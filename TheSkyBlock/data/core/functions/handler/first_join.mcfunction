@@ -4,5 +4,5 @@
 #
 # @within function core:tick
 
-# DEBUG say
-    say FirstJoin
+# DEBUG first_join
+    tellraw @s [{"storage":"core:debug","nbt":"Prefix.DEBUG"},{"text":"FirstJoin"}]

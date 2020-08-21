@@ -4,8 +4,8 @@
 #
 # @within function core:tick
 
-# DEBUG say
-    say Death
+# DEBUG death
+    tellraw @s [{"storage":"core:debug","nbt":"Prefix.DEBUG"},{"text":"Death"}]
 
 # Reset
     scoreboard players reset @s DeathEvent
