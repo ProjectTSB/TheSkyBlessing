@@ -7,7 +7,13 @@
 #> Internal
 # @internal
     #declare storage core:global
+    #declare storage core:debug
 data modify storage core:global Install set value true
+data modify storage core:debug Prefix.DEBUG set value "§3DEBUG >> §r"
+data modify storage core:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
+data modify storage core:debug Prefix.FAILD set value "§cFAILD >> §r"
+data modify storage core:debug Prefix.ERROR set value "§cERROR >> §r"
+data modify storage core:debug Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> EventHandlers
 # @within function

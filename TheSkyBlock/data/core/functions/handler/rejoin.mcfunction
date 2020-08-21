@@ -4,8 +4,8 @@
 #
 # @within function core:tick
 
-# DEBUG say
-    say Rejoin
+# DEBUG rejoin
+    tellraw @s [{"storage":"core:debug","nbt":"Prefix.DEBUG"},{"text":"Rejoin"}]
 
 # Reset
     scoreboard players reset @s RejoinEvent
