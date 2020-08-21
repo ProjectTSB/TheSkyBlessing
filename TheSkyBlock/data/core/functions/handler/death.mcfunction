@@ -7,4 +7,5 @@
 # DEBUG say
     say Death
 
-scoreboard players reset @s DeathEvent
+# Reset
+    scoreboard players reset @s DeathEvent
