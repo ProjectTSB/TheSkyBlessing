@@ -7,4 +7,5 @@
 # DEBUG say
     say Rejoin
 
-scoreboard players reset @s RejoinEvent
+# Reset
+    scoreboard players reset @s RejoinEvent
