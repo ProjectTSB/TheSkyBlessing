@@ -11,13 +11,11 @@ setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> Internal
 # @internal
-    #declare storage core:global
     #declare storage core:debug
     scoreboard objectives add Temporary dummy {"text":"1tickで消す一時変数の保存用"}
     scoreboard objectives add Global dummy {"text":"常に値が設定される変数"}
     scoreboard objectives add Const dummy {"text":"定数類 変更厳禁"}
 function core:const_define
-data modify storage core:global Install set value true
 data modify storage core:debug Prefix.DEBUG set value "§3DEBUG >> §r"
 data modify storage core:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
 data modify storage core:debug Prefix.FAILED set value "§cFAILED >> §r"
