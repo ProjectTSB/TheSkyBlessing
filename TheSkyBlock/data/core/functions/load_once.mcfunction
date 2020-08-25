@@ -4,6 +4,8 @@
 #
 # @within function core:load
 
+function core:define_gamerule
+
 #> Internal
 # @internal
     #alias vector shulkerA 10000 0 10000
