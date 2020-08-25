@@ -18,10 +18,10 @@ TheSkyBlockのDatapackリポジトリ
 * バグを未然に防止するため
 
 #### コーディング規約的なの
-* Data-pack Helper PlusのError,Warning,Informationには原則として従うこと ただしDHP側のバグの場合はその限りではない
+* Data-pack Helper PlusのError, Warning, Informationには原則として従うこと ただしDHP側のバグの場合はその限りではない
 * 全てのfunctionにはアクセス修飾子を記載すること
-* #declareをせずにtag,storage等を使用しないこと
-* function,#declareアクセス修飾子は最低限のスコープで記載すること
+* #declareをせずにtag, storage等を使用しないこと
+* function, #declareアクセス修飾子は最低限のスコープで記載すること
 
 #### 命名規則
 * 1tick内に削除される一時保存用のstorageの名前空間はそのfunctionのリソースパスを利用すること
