@@ -1,0 +1,281 @@
+{
+    "datapack.env.cmdVersion": "1.16",
+    "datapack.env.dataVersion": "1.16.1",
+    "datapack.env.defaultVisibility": "public",
+    "datapack.env.dependsOnVanilla": true,
+    "datapack.env.detectionDepth": 1,
+    "datapack.env.exclude": [],
+    "datapack.env.include": [],
+    "datapack.env.jsonVersion": "1.16",
+    "datapack.env.permissionLevel": 2,
+    "datapack.features.codeActions": true,
+    "datapack.features.completions": true,
+    "datapack.features.documentHighlighting": true,
+    "datapack.features.documentLinks": true,
+    "datapack.features.formatting": true,
+    "datapack.lint.blockStateBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.blockStateCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.blockStateEqualSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.blockStateSortKeys": null,
+    "datapack.lint.blockStateTrailingComma": false,
+    "datapack.lint.eol": "CRLF",
+    "datapack.lint.idOmitDefaultNamespace": [
+        "warning",
+        true
+    ],
+    "datapack.lint.nameOfNbtCompoundTagKeys": [
+        "error",
+        "PascalCase"
+    ],
+    "datapack.lint.nameOfObjectives": [
+        "error",
+        "PascalCase"
+    ],
+    "datapack.lint.nameOfTags": [
+        "error",
+        "PascalCase"
+    ],
+    "datapack.lint.nameOfTeams": [
+        "error",
+        "PascalCase"
+    ],
+    "datapack.lint.nbtArrayBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtArrayCommaSpacing": {
+        "before": 0,
+        "after": 1
+    },
+    "datapack.lint.nbtArrayLengthCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.nbtArraySemicolonSpacing": {
+        "after": 1
+    },
+    "datapack.lint.nbtArrayTrailingComma": false,
+    "datapack.lint.nbtBoolean": [
+        "information",
+        false
+    ],
+    "datapack.lint.nbtByteSuffix": "b",
+    "datapack.lint.nbtCompoundBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtCompoundColonSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtCompoundCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtCompoundKeyQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nbtCompoundSortKeys": null,
+    "datapack.lint.nbtCompoundTrailingComma": false,
+    "datapack.lint.nbtDoubleOmitSuffix": false,
+    "datapack.lint.nbtDoubleSuffix": "d",
+    "datapack.lint.nbtFloatSuffix": "f",
+    "datapack.lint.nbtListBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.nbtListTrailingComma": false,
+    "datapack.lint.nbtLongSuffix": "l",
+    "datapack.lint.nbtListCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtListLengthCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.nbtPathQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nbtTypeCheck": [
+        "warning",
+        "strictly"
+    ],
+    "datapack.lint.selectorBracketSpacing": {
+        "inside": 0
+    },
+    "datapack.lint.selectorCommaSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.selectorEqualSpacing": {
+        "before": 0,
+        "after": 0
+    },
+    "datapack.lint.nbtStringQuote": null,
+    "datapack.lint.nbtStringQuoteType": null,
+    "datapack.lint.selectorKeyQuote": [
+        "warning",
+        false
+    ],
+    "datapack.lint.nbtPathQuoteType": null,
+    "datapack.lint.nbtShortSuffix": "s",
+    "datapack.lint.selectorSortKeys": [
+        "information",
+        [
+            "type",
+            "gamemode",
+            "gamemodeNeg",
+            "team",
+            "teamNeg",
+            "typeNeg",
+            "tag",
+            "tagNeg",
+            "name",
+            "nameNeg",
+            "scores",
+            "advancements",
+            "nbt",
+            "nbtNeg",
+            "level",
+            "x_rotation",
+            "y_rotation",
+            "distance",
+            "x",
+            "y",
+            "z",
+            "dx",
+            "dy",
+            "dz",
+            "sort",
+            "limit"
+        ]
+    ],
+    "datapack.lint.selectorTrailingComma": false,
+    "datapack.lint.selectorKeyQuoteType": [
+        "warning",
+        "always double"
+    ],
+    "datapack.lint.strictAdvancementCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictAttributeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictBlockCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictBlockTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictBossbarCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictDimensionTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictEnchantmentCheck": [
+        "information",
+        "always"
+    ],
+    "datapack.lint.strictEntityTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictEntityTypeTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFluidCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictFluidTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFunctionCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictFunctionTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictItemCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictRecipeCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictItemTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictLootTableCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictMobEffectCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictMotiveCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictObjectiveCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictParticleTypeCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictPotionCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictPredicateCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictSoundEventCheck": [
+        "error",
+        "always"
+    ],
+    "datapack.lint.strictStorageCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictTagCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictTeamCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.timeOmitTickUnit": false,
+    "datapack.snippets": {
+        "summonAec": "summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:[\"${1:tag}\"]}",
+        "tellrawScore": "tellraw @a [{\"text\":\"score: \"},{\"score\":{\"objective\":\"${1:objective}\",\"name\":\"${2:name}\"}}]",
+        "tellrawStorage": "tellraw @a [{\"text\":\"storage: \"},{\"storage\":\"${1:storage}\",\"nbt\":\"${2:nbt}\"}]",
+        "tellrawNbt": "tellraw @a [{\"text\":\"nbt\"},{\"text\":\": \"},{\"entity\":\"${1:entity}\",\"nbt\":\"${2:nbt}\"}]"
+    }
+}
