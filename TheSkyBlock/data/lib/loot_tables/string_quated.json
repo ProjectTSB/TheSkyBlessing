@@ -1,0 +1,31 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "debug_stick",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "storage": "lib:",
+                                    "nbt": "String",
+                                    "color": "aqua"
+                                },
+                                {
+                                    "text": "のおとしもの",
+                                    "color": "aqua"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
