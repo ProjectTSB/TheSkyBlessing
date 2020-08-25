@@ -13,10 +13,12 @@ data modify storage oh_my_dat: initial set value [[[[[[[[{},{},{},{}],[],[],[]],
 data modify storage oh_my_dat: _ set from storage oh_my_dat: initial
 # 割り当て済みID保存ストレージ
 data modify storage oh_my_dat: id set value [0]
+# 使用中のIDのSet
+data modify storage oh_my_dat: IDSet set value [I;]
 #> IDを振るためのスコアボード
 # @internal
 # @within function
-#   core:keep_lost_item/*
+#   core:keep_lost_item/**
     #declare storage oh_my_dat:
     scoreboard objectives add OhMyDatID dummy
 #> 計算に使うスコアボード
