@@ -1,6 +1,6 @@
-#> core:const_define
+#> core:define_const
 #
-# 定数の定義です
+# 定数を定義します
 #
 # @within function core:load_once
 
