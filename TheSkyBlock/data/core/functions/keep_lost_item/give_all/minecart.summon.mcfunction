@@ -12,6 +12,11 @@
 #   core:keep_lost_item/give_all/packing.minecart
     #declare score_holder $i
 
+#> PrivateUsed
+# @private
+    #declare tag LostItemChest
+    #declare tag EmptyItems
+
 # シャルカーに追加する処理
     scoreboard players set $i Temporary 0
     function core:keep_lost_item/give_all/packing.minecart
