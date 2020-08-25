@@ -8,10 +8,13 @@
 # @private
     #declare storage core:keep_lost_item/take
 
-# InventoryをTempに移してSlotを削除し、固有storageに追加
+# Inventory -> Temp
     data modify storage core:keep_lost_item/take Temp set from entity @s Inventory
+# Slotを削除
     data remove storage core:keep_lost_item/take Temp[].Slot
+# UserStorage呼び出し
     function oh_my_dat:please
+# Temp -> UserStorage
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items append from storage core:keep_lost_item/take Temp[]
     data remove storage core:keep_lost_item/take Temp
 #名前の取得
