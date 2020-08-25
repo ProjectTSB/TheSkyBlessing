@@ -4,6 +4,11 @@
 #
 # @within function core:load
 
+setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
+setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
+#alias vector shulkerA 10000 0 10000
+#alias vector shulkerB 10000 1 10000
+
 #> Internal
 # @internal
     #declare storage core:global
