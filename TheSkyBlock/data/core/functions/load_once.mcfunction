@@ -6,6 +6,7 @@
 
 function core:define_gamerule
 
+
 #> Internal
 # @public
     #alias vector shulkerA 10000 0 10000
@@ -27,10 +28,13 @@ data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
 
 function core:define_const
 
+
 #> EventHandlers
 # @within function
 #   core:handler/*
 #   core:tick
+# @within predicate lib:**
+    #declare tag Death
     scoreboard objectives add FirstJoinEvent custom:play_one_minute {"text":"イベント: 初回Join"}
     scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
     scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
