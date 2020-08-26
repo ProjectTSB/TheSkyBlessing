@@ -7,11 +7,11 @@
 function core:define_gamerule
 
 #> Internal
-# @internal
+# @public
     #alias vector shulkerA 10000 0 10000
     #alias vector shulkerB 10000 1 10000
     #alias vector worldSpawn 23 3 24
-    #declare storage core:debug
+    #declare storage global:debug
     scoreboard objectives add Temporary dummy {"text":"1tickで消す一時変数の保存用"}
     scoreboard objectives add Global dummy {"text":"常に値が設定される変数"}
     scoreboard objectives add Const dummy {"text":"定数類 変更厳禁"}
@@ -19,11 +19,11 @@ function core:define_gamerule
 setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
 setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
-data modify storage core:debug Prefix.DEBUG set value "§3DEBUG >> §r"
-data modify storage core:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
-data modify storage core:debug Prefix.FAILED set value "§cFAILED >> §r"
-data modify storage core:debug Prefix.ERROR set value "§cERROR >> §r"
-data modify storage core:debug Prefix.CRIT set value "§4CRITICAL >> §r"
+data modify storage global:debug Prefix.DEBUG set value "§3DEBUG >> §r"
+data modify storage global:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
+data modify storage global:debug Prefix.FAILED set value "§cFAILED >> §r"
+data modify storage global:debug Prefix.ERROR set value "§cERROR >> §r"
+data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
 
 function core:define_const
 
