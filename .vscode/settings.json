@@ -29,10 +29,10 @@
     "datapack.lint.eol": "CRLF",
     "datapack.lint.idOmitDefaultNamespace": [
         "warning",
-        true
+        false
     ],
     "datapack.lint.nameOfNbtCompoundTagKeys": [
-        "error",
+        "information",
         "PascalCase"
     ],
     "datapack.lint.nameOfObjectives": [
