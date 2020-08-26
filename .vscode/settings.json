@@ -24,13 +24,8 @@
         "before": 0,
         "after": 0
     },
-    "datapack.lint.blockStateSortKeys": null,
     "datapack.lint.blockStateTrailingComma": false,
     "datapack.lint.eol": "CRLF",
-    "datapack.lint.idOmitDefaultNamespace": [
-        "warning",
-        false
-    ],
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
         "PascalCase"
@@ -82,7 +77,6 @@
         "warning",
         false
     ],
-    "datapack.lint.nbtCompoundSortKeys": null,
     "datapack.lint.nbtCompoundTrailingComma": false,
     "datapack.lint.nbtDoubleOmitSuffix": false,
     "datapack.lint.nbtDoubleSuffix": "d",
