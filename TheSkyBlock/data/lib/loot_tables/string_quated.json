@@ -1,15 +1,15 @@
 {
-    "type": "generic",
+    "type": "minecraft:generic",
     "pools": [
         {
             "rolls": 1,
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "debug_stick",
+                    "name": "minecraft:debug_stick",
                     "functions": [
                         {
-                            "function": "set_name",
+                            "function": "minecraft:set_name",
                             "entity": "this",
                             "name": [
                                 {
