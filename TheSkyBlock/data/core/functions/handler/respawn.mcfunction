@@ -5,4 +5,4 @@
 # @within function core:tick
 
 # DEBUG respawn
-    tellraw @s [{"storage":"core:debug","nbt":"Prefix.DEBUG"},{"text":"Respawn"}]
+    tellraw @s [{"storage":"global:debug","nbt":"Prefix.DEBUG"},{"text":"Respawn"}]
