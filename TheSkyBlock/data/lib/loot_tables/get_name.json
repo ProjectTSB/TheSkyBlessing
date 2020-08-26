@@ -1,15 +1,15 @@
 {
-    "type": "generic",
+    "type": "minecraft:generic",
     "pools": [
         {
             "rolls": 1,
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "player_head",
+                    "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "fill_player_head",
+                            "function": "minecraft:fill_player_head",
                             "entity": "this"
                         }
                     ]
