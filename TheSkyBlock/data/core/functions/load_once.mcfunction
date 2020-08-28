@@ -6,26 +6,41 @@
 
 function core:define_gamerule
 
-
-#> Internal
+#> エイリアス
 # @public
     #alias vector shulkerA 10000 0 10000
     #alias vector shulkerB 10000 1 10000
     #alias vector worldSpawn 23 3 24
-    #declare storage global:debug
-    scoreboard objectives add Temporary dummy {"text":"1tickで消す一時変数の保存用"}
-    scoreboard objectives add Global dummy {"text":"常に値が設定される変数"}
-    scoreboard objectives add Const dummy {"text":"定数類 変更厳禁"}
-
 setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
 setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
+#> デバッグ用storage Prefix.<DEBUG,SUCCESS,FAILED,ERROR,CRIT>
+# @public
+    #declare storage global:debug
 data modify storage global:debug Prefix.DEBUG set value "§3DEBUG >> §r"
 data modify storage global:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
 data modify storage global:debug Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global:debug Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
 
+#> Healthを持つMobにフィルターする際に使用してください
+#
+# **teamとしては存在しません**
+#
+# @public
+    #declare team Null
+
+#> 1tickで消す一時変数の保存用
+# @public
+    scoreboard objectives add Temporary dummy
+
+#> 常に値が設定される変数
+# @public
+    scoreboard objectives add Global dummy
+
+#> 定数類 **変更厳禁**
+# @public
+    scoreboard objectives add Const dummy
 function core:define_const
 
 

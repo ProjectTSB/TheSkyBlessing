@@ -29,7 +29,7 @@ gamerule keepInventory true
 gamerule maxCommandChainLength 2147483647
 gamerule maxEntityCramming 24
 gamerule mobGriefing true
-gamerule naturalRegeneration false
+# gamerule naturalRegeneration false
 gamerule randomTickSpeed 3
 # gamerule reducedDebugInfo true
 # gamerule sendCommandFeedback false
