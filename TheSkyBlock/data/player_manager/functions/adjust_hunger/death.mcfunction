@@ -4,7 +4,4 @@
 #
 # @within core:handler/death
 
-# DEBUG test
-    tellraw @s [{"storage":"global:debug","nbt":"Prefix.DEBUG"},{"text":"Death >> "},{"score":{"name":"@s","objective":"Hunger"}}]
-
 scoreboard players operation @s HungerTarget = @s Hunger
