@@ -18,7 +18,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 #> IDを振るためのスコアボード
 # @internal
 # @within function
-#   core:keep_lost_item/**
+#   player_manager:keep_lost_item/**
     #declare storage oh_my_dat:
     scoreboard objectives add OhMyDatID dummy
 #> 計算に使うスコアボード
