@@ -15,7 +15,5 @@
     execute if data entity @s ArmorItems[3].Count run tag @s add HasArmor
     execute if entity @s[tag=HasArmor] run function entity_manager:adjust_spawn_mob/armor
     tag @s remove HasArmor
-# debug
-    tellraw @a [{"storage":"global:debug","nbt":"Prefix.SUCCESS"},{"text":"Adjusted"}]
 # 調整済タグ
     tag @s add AdjustedEntity
