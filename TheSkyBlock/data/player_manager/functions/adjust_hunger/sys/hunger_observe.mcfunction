@@ -4,6 +4,5 @@
 #
 # @within function core:tick
 
-execute if score @s Hunger = @s HungerTarget run tellraw @s [{"storage":"global:debug","nbt":"Prefix.SUCCESS"},{"text":"Adjust ended."}]
 execute if score @s Hunger = @s HungerTarget run effect clear @s saturation
 execute if score @s Hunger = @s HungerTarget run tag @s remove AdjustHunger

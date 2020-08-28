@@ -4,9 +4,6 @@
 #
 # @within function core:tick
 
-# DEBUG death
-    tellraw @s [{"storage":"global:debug","nbt":"Prefix.DEBUG"},{"text":"Death"}]
-
 # 死亡時タグを付与
     tag @s add Death
 # 満腹度を保存
