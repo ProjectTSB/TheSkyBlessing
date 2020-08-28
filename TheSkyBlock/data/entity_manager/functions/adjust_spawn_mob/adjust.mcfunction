@@ -8,6 +8,8 @@
 # @private
     #declare tag HasArmor
 
+# アイテムを拾わないように
+    data modify entity @s CanPickUpLoot set value false
 # 防具周りの処理
     execute if data entity @s ArmorItems[0].Count run tag @s add HasArmor
     execute if data entity @s ArmorItems[1].Count run tag @s add HasArmor
