@@ -26,6 +26,7 @@
     #declare score_holder $Health
     #declare score_holder $ArmorPoints
     #declare score_holder $ArmorThoughnessPoints
+    #declare score_holder $Resistance
     #declare score_holder $SaveDamage
     #declare score_holder $SaveEPF
 
@@ -36,6 +37,7 @@
     execute store result score $Health Temporary run data get entity @s Health 10000
     execute store result score $ArmorPoints Temporary run attribute @s generic.armor get 100
     execute store result score $ArmorThoughnessPoints Temporary run attribute @s generic.armor_toughness get 100
+    execute store result score $Resistance Temporary run data get entity @s ActiveEffects[{Id:11b}].Amplifier
 # 計算
     function entity_manager:damage.calc
     scoreboard players operation $Damage Temporary < $Health Temporary
