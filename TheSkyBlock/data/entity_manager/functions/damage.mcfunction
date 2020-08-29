@@ -4,9 +4,9 @@
 #
 # @input _score_
 #   **$Damage Temporary**
-#       与えるダメージです
+#       与えるダメージを100倍し入力
 #   **$EPF Temporary**
-#       軽減効果のあるエンチャントレベルの合計値 * 2 //Protectionのみ * 1
+#       軽減効果のあるエンチャントレベルの合計値の2倍 //Protectionのみ等倍
 # @public
 
 #> Public
@@ -34,8 +34,8 @@
     scoreboard players operation $SaveEPF Temporary = $EPF Temporary
 # 値取得
     execute store result score $Health Temporary run data get entity @s Health 10000
-    execute store result score $ArmorPoints Temporary run attribute @s generic.armor get
-    execute store result score $ArmorThoughnessPoints Temporary run attribute @s generic.armor_toughness get
+    execute store result score $ArmorPoints Temporary run attribute @s generic.armor get 100
+    execute store result score $ArmorThoughnessPoints Temporary run attribute @s generic.armor_toughness get 100
 # 計算
     function entity_manager:damage.calc
     scoreboard players operation $Damage Temporary < $Health Temporary

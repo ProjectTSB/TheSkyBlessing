@@ -14,20 +14,19 @@
     #declare score_holder $CalcD
     #declare score_holder $CalcE
 
-# CalcA = $ArmorPoints * 100 / 20
+# CalcA = $ArmorPoints / 20
     scoreboard players operation $CalcA Temporary = $ArmorPoints Temporary
-    scoreboard players operation $CalcA Temporary *= $20 Const
-# CalcB = $ArmorPoints * 100 - {$Damage * 100 * 100 / {(2 * 100 + {$ArmorThoughnessPoints * 100 / 4})}}
+    scoreboard players operation $CalcA Temporary /= $20 Const
+# CalcB = $ArmorPoints * 100 - {$Damage * 100 / {(2 * 100 + {$ArmorThoughnessPoints * 100 / 4})}}
     scoreboard players operation $CalcB.3 Temporary = $ArmorThoughnessPoints Temporary
-    scoreboard players operation $CalcB.3 Temporary *= $25 Const
+    scoreboard players operation $CalcB.3 Temporary /= $4 Const
     scoreboard players operation $CalcB.3 Temporary += $200 Const
 
     scoreboard players operation $CalcB.2 Temporary = $Damage Temporary
-    scoreboard players operation $CalcB.2 Temporary *= $10000 Const
+    scoreboard players operation $CalcB.2 Temporary *= $100 Const
     scoreboard players operation $CalcB.2 Temporary /= $CalcB.3 Temporary
 
     scoreboard players operation $CalcB Temporary = $ArmorPoints Temporary
-    scoreboard players operation $CalcB Temporary *= $100 Const
     scoreboard players operation $CalcB Temporary -= $CalcB.2 Temporary
 # $CalcC = $min(20*100, max($CalcA, $CalcB)) * 100 / 25
     scoreboard players operation $CalcC Temporary = $CalcA Temporary
@@ -47,7 +46,7 @@
     scoreboard players operation $CalcE Temporary -= $EPF Temporary
 # $Damage *= $CalcE
     scoreboard players operation $Damage Temporary *= $CalcE Temporary
-    scoreboard players operation $Damage Temporary /= $100 Const
+    scoreboard players operation $Damage Temporary /= $10000 Const
 # Reset
     scoreboard players reset $CalcA
     scoreboard players reset $CalcB
