@@ -44,35 +44,10 @@
     execute if score $Health Temporary matches ..0 run data modify entity @s Health set value 00.0001f
     execute if score $Health Temporary matches ..0 run kill @s
     execute if score $Health Temporary matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health Temporary
-# 演出: ダメージ
+# 演出
     execute if score $Health Temporary matches 1.. if entity @s[type=#entity_manager:undead] run effect give @s instant_health 1 31 true
     execute if score $Health Temporary matches 1.. if entity @s[type=!#entity_manager:undead] run effect give @s instant_damage 1 31 true
-# 演出: パーティクル
-    scoreboard players operation $Damage Temporary /= $20000 Const
-    scoreboard players operation $Damage Temporary *= $2^20 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 2048
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 1024
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 512
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 256
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 128
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 64
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 32
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 16
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 8
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 4
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 2
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 1
+    execute at @s run function entity_manager:damage.particle
 # 値戻す
     scoreboard players operation $Damage Temporary = $SaveDamage Temporary
     scoreboard players operation $EPF Temporary = $SaveEPF Temporary
