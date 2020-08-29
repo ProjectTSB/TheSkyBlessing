@@ -1,6 +1,6 @@
 #> entity_manager:damage
 #
-# エンティティにダメージを与えます
+# @s[type=!player] にダメージを与えます
 #
 # @input _score_
 #   **$Damage Temporary**
@@ -29,8 +29,8 @@
 
 # 値取得
     execute store result score $Health Temporary run data get entity @s Health 10000
-    execute store result score $ArmorPoints Temporary run data get entity @s Attributes[{Name:"minecraft:generic.armor"}].Base
-    execute store result score $ArmorThoughnessPoints Temporary run data get entity @s Attributes[{Name:"minecraft:generic.armor_toughness"}].Base
+    execute store result score $ArmorPoints Temporary run attribute @s generic.armor get
+    execute store result score $ArmorThoughnessPoints Temporary run attribute @s generic.armor_toughness get
 # 計算
     function entity_manager:damage.calc
     tellraw @a [{"text":"Damage: "},{"score":{"objective":"Temporary","name":"$Damage"}}]
