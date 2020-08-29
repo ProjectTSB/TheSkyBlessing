@@ -16,7 +16,3 @@
 
     # 満腹度調整部
         execute as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/sys/hunger_observe
-
-# Entity処理部
-    # 自然沸きEntityの処理
-        execute as @e[team=!Null,type=!armor_stand,type=!player,tag=!AdjustedEntity] run function entity_manager:adjust_spawn_mob/adjust
