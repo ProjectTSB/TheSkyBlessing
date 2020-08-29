@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Open Minecraft Server",
+            "type": "shell",
+            "command": "java -Xms5G -Xmx5G -jar ./server.jar nogui",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "../../"
+            },
+            "isBackground": true,
+            "promptOnClose": true
+        }
+    ]
+}
