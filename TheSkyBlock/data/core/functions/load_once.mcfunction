@@ -63,7 +63,13 @@ function core:define_const
     #declare tag AdjustHunger
 
 #> PlayerManager
-# @within function
-#   player_manager:adjust_hunger/**
+# @within function player_manager:adjust_hunger/**
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
     scoreboard objectives add Hunger food {"text":"現在の満腹度"}
+
+#> PlayerManager
+# @within function
+#   core:load_once
+#   player_manager:**
+    scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
+scoreboard objectives setdisplay belowName Health
