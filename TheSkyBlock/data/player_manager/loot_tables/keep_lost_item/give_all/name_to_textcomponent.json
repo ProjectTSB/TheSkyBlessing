@@ -13,7 +13,7 @@
                             "entity": "this",
                             "name": [
                                 {
-                                    "storage": "lib:",
+                                    "storage": "player_manager:keep_lost_item/give_all/name_to_textcomponent",
                                     "nbt": "String",
                                     "color": "aqua"
                                 },

@@ -21,7 +21,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items append from storage player_manager:keep_lost_item/take Temp[]
     data remove storage player_manager:keep_lost_item/take Temp
 #名前の取得
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run loot replace block 10000 0 10000 container.0 loot lib:get_name
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run loot replace block 10000 0 10000 container.0 loot player_manager:lib/get_name
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name set from block 10000 0 10000 Items[0].tag.SkullOwner.Name
 # インベントリclear
     clear @s
