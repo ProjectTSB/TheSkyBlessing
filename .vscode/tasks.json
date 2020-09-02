@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Open Minecraft Server",
+            "label": "Minecraft Server",
             "type": "shell",
             "command": "java -Xms5G -Xmx5G -jar ./server.jar nogui",
             "problemMatcher": [],
