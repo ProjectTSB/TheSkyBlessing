@@ -1,4 +1,4 @@
-#> entity_manager:lib/attack.custom
+#> entity_manager:lib/score_damage/attack.custom
 #
 # 実行者のエンティティにダメージを与えます。
 #
@@ -23,4 +23,4 @@
 # @public
 
 # Entityがプレイヤー以外かつHealthを持つEntityであれば実行
-    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/core/attack
+    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/score_damage/core/attack
