@@ -1,4 +1,4 @@
-#> entity_manager:lib/attack.bypass_resistance
+#> entity_manager:lib/score_damage/attack.bypass_resistance
 #
 # 実行者のエンティティに **耐性エフェクトを貫通する** ダメージを与えます。
 #
@@ -21,4 +21,4 @@
     scoreboard players set $BypassArmor Temporary 0
     scoreboard players set $BypassResistance Temporary 1
 # Entityがプレイヤー以外かつHealthを持つEntityであれば実行
-    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/core/attack
+    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/score_damage/core/attack

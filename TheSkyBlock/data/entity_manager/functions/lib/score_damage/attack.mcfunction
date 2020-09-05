@@ -1,4 +1,4 @@
-#> entity_manager:lib/attack
+#> entity_manager:lib/score_damage/attack
 #
 # 実行者のエンティティにダメージを与えます。
 #
@@ -19,4 +19,4 @@
     scoreboard players set $BypassArmor Temporary 0
     scoreboard players set $BypassResistance Temporary 0
 # Entityがプレイヤー以外かつHealthを持つEntityであれば実行
-    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/core/attack
+    execute if entity @s[team=!Null,type=!player] run function entity_manager:lib/score_damage/core/attack

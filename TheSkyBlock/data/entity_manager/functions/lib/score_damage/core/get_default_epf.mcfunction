@@ -1,8 +1,8 @@
-#> entity_manager:lib/core/get_default_epf
+#> entity_manager:lib/score_damage/core/get_default_epf
 #
 # プロテクションのEPFを取得します
 #
-# @within function entity_manager:lib/core/get_status
+# @within function entity_manager:lib/score_damage/core/get_status
 
 #> Temp
 # @private
