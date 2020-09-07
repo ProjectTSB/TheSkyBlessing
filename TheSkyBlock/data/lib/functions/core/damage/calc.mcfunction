@@ -1,8 +1,8 @@
-#> entity_manager:lib/score_damage/core/calc
+#> lib:core/damage/calc
 #
 # 与えるダメージを計算します
 #
-# @within function entity_manager:lib/score_damage/core/attack
+# @within function lib:core/damage/attack
 
 #> Temp
 # @private

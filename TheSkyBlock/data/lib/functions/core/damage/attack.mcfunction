@@ -1,8 +1,8 @@
-#> entity_manager:lib/score_damage/core/attack
+#> lib:core/damage/attack
 #
 # ダメージ与えるよ
 #
-# @within function entity_manager:lib/score_damage/*
+# @within function lib:damage
 
 #> 変数定義
 # @internal
@@ -19,11 +19,11 @@
     scoreboard players operation $SaveDamage Temporary = $Damage Temporary
     scoreboard players operation $SaveEPF Temporary = $EPF Temporary
 # 計算に必要な値を取得
-    function entity_manager:lib/score_damage/core/get_status
+    function lib:core/damage/get_status
 # 与えるダメージの計算
-    function entity_manager:lib/score_damage/core/calc
+    function lib:core/damage/calc
 # Mobに適用
-    function entity_manager:lib/score_damage/core/health_subtract
+    function lib:core/damage/health_subtract
 # 引数を戻す
     scoreboard players operation $Damage Temporary = $SaveDamage Temporary
     scoreboard players operation $EPF Temporary = $SaveEPF Temporary
