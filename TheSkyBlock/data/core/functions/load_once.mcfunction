@@ -53,8 +53,11 @@ function core:define_const
     scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
     scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
 
-#> PredicatesScope
-# @within predicate **:**
+#> DeathTag
+# @within
+#   function core:handler/death
+#   function core:handler/respawn
+#   predicate lib:is_death
     #declare tag Death
 
 #> PlayerManager
