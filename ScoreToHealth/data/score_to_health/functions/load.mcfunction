@@ -12,4 +12,15 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+#> ObjectDeclare
+# @within function
+#   score_to_health:**
+#   lib:core/damage/health_subtract
 scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
+
+#> TagDeclare
+# @internal
+    #declare tag ScoreToHealth.AntiGlitch.UnsafeTick
+    #declare tag ScoreToHealth.AntiGlitch.Protected
+    #declare tag ScoreToHealth.Modified
+    #declare tag ScoreToHealth.Return
