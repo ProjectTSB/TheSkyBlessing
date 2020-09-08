@@ -8,25 +8,24 @@
 # @internal
     #declare score_holder $Damage
     #declare score_holder $EPF
-    #declare score_holder $SaveDamage
-    #declare score_holder $SaveEPF
     #declare score_holder $Health
     #declare score_holder $defensePoints
     #declare score_holder $toughness
     #declare score_holder $Resistance
 
 # 引数データをコピー
-    scoreboard players operation $SaveDamage Temporary = $Damage Temporary
-    scoreboard players operation $SaveEPF Temporary = $EPF Temporary
+    execute store result score $Damage Temporary run data get storage lib: Damage
+    execute unless data storage lib: EPF run data modify storage lib: EPF set value -1
+    execute unless data storage lib: DisableParticle run data modify storage lib: DisableParticle set value 0b
+    execute unless data storage lib: BypassArmor run data modify storage lib: BypassArmor set value 0b
+    execute unless data storage lib: BypassResistance run data modify storage lib: BypassResistance set value 0b
 # 計算に必要な値を取得
     function lib:core/damage/get_status
 # 与えるダメージの計算
     function lib:core/damage/calc
 # Mobに適用
     function lib:core/damage/health_subtract
-# 引数を戻す
-    scoreboard players operation $Damage Temporary = $SaveDamage Temporary
-    scoreboard players operation $EPF Temporary = $SaveEPF Temporary
 # リセット
-    scoreboard players reset $SaveDamage Temporary
-    scoreboard players reset $SaveEPF Temporary
+    scoreboard players reset $Health Temporary
+    scoreboard players reset $Damage Temporary
+    scoreboard players reset $EPF Temporary

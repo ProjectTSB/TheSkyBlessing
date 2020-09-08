@@ -2,7 +2,7 @@
 #
 # 実行者のエンティティにダメージを与えます。
 #
-# 実行者はHealthを持つEntityを持つEntityである必要があります。
+# 実行者はHealthを持つEntityである必要があります。
 #
 # @input **storage lib:**
 #   **Damage**: float
@@ -19,10 +19,6 @@
 # @api
 
 # 引数チェック
-    execute unless data storage lib: Argument.Damage run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません 正常に実行出来ない可能性があります。"},{"text":"\nMissing Argument.Damage at lib:damage"}]
-    execute unless data storage lib: Argument.EPF run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません 正常に実行出来ない可能性があります。"},{"text":"\nMissing Argument.EPF at lib:damage"}]
-    execute unless data storage lib: Argument.DisableParticle run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません 正常に実行出来ない可能性があります。"},{"text":"\nMissing Argument.DisableParticle at lib:damage"}]
-    execute unless data storage lib: Argument.BypassArmor run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません 正常に実行出来ない可能性があります。"},{"text":"\nMissing Argument.BypassArmor at lib:damage"}]
-    execute unless data storage lib: Argument.BypassResistance run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません 正常に実行出来ない可能性があります。"},{"text":"\nMissing Argument.BypassResistance at lib:damage"}]
+    execute unless data storage lib: Argument.Damage run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":"\nMissing Argument.Damage at lib:damage"}]
 # Healthを持つEntityであれば実行
-    execute if entity @s[team=!Null] run function lib:core/damage/attack
+    execute if data storage lib: Argument.Damage if entity @s[team=!Null] run function lib:core/damage/attack
