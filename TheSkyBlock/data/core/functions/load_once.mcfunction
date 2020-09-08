@@ -6,6 +6,12 @@
 
 function core:define_gamerule
 
+#> Datapack Order
+# 0: TheSkyBlock
+# 1: OhMyDat
+datapack disable "OhMyDat"
+datapack enable "OhMyDat" after "TheSkyBlock"
+
 #> エイリアス
 # @public
     #alias vector shulkerA 10000 0 10000
