@@ -8,9 +8,13 @@ function core:define_gamerule
 
 #> Datapack Order
 # 0: TheSkyBlock
-# 1: OhMyDat
+# 1: ScoreToHealth
+# 2: OhMyDat
 datapack disable "OhMyDat"
+datapack disable "ScoreToHealth"
 datapack enable "OhMyDat" after "TheSkyBlock"
+datapack enable "ScoreToHealth" after "TheSkyBlock"
+datapack enable "OhMyDat" after "ScoreToHealth"
 
 #> エイリアス
 # @public
