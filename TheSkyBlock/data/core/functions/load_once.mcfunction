@@ -63,19 +63,6 @@ function core:define_const
     scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
     scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
 
-#> DeathTag
-# @within
-#   function core:handler/death
-#   function core:handler/respawn
-#   predicate lib:is_death
-    #declare tag Death
-
-#> PlayerManager
-# @within function
-#   player_manager:adjust_hunger/**
-#   core:tick
-    #declare tag AdjustHunger
-
 #> PlayerManager
 # @within function player_manager:adjust_hunger/**
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}

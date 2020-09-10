@@ -6,17 +6,6 @@
 #   player_manager:keep_lost_item/give_all/give
 #   player_manager:keep_lost_item/give_all/minecart.summon
 
-#> Temp
-# @within function
-#   player_manager:keep_lost_item/give_all/minecart.summon
-#   player_manager:keep_lost_item/give_all/packing.minecart
-    #declare score_holder $i
-
-#> PrivateUsed
-# @private
-    #declare tag LostItemChest
-    #declare tag EmptyItems
-
 # シャルカーに追加する処理
     scoreboard players set $i Temporary 0
     function player_manager:keep_lost_item/give_all/packing.minecart

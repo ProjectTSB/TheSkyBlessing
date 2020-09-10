@@ -4,10 +4,6 @@
 #
 # @within function lib:core/damage/get_status
 
-#> Temp
-# @private
-    #declare score_holder $Temp
-
 # 明示的に0に設定
     scoreboard players set $EPF Temporary 0
 # 足

@@ -4,10 +4,6 @@
 #
 # @within core:handler/death
 
-#> Temp
-# @private
-    #declare storage player_manager:keep_lost_item/take
-
 # Inventory -> Temp
     data modify storage player_manager:keep_lost_item/take Temp set from entity @s Inventory
 # Slotを削除

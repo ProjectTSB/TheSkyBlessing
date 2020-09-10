@@ -4,11 +4,6 @@
 #
 # @
 
-#> Temp
-# @within function
-#   player_manager:keep_lost_item/give_all/*
-    #declare storage player_manager:keep_lost_item/give_all/give
-
 # ItemのChestsへの梱包処理
     function player_manager:keep_lost_item/give_all/packing.user
 # チェストへの追加処理

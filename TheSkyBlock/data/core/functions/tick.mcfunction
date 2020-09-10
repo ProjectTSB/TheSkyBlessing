@@ -15,4 +15,4 @@
         execute as @a[scores={RespawnEvent=80}] run function core:handler/respawn.delay
 
     # 満腹度調整部
-        execute as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/sys/hunger_observe
+        execute as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/observe
