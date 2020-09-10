@@ -6,12 +6,6 @@
 #   player_manager:keep_lost_item/give_all/packing.user
 #   player_manager:keep_lost_item/give_all/packing.chest
 
-#> Temp
-# @within function
-#   player_manager:keep_lost_item/give_all/packing.chest
-#   player_manager:keep_lost_item/give_all/packing.item
-    #declare score_holder $i
-
 # 梱包処理
     # チェストのAppend
         data modify storage player_manager:keep_lost_item/give_all/give Chests append value {id:"chest",Count:1b,tag:{BlockEntityTag:{Items:[]}}}

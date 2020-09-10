@@ -1,4 +1,4 @@
-#> player_manager:adjust_hunger/sys/hunger_observe
+#> player_manager:adjust_hunger/observe
 #
 # 満腹度を監視し、目標の値と同じならtagとエフェクトを削除します
 #
