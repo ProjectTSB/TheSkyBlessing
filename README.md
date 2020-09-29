@@ -5,6 +5,7 @@ TheSkyBlockのDatapackリポジトリ
 ## 開発環境
 * [Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
 * [Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)
+* [Gitmoji](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode)
 
 
 ## 依存ライブラリ
@@ -35,7 +36,7 @@ TheSkyBlockのDatapackリポジトリ
 
 ## commit時のルール
 * 一つのcommitに複数の処理の変更や追加を極力避けること
-* commitのコメントにはコミットの内容を簡潔に表す単語を`[]`で記載すること
+* Gitmojiを使いコミットメッセージの最初に絵文字をつける
 
 ## SpecialThanks
 ### [赤石愛](https://twitter.com/AiAkaishi)氏
