@@ -4,15 +4,42 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Minecraft Server",
+            "label": "change world file",
             "type": "shell",
-            "command": "java -Xms5G -Xmx5G -jar ./server.jar nogui",
-            "problemMatcher": [],
+            "command": "sed -i -e \"s/^level-name=.*$/level-name=The SkyBlock/\" ./server.properties",
             "options": {
                 "cwd": "../../"
             },
-            "isBackground": true,
-            "promptOnClose": true
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open SkyBlock Server",
+            "type": "shell",
+            "command": "java -Xms5G -Xmx5G -jar ./server.jar nogui",
+            "options": {
+                "cwd": "../../"
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "dependsOn": [
+                "change world file"
+            ],
+            "promptOnClose": true,
+            "problemMatcher": []
         }
     ]
 }
