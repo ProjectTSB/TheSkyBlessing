@@ -12,9 +12,8 @@
 # 防具強度
     execute if data storage lib: {Argument:{BypassArmor:0b}} store result score $toughness Temporary run attribute @s generic.armor_toughness get 100
     execute if data storage lib: {Argument:{BypassArmor:1b}} run scoreboard players set $toughness Temporary 0
-# EPFが未設定または-1以下の時Protectionを参照
-    execute store result score $EPF Temporary run data get storage lib: EPF
-    execute unless score $EPF Temporary matches 0.. run function lib:core/damage/get_default_epf
+# 属性の耐性値を取得
+    function lib:core/damage/get_epf
 # 耐性エフェクト
     execute if data storage lib: {Argument:{BypassResistance:0b}} store result score $Resistance Temporary run data get entity @s ActiveEffects[{Id:11b}].Amplifier
     execute if data storage lib: {Argument:{BypassResistance:0b}} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance Temporary 1
