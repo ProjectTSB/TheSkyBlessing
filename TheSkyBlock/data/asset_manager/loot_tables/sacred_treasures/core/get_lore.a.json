@@ -20,7 +20,7 @@
                                     },
                                     {
                                         "nbt": "Lore[0]",
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "interpret": true
                                     }
                                 ]

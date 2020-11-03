@@ -19,7 +19,7 @@
                                         "color": "dark_gray"
                                     },
                                     {
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "nbt": "sys.used[0]",
                                         "interpret": true
                                     },
@@ -27,7 +27,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "nbt": "sys.used[1]",
                                         "interpret": true
                                     },
@@ -35,7 +35,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "nbt": "sys.used[2]",
                                         "interpret": true
                                     },
@@ -43,7 +43,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "nbt": "sys.used[3]",
                                         "interpret": true
                                     },
@@ -51,7 +51,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:define",
+                                        "storage": "asset:sacred_treasure",
                                         "nbt": "sys.used[4]",
                                         "interpret": true
                                     }
