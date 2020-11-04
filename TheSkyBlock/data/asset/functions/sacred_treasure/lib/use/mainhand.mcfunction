@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/lib/use/mainhand
 #
-# 神器の使用回数を減らします
+# メインハンドの神器の使用時共通処理を実行します
 #
 # @within function asset:sacred_treasure/*/main
 
