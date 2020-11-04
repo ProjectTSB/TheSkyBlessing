@@ -5,6 +5,7 @@ TheSkyBlockのDatapackリポジトリ
 ## 開発環境
 * [Visual Studio Code](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
 * [Data-pack Helper Plus](https://github.com/SPGoding/datapack-language-server)
+* [MC Datapack Utility](https://github.com/ChenCMD/MC-Datapack-Utility)
 * [Gitmoji](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode)
 
 
@@ -13,7 +14,7 @@ TheSkyBlockのDatapackリポジトリ
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
 
 
-## コーディングスタイル
+## コーディングスタイル (ほぼ自戒)
 #### なぜ決めるの？
 * 可読性を向上させるため
 * 慣れた際のコーディングを楽にするため
@@ -23,11 +24,12 @@ TheSkyBlockのDatapackリポジトリ
 * Data-pack Helper PlusのError, Warning, Informationには原則として従うこと ただしDHP側のバグの場合はその限りではない
 * 全てのfunctionにはアクセス修飾子を記載すること
 * #declareをせずにtag, storage等を使用しないこと
-* function, #declareアクセス修飾子は最低限のスコープで記載すること
+* functionアクセス修飾子は最低限のスコープで記載すること
+* declareはfunctions/?/_index.d.mcfunctionにまとめてそのディレクトリ以下のを記載する
 
 #### 命名規則
-* 1tick内に削除される一時保存用のstorageの名前空間はそのfunctionのリソースパスを利用すること
-* object, tag, CustomNBT, teamの命名にはPascalCaseを使用すること
+* 1tick内に削除される一時保存用のstorageの名前空間は_index.dのディレクトリ名を利用すること
+* object, tag, CustomNBT, teamの命名にはPascalCaseを使用すること(ただし、2文字以下の略称の場合UPPERCASEを使用する)
 
 #### コメント周り
 * 簡潔でも良いので各所にコメントを記載すること
