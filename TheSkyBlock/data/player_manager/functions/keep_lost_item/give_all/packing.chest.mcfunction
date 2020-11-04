@@ -8,7 +8,7 @@
 
 # 梱包処理
     # チェストのAppend
-        data modify storage player_manager:keep_lost_item/give_all/give Chests append value {id:"chest",Count:1b,tag:{BlockEntityTag:{Items:[]}}}
+        data modify storage player_manager:keep_lost_item Chests append value {id:"chest",Count:1b,tag:{BlockEntityTag:{Items:[]}}}
     # Name適用処理
         function player_manager:keep_lost_item/give_all/name_to_textcomponent
     # ItemAppend

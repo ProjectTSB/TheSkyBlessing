@@ -12,4 +12,4 @@
 # チェストの削除処理のloop start
     schedule function player_manager:keep_lost_item/give_all/minecart_to_chest_check 1t
 # TempRemove
-    data remove storage player_manager:keep_lost_item/give_all/give Chests
+    data remove storage player_manager:keep_lost_item Chests
