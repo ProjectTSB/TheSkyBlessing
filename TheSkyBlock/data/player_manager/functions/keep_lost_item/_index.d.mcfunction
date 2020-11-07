@@ -19,8 +19,3 @@
 #   player_manager:keep_lost_item/give_all/minecart.summon
 #   player_manager:keep_lost_item/give_all/minecart_to_chest_check
     #declare tag LostItemChest
-
-#> MinecartTag
-# @within function
-#   player_manager:keep_lost_item/give_all/minecart.summon
-    #declare tag EmptyItems

@@ -6,6 +6,10 @@
 #   player_manager:keep_lost_item/give_all/give
 #   player_manager:keep_lost_item/give_all/minecart.summon
 
+#> Private
+# @private
+    #declare tag EmptyItems
+
 # チェストロッコに追加する処理
     scoreboard players set $i Temporary 0
     function player_manager:keep_lost_item/give_all/packing.minecart
