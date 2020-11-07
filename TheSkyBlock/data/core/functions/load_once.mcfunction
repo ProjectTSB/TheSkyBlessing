@@ -75,4 +75,5 @@ function core:define_const
 #   player_manager:**
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
     scoreboard objectives add MP dummy {"text":"MP"}
+    scoreboard objectives add MPMax dummy {"text":"MP上限値"}
 scoreboard objectives setdisplay belowName Health

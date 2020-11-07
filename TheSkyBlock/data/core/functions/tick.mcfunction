@@ -20,3 +20,6 @@
 
     # 満腹度調整部
         execute as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/observe
+
+    # MP表示処理
+        execute as @a run function player_manager:mp_viewer/check_xpbar
