@@ -71,6 +71,7 @@ function core:define_const
 
 #> PlayerManager
 # @within function
+#   core:handler/first_join
 #   core:load_once
 #   player_manager:**
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
