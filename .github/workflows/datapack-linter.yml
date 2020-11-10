@@ -1,0 +1,32 @@
+name: lint-datapack
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cache Node Modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
+      - name: Install Dependencies
+        run: |
+          cd datapack-linter
+          npm i
+      - name: lint
+        run: |
+          echo "::add-matcher::datapack-linter/matcher.json"
+          cd datapack-linter
+          npm run lint-dp
