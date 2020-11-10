@@ -26,7 +26,7 @@
 #   使える神のリスト
 #   `Flora`,`Urban`,`Nyaptov`,`Wi-ki`,`Rumor`
 #
-# @within function asset:sacred_treasure/*/give
+# @within function asset:sacred_treasure/*/_.give
 
 #> Private
 # @private
