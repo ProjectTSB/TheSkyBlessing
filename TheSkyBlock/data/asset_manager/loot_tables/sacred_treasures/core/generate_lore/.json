@@ -12,6 +12,35 @@
                             "function": "set_lore",
                             "entity": "this",
                             "lore": [
+                                "",
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "使用方法: "
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "trigger"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "消費MP: "
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "MPCost"
+                                    }
+                                ],
                                 [
                                     {
                                         "text": "",
