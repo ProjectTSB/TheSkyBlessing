@@ -21,12 +21,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
             ${{ runner.os }}-
-      - name: Install Dependencies
-        run: |
-          cd datapack-linter
-          npm i
-      - name: lint
-        run: |
-          echo "::add-matcher::datapack-linter/matcher.json"
-          cd datapack-linter
-          npm run lint-dp
+
+      - name: Test
+        uses: ChenCMD/datapack-linter@v1.0.0
