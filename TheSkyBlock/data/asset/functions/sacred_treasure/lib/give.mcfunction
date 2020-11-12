@@ -2,39 +2,18 @@
 #
 # 神器を入手します
 #
-# @input
-#   **storage asset:sacred_treasure ID** : int
-#   神器の固有ID スプレッドシートに記載した上で記述してください。
-#   /
-#   **storage asset:sacred_treasure Item** : string(ItemID)
-#   元となるアイテム
-#   /
-#   **storage asset:sacred_treasure Name** : string(TextComponent)
-#   神器の名前
-#   /
-#   **storage asset:sacred_treasure Lore** : string\[](TextComponent[])
-#   神器の説明文 条件などもここに記載
-#   /
-#   **storage asset:sacred_treasure RemainingCount** : int (オプション)
-#   使用できる回数
-#   /
-#   **storage asset:sacred_treasure Trigger** : string(Enum)
-#   神器のトリガー
-#   `onClick`,`shot`,`itemUse`,`passive`,`onAttack`,`onDamage`,`sneak`
-#   /
-#   **storage asset:sacred_treasure MPCost** : int
-#   消費するMP
-#   /
-#   **storage asset:sacred_treasure MPRequire** : int (オプション)
-#   使用に必要なMP 明示的に設定しない場合MPCostと同値になります
-#   /
-#   **storage asset:sacred_treasure CostText** : string(TextComponent) (オプション)
-#   カスタムのコストテキスト
-#   /
-#   **storage asset:sacred_treasure CanUsedGod** : string\[](Enum[])
-#   使える神のリスト
-#   `Flora`,`Urban`,`Nyaptov`,`Wi-ki`,`Rumor`
-#
+# @input storage asset:sacred_treasure
+#   ID : int
+#   Item : ItemID
+#   Name : TextComponent
+#   Lore : TextComponent[]
+#   RemainingCount? : int
+#   Trigger : Trigger
+#   MPCost : int
+#   MPRequire? : int
+#   CostText? : TextComponent
+#   CanUsedGod : God[]
+# @output item 神器
 # @within function asset:sacred_treasure/*/_.give
 
 #> Private
@@ -51,8 +30,10 @@
     execute unless data storage asset:sacred_treasure CanUsedGod run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument CanUsedGod at asset:sacred_treasure/lib/give"}}}]
 # 元となるアイテム召喚
     execute at @s run summon item ~ ~ ~ {Item:{id:"barrier",Count:1b},Tags:[AbstrictItem],PickupDelay:1s}
+# Optionalを補完
+    execute unless data storage asset:sacred_treasure MPRequire run data modify storage asset:sacred_treasure MPRequire set from storage asset:sacred_treasure MPCost
 # 各データ設定
-    execute as @e[type=item,tag=AbstrictItem,limit=1] run function asset_manager:sacred_treasures/core/set_data
+    execute as @e[type=item,tag=AbstrictItem,limit=1] run function asset_manager:sacred_treasures/core/create/set_data
 # tag remove
     tag @e[type=item,tag=AbstrictItem] remove AbstrictItem
 # リセット

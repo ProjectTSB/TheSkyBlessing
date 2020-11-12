@@ -11,8 +11,8 @@
 #> LootTableに渡す用のscoreHolder
 # @within
 #   function
-#       asset_manager:sacred_treasures/core/set_data
-#       asset_manager:sacred_treasures/core/remaining_decrement
+#       asset_manager:sacred_treasures/core/create/set_data
+#       asset_manager:sacred_treasures/core/use/remove_remain
 #   loot_table
 #       asset_manager:sacred_treasures/core/get_name/has_remain
     #declare score_holder $Remain

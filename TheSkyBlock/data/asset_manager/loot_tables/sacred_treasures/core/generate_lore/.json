@@ -24,7 +24,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "trigger"
+                                        "nbt": "Temp.Trigger"
                                     }
                                 ],
                                 [
@@ -49,7 +49,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "sys.used[0]",
+                                        "nbt": "Temp.CanUsedGod[0]",
                                         "interpret": true
                                     },
                                     {
@@ -57,7 +57,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "sys.used[1]",
+                                        "nbt": "Temp.CanUsedGod[1]",
                                         "interpret": true
                                     },
                                     {
@@ -65,7 +65,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "sys.used[2]",
+                                        "nbt": "Temp.CanUsedGod[2]",
                                         "interpret": true
                                     },
                                     {
@@ -73,7 +73,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "sys.used[3]",
+                                        "nbt": "Temp.CanUsedGod[3]",
                                         "interpret": true
                                     },
                                     {
@@ -81,7 +81,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "sys.used[4]",
+                                        "nbt": "Temp.CanUsedGod[4]",
                                         "interpret": true
                                     }
                                 ]

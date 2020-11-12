@@ -1,16 +1,12 @@
-#> asset_manager:sacred_treasures/core/remaining_decrement
+#> asset_manager:sacred_treasures/core/use/remove_remain
 #
-# 耐久値を減少させる
+# 耐久値を減少させます
 #
-# @within function asset:sacred_treasure/lib/use/*
+# @input
+#   as player
+#   storage asset:sacred_treasure Item : ItemData
+# @within function asset_manager:sacred_treasures/core/use/
 
-# 対象スロットのデータの取得
-    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage asset:sacred_treasure Item set from entity @s SelectedItem
-    execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:-106b}]
-    execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:100b}]
-    execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:101b}]
-    execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:102b}]
-    execute if data storage asset:sacred_treasure {TargetSlot:"head"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:103b}]
 # 対象スロットの残り使用回数取得
     execute store result score $Remain Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCount
 # 減算
@@ -25,7 +21,7 @@
     execute if score $Remain Temporary matches ..0 if data storage asset:sacred_treasure {TargetSlot:"chest"} run replaceitem entity @s armor.chest air
     execute if score $Remain Temporary matches ..0 if data storage asset:sacred_treasure {TargetSlot:"head"} run replaceitem entity @s armor.head air
 # Name更新処理
-    execute if score $Remain Temporary matches 1.. run data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure Item.tag.TSB.Name
+    execute if score $Remain Temporary matches 1.. run data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure Item.tag.TSB.rawName
     execute if score $Remain Temporary matches 1.. run data remove storage asset:sacred_treasure Item.tag.display.Name
     execute if score $Remain Temporary matches 1.. run data remove storage asset:sacred_treasure Item.Slot
     execute if score $Remain Temporary matches 1.. store result score $RemainMAX Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCountMAX
@@ -38,3 +34,6 @@
     execute if score $Remain Temporary matches 1.. if data storage asset:sacred_treasure {TargetSlot:"legs"} run loot replace entity @s armor.legs mine 10000 0 10000 debug_stick
     execute if score $Remain Temporary matches 1.. if data storage asset:sacred_treasure {TargetSlot:"chest"} run loot replace entity @s armor.chest mine 10000 0 10000 debug_stick
     execute if score $Remain Temporary matches 1.. if data storage asset:sacred_treasure {TargetSlot:"head"} run loot replace entity @s armor.head mine 10000 0 10000 debug_stick
+# リセット
+    scoreboard players reset $Remain Temporary
+    scoreboard players reset $RemainMAX Temporary

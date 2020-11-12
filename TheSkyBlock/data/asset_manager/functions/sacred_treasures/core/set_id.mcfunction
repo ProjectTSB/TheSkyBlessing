@@ -2,6 +2,14 @@
 #
 # 神器のIDを取得します
 #
+# @input as player
+# @output storage asset:id
+#   mainhand : int
+#   offhand : int
+#   feet : int
+#   legs : int
+#   chest : int
+#   head : int
 # @within asset_manager:sacred_treasures/triggers/*
 
 data modify storage asset:id mainhand set value -1

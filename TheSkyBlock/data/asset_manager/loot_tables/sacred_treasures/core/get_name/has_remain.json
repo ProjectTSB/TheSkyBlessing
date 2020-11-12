@@ -27,7 +27,7 @@
                                 {
                                     "score": {
                                         "objective": "Temporary",
-                                        "name": "#Remain"
+                                        "name": "$Remain"
                                     },
                                     "color": "green"
                                 },
@@ -38,7 +38,7 @@
                                 {
                                     "score": {
                                         "objective": "Temporary",
-                                        "name": "#RemainMAX"
+                                        "name": "$RemainMAX"
                                     },
                                     "color": "green"
                                 }
