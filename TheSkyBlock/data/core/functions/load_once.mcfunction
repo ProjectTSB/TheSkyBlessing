@@ -80,6 +80,14 @@ function core:define_const
     #declare tag Believe.Wi-ki
     #declare tag Believe.Rumor
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
-    scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
 scoreboard objectives setdisplay belowName Health
+
+#> PlayerManager
+# @within
+#   function core:handler/first_join
+#   function core:load_once
+#   function asset_manager:sacred_treasures/core/use/check
+#   function asset_manager:sacred_treasures/core/use/remove_mp
+#   * player_manager:**
+    scoreboard objectives add MP dummy {"text":"MP"}

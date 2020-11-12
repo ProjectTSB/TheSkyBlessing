@@ -6,6 +6,8 @@
 
 # 神器データの取得
     function asset_manager:sacred_treasures/core/use/get_item_data
+# MP減少処理
+    function asset_manager:sacred_treasures/core/use/remove_mp
 # 使用回数減少処理
     execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run function asset_manager:sacred_treasures/core/use/remove_remain
 # リセット
