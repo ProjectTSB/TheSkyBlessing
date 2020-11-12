@@ -1,6 +1,8 @@
 #> asset_manager:sacred_treasures/core/set_data
 #
-# アイテムに神器データを適用します
+# storageから神器を作成します
+#
+# [生成イメージ](https://imgur.com/a/sBdLG4o)
 #
 # @within function asset:sacred_treasure/lib/give
 
@@ -16,8 +18,8 @@
     execute if data storage asset:sacred_treasure RemainingCount run data modify entity @s Item.tag.TSB.RemainingCount set from storage asset:sacred_treasure RemainingCount
     execute if data storage asset:sacred_treasure RemainingCount run data modify entity @s Item.tag.TSB.RemainingCountMAX set from storage asset:sacred_treasure RemainingCount
 # 名前
-    execute store result score #Remain Temporary run data get storage asset:sacred_treasure RemainingCount
-    execute store result score #RemainMAX Temporary run data get storage asset:sacred_treasure RemainingCount
+    execute store result score $Remain Temporary run data get storage asset:sacred_treasure RemainingCount
+    execute store result score $RemainMAX Temporary run data get storage asset:sacred_treasure RemainingCount
     execute if data storage asset:sacred_treasure RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasures/core/get_name/has_remain
     execute unless data storage asset:sacred_treasure RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasures/core/get_name/
     data modify entity @s Item.tag.display.Name set from block 10000 0 10000 Items[0].tag.display.Name

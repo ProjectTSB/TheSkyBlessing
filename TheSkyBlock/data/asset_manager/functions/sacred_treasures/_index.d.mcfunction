@@ -15,5 +15,5 @@
 #       asset_manager:sacred_treasures/core/remaining_decrement
 #   loot_table
 #       asset_manager:sacred_treasures/core/get_name/has_remain
-    #declare score_holder #Remain
-    #declare score_holder #RemainMAX
+    #declare score_holder $Remain
+    #declare score_holder $RemainMAX
