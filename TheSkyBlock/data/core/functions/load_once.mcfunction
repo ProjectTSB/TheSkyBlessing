@@ -70,10 +70,15 @@ function core:define_const
     scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
 #> PlayerManager
-# @within function
-#   core:handler/first_join
-#   core:load_once
-#   player_manager:**
+# @within
+#   function core:handler/first_join
+#   function core:load_once
+#   * player_manager:**
+    #declare tag Believe.Flora
+    #declare tag Believe.Urban
+    #declare tag Believe.Nyaptov
+    #declare tag Believe.Wi-ki
+    #declare tag Believe.Rumor
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
     scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
