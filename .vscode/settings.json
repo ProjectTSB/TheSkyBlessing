@@ -1,6 +1,7 @@
 {
     "datapack.env.cmdVersion": "1.16",
-    "datapack.env.dataVersion": "1.16.1",
+    "datapack.env.dataSource": "GitHub",
+    "datapack.env.dataVersion": "1.16.4",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
@@ -8,11 +9,6 @@
     "datapack.env.include": [],
     "datapack.env.jsonVersion": "1.16",
     "datapack.env.permissionLevel": 2,
-    "datapack.features.codeActions": true,
-    "datapack.features.completions": true,
-    "datapack.features.documentHighlighting": true,
-    "datapack.features.documentLinks": true,
-    "datapack.features.formatting": true,
     "datapack.lint.blockStateBracketSpacing": {
         "inside": 0
     },
@@ -24,8 +20,10 @@
         "before": 0,
         "after": 0
     },
+    "datapack.lint.blockStateSortKeys": null,
     "datapack.lint.blockStateTrailingComma": false,
     "datapack.lint.eol": "CRLF",
+    "datapack.lint.idOmitDefaultNamespace": null,
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
         "PascalCase"
@@ -50,7 +48,7 @@
         "after": 1
     },
     "datapack.lint.nbtArrayLengthCheck": [
-        "error",
+        "warning",
         true
     ],
     "datapack.lint.nbtArraySemicolonSpacing": {
@@ -58,7 +56,7 @@
     },
     "datapack.lint.nbtArrayTrailingComma": false,
     "datapack.lint.nbtBoolean": [
-        "information",
+        "warning",
         false
     ],
     "datapack.lint.nbtByteSuffix": "b",
@@ -77,6 +75,11 @@
         "warning",
         false
     ],
+    "datapack.lint.nbtCompoundKeyQuoteType": [
+        "warning",
+        "always double"
+    ],
+    "datapack.lint.nbtCompoundSortKeys": null,
     "datapack.lint.nbtCompoundTrailingComma": false,
     "datapack.lint.nbtDoubleOmitSuffix": false,
     "datapack.lint.nbtDoubleSuffix": "d",
@@ -84,8 +87,6 @@
     "datapack.lint.nbtListBracketSpacing": {
         "inside": 0
     },
-    "datapack.lint.nbtListTrailingComma": false,
-    "datapack.lint.nbtLongSuffix": "l",
     "datapack.lint.nbtListCommaSpacing": {
         "before": 0,
         "after": 0
@@ -94,9 +95,24 @@
         "error",
         true
     ],
+    "datapack.lint.nbtListTrailingComma": false,
+    "datapack.lint.nbtLongSuffix": "l",
     "datapack.lint.nbtPathQuote": [
         "warning",
         false
+    ],
+    "datapack.lint.nbtPathQuoteType": [
+        "warning",
+        "always double"
+    ],
+    "datapack.lint.nbtShortSuffix": "s",
+    "datapack.lint.nbtStringQuote": [
+        "warning",
+        true
+    ],
+    "datapack.lint.nbtStringQuoteType": [
+        "warning",
+        "prefer double"
     ],
     "datapack.lint.nbtTypeCheck": [
         "warning",
@@ -113,14 +129,11 @@
         "before": 0,
         "after": 0
     },
-    "datapack.lint.nbtStringQuote": null,
-    "datapack.lint.nbtStringQuoteType": null,
     "datapack.lint.selectorKeyQuote": [
         "warning",
         false
     ],
-    "datapack.lint.nbtPathQuoteType": null,
-    "datapack.lint.nbtShortSuffix": "s",
+    "datapack.lint.selectorKeyQuoteType": null,
     "datapack.lint.selectorSortKeys": [
         "information",
         [
@@ -153,10 +166,6 @@
         ]
     ],
     "datapack.lint.selectorTrailingComma": false,
-    "datapack.lint.selectorKeyQuoteType": [
-        "warning",
-        "always double"
-    ],
     "datapack.lint.strictAdvancementCheck": [
         "error",
         true
@@ -213,10 +222,6 @@
         "error",
         "always"
     ],
-    "datapack.lint.strictRecipeCheck": [
-        "error",
-        true
-    ],
     "datapack.lint.strictItemTagCheck": [
         "error",
         true
@@ -249,6 +254,14 @@
         "error",
         true
     ],
+    "datapack.lint.strictRecipeCheck": [
+        "error",
+        true
+    ],
+    "datapack.lint.strictScoreHolderCheck": [
+        "information",
+        true
+    ],
     "datapack.lint.strictSoundEventCheck": [
         "error",
         "always"
@@ -265,11 +278,5 @@
         "error",
         true
     ],
-    "datapack.lint.timeOmitTickUnit": false,
-    "datapack.snippets": {
-        "summonAec": "summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:[\"${1:tag}\"]}",
-        "tellrawScore": "tellraw @a [{\"text\":\"score: \"},{\"score\":{\"objective\":\"${1:objective}\",\"name\":\"${2:name}\"}}]",
-        "tellrawStorage": "tellraw @a [{\"text\":\"storage: \"},{\"storage\":\"${1:storage}\",\"nbt\":\"${2:nbt}\"}]",
-        "tellrawNbt": "tellraw @a [{\"text\":\"nbt\"},{\"text\":\": \"},{\"entity\":\"${1:entity}\",\"nbt\":\"${2:nbt}\"}]"
-    }
+    "datapack.lint.timeOmitTickUnit": false
 }
