@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasures/core/use/check
+#> asset_manager:sacred_treasure/core/use/check
 #
 # 実行可能かどうかのチェックを行う
 #
@@ -15,7 +15,7 @@
     #declare score_holder $ReqMP
 
 # 対象スロットのデータの取得
-    function asset_manager:sacred_treasures/core/use/get_item_data
+    function asset_manager:sacred_treasure/core/use/get_item_data
 # 条件を満たしてたらtagを付与
     # MP必要量による制限
         execute store result score $ReqMP Temporary run data get storage asset:sacred_treasure Item.TSB.RequireMP

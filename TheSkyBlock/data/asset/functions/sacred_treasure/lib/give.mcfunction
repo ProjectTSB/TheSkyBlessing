@@ -33,7 +33,7 @@
 # Optionalを補完
     execute unless data storage asset:sacred_treasure MPRequire run data modify storage asset:sacred_treasure MPRequire set from storage asset:sacred_treasure MPCost
 # 各データ設定
-    execute as @e[type=item,tag=AbstrictItem,limit=1] run function asset_manager:sacred_treasures/core/create/set_data
+    execute as @e[type=item,tag=AbstrictItem,limit=1] run function asset_manager:sacred_treasure/core/create/set_data
 # tag remove
     tag @e[type=item,tag=AbstrictItem] remove AbstrictItem
 # リセット

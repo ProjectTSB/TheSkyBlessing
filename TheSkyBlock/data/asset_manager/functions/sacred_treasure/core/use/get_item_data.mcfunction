@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasures/core/use/get_item_data
+#> asset_manager:sacred_treasure/core/use/get_item_data
 #
 # TargetSlotを元にプレイヤーの神器データを取得する
 #
@@ -6,7 +6,7 @@
 #   as player
 #   storage asset:sacred_treasure TargetSlot : Slot
 # @output storage asset:sacred_treasure Item : ItemData
-# @within function asset_manager:sacred_treasures/core/use/*
+# @within function asset_manager:sacred_treasure/core/use/*
 
 execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage asset:sacred_treasure Item set from entity @s SelectedItem
 execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:-106b}]

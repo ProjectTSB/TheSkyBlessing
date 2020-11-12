@@ -1,11 +1,11 @@
-#> asset_manager:sacred_treasures/core/use/remove_mp
+#> asset_manager:sacred_treasure/core/use/remove_mp
 #
 # MPを減少させます
 #
 # @input
 #   as player
 #   storage asset:sacred_treasure Item : ItemData
-# @within function asset_manager:sacred_treasures/core/use/
+# @within function asset_manager:sacred_treasure/core/use/
 
 #> Private
 # @private

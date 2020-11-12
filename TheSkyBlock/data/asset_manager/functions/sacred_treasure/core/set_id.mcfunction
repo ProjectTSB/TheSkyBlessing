@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasures/core/set_id
+#> asset_manager:sacred_treasure/core/set_id
 #
 # 神器のIDを取得します
 #
@@ -10,7 +10,7 @@
 #   legs : int
 #   chest : int
 #   head : int
-# @within asset_manager:sacred_treasures/triggers/*
+# @within asset_manager:sacred_treasure/triggers/*
 
 data modify storage asset:id mainhand set value -1
 data modify storage asset:id offhand set value -1

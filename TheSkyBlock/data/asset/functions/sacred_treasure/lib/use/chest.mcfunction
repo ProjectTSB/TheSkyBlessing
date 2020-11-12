@@ -5,5 +5,5 @@
 # @within function asset:sacred_treasure/*/3.main
 
 data modify storage asset:sacred_treasure TargetSlot set value 'chest'
-function asset_manager:sacred_treasures/core/use/
+function asset_manager:sacred_treasure/core/use/
 tag @s remove CanUsed

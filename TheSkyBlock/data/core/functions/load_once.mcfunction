@@ -87,7 +87,7 @@ scoreboard objectives setdisplay belowName Health
 # @within
 #   function core:handler/first_join
 #   function core:load_once
-#   function asset_manager:sacred_treasures/core/use/check
-#   function asset_manager:sacred_treasures/core/use/remove_mp
+#   function asset_manager:sacred_treasure/core/use/check
+#   function asset_manager:sacred_treasure/core/use/remove_mp
 #   * player_manager:**
     scoreboard objectives add MP dummy {"text":"MP"}
