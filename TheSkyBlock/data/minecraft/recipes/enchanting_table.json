@@ -1,0 +1,8 @@
+{
+    "type": "stonecutting",
+    "ingredient": {
+        "item": "bedrock"
+    },
+    "count": 1,
+    "result": "enchanting_table"
+}
