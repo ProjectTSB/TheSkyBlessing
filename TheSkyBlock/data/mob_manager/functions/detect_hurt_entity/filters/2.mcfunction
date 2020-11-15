@@ -1,0 +1,8 @@
+#> mob_manager:detect_hurt_entity/filters/2
+#
+# 攻撃元のエンティティ候補を絞っていく
+#
+# @within function mob_manager:detect_hurt_entity/filters/3
+
+execute if entity @a[tag=this,tag=HasFlag-2,distance=..1] if entity @s[tag=DetectFlag-2] run function mob_manager:detect_hurt_entity/filters/1
+execute if entity @a[tag=this,tag=!HasFlag-2,distance=..1] if entity @s[tag=!DetectFlag-2] run function mob_manager:detect_hurt_entity/filters/1

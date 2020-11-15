@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+                        "targeted_entity": {
+                            "type": "player"
+                        },
+                        "nbt": "{Tags:[\"DetectFlag-15\"]}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "mob_manager:detect_hurt_entity/add_tag/15"
+    }
+}

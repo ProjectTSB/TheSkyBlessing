@@ -13,6 +13,7 @@
         execute as @a[scores={DeathEvent=1..}] at @s run function core:handler/death
         execute as @a[scores={RespawnEvent=1}] at @s run function core:handler/respawn
         execute as @a[scores={RespawnEvent=80}] at @s run function core:handler/respawn.delay
+        execute as @a[advancements={core:handler/consume_item=true}] at @s run function core:handler/consume_item
         execute as @a[advancements={core:handler/attack=true}] at @s run function core:handler/attack
         execute as @a[advancements={core:handler/damage=true}] at @s run function core:handler/damage
         execute as @a[advancements={core:handler/killed=true}] at @s run function core:handler/killed
@@ -23,3 +24,6 @@
 
     # MP表示処理
         execute as @a run function player_manager:mp_viewer/check_xpbar
+
+# Mobデータ初期化部
+    execute as @e[team=!Null,type=!player,type=!armor_stand,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
