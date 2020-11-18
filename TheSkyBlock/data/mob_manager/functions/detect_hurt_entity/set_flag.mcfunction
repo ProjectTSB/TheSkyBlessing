@@ -51,3 +51,5 @@
     execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-14
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
     execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-15
+# リセット
+    scoreboard players reset $CloneFlagIndex Temporary
