@@ -14,6 +14,7 @@
 # グローバルインデックス増加
     scoreboard players add $FlagIndex Global 1
     scoreboard players operation $FlagIndex Global %= $2^15 Const
+    execute if score $FlagIndex Global matches 0 run scoreboard players add $FlagIndex Global 1
 # Clone
     scoreboard players operation $CloneFlagIndex Temporary = $FlagIndex Global
 # FlagIndex << 16
