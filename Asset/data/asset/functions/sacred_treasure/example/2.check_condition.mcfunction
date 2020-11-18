@@ -4,5 +4,9 @@
 #
 # @within function asset:sacred_treasure/example/1.trigger
 
-function asset:sacred_treasure/lib/check_condition/mainhand
-execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/example/3.main
+# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
+    function asset:sacred_treasure/lib/check_condition/mainhand
+# 他にアイテム等確認する場合はここに書く
+
+# CanUsedタグをチェックして3.main.mcfunctionを実行する
+    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/example/3.main

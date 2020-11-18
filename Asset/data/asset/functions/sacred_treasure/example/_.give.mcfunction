@@ -3,7 +3,10 @@
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function void
+# @private
+
+# 神器の説明や消費MPなどをここで設定する。
+# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 data modify storage asset:sacred_treasure ID set value 2147483647
 data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
