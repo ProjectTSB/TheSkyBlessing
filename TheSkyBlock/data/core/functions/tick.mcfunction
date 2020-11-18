@@ -18,12 +18,12 @@
         execute as @a[advancements={core:handler/damage=true}] at @s run function core:handler/damage
         execute as @a[advancements={core:handler/killed=true}] at @s run function core:handler/killed
         execute as @a[scores={ClickCarrotEvent=1..}] at @s run function core:handler/click.carrot
-
     # 満腹度調整部
         execute as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/observe
-
     # MP表示処理
         execute as @a run function player_manager:mp_viewer/check_xpbar
+    # 神器
+        execute as @a run function asset_manager:sacred_treasure/core/tick
 
 # Mobデータ初期化部
     execute as @e[team=!Null,type=!player,type=!armor_stand,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag

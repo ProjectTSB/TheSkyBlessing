@@ -4,6 +4,7 @@
 #
 # @within function core:handler/click.carrot
 
-function asset_manager:sacred_treasure/core/set_id
-
-function #asset:sacred_treasure/click.carrot_on_a_stick
+# IDの代入
+    function asset_manager:sacred_treasure/core/set_id
+# 神器側に受け渡し
+    function #asset:sacred_treasure/click.carrot_on_a_stick

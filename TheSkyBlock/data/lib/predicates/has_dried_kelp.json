@@ -1,0 +1,27 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "predicate": {
+                "equipment": {
+                    "mainhand": {
+                        "item": "dried_kelp"
+                    }
+                }
+            },
+            "entity": "this"
+        },
+        {
+            "condition": "entity_properties",
+            "predicate": {
+                "equipment": {
+                    "offhand": {
+                        "item": "dried_kelp"
+                    }
+                }
+            },
+            "entity": "this"
+        }
+    ]
+}

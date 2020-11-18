@@ -1,0 +1,12 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "tag": "lib:edible"
+                }
+            }
+        }
+    }
+}

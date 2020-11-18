@@ -91,3 +91,7 @@ scoreboard objectives setdisplay belowName Health
 #   function asset_manager:sacred_treasure/core/use/remove_mp
 #   * player_manager:**
     scoreboard objectives add MP dummy {"text":"MP"}
+
+#> AssetManager: SacredTreasure
+# @within function asset_manager:sacred_treasure/core/tick
+    scoreboard objectives add TimeHasEdible dummy

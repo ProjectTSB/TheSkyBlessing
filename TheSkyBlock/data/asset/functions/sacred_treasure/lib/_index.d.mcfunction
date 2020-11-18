@@ -3,7 +3,7 @@
 
 #> storage
 # @within function
-#   asset_manager:sacred_treasure/core/set_id
+#   asset_manager:sacred_treasure/core/*_id
 #   asset:sacred_treasure/*/*
     #declare storage asset:id
 

@@ -1,0 +1,27 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "predicate": {
+                "equipment": {
+                    "mainhand": {
+                        "tag": "lib:consumable"
+                    }
+                }
+            },
+            "entity": "this"
+        },
+        {
+            "condition": "entity_properties",
+            "predicate": {
+                "equipment": {
+                    "offhand": {
+                        "tag": "lib:consumable"
+                    }
+                }
+            },
+            "entity": "this"
+        }
+    ]
+}
