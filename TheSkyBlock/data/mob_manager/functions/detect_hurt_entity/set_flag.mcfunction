@@ -20,37 +20,37 @@
 # FlagIndex << 16
     scoreboard players operation $CloneFlagIndex Temporary *= $2^16 Const
 # オーバーフローしてたらtag追加
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-0
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag0
 # 0になるまでやる
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-1
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag1
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-2
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag2
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-3
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag3
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-4
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag4
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-5
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag5
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-6
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag6
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-7
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag7
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-8
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag8
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-9
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag9
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-10
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag10
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-11
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag11
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-12
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag12
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-13
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag13
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-14
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag14
     scoreboard players operation $CloneFlagIndex Temporary *= $2 Const
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag-15
+    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add DetectFlag15
 # リセット
     scoreboard players reset $CloneFlagIndex Temporary

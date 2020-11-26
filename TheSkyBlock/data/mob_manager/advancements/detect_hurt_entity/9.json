@@ -8,7 +8,7 @@
                         "targeted_entity": {
                             "type": "player"
                         },
-                        "nbt": "{Tags:[\"DetectFlag-9\"]}"
+                        "nbt": "{Tags:[\"DetectFlag9\"]}"
                     }
                 }
             }

@@ -4,5 +4,5 @@
 #
 # @within advancement mob_manager:detect_hurt_entity/12
 
-tag @s add HasFlag-12
+tag @s add HasFlag12
 advancement revoke @s only mob_manager:detect_hurt_entity/12

@@ -4,5 +4,5 @@
 #
 # @within advancement mob_manager:detect_hurt_entity/5
 
-tag @s add HasFlag-5
+tag @s add HasFlag5
 advancement revoke @s only mob_manager:detect_hurt_entity/5
