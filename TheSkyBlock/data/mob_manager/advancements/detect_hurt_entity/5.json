@@ -5,9 +5,6 @@
             "conditions": {
                 "damage": {
                     "source_entity": {
-                        "targeted_entity": {
-                            "type": "player"
-                        },
                         "nbt": "{Tags:[\"DetectFlag5\"]}"
                     }
                 }
