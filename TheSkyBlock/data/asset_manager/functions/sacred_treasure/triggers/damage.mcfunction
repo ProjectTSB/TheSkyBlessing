@@ -8,10 +8,16 @@
     function asset_manager:sacred_treasure/core/set_id
 # 神器側に受け渡し
     function #asset:sacred_treasure/damage
-    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/melee=true}] run function #asset:sacred_treasure/damage/melee
-    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/projectile=true}] run function #asset:sacred_treasure/damage/projectile
-    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/blocked=true}] run function #asset:sacred_treasure/damage/blocked
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/fire=true}] run function #asset:sacred_treasure/damage/fire
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/explode=true}] run function #asset:sacred_treasure/damage/explode
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/from_entity/=true}] run function #asset:sacred_treasure/damage/from_entity/
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/from_entity/blocked=true}] run function #asset:sacred_treasure/damage/from_entity/blocked
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/from_entity/melee=true}] run function #asset:sacred_treasure/damage/from_entity/melee
+    execute if entity @s[advancements={asset_manager:sacred_treasure/damage/from_entity/projectile=true}] run function #asset:sacred_treasure/damage/from_entity/projectile
 # リセット
-    advancement revoke @s only asset_manager:sacred_treasure/damage/melee
-    advancement revoke @s only asset_manager:sacred_treasure/damage/projectile
-    advancement revoke @s only asset_manager:sacred_treasure/damage/blocked
+    advancement revoke @s only asset_manager:sacred_treasure/damage/fire
+    advancement revoke @s only asset_manager:sacred_treasure/damage/explode
+    advancement revoke @s only asset_manager:sacred_treasure/damage/from_entity/
+    advancement revoke @s only asset_manager:sacred_treasure/damage/from_entity/blocked
+    advancement revoke @s only asset_manager:sacred_treasure/damage/from_entity/melee
+    advancement revoke @s only asset_manager:sacred_treasure/damage/from_entity/projectile

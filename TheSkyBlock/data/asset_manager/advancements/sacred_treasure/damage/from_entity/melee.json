@@ -6,7 +6,8 @@
                 "damage": {
                     "type": {
                         "is_projectile": false
-                    }
+                    },
+                    "source_entity": {}
                 }
             }
         }

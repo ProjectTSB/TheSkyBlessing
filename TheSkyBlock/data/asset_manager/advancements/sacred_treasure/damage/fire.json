@@ -4,7 +4,9 @@
             "trigger": "entity_hurt_player",
             "conditions": {
                 "damage": {
-                    "blocked": true
+                    "type": {
+                        "is_fire": true
+                    }
                 }
             }
         }
