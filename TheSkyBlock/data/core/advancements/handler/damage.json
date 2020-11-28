@@ -1,14 +1,7 @@
 {
     "criteria": {
         "trigger": {
-            "trigger": "entity_hurt_player",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "bypasses_invulnerability": false
-                    }
-                }
-            }
+            "trigger": "entity_hurt_player"
         }
     }
 }

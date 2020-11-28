@@ -4,4 +4,4 @@
 #
 # @within function mob_manager:detect_hurt_entity/filters/0
 
-say hello world!
+say 僕が攻撃したよ
