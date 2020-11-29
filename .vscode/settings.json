@@ -315,5 +315,468 @@
         "error",
         true
     ],
-    "datapack.lint.timeOmitTickUnit": false
+    "datapack.lint.timeOmitTickUnit": false,
+    "mcdutil.createFile.fileTemplate": {
+        "function": [
+            "#> %fileResourcePath%",
+            "#",
+            "# %cursor%",
+            "#",
+            "# @within %nowOpenFileType% %nowOpenFileResourcePath%"
+        ],
+        "advancement": [
+            "{",
+            "    \"criteria\": {",
+            "        \"trigger\": {",
+            "            \"trigger\": \"%cursor%\"",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "predicate": [
+            "{",
+            "    \"condition\": \"%cursor%\"",
+            "}"
+        ],
+        "tag/block": [
+            "{",
+            "    \"values\": [",
+            "        %cursor%",
+            "    ]",
+            "}"
+        ],
+        "tag/entity_type": [
+            "{",
+            "    \"values\": [",
+            "        %cursor%",
+            "    ]",
+            "}"
+        ],
+        "tag/fluid": [
+            "{",
+            "    \"values\": [",
+            "        %cursor%",
+            "    ]",
+            "}"
+        ],
+        "tag/function": [
+            "{",
+            "    \"values\": [",
+            "        %cursor%",
+            "    ]",
+            "}"
+        ],
+        "tag/item": [
+            "{",
+            "    \"values\": [",
+            "        %cursor%",
+            "    ]",
+            "}"
+        ]
+    },
+    "mcdutil.createDatapackTemplate.customTemplate": [
+        {
+            "label": "神器/テンプレート",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/_.give.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/_.give",
+                        "#",
+                        "# 神器の作成部 ここでID等を定義する",
+                        "#",
+                        "# @user",
+                        "# @private",
+                        "",
+                        "# 神器の説明や消費MPなどをここで設定する。",
+                        "# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。",
+                        "",
+                        "# 神器のID (int) スプレッドシートの値を入れる",
+                        "    data modify storage asset:sacred_treasure ID set value ",
+                        "# 神器のベースアイテム",
+                        "    data modify storage asset:sacred_treasure Item set value ",
+                        "# 神器の名前 (TextComponent)",
+                        "    data modify storage asset:sacred_treasure Name set value ",
+                        "# 神器の説明文 (TextComponent[])",
+                        "    data modify storage asset:sacred_treasure Lore set value []",
+                        "# MP以外の消費物 (TextComponent) (オプション)",
+                        "    # data modify storage asset:sacred_treasure CostText set value ",
+                        "# 使用回数 (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure RemainingCount set value ",
+                        "# 神器のトリガー (string) Wikiを参照",
+                        "    data modify storage asset:sacred_treasure Trigger set value ",
+                        "# MP消費量 (int) ",
+                        "    data modify storage asset:sacred_treasure MPCost set value ",
+                        "# MP必要量 (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure MPRequire set value ",
+                        "# 扱える神 (string[]) Wikiを参照",
+                        "    data modify storage asset:sacred_treasure CanUsedGod set value []",
+                        "",
+                        "# 神器の入手用function",
+                        "    function asset:sacred_treasure/lib/give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/1.trigger",
+                        "#",
+                        "# 指定したイベントタイミングで実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/*",
+                        "",
+                        "# storage asset:idのfeet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:id {slot:id} run function asset:sacred_treasure/%namespace%/2.check_condition"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/2.check_condition.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/2.check_condition",
+                        "#",
+                        "# 神器の発動条件をチェックします",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/1.trigger",
+                        "",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:sacred_treasure/lib/check_condition/mainhand",
+                        "# 他にアイテム等確認する場合はここに書く",
+                        "    ",
+                        "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
+                        "    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/%namespace%/3.main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/3.main.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/3.main",
+                        "#",
+                        "# 神器のメイン処理部",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/2.check_condition",
+                        "",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:sacred_treasure/lib/use/mainhand",
+                        "",
+                        "# ここから先は神器側の効果の処理を書く",
+                        "    say test: %namespace%"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 人参棒クリック",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/click.carrot_on_a_stick.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/attack.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃 - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/attack/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃 - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/attack/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 爆発",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/explode.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 炎上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/fire.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 敵による攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 防御",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/blocked.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/killed.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/killed/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/killed/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 飲食",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 飲食 - 食事",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/use_item/edible.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 飲食 - ポーション",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/use_item/potion.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        }
+    ],
+    "mcdutil.createDatapackTemplate.defaultFolder": false,
+    "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
+    "mcdutil.createDatapackTemplate.defaultVanillaData": false
 }
