@@ -30,11 +30,38 @@
     ],
     "datapack.lint.nameOfObjectives": [
         "error",
-        "PascalCase"
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "sep": ".",
+            "parts": [
+                "PascalCase",
+                "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+            ]
+        }
     ],
     "datapack.lint.nameOfTags": [
         "error",
-        "PascalCase"
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "sep": ".",
+            "parts": [
+                "PascalCase",
+                "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+            ]
+        }
+    ],
+    "datapack.lint.nameOfScoreHolders": [
+        "error",
+        {
+            "label": "DollerPrefix",
+            "sep": "$",
+            "parts": [
+                "/^$/",
+                "/^.*$/"
+            ]
+        }
     ],
     "datapack.lint.nameOfTeams": [
         "error",
