@@ -33,6 +33,7 @@
         {
             "label": "ChainedPascalCase",
             "allowLessParts": true,
+            "allowMoreParts": true,
             "sep": ".",
             "parts": [
                 "PascalCase",
@@ -45,6 +46,7 @@
         {
             "label": "ChainedPascalCase",
             "allowLessParts": true,
+            "allowMoreParts": true,
             "sep": ".",
             "parts": [
                 "PascalCase",
@@ -54,14 +56,22 @@
     ],
     "datapack.lint.nameOfScoreHolders": [
         "error",
-        {
-            "label": "DollerPrefix",
-            "sep": "$",
-            "parts": [
-                "/^$/",
-                "/^.*$/"
-            ]
-        }
+        [
+            {
+                "label": "DollerPrefix",
+                "sep": "$",
+                "parts": [
+                    "/^$/",
+                    "/^.*$/"
+                ]
+            },
+            {
+                "label": "TemporaryCase (Deprecated)",
+                "sep": "",
+                "parts": "/^_$/"
+            },
+            "/^\\*$/"
+        ]
     ],
     "datapack.lint.nameOfTeams": [
         "error",
