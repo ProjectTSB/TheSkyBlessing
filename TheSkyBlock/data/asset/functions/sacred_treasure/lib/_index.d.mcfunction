@@ -13,3 +13,7 @@
 #   asset_manager:sacred_treasure/core/use/check
 #   asset:sacred_treasure/lib/use/*
     #declare tag CanUsed
+
+#> 処理用一時storage
+# @within * asset:**
+    #declare storage asset:temp
