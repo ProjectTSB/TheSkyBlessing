@@ -35,10 +35,7 @@
             "allowLessParts": true,
             "allowMoreParts": true,
             "sep": ".",
-            "parts": [
-                "PascalCase",
-                "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
-            ]
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
         }
     ],
     "datapack.lint.nameOfTags": [
@@ -48,22 +45,19 @@
             "allowLessParts": true,
             "allowMoreParts": true,
             "sep": ".",
-            "parts": [
-                "PascalCase",
-                "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
-            ]
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
         }
     ],
     "datapack.lint.nameOfScoreHolders": [
         "error",
         [
             {
-                "label": "DollerPrefix",
-                "sep": "$",
-                "parts": [
-                    "/^$/",
-                    "/^.*$/"
-                ]
+                "label": "DollarPrefixChainedPascalCase",
+                "prefix": "$",
+                "allowLessParts": true,
+                "allowMoreParts": true,
+                "sep": ".",
+                "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
             },
             "/^\\*$/"
         ]
