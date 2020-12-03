@@ -3,5 +3,8 @@
         "trigger": {
             "trigger": "player_killed_entity"
         }
+    },
+    "rewards": {
+        "function": "core:early_handler/killed"
     }
 }
