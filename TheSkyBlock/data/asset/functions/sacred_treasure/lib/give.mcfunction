@@ -29,7 +29,7 @@
     execute unless data storage asset:sacred_treasure MPCost run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument MPCost at asset:sacred_treasure/lib/give"}}}]
     execute unless data storage asset:sacred_treasure CanUsedGod run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument CanUsedGod at asset:sacred_treasure/lib/give"}}}]
 # 元となるアイテム召喚
-    execute at @s run summon item ~ ~ ~ {Item:{id:"barrier",Count:1b},Tags:[AbstrictItem],PickupDelay:1s}
+    execute at @s run summon item ~ ~ ~ {Item:{id:"barrier",Count:1b},Tags:["AbstrictItem"],PickupDelay:1s}
 # Optionalを補完
     execute unless data storage asset:sacred_treasure MPRequire run data modify storage asset:sacred_treasure MPRequire set from storage asset:sacred_treasure MPCost
 # 各データ設定
