@@ -1,8 +1,8 @@
-#> lib:core/damage/calc
+#> lib:damage/core/calc
 #
 # 与えるダメージを計算します
 #
-# @within function lib:core/damage/attack
+# @within function lib:damage/core/attack
 
 # 計算式:
 # damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - (min(20, cappedEPF) / 25)) * (1 - min(5, resistanceLv) / 5)

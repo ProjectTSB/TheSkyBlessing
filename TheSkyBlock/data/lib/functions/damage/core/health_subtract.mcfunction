@@ -1,8 +1,8 @@
-#> lib:core/damage/health_subtract
+#> lib:damage/core/health_subtract
 #
 # MobのHealthを減算する
 #
-# @within function lib:core/damage/attack
+# @within function lib:damage/core/attack
 
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
@@ -19,4 +19,4 @@
 # 演出
     execute if score $Health Temporary matches 1.. if entity @s[type=#lib:damage/undead,type=!player] run effect give @s instant_health 1 31 true
     execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:damage/undead,type=!player] run effect give @s instant_damage 1 31 true
-    execute if score $DisableParticle Temporary matches 0 at @s run function lib:core/damage/damage_indicator
+    execute if score $DisableParticle Temporary matches 0 at @s run function lib:damage/core/damage_indicator

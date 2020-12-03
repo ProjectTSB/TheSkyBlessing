@@ -1,8 +1,12 @@
-#> lib:core/damage/get_epf
+#> lib:damage/core/get_epf
 #
 # EPFを取得します
 #
-# @within function lib:core/damage/get_status
+# @within function lib:damage/core/get_status
+
+#> Temp
+# @private
+    #declare score_holder $Temp
 
 # データ呼び出し
     function oh_my_dat:release

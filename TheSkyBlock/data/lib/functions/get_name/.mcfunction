@@ -1,7 +1,11 @@
-#> lib:get_name
+#> lib:get_name/
 #
-# 実行者の名前を`lib: Return.Name`に返します
+# 実行者の名前を取得します
 #
+# @input as player
+# @output
+#   **storage lib: Return.Name**: String
+#   プレイヤー名
 # @api
 
 loot replace block 10000 0 10000 container.0 loot lib:get_name
