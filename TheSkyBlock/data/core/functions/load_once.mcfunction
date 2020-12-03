@@ -67,6 +67,14 @@ function core:define_const
 #> Library
 # @public
     scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
+# 乱数値の設定
+    #> Private
+    # @private
+        #declare tag Random
+    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
+    execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
+    execute store result score $Random.Curray Global run data get entity @e[tag=Random,limit=1] UUID[3]
+    kill @e[tag=Random,limit=1]
 
 #> PlayerManager
 # @within function player_manager:adjust_hunger/**
