@@ -7,15 +7,15 @@
 function oh_my_dat:sys/gc
 
 # id[0] + id[-1] / 2 を割り当てIDに取る
-execute store result score _ OhMyDatID run data get storage oh_my_dat: id[-1]
-execute store result score _ OhMyDat run data get storage oh_my_dat: id[0]
-execute if score _ OhMyDatID matches 0 run scoreboard players set _ OhMyDatID 65536
-scoreboard players operation _ OhMyDatID += _ OhMyDat
-scoreboard players set _ OhMyDat 2
-scoreboard players operation _ OhMyDatID /= _ OhMyDat
+execute store result score $ OhMyDatID run data get storage oh_my_dat: id[-1]
+execute store result score $ OhMyDat run data get storage oh_my_dat: id[0]
+execute if score $ OhMyDatID matches 0 run scoreboard players set $ OhMyDatID 65536
+scoreboard players operation $ OhMyDatID += $ OhMyDat
+scoreboard players set $ OhMyDat 2
+scoreboard players operation $ OhMyDatID /= $ OhMyDat
 
 # 割り当てIDに追加
 data modify storage oh_my_dat: id append value -1
-execute store result storage oh_my_dat: id[-1] int 1 run scoreboard players get _ OhMyDatID
+execute store result storage oh_my_dat: id[-1] int 1 run scoreboard players get $ OhMyDatID
 # 割り当てる
-scoreboard players operation @s OhMyDatID = _ OhMyDatID
+scoreboard players operation @s OhMyDatID = $ OhMyDatID
