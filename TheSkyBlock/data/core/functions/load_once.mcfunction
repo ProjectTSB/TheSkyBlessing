@@ -64,6 +64,10 @@ function core:define_const
     scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
     scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
 
+#> Library
+# @public
+    scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
+
 #> PlayerManager
 # @within function player_manager:adjust_hunger/**
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
