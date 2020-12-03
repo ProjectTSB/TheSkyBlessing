@@ -52,12 +52,12 @@
         "error",
         [
             {
-                "label": "DollarPrefixChainedPascalCase",
-                "prefix": "$",
-                "allowLessParts": true,
-                "allowMoreParts": true,
-                "sep": ".",
-                "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+                "label": "DollerPrefix",
+                "sep": "$",
+                "parts": [
+                    "/^$/",
+                    "/^.*$/"
+                ]
             },
             "/^\\*$/"
         ]
