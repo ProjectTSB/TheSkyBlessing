@@ -305,6 +305,7 @@
         true
     ],
     "datapack.lint.timeOmitTickUnit": false,
+    "datapack.features.semanticColoring": false,
     "mcdutil.createFile.fileTemplate": {
         "function": [
             "#> %fileResourcePath%",
