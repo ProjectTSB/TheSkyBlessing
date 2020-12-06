@@ -16,4 +16,4 @@
         function player_manager:keep_lost_item/give_all/packing.item
         scoreboard players reset $i Temporary
 # ループ処理
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items[-1] run function player_manager:keep_lost_item/give_all/packing.chest
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1] run function player_manager:keep_lost_item/give_all/packing.chest
