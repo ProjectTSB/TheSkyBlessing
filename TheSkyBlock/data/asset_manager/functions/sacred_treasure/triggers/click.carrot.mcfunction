@@ -4,6 +4,9 @@
 #
 # @within function core:handler/click.carrot
 
+# Autoのスロット取得
+    execute if predicate asset_manager:is_use_mainhand/carrot_on_a_stick run data modify storage asset:sacred_treasure Items.Temp.AutoSlot set value "mainhand"
+    execute unless predicate asset_manager:is_use_mainhand/carrot_on_a_stick run data modify storage asset:sacred_treasure Items.Temp.AutoSlot set value "offhand"
 # IDの代入
     function asset_manager:sacred_treasure/core/data_put/from_player
 # 神器側に受け渡し

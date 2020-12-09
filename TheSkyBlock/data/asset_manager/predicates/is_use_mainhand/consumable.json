@@ -1,0 +1,75 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "inverted",
+            "term": {
+                "condition": "alternative",
+                "terms": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_scores",
+                            "scores": {
+                                "Hunger": {
+                                    "min": 0,
+                                    "max": 19
+                                }
+                            },
+                            "entity": "this"
+                        }
+                    },
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "equipment": {
+                                    "mainhand": {
+                                        "tag": "lib:consumable"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "condition": "inverted",
+            "term": {
+                "condition": "alternative",
+                "terms": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_scores",
+                            "scores": {
+                                "Hunger": {
+                                    "min": 20,
+                                    "max": 20
+                                }
+                            },
+                            "entity": "this"
+                        }
+                    },
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "equipment": {
+                                    "mainhand": {
+                                        "tag": "lib:has_bypass_fullstomach_consumable"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

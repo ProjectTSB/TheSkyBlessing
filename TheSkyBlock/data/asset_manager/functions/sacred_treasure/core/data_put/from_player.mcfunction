@@ -2,7 +2,9 @@
 #
 # 神器のIDを取得します
 #
-# @input as player
+# @input
+#   as player
+#   storage asset:sacred_treasure Items.Temp.AutoSlot
 # @output storage asset:id
 #   mainhand : int
 #   offhand : int

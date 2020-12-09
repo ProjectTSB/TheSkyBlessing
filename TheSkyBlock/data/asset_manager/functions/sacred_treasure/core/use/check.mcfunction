@@ -21,11 +21,11 @@
         execute store result score $ReqMP Temporary run data get storage asset:sacred_treasure Item.TSB.RequireMP
         execute if score $ReqMP Temporary < @s MP run tag @s add PassConditionA
     # 信仰による制限
-        execute if data storage asset:sacred_treasure {Item:{tag:{TSB:{CanUsedGod:["Flora"]}}}} if predicate player_manager:is_believe/flora run tag @s add PassConditionB
-        execute if data storage asset:sacred_treasure {Item:{tag:{TSB:{CanUsedGod:["Nyaptov"]}}}} if predicate player_manager:is_believe/nyaptov run tag @s add PassConditionB
-        execute if data storage asset:sacred_treasure {Item:{tag:{TSB:{CanUsedGod:["Rumor"]}}}} if predicate player_manager:is_believe/rumor run tag @s add PassConditionB
-        execute if data storage asset:sacred_treasure {Item:{tag:{TSB:{CanUsedGod:["Urban"]}}}} if predicate player_manager:is_believe/urban run tag @s add PassConditionB
-        execute if data storage asset:sacred_treasure {Item:{tag:{TSB:{CanUsedGod:["Wi-ki"]}}}} if predicate player_manager:is_believe/wi-ki run tag @s add PassConditionB
+        execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Flora"]} if predicate player_manager:is_believe/flora run tag @s add PassConditionB
+        execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Nyaptov"]} if predicate player_manager:is_believe/nyaptov run tag @s add PassConditionB
+        execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Rumor"]} if predicate player_manager:is_believe/rumor run tag @s add PassConditionB
+        execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Urban"]} if predicate player_manager:is_believe/urban run tag @s add PassConditionB
+        execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Wi-ki"]} if predicate player_manager:is_believe/wi-ki run tag @s add PassConditionB
 # 両方の条件を満たしていた場合CanUsedを付与
     execute if entity @s[tag=PassConditionA] if entity @s[tag=PassConditionB] run tag @s add CanUsed
 # 条件を満たしていなかった時のユーザー側への通知
