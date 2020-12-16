@@ -419,7 +419,7 @@
                         "# @within tag/function asset:sacred_treasure/*",
                         "",
                         "# storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:id {slot:id} run function asset:sacred_treasure/%namespace%/2.check_condition"
+                        "    execute if data storage asset:id {<slot>:<id>} run function asset:sacred_treasure/%namespace%/2.check_condition"
                     ]
                 },
                 {
@@ -710,61 +710,25 @@
                     }
                 }
             ]
-        }//,
-        // {
-        //     "label": "神器/トリガー: 飲食",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // },
-        // {
-        //     "label": "神器/トリガー: 飲食 - 食事",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item/edible.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // },
-        // {
-        //     "label": "神器/トリガー: 飲食 - ポーション",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item/potion.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // }
+        },
+        {
+            "label": "神器/トリガー: 飲食",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
