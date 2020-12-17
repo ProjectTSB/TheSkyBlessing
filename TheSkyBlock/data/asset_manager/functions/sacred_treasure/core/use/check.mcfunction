@@ -18,7 +18,7 @@
     function asset_manager:sacred_treasure/core/use/get_item_data
 # 条件を満たしてたらtagを付与
     # MP必要量による制限
-        execute store result score $ReqMP Temporary run data get storage asset:sacred_treasure Item.TSB.RequireMP
+        execute store result score $ReqMP Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RequireMP
         execute if score $ReqMP Temporary < @s MP run tag @s add PassConditionA
     # 信仰による制限
         execute if data storage asset:sacred_treasure Item.tag.TSB{CanUsedGod:["Flora"]} if predicate player_manager:is_believe/flora run tag @s add PassConditionB
