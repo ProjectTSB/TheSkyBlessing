@@ -14,9 +14,9 @@
 # UserStorage呼び出し
     function oh_its_dat:please
 # データを移植
-    data modify storage asset:sacred_treasure Items.Temp.AutoSlot set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.AutoSlot
-    data modify storage asset:sacred_treasure Items.Temp.SelectedItem set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.SelectedItem
-    data modify storage asset:sacred_treasure Items.Temp.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.Inventory
+    data modify storage asset:sacred_treasure Argument.AutoSlot set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.AutoSlot
+    data modify storage asset:sacred_treasure Argument.SelectedItem set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.SelectedItem
+    data modify storage asset:sacred_treasure Argument.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.Inventory
 # 削除
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items
 # 共通処理
