@@ -66,7 +66,7 @@ function core:define_const
 
 #> Library
 # @public
-    scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
+    scoreboard objectives add Arguments dummy {"text":"ライブラリの引数/返り値用"}
 # 乱数値の設定
     #> Private
     # @private
