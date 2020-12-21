@@ -4,6 +4,13 @@
 #
 # @within function core:load
 
+# バージョン情報
+data modify storage global Version set value "0.0.1"
+
+# forceload chunks
+forceload add 10000 10000
+
+# gamerule
 function core:define_gamerule
 
 #> Datapack Order
@@ -26,12 +33,13 @@ setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> デバッグ用storage Prefix.<DEBUG,SUCCESS,FAILED,ERROR,CRIT>
 # @public
-    #declare storage global:debug
-data modify storage global:debug Prefix.DEBUG set value "§3DEBUG >> §r"
-data modify storage global:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
-data modify storage global:debug Prefix.FAILED set value "§cFAILED >> §r"
-data modify storage global:debug Prefix.ERROR set value "§cERROR >> §r"
-data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
+    #declare tag DevPrivilege
+    #declare storage global
+data modify storage global Prefix.DEBUG set value "§3DEBUG >> §r"
+data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"
+data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
+data modify storage global Prefix.ERROR set value "§cERROR >> §r"
+data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> Healthを持つMobにフィルターする際に使用してください
 #
@@ -66,7 +74,7 @@ function core:define_const
 
 #> Library
 # @public
-    scoreboard objectives add Argument dummy {"text":"ライブラリの引数/返り値用"}
+    scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
 # 乱数値の設定
     #> Private
     # @private

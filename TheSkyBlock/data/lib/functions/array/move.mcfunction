@@ -17,5 +17,5 @@
 
 execute store result score $Index Temporary if data storage lib: Array[]
 scoreboard players remove $Index Temporary 1
-scoreboard players operation $Index Temporary -= $Argument.Index Argument
+scoreboard players operation $Index Temporary -= $Argument.Index Lib
 execute if score $Index Temporary matches 1.. run function lib:array/core/move

@@ -1,7 +1,19 @@
 {
-    "condition": "entity_properties",
-    "entity": "this",
-    "predicate": {
-        "nbt": "{Tags:[\"Believe.Urban\"]}"
-    }
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"Believe.Urban\"]}"
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"DevPrivilege\"]}"
+            }
+        }
+    ]
 }
