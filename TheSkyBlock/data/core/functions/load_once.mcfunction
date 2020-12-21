@@ -4,6 +4,13 @@
 #
 # @within function core:load
 
+# バージョン情報
+data modify storage global Version set value "0.0.1"
+
+# forceload chunks
+forceload add 10000 10000
+
+# gamerule
 function core:define_gamerule
 
 #> Datapack Order
