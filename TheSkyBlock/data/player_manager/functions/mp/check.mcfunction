@@ -14,6 +14,6 @@
     #declare score_holder $HaveMP
 
 # チェック
-    execute store result score $HaveMP Argument if score $CheckMP Argument <= @s MP
+    execute store result score $HaveMP Lib if score $CheckMP Lib <= @s MP
 # リセット
-    scoreboard players reset $CheckMP Argument
+    scoreboard players reset $CheckMP Lib

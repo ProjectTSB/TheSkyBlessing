@@ -13,8 +13,8 @@
     #declare score_holder $Fluctuation
 
 # 増減
-    scoreboard players operation @s MP += $Fluctuation Argument
+    scoreboard players operation @s MP += $Fluctuation Lib
     scoreboard players operation @s MP > $0 Const
     scoreboard players operation @s MP < @s MPMax
 # リセット
-    scoreboard players reset $Fluctuation Argument
+    scoreboard players reset $Fluctuation Lib

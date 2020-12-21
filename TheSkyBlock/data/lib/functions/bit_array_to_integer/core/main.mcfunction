@@ -4,7 +4,7 @@
 #
 # @within function lib:bit_array_to_integer/
 
-scoreboard players set $Return.Number Argument 0
+scoreboard players set $Return.Number Lib 0
 data modify storage lib: Argument.Array set from storage lib: Argument.BitArray
 function lib:array/reverse
 data modify storage lib: Argument.BitArray set from storage lib: Argument.Array
