@@ -19,7 +19,7 @@
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value 
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value 100
+    data modify storage asset:sacred_treasure RemainingCount set value 100
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int) 
