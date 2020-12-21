@@ -1,4 +1,4 @@
 {
     "condition": "random_chance",
-    "chance": 62
+    "chance": 0.62
 }
