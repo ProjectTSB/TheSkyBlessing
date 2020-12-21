@@ -33,6 +33,7 @@ setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> デバッグ用storage Prefix.<DEBUG,SUCCESS,FAILED,ERROR,CRIT>
 # @public
+    #declare tag DevPrivilege
     #declare storage global
 data modify storage global Prefix.DEBUG set value "§3DEBUG >> §r"
 data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"

@@ -15,5 +15,6 @@
 
 # チェック
     execute store result score $HaveMP Lib if score $CheckMP Lib <= @s MP
+    execute if entity @s[tag=DevPrivilege] run scoreboard players set $HaveMP Lib 1
 # リセット
     scoreboard players reset $CheckMP Lib
