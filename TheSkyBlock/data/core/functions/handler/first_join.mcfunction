@@ -6,3 +6,4 @@
 
 scoreboard players set @s MP 100
 scoreboard players set @s MPMax 100
+scoreboard players set @s RespawnEvent 81

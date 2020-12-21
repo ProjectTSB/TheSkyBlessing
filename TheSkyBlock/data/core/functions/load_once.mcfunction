@@ -4,6 +4,13 @@
 #
 # @within function core:load
 
+# バージョン情報
+data modify storage global Version set value "0.0.1"
+
+# forceload chunks
+forceload add 10000 10000
+
+# gamerule
 function core:define_gamerule
 
 #> Datapack Order
@@ -26,12 +33,13 @@ setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> デバッグ用storage Prefix.<DEBUG,SUCCESS,FAILED,ERROR,CRIT>
 # @public
-    #declare storage global:debug
-data modify storage global:debug Prefix.DEBUG set value "§3DEBUG >> §r"
-data modify storage global:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
-data modify storage global:debug Prefix.FAILED set value "§cFAILED >> §r"
-data modify storage global:debug Prefix.ERROR set value "§cERROR >> §r"
-data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
+    #declare tag DevPrivilege
+    #declare storage global
+data modify storage global Prefix.DEBUG set value "§3DEBUG >> §r"
+data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"
+data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
+data modify storage global Prefix.ERROR set value "§cERROR >> §r"
+data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> Healthを持つMobにフィルターする際に使用してください
 #
@@ -77,7 +85,9 @@ function core:define_const
     kill @e[tag=Random,limit=1]
 
 #> PlayerManager
-# @within function player_manager:adjust_hunger/**
+# @within
+#   function player_manager:adjust_hunger/**
+#   predicate asset_manager:is_use_mainhand/consumable
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
     scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
@@ -92,17 +102,9 @@ function core:define_const
     #declare tag Believe.Wi-ki
     #declare tag Believe.Rumor
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
+    scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
 scoreboard objectives setdisplay belowName Health
-
-#> PlayerManager
-# @within
-#   function core:handler/first_join
-#   function core:load_once
-#   function asset_manager:sacred_treasure/core/use/check
-#   function asset_manager:sacred_treasure/core/use/remove_mp
-#   * player_manager:**
-    scoreboard objectives add MP dummy {"text":"MP"}
 
 #> AssetManager: SacredTreasure
 # @within function asset_manager:sacred_treasure/core/tick

@@ -387,11 +387,11 @@
                         "    data modify storage asset:sacred_treasure ID set value ",
                         "# 神器のベースアイテム",
                         "    data modify storage asset:sacred_treasure Item set value ",
-                        "# 神器の名前 (TextComponent)",
+                        "# 神器の名前 (TextComponentString)",
                         "    data modify storage asset:sacred_treasure Name set value ",
-                        "# 神器の説明文 (TextComponent[])",
+                        "# 神器の説明文 (TextComponentString[])",
                         "    data modify storage asset:sacred_treasure Lore set value []",
-                        "# MP以外の消費物 (TextComponent) (オプション)",
+                        "# MP以外の消費物 (TextComponentString) (オプション)",
                         "    # data modify storage asset:sacred_treasure CostText set value ",
                         "# 使用回数 (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure RemainingCount set value ",
@@ -418,8 +418,8 @@
                         "#",
                         "# @within tag/function asset:sacred_treasure/*",
                         "",
-                        "# storage asset:idのfeet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:id {slot:id} run function asset:sacred_treasure/%namespace%/2.check_condition"
+                        "# storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:id {<slot>:<id>} run function asset:sacred_treasure/%namespace%/2.check_condition"
                     ]
                 },
                 {
@@ -432,7 +432,7 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/1.trigger",
                         "",
-                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く feet/legs/chest/head/mainhand/offhandを記載してね",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね",
                         "    function asset:sacred_treasure/lib/check_condition/",
                         "# 他にアイテム等確認する場合はここに書く",
                         "    ",
@@ -450,7 +450,7 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/2.check_condition",
                         "",
-                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う feet/legs/chest/head/mainhand/offhandを記載してね",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね",
                         "    function asset:sacred_treasure/lib/use/",
                         "",
                         "# ここから先は神器側の効果の処理を書く",
@@ -710,61 +710,25 @@
                     }
                 }
             ]
-        }//,
-        // {
-        //     "label": "神器/トリガー: 飲食",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // },
-        // {
-        //     "label": "神器/トリガー: 飲食 - 食事",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item/edible.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // },
-        // {
-        //     "label": "神器/トリガー: 飲食 - ポーション",
-        //     "generates": [
-        //         {
-        //             "type": "file",
-        //             "rel": "data/asset/tags/functions/sacred_treasure/use_item/potion.json",
-        //             "content": {
-        //                 "values": [
-        //                     "asset:sacred_treasure/%namespace%/1.trigger"
-        //                 ]
-        //             },
-        //             "append": {
-        //                 "key": "values",
-        //                 "elem": "asset:sacred_treasure/%namespace%/1.trigger"
-        //             }
-        //         }
-        //     ]
-        // }
+        },
+        {
+            "label": "神器/トリガー: 飲食",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,

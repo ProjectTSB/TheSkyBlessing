@@ -3,5 +3,8 @@
         "trigger": {
             "trigger": "entity_hurt_player"
         }
+    },
+    "rewards": {
+        "function": "core:early_handler/damage"
     }
 }

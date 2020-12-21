@@ -3,5 +3,8 @@
         "trigger": {
             "trigger": "consume_item"
         }
+    },
+    "rewards": {
+        "function": "core:early_handler/consume_item"
     }
 }

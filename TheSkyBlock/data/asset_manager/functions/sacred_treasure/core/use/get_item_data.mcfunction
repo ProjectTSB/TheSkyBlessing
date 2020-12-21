@@ -8,9 +8,14 @@
 # @output storage asset:sacred_treasure Item : ItemData
 # @within function asset_manager:sacred_treasure/core/use/*
 
-execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage asset:sacred_treasure Item set from entity @s SelectedItem
-execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:-106b}]
-execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:100b}]
-execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:101b}]
-execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:102b}]
-execute if data storage asset:sacred_treasure {TargetSlot:"head"} run data modify storage asset:sacred_treasure Item set from entity @s Inventory[{Slot:103b}]
+# autoの場合のエラーメッセージ
+    execute unless data storage asset:sacred_treasure Items.auto run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"autoはこのトリガーでは実行できません","color":"white"}]
+    execute unless data storage asset:sacred_treasure Items.auto run data modify storage asset:sacred_treasure TargetSlot set value 'mainhand'
+# 取得
+    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.mainhand
+    execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.offhand
+    execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.feet
+    execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.legs
+    execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.chest
+    execute if data storage asset:sacred_treasure {TargetSlot:"head"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.head
+    execute if data storage asset:sacred_treasure {TargetSlot:"auto"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.auto
