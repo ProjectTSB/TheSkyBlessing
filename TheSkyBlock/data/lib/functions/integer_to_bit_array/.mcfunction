@@ -11,6 +11,6 @@
 # @api
 
 # 引数チェック
-    execute unless score $Argument.Number Lib matches -2147483648..2147483647 run tellraw @a [{"storage":"global:debug","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" $Argument.Integer","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Integer at lib:integer_to_bit_array"}}}]
+    execute unless score $Argument.Number Lib matches -2147483648..2147483647 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" $Argument.Integer","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Integer at lib:integer_to_bit_array"}}}]
 # 実行
     execute if score $Argument.Number Lib matches -2147483648..2147483647 run function lib:integer_to_bit_array/core/main

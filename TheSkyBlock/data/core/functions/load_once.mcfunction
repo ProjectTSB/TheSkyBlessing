@@ -26,12 +26,12 @@ setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> デバッグ用storage Prefix.<DEBUG,SUCCESS,FAILED,ERROR,CRIT>
 # @public
-    #declare storage global:debug
-data modify storage global:debug Prefix.DEBUG set value "§3DEBUG >> §r"
-data modify storage global:debug Prefix.SUCCESS set value "§aSUCCESS >> §r"
-data modify storage global:debug Prefix.FAILED set value "§cFAILED >> §r"
-data modify storage global:debug Prefix.ERROR set value "§cERROR >> §r"
-data modify storage global:debug Prefix.CRIT set value "§4CRITICAL >> §r"
+    #declare storage global
+data modify storage global Prefix.DEBUG set value "§3DEBUG >> §r"
+data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"
+data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
+data modify storage global Prefix.ERROR set value "§cERROR >> §r"
+data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> Healthを持つMobにフィルターする際に使用してください
 #
