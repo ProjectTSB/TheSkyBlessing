@@ -15,4 +15,4 @@ scoreboard players operation $Random.Curray Global = $Random.Base Global
 scoreboard players operation $Random.Curray Global /= $65535 Const
 scoreboard players operation $Random.Base Global %= $65535 Const
 
-scoreboard players operation $Return.Random Arguments = $Random.Base Global
+scoreboard players operation $Return.Random Argument = $Random.Base Global
