@@ -16,6 +16,9 @@
 # 晴れの時25%の確率で雷雨に切り替え
     execute if predicate lib:weather/is_sunny if predicate lib:random_pass_per/25 run scoreboard players set @s Temporary 3
     
+# 演出
+    particle minecraft:campfire_cosy_smoke ~ ~ ~ 0 5 0 0.1 100 force @a[distance=..30]
+    playsound minecraft:entity.creeper.death master @s ~ ~ ~ 20 0.2
 
 # 天気を切り替える
     execute if score @s Temporary matches 0 run weather rain
