@@ -8,7 +8,6 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0022.amen_ra_rod
 
 # 発光を付与
 effect give @e[type=!player,distance=..30] minecraft:glowing 60 0 true
