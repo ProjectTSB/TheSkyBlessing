@@ -7,14 +7,8 @@
 #   storage asset:sacred_treasure Item : ItemData
 # @within function asset_manager:sacred_treasure/core/use/
 
-#> Private
-# @private
-    #declare score_holder $MPCost
-
 # 取得
-    execute store result score $MPCost Temporary run data get storage asset:sacred_treasure Item.tag.TSB.MPCost
-# 減算
-    scoreboard players operation @s MP -= $MPCost Temporary
-    execute if score @s MP matches ..-1 run scoreboard players set @s MP 0
-# リセット
-    scoreboard players reset $MPCost Temporary
+    execute store result score $Fluctuation Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPCost
+# 反転して減算
+    scoreboard players operation $Fluctuation Lib *= $-1 Const
+    function player_manager:mp/fluctuation

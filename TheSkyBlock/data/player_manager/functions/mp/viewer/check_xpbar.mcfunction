@@ -1,4 +1,4 @@
-#> player_manager:mp_viewer/check_xpbar
+#> player_manager:mp/viewer/check_xpbar
 #
 # 経験値が想定される表示とずれている場合に修正します
 #
