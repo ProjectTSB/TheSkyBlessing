@@ -21,7 +21,7 @@
     # 満腹度調整部
         execute if entity @a[tag=AdjustHunger] as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/observe
     # MP表示処理
-        execute as @a run function player_manager:mp_viewer/check_xpbar
+        execute as @a run function player_manager:mp/viewer/check_xpbar
 
 # Mobデータ初期化部
     execute as @e[team=!Null,type=!player,type=!armor_stand,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag

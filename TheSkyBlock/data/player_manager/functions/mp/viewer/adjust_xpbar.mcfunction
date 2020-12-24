@@ -1,4 +1,4 @@
-#> player_manager:mp_viewer/adjust_xpbar
+#> player_manager:mp/viewer/adjust_xpbar
 #
 # xpbarを調整します
 #
