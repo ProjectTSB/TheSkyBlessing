@@ -12,7 +12,7 @@
 #   **storage lib: Argument.ElementType** : Enum
 #   `"None"`, `"Fire"`, `"Water"`, `"Thunder"`
 #   **storage lib: Argument.DisableParticle** : boolean
-#   パーティクルを表示するか否か
+#   パーティクルを無効化するか否か
 #   **storage lib: Argument.BypassArmor** : boolean
 #   防御力/防具強度を無視するか否か
 #   **storage lib: Argument.BypassResist** : boolean
