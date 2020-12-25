@@ -1,7 +1,7 @@
 #> asset:sacred_treasure/0035.malleus_maleficarum/3.main
 #
 # 神器のメイン処理部
-# @within function 
+# @within function
 #   asset:sacred_treasure/0035.malleus_maleficarum/2.check_condition
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager
 
