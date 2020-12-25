@@ -13,19 +13,19 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"突撃命令","color":"red"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"全　軍　突　撃","color":"red",""}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"天候を変更する力を持つ杖"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
-# MP消費量 (int) 
-    data modify storage asset:sacred_treasure MPCost set value 0
+# MP消費量 (int)
+    data modify storage asset:sacred_treasure MPCost set value 1
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value 
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Rumor"]
 
