@@ -6,13 +6,6 @@
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.main
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager
 
-#> private
-# @private 
-#  declare tag MalleusMaleficarumInit
-#  declare tag MalleusMaleficarumIndicator
-#  declare tag MalleusMaleficarumEntity
-#  declare storage data asset:temp
-
 # 軌跡表示用パーティクル
 particle soul_fire_flame ~ ~ ~ 0 0 0 0 2 force
 
