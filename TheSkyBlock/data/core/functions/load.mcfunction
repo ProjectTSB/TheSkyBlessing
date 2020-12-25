@@ -4,5 +4,4 @@
 #
 # @within tag/function minecraft:load
 
-forceload add 10000 10000
-execute unless block 10000 0 10000 lime_shulker_box run function core:load_once
+execute if data storage global {Version:"0.0.1"} run function core:load_once
