@@ -8,3 +8,15 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
+
+# 演出
+    particle minecraft:end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..30]
+    playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 20 0.3
+
+# 召喚
+    summon minecraft:iron_golem ~ ~ ~
+    summon minecraft:iron_golem ~ ~ ~
+    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}
+    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}
+    summon minecraft:iron_golem ~ ~ ~ {Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}]}
+    summon minecraft:iron_golem ~ ~ ~ {Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}]}
