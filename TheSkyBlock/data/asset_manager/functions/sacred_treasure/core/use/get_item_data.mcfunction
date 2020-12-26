@@ -9,7 +9,7 @@
 # @within function asset_manager:sacred_treasure/core/use/*
 
 # autoの場合のエラーメッセージ
-    execute unless data storage asset:sacred_treasure Items.auto run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"autoはこのトリガーでは実行できません","color":"white"}]
+    execute if data storage asset:sacred_treasure {TargetSlot:"auto"} unless data storage asset:sacred_treasure Items.auto run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"autoはこのトリガーでは実行できません","color":"white"}]
     execute unless data storage asset:sacred_treasure Items.auto run data modify storage asset:sacred_treasure TargetSlot set value 'mainhand'
 # 取得
     execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure Items.mainhand
