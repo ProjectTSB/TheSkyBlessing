@@ -19,7 +19,7 @@
     tag @e[type=minecraft:snow_golem,distance=..15] add GolemBomb
 
 # カウントダウン
-    tellraw @a[distance=..20] [{"text":"残り3秒","color":"red","bold":true}]
+    tellraw @a[distance=..20] [{"text":"爆発まで残り3秒","color":"red","bold":true}]
     schedule function asset:sacred_treasure/0078.self_destruct_order/3.1.explosion_manager 60t replace
 
 #演出
