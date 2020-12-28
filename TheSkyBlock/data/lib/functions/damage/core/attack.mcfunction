@@ -5,7 +5,7 @@
 # @within function lib:damage/
 
 # 引数データをコピー
-    execute store result score $Damage Temporary run data get storage lib: Argument.Damage
+    execute store result score $Damage Temporary run data get storage lib: Argument.Damage 100
     execute unless data storage lib: Argument.ElementType run data modify storage lib: ElementType set value "None"
     execute unless data storage lib: Argument.DisableParticle run data modify storage lib: DisableParticle set value 0b
     execute unless data storage lib: Argument.BypassArmor run data modify storage lib: BypassArmor set value 0b
