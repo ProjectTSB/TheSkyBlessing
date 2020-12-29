@@ -57,6 +57,8 @@
         execute unless data storage asset:sacred_treasure CostText run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/core/generate_lore/
     # 追加
         data modify entity @s Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[]
+# カスタムNBT
+    data modify entity @s {} merge from storage asset:sacred_treasure CustomNBT
 # リセット
     data remove storage asset:sacred_treasure Temp
     scoreboard players reset $Remain Temporary
