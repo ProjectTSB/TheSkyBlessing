@@ -58,7 +58,7 @@
     # 追加
         data modify entity @s Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[]
 # カスタムNBT
-    data modify entity @s {} merge from storage asset:sacred_treasure CustomNBT
+    data modify entity @s Item merge from storage asset:sacred_treasure CustomNBT
 # リセット
     data remove storage asset:sacred_treasure Temp
     scoreboard players reset $Remain Temporary
