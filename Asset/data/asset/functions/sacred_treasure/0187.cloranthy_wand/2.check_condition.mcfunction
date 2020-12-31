@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # プレイヤーのゲームモードがサバイバル・クリエイティブの時にのみ使用可能
-    execute if entity @s[gamemode=!survival] if entity @s[gamemode=!creative] run tag @s remove CanUsed
+    execute if entity @s[gamemode=!survival,gamemode=!creative] run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0187.cloranthy_wand/3.main
