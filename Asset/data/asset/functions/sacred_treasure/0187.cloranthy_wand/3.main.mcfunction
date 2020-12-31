@@ -14,10 +14,4 @@
     playsound minecraft:entity.evoker.prepare_summon master @s ~ ~ ~ 20 2
 
 # 土系ブロックを草ブロックに置換する
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:dirt
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:coarse_dirt
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:podzol
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:mycelium
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:warped_nylium
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:crimson_nylium
-    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace minecraft:soul_soil
+    fill ~-3 ~-3 ~-3 ~3 ~3 ~3 minecraft:grass_block replace #lib:dirts
