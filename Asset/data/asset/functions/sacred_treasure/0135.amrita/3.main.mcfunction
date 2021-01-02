@@ -4,8 +4,19 @@
 #
 # @within function asset:sacred_treasure/0135.amrita/2.check_condition
 
+#> private
+# @private
+    #declare score_holder $Fluctuation
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0135.amrita
+
+# 演出
+    execute as @a[distance=..15] run particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @a[distance=..30]
+    playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
+
+# MP回復
+    scoreboard players set $Fluctuation Lib 20
+    execute as @s run function player_manager:mp/fluctuation
