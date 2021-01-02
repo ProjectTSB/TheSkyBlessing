@@ -13,8 +13,7 @@
 
 #> private
 # @private
-    #declare score_holder $Before
-    #declare score_holder $After
+    #declare score_holder $isSuccess
 
 # UserStorage呼び出し
     function oh_its_dat:please
@@ -24,19 +23,26 @@
 # 削除
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items
 # AutoSlotの計算
+    # Fallback
+        data modify storage asset:sacred_treasure Temp.Base set value {}
+        data modify storage asset:sacred_treasure Temp.Another set value {}
     # mainhand
-        execute store result score $Before Temporary run data get storage asset:sacred_treasure Argument.SelectedItem.Count
-        execute store result score $After Temporary run data get entity @s SelectedItem.Count
-        execute unless score $Before Temporary = $After Temporary run data modify storage asset:sacred_treasure Argument.AutoSlot set value 'mainhand'
+        data modify storage asset:sacred_treasure Temp.Base set from storage asset:sacred_treasure Argument.SelectedItem
+        data modify storage asset:sacred_treasure Temp.Another set from entity @s SelectedItem
+        execute store success score $isSuccess Temporary run data modify storage asset:sacred_treasure Temp.Base set from storage asset:sacred_treasure Temp.Another
+        execute if score $isSuccess Temporary matches 1 run data modify storage asset:sacred_treasure Argument.AutoSlot set value 'mainhand'
     # リセット
-        scoreboard players reset $Before Temporary
-        scoreboard players reset $After Temporary
+        scoreboard players reset $isSuccess Temporary
+        data modify storage asset:sacred_treasure Temp.Base set value {}
+        data modify storage asset:sacred_treasure Temp.Another set value {}
     # offhand
-        execute store result score $Before Temporary run data get storage asset:sacred_treasure Argument.Inventory[{Slot:-106b}].Count
-        execute store result score $After Temporary run data get entity @s Inventory[{Slot:-106b}].Count
-        execute unless score $Before Temporary = $After Temporary run data modify storage asset:sacred_treasure Argument.AutoSlot set value 'offhand'
+        data modify storage asset:sacred_treasure Temp.Base set from storage asset:sacred_treasure Argument.Inventory[{Slot:-106b}]
+        data modify storage asset:sacred_treasure Temp.Another set from entity @s Inventory[{Slot:-106b}]
+        execute store success score $isSuccess Temporary run data modify storage asset:sacred_treasure Temp.Base set from storage asset:sacred_treasure Temp.Another
+        execute if score $isSuccess Temporary matches 1 run data modify storage asset:sacred_treasure Argument.AutoSlot set value 'offhand'
     # リセット
-        scoreboard players reset $Before Temporary
-        scoreboard players reset $After Temporary
+        scoreboard players reset $isSuccess Temporary
+        data remove storage asset:sacred_treasure Temp
+    tellraw @a [{"text":"storage: "},{"storage":"asset:sacred_treasure","nbt":"Argument.AutoSlot"}]
 # 共通処理
     function asset_manager:sacred_treasure/core/data_put/common
