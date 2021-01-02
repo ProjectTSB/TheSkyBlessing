@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{text":"皮装備セット","italic":false}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"皮装備セット","italic":false}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"エンチャント不可の皮装備を装着する"}']
 # MP以外の消費物 (TextComponentString) (オプション)

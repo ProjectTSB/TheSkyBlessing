@@ -9,8 +9,6 @@
 
 # ここから先は神器側の効果の処理を書く
 
-#テスト後で消す
-    say test: 0090.leatherequipmentset
 
 # 装備変更
     replaceitem entity @s[nbt=!{Inventory:[{Slot:103b}]}] armor.head minecraft:leather_helmet{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
