@@ -14,8 +14,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @a[distance=..30]
-    playsound minecraft:entity.arrow.hit_player master @a[distance=..30] ~ ~ ~ 20 1
+    particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
+    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
 
 # MP回復
     scoreboard players set $Fluctuation Lib 20
