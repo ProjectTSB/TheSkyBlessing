@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:potion"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"アムリタ","color":"dark_purple"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"アムリタ","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"MP20回復"}']
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -29,7 +29,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {}
+    data modify storage asset:sacred_treasure CustomNBT set value {CustomPotionColor:16318239,HideFlags:32}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
