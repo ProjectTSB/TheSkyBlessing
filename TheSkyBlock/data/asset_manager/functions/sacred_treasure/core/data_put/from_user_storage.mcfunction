@@ -43,6 +43,5 @@
     # リセット
         scoreboard players reset $isSuccess Temporary
         data remove storage asset:sacred_treasure Temp
-    tellraw @a [{"text":"storage: "},{"storage":"asset:sacred_treasure","nbt":"Argument.AutoSlot"}]
 # 共通処理
     function asset_manager:sacred_treasure/core/data_put/common
