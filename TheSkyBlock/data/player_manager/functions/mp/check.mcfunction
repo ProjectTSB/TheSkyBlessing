@@ -4,17 +4,17 @@
 #
 # @input
 #   as player
-#   score $CheckMP Argument
-# @output score $HaveMP Argument
+#   score $CheckMP Lib
+# @output result score boolean
 # @api
 
 #> temp
 # @private
     #declare score_holder $CheckMP
-    #declare score_holder $HaveMP
 
+# リセット予約
+    schedule function player_manager:mp/check.reset 1t
+# Bypass
+    execute if entity @s[tag=DevPrivilege] run scoreboard players set $CheckMP Lib 0
 # チェック
-    execute store result score $HaveMP Lib if score $CheckMP Lib <= @s MP
-    execute if entity @s[tag=DevPrivilege] run scoreboard players set $HaveMP Lib 1
-# リセット
-    scoreboard players reset $CheckMP Lib
+    execute if score $CheckMP Lib <= @s MP

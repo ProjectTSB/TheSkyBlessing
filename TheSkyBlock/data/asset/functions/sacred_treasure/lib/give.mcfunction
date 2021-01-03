@@ -47,3 +47,4 @@
     data remove storage asset:sacred_treasure MPRequire
     data remove storage asset:sacred_treasure CostText
     data remove storage asset:sacred_treasure CanUsedGod
+    data remove storage asset:sacred_treasure CustomNBT
