@@ -19,4 +19,4 @@
 
 # MP回復
     scoreboard players set $Fluctuation Lib 20
-    execute as @s run function player_manager:mp/fluctuation
+    function player_manager:mp/fluctuation
