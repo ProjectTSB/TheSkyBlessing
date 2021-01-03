@@ -19,5 +19,11 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] run summon witch ~ ~ ~ {Fire:1200s}
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] at @s run tp @s ~ -100 ~
 
+#効果音
+    playsound entity.zombie_villager.converted player @a ~ ~ ~ 1 1 1
+
+#particle
+    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] at @s run particle falling_obsidian_tear ~ ~2 ~ 0 0 0 0 25 normal
+
 #indicator削除
     kill @s
