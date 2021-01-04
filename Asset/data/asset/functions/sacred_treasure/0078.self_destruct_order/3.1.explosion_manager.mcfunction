@@ -11,7 +11,7 @@
     #declare tag GolemBomb
 
 # ダメージ処理(アイアンゴーレム)
-      # 与えるダメージ = 7.5
+    # 与えるダメージ = 7.5
         data modify storage lib: Argument.Damage set value 50.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
