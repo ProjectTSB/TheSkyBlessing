@@ -6,6 +6,7 @@
 
 # バージョン情報
 data modify storage global Version set value "0.0.1"
+tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
 forceload add 10000 10000
