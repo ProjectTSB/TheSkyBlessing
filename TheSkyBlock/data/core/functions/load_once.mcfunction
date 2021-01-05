@@ -5,10 +5,12 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.1"
+data modify storage global Version set value "0.0.2"
+tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
 forceload add 10000 10000
+forceload add -1 -1 0 0
 
 # gamerule
 function core:define_gamerule
