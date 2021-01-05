@@ -97,6 +97,7 @@ function core:define_const
 # @within
 #   function core:handler/first_join
 #   function core:load_once
+#   * lib:**
 #   * player_manager:**
     #declare tag Believe.Flora
     #declare tag Believe.Urban

@@ -19,4 +19,4 @@
 
 # MP回復
     scoreboard players set $Fluctuation Lib 80
-    function player_manager:mp/fluctuation
+    function lib:mp/fluctuation

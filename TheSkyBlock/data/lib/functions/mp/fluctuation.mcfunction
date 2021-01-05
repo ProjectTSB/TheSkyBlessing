@@ -1,4 +1,4 @@
-#> player_manager:mp/fluctuation
+#> lib:mp/fluctuation
 #
 # プレイヤーのMPを増減します。
 #
