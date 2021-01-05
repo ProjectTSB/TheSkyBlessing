@@ -3,10 +3,10 @@
 # スコアをbit配列に変換します
 #
 # @input
-#   **score $Argument.Number Lib**
+#   score $Argument.Number Lib
 #   変換する値
 # @output
-#   **storage lib: Return.Array**: list(bit)
+#   storage lib: Return.Array: list(bit)
 #   bit配列
 # @api
 

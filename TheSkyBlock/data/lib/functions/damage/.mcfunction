@@ -6,18 +6,13 @@
 #
 # @input
 #   as entity
-#   **storage lib: Argument.Damage** : float
-#   与えるダメージ
-#   **storage lib: Argument.AttackType** : Enum
-#   `"Physical"`, `"Magic"`
-#   **storage lib: Argument.ElementType** : Enum
-#   `"None"`, `"Fire"`, `"Water"`, `"Thunder"`
-#   **storage lib: Argument.DisableParticle** : boolean
-#   パーティクルを無効化するか否か
-#   **storage lib: Argument.BypassArmor** : boolean
-#   防御力/防具強度を無視するか否か
-#   **storage lib: Argument.BypassResist** : boolean
-#   耐性エフェクトを無視するか否か
+#   storage lib:
+#       Argument.Damage : float
+#       Argument.AttackType : Enum
+#       Argument.ElementType? : Enum
+#       Argument.DisableParticle? : boolean
+#       Argument.BypassArmor? : boolean
+#       Argument.BypassResist? : boolean
 # @api
 
 # 引数チェック
