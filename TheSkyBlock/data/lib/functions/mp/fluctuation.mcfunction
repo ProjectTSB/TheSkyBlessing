@@ -1,11 +1,10 @@
-#> player_manager:mp/fluctuation
+#> lib:mp/fluctuation
 #
 # プレイヤーのMPを増減します。
 #
 # @input
 #   as player
 #   score $Fluctuation Argument
-#
 # @api
 
 #> temp
