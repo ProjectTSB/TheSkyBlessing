@@ -2,7 +2,7 @@
 # @output
 # @output
 #   **score $Return.Random Lib**
-#   乱数 (uShort)
+#   乱数 (uShort 0-65534)
 # @api
 
 #> Private

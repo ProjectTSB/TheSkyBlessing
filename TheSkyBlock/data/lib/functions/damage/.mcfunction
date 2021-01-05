@@ -5,6 +5,7 @@
 # 実行者はHealthを持つEntityである必要があります。
 #
 # @input
+#   as entity
 #   **storage lib: Argument.Damage** : float
 #   与えるダメージ
 #   **storage lib: Argument.AttackType** : Enum
