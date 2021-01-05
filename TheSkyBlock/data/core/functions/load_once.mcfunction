@@ -22,7 +22,7 @@ function core:define_gamerule
 datapack disable OhMyDat
 datapack disable ScoreToHealth
 datapack enable OhMyDat after TheSkyBlock
-datapack enable coreToHealth after TheSkyBlock
+datapack enable ScoreToHealth after TheSkyBlock
 datapack enable OhMyDat after ScoreToHealth
 
 #> エイリアス
