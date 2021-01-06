@@ -23,7 +23,15 @@
 * 一つのcommitに複数の処理の変更や追加を極力避けること
 * masterはGitmojiを使いコミットメッセージの最初に絵文字をつける
 
+## ライセンスについて
+このリポジトリはMITライセンスを採用していますが、例外として[ScoreToHealth](https://github.com/TheSkyBlock/TheSkyBlock/tree/master/ScoreToHealth)ディレクトリには[Apache license 2.0](http://www.apache.org/licenses/LICENSE-2.0)が適用されます。
+
+## 著作者(Copyright)について
+* [ScoreToHeath](https://github.com/Ai-Akaishi/ScoreToHealth) : 赤石愛
+* [OhMyDat](https://github.com/Ai-Akaishi/OhMyDat) : 赤石愛
+* その他 : TheSkyBlock
+
 ## SpecialThanks
-### [赤石愛](https://twitter.com/AiAkaishi)氏
+#### [赤石愛](https://twitter.com/AiAkaishi)氏
 * 個別ストレージライブラリ[Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)を使用させていただいています。
 * プレイヤー体力調整ライブラリ[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を使用させていただいています。
