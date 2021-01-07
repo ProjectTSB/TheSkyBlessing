@@ -3,7 +3,7 @@
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @private
+# @within function asset:sacred_treasure/0184.incresable_cookie/3.main
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
