@@ -9,7 +9,7 @@
     #declare score_holder $Temp
 
 # データ呼び出し
-    function oh_my_dat:release
+    function oh_my_dat:please
 # 物魔耐性値
     execute if data storage lib: {Argument:{AttackType:"Physical"}} store result score $EPF Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobData.PhysicalDEF
     execute if data storage lib: {Argument:{AttackType:"Magic"}} store result score $EPF Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ModData.MagicDEF

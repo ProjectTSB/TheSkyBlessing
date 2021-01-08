@@ -1,4 +1,4 @@
-#> player_manager:mp/check
+#> lib:mp/check
 #
 # プレイヤーのMPが一定以上かチェックします。
 #
@@ -13,7 +13,7 @@
     #declare score_holder $CheckMP
 
 # リセット予約
-    schedule function player_manager:mp/check.reset 1t
+    schedule function lib:mp/core/reset 1t
 # Bypass
     execute if entity @s[tag=DevPrivilege] run scoreboard players set $CheckMP Lib 0
 # チェック

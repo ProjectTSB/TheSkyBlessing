@@ -1,8 +1,8 @@
-#> player_manager:mp/check.reset
+#> lib:mp/core/reset
 #
 # score_holder $CheckMP をリセットします
 #
-# @within function player_manager:mp/check
+# @within function lib:mp/check
 
 #> temp
 # @private

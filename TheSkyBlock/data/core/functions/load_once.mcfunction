@@ -5,10 +5,12 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.1"
+data modify storage global Version set value "0.0.2"
+tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
 forceload add 10000 10000
+forceload add -1 -1 0 0
 
 # gamerule
 function core:define_gamerule
@@ -20,7 +22,7 @@ function core:define_gamerule
 datapack disable OhMyDat
 datapack disable ScoreToHealth
 datapack enable OhMyDat after TheSkyBlock
-datapack enable coreToHealth after TheSkyBlock
+datapack enable ScoreToHealth after TheSkyBlock
 datapack enable OhMyDat after ScoreToHealth
 
 #> エイリアス
@@ -95,6 +97,7 @@ function core:define_const
 # @within
 #   function core:handler/first_join
 #   function core:load_once
+#   * lib:**
 #   * player_manager:**
     #declare tag Believe.Flora
     #declare tag Believe.Urban
