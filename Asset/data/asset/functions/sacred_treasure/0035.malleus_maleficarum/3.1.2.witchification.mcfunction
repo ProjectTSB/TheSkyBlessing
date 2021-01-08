@@ -24,6 +24,8 @@
 #魔女化
     execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] run summon witch ~ ~ ~ {Fire:1200s}
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] at @s run tp @s ~ -100 ~
+    execute positioned ~-0.5 -100 ~-0.5 as @e[tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] run kill @s
+
 
 #indicator削除
     kill @s
