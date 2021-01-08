@@ -8,4 +8,10 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0016.golem_core
+
+# ゴーレム召喚
+  summon minecraft:iron_golem ~ ~1 ~ {Health:75f, Attributes:[{Name:"generic.max_health", Base:75d},{Name:"generic.attack_damage",Base:15d}]}
+
+# 演出
+  particle minecraft:enchanted_hit ~ ~ ~ 0.5 1 0.5 0.5 100 force @s
+  playsound minecraft:block.anvil.destroy master @s ~ ~ ~ 1 0.9

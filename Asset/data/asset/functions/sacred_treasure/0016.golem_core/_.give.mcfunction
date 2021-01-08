@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"アイアンゴーレムの核となる精密機械"}','{"text":"鉄ブロックに取り付けるだけでゴーレムを製造できる。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    data modify storage asset:sacred_treasure CostText set value '[{"translate":"item.minecraft.iron_block"},{"text":" x1"}]'
+    data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.iron_block"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 30
 # 神器のトリガー (string) Wikiを参照
