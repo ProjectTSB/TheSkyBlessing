@@ -730,6 +730,24 @@
                     }
                 }
             ]
+        },
+        {
+            "label": "神器/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/tick.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
         }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
