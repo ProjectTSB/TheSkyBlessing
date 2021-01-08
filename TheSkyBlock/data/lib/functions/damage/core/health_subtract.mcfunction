@@ -17,6 +17,6 @@
     # Common
         execute if score $Health Temporary matches ..0 run kill @s
 # 演出
-    execute if score $Health Temporary matches 1.. if entity @s[type=#lib:damage/undead,type=!player] run effect give @s instant_health 1 31 true
-    execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:damage/undead,type=!player] run effect give @s instant_damage 1 31 true
+    execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead,type=!player] run effect give @s instant_health 1 31 true
+    execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead,type=!player] run effect give @s instant_damage 1 31 true
     execute if score $DisableParticle Temporary matches 0 at @s run function lib:damage/core/damage_indicator

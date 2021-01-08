@@ -4,6 +4,17 @@
 #
 # @within function lib:damage/core/attack
 
+#> Temp
+# @private
+    #declare score_holder $CalcA
+    #declare score_holder $CalcB
+    #declare score_holder $CalcB.2
+    #declare score_holder $CalcB.3
+    #declare score_holder $CalcC
+    #declare score_holder $CalcD
+    #declare score_holder $CalcE
+    #declare score_holder $CalcF
+
 # 計算式:
 # damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - (min(20, cappedEPF) / 25)) * (1 - min(5, resistanceLv) / 5)
 
