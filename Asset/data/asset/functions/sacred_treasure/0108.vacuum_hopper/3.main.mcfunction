@@ -22,7 +22,7 @@
     execute at @e[tag=Vacuum] run particle portal ~ ~ ~ 0.2 0.2 0.2 0 30 force @a
     tp @e[tag=Vacuum] @s
     execute store result score $Items Temporary if entity @e[type=item,tag=Vacuum]
-    tellraw @s [{"text": "ﾀﾞｲｿｿ >> "},{"text": "[ "},{"score": {"name": "$Items","objective": "Temporary"},"color": "gold"},{"text": " ]のアイテムを回収しました」"}]
+    tellraw @s [{"text": "ﾀﾞｲｿｿ >> "},{"text": "[ "},{"score": {"name": "$Items","objective": "Temporary"},"color": "gold"},{"text": " ]のアイテムを回収しました"}]
     execute as @e[type=item,distance=..1] run data modify entity @s PickupDelay set value 0s
     scoreboard players reset $Items Temporary
     tag @e[type=item,tag=Vacuum] remove Vacuum
