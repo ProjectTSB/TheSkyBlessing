@@ -16,5 +16,3 @@
     particle portal 23 3 24 0 0 0 2 250 force @a
     particle effect 23 3 24 0 10 0 0.1 250 force @a
     playsound entity.illusioner.prepare_blindness master @s 23 3 24 1 0 1
-
-
