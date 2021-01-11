@@ -27,3 +27,6 @@
     playsound entity.player.hurt player @a ~ ~ ~ 1 1
     playsound minecraft:entity.zombie_villager.cure master @s ~ ~ ~ 1 2
     particle angry_villager ~ ~1 ~ 0.5 0.5 0.5 0 30 normal @s
+
+    # リセット
+    scoreboard players reset @s Temporary
