@@ -21,7 +21,7 @@
 
     # 効果
     effect give @s jump_boost 10 50 true
-    execute if predicate player_manager:is_believe/nyaptov run effect give @s jump_boost 10 50 true
+    execute if predicate player_manager:is_believe/nyaptov run effect give @s jump_boost 10 75 true
 
     # 演出
     playsound entity.player.hurt player @a ~ ~ ~ 1 1
