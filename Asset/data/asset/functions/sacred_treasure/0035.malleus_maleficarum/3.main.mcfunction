@@ -1,9 +1,7 @@
 #> asset:sacred_treasure/0035.malleus_maleficarum/3.main
 #
 # 神器のメイン処理部
-# @within function
-#   asset:sacred_treasure/0035.malleus_maleficarum/2.check_condition
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
+# @within function asset:sacred_treasure/0035.malleus_maleficarum/2.check_condition
 
 #> private
 # @private 
