@@ -9,10 +9,10 @@
     function asset:sacred_treasure/lib/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
     # ガラス瓶持ってるかチェック
-    execute store result score $BottleCount Temporary run clear @s glass_bottle 0
-    execute if score $BottleCount Temporary matches 0 run tag @s remove CanUsed
-    # ガラス瓶ないよコメント //MessageLibができたら差し替える
-    execute if score $BottleCount Temporary matches 0 run function lib:message/sacred_treasure/dont_have_require_items
-    scoreboard players reset $BottleCount Temporary
+        execute store result score $BottleCount Temporary run clear @s glass_bottle 0
+        execute if score $BottleCount Temporary matches 0 run tag @s remove CanUsed
+    # ガラス瓶ないよコメント
+        execute if score $BottleCount Temporary matches 0 run function lib:message/sacred_treasure/dont_have_require_items
+        scoreboard players reset $BottleCount Temporary
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0158.mp_extractor/3.main
