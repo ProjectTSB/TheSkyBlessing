@@ -3,14 +3,12 @@
 # 神器のメイン処理部
 # @within function
 #   asset:sacred_treasure/0035.malleus_maleficarum/2.check_condition
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager
+#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
 
 #> private
 # @private 
     #declare tag MalleusMaleficarumInit
-    #declare tag MalleusMaleficarumIndicator
     #declare tag MalleusMaleficarumEntity
-    #declare storage data asset:temp
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
@@ -31,7 +29,7 @@
     execute as @e[type=ender_pearl,tag=MalleusMaleficarumInit] run data modify entity @s Motion set from storage asset:temp 0035.Pos
 
 # 命中したことを管理するscheduleをセット
-    schedule function asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager 1t replace
+    schedule function asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager 1t replace
 
 # 初期設定用タグ削除
     execute positioned as @s run tag @e[tag=MalleusMaleficarumInit,distance=..2] remove MalleusMaleficarumInit

@@ -4,10 +4,10 @@
 #
 # @within function
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.main
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager
+#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
 
 # 軌跡表示用パーティクル
 particle soul_fire_flame ~ ~ ~ 0 0 0 0 2 force
 
 # 次tickのmanager実行予約
-schedule function asset:sacred_treasure/0035.malleus_maleficarum/3.1.check_hit_manager 1t replace
+schedule function asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager 1t replace
