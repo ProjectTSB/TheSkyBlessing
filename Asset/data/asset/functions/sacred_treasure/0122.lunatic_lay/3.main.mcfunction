@@ -12,12 +12,12 @@
     # 対象選択
         tag @e[type=#lib:living,type=!player,distance=..5,sort=random,limit=1] add Hit
     # 演出
-        execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..5] run particle crit ~ ~3 ~ 0.025 3 0.025 0 100 normal @a
+        execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run particle crit ~ ~3 ~ 0.025 3 0.025 0 100 normal @a
         playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
-        effect give @e[type=#lib:living,type=!player,tag=Hit,distance=..5] speed 15 30 true
+        effect give @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] speed 15 30 true
     # ダメージ
         data merge storage lib: {Argument:{Damage:40.0f,AttackType:Magic,ElementType:Thunder,DisableParticle:true}}
-        execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..5] run function lib:damage/
+        execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run function lib:damage/
     # リセット
         data remove storage lib: Argument
-        tag @e[type=#lib:living,type=!player,tag=Hit,distance=..5] remove Hit
+        tag @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] remove Hit
