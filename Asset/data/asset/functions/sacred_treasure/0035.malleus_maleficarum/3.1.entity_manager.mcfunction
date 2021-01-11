@@ -5,7 +5,6 @@
 # @within function
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.main
 #   asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.1.flying
 
 #アーマースタンドがエンダーパールの上に乗っていない状態なら命中処理
 execute as @e[tag=MalleusMaleficarumIndicator] unless predicate asset:0035.malleus_maleficarum/is_ride_on_enderpearl at @s run function asset:sacred_treasure/0035.malleus_maleficarum/3.1.2.witchification

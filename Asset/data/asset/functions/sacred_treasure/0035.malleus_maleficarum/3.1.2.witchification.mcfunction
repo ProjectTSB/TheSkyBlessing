@@ -2,9 +2,7 @@
 # 
 # エンダーパール着弾地点にいるアーマースタンドを起点として、魔女化処理を行う
 #
-# @within function
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.main
-#   asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
+# @within function asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager
 
 #> private
 # @private 
