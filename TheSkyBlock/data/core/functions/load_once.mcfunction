@@ -89,7 +89,6 @@ function core:define_const
 #> PlayerManager
 # @within
 #   function player_manager:adjust_hunger/**
-#   predicate asset_manager:is_use_mainhand/consumable
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
     scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
