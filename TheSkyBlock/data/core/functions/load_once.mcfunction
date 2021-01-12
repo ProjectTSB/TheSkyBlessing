@@ -5,7 +5,7 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.2"
+data modify storage global Version set value "0.0.3"
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
@@ -108,6 +108,10 @@ function core:define_const
     scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
 scoreboard objectives setdisplay belowName Health
+
+#> PlayerNBT
+# @public
+    scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
 
 #> AssetManager: SacredTreasure
 # @within function asset_manager:sacred_treasure/core/tick

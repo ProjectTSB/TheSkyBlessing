@@ -7,6 +7,8 @@
 # @within tag/function minecraft:tick
 
 # プレイヤー処理部
+    # FallDistanceの記録
+        execute as @a[predicate=!lib:is_death] store result score @s FallDistance run data get entity @s FallDistance
     # Triggers
         execute if entity @a[scores={FirstJoinEvent=1},limit=1] as @a[scores={FirstJoinEvent=1}] at @s run function core:handler/first_join
         execute if entity @a[scores={RejoinEvent=1..},limit=1] as @a[scores={RejoinEvent=1..}] at @s run function core:handler/rejoin
