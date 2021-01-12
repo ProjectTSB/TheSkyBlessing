@@ -19,13 +19,13 @@
         execute if entity @a[advancements={core:handler/attack=true},limit=1] as @a[advancements={core:handler/attack=true}] at @s run function core:handler/attack
         execute if entity @a[advancements={core:handler/damage=true},limit=1] as @a[advancements={core:handler/damage=true}] at @s run function core:handler/damage
         execute if entity @a[advancements={core:handler/killed=true},limit=1] as @a[advancements={core:handler/killed=true}] at @s run function core:handler/killed
-        execute if entity @a[scores={ClickCarrotEvent=1..}] as @a[scores={ClickCarrotEvent=1..}] at @s run function core:handler/click.carrot
+        execute if entity @a[scores={ClickCarrotEvent=1..},limit=1] as @a[scores={ClickCarrotEvent=1..}] at @s run function core:handler/click.carrot
     # tickTriggerの神器
-        execute as @a unless predicate lib:is_death run function asset_manager:sacred_treasure/triggers/tick
+        execute as @a[predicate=!lib:is_death] run function asset_manager:sacred_treasure/triggers/tick
     # 満腹度調整部
-        execute if entity @a[tag=AdjustHunger] as @a[tag=AdjustHunger] unless predicate lib:is_death run function player_manager:adjust_hunger/observe
+        execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,predicate=!lib:is_death] run function player_manager:adjust_hunger/observe
     # MP表示処理
         execute as @a run function player_manager:mp/viewer/check_xpbar
 
 # Mobデータ初期化部
-    execute as @e[team=!Null,type=!player,type=!armor_stand,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
+    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
