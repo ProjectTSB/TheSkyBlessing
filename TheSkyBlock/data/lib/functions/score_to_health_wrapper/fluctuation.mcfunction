@@ -7,7 +7,7 @@
 # @input
 #   as player
 #   score $Fluctuation Argument
-# @api
+# @within function lib:**
 
 #> temp
 # @private
