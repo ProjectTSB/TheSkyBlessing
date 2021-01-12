@@ -3,6 +3,7 @@
 # 神器の発動条件をチェックします
 #
 # @within function asset:sacred_treasure/0016.golem_core/1.trigger
+
 #> Private
 # @private
     #declare score_holder $IronBlockCount
