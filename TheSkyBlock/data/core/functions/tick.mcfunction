@@ -29,3 +29,7 @@
 
 # Mobデータ初期化部
     execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
+
+# Tick最後の処理
+    # ScoreToHealthWrapperの消化
+        execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc

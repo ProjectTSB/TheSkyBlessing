@@ -11,11 +11,11 @@
 # Mobへ代入
     # Player
         execute if entity @s[type=player] run scoreboard players operation $Health Temporary /= $100 Const
-        execute if entity @s[type=player] run scoreboard players operation @s ScoreToHealth = $Health Temporary
+        execute if entity @s[type=player] run scoreboard players operation $Fluctuation Lib = $Health Temporary
+        execute if entity @s[type=player] run function lib:score_to_health_wrapper/fluctuation
     # Mob
         execute if entity @s[type=!player] if score $Health Temporary matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health Temporary
-    # Common
-        execute if score $Health Temporary matches ..0 run kill @s
+        execute if entity @s[type=!player] if score $Health Temporary matches ..0 run kill @s
 # 演出
     execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead,type=!player] run effect give @s instant_health 1 31 true
     execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead,type=!player] run effect give @s instant_damage 1 31 true
