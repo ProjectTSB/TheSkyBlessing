@@ -5,7 +5,7 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.2"
+data modify storage global Version set value "0.0.4"
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
@@ -21,7 +21,6 @@ function core:define_gamerule
 # 2: OhMyDat
 datapack disable OhMyDat
 datapack disable ScoreToHealth
-datapack enable OhMyDat after TheSkyBlock
 datapack enable ScoreToHealth after TheSkyBlock
 datapack enable OhMyDat after ScoreToHealth
 
@@ -57,6 +56,14 @@ data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 #> 常に値が設定される変数
 # @public
     scoreboard objectives add Global dummy
+# 乱数値の設定
+    #> Private
+    # @private
+        #declare tag Random
+    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
+    execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
+    execute store result score $Random.Curray Global run data get entity @e[tag=Random,limit=1] UUID[3]
+    kill @e[tag=Random,limit=1]
 
 #> 定数類 **変更厳禁**
 # @public
@@ -77,19 +84,14 @@ function core:define_const
 #> Library
 # @public
     scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
-# 乱数値の設定
-    #> Private
-    # @private
-        #declare tag Random
-    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-    execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-    execute store result score $Random.Curray Global run data get entity @e[tag=Random,limit=1] UUID[3]
-    kill @e[tag=Random,limit=1]
+
+#> Library - Private
+# @within * lib:**
+    scoreboard objectives add ScoreToHPFluc dummy
 
 #> PlayerManager
 # @within
 #   function player_manager:adjust_hunger/**
-#   predicate asset_manager:is_use_mainhand/consumable
     scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
     scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
@@ -108,6 +110,10 @@ function core:define_const
     scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
 scoreboard objectives setdisplay belowName Health
+
+#> PlayerNBT
+# @public
+    scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
 
 #> AssetManager: SacredTreasure
 # @within function asset_manager:sacred_treasure/core/tick
