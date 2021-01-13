@@ -22,4 +22,4 @@
     execute at @s as @a[distance=..15] run function lib:heal/
 
 # リセット
-    execute as @a[distance=..15] run data remove storage lib: Argument
+    data remove storage lib: Argument
