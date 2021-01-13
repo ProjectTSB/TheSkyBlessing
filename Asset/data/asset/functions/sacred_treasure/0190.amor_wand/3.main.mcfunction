@@ -17,11 +17,9 @@
     execute as @a[distance=..15] run particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @a[distance=..30]
     playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
 
-# 現在の体力を取得
-    execute as @a[distance=..15] run execute store result score @s Temporary run data get entity @s Health 100
-# 回復量を加算
-    execute as @a[distance=..15] run scoreboard players add @s Temporary 600
 # 回復
-    execute as @a[distance=..15] run execute store result score @s ScoreToHealth run scoreboard players get @s Temporary
+    data modify storage lib: Argument.Heal set value 6f
+    execute at @s as @a[distance=..15] run function lib:heal/
 
-scoreboard players reset @a[distance=..15] Temporary
+# リセット
+    execute as @a[distance=..15] run data remove storage lib: Argument
