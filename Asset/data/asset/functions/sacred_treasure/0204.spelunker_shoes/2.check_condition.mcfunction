@@ -9,9 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # 落下距離が2マス未満の場合は処理しない
-    execute store result score @s Temporary run data get entity @s FallDistance 1
-    execute if score @s Temporary matches 0 run tag @s remove CanUsed
-    scoreboard players reset @s Temporary
+    execute if score @s FallDistance matches 0 run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0204.spelunker_shoes/3.main
