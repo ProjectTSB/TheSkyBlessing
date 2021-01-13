@@ -3,14 +3,14 @@
 # 配列をキャッシュへ移動します。
 #
 # @input
-#   **storage lib: Array**: any[]
+#   storage lib: Array: any[]
 #   操作する配列データ
 #   score $Argument.Index Lib
 #   目的の要素のindex
 # @output
 #   storage lib:
 #       Array: any[]
-#           Array[-1]に目的の要素が存在
+#           Array[-1]に目的の要素が存在する配列
 #       Cache: any[]
 #           移動されたデータ
 # @api

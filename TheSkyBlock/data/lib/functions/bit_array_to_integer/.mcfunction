@@ -3,10 +3,10 @@
 # bit配列をスコアに変換します。
 #
 # @input
-#   **storage lib: Argument.BitArray**: list(bit)
+#   storage lib: Argument.BitArray: list(bit)
 #   bit配列
 # @output
-#   **score $Return.Number Lib**
+#   score $Return.Number Lib
 #   変換後の値
 # @api
 

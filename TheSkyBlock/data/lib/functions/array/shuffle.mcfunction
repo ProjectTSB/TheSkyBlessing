@@ -3,10 +3,10 @@
 # 配列の要素をシャッフルします
 #
 # @input
-#   **storage lib: Array**: any[]
+#   storage lib: Array: any[]
 #   配列データ
 # @output
-#   **storage lib: Array**: any[]
+#   storage lib: Array: any[]
 #   ランダムな順の配列
 # @api
 
