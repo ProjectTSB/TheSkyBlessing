@@ -7,7 +7,7 @@
 # @input
 #   as player
 #   score $Set Argument
-# @within function lib:**
+# @api
 
 #> temp
 # @private
