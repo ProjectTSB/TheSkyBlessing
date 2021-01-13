@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"シュレディンガーの猫","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"ネコの気配があるかもしれないし、"}','{"text":"ないかもしれない"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"ネコの気配があるかもしれないし、"}','{"text":"ないかもしれない。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -23,7 +23,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 10
+    data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
