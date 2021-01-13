@@ -34,7 +34,7 @@
     execute if entity @s[tag=PassConditionA] if entity @s[tag=PassConditionB] run tag @s add CanUsed
 # 条件を満たしていなかった時のユーザー側への通知
     execute if entity @s[tag=!PassConditionA] run tellraw @s {"text":"MPが足りない！","color":"red"}
-    execute if entity @s[tag=!PassConditionB] run tellraw @a {"text":"現在の信仰では使えないようだ...","color":"red"}
+    execute if entity @s[tag=!PassConditionB] run tellraw @s {"text":"現在の信仰では使えないようだ...","color":"red"}
 # リセット
     tag @s remove PassConditionA
     tag @s remove PassConditionB

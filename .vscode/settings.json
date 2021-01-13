@@ -177,6 +177,8 @@
             "advancements",
             "nbt",
             "nbtNeg",
+            "predicate",
+            "predicateNeg",
             "level",
             "x_rotation",
             "y_rotation",
