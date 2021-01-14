@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 10%の確率で死亡
-scoreboard players set @s Temporary 0
-execute if predicate lib:random_pass_per/10 run scoreboard players set @s Temporary 1
+    scoreboard players set @s Temporary 0
+    execute if predicate lib:random_pass_per/10 run scoreboard players set @s Temporary 1
 
 # 演出 共通
     title @a times 20 20 20
