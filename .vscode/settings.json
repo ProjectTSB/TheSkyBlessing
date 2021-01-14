@@ -177,6 +177,8 @@
             "advancements",
             "nbt",
             "nbtNeg",
+            "predicate",
+            "predicateNeg",
             "level",
             "x_rotation",
             "y_rotation",
@@ -403,6 +405,8 @@
                         "    # data modify storage asset:sacred_treasure MPRequire set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
+                        "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
+                        "    # data modify storage asset:sacred_treasure CustomNBT set value {}",
                         "",
                         "# 神器の入手用function",
                         "    function asset:sacred_treasure/lib/give"
@@ -717,6 +721,24 @@
                 {
                     "type": "file",
                     "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/tick.json",
                     "content": {
                         "values": [
                             "asset:sacred_treasure/%namespace%/1.trigger"

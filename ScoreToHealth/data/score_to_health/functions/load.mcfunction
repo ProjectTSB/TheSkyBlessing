@@ -13,9 +13,10 @@
 #   limitations under the License.
 
 #> ObjectDeclare
-# @within function
+# @within *
 #   score_to_health:**
-#   lib:damage/core/health_subtract
+#   lib:score_to_health_wrapper/**
+#   lib:has_health_modify_score
 scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
 
 #> TagDeclare

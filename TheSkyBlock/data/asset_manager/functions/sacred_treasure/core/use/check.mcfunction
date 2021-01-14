@@ -21,7 +21,7 @@
 # 条件を満たしてたらtagを付与
     # MP必要量による制限
         execute store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPRequire
-        execute store result score $CheckMPRes Temporary run function player_manager:mp/check
+        execute store result score $CheckMPRes Temporary run function lib:mp/check
         execute if score $CheckMPRes Temporary matches 1 run tag @s add PassConditionA
         scoreboard players reset $CheckMPRes Temporary
     # 信仰による制限
@@ -34,7 +34,7 @@
     execute if entity @s[tag=PassConditionA] if entity @s[tag=PassConditionB] run tag @s add CanUsed
 # 条件を満たしていなかった時のユーザー側への通知
     execute if entity @s[tag=!PassConditionA] run tellraw @s {"text":"MPが足りない！","color":"red"}
-    execute if entity @s[tag=!PassConditionB] run tellraw @a {"text":"現在の信仰では使えないようだ...","color":"red"}
+    execute if entity @s[tag=!PassConditionB] run tellraw @s {"text":"現在の信仰では使えないようだ...","color":"red"}
 # リセット
     tag @s remove PassConditionA
     tag @s remove PassConditionB

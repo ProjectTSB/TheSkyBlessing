@@ -4,7 +4,7 @@
 #
 # @input as player
 # @output
-#   **storage lib: Return.Name**: String
+#   storage lib: Return.Name: String
 #   プレイヤー名
 # @api
 

@@ -4,4 +4,4 @@
 #
 # @within tag/function minecraft:load
 
-execute if data storage global {Version:"0.0.1"} run function core:load_once
+execute unless data storage global {Version:"0.0.4"} run function core:load_once

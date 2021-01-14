@@ -1,8 +1,7 @@
 #> lib:array/core/shuffle
 # @within function lib:array/**
 
-function lib:random/
-scoreboard players operation $Index Lib = $Return.Random Lib
+execute store result score $Index Lib run function lib:random/
 scoreboard players operation $Index Lib %= $ListSize Lib
 execute if score $Index Lib matches 1.. run function lib:array/core/move
 data modify storage lib: ArrayO append from storage lib: Array[-1]
