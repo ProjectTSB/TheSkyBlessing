@@ -8,4 +8,7 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0214.web_shooter
+
+# 蜘蛛の巣を設置
+    execute at @e[type=!player,distance=..7] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 cobweb replace air
+    playsound minecraft:item.crossbow.shoot master @s ~ ~ ~ 1 1

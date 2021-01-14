@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ウェブ・シューター","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"周囲7mのMobに蜘蛛の巣を発射し、身動きを封じる}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"周囲7mのMobに蜘蛛の巣を発射し、身動きを封じる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
