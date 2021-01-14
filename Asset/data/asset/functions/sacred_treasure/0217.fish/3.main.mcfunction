@@ -8,4 +8,14 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0217.fish
+
+# 回復する量 = 全回復
+    data modify storage lib: Argument.Heal set value 10000f
+# 実行者対象
+    execute at @s run function lib:heal/
+# リセット
+    data remove storage lib: Argument
+
+# 演出
+    execute at @s run playsound entity.cat.ambient master @a[distance=..10] ~ ~ ~ 3 1
+    execute at @s run tellraw @a[distance=..10] {"text":"ネコの気配を感じる……？","color":"white"}
