@@ -9,7 +9,7 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 data modify storage asset:sacred_treasure ID set value 2147483647
-data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
+data modify storage asset:sacred_treasure Item set value "minecraft:potion"
 data modify storage asset:sacred_treasure Name set value '{"text":"サンプル神器","color":"green"}'
 data modify storage asset:sacred_treasure Lore set value ['{"text":"周囲にパーティクルを発生させる"}']
 # data modify storage asset:sacred_treasure CostText set value ''
