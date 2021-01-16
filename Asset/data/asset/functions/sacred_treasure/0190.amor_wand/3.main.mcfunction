@@ -10,12 +10,12 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @a[distance=..15] run particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @a[distance=..30]
+    execute at @a[distance=..15] run particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @a[distance=..30]
     playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
 
 # 回復
     data modify storage lib: Argument.Heal set value 6f
-    execute at @s as @a[distance=..15] run function lib:heal/
+    execute as @a[distance=..15] run function lib:heal/
 
 # リセット
     data remove storage lib: Argument
