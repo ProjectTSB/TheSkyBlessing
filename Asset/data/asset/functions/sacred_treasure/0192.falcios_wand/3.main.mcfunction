@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0190.amor_wand/3.main
+#> asset:sacred_treasure/0192.falcios_wand/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0190.amor_wand/2.check_condition
+# @within function asset:sacred_treasure/0192.falcios_wand/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
@@ -14,7 +14,7 @@
     playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
 
 # 回復
-    data modify storage lib: Argument.Heal set value 6f
+    data modify storage lib: Argument.Heal set value 24f
     execute as @a[distance=..15] run function lib:heal/
 
 # リセット
