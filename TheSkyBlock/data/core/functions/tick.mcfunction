@@ -6,7 +6,10 @@
 #
 # @within tag/function minecraft:tick
 
+
 # プレイヤー処理部
+    # 神器のグローバルクールダウン
+        execute if score $SacredTreasureGlobalCooldown Global matches 1.. run scoreboard players remove $SacredTreasureGlobalCooldown Global 1
     # FallDistanceの記録
         execute as @a[predicate=!lib:is_death] store result score @s FallDistance run data get entity @s FallDistance
     # Triggers

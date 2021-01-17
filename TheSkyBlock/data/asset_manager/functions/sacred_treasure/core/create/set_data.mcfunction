@@ -16,6 +16,8 @@
 #       MPCost : int
 #       MPRequire : int
 #       CostText? : TextComponent
+#       LocalCooldown : int
+#       GlobalCooldown : int
 #       CanUsedGod : God[]
 # @within function asset:sacred_treasure/lib/give
 
@@ -36,6 +38,8 @@
     data modify storage asset:sacred_treasure Data.tag.TSB.CanUsedGod set from storage asset:sacred_treasure CanUsedGod
     data modify storage asset:sacred_treasure Data.tag.TSB.RemainingCount set from storage asset:sacred_treasure RemainingCount
     data modify storage asset:sacred_treasure Data.tag.TSB.RemainingCountMAX set from storage asset:sacred_treasure RemainingCount
+    data modify storage asset:sacred_treasure Data.tag.TSB.LocalCooldown set from storage asset:sacred_treasure LocalCooldown
+    data modify storage asset:sacred_treasure Data.tag.TSB.GlobalCooldown set from storage asset:sacred_treasure GlobalCooldown
 
 # 名前
     # 残り回数が存在する場合
