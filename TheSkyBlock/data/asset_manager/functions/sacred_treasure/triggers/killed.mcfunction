@@ -11,6 +11,6 @@
     execute if entity @s[advancements={asset_manager:sacred_treasure/killed/melee=true}] run function #asset:sacred_treasure/killed/melee
     execute if entity @s[advancements={asset_manager:sacred_treasure/killed/projectile=true}] run function #asset:sacred_treasure/killed/projectile
 # リセット
-    data remove storage asset:sacred_treasure Items
+    data remove storage asset:context Items
     advancement revoke @s only asset_manager:sacred_treasure/killed/melee
     advancement revoke @s only asset_manager:sacred_treasure/killed/projectile

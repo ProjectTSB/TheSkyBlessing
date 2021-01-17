@@ -1,6 +1,12 @@
 #> asset_manager:sacred_treasure/_index.d
 # @private
 
+#> Assetの環境をしまいこむstorage
+# @within function
+#   asset_manager:sacred_treasure/**
+#   asset:sacred_treasure/*/*
+    #declare storage asset:context
+
 #> storage
 # @within *
 #   asset_manager:sacred_treasure/**

@@ -2,13 +2,6 @@
 #
 # 神器のIDを取得します
 #
-# @output storage asset:id
-#   mainhand : int
-#   offhand : int
-#   feet : int
-#   legs : int
-#   chest : int
-#   head : int
 # @within asset_manager:sacred_treasure/triggers/use_item
 
 #> private
