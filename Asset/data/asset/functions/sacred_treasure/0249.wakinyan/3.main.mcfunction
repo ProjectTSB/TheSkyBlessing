@@ -42,4 +42,4 @@
     # リセット
         scoreboard players reset @s Temporary
         data remove storage lib: Argument
-        execute run tag @e[type=#lib:living,tag=Hit,distance=..100,limit=1] remove Hit
+        tag @e[type=#lib:living,tag=Hit,distance=..100,limit=1] remove Hit
