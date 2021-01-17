@@ -6,7 +6,9 @@
 #
 # @within tag/function minecraft:tick
 
-
+# HurtTime
+    tag @e[type=#lib:living,tag=HurtEntity] remove HurtEntity
+    execute at @a[predicate=!lib:is_death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureGlobalCooldown Global matches 1.. run scoreboard players remove $SacredTreasureGlobalCooldown Global 1
