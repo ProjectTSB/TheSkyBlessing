@@ -12,50 +12,6 @@
                             "function": "set_lore",
                             "entity": "this",
                             "lore": [
-                                "",
-                                [
-                                    {
-                                        "text": "",
-                                        "color": "white",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": "使用方法: "
-                                    },
-                                    {
-                                        "storage": "asset:sacred_treasure",
-                                        "nbt": "Temp.Trigger"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "text": "",
-                                        "color": "white",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": "消費MP: "
-                                    },
-                                    {
-                                        "storage": "asset:sacred_treasure",
-                                        "nbt": "MPCost"
-                                    }
-                                ],
-                                [
-                                    {
-                                        "text": "",
-                                        "color": "white",
-                                        "italic": false
-                                    },
-                                    {
-                                        "text": "消費アイテム: "
-                                    },
-                                    {
-                                        "storage": "asset:sacred_treasure",
-                                        "nbt": "CostText",
-                                        "interpret": true
-                                    }
-                                ],
                                 [
                                     {
                                         "text": "",
