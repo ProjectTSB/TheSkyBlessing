@@ -7,7 +7,7 @@
 # HP取得
     execute store result score $Health Temporary run data get entity @s Health 10000
 # 代入
-    execute store result score $Damage Lib run data get storage lib: Argument.Damage 10000
+    execute store result score $Damage Temporary run data get storage lib: Argument.Damage 10000
 # 減算
     scoreboard players operation $Health Temporary -= $Damage Temporary
 # 代入 / kill
@@ -19,3 +19,4 @@
     function lib:damage/core/damage_indicator
 # リセット
     scoreboard players reset $Damage
+    scoreboard players reset $Health

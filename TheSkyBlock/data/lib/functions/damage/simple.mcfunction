@@ -14,4 +14,4 @@
 # プレイヤーの処理
     execute if entity @s[type=player] run function lib:damage/core/simple.player-process
 # Mob処理
-    execute if entity @s[type=!player] run function lib:damage/core/simple.non-player-process
+    execute if entity @s[type=#lib:living,type=!player] run function lib:damage/core/simple.non-player-process
