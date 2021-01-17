@@ -5,7 +5,7 @@
 # @within function
 #   asset_manager:sacred_treasure/core/**
 #   asset:sacred_treasure/*/*
-    #declare storage asset:id
+    #declare storage asset:context
 
 #> ReturnTag
 # @within function
