@@ -20,6 +20,8 @@
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 30
+# 神器を発動できるスロット (string) Wikiを参照
+    data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onAttack"
 # MP消費量 (int)
