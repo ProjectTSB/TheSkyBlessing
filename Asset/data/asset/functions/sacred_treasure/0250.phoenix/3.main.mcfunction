@@ -12,7 +12,7 @@
 
 # ここから先は神器側の効果の処理を書く
     # 対象選定 + ダメージ増加判定
-        execute as @e[type=#lib:living,nbt={HurtTime:10s},distance=..100] run tag @s add Hit
+        execute as @e[type=#lib:living,tag=HurtEntity,distance=..100] run tag @s add Hit
         execute store result score @s Temporary run time query daytime
 
         # //ここから@sのTemporaryは強さ指数に変化(0..2)
