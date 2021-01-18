@@ -3,7 +3,10 @@
 # 神器の発動条件をチェックします
 #
 # @within function asset:sacred_treasure/0158.mp_extractor/1.trigger
-#declare score_holder $BottleCount
+
+#> Private
+# @private
+    #declare score_holder $BottleCount
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/check_condition/auto

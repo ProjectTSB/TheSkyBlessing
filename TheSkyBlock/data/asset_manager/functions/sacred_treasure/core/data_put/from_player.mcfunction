@@ -2,16 +2,6 @@
 #
 # 神器のIDを取得します
 #
-# @input
-#   as player
-#   storage asset:sacred_treasure Argument.AutoSlot ?
-# @output storage asset:id
-#   mainhand : int
-#   offhand : int
-#   feet : int
-#   legs : int
-#   chest : int
-#   head : int
 # @within asset_manager:sacred_treasure/triggers/*
 
 # データを移植

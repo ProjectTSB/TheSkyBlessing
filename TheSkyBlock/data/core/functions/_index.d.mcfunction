@@ -7,3 +7,7 @@
 #   function core:handler/respawn
 #   predicate lib:is_death
     #declare tag Death
+
+#> HurtEntity
+# @public
+    #declare tag HurtEntity

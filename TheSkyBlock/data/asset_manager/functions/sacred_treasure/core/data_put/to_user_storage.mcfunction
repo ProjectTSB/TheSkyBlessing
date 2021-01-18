@@ -2,7 +2,6 @@
 #
 # ユーザーストレージに神器データを追加する
 #
-# @input as player
 # @within function asset_manager:sacred_treasure/triggers/use_item.pre
 
 # UserStorage呼び出し

@@ -6,7 +6,12 @@
 #
 # @within tag/function minecraft:tick
 
+# HurtTime
+    tag @e[type=#lib:living,tag=HurtEntity] remove HurtEntity
+    execute at @a[predicate=!lib:is_death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # プレイヤー処理部
+    # 神器のグローバルクールダウン
+        execute if score $SacredTreasureGlobalCooldown Global matches 1.. run scoreboard players remove $SacredTreasureGlobalCooldown Global 1
     # FallDistanceの記録
         execute as @a[predicate=!lib:is_death] store result score @s FallDistance run data get entity @s FallDistance
     # Triggers
@@ -25,7 +30,11 @@
     # 満腹度調整部
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,predicate=!lib:is_death] run function player_manager:adjust_hunger/observe
     # MP表示処理
-        execute as @a run function player_manager:mp/viewer/check_xpbar
+        execute as @a run function player_manager:mp_viewer/check_xpbar
 
 # Mobデータ初期化部
     execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
+
+# Tick最後の処理
+    # ScoreToHealthWrapperの消化
+        execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc

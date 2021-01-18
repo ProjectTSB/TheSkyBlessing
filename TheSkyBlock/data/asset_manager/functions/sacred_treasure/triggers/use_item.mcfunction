@@ -9,4 +9,4 @@
 # 神器側に受け渡し
     function #asset:sacred_treasure/use_item
 # リセット
-    data remove storage asset:sacred_treasure Items
+    data remove storage asset:context Items
