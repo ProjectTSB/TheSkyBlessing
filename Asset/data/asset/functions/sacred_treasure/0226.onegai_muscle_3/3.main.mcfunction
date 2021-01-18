@@ -8,25 +8,15 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    # 体力が1になるように減算,(体力*100-100)をScale0.01でDamage
-    execute store result score @s Temporary run data get entity @s Health 100
-    scoreboard players remove @s Temporary 100
-    execute store result storage lib: Argument.Damage float 0.01 run scoreboard players get @s Temporary
-    data modify storage lib: Argument.AttackType set value Physical
-    data modify storage lib: Argument.DisableParticle set value true
-    data modify storage lib: Argument.BypassArmor set value true
-    data modify storage lib: Argument.BypassResist set value true
-    function lib:damage/
-    data remove storage lib: Argument
-
+    # 体力を変更
+        scoreboard players set $Set Lib 100
+        function lib:score_to_health_wrapper/set
     # 効果
-    effect give @s jump_boost 10 50 true
-    execute if predicate player_manager:is_believe/nyaptov run effect give @s jump_boost 10 75 true
-
+        effect give @s jump_boost 10 50 true
+        execute if predicate player_manager:is_believe/nyaptov run effect give @s jump_boost 10 75 true
     # 演出
-    playsound entity.player.hurt player @a ~ ~ ~ 1 1
-    playsound minecraft:entity.zombie_villager.cure master @s ~ ~ ~ 1 2
-    particle sweep_attack ~ ~1 ~ 0.5 0.5 0.5 0 30 normal @s
-
+        playsound entity.player.hurt player @a ~ ~ ~ 1 1
+        playsound minecraft:entity.zombie_villager.cure master @s ~ ~ ~ 1 2
+        particle sweep_attack ~ ~1 ~ 0.5 0.5 0.5 0 30 normal @s
     #リセット
-    scoreboard players reset @s Temporary
+        scoreboard players reset @s Temporary
