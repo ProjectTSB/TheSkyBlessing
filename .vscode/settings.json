@@ -26,7 +26,21 @@
     "datapack.lint.idOmitDefaultNamespace": null,
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
-        "PascalCase"
+        [
+            "PascalCase",
+            {
+                "label": "SlotType",
+                "parts": [
+                    "/auto/",
+                    "/mainhand/",
+                    "/offhand/",
+                    "/head/",
+                    "/chest/",
+                    "/legs/",
+                    "/feet/"
+                ]
+            }
+        ]
     ],
     "datapack.lint.nameOfObjectives": [
         "error",
@@ -50,17 +64,10 @@
     ],
     "datapack.lint.nameOfScoreHolders": [
         "error",
-        [
-            {
-                "label": "DollerPrefix",
-                "sep": "$",
-                "parts": [
-                    "/^$/",
-                    "/^.*$/"
-                ]
-            },
-            "/^\\*$/"
-        ]
+        {
+            "label": "DollerPrefix",
+            "prefix": "$"
+        }
     ],
     "datapack.lint.nameOfTeams": [
         "error",
@@ -305,6 +312,14 @@
     "datapack.lint.strictTeamCheck": [
         "error",
         true
+    ],
+    "datapack.lint.stringQuote": [
+        "warning",
+        true
+    ],
+    "datapack.lint.stringQuoteType": [
+        "warning",
+        "prefer double"
     ],
     "datapack.lint.timeOmitTickUnit": false,
     "datapack.features.semanticColoring": false,
