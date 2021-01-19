@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/core/data_put/to_user_storage
+#> asset_manager:sacred_treasure/core/data/to_user_storage
 #
 # ユーザーストレージに神器データを追加する
 #
-# @within function asset_manager:sacred_treasure/triggers/use_item.pre
+# @within function core:early_handler/consume_item
 
 # UserStorage呼び出し
     function oh_its_dat:please

@@ -26,7 +26,7 @@
         execute if entity @a[advancements={core:handler/killed=true},limit=1] as @a[advancements={core:handler/killed=true}] at @s run function core:handler/killed
         execute if entity @a[scores={ClickCarrotEvent=1..},limit=1] as @a[scores={ClickCarrotEvent=1..}] at @s run function core:handler/click.carrot
     # tickTriggerの神器
-        execute as @a[predicate=!lib:is_death] run function asset_manager:sacred_treasure/triggers/tick
+        execute as @a at @s run function asset_manager:sacred_treasure/triggers/
     # 満腹度調整部
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,predicate=!lib:is_death] run function player_manager:adjust_hunger/observe
     # MP表示処理

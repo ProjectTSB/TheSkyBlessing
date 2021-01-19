@@ -19,7 +19,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 # @within function
 #   oh_my_dat:**
 #   lib:**
-#   asset_manager:sacred_treasure/core/**
+#   asset_manager:sacred_treasure/**
 #   player_manager:**
     #declare storage oh_my_dat:
     scoreboard objectives add OhMyDatID dummy
