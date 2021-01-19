@@ -19,10 +19,10 @@ function core:define_gamerule
 # 0: TheSkyBlock
 # 1: ScoreToHealth
 # 2: OhMyDat
-datapack disable OhMyDat
-datapack disable ScoreToHealth
-datapack enable ScoreToHealth after TheSkyBlock
-datapack enable OhMyDat after ScoreToHealth
+datapack disable "OhMyDat"
+datapack disable "ScoreToHealth"
+datapack enable "ScoreToHealth" after "TheSkyBlock"
+datapack enable "OhMyDat" after "ScoreToHealth"
 
 #> エイリアス
 # @public
