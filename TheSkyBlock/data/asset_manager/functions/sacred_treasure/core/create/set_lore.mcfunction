@@ -23,3 +23,5 @@
     function asset_manager:sacred_treasure/core/create/set_god
 # Lore一括追加
     data modify storage asset:sacred_treasure Data.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
+# リセット
+    data modify block 10000 0 10000 Items set value []
