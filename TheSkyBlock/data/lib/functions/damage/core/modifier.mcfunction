@@ -27,6 +27,8 @@
         execute if data storage lib: Argument{ElementType:"Water"} store result score $Temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifier.AttackType.Water 10000
         execute if data storage lib: Argument{ElementType:"Thunder"} store result score $Temp Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifier.AttackType.Thunder 10000
         scoreboard players operation $Modifier Temporary += $Temp Temporary
+    # 200%減算
+        scoreboard players remove $Modifier Temporary 20000
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
