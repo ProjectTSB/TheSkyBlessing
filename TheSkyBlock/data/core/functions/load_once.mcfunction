@@ -109,6 +109,7 @@ function core:define_const
     scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
     scoreboard objectives add MP dummy {"text":"MP"}
     scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+    scoreboard objectives add HealModifier dummy {"text":"ヒール補正値"}
 scoreboard objectives setdisplay belowName Health
 
 #> PlayerNBT
