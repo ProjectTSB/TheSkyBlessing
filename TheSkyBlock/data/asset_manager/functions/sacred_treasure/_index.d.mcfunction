@@ -40,3 +40,9 @@
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Damage
     #declare tag TriggerFlag.Killed
+
+#> this
+# @within *
+#   asset_manager:sacred_treasure/triggers/
+#   asset:sacred_treasure/**
+    #declare tag this
