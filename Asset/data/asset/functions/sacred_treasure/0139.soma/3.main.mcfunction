@@ -24,6 +24,7 @@
 
 # HP回復
     data modify storage lib: Argument.Heal set value 10f
+    function lib:heal/modifier
     function lib:heal/
 
 # リセット

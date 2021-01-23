@@ -12,7 +12,8 @@
 # 回復する量 = 全回復
     data modify storage lib: Argument.Heal set value 10000f
 # 実行者対象
-    execute at @s run function lib:heal/
+    function lib:heal/modifier
+    function lib:heal/
 # リセット
     data remove storage lib: Argument
 

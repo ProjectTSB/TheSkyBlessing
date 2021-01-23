@@ -38,6 +38,7 @@
         execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 80.0f
         execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 100.0f
         execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 120.0f
+        function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Hit,distance=..100,limit=1] run function lib:damage/
     # リセット
         scoreboard players reset @s Temporary
