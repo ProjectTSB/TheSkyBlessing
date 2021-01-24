@@ -4,5 +4,5 @@
 #
 # @within function mob_manager:detect_hurt_entity/filters/2
 
-execute if entity @a[tag=This,tag=HasFlag1,distance=..1] if entity @s[tag=DetectFlag1] run function mob_manager:detect_hurt_entity/filters/0
-execute if entity @a[tag=This,tag=!HasFlag1,distance=..1] if entity @s[tag=!DetectFlag1] run function mob_manager:detect_hurt_entity/filters/0
+execute if entity @a[tag=this,tag=HasFlag1,distance=..1] if entity @s[tag=DetectFlag1] run function mob_manager:detect_hurt_entity/filters/0
+execute if entity @a[tag=this,tag=!HasFlag1,distance=..1] if entity @s[tag=!DetectFlag1] run function mob_manager:detect_hurt_entity/filters/0
