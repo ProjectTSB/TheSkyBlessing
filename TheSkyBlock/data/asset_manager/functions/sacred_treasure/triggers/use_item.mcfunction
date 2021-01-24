@@ -10,7 +10,7 @@
 
 # AutoSlot設定
     # UserStorage呼び出し
-        function oh_its_dat:please
+        function oh_my_dat:please
     # mainhand?
         data modify storage asset:sacred_treasure Temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Items.SelectedItem
         execute store success score $isSuccess Temporary run data modify storage asset:sacred_treasure Temp set from storage asset:context Items.mainhand
