@@ -19,6 +19,7 @@
 #       LocalCooldown : int
 #       GlobalCooldown : int
 #       CanUsedGod : God[]
+#       CustomNBT : Item.tag
 # @within function asset:sacred_treasure/lib/give
 
 #> Private
