@@ -8,4 +8,4 @@
     function asset:sacred_treasure/lib/use/chest
 
 # ここから先は神器側の効果の処理を書く
-    execute at @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run summon lightning_bolt
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run summon lightning_bolt
