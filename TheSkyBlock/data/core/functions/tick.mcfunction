@@ -38,3 +38,6 @@
 # Tick最後の処理
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
+
+# リセット
+    execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:detect_hurt_entity/reset

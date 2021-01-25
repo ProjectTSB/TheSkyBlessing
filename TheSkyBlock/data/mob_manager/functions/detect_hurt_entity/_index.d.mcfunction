@@ -7,6 +7,11 @@
 #   mob_manager:detect_hurt_entity/set_flag
     #declare tag AlreadyInitMob
 
+#> 攻撃元Entity
+# `@e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150]`
+# @public
+    #declare tag AttackedEntity
+
 #> DetectFlag
 # @within * mob_manager:detect_hurt_entity/**
     #declare tag DetectFlag0
@@ -42,3 +47,4 @@
     #declare tag HasFlag14
     #declare tag HasFlag15
     #declare tag this
+    #declare score_holder $AttackedEntityIndex
