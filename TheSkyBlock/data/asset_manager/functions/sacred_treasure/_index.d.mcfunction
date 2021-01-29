@@ -40,6 +40,7 @@
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Damage
     #declare tag TriggerFlag.Killed
+    #declare tag TriggerFlag.Sneak
 
 #> this
 # @within *
