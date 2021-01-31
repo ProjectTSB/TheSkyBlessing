@@ -784,20 +784,12 @@
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
     "mcdutil.createDatapackTemplate.defaultVanillaData": false,
-    "harurow.file.exclude.backup": {
+    "files.exclude": {
         ".idea": true,
         ".vscode": true,
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "desktop.ini": true
-    },
-    "files.exclude": {
-        ".idea": false,
-        ".vscode": false,
-        "**/.classpath": false,
-        "**/.project": false,
-        "**/.settings": false,
-        "desktop.ini": false
     }
 }
