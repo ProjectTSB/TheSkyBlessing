@@ -2,7 +2,7 @@
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0248.bow_of_vinderre/2.check_condition]
+# @within function asset:sacred_treasure/0248.bow_of_vinderre/2.check_condition
 
 #> private
 # @private
