@@ -42,9 +42,9 @@
         execute store result score $Cooldown Temporary run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
         scoreboard players operation $Tick Temporary -= $LatestUsedTick Temporary
         execute if score $Tick Temporary >= $Cooldown Temporary run tag @s add PassConditionC
-    # GlobalCooldownによる制限
+    # SpecialCooldownによる制限
         tag @s add PassConditionD
-        execute if data storage asset:sacred_treasure Item.tag.TSB.GlobalCooldown if score $SacredTreasureGlobalCooldown Global matches 1.. run tag @s remove PassConditionD
+        execute if data storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown if score $SacredTreasureSpecialCooldown Global matches 1.. run tag @s remove PassConditionD
 # 両方の条件を満たしていた場合CanUsedを付与
     execute if entity @s[tag=PassConditionA,tag=PassConditionB,tag=PassConditionC,tag=PassConditionD] run tag @s add CanUsed
 # 条件を満たしていなかった時のユーザー側への通知

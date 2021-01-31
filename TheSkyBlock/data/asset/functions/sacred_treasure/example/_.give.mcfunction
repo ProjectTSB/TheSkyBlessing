@@ -20,7 +20,7 @@ data modify storage asset:sacred_treasure Trigger set value "keepSneak"
 data modify storage asset:sacred_treasure MPCost set value 1
 # data modify storage asset:sacred_treasure MPRequire set value 100
 # data modify storage asset:sacred_treasure LocalCooldown set value 20
-# data modify storage asset:sacred_treasure GlobalCooldown set value 5
+# data modify storage asset:sacred_treasure SpecialCooldown set value 5
 data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Wi-ki"]
 data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b}
 

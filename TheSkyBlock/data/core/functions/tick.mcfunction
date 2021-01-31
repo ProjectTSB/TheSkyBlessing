@@ -11,7 +11,7 @@
     execute at @a[predicate=!lib:is_death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # プレイヤー処理部
     # 神器のグローバルクールダウン
-        execute if score $SacredTreasureGlobalCooldown Global matches 1.. run scoreboard players remove $SacredTreasureGlobalCooldown Global 1
+        execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
     # FallDistanceの記録
         execute as @a[predicate=!lib:is_death] store result score @s FallDistance run data get entity @s FallDistance
     # Triggers
