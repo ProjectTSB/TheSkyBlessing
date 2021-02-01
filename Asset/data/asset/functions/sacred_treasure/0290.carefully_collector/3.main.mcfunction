@@ -37,3 +37,4 @@
         scoreboard players reset @s Temporary
         data remove storage asset:temp block
         data remove storage asset:temp chest
+        tag @e[type=item,tag=CarefullyCollect,distance=..0] remove CarefullyCollect
