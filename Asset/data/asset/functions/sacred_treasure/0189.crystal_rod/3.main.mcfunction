@@ -14,6 +14,6 @@
     playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 2 1
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 2 1.5
     playsound minecraft:block.end_portal_frame.fill player @a ~ ~ ~ 2
-    
+
 # 効果
     effect clear @a[distance=15]
