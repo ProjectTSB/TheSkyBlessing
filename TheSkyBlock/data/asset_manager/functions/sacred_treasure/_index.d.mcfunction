@@ -29,7 +29,7 @@
 #   asset_manager:sacred_treasure/core/use/check
 #   asset_manager:sacred_treasure/core/use/
 #   core:tick
-    #declare score_holder $SacredTreasureGlobalCooldown
+    #declare score_holder $SacredTreasureSpecialCooldown
 
 #> Trigger検知用
 # @within function
@@ -40,6 +40,7 @@
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Damage
     #declare tag TriggerFlag.Killed
+    #declare tag TriggerFlag.Sneak
 
 #> this
 # @within *

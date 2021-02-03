@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0140.hi_soma/_.give
+#> asset:sacred_treasure/0141.aure_soma/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,13 +9,13 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 140
+    data modify storage asset:sacred_treasure ID set value 141
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:potion"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ハイソーマ","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"アウレソーマ","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"HPを20回復、MPを40回復"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"HPを30回復、MPを80回復"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -33,7 +33,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value
+    # data modify storage asset:sacred_treasure GlobalCooldown set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
