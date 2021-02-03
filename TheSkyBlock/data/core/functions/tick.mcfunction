@@ -12,8 +12,12 @@
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
-    # FallDistanceの記録
-        execute as @a[predicate=!lib:is_death] store result score @s FallDistance run data get entity @s FallDistance
+    # PlayerNBT
+        # リセット
+            function player_manager:nbt_data/reset
+        # 記録
+            execute as @a[predicate=!lib:is_death] run function player_manager:nbt_data/put
+
     # Triggers
         execute if entity @a[scores={FirstJoinEvent=1},limit=1] as @a[scores={FirstJoinEvent=1}] at @s run function core:handler/first_join
         execute if entity @a[scores={RejoinEvent=1..},limit=1] as @a[scores={RejoinEvent=1..}] at @s run function core:handler/rejoin
