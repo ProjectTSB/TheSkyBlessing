@@ -16,4 +16,4 @@
     playsound minecraft:block.end_portal_frame.fill player @a ~ ~ ~ 2
 
 # 効果
-    effect clear @a[distance=15]
+    effect clear @a[distance=..15]
