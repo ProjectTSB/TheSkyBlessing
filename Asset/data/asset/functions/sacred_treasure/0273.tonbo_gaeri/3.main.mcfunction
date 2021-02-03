@@ -9,7 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
 # 移動前の地点にパーティクルと音を残す
-function asset:sacred_treasure/0273.tonbo_gaeri/3.1.warp_effect
+    function asset:sacred_treasure/0273.tonbo_gaeri/3.1.warp_effect
 
 # ぶん殴ったやつに物理、無属性のダメージをぶちかます
     data modify storage lib: Argument.Damage set value 100.0f
