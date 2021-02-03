@@ -24,3 +24,5 @@ jobs:
 
       - name: Test
         uses: ChenCMD/datapack-linter@main
+        with:
+          outputDefine: public
