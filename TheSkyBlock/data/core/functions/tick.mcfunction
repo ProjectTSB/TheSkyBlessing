@@ -8,7 +8,7 @@
 
 # HurtTime
     tag @e[type=#lib:living,tag=HurtEntity] remove HurtEntity
-    execute at @a[predicate=!lib:is_death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
+    execute at @a[tag=!Death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
@@ -16,7 +16,7 @@
         # リセット
             function player_manager:nbt_data/reset
         # 記録
-            execute as @a[predicate=!lib:is_death] run function player_manager:nbt_data/put
+            execute as @a[tag=!Death] run function player_manager:nbt_data/put
 
     # Triggers
         execute if entity @a[scores={FirstJoinEvent=1},limit=1] as @a[scores={FirstJoinEvent=1}] at @s run function core:handler/first_join
@@ -34,7 +34,7 @@
     # 神器処理
         execute as @a at @s run function asset_manager:sacred_treasure/triggers/
     # 満腹度調整部
-        execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,predicate=!lib:is_death] run function player_manager:adjust_hunger/observe
+        execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,tag=!Death] run function player_manager:adjust_hunger/observe
     # MP表示処理
         execute as @a run function player_manager:mp_viewer/check_xpbar
 
