@@ -20,6 +20,8 @@
     execute if entity @s[tag=TriggerFlag.Killed] run function asset_manager:sacred_treasure/triggers/killed
 
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:sacred_treasure/triggers/use_item
+
+    execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:sacred_treasure/triggers/sneak
 # リセット
     tag @s remove this
     tag @s remove TriggerFlag.Attack
@@ -27,3 +29,4 @@
     tag @s remove TriggerFlag.Damage
     tag @s remove TriggerFlag.Killed
     tag @s remove TriggerFlag.UseItem
+    tag @s remove TriggerFlag.Sneak
