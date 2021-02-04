@@ -15,7 +15,7 @@
 #   MPRequire? : int
 #   CostText? : TextComponent
 #   LocalCooldown? : int
-#   GlobalCooldown? : int
+#   SpecialCooldown? : int
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:sacred_treasure/*/_.give
@@ -54,4 +54,4 @@
     data remove storage asset:sacred_treasure CanUsedGod
     data remove storage asset:sacred_treasure CustomNBT
     data remove storage asset:sacred_treasure LocalCooldown
-    data remove storage asset:sacred_treasure GlobalCooldown
+    data remove storage asset:sacred_treasure SpecialCooldown

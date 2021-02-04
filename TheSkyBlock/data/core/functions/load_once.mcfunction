@@ -5,7 +5,7 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.5"
+data modify storage global Version set value "0.0.7"
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
@@ -42,12 +42,10 @@ data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
-#> Healthを持つMobにフィルターする際に使用してください
-#
-# **teamとしては存在しません**
-#
+#> NoCollision
 # @public
-    #declare team Null
+    team add NoCollision
+team modify NoCollision collisionRule never
 
 #> 1tickで消す一時変数の保存用
 # @public
@@ -70,9 +68,9 @@ data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
     scoreboard objectives add Const dummy
 function core:define_const
 
-
 #> EventHandlers
 # @within function
+#   asset_manager:sacred_treasure/triggers/**
 #   core:handler/*
 #   core:tick
     scoreboard objectives add FirstJoinEvent custom:play_one_minute {"text":"イベント: 初回Join"}
@@ -80,6 +78,7 @@ function core:define_const
     scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
     scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
     scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
+    scoreboard objectives add Sneak custom:sneak_time {"text":"イベント: スニーク"}
 
 #> Library
 # @public

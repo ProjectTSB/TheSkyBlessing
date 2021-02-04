@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "inventory_changed"
+        }
+    },
+    "rewards": {
+        "function": "core:early_handler/inventory_change"
+    }
+}
