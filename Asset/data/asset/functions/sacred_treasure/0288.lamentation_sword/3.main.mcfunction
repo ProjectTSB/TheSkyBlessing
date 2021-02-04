@@ -25,6 +25,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
 
 # ダメージ
+    function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
