@@ -8,4 +8,18 @@
     function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0073.suzuran_charm
+
+# 物理無属性ダメージ:25
+    data modify storage lib: Argument.Damage set value 25.0f
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "None"
+    execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
+
+# 敵に衰弱を付与
+    effect give @e[type=#lib:living,tag=HurtEntity,distance=..10] wither 1000000 0 false
+
+# 演出
+    execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run particle minecraft:smoke ~ ~ ~ 1 1 1 0.0001 500 normal @a[distance=..30]
+    playsound minecraft:entity.splash_potion.break master @a[distance=..30] ~ ~ ~ 1 0.5
