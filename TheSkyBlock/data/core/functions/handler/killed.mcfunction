@@ -5,7 +5,6 @@
 # @within function core:tick
 
 # asset_managerへの引継ぎ
-    function asset_manager:sacred_treasure/triggers/killed
-
+    tag @s add TriggerFlag.Killed
 # Reset
     advancement revoke @s only core:handler/killed

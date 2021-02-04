@@ -4,13 +4,12 @@
 #
 # @within function core:handler/damage
 
-say 痛い！
 # タグ付け
-    tag @s add This
+    tag @s add this
 # 対象を設定してフィルターにかける
-    execute as @e[team=!Null,type=!player,type=!armor_stand,distance=..100] run function mob_manager:detect_hurt_entity/filters/15
+    execute as @e[type=#lib:living,type=!player,distance=..150] run function mob_manager:detect_hurt_entity/filters/15
 # リセット
-    tag @s remove This
+    tag @s remove this
     tag @s remove HasFlag0
     tag @s remove HasFlag1
     tag @s remove HasFlag2
