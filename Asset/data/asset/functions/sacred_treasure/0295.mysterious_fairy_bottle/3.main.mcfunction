@@ -16,6 +16,7 @@
     playsound minecraft:item.bottle.fill player @a ~ ~ ~ 2 1.5
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 1.75
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 2
+
 # ハチを動かすやつ
     function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
 

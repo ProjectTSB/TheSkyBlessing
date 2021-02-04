@@ -12,9 +12,9 @@
     data modify entity @s AngerTime set value 2147483647
 
 # パーティクル
-    particle minecraft:crit ~ ~0.5 ~ 0 0 0 0 1
-    particle minecraft:dust 1 0.5 0.5 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1
-    particle minecraft:dust 1 0.5 0.8 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1
+    particle minecraft:crit ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..20]
+    particle minecraft:dust 1 0.5 0.5 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..20]
+    particle minecraft:dust 1 0.5 0.8 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..20]
 
 # 透明化
     effect give @s invisibility 1 0 true
