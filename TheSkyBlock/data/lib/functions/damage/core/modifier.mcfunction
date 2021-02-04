@@ -30,8 +30,6 @@
     # 200%減算
         scoreboard players remove $Modifier Temporary 200
 # 補正
-    tellraw @a [{"text":"score: "},{"score":{"objective":"Temporary","name":"$Damage"}}]
-    tellraw @a [{"text":"score: "},{"score":{"objective":"Temporary","name":"$Modifier"}}]
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
     execute store result storage lib: Argument.Damage float 0.0001 run scoreboard players get $Damage Temporary
