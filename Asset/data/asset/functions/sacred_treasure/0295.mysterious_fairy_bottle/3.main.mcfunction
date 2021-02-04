@@ -8,5 +8,9 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    summon bee ~ ~ ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",AngerTime:2147483647,Tags:["ChuzFairy","ChuzFairyInit"]}
-    say hi
+# ハチを召喚 一瞬も見せたくないので空の上に
+    summon bee ~ ~256 ~ {HasStung:0b,Silent:1b,Invulnerable:0b,Team:"NoCollision",Tags:["ChuzFairyInit"]}
+
+# ハチを動かすやつ
+    function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
+
