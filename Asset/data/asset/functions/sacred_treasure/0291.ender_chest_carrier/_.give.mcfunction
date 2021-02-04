@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"チェストキャリアー","color":"green"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"エンダーチェストキャリアー","color":"#DD00FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"荷物を持ってついてきてくれる、小さな相棒。"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"スニークしながら使用すると、"}','{"text":"足元にあるエンダーチェストを自律飛行させる。"}','{"text":"飛行したチェストの付近で使用すると、"}','{"text":"エンダーチェストに戻すことができる。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
