@@ -8,7 +8,7 @@
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
-    execute store result score $MPRequire Temporary run data get entity @s Inventory[{Slot:-106b}].tag.TSB.MPRequire
+    execute store result score $MPRequire Temporary run data get storage asset:context Items.offhand.tag.TSB.MPRequire
     execute unless score $MPRequire Temporary matches 1.. run tag @s remove CanUsed
     execute unless score $MPRequire Temporary matches 1.. run playsound ui.button.click master @s ~ ~ ~ 1 2
     execute unless score $MPRequire Temporary matches 1.. run tellraw @s [{"text": "オフハンドにMPを消費する神器を持っている必要があります","color": "red"}]
