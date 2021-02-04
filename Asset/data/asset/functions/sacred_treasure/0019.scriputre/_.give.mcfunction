@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:book"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"聖書,"color":"white"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"聖書","color":"white"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"神の加護を受けた書物"}','{"text":"文章の内から治癒の力を感じる。"}']
 # MP以外の消費物 (TextComponentString) (オプション)

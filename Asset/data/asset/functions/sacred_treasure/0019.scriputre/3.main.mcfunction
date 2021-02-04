@@ -8,4 +8,9 @@
     function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0019.scriputre
+# 攻撃した対象に回復とパーティクル
+    effect give @e[type=#lib:living,tag=HurtEntity,distance=..10] minecraft:instant_health 1 1 true
+    execute at @e[type=#lib:living,tag=HurtEntity,distance=..10] run particle end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..10]
+
+# SE
+    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 20 1
