@@ -19,4 +19,3 @@
 
 # ハチを動かすやつ
     function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
-

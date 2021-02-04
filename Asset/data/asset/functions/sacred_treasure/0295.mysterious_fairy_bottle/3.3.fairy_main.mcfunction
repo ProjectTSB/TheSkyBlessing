@@ -13,8 +13,8 @@
 
 # パーティクル
     particle minecraft:crit ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..20]
-    particle minecraft:dust 1 0.5 0.5 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..20]
-    particle minecraft:dust 1 0.5 0.8 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..20]
+    particle minecraft:dust 1 0.5 0.5 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    particle minecraft:dust 1 0.5 0.8 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
 
 # 透明化
     effect give @s invisibility 1 0 true

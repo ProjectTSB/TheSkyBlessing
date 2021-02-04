@@ -6,5 +6,6 @@
 # @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/**
     #declare tag ChuzFairy
     #declare tag ChuzFairyInit
-    #declare tag ChuzFairySnowball
     #declare tag ChuzFairySnowballInit
+    #declare tag ChuzFairyShot
+    #declare tag ChuzFairyShotInit
