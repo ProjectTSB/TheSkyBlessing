@@ -17,5 +17,5 @@
 # テレポート処理
     execute if predicate lib:random_pass_per/25 run tag @e[type=#lib:living,tag=HurtEntity,distance=..100] add RandomTP
     tp @e[type=#lib:living,tag=HurtEntity,tag=RandomTP,distance=..100] ^ ^ ^1.5
-    execute if @e[type=#lib:living,tag=HurtEntity,tag=RandomTP,distance=..2] run playsound minecraft:entity.enderman.teleport ambient @a ^ ^ ^1.5 1 1 0
+    execute if entity @e[type=#lib:living,tag=HurtEntity,tag=RandomTP,distance=..2] run playsound minecraft:entity.enderman.teleport ambient @a ^ ^ ^1.5 1 1 0
     tag @e[type=#lib:living,tag=HurtEntity,tag=RandomTP,distance=..100] remove RandomTP
