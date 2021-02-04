@@ -9,8 +9,13 @@
 
 # ここから先は神器側の効果の処理を書く
 # ハチを召喚 一瞬も見せたくないので空の上に
-    summon bee ~ ~256 ~ {HasStung:0b,Silent:1b,Invulnerable:0b,Team:"NoCollision",Tags:["ChuzFairyInit"]}
+    summon bee ~ ~256 ~ {HasStung:0b,Silent:1b,Invulnerable:0b,Team:"NoCollision",Tags:["ChuzFairyInit"],DeathTime:19s}
 
+# 音とパーティクル
+    playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2
+    playsound minecraft:item.bottle.fill player @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 1.75
+    playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 2
 # ハチを動かすやつ
     function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
 
