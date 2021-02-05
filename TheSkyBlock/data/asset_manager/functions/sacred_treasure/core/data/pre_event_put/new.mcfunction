@@ -7,6 +7,7 @@
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context id set from storage asset:context New.id
     data modify storage asset:context Items set from storage asset:context New.Items
+    data modify storage asset:context Inventory set from storage asset:context New.Inventory
 # autoの処理
     # 初期化
         data remove storage asset:context id.auto
