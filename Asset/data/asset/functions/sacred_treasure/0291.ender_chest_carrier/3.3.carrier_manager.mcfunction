@@ -14,7 +14,10 @@
 
         execute as @e[type=armor_stand,tag=YvCarrierModel] at @s run data modify entity @s Rotation set from entity @e[type=bee,tag=YvCarrier,sort=nearest,limit=1] Rotation
 
-        execute as @e[type=bee,tag=YvCarrier] at @s run particle minecraft:dust 0.8 0 1 0.5 ~ ~1.2 ~ 0.1 0.1 0.1 0 1 force @a[distance=..20]
+        execute as @e[type=bee,tag=YvCarrier] at @s run particle minecraft:dust .8 0 1 .5 ~ ~1.6 ~ .15 .15 .15 0 4 force @a[distance=..20]
+
+        execute as @e[type=bee,tag=YvCarrier] at @s if entity @a[distance=2..2.1] run function asset:sacred_treasure/0291.ender_chest_carrier/3.3.2.carrier_sound
+
 
     # universalAnger false
         #execute as @e[type=bee,tag=YvCarrierInit] at @s run summon snowball ~ ~-0.5 ~ {Owner:[I;0,0,0,0],NoGravity:0b,Tags:["YvCarrierSnowball"],Item:{id:"minecraft:black_stained_glass_pane",Count:1b}}
@@ -31,7 +34,9 @@
 
         #execute as @e[type=armor_stand,tag=YvCarrierModel] at @s run data modify entity @s Rotation set from entity @e[type=bee,tag=YvCarrier,sort=nearest,limit=1] Rotation
 
-        #execute as @e[type=armor_stand,tag=YvCarrier] at @s run particle minecraft:dust 0.8 0 1 1 ~ ~1 ~ 0.1 0.1 0.1 0 10 force @a[distance=..20]
+        #execute as @e[type=bee,tag=YvCarrier] at @s run particle minecraft:dust .8 0 1 .5 ~ ~1.6 ~ .15 .15 .15 0 4 force @a[distance=..20]
+
+        #execute as @e[type=bee,tag=YvCarrier] at @s if entity @a[distance=2..2.1] run function asset:sacred_treasure/0291.ender_chest_carrier/3.3.2.carrier_sound
 
 # scheduleループ
     execute if entity @e[type=bee,tag=YvCarrier,limit=1] run schedule function asset:sacred_treasure/0291.ender_chest_carrier/3.3.carrier_manager 1t replace
