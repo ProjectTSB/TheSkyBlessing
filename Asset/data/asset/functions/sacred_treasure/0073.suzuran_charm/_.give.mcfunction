@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"スズランチャーム","color":"white","bold":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"儚い花の香りを宿した大斧"}','{"text":"ひとたび敵に振るえば、付いた傷跡に猛毒がしみこむ。"}','{"text":"＊クールタイム: 5秒","color":"green"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"儚い花の香りを宿した大斧"}','{"text":"ひとたび敵に振るえば、付いた傷跡に猛毒がしみこむ。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.lily_of_the_valley"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
