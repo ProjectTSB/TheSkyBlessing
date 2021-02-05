@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"スズランチャーム","color":"white","bold":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"儚い花の香りを宿した大斧"}','{"text":"ひとたび敵に振るえば、付いた傷跡に猛毒がしみこむ。"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"儚い花の香りを宿した大斧"}','{"text":"ひとたび敵に振るえば、付いた傷跡に猛毒がしみこむ。"}','{"text":"＊クールタイム: 5秒","color":"green"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.lily_of_the_valley"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
@@ -31,13 +31,13 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 100
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    # data modify storage asset:sacred_treasure CustomNBT set value {}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1243279361,-1204256905,-1442042569,-1799465245],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;1566434863,1912073007,1186201922,1992060585]}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

@@ -23,3 +23,6 @@
 # 演出
     execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run particle minecraft:smoke ~ ~ ~ 1 1 1 0.0001 500 normal @a[distance=..30]
     playsound minecraft:entity.splash_potion.break master @a[distance=..30] ~ ~ ~ 1 0.5
+
+# スズラン現象
+    clear @s lily_of_the_valley 1
