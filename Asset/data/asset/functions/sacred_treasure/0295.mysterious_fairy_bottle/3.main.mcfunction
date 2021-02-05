@@ -9,7 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
 # ハチを召喚 一瞬も見せたくないので空の上に
-    summon bee ~ ~256 ~ {HasStung:0b,Silent:1b,Invulnerable:0b,Team:"NoCollision",Tags:["ChuzFairyInit"],DeathTime:19s}
+    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:ender_eye",Count:1b}}]}
 
 # 音とパーティクル
     playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2
