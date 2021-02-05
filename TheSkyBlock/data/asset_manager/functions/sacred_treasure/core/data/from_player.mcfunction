@@ -12,14 +12,14 @@
 # 初期化
     data remove storage asset:context New
 # Inventory
-    data modify storage asset:sacred_treasure New.Inventory set from entity @s Inventory
+    data modify storage asset:context New.Inventory set from entity @s Inventory
 # Items
     data modify storage asset:context New.Items.mainhand set from entity @s SelectedItem
-    data modify storage asset:context New.Items.offhand set from storage asset:sacred_treasure New.Inventory[{Slot:-106b}]
-    data modify storage asset:context New.Items.feet set from storage asset:sacred_treasure New.Inventory[{Slot:100b}]
-    data modify storage asset:context New.Items.legs set from storage asset:sacred_treasure New.Inventory[{Slot:101b}]
-    data modify storage asset:context New.Items.chest set from storage asset:sacred_treasure New.Inventory[{Slot:102b}]
-    data modify storage asset:context New.Items.head set from storage asset:sacred_treasure New.Inventory[{Slot:103b}]
+    data modify storage asset:context New.Items.offhand set from storage asset:context New.Inventory[{Slot:-106b}]
+    data modify storage asset:context New.Items.feet set from storage asset:context New.Inventory[{Slot:100b}]
+    data modify storage asset:context New.Items.legs set from storage asset:context New.Inventory[{Slot:101b}]
+    data modify storage asset:context New.Items.chest set from storage asset:context New.Inventory[{Slot:102b}]
+    data modify storage asset:context New.Items.head set from storage asset:context New.Inventory[{Slot:103b}]
 # id
     data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
     data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID
@@ -28,6 +28,6 @@
     data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.tag.TSB.ID
     data modify storage asset:context New.id.head set from storage asset:context New.Items.head.tag.TSB.ID
 # リセット
-    data remove storage asset:sacred_treasure Inventory
+    data remove storage asset:context Inventory
     data remove storage asset:context Items
     data remove storage asset:context id
