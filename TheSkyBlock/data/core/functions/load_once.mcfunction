@@ -118,5 +118,5 @@ scoreboard objectives setdisplay belowName Health
 # @public
     scoreboard objectives add AttackedEntity dummy
 
-#> Dchedule
+#> Schedule
     schedule function core:4_interval_tick 4t
