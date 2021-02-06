@@ -8,7 +8,7 @@
 # @private
     #declare score_holder $NowMP
 
-#初期化
+#初期化 //40levelは最大が201pointであることを利用して100%までを表現する
     xp set @s 40 levels
     xp set @s 0 points
     scoreboard players operation $NowMP Temporary = @s MP
