@@ -10,21 +10,21 @@
 # ここから先は神器側の効果の処理を書く
 
 # 装備変更成功の時
-    execute unless data storage asset:context Inventory[{Slot:103b}] unless data storage asset:context Inventory[{Slot:102b}] unless data storage asset:context Inventory[{Slot:101b}] unless data storage asset:context Inventory[{Slot:100b}] run particle minecraft:happy_villager ~ ~1 ~ 0.4 0.4 0.4 0.1 50
-    execute unless data storage asset:context Inventory[{Slot:103b}] unless data storage asset:context Inventory[{Slot:102b}] unless data storage asset:context Inventory[{Slot:101b}] unless data storage asset:context Inventory[{Slot:100b}] run playsound minecraft:block.anvil.land player @a ~ ~ ~ 1 2
+    execute unless data storage asset:context {Inventory:[{Slot:100b},{Slot:101b},{Slot:102b},{Slot:103b}]} run particle minecraft:happy_villager ~ ~1 ~ 0.4 0.4 0.4 0.1 50
+    execute unless data storage asset:context {Inventory:[{Slot:100b},{Slot:101b},{Slot:102b},{Slot:103b}]} run playsound minecraft:block.anvil.land player @a ~ ~ ~ 1 2
 
 # 装備変更失敗の時
-    execute if data storage asset:context Inventory[{Slot:103b}] if data storage asset:context Inventory[{Slot:102b}] if data storage asset:context Inventory[{Slot:101b}] if data storage asset:context Inventory[{Slot:100b}] run particle minecraft:smoke ~ ~1 ~ 0 0 0 0.1 50
-    execute if data storage asset:context Inventory[{Slot:103b}] if data storage asset:context Inventory[{Slot:102b}] if data storage asset:context Inventory[{Slot:101b}] if data storage asset:context Inventory[{Slot:100b}] run playsound minecraft:item.shield.break player @a ~ ~ ~ 1 0.5
+    execute if data storage asset:context {Inventory:[{Slot:100b},{Slot:101b},{Slot:102b},{Slot:103b}]} run particle minecraft:smoke ~ ~1 ~ 0 0 0 0.1 50
+    execute if data storage asset:context {Inventory:[{Slot:100b},{Slot:101b},{Slot:102b},{Slot:103b}]} run playsound minecraft:item.shield.break player @a ~ ~ ~ 1 0.5
 
 # 装備返却処理
-    execute if data storage asset:context Inventory[{Slot:103b}] run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_helmet",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
-    execute if data storage asset:context Inventory[{Slot:102b}] run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_chestplate",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
-    execute if data storage asset:context Inventory[{Slot:101b}] run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_leggings",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
-    execute if data storage asset:context Inventory[{Slot:100b}] run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_boots",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
+    execute if data storage asset:context {Inventory:[{Slot:103b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_helmet",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
+    execute if data storage asset:context {Inventory:[{Slot:102b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_chestplate",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
+    execute if data storage asset:context {Inventory:[{Slot:101b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_leggings",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
+    execute if data storage asset:context {Inventory:[{Slot:100b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_boots",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
 
 # 装備変更
-    execute unless data storage asset:context Inventory[{Slot:103b}] run replaceitem entity @s armor.head minecraft:diamond_helmet{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context Inventory[{Slot:102b}] run replaceitem entity @s armor.chest minecraft:diamond_chestplate{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context Inventory[{Slot:101b}] run replaceitem entity @s armor.legs minecraft:diamond_leggings{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context Inventory[{Slot:100b}] run replaceitem entity @s armor.feet minecraft:diamond_boots{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run replaceitem entity @s armor.head minecraft:diamond_helmet{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run replaceitem entity @s armor.chest minecraft:diamond_chestplate{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run replaceitem entity @s armor.legs minecraft:diamond_leggings{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run replaceitem entity @s armor.feet minecraft:diamond_boots{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
