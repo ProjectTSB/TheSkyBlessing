@@ -13,9 +13,22 @@
 
 # パーティクル
     particle minecraft:enchanted_hit ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
-    #particle minecraft:soul_fire_flame ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
-    particle minecraft:dust 0.5 0.5 1 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
-    particle minecraft:dust 0.5 0.8 1 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+
+# パーティクル(ノーマル)
+    execute if entity @s[tag=ChuzFairyNormal] run particle minecraft:dust 0.5 0.5 0.5 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyNormal] run particle minecraft:dust 1 1 1 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+
+# パーティクル(火)
+    execute if entity @s[tag=ChuzFairyFire] run particle minecraft:dust 1 0 0 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyFire] run particle minecraft:dust 1 0.3 0 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+
+# パーティクル(水)
+    execute if entity @s[tag=ChuzFairyWater] run particle minecraft:dust 0.208 0.208 1 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyWater] run particle minecraft:dust 0.522 0.467 1 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+
+# パーティクル(雷)
+    execute if entity @s[tag=ChuzFairyThunder] run particle minecraft:dust 0.878 1 0.333 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyThunder] run particle minecraft:dust 0.816 1 0 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
 
 # 透明化
     effect give @s invisibility 1 0 true

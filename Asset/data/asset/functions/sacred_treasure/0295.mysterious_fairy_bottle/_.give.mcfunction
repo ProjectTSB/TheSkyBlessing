@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"不思議な妖精入りの瓶","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"コール: ワンダリング・ソウル","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"一緒に戦ってくれる、キラキラした妖精！","color":"white"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う魂を呼び出す。","color":"white"}','{"text":" "}','{"text":"私と一緒に戦ってくれるかい？","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,11 +27,11 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 99999
+    data modify storage asset:sacred_treasure MPCost set value 40
 # MP必要量 (int) (オプション)
-    data modify storage asset:sacred_treasure MPRequire set value 100
+#    data modify storage asset:sacred_treasure MPRequire set value 100
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value 1000
+#    data modify storage asset:sacred_treasure LocalCooldown set value 20
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照

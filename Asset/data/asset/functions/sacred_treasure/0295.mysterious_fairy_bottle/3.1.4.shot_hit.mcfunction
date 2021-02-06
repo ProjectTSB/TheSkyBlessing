@@ -6,7 +6,7 @@
 
 # 魔法、無属性のダメージをぶちかます
     tag @s add HurtEntity
-    data modify storage lib: Argument.Damage set value 4.0f
+    data modify storage lib: Argument.Damage set value 8.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/

@@ -6,6 +6,7 @@
 
 # 天空から降ろす、その後雪玉ぶつけて付近のプレイヤーに敵対させる
     tp @s ~ ~-255 ~
+    execute at @p run tp @s ~ ~ ~
     tag @s remove ChuzFairyInit
     tag @s add ChuzFairy
 
