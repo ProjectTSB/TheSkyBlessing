@@ -22,5 +22,5 @@
     tellraw @a [{"text":"とってもためになるちぇん氏のTwitter：","color":"white"},{"text":"@CMD__Cat","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/CMD__Cat"},"hoverEvent":{"action":"show_text","contents":{"text":"クリックしてアクセス！"}}}]
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 100
+    scoreboard players set $Fluctuation Lib 1231
     function lib:mp/fluctuation
