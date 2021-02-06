@@ -54,3 +54,5 @@
 
 # リセット
     scoreboard players reset $NowMP Temporary
+# 音とめ
+    stopsound @s * entity.player.levelup
