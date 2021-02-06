@@ -13,3 +13,7 @@
     #declare tag ChuzFairySnowballInit
     #declare tag ChuzFairyShot
     #declare tag ChuzFairyShotInit
+    #declare tag ChuzFairyShotNormal
+    #declare tag ChuzFairyShotFire
+    #declare tag ChuzFairyShotWater
+    #declare tag ChuzFairyShotThunder

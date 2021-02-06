@@ -5,7 +5,10 @@
 # @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.3.fairy_main
 
 # ショット役召喚
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["ChuzFairyShotInit"]}
+    execute if entity @s[tag=ChuzFairyNormal] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["ChuzFairyShotInit","ChuzFairyShotNormal"]}
+    execute if entity @s[tag=ChuzFairyFire] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["ChuzFairyShotInit","ChuzFairyShotFire"]}
+    execute if entity @s[tag=ChuzFairyWater] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["ChuzFairyShotInit","ChuzFairyShotWater"]}
+    execute if entity @s[tag=ChuzFairyThunder] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["ChuzFairyShotInit","ChuzFairyShotThunder"]}
 
 # scheduleループ開始
     function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.1.shot_tick
