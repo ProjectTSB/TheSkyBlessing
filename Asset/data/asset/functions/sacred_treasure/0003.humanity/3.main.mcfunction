@@ -27,6 +27,7 @@
 
 # 回復処理
     execute if score @s Temporary matches 0 run data modify storage lib: Argument.Heal set value 10000f
+    execute if score @s Temporary matches 0 run function lib:heal/modifier
     execute if score @s Temporary matches 0 run function lib:heal/
 
 # 死亡処理

@@ -15,6 +15,7 @@
 
 # 回復
     data modify storage lib: Argument.Heal set value 24f
+    function lib:heal/modifier
     execute as @a[distance=..15] run function lib:heal/
 
 # リセット

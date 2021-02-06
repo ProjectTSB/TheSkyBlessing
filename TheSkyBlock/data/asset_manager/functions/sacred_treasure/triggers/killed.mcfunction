@@ -2,15 +2,14 @@
 #
 # 各神器処理へデータ受け渡し
 #
-# @within function core:handler/killed
+# @within function asset_manager:sacred_treasure/triggers/
 
-# IDの代入
-    function asset_manager:sacred_treasure/core/data_put/from_player
+# イベント発火前に実行するやつ
+    function asset_manager:sacred_treasure/core/data/pre_event_put/new
 # 神器側に受け渡し
     function #asset:sacred_treasure/killed
     execute if entity @s[advancements={asset_manager:sacred_treasure/killed/melee=true}] run function #asset:sacred_treasure/killed/melee
     execute if entity @s[advancements={asset_manager:sacred_treasure/killed/projectile=true}] run function #asset:sacred_treasure/killed/projectile
 # リセット
-    data remove storage asset:context Items
     advancement revoke @s only asset_manager:sacred_treasure/killed/melee
     advancement revoke @s only asset_manager:sacred_treasure/killed/projectile

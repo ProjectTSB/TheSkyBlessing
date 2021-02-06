@@ -26,7 +26,24 @@
 
 #> グローバルクールダウン
 # @within function
-#       asset_manager:sacred_treasure/core/use/check
-#       asset_manager:sacred_treasure/core/use/
-#       core:tick
-    #declare score_holder $SacredTreasureGlobalCooldown
+#   asset_manager:sacred_treasure/core/use/check
+#   asset_manager:sacred_treasure/core/use/
+#   core:tick
+    #declare score_holder $SacredTreasureSpecialCooldown
+
+#> Trigger検知用
+# @within function
+#   asset_manager:sacred_treasure/triggers/**
+#   core:handler/**
+    #declare tag TriggerFlag.Attack
+    #declare tag TriggerFlag.ClickCarrot
+    #declare tag TriggerFlag.UseItem
+    #declare tag TriggerFlag.Damage
+    #declare tag TriggerFlag.Killed
+    #declare tag TriggerFlag.Sneak
+
+#> this
+# @within *
+#   asset_manager:sacred_treasure/triggers/
+#   asset:sacred_treasure/**
+    #declare tag this

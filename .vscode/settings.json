@@ -26,7 +26,21 @@
     "datapack.lint.idOmitDefaultNamespace": null,
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
-        "PascalCase"
+        [
+            "PascalCase",
+            {
+                "label": "SlotType",
+                "parts": [
+                    "/auto/",
+                    "/mainhand/",
+                    "/offhand/",
+                    "/head/",
+                    "/chest/",
+                    "/legs/",
+                    "/feet/"
+                ]
+            }
+        ]
     ],
     "datapack.lint.nameOfObjectives": [
         "error",
@@ -40,27 +54,26 @@
     ],
     "datapack.lint.nameOfTags": [
         "error",
-        {
-            "label": "ChainedPascalCase",
-            "allowLessParts": true,
-            "allowMoreParts": true,
-            "sep": ".",
-            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
-        }
+        [
+            {
+                "label": "ChainedPascalCase",
+                "allowLessParts": true,
+                "allowMoreParts": true,
+                "sep": ".",
+                "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+            },
+            {
+                "label": "this",
+                "parts": "/this/"
+            }
+        ]
     ],
     "datapack.lint.nameOfScoreHolders": [
         "error",
-        [
-            {
-                "label": "DollerPrefix",
-                "sep": "$",
-                "parts": [
-                    "/^$/",
-                    "/^.*$/"
-                ]
-            },
-            "/^\\*$/"
-        ]
+        {
+            "label": "DollerPrefix",
+            "prefix": "$"
+        }
     ],
     "datapack.lint.nameOfTeams": [
         "error",
@@ -161,7 +174,7 @@
     ],
     "datapack.lint.selectorKeyQuoteType": null,
     "datapack.lint.selectorSortKeys": [
-        "information",
+        "warning",
         [
             "type",
             "gamemode",
@@ -306,6 +319,14 @@
         "error",
         true
     ],
+    "datapack.lint.stringQuote": [
+        "warning",
+        true
+    ],
+    "datapack.lint.stringQuoteType": [
+        "warning",
+        "prefer double"
+    ],
     "datapack.lint.timeOmitTickUnit": false,
     "datapack.features.semanticColoring": false,
     "mcdutil.createFile.fileTemplate": {
@@ -410,7 +431,7 @@
                         "# 神器のクールダウン (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure GlobalCooldown set value ",
+                        "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -762,5 +783,13 @@
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
-    "mcdutil.createDatapackTemplate.defaultVanillaData": false
+    "mcdutil.createDatapackTemplate.defaultVanillaData": false,
+    "files.exclude": {
+        ".idea": true,
+        ".vscode": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "desktop.ini": true
+    }
 }

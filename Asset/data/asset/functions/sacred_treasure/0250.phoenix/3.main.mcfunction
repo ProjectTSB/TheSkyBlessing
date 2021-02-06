@@ -34,6 +34,7 @@
         execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 50.0f
         execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 55.0f
         execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 60.0f
+        function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Hit,distance=..100,limit=1] run function lib:damage/
         data modify entity @e[type=#lib:living,tag=Hit,distance=..100,limit=1] Fire set value 200s
     # リセット
