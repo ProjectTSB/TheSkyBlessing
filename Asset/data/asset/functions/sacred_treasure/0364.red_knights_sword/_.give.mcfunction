@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"赤い騎士の剣","color":"dark_red","bold":true,"italic":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"つえー剣"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"渇きは収まることを知らない。","color":"dark_red"}','[{"text":"血の欲望は","color":"dark_red"},{"text":"貴方","color":"dark_red","underlined":true},{"text":"の身体まで求める。","color":"dark_red"}]','{"text":"壊れたとしても血を与えれば再生する。","color":"dark_red","underlined":true}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -37,7 +37,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Wi-ki]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    # data modify storage asset:sacred_treasure CustomNBT set value {}
+    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;0,0,364,0]}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

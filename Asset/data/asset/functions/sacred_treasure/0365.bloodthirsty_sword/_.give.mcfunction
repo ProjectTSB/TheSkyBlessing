@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"血を欲する大剣","color":"dark_red","bold":true,"italic":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"血を欲する剣","color":"dark_red","bold":true,"italic":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"ちをくれー"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"血を与えればまた再生しそうだ。","color":"dark_red"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
