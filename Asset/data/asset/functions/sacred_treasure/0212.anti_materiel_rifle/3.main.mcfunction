@@ -9,11 +9,12 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 弾を進めるための再起開始
+    execute positioned ~ ~1.5 ~ run function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
+
 # 演出
+    tp @s ~ ~ ~ ~ ~-5
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 1.5
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 2
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.75
     playsound minecraft:entity.wither.hurt neutral @a ~ ~ ~ 1 1.5
-
-# 弾を進めるための再起開始
-    execute positioned ~ ~1 ~ run function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
