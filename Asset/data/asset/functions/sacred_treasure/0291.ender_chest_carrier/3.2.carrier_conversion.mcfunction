@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0291.ender_chest_carrier/3.main
 
 # エンチェスに変換
-    execute as @p[y_rotation=45..134] at @s run setblock ~ ~.2 ~ ender_chest[facing=east]
-    execute as @p[y_rotation=135..224] at @s run setblock ~ ~.2 ~ ender_chest[facing=south]
-    execute as @p[y_rotation=225..314] at @s run setblock ~ ~.2 ~ ender_chest[facing=west]
-    execute as @p[y_rotation=315..44] at @s run setblock ~ ~.2 ~ ender_chest[facing=north]
+    execute as @p[y_rotation=45.00001..135] at @s run setblock ~ ~.2 ~ ender_chest[facing=east]
+    execute as @p[y_rotation=135.00001..225] at @s run setblock ~ ~.2 ~ ender_chest[facing=south]
+    execute as @p[y_rotation=225.00001..315] at @s run setblock ~ ~.2 ~ ender_chest[facing=west]
+    execute as @p[y_rotation=315.00001..45] at @s run setblock ~ ~.2 ~ ender_chest[facing=north]
     kill @e[type=armor_stand,tag=YvCarrierModel,sort=nearest,limit=1]
     kill @e[type=area_effect_cloud,tag=YvCarrierCommon,sort=nearest,limit=1]
     tp @s ~ -200 ~

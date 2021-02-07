@@ -18,3 +18,6 @@
         playsound minecraft:block.ender_chest.open neutral @a ~ ~-1 ~ 1 2
         playsound minecraft:block.note_block.banjo neutral @a ~ ~-2 ~ 1 1.6
         playsound minecraft:block.note_block.banjo neutral @a ~ ~-2 ~ 1 2
+
+    # パーティクル
+        execute align xyz positioned ~.5 ~.4 ~.5 run particle minecraft:dust .8 0 1 1.5 ~ ~ ~ .3 .3 .3 0.1 30 force @a[distance=..20]
