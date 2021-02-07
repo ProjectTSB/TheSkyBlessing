@@ -10,7 +10,7 @@
     #declare tag ChuzFairyThunder
     #declare tag ChuzFairyNormal
     #declare tag ChuzFairyInit
-    #declare tag ChuzFairySnowballInit
+    #declare tag ChuzFairySnowball
     #declare tag ChuzFairyShot
     #declare tag ChuzFairyShotInit
     #declare tag ChuzFairyShotNormal

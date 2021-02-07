@@ -34,8 +34,8 @@
     effect give @s invisibility 1 0 true
 
 # ダメージを受けるとショットになる
-    execute if entity @s[tag=HurtEntity] run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.4.fairy_shoot
-    execute if entity @s[tag=HurtEntity] run kill @s
+#    execute if entity @s[tag=HurtEntity] run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.4.fairy_shoot
+#    execute if entity @s[tag=HurtEntity] run kill @s
 
 # Y0以下で死ぬ
     execute if entity @s[y=0,dy=-255] run kill @s
