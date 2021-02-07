@@ -12,6 +12,7 @@
 
 # リセット
     data remove storage lib: Argument
+    data remove storage chuz: MPMax
 
 # ショットを消す
     kill @e[type=armor_stand,tag=ChuzFairyShot,sort=nearest,limit=1]

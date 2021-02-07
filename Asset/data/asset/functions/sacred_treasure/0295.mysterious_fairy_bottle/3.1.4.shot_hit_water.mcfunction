@@ -10,7 +10,8 @@
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/
 
-# 
+# ふわり
+    effect give @s minecraft:levitation 1 1 true
 
 # リセット
     data remove storage lib: Argument
