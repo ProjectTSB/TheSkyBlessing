@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0291.ender_chest_carrier/_index.d.mcf
+#> asset:sacred_treasure/0291.ender_chest_carrier/_index.d
 #
 # @private
 #
