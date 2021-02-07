@@ -1,4 +1,4 @@
-#> player_manager:mp_viewer/_.index.d
+#> player_manager:mp_viewer/_index.d
 # @private
 
 #> PlayerManager
