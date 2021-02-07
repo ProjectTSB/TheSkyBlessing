@@ -54,4 +54,6 @@
     data remove storage asset:sacred_treasure CanUsedGod
     data remove storage asset:sacred_treasure CustomNBT
     data remove storage asset:sacred_treasure LocalCooldown
+    data remove storage asset:sacred_treasure LocalCooldownDecimal
     data remove storage asset:sacred_treasure SpecialCooldown
+    data remove storage asset:sacred_treasure SpecialCooldownDecimal

@@ -14,3 +14,7 @@
 # 5?ストレージに入れる
     execute store result storage asset:sacred_treasure LocalCooldown int 1 run scoreboard players get $Cooldown Temporary
     execute store result storage asset:sacred_treasure LocalCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
+
+# リセット
+    scoreboard players reset $Cooldown
+    scoreboard players reset $CooldownDecimal

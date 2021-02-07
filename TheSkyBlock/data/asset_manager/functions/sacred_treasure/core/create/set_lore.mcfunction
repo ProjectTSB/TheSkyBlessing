@@ -31,5 +31,3 @@
     data modify storage asset:sacred_treasure Data.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
 # リセット
     data modify block 10000 0 10000 Items set value []
-    scoreboard players reset $Bob
-    scoreboard players reset $John
