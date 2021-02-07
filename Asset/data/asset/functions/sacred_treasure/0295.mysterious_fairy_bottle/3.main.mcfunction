@@ -10,10 +10,20 @@
 # ここから先は神器側の効果の処理を書く
 # ハチを召喚 一瞬も見せたくないので空の上に
 # 4種類を確立で呼び出す
-#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyNormal"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
-#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyWater"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:blue_shulker_box",Count:1b}}]}
-#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyThunder"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:yellow_shulker_box",Count:1b}}]}
-    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyFire"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:red_shulker_box",Count:1b}}]}
+
+#
+# 疑似乱数取得
+    execute store result score $Random Temporary run function lib:random/
+# ほしい範囲に剰余算
+    scoreboard players operation $Random Temporary %= $100 Const
+# 精霊召喚
+    execute if score $Random Temporary matches 00..24 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_normal
+    execute if score $Random Temporary matches 25..49 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_fire
+    execute if score $Random Temporary matches 50..74 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_water
+    execute if score $Random Temporary matches 75..99 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_thunder
+
+# リセット
+    scoreboard players reset $Random Temporary
 
 # 音とパーティクル
     playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2

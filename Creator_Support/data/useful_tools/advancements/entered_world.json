@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "enter": {
+      "trigger": "minecraft:location"
+    }
+  },
+  "rewards": {
+    "function": "useful_tools:install"
+  }
+}
