@@ -7,7 +7,11 @@
 # 移動とパーティクル
     tp @s ^ ^ ^0.5
     execute if entity @s[tag=ChuzFairyShotNormal] run particle minecraft:dust 1 1 1 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyShotNormal] run particle minecraft:end_rod ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+
     execute if entity @s[tag=ChuzFairyShotFire] run particle minecraft:dust 1 0.451 0 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+    execute if entity @s[tag=ChuzFairyShotFire] run particle minecraft:flame ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+
     execute if entity @s[tag=ChuzFairyShotWater] run particle minecraft:dust 0.298 0.471 0.945 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
     execute if entity @s[tag=ChuzFairyShotThunder] run particle minecraft:dust 0.878 1 0.333 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
 #    particle minecraft:soul_fire_flame ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]

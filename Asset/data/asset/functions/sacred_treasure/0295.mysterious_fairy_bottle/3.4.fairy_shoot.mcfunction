@@ -16,7 +16,8 @@
 # サウンド
     playsound minecraft:entity.shulker_bullet.hurt player @a ~ ~ ~ 2 2
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 2
-
+    playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
+    
 # 自身は死ぬ
 #    tp @s ~ -400 ~
 #    kill @s

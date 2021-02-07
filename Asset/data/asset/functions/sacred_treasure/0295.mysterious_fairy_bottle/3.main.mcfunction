@@ -10,9 +10,9 @@
 # ここから先は神器側の効果の処理を書く
 # ハチを召喚 一瞬も見せたくないので空の上に
 # 4種類を確立で呼び出す
-    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyNormal"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
-    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyWater"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:blue_shulker_box",Count:1b}}]}
-    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyThunder"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:yellow_shulker_box",Count:1b}}]}
+#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyNormal"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
+#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyWater"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:blue_shulker_box",Count:1b}}]}
+#    summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyThunder"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:yellow_shulker_box",Count:1b}}]}
     summon bee ~ ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["ChuzFairyInit","ChuzFairyFire"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:red_shulker_box",Count:1b}}]}
 
 # 音とパーティクル
