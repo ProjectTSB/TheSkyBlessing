@@ -1,0 +1,10 @@
+#> asset:sacred_treasure/0383.i_scream_icecream/3.1.message
+#
+# 数秒遅れての処理
+#
+# @within function asset:sacred_treasure/0383.i_scream_icecream/3.main
+
+# メッセージ
+    tellraw @a {"text":"場が凍りついた...","color":"dark_purple"}
+    execute as @a at @s run playsound minecraft:entity.wither.spawn ambient @a ~ ~ ~ 0.3 0
+
