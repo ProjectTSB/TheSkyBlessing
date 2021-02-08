@@ -25,7 +25,7 @@
 # 6? スペシャル☆クールタイム
     execute if data storage asset:sacred_treasure SpecialCooldown run function asset_manager:sacred_treasure/core/create/convert_special_cooltime
     execute if data storage asset:sacred_treasure SpecialCooldown run loot replace block 10000 0 10000 container.6 loot asset_manager:sacred_treasure/core/generate_lore/special_cooldown
-# 6 使える神
+# 7 使える神
     function asset_manager:sacred_treasure/core/create/set_god
 # Lore一括追加
     data modify storage asset:sacred_treasure Data.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
