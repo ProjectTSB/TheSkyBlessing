@@ -5,3 +5,5 @@
 # @within tag/function minecraft:load
 
 execute unless data storage global {Version:"0.0.8"} run function core:load_once
+#TODO リリース時はload_once行き
+    function #asset:sacred_treasure/load
