@@ -36,5 +36,5 @@ gamerule randomTickSpeed 3
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
-gamerule universalAnger true
+gamerule universalAnger false
 # メモ リリース時に上記のコメントを外す
