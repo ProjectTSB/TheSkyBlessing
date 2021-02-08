@@ -5,10 +5,17 @@
 # @within
 #   function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
 
-# 演出
+# 着弾の演出
     particle minecraft:explosion ~ ~ ~ 0.1 0.1 0.1 0 10
-    particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 99
-    playsound minecraft:entity.generic.explode hostile @a
+    playsound minecraft:entity.generic.explode block @a
+
+# ブロック破壊
+    execute unless block ^ ^ ^0.5 #lib:no_collision unless block ^ ^ ^0.5 #lib:unbreakable if entity @s[gamemode=!adventure] run setblock ^ ^ ^0.5 air destroy
+    # アドベンチャー用(仕様決まるまでちょっと保留で)
+        #execute positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,type=!minecraft:player,dx=0] positioned ~0.5 ~0.5 ~0.5 unless block ^ ^ ^0.5 #lib:no_collision if block ^ ^ ^0.5 spawner if entity @s[gamemode=adventure] run setblock ^ ^ ^0.5 air destroy
+
+# 演出
+    execute at @e[tag=LandingTarget,limit=1] run particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 99
 
 # ダメージ設定
     # 与えるダメージ = 100
@@ -17,4 +24,9 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
-        function lib:damage/
+        execute as @e[tag=LandingTarget] at @s run function lib:damage/
+# リセット
+    data remove storage lib: Argument
+
+# 着弾タグを消す
+    tag @e[tag=LandingTarget] remove LandingTarget
