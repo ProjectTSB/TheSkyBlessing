@@ -2,9 +2,7 @@
 #
 # スコア定義
 #
-# @within function asset:sacred_treasure/0246_magical_cane/3.main
-
-#> objective
-# @within function
-#   asset:sacred_treasure/0246_magical_cane//**
+#> デフォルトのMPスコアなど
+# @within function asset:sacred_treasure/0246_magical_cane/**
     #declare objective MP
+    #declare score_holder $MagicalCane
