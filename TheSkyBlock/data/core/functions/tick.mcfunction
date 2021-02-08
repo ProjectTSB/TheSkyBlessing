@@ -35,8 +35,6 @@
         execute as @a at @s run function asset_manager:sacred_treasure/triggers/
     # 満腹度調整部
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,tag=!Death] run function player_manager:adjust_hunger/observe
-    # MP表示処理
-        execute as @a run function player_manager:mp_viewer/check_xpbar
 
 # Mobデータ初期化部
     execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
