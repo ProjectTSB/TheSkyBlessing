@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/core/create/convert_cooltime
+#> asset_manager:sacred_treasure/core/create/set_cooltime
 #
 # 普通のクールタイムを秒数に変換 クールタイムが1tickだったりすると正確な秒数が出ない
 #
@@ -15,6 +15,10 @@
     execute store result storage asset:sacred_treasure LocalCooldown int 1 run scoreboard players get $Cooldown Temporary
     execute store result storage asset:sacred_treasure LocalCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
 
+# lootする
+    loot replace block 10000 0 10000 container.5 loot asset_manager:sacred_treasure/core/generate_lore/cooldown
+
 # リセット
     scoreboard players reset $Cooldown
     scoreboard players reset $CooldownDecimal
+    data remove storage asset:sacred_treasure SpecialCooldownDecimal
