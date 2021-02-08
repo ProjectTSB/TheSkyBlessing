@@ -6,5 +6,5 @@
 
 # メッセージ
     tellraw @a {"text":"場が凍りついた...","color":"dark_purple"}
-    execute as @a at @s run playsound minecraft:entity.wither.spawn ambient @a ~ ~ ~ 0.3 0
+    execute as @a at @s run playsound minecraft:entity.wither.spawn ambient @s ~ ~ ~ 0.3 0
 
