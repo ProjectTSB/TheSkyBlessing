@@ -4,6 +4,7 @@
 #
 # @user
 # @private
+# @within function asset:sacred_treasure/0272.infinity_food/3.main
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
@@ -27,9 +28,9 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 0
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value
+    data modify storage asset:sacred_treasure MPRequire set value 0
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)

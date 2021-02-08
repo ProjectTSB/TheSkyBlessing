@@ -8,4 +8,4 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test
+    function asset:sacred_treasure/0272.infinity_food/_.give
