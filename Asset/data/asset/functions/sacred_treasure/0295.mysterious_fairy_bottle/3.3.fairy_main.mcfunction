@@ -30,6 +30,16 @@
     execute if entity @s[tag=295Fa.Thunder] run particle minecraft:dust 0.878 1 0.333 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
     execute if entity @s[tag=295Fa.Thunder] run particle minecraft:dust 0.816 1 0 0.75 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
 
+# 付近に敵がいるならスコア加算
+    execute if entity @e[type=#lib:hostile,distance=..30] run scoreboard players add @s 295Fa.Tick 1
+
+# 付近に敵がいるならスコア加算
+    execute if entity @e[type=#lib:hostile,distance=..30] run scoreboard players add @s 295Fa.Tick 1
+ 
+# ヘルス
+    scoreboard players add @s 295Fa.Health 1
+    kill @s[scores={295Fa.Health=200..}]
+
 # 透明化
     effect give @s invisibility 1 0 true
 
