@@ -15,7 +15,9 @@
 # ここから先は神器側の効果の処理を書く
 
     #ネコ召喚にゃ
-        summon cat ~ ~ ~ {Invulnerable:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Age:300,CatType:0,Tags:["AbstrictCat","CalledCat"],Passengers:[{id:"minecraft:area_effect_cloud",Particle:"block air",ReapplicationDelay:10,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,DurationOnUse:0,Age:0,WaitTime:0,Color:16711680,Potion:"minecraft:healing",Effects:[{Id:6b,Amplifier:0b,Duration:1,ShowParticles:1b}]}],Attributes:[{Name:"generic.follow_range",Base:32d}]}
+        summon cat ~ ~ ~ {Invulnerable:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Age:300,CatType:0,Tags:["AbstrictCat","CalledCat"],Passengers:[{id:"minecraft:area_effect_cloud",Particle:"block air",ReapplicationDelay:20,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,DurationOnUse:0,Age:0,WaitTime:20,Color:16711680,Potion:"minecraft:healing",Effects:[{Id:6b,Amplifier:0b,Duration:1,ShowParticles:1b}]}],Attributes:[{Name:"generic.follow_range",Base:32d}]}
+        particle minecraft:heart ~ ~ ~ 0.5 0.25 0.5 1 10
+        playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 1 1.25
 
     #ネコの種類をランダムにするにゃ
         execute store result score $Random Temporary run function lib:random/
