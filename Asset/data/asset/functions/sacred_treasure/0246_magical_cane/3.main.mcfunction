@@ -4,9 +4,6 @@
 #
 # @within function asset:sacred_treasure/0246_magical_cane/2.check_condition
 
-# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/use/mainhand
-
 # ここから先は神器側の効果の処理を書く
 
 # 使用時のMPの数値によって演出がかわるよ
@@ -24,8 +21,8 @@
     data modify storage lib: Argument.ElementType set value "None"
     execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run function lib:damage/
 
-# MPを0に
-    scoreboard players set @s MP 0
+# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
+    function asset:sacred_treasure/lib/use/mainhand
 
 # リセット
     data remove storage lib: Argument
