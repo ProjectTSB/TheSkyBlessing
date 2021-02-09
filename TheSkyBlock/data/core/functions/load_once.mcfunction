@@ -121,3 +121,6 @@ scoreboard objectives setdisplay belowName Health
 #> MobManager
 # @public
     scoreboard objectives add AttackedEntity dummy
+
+#> Schedule
+    schedule function core:4_interval_tick 4t
