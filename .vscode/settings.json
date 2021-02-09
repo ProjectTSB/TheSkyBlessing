@@ -493,6 +493,37 @@
             ]
         },
         {
+            "label": "神器/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/0.load",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/0.load",
+                        "#",
+                        "# 神器に利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/load",
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/load.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/0.load"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/0.load"
+                    }
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: 人参棒クリック",
             "generates": [
                 {
