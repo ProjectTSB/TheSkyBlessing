@@ -29,7 +29,7 @@
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 99999
 # MP必要量 (int) (オプション)
-#    data modify storage asset:sacred_treasure MPRequire set value 0
+    data modify storage asset:sacred_treasure MPRequire set value 0
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
