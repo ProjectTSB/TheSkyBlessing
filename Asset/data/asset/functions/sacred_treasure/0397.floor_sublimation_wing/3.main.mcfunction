@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0397.floor_sublimation_wing/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/use/mainhand
+    function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
     # 演出(テレポート元)
@@ -15,7 +15,7 @@
         particle minecraft:witch ~ ~ ~ 0.1 0.1 0.1 5 30
 
     # テレポート
-        execute at @e[tag=397.Marker,limit=1] rotated as @s run tp @s ~ ~ ~
+        execute at @e[tag=397.Marker,dx=0.1,dy=33,dz=0.1,limit=1] rotated as @s run tp @s ~ ~ ~
 
     # 演出(テレポート後)
         execute at @s run particle minecraft:reverse_portal ~ ~ ~ 0.1 0.1 0.1 1 150
