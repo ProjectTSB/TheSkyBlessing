@@ -6,40 +6,26 @@
 
 # 初期化としてsummon & 視点を自分にあわせてTP
     execute unless entity @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] run summon area_effect_cloud 0.0 0.0 0.0 {Tags:[MotionLibMarker]}
-    tp @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] 0.0 0.0 0.0 ~ ~
+    execute positioned 0.0 0.0 0.0 run tp @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] ^ ^ ^0.01
 
 # 演算処理
-    scoreboard players operation $VectorMagnitude.copy Temporary = $VectorMagnitude Lib
-    #//18bitシフト + operation *= 2 の分で19bit分シフト
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2^19 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^20.48
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^10.24
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^5.12
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^2.56
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^1.28
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.6
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.3
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.16
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.08
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.04
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.02
-    scoreboard players operation $VectorMagnitude.copy Temporary *= $2 Const
-    execute if score $VectorMagnitude.copy Temporary matches ..-1 at @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] run tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] ^ ^ ^0.01
+    data modify storage lib: Pos set from entity @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] Pos
+    execute store result score $VectorX Temporary run data get storage lib: Pos[0] 1000
+    execute store result score $VectorY Temporary run data get storage lib: Pos[1] 1000
+    execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 1000
+
+    scoreboard players operation $VectorX Temporary *= $VectorMagnitude Lib
+    scoreboard players operation $VectorY Temporary *= $VectorMagnitude Lib
+    scoreboard players operation $VectorZ Temporary *= $VectorMagnitude Lib
 
 # 適用
-    data modify entity @s Motion set from entity @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] Pos
+    execute store result storage lib: Pos[0] double 0.001 run scoreboard players get $VectorX Temporary
+    execute store result storage lib: Pos[1] double 0.001 run scoreboard players get $VectorY Temporary
+    execute store result storage lib: Pos[2] double 0.001 run scoreboard players get $VectorZ Temporary
+    data modify entity @s Motion set from storage lib: Pos
+
 # 次Entityに備えたtp
     tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] 0.0 0.0 0.0
 
 # リセット 複数Entityが利用する可能性がある都合上1tick遅らせる
-    schedule function lib:motion/core/score_reset 1t
+    schedule function lib:motion/core/reset 1t
