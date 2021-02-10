@@ -12,11 +12,11 @@
     execute if score @s MP matches 120.. run function asset:sacred_treasure/0246_magical_cane/3.3.hyper_hit
 
 # $MagicalCaneに現在のスコアx3の数値を持たせる
-    scoreboard players operation $MagicalCane Temporary = @s MP
+    execute store result score $MagicalCane Temporary run function lib:mp/get
     scoreboard players operation $MagicalCane Temporary *= $3 Const
 
 # ぶん殴ったやつにさっきもたせた数値ぶんの魔法無属性のダメージをぶちかます
-    execute store result storage lib: Argument.Damage int 1 run scoreboard players get $MagicalCane Temporary
+    execute store result storage lib: Argument.Damage float 1 run scoreboard players get $MagicalCane Temporary
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run function lib:damage/
