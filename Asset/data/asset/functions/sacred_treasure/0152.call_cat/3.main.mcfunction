@@ -18,18 +18,22 @@
         summon cat ~ ~ ~ {Invulnerable:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:0b,Age:300,CatType:0,Tags:["AbstrictCat","CalledCat"],Passengers:[{id:"minecraft:area_effect_cloud",Particle:"block air",ReapplicationDelay:20,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:600,DurationOnUse:0,Age:0,WaitTime:20,Color:16711680,Potion:"minecraft:healing",Effects:[{Id:6b,Amplifier:0b,Duration:1,ShowParticles:1b}]}],Attributes:[{Name:"generic.follow_range",Base:32d}]}
         particle minecraft:heart ~ ~ ~ 0.5 0.25 0.5 1 10
         playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 1 1.25
+        #TODO AEC式ではなく手動にする（味方tag実装待ち）
 
     #ネコの種類をランダムにするにゃ
         execute store result score $Random Temporary run function lib:random/
         scoreboard players operation $Random Temporary %= $11 Const
         execute store result entity @e[type=cat,tag=AbstrictCat,limit=1] CatType int 1 run scoreboard players get $Random Temporary
+        #TODO distance付ける（懐かせるとこも）
 
     #使用者に懐いてもらうにゃ //PlayerNBT参照してるけど使用時のみなので許して
         data modify entity @e[type=cat,tag=AbstrictCat,limit=1] Owner set from entity @s UUID
 
     #ネコとさようならをする予約にゃ
         schedule function asset:sacred_treasure/0152.call_cat/3.1.goodbye_cat 600t
+        #TODO 毎tickチェックにする
 
     #リセットにゃ
         scoreboard players reset $Random Temporary
         tag @e[type=cat,tag=AbstrictCat] remove AbstrictCat
+        #TODO タグを厳格にする
