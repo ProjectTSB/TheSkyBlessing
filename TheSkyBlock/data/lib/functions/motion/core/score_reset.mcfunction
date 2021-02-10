@@ -2,7 +2,7 @@
 #
 # Scoreをリセットします
 #
-# @within function lib:motion/
+# @within function lib:motion/core/apply
 
 # リセット処理
     scoreboard players reset $VectorMagnitude Lib
