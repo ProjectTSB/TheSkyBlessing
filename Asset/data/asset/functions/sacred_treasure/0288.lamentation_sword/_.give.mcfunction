@@ -37,7 +37,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;476605664,-410891258,-1098564591,510816908],Slot:"mainhand"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,288,1],Slot:"mainhand"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
