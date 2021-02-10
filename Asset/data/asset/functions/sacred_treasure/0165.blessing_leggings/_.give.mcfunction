@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0164.blessing_boots/_.give
+#> asset:sacred_treasure/0165.blessing_leggings/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,19 +9,19 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 164
+    data modify storage asset:sacred_treasure ID set value 165
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:diamond_boots"
+    data modify storage asset:sacred_treasure Item set value "minecraft:diamond_leggings"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"加護のブーツ","color":"light_purple"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"加護のレギンス","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"神々の加護","color":"yellow"},{"text":"を受けたブーツ","color":"white"}]','[{"text":"奈落","color":"dark_purple"},{"text":"から身を守る機能もあるが、","color":"white"}]','{"text":"実戦向きではない"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"神々の加護","color":"yellow"},{"text":"を受けたレギンス","color":"white"}]','[{"text":"奈落","color":"dark_purple"},{"text":"から身を守る機能もあるが、","color":"white"}]','{"text":"実戦向きではない"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "feet"
+    data modify storage asset:sacred_treasure Slot set value "legs"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "passive"
 # 神器の発動条件 (TextComponentString) (オプション)
@@ -37,7 +37,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:1,UUID:[I;1,1,164,6],Slot:"feet"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:-1,Operation:1,UUID:[I;1,1,164,6],Slot:"feet"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:0.2,Operation:1,UUID:[I;1,1,165,5],Slot:"legs"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:-1,Operation:1,UUID:[I;1,1,165,5],Slot:"legs"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
