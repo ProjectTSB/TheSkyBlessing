@@ -15,7 +15,7 @@
         particle minecraft:witch ~ ~ ~ 0.1 0.1 0.1 5 30
 
     # テレポート
-        execute at @e[tag=397.Marker,dx=0.1,dy=33,dz=0.1,limit=1] rotated as @s run tp @s ~ ~ ~
+        execute at @e[tag=397.Marker,distance=..32,limit=1] rotated as @s run tp @s ~ ~ ~
 
     # 演出(テレポート後)
         execute at @s run particle minecraft:reverse_portal ~ ~ ~ 0.1 0.1 0.1 1 150
