@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/_.give
+#> asset:sacred_treasure/0295.call_elemental_familiar/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

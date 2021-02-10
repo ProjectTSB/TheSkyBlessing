@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/_index.d.mcfunction
+#> asset:sacred_treasure/0295.call_elemental_familiar/_index.d.mcfunction
 #
 # 使用タグを定義
 #
 #> tags
-# @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/**
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/**
     #declare tag 295Fa.Main
     #declare tag 295Fa.Fire
     #declare tag 295Fa.Water

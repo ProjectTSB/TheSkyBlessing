@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/3.2.fairy_init
+#> asset:sacred_treasure/0295.call_elemental_familiar/3.2.fairy_init
 #
 # 最初に実行するやつ
 #
-# @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/3.1.fairy_tick
 
 # 天空から降ろす
     tp @s ~ ~-255 ~

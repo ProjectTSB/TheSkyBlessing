@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/3.main
+#> asset:sacred_treasure/0295.call_elemental_familiar/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/2.check_condition
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
@@ -17,10 +17,10 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $100 Const
 # 精霊召喚
-    execute if score $Random Temporary matches 00..24 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_normal
-    execute if score $Random Temporary matches 25..49 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_fire
-    execute if score $Random Temporary matches 50..74 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_water
-    execute if score $Random Temporary matches 75..99 run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.summon_thunder
+    execute if score $Random Temporary matches 00..24 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_normal
+    execute if score $Random Temporary matches 25..49 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_fire
+    execute if score $Random Temporary matches 50..74 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_water
+    execute if score $Random Temporary matches 75..99 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_thunder
 
 # リセット
     scoreboard players reset $Random Temporary
@@ -33,4 +33,4 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # ハチを動かすやつ
-    function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
+    function asset:sacred_treasure/0295.call_elemental_familiar/3.1.fairy_tick

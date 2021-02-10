@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.4.shot_hit_fire
+#> asset:sacred_treasure/0295.call_elemental_familiar/3.1.4.shot_hit_fire
 #
 #
 #
-# @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.3.shot_main
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/3.1.3.shot_main
 
 # 魔法、火属性のダメージをぶちかます
     data modify storage lib: Argument.Damage set value 7.0f

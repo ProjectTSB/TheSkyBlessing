@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.mysterious_fairy_bottle/3.3.fairy_main
+#> asset:sacred_treasure/0295.call_elemental_familiar/3.3.fairy_main
 #
 #
 #
-# @within function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.1.fairy_tick
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/3.1.fairy_tick
 
 # 近くにプレイヤーがいるなら針が抜ける
     execute if entity @a[distance=..2] run data modify entity @s HasStung set value 1b
@@ -34,7 +34,7 @@
     execute if entity @e[type=#lib:hostile,distance=..10] run scoreboard players add @s 295Fa.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={295Fa.Tick=60..}] run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.4.fairy_shoot
+    execute if entity @s[scores={295Fa.Tick=60..}] run function asset:sacred_treasure/0295.call_elemental_familiar/3.4.fairy_shoot
     scoreboard players reset @s[scores={295Fa.Tick=60..}] 295Fa.Tick
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[type=#lib:hostile,distance=..10] run scoreboard players reset @s 295Fa.Tick
@@ -47,7 +47,7 @@
     effect give @s invisibility 1 0 true
 
 # ダメージを受けるとショットになる
-#    execute if entity @s[tag=HurtEntity] run function asset:sacred_treasure/0295.mysterious_fairy_bottle/3.4.fairy_shoot
+#    execute if entity @s[tag=HurtEntity] run function asset:sacred_treasure/0295.call_elemental_familiar/3.4.fairy_shoot
 #    execute if entity @s[tag=HurtEntity] run kill @s
 
 # Y0以下で死ぬ
