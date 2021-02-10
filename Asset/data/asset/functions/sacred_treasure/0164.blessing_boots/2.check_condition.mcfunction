@@ -9,9 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # Y座標が0未満のみ処理
-    execute store result score @s Temporary run data get entity @s Pos[1] 1
-    execute if score @s Temporary matches 0.. run tag @s remove CanUsed
-    scoreboard players reset @s Temporary
+    execute if entity @s[y=0,dy=-255] run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0164.blessing_boots/3.main
