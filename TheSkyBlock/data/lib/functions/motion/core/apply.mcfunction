@@ -30,9 +30,6 @@
     execute store result storage lib: Pos[2] double 0.00001 run scoreboard players get $VectorZ Temporary
     data modify entity @s Motion set from storage lib: Pos
 
-# 次Entityに備えたtp
-    tp 0-0-0-0-0 0.0 0.0 0.0
-
 # リセット 複数Entityが利用する可能性がある都合上$VectorMagnitudeは1tick遅らせる
     scoreboard players reset $VectorX Temporary
     scoreboard players reset $VectorY Temporary
