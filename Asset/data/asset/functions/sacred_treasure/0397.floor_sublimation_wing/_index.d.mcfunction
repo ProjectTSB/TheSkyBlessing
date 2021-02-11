@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0397.floor_sublimation_wing/_index.d.mcfunction
+#> asset:sacred_treasure/0397.floor_sublimation_wing/_index.d
 #
 #
 # @private
