@@ -11,8 +11,8 @@
     #declare score_holder $VectorY
     #declare score_holder $VectorZ
 
-# 初期化として視点を自分にあわせる & ^ ^ ^0.01を取得
-    execute positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^0.01
+# 初期化として視点を自分にあわせる & ^ ^ ^1を取得
+    execute positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^1
 
 # 演算処理
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos
@@ -25,9 +25,9 @@
     scoreboard players operation $VectorZ Temporary *= $VectorMagnitude Lib
 
 # 適用
-    execute store result storage lib: Pos[0] double 0.001 run scoreboard players get $VectorX Temporary
-    execute store result storage lib: Pos[1] double 0.001 run scoreboard players get $VectorY Temporary
-    execute store result storage lib: Pos[2] double 0.001 run scoreboard players get $VectorZ Temporary
+    execute store result storage lib: Pos[0] double 0.00001 run scoreboard players get $VectorX Temporary
+    execute store result storage lib: Pos[1] double 0.00001 run scoreboard players get $VectorY Temporary
+    execute store result storage lib: Pos[2] double 0.00001 run scoreboard players get $VectorZ Temporary
     data modify entity @s Motion set from storage lib: Pos
 
 # 次Entityに備えたtp
