@@ -1,8 +1,7 @@
 #> asset:sacred_treasure/0397.floor_sublimation_wing/_index.d.mcfunction
 #
 #
-#
-# @within function asset:sacred_treasure/0397.floor_sublimation_wing/**
+# @private
 
 #> Temp
 # 条件チェックに必要なスコアホルダー、タグ
