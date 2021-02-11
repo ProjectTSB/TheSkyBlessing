@@ -4,12 +4,11 @@
 #
 # @within function lib:motion/
 
-# 初期化としてsummon & 視点を自分にあわせてTP
-    execute unless entity @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] run summon area_effect_cloud 0.0 0.0 0.0 {Tags:[MotionLibMarker]}
-    execute positioned 0.0 0.0 0.0 run tp @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] ^ ^ ^0.01
+# 初期化として視点を自分にあわせる & ^ ^ ^0.01を取得
+    execute positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^0.01
 
 # 演算処理
-    data modify storage lib: Pos set from entity @e[type=area_effect_cloud,tag=MotionLibMarker,x=0,limit=1] Pos
+    data modify storage lib: Pos set from entity 0-0-0-0-0 Pos
     execute store result score $VectorX Temporary run data get storage lib: Pos[0] 1000
     execute store result score $VectorY Temporary run data get storage lib: Pos[1] 1000
     execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 1000
@@ -25,7 +24,11 @@
     data modify entity @s Motion set from storage lib: Pos
 
 # 次Entityに備えたtp
-    tp @e[type=area_effect_cloud,tag=MotionLibMarker,limit=1] 0.0 0.0 0.0
+    tp 0-0-0-0-0 0.0 0.0 0.0
 
-# リセット 複数Entityが利用する可能性がある都合上1tick遅らせる
+# リセット 複数Entityが利用する可能性がある都合上$VectorMagnitudeは1tick遅らせる
+    scoreboard players reset $VectorX Temporary
+    scoreboard players reset $VectorY Temporary
+    scoreboard players reset $VectorZ Temporary
+    data remove storage lib: Pos
     schedule function lib:motion/core/reset 1t

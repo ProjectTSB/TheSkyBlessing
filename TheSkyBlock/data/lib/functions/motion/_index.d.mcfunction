@@ -8,4 +8,3 @@
     #declare score_holder $VectorX
     #declare score_holder $VectorY
     #declare score_holder $VectorZ
-    #declare tag MotionLibMarker
