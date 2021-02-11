@@ -8,4 +8,19 @@
     function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0333.koukisin
+
+# 演出
+    execute at @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run particle minecraft:crit ~ ~1 ~ 0.2 0.8 0.2 0 80 normal @a[distance=..30]
+    playsound minecraft:block.anvil.place master @a[distance=..10] ~ ~ ~ 0.8 2
+
+# ダメージ
+    # 与えるダメージ = 3
+        data modify storage lib: Argument.Damage set value 3f
+        # 第一属性
+        data modify storage lib: Argument.AttackType set value ""
+# 補正functionを実行
+    function lib:damage/modifier
+# 攻撃した対象に実行
+    execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run function lib:damage/simple
+# リセット
+    data remove storage lib: Argument
