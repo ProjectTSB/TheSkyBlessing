@@ -497,7 +497,7 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/0.load",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/0.load.mcfunction",
                     "content": [
                         "#> asset:sacred_treasure/%namespace%/0.load",
                         "#",
@@ -505,7 +505,9 @@
                         "#",
                         "# @within tag/function asset:sacred_treasure/load",
                         "",
-                        ""
+                        "#> 定義類はここに",
+                        "# @within function asset:sacred_treasure/%namespace%/**",
+                        "    scoreboard objectives add "
                     ]
                 },
                 {
