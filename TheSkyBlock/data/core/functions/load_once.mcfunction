@@ -44,6 +44,12 @@ data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> リセットが必要なやつ
 scoreboard objectives remove FirstJoinEvent
+kill 0-0-0-0-0
+
+#> ベクトル取得用汎用Entity
+# @public
+    #alias entity vectorEntity 0-0-0-0-0
+summon minecraft:area_effect_cloud 0.0 0.0 0.0 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,UUID:[I;0,0,0,0]}
 
 #> NoCollision
 # @public
