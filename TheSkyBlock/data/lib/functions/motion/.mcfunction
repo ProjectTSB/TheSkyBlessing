@@ -1,6 +1,6 @@
 #> lib:motion/
 #
-# 実行座標の前方に$VectorMagnitude*100のMotionを付与します。
+# 実行座標の前方に$VectorMagnitude*0.01の大きさのMotionを付与します。
 #
 # 実行者はPlayer以外のEntityである必要があります。
 #
