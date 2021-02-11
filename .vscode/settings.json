@@ -22,7 +22,7 @@
     },
     "datapack.lint.blockStateSortKeys": null,
     "datapack.lint.blockStateTrailingComma": false,
-    "datapack.lint.eol": "CRLF",
+    "datapack.lint.eol": "LF",
     "datapack.lint.idOmitDefaultNamespace": null,
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
@@ -824,5 +824,6 @@
         "**/.project": true,
         "**/.settings": true,
         "desktop.ini": true
-    }
+    },
+    "files.eol": "\n"
 }
