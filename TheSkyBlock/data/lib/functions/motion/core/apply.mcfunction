@@ -4,6 +4,13 @@
 #
 # @within function lib:motion/
 
+#> private
+# @private
+    #declare score_holder $VectorMagnitude
+    #declare score_holder $VectorX
+    #declare score_holder $VectorY
+    #declare score_holder $VectorZ
+
 # 初期化として視点を自分にあわせる & ^ ^ ^0.01を取得
     execute positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^0.01
 
