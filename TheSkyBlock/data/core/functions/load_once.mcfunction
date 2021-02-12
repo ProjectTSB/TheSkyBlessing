@@ -126,6 +126,7 @@ scoreboard objectives setdisplay belowName Health
 
 #> MobManager
 # @public
+    scoreboard objectives add AttackedEntity dummy
     scoreboard objectives add AttackingEntity dummy
 
 #> Schedule

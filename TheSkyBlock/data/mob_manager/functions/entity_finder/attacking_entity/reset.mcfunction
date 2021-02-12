@@ -1,9 +1,8 @@
 #> mob_manager:entity_finder/attacking_entity/reset
 #
-#
+# スコア等のリセット
 #
 # @within function core:tick
-
 
 scoreboard players set $AttackingEntityIndex Global 0
 scoreboard players reset @a[scores={AttackingEntity=-2147483648..}] AttackingEntity

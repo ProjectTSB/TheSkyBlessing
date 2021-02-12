@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"FindFlag10\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "mob_manager:entity_finder/attacked_entity/add_tag/10"
+    }
+}
