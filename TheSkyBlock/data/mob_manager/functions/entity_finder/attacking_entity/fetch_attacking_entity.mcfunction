@@ -1,4 +1,4 @@
-#> mob_manager:entity_finder/attacking_entity/fetch_hurt_entity
+#> mob_manager:entity_finder/attacking_entity/fetch_attacking_entity
 #
 # 多分このfunctionの実行者は攻撃してきたEntityであるはず
 #
