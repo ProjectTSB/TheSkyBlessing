@@ -37,12 +37,12 @@
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,tag=!Death] run function player_manager:adjust_hunger/observe
 
 # Mobデータ初期化部
-    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function player_manager:find_attacking_entity/set_flag
+    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
 
 # Tick最後の処理
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 
 # リセット
-    execute if entity @a[scores={AttackedEntity=0..}] run function player_manager:find_attacking_entity/reset
+    execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
     scoreboard players reset @a[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
