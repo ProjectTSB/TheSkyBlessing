@@ -5,7 +5,7 @@
             "conditions": {
                 "damage": {
                     "source_entity": {
-                        "nbt": "{Tags:[\"DetectFlag6\"]}"
+                        "nbt": "{Tags:[\"FindFlag6\"]}"
                     }
                 }
             }

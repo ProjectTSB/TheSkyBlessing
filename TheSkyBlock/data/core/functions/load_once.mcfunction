@@ -5,7 +5,7 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value 8
+data modify storage global Version set value 9
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
@@ -126,7 +126,7 @@ scoreboard objectives setdisplay belowName Health
 
 #> MobManager
 # @public
-    scoreboard objectives add AttackedEntity dummy
+    scoreboard objectives add AttackingEntity dummy
 
 #> Schedule
     schedule function core:4_interval_tick 4t

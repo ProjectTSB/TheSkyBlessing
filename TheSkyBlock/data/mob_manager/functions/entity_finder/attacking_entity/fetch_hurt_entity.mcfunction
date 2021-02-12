@@ -5,8 +5,8 @@
 # @within function mob_manager:entity_finder/attacking_entity/filters/0
 
 # 軽量にセレクターを利用する用のtag
-    tag @s add AttackedEntity
+    tag @s add AttackingEntity
 # 紐づけ用スコア
-    scoreboard players add $AttackedEntityIndex Global 1
-    scoreboard players operation @s AttackedEntity = $AttackedEntityIndex Global
-    scoreboard players operation @a[tag=this] AttackedEntity = $AttackedEntityIndex Global
+    scoreboard players add $AttackingEntityIndex Global 1
+    scoreboard players operation @s AttackingEntity = $AttackingEntityIndex Global
+    scoreboard players operation @a[tag=this] AttackingEntity = $AttackingEntityIndex Global

@@ -4,5 +4,5 @@
 #
 # @within advancement mob_manager:entity_finder/attacking_entity/13
 
-tag @s add HasFlag13
+tag @s add HasFindAttackingFlag13
 advancement revoke @s only mob_manager:entity_finder/attacking_entity/13
