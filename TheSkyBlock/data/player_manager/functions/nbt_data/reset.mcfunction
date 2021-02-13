@@ -5,6 +5,6 @@
 # @within function core:tick
 
 # FallDistance
-    scoreboard players reset @a AttackingEntity
+    scoreboard players reset @a FallDistance
 # OnGround
     tag @a[tag=OnGround] remove OnGround
