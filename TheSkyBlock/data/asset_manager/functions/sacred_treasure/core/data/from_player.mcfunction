@@ -20,6 +20,13 @@
     data modify storage asset:context New.Items.legs set from storage asset:context New.Inventory[{Slot:101b}]
     data modify storage asset:context New.Items.chest set from storage asset:context New.Inventory[{Slot:102b}]
     data modify storage asset:context New.Items.head set from storage asset:context New.Inventory[{Slot:103b}]
+# NullCheck
+    execute unless data storage asset:context New.Items.mainhand run data modify storage asset:context New.Items.mainhand set value {}
+    execute unless data storage asset:context New.Items.offhand run data modify storage asset:context New.Items.offhand set value {}
+    execute unless data storage asset:context New.Items.feet run data modify storage asset:context New.Items.feet set value {}
+    execute unless data storage asset:context New.Items.legs run data modify storage asset:context New.Items.legs set value {}
+    execute unless data storage asset:context New.Items.chest run data modify storage asset:context New.Items.chest set value {}
+    execute unless data storage asset:context New.Items.head run data modify storage asset:context New.Items.head set value {}
 # id
     data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
     data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID
