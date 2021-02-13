@@ -8,8 +8,8 @@
     data modify storage lib: Argument.Damage set value 9.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
-    function lib:damage/
     function lib:damage/modifier
+    function lib:damage/
 
 # リセット
     data remove storage lib: Argument

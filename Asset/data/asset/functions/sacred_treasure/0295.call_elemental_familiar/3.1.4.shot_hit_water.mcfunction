@@ -8,8 +8,8 @@
     data modify storage lib: Argument.Damage set value 7.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
-    function lib:damage/
     function lib:damage/modifier
+    function lib:damage/
 
 # ふわり
     effect give @s minecraft:levitation 1 1 true
