@@ -8,7 +8,6 @@
 
 #> フラグ
 # @within function mob_manager:entity_finder/attacked_entity/**
-    #declare tag HurtEntity
     #declare tag HasFindAttackedFlag0
     #declare tag HasFindAttackedFlag1
     #declare tag HasFindAttackedFlag2
