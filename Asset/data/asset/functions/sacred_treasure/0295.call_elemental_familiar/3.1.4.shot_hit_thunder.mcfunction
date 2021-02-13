@@ -9,6 +9,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
     function lib:damage/
+    function lib:damage/modifier
 
 # しびれる
     effect give @s slowness 3 1
