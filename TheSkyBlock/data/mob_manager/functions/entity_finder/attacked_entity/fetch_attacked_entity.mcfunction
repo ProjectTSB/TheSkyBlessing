@@ -9,4 +9,4 @@
 # 紐づけ用スコア
     scoreboard players add $AttackedEntityIndex Global 1
     scoreboard players operation @s AttackedEntity = $AttackedEntityIndex Global
-    scoreboard players operation @a[tag=this] AttackedEntity = $AttackedEntityIndex Global
+    scoreboard players operation @a[tag=this,limit=1] AttackedEntity = $AttackedEntityIndex Global

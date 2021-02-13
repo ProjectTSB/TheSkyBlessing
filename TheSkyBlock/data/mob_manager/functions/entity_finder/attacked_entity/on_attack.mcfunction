@@ -2,17 +2,14 @@
 #
 # 攻撃対象を特定します
 #
-# @within function core:handler/damage
+# @within function core:handler/attack
 
 # タグ付け
     tag @s add this
-# HurtTime
-    tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # 対象を設定してフィルターにかける
-    execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..150] run function mob_manager:entity_finder/attacked_entity/filters/15
+    execute as @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] run function mob_manager:entity_finder/attacked_entity/filters/15
 # リセット
     tag @s remove this
-    tag @e[type=#lib:living,type=!player,tag=HurtEntity] remove HurtEntity
     tag @s remove HasFindAttackedFlag0
     tag @s remove HasFindAttackedFlag1
     tag @s remove HasFindAttackedFlag2
