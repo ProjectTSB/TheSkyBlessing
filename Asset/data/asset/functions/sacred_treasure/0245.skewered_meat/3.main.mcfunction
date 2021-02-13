@@ -17,4 +17,4 @@
 
 # 演出
     tellraw @s {"text":"─── んまいっ！","bold":true}
-    execute at @s run particle minecraft:heart ~ ~1.3 ~ 0.25 0.25 0.25 1 7
+    particle minecraft:heart ~ ~1.3 ~ 0.25 0.25 0.25 1 7
