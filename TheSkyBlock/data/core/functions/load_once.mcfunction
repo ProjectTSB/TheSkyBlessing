@@ -5,7 +5,7 @@
 # @within function core:load
 
 # バージョン情報
-data modify storage global Version set value "0.0.7"
+data modify storage global Version set value 9
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 # forceload chunks
@@ -42,6 +42,15 @@ data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
+#> リセットが必要なやつ
+scoreboard objectives remove FirstJoinEvent
+kill 0-0-0-0-0
+
+#> ベクトル取得用汎用Entity
+# @public
+    #alias entity vectorEntity 0-0-0-0-0
+summon minecraft:area_effect_cloud 0.0 0.0 0.0 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,UUID:[I;0,0,0,0]}
+
 #> NoCollision
 # @public
     team add NoCollision
@@ -70,6 +79,7 @@ function core:define_const
 
 #> EventHandlers
 # @within function
+#   core:load_once
 #   asset_manager:sacred_treasure/triggers/**
 #   core:handler/*
 #   core:tick
@@ -117,3 +127,7 @@ scoreboard objectives setdisplay belowName Health
 #> MobManager
 # @public
     scoreboard objectives add AttackedEntity dummy
+    scoreboard objectives add AttackingEntity dummy
+
+#> Schedule
+    schedule function core:4_interval_tick 4t
