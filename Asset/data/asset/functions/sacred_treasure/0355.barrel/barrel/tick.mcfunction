@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0355.barrel/barrel/tick
 #
-#   樽ごとに実行されるファンクション
+#　樽ごとに実行されるファンクション
 #
 # @within function asset:sacred_treasure/0355.barrel/3.1.tick_base
 

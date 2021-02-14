@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0355.barrel/3.1.tick_base
 #
-#    全体のtick
+#　全体のtick
 #
 # @within function asset:sacred_treasure/0355.barrel/3.*
 
