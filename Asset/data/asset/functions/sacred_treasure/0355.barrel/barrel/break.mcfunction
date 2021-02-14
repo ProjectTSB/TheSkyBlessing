@@ -9,3 +9,4 @@
 # 演出
     particle block barrel ~ ~ ~ 0.3 0.3 0.3 1 20
     playsound block.wood.break block @a ~ ~ ~ 1.0 1.0
+    playsound block.fence_gate.close block @a ~ ~ ~ 1.0 1.3
