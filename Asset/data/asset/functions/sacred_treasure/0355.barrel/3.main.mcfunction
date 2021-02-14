@@ -1,0 +1,23 @@
+#> asset:sacred_treasure/0355.barrel/3.main
+#
+# 神器のメイン処理部
+#
+# @within function asset:sacred_treasure/0355.barrel/2.check_condition
+
+#> Temp
+#
+# @private
+    #declare tag 355.BarrelExist
+
+# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
+    function asset:sacred_treasure/lib/use/auto
+
+# ここから先は神器側の効果の処理を書く
+    # 樽がすでに存在するか確認
+        execute if entity @e[type=armor_stand,tag=355.Barrel,limit=1] run tag @s add 355.BarrelExist
+    # 樽召喚
+        execute at @e[type=!player,distance=..8] run summon armor_stand ~ ~1.8 ~ {Tags:["355.Barrel"],Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:barrel",Count:1b}]}
+    # tick予約
+        execute if entity @s[tag=!355.BarrelExist] if entity @e[type=armor_stand,tag=355.Barrel,limit=1] run schedule function asset:sacred_treasure/0355.barrel/3.1.tick_base 1t replace
+    # 開放
+        execute if entity @s[tag=355.BarrelExist] run tag @s remove 355.BarrelExist
