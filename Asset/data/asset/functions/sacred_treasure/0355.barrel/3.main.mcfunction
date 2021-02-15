@@ -18,7 +18,7 @@
     # 樽召喚
         execute at @e[type=#lib:living,type=!player,distance=..8] run summon armor_stand ~ ~1.8 ~ {Tags:["355.Barrel"],Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:barrel",Count:1b}]}
     # tick予約
-        execute if entity @s[tag=!355.BarrelExist] if entity @e[type=armor_stand,tag=355.Barrel,limit=1] run schedule function asset:sacred_treasure/0355.barrel/3.1.tick_base 1t replace
+        schedule function asset:sacred_treasure/0355.barrel/3.1.tick_base 1t replace
     
     # 演出
         particle happy_villager ~ ~ ~ 0.5 0.5 0.5 1 30
