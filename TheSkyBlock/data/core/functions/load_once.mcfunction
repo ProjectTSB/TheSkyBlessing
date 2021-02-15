@@ -52,6 +52,7 @@ data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 
 #> リセット必須オブジェクト等の削除
+scoreboard objectives remove Debug
 scoreboard objectives remove FirstJoinEvent
 kill 0-0-0-0-0
 
@@ -90,8 +91,15 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Const dummy
     function core:define_const
 
+    #> DEBUG用スコアボード
+    # @within function
+    #   core:load_once
+    #   lib:debug/objective_view
+        scoreboard objectives add Debug dummy {"text":"デバッグ"}
+
     #> AssetManager
     # @within function
+    #   lib:debug/objective_view
     #   asset_manager:**
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
@@ -108,6 +116,7 @@ team modify NoCollision collisionRule never
 
     #> イベントハンドラ用スコアボード
     # @within function
+    #   lib:debug/objective_view
     #   asset_manager:sacred_treasure/triggers/**
     #   core:load_once
     #   core:handler/*
@@ -128,7 +137,9 @@ team modify NoCollision collisionRule never
         scoreboard objectives add ScoreToHPFluc dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
-    # @within function player_manager:adjust_hunger/**
+    # @within function
+    #   lib:debug/objective_view
+    #   player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
