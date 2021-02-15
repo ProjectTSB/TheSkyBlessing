@@ -51,7 +51,7 @@
     execute if entity @s[tag=!PassConditionA] run tellraw @s {"text":"MPが足りない！","color":"red"}
     execute if entity @s[tag=!PassConditionB] run tellraw @s {"text":"現在の信仰では使えないようだ...","color":"red"}
     execute if entity @s[tag=!PassConditionC] run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
-    execute if entity @s[tag=!PassConditionD] run tellraw @s {"text":"グローバルクールダウンが終わっていません。","color":"red"}
+    execute if entity @s[tag=!PassConditionD] run tellraw @s {"text":"特殊クールダウンが終わっていません。","color":"red"}
 # リセット
     tag @s remove PassConditionA
     tag @s remove PassConditionB
