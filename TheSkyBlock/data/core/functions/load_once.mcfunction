@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 9
+data modify storage global Version set value 10
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -89,6 +89,22 @@ team modify NoCollision collisionRule never
     # @public
         scoreboard objectives add Const dummy
     function core:define_const
+
+    #> AssetManager
+    # @within function
+    #   asset_manager:**
+        scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
+        scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
+        scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
+        scoreboard objectives add Sneak.Chest custom:sneak_time {"text":"スニークタイム: 胸"}
+        scoreboard objectives add Sneak.Legs custom:sneak_time {"text":"スニークタイム: 脚"}
+        scoreboard objectives add Sneak.Feet custom:sneak_time {"text":"スニークタイム: 足"}
+        scoreboard objectives add UUID.Mainhand dummy {"text":"メインハンド装備のUUID"}
+        scoreboard objectives add UUID.Offhand dummy {"text":"オフハンド装備のUUID"}
+        scoreboard objectives add UUID.Head dummy {"text":"頭装備のUUID"}
+        scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
+        scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
+        scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
 
     #> イベントハンドラ用スコアボード
     # @within function
