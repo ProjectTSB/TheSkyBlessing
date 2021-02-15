@@ -10,10 +10,5 @@
 # ここから先は神器側の効果の処理を書く
 
 # 水に入っているかいないか
-    execute if block ~ ~ ~ water as @e[type=#lib:living,type=!player,distance=..5] at @s run function asset:sacred_treasure/0075.whirlpool_wand/3.1.insidewater
-    execute unless block ~ ~ ~ water as @e[type=#lib:living,type=!player,distance=..5] at @s run function asset:sacred_treasure/0075.whirlpool_wand/3.2.outsidewater
-
-# 演出
-    playsound minecraft:block.bubble_column.upwards_inside master @a ~ ~ ~ 1 1.8
-    execute as @e[type=#lib:living,type=!player,distance=..5] at @s run particle minecraft:splash ~ ~1 ~ 0.4 0.25 0.4 0.1 50 force
-    execute as @e[type=#lib:living,type=!player,distance=..5] at @s run particle minecraft:poof ~ ~0.6 ~ 0.1 0.125 0.1 0.1 10 force
+    execute as @e[type=#lib:living,type=!player,distance=..5] at @s if predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.1.insidewater
+    execute as @e[type=#lib:living,type=!player,distance=..5] at @s unless predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.2.outsidewater

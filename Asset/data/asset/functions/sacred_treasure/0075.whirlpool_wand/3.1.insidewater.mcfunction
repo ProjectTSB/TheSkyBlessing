@@ -16,3 +16,8 @@
         function lib:damage/modifier
 # リセット
     data remove storage lib: Argument
+
+# 演出
+    playsound minecraft:block.bubble_column.upwards_inside master @a ~ ~ ~ 1 1.8
+    particle minecraft:splash ~ ~2 ~ 0.4 1 0.4 0.1 100 force
+    particle minecraft:poof ~ ~1 ~ 0.1 0.5 0.1 0.1 20 force
