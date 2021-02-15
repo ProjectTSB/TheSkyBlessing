@@ -25,8 +25,8 @@
     function asset_manager:sacred_treasure/core/use/get_item_data
 # 条件を満たしてたらtagを付与
     # MP必要量による制限
-        execute store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPRequire
-        execute unless score $CheckMP Lib matches -2147483648.. store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPCost
+        execute if data storage asset:sacred_treasure Item.tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPRequire
+        execute unless data storage asset:sacred_treasure Item.tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPCost
         execute store result score $CheckMPRes Temporary run function lib:mp/check
         execute if score $CheckMPRes Temporary matches 1 run tag @s add PassConditionA
         scoreboard players reset $CheckMPRes Temporary
