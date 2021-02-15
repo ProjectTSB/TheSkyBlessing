@@ -10,12 +10,12 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute at @e[type=#lib:living,tag=HurtEntity,distance=..10] run particle minecraft:end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..10]
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..10]
 
 # 攻撃したエンティティを40回復
     data modify storage lib: Argument.Heal set value 40f
     function lib:heal/modifier
-    execute as @e[type=#lib:living,tag=HurtEntity,distance=..10] run function lib:heal/
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:heal/
 
 # リセット
     data remove storage lib: Argument

@@ -21,7 +21,7 @@
 # 演出
     playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
     playsound minecraft:entity.wither.hurt player @a ~ ~ ~ 1 1
-    execute at @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
 
 # ダメージ設定
     # 与えるダメージ = 90
@@ -30,7 +30,6 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run function lib:damage/
+        execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
 # リセット
     data remove storage lib: Argument
-
