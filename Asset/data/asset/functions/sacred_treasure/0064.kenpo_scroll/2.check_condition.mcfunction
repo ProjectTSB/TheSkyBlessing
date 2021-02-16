@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # メインハンドにアイテムを所持していない場合のみ実行
-    execute as @s[nbt={SelectedItem:{}}] run tag @s remove CanUsed
+    execute if data storage asset:context Items.mainhand.id run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0064.kenpo_scroll/3.main
