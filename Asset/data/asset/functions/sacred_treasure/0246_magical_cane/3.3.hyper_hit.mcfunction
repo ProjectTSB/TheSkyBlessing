@@ -9,5 +9,5 @@
     playsound minecraft:item.trident.thunder player @a ~ ~ ~ 2 2
 
 # 付近のヒットさせた敵にパーティクルを出す
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run particle firework ~ ~1 ~ 0 0 0 0.2 20
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run particle minecraft:end_rod ~ ~2 ~ 0.1 1 0.1 0.01 50
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle firework ~ ~1 ~ 0 0 0 0.2 20
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:end_rod ~ ~2 ~ 0.1 1 0.1 0.01 50
