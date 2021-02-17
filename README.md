@@ -24,12 +24,12 @@
 * masterはGitmojiを使いコミットメッセージの最初に絵文字をつける
 
 ## ライセンスについて
-このリポジトリでは、以下のディレクトリを除いて[CC0 1.0ライセンス](LICENSE)が適用されます。
+このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
 
-CC0が適用されないディレクトリ
-* [Asset](Asset)ディレクトリ ([MIT license](Asset/LICENSE))
-* [OhMyDat](OhMyDat)ディレクトリ ([MIT license](OhMyDat/LICENSE) / Copyright by 赤石愛)
-* [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache license 2.0](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
+CC0-1.0 Licenseが適用されないディレクトリ
+* [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
+* [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
+* [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
 
 ## 謝辞
 このリポジトリでは以下のライブラリを使用させていただいてます。
