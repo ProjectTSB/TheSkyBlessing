@@ -6,5 +6,5 @@
 
 #> 定義類はここに
 # @within function
-#   asset:sacred_treasure/0152.call_cat/3.1.entity_manager
+#   asset:sacred_treasure/0152.call_cat/*
     scoreboard objectives add 152.CatTime dummy

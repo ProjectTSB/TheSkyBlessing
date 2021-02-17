@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0152.call_cat/3.1.entity_manager
 
 
-#さようなら //killだとログがプレイヤーに出る、死亡音が聞こえるためdataで消す
+# さようなら //killだとログがプレイヤーに出る、死亡音が聞こえるためdataで消す
     playsound minecraft:item.chorus_fruit.teleport master @a ~ ~ ~ 1 0.75
     particle minecraft:reverse_portal ~ ~ ~ 0.1 0.1 0.1 0.01 200
     tp @s ~ -64 ~

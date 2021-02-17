@@ -14,25 +14,25 @@
 
 # ここから先は神器側の効果の処理を書く
 
-    #ネコ召喚
+    # ネコ召喚
         summon cat ~ ~ ~ {DeathLootTable:"minecraft:empty",PersistenceRequired:1b,CanPickUpLoot:0b,CatType:0,Tags:["AbstrictCat","152.CalledCat"]}
         particle minecraft:heart ~ ~ ~ 0.5 0.25 0.5 1 10
         playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 1 1.25
 
-    #ネコの種類をランダムに
+    # ネコの種類をランダムに
         execute store result score $Random Temporary run function lib:random/
         scoreboard players operation $Random Temporary %= $11 Const
         execute store result entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] CatType int 1 run scoreboard players get $Random Temporary
 
-    #使用者に懐かせる //PlayerNBT参照せずUUID取得する方法があるならそっち使いたい
+    # 使用者に懐かせる //PlayerNBT参照せずUUID取得する方法があるならそっち使いたい
         data modify entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] Owner set from entity @s UUID
 
-    #回復クールダウンスコア設定
+    # 回復クールダウンスコア設定
         execute as @a unless score @s 152.CatTime matches -11..22 run scoreboard players set @s 152.CatTime -10
 
-    #ネコがいる間tickさせるfunctionをschedule
+    # ネコがいる間tickさせるfunctionをschedule
         schedule function asset:sacred_treasure/0152.call_cat/3.1.entity_manager 1t replace
 
-    #リセット
+    # リセット
         scoreboard players reset $Random Temporary
         tag @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] remove AbstrictCat
