@@ -64,6 +64,5 @@
 
 # リセット
     data remove storage asset:sacred_treasure Data
-    data remove storage asset:sacred_treasure Temp
     scoreboard players reset $Remain Temporary
     scoreboard players reset $RemainMAX Temporary
