@@ -4,7 +4,6 @@
 #
 # @within function asset_manager:sacred_treasure/core/create/set_data
 
-
 # 通常説明文
     function asset_manager:sacred_treasure/core/create/lore_append
 # 空行セパレータ
@@ -19,7 +18,11 @@
     loot replace block 10000 0 10000 container.3 loot asset_manager:sacred_treasure/core/generate_lore/mp_cost
 # 4? 消費アイテム
     execute if data storage asset:sacred_treasure CostText run loot replace block 10000 0 10000 container.4 loot asset_manager:sacred_treasure/core/generate_lore/cost_item
-# 5 使える神
+# 5? クールタイム
+    execute if data storage asset:sacred_treasure LocalCooldown run function asset_manager:sacred_treasure/core/create/set_cooltime
+# 6? スペシャル☆クールタイム
+    execute if data storage asset:sacred_treasure SpecialCooldown run function asset_manager:sacred_treasure/core/create/set_special_cooltime
+# 7 使える神
     function asset_manager:sacred_treasure/core/create/set_god
 # Lore一括追加
     data modify storage asset:sacred_treasure Data.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]

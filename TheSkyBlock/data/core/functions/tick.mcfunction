@@ -6,9 +6,6 @@
 #
 # @within tag/function minecraft:tick
 
-# HurtTime
-    tag @e[type=#lib:living,tag=HurtEntity] remove HurtEntity
-    execute at @a[tag=!Death] run tag @e[type=#lib:living,nbt={HurtTime:10s},distance=..150] add HurtEntity
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
@@ -37,12 +34,17 @@
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,tag=!Death] run function player_manager:adjust_hunger/observe
 
 # Mobデータ初期化部
-    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:detect_hurt_entity/set_flag
+    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
 
 # Tick最後の処理
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 
 # リセット
-    execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:detect_hurt_entity/reset
+    execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
+    execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
+    execute as @a[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:sacred_treasure/triggers/sneak/reset
     scoreboard players reset @a[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
+
+# Debugスコアボードへの代入
+    execute as @p run function lib:debug/objective_view
