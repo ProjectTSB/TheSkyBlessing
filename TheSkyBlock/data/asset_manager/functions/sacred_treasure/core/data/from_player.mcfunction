@@ -4,24 +4,37 @@
 #
 # @within asset_manager:sacred_treasure/triggers/
 
-# データを移植
-    data modify storage asset:sacred_treasure Temp set from entity @s Inventory
+# 初期化して古いデータとして突っ込む
+    data remove storage asset:context Old
+    data modify storage asset:context Old.id set from storage asset:context New.id
+    data modify storage asset:context Old.Items set from storage asset:context New.Items
+    data modify storage asset:context Old.Inventory set from storage asset:context New.Inventory
+# 初期化
+    data remove storage asset:context New
+# Inventory
+    data modify storage asset:context New.Inventory set from entity @s Inventory
+# Items
+    data modify storage asset:context New.Items.mainhand set from entity @s SelectedItem
+    data modify storage asset:context New.Items.offhand set from storage asset:context New.Inventory[{Slot:-106b}]
+    data modify storage asset:context New.Items.feet set from storage asset:context New.Inventory[{Slot:100b}]
+    data modify storage asset:context New.Items.legs set from storage asset:context New.Inventory[{Slot:101b}]
+    data modify storage asset:context New.Items.chest set from storage asset:context New.Inventory[{Slot:102b}]
+    data modify storage asset:context New.Items.head set from storage asset:context New.Inventory[{Slot:103b}]
+# NullCheck
+    execute unless data storage asset:context New.Items.mainhand run data modify storage asset:context New.Items.mainhand set value {}
+    execute unless data storage asset:context New.Items.offhand run data modify storage asset:context New.Items.offhand set value {}
+    execute unless data storage asset:context New.Items.feet run data modify storage asset:context New.Items.feet set value {}
+    execute unless data storage asset:context New.Items.legs run data modify storage asset:context New.Items.legs set value {}
+    execute unless data storage asset:context New.Items.chest run data modify storage asset:context New.Items.chest set value {}
+    execute unless data storage asset:context New.Items.head run data modify storage asset:context New.Items.head set value {}
+# id
+    data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
+    data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID
+    data modify storage asset:context New.id.feet set from storage asset:context New.Items.feet.tag.TSB.ID
+    data modify storage asset:context New.id.legs set from storage asset:context New.Items.legs.tag.TSB.ID
+    data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.tag.TSB.ID
+    data modify storage asset:context New.id.head set from storage asset:context New.Items.head.tag.TSB.ID
 # リセット
-    data remove storage asset:context id
+    data remove storage asset:context Inventory
     data remove storage asset:context Items
-# データ移植
-    data modify storage asset:context Items.mainhand set from entity @s SelectedItem
-    data modify storage asset:context Items.offhand set from storage asset:sacred_treasure Temp[{Slot:-106b}]
-    data modify storage asset:context Items.feet set from storage asset:sacred_treasure Temp[{Slot:100b}]
-    data modify storage asset:context Items.legs set from storage asset:sacred_treasure Temp[{Slot:101b}]
-    data modify storage asset:context Items.chest set from storage asset:sacred_treasure Temp[{Slot:102b}]
-    data modify storage asset:context Items.head set from storage asset:sacred_treasure Temp[{Slot:103b}]
-# ID追加
-    data modify storage asset:context id.mainhand set from storage asset:context Items.mainhand.tag.TSB.ID
-    data modify storage asset:context id.offhand set from storage asset:context Items.offhand.tag.TSB.ID
-    data modify storage asset:context id.feet set from storage asset:context Items.feet.tag.TSB.ID
-    data modify storage asset:context id.legs set from storage asset:context Items.legs.tag.TSB.ID
-    data modify storage asset:context id.chest set from storage asset:context Items.chest.tag.TSB.ID
-    data modify storage asset:context id.head set from storage asset:context Items.head.tag.TSB.ID
-# リセット
-    data remove storage asset:sacred_treasure Temp
+    data remove storage asset:context id

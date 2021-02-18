@@ -17,7 +17,7 @@
 #       MPRequire : int
 #       CostText? : TextComponent
 #       LocalCooldown : int
-#       GlobalCooldown : int
+#       SpecialCooldown : int
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
 # @within function asset:sacred_treasure/lib/give
@@ -25,6 +25,9 @@
 #> Private
 # @private
     #declare score_holder $SacredTreasureIndex
+
+# Count
+    data modify storage asset:sacred_treasure Data.Count set value 1b
 
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
@@ -40,7 +43,7 @@
     data modify storage asset:sacred_treasure Data.tag.TSB.RemainingCount set from storage asset:sacred_treasure RemainingCount
     data modify storage asset:sacred_treasure Data.tag.TSB.RemainingCountMAX set from storage asset:sacred_treasure RemainingCount
     data modify storage asset:sacred_treasure Data.tag.TSB.LocalCooldown set from storage asset:sacred_treasure LocalCooldown
-    data modify storage asset:sacred_treasure Data.tag.TSB.GlobalCooldown set from storage asset:sacred_treasure GlobalCooldown
+    data modify storage asset:sacred_treasure Data.tag.TSB.SpecialCooldown set from storage asset:sacred_treasure SpecialCooldown
 
 # 名前
     # 残り回数が存在する場合
@@ -57,10 +60,9 @@
     data modify storage asset:sacred_treasure Data.tag merge from storage asset:sacred_treasure CustomNBT
 
 # データの適用
-    data modify entity @s Item merge from storage asset:sacred_treasure Data
+    data modify block 10000 0 10000 Items append from storage asset:sacred_treasure Data
 
 # リセット
     data remove storage asset:sacred_treasure Data
-    data remove storage asset:sacred_treasure Temp
     scoreboard players reset $Remain Temporary
     scoreboard players reset $RemainMAX Temporary

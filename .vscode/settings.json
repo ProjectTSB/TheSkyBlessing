@@ -22,7 +22,7 @@
     },
     "datapack.lint.blockStateSortKeys": null,
     "datapack.lint.blockStateTrailingComma": false,
-    "datapack.lint.eol": "CRLF",
+    "datapack.lint.eol": "LF",
     "datapack.lint.idOmitDefaultNamespace": null,
     "datapack.lint.nameOfNbtCompoundTagKeys": [
         "information",
@@ -174,7 +174,7 @@
     ],
     "datapack.lint.selectorKeyQuoteType": null,
     "datapack.lint.selectorSortKeys": [
-        "information",
+        "warning",
         [
             "type",
             "gamemode",
@@ -431,7 +431,7 @@
                         "# 神器のクールダウン (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure GlobalCooldown set value ",
+                        "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -489,6 +489,39 @@
                         "# ここから先は神器側の効果の処理を書く",
                         "    say test: %namespace%"
                     ]
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/0.load.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/0.load",
+                        "#",
+                        "# 神器に利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:sacred_treasure/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/load.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/0.load"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/0.load"
+                    }
                 }
             ]
         },
@@ -763,6 +796,258 @@
             ]
         },
         {
+            "label": "神器/トリガー: スニーク",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 1秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 2秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 3秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 4秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 5秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 10秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/10s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 0秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 1秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 2秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 3秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 4秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 5秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 10秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/10s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: tick",
             "generates": [
                 {
@@ -783,5 +1068,14 @@
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
-    "mcdutil.createDatapackTemplate.defaultVanillaData": false
+    "mcdutil.createDatapackTemplate.defaultVanillaData": false,
+    "files.exclude": {
+        ".idea": true,
+        ".vscode": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "desktop.ini": true
+    },
+    "files.eol": "\n"
 }

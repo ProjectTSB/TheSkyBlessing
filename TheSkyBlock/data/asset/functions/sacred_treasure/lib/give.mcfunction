@@ -15,14 +15,10 @@
 #   MPRequire? : int
 #   CostText? : TextComponent
 #   LocalCooldown? : int
-#   GlobalCooldown? : int
+#   SpecialCooldown? : int
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:sacred_treasure/*/_.give
-
-#> Private
-# @private
-    #declare tag AbstrictItem
 
 # storage検証
     execute unless data storage asset:sacred_treasure ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument ID at asset:sacred_treasure/lib/give"}}}]
@@ -33,12 +29,10 @@
     execute unless data storage asset:sacred_treasure Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Trigger at asset:sacred_treasure/lib/give"}}}]
     execute unless data storage asset:sacred_treasure MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument MPCost at asset:sacred_treasure/lib/give"}}}]
     execute unless data storage asset:sacred_treasure CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument CanUsedGod at asset:sacred_treasure/lib/give"}}}]
-# 元となるアイテム召喚
-    execute at @s run summon item ~ ~ ~ {Item:{id:"barrier",Count:1b},Tags:["AbstrictItem"],PickupDelay:1s}
 # 各データ設定
-    execute as @e[type=item,tag=AbstrictItem,limit=1] run function asset_manager:sacred_treasure/core/create/set_data
-# tag remove
-    tag @e[type=item,tag=AbstrictItem] remove AbstrictItem
+    function asset_manager:sacred_treasure/core/create/set_data
+# 神器give
+    loot give @s mine 10000 0 10000 debug_stick
 # リセット
     data remove storage asset:sacred_treasure ID
     data remove storage asset:sacred_treasure Item
@@ -54,4 +48,4 @@
     data remove storage asset:sacred_treasure CanUsedGod
     data remove storage asset:sacred_treasure CustomNBT
     data remove storage asset:sacred_treasure LocalCooldown
-    data remove storage asset:sacred_treasure GlobalCooldown
+    data remove storage asset:sacred_treasure SpecialCooldown
