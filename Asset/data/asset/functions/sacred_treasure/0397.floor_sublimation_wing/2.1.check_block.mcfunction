@@ -2,9 +2,9 @@
 #
 # Y <= 32 にテレポートすることができるブロックが存在するかチェックする
 #
-# @within
-#   function asset:sacred_treasure/0397.floor_sublimation_wing/2.check_condition
-#   function asset:sacred_treasure/0397.floor_sublimation_wing/2.1.check_block
+# @within function
+#   asset:sacred_treasure/0397.floor_sublimation_wing/2.check_condition
+#   asset:sacred_treasure/0397.floor_sublimation_wing/2.1.check_block
 
 # 加算
     scoreboard players add $397_Count Temporary 1
