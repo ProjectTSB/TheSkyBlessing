@@ -9,4 +9,4 @@
 
 # ここから先は神器側の効果の処理を書く
     # 攻撃先のエンティティで実行
-        execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..15] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0106.stone_cutter_blade/3.1.entity.main
+        execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0106.stone_cutter_blade/3.1.entity.main
