@@ -8,5 +8,4 @@
     function asset:sacred_treasure/lib/use/feet
 
 # ここから先は神器側の効果の処理を書く
-    summon area_effect_cloud ~ ~ ~ {Particle:"block air",Radius:0.01f,Duration:1,Age:-1,Effects:[{Id:25b,Amplifier:8b,Duration:2,ShowParticles:0b}]}
-    particle flame ~ ~-0.4 ~ 0.2 0.2 0.2 0.2 20 normal
+    summon area_effect_cloud ~ ~ ~ {Particle:"block air",Radius:0.01f,Duration:1,Age:-1,Effects:[{Id:25b,Amplifier:80b,Duration:5,ShowParticles:0b}]}
