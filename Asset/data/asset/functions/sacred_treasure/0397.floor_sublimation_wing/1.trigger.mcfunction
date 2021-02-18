@@ -5,4 +5,4 @@
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{mainhand:397} run function asset:sacred_treasure/0397.floor_sublimation_wing/2.check_condition
+    execute if data storage asset:context id{auto:397} run function asset:sacred_treasure/0397.floor_sublimation_wing/2.check_condition
