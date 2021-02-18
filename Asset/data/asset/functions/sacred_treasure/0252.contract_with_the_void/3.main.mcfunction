@@ -17,18 +17,18 @@
     particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
 
 # 絶大な力
-    effect give @s speed 120 3 true
-    effect give @s strength 120 3 true
-    effect give @s jump_boost 120 3 true
-    effect give @s regeneration 120 3 true
-    effect give @s fire_resistance 120 3 true
-    effect give @s resistance 120 3 true
-    effect give @s invisibility 120 3 true
-    effect give @s night_vision 120 3 true
-    effect give @s water_breathing 120 3 true
-    effect give @s absorption 120 3 true
-    effect give @s health_boost 120 3 true
-    effect give @s slow_falling 120 3 true
+    effect give @s speed 120 3
+    effect give @s strength 120 3
+    effect give @s jump_boost 120 3
+    effect give @s regeneration 120 3
+    effect give @s fire_resistance 120 3
+    effect give @s resistance 120 3
+    effect give @s invisibility 120 3
+    effect give @s night_vision 120 3
+    effect give @s water_breathing 120 3
+    effect give @s absorption 120 3
+    effect give @s health_boost 120 3
+    effect give @s slow_falling 120 3
 
 # 2分後の奈落予約
     tag @s add Void

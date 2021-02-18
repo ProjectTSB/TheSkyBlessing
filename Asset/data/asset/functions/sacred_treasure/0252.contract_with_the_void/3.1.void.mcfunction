@@ -7,8 +7,11 @@
 # @private
     #declare tag Void
 
+# tp前演出
+    execute as @a at @s if entity @s[tag=Void] run particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
+
 # 奈落tp
     execute as @a at @s if entity @s[tag=Void] run tp @s ~ -100 ~
 
-# 演出
+# tp後演出
     execute as @a at @s if entity @s[tag=Void] run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~
