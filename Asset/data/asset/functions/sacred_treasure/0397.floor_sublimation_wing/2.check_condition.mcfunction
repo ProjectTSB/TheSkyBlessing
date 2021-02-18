@@ -22,6 +22,6 @@
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0397.floor_sublimation_wing/3.main
 
 # オブジェクトの開放
-    kill @e[tag=397.Marker,distance=..32,limit=1]
+    kill @e[type=area_effect_cloud,tag=397.Marker,distance=..32,limit=1]
     scoreboard players reset $397_Count Temporary
     scoreboard players reset $397_Stat Temporary
