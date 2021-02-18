@@ -14,3 +14,5 @@
     execute if data storage asset:sacred_treasure {CanUsedGod:["Rumor"]} run data modify storage asset:sacred_treasure Temp.CanUsedGod[4] set value '{"translate":"ﾙｰ","color":"green"}'
 # 生成
     loot replace block 10000 0 10000 container.7 loot asset_manager:sacred_treasure/core/generate_lore/god
+# リセット
+    data remove storage asset:sacred_treasure Temp
