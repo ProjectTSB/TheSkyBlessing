@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"奈落との契約","color":"dark_purple","bold":true}'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"奈","color":"dark_purple","bold":true},{"text":"落","obfuscated":true},{"text":"との契約","obfuscated":false}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"絶大な力を得る代償に"}','{"text":"奈落へ引きずり込まれる。"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"絶大な力を得る代償に"}','[{"text":"奈","obfuscated":true},{"text":"落へ引きずり込まれる。","obfuscated":false}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
