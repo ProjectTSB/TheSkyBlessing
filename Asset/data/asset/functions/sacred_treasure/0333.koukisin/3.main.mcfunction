@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute at @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run particle minecraft:crit ~ ~1 ~ 0.2 0.8 0.2 0 80 normal @a[distance=..30]
+    execute at @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10,limit=1] run particle minecraft:crit ~ ~1 ~ 0.2 0.8 0.2 0 80 normal @a[distance=..30]
     playsound minecraft:block.anvil.place master @a[distance=..10] ~ ~ ~ 0.8 2
 
 # ダメージ
@@ -23,6 +23,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 攻撃した対象に実行
-    execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run function lib:damage/simple
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10,limit=1] run function lib:damage/simple
 # リセット
     data remove storage lib: Argument
