@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"鋼","color":"light_gray"},{"text":"鬼","color":"red"},{"text":"針","color":"light_gray"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"鋼","color":"gray"},{"text":"鬼","color":"red"},{"text":"針","color":"gray"}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"鬼の伝承に語られる武器のひとつ","color":"white"}','{"text":"敵に微弱な貫通ダメージを与える。","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)

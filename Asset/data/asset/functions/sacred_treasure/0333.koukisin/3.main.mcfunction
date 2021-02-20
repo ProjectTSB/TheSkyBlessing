@@ -16,8 +16,10 @@
 # ダメージ
     # 与えるダメージ = 3
         data modify storage lib: Argument.Damage set value 3f
-        # 第一属性
-        data modify storage lib: Argument.AttackType set value ""
+    # 物理属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+     # パーティクルを無効化するか否か
+        data modify storage lib: Argument.DisableParticle set value false
 # 補正functionを実行
     function lib:damage/modifier
 # 攻撃した対象に実行
