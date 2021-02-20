@@ -22,4 +22,4 @@
     execute as @a at @s if entity @s[tag=Void] if predicate asset:0252.contract_with_the_void/effect_expire run tag @s remove Void
 
 # 次tickにschedule再予約
-    execute if entity @a[tag=Void] run schedule function asset:sacred_treasure/0252.contract_with_the_void/3.1.void 1t replace
+    execute unless entity @a[tag=!Void] run schedule function asset:sacred_treasure/0252.contract_with_the_void/3.1.void 1t replace
