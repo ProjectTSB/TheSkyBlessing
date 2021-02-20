@@ -18,8 +18,8 @@
     # 使用回数を3で剰余算
         scoreboard players operation $ElementalSwordAttack Temporary %= $3 Const
     # 属性を変える
-        execute if score $ElementalSwordAttack Temporary matches 0 as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] at @s run function asset:sacred_treasure/0057.elemental_sword/3.1.fireattack
-        execute if score $ElementalSwordAttack Temporary matches 1 as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] at @s run function asset:sacred_treasure/0057.elemental_sword/3.2.waterattack
-        execute if score $ElementalSwordAttack Temporary matches 2 as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] at @s run function asset:sacred_treasure/0057.elemental_sword/3.3.thunderattack
+        execute if score $ElementalSwordAttack Temporary matches 0 as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0057.elemental_sword/3.1.fireattack
+        execute if score $ElementalSwordAttack Temporary matches 1 as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0057.elemental_sword/3.2.waterattack
+        execute if score $ElementalSwordAttack Temporary matches 2 as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0057.elemental_sword/3.3.thunderattack
     # リセット
         scoreboard players reset $ElementalSwordAttack Temporary
