@@ -18,7 +18,7 @@
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $100 Const
     # メッセージ出力
-        execute if score $Random Temporary matches 00..4 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"あんまチョーシくれてっとひき肉にしちまうよ！"}]
+        execute if score $Random Temporary matches 0..4 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"あんまチョーシくれてっとひき肉にしちまうよ！"}]
         execute if score $Random Temporary matches 5..9 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"おまえも････ うるさい蟲だ････"}]
         execute if score $Random Temporary matches 10..14 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"殺し合いだッ...！クソ野郎！！"}]
         execute if score $Random Temporary matches 15..19 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"フザけろよ････？ コラ････"}]
@@ -34,7 +34,8 @@
         execute if score $Random Temporary matches 65..69 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"俺が手に入れてやる･･･！その領域･･！”スピードの向こう側”を･･！！"}]
         execute if score $Random Temporary matches 70..74 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"疼くんだよゥ････"}]
         execute if score $Random Temporary matches 75..79 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"楽しーぜェ！？月が狂っちまってやがるぜェ！？てめーらよぅ！！"}]
-        execute if score $Random Temporary matches 80..84 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"”全部”････潰してくれてやんからよぅ････"}]
+        execute if score $Random Temporary matches 80..84 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"”ひき肉”だッ！！てめーらぁ！？"}]
+        execute if score $Random Temporary matches 85..94 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"”全部”････潰してくれてやんからよぅ････"}]
         execute if score $Random Temporary matches 95..99 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"めんどくせーから全部殺すか？あ？"}]
 
     # プレイヤーが"不運"と"踊"っちまった時
