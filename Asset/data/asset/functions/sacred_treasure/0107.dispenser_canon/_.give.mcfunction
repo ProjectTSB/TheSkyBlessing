@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0107dispenser_canon/_.give
+#> asset:sacred_treasure/0107.dispenser_canon/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

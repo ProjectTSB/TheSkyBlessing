@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0107dispenser_canon/3.main
+#> asset:sacred_treasure/0107.dispenser_canon/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0107dispenser_canon/2.check_condition
+# @within function asset:sacred_treasure/0107.dispenser_canon/2.check_condition
 #> private
 # @private
     #declare tag TNTCanon
@@ -32,4 +32,4 @@
     tag @e[tag=TNTCanon,distance=..2,limit=1] remove TNTCanon
 
 # スケジュール
-    schedule function asset:sacred_treasure/0107dispenser_canon/3.1.sticky 1t
+    schedule function asset:sacred_treasure/0107.dispenser_canon/3.1.sticky 1t
