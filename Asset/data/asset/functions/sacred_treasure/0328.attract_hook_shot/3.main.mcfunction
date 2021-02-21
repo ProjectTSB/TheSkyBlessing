@@ -9,9 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# ヒットした敵をプレイヤーの手前にテレポート
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity rotated ~ 0 run tp @s ^ ^ ^1
+
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:witch ~ ~ ~ 0.5 0.5 0.5 2 50 force @a[distance=..150]
     playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 1
-
-# ヒットした敵をプレイヤーの手前にテレポート
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity rotated ~ 0 run tp @s ^ ^ ^1
