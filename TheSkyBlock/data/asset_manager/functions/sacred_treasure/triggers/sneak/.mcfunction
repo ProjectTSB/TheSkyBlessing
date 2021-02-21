@@ -37,7 +37,7 @@
         execute if score @s Sneak matches 200.. run function #asset:sacred_treasure/sneak/keep/10s
 
     # 単発トリガー類 <-実装頭悪い, バカ, 雑魚
-        scoreboard players set $SneakThreshold Temporary 0
+        scoreboard players set $SneakThreshold Temporary 1
         function asset_manager:sacred_treasure/triggers/sneak/reset_value_not-equal
         function #asset:sacred_treasure/sneak/
 

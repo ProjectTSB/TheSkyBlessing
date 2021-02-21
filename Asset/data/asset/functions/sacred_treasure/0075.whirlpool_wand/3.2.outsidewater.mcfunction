@@ -13,7 +13,7 @@
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージを与える
         function lib:damage/modifier
-        function lib:damage/modifier
+        function lib:damage/
 # リセット
     data remove storage lib: Argument
 
