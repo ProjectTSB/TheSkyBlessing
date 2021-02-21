@@ -8,4 +8,9 @@
     function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0329_approaching_hook_shot
+
+    execute positioned as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tp @a[tag=this] ~ ~ ~
+
+    execute positioned as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:portal ~ ~ ~ 0.3 0.3 0.3 1 200
+
+    execute positioned as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run playsound minecraft:entity.shulker.teleport master @a ~ ~ ~ 2 1.5

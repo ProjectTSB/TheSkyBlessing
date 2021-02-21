@@ -9,4 +9,4 @@
 # 他にアイテム等確認する場合はここに書く
     
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0329_approaching_hook_shot/3.main
+    execute unless predicate lib:is_ban_tp_area if entity @s[tag=CanUsed] run function asset:sacred_treasure/0329_approaching_hook_shot/3.main

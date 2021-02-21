@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:bow"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"近接フックショット","color":""}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"近接フックショット","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"ヒット","color":"red"},{"text":"した敵の元へ","color":"white"},{"text":"テレポート","color":"yellow"},{"text":"する","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value 
 # 使用回数 (int) (オプション)
@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onAttack"
+    data modify storage asset:sacred_treasure Trigger set value "onAttackByProjectile"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value 
 # MP消費量 (int) 
