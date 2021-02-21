@@ -2,14 +2,15 @@
 #
 # 新しいデータをcontextにputします
 #
-# @within function asset_manager:sacred_treasure/triggers/*
+# @within function asset_manager:sacred_treasure/triggers/**
 
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context id set from storage asset:context New.id
     data modify storage asset:context Items set from storage asset:context New.Items
+    data modify storage asset:context Inventory set from storage asset:context New.Inventory
 # autoの処理
     # 初期化
-        data remove storage asset:context id.auto
+        data modify storage asset:context id.auto set value -1
     # idのputとAutoSlotの設定
         data modify storage asset:context Items.AutoSlot set from storage asset:sacred_treasure Argument.AutoSlot
         execute if data storage asset:sacred_treasure Argument{AutoSlot:"mainhand"} run data modify storage asset:context id.auto set from storage asset:context Items.mainhand.tag.TSB.ID
