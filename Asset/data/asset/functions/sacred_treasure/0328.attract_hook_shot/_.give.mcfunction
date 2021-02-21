@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0328.attract_hookshot/_.give
+#> asset:sacred_treasure/0328.attract_hook_shot/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
