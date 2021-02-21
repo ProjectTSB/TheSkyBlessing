@@ -7,6 +7,8 @@
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
+    execute if entity @s[gamemode=adventure] run function lib:message/sacred_treasure/can_not_use_here
+    execute if entity @s[gamemode=adventure] run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0107.dispenser_canon/3.main
