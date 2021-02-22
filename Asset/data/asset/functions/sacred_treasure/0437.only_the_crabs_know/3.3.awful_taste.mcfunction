@@ -13,5 +13,5 @@
     effect give @s poison 15 2 true
 
 # 演出
-    tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は酷い味だ と酷評した"}]
+    tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は酷い味だと酷評した"}]
     playsound entity.llama.ambient master @a ~ ~ ~ 1.0 1.0
