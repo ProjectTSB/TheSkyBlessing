@@ -15,7 +15,7 @@
     # ゲームモード確認
         execute if entity @s[gamemode=!survival,gamemode=!creative] run tag @s remove CanUsed
         #//ゲームモードエラーメッセージ 後々messageのfunctionに変更
-        execute if entity @s[gamemode=!survival,gamemode=!creative] run tellraw @s [{"text": "ここでは使えなさそうだ..."}]
+        execute if entity @s[gamemode=!survival,gamemode=!creative] run function lib:message/sacred_treasure/can_not_use_here
     # アイテム確認
         execute store result score $BoneMeal Temporary run clear @s bone_meal 0
         execute if score $BoneMeal Temporary matches ..7 run tag @s remove CanUsed
