@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:cooked_chicken"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"winner","color":"dark_green","obfuscated":true,"bold":true},{"text":" たけのこの里 ","color":"green","obfuscated":false},{"text":"umauma","color":"dark_green","obfuscated":true}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"loser_","color":"dark_green","obfuscated":true,"bold":true},{"text":" たけのこの里 ","color":"green","obfuscated":false},{"text":"maamaa","color":"dark_green","obfuscated":true}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['[{"text":"(量が少なくて)食べやすい。しかもうまい！"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
