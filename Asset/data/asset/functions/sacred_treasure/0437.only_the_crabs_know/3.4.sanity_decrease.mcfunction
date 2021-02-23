@@ -7,11 +7,7 @@
 # HP減少
     # 与えるダメージ = 15
         data modify storage lib: Argument.Damage set value 15f
-        data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.DisableParticle set value true
-        data modify storage lib: Argument.BypassArmor set value true
-        data modify storage lib: Argument.BypassResist set value true
-        function lib:damage/
+        function lib:damage/simple
     # リセット
         data remove storage lib: Argument
 
