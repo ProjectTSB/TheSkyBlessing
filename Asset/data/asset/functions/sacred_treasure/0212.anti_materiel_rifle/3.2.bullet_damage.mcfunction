@@ -12,7 +12,7 @@
 # ブロック破壊
     execute unless block ^ ^ ^0.5 #lib:no_collision unless block ^ ^ ^0.5 #lib:unbreakable if entity @s[gamemode=!adventure] run setblock ^ ^ ^0.5 air destroy
     # アドベンチャー用(仕様決まるまでちょっと保留で)
-        #execute positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,type=!minecraft:player,dx=0] positioned ~0.5 ~0.5 ~0.5 unless block ^ ^ ^0.5 #lib:no_collision if block ^ ^ ^0.5 spawner if entity @s[gamemode=adventure] run setblock ^ ^ ^0.5 air destroy
+        #execute unless block ^ ^ ^0.5 #lib:no_collision if block ^ ^ ^0.5 spawner if entity @s[gamemode=adventure] run setblock ^ ^ ^0.5 air destroy
 
 # 演出
     execute at @e[tag=LandingTarget,limit=1] run particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 99
