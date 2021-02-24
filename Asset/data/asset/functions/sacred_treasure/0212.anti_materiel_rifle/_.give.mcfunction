@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"対物ライフル","color":"gray","bold":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"ぶっころすらいふる"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"対象を","color":"white"},{"text":"破壊","color":"red","bold":true},{"text":"するため作られた銃"}]','{"text":"効果はモブだけでなく、ブロックにも及ぶ","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
