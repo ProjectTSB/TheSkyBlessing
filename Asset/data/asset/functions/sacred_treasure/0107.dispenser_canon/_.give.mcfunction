@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value
+    data modify storage asset:sacred_treasure Condition set value '{"text":"サバイバルのみで使用可能"}'
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 50
 # MP必要量 (int) (オプション)

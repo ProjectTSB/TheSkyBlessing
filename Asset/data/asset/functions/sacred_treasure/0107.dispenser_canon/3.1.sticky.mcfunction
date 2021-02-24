@@ -7,7 +7,7 @@
 #   function asset:sacred_treasure/0107.dispenser_canon/3.1.sticky
 
 # 粘着する
-    execute as @e[tag=TNTStick] at @s run tp @e[type=#lib:living,type=!minecraft:player,tag=!TNTStick,distance=..2,sort=nearest,limit=1]
+    execute as @e[type=endermite,tag=TNTStick] at @s run tp @e[type=#lib:living,type=!minecraft:player,tag=!TNTStick,distance=..2,sort=nearest,limit=1]
 
 # ループさせる
-    execute as @e[tag=TNTStick,limit=1] run schedule function asset:sacred_treasure/0107.dispenser_canon/3.1.sticky 1t
+    execute as @e[type=endermite,tag=TNTStick,limit=1] run schedule function asset:sacred_treasure/0107.dispenser_canon/3.1.sticky 1t
