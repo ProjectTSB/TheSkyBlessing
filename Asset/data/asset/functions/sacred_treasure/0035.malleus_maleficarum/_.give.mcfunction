@@ -15,19 +15,19 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"魔女に与える鉄槌","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔女に鉄槌を与えるのではなく、鉄槌を与えられたものが魔女なのである"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔女に鉄槌を与えるのではなく、"}','{"text":"鉄槌を与えられたものが魔女なのである"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value 
+    # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
-# MP消費量 (int) 
+# MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 100
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value 
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Wi-ki","Rumor"]
 

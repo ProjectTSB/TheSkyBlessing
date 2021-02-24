@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # 落下距離が2マス未満の場合は処理しない
-    execute if score @s FallDistance matches 0 run tag @s remove CanUsed
+    execute if score @s FallDistance matches ..150 run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0204.spelunker_shoes/3.main

@@ -47,3 +47,5 @@
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak10s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "10秒間以上スニーク"
 # 生成
     loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/core/generate_lore/trigger
+# リセット
+    data remove storage asset:sacred_treasure Temp
