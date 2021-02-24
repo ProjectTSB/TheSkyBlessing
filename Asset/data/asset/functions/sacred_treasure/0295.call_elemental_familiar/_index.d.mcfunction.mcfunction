@@ -1,7 +1,6 @@
 #> asset:sacred_treasure/0295.call_elemental_familiar/_index.d.mcfunction
-#
-# 使用タグを定義
-#
+# @private
+
 #> tags
 # @within function asset:sacred_treasure/0295.call_elemental_familiar/**
     #declare tag 295Fa.Main
