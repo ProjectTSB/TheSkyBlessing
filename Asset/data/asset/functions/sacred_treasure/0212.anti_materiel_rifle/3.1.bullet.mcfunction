@@ -2,9 +2,9 @@
 #
 # 再起する弾
 #
-# @within
-#   function asset:sacred_treasure/0212.anti_materiel_rifle/3.main
-#   function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
+# @within function
+#   asset:sacred_treasure/0212.anti_materiel_rifle/3.main
+#   asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
 
 # 着弾検知
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!minecraft:player,dx=0] run tag @s add Landing
