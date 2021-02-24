@@ -2,7 +2,7 @@
 #
 # 付近の敵へと向きを変える
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/3.1.1.shot_tick
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/3.4.fairy_shoot
 
 # 敵の方を向き、タグを変更
     execute facing entity @e[type=#lib:hostile,distance=..20,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~-2

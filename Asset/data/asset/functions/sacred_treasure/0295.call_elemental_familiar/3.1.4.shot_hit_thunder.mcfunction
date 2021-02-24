@@ -8,7 +8,6 @@
     data modify storage lib: Argument.Damage set value 7.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
-    function lib:damage/modifier
     function lib:damage/
 
 # しびれる
