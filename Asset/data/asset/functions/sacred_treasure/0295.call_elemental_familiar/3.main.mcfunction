@@ -15,12 +15,15 @@
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $100 Const
+    scoreboard players operation $Random Temporary %= $4 Const
 # 精霊召喚
-    execute if score $Random Temporary matches 00..24 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_normal
-    execute if score $Random Temporary matches 25..49 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_fire
-    execute if score $Random Temporary matches 50..74 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_water
-    execute if score $Random Temporary matches 75..99 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_thunder
+    execute if score $Random Temporary matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_normal
+    execute if score $Random Temporary matches 1 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_fire
+    execute if score $Random Temporary matches 2 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_water
+    execute if score $Random Temporary matches 3 run function asset:sacred_treasure/0295.call_elemental_familiar/3.1.summon_thunder
+
+# 精霊Init
+    execute as @e[type=bee,tag=295Fa.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/3.2.fairy_init
 
 # リセット
     scoreboard players reset $Random Temporary

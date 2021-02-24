@@ -6,7 +6,6 @@
 # @within function asset:sacred_treasure/0295.call_elemental_familiar/3.main
 
 # エンティティに実行させる
-    execute as @e[type=bee,tag=295Fa.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/3.2.fairy_init
     execute as @e[type=bee,tag=295Fa.Main] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/3.3.fairy_main
 
 # エンティティがいればループ

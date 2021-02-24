@@ -35,7 +35,7 @@
 
 # 魔法攻撃
     execute if entity @s[scores={295Fa.Tick=60..}] run function asset:sacred_treasure/0295.call_elemental_familiar/3.4.fairy_shoot
-    scoreboard players reset @s[scores={295Fa.Tick=60..}] 295Fa.Tick
+
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[type=#lib:hostile,distance=..10] run scoreboard players reset @s 295Fa.Tick
 
