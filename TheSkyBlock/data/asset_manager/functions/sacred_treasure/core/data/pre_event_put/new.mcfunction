@@ -2,7 +2,7 @@
 #
 # 新しいデータをcontextにputします
 #
-# @within function asset_manager:sacred_treasure/triggers/*
+# @within function asset_manager:sacred_treasure/triggers/**
 
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context id set from storage asset:context New.id
