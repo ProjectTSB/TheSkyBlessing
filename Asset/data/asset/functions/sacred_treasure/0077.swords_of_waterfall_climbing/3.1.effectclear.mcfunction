@@ -14,7 +14,7 @@
 
 # 着地時の処理
     effect clear @a[tag=Treasure77EffectClear,tag=OnGround] levitation
-    execute as @a[tag=Treasure77EffectClear,tag=OnGround] run attribute @s minecraft:generic.knockback_resistance modifier remove 1-1-77-1-1
+    execute as @a[tag=Treasure77EffectClear,tag=OnGround] run attribute @s minecraft:generic.knockback_resistance modifier remove 1-0-1-0-4d00000007
     tag @a[tag=Treasure77EffectClear,tag=OnGround] remove Treasure77EffectClear
 
 # 着地していない場合、次tickも実行

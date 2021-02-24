@@ -23,7 +23,7 @@
     tag @s[tag=!OnGround] add Treasure77EffectClear
 
 # 落下中攻撃食らうとぶっ飛ぶので対処
-    attribute @s[tag=!OnGround] minecraft:generic.knockback_resistance modifier add 1-1-77-1-1 "waterfall" 2147483647 add
+    attribute @s[tag=!OnGround] minecraft:generic.knockback_resistance modifier add 1-0-1-0-4d00000007 "77waterfall" 1024 add
 
 # タグ消去
     tag @e[tag=Hit] remove Hit
