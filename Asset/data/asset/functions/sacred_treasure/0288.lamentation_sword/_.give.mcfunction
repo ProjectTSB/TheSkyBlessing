@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 288
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:stone_sword"
+    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"Help","color":"dark_purple","obfuscated":true},{"text":"嘆きの剣","obfuscated":false},{"text":"Help","obfuscated":true}]'
 # 神器の説明文 (TextComponentString[])
@@ -37,7 +37,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,288,1],Slot:"mainhand"}]}
+    # data modify storage asset:sacred_treasure CustomNBT set value {}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

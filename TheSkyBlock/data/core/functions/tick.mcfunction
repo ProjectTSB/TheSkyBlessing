@@ -21,7 +21,7 @@
         execute if entity @a[scores={DeathEvent=1..},limit=1] as @a[scores={DeathEvent=1..}] at @s run function core:handler/death
         execute if entity @a[scores={RespawnEvent=1},limit=1] as @a[scores={RespawnEvent=1}] at @s run function core:handler/respawn
         execute if entity @a[scores={RespawnEvent=80},limit=1] as @a[scores={RespawnEvent=80}] at @s run function core:handler/respawn.delay
-        execute as @a[scores={Sneak=1..}] run function core:handler/sneak
+        execute as @a[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
         execute if entity @a[advancements={core:handler/consume_item=true},limit=1] as @a[advancements={core:handler/consume_item=true}] at @s run function core:handler/consume_item
         execute if entity @a[advancements={core:handler/attack=true},limit=1] as @a[advancements={core:handler/attack=true}] at @s run function core:handler/attack
         execute if entity @a[advancements={core:handler/damage=true},limit=1] as @a[advancements={core:handler/damage=true}] at @s run function core:handler/damage
@@ -43,4 +43,8 @@
 # リセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
+    execute as @a[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:sacred_treasure/triggers/sneak/reset
     scoreboard players reset @a[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
+
+# Debugスコアボードへの代入
+    execute as @p run function lib:debug/objective_view
