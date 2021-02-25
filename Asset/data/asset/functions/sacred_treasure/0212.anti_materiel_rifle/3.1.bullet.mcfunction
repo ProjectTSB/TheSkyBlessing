@@ -18,9 +18,11 @@
     particle minecraft:cloud ~ ~ ~ 0 0 0 0 1
     particle minecraft:flame ~ ~ ~ 0.05 0.05 0.05 0 1
 
-# 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..80] run function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
-
 # 着弾
     execute if entity @s[tag=Landing] run function asset:sacred_treasure/0212.anti_materiel_rifle/3.2.bullet_damage
 
+# 再起
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..80] run function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
+
+# タグを消す
+    tag @s remove Landing

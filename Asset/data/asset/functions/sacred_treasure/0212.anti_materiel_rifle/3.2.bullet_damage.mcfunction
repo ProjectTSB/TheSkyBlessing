@@ -5,8 +5,6 @@
 # @within
 #   function asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
 
-
-
 # 着弾の演出
     particle minecraft:explosion ~ ~ ~ 0.1 0.1 0.1 0 10
     playsound minecraft:entity.generic.explode block @a
@@ -32,4 +30,3 @@
 
 # 着弾タグを消す
     tag @e[tag=LandingTarget] remove LandingTarget
-    tag @s remove Landing
