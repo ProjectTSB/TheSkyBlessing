@@ -13,7 +13,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run particle minecraft:flame ~ ~0.5 ~ 0 0.5 0 0.1 100
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:flame ~ ~0.5 ~ 0 0.5 0 0.1 100
     playsound minecraft:entity.blaze.shoot ambient @a ~ ~ ~ 1 0.6
 
 # ダメージ
