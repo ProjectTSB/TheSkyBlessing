@@ -5,12 +5,22 @@
 # @within
 #   function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance
 
+# 帰還
+    tag @s add 4F.End
+    execute as @e[tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run tp @a[tag=4F.End,limit=1] @s
+
 # ゲームモードを戻す
-    execute if score @a[tag=4F.Trance,limit=1] 4F.GameMode matches 0 run gamemode survival @a[tag=4F.Trance]
-    execute if score @a[tag=4F.Trance,limit=1] 4F.GameMode matches 1 run gamemode creative @a[tag=4F.Trance]
-    execute if score @a[tag=4F.Trance,limit=1] 4F.GameMode matches 2 run gamemode adventure @a[tag=4F.Trance]
+    gamemode survival @s[scores={4F.GameMode=0}]
+    gamemode creative @s[scores={4F.GameMode=1}]
+    gamemode adventure @s[scores={4F.GameMode=2}]
 
 # リセット処理
-    scoreboard players reset @a[tag=4F.Trance] 4F.TickCount
-    scoreboard players reset @a[tag=4F.Trance] 4F.GameMode
-    tag @a[tag=4F.Trance] remove 4F.Trance
+    execute as @e[tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run kill @s
+    scoreboard players reset @s 4F.UserID
+    scoreboard players reset @s 4F.GameMode
+    scoreboard players reset @s 4F.TickCount
+    scoreboard players remove $4F.UserManager 4F.UserID 1
+    tag @s remove 4F.End
+
+# 他にトランス状態のプレイヤーがいない場合はスコアホルダーを削除
+    execute if score $4F.UserManager 4F.UserID matches 0 run scoreboard players reset $4F.UserManager

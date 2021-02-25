@@ -6,11 +6,11 @@
 #   function asset:sacred_treasure/0297.spirit_world_trance/3.main
 #   function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance
 
-# TickCount加算
-    scoreboard players remove @a[tag=4F.Trance] 4F.TickCount 1
+# TickCount減算
+    scoreboard players remove @a[tag=4F.Player,scores={4F.TickCount=1..}] 4F.TickCount 1
 
-# 帰還処理
-    execute if score @a[tag=4F.Trance,limit=1] 4F.TickCount matches ..0 run function asset:sacred_treasure/0297.spirit_world_trance/3.2.reset
+# 帰還処理（一人ずつ処理する）
+    execute as @a[tag=4F.Player,scores={4F.TickCount=0},limit=1] run function asset:sacred_treasure/0297.spirit_world_trance/3.2.reset
 
 # 再帰処理
-    execute if score @a[tag=4F.Trance,limit=1] 4F.TickCount matches 1.. run schedule function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance 1t
+    execute if entity @a[tag=4F.Player,scores={4F.TickCount=0..}] run schedule function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance 1t
