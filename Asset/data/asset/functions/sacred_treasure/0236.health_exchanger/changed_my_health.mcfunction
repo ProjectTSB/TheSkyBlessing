@@ -9,29 +9,22 @@
 #> private
 # @private
     #declare tag HasMaxHealth
-    #declare score_holder $MyHealthDecimal
-    #declare score_holder $MyHealthInt
-    #declare score_holder $TargetHealthDecimal
-    #declare score_holder $TargetHealthInt
+    #declare score_holder $UserHealthDecimal 神器使用者の体力整数部分が代入されています
+    #declare score_holder $UserHealthInt 神器使用者の体力小数部分が代入されています
+    #declare score_holder $TargetHealthDecimal 体力交換先(このfunction実行者)の体力整数部分を代入します
+    #declare score_holder $TargetHealthInt 体力交換先(このfunction実行者)の体力小数部分を代入します
 
     # 体力設定
         scoreboard players operation $Set Lib = @a[tag=this,limit=1] Temporary
         execute as @a[tag=HasMaxHealth] run function lib:score_to_health_wrapper/set
 
     # 表示用体力演算
-        # //下のx.xx部分
-        scoreboard players operation $MyHealthInt Temporary = @s Temporary
-        scoreboard players operation $MyHealthDecimal Temporary = $MyHealthInt Temporary
-
-        scoreboard players operation $MyHealthInt Temporary /= $100 Const
-        scoreboard players operation $MyHealthDecimal Temporary %= $100 Const
-
         # //下のy.yy部分
-        scoreboard players operation $TargetHealthInt Temporary = @a[tag=this,limit=1] Temporary
+        scoreboard players operation $TargetHealthInt Temporary = @s Temporary
         scoreboard players operation $TargetHealthDecimal Temporary = $TargetHealthInt Temporary
 
         scoreboard players operation $TargetHealthInt Temporary /= $100 Const
         scoreboard players operation $TargetHealthDecimal Temporary %= $100 Const
 
-    # 表示 「A と体力が交換された！ x.xx(A) <=> y.yy(B)」
-        tellraw @s [{"selector":"@a[tag=this,limit=1]"},{"text": " と体力が交換された！ "},{"score":{"name": "$MyHealthInt","objective": "Temporary"}},".",{"score":{"name": "$MyHealthDecimal","objective": "Temporary"}},"(",{"selector":"@a[tag=this,limit=1]"},")",{"text": " <=> "},{"score":{"name": "$TargetHealthInt","objective": "Temporary"}},".",{"score":{"name": "$TargetHealthDecimal","objective": "Temporary"}},"(",{"selector":"@s"},")"]
+    # 表示 「A と体力が交換された！ x.xx => y.yy」
+        tellraw @s [{"selector":"@a[tag=this,limit=1]"},{"text": " と体力が交換された！ "},{"score":{"name": "$TargetHealthInt","objective": "Temporary"}},".",{"score":{"name": "$TargetHealthDecimal","objective": "Temporary"}},{"text": " => "},{"score":{"name": "$UserHealthInt","objective": "Temporary"}},".",{"score":{"name": "$UserHealthDecimal","objective": "Temporary"}}]
