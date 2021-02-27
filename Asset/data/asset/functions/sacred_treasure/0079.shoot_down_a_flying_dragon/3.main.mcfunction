@@ -35,9 +35,9 @@
 
         # 自身が水の近くにいた場合($AroundWater=1..)r=..10の付近に水がある敵も対象となる
             # //MobのTemporaryはMob周囲の水の数に設定
-            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
+            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
             # //Mobとして：@s のTemporaryが1..ならHitする
-            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
+            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
         # プレイヤーへの誤Hit処理 HitしたMobの0.05m以内にいると自分にもあたる やっぱPKしたいじゃぁん？ ※現在はコメントアウト中
             # execute as @e[type=#lib:living,tag=Hit,distance=..10] at @s as @a[distance=..0.05] run tag @s add Hit
 
@@ -46,11 +46,11 @@
         # 演算
             # //天候の値を加算
             scoreboard players operation $AttackStrength Temporary += $Weather Temporary
-            # //"晴"なら"雨"の火力に、"雨"なら"雷"の火力に1段階強化する "雷"の場合さらに強化
-            execute if score $AroundWater Temporary matches 1.. unless score $Weather Temporary matches 0 run scoreboard players add $AttackStrength Temporary 1
+            # //水の中にいる場合さらに1段階増加
+            execute if score $AroundWater Temporary matches 1.. run scoreboard players add $AttackStrength Temporary 1
 
         # 引数初期化
-            data modify storage lib: Argument.Damage set value {AttackType:Magic,ElementType:Thunder,BypassArmor:0b,BypassResist:0b}
+            data modify storage lib: Argument set value {AttackType:Magic,ElementType:Thunder,BypassArmor:0b,BypassResist:0b}
 
         # //ここ時点で$AttackStrengthは0..3をとる
         # AttackStrengthに従ってダメージを設定
@@ -84,4 +84,5 @@
         scoreboard players reset $Weather Temporary
         scoreboard players reset $AroundWater Temporary
         scoreboard players reset $UpperBlocks Temporary
+        scoreboard players reset $AttackStrength Temporary
         data remove storage lib: Argument
