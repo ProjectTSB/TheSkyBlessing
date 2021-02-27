@@ -3,7 +3,7 @@
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @private
+# @within function asset:sacred_treasure/0184.incresable_cookie/3.main
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
@@ -20,6 +20,8 @@
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
+# 神器を発動できるスロット (string) Wikiを参照
+    data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "itemUse"
 # MP消費量 (int)

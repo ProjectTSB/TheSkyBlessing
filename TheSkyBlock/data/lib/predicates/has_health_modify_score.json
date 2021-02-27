@@ -1,0 +1,25 @@
+{
+    "condition": "alternative",
+    "terms": [
+        {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+                "ScoreToHPFluc": {
+                    "min": -2147483648,
+                    "max": 2147483648
+                }
+            }
+        },
+        {
+            "condition": "entity_scores",
+            "entity": "this",
+            "scores": {
+                "ScoreToHealth": {
+                    "min": -2147483648,
+                    "max": 2147483648
+                }
+            }
+        }
+    ]
+}

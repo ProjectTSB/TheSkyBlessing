@@ -5,7 +5,6 @@
 # @within function core:tick
 
 # asset_managerへの引継ぎ
-    function asset_manager:sacred_treasure/triggers/use_item
-
+    tag @s add TriggerFlag.UseItem
 # Reset
     advancement revoke @s only core:handler/consume_item
