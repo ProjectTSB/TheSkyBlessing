@@ -1,30 +1,31 @@
-#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.2.attack
+#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.3.landing_attack
 #
 # エフェクトを消す処理
 #
 # @within function
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.main
+#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.1.effectclear
 
 # ここから先は神器側の効果の処理を書く
 
-# タグ付与
-    tag @s add 1d.Hit
+    tag @s remove 1d.Landing
 
 # 攻撃処理
     # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10.f
+        data modify storage lib: Argument.Damage set value 25.f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
 #ダメージ
-    execute as @a[tag=this] run function lib:damage/modifier
-    function lib:damage/
+    function lib:damage/modifier
+    execute as @e[type=!player,distance=..4] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # 演出
-    particle minecraft:rain ~ ~ ~ 0 2 0 1 100
-    particle minecraft:bubble_pop ~ ~ ~ 0.1 2 0.1 0 100
+    particle minecraft:rain ~ ~ ~ 1 1 1 1 100
+    particle minecraft:bubble_pop ~ ~ ~ 1 1 1 0 100
+    particle minecraft:explosion ~ ~ ~ 0.2 0.2 0.2 1 10
     playsound minecraft:block.bubble_column.upwards_inside player @a ~ ~ ~ 1 2 0
     playsound minecraft:block.bubble_column.upwards_inside player @a ~ ~ ~ 1 2 0
+    playsound minecraft:entity.generic.explode master @a ~ ~ ~ 1 0
