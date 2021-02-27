@@ -20,14 +20,20 @@
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 50
+# 神器を発動できるスロット (string) Wikiを参照
+    data modify storage asset:sacred_treasure Slot set value auto
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onClick"
+    data modify storage asset:sacred_treasure Trigger set value onClick
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 35
 # MP必要量 (int) (オプション)
     data modify storage asset:sacred_treasure MPRequire set value 35
+# 神器のクールダウン (int) (オプション)
+    # data modify storage asset:sacred_treasure LocalCooldown set value
+# グローバルクールダウン (int) (オプション)
+    # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Urban","Wi-ki","Rumor"]
+    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
