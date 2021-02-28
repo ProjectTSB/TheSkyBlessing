@@ -15,8 +15,6 @@
 
 # 10の軽減貫通ダメージを与える
     data modify storage lib: Argument.Damage set value 10f
-    data modify storage lib: Argument.AttackType set value "Physical"
-    function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/simple
 
 # リセット
