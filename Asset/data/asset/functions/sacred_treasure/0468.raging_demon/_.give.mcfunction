@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"瞬獄殺","color":"dark_red","bold":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"周囲10M以内の","color":"white"},{"text":"体力が20以下","color":"light_purple"},{"text":"の","color":"white"},{"text":"敵","color":"red"},{"text":"に20ダメージを与える","color":"white"}]','{"text":"「我こそ、拳を極めし者」","color":"dark_red"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"周囲10M以内の","color":"white"},{"text":"体力が20以下","color":"light_purple"},{"text":"の","color":"white"},{"text":"敵","color":"red"},{"text":"にダメージを与える","color":"white"}]','{"text":"「我こそ、拳を極めし者」","color":"dark_red"}','{"text":""}','{"text":"ダメージタイプ: 軽減貫通","color":"white"}','{"text":"ダメージ： 20","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
