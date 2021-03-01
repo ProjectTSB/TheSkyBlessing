@@ -9,10 +9,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # スコア減らす
-    scoreboard players remove @a[tag=78.Use] 78.Tick 1
+    scoreboard players remove @a[scores={78.Tick=1..}] 78.Tick 1
 
 # スコアリセット
-    tag @a[scores={78.Tick=0}] remove 78.Use
     scoreboard players reset @a[scores={78.Tick=0}] 78.Tick
 
 #　効果

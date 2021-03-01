@@ -12,15 +12,17 @@
 # 時間内にもう一度つかった愚か者へのダメージ
 
 # 与えるダメージ = 7.5
-    data modify storage lib: Argument.Damage set value 5.0f
+    data modify storage lib: Argument.Damage set value 10.0f
 # 範囲5m以内のゾンビを対象に
-    execute as @a[scores={78.Tick=1..}] run function lib:damage/simple
+    execute as @s[scores={78.Tick=1..}] run function lib:damage/simple
 # リセット
     data remove storage lib: Argument
 
+# 演出
+    execute if entity @s[scores={78.Tick=1..}] run
+
 # セットする
     scoreboard players set @s 78.Tick 2400
-    tag @a add 78.Use
 
 # スタート
     schedule function asset:sacred_treasure/0456.potion_of_stalling_power/3.1.effect 1t
