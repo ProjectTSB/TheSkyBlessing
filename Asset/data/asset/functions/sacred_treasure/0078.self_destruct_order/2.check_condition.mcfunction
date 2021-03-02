@@ -8,5 +8,7 @@
     function asset:sacred_treasure/lib/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
+# アイアンゴーレムとスノーゴーレムが近くにいるときのみ発動
+
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0078.self_destruct_order/3.main

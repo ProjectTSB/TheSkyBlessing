@@ -1,14 +1,9 @@
-#> asset:sacred_treasure/0078.self_destruct_order/3.1.explosion_manager
+#> asset:sacred_treasure/0078.self_destruct_order/explosion
 #
 #
 #
 # @within function
-#    asset:sacred_treasure/0078.self_destruct_order/3.main
-#    asset:sacred_treasure/0078.self_destruct_order/3.1.explosion_manager
-
-#> private
-# @private
-    #declare tag GolemBomb
+#    asset:sacred_treasure/0078.self_destruct_order/count_down
 
 # ダメージ処理(アイアンゴーレム)
     # 与えるダメージ = 7.5
@@ -24,7 +19,7 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=iron_golem,tag=GolemBomb] as @e[distance=..5] run function lib:damage/
+    execute at @e[type=iron_golem,tag=1e.GolemBomb] as @e[type=#lib:living,distance=..5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
@@ -42,17 +37,22 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=snow_golem,tag=GolemBomb] as @e[distance=..3] run function lib:damage/
+    execute at @e[type=snow_golem,tag=1e.GolemBomb] as @e[type=#lib:living,distance=..3] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # 演出(アイアンゴーレム)
-    execute at @e[type=iron_golem,tag=GolemBomb] run particle minecraft:explosion ~ ~ ~ 3 3 3 1 100 force @a[distance=..30]
-    execute at @e[type=iron_golem,tag=GolemBomb] run playsound minecraft:entity.generic.explode master @a[distance=..30] ~ ~ ~ 1 0.1
+    execute at @e[type=iron_golem,tag=1e.GolemBomb] run particle minecraft:explosion ~ ~ ~ 3 3 3 1 100 force @a[distance=..30]
+    execute at @e[type=iron_golem,tag=1e.GolemBomb] run playsound minecraft:entity.generic.explode master @a[distance=..30] ~ ~ ~ 1 0.1
 
 #演出(スノウゴーレム)
-    execute at @e[type=snow_golem,tag=GolemBomb] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 100 force @a[distance=..30]
-    execute at @e[type=snow_golem,tag=GolemBomb] run playsound minecraft:entity.generic.explode master @a[distance=..30] ~ ~ ~ 1 0.1
+    execute at @e[type=snow_golem,tag=1e.GolemBomb] run particle minecraft:explosion ~ ~ ~ 1 1 1 1 100 force @a[distance=..30]
+    execute at @e[type=snow_golem,tag=1e.GolemBomb] run playsound minecraft:entity.generic.explode master @a[distance=..30] ~ ~ ~ 1 0.1
 
 # 自滅
-    tp @e[tag=GolemBomb] ~ -100 ~
+    tp @e[tag=1e.GolemBomb] ~ -100 ~
+    kill @e[tag=1e.GolemBomb]
+
+# 後処理
+    scoreboard players reset @s 1e.TickCount
+    tag @s remove 1e.Owner
