@@ -9,7 +9,7 @@
         data modify storage asset:sacred_treasure Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
 
     # 貫通/非貫通 軽減/非軽減を表示 //未設定-軽減非貫通
-        execute if data storage asset:sacred_treasure {AttackInfo:{BypassResist:1b}} run data modify storage asset:sacred_treasure Line1[0] set value '{"text":"[防御無視]"}'
+        execute if data storage asset:sacred_treasure {AttackInfo:{BypassResist:1b}} run data modify storage asset:sacred_treasure Line1[0] set value '{"text":"[防御無効]"}'
 
     # ダメージ量を表示 //未設定-???
         # List(要素数1)のとき
