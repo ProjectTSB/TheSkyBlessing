@@ -4,8 +4,6 @@
 #
 # @within function asset:sacred_treasure/0471.stone_cutter_chainsaw/3.main
 
-# ダメージ処理
-
 # 演出など
     particle block red_wool ~ ~1 ~ 0.1 0 0.1 1 30
     execute if entity @s[tag=471.Critical] run particle block redstone_block ~ ~1 ~ 0 0 0 1 50
