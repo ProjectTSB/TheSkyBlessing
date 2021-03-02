@@ -27,15 +27,15 @@
                                         "interpret": true
                                     },
                                     {
-                                        "text": " Damage"
-                                    },
-                                    {
                                         "text": " "
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
                                         "nbt": "Line1[1]",
                                         "interpret": true
+                                    },
+                                    {
+                                        "text": " Damage"
                                     }
                                 ],
                                 [
