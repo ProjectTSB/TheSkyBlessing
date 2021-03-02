@@ -24,7 +24,7 @@
         # パーティクルを無効化
             data modify storage lib: Argument.DisableParticle set value true
     # 補正
-        execute as @a[tag=this,distance=..3] run function lib:damage/modifier
+        execute as @a[tag=this,distance=..5] run function lib:damage/modifier
     # 実行
         function lib:damage/
     # 開放
