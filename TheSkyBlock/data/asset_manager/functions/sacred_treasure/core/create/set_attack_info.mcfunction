@@ -4,12 +4,6 @@
 #
 # @within function asset_manager:sacred_treasure/core/create/set_lore
 
-# // スタイル
-# // |
-# // | 軽減・貫通 | 物理 魔法 |
-# // |
-# // |
-
     # 初期化
         data modify storage asset:sacred_treasure Line1 set value ['{"text":"???"}','""']
         data modify storage asset:sacred_treasure Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
