@@ -12,20 +12,28 @@
 * [MC Datapack Utility](https://github.com/ChenCMD/MC-Datapack-Utility)
 * [Gitmoji](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode)
 
-
 ## 依存ライブラリ
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
-
 
 ## 開発のあれこれ
 [Wiki](https://github.com/TheSkyBlock/TheSkyBlock/wiki)見てね！
 
 ## commit時のルール
 * 一つのcommitに複数の処理の変更や追加を極力避けること
-* Gitmojiを使いコミットメッセージの最初に絵文字をつける
+* masterはGitmojiを使いコミットメッセージの最初に絵文字をつける
 
-## SpecialThanks
-### [赤石愛](https://twitter.com/AiAkaishi)氏
-* 個別ストレージライブラリ[Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)を使用させていただいています。
-* プレイヤー体力調整ライブラリ[ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)を使用させていただいています。
+## ライセンスについて
+このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
+
+CC0-1.0 Licenseが適用されないディレクトリ
+* [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
+* [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
+* [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
+
+## 謝辞
+このリポジトリでは以下のライブラリを使用させていただいてます。
+
+#### [赤石愛](https://twitter.com/AiAkaishi)氏
+* [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
+* [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)

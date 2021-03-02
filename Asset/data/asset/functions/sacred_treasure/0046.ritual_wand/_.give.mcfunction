@@ -15,19 +15,21 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"祭祀の杖","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"天候を変更する力を持つ杖"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"天候を変化させる杖"}','{"text":"雨乞いの儀式にも使われる。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    data modify storage asset:sacred_treasure RemainingCount set value 20
+    # data modify storage asset:sacred_treasure RemainingCount set value
+# 神器を発動できるスロット (string) Wikiを参照
+    data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
-# MP消費量 (int) 
-    data modify storage asset:sacred_treasure MPCost set value 50
+# MP消費量 (int)
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value 
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Rumor"]
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Urban","Nyaptov","Wi-ki","Rumor"]
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

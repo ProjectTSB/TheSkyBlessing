@@ -2,8 +2,5 @@
 # @private
 
 #> DeathTag
-# @within
-#   function core:handler/death
-#   function core:handler/respawn
-#   predicate lib:is_death
+# @public
     #declare tag Death

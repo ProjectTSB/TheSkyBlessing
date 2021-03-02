@@ -6,6 +6,6 @@
 # IDを持っていなければ、IDを割り当て
 execute unless score @s OhMyDatID matches 1.. run function oh_my_dat:sys/allocate
 # IDを一時変数にコピー
-scoreboard players operation $ OhMyDatID = @s OhMyDatID
+execute unless score @s OhMyDatID = $LatestProvidedID OhMyDatID run scoreboard players operation $ OhMyDatID = @s OhMyDatID
 # ストレージ提供
-function oh_my_dat:sys/provide
+execute unless score @s OhMyDatID = $LatestProvidedID OhMyDatID run function oh_my_dat:sys/provide

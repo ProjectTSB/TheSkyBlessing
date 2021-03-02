@@ -5,7 +5,8 @@
 # @within function core:tick
 
 # asset_managerへの引継ぎ
-    function asset_manager:sacred_treasure/triggers/attack
-
+    tag @s add TriggerFlag.Attack
+# 攻撃対象の特定
+    function mob_manager:entity_finder/attacked_entity/on_attack
 # Reset
     advancement revoke @s only core:handler/attack
