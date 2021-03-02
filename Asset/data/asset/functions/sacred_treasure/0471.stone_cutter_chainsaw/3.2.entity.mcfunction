@@ -16,7 +16,7 @@
         # 与えるダメージ: 3
             data modify storage lib: Argument.Damage set value 3.0f
         # クリティカル時のダメージ: 5
-            execute if entity @s[tag=471.Critical] run data modify storage lib: Argument.Damage set value 5.0f
+            execute if entity @s[tag=471.Critical] run data modify storage lib: Argument.Damage set value 6.0f
         # 第一属性
             data modify storage lib: Argument.AttackType set value "Physical"
         # パーティクルを無効化
