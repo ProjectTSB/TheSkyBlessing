@@ -22,7 +22,6 @@
         execute positioned ^ ^ ^0.1 run function asset:sacred_treasure/0471.stone_cutter_chainsaw/3.1.check_critical
 
     # ヒット
-        execute positioned ^ ^ ^2 as @e[type=#lib:living,type=!player,tag=Enemy,distance=..2] at @s if entity @p[tag=this, distance=..4] run function asset:sacred_treasure/0471.stone_cutter_chainsaw/3.2.entity
-
+        execute positioned ^ ^ ^2 as @e[type=#lib:living,type=!player,tag=!Npc,tag=!Object,tag=!Friend,tag=!Projectile,distance=..2] at @s if entity @p[tag=this, distance=..4] run function asset:sacred_treasure/0471.stone_cutter_chainsaw/3.2.entity
     # 開放
         scoreboard players reset $471.Count Temporary
