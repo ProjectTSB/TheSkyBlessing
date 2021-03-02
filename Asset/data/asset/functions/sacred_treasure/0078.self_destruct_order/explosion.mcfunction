@@ -24,7 +24,7 @@
     data remove storage lib: Argument
 
 # ダメージ処理(スノウゴーレム)
-      # 与えるダメージ = 7.5
+    # 与えるダメージ = 7.5
         data modify storage lib: Argument.Damage set value 25.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
