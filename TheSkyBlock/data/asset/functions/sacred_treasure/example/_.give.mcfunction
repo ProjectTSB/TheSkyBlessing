@@ -17,6 +17,7 @@ data modify storage asset:sacred_treasure RemainingCount set value 50
 data modify storage asset:sacred_treasure Slot set value "feet"
 data modify storage asset:sacred_treasure Trigger set value "sneak"
 # data modify storage asset:sacred_treasure Condition set value '{"text":""}'
+data modify storage asset:sacred_treasure AttackInfo set value {Damage:[0,100],AttackType:[Physical,Magic],ElementType:[Fire,Water,Thunder,None],BypassResist:1b}
 data modify storage asset:sacred_treasure MPCost set value 40
 # data modify storage asset:sacred_treasure MPRequire set value 100
 # data modify storage asset:sacred_treasure LocalCooldown set value 20
