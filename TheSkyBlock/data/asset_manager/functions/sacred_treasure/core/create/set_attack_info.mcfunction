@@ -22,6 +22,7 @@
         execute if data storage asset:sacred_treasure {AttackInfo:{AttackType:[Magic]}} run data modify storage asset:sacred_treasure Line2[1] set value '{"text":"魔法 ","color":"dark_purple"}'
 
         execute unless data storage asset:sacred_treasure AttackInfo.AttackType[0] run data modify storage asset:sacred_treasure Line2[0] set value '{"text":"物理 ","color":"dark_green"}'
+
     # 属性を表示 //未設定-無
         execute if data storage asset:sacred_treasure {AttackInfo:{ElementType:[Fire]}} run data modify storage asset:sacred_treasure Line2[2] set value '{"text":"火 ","color":"red"}'
         execute if data storage asset:sacred_treasure {AttackInfo:{ElementType:[Water]}} run data modify storage asset:sacred_treasure Line2[3] set value '{"text":"水 ","color":"aqua"}'
