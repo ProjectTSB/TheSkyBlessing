@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:potion"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"失速する力のポーション","color":"dark_aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"失速する速力のポーション","color":"dark_aqua"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"力は一時的な物でしかない。","color":"gray"}','{"text":"その欲求を求め続けるなら","color":"gray"}','{"text":"代償を支払うものだ。","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
