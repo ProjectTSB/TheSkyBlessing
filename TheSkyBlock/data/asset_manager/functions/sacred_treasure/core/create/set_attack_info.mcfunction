@@ -4,6 +4,10 @@
 #
 # @within function asset_manager:sacred_treasure/core/create/set_lore
 
+#> private
+# @private
+    #declare score_holder $IsList
+
     # 初期化
         data modify storage asset:sacred_treasure Line1 set value ['""','{"text":"???"}']
         data modify storage asset:sacred_treasure Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
@@ -12,10 +16,15 @@
         execute if data storage asset:sacred_treasure {AttackInfo:{BypassResist:1b}} run data modify storage asset:sacred_treasure Line1[0] set value '{"text":"[防御無効] "}'
 
     # ダメージ量を表示 //未設定-???
+        # Listかを確認
+            execute if data storage asset:sacred_treasure AttackInfo.Damage[0] run scoreboard players set $IsList Temporary 1
+            execute if data storage asset:sacred_treasure {AttackInfo:{Damage:[]}} run scoreboard players set $IsList Temporary 1
+        # Literalのとき
+            execute unless score $IsList Temporary matches 1.. if data storage asset:sacred_treasure AttackInfo.Damage run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage"}]'
         # List(要素数1)のとき
-            execute if data storage asset:sacred_treasure AttackInfo.Damage[0] run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[0]"}]'
+            execute if score $IsList Temporary matches 1.. if data storage asset:sacred_treasure AttackInfo.Damage[0] run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[0]"}]'
         # List(要素数2)のとき
-            execute if data storage asset:sacred_treasure AttackInfo.Damage[1] run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[0]"},{"text":"-"},{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[1]"}]'
+            execute if score $IsList Temporary matches 1.. if data storage asset:sacred_treasure AttackInfo.Damage[1] run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[0]"},{"text":"-"},{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[1]"}]'
 
     # 物理/魔法を表示 //未設定-物理
         execute if data storage asset:sacred_treasure {AttackInfo:{AttackType:[Physical]}} run data modify storage asset:sacred_treasure Line2[0] set value '{"text":"物理 ","color":"dark_green"}'
@@ -37,3 +46,4 @@
     # リセット
         data remove storage asset:sacred_treasure Line1
         data remove storage asset:sacred_treasure Line2
+        scoreboard players reset $IsList Temporary
