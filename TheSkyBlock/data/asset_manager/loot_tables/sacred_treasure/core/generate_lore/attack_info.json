@@ -27,9 +27,6 @@
                                         "interpret": true
                                     },
                                     {
-                                        "text": " "
-                                    },
-                                    {
                                         "storage": "asset:sacred_treasure",
                                         "nbt": "Line1[1]",
                                         "interpret": true
