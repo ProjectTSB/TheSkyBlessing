@@ -18,8 +18,6 @@
         data modify storage lib: Argument.ElementType set value "Fire"
     # パーティクルを無効化するか否か
         data modify storage lib: Argument.DisableParticle set value false
-    # 防御力/防具強度を無視するか否か
-        data modify storage lib: Argument.BypassArmor set value false
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value false
 # 補正functionを実行
