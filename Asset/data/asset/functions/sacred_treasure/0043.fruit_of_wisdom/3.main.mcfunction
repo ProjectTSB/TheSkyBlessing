@@ -13,7 +13,7 @@
         function lib:mp/fluctuation
 
     # 体力減
-        data modify storage lib: Argument set value {AttackType:Physical,DisableParticle:1b,BypassArmor:1b,BypassResist:1b}
+        data modify storage lib: Argument set value {AttackType:Physical,DisableParticle:1b,BypassResist:1b}
         execute store result storage lib: Argument.Damage float 0.01 run data get entity @s Health 75
         function lib:damage/
         data remove storage lib: Argument
