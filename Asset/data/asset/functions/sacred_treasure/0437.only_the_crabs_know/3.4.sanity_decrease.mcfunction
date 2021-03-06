@@ -5,9 +5,11 @@
 # @within function asset:sacred_treasure/0437.only_the_crabs_know/3.main
 
 # HP減少
-    # 与えるダメージ = 15
-        data modify storage lib: Argument.Damage set value 15f
-        function lib:damage/simple
+    # 防御無視・補正なし・魔法・無属性の15のダメージを与える
+        data modify storage lib: Argument.Damage set value 20f
+        data modify storage lib: Argument.AttackType set value "Magic"
+        data modify storage lib: Argument.BypassResist set value true
+        function lib:damage/
     # リセット
         data remove storage lib: Argument
 
