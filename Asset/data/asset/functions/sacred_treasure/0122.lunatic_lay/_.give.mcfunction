@@ -24,6 +24,8 @@
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:40,AttackType:[Magic],ElementType:[Thunder],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 50
 # MP必要量 (int) (オプション)
