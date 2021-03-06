@@ -15,8 +15,8 @@
 # 演出
     playsound minecraft:entity.ghast.hurt ambient @a ~ ~ ~ 0.3 1.6
     playsound minecraft:entity.enderman.death ambient @a ~ ~ ~ 0.4 2
-    execute at @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run particle minecraft:soul ~ ~1 ~ 0.1 0.1 0.1 0.02 10
-    effect give @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] minecraft:weakness 10 0
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:soul ~ ~1 ~ 0.1 0.1 0.1 0.02 10
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run effect give @s minecraft:weakness 10 0
 
 # ダメージ設定
     # 与えるダメージ = 8
@@ -26,6 +26,6 @@
 
 # ダメージ
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=HurtEntity,distance=..10,limit=1] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
 # リセット
     data remove storage lib: Argument

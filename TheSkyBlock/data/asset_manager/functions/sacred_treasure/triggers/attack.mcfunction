@@ -10,6 +10,8 @@
     function #asset:sacred_treasure/attack
     execute if entity @s[advancements={asset_manager:sacred_treasure/attack/melee=true}] run function #asset:sacred_treasure/attack/melee
     execute if entity @s[advancements={asset_manager:sacred_treasure/attack/projectile=true}] run function #asset:sacred_treasure/attack/projectile
+# イベント発火後に実行するやつ
+    function asset_manager:sacred_treasure/core/data/post_event_put/new
 # リセット
     advancement revoke @s only asset_manager:sacred_treasure/attack/melee
     advancement revoke @s only asset_manager:sacred_treasure/attack/projectile

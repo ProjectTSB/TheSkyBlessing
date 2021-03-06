@@ -1,6 +1,9 @@
 ### Copyright © 2020 赤石愛
 ### This software is released under the MIT License, see LICENSE.
 
+# 最後に呼び出したIDを記録する
+scoreboard players operation $LatestProvidedID OhMyDatID = $ OhMyDatID
+
 ### 指定されたエンティティのデータを、特定のオフセットで呼び出せるようにする
 
 # シフト  (reset->1->     2->     3->     4->     5->     6->     7->     8)

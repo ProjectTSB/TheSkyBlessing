@@ -13,6 +13,7 @@
 #       Slot : Slot
 #       Trigger : Trigger
 #       Condition? : TextComponent
+#       AttackInfo? : Component
 #       MPCost : int
 #       MPRequire : int
 #       CostText? : TextComponent
@@ -25,6 +26,9 @@
 #> Private
 # @private
     #declare score_holder $SacredTreasureIndex
+
+# Count
+    data modify storage asset:sacred_treasure Data.Count set value 1b
 
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
@@ -57,10 +61,9 @@
     data modify storage asset:sacred_treasure Data.tag merge from storage asset:sacred_treasure CustomNBT
 
 # データの適用
-    data modify entity @s Item merge from storage asset:sacred_treasure Data
+    data modify block 10000 0 10000 Items append from storage asset:sacred_treasure Data
 
 # リセット
     data remove storage asset:sacred_treasure Data
-    data remove storage asset:sacred_treasure Temp
     scoreboard players reset $Remain Temporary
     scoreboard players reset $RemainMAX Temporary
