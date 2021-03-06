@@ -21,7 +21,7 @@
     execute store result storage asset:sacred_treasure SpecialCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
 
 # lootする
-    loot replace block 10000 0 10000 container.6 loot asset_manager:sacred_treasure/core/generate_lore/special_cooldown
+    loot replace block 10000 0 10000 container.7 loot asset_manager:sacred_treasure/core/generate_lore/special_cooldown
 
 # リセット
     scoreboard players reset $Cooldown

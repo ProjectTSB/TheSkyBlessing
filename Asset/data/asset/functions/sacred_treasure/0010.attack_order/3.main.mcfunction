@@ -14,9 +14,9 @@
     playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 20 0.3
 
 # 召喚
-    summon minecraft:iron_golem ~ ~ ~
-    summon minecraft:iron_golem ~ ~ ~
-    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}
-    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}
-    summon minecraft:iron_golem ~ ~ ~ {Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}]}
-    summon minecraft:iron_golem ~ ~ ~ {Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}]}]}
+    summon minecraft:iron_golem ~ ~ ~ {Tags:["Friend"]}
+    summon minecraft:iron_golem ~ ~ ~ {Tags:["Friend"]}
+    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}],Tags:["Friend"]}
+    summon minecraft:snow_golem ~ ~ ~ {Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}],Tags:["Friend"]}
+    summon minecraft:iron_golem ~ ~ ~ {Tags:["Friend"],Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}],Tags:["Friend"]}]}
+    summon minecraft:iron_golem ~ ~ ~ {Tags:["Friend"],Passengers:[{id:"minecraft:snow_golem", Pumpkin:0b, Health:100f, Attributes:[{Name:"generic.max_health", Base:100d}],Tags:["Friend"]}]}

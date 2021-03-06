@@ -10,3 +10,5 @@
     function asset_manager:sacred_treasure/core/data/pre_event_put/new
 # 神器側に受け渡し
     function #asset:sacred_treasure/click.carrot_on_a_stick
+# イベント発火後に実行するやつ
+    function asset_manager:sacred_treasure/core/data/post_event_put/new
