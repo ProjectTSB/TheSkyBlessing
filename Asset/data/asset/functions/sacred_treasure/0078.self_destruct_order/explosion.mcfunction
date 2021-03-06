@@ -6,7 +6,7 @@
 #    asset:sacred_treasure/0078.self_destruct_order/count_down
 
 # ダメージ処理(アイアンゴーレム)
-    # 与えるダメージ = 7.5
+    # 与えるダメージ = 50
         data modify storage lib: Argument.Damage set value 50.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
@@ -19,12 +19,12 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=iron_golem,tag=1e.GolemBomb] as @e[type=#lib:living,distance=..5] run function lib:damage/
+    execute at @e[type=iron_golem,tag=1e.GolemBomb] as @e[type=#lib:living,tag=!1e.GolemBomb,distance=..5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # ダメージ処理(スノウゴーレム)
-    # 与えるダメージ = 7.5
+    # 与えるダメージ = 25
         data modify storage lib: Argument.Damage set value 25.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
@@ -37,7 +37,7 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=snow_golem,tag=1e.GolemBomb] as @e[type=#lib:living,distance=..3] run function lib:damage/
+    execute at @e[type=snow_golem,tag=1e.GolemBomb] as @e[type=#lib:living,tag=!1e.GolemBomb,distance=..5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
