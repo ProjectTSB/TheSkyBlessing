@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onAttack"
+    data modify storage asset:sacred_treasure Trigger set value "onAttackByProjectile"
 # 攻撃に関する情報 (オプション)
     data modify storage asset:sacred_treasure AttackInfo set value {Damage:[60,120],AttackType:[Magic],ElementType:[Thunder],BypassResist:0b}
 # MP消費量 (int)
