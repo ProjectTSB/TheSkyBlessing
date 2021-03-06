@@ -30,10 +30,6 @@
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
-    # パーティクルを無効化するか否か
-        data modify storage lib: Argument.DisableParticle set value false
-    # 防御力/防具強度を無視するか否か
-        data modify storage lib: Argument.BypassArmor set value true
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
