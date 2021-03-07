@@ -9,8 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 座標を管理するアーマースタンド召喚
-    summon armor_stand ~ ~ ~ {Tags:["4F.PosManager"],NoGravity:1b,Invulnerable:1b,Invisible:1b}
+# 座標を管理するAEC召喚
+    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["4F.PosManager"],NoGravity:1b}
 
 # トランス対象のプレイヤーにタグを付与
     tag @s add 4F.Player
