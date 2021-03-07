@@ -12,8 +12,6 @@
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
-    # パーティクルを無効化するか否か
-        data modify storage lib: Argument.DisableParticle set value false
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
