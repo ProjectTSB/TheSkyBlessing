@@ -20,6 +20,8 @@
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:7,AttackType:[Magic],ElementType:[None,File,Water,Thunder],BypassResist:0b}
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value auto
 # 神器のトリガー (string) Wikiを参照
