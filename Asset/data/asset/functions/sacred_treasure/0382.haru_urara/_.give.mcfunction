@@ -26,6 +26,8 @@
     data modify storage asset:sacred_treasure Trigger set value "onAttack"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:60,AttackType:[Magic],ElementType:[None],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 30
 # MP必要量 (int) (オプション)
