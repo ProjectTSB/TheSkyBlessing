@@ -4,6 +4,11 @@
 #
 # @within function asset_manager:sacred_treasure/core/create/set_lore
 
+#> Temp
+# @private
+    #declare score_holder $Cooldown
+    #declare score_holder $CooldownDecimal
+
 # 5? スペシャル☆クールタイムを秒数に変換
     execute store result score $Cooldown Temporary run data get storage asset:sacred_treasure SpecialCooldown
     scoreboard players operation $Cooldown Temporary /= $20 Const
@@ -16,7 +21,7 @@
     execute store result storage asset:sacred_treasure SpecialCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
 
 # lootする
-    loot replace block 10000 0 10000 container.6 loot asset_manager:sacred_treasure/core/generate_lore/special_cooldown
+    loot replace block 10000 0 10000 container.7 loot asset_manager:sacred_treasure/core/generate_lore/special_cooldown
 
 # リセット
     scoreboard players reset $Cooldown

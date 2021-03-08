@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 57
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:golden_sword"
+    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"X","color":"red","bold":true,"obfuscated":true},{"text":"x","color":"blue","obfuscated":true},{"text":"_","color":"gold","obfuscated":true},{"text":"エレメンタルソード","color":"yellow","obfuscated":false},{"text":"_","color":"gold","obfuscated":true},{"text":"x","color":"blue","obfuscated":true},{"text":"X","color":"red","obfuscated":true}]'
 # 神器の説明文 (TextComponentString[])
@@ -26,6 +26,8 @@
     data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:30,AttackType:[Physical],ElementType:[Fire,Water,Thunder],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 15
 # MP必要量 (int) (オプション)
@@ -37,7 +39,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Urban","Nyaptov","Wi-ki","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:7,Enchantments:[{}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,57,1]}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {Enchantments:[{}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

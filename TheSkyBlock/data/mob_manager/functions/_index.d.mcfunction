@@ -1,6 +1,15 @@
 #> mob_manager:_index.d
 # @private
 
+#> General purpose Tag
+# @public
+    #declare tag Friend
+    #declare tag Enemy
+    #declare tag Enemy.Boss
+    #declare tag Projectile
+    #declare tag Npc
+    #declare tag Object
+
 #> InitTag
 # @within function
 #   core:tick

@@ -7,7 +7,8 @@
 # thisタグ
     tag @s add this
 # IDの代入
-    function asset_manager:sacred_treasure/core/data/from_player
+    function asset_manager:sacred_treasure/core/data/set_old
+    function asset_manager:sacred_treasure/core/data/set_new
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:sacred_treasure/triggers/tick
     execute if entity @s[tag=TriggerFlag.Attack] run function asset_manager:sacred_treasure/triggers/attack
@@ -15,8 +16,11 @@
     execute if entity @s[tag=TriggerFlag.Damage] run function asset_manager:sacred_treasure/triggers/damage
     execute if entity @s[tag=TriggerFlag.Killed] run function asset_manager:sacred_treasure/triggers/killed
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:sacred_treasure/triggers/use_item
-    execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:sacred_treasure/triggers/sneak
+    execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:sacred_treasure/triggers/sneak/
+# EntityStorageにデータ突っ込む
+    function asset_manager:sacred_treasure/core/data/stash_context
 # リセット
+    function asset_manager:sacred_treasure/core/data/reset_context
     tag @s remove this
     tag @s remove TriggerFlag.Attack
     tag @s remove TriggerFlag.ClickCarrot
