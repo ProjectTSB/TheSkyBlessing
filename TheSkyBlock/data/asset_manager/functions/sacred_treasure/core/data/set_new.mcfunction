@@ -1,14 +1,9 @@
-#> asset_manager:sacred_treasure/core/data/from_player
+#> asset_manager:sacred_treasure/core/data/set_new
 #
 # 神器のIDを取得します
 #
 # @within asset_manager:sacred_treasure/triggers/
 
-# 初期化して古いデータとして突っ込む
-    data remove storage asset:context Old
-    data modify storage asset:context Old.id set from storage asset:context New.id
-    data modify storage asset:context Old.Items set from storage asset:context New.Items
-    data modify storage asset:context Old.Inventory set from storage asset:context New.Inventory
 # 初期化
     data remove storage asset:context New
 # Inventory
@@ -34,7 +29,3 @@
     data modify storage asset:context New.id.legs set from storage asset:context New.Items.legs.tag.TSB.ID
     data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.tag.TSB.ID
     data modify storage asset:context New.id.head set from storage asset:context New.Items.head.tag.TSB.ID
-# リセット
-    data remove storage asset:context Inventory
-    data remove storage asset:context Items
-    data remove storage asset:context id
