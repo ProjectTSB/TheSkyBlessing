@@ -3,7 +3,10 @@
 # 神器の発動条件をチェックします
 #
 # @within function asset:sacred_treasure/0188.reverse_transcription_magic/1.trigger
-#declare score_holder $MPRequire
+
+#>
+# @private
+    #declare score_holder $MPRequire
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/check_condition/auto
