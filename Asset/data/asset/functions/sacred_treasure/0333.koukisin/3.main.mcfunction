@@ -21,6 +21,6 @@
     # 属性耐性・防御力/防具強度・耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 攻撃した対象に実行
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10,limit=1] run function lib:damage/simple
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
