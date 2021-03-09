@@ -9,9 +9,11 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 20のダメージを与える
+# 防御無視・補正なし・物理・無属性の20のダメージを与える
     data modify storage lib: Argument.Damage set value 20f
-    execute as @e[tag=7k.Target] run function lib:damage/simple
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.BypassResist set value true
+    execute as @e[tag=7k.Target] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
