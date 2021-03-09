@@ -7,10 +7,11 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# タグを消しちゃう
     tag @s remove 1d.Landing
 
 # 攻撃処理
-    # 与えるダメージ = 10
+    # 与えるダメージ = 25
         data modify storage lib: Argument.Damage set value 25.f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
@@ -18,7 +19,7 @@
         data modify storage lib: Argument.ElementType set value "Water"
 #ダメージ
     function lib:damage/modifier
-    execute as @e[type=!player,distance=..4] run function lib:damage/
+    execute as @e[tag=Enemy,distance=..4] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
