@@ -10,7 +10,8 @@ gamerule disableElytraMovementCheck false
 gamerule disableRaids true
 gamerule doDaylightCycle true
 gamerule doEntityDrops true
-gamerule doFireTick true
+# gamerule doFireTick true
+    gamerule doFireTick false
 gamerule doImmediateRespawn false
 gamerule doInsomnia true
 gamerule doLimitedCrafting false
@@ -25,16 +26,20 @@ gamerule fallDamage true
 gamerule fireDamage true
 gamerule forgiveDeadPlayers false
 gamerule keepInventory true
-# gamerule logAdminCommands true
+# gamerule logAdminCommands false
+    gamerule logAdminCommands true
 gamerule maxCommandChainLength 2147483647
 gamerule maxEntityCramming 24
-gamerule mobGriefing true
-# gamerule naturalRegeneration false
+# gamerule mobGriefing true
+    gamerule mobGriefing false
+gamerule naturalRegeneration false
 gamerule randomTickSpeed 3
 # gamerule reducedDebugInfo true
+    gamerule reducedDebugInfo false
 # gamerule sendCommandFeedback false
+    gamerule sendCommandFeedback true
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
-gamerule universalAnger true
-# メモ リリース時に上記のコメントを外す
+gamerule universalAnger false
+#TODO リリース時に上記のコメントを外してインデントのある行を削除する
