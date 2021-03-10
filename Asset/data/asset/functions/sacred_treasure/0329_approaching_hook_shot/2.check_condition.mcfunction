@@ -3,6 +3,8 @@
 # 神器の発動条件をチェックします
 #
 # @within function asset:sacred_treasure/0329_approaching_hook_shot/1.trigger
+
+#>
 # @private
     #declare score_holder $isBanTPArea
 
