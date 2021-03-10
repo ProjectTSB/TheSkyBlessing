@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0218.iron_storm/3.2.blast
+#> asset:sacred_treasure/0218.iron_storm/3.3.blast
 #
-# 神器のメイン処理部
+# ダメージ、音、パーティクルを出したあと処理対象タグを剥がす
 #
-# @within function asset:sacred_treasure/0218.iron_storm/3.1.check_on_ground
+# @within function asset:sacred_treasure/0218.iron_storm/3.2.check_entity
 
 #> private
 #
@@ -11,8 +11,6 @@
     #declare score_holder $Random
     #declare score_holder $70
     #declare score_holder $DamageCoefficient
-
-# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
 
 # ダメージ計算(アイアンゴーレムのHPの30%~100%),計算結果=ダメージ*100
     execute store result score $Random Temporary run function lib:random/

@@ -25,15 +25,15 @@
 # ここから先は神器側の効果の処理を書く
 
 # アイアンゴーレム召喚
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number1,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number2,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number3,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number4,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number5,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number6,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number7,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number8,DA.InAir]}
-    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number9,DA.InAir]}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number1,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number2,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number3,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number4,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number5,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number6,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number7,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number8,DA.InAir],OnGround:0b}
+    summon iron_golem 0 0 0 {Tags:[IronStormInit,DA.Number9,DA.InAir],OnGround:0b}
 
 # アイアンゴーレム拡散
     execute rotated ~ 0 positioned ^ ^ ^40 run spreadplayers ~ ~ 0 15 false @e[type=iron_golem,tag=IronStormInit,distance=..1,x=0,y=0,z=0]
@@ -56,5 +56,5 @@
     playsound minecraft:entity.iron_golem.death player @s ~ ~ ~ 1 0.75 1
 
 # エンティティ管理スケジュール実行
-    schedule function asset:sacred_treasure/0218.iron_storm/3.1.check_on_ground 1t replace
+    schedule function asset:sacred_treasure/0218.iron_storm/3.1.entity_manager 1t replace
 
