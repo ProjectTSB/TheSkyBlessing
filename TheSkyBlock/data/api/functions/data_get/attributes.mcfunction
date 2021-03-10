@@ -1,4 +1,4 @@
-#> api:data_cache/attributes
+#> api:data_get/attributes
 #
 # 対象のAttributesをstorageに軽量に取得します。
 #

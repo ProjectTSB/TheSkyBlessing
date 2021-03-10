@@ -1,4 +1,4 @@
-#> api:data_cache/on_ground
+#> api:data_get/on_ground
 #
 # 対象のOnGroundをstorageに軽量に取得します。
 #

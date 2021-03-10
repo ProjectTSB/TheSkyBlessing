@@ -1,4 +1,4 @@
-#> api:data_cache/fall_flying
+#> api:data_get/fall_flying
 #
 # 対象のFallFlyingをstorageに軽量に取得します。
 #

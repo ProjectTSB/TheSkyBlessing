@@ -1,4 +1,4 @@
-#> api:data_cache/custom_name_visible
+#> api:data_get/custom_name_visible
 #
 # 対象のCustomNameVisibleをstorageに軽量に取得します。
 #

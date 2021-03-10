@@ -1,4 +1,4 @@
-#> api:data_cache/no_ai
+#> api:data_get/no_ai
 #
 # 対象のNoAIをstorageに軽量に取得します。
 #

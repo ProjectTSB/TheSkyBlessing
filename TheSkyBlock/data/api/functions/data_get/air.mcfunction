@@ -1,4 +1,4 @@
-#> api:data_cache/air
+#> api:data_get/air
 #
 # 対象のAirをstorageに軽量に取得します。
 #

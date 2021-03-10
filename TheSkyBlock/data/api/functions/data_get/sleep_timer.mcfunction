@@ -1,4 +1,4 @@
-#> api:data_cache/sleep_timer
+#> api:data_get/sleep_timer
 #
 # 対象のSleepTimerをstorageに軽量に取得します。
 #

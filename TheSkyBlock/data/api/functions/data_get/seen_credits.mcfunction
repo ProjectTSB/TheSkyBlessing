@@ -1,4 +1,4 @@
-#> api:data_cache/seen_credits
+#> api:data_get/seen_credits
 #
 # 対象のseenCreditsをstorageに軽量に取得します。
 #

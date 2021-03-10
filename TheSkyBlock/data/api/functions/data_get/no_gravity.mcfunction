@@ -1,4 +1,4 @@
-#> api:data_cache/no_gravity
+#> api:data_get/no_gravity
 #
 # 対象のNoGravityをstorageに軽量に取得します。
 #

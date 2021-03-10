@@ -1,4 +1,4 @@
-#> api:data_cache/xp_level
+#> api:data_get/xp_level
 #
 # 対象のXpLevelをstorageに軽量に取得します。
 #

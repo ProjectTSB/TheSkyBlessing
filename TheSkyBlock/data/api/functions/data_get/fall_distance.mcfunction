@@ -1,4 +1,4 @@
-#> api:data_cache/fall_distance
+#> api:data_get/fall_distance
 #
 # 対象のFallDistanceをstorageに軽量に取得します。
 #

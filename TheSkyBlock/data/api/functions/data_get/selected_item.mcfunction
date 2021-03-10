@@ -1,4 +1,4 @@
-#> api:data_cache/selected_item
+#> api:data_get/selected_item
 #
 # 対象のSelectedItemをstorageに軽量に取得します。
 #

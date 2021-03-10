@@ -1,4 +1,4 @@
-#> api:data_cache/score
+#> api:data_get/score
 #
 # 対象のScoreをstorageに軽量に取得します。
 #

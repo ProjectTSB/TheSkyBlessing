@@ -1,4 +1,4 @@
-#> api:data_cache/brain
+#> api:data_get/brain
 #
 # 対象のBrainをstorageに軽量に取得します。
 #

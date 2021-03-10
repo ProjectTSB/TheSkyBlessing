@@ -1,4 +1,4 @@
-#> api:data_cache/health
+#> api:data_get/health
 #
 # 対象のHealthをstorageに軽量に取得します。
 #

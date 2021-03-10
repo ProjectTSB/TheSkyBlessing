@@ -1,4 +1,4 @@
-#> api:data_cache/hurt_time
+#> api:data_get/hurt_time
 #
 # 対象のHurtTimeをstorageに軽量に取得します。
 #

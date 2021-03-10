@@ -1,4 +1,4 @@
-#> api:data_cache/player_game_type
+#> api:data_get/player_game_type
 #
 # 対象のplayerGameTypeをstorageに軽量に取得します。
 #

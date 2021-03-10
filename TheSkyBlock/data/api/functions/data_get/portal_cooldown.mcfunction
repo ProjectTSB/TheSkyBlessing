@@ -1,4 +1,4 @@
-#> api:data_cache/portal_cooldown
+#> api:data_get/portal_cooldown
 #
 # 対象のPortalCooldownをstorageに軽量に取得します。
 #

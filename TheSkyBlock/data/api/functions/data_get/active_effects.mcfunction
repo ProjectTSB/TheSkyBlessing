@@ -1,4 +1,4 @@
-#> api:data_cache/active_effects
+#> api:data_get/active_effects
 #
 # 対象のActiveEffectsをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/fire
+#> api:data_get/fire
 #
 # 対象のFireをstorageに軽量に取得します。
 #

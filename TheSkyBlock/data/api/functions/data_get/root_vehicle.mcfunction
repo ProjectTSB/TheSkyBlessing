@@ -1,4 +1,4 @@
-#> api:data_cache/root_vehicle
+#> api:data_get/root_vehicle
 #
 # 対象のRootVehicleをstorageに軽量に取得します。
 #

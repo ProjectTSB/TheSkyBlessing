@@ -1,4 +1,4 @@
-#> api:data_cache/recipe_book
+#> api:data_get/recipe_book
 #
 # 対象のrecipeBookをstorageに軽量に取得します。
 #

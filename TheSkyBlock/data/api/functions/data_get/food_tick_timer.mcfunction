@@ -1,4 +1,4 @@
-#> api:data_cache/food_tick_timer
+#> api:data_get/food_tick_timer
 #
 # 対象のfoodTickTimerをstorageに軽量に取得します。
 #

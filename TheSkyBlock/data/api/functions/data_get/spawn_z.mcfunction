@@ -1,4 +1,4 @@
-#> api:data_cache/spawn_z
+#> api:data_get/spawn_z
 #
 # 対象のSpawnZをstorageに軽量に取得します。
 #

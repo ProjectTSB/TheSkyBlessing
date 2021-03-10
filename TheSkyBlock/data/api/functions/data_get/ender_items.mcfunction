@@ -1,4 +1,4 @@
-#> api:data_cache/ender_items
+#> api:data_get/ender_items
 #
 # 対象のEnderItemsをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/glowing
+#> api:data_get/glowing
 #
 # 対象のGlowingをstorageに軽量に取得します。
 #

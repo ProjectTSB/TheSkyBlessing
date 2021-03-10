@@ -1,4 +1,4 @@
-#> api:data_cache/sleeping_z
+#> api:data_get/sleeping_z
 #
 # 対象のSleepingZをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/passengers
+#> api:data_get/passengers
 #
 # 対象のPassengersをstorageに軽量に取得します。
 #

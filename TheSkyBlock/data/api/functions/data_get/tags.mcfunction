@@ -1,4 +1,4 @@
-#> api:data_cache/tags
+#> api:data_get/tags
 #
 # 対象のTagsをstorageに軽量に取得します。
 #

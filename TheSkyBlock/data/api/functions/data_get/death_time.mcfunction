@@ -1,4 +1,4 @@
-#> api:data_cache/death_time
+#> api:data_get/death_time
 #
 # 対象のDeathTimeをstorageに軽量に取得します。
 #

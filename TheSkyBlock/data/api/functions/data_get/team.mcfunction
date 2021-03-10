@@ -1,4 +1,4 @@
-#> api:data_cache/team
+#> api:data_get/team
 #
 # 対象のTeamをstorageに軽量に取得します。
 #

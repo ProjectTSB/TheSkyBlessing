@@ -1,4 +1,4 @@
-#> api:data_cache/abilities
+#> api:data_get/abilities
 #
 # 対象のabilitiesをstorageに軽量に取得します。
 #

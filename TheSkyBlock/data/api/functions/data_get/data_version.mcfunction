@@ -1,4 +1,4 @@
-#> api:data_cache/data_version
+#> api:data_get/data_version
 #
 # 対象のDataVersionをstorageに軽量に取得します。
 #

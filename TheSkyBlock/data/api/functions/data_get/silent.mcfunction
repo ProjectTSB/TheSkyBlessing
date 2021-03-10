@@ -1,4 +1,4 @@
-#> api:data_cache/silent
+#> api:data_get/silent
 #
 # 対象のSilentをstorageに軽量に取得します。
 #

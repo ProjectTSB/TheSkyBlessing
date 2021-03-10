@@ -1,4 +1,4 @@
-#> api:data_cache/uuid
+#> api:data_get/uuid
 #
 # 対象のUUIDをstorageに軽量に取得します。
 #

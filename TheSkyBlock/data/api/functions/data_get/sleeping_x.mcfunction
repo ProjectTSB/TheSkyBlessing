@@ -1,4 +1,4 @@
-#> api:data_cache/sleeping_x
+#> api:data_get/sleeping_x
 #
 # 対象のSleepingXをstorageに軽量に取得します。
 #

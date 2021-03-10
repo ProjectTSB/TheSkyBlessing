@@ -1,4 +1,4 @@
-#> api:data_cache/xp_p
+#> api:data_get/xp_p
 #
 # 対象のXpPをstorageに軽量に取得します。
 #

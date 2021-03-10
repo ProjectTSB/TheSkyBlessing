@@ -1,4 +1,4 @@
-#> api:data_cache/food_exhaustion_level
+#> api:data_get/food_exhaustion_level
 #
 # 対象のfoodExhaustionLevelをstorageに軽量に取得します。
 #

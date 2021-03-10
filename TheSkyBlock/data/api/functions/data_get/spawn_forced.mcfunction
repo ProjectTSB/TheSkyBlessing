@@ -1,4 +1,4 @@
-#> api:data_cache/spawn_forced
+#> api:data_get/spawn_forced
 #
 # 対象のSpawnForcedをstorageに軽量に取得します。
 #

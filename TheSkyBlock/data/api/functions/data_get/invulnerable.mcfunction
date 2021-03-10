@@ -1,4 +1,4 @@
-#> api:data_cache/invulnerable
+#> api:data_get/invulnerable
 #
 # 対象のInvulnerableをstorageに軽量に取得します。
 #

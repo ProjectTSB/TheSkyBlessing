@@ -1,4 +1,4 @@
-#> api:data_cache/inventory
+#> api:data_get/inventory
 #
 # 対象のInventoryをstorageに軽量に取得します。
 #

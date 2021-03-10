@@ -1,4 +1,4 @@
-#> api:data_cache/sleeping_y
+#> api:data_get/sleeping_y
 #
 # 対象のSleepingYをstorageに軽量に取得します。
 #

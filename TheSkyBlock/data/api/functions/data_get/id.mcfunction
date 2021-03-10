@@ -1,4 +1,4 @@
-#> api:data_cache/id
+#> api:data_get/id
 #
 # 対象のidをstorageに軽量に取得します。
 #

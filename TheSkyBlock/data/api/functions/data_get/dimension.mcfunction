@@ -1,4 +1,4 @@
-#> api:data_cache/dimension
+#> api:data_get/dimension
 #
 # 対象のDimensionをstorageに軽量に取得します。
 #

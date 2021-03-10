@@ -1,4 +1,4 @@
-#> api:data_cache/absorption_amount
+#> api:data_get/absorption_amount
 #
 # 対象のAbsorptionAmountをstorageに軽量に取得します。
 #

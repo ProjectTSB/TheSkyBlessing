@@ -1,4 +1,4 @@
-#> api:data_cache/xp_total
+#> api:data_get/xp_total
 #
 # 対象のXpTotalをstorageに軽量に取得します。
 #

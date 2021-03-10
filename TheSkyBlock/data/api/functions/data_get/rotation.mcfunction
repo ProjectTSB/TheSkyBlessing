@@ -1,4 +1,4 @@
-#> api:data_cache/rotation
+#> api:data_get/rotation
 #
 # 対象のRotationをstorageに軽量に取得します。
 #

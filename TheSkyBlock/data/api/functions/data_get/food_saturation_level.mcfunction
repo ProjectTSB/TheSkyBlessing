@@ -1,4 +1,4 @@
-#> api:data_cache/food_saturation_level
+#> api:data_get/food_saturation_level
 #
 # 対象のfoodSaturationLevelをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/shoulder_entity_left
+#> api:data_get/shoulder_entity_left
 #
 # 対象のShoulderEntityLeftをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/entered_nether_position
+#> api:data_get/entered_nether_position
 #
 # 対象のenteredNetherPositionをstorageに軽量に取得します。
 #

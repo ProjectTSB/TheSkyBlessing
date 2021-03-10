@@ -1,4 +1,4 @@
-#> api:data_cache/selected_item_slot
+#> api:data_get/selected_item_slot
 #
 # 対象のSelectedItemSlotをstorageに軽量に取得します。
 #

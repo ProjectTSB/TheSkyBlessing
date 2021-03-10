@@ -1,4 +1,4 @@
-#> api:data_cache/motion
+#> api:data_get/motion
 #
 # 対象のMotionをstorageに軽量に取得します。
 #

@@ -1,4 +1,4 @@
-#> api:data_cache/custom_name
+#> api:data_get/custom_name
 #
 # 対象のCustomNameをstorageに軽量に取得します。
 #

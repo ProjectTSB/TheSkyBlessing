@@ -1,4 +1,4 @@
-#> api:data_cache/pos
+#> api:data_get/pos
 #
 # 対象のPosをstorageに軽量に取得します。
 #

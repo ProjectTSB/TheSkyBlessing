@@ -1,4 +1,4 @@
-#> api:data_cache/xp_seed
+#> api:data_get/xp_seed
 #
 # 対象のXpSeedをstorageに軽量に取得します。
 #
