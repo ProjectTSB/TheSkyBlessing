@@ -24,8 +24,10 @@
         scoreboard players operation $Random Temporary %= $11 Const
         execute store result entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] CatType int 1 run scoreboard players get $Random Temporary
 
-    # 使用者に懐かせる //PlayerNBT参照せずUUID取得する方法があるならそっち使いたい
-        data modify entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] Owner set from entity @s UUID
+    # 使用者に懐かせる
+        function api:data_get/uuid
+        data modify entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] Owner merge from storage api: uuid
+        tellraw @a {"storage":"api:","nbt":"uuid"}
 
     # 回復クールダウンスコア設定
         execute as @a unless score @s 152.CatTime matches -11..22 run scoreboard players set @s 152.CatTime -10

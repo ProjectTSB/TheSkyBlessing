@@ -12,11 +12,12 @@
 
 # 回復
     # 引数の設定
-        execute at @s store result storage lib: Argument.Heal float 2 if entity @e[type=cat,tag=152.CalledCat,distance=..2.5,limit=4]
+        data modify storage lib: Argument.Heal set value 2.0f
+        say heal
     # 補正function
         function lib:heal/modifier
-    # 実行 //このmcfは近くのネコの数だけ実行されてるので回復可能か(一度回復したか)どうかを確認して回復
-        execute if score @s 152.CatTime matches 21 run function lib:heal/
+    # 実行
+        function lib:heal/
     # リセット
         data remove storage lib: Argument
 
