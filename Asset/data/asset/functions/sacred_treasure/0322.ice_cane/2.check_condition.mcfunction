@@ -8,5 +8,9 @@
     function asset:sacred_treasure/lib/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
+# プレイヤーのゲームモードがサバイバル・クリエイティブの時にのみ使用可能
+    execute if entity @s[gamemode=!survival,gamemode=!creative] run tag @s remove CanUsed
+    execute if entity @s[gamemode=!survival,gamemode=!creative] run function lib:message/sacred_treasure/can_not_use_here
+
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0322.ice_cane/3.main

@@ -22,8 +22,6 @@
         data modify storage lib: Argument.Damage set value 18.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # 防御力/防具強度を無視するか否か
-        data modify storage lib: Argument.BypassArmor set value true
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
     # ダメージ
