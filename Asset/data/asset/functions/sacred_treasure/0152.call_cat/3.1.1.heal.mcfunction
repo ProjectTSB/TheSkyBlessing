@@ -13,13 +13,12 @@
 # 回復
     # 引数の設定
         data modify storage lib: Argument.Heal set value 2.0f
-        say heal
     # 補正function
         function lib:heal/modifier
-    # 実行
-        function lib:heal/
+    # 実行（既に4回回復した場合は実行しない）
+        execute if entity @s[scores={152.CatTime=21..24}] run function lib:heal/
     # リセット
         data remove storage lib: Argument
 
-# 回復クールダウンセット
-    scoreboard players set @s 152.CatTime 0
+# 回復回数を+1
+    scoreboard players add @s 152.CatTime 1

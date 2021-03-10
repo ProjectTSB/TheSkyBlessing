@@ -12,7 +12,9 @@
 
 # 近くにプレイヤーが居たら回復
     execute at @e[type=cat,tag=152.CalledCat] if entity @a[gamemode=!spectator,scores={152.CatTime=21},distance=..2.5,limit=1] as @a[gamemode=!spectator,scores={152.CatTime=21},distance=..2.5] run function asset:sacred_treasure/0152.call_cat/3.1.1.heal
-    execute if entity @a[scores={152.CatTime=0}] run say healend
+
+# 1回以上回復したプレーヤーのクールダウンを設定
+    execute if entity @a[scores={152.CatTime=22..}] run scoreboard players set @a[scores={152.CatTime=22..}] 152.CatTime 0
 
 # ネコのCatTimeが600以上（勤務時間30秒経過）になったらさようなら
     execute if entity @e[type=cat,tag=152.CalledCat,scores={152.CatTime=600..},limit=1] as @e[type=cat,tag=152.CalledCat,scores={152.CatTime=600..}] at @s run function asset:sacred_treasure/0152.call_cat/3.1.2.goodbye_cat

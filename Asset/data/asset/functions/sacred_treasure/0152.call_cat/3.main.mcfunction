@@ -26,11 +26,10 @@
 
     # 使用者に懐かせる
         function api:data_get/uuid
-        data modify entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] Owner merge from storage api: uuid
-        tellraw @a {"storage":"api:","nbt":"uuid"}
+        data modify entity @e[type=cat,tag=AbstrictCat,distance=..1,limit=1] Owner set from storage api: UUID
 
     # 回復クールダウンスコア設定
-        execute as @a unless score @s 152.CatTime matches -11..22 run scoreboard players set @s 152.CatTime -10
+        execute as @a unless score @s 152.CatTime matches -10.. run scoreboard players set @s 152.CatTime -10
 
     # ネコがいる間tickさせるfunctionをschedule
         schedule function asset:sacred_treasure/0152.call_cat/3.1.entity_manager 1t replace
