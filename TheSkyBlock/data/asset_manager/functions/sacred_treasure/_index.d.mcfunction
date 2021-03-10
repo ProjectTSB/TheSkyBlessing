@@ -49,7 +49,7 @@
     #declare tag OnInventoryChanged
 
 #> スニークの閾値用スコアホルダー
-# @wtihin function asset_manager:sacred_treasure/triggers/sneak/*
+# @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
 
 #> this
