@@ -28,6 +28,8 @@
     # data modify storage asset:sacred_treasure Condition set value
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 80
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:100,AttackType:[Physical],ElementType:[None],BypassResist:0b}
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
