@@ -19,7 +19,7 @@
     data remove storage lib: Argument
 
 # 敵に衰弱を付与
-    effect give @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] wither 1000000 0 false
+    effect give @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] wither 1000000 2 false
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] run particle minecraft:smoke ~ ~ ~ 1 1 1 0.0001 500 normal @a[distance=..30]
