@@ -12,8 +12,10 @@
 # 時間内にもう一度つかった愚か者へのダメージ
     # ダメージセット
         data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.BypassResist set value true
     # ダメージを与える
-        execute as @s[scores={78.Tick=1..}] run function lib:damage/simple
+        execute as @s[scores={78.Tick=1..}] run function lib:damage/
     # リセット
         data remove storage lib: Argument
 
