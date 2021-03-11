@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0252.void_transaction/2.check_condition
 #> private
 # @private
-    #declare tag Void
+    #declare tag VoidTransaction
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
@@ -16,8 +16,8 @@
     particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
 
 # 使用中であれば追加演出
-    execute if entity @s[tag=Void] run tellraw @s [{"text":"［","color":"dark_purple","bold":true},{"text":"奈"},{"text":"落","obfuscated":true},{"text":"の主"},{"text":"］ "},{"text":"二","color":"dark_red","obfuscated":true},{"text":"重取引","color":"dark_red"},{"text":"とは何事だ","color":"dark_red"}]
-    execute if entity @s[tag=Void] run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1.5
+    execute if entity @s[tag=VoidTransaction] run tellraw @s [{"text":"［","color":"dark_purple","bold":true},{"text":"奈"},{"text":"落","obfuscated":true},{"text":"の主"},{"text":"］ "},{"text":"二","color":"dark_red","obfuscated":true},{"text":"重取引","color":"dark_red"},{"text":"とは何事だ","color":"dark_red"}]
+    execute if entity @s[tag=VoidTransaction] run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1.5
 
 # 使用中でなければ初期設定
     execute unless score @s 0252.Timer matches 1..2400 run function asset:sacred_treasure/0252.void_transaction/3.1.initiation
