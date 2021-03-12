@@ -5,13 +5,13 @@
 # @within function asset:sacred_treasure/0252.void_transaction/3.main
 #> private
 # @private
-    #declare tag VoidTransaction
+    #declare tag 3Y.Void
 
 # 初期タイマーの設定
     scoreboard players set @s 0252.Timer 2400
 
 # 絶大な力
-    tag @s add VoidTransaction
+    tag @s add 3Y.Void
     effect give @s speed 120 3 true
     effect give @s strength 120 3 true
     effect give @s jump_boost 120 3 true
