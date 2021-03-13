@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 273
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "iron_sword"
+    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"とんぼがえり","color":"green"}'
 # 神器の説明文 (TextComponentString[])
@@ -26,6 +26,8 @@
     data modify storage asset:sacred_treasure Trigger set value "onAttack"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:100,AttackType:[Physical],ElementType:[None],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 99999
 # MP必要量 (int) (オプション)
@@ -37,7 +39,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Wi-ki","Urban","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,273,1],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;1,1,273,1],Slot:"mainhand"}]}
+    # data modify storage asset:sacred_treasure CustomNBT set value {}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

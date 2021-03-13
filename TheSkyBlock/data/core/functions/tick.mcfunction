@@ -6,6 +6,8 @@
 #
 # @within tag/function minecraft:tick
 
+# 現在の時間をglobalに代入する
+    execute store result storage global Time int 1 run time query gametime
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1

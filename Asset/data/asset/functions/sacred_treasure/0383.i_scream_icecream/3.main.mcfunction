@@ -43,7 +43,7 @@
     effect give @e[type=#lib:living,type=!player,distance=..5] slowness 30 4
 
 # ダメージ
-    # 与えるダメージ = 7.5
+    # 与えるダメージ = 30
         data modify storage lib: Argument.Damage set value 30f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
