@@ -8,4 +8,4 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    execute positioned ~ ~0.5 ~ run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
+    execute anchored eye positioned ^ ^ ^ run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
