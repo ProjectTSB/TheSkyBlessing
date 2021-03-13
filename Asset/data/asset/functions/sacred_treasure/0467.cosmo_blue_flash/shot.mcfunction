@@ -23,7 +23,3 @@
 
 # 再帰
     execute positioned ^ ^ ^0.5 if entity @s[tag=!7j.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
-
-# リセット
-    tag @e[tag=7j.HitEntity] remove 7j.HitEntity
-    tag @s remove 7j.HitFlag

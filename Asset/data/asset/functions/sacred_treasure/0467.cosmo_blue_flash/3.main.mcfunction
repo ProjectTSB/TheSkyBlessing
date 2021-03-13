@@ -9,3 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
     execute positioned ~ ~0.5 ~ run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
+
+# リセット
+    tag @e[tag=7j.HitEntity] remove 7j.HitEntity
+    tag @s remove 7j.HitFlag
