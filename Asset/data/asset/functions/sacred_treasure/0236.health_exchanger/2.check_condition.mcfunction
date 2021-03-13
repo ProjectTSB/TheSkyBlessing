@@ -15,9 +15,10 @@
 # 他にアイテム等確認する場合はここに書く
 
     # //まず全員の体力をscoreに代入
-    execute as @a store result score @s Temporary run data get entity @s Health 100
+    execute as @a run function asset:sacred_treasure/0236.health_exchanger/own_data_put
     # //自分の体力も比較用に代入
-    execute store result score $OwnHealth Temporary run data get entity @s Health 100
+    function api:data_get/health
+    execute store result score $OwnHealth Temporary run data get storage api: Health 100
     # //鯖民の最大体力を求める
     execute as @a run scoreboard players operation $MaxHealth Temporary > @s Temporary
     execute as @a if score @s Temporary = $MaxHealth Temporary run tag @s add HasMaxHealth
