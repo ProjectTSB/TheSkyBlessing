@@ -41,9 +41,18 @@
                 execute store result score @s Temporary run function lib:random/
             # ほしい範囲に剰余算
                 scoreboard players operation @s Temporary %= $3 Const
-            execute if score @s Temporary matches 0 run function asset:sacred_treasure/0462.456_dice/fire
-            execute if score @s Temporary matches 1 run function asset:sacred_treasure/0462.456_dice/water
-            execute if score @s Temporary matches 2 run function asset:sacred_treasure/0462.456_dice/thunder
+
+            # 火
+                execute if score @s Temporary matches 0 run data modify storage lib: Argument.ElementType set value "Fire"
+                execute if score @s Temporary matches 0 at @e[tag=7e.Target] run particle minecraft:flame ~ ~1 ~ 0 0 0 0.05 30 force
+
+            # 水
+                execute if score @s Temporary matches 1 run data modify storage lib: Argument.ElementType set value "Water"
+                execute if score @s Temporary matches 1 at @e[tag=7e.Target] run particle minecraft:bubble_pop ~ ~1 ~ 0.5 0.5 0.5 0.01 100 force
+
+            # 雷
+                execute if score @s Temporary matches 2 run data modify storage lib: Argument.ElementType set value "Thunder"
+                execute if score @s Temporary matches 2 at @e[tag=7e.Target] run particle minecraft:flash ~ ~1 ~ 0 0 0 1 1 force
     # 補正functionを実行
         function lib:damage/modifier
     # 近くの敵1体を対象にダメージを与える
