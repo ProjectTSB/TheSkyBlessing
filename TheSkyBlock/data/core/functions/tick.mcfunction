@@ -37,6 +37,10 @@
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 
+# アイテムのメタデータチェック
+    execute at @a run kill @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["BanEntityConditionItem"]}}}},distance=..10]
+    clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
+
 # リセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
