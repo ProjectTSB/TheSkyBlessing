@@ -16,7 +16,7 @@
     # ほしい範囲に剰余算
         scoreboard players operation @s Temporary %= $3 Const
     # 0~2の値を4~6になるように4加算
-    scoreboard players add @s Temporary 4
+        scoreboard players add @s Temporary 4
 
 # メッセージ表示
     tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."},{"score":{"name":"*","objective":"Temporary"}}]
