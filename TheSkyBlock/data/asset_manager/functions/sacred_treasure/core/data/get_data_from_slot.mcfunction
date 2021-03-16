@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/core/use/get_item_data
+#> asset_manager:sacred_treasure/core/data/get_data_from_slot
 #
 # TargetSlotを元にプレイヤーの神器データを取得する
 #
@@ -6,7 +6,9 @@
 #   as player
 #   storage asset:sacred_treasure TargetSlot : Slot
 # @output storage asset:sacred_treasure Item : ItemData
-# @within function asset_manager:sacred_treasure/core/use/*
+# @within function
+#   asset_manager:sacred_treasure/core/check/
+#   asset_manager:sacred_treasure/core/use/
 
 # autoの場合の処理
     execute if data storage asset:sacred_treasure {TargetSlot:"auto"} unless data storage asset:context Items.AutoSlot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"autoはこのトリガーでは実行できません","color":"white"}]

@@ -47,6 +47,7 @@
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
     execute as @a[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:sacred_treasure/triggers/sneak/reset
     scoreboard players reset @a[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
+    tp 0-0-0-0-0 0.0 0.0 0.0 0.0 0.0
 
 # Debugスコアボードへの代入
     execute as @p run function lib:debug/objective_view
