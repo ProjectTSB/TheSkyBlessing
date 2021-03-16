@@ -42,12 +42,6 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
 
-#> スニークのチェック用タグ
-# @within function
-#   asset_manager:sacred_treasure/triggers/sneak/*
-#   core:handler/inventory_change
-    #declare tag OnInventoryChanged
-
 #> スニークの閾値用スコアホルダー
 # @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
