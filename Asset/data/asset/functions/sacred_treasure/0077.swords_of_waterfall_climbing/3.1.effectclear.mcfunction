@@ -9,7 +9,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # OnGround取得
-    function api:data_get/on_ground
+    execute as @a[tag=1d.EffectClear] run function api:data_get/on_ground
 
 # 落下量を検知
     tag @a[tag=1d.EffectClear,scores={FallDistance=150..}] add 1d.Landing
