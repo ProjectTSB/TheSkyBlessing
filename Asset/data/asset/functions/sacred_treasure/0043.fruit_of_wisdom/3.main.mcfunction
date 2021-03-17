@@ -7,6 +7,9 @@
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
 
+# データ取得
+    function api:data_get/health
+
 # ここから先は神器側の効果の処理を書く
     # MP回復
         scoreboard players set $Fluctuation Lib 10000
@@ -14,7 +17,7 @@
 
     # 体力減
         data modify storage lib: Argument set value {AttackType:Physical,DisableParticle:1b,BypassResist:1b}
-        execute store result storage lib: Argument.Damage float 0.01 run data get entity @s Health 75
+        execute store result storage lib: Argument.Damage float 0.01 run data get storage api: Health 75
         function lib:damage/
         data remove storage lib: Argument
         playsound entity.player.hurt player @a ~ ~ ~ 1 1
