@@ -9,7 +9,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-     particle minecraft:flame ^ ^ ^1 0 0.4 0 0 20
+    execute positioned ~ ~1 ~ run particle minecraft:flame ^ ^ ^1 0 0.4 0 0 20
 
 # 回す
     scoreboard players add $Rotate Temporary 1
