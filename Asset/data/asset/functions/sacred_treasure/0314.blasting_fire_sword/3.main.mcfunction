@@ -14,8 +14,7 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 100
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["4W.Circle","Object"]}
-    execute as @e[type=armor_stand,tag=4W.Circle] at @s run function asset:sacred_treasure/0314.blasting_fire_sword/3.1.particle
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0314.blasting_fire_sword/3.1.particle
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 1 0
