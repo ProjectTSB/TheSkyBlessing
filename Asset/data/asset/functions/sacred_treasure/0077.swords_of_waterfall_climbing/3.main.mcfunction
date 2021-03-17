@@ -9,21 +9,24 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# OnGround取得
+    function api:data_get/on_ground
+
 # 攻撃当てた処理
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.2.attack
 
 #　地面にいる時の処理
-    execute if entity @s[tag=OnGround] run effect give @e[tag=1d.Hit,distance=..10,sort=nearest,limit=1] levitation 1 10
-    effect give @s[tag=OnGround] levitation 1 10 true
+    execute if data storage api: {OnGround:1b} run effect give @e[tag=1d.Hit,distance=..10,sort=nearest,limit=1] levitation 1 10
+    execute if data storage api: {OnGround:1b} run effect give @s levitation 1 10 true
 
 # 空中にいる時の処理
-    execute if entity @s[tag=!OnGround] run data merge entity @e[tag=1d.Hit,tag=!OnGround,distance=..10,sort=nearest,limit=1] {Motion:[0.0,-3.5,0.0]}
+    execute if data storage api: {OnGround:0b} run data merge entity @e[tag=1d.Hit,nbt={OnGround:0b},distance=..10,sort=nearest,limit=1] {Motion:[0.0,-3.5,0.0]}
 
 # 着地後にエフェクトを消すためタグを付与
-    tag @s[tag=!OnGround] add 1d.EffectClear
+    execute if data storage api: {OnGround:0b} run tag @s add 1d.EffectClear
 
 # 落下中攻撃食らうとぶっ飛ぶので対処
-    attribute @s[tag=!OnGround] minecraft:generic.knockback_resistance modifier add 1-0-1-0-4d00000007 "77waterfall" 1024 add
+    execute if data storage api: {OnGround:0b} run attribute @s minecraft:generic.knockback_resistance modifier add 1-0-1-0-4d00000007 "77waterfall" 1024 add
 
 # タグ消去
     tag @e[tag=1d.Hit] remove 1d.Hit

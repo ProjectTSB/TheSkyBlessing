@@ -11,11 +11,6 @@
 # プレイヤー処理部
     # 神器のグローバルクールダウン
         execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
-    # PlayerNBT
-        # リセット
-            function player_manager:nbt_data/reset
-        # 記録
-            execute as @a[tag=!Death] run function player_manager:nbt_data/put
 
     # Triggers
         execute if entity @a[scores={FirstJoinEvent=1},limit=1] as @a[scores={FirstJoinEvent=1}] at @s run function core:handler/first_join
@@ -41,6 +36,10 @@
 # Tick最後の処理
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
+
+# アイテムのメタデータチェック
+    execute at @a run kill @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["BanEntityConditionItem"]}}}},distance=..10]
+    clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
 
 # リセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
