@@ -8,20 +8,23 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# OnGround取得
+    function api:data_get/on_ground
+
 # 落下量を検知
     tag @a[tag=1d.EffectClear,scores={FallDistance=150..}] add 1d.Landing
 
 # 落下を与える
-    effect give @a[tag=1d.EffectClear,tag=!OnGround] levitation 1 130 true
-    effect give @a[tag=1d.EffectClear,tag=!OnGround] slow_falling 1 10 true
+    execute if data storage api: {OnGround:0b} run effect give @a[tag=1d.EffectClear] levitation 1 130 true
+    execute if data storage api: {OnGround:0b} run effect give @a[tag=1d.EffectClear] slow_falling 1 10 true
 
 # 着地時の処理
-    effect clear @a[tag=1d.EffectClear,tag=OnGround] levitation
-    execute as @a[tag=1d.EffectClear,tag=OnGround] run attribute @s minecraft:generic.knockback_resistance modifier remove 1-0-1-0-4d00000007
+    execute if data storage api: {OnGround:1b} run effect clear @a[tag=1d.EffectClear] levitation
+    execute as @a[tag=1d.EffectClear,tag=OnGround] if data storage api: {OnGround:1b} run attribute @s minecraft:generic.knockback_resistance modifier remove 1-0-1-0-4d00000007
     # 着地時に周囲にダメージ与える
-        execute as @a[tag=1d.EffectClear,tag=OnGround,tag=1d.Landing] at @s run function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.3.landing_attack
+        execute as @a[tag=1d.EffectClear,tag=1d.Landing] if data storage api: {OnGround:1b} at @s run function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.3.landing_attack
 
-    tag @a[tag=1d.EffectClear,tag=OnGround] remove 1d.EffectClear
+    execute if data storage api: {OnGround:1b} run tag @a[tag=1d.EffectClear] remove 1d.EffectClear
 
 
 # 着地していない場合、次tickも実行
