@@ -20,7 +20,7 @@
 
 # 着地時の処理
     execute if data storage api: {OnGround:1b} run effect clear @a[tag=1d.EffectClear] levitation
-    execute as @a[tag=1d.EffectClear,tag=OnGround] if data storage api: {OnGround:1b} run attribute @s minecraft:generic.knockback_resistance modifier remove 1-0-1-0-4d00000007
+    execute as @a[tag=1d.EffectClear] if data storage api: {OnGround:1b} run attribute @s minecraft:generic.knockback_resistance modifier remove 1-0-1-0-4d00000007
     # 着地時に周囲にダメージ与える
         execute as @a[tag=1d.EffectClear,tag=1d.Landing] if data storage api: {OnGround:1b} at @s run function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.3.landing_attack
 
