@@ -3,6 +3,7 @@
 # 神器のメイン処理部
 #
 # @within function asset:sacred_treasure/0314.blasting_fire_sword/2.check_condition
+
 #> Private
 # @private
     #declare score_holder $RandomDamage

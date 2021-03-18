@@ -13,4 +13,4 @@
 
 # 回す
     scoreboard players add $Rotate Temporary 1
-    execute if score $Rotate Temporary matches ..18 rotated ~20 ~ run function asset:sacred_treasure/0314.blasting_fire_sword/3.1.particle
+    execute if score $Rotate Temporary matches ..17 rotated ~20 ~ run function asset:sacred_treasure/0314.blasting_fire_sword/3.1.particle
