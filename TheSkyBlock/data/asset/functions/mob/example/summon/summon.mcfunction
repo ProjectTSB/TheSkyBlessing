@@ -1,6 +1,6 @@
 #> asset:mob/example/summon/summon
 #
-#
+# Mobの召喚部 ここでデータを定義する
 #
 # @within function asset:mob/example/summon/trigger
 
@@ -14,9 +14,9 @@
     data modify storage asset:mob Health set value 100.0
 # 攻撃力
     data modify storage asset:mob AttackDamage set value 2.0
-# 防御力
+# 防御力 // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 0.0
-# 特殊防御力
+# 特殊防御力 // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 0.0
 # 移動速度
     data modify storage asset:mob Speed set value 0.23
@@ -24,7 +24,7 @@
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性
     data modify storage asset:mob KnockBackResist set value 1.0
-# 属性耐性 // 1pointにつき2%カット、20point以上は頭打ち
+# 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち
     # 物理耐性
         data modify storage asset:mob Resist.Physical set value 10
     # 魔法耐性
