@@ -3,6 +3,7 @@
 
 #> storage
 # @within *
+#   api:mob/summon
 #   asset_manager:mob/**
 #   asset:mob/*/summon/summon
 #   asset:mob/common/**
