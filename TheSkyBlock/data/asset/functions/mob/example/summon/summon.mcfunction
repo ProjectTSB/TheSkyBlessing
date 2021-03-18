@@ -39,4 +39,4 @@
     data modify storage asset:mob CustomNBT set value {}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    function asset:mob/common/summon
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
