@@ -11,6 +11,7 @@
 #   Slot : Slot
 #   Trigger : Trigger
 #   Condition? : TextComponent
+#   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
 #   CostText? : TextComponent
@@ -42,6 +43,7 @@
     data remove storage asset:sacred_treasure Slot
     data remove storage asset:sacred_treasure Trigger
     data remove storage asset:sacred_treasure Condition
+    data remove storage asset:sacred_treasure AttackInfo
     data remove storage asset:sacred_treasure MPCost
     data remove storage asset:sacred_treasure MPRequire
     data remove storage asset:sacred_treasure CostText

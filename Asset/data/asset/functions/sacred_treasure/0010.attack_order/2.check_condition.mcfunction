@@ -10,6 +10,7 @@
 
 # プレイヤーのゲームモードがサバイバル・クリエイティブの時にのみ使用可能
     execute if entity @s[gamemode=!survival,gamemode=!creative] run tag @s remove CanUsed
+    execute if entity @s[gamemode=!survival,gamemode=!creative] run function lib:message/sacred_treasure/can_not_use_here
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0010.attack_order/3.main

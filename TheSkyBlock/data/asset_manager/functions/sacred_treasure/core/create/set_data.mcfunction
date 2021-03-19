@@ -13,6 +13,7 @@
 #       Slot : Slot
 #       Trigger : Trigger
 #       Condition? : TextComponent
+#       AttackInfo? : Component
 #       MPCost : int
 #       MPRequire : int
 #       CostText? : TextComponent
