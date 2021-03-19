@@ -11,7 +11,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle minecraft:dolphin ~ ~1 ~ 0.1 0.1 0.1 1 30 force
+    particle minecraft:dolphin ~ ~ ~ 0.1 0.1 0.1 1 30 force
     playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
 
 # 着弾検知
