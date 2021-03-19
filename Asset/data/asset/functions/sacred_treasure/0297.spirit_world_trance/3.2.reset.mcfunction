@@ -15,7 +15,7 @@
     gamemode adventure @s[scores={4F.GameMode=2}]
 
 # リセット処理
-    execute as @e[tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run kill @s
+    execute as @e[type=area_effect_cloud,tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run kill @s
     scoreboard players reset @s 4F.UserID
     scoreboard players reset @s 4F.GameMode
     scoreboard players reset @s 4F.TickCount
