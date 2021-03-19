@@ -19,7 +19,7 @@
         scoreboard players add @s Temporary 4
 
 # メッセージ表示
-    tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."},{"score":{"name":"*","objective":"Temporary"}}]
+    tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."},{"score":{"name":"@s","objective":"Temporary"}}]
 
 # ダメージを与えるエンティティの絞り込み
     tag @e[tag=Enemy,sort=nearest,limit=1] add 7e.Target
