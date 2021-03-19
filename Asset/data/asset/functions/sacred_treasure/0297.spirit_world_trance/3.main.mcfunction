@@ -19,7 +19,7 @@
     scoreboard players set @s 4F.TickCount 200
     scoreboard players add $4F.UserManager 4F.UserID 1
     scoreboard players operation @s 4F.UserID = $4F.UserManager 4F.UserID
-    scoreboard players operation @e[tag=4F.PosManager,sort=nearest,limit=1] 4F.UserID = $4F.UserManager 4F.UserID
+    scoreboard players operation @e[type=area_effect_cloud,tag=4F.PosManager,sort=nearest,limit=1] 4F.UserID = $4F.UserManager 4F.UserID
 
 # 現在のゲームモードを取得
     scoreboard players set @s[gamemode=survival] 4F.GameMode 0
