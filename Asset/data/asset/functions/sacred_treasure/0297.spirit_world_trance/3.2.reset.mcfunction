@@ -7,7 +7,7 @@
 
 # 帰還
     tag @s add 4F.End
-    execute as @e[tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run tp @a[tag=4F.End,limit=1] @s
+    execute as @e[type=area_effect_cloud,tag=4F.PosManager] if score @s 4F.UserID = @a[tag=4F.End,limit=1] 4F.UserID run tp @a[tag=4F.End,limit=1] @s
 
 # ゲームモードを戻す
     gamemode survival @s[scores={4F.GameMode=0}]
