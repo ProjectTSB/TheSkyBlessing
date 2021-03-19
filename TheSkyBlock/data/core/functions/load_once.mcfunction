@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 10
+data modify storage global Version set value 11
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -33,9 +33,12 @@ datapack enable "OhMyDat" after "ScoreToHealth"
     #alias vector shulkerA 10000 0 10000
     #alias vector shulkerB 10000 1 10000
     #alias vector worldSpawn 23 3 24
-setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
-setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
-
+execute in overworld run setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
+execute in overworld run setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
+execute in the_nether run setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
+execute in the_nether run setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
+execute in the_end run setblock 10000 0 10000 lime_shulker_box{Lock:"lock"}
+execute in the_end run setblock 10000 1 10000 lime_shulker_box{Lock:"lock"}
 
 #> デバッグ用storageの設定
 #
