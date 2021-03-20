@@ -8,11 +8,11 @@
 # ここから先は神器側の効果の処理を書く
 
 # タグ付与
-    tag @s add Hit
+    tag @s add 1d.Hit
 
 # 攻撃処理
     # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10.f
+        data modify storage lib: Argument.Damage set value 10f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

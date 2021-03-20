@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 246
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value carrot_on_a_stick
+    data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"マジカルステッキ","color":"green"}'
 # 神器の説明文 (TextComponentString[])
@@ -21,11 +21,13 @@
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value mainhand
+    data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value onAttack
+    data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:"消費MP分",AttackType:[Magic],ElementType:[None],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 99999
 # MP必要量 (int) (オプション)
