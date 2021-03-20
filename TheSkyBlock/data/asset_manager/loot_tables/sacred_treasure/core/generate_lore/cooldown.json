@@ -36,6 +36,64 @@
                                         "text": "秒"
                                     }
                                 ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "inverted",
+                                    "term": {
+                                        "condition": "minecraft:entity_properties",
+                                        "entity": "this",
+                                        "predicate": {
+                                            "nbt": "{Tags:[HasMinutesCDFlag]}"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "クールダウン: "
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "LocalCooldownMinutes"
+                                    },
+                                    {
+                                        "text": "分"
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "LocalCooldown"
+                                    },
+                                    {
+                                        "text": "."
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "LocalCooldownDecimal"
+                                    },
+                                    {
+                                        "text": "秒"
+                                    }
+                                ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "nbt": "{Tags:[HasMinutesCDFlag]}"
+                                    }
+                                }
                             ]
                         }
                     ]
