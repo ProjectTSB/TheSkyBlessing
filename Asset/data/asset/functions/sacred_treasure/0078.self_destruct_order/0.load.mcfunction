@@ -1,3 +1,4 @@
+#> asset:sacred_treasure/0078.self_destruct_order/0.load
 #
 # 神器に利用するスコアボード等の初期化処理
 #

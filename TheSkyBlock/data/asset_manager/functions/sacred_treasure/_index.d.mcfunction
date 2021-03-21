@@ -24,9 +24,9 @@
     #declare score_holder $Remain
     #declare score_holder $RemainMAX
 
-#> グローバルクールダウン
+#> 特殊クールダウン
 # @within function
-#   asset_manager:sacred_treasure/core/use/check
+#   asset_manager:sacred_treasure/core/check/check_special_cooldown
 #   asset_manager:sacred_treasure/core/use/
 #   core:tick
     #declare score_holder $SacredTreasureSpecialCooldown
@@ -42,11 +42,10 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
 
-#> スニークのチェック用タグ
+#> check用の失敗フラグ
 # @within function
-#   asset_manager:sacred_treasure/triggers/sneak/*
-#   core:handler/inventory_change
-    #declare tag OnInventoryChanged
+#   asset_manager:sacred_treasure/core/check/*
+    #declare tag CheckFailed
 
 #> スニークの閾値用スコアホルダー
 # @within function asset_manager:sacred_treasure/triggers/sneak/*
