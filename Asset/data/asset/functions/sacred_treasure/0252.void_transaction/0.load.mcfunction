@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0252.void_transaction/**
-    scoreboard objectives add 0252.Timer dummy
+    scoreboard objectives add 3Y.Timer dummy
