@@ -2,7 +2,7 @@
 #
 #
 #
-# @within asset:mob/*/summon/summon
+# @within function asset:mob/*/summon/summon
 
 execute unless entity @e[tag=MobInit] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"MobInitが設定されたEntityが存在しません"}]
 execute unless data storage asset:mob ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument ID at asset:mob/common/summon"}}}]
