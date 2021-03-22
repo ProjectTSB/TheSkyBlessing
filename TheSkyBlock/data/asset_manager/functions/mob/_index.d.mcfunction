@@ -12,4 +12,5 @@
 #> 初期化タグ
 # @within function
 #   asset:mob/*/summon/summon
+#   asset:mob/common/summon
     #declare tag MobInit
