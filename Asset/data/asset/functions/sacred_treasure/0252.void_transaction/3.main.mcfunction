@@ -13,11 +13,11 @@
     particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
 
 # 使用中であれば追加演出
-    execute if score @s 3Y.Timer matches 1..2400 run tellraw @s [{"text":"［","color":"dark_purple","bold":true},{"text":"奈"},{"text":"落","obfuscated":true},{"text":"の主"},{"text":"］ "},{"text":"二","color":"dark_red","obfuscated":true},{"text":"重取引","color":"dark_red"},{"text":"とは何事だ","color":"dark_red"}]
-    execute if score @s 3Y.Timer matches 1..2400 run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1.5
+    execute if entity @s[scores={3Y.Timer=1..2400}] run tellraw @s [{"text":"［","color":"dark_purple","bold":true},{"text":"奈"},{"text":"落","obfuscated":true},{"text":"の主"},{"text":"］ "},{"text":"二","color":"dark_red","obfuscated":true},{"text":"重取引","color":"dark_red"},{"text":"とは何事だ","color":"dark_red"}]
+    execute if entity @s[scores={3Y.Timer=1..2400}] run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1.5
 
 # 使用中でなければ初期設定
-    execute unless score @s 3Y.Timer matches 1..2400 run function asset:sacred_treasure/0252.void_transaction/3.1.initiation
+    execute unless entity @s[scores={3Y.Timer=1..2400}] run function asset:sacred_treasure/0252.void_transaction/3.1.initiation
 
 # 2分後の奈落予約
     schedule function asset:sacred_treasure/0252.void_transaction/3.2.void 1t replace
