@@ -2,8 +2,7 @@
 #
 # 数秒遅れての処理
 #
-# @within
-#   function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance
+# @within function asset:sacred_treasure/0297.spirit_world_trance/3.1.trance
 
 # 帰還
     tag @s add 4F.End
