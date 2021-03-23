@@ -43,9 +43,12 @@
         "asset:sacred_treasure/0322.ice_cane/1.trigger",
         "asset:sacred_treasure/0397.floor_sublimation_wing/1.trigger",
         "asset:sacred_treasure/0088.fertility_hoe/1.trigger",
+        "asset:sacred_treasure/0236.health_exchanger/1.trigger",
         "asset:sacred_treasure/0091.iron_armor_set/1.trigger",
         "asset:sacred_treasure/0092.golden_armor_set/1.trigger",
         "asset:sacred_treasure/0078.self_destruct_order/1.trigger",
-        "asset:sacred_treasure/0467.cosmo_blue_flash/1.trigger"
+        "asset:sacred_treasure/0467.cosmo_blue_flash/1.trigger",
+        "asset:sacred_treasure/0431.weather_lock_cane/1.trigger",
+        "asset:sacred_treasure/0462.456_dice/1.trigger"
     ]
 }
