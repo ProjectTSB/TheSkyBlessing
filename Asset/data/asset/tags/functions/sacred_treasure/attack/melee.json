@@ -5,6 +5,7 @@
         "asset:sacred_treasure/0019.scriputre/1.trigger",
         "asset:sacred_treasure/0273.tonbo_gaeri/1.trigger",
         "asset:sacred_treasure/0288.lamentation_sword/1.trigger",
+        "asset:sacred_treasure/0073.suzuran_charm/1.trigger",
         "asset:sacred_treasure/0349.passion_pickaxe/1.trigger",
         "asset:sacred_treasure/0246_magical_cane/1.trigger",
         "asset:sacred_treasure/0358.cyfosio/1.trigger",
@@ -18,6 +19,7 @@
         "asset:sacred_treasure/0219.abyss_sword/1.trigger",
         "asset:sacred_treasure/0441.awaited_opportunity/1.trigger",
         "asset:sacred_treasure/0315.water_sword/1.trigger",
-        "asset:sacred_treasure/0313.raging_fire_sword/1.trigger"
+        "asset:sacred_treasure/0313.raging_fire_sword/1.trigger",
+        "asset:sacred_treasure/0314.blasting_fire_sword/1.trigger"
     ]
 }

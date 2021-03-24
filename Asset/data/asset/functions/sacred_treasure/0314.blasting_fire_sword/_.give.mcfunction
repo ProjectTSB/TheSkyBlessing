@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0313.raging_fire_sword/_.give
+#> asset:sacred_treasure/0314.blasting_fire_sword/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,13 +9,13 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 313
+    data modify storage asset:sacred_treasure ID set value 314
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"烈火の剣","color":"red"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"爆炎の剣","color":"dark_red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"炎を纏った剣。 "}','{"text":"敵にやや強力な物理火属性ダメージを与える"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"炎を纏った剣。 "}','{"text":"敵に強力な物理火属性ダメージを与える"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,9 +27,9 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 (Component) (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:[23,30],AttackType:[Physical],ElementType:[Fire],BypassResist:0b}
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:[45,60],AttackType:[Physical],ElementType:[Fire],BypassResist:0b}
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 10
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
