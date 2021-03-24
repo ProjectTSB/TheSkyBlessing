@@ -5,9 +5,13 @@
 # @within function asset:mob/example/summon/trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","Enemy"]}
+    summon zombie ~ ~ ~ {Tags:["MobInit"]}
 # ID
     data modify storage asset:mob ID set value -2147483647
+# Type
+    data modify storage asset:mob Type set value "Enemy.Boss"
+# 干渉可能か否か
+    data modify storage asset:mob Interferable set value true
 # 名前
     data modify storage asset:mob Name set value '{"text":"サンプルの敵"}'
 # 体力
@@ -35,8 +39,6 @@
         data modify storage asset:mob Resist.Water set value 5
     # 雷耐性
         data modify storage asset:mob Resist.Thunder set value 15
-# CustomNBT
-    data modify storage asset:mob CustomNBT set value {}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
