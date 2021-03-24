@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0313.raging_fire_sword/_.give
+#> asset:sacred_treasure/0431.weather_lock_cane/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,35 +9,35 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 313
+    data modify storage asset:sacred_treasure ID set value 431
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
+    data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"烈火の剣","color":"red"}'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"天","obfuscated":true,"color":"blue"},{"text":" 天鍵杖 ","obfuscated":false,"color":"aqua"},{"text":"鍵","obfuscated":true,"color":"blue"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"炎を纏った剣。 "}','{"text":"敵にやや強力な物理火属性ダメージを与える"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"時雨 驟雨 零雨 五月"}','{"text":"淡雪 霙 野分に唄え"}','{"text":"東風 南風 北風 西風"}','{"text":"夜風を散らし 晴嵐に舞え"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "mainhand"
+    data modify storage asset:sacred_treasure Slot set value auto
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
+    data modify storage asset:sacred_treasure Trigger set value onClick
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 (Component) (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:[23,30],AttackType:[Physical],ElementType:[Fire],BypassResist:0b}
+    # data modify storage asset:sacred_treasure AttackInfo set value {Damage:[0,0],AttackType:[Physical,Magic],ElementType:[Fire,Water,Thunder,None],BypassResist:1b}
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 10
+    data modify storage asset:sacred_treasure MPCost set value 75
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure LocalCooldown set value 20
+    # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value
+    data modify storage asset:sacred_treasure SpecialCooldown set value 36000
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Rumor]
+    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Wi-ki]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
