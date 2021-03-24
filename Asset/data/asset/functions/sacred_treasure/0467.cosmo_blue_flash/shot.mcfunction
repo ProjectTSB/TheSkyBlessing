@@ -5,8 +5,6 @@
 # @within function
 #   asset:sacred_treasure/0467.cosmo_blue_flash/3.main
 #   asset:sacred_treasure/0467.cosmo_blue_flash/shot
-    #declare tag 7j.HitFlag
-    #declare tag 7j.HitEntity
 
 # ここから先は神器側の効果の処理を書く
 
