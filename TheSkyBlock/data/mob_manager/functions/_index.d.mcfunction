@@ -9,6 +9,7 @@
     #declare tag Projectile
     #declare tag Npc
     #declare tag Object
+    #declare tag Uninterferable
 
 #> InitTag
 # @within function
