@@ -2,9 +2,7 @@
 #
 # 着弾処理
 #
-# @within function
-#   asset:sacred_treasure/0467.cosmo_blue_flash/shot
-    #declare tag 7j.HitEntity
+# @within function asset:sacred_treasure/0467.cosmo_blue_flash/shot
 
 # 演出
     particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.5 0.5 0.1 100 force
