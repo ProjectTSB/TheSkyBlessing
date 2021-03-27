@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 11
+data modify storage global Version set value 12
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -93,6 +93,10 @@ team modify NoCollision collisionRule never
     # @public
         scoreboard objectives add Const dummy
     function core:define_const
+
+    #> UserID
+    # @public
+        scoreboard objectives add UserID dummy {"text":"汎用固有ユーザーID"}
 
     #> DEBUG用スコアボード
     # @within function
