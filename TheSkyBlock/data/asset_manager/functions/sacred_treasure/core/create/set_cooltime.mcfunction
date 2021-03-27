@@ -33,7 +33,6 @@
     loot replace block 10000 0 10000 container.6 loot asset_manager:sacred_treasure/core/generate_lore/cooldown
 
 # リセット
-    tellraw @s [{"score":{"name": "$CooldownMinutes","objective": "Temporary"}}," ",{"score":{"name": "$Cooldown","objective": "Temporary"}}," ",{"score":{"name": "$CooldownDecimal","objective": "Temporary"}}]
     scoreboard players reset $Cooldown
     scoreboard players reset $CooldownDecimal
     scoreboard players reset $CooldownMinutes
