@@ -28,26 +28,26 @@
             execute store result score $AroundWater Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
 
     # 対象を設定
-        # //前提として近い1体はHit確定
-        tag @e[type=#lib:living,tag=Enemy,distance=..10,sort=nearest,limit=1] add Hit
-        # //雨、雷で、頭上にブロックがない時は..10全体にHit
-        execute if score $UpperBlocks Temporary matches 0 unless score $Weather Temporary matches 0 run tag @e[type=#lib:living,tag=Enemy,distance=..10] add Hit
+        # 前提として近い1体はHit確定
+            tag @e[type=#lib:living,tag=Enemy,distance=..10,sort=nearest,limit=1] add Hit
+        # 雨、雷で、頭上にブロックがない時は..10全体にHit
+            execute if score $UpperBlocks Temporary matches 0 unless score $Weather Temporary matches 0 run tag @e[type=#lib:living,tag=Enemy,distance=..10] add Hit
 
         # 自身が水の近くにいた場合($AroundWater=1..)r=..10の付近に水がある敵も対象となる
-            # //MobのTemporaryはMob周囲の水の数に設定
-            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
-            # //Mobとして：@s のTemporaryが1..ならHitする
-            execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
+            # MobのTemporaryはMob周囲の水の数に設定
+                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
+            # Mobとして：@s のTemporaryが1..ならHitする
+                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
         # プレイヤーへの誤Hit処理 HitしたMobの0.05m以内にいると自分にもあたる やっぱPKしたいじゃぁん？ ※現在はコメントアウト中
             # execute as @e[type=#lib:living,tag=Hit,distance=..10] at @s as @a[distance=..0.05] run tag @s add Hit
 
 
     # ダメージを設定
         # 演算
-            # //天候の値を加算
-            scoreboard players operation $AttackStrength Temporary += $Weather Temporary
-            # //水の中にいる場合さらに1段階増加
-            execute if score $AroundWater Temporary matches 1.. run scoreboard players add $AttackStrength Temporary 1
+            # 天候の値を加算
+                scoreboard players operation $AttackStrength Temporary += $Weather Temporary
+            # 水の中にいる場合さらに1段階増加
+                execute if score $AroundWater Temporary matches 1.. run scoreboard players add $AttackStrength Temporary 1
 
         # 引数初期化
             data modify storage lib: Argument set value {AttackType:Magic,ElementType:Thunder,BypassArmor:0b,BypassResist:0b}
