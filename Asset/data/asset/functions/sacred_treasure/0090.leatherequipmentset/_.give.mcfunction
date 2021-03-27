@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value onClick
+    data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 30
 # MP必要量 (int) (オプション)

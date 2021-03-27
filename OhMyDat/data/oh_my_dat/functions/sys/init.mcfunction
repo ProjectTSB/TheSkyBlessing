@@ -19,6 +19,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 # @within function
 #   oh_*:**
 #   lib:**
+#   api:**
 #   core:**
 #   asset_manager:sacred_treasure/**
 #   player_manager:**
