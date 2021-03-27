@@ -41,10 +41,13 @@
                                 {
                                     "condition": "inverted",
                                     "term": {
-                                        "condition": "minecraft:entity_properties",
+                                        "condition": "minecraft:entity_scores",
                                         "entity": "this",
-                                        "predicate": {
-                                            "nbt": "{Tags:[HasMinutesCDFlag]}"
+                                        "scores": {
+                                            "Temporary": {
+                                                "min": 1,
+                                                "max": 1
+                                            }
                                         }
                                     }
                                 }
@@ -88,10 +91,13 @@
                             ],
                             "conditions": [
                                 {
-                                    "condition": "minecraft:entity_properties",
+                                    "condition": "minecraft:entity_scores",
                                     "entity": "this",
-                                    "predicate": {
-                                        "nbt": "{Tags:[HasMinutesCDFlag]}"
+                                    "scores": {
+                                        "Temporary": {
+                                            "min": 1,
+                                            "max": 1
+                                        }
                                     }
                                 }
                             ]

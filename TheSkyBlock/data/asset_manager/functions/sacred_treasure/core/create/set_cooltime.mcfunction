@@ -9,7 +9,6 @@
     #declare score_holder $Cooldown
     #declare score_holder $CooldownDecimal
     #declare score_holder $CooldownMinutes
-    #declare tag HasMinutesCDFlag
 
 # 5? クールタイムを秒数に変換
     execute store result score $Cooldown Temporary run data get storage asset:sacred_treasure LocalCooldown
@@ -24,7 +23,7 @@
     # //用がなくなったらmod演算
     scoreboard players operation $Cooldown Temporary %= $60 Const
     # //分がいるかをloot_table側で判断するためのフラグ
-    execute if score $CooldownMinutes Temporary matches 1.. run tag @s add HasMinutesCDFlag
+    execute if score $CooldownMinutes Temporary matches 1.. run scoreboard players set @s Temporary 1
 # 5?ストレージに入れる
     execute store result storage asset:sacred_treasure LocalCooldown int 1 run scoreboard players get $Cooldown Temporary
     execute store result storage asset:sacred_treasure LocalCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
@@ -38,6 +37,6 @@
     scoreboard players reset $Cooldown
     scoreboard players reset $CooldownDecimal
     scoreboard players reset $CooldownMinutes
+    scoreboard players reset @s Temporary
     data remove storage asset:sacred_treasure SpecialCooldownDecimal
     data remove storage asset:sacred_treasure SpecialCooldownMinutes
-    tag @s remove HasMinutesCDFlag
