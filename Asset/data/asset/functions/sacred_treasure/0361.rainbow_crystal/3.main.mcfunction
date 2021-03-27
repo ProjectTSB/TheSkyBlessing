@@ -28,36 +28,36 @@
         # //PhysicalDamage
         data merge storage lib: {Argument:{Damage:20.0f,AttackType:Physical,ElementType:None,DisableParticle:1b}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         # //MagicDamage
         data merge storage lib: {Argument:{Damage:20.0f,AttackType:Magic,ElementType:None}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
         data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Target,distance=..30] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
 
     # リセット
     data remove storage lib: Argument
