@@ -21,6 +21,7 @@
 # @within *
 #   mob_manager:init
 #   mob_manager:entity_finder/**
+#   lib:damage/core/trigger_on_attack
     #declare tag FindFlag0.0
     #declare tag FindFlag0.1
     #declare tag FindFlag1.0
