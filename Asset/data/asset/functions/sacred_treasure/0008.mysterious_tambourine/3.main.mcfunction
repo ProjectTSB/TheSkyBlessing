@@ -21,3 +21,4 @@
     playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 1.2
     playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.7 1.5
     playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.7 2
+    particle minecraft:crit ~ ~1 ~ 0.25 0.1 0.25 0.7 20
