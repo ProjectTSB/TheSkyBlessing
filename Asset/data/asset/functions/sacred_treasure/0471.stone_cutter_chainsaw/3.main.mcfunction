@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
     # 初期化
-        scoreboard players set $471.Count Temporary 0
+        scoreboard players set $7n.Count Temporary 0
 
     # 演出
         execute positioned ~ ~1 ~ run particle block stone ^ ^ ^0.8 0.1 0.1 0.1 1.0 20
@@ -25,4 +25,4 @@
         execute positioned ^ ^ ^2 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] at @s if entity @p[tag=this, distance=..4] run function asset:sacred_treasure/0471.stone_cutter_chainsaw/3.2.entity
 
     # 開放
-        scoreboard players reset $471.Count Temporary
+        scoreboard players reset $7n.Count Temporary

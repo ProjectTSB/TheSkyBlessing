@@ -11,5 +11,5 @@
 #   asset:sacred_treasure/0471.stone_cutter_chainsaw/3.1.check_critical
 #   asset:sacred_treasure/0471.stone_cutter_chainsaw/3.2.entity
 #
-    #declare score_holder $471.Count
-    #declare tag 471.Critical
+    #declare score_holder $7n.Count
+    #declare tag 7n.Critical
