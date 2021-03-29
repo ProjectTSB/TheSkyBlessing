@@ -14,4 +14,4 @@
 # プレイヤー
     execute if entity @s[type=player] run function lib:heal/core/player
 # non-プレイヤー
-    execute if entity @s[type=#lib:living,type=!player] run function lib:heal/core/non-player
+    execute if entity @s[type=#lib:living,type=!player,tag=!Uninterferable] run function lib:heal/core/non-player

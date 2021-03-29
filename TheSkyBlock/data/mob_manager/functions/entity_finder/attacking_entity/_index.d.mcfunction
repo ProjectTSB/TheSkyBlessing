@@ -8,20 +8,5 @@
 
 #> フラグ
 # @within function mob_manager:entity_finder/attacking_entity/**
-    #declare tag HasFindAttackingFlag0
-    #declare tag HasFindAttackingFlag1
-    #declare tag HasFindAttackingFlag2
-    #declare tag HasFindAttackingFlag3
-    #declare tag HasFindAttackingFlag4
-    #declare tag HasFindAttackingFlag5
-    #declare tag HasFindAttackingFlag6
-    #declare tag HasFindAttackingFlag7
-    #declare tag HasFindAttackingFlag8
-    #declare tag HasFindAttackingFlag9
-    #declare tag HasFindAttackingFlag10
-    #declare tag HasFindAttackingFlag11
-    #declare tag HasFindAttackingFlag12
-    #declare tag HasFindAttackingFlag13
-    #declare tag HasFindAttackingFlag14
-    #declare tag HasFindAttackingFlag15
+    #declare storage mob_manager:attacking_entity
     #declare score_holder $AttackingEntityIndex

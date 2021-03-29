@@ -4,5 +4,5 @@
 #
 # @within function mob_manager:entity_finder/attacked_entity/filters/7
 
-execute if entity @a[tag=this,tag=HasFindAttackedFlag6,distance=..1] if entity @s[tag=FindFlag6] run function mob_manager:entity_finder/attacked_entity/filters/5
-execute if entity @a[tag=this,tag=!HasFindAttackedFlag6,distance=..1] if entity @s[tag=!FindFlag6] run function mob_manager:entity_finder/attacked_entity/filters/5
+execute if data storage mob_manager:attacked_entity BitData{6:0b} if entity @s[tag=FindFlag6.0] run function mob_manager:entity_finder/attacked_entity/filters/5
+execute if data storage mob_manager:attacked_entity BitData{6:1b} if entity @s[tag=FindFlag6.1] run function mob_manager:entity_finder/attacked_entity/filters/5
