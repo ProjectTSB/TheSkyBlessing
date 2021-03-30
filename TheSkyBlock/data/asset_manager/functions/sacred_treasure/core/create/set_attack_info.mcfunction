@@ -9,7 +9,7 @@
     #declare score_holder $IsList
 
     # 初期化
-        data modify storage asset:sacred_treasure Line1 set value ['""','{"text":"???"}']
+        data modify storage asset:sacred_treasure Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]']
         data modify storage asset:sacred_treasure Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
 
 
@@ -28,6 +28,11 @@
             # List(要素数2)のとき
                 execute if score $IsList Temporary matches 1.. if data storage asset:sacred_treasure AttackInfo.Damage[1] run data modify storage asset:sacred_treasure Line1[1] set value '[{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[0]"},{"text":"-"},{"storage":"asset:sacred_treasure","nbt":"AttackInfo.Damage[1]"}]'
 
+        # 単体/確率範囲/条件範囲/常時範囲 を表示 //未設定-不明
+            execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:never}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"単体"}]'
+            execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:probability}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"確率","color":"aqua"}]'
+            execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:condition}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"条件","color":"green"}]'
+            execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:every}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"常時","color":"gold"}]'
 
     # Line-2
         # 物理/魔法を表示 //未設定-物理
