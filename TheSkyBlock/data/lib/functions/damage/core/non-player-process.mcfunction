@@ -14,3 +14,5 @@
 # 演出
     execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead] run effect give @s instant_health 1 31 true
     execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead] run effect give @s instant_damage 1 31 true
+# onAttackのトリガー
+    execute if score $Health Temporary matches 1.. run function lib:damage/core/trigger_on_attack

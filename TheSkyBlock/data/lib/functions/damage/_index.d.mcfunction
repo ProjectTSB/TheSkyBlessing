@@ -10,3 +10,4 @@
     #declare score_holder $toughness
     #declare score_holder $Resistance
     #declare score_holder $DisableParticle
+    #declare score_holder $LatestModifiedUser

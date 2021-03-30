@@ -10,6 +10,9 @@
     #declare score_holder $Modifier
     #declare score_holder $Temp
 
+# プレイヤー情報の記録
+    scoreboard players operation $LatestModifiedUser UserID = @s UserID
+
 # ユーザーストレージ呼び出し
     function oh_my_dat:please
 # 必要なデータの取得と加算
