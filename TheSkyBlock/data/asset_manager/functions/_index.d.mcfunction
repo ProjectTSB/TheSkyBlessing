@@ -5,4 +5,5 @@
 # @within function
 #   asset_manager:**
 #   asset:*/*/**
+#   api:**
     #declare storage asset:context
