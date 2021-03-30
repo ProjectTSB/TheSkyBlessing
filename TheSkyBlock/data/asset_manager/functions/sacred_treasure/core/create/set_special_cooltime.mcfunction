@@ -20,10 +20,10 @@
 # 5? 秒数を分に変換
     scoreboard players operation $CooldownMinutes Temporary = $Cooldown Temporary
     scoreboard players operation $CooldownMinutes Temporary /= $60 Const
-    # //用がなくなったらmod演算
-    scoreboard players operation $Cooldown Temporary %= $60 Const
-    # //分がいるかをloot_table側で判断するためのフラグ
-    execute if score $CooldownMinutes Temporary matches 1.. run scoreboard players set @s Temporary 1
+    # 用がなくなったらmod演算
+        scoreboard players operation $Cooldown Temporary %= $60 Const
+    # 分がいるかをloot_table側で判断するためのフラグ
+        execute if score $CooldownMinutes Temporary matches 1.. run scoreboard players set @s Temporary 1
 # 5?ストレージに入れる
     execute store result storage asset:sacred_treasure SpecialCooldown int 1 run scoreboard players get $Cooldown Temporary
     execute store result storage asset:sacred_treasure SpecialCooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
