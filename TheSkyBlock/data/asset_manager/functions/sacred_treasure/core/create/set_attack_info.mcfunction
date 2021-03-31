@@ -9,12 +9,12 @@
     #declare score_holder $IsList
 
     # 初期化
-        data modify storage asset:sacred_treasure Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]']
+        data modify storage asset:sacred_treasure Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]','""']
         data modify storage asset:sacred_treasure Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
 
 
     # Line-1
-        # 貫通/非貫通 軽減/非軽減を表示 //未設定-軽減非貫通
+        # 貫通/非貫通 軽減/非軽減を表示 //未設定-非表示
             execute if data storage asset:sacred_treasure {AttackInfo:{BypassResist:1b}} run data modify storage asset:sacred_treasure Line1[0] set value '{"text":"[防御無効] "}'
 
         # ダメージ量を表示 //未設定-???
@@ -33,6 +33,9 @@
             execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:probability}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"確率","color":"aqua"}]'
             execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:condition}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"条件","color":"green"}]'
             execute if data storage asset:sacred_treasure {AttackInfo:{IsRangeAttack:every}} run data modify storage asset:sacred_treasure Line1[2] set value '[{"text":"範囲-"},{"text":"常時","color":"gold"}]'
+
+        # 攻撃範囲を表示 //未設定-非表示
+            execute if data storage asset:sacred_treasure AttackInfo.AttackRange run data modify storage asset:sacred_treasure Line1[3] set value '[{"text":" 範囲:"},{"storage":"asset:sacred_treasure","nbt":"AttackInfo.AttackRange"},{"text":"m"}]'
 
     # Line-2
         # 物理/魔法を表示 //未設定-物理
