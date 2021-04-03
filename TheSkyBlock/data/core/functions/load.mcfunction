@@ -4,6 +4,6 @@
 #
 # @within tag/function minecraft:load
 
-execute unless data storage global {Version:11} run function core:load_once
+execute unless data storage global {Version:12} run function core:load_once
 #TODO リリース時はload_once行き
     function #asset:sacred_treasure/load

@@ -21,20 +21,37 @@
 # @within *
 #   mob_manager:init
 #   mob_manager:entity_finder/**
-    #declare tag FindFlag0
-    #declare tag FindFlag1
-    #declare tag FindFlag2
-    #declare tag FindFlag3
-    #declare tag FindFlag4
-    #declare tag FindFlag5
-    #declare tag FindFlag6
-    #declare tag FindFlag7
-    #declare tag FindFlag8
-    #declare tag FindFlag9
-    #declare tag FindFlag10
-    #declare tag FindFlag11
-    #declare tag FindFlag12
-    #declare tag FindFlag13
-    #declare tag FindFlag14
-    #declare tag FindFlag15
+#   lib:damage/core/trigger_on_attack
+    #declare tag FindFlag0.0
+    #declare tag FindFlag0.1
+    #declare tag FindFlag1.0
+    #declare tag FindFlag1.1
+    #declare tag FindFlag2.0
+    #declare tag FindFlag2.1
+    #declare tag FindFlag3.0
+    #declare tag FindFlag3.1
+    #declare tag FindFlag4.0
+    #declare tag FindFlag4.1
+    #declare tag FindFlag5.0
+    #declare tag FindFlag5.1
+    #declare tag FindFlag6.0
+    #declare tag FindFlag6.1
+    #declare tag FindFlag7.0
+    #declare tag FindFlag7.1
+    #declare tag FindFlag8.0
+    #declare tag FindFlag8.1
+    #declare tag FindFlag9.0
+    #declare tag FindFlag9.1
+    #declare tag FindFlag10.0
+    #declare tag FindFlag10.1
+    #declare tag FindFlag11.0
+    #declare tag FindFlag11.1
+    #declare tag FindFlag12.0
+    #declare tag FindFlag12.1
+    #declare tag FindFlag13.0
+    #declare tag FindFlag13.1
+    #declare tag FindFlag14.0
+    #declare tag FindFlag14.1
+    #declare tag FindFlag15.0
+    #declare tag FindFlag15.1
     #declare tag this
