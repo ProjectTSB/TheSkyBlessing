@@ -33,6 +33,19 @@
                                     },
                                     {
                                         "text": " Damage"
+                                    },
+                                    {
+                                        "text": " "
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "Line1[2]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "Line1[3]",
+                                        "interpret": true
                                     }
                                 ],
                                 [
