@@ -25,7 +25,7 @@
     tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."},{"score":{"name":"@s","objective":"Temporary"}}]
 
 # ダメージを与えるエンティティの絞り込み
-    tag @e[tag=Enemy,sort=nearest,limit=1] add 7e.Target
+    tag @e[tag=Enemy,tag=!Uninterferable,sort=nearest,limit=1] add 7e.Target
 
 # ダメージ計算 出た目の5倍
     scoreboard players operation @s Temporary *= $5 Const
