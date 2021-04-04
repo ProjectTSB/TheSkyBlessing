@@ -13,7 +13,7 @@
     playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
 
 # 着弾検知
-    execute as @e[tag=Enemy,distance=..1.5,limit=1] run tag @s add 7j.HitEntity
+    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5,limit=1] run tag @s add 7j.HitEntity
     execute if entity @e[tag=7j.HitEntity] run tag @s add 7j.HitFlag
 
 # 着弾処理
