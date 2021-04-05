@@ -23,9 +23,11 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onAttack"
+    data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
+# 攻撃に関する情報 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo set value {Damage:30,AttackType:[Physical],ElementType:[Fire],BypassResist:0b}
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 30
 # MP必要量 (int) (オプション)
@@ -37,7 +39,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Wi-ki","Urban","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1091482349,-1376304349,-1344836349,-1768086349],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;1476913349,1629933349,-1904965349,1955340349]}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,349,1],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;1,1,349,1],Slot:"mainhand"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

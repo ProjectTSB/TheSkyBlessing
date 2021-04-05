@@ -4,7 +4,7 @@
 #> ReturnTag
 # @within function
 #   asset:sacred_treasure/*/2.check_condition
-#   asset_manager:sacred_treasure/core/use/check
+#   asset_manager:sacred_treasure/core/check/
 #   asset:sacred_treasure/lib/use/*
     #declare tag CanUsed
 

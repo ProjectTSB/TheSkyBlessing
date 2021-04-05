@@ -1,0 +1,12 @@
+#> mob_manager:entity_finder/attacked_entity/_index.d
+# @private
+
+#> 攻撃したEntity
+# `@e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150]`
+# @public
+    #declare tag AttackedEntity
+
+#> フラグ
+# @within function mob_manager:entity_finder/attacked_entity/**
+    #declare storage mob_manager:attacked_entity
+    #declare score_holder $AttackedEntityIndex
