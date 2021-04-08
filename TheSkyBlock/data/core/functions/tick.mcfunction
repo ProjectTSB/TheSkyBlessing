@@ -30,8 +30,11 @@
     # 満腹度調整部
         execute if entity @a[tag=AdjustHunger,limit=1] as @a[tag=AdjustHunger,tag=!Death] run function player_manager:adjust_hunger/observe
 
-# Mobデータ初期化部
-    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
+# Mob処理部
+    # データ初期化部
+        execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
+    # MobAsset処理
+        function asset_manager:mob/core
 
 # Tick最後の処理
     # ScoreToHealthWrapperの消化

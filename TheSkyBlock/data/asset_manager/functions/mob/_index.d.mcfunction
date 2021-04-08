@@ -13,3 +13,9 @@
 #   asset:mob/*/summon/summon
 #   asset:mob/common/summon
     #declare tag MobInit
+
+#> MobAsset側で定義されたMobに付けられるタグ
+# @within function
+#   asset:mob/**
+#   asset_manager:mob/**
+    #declare tag AssetMob

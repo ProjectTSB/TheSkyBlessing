@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:mob/set_data
 
+# デフォルト
+    tag @s add AssetMob
 # Friend
     execute if data storage asset:mob {Type:"Friend"} run tag @s add Friend
 # Enemy
