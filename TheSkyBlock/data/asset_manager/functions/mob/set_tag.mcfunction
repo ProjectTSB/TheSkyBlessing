@@ -19,4 +19,5 @@
     execute if data storage asset:mob {Type:"Object"} run tag @s add Object
 
 # Uninterferable
+    execute if data storage asset:mob {Interferable:false} run data modify entity @s Invulnerable set value 1b
     execute if data storage asset:mob {Interferable:false} run tag @s add Uninterferable
