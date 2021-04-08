@@ -38,6 +38,7 @@
 # データ適用
     execute if entity @s run function asset_manager:mob/set_data
 # リセット
+    tag @s remove MobInit
     data remove storage asset:mob ID
     data remove storage asset:mob Name
     data remove storage asset:mob Health
