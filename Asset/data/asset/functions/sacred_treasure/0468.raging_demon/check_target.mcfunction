@@ -8,9 +8,6 @@
 # @private
     #declare tag CanUsed
 
-# データ取得
-    function api:data_get/health
-
 # 周囲10M以内の敵全てのHPを取得
     execute as @e[tag=Enemy,tag=!Uninterferable,distance=..10] store result score @s Temporary run data get entity @s Health
 # 周囲10M以内のHPが20以下のエンティティ1体を絞り込み、ターゲットタグを付与
