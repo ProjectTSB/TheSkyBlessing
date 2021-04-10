@@ -3,6 +3,9 @@
 # 神器のメイン処理部
 #
 # @within function asset:sacred_treasure/0316.rapids_sword/2.check_condition
+#> private
+# @private
+    #declare score_holder $RandomDamage
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/mainhand
@@ -10,7 +13,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
     playsound minecraft:item.trident.riptide_3 player @a ~ ~ ~ 1 1.2
     playsound minecraft:entity.squid.squirt player @a ~ ~ ~ 1 1.3
     playsound minecraft:entity.player.swim ambient @a ~ ~ ~ 1 1.3
