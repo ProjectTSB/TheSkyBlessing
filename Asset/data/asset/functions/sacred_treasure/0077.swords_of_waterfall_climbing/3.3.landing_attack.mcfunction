@@ -8,7 +8,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # タグを消しちゃう
-    tag @s remove 1d.Landing
+    tag @s remove 25.Landing
 
 # 攻撃処理
     # 与えるダメージ = 25
