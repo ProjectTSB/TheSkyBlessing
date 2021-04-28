@@ -3,5 +3,5 @@
 
 #> Private
 # @within asset:sacred_treasure/0467.cosmo_blue_flash/*
-    #declare tag 7j.HitEntity
-    #declare tag 7j.HitFlag
+    #declare tag CZ.HitEntity
+    #declare tag CZ.HitFlag

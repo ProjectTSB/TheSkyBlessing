@@ -11,5 +11,5 @@
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
 
 # リセット
-    tag @e[tag=7j.HitEntity] remove 7j.HitEntity
-    tag @s remove 7j.HitFlag
+    tag @e[tag=CZ.HitEntity] remove CZ.HitEntity
+    tag @s remove CZ.HitFlag
