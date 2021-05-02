@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0184.incresable_cookie/_.give
+#> asset:sacred_treasure/0184.increasable_cookie/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
