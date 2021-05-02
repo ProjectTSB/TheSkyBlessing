@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0252.void_transaction/3.main
 
 # 初期タイマーの設定
-    scoreboard players set @s 3Y.Timer 2400
+    scoreboard players set @s 70.Timer 2400
 
 # 絶大な力
     effect give @s speed 120 3 true

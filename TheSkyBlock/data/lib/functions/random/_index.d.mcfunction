@@ -6,4 +6,4 @@
 #   lib:random/*
 #   core:load_once
     #declare score_holder $Random.Base
-    #declare score_holder $Random.Curray
+    #declare score_holder $Random.Carry
