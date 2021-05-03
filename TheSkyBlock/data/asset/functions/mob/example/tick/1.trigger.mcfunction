@@ -3,3 +3,5 @@
 # Mobが生きている間毎tick実行されるfunction
 #
 # @within tag/function asset:mob/tick
+
+execute if data storage asset:context {ID:2147483647} run function asset:mob/example/tick/2.tick
