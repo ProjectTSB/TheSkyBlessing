@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0383.i_scream_icecream/3.main
+#> asset:sacred_treasure/0383.i_scream_ice_cream/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0383.i_scream_icecream/2.check_condition
+# @within function asset:sacred_treasure/0383.i_scream_ice_cream/2.check_condition
 #> Private
 # @private
     #declare score_holder $Random
@@ -36,7 +36,7 @@
     playsound minecraft:block.glass.break player @a ~ ~ ~ 1 1
     particle minecraft:block blue_ice ~ ~3 ~ 4 4 4 10 1000
     particle minecraft:block ice ~ ~3 ~ 4 4 4 10 1000
-    schedule function asset:sacred_treasure/0383.i_scream_icecream/3.1.message 2s append
+    schedule function asset:sacred_treasure/0383.i_scream_ice_cream/3.1.message 2s append
     fill ~-4 ~-4 ~-4 ~4 ~4 ~4 minecraft:frosted_ice replace minecraft:water[level=0]
 
 # 移動速度低下付与

@@ -1,13 +1,13 @@
-#> asset:mob/example/summon/summon
+#> asset:mob/example/summon/2.summon
 #
 # Mobの召喚部 ここでデータを定義する
 #
-# @within function asset:mob/example/summon/trigger
+# @within function asset:mob/example/summon/1.trigger
 
 # 元となるMobを召喚する
     summon zombie ~ ~ ~ {Tags:["MobInit"]}
-# ID
-    data modify storage asset:mob ID set value -2147483647
+# ID<
+    data modify storage asset:mob ID set value 2147483647
 # Type
     data modify storage asset:mob Type set value "Enemy.Boss"
 # 干渉可能か否か

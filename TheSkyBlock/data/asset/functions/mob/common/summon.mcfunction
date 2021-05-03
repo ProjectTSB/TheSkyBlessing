@@ -4,6 +4,8 @@
 #
 # @input storage asset:mob
 #   ID : int
+#   Type : string
+#   Interferable : boolean
 #   Name? : TextComponentString
 #   Health? : float
 #   AttackDamage? : double (x <= 2048.0)
@@ -17,11 +19,13 @@
 #   Resist.Fire? : int (x <= 20)
 #   Resist.Water? : int (x <= 20)
 #   Resist.Thunder? : int (x <= 20)
-# @within function asset:mob/*/summon/summon
+# @within function asset:mob/*/summon/2.summon
 
 # validate
     execute unless entity @s run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"データを適用するEntityが存在しません\nasを利用して対象のEntityを実行者にしてください"}]
     execute unless data storage asset:mob ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument ID at asset:mob/common/summon"}}}]
+    execute unless data storage asset:mob Type run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Type","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Type at asset:mob/common/summon"}}}]
+    execute unless data storage asset:mob Interferable run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Interferable","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Interferable at asset:mob/common/summon"}}}]
     # execute unless data storage asset:mob Name run
     # execute unless data storage asset:mob Health run
     # execute unless data storage asset:mob AttackDamage run
@@ -40,6 +44,8 @@
 # リセット
     tag @s remove MobInit
     data remove storage asset:mob ID
+    data remove storage asset:mob Type
+    data remove storage asset:mob Interferable
     data remove storage asset:mob Name
     data remove storage asset:mob Health
     data remove storage asset:mob AttackDamage

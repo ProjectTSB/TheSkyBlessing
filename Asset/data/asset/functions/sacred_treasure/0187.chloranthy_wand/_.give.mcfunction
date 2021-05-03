@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0383.i_scream_icecream/_.give
+#> asset:sacred_treasure/0187.chloranthy_wand/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,13 +9,13 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 383
+    data modify storage asset:sacred_treasure ID set value 187
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"氷はもうこーりごり！","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"緑化の杖","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"クソみたいなダジャレを言う","color":"dark_aqua"}','{"text":"周囲に水属性の攻撃をし、移動速度低下を与える","color":"dark_aqua"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"周囲の土ブロックを草ブロックに置換する"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -24,20 +24,12 @@
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
-# 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value
-# 攻撃に関する情報 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:30,AttackType:[Magic],ElementType:[Water],BypassResist:0b}
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 30
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
-# 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
-# グローバルクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure SpecialCooldown set value 120
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Nyaptov,Wi-ki,Rumor]
+    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

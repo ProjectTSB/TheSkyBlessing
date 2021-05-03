@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0187.cloranthy_wand/3.main
+#> asset:sacred_treasure/0187.chloranthy_wand/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0187.cloranthy_wand/2.check_condition
+# @within function asset:sacred_treasure/0187.chloranthy_wand/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
