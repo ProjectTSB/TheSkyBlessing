@@ -22,6 +22,7 @@
 
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
     # そのまま適用するやつ
+        execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
         execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
     # Attributeの事前追加

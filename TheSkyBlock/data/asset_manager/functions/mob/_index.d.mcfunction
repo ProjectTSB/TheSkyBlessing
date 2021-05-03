@@ -16,6 +16,7 @@
 
 #> MobAsset側で定義されたMobに付けられるタグ
 # @within function
+#   core:tick
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
