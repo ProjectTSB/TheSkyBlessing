@@ -17,7 +17,7 @@
 #   Resist.Fire? : int (x <= 20)
 #   Resist.Water? : int (x <= 20)
 #   Resist.Thunder? : int (x <= 20)
-# @within function asset:mob/*/summon/summon
+# @within function asset:mob/*/summon/2.summon
 
 # validate
     execute unless entity @s run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"データを適用するEntityが存在しません\nasを利用して対象のEntityを実行者にしてください"}]
