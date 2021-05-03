@@ -1,6 +1,6 @@
 #> asset:mob/example/summon/2.summon
 #
-# Mobの召喚部 ここでデータを定義する
+# Mobの召喚時の処理
 #
 # @within function asset:mob/example/summon/1.trigger
 
