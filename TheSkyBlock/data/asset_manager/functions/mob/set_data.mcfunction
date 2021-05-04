@@ -25,6 +25,18 @@
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
         execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
+    # 武器防具の事前追加
+        data modify storage asset:mob HandItems set value []
+        data modify storage asset:mob HandItems append from storage asset:mob Weapon.Mainhand
+        data modify storage asset:mob HandItems append from storage asset:mob Weapon.Offhand
+        data modify storage asset:mob ArmorItems set value []
+        data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Feet
+        data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Legs
+        data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Chest
+        data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
+    # 武器防具
+        data modify entity @s HandItems set from storage asset:mob HandItems
+        data modify entity @s ArmorItems set from storage asset:mob ArmorItems
     # Attributeの事前追加
         execute if data storage asset:mob Health run data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
         execute if data storage asset:mob AttackDamage run data modify storage asset:mob Attributes append value {Name:"generic.attack_damage"}
@@ -50,3 +62,7 @@
         function oh_my_dat:please
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobData.DEF set from storage asset:mob Resist
+# リセット
+    data remove storage asset:mob HandItems
+    data remove storage asset:mob ArmorItems
+    data remove storage asset:mob Attributes

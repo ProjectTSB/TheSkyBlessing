@@ -7,7 +7,13 @@
 #   Type : string
 #   Interferable : boolean
 #   Name? : TextComponentString
-#   Health? : float
+#   Weapon.Mainhand? : Item
+#   Weapon.Offhand? : Item
+#   Armor.Head? : Item
+#   Armor.Chest? : Item
+#   Armor.Legs? : Item
+#   Armor.Feet? : Item
+#   Health? : double (x <= 2048.0)
 #   AttackDamage? : double (x <= 2048.0)
 #   Defense? : double (x <= 30.0)
 #   SpecialDefense? : double (x <= 20.0)
@@ -27,6 +33,12 @@
     execute unless data storage asset:mob Type run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Type","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Type at asset:mob/common/summon"}}}]
     execute unless data storage asset:mob Interferable run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Interferable","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Interferable at asset:mob/common/summon"}}}]
     # execute unless data storage asset:mob Name run
+    execute unless data storage asset:mob Weapon.Mainhand run data modify storage asset:mob Weapon.Mainhand set value {}
+    execute unless data storage asset:mob Weapon.Offhand run data modify storage asset:mob Weapon.Offhand set value {}
+    execute unless data storage asset:mob Armor.Head run data modify storage asset:mob Armor.Head set value {}
+    execute unless data storage asset:mob Armor.Chest run data modify storage asset:mob Armor.Chest set value {}
+    execute unless data storage asset:mob Armor.Legs run data modify storage asset:mob Armor.Legs set value {}
+    execute unless data storage asset:mob Armor.Feet run data modify storage asset:mob Armor.Feet set value {}
     # execute unless data storage asset:mob Health run
     # execute unless data storage asset:mob AttackDamage run
     # execute unless data storage asset:mob Defense run
