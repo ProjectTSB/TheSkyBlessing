@@ -20,3 +20,9 @@
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
+
+#> this
+# @within *
+#   asset_manager:mob/core
+#   asset:mob/**
+    #declare tag this
