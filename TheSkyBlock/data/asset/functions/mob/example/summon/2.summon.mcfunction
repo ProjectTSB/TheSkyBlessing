@@ -6,38 +6,52 @@
 
 # 元となるMobを召喚する
     summon zombie ~ ~ ~ {Tags:["MobInit"]}
-# ID<
+# ID (int)
     data modify storage asset:mob ID set value 2147483647
-# Type
+# Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy.Boss"
-# 干渉可能か否か
+# 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
-# 名前
+# 名前 (TextComponentString) (オプション)
     data modify storage asset:mob Name set value '{"text":"サンプルの敵"}'
-# 体力
+# 体力 (double) (オプション)
     data modify storage asset:mob Health set value 100.0
-# 攻撃力
+# 武器
+    # メインハンド (Compound(Item)) (オプション)
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:iron_sword",Count:1b}
+    # オフハンド (Compound(Item)) (オプション)
+        # data modify storage asset:mob Weapon.Offhand set value
+# 防具
+    # 頭 (Compound(Item)) (オプション)
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:iron_helmet",Count:1b}
+    # 胴 (Compound(Item)) (オプション)
+        data modify storage asset:mob Armor.Chest set value {id:"minecraft:iron_chestplate",Count:1b}
+    # 脚 (Compound(Item)) (オプション)
+        data modify storage asset:mob Armor.Legs set value {id:"minecraft:iron_leggings",Count:1b}
+    # 足 (Compound(Item)) (オプション)
+        data modify storage asset:mob Armor.Feet set value {id:"minecraft:iron_boots",Count:1b}
+# 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 2.0
-# 防御力 // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
+# 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 0.0
-# 特殊防御力 // 4pointにつきダメージを大きく減らす
+# 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 0.0
-# 移動速度
+# 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.23
-# 索敵範囲
+# 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
-# ノックバック耐性
+# ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 1.0
 # 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち
-    # 物理耐性
+    # 物理耐性 (int) (オプション)
         data modify storage asset:mob Resist.Physical set value 10
-    # 魔法耐性
+    # 魔法耐性 (int) (オプション)
         data modify storage asset:mob Resist.Magic set value 2
-    # 火耐性
+    # 火耐性 (int) (オプション)
         data modify storage asset:mob Resist.Fire set value 20
-    # 水耐性
+    # 水耐性 (int) (オプション)
         data modify storage asset:mob Resist.Water set value 5
-    # 雷耐性
+    # 雷耐性 (int) (オプション)
         data modify storage asset:mob Resist.Thunder set value 15
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し

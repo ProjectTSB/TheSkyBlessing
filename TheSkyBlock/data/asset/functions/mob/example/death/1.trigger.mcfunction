@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/death
 
-execute if data storage asset:context {ID:2147483647} run function asset:mob/example/death/2.death
+execute if data storage asset:context {id:2147483647} run function asset:mob/example/death/2.death
