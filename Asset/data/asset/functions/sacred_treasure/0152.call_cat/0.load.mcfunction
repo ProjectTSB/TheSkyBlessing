@@ -7,4 +7,4 @@
 #> 定義類はここに
 # @within function
 #   asset:sacred_treasure/0152.call_cat/*
-    scoreboard objectives add 2o.CatTime dummy
+    scoreboard objectives add 48.CatTime dummy

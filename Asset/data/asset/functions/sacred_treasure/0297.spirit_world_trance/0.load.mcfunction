@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0297.spirit_world_trance/**
-    scoreboard objectives add 4F.TickCount dummy
-    scoreboard objectives add 4F.GameMode dummy
-    scoreboard objectives add 4F.UserID dummy
+    scoreboard objectives add 89.TickCount dummy
+    scoreboard objectives add 89.GameMode dummy
+    scoreboard objectives add 89.UserID dummy

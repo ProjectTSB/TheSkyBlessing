@@ -6,7 +6,7 @@
 #   player_manager:keep_lost_item/give_all/minecart.summon
 #   player_manager:keep_lost_item/give_all/packing.minecart
 
-# Chests -> MinecarItems
+# Chests -> MinecartItems
     data modify storage player_manager:keep_lost_item MinecartItems append from storage player_manager:keep_lost_item Chests[-1]
     data remove storage player_manager:keep_lost_item Chests[-1]
 # Slotの設定
