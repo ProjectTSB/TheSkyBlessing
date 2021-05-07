@@ -1082,78 +1082,6 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/attack/1.trigger.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/attack/1.trigger",
-                        "#",
-                        "# Mobの攻撃時に実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/attack",
-                        "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/attack/2.attack"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/attack/2.attack.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/attack/2.attack",
-                        "#",
-                        "# Mobの攻撃時の処理",
-                        "#",
-                        "# @within function asset:mob/%namespace%/attack/1.trigger"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/death/1.trigger.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/death/1.trigger",
-                        "#",
-                        "# Mobの死亡時に実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/death",
-                        "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/death/2.death"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/death/2.death.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/death/2.death",
-                        "#",
-                        "# Mobの死亡時の処理",
-                        "#",
-                        "# @within function asset:mob/%namespace%/death/1.trigger"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/hurt/1.trigger.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/hurt/1.trigger",
-                        "#",
-                        "# Mobの被ダメージに実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/hurt",
-                        "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/hurt/2.hurt"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/hurt/2.hurt.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/hurt/2.hurt",
-                        "#",
-                        "# Mobの被ダメージ時の処理",
-                        "#",
-                        "# @within function asset:mob/%namespace%/hurt/1.trigger"
-                    ]
-                },
-                {
-                    "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/summon/1.trigger.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/summon/1.trigger",
@@ -1231,69 +1159,6 @@
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/tick/1.trigger.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/tick/1.trigger",
-                        "#",
-                        "# Mobが生きている間毎tick実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/tick",
-                        "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/tick/2.tick"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/tick/2.tick.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/tick/2.tick",
-                        "#",
-                        "# Mobのtick時の処理",
-                        "#",
-                        "# @within function asset:mob/%namespace%/tick/1.trigger"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/tags/functions/mob/attack.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/attack/1.trigger"
-                        ]
-                    },
-                    "append": {
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/attack/1.trigger"
-                    }
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/tags/functions/mob/death.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/death/1.trigger"
-                        ]
-                    },
-                    "append": {
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/death/1.trigger"
-                    }
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/tags/functions/mob/hurt.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/hurt/1.trigger"
-                        ]
-                    },
-                    "append": {
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/hurt/1.trigger"
-                    }
-                },
-                {
-                    "type": "file",
                     "rel": "data/asset/tags/functions/mob/summon.json",
                     "content": {
                         "values": [
@@ -1303,19 +1168,6 @@
                     "append": {
                         "key": "values",
                         "elem": "asset:mob/%namespace%/summon/1.trigger"
-                    }
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/tags/functions/mob/tick.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/tick/1.trigger"
-                        ]
-                    },
-                    "append": {
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/tick/1.trigger"
                     }
                 },
                 {
@@ -1364,6 +1216,206 @@
                     "question": "元となるentity",
                     "pattern": "(bat|bee|blaze|cat|cave_spider|chicken|cod|cow|creeper|dolphin|donkey|drowned|elder_guardian|ender_dragon|enderman|endermite|evoker|fox|ghast|giant|guardian|hoglin|horse|husk|illusioner|iron_golem|llama|magma_cube|mooshroom|mule|ocelot|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|player|polar_bear|pufferfish|rabbit|ravager|salmon|sheep|shulker|silverfish|skeleton|skeleton_horse|slime|snow_golem|spider|squid|stray|strider|trader_llama|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin)",
                     "patternErrorMessage": "Mobの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/トリガー: 攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/attack/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/attack/1.trigger",
+                        "#",
+                        "# Mobの攻撃時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/attack",
+                        "",
+                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/attack/2.attack"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/attack/2.attack.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/attack/2.attack",
+                        "#",
+                        "# Mobの攻撃時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/attack/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/attack.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/attack/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/attack/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/トリガー: 被ダメージ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/hurt/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/hurt/1.trigger",
+                        "#",
+                        "# Mobの被ダメージに実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/hurt",
+                        "",
+                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/hurt/2.hurt"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/hurt/2.hurt.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/hurt/2.hurt",
+                        "#",
+                        "# Mobの被ダメージ時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/hurt/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/hurt.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/hurt/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/hurt/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/トリガー: 死亡",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/death/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/death/1.trigger",
+                        "#",
+                        "# Mobの死亡時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/death",
+                        "",
+                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/death/2.death"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/death/2.death.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/death/2.death",
+                        "#",
+                        "# Mobの死亡時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/death/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/death.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/death/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/death/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/tick/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/tick/1.trigger",
+                        "#",
+                        "# Mobが生きている間毎tick実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/tick",
+                        "",
+                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/tick/2.tick"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/tick/2.tick.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/tick/2.tick",
+                        "#",
+                        "# Mobのtick時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/tick/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/tick.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/tick/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/tick/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
                 }
             ]
         }
