@@ -45,6 +45,7 @@
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 
 # アイテムのメタデータチェック
+    execute at @a as @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["MobDeathTrigger"]}}}}] run function asset_manager:mob/trigger_death
     execute at @a run kill @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["BanEntityConditionItem"]}}}},distance=..10]
     clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
 

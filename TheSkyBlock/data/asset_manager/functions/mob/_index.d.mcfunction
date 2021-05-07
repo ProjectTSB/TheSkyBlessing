@@ -24,5 +24,6 @@
 #> this
 # @within *
 #   asset_manager:mob/core
+#   asset_manager:mob/trigger_death
 #   asset:mob/**
     #declare tag this
