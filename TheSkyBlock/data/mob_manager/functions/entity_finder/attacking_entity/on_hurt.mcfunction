@@ -33,7 +33,6 @@
     # tag付け
         tag @s add this
     # フィルタ
-        execute if score $Count Temporary matches 16 run tellraw @a [{"text":"storage: "},{"storage":"mob_manager:attacking_entity","nbt":"BitData"}]
         execute if score $Count Temporary matches 16 as @e[type=#lib:living,type=!player,distance=..150] run function mob_manager:entity_finder/attacking_entity/filters/15
     # リセット
         execute if score $Count Temporary matches 16 run data remove storage mob_manager:attacking_entity BitData

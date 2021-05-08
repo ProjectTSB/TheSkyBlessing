@@ -15,13 +15,13 @@
 # ここから先は神器側の効果の処理を書く
     playsound entity.enderman.teleport master @s ~ ~ ~ 1 2
     particle portal ~ ~ ~ 0.5 1 0.5 0 300 force @a
-    execute positioned ^ ^ ^10 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^15 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^20 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^25 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^30 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^35 run tag @e[type=item,distance=..10] add Vacuum
-    execute positioned ^ ^ ^40 run tag @e[type=item,distance=..10] add Vacuum
+    execute positioned ^ ^ ^10 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^15 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^20 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^25 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^30 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^35 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
+    execute positioned ^ ^ ^40 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
     execute at @e[tag=Vacuum] run particle portal ~ ~ ~ 0.2 0.2 0.2 0 30 force @a
     tp @e[tag=Vacuum] @s
     execute store result score $Items Temporary if entity @e[type=item,tag=Vacuum]

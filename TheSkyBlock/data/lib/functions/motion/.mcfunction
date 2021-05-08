@@ -8,7 +8,7 @@
 #
 # @input
 #   as entity
-#   score $VectorMagnitude Armument
+#   score $VectorMagnitude Argument
 # @api
 
 # PlayerならErrorを出力

@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0078.self_destruct_order/**
-    scoreboard objectives add 1e.TickCount dummy
+    scoreboard objectives add 26.TickCount dummy

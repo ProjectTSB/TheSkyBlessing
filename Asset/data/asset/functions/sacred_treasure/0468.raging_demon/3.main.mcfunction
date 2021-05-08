@@ -13,8 +13,8 @@
     data modify storage lib: Argument.Damage set value 20f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.BypassResist set value true
-    execute as @e[tag=7k.Target] run function lib:damage/
+    execute as @e[tag=D0.Target] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
-    tag @e[tag=7k.Target] remove 7k.Target
+    tag @e[tag=D0.Target] remove D0.Target

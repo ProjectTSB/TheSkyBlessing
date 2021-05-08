@@ -6,7 +6,7 @@
 
 #> Private
 # @private
-    #declare tag 7e.Target
+    #declare tag CU.Target
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/auto
@@ -25,7 +25,7 @@
     tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."},{"score":{"name":"@s","objective":"Temporary"}}]
 
 # ダメージを与えるエンティティの絞り込み
-    tag @e[tag=Enemy,sort=nearest,limit=1] add 7e.Target
+    tag @e[tag=Enemy,tag=!Uninterferable,sort=nearest,limit=1] add CU.Target
 
 # ダメージ計算 出た目の5倍
     scoreboard players operation @s Temporary *= $5 Const
@@ -44,21 +44,21 @@
 
             # 火
                 execute if score @s Temporary matches 0 run data modify storage lib: Argument.ElementType set value "Fire"
-                execute if score @s Temporary matches 0 at @e[tag=7e.Target] run particle minecraft:flame ~ ~1 ~ 0 0 0 0.05 30 force
+                execute if score @s Temporary matches 0 at @e[tag=CU.Target] run particle minecraft:flame ~ ~1 ~ 0 0 0 0.05 30 force
 
             # 水
                 execute if score @s Temporary matches 1 run data modify storage lib: Argument.ElementType set value "Water"
-                execute if score @s Temporary matches 1 at @e[tag=7e.Target] run particle minecraft:bubble_pop ~ ~1 ~ 0.5 0.5 0.5 0.01 100 force
+                execute if score @s Temporary matches 1 at @e[tag=CU.Target] run particle minecraft:bubble_pop ~ ~1 ~ 0.5 0.5 0.5 0.01 100 force
 
             # 雷
                 execute if score @s Temporary matches 2 run data modify storage lib: Argument.ElementType set value "Thunder"
-                execute if score @s Temporary matches 2 at @e[tag=7e.Target] run particle minecraft:flash ~ ~1 ~ 0 0 0 1 1 force
+                execute if score @s Temporary matches 2 at @e[tag=CU.Target] run particle minecraft:flash ~ ~1 ~ 0 0 0 1 1 force
     # 補正functionを実行
         function lib:damage/modifier
     # 近くの敵1体を対象にダメージを与える
-        execute as @e[tag=7e.Target] run function lib:damage/
+        execute as @e[tag=CU.Target] run function lib:damage/
 
 # リセット
     scoreboard players reset @s Temporary
     data remove storage lib: Argument
-    tag @e[tag=7e.Target] remove 7e.Target
+    tag @e[tag=CU.Target] remove CU.Target

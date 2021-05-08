@@ -10,5 +10,5 @@
 # ここから先は神器側の効果の処理を書く
 
 # 水に入っているかいないか
-    execute as @e[type=#lib:living,type=!player,distance=..5] at @s if predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.1.insidewater
-    execute as @e[type=#lib:living,type=!player,distance=..5] at @s unless predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.2.outsidewater
+    execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] at @s if predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.1.insidewater
+    execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] at @s unless predicate lib:is_in_water/include_flowing run function asset:sacred_treasure/0075.whirlpool_wand/3.2.outsidewater

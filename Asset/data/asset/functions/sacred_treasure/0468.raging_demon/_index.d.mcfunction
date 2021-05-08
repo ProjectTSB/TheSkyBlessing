@@ -4,4 +4,4 @@
 #> tag
 # @within function
 #   asset:sacred_treasure/0468.raging_demon/**
-    #declare tag 7k.Target
+    #declare tag D0.Target

@@ -86,7 +86,7 @@ team modify NoCollision collisionRule never
             #declare tag Random
         summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Curray Global run data get entity @e[tag=Random,limit=1] UUID[3]
+        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
 
     #> 定数類用スコアボード **変更厳禁**
@@ -99,15 +99,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UserID dummy {"text":"汎用固有ユーザーID"}
 
     #> DEBUG用スコアボード
-    # @within function
-    #   core:load_once
-    #   lib:debug/objective_view
+    # @within function core:load_once
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
     #> AssetManager
-    # @within function
-    #   lib:debug/objective_view
-    #   asset_manager:**
+    # @within function asset_manager:**
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
         scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
@@ -123,7 +119,6 @@ team modify NoCollision collisionRule never
 
     #> イベントハンドラ用スコアボード
     # @within function
-    #   lib:debug/objective_view
     #   asset_manager:sacred_treasure/triggers/**
     #   core:load_once
     #   core:handler/*
@@ -144,9 +139,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add ScoreToHPFluc dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
-    # @within function
-    #   lib:debug/objective_view
-    #   player_manager:adjust_hunger/**
+    # @within function player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 

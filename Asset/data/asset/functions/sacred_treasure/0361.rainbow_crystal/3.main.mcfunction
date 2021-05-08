@@ -14,7 +14,7 @@
 # ここから先は神器側の効果の処理を書く
 
     # 対象選択
-        tag @e[type=#lib:living,tag=Enemy,distance=..30] add Target
+        tag @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..30] add Target
 
     # 演出
         execute at @e[type=#lib:living,tag=Target,distance=..30] run particle dust 255 255 255 0.5 ~ ~0.25 ~ 0.025 5 0.025 0 100 force @a
