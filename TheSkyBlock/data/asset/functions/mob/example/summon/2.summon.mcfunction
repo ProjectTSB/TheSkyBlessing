@@ -5,7 +5,7 @@
 # @within function asset:mob/example/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit"]}
+    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/example/death"}
 # ID (int)
     data modify storage asset:mob ID set value 2147483647
 # Type (string) Wikiを参照

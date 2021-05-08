@@ -1104,7 +1104,7 @@
                         "# @within function asset:mob/%namespace%/summon/1.trigger",
                         "",
                         "# 元となるMobを召喚する",
-                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"]}",
+                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"],DeathLootTable:\"asset:mob/%namespace%/death\"}",
                         "# ID (int)",
                         "    data modify storage asset:mob ID set value %id%",
                         "# Type (string) Wikiを参照",
