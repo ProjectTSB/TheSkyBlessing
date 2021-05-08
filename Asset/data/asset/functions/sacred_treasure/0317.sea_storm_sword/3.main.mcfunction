@@ -15,6 +15,7 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0317.sea_storm_sword/3.1.particle
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.1 50
     playsound minecraft:entity.dolphin.jump player @a ~ ~ ~ 1 2
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
@@ -22,10 +23,10 @@
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~2の追加ダメージ
-          scoreboard players operation $RandomDamage Temporary %= $3 Const
+        # 剰余算する。0~15の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $16 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 7
+            scoreboard players add $RandomDamage Temporary 45
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性
