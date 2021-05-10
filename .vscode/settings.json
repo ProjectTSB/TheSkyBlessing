@@ -1186,6 +1186,17 @@
                                             {
                                                 "function": "set_nbt",
                                                 "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:%id%}}"
+                                            },
+                                            {
+                                                "function": "copy_nbt",
+                                                "source": "killer_player",
+                                                "ops": [
+                                                    {
+                                                        "op": "replace",
+                                                        "source": "UUID",
+                                                        "target": "TSB.KillerUUID"
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
