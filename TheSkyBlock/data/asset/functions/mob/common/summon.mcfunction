@@ -52,7 +52,7 @@
     execute unless data storage asset:mob Resist.Water run data modify storage asset:mob Resist.Water set value 0
     execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 0
 # データ適用
-    execute if entity @s run function asset_manager:mob/set_data
+    execute if entity @s run function asset_manager:mob/summon/set_data
 # リセット
     tag @s remove MobInit
     data remove storage asset:mob ID

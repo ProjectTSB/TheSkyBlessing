@@ -1,8 +1,8 @@
-#> asset_manager:mob/set_tag
+#> asset_manager:mob/summon/set_tag
 #
 #
 #
-# @within function asset_manager:mob/set_data
+# @within function asset_manager:mob/summon/set_data
 
 # デフォルト
     tag @s add AssetMob

@@ -1,4 +1,4 @@
-#> asset_manager:mob/set_data
+#> asset_manager:mob/summon/set_data
 #
 #
 #
@@ -56,7 +56,7 @@
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
 # タグ周り
-    function asset_manager:mob/set_tag
+    function asset_manager:mob/summon/set_tag
 # 属性耐性
     # EntityStorage呼び出し
         function oh_my_dat:please

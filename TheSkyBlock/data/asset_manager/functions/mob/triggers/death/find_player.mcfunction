@@ -1,8 +1,8 @@
-#> asset_manager:mob/find_player
+#> asset_manager:mob/triggers/death/find_player
 #
 #
 #
-# @within function asset_manager:mob/trigger_death
+# @within function asset_manager:mob/triggers/death/
 
 #> Private
 # @private

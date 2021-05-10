@@ -1,4 +1,4 @@
-#> asset_manager:mob/core
+#> asset_manager:mob/triggers/tick_check
 #
 #
 #
@@ -17,6 +17,8 @@
     execute if entity @s[tag=AttackingEntity] run function #asset:mob/attack
     execute if entity @s[tag=AttackedEntity] run function #asset:mob/hurt
 # リセット
+    data remove storage asset:context id
+    data remove storage asset:context Health
     tag @a[tag=Victim] remove Victim
     tag @a[tag=Attacker] remove Attacker
     tag @s remove this
