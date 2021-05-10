@@ -4,4 +4,4 @@
 #
 # @within function asset:mob/example/hurt/1.trigger
 
-say 痛い
+tellraw @a [{"selector":"@a[tag=Attacker]"},{"text":"痛いよ..."}]

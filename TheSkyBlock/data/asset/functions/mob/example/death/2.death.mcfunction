@@ -4,4 +4,5 @@
 #
 # @within function asset:mob/example/death/1.trigger
 
-say 死
+tellraw @a [{"selector":"@a[tag=Killer]"},{"text":"ばいばい...."}]
+execute at @a[tag=Killer] run summon lightning_bolt
