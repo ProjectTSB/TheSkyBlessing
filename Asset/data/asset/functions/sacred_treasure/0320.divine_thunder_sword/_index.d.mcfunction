@@ -4,5 +4,5 @@
 #> tag
 # @within function
 #   asset:sacred_treasure/0320.divine_thunder_sword/**
-    #declare score_holder $Rotate
+    #declare score_holder $Line
     #declare score_holder $RandomDamage

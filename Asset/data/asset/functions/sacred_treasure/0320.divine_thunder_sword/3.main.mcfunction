@@ -10,13 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0320.divine_thunder_sword/3.1.particle
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.1 50
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block water ~ ~2.4 ~ 0.4 1.4 0.4 0 300
-    playsound minecraft:entity.dolphin.jump player @a ~ ~ ~ 1 2
-    playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
-    playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.5 1.2
-    playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s rotated ~ 0 run function asset:sacred_treasure/0320.divine_thunder_sword/3.1.particle
 
 # ダメージ
     #ダメージブレのための処理
@@ -40,4 +34,4 @@
 # リセット
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $Rotate Temporary
+    scoreboard players reset $Line Temporary
