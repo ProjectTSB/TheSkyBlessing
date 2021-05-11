@@ -34,4 +34,3 @@
 # リセット
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $Line Temporary
