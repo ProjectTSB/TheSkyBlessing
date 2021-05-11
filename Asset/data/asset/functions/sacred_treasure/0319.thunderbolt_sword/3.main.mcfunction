@@ -7,7 +7,6 @@
 # @private
     #declare score_holder $RandomDamage
 
-
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/mainhand
 
@@ -15,11 +14,10 @@
 
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
-    playsound minecraft:item.trident.riptide_3 player @a ~ ~ ~ 1 1.2
-    playsound minecraft:entity.squid.squirt player @a ~ ~ ~ 1 1.3
-    playsound minecraft:entity.player.swim ambient @a ~ ~ ~ 1 1.3
-    playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle dust 0.867 0.667 0.161 1 ~ ~2 ~ 0 2.5 0 0 100
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:explosion ~ ~ ~ 0.7 0.1 0.7 0 10
+    playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
+    playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1 1
 
 # ダメージ
     #ダメージブレのための処理
@@ -34,7 +32,7 @@
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
-        data modify storage lib: Argument.ElementType set value "Water"
+        data modify storage lib: Argument.ElementType set value "Thunder"
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
