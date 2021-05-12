@@ -20,8 +20,18 @@
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
-# 攻撃に関する情報 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:7,AttackType:[Magic],ElementType:[None,File,Water,Thunder],BypassResist:0b}
+# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [7]
+# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
+# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None,Fire,Water,Thunder]
+# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
+# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
+# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
