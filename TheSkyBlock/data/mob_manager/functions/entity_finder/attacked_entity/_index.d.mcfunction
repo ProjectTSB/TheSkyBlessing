@@ -10,3 +10,9 @@
 # @within function mob_manager:entity_finder/attacked_entity/**
     #declare storage mob_manager:attacked_entity
     #declare score_holder $AttackedEntityIndex
+
+#> lib:damage/からの攻撃検出用
+# @within function
+#   mob_manager:entity_finder/attacked_entity/on_attack
+#   lib:damage/core/trigger_on_attack
+    #declare tag LibraryDamage
