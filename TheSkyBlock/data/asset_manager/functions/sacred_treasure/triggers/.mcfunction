@@ -9,6 +9,9 @@
 # IDの代入
     function asset_manager:sacred_treasure/core/data/set_old
     function asset_manager:sacred_treasure/core/data/set_new
+# Attacker / Victimのセット
+    execute as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s AttackingEntity = @a[tag=this,limit=1] AttackingEntity run tag @s add Attacker
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Victim
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:sacred_treasure/triggers/tick
     execute if entity @s[tag=TriggerFlag.Attack] run function asset_manager:sacred_treasure/triggers/attack
@@ -21,6 +24,8 @@
     function asset_manager:sacred_treasure/core/data/stash_context
 # リセット
     function asset_manager:sacred_treasure/core/data/reset_context
+    tag @e[tag=Attacker] remove Attacker
+    tag @e[tag=Victim] remove Victim
     tag @s remove this
     tag @s remove TriggerFlag.Attack
     tag @s remove TriggerFlag.ClickCarrot

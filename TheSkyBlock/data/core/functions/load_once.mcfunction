@@ -169,10 +169,21 @@ team modify NoCollision collisionRule never
     # @public
         scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
 
-    #> MobManager用スコアボード
-    # @public
-        scoreboard objectives add AttackedEntity dummy
+    #> MobManager用スコアボード - 攻撃元
+    # @within function
+    #   core:tick
+    #   asset_manager:sacred_treasure/triggers/
+    #   asset_manager:mob/triggers/tick_check
+    #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
+
+    #> MobManager用スコアボード - 攻撃先
+    # @within function
+    #   core:tick
+    #   asset_manager:sacred_treasure/triggers/
+    #   asset_manager:mob/triggers/tick_check
+    #   mob_manager:entity_finder/attacked_entity/*
+        scoreboard objectives add AttackedEntity dummy
 
 
 #> Scheduleループの初期化(replace)

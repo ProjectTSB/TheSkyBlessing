@@ -13,7 +13,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
     playsound minecraft:item.trident.riptide_3 player @a ~ ~ ~ 1 1.2
     playsound minecraft:entity.squid.squirt player @a ~ ~ ~ 1 1.3
     playsound minecraft:entity.player.swim ambient @a ~ ~ ~ 1 1.3
@@ -36,7 +36,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
