@@ -26,8 +26,18 @@
     data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
-# 攻撃に関する情報 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:[7,9],AttackType:[Physical],ElementType:[Fire],BypassResist:0b}
+# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [7,9]
+# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical]
+# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire]
+# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
+# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
+# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 3
 # MP必要量 (int) (オプション)
