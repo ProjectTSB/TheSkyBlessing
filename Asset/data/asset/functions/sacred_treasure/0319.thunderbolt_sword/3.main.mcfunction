@@ -14,8 +14,8 @@
 
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle dust 0.867 0.667 0.161 1 ~ ~2 ~ 0 2.5 0 0 100
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:explosion ~ ~ ~ 0.7 0.1 0.7 0 10
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle dust 0.867 0.667 0.161 1 ~ ~2 ~ 0 2.5 0 0 100
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle minecraft:explosion ~ ~ ~ 0.7 0.1 0.7 0 10
     playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
     playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1 1
 
@@ -36,7 +36,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
