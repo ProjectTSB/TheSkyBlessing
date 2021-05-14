@@ -10,8 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s rotated ~ 0 run function asset:sacred_treasure/0320.divine_thunder_sword/3.1.particle
-
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] rotated ~ 0 run function asset:sacred_treasure/0320.divine_thunder_sword/3.1.particle
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
@@ -29,7 +28,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
