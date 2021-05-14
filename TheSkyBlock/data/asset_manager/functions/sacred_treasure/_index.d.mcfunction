@@ -1,12 +1,6 @@
 #> asset_manager:sacred_treasure/_index.d
 # @private
 
-#> Assetの環境をしまいこむstorage
-# @within function
-#   asset_manager:sacred_treasure/**
-#   asset:sacred_treasure/*/*
-    #declare storage asset:context
-
 #> storage
 # @within *
 #   asset_manager:sacred_treasure/**
@@ -51,8 +45,10 @@
 # @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
 
-#> this
+#> 神器側にさらすタグ
 # @within *
 #   asset_manager:sacred_treasure/triggers/
 #   asset:sacred_treasure/**
     #declare tag this
+    #declare tag Attacker
+    #declare tag Victim

@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
     # 矢が当たったエンティティに視線方向維持でテレポート
-    execute positioned as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tp @a[tag=this] ~ ~ ~
+    execute positioned as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run tp @a[tag=this] ~ ~ ~
 
     execute at @s run particle minecraft:portal ~ ~ ~ 0.3 0.3 0.3 1 200
 

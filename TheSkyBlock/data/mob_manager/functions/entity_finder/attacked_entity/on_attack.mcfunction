@@ -34,7 +34,9 @@
         tag @s add this
     # フィルタ
         execute if score $Count Temporary matches 16 as @e[type=#lib:living,nbt=!{HurtTime:0s},distance=..150] run function mob_manager:entity_finder/attacked_entity/filters/15
+        execute if score $Count Temporary matches 16 as @e[type=#lib:living,tag=LibraryDamage,distance=..150] run function mob_manager:entity_finder/attacked_entity/filters/15
     # リセット
+        execute if score $Count Temporary matches 16 run tag @s remove LibraryDamage
         execute if score $Count Temporary matches 16 run data remove storage mob_manager:attacked_entity BitData
         execute if score $Count Temporary matches 16 run scoreboard players reset $Count Temporary
 # リセット
