@@ -28,14 +28,24 @@
     # 神器処理
         execute as @a at @s run function asset_manager:sacred_treasure/triggers/
 
-# Mobデータ初期化部
-    execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
+# asset:contextの明示的な全削除
+    function asset_manager:common/reset_all_context
+
+# Mob処理部
+    # データ初期化部
+        execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
+    # MobAsset処理
+        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/triggers/tick_check
+
+# asset:contextの明示的な全削除
+    function asset_manager:common/reset_all_context
 
 # Tick最後の処理
     # ScoreToHealthWrapperの消化
         execute if entity @a[predicate=lib:has_health_modify_score,limit=1] as @a[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 
 # アイテムのメタデータチェック
+    execute at @a as @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["MobDeathTrigger"]}}}},distance=..30] run function asset_manager:mob/triggers/death/
     execute at @a run kill @e[type=item,nbt={Item:{tag:{TSB:{ItemMetaData:["BanEntityConditionItem"]}}}},distance=..10]
     clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
 

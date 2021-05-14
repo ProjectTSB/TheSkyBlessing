@@ -16,7 +16,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

@@ -14,9 +14,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0317.sea_storm_sword/3.1.particle
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.1 50
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:block water ~ ~2.4 ~ 0.4 1.4 0.4 0 300
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run function asset:sacred_treasure/0317.sea_storm_sword/3.1.particle
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.1 50
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block water ~ ~2.4 ~ 0.4 1.4 0.4 0 300
     playsound minecraft:entity.dolphin.jump player @a ~ ~ ~ 1 2
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
     playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.5 1.2
@@ -39,7 +39,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
