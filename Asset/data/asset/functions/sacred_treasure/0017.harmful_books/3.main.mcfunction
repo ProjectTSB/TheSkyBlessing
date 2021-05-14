@@ -9,6 +9,6 @@
 
 # ここから先は神器側の効果の処理を書く
 
-execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0017.harmful_books/3.1.add_effect
+execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run function asset:sacred_treasure/0017.harmful_books/3.1.add_effect
 
 playsound minecraft:entity.witch.ambient master @a[distance=..10] ~ ~ ~ 1 1.2

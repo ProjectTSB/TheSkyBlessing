@@ -12,7 +12,7 @@
 
 # ここから先は神器側の効果の処理を書く
     # 対象選定 + クリティカル判定(周囲が水か)
-        execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..100] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Hit
+        execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..100] run tag @s add Hit
         # //ここで相手の周囲の水の量を@sのTemporaryにstore
         execute at @e[type=#lib:living,type=!player,tag=AttackedEntity,tag=Hit,distance=..100,limit=1] store result score @s Temporary run clone ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 ~-0.5 ~-0.5 ~-0.5 filtered water force
 

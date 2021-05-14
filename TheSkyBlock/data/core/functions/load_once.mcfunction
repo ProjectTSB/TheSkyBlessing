@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 12
+data modify storage global Version set value 13
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -102,8 +102,8 @@ team modify NoCollision collisionRule never
     # @within function core:load_once
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
-    #> AssetManager
-    # @within function asset_manager:**
+    #> AssetManager: 神器
+    # @within function asset_manager:sacred_treasure/**
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
         scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
@@ -116,6 +116,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
         scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
+
+    #> AssetManager: Mob
+    # @within function
+    #   lib:debug/objective_view
+    #   asset_manager:mob/**
+        scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -163,10 +169,21 @@ team modify NoCollision collisionRule never
     # @public
         scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
 
-    #> MobManager用スコアボード
-    # @public
-        scoreboard objectives add AttackedEntity dummy
+    #> MobManager用スコアボード - 攻撃元
+    # @within function
+    #   core:tick
+    #   asset_manager:sacred_treasure/triggers/
+    #   asset_manager:mob/triggers/tick_check
+    #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
+
+    #> MobManager用スコアボード - 攻撃先
+    # @within function
+    #   core:tick
+    #   asset_manager:sacred_treasure/triggers/
+    #   asset_manager:mob/triggers/tick_check
+    #   mob_manager:entity_finder/attacked_entity/*
+        scoreboard objectives add AttackedEntity dummy
 
 
 #> Scheduleループの初期化(replace)

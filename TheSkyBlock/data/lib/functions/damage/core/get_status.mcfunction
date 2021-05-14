@@ -14,7 +14,7 @@
     execute if data storage lib: {Argument:{BypassResist:0b}} store result score $Resistance Temporary run data get entity @s ActiveEffects[{Id:11b}].Amplifier
     execute if data storage lib: {Argument:{BypassResist:0b}} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance Temporary 1
 # 属性の耐性値を取得
-    function lib:damage/core/get_epf
+    function lib:damage/core/get_type_defence
 # 防御貫通の場合
     execute if data storage lib: {Argument:{BypassResist:1b}} run scoreboard players set $defensePoints Temporary 0
     execute if data storage lib: {Argument:{BypassResist:1b}} run scoreboard players set $toughness Temporary 0

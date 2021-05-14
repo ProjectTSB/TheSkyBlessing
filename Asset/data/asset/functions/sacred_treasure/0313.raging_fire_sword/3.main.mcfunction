@@ -14,7 +14,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] at @s if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run particle minecraft:lava ~ ~0.5 ~ 0 0.5 0 0.1 40
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~0.5 ~ 0 0.5 0 0.1 40
     playsound minecraft:entity.blaze.shoot ambient @a ~ ~ ~ 1 0.6
 
 # ダメージ
@@ -34,7 +34,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument

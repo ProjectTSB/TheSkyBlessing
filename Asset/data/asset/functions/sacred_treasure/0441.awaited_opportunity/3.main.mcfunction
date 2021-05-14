@@ -16,4 +16,4 @@
     execute if predicate lib:random_pass_per/30 run function asset:sacred_treasure/0441.awaited_opportunity/3.1.message
 
 # 攻撃対象にダメージ
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s run function asset:sacred_treasure/0441.awaited_opportunity/3.3.attack
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] at @s run function asset:sacred_treasure/0441.awaited_opportunity/3.3.attack
