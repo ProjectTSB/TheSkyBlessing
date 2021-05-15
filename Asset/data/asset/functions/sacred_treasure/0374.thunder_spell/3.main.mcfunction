@@ -10,16 +10,20 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle dust 1 1 0 1 ^ ^ ^0.5 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^1 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^1.5 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^2 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^2.5 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^3 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^3.5 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^4 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^4.5 0.1 0 0.1 0 5
-    particle dust 1 1 0 1 ^ ^ ^5 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^1 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^1.5 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^2 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^2.5 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^3 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^3.5 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^4 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^4.5 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    execute positioned ^ ^ ^5 run particle dust 1 1 0 1 ~ ~1 ~ 0.1 0 0.1 0 5
+    playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 1 2
+    playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.4 2
 
+# 弾丸飛ばす
+    execute positioned ~ ~1 ~ positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] facing entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] feet run function asset:sacred_treasure/0374.thunder_spell/3.1.line
 
-    execute positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] facing entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] feet run function asset:sacred_treasure/0374.thunder_spell/3.1.line
+# タグ消し
+    tag @s remove 64.Check
