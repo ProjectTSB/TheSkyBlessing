@@ -8,4 +8,4 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    execute as @e[type=#lib:living,distance=..10,sort=random,limit=1] at @s run function asset:sacred_treasure/0334.abunai_kine/attack
+    execute as @e[type=#lib:living,tag=!Uninterferable,distance=..10,sort=random,limit=1] at @s run function asset:sacred_treasure/0334.abunai_kine/attack
