@@ -39,6 +39,10 @@
                     "/legs/",
                     "/feet/"
                 ]
+            },
+            {
+                "label":"id",
+                "parts": "/^id$/"
             }
         ]
     ],
@@ -1090,7 +1094,7 @@
                         "#",
                         "# @within tag/function asset:mob/summon",
                         "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/summon/2.summon"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/summon/2.summon"
                     ]
                 },
                 {
@@ -1243,7 +1247,7 @@
                         "#",
                         "# @within tag/function asset:mob/attack",
                         "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/attack/2.attack"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/attack/2.attack"
                     ]
                 },
                 {
@@ -1293,7 +1297,7 @@
                         "#",
                         "# @within tag/function asset:mob/hurt",
                         "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/hurt/2.hurt"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/hurt/2.hurt"
                     ]
                 },
                 {
@@ -1343,7 +1347,7 @@
                         "#",
                         "# @within tag/function asset:mob/death",
                         "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/death/2.death"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/death/2.death"
                     ]
                 },
                 {
@@ -1393,7 +1397,7 @@
                         "#",
                         "# @within tag/function asset:mob/tick",
                         "",
-                        "execute if data storage asset:context {ID:%id%} run function asset:mob/%namespace%/tick/2.tick"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/tick/2.tick"
                     ]
                 },
                 {
