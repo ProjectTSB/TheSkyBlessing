@@ -14,10 +14,10 @@
 # ここから先は神器側の効果の処理を書く
 
     # 対象選択
-        tag @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..30] add Target
+        tag @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..30] add Target
 
     # 演出
-        execute at @e[type=#lib:living,tag=Target,distance=..30] run particle dust 255 255 255 0.5 ~ ~0.25 ~ 0.025 5 0.025 0 100 force @a
+        execute at @e[type=#lib:living,type=!player,tag=Target,distance=..30] run particle dust 255 255 255 0.5 ~ ~0.25 ~ 0.025 5 0.025 0 100 force @a
         particle dust 255 255 255 1 ~ ~ ~ 15 0.25 15 0 1000 force @a
         stopsound @s * block.beacon.activate
         playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1 1
@@ -28,37 +28,37 @@
         # PhysicalDamage
             data merge storage lib: {Argument:{Damage:20.0f,AttackType:Physical,ElementType:None,DisableParticle:1b}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
         # MagicDamage
             data merge storage lib: {Argument:{Damage:20.0f,AttackType:Magic,ElementType:None}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
             data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
             function lib:damage/modifier
-            execute as @e[type=#lib:living,tag=Target,distance=..30] run function lib:damage/
+            execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
     # リセット
         data remove storage lib: Argument
-        tag @e[type=#lib:living,tag=Target,distance=..30] remove Target
+        tag @e[type=#lib:living,type=!player,tag=Target,distance=..30] remove Target

@@ -15,7 +15,7 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=iron_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!26.GolemBomb,distance=..5] run function lib:damage/
+    execute at @e[type=iron_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
@@ -29,7 +29,7 @@
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 対象指定
-    execute at @e[type=snow_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!26.GolemBomb,distance=..5] run function lib:damage/
+    execute at @e[type=snow_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

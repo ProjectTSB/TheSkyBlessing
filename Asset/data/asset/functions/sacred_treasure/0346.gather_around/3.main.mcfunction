@@ -21,4 +21,4 @@
         execute unless entity @e[type=#lib:living,tag=!Uninterferable,distance=1..15,limit=1] run tellraw @s {"text":"全員集ご...！ 誰もいないみたいだ..."}
 
 # 集合
-    tp @e[type=#lib:living,distance=1..15] @s
+    tp @e[type=#lib:living,tag=!Uninterferable,distance=1..15] @s
