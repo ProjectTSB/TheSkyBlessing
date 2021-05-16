@@ -12,7 +12,7 @@
 
 # 演出
     playsound minecraft:entity.drowned.death_water player @a ~ ~ ~ 1 0.8
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:squid_ink ~ ~1 ~ 0.4 0.4 0.4 0.03 30
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle minecraft:squid_ink ~ ~1 ~ 0.4 0.4 0.4 0.03 30
 
 # ダメージ設定
     # 与えるダメージ = 90
