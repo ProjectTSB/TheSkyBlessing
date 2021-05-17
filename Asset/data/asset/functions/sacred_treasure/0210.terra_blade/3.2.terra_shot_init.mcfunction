@@ -15,4 +15,4 @@
     scoreboard players set @s 210.Range 100
 
 # IDコピー
-    scoreboard players operation @s 210.ID = @p UserID
+    scoreboard players operation @s 210.ID = @a[tag=this,limit=1] UserID
