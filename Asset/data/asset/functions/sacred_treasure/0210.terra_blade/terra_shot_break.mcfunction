@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0210.terra_blade/3.3.terra_shot_main
+# @within function asset:sacred_treasure/0210.terra_blade/*
 
 scoreboard players reset @s 210.Range
 particle minecraft:happy_villager ^ ^ ^-1 0 0 0 1 1 force

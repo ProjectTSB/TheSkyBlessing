@@ -13,3 +13,6 @@
 
 # スコアセット
     scoreboard players set @s 210.Range 100
+
+# IDコピー
+    scoreboard players operation @s 210.ID = @p UserID
