@@ -8,3 +8,5 @@
 # @within asset:sacred_treasure/0210.terra_blade/**
     scoreboard objectives add 210.Tick dummy
     scoreboard objectives add 210.ID dummy
+    scoreboard objectives add 210.Range dummy
+    scoreboard objectives add 210.Recursion dummy

@@ -4,7 +4,12 @@
 #
 # @within function asset:sacred_treasure/0210.terra_blade/3.1.terra_shot_tick
 
+
+# 向き調整とタグ削除
     execute facing entity @e[type=area_effect_cloud,tag=ChuzTerraSpread,distance=..100] feet run tp @s ~ ~ ~ ~ ~
     kill @e[type=area_effect_cloud,tag=ChuzTerraSpread,distance=..100]
     tag @s remove ChuzTerraShotInit
     tag @s add ChuzTerraShot
+
+# スコアセット
+    scoreboard players set @s 210.Range 300
