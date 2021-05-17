@@ -12,4 +12,4 @@
     tag @s add ChuzTerraShot
 
 # スコアセット
-    scoreboard players set @s 210.Range 300
+    scoreboard players set @s 210.Range 100

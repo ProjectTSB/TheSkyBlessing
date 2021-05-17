@@ -13,10 +13,9 @@
     particle minecraft:dust 0.75 1 0.75 0.75 ~ ~ ~ 0 0 0 0 1
 
 # モブに接触
-    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,dx=0] at @s run function api:data_get/hurt_time
-    execute if data storage api: {HurtTime:0s} positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,dx=0] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:crit ~ ~ ~ 0 0 0 0.5 10
-    execute if data storage api: {HurtTime:0s} positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,dx=0] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 0 1
-    execute if data storage api: {HurtTime:0s} positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,dx=0] at @s run function asset:sacred_treasure/0210.terra_blade/3.5.terra_shot_hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,dx=0] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:crit ~ ~ ~ 0 0 0 0.5 10
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,dx=0] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:sweep_attack ~ ~ ~ 0 0 0 0 1
+    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,dx=0] at @s run function asset:sacred_treasure/0210.terra_blade/3.5.terra_shot_hit
 
 # 再帰カウントが0なら弾速からセット
     execute unless entity @s[scores={210.Recursion=1..,210.Range=1..}] run scoreboard players set @s 210.Recursion 20
