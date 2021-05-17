@@ -52,3 +52,7 @@
     #declare tag this
     #declare tag Attacker
     #declare tag Victim
+
+#> セレクターテンプレート
+# @within * asset:sacred_treasure/**
+    #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
