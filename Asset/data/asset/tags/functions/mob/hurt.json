@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/hurt/1.trigger"
+        "asset:mob/example/hurt/1.trigger",
+        "asset:mob/0021.demon_eye/hurt/1.trigger"
     ]
 }
