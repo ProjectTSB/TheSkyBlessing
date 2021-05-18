@@ -20,7 +20,7 @@
     execute anchored eyes run particle minecraft:sweep_attack ^-0.35 ^ ^1 0.1 0.1 0.1 0 1
 
 # テラショット(召喚)
-    execute anchored eyes run summon armor_stand ^-0.35 ^ ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile"]}
+    execute anchored eyes run summon armor_stand ^-0.35 ^ ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile","Uninterferable"]}
     execute anchored eyes run summon area_effect_cloud ^ ^ ^30 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["ChuzTerraSpread","Uninterferable"]}
 
 # ループスタート
