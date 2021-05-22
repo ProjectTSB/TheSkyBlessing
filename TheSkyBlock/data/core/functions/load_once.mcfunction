@@ -165,10 +165,6 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
     scoreboard objectives setdisplay belowName Health
 
-    #> PlayerNBT用スコアボード
-    # @public
-        scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
-
     #> MobManager用スコアボード - 攻撃元
     # @within function
     #   core:tick
