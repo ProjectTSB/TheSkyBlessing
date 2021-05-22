@@ -12,7 +12,10 @@
     execute as @a[tag=25.EffectClear] run function api:data_get/on_ground
 
 # 落下量を検知
-    tag @a[tag=25.EffectClear,scores={FallDistance=150..}] add 25.Landing
+    execute as @a[tag=25.EffectClear] run function api:data_get/fall_distance
+    execute store result score $FallDistance Temporary run data get storage api: FallDistance
+    execute as @a[tag=25.EffectClear] if score $FallDistance Temporary matches 2.. run tag @s add 25.Landing
+    scoreboard players reset $FallDistance
 
 # 落下を与える
     execute if data storage api: {OnGround:0b} run effect give @a[tag=25.EffectClear] levitation 1 130 true
@@ -29,3 +32,6 @@
 
 # 着地していない場合、次tickも実行
     execute if entity @a[tag=25.EffectClear,limit=1] run schedule function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.1.effectclear 1t replace
+
+
+
