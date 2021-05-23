@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0246_magical_cane/_.give
+#> asset:sacred_treasure/0246.magical_cane/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

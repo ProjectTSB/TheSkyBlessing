@@ -1,16 +1,16 @@
-#> asset:sacred_treasure/0246_magical_cane/3.main
+#> asset:sacred_treasure/0246.magical_cane/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0246_magical_cane/2.check_condition
+# @within function asset:sacred_treasure/0246.magical_cane/2.check_condition
 
 # ここから先は神器側の効果の処理を書く
 
 # 使用時のMPの数値によって演出がかわるよ
     execute store result score $MagicalCane Temporary run function lib:mp/get
-    execute if score $MagicalCane Temporary matches 0..30 run function asset:sacred_treasure/0246_magical_cane/3.1.weak_hit
-    execute if score $MagicalCane Temporary matches 31..120 run function asset:sacred_treasure/0246_magical_cane/3.2.strong_hit
-    execute if score $MagicalCane Temporary matches 120.. run function asset:sacred_treasure/0246_magical_cane/3.3.hyper_hit
+    execute if score $MagicalCane Temporary matches 0..30 run function asset:sacred_treasure/0246.magical_cane/3.1.weak_hit
+    execute if score $MagicalCane Temporary matches 31..120 run function asset:sacred_treasure/0246.magical_cane/3.2.strong_hit
+    execute if score $MagicalCane Temporary matches 120.. run function asset:sacred_treasure/0246.magical_cane/3.3.hyper_hit
 
 # $MagicalCaneに現在のスコアx3の数値を持たせる
     scoreboard players operation $MagicalCane Temporary *= $3 Const
