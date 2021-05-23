@@ -18,7 +18,7 @@
     particle dust 1 1 0 1 ~ ~ ~ 0.5 0.5 0.5 0 5
 
 # 着弾
-    execute if entity @s[tag=Landing,limit=1] run function asset:sacred_treasure/0376.ray_sorcery/3.2.damage
+    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0376.ray_sorcery/3.2.damage
 
 # 再起
     execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:sacred_treasure/0376.ray_sorcery/3.1.shoot
