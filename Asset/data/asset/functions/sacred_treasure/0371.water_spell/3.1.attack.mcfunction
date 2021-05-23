@@ -8,6 +8,7 @@
 
 # 演出
     particle minecraft:rain ~ ~1 ~ 0.2 0.2 0.2 0 200
+    playsound minecraft:entity.squid.death player @a ~ ~ ~ 1 2
     playsound minecraft:entity.dolphin.jump player @a ~ ~ ~ 1 2
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
