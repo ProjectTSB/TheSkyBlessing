@@ -5,7 +5,7 @@
 # @within function asset:mob/0021.demon_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0021.demon_eye"}
+    summon zombie ~ ~ ~ {Silent:1b,DeathLootTable:"asset:mob/death/0021.demon_eye",Tags:["MobInit","Enemy"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["21.Rotater"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 21
 # Type (string) Wikiを参照
@@ -13,46 +13,27 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value 1b
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set value '{"text":"デーモンアイ","color":"white","italic":false}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        #data modify storage asset:mob Weapon.Mainhand set value
+        data modify storage asset:mob Weapon.Mainhand set value {}
     # オフハンド (Compound(Item)) (オプション)
-        #data modify storage asset:mob Weapon.Offhand set value
+        data modify storage asset:mob Weapon.Offhand set value {}
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1343399411,-1120972915,-2082756986,-1574051050],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmE1YmM2ODdhMTc1ZDA0MWVlODBjZjcxZmI4NjZhMDNmMDk1ZGUwYWI1NDRiNDMwYjFmZGQ5NTQ1NDU3NzljMCJ9fX0="}]}}}}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value
+        data modify storage asset:mob Armor.Chest set value {}
     # 脚 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Legs set value
+        data modify storage asset:mob Armor.Legs set value {}
     # 足 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Feet set value
+        data modify storage asset:mob Armor.Feet set value {}
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value
+    data modify storage asset:mob Health set value 30d
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value
-# 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value
-# 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value
+    data modify storage asset:mob AttackDamage set value 0d
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value
-# 索敵範囲 (double) (オプション)
-    data modify storage asset:mob FollowRange set value
-# ノックバック耐性 (double) (オプション)
-    data modify storage asset:mob KnockBackResist set value
-# 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち
-    # 物理耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Physical set value
-    # 魔法耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Magic set value
-    # 火耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Fire set value
-    # 水耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Water set value
-    # 雷耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Thunder set value
+    data modify storage asset:mob Speed set value 0.0d
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
