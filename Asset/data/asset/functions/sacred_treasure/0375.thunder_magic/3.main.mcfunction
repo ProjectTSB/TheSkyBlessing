@@ -11,13 +11,13 @@
 
 
 # 敵が居ない場合
-    execute positioned ^ ^ ^5 unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] run function asset:sacred_treasure/0375.thunder_magic/3.1.rotate
-    execute positioned ^ ^ ^5 unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] run function asset:sacred_treasure/0375.thunder_magic/3.2.particle
+    execute positioned ^ ^ ^7 unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7] run function asset:sacred_treasure/0375.thunder_magic/3.1.rotate
+    execute positioned ^ ^ ^7 unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7] run function asset:sacred_treasure/0375.thunder_magic/3.2.particle
 
 
 # 前方に敵が居た場合
-    execute positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] run function asset:sacred_treasure/0375.thunder_magic/3.1.rotate
-    execute positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] run function asset:sacred_treasure/0375.thunder_magic/3.2.particle
+    execute positioned ^ ^ ^7 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7] at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7,sort=nearest,limit=1] run function asset:sacred_treasure/0375.thunder_magic/3.1.rotate
+    execute positioned ^ ^ ^7 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7] at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..7,sort=nearest,limit=1] run function asset:sacred_treasure/0375.thunder_magic/3.2.particle
 
 
     scoreboard players reset $Rotate Temporary
