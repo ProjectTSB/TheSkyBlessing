@@ -27,6 +27,3 @@
 
 # 着地していない場合、次tickも実行
     execute if entity @a[tag=25.EffectClear,limit=1] run schedule function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.1.effectclear 1t replace
-
-
-
