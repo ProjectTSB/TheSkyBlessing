@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0246_magical_cane/3.3.hyper_hit
+#> asset:sacred_treasure/0246.magical_cane/3.3.hyper_hit
 #
 # MP120以上
 #
-# @within function asset:sacred_treasure/0246_magical_cane/3.main
+# @within function asset:sacred_treasure/0246.magical_cane/3.main
 
     playsound minecraft:item.totem.use player @a ~ ~ ~ 2 2
     playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 2 2
