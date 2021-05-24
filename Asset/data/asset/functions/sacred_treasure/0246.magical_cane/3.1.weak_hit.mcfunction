@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0246_magical_cane/3.1.weak_hit
+#> asset:sacred_treasure/0246.magical_cane/3.1.weak_hit
 #
 # MPほぼ消費せずに使った場合
 #
-# @within function asset:sacred_treasure/0246_magical_cane/3.main
+# @within function asset:sacred_treasure/0246.magical_cane/3.main
 
     stopsound @s player minecraft:entity.player.attack.strong
     stopsound @s player minecraft:entity.player.attack.knockback
