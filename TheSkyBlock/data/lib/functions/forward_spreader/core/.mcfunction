@@ -3,7 +3,7 @@
 #
 #
 # @within function lib:forward_spreader/*
-tellraw @a [{"text":"-------------------------"}]
+
 # 実行座標に汎用EntityをTP
     tp 0-0-0-0-0 ~ ~ ~ ~ ~
 # 必要な実行座標のデータを取得
