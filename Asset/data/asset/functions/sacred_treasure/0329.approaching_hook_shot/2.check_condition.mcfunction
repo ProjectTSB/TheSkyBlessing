@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0329_approaching_hook_shot/2.check_condition
+#> asset:sacred_treasure/0329.approaching_hook_shot/2.check_condition
 #
 # 神器の発動条件をチェックします
 #
-# @within function asset:sacred_treasure/0329_approaching_hook_shot/1.trigger
+# @within function asset:sacred_treasure/0329.approaching_hook_shot/1.trigger
 
 #>
 # @private
@@ -17,4 +17,4 @@
     scoreboard players reset $isBanTPArea Temporary
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0329_approaching_hook_shot/3.main
+    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0329.approaching_hook_shot/3.main

@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0246_magical_cane/_.give
+#> asset:sacred_treasure/0534.all_night_hellmet/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,29 +9,29 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 246
+    data modify storage asset:sacred_treasure ID set value 534
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
+    data modify storage asset:sacred_treasure Item set value "minecraft:leather_helmet"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"マジカルステッキ","color":"green"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"終夜","color":"dark_purple","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"MPを全て消費し、強力な攻撃をぶちかます。","color":"white"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"夜を崇拝する者達の正装だ。","color":"dark_purple"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    data modify storage asset:sacred_treasure RemainingCount set value 1
+    # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "mainhand"
+    data modify storage asset:sacred_treasure Slot set value "head"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value
+    data modify storage asset:sacred_treasure Condition set value '{"text":"夜の間、終夜をすべて着ている状態"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value "{消費MP×3}"
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [15]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None]
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
@@ -39,17 +39,17 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 99999
+    data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
-    data modify storage asset:sacred_treasure MPRequire set value 0
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Wi-ki","Urban","Rumor"]
+    data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1325912063,-1346287147,-1646160005,-2144481414],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;108815412,1284391254,-1801712452,1121514494]}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:1050959},HideFlags:64,Enchantments:[{id:"minecraft:protection",lvl:2s},{id:"minecraft:projectile_protection",lvl:3s},{id:"minecraft:unbreaking",lvl:2s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:1,Operation:0,UUID:[I;1,1,534,6],Slot:"head"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
