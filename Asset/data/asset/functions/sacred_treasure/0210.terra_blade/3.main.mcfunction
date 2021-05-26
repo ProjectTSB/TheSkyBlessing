@@ -23,5 +23,8 @@
     execute anchored eyes run summon armor_stand ^-0.35 ^ ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile","Uninterferable"]}
     execute anchored eyes run summon area_effect_cloud ^ ^ ^30 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["ChuzTerraSpread","Uninterferable"]}
 
+# テラショットにInitコマンド実行
+    execute as @e[type=armor_stand,tag=ChuzTerraShotInit] at @s run function asset:sacred_treasure/0210.terra_blade/3.2.terra_shot_init
+
 # ループスタート
     function asset:sacred_treasure/0210.terra_blade/3.1.terra_shot_tick

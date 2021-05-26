@@ -2,7 +2,7 @@
 #
 # テラショット発射直後の動作。向きを発射者に揃えて、発射者の目線の高さに移動
 #
-# @within function asset:sacred_treasure/0210.terra_blade/3.1.terra_shot_tick
+# @within function asset:sacred_treasure/0210.terra_blade/3.main
 
 
 # 向き調整とタグ削除
