@@ -9,7 +9,7 @@
 # 精度
     data modify storage lib: Argument.Distance set value 21.0f
     data modify storage lib: Argument.Spread set value 0.5f
-    execute as @p at @s anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
+    execute as @p[tag=210.This] at @s anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
     execute facing entity 0-0-0-0-0 feet run tp @s ~ ~ ~ ~ ~
     tag @s remove ChuzTerraShotInit
     tag @s add ChuzTerraShot
