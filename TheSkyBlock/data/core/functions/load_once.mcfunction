@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 13
+data modify storage global Version set value 14
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -128,7 +128,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:sacred_treasure/triggers/**
     #   core:load_once
     #   core:handler/*
-    #   core:tick
+    #   core:tick/*
         scoreboard objectives add FirstJoinEvent custom:play_one_minute {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
@@ -165,26 +165,20 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
     scoreboard objectives setdisplay belowName Health
 
-    #> PlayerNBT用スコアボード
-    # @public
-        scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
-
     #> MobManager用スコアボード - 攻撃元
     # @within function
-    #   core:tick
-    #   asset_manager:sacred_treasure/triggers/
-    #   asset_manager:mob/triggers/tick_check
+    #   core:tick/
+    #   asset_manager:*/triggers/
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
     #> MobManager用スコアボード - 攻撃先
     # @within function
-    #   core:tick
-    #   asset_manager:sacred_treasure/triggers/
-    #   asset_manager:mob/triggers/tick_check
+    #   core:tick/
+    #   asset_manager:*/triggers/
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
 
 
 #> Scheduleループの初期化(replace)
-    schedule function core:4_interval_tick 4t
+    schedule function core:tick/4_interval 4t

@@ -1235,6 +1235,39 @@
             ]
         },
         {
+            "label": "MOB/トリガー: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/0.load.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/0.load",
+                        "#",
+                        "# MOBに利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:mob/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:mob/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/load.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/0.load"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/0.load"
+                    }
+                }
+            ]
+        },
+        {
             "label": "MOB/トリガー: 攻撃",
             "generates": [
                 {

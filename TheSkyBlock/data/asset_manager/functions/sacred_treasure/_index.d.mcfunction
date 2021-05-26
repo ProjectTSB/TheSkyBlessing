@@ -22,7 +22,7 @@
 # @within function
 #   asset_manager:sacred_treasure/core/check/check_special_cooldown
 #   asset_manager:sacred_treasure/core/use/
-#   core:tick
+#   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 
 #> Trigger検知用
@@ -52,3 +52,7 @@
     #declare tag this
     #declare tag Attacker
     #declare tag Victim
+
+#> セレクターテンプレート
+# @within * asset:sacred_treasure/**
+    #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
