@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0375.thunder_magic/3.2.particle
+#> asset:sacred_treasure/0375.thunder_magic/3.2.damage
 #
 # 神器のメイン処理部
 #
