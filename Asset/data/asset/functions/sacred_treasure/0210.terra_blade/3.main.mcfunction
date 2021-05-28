@@ -20,12 +20,12 @@
     execute anchored eyes run particle minecraft:sweep_attack ^-0.35 ^ ^1 0.1 0.1 0.1 0 1
 
 # テラショット(召喚)
-    tag @s add 210.This
+    tag @s add this
     execute anchored eyes run summon armor_stand ^-0.35 ^-0.25 ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile","Uninterferable"]}
 
 # テラショットにInitコマンド実行
     execute as @e[type=armor_stand,tag=ChuzTerraShotInit] at @s run function asset:sacred_treasure/0210.terra_blade/3.2.terra_shot_init
-    tag @s remove 210.This
+    tag @s remove this
 
 # ループスタート
     function asset:sacred_treasure/0210.terra_blade/3.1.terra_shot_tick

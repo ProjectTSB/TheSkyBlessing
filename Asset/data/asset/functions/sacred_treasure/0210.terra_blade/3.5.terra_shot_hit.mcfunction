@@ -10,9 +10,9 @@
     data modify storage lib: Argument.Damage set value 7.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
-    tag @s add 210.This
-    execute as @a if score @s UserID = @e[type=armor_stand,tag=210.This,distance=..1,limit=1] 210.ID run function lib:damage/modifier
-    tag @s remove 210.This
+    tag @s add this
+    execute as @a if score @s UserID = @e[type=armor_stand,tag=this,distance=..1,limit=1] 210.ID run function lib:damage/modifier
+    tag @s remove this
     execute as @e[type=#lib:living,type=!player,sort=nearest,limit=1] run function lib:damage/
 
 # パーティクル
