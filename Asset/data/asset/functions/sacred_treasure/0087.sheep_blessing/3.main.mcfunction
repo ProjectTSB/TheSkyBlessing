@@ -15,4 +15,5 @@
 # カウントダウンスコアを付与
     scoreboard players set @s 2f.TickCount 0
 
-function asset:sacred_treasure/0087.sheep_blessing/count_down
+# カウントダウン開始
+    function asset:sacred_treasure/0087.sheep_blessing/count_down
