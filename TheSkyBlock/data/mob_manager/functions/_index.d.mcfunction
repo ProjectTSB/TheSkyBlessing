@@ -13,7 +13,7 @@
 
 #> InitTag
 # @within function
-#   core:tick
+#   core:tick/
 #   mob_manager:init
     #declare tag AlreadyInitMob
 
