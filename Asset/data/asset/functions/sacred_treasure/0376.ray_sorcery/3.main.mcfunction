@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 弾を進めるための再起開始
-    execute anchored eyes run function asset:sacred_treasure/0376.ray_sorcery/3.1.shoot
+    execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0376.ray_sorcery/3.1.shoot
 
 # 演出
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
