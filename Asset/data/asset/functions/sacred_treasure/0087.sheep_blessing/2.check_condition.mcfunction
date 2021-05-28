@@ -17,5 +17,8 @@
     execute if score @s Temporary matches 0 run tag @s remove CanUsed
     execute if score @s Temporary matches 0 run function lib:message/sacred_treasure/dont_have_require_items
 
+# リセット
+    scoreboard players reset @s Temporary
+
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0087.sheep_blessing/3.main
