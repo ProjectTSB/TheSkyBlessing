@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function core:tick
+# @within function core:tick/check_item_meta/entity
 
 # 殺したユーザーの特定
     data modify storage asset:mob UUID set value [I;0,0,0,0]

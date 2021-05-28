@@ -2,7 +2,7 @@
 #
 # 各トリガーに処理受け渡し
 #
-# @within function core:tick
+# @within function core:tick/player
 
 # thisタグ
     tag @s add this
