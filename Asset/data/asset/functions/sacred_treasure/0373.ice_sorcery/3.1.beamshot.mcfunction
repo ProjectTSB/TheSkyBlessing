@@ -6,10 +6,6 @@
 #    asset:sacred_treasure/0373.ice_sorcery/3.main
 #    asset:sacred_treasure/0373.ice_sorcery/3.1.beamshot
 
-# 1前方拡散設定
-    data modify storage lib: Argument.Distance set value 10.0
-    data modify storage lib: Argument.Spread set value 2.5
-
 # またファンクション分岐
     execute as @a[scores={61.BeamTime=1..}] at @s run function asset:sacred_treasure/0373.ice_sorcery/3.2.beamshot2
 

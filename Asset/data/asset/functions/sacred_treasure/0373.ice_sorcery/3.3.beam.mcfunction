@@ -15,10 +15,9 @@
     execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2,limit=1] add 61.HitTarget
 
 # 演出
-    particle minecraft:block blue_ice ~ ~ ~ 0 0 0 1 1 force
-    particle minecraft:dolphin ~ ~ ~ 0 0 0 1 1 force
+    particle minecraft:block blue_ice ~ ~ ~ 0 0 0 2 1 force
+    particle minecraft:dolphin ~ ~ ~ 0 0 0 2 1 force
     execute if predicate lib:random_pass_per/10 run particle minecraft:firework ~ ~ ~ 0 0 0 0 1
-    playsound minecraft:block.glass.break ambient @a ~ ~ ~ 1 1.3
 
 # 着弾
     execute if entity @s[tag=61.Hit] run function asset:sacred_treasure/0373.ice_sorcery/3.4.hit
