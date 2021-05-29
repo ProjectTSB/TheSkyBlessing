@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0373.ice_sorcery/3.2.beam
+#> asset:sacred_treasure/0373.ice_sorcery/3.3.beam
 #
 # ビーム部
 #
@@ -21,7 +21,7 @@
     playsound minecraft:block.glass.break ambient @a ~ ~ ~ 1 1.3
 
 # 着弾
-    execute if entity @s[tag=61.Hit] run function asset:sacred_treasure/0373.ice_sorcery/3.3.hit
+    execute if entity @s[tag=61.Hit] run function asset:sacred_treasure/0373.ice_sorcery/3.4.hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!61.Hit,distance=..30] run function asset:sacred_treasure/0373.ice_sorcery/3.2.beam
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!61.Hit,distance=..30] run function asset:sacred_treasure/0373.ice_sorcery/3.3.beam

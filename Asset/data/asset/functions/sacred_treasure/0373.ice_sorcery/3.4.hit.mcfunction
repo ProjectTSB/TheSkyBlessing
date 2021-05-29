@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0373.ice_sorcery/3.3.hit
+#> asset:sacred_treasure/0373.ice_sorcery/3.4.hit
 #
 # ビーム部
 #
