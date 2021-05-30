@@ -2,7 +2,7 @@
 #
 # Mobにフラグをセットします
 #
-# @within function core:tick
+# @within function core:tick/
 
 #> Private
 # @private

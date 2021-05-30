@@ -2,7 +2,7 @@
 #
 # すべてのcontextを削除します
 #
-# @within function core:tick
+# @within function core:tick/
 
 data remove storage asset:context New
 data remove storage asset:context Old
