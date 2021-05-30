@@ -1096,6 +1096,35 @@
             ]
         },
         {
+            "label": "神器/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/rejoin",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/rejoin_process"
+                    }
+                }
+            ]
+        },
+        {
             "label": "MOB/テンプレート",
             "generates": [
                 {
