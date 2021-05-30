@@ -15,11 +15,9 @@
     # 演出
         execute at @e[type=#lib:living,tag=Victim] run particle end_rod ~ ~0.5 ~ 0.3 0.5 0.3 0 50 force @a
     # 効果
-        # 攻撃Player判別tag
-            tag @s add Attacked
         # ノックバック
             scoreboard players set $VectorMagnitude Lib 100
-            execute as @e[type=#lib:living,tag=Victim] at @s facing entity @a[tag=Attacked] feet rotated ~180 -15 run function lib:motion/
+            execute as @e[type=#lib:living,tag=Victim] at @s facing entity @a[tag=this] feet rotated ~180 -15 run function lib:motion/
         # Damage
             data modify storage lib: Argument set value {Damage:10,AttackType:Physical,ElementType:None}
             function lib:damage/modifier
@@ -27,4 +25,3 @@
 
     # リセット -$VectorMagnitudeは自動でリセットされる
         data remove storage lib: Argument
-        tag @s remove Attacked
