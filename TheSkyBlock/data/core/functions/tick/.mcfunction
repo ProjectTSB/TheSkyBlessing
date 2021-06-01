@@ -21,7 +21,7 @@
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init
     # MobAsset処理
-        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/triggers/
+        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
