@@ -60,6 +60,10 @@
         "asset:sacred_treasure/0471.stone_cutter_chainsaw/1.trigger",
         "asset:sacred_treasure/0522.humanism/1.trigger",
         "asset:sacred_treasure/0501.infinity/1.trigger",
-        "asset:sacred_treasure/0374.thunder_spell/1.trigger"
+        "asset:sacred_treasure/0087.sheep_blessing/1.trigger",
+        "asset:sacred_treasure/0374.thunder_spell/1.trigger",
+        "asset:sacred_treasure/0376.ray_sorcery/1.trigger",
+        "asset:sacred_treasure/0375.thunder_magic/1.trigger",
+        "asset:sacred_treasure/0210.terra_blade/1.trigger"
     ]
 }
