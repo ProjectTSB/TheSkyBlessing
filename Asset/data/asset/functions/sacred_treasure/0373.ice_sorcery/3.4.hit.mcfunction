@@ -18,7 +18,7 @@
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,tag=61.HitTarget,tag=!Uninterferable,distance=..50,limit=1] at @s run function lib:damage/
+        execute as @e[type=#lib:living,type=!player,tag=61.HitTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
