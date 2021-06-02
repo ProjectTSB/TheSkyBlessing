@@ -411,7 +411,7 @@
                         "# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。",
                         "",
                         "# 神器のID (int) スプレッドシートの値を入れる",
-                        "    data modify storage asset:sacred_treasure ID set value ",
+                        "    data modify storage asset:sacred_treasure ID set value %ItemID%",
                         "# 神器のベースアイテム",
                         "    data modify storage asset:sacred_treasure Item set value ",
                         "# 神器の名前 (TextComponentString)",
@@ -423,7 +423,7 @@
                         "# 使用回数 (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure RemainingCount set value ",
                         "# 神器を発動できるスロット (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Slot set value ",
+                        "    data modify storage asset:sacred_treasure Slot set value \"%slot%\"",
                         "# 神器のトリガー (string) Wikiを参照",
                         "    data modify storage asset:sacred_treasure Trigger set value ",
                         "# 神器の発動条件 (TextComponentString) (オプション)",
@@ -467,8 +467,8 @@
                         "#",
                         "# @within tag/function asset:sacred_treasure/**",
                         "",
-                        "# storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:context id{<slot>:<id>} run function asset:sacred_treasure/%namespace%/2.check_condition"
+                        "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/2.check_condition"
                     ]
                 },
                 {
@@ -481,8 +481,8 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/1.trigger",
                         "",
-                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね",
-                        "    function asset:sacred_treasure/lib/check_condition/",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:sacred_treasure/lib/check_condition/%slot%",
                         "# 他にアイテム等確認する場合はここに書く",
                         "    ",
                         "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
@@ -499,12 +499,26 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/2.check_condition",
                         "",
-                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね",
-                        "    function asset:sacred_treasure/lib/use/",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:sacred_treasure/lib/use/%slot%",
                         "",
                         "# ここから先は神器側の効果の処理を書く",
                         "    say test: %namespace%"
                     ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "ID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "Slot",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
                 }
             ]
         },
@@ -1077,6 +1091,35 @@
                     "append": {
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/rejoin",
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/rejoin_process"
                     }
                 }
             ]
