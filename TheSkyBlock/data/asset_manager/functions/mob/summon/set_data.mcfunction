@@ -1,6 +1,6 @@
 #> asset_manager:mob/summon/set_data
 #
-#
+# 召喚されたAssetMobのデータを初期化します
 #
 # @input storage asset:mob
 #   ID : int

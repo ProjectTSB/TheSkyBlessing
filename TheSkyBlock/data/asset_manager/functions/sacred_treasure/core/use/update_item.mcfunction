@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/use/update_item
 #
-#
+# アイテムを更新します
 #
 # @within function asset_manager:sacred_treasure/core/use/
 

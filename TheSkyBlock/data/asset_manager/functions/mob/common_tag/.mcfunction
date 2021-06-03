@@ -1,6 +1,6 @@
 #> asset_manager:mob/common_tag/
 #
-#
+# 汎用タグの処理
 #
 # @within function asset_manager:mob/tick
 

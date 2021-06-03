@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/randomizer
 #
-#
+# ランダム座標生成処理
 #
 # @within function
 #   lib:forward_spreader/core/

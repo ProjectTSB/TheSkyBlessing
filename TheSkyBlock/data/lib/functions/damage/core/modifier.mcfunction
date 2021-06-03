@@ -1,6 +1,6 @@
 #> lib:damage/core/modifier
 #
-#
+# damageLibの中でも攻撃元に関係する処理部
 #
 # @within function lib:damage/modifier
 
