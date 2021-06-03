@@ -20,11 +20,11 @@
 #   Speed? : double (x <= 1024.0)
 #   FollowRange? : double (x <= 2048.0)
 #   KnockBackResist? : double (x <= 1.0)
-#   Resist.Physical? : int (x <= 20)
-#   Resist.Magic? : int (x <= 20)
-#   Resist.Fire? : int (x <= 20)
-#   Resist.Water? : int (x <= 20)
-#   Resist.Thunder? : int (x <= 20)
+#   Resist.Physical? : float
+#   Resist.Magic? : float
+#   Resist.Fire? : float
+#   Resist.Water? : float
+#   Resist.Thunder? : float
 # @within function asset:mob/*/summon/2.summon
 
 # validate
@@ -46,11 +46,11 @@
     # execute unless data storage asset:mob Speed run
     # execute unless data storage asset:mob FollowRange run
     # execute unless data storage asset:mob KnockBackResist run
-    execute unless data storage asset:mob Resist.Physical run data modify storage asset:mob Resist.Physical set value 0
-    execute unless data storage asset:mob Resist.Magic run data modify storage asset:mob Resist.Magic set value 0
-    execute unless data storage asset:mob Resist.Fire run data modify storage asset:mob Resist.Fire set value 0
-    execute unless data storage asset:mob Resist.Water run data modify storage asset:mob Resist.Water set value 0
-    execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 0
+    execute unless data storage asset:mob Resist.Physical run data modify storage asset:mob Resist.Physical set value 1f
+    execute unless data storage asset:mob Resist.Magic run data modify storage asset:mob Resist.Magic set value 1f
+    execute unless data storage asset:mob Resist.Fire run data modify storage asset:mob Resist.Fire set value 1f
+    execute unless data storage asset:mob Resist.Water run data modify storage asset:mob Resist.Water set value 1f
+    execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 1f
 # データ適用
     execute if entity @s run function asset_manager:mob/summon/set_data
 # リセット
