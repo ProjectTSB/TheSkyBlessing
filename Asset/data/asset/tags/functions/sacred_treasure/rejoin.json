@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:sacred_treasure/0252.void_transaction/rejoin_process",
-        "asset:sacred_treasure/0077.swords_of_waterfall_climbing/rejoin_process"
+        "asset:sacred_treasure/0077.swords_of_waterfall_climbing/rejoin_process",
+        "asset:sacred_treasure/0078.self_destruct_order/rejoin_process"
     ]
 }
