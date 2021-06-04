@@ -5,6 +5,7 @@
 # @within
 #   function asset:sacred_treasure/0252.void_transaction/3.main
 #   function asset:sacred_treasure/0252.void_transaction/3.2.void
+#   function asset:sacred_treasure/0252.void_transaction/rejoin_process
 
 # スコア減算
     scoreboard players remove @a[scores={70.Timer=1..2400}] 70.Timer 1
