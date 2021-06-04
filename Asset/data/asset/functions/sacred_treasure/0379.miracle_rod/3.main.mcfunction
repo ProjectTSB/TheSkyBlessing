@@ -14,8 +14,8 @@
 
 # 魔法陣展開
     summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Tags:["67.Magic","67.MagicSet","Uninterferable"]}
-    execute as @e[type=area_effect_cloud,tag=67.Magic,sort=nearest,limit=1] run tp @s @p
-    scoreboard players set @e[type=area_effect_cloud,tag=67.MagicSet,sort=nearest,limit=1] 67.CoolTime 20
+    execute as @e[type=area_effect_cloud,tag=67.MagicSet,sort=nearest,limit=1] run tp @s @p
+    scoreboard players set @e[type=area_effect_cloud,tag=67.MagicSet,sort=nearest,limit=1] 67.CoolTime 10
     scoreboard players operation @e[type=area_effect_cloud,tag=67.MagicSet,sort=nearest,limit=1] 67.UserID = @s UserID
     tag @e[type=area_effect_cloud,tag=67.MagicSet,sort=nearest,limit=1] remove 67.MagicSet
 

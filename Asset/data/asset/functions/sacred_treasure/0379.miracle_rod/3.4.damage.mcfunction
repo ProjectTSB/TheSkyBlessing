@@ -8,24 +8,22 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle dust 1 1 0 1 ~ ~3 ~ 0.7 3 0.7 0 300
-    particle dust 1 1 0 1 ~ ~5 ~ 0.1 5 0.1 0 300
-    particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
-    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
+    particle end_rod ~ ~ ~ 0 0 0 0.4 200
+    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 10
 
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
+    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
+    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
+    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
 
 # ダメージ設定
-    # 与えるダメージ = 50
-        data modify storage lib: Argument.Damage set value 50.0f
+    # 与えるダメージ = 54
+        data modify storage lib: Argument.Damage set value 54.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
-        execute as @a if score @s UserID = @e[tag=67.Magic,scores={67.CoolTime=0},sort=nearest,limit=1] 67.UserID run function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=67.Magic,scores={67.CoolTime=0},sort=nearest,limit=1] 67.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
