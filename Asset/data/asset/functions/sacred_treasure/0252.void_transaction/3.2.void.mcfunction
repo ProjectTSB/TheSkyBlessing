@@ -22,5 +22,8 @@
     execute as @a if entity @s[scores={70.Timer=0}] at @s run tp @s ~ -200 ~
     execute as @a if entity @s[scores={70.Timer=0}] at @s run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~
 
+# スコアが0になった時にリセットする
+    scoreboard players reset @a[scores={70.Timer=0}] 70.Timer
+
 # 次tickにschedule予約
     execute if entity @a[scores={70.Timer=1..2400},limit=1] run schedule function asset:sacred_treasure/0252.void_transaction/3.2.void 1t replace
