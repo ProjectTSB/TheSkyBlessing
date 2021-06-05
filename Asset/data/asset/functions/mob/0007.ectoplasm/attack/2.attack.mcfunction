@@ -11,11 +11,11 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
         function lib:damage/modifier
-        execute as @a[tag=Victim,scores={MP=0}] run function lib:damage/
+        execute as @a[tag=Victim,scores={MP=..15}] run function lib:damage/
         data remove storage lib: Argument
     # 演出
-        execute as @a[tag=Victim,scores={MP=0}] at @s run playsound entity.puffer_fish.hurt player @a ~ ~ ~ 1 0
-        execute as @a[tag=Victim,scores={MP=0}] at @s run particle soul ~ ~1 ~ 0 0 0 0.1 10
+        execute as @a[tag=Victim,scores={MP=..15}] at @s run playsound entity.puffer_fish.hurt player @a ~ ~ ~ 1 0
+        execute as @a[tag=Victim,scores={MP=..15}] at @s run particle soul ~ ~1 ~ 0 0 0 0.1 10
 
 # マナを吸い取る
     scoreboard players set $Fluctuation Lib -15
