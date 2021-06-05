@@ -3,6 +3,15 @@
 # Mobの攻撃時の処理
 #
 # @within function asset:mob/0007.ectoplasm/attack/1.trigger
+#> private
+# @private
+    #declare score_holder $EctoplasmMPCheck
+    #declare tag EmptyMP
+
+# プレイヤーのマナを検知する
+    scoreboard players set $CheckMP Lib 15
+    execute as @p[tag=Victim] store success score $EctoplasmMPCheck Temporary run function lib:mp/check
+    execute if score $EctoplasmMPCheck Temporary matches 1 run tag @p[tag=Victim] add EmptyMP
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定
@@ -11,12 +20,15 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
         function lib:damage/modifier
-        execute as @a[tag=Victim,scores={MP=..15}] run function lib:damage/
+        execute as @p[tag=EmptyMP] run function lib:damage/
         data remove storage lib: Argument
     # 演出
-        execute as @a[tag=Victim,scores={MP=..15}] at @s run playsound entity.puffer_fish.hurt player @a ~ ~ ~ 1 0
-        execute as @a[tag=Victim,scores={MP=..15}] at @s run particle soul ~ ~1 ~ 0 0 0 0.1 10
+        execute as @p[tag=EmptyMP] at @s run playsound entity.puffer_fish.hurt player @a ~ ~ ~ 1 0
+        execute as @p[tag=EmptyMP] at @s run particle soul ~ ~1 ~ 0 0 0 0.1 10
 
 # マナを吸い取る
     scoreboard players set $Fluctuation Lib -15
-    execute as @a[tag=Victim] run function lib:mp/fluctuation
+    execute as @p[tag=Victim] run function lib:mp/fluctuation
+
+# タグリセット
+    tag @p[tag=EmptyMP] remove EmptyMP
