@@ -20,8 +20,8 @@
         data modify storage lib: Argument.Damage set value 54.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
-    # 雷属性
-        data modify storage lib: Argument.ElementType set value "Thunder"
+    # 無属性
+        data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=67.Magic,scores={67.CoolTime=0},sort=nearest,limit=1] 67.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
