@@ -1,6 +1,6 @@
 #> lib:bit_array_to_integer/core/recursive
 #
-#
+# 再帰的に1ビットずつ加算していく
 #
 # @within function lib:bit_array_to_integer/core/*
 

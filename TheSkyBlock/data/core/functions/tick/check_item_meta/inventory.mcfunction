@@ -1,6 +1,6 @@
 #> core:tick/check_item_meta/inventory
 #
-#
+# インベントリ内のアイテムのItemMetaDataをチェックします
 #
 # @within function core:tick/post-tick-proc_player
 

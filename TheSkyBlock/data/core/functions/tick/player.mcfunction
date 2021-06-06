@@ -1,6 +1,6 @@
 #> core:tick/player
 #
-#
+# プレイヤーに対するtick処理
 #
 # @within function core:tick/
 

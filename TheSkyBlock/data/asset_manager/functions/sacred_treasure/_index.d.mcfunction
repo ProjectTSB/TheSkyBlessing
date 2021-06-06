@@ -29,6 +29,7 @@
 # @within function
 #   asset_manager:sacred_treasure/triggers/**
 #   core:handler/**
+    #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem

@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/yaw
 #
-#
+# 実行方向のyawからsin/cosを取得します
 #
 # @within function lib:forward_spreader/core/
 

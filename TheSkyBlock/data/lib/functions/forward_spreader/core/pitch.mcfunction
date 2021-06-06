@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/pitch
 #
-#
+# 実行方向のpitchからsin/cosを取得します
 #
 # @within function lib:forward_spreader/core/
 

@@ -9,5 +9,3 @@ data remove storage asset:context Old
 data remove storage asset:context id
 data remove storage asset:context Items
 data remove storage asset:context Inventory
-
-data remove storage asset:context Health

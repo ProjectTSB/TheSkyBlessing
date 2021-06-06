@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/use/remove_remain/break_item
 #
-#
+# アイテムを破壊します
 #
 # @within function asset_manager:sacred_treasure/core/use/remove_remain/
 
