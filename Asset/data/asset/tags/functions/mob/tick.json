@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/tick/1.trigger"
+        "asset:mob/example/tick/1.trigger",
+        "asset:mob/0019.horus_priest/tick/1.trigger"
     ]
 }
