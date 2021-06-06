@@ -1155,7 +1155,7 @@
                         "# ID (int)",
                         "    data modify storage asset:mob ID set value %id%",
                         "# Type (string) Wikiを参照",
-                        "    data modify storage asset:mob Type set value \"%entity%\"",
+                        "    data modify storage asset:mob Type set value \"\"",
                         "# 干渉可能か否か (boolean)",
                         "    data modify storage asset:mob Interferable set value ",
                         "# 名前 (TextComponentString) (オプション)",
