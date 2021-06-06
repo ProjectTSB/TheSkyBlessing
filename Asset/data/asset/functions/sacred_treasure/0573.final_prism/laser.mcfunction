@@ -6,19 +6,14 @@
 
 # 即着レーザー
 # パーティクル 虹色だぞ
-    particle minecraft:dust 10 10 10 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 1 run particle minecraft:dust 1 0.369 0.369 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 2 run particle minecraft:dust 1 0.631 0.263 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 3 run particle minecraft:dust 1 1 0.459 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 4 run particle minecraft:dust 0.49 1 0.49 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 5 run particle minecraft:dust 0.502 0.749 1 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 6 run particle minecraft:dust 0.514 0.514 1 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 7 run particle minecraft:dust 1 0.478 1 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 8 run particle minecraft:dust 0.514 0.514 1 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 9 run particle minecraft:dust 0.502 0.749 1 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 10 run particle minecraft:dust 0.49 1 0.49 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 11 run particle minecraft:dust 1 1 0.459 0.5 ~ ~ ~ 0 0 0 0 1
-    execute if score @s[distance=2..] Sh.Beam_Rainbow matches 12 run particle minecraft:dust 1 0.631 0.263 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 0 run particle minecraft:dust 1 0.369 0.369 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 1 run particle minecraft:dust 1 0.631 0.263 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 2 run particle minecraft:dust 1 1 0.459 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 3 run particle minecraft:dust 0.49 1 0.49 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 4 run particle minecraft:dust 0.502 0.749 1 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 5 run particle minecraft:dust 0.514 0.514 1 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 6 run particle minecraft:dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1
+    execute unless entity @s[distance=..2] if score $Random Temporary matches 7 run particle minecraft:dust 0.75 0.75 0.75 1 0.5 ~ ~ ~ 0 0 0 1
 
 # 限界距離、または地形ヒット これまた虹色
 # execute unless entity @s[distance=..15] run particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
