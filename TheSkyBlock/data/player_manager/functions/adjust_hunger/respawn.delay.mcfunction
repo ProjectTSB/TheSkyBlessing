@@ -1,6 +1,6 @@
 #> player_manager:adjust_hunger/respawn.delay
 #
-#
+# 満腹度回復を与え、監視処理をセットします
 #
 # @within core:handler/respawn.delay
 

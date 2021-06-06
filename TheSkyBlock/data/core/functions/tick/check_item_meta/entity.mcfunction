@@ -1,6 +1,6 @@
 #> core:tick/check_item_meta/entity
 #
-#
+# ItemEntityのItemMetaDataをチェックします
 #
 # @within function core:tick/
 

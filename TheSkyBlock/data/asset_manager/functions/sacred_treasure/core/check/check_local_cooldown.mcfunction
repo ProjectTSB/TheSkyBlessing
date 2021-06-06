@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/check/check_local_cooldown
 #
-#
+# ローカルクールダウンをチェックします
 #
 # @within function asset_manager:sacred_treasure/core/check/
 

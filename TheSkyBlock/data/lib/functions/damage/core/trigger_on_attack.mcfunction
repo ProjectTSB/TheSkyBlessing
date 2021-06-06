@@ -1,6 +1,6 @@
 #> lib:damage/core/trigger_on_attack
 #
-#
+# attackトリガー用の進捗を手動でトリガーします
 #
 # @within function lib:damage/core/non-player-process
 

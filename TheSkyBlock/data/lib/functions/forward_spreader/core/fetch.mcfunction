@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/fetch
 #
-#
+# 汎用entityのPosに計算済みの拡散座標を代入します
 #
 # @within function lib:forward_spreader/core/
 

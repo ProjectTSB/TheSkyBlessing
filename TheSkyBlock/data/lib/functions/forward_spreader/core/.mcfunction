@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/
 #
-#
+# 拡散処理の呼び出し部
 #
 # @within function lib:forward_spreader/*
 

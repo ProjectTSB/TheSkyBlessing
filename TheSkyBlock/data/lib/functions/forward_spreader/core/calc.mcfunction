@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/calc
 #
-#
+# 回転行列で実行方向へ座標を補正します
 #
 # @within function lib:forward_spreader/core/
 
