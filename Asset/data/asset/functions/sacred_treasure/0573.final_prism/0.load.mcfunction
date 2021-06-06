@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0573.final_prism/**
     scoreboard objectives add 573.Laser dummy
+    scoreboard objectives add 573.Spread dummy
