@@ -4,8 +4,15 @@
 #
 # @within function asset:sacred_treasure/0609.lunar_flare/**
 
-# 演出
 
+# 演出
+    particle explosion ~ ~ ~ 0 0 0 1 0
+    particle minecraft:block sea_lantern ~ ~ ~ 0.2 0.2 0.2 1 30
+    particle composter ~ ~ ~ 0.2 0.2 0.2 0.4 10
+    playsound entity.generic.explode master @a ~ ~ ~ 1 1
+
+# タグ付与
+    tag @s add this
 
 # ダメージ設定
     # 与えるダメージ = 10
@@ -15,10 +22,9 @@
     # 水属性
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
-        function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
+        execute as @a if score @s UserID = @e[type=armor_stand,tag=this,distance=..1,limit=1] 9P.UserID run function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=armor_stand,tag=this,distance=..1,limit=1] 9P.UserID run say @s
+        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2,sort=nearest,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
-
-# 着弾タグを消す
-    tag @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] remove LandingTarget
+    kill @s

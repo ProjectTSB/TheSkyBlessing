@@ -10,3 +10,5 @@
     #declare tag LandingTarget
     #declare tag Watcher
     #declare tag 9P.Laser
+    #declare tag 9P.LaserPos
+    #declare tag 9P.LaserPosFirst

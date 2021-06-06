@@ -8,3 +8,4 @@
 # @within function asset:sacred_treasure/0609.lunar_flare/**
     scoreboard objectives add 9P.BeamTime dummy
     scoreboard objectives add 9P.BulletTime dummy
+    scoreboard objectives add 9P.UserID dummy
