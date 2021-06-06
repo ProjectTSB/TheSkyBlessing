@@ -4,9 +4,9 @@
 #
 # @within function asset_manager:sacred_treasure/triggers/sneak/
 
-execute store result storage asset:context SneakTime.Mainhand int 1 run scoreboard players get @s Sneak.Mainhand
-execute store result storage asset:context SneakTime.Offhand int 1 run scoreboard players get @s Sneak.Offhand
-execute store result storage asset:context SneakTime.Head int 1 run scoreboard players get @s Sneak.Head
-execute store result storage asset:context SneakTime.Chest int 1 run scoreboard players get @s Sneak.Chest
-execute store result storage asset:context SneakTime.Legs int 1 run scoreboard players get @s Sneak.Legs
-execute store result storage asset:context SneakTime.Feet int 1 run scoreboard players get @s Sneak.Feet
+execute store result storage asset:context SneakTime.mainhand int 1 run scoreboard players get @s Sneak.Mainhand
+execute store result storage asset:context SneakTime.offhand int 1 run scoreboard players get @s Sneak.Offhand
+execute store result storage asset:context SneakTime.head int 1 run scoreboard players get @s Sneak.Head
+execute store result storage asset:context SneakTime.chest int 1 run scoreboard players get @s Sneak.Chest
+execute store result storage asset:context SneakTime.legs int 1 run scoreboard players get @s Sneak.Legs
+execute store result storage asset:context SneakTime.feet int 1 run scoreboard players get @s Sneak.Feet
