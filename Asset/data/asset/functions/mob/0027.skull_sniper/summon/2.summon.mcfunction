@@ -9,7 +9,7 @@
 # ID (int)
     data modify storage asset:mob ID set value 27
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value "skeleton"
+    data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
@@ -42,17 +42,17 @@
     data modify storage asset:mob FollowRange set value 100
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 0
-# 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち
+# 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Physical set value 5
+        data modify storage asset:mob Resist.Physical set value 0.95
     # 魔法耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Magic set value 5
+        data modify storage asset:mob Resist.Magic set value 0.95
     # 火耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Fire set value 5
+        data modify storage asset:mob Resist.Fire set value 0.95
     # 水耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Water set value 5
+        data modify storage asset:mob Resist.Water set value 0.95
     # 雷耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 5
+        data modify storage asset:mob Resist.Thunder set value 0.95
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
