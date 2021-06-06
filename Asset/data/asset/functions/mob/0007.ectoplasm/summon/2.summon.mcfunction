@@ -9,7 +9,7 @@
 # ID (int)
     data modify storage asset:mob ID set value 7
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value "vex"
+    data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
@@ -44,15 +44,15 @@
     data modify storage asset:mob KnockBackResist set value 0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 0
+        data modify storage asset:mob Resist.Physical set value 1
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0
+        data modify storage asset:mob Resist.Magic set value 1
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 0
+        data modify storage asset:mob Resist.Fire set value 1
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 0
+        data modify storage asset:mob Resist.Water set value 1
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 0
+        data modify storage asset:mob Resist.Thunder set value 1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=vex,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

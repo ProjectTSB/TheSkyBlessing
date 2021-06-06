@@ -9,9 +9,8 @@
     #declare tag EmptyMP
 
 # プレイヤーのマナを検知する
-    scoreboard players set $CheckMP Lib 15
-    execute as @p[tag=Victim] store success score $EctoplasmMPCheck Temporary run function lib:mp/check
-    execute if score $EctoplasmMPCheck Temporary matches 1 run tag @p[tag=Victim] add EmptyMP
+    execute as @p[tag=Victim] store result score $EctoplasmMPCheck Temporary run function lib:mp/get
+    execute if score $EctoplasmMPCheck Temporary matches ..15 run tag @p[tag=Victim] add EmptyMP
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定
@@ -32,3 +31,4 @@
 
 # タグリセット
     tag @p[tag=EmptyMP] remove EmptyMP
+    scoreboard players reset $EctoplasmMPCheck
