@@ -4,7 +4,6 @@
 #> Private
 # @within asset:sacred_treasure/0609.lunar_flare/*
     #declare tag 9P.Target
-    #declare tag 9P.Target2
     #declare tag 9P.First
     #declare tag Landing
     #declare tag LandingTarget
@@ -12,3 +11,4 @@
     #declare tag 9P.Laser
     #declare tag 9P.LaserPos
     #declare tag 9P.LaserPosFirst
+    #declare tag CanUsed

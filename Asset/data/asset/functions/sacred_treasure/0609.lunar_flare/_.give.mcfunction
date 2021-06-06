@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ルナーフレア","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ルナフレア","color":"dark_green","underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"月輪の陽炎。敵を狙ってレーザーを上空から放つ"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"その月光はすべてを焼き尽くす。","color":"yellow"}','{"text":"敵を狙うことで発動できる","color":"yellow"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [20]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [10]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -37,9 +37,9 @@
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 20
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 30
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 20
+    data modify storage asset:sacred_treasure MPCost set value 5
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)

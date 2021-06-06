@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0609.lunar_flare/3.3.beam
+#> asset:sacred_treasure/0609.lunar_flare/3.5.beamloop
 #
 # ビーム部
 #

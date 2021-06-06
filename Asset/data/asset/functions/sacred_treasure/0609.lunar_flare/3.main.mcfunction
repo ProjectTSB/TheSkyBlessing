@@ -9,14 +9,20 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound item.chorus_fruit.teleport master @p ~ ~ ~ 0.6 2.0
+    playsound entity.blaze.shoot master @a ~ ~ ~ 0.4 2
+
 # スコアを付与する。スコア分の時間ビームする
-    execute as @e[type=#lib:living,tag=9P.Target] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.LaserPos","9P.LaserPosFirst"]}
-    scoreboard players add @e[type=armor_stand,tag=9P.LaserPosFirst] 9P.BeamTime 3
+    execute as @e[type=#lib:living,tag=9P.Target,limit=1] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.LaserPos","9P.LaserPosFirst"]}
+    scoreboard players set @e[type=armor_stand,tag=9P.LaserPosFirst] 9P.BeamTime 3
 
 # ユーザーIDを入れる
     scoreboard players operation @e[type=armor_stand,tag=9P.LaserPosFirst,sort=nearest,limit=1] 9P.UserID = @s UserID
     tag @e[type=armor_stand,tag=9P.LaserPosFirst,sort=nearest,limit=1] remove 9P.LaserPosFirst
 
-# ファンクション分岐
-    execute as @e[type=armor_stand,tag=9P.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/3.1.beamshot
+# タグを消す
     tag @e[type=#lib:living,tag=9P.Target] remove 9P.Target
+# ファンクション分岐
+
+    execute as @e[type=armor_stand,tag=9P.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/3.1.beamshot
