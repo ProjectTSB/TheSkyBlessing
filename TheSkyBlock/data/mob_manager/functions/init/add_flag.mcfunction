@@ -1,16 +1,14 @@
-#> mob_manager:init
+#> mob_manager:init/add_flag
 #
 # Mobにフラグをセットします
 #
-# @within function core:tick/
+# @within function mob_manager:init/
 
 #> Private
 # @private
     #declare score_holder $FlagIndex
     #declare score_holder $CloneFlagIndex
 
-# 初期化フラグ追加
-    tag @s add AlreadyInitMob
 # グローバルインデックス増加
     scoreboard players add $FlagIndex Global 1
     scoreboard players operation $FlagIndex Global %= $2^15 Const
