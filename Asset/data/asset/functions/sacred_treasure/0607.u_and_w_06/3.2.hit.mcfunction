@@ -8,8 +8,6 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 着弾の演出
-
 # 演出
     execute at @e[tag=LandingTarget,limit=1] run particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 4
 

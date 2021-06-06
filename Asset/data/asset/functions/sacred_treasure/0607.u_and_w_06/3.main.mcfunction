@@ -16,7 +16,6 @@
 # 演出
     playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 2
     playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 0
-    #playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 2
     playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
 
 # 残り回数が1回の時発動した場合
