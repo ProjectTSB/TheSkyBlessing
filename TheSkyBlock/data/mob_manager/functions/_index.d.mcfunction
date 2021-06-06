@@ -14,12 +14,12 @@
 #> InitTag
 # @within function
 #   core:tick/
-#   mob_manager:init
+#   mob_manager:init/
     #declare tag AlreadyInitMob
 
 #> FindFlag
 # @within *
-#   mob_manager:init
+#   mob_manager:init/add_flag
 #   mob_manager:entity_finder/**
 #   lib:damage/core/trigger_on_attack
     #declare tag FindFlag0.0

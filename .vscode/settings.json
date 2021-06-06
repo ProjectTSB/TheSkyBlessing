@@ -1106,12 +1106,12 @@
                         "#",
                         "# 使い方は必ずwikiを見ること",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/rejoin"
+                        "# @within tag/function asset:rejoin"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/rejoin.json",
+                    "rel": "data/asset/tags/functions/rejoin.json",
                     "content": {
                         "values": [
                             "asset:sacred_treasure/%namespace%/rejoin_process"
@@ -1507,6 +1507,35 @@
                     "question": "MobID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:rejoin"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/rejoin_process"
+                    }
                 }
             ]
         }
