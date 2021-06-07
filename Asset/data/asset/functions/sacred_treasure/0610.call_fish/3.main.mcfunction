@@ -16,7 +16,7 @@
     playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 1 1.3
 
 # 魚召喚
-    summon cod ~ ~ ~ {Invulnerable:1b,Tags:["9Q.Fish","9Q.First"]}
+    summon cod ~ ~ ~ {Invulnerable:1b,Tags:["9Q.Fish","9Q.First","Friend"]}
 
 # 魚の寿命を設定する
     scoreboard players set @e[type=cod,tag=9Q.First] 9Q.FishTime 600

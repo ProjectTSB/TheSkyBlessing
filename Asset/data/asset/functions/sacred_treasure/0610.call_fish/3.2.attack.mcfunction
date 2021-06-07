@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0610.call_fish/3.1.tick
 
 # 自分にタグ付与
-    tag @s add this
+    tag @s add 9Q.This
 
 # 敵の元へテレポート
     tp @s @e[tag=Enemy,sort=nearest,limit=1]
@@ -27,4 +27,4 @@
 
 # リセット
     data remove storage lib: Argument
-    tag @s remove this
+    tag @s remove 9Q.This

@@ -6,3 +6,4 @@
 #   asset:sacred_treasure/0610.call_fish/**
     #declare tag 9Q.Fish
     #declare tag 9Q.First
+    #declare tag 9Q.This
