@@ -23,6 +23,6 @@
 
 # タグを消す
     tag @e[type=#lib:living,tag=9P.Target] remove 9P.Target
-# ファンクション分岐
 
+# ファンクション分岐
     execute as @e[type=armor_stand,tag=9P.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/3.1.beamshot
