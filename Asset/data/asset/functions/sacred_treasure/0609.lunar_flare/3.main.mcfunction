@@ -14,7 +14,7 @@
     playsound entity.blaze.shoot master @a ~ ~ ~ 0.4 2
 
 # スコアを付与する。スコア分の時間ビームする
-    execute as @e[type=#lib:living,tag=9P.Target,limit=1] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.LaserPos","9P.LaserPosFirst"]}
+    execute as @e[type=#lib:living,tag=9P.Target,sort=nearest,limit=1] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.LaserPos","9P.LaserPosFirst"]}
     scoreboard players set @e[type=armor_stand,tag=9P.LaserPosFirst] 9P.BeamTime 3
 
 # ユーザーIDを入れる
