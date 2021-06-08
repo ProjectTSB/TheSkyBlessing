@@ -17,7 +17,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Water"
     # 補正function
-        execute as @a if score @s UserID = @e[type=cod,tag=this,limit=1] 9Q.UserID run function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=cod,tag=9Q.This,limit=1] 9Q.UserID run function lib:damage/modifier
     # 対象に
         execute as @e[tag=Enemy,sort=nearest,limit=1] run function lib:damage/
 
