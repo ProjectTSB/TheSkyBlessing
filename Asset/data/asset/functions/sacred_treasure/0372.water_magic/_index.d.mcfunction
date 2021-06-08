@@ -6,3 +6,5 @@
 # @within function asset:sacred_treasure/0372.water_magic/**
     #declare tag 60.Water
     #declare tag 60.First
+    #declare tag 60.This
+    #declare tag 60.Target
