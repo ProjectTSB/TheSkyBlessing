@@ -10,5 +10,5 @@
 # ここから先は神器側の効果の処理を書く
 
 # 蜘蛛の巣を設置
-    execute at @e[type=!player,distance=..7] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 cobweb replace air
+    execute at @e[tag=Enemy,tag=!Uninterferable,distance=..7] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 cobweb replace air
     playsound minecraft:item.crossbow.shoot master @s ~ ~ ~ 1 1
