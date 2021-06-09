@@ -1,6 +1,6 @@
 #> lib:mp/get
 #
-# プレイヤーのMP取得します。
+# プレイヤーのMPの現在値を取得します。
 #
 # @input as player
 # @output result score MP

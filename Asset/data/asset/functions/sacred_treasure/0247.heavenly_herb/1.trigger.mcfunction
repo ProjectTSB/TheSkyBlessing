@@ -4,5 +4,5 @@
 #
 # @within tag/function asset:sacred_treasure/**
 
-# storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:id {offhand:247} run function asset:sacred_treasure/0247.heavenly_herb/2.check_condition
+# storage asset:context idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
+    execute if data storage asset:context id{offhand:247} run function asset:sacred_treasure/0247.heavenly_herb/2.check_condition

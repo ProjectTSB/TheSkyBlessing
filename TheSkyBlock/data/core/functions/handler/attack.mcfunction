@@ -2,10 +2,9 @@
 #
 # entityを殴った際に実行される
 #
-# @within function core:tick
+# @within function core:tick/player
 
 # asset_managerへの引継ぎ
-    function asset_manager:sacred_treasure/triggers/attack
-
+    tag @s add TriggerFlag.Attack
 # Reset
     advancement revoke @s only core:handler/attack

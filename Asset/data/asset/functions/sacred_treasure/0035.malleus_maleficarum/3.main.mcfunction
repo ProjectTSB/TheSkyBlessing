@@ -30,4 +30,4 @@
     schedule function asset:sacred_treasure/0035.malleus_maleficarum/3.1.entity_manager 1t replace
 
 # 初期設定用タグ削除
-    execute positioned as @s run tag @e[tag=MalleusMaleficarumInit,distance=..2] remove MalleusMaleficarumInit
+    execute positioned as @s run tag @e[tag=MalleusMaleficarumInit,distance=..3] remove MalleusMaleficarumInit

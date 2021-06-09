@@ -11,9 +11,7 @@
 
 # 引数チェック
     execute unless data storage lib: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Heal at lib:heal/"}}}]
-# 代入
-    execute store result score $Fluctuation Lib run data get storage lib: Argument.Heal 100
-# 負数の場合の処理
-    execute if score $Fluctuation Lib matches ..-1 run scoreboard players set $Fluctuation Lib 0
-# Healthを持つEntityであれば実行
-    execute if data storage lib: Argument.Heal if entity @s[type=#lib:living] run function lib:score_to_health_wrapper/fluctuation
+# プレイヤー
+    execute if entity @s[type=player] run function lib:heal/core/player
+# non-プレイヤー
+    execute if entity @s[type=#lib:living,type=!player,tag=!Uninterferable] run function lib:heal/core/non-player

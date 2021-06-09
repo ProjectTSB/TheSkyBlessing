@@ -2,10 +2,9 @@
 #
 # 人参棒をクリックした際に実行される
 #
-# @within function core:tick
+# @within function core:tick/player
 
 # asset_managerへの引継ぎ
-    function asset_manager:sacred_treasure/triggers/click.carrot
-
+    tag @s add TriggerFlag.ClickCarrot
 # Reset
     scoreboard players reset @s ClickCarrotEvent
