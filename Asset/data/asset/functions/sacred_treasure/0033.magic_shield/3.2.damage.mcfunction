@@ -1,9 +1,8 @@
-#> asset:sacred_treasure/0033.magic_shield/3.3.take_damage_tag_remove
+#> asset:sacred_treasure/0033.magic_shield/3.2.damage
 #
-# タグ消し
 #
-# @within function asset:sacred_treasure/0033.magic_shield/3.2.take_damage
-
+#
+# @within function asset:sacred_treasure/0033.magic_shield/1.1.damage_trigger
 
 # 演出
     particle block iron_block ~ ~1 ~ 0.5 0.5 0.5 0.2 60

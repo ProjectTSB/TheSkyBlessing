@@ -7,9 +7,6 @@
 #       asset:sacred_treasure/0033.magic_shield/rejoin_process
 #       asset:sacred_treasure/0033.magic_shield/3.1.loop
 
-# データ取得
-    execute as @a[tag=X.MagicShield] run function asset:sacred_treasure/0033.magic_shield/3.2.take_damage
-
 # 効果を与える
     effect give @a[tag=X.MagicShield] resistance 1 3
 
