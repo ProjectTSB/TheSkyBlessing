@@ -7,5 +7,7 @@
 # ダメージを受けたことを検知する
     function api:data_get/hurt_time
     execute store result score $HurtTime Temporary run data get storage api: HurtTime
-    execute if score $HurtTime Temporary matches 1.. run tag @s remove X.MagicShield
+# ダメージを受けたらタグを消す。ついでに演出
+    execute if score $HurtTime Temporary matches 1.. at @s run function asset:sacred_treasure/0033.magic_shield/3.3.take_damage_tag_remove
+# リセット
     scoreboard players reset $HurtTime

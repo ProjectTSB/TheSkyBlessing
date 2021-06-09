@@ -4,6 +4,7 @@
 #
 # @within function
 #       asset:sacred_treasure/0033.magic_shield/3.main
+#       asset:sacred_treasure/0033.magic_shield/rejoin_process
 #       asset:sacred_treasure/0033.magic_shield/3.1.loop
 
 # データ取得

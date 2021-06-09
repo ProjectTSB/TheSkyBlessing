@@ -9,9 +9,12 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound block.anvil.use master @a ~ ~ ~ 0.5 0.5 0
+    particle enchanted_hit ~ ~1 ~ 0.2 0.2 0.2 1 30
+
 # プレイヤーにタグを付与
     tag @s add X.MagicShield
-    playsound block.anvil.use master @a ~ ~ ~ 0.5 0.5 0
 
 # 再帰先へ飛ばす
     function asset:sacred_treasure/0033.magic_shield/3.1.loop
