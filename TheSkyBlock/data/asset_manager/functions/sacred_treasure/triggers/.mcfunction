@@ -7,7 +7,7 @@
 # thisタグ
     tag @s add this
 # 神器のリログ対策用トリガー呼び出し
-    execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:sacred_treasure/rejoin
+    execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:rejoin
 # IDの代入
     function asset_manager:sacred_treasure/core/data/set_old
     function asset_manager:sacred_treasure/core/data/set_new
