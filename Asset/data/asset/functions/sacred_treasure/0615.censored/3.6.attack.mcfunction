@@ -9,6 +9,7 @@
     execute positioned ~ ~1.5 ~ rotated 45 0 run function lib:particle/circle/dragon_breath/0.5
     execute positioned ~ ~1.5 ~ rotated 90 0 run function lib:particle/circle/dragon_breath/0.5
     execute positioned ~ ~1.5 ~ rotated 135 0 run function lib:particle/circle/dragon_breath/0.5
+    playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
 
 # ダメージを与える
     # 与えるダメージ
