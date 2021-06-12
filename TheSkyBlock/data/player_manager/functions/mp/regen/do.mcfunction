@@ -26,6 +26,6 @@
 # 回復
     function lib:mp/fluctuation
 # クールダウンリセット
-    scoreboard players set @s MPRegenCooldown 20
+    scoreboard players set @s MPRegenCooldown 0
 # リセット
      scoreboard players reset $AmountFloat Temporary

@@ -4,7 +4,7 @@
 #
 # @within function core:tick/player
 
-# クールダウンの減少
-    scoreboard players remove @s MPRegenCooldown 1
-# 0なら回復処理
-    execute if score @s MPRegenCooldown matches 0 run function player_manager:mp/regen/do
+# 回復してからの時間を加算
+    scoreboard players add @s MPRegenCooldown 1
+# 20なら回復処理
+    execute if score @s MPRegenCooldown matches 20 run function player_manager:mp/regen/do
