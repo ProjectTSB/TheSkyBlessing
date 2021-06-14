@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/check/check_special_cooldown
 #
-#
+# 特殊クールダウンをチェックします
 #
 # @within function asset_manager:sacred_treasure/core/check/
 

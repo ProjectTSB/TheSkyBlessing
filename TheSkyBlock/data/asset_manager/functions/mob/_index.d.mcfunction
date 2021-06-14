@@ -16,15 +16,16 @@
 
 #> MobAsset側で定義されたMobに付けられるタグ
 # @within function
-#   core:tick
+#   core:tick/
+#   mob_manager:init/
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
 
 #> this
 # @within *
-#   asset_manager:mob/triggers/tick_check
-#   asset_manager:mob/triggers/death
+#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/death/
 #   asset:mob/**
     #declare tag this
 
@@ -37,12 +38,12 @@
 
 #> Victim
 # @within *
-#   asset_manager:mob/triggers/tick_check
+#   asset_manager:mob/triggers/
 #   asset:mob/*/attack/2.attack
     #declare tag Victim
 
 #> Attacker
 # @within *
-#   asset_manager:mob/triggers/tick_check
+#   asset_manager:mob/triggers/
 #   asset:mob/*/hurt/2.hurt
     #declare tag Attacker

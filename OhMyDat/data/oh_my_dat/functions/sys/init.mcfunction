@@ -16,13 +16,7 @@ data modify storage oh_my_dat: id set value [0]
 # 使用中のIDのSet
 data modify storage oh_my_dat: IDSet set value [I;]
 #> IDを振るためのスコアボード
-# @within function
-#   oh_*:**
-#   lib:**
-#   api:**
-#   core:**
-#   asset_manager:**
-#   player_manager:**
+# @public
     #declare storage oh_my_dat:
     scoreboard objectives add OhMyDatID dummy
 #> 計算に使うスコアボード

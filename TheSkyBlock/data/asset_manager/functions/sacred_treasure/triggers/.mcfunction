@@ -2,10 +2,12 @@
 #
 # 各トリガーに処理受け渡し
 #
-# @within function core:tick
+# @within function core:tick/player
 
 # thisタグ
     tag @s add this
+# 神器のリログ対策用トリガー呼び出し
+    execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:rejoin
 # IDの代入
     function asset_manager:sacred_treasure/core/data/set_old
     function asset_manager:sacred_treasure/core/data/set_new
@@ -27,6 +29,7 @@
     tag @e[tag=Attacker] remove Attacker
     tag @e[tag=Victim] remove Victim
     tag @s remove this
+    tag @s remove TriggerFlag.Rejoin
     tag @s remove TriggerFlag.Attack
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.Damage

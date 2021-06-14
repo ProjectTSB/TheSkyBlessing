@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/check/check_believe
 #
-#
+# 信仰をチェックします
 #
 # @within function asset_manager:sacred_treasure/core/check/
 

@@ -5,6 +5,7 @@
 # @within function
 #   asset:sacred_treasure/0456.potion_of_stalling_power/3.main
 #   asset:sacred_treasure/0456.potion_of_stalling_power/3.1.effect
+#   asset:sacred_treasure/0456.potion_of_stalling_power/rejoin_process
 
 # ここから先は神器側の効果の処理を書く
 

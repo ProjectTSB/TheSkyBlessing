@@ -8,8 +8,10 @@
     function asset_manager:sacred_treasure/core/data/pre_event_put/new
 # スロット毎のチェック
     function asset_manager:sacred_treasure/triggers/sneak/reset_when_change_item
+# asset:contextにスニーク時間を設定する
+    function asset_manager:sacred_treasure/triggers/sneak/set_context
 # 神器側に受け渡し
-    # keepトリガー類 <-実装頭良い, 神
+    # keepトリガー類
         function #asset:sacred_treasure/sneak/keep/
 
         execute if score @s Sneak matches 20.. run scoreboard players set $SneakThreshold Temporary 20
@@ -36,7 +38,7 @@
         execute if score @s Sneak matches 200.. run function asset_manager:sacred_treasure/triggers/sneak/reset_threshold_less
         execute if score @s Sneak matches 200.. run function #asset:sacred_treasure/sneak/keep/10s
 
-    # 単発トリガー類 <-実装頭悪い, バカ, 雑魚
+    # 単発トリガー類
         scoreboard players set $SneakThreshold Temporary 1
         function asset_manager:sacred_treasure/triggers/sneak/reset_value_not-equal
         function #asset:sacred_treasure/sneak/
@@ -66,3 +68,5 @@
         execute if score @s Sneak matches 200.. run function #asset:sacred_treasure/sneak/10s
 # イベント発火後に実行するやつ
     function asset_manager:sacred_treasure/core/data/post_event_put/new
+# リセット
+    data remove storage asset:context SneakTime
