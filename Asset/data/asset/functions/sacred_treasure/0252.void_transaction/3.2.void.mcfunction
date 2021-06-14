@@ -5,6 +5,7 @@
 # @within
 #   function asset:sacred_treasure/0252.void_transaction/3.main
 #   function asset:sacred_treasure/0252.void_transaction/3.2.void
+#   function asset:sacred_treasure/0252.void_transaction/rejoin_process
 
 # スコア減算
     scoreboard players remove @a[scores={70.Timer=1..2400}] 70.Timer 1
@@ -21,6 +22,9 @@
     execute as @a if entity @s[scores={70.Timer=0}] at @s run particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
     execute as @a if entity @s[scores={70.Timer=0}] at @s run tp @s ~ -200 ~
     execute as @a if entity @s[scores={70.Timer=0}] at @s run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~
+
+# スコアが0になった時にリセットする
+    scoreboard players reset @a[scores={70.Timer=0}] 70.Timer
 
 # 次tickにschedule予約
     execute if entity @a[scores={70.Timer=1..2400},limit=1] run schedule function asset:sacred_treasure/0252.void_transaction/3.2.void 1t replace
