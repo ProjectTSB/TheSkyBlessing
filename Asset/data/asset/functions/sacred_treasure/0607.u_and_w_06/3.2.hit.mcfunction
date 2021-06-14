@@ -18,7 +18,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[tag=LandingTarget] at @s run function lib:damage/
+        execute as @e[tag=LandingTarget] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

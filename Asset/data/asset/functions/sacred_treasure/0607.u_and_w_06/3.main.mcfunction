@@ -18,7 +18,7 @@
     playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 0
     playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
 
-# 残り回数が1回の時発動した場合
+# 残り回数が1回の時発動した場合※何故か動く
     execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
     execute if score $UseCount Temporary matches 1 run function asset:sacred_treasure/0608.u_and_w_06_empty/_.give
     scoreboard players reset $UseCount Temporary
@@ -42,7 +42,7 @@
     function lib:forward_spreader/circle
 
 # 発砲
-    execute as @s facing entity 0-0-0-0-0 feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0607.u_and_w_06/3.1.bullet
+    execute facing entity 0-0-0-0-0 feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0607.u_and_w_06/3.1.bullet
     tag @s remove Landing
 
 # 向きを変える
