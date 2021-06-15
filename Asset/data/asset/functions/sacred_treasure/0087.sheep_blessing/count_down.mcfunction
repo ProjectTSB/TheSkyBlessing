@@ -5,6 +5,7 @@
 # @within function
 #   asset:sacred_treasure/0087.sheep_blessing/3.main
 #   asset:sacred_treasure/0087.sheep_blessing/count_down
+#   asset:sacred_treasure/0087.sheep_blessing/rejoin_process
 #> private
 # @private
     #declare tag 2f.CanNotUse

@@ -1,4 +1,4 @@
-#> player_manager:mp_viewer/check_xpbar
+#> player_manager:mp/viewer/check_xpbar
 #
 # 経験値が想定される表示とずれている場合に修正します
 #
@@ -21,7 +21,7 @@
     scoreboard players operation $NowLvP Temporary /= @s MPMax
 # ずれている場合再調整
     execute if score @s MP = $Lv Temporary if score $NowLvP Temporary = $LvP Temporary run tag @s add Success
-    execute if entity @s[tag=!Success] run function player_manager:mp_viewer/adjust_xpbar
+    execute if entity @s[tag=!Success] run function player_manager:mp/viewer/adjust_xpbar
 # リセット
     tag @s remove Success
     scoreboard players reset $Lv Temporary
