@@ -17,15 +17,22 @@
         execute store result score $Damage Temporary run data get storage lib: Argument.Damage 100
     # ベース補正
         execute store result score $Modifier Temporary run data get storage lib: Modifiers.Base 100
+        execute unless data storage lib: Modifiers.Base run scoreboard players set $Modifier Temporary 100
     # 第一属性
         execute if data storage lib: Argument{AttackType:"Physical"} store result score $Temp Temporary run data get storage lib: Modifiers.Physical 100
         execute if data storage lib: Argument{AttackType:"Magic"} store result score $Temp Temporary run data get storage lib: Modifiers.Magic 100
+        execute if data storage lib: Argument{AttackType:"Physical"} unless data storage lib: Modifiers.Physical run scoreboard players set $Temp Temporary 100
+        execute if data storage lib: Argument{AttackType:"Magic"} unless data storage lib: Modifiers.Magic run scoreboard players set $Temp Temporary 100
         scoreboard players operation $Modifier Temporary += $Temp Temporary
     # 第二属性
         execute if data storage lib: Argument{ElementType:"None"} store result score $Temp Temporary run data get storage lib: Modifiers.None 100
         execute if data storage lib: Argument{ElementType:"Fire"} store result score $Temp Temporary run data get storage lib: Modifiers.Fire 100
         execute if data storage lib: Argument{ElementType:"Water"} store result score $Temp Temporary run data get storage lib: Modifiers.Water 100
         execute if data storage lib: Argument{ElementType:"Thunder"} store result score $Temp Temporary run data get storage lib: Modifiers.Thunder 100
+        execute if data storage lib: Argument{ElementType:"None"} unless data storage lib: Modifiers.None run scoreboard players set $Temp Temporary 100
+        execute if data storage lib: Argument{ElementType:"Fire"} unless data storage lib: Modifiers.Fire run scoreboard players set $Temp Temporary 100
+        execute if data storage lib: Argument{ElementType:"Water"} unless data storage lib: Modifiers.Water run scoreboard players set $Temp Temporary 100
+        execute if data storage lib: Argument{ElementType:"Thunder"} unless data storage lib: Modifiers.Thunder run scoreboard players set $Temp Temporary 100
         scoreboard players operation $Modifier Temporary += $Temp Temporary
     # 200%減算
         scoreboard players remove $Modifier Temporary 200
