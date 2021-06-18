@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/tick/1.trigger"
+        "asset:mob/example/tick/1.trigger",
+        "asset:mob/0023.chainsaw_zombie/tick/1.trigger"
     ]
 }
