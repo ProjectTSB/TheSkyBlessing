@@ -17,6 +17,7 @@
 # 演出
     playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 1 2
     stopsound @a master minecraft:block.beacon.ambient
+
 # タグ消し
     tag @s remove Landing
     tag @s remove C.Charge
