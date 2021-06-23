@@ -8,4 +8,19 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    execute as @e[type=!player] at @s facing entity @p eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-1000 facing entity @s eyes positioned as @s run tp @s ~ ~ ~ ~ ~
+
+# 演出
+    playsound entity.blaze.shoot master @a ~ ~ ~ 1 1
+    playsound entity.blaze.shoot master @a ~ ~ ~ 1 0.5
+
+# 弾を召喚
+    summon area_effect_cloud ~ ~ ~ {Particle:"block air",Duration:40,Tags:["5X.First","5X.Fire"]}
+    execute anchored eyes positioned ^ ^ ^ run tp @e[type=area_effect_cloud,tag=5X.First] ~ ~ ~ facing ^ ^ ^10
+# ユーザーID適応
+    scoreboard players operation @e[type=area_effect_cloud,tag=5X.First] 5X.UserID = @s UserID
+# タグを消す
+    tag @e[tag=5X.First] remove 5X.First
+
+
+# Scheduleループ
+    schedule function asset:sacred_treasure/0369.fire_magic/3.1.tick 1t replace

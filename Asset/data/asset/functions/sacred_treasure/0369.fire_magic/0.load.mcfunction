@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0369.fire_magic/**
-    scoreboard objectives add 
+    scoreboard objectives add 5X.UserID dummy
