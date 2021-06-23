@@ -14,7 +14,7 @@
     playsound entity.blaze.shoot master @a ~ ~ ~ 1 0.5
 
 # 弾を召喚
-    summon area_effect_cloud ~ ~ ~ {Particle:"block air",Duration:40,Tags:["5X.First","5X.Fire"]}
+    summon area_effect_cloud ~ ~ ~ {Particle:"block air",Duration:20,Tags:["5X.First","5X.Fire"]}
     execute anchored eyes positioned ^ ^ ^ run tp @e[type=area_effect_cloud,tag=5X.First] ~ ~ ~ facing ^ ^ ^10
 # ユーザーID適応
     scoreboard players operation @e[type=area_effect_cloud,tag=5X.First] 5X.UserID = @s UserID

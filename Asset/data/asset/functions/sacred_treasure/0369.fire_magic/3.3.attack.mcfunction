@@ -27,7 +27,6 @@
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
     execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=5X.This,limit=1] 5X.UserID run function lib:damage/modifier
-    execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=5X.This,limit=1] 5X.UserID run say @s
 # 攻撃した対象に実行
     execute as @e[tag=5X.Target] run function lib:damage/
 # リセット

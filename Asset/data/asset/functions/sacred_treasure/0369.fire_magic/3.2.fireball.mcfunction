@@ -17,4 +17,4 @@
     particle flame ~ ~ ~ 0.1 0.1 0.1 0 10 force
 
 # 進ませる
-    tp @s ^ ^ ^0.5 ~ ~
+    tp @s ^ ^ ^1 ~ ~
