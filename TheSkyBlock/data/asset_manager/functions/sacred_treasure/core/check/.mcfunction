@@ -29,7 +29,7 @@
         tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
         function asset_manager:sacred_treasure/core/check/check_local_cooldown
-        execute if entity @s[tag=CheckFailed] run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # SpecialCooldownによる制限
