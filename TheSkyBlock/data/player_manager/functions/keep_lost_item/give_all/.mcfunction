@@ -1,4 +1,4 @@
-#> player_manager:keep_lost_item/give_all/give
+#> player_manager:keep_lost_item/give_all/
 #
 # 没収したアイテムをすべて返却します
 #
