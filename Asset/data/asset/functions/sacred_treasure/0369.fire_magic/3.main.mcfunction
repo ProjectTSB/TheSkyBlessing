@@ -21,6 +21,5 @@
 # タグを消す
     tag @e[tag=5X.First] remove 5X.First
 
-
 # Scheduleループ
     schedule function asset:sacred_treasure/0369.fire_magic/3.1.tick 1t replace
