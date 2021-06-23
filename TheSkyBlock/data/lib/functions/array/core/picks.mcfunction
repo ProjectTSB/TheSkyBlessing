@@ -17,7 +17,7 @@
 # その分だけ動かす
     execute if score $Index Temporary matches 1.. run function lib:array/core/move
 # 最後の要素をElementsに移す
-    data modify storage lib: Elements append from storage lib: Array[-1]
-    data remove storage lib: Array[-1]
+    execute if score $Index Temporary matches 0.. run data modify storage lib: Elements append from storage lib: Array[-1]
+    execute if score $Index Temporary matches 0.. run data remove storage lib: Array[-1]
 # 添字が二つ以上残ってるなら繰り返す
     execute if data storage lib: Picks[-2] run function lib:array/core/picks
