@@ -19,3 +19,9 @@
 #   player_manager:keep_lost_item/give_all/minecart.summon
 #   player_manager:keep_lost_item/give_all/minecart_to_chest_check
     #declare tag LostItemChest
+
+#> Temp
+# @within function player_manager:keep_lost_item/give_part/*
+    #declare score_holder $GiveCount
+    #declare score_holder $ListLength
+    #declare score_holder $Index
