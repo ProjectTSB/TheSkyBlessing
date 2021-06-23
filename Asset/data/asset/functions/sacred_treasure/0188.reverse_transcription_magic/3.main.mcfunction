@@ -9,10 +9,12 @@
 
 # ここから先は神器側の効果の処理を書く
     # MPをOffhandItemのMPRequireに設定
-        execute store result score $Set Lib run data get storage asset:context Items.offhand.tag.TSB.MPRequire
-        tellraw @s [{"text": "MPが ["},{"nbt": "Items.offhand.tag.display.Name","entity": "@s","interpret": true},{"text": "] の消費MP [ "},{"score": {"name": "$Set","objective": "Lib"}},{"text": " ] になった！"}]
+        execute store result score $Set Lib run data get storage asset:context Items.offhand.tag.TSB.MPCost
+        tellraw @s [{"text": "MPが ["},{"nbt": "Inventory[{Slot:-106b}].tag.display.Name","storage": "asset:context","interpret": true},{"text": "] の消費MP [ "},{"score": {"name": "$Set","objective": "Lib"}},{"text": " ] になった！"}]
         function lib:mp/set
     # 演出
         playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
         stopsound @s * entity.item.break
         particle totem_of_undying ~ ~1.5 ~ 0.5 1 0.5 0 100 force @s
+
+        data get entity @s Inventory
