@@ -12,10 +12,6 @@
 * [MC Datapack Utility](https://github.com/ChenCMD/MC-Datapack-Utility)
 * [Gitmoji](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode)
 
-## 依存ライブラリ
-* [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
-* [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
-
 ## 開発のあれこれ
 [Wiki](https://github.com/TheSkyBlock/TheSkyBlock/wiki)見てね！
 
@@ -28,6 +24,7 @@
 
 CC0-1.0 Licenseが適用されないディレクトリ
 * [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
+* [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 * [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
 
@@ -35,5 +32,6 @@ CC0-1.0 Licenseが適用されないディレクトリ
 このリポジトリでは以下のライブラリを使用させていただいてます。
 
 #### [赤石愛](https://twitter.com/AiAkaishi)氏
+* [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)

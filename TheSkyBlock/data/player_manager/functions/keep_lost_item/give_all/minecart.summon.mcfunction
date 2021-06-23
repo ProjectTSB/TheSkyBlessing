@@ -3,7 +3,7 @@
 # チェストトロッコへアイテムを追加する処理
 #
 # @within function
-#   player_manager:keep_lost_item/give_all/give
+#   player_manager:keep_lost_item/give_all/
 #   player_manager:keep_lost_item/give_all/minecart.summon
 
 #> Private
