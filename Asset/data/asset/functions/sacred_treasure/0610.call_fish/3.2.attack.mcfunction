@@ -10,6 +10,10 @@
 # 敵の元へテレポート
     tp @s @e[tag=Enemy,sort=nearest,limit=1]
 
+#演出
+    execute at @e[tag=Enemy,sort=nearest,limit=1] run particle minecraft:block water ~ ~ ~ 0.3 0.3 0.3 10 100
+    playsound entity.squid.death master @a ~ ~ ~ 1 2
+
 # ダメージを与える
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 10.0f
@@ -20,10 +24,6 @@
         execute as @a if score @s UserID = @e[type=cod,tag=9Q.This,limit=1] 9Q.UserID run function lib:damage/modifier
     # 対象に
         execute as @e[tag=Enemy,sort=nearest,limit=1] run function lib:damage/
-
-#演出
-    execute at @e[tag=Enemy,sort=nearest,limit=1] run particle minecraft:block water ~ ~ ~ 0.3 0.3 0.3 10 100
-    playsound entity.squid.death master @a ~ ~ ~ 1 2
 
 # リセット
     data remove storage lib: Argument
