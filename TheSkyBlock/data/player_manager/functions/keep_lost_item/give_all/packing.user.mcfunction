@@ -11,6 +11,8 @@
     data remove storage oh_my_dat: IDSet[-1]
 # UserStorage呼び出し
     function oh_its_dat:please
+# Arrayに移す
+    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1]
 # Chests構造へ梱包して追加
     function player_manager:keep_lost_item/give_all/packing.chest
 # 明示的にstorageを綺麗にしておく
