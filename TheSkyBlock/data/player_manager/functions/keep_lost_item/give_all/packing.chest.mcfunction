@@ -8,12 +8,12 @@
 
 # 梱包処理
     # チェストのAppend
-        data modify storage player_manager:keep_lost_item Chests append value {id:"chest",Count:1b,tag:{BlockEntityTag:{Items:[]}}}
+        data modify storage player_manager:keep_lost_item Chests append value {id:"chest",Count:1b}
     # Name適用処理
         function player_manager:keep_lost_item/give_all/name_to_textcomponent
-    # ItemAppend
-        scoreboard players set $i Temporary 0
-        function player_manager:keep_lost_item/give_all/packing.item
-        scoreboard players reset $i Temporary
+    # 梱包
+        function lib:array/packing_chest
+    # チェストに突っ込む
+        data modify storage player_manager:keep_lost_item Chests[-1].tag.BlockEntityTag.Items set from storage lib: Package
 # ループ処理
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1] run function player_manager:keep_lost_item/give_all/packing.chest
+    execute if data storage lib: Array[0] run function player_manager:keep_lost_item/give_all/packing.chest

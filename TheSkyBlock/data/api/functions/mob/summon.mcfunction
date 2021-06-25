@@ -2,6 +2,7 @@
 #
 # MobAssetの召喚処理を叩く処理
 #
+# @input storage api: Argument.ID
 # @api
 
 # validate
