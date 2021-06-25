@@ -11,6 +11,10 @@
         "asset:sacred_treasure/0087.sheep_blessing/0.load",
         "asset:sacred_treasure/0210.terra_blade/0.load",
         "asset:sacred_treasure/0373.ice_sorcery/0.load",
-        "asset:sacred_treasure/0372.water_magic/0.load"
+        "asset:sacred_treasure/0372.water_magic/0.load",
+        "asset:sacred_treasure/0609.lunar_flare/0.load",
+        "asset:sacred_treasure/0369.fire_magic/0.load",
+        "asset:sacred_treasure/0379.miracle_rod/0.load",
+        "asset:sacred_treasure/0610.call_fish/0.load"
     ]
 }

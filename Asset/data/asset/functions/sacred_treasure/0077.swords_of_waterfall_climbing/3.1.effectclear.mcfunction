@@ -5,6 +5,7 @@
 # @within function
 #   asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.main
 #   asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.1.effectclear
+#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/rejoin_process
 
 # ここから先は神器側の効果の処理を書く
 

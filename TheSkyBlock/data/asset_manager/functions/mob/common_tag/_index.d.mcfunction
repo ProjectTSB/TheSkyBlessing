@@ -10,5 +10,4 @@
     #declare tag AntiBurn
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
-    #declare tag AlwaysNoGravity
     #declare tag AutoKillWhenDieVehicle
