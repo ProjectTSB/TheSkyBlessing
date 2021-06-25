@@ -16,5 +16,3 @@
         playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
         stopsound @s * entity.item.break
         particle totem_of_undying ~ ~1.5 ~ 0.5 1 0.5 0 100 force @s
-
-        data get entity @s Inventory
