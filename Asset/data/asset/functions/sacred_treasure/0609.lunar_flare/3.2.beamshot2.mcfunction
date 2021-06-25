@@ -16,7 +16,7 @@
     # 演出
         playsound entity.blaze.shoot master @a ~ ~ ~ 1 2
     # 判定用アマスタ召喚
-        summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.Laser","9P.First"]}
+        summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["9P.Laser","9P.First","Projectile"]}
     # ユーザーIDを適応
         scoreboard players operation @e[type=armor_stand,tag=9P.First] 9P.UserID = @s 9P.UserID
     # 分散させる。着弾点がまとまる
