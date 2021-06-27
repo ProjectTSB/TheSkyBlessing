@@ -8,7 +8,7 @@
 # @api
 
 # validate
-    execute unless data storage api: Argument.Count run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Count","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Count at api:lost_items/give"}}}]
+    execute unless data storage api: Argument.Count run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Count","color":"red"}]
 # 代入
     execute store result score $GiveCount Temporary run data get storage api: Argument.Count
 # 呼び出し

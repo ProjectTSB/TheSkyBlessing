@@ -10,7 +10,7 @@
 # @api
 
 # 引数チェック
-    execute unless data storage lib: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Missing argument Heal at lib:heal/"}}}]
+    execute unless data storage lib: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red"}]
 # プレイヤー
     execute if entity @s[type=player] run function lib:heal/core/player
 # non-プレイヤー
