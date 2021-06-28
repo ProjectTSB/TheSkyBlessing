@@ -45,6 +45,9 @@
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak4s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "4秒間以上スニーク"
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak5s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "5秒間以上スニーク"
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak10s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "10秒間以上スニーク"
+# 設定されてなかったらエラーメッセージ
+    execute unless data storage asset:sacred_treasure Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"},{"text":" UUID","color":"red"}]
+    execute unless data storage asset:sacred_treasure Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"},{"text":" UUID","color":"red"}]
 # 生成
     loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/core/generate_lore/trigger
 # リセット
