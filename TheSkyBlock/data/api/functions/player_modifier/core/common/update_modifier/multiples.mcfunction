@@ -13,10 +13,10 @@
 # Multiply値を取得
     execute store result score $Multiply Temporary run data get storage api: Multiples[-1] 10
 # ベース分1.0追加
-    scoreboard players add $Multiply Temporary 10
+    scoreboard players add $Multiply Temporary 1000
 # 乗算する
     scoreboard players operation $Modifier Temporary *= $Multiply Temporary
-    scoreboard players operation $Modifier Temporary /= $10 Const
+    scoreboard players operation $Modifier Temporary /= $1000 Const
 # 最後の要素を削除する
     data remove storage api: Multiples[-1]
 # リセット
