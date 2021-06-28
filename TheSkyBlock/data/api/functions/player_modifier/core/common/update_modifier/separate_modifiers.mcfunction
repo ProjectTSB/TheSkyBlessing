@@ -1,10 +1,10 @@
-#> api:player_modifier/core/update_modifier/separate_modifiers
+#> api:player_modifier/core/common/update_modifier/separate_modifiers
 #
 #
 #
 # @within function
-#   api:player_modifier/core/update_modifier/
-#   api:player_modifier/core/update_modifier/separate_modifiers
+#   api:player_modifier/core/common/update_modifier/
+#   api:player_modifier/core/common/update_modifier/separate_modifiers
 
 #> Temp
 # @private
@@ -23,4 +23,4 @@
 # リセット
     data remove storage api: Op
 # 要素がまだあったら再帰する
-    execute if data storage api: Modifiers[0] run function api:player_modifier/core/update_modifier/separate_modifiers
+    execute if data storage api: Modifiers[0] run function api:player_modifier/core/common/update_modifier/separate_modifiers

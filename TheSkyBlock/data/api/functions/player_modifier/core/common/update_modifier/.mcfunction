@@ -1,4 +1,4 @@
-#> api:player_modifier/core/update_modifier/
+#> api:player_modifier/core/common/update_modifier/
 #
 #
 #
@@ -8,7 +8,7 @@
 # 処理としては最初にModifiersをforEachしてOperation毎に別の配列にする、そのあと順番に処理する
 
 # Operation毎に分離する
-    function api:player_modifier/core/update_modifier/separate_modifiers
+    function api:player_modifier/core/common/update_modifier/separate_modifiers
 # デフォルト値の設定
     scoreboard players set $Modifier Temporary 10
 # Addの処理
@@ -18,7 +18,7 @@
     scoreboard players operation $Modifier Temporary *= $MultiplyBase Temporary
     scoreboard players operation $Modifier Temporary /= $10 Const
 # Multiplyの処理
-    execute if data storage api: Multiples[0] run function api:player_modifier/core/update_modifier/multiples
+    execute if data storage api: Multiples[0] run function api:player_modifier/core/common/update_modifier/multiples
 # ストレージに戻す
     execute store result storage api: Modifier double 0.1 run scoreboard players get $Modifier Temporary
 # リセット

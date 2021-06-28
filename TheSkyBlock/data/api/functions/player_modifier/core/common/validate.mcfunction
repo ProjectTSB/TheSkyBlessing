@@ -1,4 +1,4 @@
-#> api:player_modifier/core/validate
+#> api:player_modifier/core/common/validate
 #
 #
 #

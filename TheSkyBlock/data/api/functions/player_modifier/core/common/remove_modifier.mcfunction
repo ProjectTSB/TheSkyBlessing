@@ -1,10 +1,10 @@
-#> api:player_modifier/core/remove_modifier
+#> api:player_modifier/core/common/remove_modifier
 #
 #
 #
 # @within function
 #   api:player_modifier/**/remove
-#   api:player_modifier/core/remove_modifier
+#   api:player_modifier/core/common/remove_modifier
 
 #> Temp
 # @private
@@ -24,4 +24,4 @@
 # リセット
     scoreboard players reset $isSuccess Temporary
 # 要素が残ってたら再帰
-    execute if data storage api: Modifiers[0] run function api:player_modifier/core/remove_modifier
+    execute if data storage api: Modifiers[0] run function api:player_modifier/core/common/remove_modifier

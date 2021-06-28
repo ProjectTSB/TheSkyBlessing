@@ -1,10 +1,10 @@
-#> api:player_modifier/core/update_modifier/multiples
+#> api:player_modifier/core/common/update_modifier/multiples
 #
 #
 #
 # @within function
-#   api:player_modifier/core/update_modifier/
-#   api:player_modifier/core/update_modifier/multiples
+#   api:player_modifier/core/common/update_modifier/
+#   api:player_modifier/core/common/update_modifier/multiples
 
 #> Temp
 # @private
@@ -22,4 +22,4 @@
 # リセット
     scoreboard players reset $Multiply Temporary
 # 要素がまだあったら再帰する
-    execute if data storage api: Multiples[0] run function api:player_modifier/core/update_modifier/multiples
+    execute if data storage api: Multiples[0] run function api:player_modifier/core/common/update_modifier/multiples
