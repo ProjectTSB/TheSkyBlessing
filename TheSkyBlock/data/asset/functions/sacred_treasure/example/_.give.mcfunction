@@ -15,7 +15,7 @@ data modify storage asset:sacred_treasure Lore set value ['{"text":"つけてい
 # data modify storage asset:sacred_treasure CostText set value '{"text":""}'
 # data modify storage asset:sacred_treasure RemainingCount set value 50
 data modify storage asset:sacred_treasure Slot set value "head"
-data modify storage asset:sacred_treasure Trigger set value "equipped"
+data modify storage asset:sacred_treasure Trigger set value "equipping"
 # data modify storage asset:sacred_treasure Condition set value '{"text":""}'
 # data modify storage asset:sacred_treasure AttackInfo set value {Damage:[0,0],AttackType:[Physical,Magic],ElementType:[Fire,Water,Thunder,None],BypassResist:1b,IsrangeAttack:never}
 data modify storage asset:sacred_treasure MPCost set value 0

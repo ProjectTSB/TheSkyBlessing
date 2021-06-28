@@ -8,5 +8,4 @@
     function asset:sacred_treasure/lib/use/head
 
 # ここから先は神器側の効果の処理を書く
-    execute if entity @s[tag=Equip] run effect give @s night_vision 999999 0 true
-    execute if entity @s[tag=DisEquip] run effect clear @s night_vision
+    effect give @s night_vision 999999 0 true

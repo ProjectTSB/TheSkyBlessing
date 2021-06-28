@@ -14,6 +14,8 @@
     execute if data storage asset:sacred_treasure {Slot:"feet"} run data modify storage asset:sacred_treasure Temp.Trigger.A set value "装備"
     execute if data storage asset:sacred_treasure {Slot:"inventory"} run data modify storage asset:sacred_treasure Temp.Trigger.A set value "インベントリ内に保持"
     execute if data storage asset:sacred_treasure {Slot:"hotbar"} run data modify storage asset:sacred_treasure Temp.Trigger.A set value "ホットバーに保持"
+# 接続詞
+    data modify storage asset:sacred_treasure Temp.Trigger.AB set value "し"
 # トリガー
     execute if data storage asset:sacred_treasure {Trigger:"onClick"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "右クリック"
     execute if data storage asset:sacred_treasure {Trigger:"shot"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "発射"
@@ -45,6 +47,8 @@
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak4s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "4秒間以上スニーク"
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak5s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "5秒間以上スニーク"
     execute if data storage asset:sacred_treasure {Trigger:"keepSneak10s"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value "10秒間以上スニーク"
+    execute if data storage asset:sacred_treasure {Trigger:"equipping"} run data modify storage asset:sacred_treasure Temp.Trigger.AB set value ""
+    execute if data storage asset:sacred_treasure {Trigger:"equipping"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value ""
 # 設定されてなかったらエラーメッセージ
     execute unless data storage asset:sacred_treasure Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"},{"text":" UUID","color":"red"}]
     execute unless data storage asset:sacred_treasure Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"},{"text":" UUID","color":"red"}]

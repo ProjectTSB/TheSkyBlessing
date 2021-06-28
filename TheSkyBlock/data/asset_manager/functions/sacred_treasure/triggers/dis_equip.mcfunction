@@ -13,11 +13,7 @@
     execute if entity @s[tag=!ChangeChest] run data modify storage asset:context id.chest set value -1
     execute if entity @s[tag=!ChangeLegs] run data modify storage asset:context id.legs set value -1
     execute if entity @s[tag=!ChangeFeet] run data modify storage asset:context id.feet set value -1
-# 単独トリガーで処理できるようにタグを付与する
-    tag @s add DisEquip
 # 神器側に受け渡し
-    function #asset:sacred_treasure/change_equip
+    function #asset:sacred_treasure/dis_equip
 # イベント発火後に実行するやつ
     function asset_manager:sacred_treasure/core/data/post_event_put/old
-# リセット
-    tag @s remove DisEquip
