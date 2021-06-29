@@ -11,7 +11,7 @@
     #declare score_holder $Multiply
 
 # Multiply値を取得
-    execute store result score $Multiply Temporary run data get storage api: Multiples[-1] 10
+    execute store result score $Multiply Temporary run data get storage api: Multiples[-1] 1000
 # ベース分1.0追加
     scoreboard players add $Multiply Temporary 1000
 # 乗算する
