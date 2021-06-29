@@ -9,4 +9,4 @@
 
 # ここから先は神器側の効果の処理を書く
     scoreboard players set $Fluctuation Lib 5
-    execute as @s run function lib:mp/fluctuation
+    function lib:mp/fluctuation
