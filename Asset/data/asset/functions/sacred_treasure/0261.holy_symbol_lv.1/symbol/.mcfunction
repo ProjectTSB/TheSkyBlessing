@@ -13,7 +13,7 @@
 # 1秒毎にMP回復と魔法陣の表示
     scoreboard players operation $Temp Temporary %= $20 Const
     execute if score $Temp Temporary matches 0 run function asset:sacred_treasure/0261.holy_symbol_lv.1/symbol/vfx
-    execute if score $Temp Temporary matches 0 as @a[distance=..4.5] run function asset:sacred_treasure/0261.holy_symbol_lv.1/symbol/add_mp
+    execute if score $Temp Temporary matches 0 as @a[distance=..4.5,limit=10] run function asset:sacred_treasure/0261.holy_symbol_lv.1/symbol/add_mp
 # プレイヤーにエフェクトの付与
     execute as @a[distance=..4.5] unless score @s 79.HolySymbol matches -2147483648..2147483647 run function asset:sacred_treasure/0261.holy_symbol_lv.1/effect/start
 # 実行時間のインクリメント
