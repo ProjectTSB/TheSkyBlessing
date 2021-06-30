@@ -10,4 +10,4 @@
     function api:player_modifier/defense/fire/remove
 
 # 演出
-    playsound entity.generic.burn master @s
+    playsound entity.generic.burn master @s ~ ~ ~ 0.2 1
