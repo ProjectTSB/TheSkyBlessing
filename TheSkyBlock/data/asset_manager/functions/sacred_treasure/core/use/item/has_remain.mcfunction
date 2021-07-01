@@ -5,7 +5,9 @@
 # @input
 #   as player
 #   storage asset:sacred_treasure Item : ItemData
-# @within function asset_manager:sacred_treasure/core/use/
+# @within function
+#   asset_manager:sacred_treasure/core/check/
+#   asset_manager:sacred_treasure/core/use/
 
 # 対象スロットの残り使用回数取得
     execute store result score $Remain Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCount
