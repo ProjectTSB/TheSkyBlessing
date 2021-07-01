@@ -1,8 +1,10 @@
-#> asset_manager:sacred_treasure/core/use/update_item
+#> asset_manager:sacred_treasure/core/use/item/update
 #
 # アイテムを更新します
 #
-# @within function asset_manager:sacred_treasure/core/use/
+# @within function
+#   asset_manager:sacred_treasure/core/use/
+#   asset_manager:sacred_treasure/core/use/item/has_remain
 
 # Name更新処理
     data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure Item.tag.TSB.rawName

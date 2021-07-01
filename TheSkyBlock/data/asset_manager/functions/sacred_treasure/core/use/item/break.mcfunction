@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/core/use/remove_remain/break_item
+#> asset_manager:sacred_treasure/core/use/item/break
 #
 # アイテムを破壊します
 #
-# @within function asset_manager:sacred_treasure/core/use/remove_remain/
+# @within function asset_manager:sacred_treasure/core/use/item/has_remain
 
 # 音
     playsound entity.item.break player @s

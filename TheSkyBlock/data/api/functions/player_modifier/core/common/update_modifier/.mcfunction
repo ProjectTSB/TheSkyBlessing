@@ -10,17 +10,17 @@
 # Operation毎に分離する
     function api:player_modifier/core/common/update_modifier/separate_modifiers
 # デフォルト値の設定
-    scoreboard players set $Modifier Temporary 10
+    scoreboard players set $Modifier Temporary 1000
 # Addの処理
     scoreboard players operation $Modifier Temporary += $Add Temporary
 # MultiplyBaseの処理
-    scoreboard players add $MultiplyBase Temporary 10
+    scoreboard players add $MultiplyBase Temporary 1000
     scoreboard players operation $Modifier Temporary *= $MultiplyBase Temporary
-    scoreboard players operation $Modifier Temporary /= $10 Const
+    scoreboard players operation $Modifier Temporary /= $1000 Const
 # Multiplyの処理
     execute if data storage api: Multiples[0] run function api:player_modifier/core/common/update_modifier/multiples
 # ストレージに戻す
-    execute store result storage api: Modifier double 0.1 run scoreboard players get $Modifier Temporary
+    execute store result storage api: Modifier double 0.001 run scoreboard players get $Modifier Temporary
 # リセット
     scoreboard players reset $Add Temporary
     scoreboard players reset $Modifier Temporary

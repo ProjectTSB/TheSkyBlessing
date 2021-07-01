@@ -40,6 +40,7 @@
     data modify storage asset:sacred_treasure Data.tag.CustomModelData set from storage asset:sacred_treasure ID
     data modify storage asset:sacred_treasure Data.tag.TSB.rawName set from storage asset:sacred_treasure Name
     data modify storage asset:sacred_treasure Data.tag.TSB.ID set from storage asset:sacred_treasure ID
+    data modify storage asset:sacred_treasure Data.tag.TSB.Trigger set from storage asset:sacred_treasure Trigger
     data modify storage asset:sacred_treasure Data.tag.TSB.MPCost set from storage asset:sacred_treasure MPCost
     data modify storage asset:sacred_treasure Data.tag.TSB.MPRequire set from storage asset:sacred_treasure MPRequire
     data modify storage asset:sacred_treasure Data.tag.TSB.CanUsedGod set from storage asset:sacred_treasure CanUsedGod
