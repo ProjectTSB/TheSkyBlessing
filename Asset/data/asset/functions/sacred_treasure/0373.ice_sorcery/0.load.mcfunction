@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0373.ice_sorcery/**
-    scoreboard objectives add 61.BeamTime dummy
+    scoreboard objectives add AD.BeamTime dummy

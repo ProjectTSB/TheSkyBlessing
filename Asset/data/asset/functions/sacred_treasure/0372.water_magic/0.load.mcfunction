@@ -6,5 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0372.water_magic/**
-    scoreboard objectives add 60.Time dummy
-    scoreboard objectives add 60.UserID dummy
+    scoreboard objectives add AC.Time dummy
+    scoreboard objectives add AC.UserID dummy

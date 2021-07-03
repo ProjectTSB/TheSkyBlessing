@@ -15,4 +15,4 @@
 # ビームを飛ばす
     playsound minecraft:block.glass.break ambient @a ~ ~ ~ 1 1.3
     execute as @s facing entity 0-0-0-0-0 feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0373.ice_sorcery/3.3.beam
-    tag @s remove 61.Hit
+    tag @s remove AD.Hit

@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0609.lunar_flare/**
-    scoreboard objectives add 9P.BeamTime dummy
-    scoreboard objectives add 9P.BulletTime dummy
-    scoreboard objectives add 9P.UserID dummy
+    scoreboard objectives add GX.BeamTime dummy
+    scoreboard objectives add GX.BulletTime dummy
+    scoreboard objectives add GX.UserID dummy

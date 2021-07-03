@@ -4,5 +4,5 @@
 #> tag
 # @within function
 #   asset:sacred_treasure/0615.censored/**
-    #declare tag 9V.Censored
-    #declare tag 9V.CensoredSound
+    #declare tag H3.Censored
+    #declare tag H3.CensoredSound

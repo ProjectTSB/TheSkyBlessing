@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0369.fire_magic/3.2.fireball
 
 # 自身にタグ付与
-    tag @s add 5X.This
+    tag @s add A9.This
 
 # 周囲2mから最寄りの敵にタグを付与
-    tag @e[type=#lib:living,type=!player,tag=!5X.Fire,distance=..2,sort=nearest,limit=1] add 5X.Target
+    tag @e[type=#lib:living,type=!player,tag=!A9.Fire,distance=..2,sort=nearest,limit=1] add A9.Target
 
 # 演出
     particle lava ~ ~1 ~ 0 1 0 0 20 force
@@ -26,9 +26,9 @@
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
-    execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=5X.This,limit=1] 5X.UserID run function lib:damage/modifier
+    execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=A9.This,limit=1] A9.UserID run function lib:damage/modifier
 # 攻撃した対象に実行
-    execute as @e[tag=5X.Target] run function lib:damage/
+    execute as @e[tag=A9.Target] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

@@ -3,12 +3,12 @@
 
 #> Private
 # @within asset:sacred_treasure/0609.lunar_flare/*
-    #declare tag 9P.Target
-    #declare tag 9P.First
+    #declare tag GX.Target
+    #declare tag GX.First
     #declare tag Landing
     #declare tag LandingTarget
     #declare tag Watcher
-    #declare tag 9P.Laser
-    #declare tag 9P.LaserPos
-    #declare tag 9P.LaserPosFirst
+    #declare tag GX.Laser
+    #declare tag GX.LaserPos
+    #declare tag GX.LaserPosFirst
     #declare tag CanUsed

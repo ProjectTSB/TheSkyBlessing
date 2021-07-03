@@ -5,5 +5,5 @@
 #> Temp
 #
 # @within function asset:sacred_treasure/0373.ice_sorcery/**
-    #declare tag 61.Hit
-    #declare tag 61.HitTarget
+    #declare tag AD.Hit
+    #declare tag AD.HitTarget
