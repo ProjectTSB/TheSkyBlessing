@@ -1,5 +1,6 @@
 # TheSkyBlock
 <!-- [![discord](https://img.shields.io/discord/serverID?logo=discord&label=discord)](https://discord.gg/inviteUrl) -->
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/TheSkyBlock/TheSkyBlock)
 [![stars](https://img.shields.io/github/stars/TheSkyBlock/TheSkyBlock?logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/stargazers)
 [![progress](https://img.shields.io/github/milestones/progress/TheSkyBlock/TheSkyBlock/1?label=devProgress&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/milestone/1)
 [![activity](https://img.shields.io/github/commit-activity/m/TheSkyBlock/TheSkyBlock?label=commit&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/commits/master)
