@@ -8,6 +8,7 @@
     execute as @p[tag=Victim] at @s run particle dragon_breath ~ ~ ~ 0 1 0 0 20
     execute as @p[tag=Victim] at @s run particle witch ~ ~ ~ 0 1 0 0 20
     playsound entity.phantom.bite hostile @a ~ ~ ~ 1 0
+
 # 何故かこうするとプレイヤーと同じ剣の降り方をする
     replaceitem entity @s weapon stick{CustomModelData:219}
 
