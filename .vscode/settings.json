@@ -448,6 +448,8 @@
                         "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
+                        "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -1096,6 +1098,77 @@
             ]
         },
         {
+            "label": "神器/トリガー: 装備着脱",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/dis_equip/.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/dis_equip/",
+                        "#",
+                        "# 装備を外した時に外した部位にのみのidが入った状態でトリガーされる",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/dis_equip",
+                        "",
+                        "execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/dis_equip/main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/dis_equip/main.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/dis_equip/main",
+                        "#",
+                        "# 装備を外した時のメイン処理",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/dis_equip/",
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/equip.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/dis_equip.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/dis_equip/"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/dis_equip/"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "ID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "Slot",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
+                }
+            ]
+        },
+        {
             "label": "神器/特殊トリガー: 再Join",
             "generates": [
                 {
@@ -1165,6 +1238,8 @@
                         "        # data modify storage asset:mob Weapon.Mainhand set value ",
                         "    # オフハンド (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Weapon.Offhand set value ",
+                        "# 武器ドロップ率 ([float, float]) (オプション)",
+                        "    # data modify storage asset:mob WeaponDropChances set value ",
                         "# 防具",
                         "    # 頭 (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Armor.Head set value ",
@@ -1174,6 +1249,8 @@
                         "        # data modify storage asset:mob Armor.Legs set value ",
                         "    # 足 (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Armor.Feet set value ",
+                        "# 防具ドロップ率 ([float, float]) (オプション)",
+                        "    # data modify storage asset:mob ArmorDropChances set value ",
                         "# 体力 (double) (オプション)",
                         "    # data modify storage asset:mob Health set value ",
                         "# 攻撃力 (double) (オプション)",

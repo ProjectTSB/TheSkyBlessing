@@ -5,6 +5,7 @@
 # @within function
 #    asset:sacred_treasure/0078.self_destruct_order/3.main
 #    asset:sacred_treasure/0078.self_destruct_order/count_down
+#    asset:sacred_treasure/0078.self_destruct_order/rejoin_process
 
 scoreboard players add @a[tag=26.Owner] 26.TickCount 1
 
