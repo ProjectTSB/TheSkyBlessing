@@ -14,7 +14,7 @@
 # 範囲内ならホーミングじみた移動、ただしダメージを受けていないなら
     function api:data_get/hurt_time
     execute as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function asset:mob/0021.demon_eye/tick/rotater_tick
-    scoreboard players set $VectorMagnitude Lib 15
+    scoreboard players set $VectorMagnitude Lib 25
     execute if data storage api: {HurtTime:0s} rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
 
 # 向き
@@ -26,3 +26,6 @@
 
 # 安定してダメージを出すために
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[gamemode=!creative,dx=0] run function asset:mob/0021.demon_eye/tick/attack
+
+#
+    execute anchored eyes unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45

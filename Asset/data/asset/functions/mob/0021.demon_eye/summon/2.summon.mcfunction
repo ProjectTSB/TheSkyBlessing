@@ -5,7 +5,7 @@
 # @within function asset:mob/0021.demon_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,DeathLootTable:"asset:mob/death/0021.demon_eye",Tags:["MobInit","Enemy"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["21.Rotater"]}]}
+    summon zombie ~ ~ ~ {Silent:1b,DeathLootTable:"asset:mob/death/0021.demon_eye",Tags:["MobInit","Enemy","AlwaysInvisible"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["21.Rotater","AutoKillWhenDieVehicle"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 21
 # Type (string) Wikiを参照
@@ -21,7 +21,7 @@
         data modify storage asset:mob Weapon.Offhand set value {}
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1343399411,-1120972915,-2082756986,-1574051050],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmE1YmM2ODdhMTc1ZDA0MWVlODBjZjcxZmI4NjZhMDNmMDk1ZGUwYWI1NDRiNDMwYjFmZGQ5NTQ1NDU3NzljMCJ9fX0="}]}}}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-2096771334,1747471520,-1307822589,862786690],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGVhZDg5NDNhMDkyMWY4MWEwYWE5NWZlOWRlYTA5MTE3MjI4OGMyMjMwNzVjOGJlOTI5ZGVmMWVhNzdjNzQ1YyJ9fX0="}]}}}}
     # 胴 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Chest set value {}
     # 脚 (Compound(Item)) (オプション)
