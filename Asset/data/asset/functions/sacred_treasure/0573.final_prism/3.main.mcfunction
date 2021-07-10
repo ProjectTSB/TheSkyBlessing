@@ -17,16 +17,31 @@
     scoreboard players operation $Random Temporary %= $4 Const
 # ここから先は神器側の効果の処理を書く
     data modify storage lib: Argument.Distance set value 10.0f
-    execute unless score @s 573.Spread matches -2147483648..2147483647 run scoreboard players set @s 573.Spread 45
-    execute unless score @s 573.Spread matches ..1 run scoreboard players remove @s 573.Spread 1
-    execute store result storage lib: Argument.Spread float 0.1 run scoreboard players get @s 573.Spread
+
+# 精度をスニーク時間に
+    scoreboard players set $Spread Temporary 45
+    execute store result score $SneakTime Temporary run data get storage asset:context SneakTime.mainhand 0.5
+    scoreboard players operation $Spread Temporary -= $SneakTime Temporary
+
+# マイナスになるとやばいんだって
+    execute if score $Spread Temporary matches ..0 run scoreboard players set $Spread Temporary 1
+
+# スコアを精度に
+    execute store result storage lib: Argument.Spread float 0.1 run scoreboard players get $Spread Temporary
     execute anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
 
 # 非収束ビーム
-    execute if score @s 573.Spread matches 2.. anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/laser
+    execute if score $Spread Temporary matches 2.. anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/laser
 
 # 完全収束ビーム
-    execute if score @s 573.Spread matches ..1 anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/final_laser
+    execute if score $Spread Temporary matches ..1 anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/final_laser
+    execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/final_sound
+
+# サウンド
+    execute if score $Spread Temporary matches 2.. run playsound minecraft:block.portal.ambient player @s ~ ~ ~ 0.1 2
+    execute if score $Spread Temporary matches 1.. run playsound minecraft:block.water.ambient player @a ~ ~ ~ 2 2
+    execute if score $Spread Temporary matches 1 run playsound minecraft:block.water.ambient player @a ~ ~ ~ 2 1
 
 # リセット
     scoreboard players reset $Random Temporary
+    scoreboard players reset $Temporary Temporary

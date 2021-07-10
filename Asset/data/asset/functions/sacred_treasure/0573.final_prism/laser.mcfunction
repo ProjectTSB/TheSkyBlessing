@@ -15,11 +15,6 @@
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/5 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1 force
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/10 run particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force
 
-# 限界距離、または地形ヒット これまた虹色
-# execute unless entity @s[distance=..15] run particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
-# execute unless block ^ ^ ^1 #sheepinator:no_collision run particle minecraft:entity_effect ~ ~ ~ 0 0 0 1 1
-    #execute unless entity @s[distance=..15] run function sheepinator:item/sheep_convert_beamer/beam_limit
-    #execute unless block ^ ^ ^1 #sheepinator:no_collision run function sheepinator:item/sheep_convert_beamer/beam_limit
 
 # 接触時判定
     #execute if entity @s[distance=..15] positioned ~-0.5 ~-0.5 ~-0.5 unless entity @s[dx=0] if entity @e[dx=0,team=!null,tag=!Sh.Beam_Sheep_Spin,type=!#sheepinator:no_convert] run function sheepinator:item/sheep_convert_beamer/hit_sound
