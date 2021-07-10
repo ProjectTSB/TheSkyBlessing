@@ -28,4 +28,4 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[gamemode=!creative,dx=0] run function asset:mob/0021.demon_eye/tick/attack
 
 #
-    execute anchored eyes unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
+    execute unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
