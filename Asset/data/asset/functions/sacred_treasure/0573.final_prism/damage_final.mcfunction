@@ -1,12 +1,12 @@
-#> asset:sacred_treasure/0573.final_prism/damage
+#> asset:sacred_treasure/0573.final_prism/damage_final
 #
-# ヒット!
 #
-# @within function asset:sacred_treasure/0573.final_prism/laser
+#
+# @within function asset:sacred_treasure/0573.final_prism/final_laser
 
 # ダメージ
     # 与えるダメージ = 5
-        data modify storage lib: Argument.Damage set value 3f
+        data modify storage lib: Argument.Damage set value 6f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 属性が変わる

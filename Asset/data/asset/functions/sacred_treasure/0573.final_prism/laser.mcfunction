@@ -15,7 +15,6 @@
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/5 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1 force
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/10 run particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force
 
-
 # 接触時判定
     execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=Enemy,dx=0] run function asset:sacred_treasure/0573.final_prism/damage
 
