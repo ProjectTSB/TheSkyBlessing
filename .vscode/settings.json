@@ -411,7 +411,7 @@
                         "# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。",
                         "",
                         "# 神器のID (int) スプレッドシートの値を入れる",
-                        "    data modify storage asset:sacred_treasure ID set value ",
+                        "    data modify storage asset:sacred_treasure ID set value %ItemID%",
                         "# 神器のベースアイテム",
                         "    data modify storage asset:sacred_treasure Item set value ",
                         "# 神器の名前 (TextComponentString)",
@@ -423,7 +423,7 @@
                         "# 使用回数 (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure RemainingCount set value ",
                         "# 神器を発動できるスロット (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Slot set value ",
+                        "    data modify storage asset:sacred_treasure Slot set value \"%slot%\"",
                         "# 神器のトリガー (string) Wikiを参照",
                         "    data modify storage asset:sacred_treasure Trigger set value ",
                         "# 神器の発動条件 (TextComponentString) (オプション)",
@@ -448,6 +448,8 @@
                         "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
+                        "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -467,8 +469,8 @@
                         "#",
                         "# @within tag/function asset:sacred_treasure/**",
                         "",
-                        "# storage asset:idのauto/feet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:context id{<slot>:<id>} run function asset:sacred_treasure/%namespace%/2.check_condition"
+                        "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/2.check_condition"
                     ]
                 },
                 {
@@ -481,8 +483,8 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/1.trigger",
                         "",
-                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね",
-                        "    function asset:sacred_treasure/lib/check_condition/",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:sacred_treasure/lib/check_condition/%slot%",
                         "# 他にアイテム等確認する場合はここに書く",
                         "    ",
                         "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
@@ -499,12 +501,26 @@
                         "#",
                         "# @within function asset:sacred_treasure/%namespace%/2.check_condition",
                         "",
-                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね",
-                        "    function asset:sacred_treasure/lib/use/",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:sacred_treasure/lib/use/%slot%",
                         "",
                         "# ここから先は神器側の効果の処理を書く",
                         "    say test: %namespace%"
                     ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "ID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "Slot",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
                 }
             ]
         },
@@ -1082,6 +1098,106 @@
             ]
         },
         {
+            "label": "神器/トリガー: 装備着脱",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/dis_equip/.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/dis_equip/",
+                        "#",
+                        "# 装備を外した時に外した部位にのみのidが入った状態でトリガーされる",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/dis_equip",
+                        "",
+                        "execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/dis_equip/main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/dis_equip/main.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/dis_equip/main",
+                        "#",
+                        "# 装備を外した時のメイン処理",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/dis_equip/",
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/equip.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/dis_equip.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/dis_equip/"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/dis_equip/"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "ID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "Slot",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:rejoin"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/rejoin_process"
+                    }
+                }
+            ]
+        },
+        {
             "label": "MOB/テンプレート",
             "generates": [
                 {
@@ -1112,50 +1228,50 @@
                         "# ID (int)",
                         "    data modify storage asset:mob ID set value %id%",
                         "# Type (string) Wikiを参照",
-                        "    data modify storage asset:mob Type set value \"%entity%\"",
+                        "    data modify storage asset:mob Type set value \"\"",
                         "# 干渉可能か否か (boolean)",
                         "    data modify storage asset:mob Interferable set value ",
                         "# 名前 (TextComponentString) (オプション)",
-                        "    data modify storage asset:mob Name set value ",
+                        "    # data modify storage asset:mob Name set value ",
                         "# 武器",
                         "    # メインハンド (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Weapon.Mainhand set value ",
+                        "        # data modify storage asset:mob Weapon.Mainhand set value ",
                         "    # オフハンド (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Weapon.Offhand set value ",
+                        "        # data modify storage asset:mob Weapon.Offhand set value ",
                         "# 防具",
                         "    # 頭 (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Armor.Head set value ",
+                        "        # data modify storage asset:mob Armor.Head set value ",
                         "    # 胴 (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Armor.Chest set value ",
+                        "        # data modify storage asset:mob Armor.Chest set value ",
                         "    # 脚 (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Armor.Legs set value ",
+                        "        # data modify storage asset:mob Armor.Legs set value ",
                         "    # 足 (Compound(Item)) (オプション)",
-                        "        data modify storage asset:mob Armor.Feet set value ",
+                        "        # data modify storage asset:mob Armor.Feet set value ",
                         "# 体力 (double) (オプション)",
-                        "    data modify storage asset:mob Health set value ",
+                        "    # data modify storage asset:mob Health set value ",
                         "# 攻撃力 (double) (オプション)",
-                        "    data modify storage asset:mob AttackDamage set value ",
+                        "    # data modify storage asset:mob AttackDamage set value ",
                         "# 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち",
-                        "    data modify storage asset:mob Defense set value ",
+                        "    # data modify storage asset:mob Defense set value ",
                         "# 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす",
-                        "    data modify storage asset:mob SpecialDefense set value ",
+                        "    # data modify storage asset:mob SpecialDefense set value ",
                         "# 移動速度 (double) (オプション)",
-                        "    data modify storage asset:mob Speed set value ",
+                        "    # data modify storage asset:mob Speed set value ",
                         "# 索敵範囲 (double) (オプション)",
-                        "    data modify storage asset:mob FollowRange set value ",
+                        "    # data modify storage asset:mob FollowRange set value ",
                         "# ノックバック耐性 (double) (オプション)",
-                        "    data modify storage asset:mob KnockBackResist set value ",
-                        "# 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち",
-                        "    # 物理耐性 (int) (オプション)",
-                        "        data modify storage asset:mob Resist.Physical set value ",
-                        "    # 魔法耐性 (int) (オプション)",
-                        "        data modify storage asset:mob Resist.Magic set value ",
-                        "    # 火耐性 (int) (オプション)",
-                        "        data modify storage asset:mob Resist.Fire set value ",
-                        "    # 水耐性 (int) (オプション)",
-                        "        data modify storage asset:mob Resist.Water set value ",
-                        "    # 雷耐性 (int) (オプション)",
-                        "        data modify storage asset:mob Resist.Thunder set value ",
+                        "    # data modify storage asset:mob KnockBackResist set value ",
+                        "# 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る",
+                        "    # 物理倍率 (float) (オプション)",
+                        "        # data modify storage asset:mob Resist.Physical set value ",
+                        "    # 魔法倍率 (float) (オプション)",
+                        "        # data modify storage asset:mob Resist.Magic set value ",
+                        "    # 火倍率 (float) (オプション)",
+                        "        # data modify storage asset:mob Resist.Fire set value ",
+                        "    # 水倍率 (float) (オプション)",
+                        "        # data modify storage asset:mob Resist.Water set value ",
+                        "    # 雷倍率 (float) (オプション)",
+                        "        # data modify storage asset:mob Resist.Thunder set value ",
                         "",
                         "# MobInitタグ持ちを対象にして召喚関数呼び出し",
                         "    execute as @e[type=%entity%,tag=MobInit,distance=..0.01] run function asset:mob/common/summon"
@@ -1464,6 +1580,35 @@
                     "question": "MobID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "MOB/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:rejoin"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/rejoin_process"
+                    }
                 }
             ]
         }

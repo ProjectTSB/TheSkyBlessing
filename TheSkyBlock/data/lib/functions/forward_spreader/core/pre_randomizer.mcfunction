@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/pre_randomizer
 #
-#
+# ランダム座標生成前に半径等のデータを求めます
 #
 # @within function lib:forward_spreader/core/
 

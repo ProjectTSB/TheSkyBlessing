@@ -7,4 +7,5 @@
     #declare tag 89.PosManager
     #declare tag 89.Player
     #declare tag 89.End
+    #declare tag 89.Kill
     #declare score_holder $4F.UserManager

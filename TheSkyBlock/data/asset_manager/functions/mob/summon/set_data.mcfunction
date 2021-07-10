@@ -1,6 +1,6 @@
 #> asset_manager:mob/summon/set_data
 #
-#
+# 召喚されたAssetMobのデータを初期化します
 #
 # @input storage asset:mob
 #   ID : int
@@ -13,18 +13,14 @@
 #   FollowRange? : double
 #   KnockBackResist? : double
 #
-#   Resist.Physical : int
-#   Resist.Magic : int
-#   Resist.Fire : int
-#   Resist.Water : int
-#   Resist.Thunder : int
+#   Resist.Physical : float
+#   Resist.Magic : float
+#   Resist.Fire : float
+#   Resist.Water : float
+#   Resist.Thunder : float
 # @within function asset:mob/common/summon
 
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
-    # そのまま適用するやつ
-        execute store result score @s MobID run data get storage asset:mob ID
-        execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
-        execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
     # 武器防具の事前追加
         data modify storage asset:mob HandItems set value []
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Mainhand
@@ -36,7 +32,9 @@
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
+        execute unless data entity @s HandDropChances run data modify entity @s HandDropChances set value [0f,0f]
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
+        execute unless data entity @s ArmorDropChances run data modify entity @s ArmorDropChances set value [0f,0f,0f,0f]
     # Attributeの事前追加
         execute if data storage asset:mob Health run data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
         execute if data storage asset:mob AttackDamage run data modify storage asset:mob Attributes append value {Name:"generic.attack_damage"}
@@ -55,13 +53,19 @@
         data modify storage asset:mob Attributes[{Name:"generic.knockback_resistance"}].Base set from storage asset:mob KnockBackResist
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
+    # そのまま適用するやつ
+        execute store result score @s MobID run data get storage asset:mob ID
+        execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
+        execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
 # タグ周り
     function asset_manager:mob/summon/set_tag
 # 属性耐性
     # EntityStorage呼び出し
         function oh_my_dat:please
+    # Baseを追加
+        data modify storage asset:mob Resist.Base set value 1f
     # 適用
-        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobData.DEF set from storage asset:mob Resist
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
 # リセット
     data remove storage asset:mob HandItems
     data remove storage asset:mob ArmorItems

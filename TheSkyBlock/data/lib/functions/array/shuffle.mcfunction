@@ -10,7 +10,6 @@
 #   ランダムな順の配列
 # @api
 
-
 execute store result score $ListSize Lib if data storage lib: Array[]
 data modify storage lib: ArrayO set value []
 function lib:array/core/shuffle

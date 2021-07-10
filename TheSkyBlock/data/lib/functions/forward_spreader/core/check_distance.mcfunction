@@ -1,6 +1,6 @@
 #> lib:forward_spreader/core/check_distance
 #
-#
+# 点が中心から半径以内に存在するまで繰り返します
 #
 # @within function lib:forward_spreader/core/randomizer
 

@@ -1,6 +1,6 @@
 #> asset_manager:mob/triggers/death/
 #
-#
+# 死亡トリガーの処理
 #
 # @within function core:tick/check_item_meta/entity
 

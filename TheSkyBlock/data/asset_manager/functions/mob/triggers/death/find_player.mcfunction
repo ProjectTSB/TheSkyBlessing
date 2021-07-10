@@ -1,6 +1,6 @@
 #> asset_manager:mob/triggers/death/find_player
 #
-#
+# 殺したプレイヤーを特定します
 #
 # @within function asset_manager:mob/triggers/death/
 

@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/core/data/post_event_put/old
 #
-#
+# 最上層のデータをOldデータに格納します
 #
 # @within function asset_manager:sacred_treasure/triggers/**
 

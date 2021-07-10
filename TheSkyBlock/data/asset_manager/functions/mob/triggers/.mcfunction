@@ -1,8 +1,8 @@
 #> asset_manager:mob/triggers/
 #
+# トリガー処理
 #
-#
-# @within function core:tick/
+# @within function asset_manager:mob/tick
 
 # thisタグ
     tag @s add this

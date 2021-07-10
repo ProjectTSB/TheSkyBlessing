@@ -1,6 +1,6 @@
 #> lib:heal/core/modifier
 #
-#
+# 回復量に補正をかける
 #
 # @within function lib:heal/modifier
 

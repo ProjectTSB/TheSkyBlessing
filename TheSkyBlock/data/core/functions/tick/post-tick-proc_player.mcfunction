@@ -1,6 +1,6 @@
 #> core:tick/post-tick-proc_player
 #
-#
+# tickの基本的な処理を終えた後に実行されるプレイヤーのtick処理
 #
 # @within function core:tick/
 

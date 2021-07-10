@@ -42,17 +42,17 @@
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 1.0
-# 属性耐性 // 防御力,特殊防御力による軽減計算後、1ptにつき4%カット 20pt以上は頭打ち
-    # 物理耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Physical set value 10
-    # 魔法耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Magic set value 2
-    # 火耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Fire set value 20
-    # 水耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Water set value 5
-    # 雷耐性 (int) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 15
+# 属性倍率 // 防御力,特殊防御力による軽減計算前に計算
+    # 物理倍率 (int) (オプション)
+        data modify storage asset:mob Resist.Physical set value 0.85f
+    # 魔法倍率 (int) (オプション)
+        data modify storage asset:mob Resist.Magic set value 2f
+    # 火倍率 (int) (オプション)
+        data modify storage asset:mob Resist.Fire set value 0.2f
+    # 水倍率 (int) (オプション)
+        data modify storage asset:mob Resist.Water set value 2f
+    # 雷倍率 (int) (オプション)
+        data modify storage asset:mob Resist.Thunder set value 0.6f
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

@@ -11,7 +11,7 @@
 
 # エフェクト効果
     effect give @s minecraft:strength 60 10 true
-    effect give @s minecraft:resistance 60 5 true
+    effect give @s minecraft:resistance 60 2 true
     effect give @s minecraft:nausea 60 0 true
     effect give @s minecraft:poison 15 3 true
     effect give @s minecraft:instant_damage 1 1 true

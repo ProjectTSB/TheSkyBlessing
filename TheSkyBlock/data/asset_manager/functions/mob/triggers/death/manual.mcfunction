@@ -1,6 +1,6 @@
 #> asset_manager:mob/triggers/death/manual
 #
-#
+# 手動で死亡トリガーを呼び出します
 #
 # @within function lib:damage/core/non-player-process
 
