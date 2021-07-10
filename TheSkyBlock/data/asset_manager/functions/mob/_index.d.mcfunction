@@ -47,3 +47,14 @@
 #   asset_manager:mob/triggers/
 #   asset:mob/*/hurt/**
     #declare tag Attacker
+
+#> 汎用タグ類
+# @within function
+#   asset_manager:mob/common_tag/*
+#   asset:mob/mob/*/*/**
+    #declare tag AntiFallDamage
+    #declare tag AntiVoid
+    #declare tag AntiBurn
+    #declare tag AlwaysBurn
+    #declare tag AlwaysInvisible
+    #declare tag AutoKillWhenDieVehicle
