@@ -13,9 +13,6 @@
     effect give @a[tag=Victim] weakness 3 2 true
     effect give @a[tag=Victim] mining_fatigue 3 2 true
 
-# 氷に閉じ込め
-    execute at @a[tag=Victim] run fill ~0.5 ~1 ~0.5 ~-0.5 ~ ~-0.5 ice replace #lib:air
-
 # 引数の設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 5.0f
@@ -26,6 +23,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute as @a[distance=..1.5] run function lib:damage/
+    execute at @p[tag=Victim] as @a[distance=..2.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
