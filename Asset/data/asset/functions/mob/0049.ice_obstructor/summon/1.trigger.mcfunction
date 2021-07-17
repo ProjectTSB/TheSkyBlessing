@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/summon
 
-execute if data storage asset:context {id:49} run function asset:mob/0049.ice_obstructor/summon/2.summon
+execute if data storage asset:context {id:38} run function asset:mob/0049.ice_obstructor/summon/2.summon
