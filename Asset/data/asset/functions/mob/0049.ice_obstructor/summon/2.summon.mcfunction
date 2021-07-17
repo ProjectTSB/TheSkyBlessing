@@ -7,7 +7,7 @@
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0049.ice_obstructor"}
 # ID (int)
-    data modify storage asset:mob ID set value 38
+    data modify storage asset:mob ID set value 49
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)

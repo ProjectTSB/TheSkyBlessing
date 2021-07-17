@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/hurt
 
-execute if data storage asset:context {id:38} run function asset:mob/0049.ice_obstructor/hurt/2.hurt
+execute if data storage asset:context {id:49} run function asset:mob/0049.ice_obstructor/hurt/2.hurt
