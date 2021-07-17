@@ -16,20 +16,20 @@
     data modify storage asset:mob Name set value '{"text":"Fire_spreader","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:7s}]},HandDropChances:[0.000F,0.085F]}
+    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:7s}]}}
     # オフハンド (Compound(Item)) (オプション)
-    data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:air"}
+    # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-    data modify storage asset:mob Armor.Head set value {id:"minecraft:magma_block",Count:1b,ArmorDropChances:[0.000F,0.000F,0.000F,0.000F]}
+    data modify storage asset:mob Armor.Head set value {id:"minecraft:magma_block",Count:1b}
     # 胴 (Compound(Item)) (オプション)
-    data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:6029569}},ArmorDropChances:[0.000F,0.000F,0.000F,0.000F]}
+    data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:6029569}}}
     # 脚 (Compound(Item)) (オプション)
-    data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6029569}},ArmorDropChances:[0.000F,0.000F,0.000F,0.000F]}
+    data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6029569}}}
     # 足 (Compound(Item)) (オプション)
-    data modify storage asset:mob Armor.Feet set value {id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6029569}},ArmorDropChances:[0.000F,0.000F,0.000F,0.000F]}
+    data modify storage asset:mob Armor.Feet set value {id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6029569}}}
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
