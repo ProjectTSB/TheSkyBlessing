@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"Ice_obstructor","color":"aqua"}'
+    data modify storage asset:mob Name set value '{"text":"雹害者","color":"aqua"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
     data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:3s}]}}
