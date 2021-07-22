@@ -19,10 +19,14 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
 # 補正functionを実行
     function lib:damage/modifier
-# 範囲5m以内のゾンビを対象に
+# ダメージ対象
     execute as @a[tag=Victim] run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# マナ減少
+    scoreboard players set $Fluctuation Lib -8
+    execute as @p[tag=Victim] run function lib:mp/fluctuation
 
 # 弓から剣に切り替えた場合speedを得る
     effect give @s[predicate=asset:mob/0056.thunder_trifler/bow] speed 500 1 true
