@@ -25,9 +25,9 @@
     data remove storage lib: Argument
 
 # 弓から剣に切り替えた場合speedを得る
-    effect give @s[nbt={HandItems:[{id:"minecraft:bow"}]}] speed 500 1 true
+    effect give @s[predicate=asset:mob/0056.thunder_trifler/bow] speed 500 1 true
        # 弓から切り替えた瞬間にワープ
-       tp @s[nbt={HandItems:[{id:"minecraft:bow"}]}] @a[tag=Victim,limit=1]
+       tp @s[predicate=asset:mob/0056.thunder_trifler/bow] @a[tag=Victim,limit=1]
 
 # 攻撃が当たった場合武器が弓なら剣に切替(挙動の関係上最後に配置)
-    replaceitem entity @s[nbt={HandItems:[{id:"minecraft:bow"}]}] weapon.mainhand golden_sword{Enchantments:[{id:"sharpness",lvl:3}]}
+    replaceitem entity @s[predicate=asset:mob/0056.thunder_trifler/bow] weapon.mainhand golden_sword{Enchantments:[{id:"sharpness",lvl:3}]}

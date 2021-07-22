@@ -15,10 +15,10 @@
     data modify storage lib: Argument.Distance set value 10
     data modify storage lib: Argument.Spread set value 4.633
     execute facing entity @p[tag=Attacker] eyes rotated ~ 0 run function lib:forward_spreader/circle
-    execute at 0-0-0-0-0 if block ~ ~ ~ #asset/mob/0056.thunder_trifler/no_collision run tp @s 0-0-0-0-0
+    execute at 0-0-0-0-0 if block ~ ~ ~ #asset:mob/0056.thunder_trifler/no_collision run tp @s 0-0-0-0-0
 
 # 武器が剣の場合弓に切替
-   replaceitem entity @s[nbt={HandItems:[{id:"minecraft:golden_sword"}]}] weapon.mainhand bow{Enchantments:[{id:"punch",lvl:2}]}
+   replaceitem entity @s[predicate=asset:mob/0056.thunder_trifler/golden_sword] weapon.mainhand bow{Enchantments:[{id:"punch",lvl:2}]}
 
 # speedバフ消し
     effect clear @s speed
