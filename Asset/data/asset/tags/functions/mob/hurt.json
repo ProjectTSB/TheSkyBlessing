@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/hurt/1.trigger"
+        "asset:mob/example/hurt/1.trigger",
+        "asset:mob/0055.hetukedah/hurt/1.trigger"
     ]
 }

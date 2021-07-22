@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/tick/1.trigger",
-        "asset:mob/0027.skull_sniper/tick/1.trigger"
+        "asset:mob/0027.skull_sniper/tick/1.trigger",
+        "asset:mob/0055.hetukedah/tick/1.trigger"
     ]
 }
