@@ -11,8 +11,8 @@
    playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 2.0 0
 
 # 引数の設定
-    # 与えるダメージ = 7.5
-        data modify storage lib: Argument.Damage set value 5.0
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 3.0
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
