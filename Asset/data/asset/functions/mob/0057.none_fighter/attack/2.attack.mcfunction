@@ -5,8 +5,8 @@
 # @within function asset:mob/0057.none_fighter/attack/1.trigger
 
 # 演出
-    particle minecraft:block white_concrete ~ ~1.2 ~ 1.0 1.0 1.0 0 40 normal @a
-    playsound minecraft:block.stone.break master @a ~ ~ ~ 1 1.2 0
+    execute at @p[tag=Victim] run particle minecraft:block white_concrete ~ ~1.2 ~ 1.0 0.5 1.0 0 40 normal @a
+    execute at @p[tag=Victim] run playsound minecraft:block.stone.break master @a ~ ~ ~ 1 1.2 0
 
 # 引数の設定
     # 与えるダメージ
@@ -17,7 +17,7 @@
         data modify storage lib: Argument.ElementType set value "None"
 # 補正functionを実行
     function lib:damage/modifier
-# 範囲5m以内のゾンビを対象に
+# 範囲
     execute at @p[tag=Victim] as @a[distance=..2.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
