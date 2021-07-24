@@ -7,11 +7,11 @@
 # 演出
     particle dust 0 0.2 0.1 1 ~ ~1 ~ 0.5 0.3 0.5 1 6 normal @a[distance=..12]
 
-# 周囲のプレイヤーにデバフ
+# 周囲のプレイヤーにウィザー
     effect give @a[gamemode=!spectator,distance=..1.2] wither 1 2 false
 
 # 増殖スコア(周囲に増殖靄がいなければ増える)
-   execute unless entity @e[tag=1M.DivideHaze,distance=0.01..20] run scoreboard players add @s 1M.HazeCount 1
+   execute unless entity @e[type=zombie,tag=1M.DivideHaze,distance=0.01..20] run scoreboard players add @s 1M.HazeCount 1
 
 # 増殖
    execute if score @s 1M.HazeCount matches 300.. run function asset:mob/0058.divide_haze/tick/divide
