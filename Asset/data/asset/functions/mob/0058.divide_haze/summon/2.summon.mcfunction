@@ -2,10 +2,10 @@
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0058.divide_haze/summon/1.trigger
+# @within function asset:mob/0058.divide_haze/*/**
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","1M.divide_haze"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","1M.DivideHaze","AntiBurn"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
 # ID (int)
     data modify storage asset:mob ID set value 58
 # Type (string) Wikiを参照
