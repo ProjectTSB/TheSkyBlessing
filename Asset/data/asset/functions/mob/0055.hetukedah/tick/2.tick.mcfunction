@@ -14,3 +14,7 @@
 
 # スキル発動
     execute if score @s 1J.BossTime matches 140 run function asset:mob/0055.hetukedah/tick/3.skill
+
+# 演出
+    particle dripping_obsidian_tear ~ ~1 ~ 0.4 0.4 0.4 1 1 normal
+    particle portal ~ ~1 ~ 0.4 0.4 0.4 1 3 normal
