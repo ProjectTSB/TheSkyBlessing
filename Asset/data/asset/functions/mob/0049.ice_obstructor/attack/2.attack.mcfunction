@@ -23,6 +23,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute at @p[tag=Victim] as @p[distance=..2.5] run function lib:damage/
+    execute at @p[tag=Victim] as @a[gamemode=!spectator,distance=..2.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
