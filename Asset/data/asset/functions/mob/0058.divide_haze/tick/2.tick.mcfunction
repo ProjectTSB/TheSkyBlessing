@@ -14,4 +14,4 @@
    execute unless entity @e[type=zombie,tag=1M.DivideHaze,distance=0.01..20] run scoreboard players add @s 1M.HazeCount 1
 
 # 増殖
-   execute if score @s 1M.HazeCount matches 300.. run function asset:mob/0058.divide_haze/tick/divide
+   execute unless entity @e[type=zombie,tag=1M.DivideHaze,distance=0.01..20] if score @s 1M.HazeCount matches 300.. run function asset:mob/0058.divide_haze/tick/divide
