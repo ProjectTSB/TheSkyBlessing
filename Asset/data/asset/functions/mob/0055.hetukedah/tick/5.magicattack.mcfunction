@@ -6,7 +6,7 @@
 
 # 演出
     playsound entity.wither.death hostile @a ~ ~ ~ 1 1
-    execute positioned ~ ~0.5 ~ run function asset:mob/0055.hetukedah/tick/5.1.particle
+    execute positioned ~ ~0.5 ~ rotated ~ 0 run function asset:mob/0055.hetukedah/tick/5.1.particle
 
 # ダメージ設定
     # 与えるダメージ
