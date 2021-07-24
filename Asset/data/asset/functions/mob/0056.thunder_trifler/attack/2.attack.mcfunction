@@ -29,7 +29,7 @@
     execute as @p[tag=Victim] run function lib:mp/fluctuation
 
 # 弓から剣に切り替えた場合speedを得る
-    effect give @s[predicate=asset:mob/0056.thunder_trifler/bow] speed 500 1 true
+    effect give @s[predicate=asset:mob/0056.thunder_trifler/bow] speed 500 0 true
        # 弓から切り替えた瞬間にワープ
        tp @s[predicate=asset:mob/0056.thunder_trifler/bow] @a[tag=Victim,limit=1]
 
