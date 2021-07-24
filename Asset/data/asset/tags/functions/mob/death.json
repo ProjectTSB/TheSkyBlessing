@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/death/1.trigger"
+        "asset:mob/example/death/1.trigger",
+        "asset:mob/0060.self_destructor/death/1.trigger"
     ]
 }
