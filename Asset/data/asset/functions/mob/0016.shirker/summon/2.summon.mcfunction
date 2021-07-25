@@ -1,19 +1,19 @@
-#> asset:mob/0015.guardian/summon/2.summon
+#> asset:mob/0016.shirker/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0015.guardian/summon/1.trigger
+# @within function asset:mob/0016.shirker/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon guardian ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0015.guardian"}
+    summon elder_guardian ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0016.shirker"}
 # ID (int)
-    data modify storage asset:mob ID set value 15
+    data modify storage asset:mob ID set value 16
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":監視者","color":"blue"}'
+    data modify storage asset:mob Name set value '{"text":忌視者","color":"blue"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -33,24 +33,24 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 30
+    data modify storage asset:mob Health set value 200.0
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 3.0
+    data modify storage asset:mob AttackDamage set value 5.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    # data modify storage asset:mob Defense set value
+    data modify storage asset:mob Defense set value 3.0
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.20
+    data modify storage asset:mob Speed set value 0.10
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 0.0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 0.8
+        data modify storage asset:mob Resist.Physical set value 0.6
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.8
+        data modify storage asset:mob Resist.Magic set value 0.6
     # 火倍率 (float) (オプション)
         data modify storage asset:mob Resist.Fire set value 0.25
     # 水倍率 (float) (オプション)
@@ -59,4 +59,4 @@
         data modify storage asset:mob Resist.Thunder set value 1.0
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=guardian,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=elder_guardian,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
