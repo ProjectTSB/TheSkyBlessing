@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:15}}"
+                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:16}}"
                         },
                         {
                             "function": "copy_nbt",
@@ -32,7 +32,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "entities/guardian"
+                    "name": "entities/elder_guardian"
                 }
             ]
         }

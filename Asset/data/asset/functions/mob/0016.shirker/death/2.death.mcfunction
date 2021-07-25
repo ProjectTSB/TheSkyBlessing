@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0016.shirker/death/1.trigger
 
-data modify storage api: Argument.ID set value 15
+data modify storage api: Argument.ID set value 27
 function api:mob/summon
 
 say a
