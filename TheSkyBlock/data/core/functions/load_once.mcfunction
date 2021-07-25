@@ -124,6 +124,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob
     # @within function
     #   lib:debug/objective_view
+    #   asset:mob/*/**
     #   asset_manager:mob/**
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
