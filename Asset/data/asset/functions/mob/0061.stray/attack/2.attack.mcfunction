@@ -11,9 +11,9 @@
     # 与えるダメー
         data modify storage lib: Argument.Damage set value 4.0
     # 第一属性
-        data modify storage lib: Argument.AttackType set value "Magic"
+        data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
-        data modify storage lib: Argument.ElementType set value "Thunder"
+        data modify storage lib: Argument.ElementType set value "Water"
 # 補正functionを実行
     function lib:damage/modifier
 # 範囲5m以内のゾンビを対象に
