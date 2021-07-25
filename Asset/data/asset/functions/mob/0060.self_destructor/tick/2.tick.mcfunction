@@ -4,8 +4,8 @@
 #
 # @within function asset:mob/0060.self_destructor/tick/1.trigger
 
-# 燃えてる場合爆発(爆発する値までスコア増加)
-   scoreboard players add @s[predicate=lib:is_burnning] 1O.ExploOrder 40
+# 燃えてる場合爆発
+   execute unless entity @s[tag=!1O.Explode,predicate=!lib:is_burnning] run scoreboard players add @s 1O.ExploOrder 40
 
 # 自爆
   # 演出

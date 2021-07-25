@@ -23,6 +23,8 @@ playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 0.6 1
     # リセット
    data remove storage lib: Argument
 
+   execute as @e[type=zombie,scores={MobID=},distance=..10] run tag @s add 1O
+
   # 消滅
       tp @s ~ 0 ~
       kill @s
