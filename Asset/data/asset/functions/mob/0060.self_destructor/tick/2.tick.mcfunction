@@ -5,7 +5,7 @@
 # @within function asset:mob/0060.self_destructor/tick/1.trigger
 
 # 燃えてる場合爆発(爆発する値までスコア増加)
-   scoreboard players add @s[predicate=lib:is_burnning] 1O.ExplosionCo 1
+   scoreboard players add @s[predicate=lib:is_burnning] 1O.ExploOrder 40
 
 # 自爆
   # 演出
