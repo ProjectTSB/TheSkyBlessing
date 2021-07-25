@@ -5,13 +5,17 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 17
+data modify storage global Version set value 18
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
-forceload add 10000 10000
-forceload add -1 -1 0 0
+execute in overworld run forceload add 10000 10000
+execute in overworld run forceload add -1 -1 0 0
+execute in the_nether run forceload add 10000 10000
+execute in the_nether run forceload add -1 -1 0 0
+execute in the_end run forceload add 10000 10000
+execute in the_end run forceload add -1 -1 0 0
 
 
 #> gameruleの設定
