@@ -13,7 +13,7 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 7.5f
+        data modify storage lib: Argument.Damage set value 4.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -21,6 +21,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute as @a[distance=..2] run function lib:damage/
+    execute at @p[tag=Victim] as @a[predicate=lib:is_burnning,distance=..2] run function lib:damage/
 # リセット
     data remove storage lib: Argument
