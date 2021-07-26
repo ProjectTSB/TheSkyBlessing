@@ -15,17 +15,17 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"ハート","color":"light_purple","bold":true},{"text":"ランド","color":"green","bold":true}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"大地の加護を得た衣"}]','[{"text":"豊穣","color":"yellow"},{"text":はここに。"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"大地の加護を得た衣"}]','[{"text":"豊穣","color":"yellow"},{"text":"はここに。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value 
+    # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "legs"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "passive"
 # 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value 
+    # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
@@ -33,25 +33,25 @@
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value 
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value 
+    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 
-# MP消費量 (int) 
+    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
+# MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value 
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value 
+    # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value 
+    # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value 
+    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,564,4],AttributeName:"generic.armor‌",Name:armor,Amount:3,Operation:0,Slot:legs},{UUID:[I;1,1,564,4],AttributeName:"generic.max_Health‌",Name:health,Amount:4,Operation:0,Slot:legs}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:63,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,564,4],AttributeName:"generic.armor",Name:"armor",Slot:legs,Operation:0,Amount:3},{UUID:[I;1,1,564,4],AttributeName:"generic.max_Health",Name:"max_Health",Slot:legs,Operation:0,Amount:4}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
