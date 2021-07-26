@@ -8,7 +8,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # タグチェック用
-    tag @s add 64.Check
+    tag @s add AE.Check
 # 演出
     particle dust 1 1 0 1 ~ ~ ~ 0.1 0 0.1 0 5
     playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 1

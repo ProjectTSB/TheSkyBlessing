@@ -12,7 +12,8 @@
     execute store result score $Diameter Temporary run data get storage lib: Argument.Spread 10000
     data modify storage lib: Rotation set from entity 0-0-0-0-0 Rotation
 # オーバーフロー警告
-    execute if score $Diameter Temporary matches 46340.. run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"Spreadの値が4.6340fを上回っています。オーバーフローで正常に動作しない為、値を縮小してください。","color":"white"}]
+    execute if score $Diameter Temporary matches 46340.. run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"Spreadの絶対値が4.6340を上回っています。オーバーフローで正常に動作しない為、値を縮小してください。","color":"white"}]
+    execute if score $Diameter Temporary matches ..-46340 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"Spreadの絶対値が4.6340を上回っています。オーバーフローで正常に動作しない為、値を縮小してください。","color":"white"}]
 # 実行座標のデータからベクトルを取得する
 # Rotation[] => ($YawSin, $YawCos, $PitchSin, $PitchCos)
     function lib:forward_spreader/core/yaw

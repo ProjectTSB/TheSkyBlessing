@@ -5,13 +5,17 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 15
+data modify storage global Version set value 18
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
-forceload add 10000 10000
-forceload add -1 -1 0 0
+execute in overworld run forceload add 10000 10000
+execute in overworld run forceload add -1 -1 0 0
+execute in the_nether run forceload add 10000 10000
+execute in the_nether run forceload add -1 -1 0 0
+execute in the_end run forceload add 10000 10000
+execute in the_end run forceload add -1 -1 0 0
 
 
 #> gameruleの設定
@@ -120,6 +124,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob
     # @within function
     #   lib:debug/objective_view
+    #   asset:mob/*/**
     #   asset_manager:mob/**
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
@@ -162,7 +167,9 @@ team modify NoCollision collisionRule never
         #declare tag Believe.Rumor
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
+        scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+        scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
 
     #> MobManager用スコアボード - 攻撃元

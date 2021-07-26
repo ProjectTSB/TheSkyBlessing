@@ -33,6 +33,8 @@
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
+        data modify entity @s HandDropChances set from storage asset:mob WeaponDropChances
+        data modify entity @s ArmorDropChances set from storage asset:mob ArmorDropChances
     # Attributeの事前追加
         execute if data storage asset:mob Health run data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
         execute if data storage asset:mob AttackDamage run data modify storage asset:mob Attributes append value {Name:"generic.attack_damage"}
