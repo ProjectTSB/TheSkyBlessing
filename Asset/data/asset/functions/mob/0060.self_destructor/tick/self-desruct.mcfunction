@@ -19,7 +19,7 @@ playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 0.6 1
     # 補正functionを実行
    execute if score @s 1O.ExploOrder matches 40 run function lib:damage/modifier
     # 範囲5m以内のゾンビを対象に
-   execute as @a[distance=..7.5] run function lib:damage/
+   execute as @a[gamemode=!adventure,gamemode=!creative,distance=..7.5] run function lib:damage/
     # リセット
    data remove storage lib: Argument
 
@@ -27,5 +27,5 @@ playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 0.6 1
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplosionCo 8
 
   # 消滅
-      tp @s ~ 0 ~
+      tp @s ~ -10 ~
       kill @s
