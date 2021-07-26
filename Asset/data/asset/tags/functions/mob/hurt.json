@@ -1,6 +1,5 @@
 {
     "values": [
-        "asset:mob/example/hurt/1.trigger",
-        "asset:mob/0058.divide_haze/hurt/1.trigger"
+        "asset:mob/example/hurt/1.trigger"
     ]
 }

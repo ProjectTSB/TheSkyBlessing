@@ -3,7 +3,6 @@
         "asset:mob/example/summon/1.trigger",
         "asset:mob/0027.skull_sniper/summon/1.trigger",
         "asset:mob/0007.ectoplasm/summon/1.trigger",
-        "asset:mob/0058.divide_haze/summon/1.trigger",
         "asset:mob/0061.stray/summon/1.trigger"
     ]
 }
