@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 没収されたアイテムの個数を取得
-    execute store result score @s Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
+    execute store result score @s Temporary run function api:lost_items/get_length
 
 # 没収されたアイテム / 3の値を設定
     scoreboard players operation @s Temporary /= $3 Const
