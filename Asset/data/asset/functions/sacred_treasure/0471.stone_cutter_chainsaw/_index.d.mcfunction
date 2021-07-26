@@ -12,4 +12,4 @@
 #   asset:sacred_treasure/0471.stone_cutter_chainsaw/3.2.entity
 #
     #declare score_holder $7n.Count
-    #declare tag 7n.Critical
+    #declare tag D3.Critical

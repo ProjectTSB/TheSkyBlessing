@@ -10,21 +10,21 @@
 # ここから先は神器側の効果の処理を書く
 
 # 座標を管理するAEC召喚
-    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["4F.PosManager"],NoGravity:1b}
+    summon minecraft:area_effect_cloud ~ ~ ~ {Duration:201,Tags:["89.PosManager"],NoGravity:1b}
 
 # トランス対象のプレイヤーにタグを付与
-    tag @s add 4F.Player
+    tag @s add 89.Player
 
 # スコアボードを初期化
-    scoreboard players set @s 4F.TickCount 200
-    scoreboard players add $4F.UserManager 4F.UserID 1
-    scoreboard players operation @s 4F.UserID = $4F.UserManager 4F.UserID
-    scoreboard players operation @e[type=area_effect_cloud,tag=4F.PosManager,sort=nearest,limit=1] 4F.UserID = $4F.UserManager 4F.UserID
+    scoreboard players set @s 89.TickCount 200
+    scoreboard players add $4F.UserManager 89.UserID 1
+    scoreboard players operation @s 89.UserID = $4F.UserManager 89.UserID
+    scoreboard players operation @e[type=area_effect_cloud,tag=89.PosManager,sort=nearest,limit=1] 89.UserID = $4F.UserManager 89.UserID
 
 # 現在のゲームモードを取得
-    scoreboard players set @s[gamemode=survival] 4F.GameMode 0
-    scoreboard players set @s[gamemode=creative] 4F.GameMode 1
-    scoreboard players set @s[gamemode=adventure] 4F.GameMode 2
+    scoreboard players set @s[gamemode=survival] 89.GameMode 0
+    scoreboard players set @s[gamemode=creative] 89.GameMode 1
+    scoreboard players set @s[gamemode=adventure] 89.GameMode 2
 
 # 演出
     playsound entity.wither.ambient master @s ~ ~ ~ 1 2

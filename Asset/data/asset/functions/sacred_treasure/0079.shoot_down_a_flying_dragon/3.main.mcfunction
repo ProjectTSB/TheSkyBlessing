@@ -29,17 +29,17 @@
 
     # 対象を設定
         # 前提として近い1体はHit確定
-            tag @e[type=#lib:living,tag=Enemy,distance=..10,sort=nearest,limit=1] add Hit
+            tag @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10,sort=nearest,limit=1] add Hit
         # 雨、雷で、頭上にブロックがない時は..10全体にHit
-            execute if score $UpperBlocks Temporary matches 0 unless score $Weather Temporary matches 0 run tag @e[type=#lib:living,tag=Enemy,distance=..10] add Hit
+            execute if score $UpperBlocks Temporary matches 0 unless score $Weather Temporary matches 0 run tag @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] add Hit
 
         # 自身が水の近くにいた場合($AroundWater=1..)r=..10の付近に水がある敵も対象となる
             # MobのTemporaryはMob周囲の水の数に設定
-                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
+                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] at @s store result score @s Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
             # Mobとして：@s のTemporaryが1..ならHitする
-                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,tag=Enemy,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
+                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
         # プレイヤーへの誤Hit処理 HitしたMobの0.05m以内にいると自分にもあたる やっぱPKしたいじゃぁん？ ※現在はコメントアウト中
-            # execute as @e[type=#lib:living,tag=Hit,distance=..10] at @s as @a[distance=..0.05] run tag @s add Hit
+            # execute as @e[type=#lib:living,type=!player,tag=Hit,tag=!Uninterferable,distance=..10] at @s as @a[distance=..0.05] run tag @s add Hit
 
 
     # ダメージを設定
@@ -63,24 +63,24 @@
 
     # 演出
         # Particle
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run particle enchanted_hit ~ ~2 ~ 0.02 5 0.02 0 75 force @a
-            execute if score $AttackStrength Temporary matches 0 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 0.941 1 0.11 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
-            execute if score $AttackStrength Temporary matches 1 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 1 0.69 0.11 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
-            execute if score $AttackStrength Temporary matches 2 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 1 0.176 0.176 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
-            execute if score $AttackStrength Temporary matches 3 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 0.929 0.137 1 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
+            execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run particle enchanted_hit ~ ~2 ~ 0.02 5 0.02 0 75 force @a
+            execute if score $AttackStrength Temporary matches 0 at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run particle dust 0.941 1 0.11 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
+            execute if score $AttackStrength Temporary matches 1 at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run particle dust 1 0.69 0.11 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
+            execute if score $AttackStrength Temporary matches 2 at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run particle dust 1 0.176 0.176 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
+            execute if score $AttackStrength Temporary matches 3 at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run particle dust 0.929 0.137 1 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
         # Sound
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
 
     # 効果
         # 通常Hit処理
-            execute as @e[type=#lib:living,tag=Hit,distance=..10] run function lib:damage/
-            effect clear @e[type=#lib:living,distance=..10,limit=1] levitation
+            execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..10] run function lib:damage/
+            effect clear @e[type=#lib:living,tag=!Uninterferable,distance=..10,limit=1] levitation
 
     # リセット
-        tag @e[type=#lib:living,tag=Hit,distance=..10] remove Hit
-        scoreboard players reset @e[type=#lib:living,distance=..10] Temporary
+        tag @e[type=#lib:living,type=!player,tag=Hit,distance=..10] remove Hit
+        scoreboard players reset @e[type=#lib:living,tag=!Uninterferable,distance=..10] Temporary
         scoreboard players reset $Weather Temporary
         scoreboard players reset $AroundWater Temporary
         scoreboard players reset $UpperBlocks Temporary

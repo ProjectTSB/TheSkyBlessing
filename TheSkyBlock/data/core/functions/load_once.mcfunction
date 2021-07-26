@@ -5,13 +5,17 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 12
+data modify storage global Version set value 18
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
-forceload add 10000 10000
-forceload add -1 -1 0 0
+execute in overworld run forceload add 10000 10000
+execute in overworld run forceload add -1 -1 0 0
+execute in the_nether run forceload add 10000 10000
+execute in the_nether run forceload add -1 -1 0 0
+execute in the_end run forceload add 10000 10000
+execute in the_end run forceload add -1 -1 0 0
 
 
 #> gameruleの設定
@@ -86,7 +90,7 @@ team modify NoCollision collisionRule never
             #declare tag Random
         summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Curray Global run data get entity @e[tag=Random,limit=1] UUID[3]
+        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
 
     #> 定数類用スコアボード **変更厳禁**
@@ -99,15 +103,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UserID dummy {"text":"汎用固有ユーザーID"}
 
     #> DEBUG用スコアボード
-    # @within function
-    #   core:load_once
-    #   lib:debug/objective_view
+    # @within function core:load_once
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
-    #> AssetManager
-    # @within function
-    #   lib:debug/objective_view
-    #   asset_manager:**
+    #> AssetManager: 神器
+    # @within function asset_manager:sacred_treasure/**
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
         scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
@@ -121,13 +121,19 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
 
-    #> イベントハンドラ用スコアボード
+    #> AssetManager: Mob
     # @within function
     #   lib:debug/objective_view
+    #   asset:mob/*/**
+    #   asset_manager:mob/**
+        scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
+
+    #> イベントハンドラ用スコアボード
+    # @within function
     #   asset_manager:sacred_treasure/triggers/**
     #   core:load_once
     #   core:handler/*
-    #   core:tick
+    #   core:tick/*
         scoreboard objectives add FirstJoinEvent custom:play_one_minute {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
@@ -144,9 +150,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add ScoreToHPFluc dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
-    # @within function
-    #   lib:debug/objective_view
-    #   player_manager:adjust_hunger/**
+    # @within function player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
@@ -163,18 +167,25 @@ team modify NoCollision collisionRule never
         #declare tag Believe.Rumor
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
+        scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+        scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
 
-    #> PlayerNBT用スコアボード
-    # @public
-        scoreboard objectives add FallDistance dummy {"text":"FallDistance"}
-
-    #> MobManager用スコアボード
-    # @public
-        scoreboard objectives add AttackedEntity dummy
+    #> MobManager用スコアボード - 攻撃元
+    # @within function
+    #   core:tick/
+    #   asset_manager:*/triggers/
+    #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
+
+    #> MobManager用スコアボード - 攻撃先
+    # @within function
+    #   core:tick/
+    #   asset_manager:*/triggers/
+    #   mob_manager:entity_finder/attacked_entity/*
+        scoreboard objectives add AttackedEntity dummy
 
 
 #> Scheduleループの初期化(replace)
-    schedule function core:4_interval_tick 4t
+    schedule function core:tick/4_interval 4t

@@ -6,17 +6,17 @@
 
 # 演出など
     particle block red_wool ~ ~1 ~ 0.1 0 0.1 1 30
-    execute if entity @s[tag=7n.Critical] run particle block redstone_block ~ ~1 ~ 0 0 0 1 50
+    execute if entity @s[tag=D3.Critical] run particle block redstone_block ~ ~1 ~ 0 0 0 1 50
     playsound entity.blaze.hurt master @a ~ ~ ~ 0.2 0.1
     playsound block.sand.step master @p ~ ~ ~ 1.0 0.8
-    execute if entity @s[tag=7n.Critical] run playsound item.totem.use master @p ~ ~ ~ 0.3 2.0
+    execute if entity @s[tag=D3.Critical] run playsound item.totem.use master @p ~ ~ ~ 0.3 2.0
 
 # ダメージ処理
     # 引数の設定
         # 与えるダメージ: 3
             data modify storage lib: Argument.Damage set value 3.0f
         # クリティカル時のダメージ: 5
-            execute if entity @s[tag=7n.Critical] run data modify storage lib: Argument.Damage set value 6.0f
+            execute if entity @s[tag=D3.Critical] run data modify storage lib: Argument.Damage set value 6.0f
         # 第一属性
             data modify storage lib: Argument.AttackType set value "Physical"
         # パーティクルを無効化
@@ -29,4 +29,4 @@
         data remove storage lib: Argument
 
 # タグの開放
-    tag @s remove 7n.Critical
+    tag @s remove D3.Critical

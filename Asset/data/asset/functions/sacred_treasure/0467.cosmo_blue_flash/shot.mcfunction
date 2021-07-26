@@ -13,11 +13,11 @@
     playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
 
 # 着弾検知
-    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5,limit=1] run tag @s add 7j.HitEntity
-    execute if entity @e[tag=7j.HitEntity] run tag @s add 7j.HitFlag
+    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5,limit=1] run tag @s add CZ.HitEntity
+    execute if entity @e[tag=CZ.HitEntity] run tag @s add CZ.HitFlag
 
 # 着弾処理
-    execute as @e[tag=7j.HitEntity] run function asset:sacred_treasure/0467.cosmo_blue_flash/hit
+    execute as @e[tag=CZ.HitEntity] run function asset:sacred_treasure/0467.cosmo_blue_flash/hit
 
 # 再帰
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!7j.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/shot
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/shot

@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run particle minecraft:crit ~ ~1 ~ 0.2 0.8 0.2 0 80 normal @a[distance=..30]
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run particle minecraft:crit ~ ~1 ~ 0.2 0.8 0.2 0 80 normal @a[distance=..30]
     playsound minecraft:block.anvil.place master @a[distance=..10] ~ ~ ~ 0.8 2
 
 # ダメージ
@@ -21,6 +21,6 @@
     # 属性耐性・防御力/防具強度・耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
 # 攻撃した対象に実行
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..10,limit=1] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..10,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
