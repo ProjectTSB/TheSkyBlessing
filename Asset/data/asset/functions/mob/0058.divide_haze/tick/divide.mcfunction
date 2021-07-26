@@ -7,7 +7,7 @@
 # 増殖
     data modify storage api: Argument.ID set value 58
     execute positioned ~ 0 ~ run function api:mob/summon
-    execute positioned ~ 0 ~ run tp @e[type=skeleton,tag=1M.DivideHaze,distance=..0.1] @s
+    execute positioned ~ 0 ~ run tp @e[type=skeleton,scores={MobID=58},distance=..0.1] @s
 
 # 仕様上同じ座標にいるとスコアが増えてしまうので多少座標ずらし
     tp @s ^ ^ ^0.3
