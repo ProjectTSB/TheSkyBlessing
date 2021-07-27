@@ -5,7 +5,7 @@
 # @within function asset:mob/10002.sandbag3/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/10002.sandbag3"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"empty"}
 # ID (int)
     data modify storage asset:mob ID set value 10003
 # Type (string) Wikiを参照
