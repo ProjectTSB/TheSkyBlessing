@@ -15,7 +15,6 @@
 
 # 必要なデータの取得と加算
     # 元ダメージ
-tellraw @a [{"text":"Argument.Damage: "},{"storage":"lib:","nbt":"Argument.Damage"}]
         execute store result score $Damage Temporary run data get storage lib: Argument.Damage 100
     # Base値による補正
         execute store result score $Modifier Temporary run data get storage lib: Modifiers.Base 100
@@ -25,7 +24,6 @@ tellraw @a [{"text":"Argument.Damage: "},{"storage":"lib:","nbt":"Argument.Damag
         execute if data storage lib: Argument{AttackType:"Physical"} unless data storage lib: Modifiers.Physical run scoreboard players set $Temp Temporary 100
         execute if data storage lib: Argument{AttackType:"Magic"} store result score $Temp Temporary run data get storage lib: Modifiers.Magic 100
         execute if data storage lib: Argument{AttackType:"Magic"} unless data storage lib: Modifiers.Magic run scoreboard players set $Temp Temporary 100
-tellraw @a [{"text":"ModifierA: "},{"score":{"objective":"Temporary","name":"$Temp"}}]
         scoreboard players operation $Average Temporary += $Temp Temporary
     # 第二属性
         execute if data storage lib: Argument{ElementType:"None"} run scoreboard players operation $Temp Temporary = $Average Temporary
@@ -35,23 +33,18 @@ tellraw @a [{"text":"ModifierA: "},{"score":{"objective":"Temporary","name":"$Te
         execute if data storage lib: Argument{ElementType:"Water"} unless data storage lib: Modifiers.Water run scoreboard players set $Temp Temporary 100
         execute if data storage lib: Argument{ElementType:"Thunder"} store result score $Temp Temporary run data get storage lib: Modifiers.Thunder 100
         execute if data storage lib: Argument{ElementType:"Thunder"} unless data storage lib: Modifiers.Thunder run scoreboard players set $Temp Temporary 100
-tellraw @a [{"text":"ModifierB: "},{"score":{"objective":"Temporary","name":"$Temp"}}]
         scoreboard players operation $Average Temporary += $Temp Temporary
     # 平均値
-tellraw @a [{"text":"$Average: "},{"score":{"objective":"Temporary","name":"$Average"}}]
         scoreboard players operation $Average Temporary /= $2 Const
-tellraw @a [{"text":"$Average: "},{"score":{"objective":"Temporary","name":"$Average"}}]
     # 補正値の計算
         scoreboard players operation $Modifier Temporary *= $Average Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
 # 最低値設定
     scoreboard players operation $Modifier Temporary > $25 Const
 # 補正
-tellraw @a [{"text":"$Modifier: "},{"score":{"objective":"Temporary","name":"$Modifier"}}]
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
     execute store result storage lib: Argument.Damage double 0.0001 run scoreboard players get $Damage Temporary
-    tellraw @a [{"text":"Argument.Damage: "},{"storage":"lib:","nbt":"Argument.Damage"}]
 # リセット
     data remove storage lib: Modifiers
     scoreboard players reset $Average Temporary
