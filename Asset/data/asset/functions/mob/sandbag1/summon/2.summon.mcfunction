@@ -1,8 +1,5 @@
-#> asset:mob/10000.sandbags/summon/2.summon
-#
-# Mobの召喚時の処理
-#
-# @within function asset:mob/10000.sandbags/summon/1.trigger
+#> asset:mob/sandbag1/summon/2.summon
+# @private
 
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"empty"}

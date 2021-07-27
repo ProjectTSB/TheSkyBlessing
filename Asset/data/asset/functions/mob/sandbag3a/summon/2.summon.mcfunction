@@ -1,8 +1,5 @@
-#> asset:mob/10012.sandbag_angel3/summon/2.summon
-#
-# Mobの召喚時の処理
-#
-# @within function asset:mob/10012.sandbag_angel3/summon/1.trigger
+#> asset:mob/sandbag3a/summon/2.summon
+# @private
 
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"empty"}
@@ -33,7 +30,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 700
+    data modify storage asset:mob Health set value 1300
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 20
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち

@@ -1,19 +1,16 @@
-#> asset:mob/10002.sandbag3/summon/2.summon
-#
-# Mobの召喚時の処理
-#
-# @within function asset:mob/10002.sandbag3/summon/1.trigger
+#> asset:mob/sandbag2a/summon/2.summon
+# @private
 
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"empty"}
 # ID (int)
-    data modify storage asset:mob ID set value 10003
+    data modify storage asset:mob ID set value 10011
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value "Enemy"
+    data modify storage asset:mob Type set value "Enemy.Boss"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"雑魚サンドバッグ3"}'
+    data modify storage asset:mob Name set value '{"text":"天使サンドバッグ2"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -33,13 +30,13 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 150
+    data modify storage asset:mob Health set value 870
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 12
+    data modify storage asset:mob AttackDamage set value 13
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 18
+    data modify storage asset:mob Defense set value 13
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 0
+    data modify storage asset:mob SpecialDefense set value 8
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0
 # 索敵範囲 (double) (オプション)
