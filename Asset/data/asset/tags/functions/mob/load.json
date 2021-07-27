@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/0027.skull_sniper/0.load"
+        "asset:mob/0027.skull_sniper/0.load",
+        "asset:mob/0065.night_shadow/0.load"
     ]
 }
