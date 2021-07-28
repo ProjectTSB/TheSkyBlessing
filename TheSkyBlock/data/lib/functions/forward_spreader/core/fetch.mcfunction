@@ -27,4 +27,7 @@
     execute store result storage lib: Pos[2] double 0.0001 run scoreboard players get $PosZ Temporary
     data modify entity 0-0-0-0-0 Pos set from storage lib: Pos
 # リセット
+    scoreboard players reset $PosX Temporary
+    scoreboard players reset $PosY Temporary
+    scoreboard players reset $PosZ Temporary
     data remove storage lib: Pos
