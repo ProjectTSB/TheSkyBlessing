@@ -1,6 +1,5 @@
 {
     "values": [
-        "asset:mob/example/death/1.trigger",
-        "asset:mob/0059.none_fighter_bow/death/1.trigger"
+        "asset:mob/example/death/1.trigger"
     ]
 }
