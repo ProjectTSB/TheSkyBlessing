@@ -20,6 +20,6 @@
     function api:player_modifier/defense/water/add
 
 # 演出
-    particle falling_dust diamond_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @s
-    particle falling_dust snow_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @s
-    playsound minecraft:block.glass.break master @s ~ ~ ~ 0.4 1.2 0
+    particle falling_dust diamond_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @a
+    particle falling_dust snow_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @a
+    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 1.2 0
