@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0610.call_fish/**
-    scoreboard objectives add 9Q.FishTime dummy
-    scoreboard objectives add 9Q.FishCool dummy
-    scoreboard objectives add 9Q.UserID dummy
+    scoreboard objectives add GY.FishTime dummy
+    scoreboard objectives add GY.FishCool dummy
+    scoreboard objectives add GY.UserID dummy

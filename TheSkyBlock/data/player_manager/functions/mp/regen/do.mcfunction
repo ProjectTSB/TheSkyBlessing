@@ -11,7 +11,7 @@
 # UserStorage呼び出し
     function oh_my_dat:please
 # 回復量取得
-    execute store result score $Fluctuation Lib run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPRegenAmount 10
+    execute store result score $Fluctuation Lib run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPRegen 10
 # MP回復量を整数部と少数部に分離する
     # $AmountFloatにコピー
         scoreboard players operation $AmountFloat Temporary = $Fluctuation Lib

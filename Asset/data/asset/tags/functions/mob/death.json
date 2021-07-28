@@ -1,5 +1,6 @@
 {
     "values": [
-        "asset:mob/example/death/1.trigger"
+        "asset:mob/example/death/1.trigger",
+        "asset:mob/0019.horus_priest/death/1.trigger"
     ]
 }

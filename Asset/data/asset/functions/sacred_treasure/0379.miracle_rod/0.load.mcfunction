@@ -6,5 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0379.miracle_rod/**
-    scoreboard objectives add 67.CoolTime dummy
-    scoreboard objectives add 67.UserID dummy
+    scoreboard objectives add AJ.CoolTime dummy
+    scoreboard objectives add AJ.UserID dummy

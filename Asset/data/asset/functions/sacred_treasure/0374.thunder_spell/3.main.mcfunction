@@ -26,4 +26,4 @@
     execute positioned ~ ~1 ~ positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] facing entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] feet run function asset:sacred_treasure/0374.thunder_spell/3.1.line
 
 # タグ消し
-    tag @s remove 64.Check
+    tag @s remove AE.Check

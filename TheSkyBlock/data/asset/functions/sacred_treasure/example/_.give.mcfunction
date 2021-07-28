@@ -9,16 +9,16 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 data modify storage asset:sacred_treasure ID set value 2147483647
-data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
-data modify storage asset:sacred_treasure Name set value '{"text":"銃","color":"green"}'
-data modify storage asset:sacred_treasure Lore set value ['{"text":"拡散が激しい銃"}']
+data modify storage asset:sacred_treasure Item set value "minecraft:leather_helmet"
+data modify storage asset:sacred_treasure Name set value '{"text":"暗視ゴーグル","color":"dark_purple"}'
+data modify storage asset:sacred_treasure Lore set value ['{"text":"つけている間暗視効果を得る"}']
 # data modify storage asset:sacred_treasure CostText set value '{"text":""}'
 # data modify storage asset:sacred_treasure RemainingCount set value 50
-data modify storage asset:sacred_treasure Slot set value "auto"
-data modify storage asset:sacred_treasure Trigger set value "onClick"
+data modify storage asset:sacred_treasure Slot set value "head"
+data modify storage asset:sacred_treasure Trigger set value "equipping"
 # data modify storage asset:sacred_treasure Condition set value '{"text":""}'
 # data modify storage asset:sacred_treasure AttackInfo set value {Damage:[0,0],AttackType:[Physical,Magic],ElementType:[Fire,Water,Thunder,None],BypassResist:1b,IsrangeAttack:never}
-data modify storage asset:sacred_treasure MPCost set value 3
+data modify storage asset:sacred_treasure MPCost set value 0
 # data modify storage asset:sacred_treasure MPRequire set value 100
 # data modify storage asset:sacred_treasure LocalCooldown set value 20
 # data modify storage asset:sacred_treasure SpecialCooldown set value 5

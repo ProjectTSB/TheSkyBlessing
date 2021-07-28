@@ -15,7 +15,7 @@
     tag @s add ChuzTerraShot
 
 # スコアセット
-    scoreboard players set @s 210.Range 100
+    scoreboard players set @s 5U.Range 100
 
 # IDコピー
-    scoreboard players operation @s 210.ID = @a[tag=this,limit=1] UserID
+    scoreboard players operation @s 5U.ID = @a[tag=this,limit=1] UserID

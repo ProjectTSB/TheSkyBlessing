@@ -14,4 +14,4 @@
     execute if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..1,sort=nearest,limit=1] run function asset:sacred_treasure/0374.thunder_spell/3.2.damage
 
 # 再起
-    execute if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..1] unless entity @s[tag=64.Check] positioned ^ ^ ^0.5 run function asset:sacred_treasure/0374.thunder_spell/3.1.line
+    execute if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..1] unless entity @s[tag=AE.Check] positioned ^ ^ ^0.5 run function asset:sacred_treasure/0374.thunder_spell/3.1.line

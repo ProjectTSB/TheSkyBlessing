@@ -6,3 +6,10 @@
     #declare score_holder $Index
     #declare score_holder $ListSize
     #declare score_holder $Argument.Index
+
+#> Picks処理用
+# @within function
+#   lib:array/picks
+#   lib:array/core/picks
+    #declare score_holder $Prev
+    #declare score_holder $Cur
