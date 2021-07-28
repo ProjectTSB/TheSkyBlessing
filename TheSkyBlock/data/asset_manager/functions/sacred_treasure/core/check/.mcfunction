@@ -29,7 +29,7 @@
         tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
         function asset_manager:sacred_treasure/core/check/check_local_cooldown
-        execute if entity @s[tag=CheckFailed] run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # SpecialCooldownによる制限
@@ -37,6 +37,8 @@
         execute if entity @s[tag=CheckFailed] run tellraw @s {"text":"特殊クールダウンが終わっていません。","color":"red"}
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
+# 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
+    execute if entity @s[tag=!CanUsed] if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount if data storage asset:sacred_treasure Item.tag.TSB{Trigger:"itemUse"} run function asset_manager:sacred_treasure/core/use/item/has_remain
 # リセット
     data remove storage asset:sacred_treasure TargetSlot
     data remove storage asset:sacred_treasure Item

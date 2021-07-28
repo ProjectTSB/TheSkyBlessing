@@ -32,9 +32,9 @@
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
-        execute unless data entity @s HandDropChances run data modify entity @s HandDropChances set value [0f,0f]
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
-        execute unless data entity @s ArmorDropChances run data modify entity @s ArmorDropChances set value [0f,0f,0f,0f]
+        data modify entity @s HandDropChances set from storage asset:mob WeaponDropChances
+        data modify entity @s ArmorDropChances set from storage asset:mob ArmorDropChances
     # Attributeの事前追加
         execute if data storage asset:mob Health run data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
         execute if data storage asset:mob AttackDamage run data modify storage asset:mob Attributes append value {Name:"generic.attack_damage"}

@@ -23,7 +23,7 @@
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
-        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=67.Magic,scores={67.CoolTime=0},sort=nearest,limit=1] 67.UserID run function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0},sort=nearest,limit=1] AJ.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
