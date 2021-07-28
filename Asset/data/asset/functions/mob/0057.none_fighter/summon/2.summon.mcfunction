@@ -14,11 +14,23 @@
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
     data modify storage asset:mob Name set value '{"text":"虚闘者","color":"white"}'
+
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:iron_sword",Count:1b}
+        #　武器分岐のための擬人乱数
+                # 疑似乱数取得
+                    execute store result score $Random Temporary run function lib:random/
+                # ほしい範囲に剰余算
+                    scoreboard players operation $Random Temporary %= $100 Const
+                # 剣か弓かへ分岐
+                    execute if score $Random Temporary matches 0..50 run data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:iron_sword",Count:1b}
+                    execute if score $Random Temporary matches 51..100 run data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b}
+                # リセット
+                    scoreboard players reset $Random Temporary
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:shield",Count:1b,tag:{BlockEntityTag:{Base:0}}}
+
+
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
