@@ -15,4 +15,4 @@
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
 
 # タグを付与する
-    tag @s add 
+    tag @s add HV.Full
