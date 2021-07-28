@@ -4,8 +4,8 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "item":
-                    "minecraft:golden_sword"            }
+                "item": "minecraft:golden_sword"
+            }
         }
     }
 }
