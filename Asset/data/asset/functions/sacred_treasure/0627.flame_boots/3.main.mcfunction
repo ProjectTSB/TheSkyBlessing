@@ -20,5 +20,5 @@
     function api:player_modifier/defense/fire/add
 
 #ちょっとした演出
-    particle flame ~ ~0.3 ~ 0.4 0.4 0.4 0 10 normal @s
+    particle flame ~ ~0.3 ~ 0.4 0.2 0.4 0 10 normal @s
     playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 0.4 1
