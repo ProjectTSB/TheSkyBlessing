@@ -5,4 +5,4 @@
 #> Temp
 #
 # @within function asset:sacred_treasure/0374.thunder_spell/**
-    #declare tag 64.Check
+    #declare tag AE.Check

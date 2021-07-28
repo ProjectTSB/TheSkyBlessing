@@ -48,12 +48,23 @@
 
 #> 神器側にさらすタグ
 # @within *
-#   asset_manager:sacred_treasure/triggers/
+#   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**
     #declare tag this
     #declare tag Attacker
     #declare tag Victim
+    #declare tag Equip
+    #declare tag DisEquip
 
 #> セレクターテンプレート
 # @within * asset:sacred_treasure/**
     #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
+
+#> 防具変更情報の記録用タグ
+# @within function asset_manager:sacred_treasure/triggers/**
+    #declare tag ChangeMainhand
+    #declare tag ChangeOffhand
+    #declare tag ChangeHead
+    #declare tag ChangeChest
+    #declare tag ChangeLegs
+    #declare tag ChangeFeet

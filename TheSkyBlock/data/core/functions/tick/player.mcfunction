@@ -10,7 +10,7 @@
     execute if entity @s[scores={DeathEvent=1..}] run function core:handler/death
     execute if entity @s[scores={RespawnEvent=1}] run function core:handler/respawn
     execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
-    execute if entity @a[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
+    execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
     execute if entity @s[advancements={core:handler/consume_item=true}] run function core:handler/consume_item
     execute if entity @s[advancements={core:handler/attack=true}] run function core:handler/attack
     execute if entity @s[advancements={core:handler/damage=true}] run function core:handler/damage
@@ -19,3 +19,5 @@
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
 # 神器処理
     function asset_manager:sacred_treasure/triggers/
+# MP回復処理
+    function player_manager:mp/regen/check
