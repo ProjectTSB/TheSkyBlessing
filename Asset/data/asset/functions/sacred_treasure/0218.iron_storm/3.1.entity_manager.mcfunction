@@ -10,5 +10,5 @@
     execute as @e[type=iron_golem,tag=DA.InAir] run function asset:sacred_treasure/0218.iron_storm/3.2.check_entity
 
 # 次tickのmanager実行予約
-    execute if entity @e[type=iron_golem,tag=DA.InAir] run schedule function asset:sacred_treasure/0218.iron_storm/3.1.entity_manager 1t replace
+    execute if entity @e[type=iron_golem,tag=DA.InAir,limit=1] run schedule function asset:sacred_treasure/0218.iron_storm/3.1.entity_manager 1t replace
 
