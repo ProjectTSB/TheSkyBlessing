@@ -17,4 +17,4 @@
 #
     #declare score_holder $397_Count
     #declare score_holder $397_Stat
-    #declare tag 397.Marker
+    #declare tag B1.Marker

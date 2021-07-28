@@ -6,4 +6,4 @@
 
 #> Objective
 # @within function asset:sacred_treasure/0456.potion_of_stalling_power/**
-    scoreboard objectives add 78.Tick dummy
+    scoreboard objectives add CO.Tick dummy

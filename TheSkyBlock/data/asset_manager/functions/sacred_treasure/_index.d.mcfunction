@@ -1,12 +1,6 @@
 #> asset_manager:sacred_treasure/_index.d
 # @private
 
-#> Assetの環境をしまいこむstorage
-# @within function
-#   asset_manager:sacred_treasure/**
-#   asset:sacred_treasure/*/*
-    #declare storage asset:context
-
 #> storage
 # @within *
 #   asset_manager:sacred_treasure/**
@@ -24,17 +18,18 @@
     #declare score_holder $Remain
     #declare score_holder $RemainMAX
 
-#> グローバルクールダウン
+#> 特殊クールダウン
 # @within function
-#   asset_manager:sacred_treasure/core/use/check
+#   asset_manager:sacred_treasure/core/check/check_special_cooldown
 #   asset_manager:sacred_treasure/core/use/
-#   core:tick
+#   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 
 #> Trigger検知用
 # @within function
 #   asset_manager:sacred_treasure/triggers/**
 #   core:handler/**
+    #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
@@ -42,18 +37,34 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
 
-#> スニークのチェック用タグ
+#> check用の失敗フラグ
 # @within function
-#   asset_manager:sacred_treasure/triggers/sneak/*
-#   core:handler/inventory_change
-    #declare tag OnInventoryChanged
+#   asset_manager:sacred_treasure/core/check/*
+    #declare tag CheckFailed
 
 #> スニークの閾値用スコアホルダー
-# @wtihin function asset_manager:sacred_treasure/triggers/sneak/*
+# @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
 
-#> this
+#> 神器側にさらすタグ
 # @within *
-#   asset_manager:sacred_treasure/triggers/
+#   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**
     #declare tag this
+    #declare tag Attacker
+    #declare tag Victim
+    #declare tag Equip
+    #declare tag DisEquip
+
+#> セレクターテンプレート
+# @within * asset:sacred_treasure/**
+    #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
+
+#> 防具変更情報の記録用タグ
+# @within function asset_manager:sacred_treasure/triggers/**
+    #declare tag ChangeMainhand
+    #declare tag ChangeOffhand
+    #declare tag ChangeHead
+    #declare tag ChangeChest
+    #declare tag ChangeLegs
+    #declare tag ChangeFeet

@@ -8,7 +8,7 @@
     #declare score_holder $Random
 
 # マガジンマーク召喚
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity at @s positioned ~ ~1 ~ run summon area_effect_cloud ^0.5 ^ ^ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"！？","bold":true}'}
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] at @s positioned ~ ~1 ~ run summon area_effect_cloud ^0.5 ^ ^ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"！？","bold":true}'}
 # 効果音
     playsound minecraft:item.trident.return master @a ~ ~ ~ 1 0
 
@@ -29,7 +29,7 @@
         execute if score $Random Temporary matches 40..44 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"おぉ！上等だよ！てめーら上等だってんだよ！！"}]
         execute if score $Random Temporary matches 45..49 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"今夜で”オワリ”にしてやるよ！"}]
         execute if score $Random Temporary matches 50..54 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"冥府に送っちまえってよォ！！"}]
-        execute if score $Random Temporary matches 55..59 as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tellraw @a [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"“事故”る奴は････“不運”と”踊”っちまったんだよ････"}]
+        execute if score $Random Temporary matches 55..59 as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run tellraw @a [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"“事故”る奴は････“不運”と”踊”っちまったんだよ････"}]
         execute if score $Random Temporary matches 60..64 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"てめェの臓物ブチまけてやる････！！"}]
         execute if score $Random Temporary matches 65..69 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"俺が手に入れてやる･･･！その領域･･！”スピードの向こう側”を･･！！"}]
         execute if score $Random Temporary matches 70..74 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"疼くんだよゥ････"}]
@@ -46,5 +46,3 @@
 
     # リセット
         scoreboard players reset $Random Temporary
-
-

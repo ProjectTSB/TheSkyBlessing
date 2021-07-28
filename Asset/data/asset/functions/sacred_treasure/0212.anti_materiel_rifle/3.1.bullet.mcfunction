@@ -7,16 +7,16 @@
 #   asset:sacred_treasure/0212.anti_materiel_rifle/3.1.bullet
 
 # 着弾検知
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!minecraft:player,dx=0] run tag @s add Landing
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @s add Landing
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 
 # ターゲットにタグ付与
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!minecraft:player,dx=0] run tag @e[type=#lib:living,type=!minecraft:player,dx=0] add LandingTarget
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] add LandingTarget
 
 # 演出
-    particle minecraft:smoke ~ ~ ~ 0 0 0 0 1
-    particle minecraft:cloud ~ ~ ~ 0 0 0 0 1
-    particle minecraft:flame ~ ~ ~ 0.05 0.05 0.05 0 1
+    particle smoke ~ ~ ~ 0 0 0 0 1
+    particle cloud ~ ~ ~ 0 0 0 0 1
+    particle flame ~ ~ ~ 0.05 0.05 0.05 0 1
 
 # 着弾
     execute if entity @s[tag=Landing] run function asset:sacred_treasure/0212.anti_materiel_rifle/3.2.bullet_damage

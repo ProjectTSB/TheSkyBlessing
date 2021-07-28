@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "feet"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "tick"
+    data modify storage asset:sacred_treasure Trigger set value "passive"
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)

@@ -3,25 +3,19 @@
 
 #> 攻撃したEntity
 # `@e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150]`
-# @public
+# @public function
+#   mob_manager:entity_finder/attacked_entity/**
+#   asset_manager:sacred_treasure/triggers/
+#   asset_manager:mob/triggers/tick_check
     #declare tag AttackedEntity
 
 #> フラグ
 # @within function mob_manager:entity_finder/attacked_entity/**
-    #declare tag HasFindAttackedFlag0
-    #declare tag HasFindAttackedFlag1
-    #declare tag HasFindAttackedFlag2
-    #declare tag HasFindAttackedFlag3
-    #declare tag HasFindAttackedFlag4
-    #declare tag HasFindAttackedFlag5
-    #declare tag HasFindAttackedFlag6
-    #declare tag HasFindAttackedFlag7
-    #declare tag HasFindAttackedFlag8
-    #declare tag HasFindAttackedFlag9
-    #declare tag HasFindAttackedFlag10
-    #declare tag HasFindAttackedFlag11
-    #declare tag HasFindAttackedFlag12
-    #declare tag HasFindAttackedFlag13
-    #declare tag HasFindAttackedFlag14
-    #declare tag HasFindAttackedFlag15
+    #declare storage mob_manager:attacked_entity
     #declare score_holder $AttackedEntityIndex
+
+#> lib:damage/からの攻撃検出用
+# @within function
+#   mob_manager:entity_finder/attacked_entity/on_attack
+#   lib:damage/core/trigger_on_attack
+    #declare tag LibraryDamage

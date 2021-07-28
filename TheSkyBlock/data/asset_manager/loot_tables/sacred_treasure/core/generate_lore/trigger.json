@@ -26,7 +26,8 @@
                                         "nbt": "Temp.Trigger.A"
                                     },
                                     {
-                                        "text": "し"
+                                        "storage": "asset:sacred_treasure",
+                                        "nbt": "Temp.Trigger.AB"
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",

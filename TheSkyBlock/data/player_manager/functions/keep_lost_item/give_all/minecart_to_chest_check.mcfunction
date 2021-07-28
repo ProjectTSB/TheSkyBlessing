@@ -3,7 +3,7 @@
 # LostItemChest -> Chestの移動を監視してkillやホッパーの加速を行う
 #
 # @within function
-#   player_manager:keep_lost_item/give_all/give
+#   player_manager:keep_lost_item/give_all/
 #   player_manager:keep_lost_item/give_all/minecart_to_chest_check
 
 # ホッパー加速 //TODO チェストの座標

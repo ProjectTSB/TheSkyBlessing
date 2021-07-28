@@ -12,10 +12,10 @@
     function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..100] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run effect give @s poison 20 4
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..100] run effect give @s poison 20 4
 
 # テレポート処理
-    execute if predicate lib:random_pass_per/25 as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..100] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add RandomTP
-    tp @e[type=#lib:living,type=!player,tag=AttackedEntity,tag=RandomTP,distance=..100] ^ ^ ^1.5
-    execute if entity @e[type=#lib:living,type=!player,tag=AttackedEntity,tag=RandomTP,distance=..2] run playsound minecraft:entity.enderman.teleport ambient @a ^ ^ ^1.5 1 1 0
-    tag @e[type=#lib:living,type=!player,tag=AttackedEntity,tag=RandomTP,distance=..100] remove RandomTP
+    execute if predicate lib:random_pass_per/25 as @e[type=#lib:living,type=!player,tag=Victim,distance=..100] run tag @s add RandomTP
+    tp @e[type=#lib:living,type=!player,tag=Victim,tag=RandomTP,distance=..100] ^ ^ ^1.5
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=RandomTP,distance=..2] run playsound minecraft:entity.enderman.teleport ambient @a ^ ^ ^1.5 1 1 0
+    tag @e[type=#lib:living,type=!player,tag=Victim,tag=RandomTP,distance=..100] remove RandomTP

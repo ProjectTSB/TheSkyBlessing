@@ -12,22 +12,24 @@
 # 時間内にもう一度つかった愚か者へのダメージ
     # ダメージセット
         data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.BypassResist set value true
     # ダメージを与える
-        execute as @s[scores={78.Tick=1..}] run function lib:damage/simple
+        execute as @s[scores={CO.Tick=1..}] run function lib:damage/
     # リセット
         data remove storage lib: Argument
 
 # 演出
-    execute if entity @s[scores={78.Tick=1..}] run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
-    execute if entity @s[scores={78.Tick=1..}] run playsound minecraft:entity.evoker.prepare_summon player @a
+    execute if entity @s[scores={CO.Tick=1..}] run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
+    execute if entity @s[scores={CO.Tick=1..}] run playsound minecraft:entity.evoker.prepare_summon player @a
 
 # 一回エフェクトを消す
     effect clear @s speed
     effect clear @s slowness
-    effect clear @s[scores={78.Tick=..400}] blindness
+    effect clear @s[scores={CO.Tick=..400}] blindness
 
 # セットする
-    scoreboard players set @s 78.Tick 2400
+    scoreboard players set @s CO.Tick 2400
 
 # スタート
     schedule function asset:sacred_treasure/0456.potion_of_stalling_power/3.1.effect 1t
