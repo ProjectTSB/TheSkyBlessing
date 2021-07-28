@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/summon/1.trigger",
+        "asset:mob/0038.laser_eye/summon/1.trigger",
         "asset:mob/0023.chainsaw_zombie/summon/1.trigger",
         "asset:mob/0019.horus_priest/summon/1.trigger",
         "asset:mob/0027.skull_sniper/summon/1.trigger",
