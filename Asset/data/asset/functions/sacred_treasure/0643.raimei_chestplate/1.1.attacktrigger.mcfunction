@@ -5,4 +5,4 @@
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのchestに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if entity @s[tag=]  run function asset:sacred_treasure/0643.raimei_chestplate/2.check_condition
+    execute if entity @s[tag=test] run say aaa
