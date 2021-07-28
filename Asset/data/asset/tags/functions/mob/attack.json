@@ -2,6 +2,12 @@
     "values": [
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
-        "asset:mob/0055.hetukedah/attack/1.trigger"
+        "asset:mob/0055.hetukedah/attack/1.trigger",
+        "asset:mob/0058.divide_haze/attack/1.trigger",
+        "asset:mob/0056.thunder_trifler/attack/1.trigger",
+        "asset:mob/0037.fire_spreader/attack/1.trigger",
+        "asset:mob/0047.the_heretic/attack/1.trigger",
+        "asset:mob/0023.chainsaw_zombie/attack/1.trigger",
+        "asset:mob/0007.ectoplasm/attack/1.trigger"
     ]
 }
