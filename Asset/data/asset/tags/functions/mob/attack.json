@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/attack/1.trigger",
+        "asset:mob/0023.chainsaw_zombie/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger"
     ]
 }
