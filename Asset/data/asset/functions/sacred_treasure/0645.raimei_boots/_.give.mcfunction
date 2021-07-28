@@ -9,7 +9,7 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 644
+    data modify storage asset:sacred_treasure ID set value 645
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:leather_boots"
 # 神器の名前 (TextComponentString)
