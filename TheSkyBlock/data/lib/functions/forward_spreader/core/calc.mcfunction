@@ -38,3 +38,15 @@
     scoreboard players operation $Z Temporary /= $10000 Const
 # リセット
     scoreboard players reset $Temp Temporary
+    scoreboard players reset $CircleRandomizerMode Temporary
+    scoreboard players reset $Distance Temporary
+    scoreboard players reset $Diameter Temporary
+    scoreboard players reset $YawSin Temporary
+    scoreboard players reset $YawCos Temporary
+    scoreboard players reset $PitchSin Temporary
+    scoreboard players reset $PitchCos Temporary
+    scoreboard players reset $Radius Temporary
+    scoreboard players reset $Radius^2 Temporary
+    scoreboard players reset $VecX Temporary
+    scoreboard players reset $VecY Temporary
+    scoreboard players reset $VecZ Temporary
