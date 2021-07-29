@@ -6,7 +6,7 @@
     #declare tag HV.Full
 
 # タグを消す
-    tag @s remove HV.Full
+    tag @s[tag=HV.Full] remove HV.Full
 
 # 引数の設定
     # UUID

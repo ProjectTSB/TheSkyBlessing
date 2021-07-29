@@ -20,6 +20,4 @@
     function api:player_modifier/defense/thunder/add
 
 #セット効果用のファンクション実行（実行はチェストプレートの方へ）
-
-
     execute if data storage asset:context id{head:642,chest:643,legs:644,feet:645} run say aaaa
