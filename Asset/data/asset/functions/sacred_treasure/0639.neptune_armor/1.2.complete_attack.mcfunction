@@ -6,6 +6,7 @@
 
 #　演出
     execute at @e[tag=Victim] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 100 normal @a
+    execute at @e[tag=Victim] run playsound entity.dolphin.splash master @a ~ ~ ~ 1 1 0
 
 
 # ダメージ設定
