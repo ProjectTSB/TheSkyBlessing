@@ -13,7 +13,7 @@
 
     # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,624,3]
+        data modify storage api: Argument.UUID set value [I;1,1,641,3]
     # 補正値
         data modify storage api: Argument.Amount set value 0.1
     # 補正方法
