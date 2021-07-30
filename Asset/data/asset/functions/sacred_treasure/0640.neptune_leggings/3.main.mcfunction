@@ -30,4 +30,5 @@
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
     function api:player_modifier/defense/thunder/add
-
+# フルセット判定
+    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:638}}},{Slot:101b,tag:{TSB:{ID:640}}},{Slot:100b,tag:{TSB:{ID:641}}}]} run function asset:sacred_treasure/0639.neptune_armor/3.1.complete_set

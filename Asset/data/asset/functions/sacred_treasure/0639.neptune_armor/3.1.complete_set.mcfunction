@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0639.neptune_armor/complete_set
+#> asset:sacred_treasure/0639.neptune_armor/3.1.complete_set
 #
 #
 #
