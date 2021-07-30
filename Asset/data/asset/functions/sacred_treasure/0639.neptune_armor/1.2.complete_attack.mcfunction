@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0639.neptune_armor/1.1.attack_trigger
 
 #　演出
-    execute at @e[tag=Victim] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 100 normal @a
+    execute at @e[tag=Victim] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 100 force @a[distance=..40]
     execute at @e[tag=Victim] run playsound entity.dolphin.splash master @a ~ ~ ~ 1 1 0
 
 
