@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"海神ノ履","color":"dark_blue"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"嘗テ海ノ神ト呼バレシ者ノ履","color":"dark_blue"}','[{"text":"水耐性10％ ","color":"blue"},{"text":"雷耐性+5%","color":"gold"}]']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"嘗テ海ノ神ト呼バレシ者ノ履","color":"dark_blue"}','[{"text":"水耐性10％ ","color":"blue"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
