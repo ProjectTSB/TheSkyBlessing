@@ -5,6 +5,20 @@
 # @within function asset:sacred_treasure/0640.neptune_leggings/dis_equip/
 
 # UUID
+    data modify storage api: Argument.UUID set value [I;1,1,640,4]
+# 補正の削除
+    function api:player_modifier/defense/physical/remove
+# フルセット解除
+    tag @s[tag=HS.Complete] remove HS.Complete
+
+# UUID
+    data modify storage api: Argument.UUID set value [I;1,1,640,4]
+# 補正の削除
+    function api:player_modifier/defense/magic/remove
+# フルセット解除
+    tag @s[tag=HS.Complete] remove HS.Complete
+
+# UUID
     data modify storage api: Argument.UUID set value [I;1,1,640,5]
 # 補正の削除
     function api:player_modifier/defense/water/remove
