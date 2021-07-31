@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:carved_pumpkin",Count:1b}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:20016}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)

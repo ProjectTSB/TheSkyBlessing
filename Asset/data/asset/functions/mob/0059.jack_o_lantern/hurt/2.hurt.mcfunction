@@ -12,5 +12,5 @@
 # スコア蓄積
     execute unless score @s 1N.Surprise matches 8.. run scoreboard players add @s 1N.Surprise 3
 
-# スコア1N.Glowingが1..39の場合、即座にそのスコアが120になる
+# スコア1N.Glowingが1..39の場合、即座にそのスコアが140になる
     execute if score @s 1N.Glowing matches 1..39 run function asset:mob/0059.jack_o_lantern/hurt/3.shorten_glowing
