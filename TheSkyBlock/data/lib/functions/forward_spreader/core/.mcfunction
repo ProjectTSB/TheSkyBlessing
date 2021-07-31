@@ -31,5 +31,8 @@
 # 適用
     function lib:forward_spreader/core/fetch
 # リセット
+    scoreboard players reset $X Temporary
+    scoreboard players reset $Y Temporary
+    scoreboard players reset $Z Temporary
     data remove storage lib: Argument
     data remove storage lib: Rotation
