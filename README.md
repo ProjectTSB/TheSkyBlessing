@@ -36,3 +36,4 @@ CC0-1.0 Licenseが適用されないディレクトリ
 * [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
+* [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)
