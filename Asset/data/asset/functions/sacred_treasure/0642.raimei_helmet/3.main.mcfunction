@@ -9,15 +9,18 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound minecraft:block.respawn_anchor.charge master @s ~ ~ ~ 1 2
+
 # 引数の設定
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,642,6]
     # 補正値
-        data modify storage api: Argument.Amount set value 0.08
+        data modify storage api: Argument.Amount set value 0.04
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
     function api:player_modifier/defense/thunder/add
 
 #セット効果用のファンクション実行（実行はチェストプレートの方へ）
-    execute if data storage asset:context id{head:642,chest:643,legs:644,feet:645} run say aaaa
+    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:642}}},{Slot:102b,tag:{TSB:{ID:643}}},{Slot:101b,tag:{TSB:{ID:644}}},{Slot:100b,tag:{TSB:{ID:645}}}]} run function asset:sacred_treasure/0643.raimei_chestplate/3.1.armorfullset

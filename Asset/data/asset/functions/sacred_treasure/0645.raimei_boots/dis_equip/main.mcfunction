@@ -5,8 +5,8 @@
 # @within function asset:sacred_treasure/0645.raimei_boots/dis_equip/
     #declare tag HV.Full
 
-# タグを消す
-    tag @s[tag=HV.Full] remove HV.Full
+# タグを消す(チェストプレート側で実行)
+    execute if entity @s[tag=HV.Full] run function asset:sacred_treasure/0643.raimei_chestplate/3.3.tag_delete
 
 # 引数の設定
     # UUID

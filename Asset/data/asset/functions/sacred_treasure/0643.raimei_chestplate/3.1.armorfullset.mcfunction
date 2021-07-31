@@ -13,6 +13,20 @@
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
+    playsound block.end_portal.spawn master @a ~ ~ ~ 1 1
 
 # タグを付与する
     tag @s add HV.Full
+
+# 耐性を強化する
+    # UUID(部位が不明なためanyにする)
+        data modify storage api: Argument.UUID set value [I;1,1,643,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.09
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/thunder/add
+
+# Scheduleループ
+    schedule function asset:sacred_treasure/0643.raimei_chestplate/3.4.loop 1t replace

@@ -8,11 +8,15 @@
     function asset:sacred_treasure/lib/use/feet
 
 # ここから先は神器側の効果の処理を書く
+
+# 演出
+    playsound minecraft:block.respawn_anchor.charge master @s ~ ~ ~ 1 2
+
 # 引数の設定
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,645,3]
     # 補正値
-        data modify storage api: Argument.Amount set value 0.08
+        data modify storage api: Argument.Amount set value 0.04
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加

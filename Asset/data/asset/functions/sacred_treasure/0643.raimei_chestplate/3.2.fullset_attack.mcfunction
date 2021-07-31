@@ -4,6 +4,12 @@
 #
 # @within function asset:sacred_treasure/0643.raimei_chestplate/1.1.attacktrigger
 
+
+# 演出
+    playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 1 1
+
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle dust 0.867 0.667 0.161 1 ~ ~1 ~ 0 1 0 0 100
+
 # ダメージ設定
     # 与えるダメージ = 15
         data modify storage lib: Argument.Damage set value 15.0f
@@ -15,3 +21,4 @@
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
