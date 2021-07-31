@@ -16,14 +16,8 @@
 ## 開発のあれこれ
 [Wiki](https://github.com/TheSkyBlock/TheSkyBlock/wiki)見てね！
 
-## commit時のルール
-* 一つのcommitに複数の処理の変更や追加を極力避けること
-* masterはGitmojiを使いコミットメッセージの最初に絵文字をつける
-
 ## ライセンスについて
 このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
-
-CC0-1.0 Licenseが適用されないディレクトリ
 * [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
