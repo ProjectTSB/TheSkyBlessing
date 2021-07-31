@@ -1,4 +1,4 @@
-#> asset:mob/0059.jack_o_lantern/tick/8.tick_sound
+#> asset:mob/0059.jack_o_lantern/tick/3.tick_sound
 #
 #
 #

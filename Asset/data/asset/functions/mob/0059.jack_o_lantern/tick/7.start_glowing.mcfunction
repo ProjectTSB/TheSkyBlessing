@@ -1,8 +1,8 @@
-#> asset:mob/0059.jack_o_lantern/tick/5.start_glowing
+#> asset:mob/0059.jack_o_lantern/tick/7.start_glowing
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/3.glowing
+# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing
 
 # 出現
     particle dust 1 0.6 0 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a

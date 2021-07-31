@@ -1,8 +1,8 @@
-#> asset:mob/0059.jack_o_lantern/tick/7.end_glowing
+#> asset:mob/0059.jack_o_lantern/tick/9.end_glowing
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/3.glowing
+# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing
 
 # ただのカボチャに
     replaceitem entity @s armor.head carved_pumpkin
