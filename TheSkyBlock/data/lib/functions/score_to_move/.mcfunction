@@ -4,7 +4,7 @@
 #
 # @input
 #   as entity
-#   score $Move Lib
+#   score $Move Lib 前進させたい距離(m)の10000倍
 # @public
 
 # 二分探索してTP
