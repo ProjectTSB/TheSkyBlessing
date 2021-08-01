@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "equipping"
 # 神器の発動条件 (TextComponentString) (オプション)
-    data modify storage asset:sacred_treasure Condition set value ['{"text":"一式全て揃えた場合、追加で火耐性+3%","color":"red"}']
+    data modify storage asset:sacred_treasure Condition set value '{"text":"一式全て揃えた場合、追加で火耐性+3%","color":"red"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
