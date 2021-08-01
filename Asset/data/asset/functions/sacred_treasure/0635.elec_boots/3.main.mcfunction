@@ -13,7 +13,7 @@
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,635,3]
     # 補正値
-        data modify storage api: Argument.Amount set value 0.1
+        data modify storage api: Argument.Amount set value 0.03
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
@@ -23,3 +23,6 @@
     particle dust 1 1 0 1 ~ ~0.3 ~ 0.4 0.1 0.4 0 6 normal @a
     particle firework ~ ~0.3 ~ 0.4 0.2 0.4 0 6 normal @a
     playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.4 1.5 0
+
+# 一式効果
+    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:632}}},{Slot:102b,tag:{TSB:{ID:633}}},{Slot:101b,tag:{TSB:{ID:634}}},{Slot:100b,tag:{TSB:{ID:635}}}]} run function asset:sacred_treasure/0633.elec_armor/4.fullset
