@@ -9,7 +9,7 @@
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,625,5]
+        data modify storage api: Argument.UUID set value [I;1,1,625,0]
     # 補正値
         data modify storage api: Argument.Amount set value 0.03
     # 補正方法
@@ -20,3 +20,6 @@
 # 演出
      particle flame ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
      playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 0.2 0
+
+# tagを自身に付与
+    tag @s add HC.FullSet
