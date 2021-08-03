@@ -6,7 +6,7 @@
 
 # 演出
     particle block melon ~ ~1.3 ~ 0.3 0.5 0.3 0 40 normal @a
-    particle block nether_wart_block ~ ~1.3 ~ 0.4 0.4 0.4 0 40 normal @a
+    particle dust 1 0.141 0.141 1 ~ ~1.2 ~ 1 1 1 0 20 normal @a
     particle explosion ~ ~1.5 ~ 0.4 0.4 0.4 0 10 normal @a
     playsound entity.generic.explode master @a ~ ~ ~ 0.5 1 0
 
