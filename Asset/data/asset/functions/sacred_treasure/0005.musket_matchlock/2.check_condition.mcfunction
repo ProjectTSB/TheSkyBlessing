@@ -9,7 +9,7 @@
     #declare score_holder $5.GunpowderCount
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
-    function asset:sacred_treasure/lib/check_condition/auto
+    function asset:sacred_treasure/lib/check_condition/mainhand
 # 他にアイテム等確認する場合はここに書く
     # 火薬を持ってるかチェック
         execute store result score $5.GunpowderCount Temporary run clear @s gunpowder 0

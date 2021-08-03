@@ -15,7 +15,7 @@
     #declare score_holder $VectorMagnitude
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/lib/use/auto
+    function asset:sacred_treasure/lib/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 # 火薬消費
