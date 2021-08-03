@@ -10,7 +10,7 @@
     function api:player_modifier/defense/fire/remove
 
 # 演出
-    playsound entity.generic.burn master @s ~ ~ ~ 0.2 1
+    playsound entity.generic.burn master @a ~ ~ ~ 0.2 1 0
 
 # フルセットの耐性削除
     execute if entity @s[tag=HC.FullSet] run function asset:sacred_treasure/0625.flame_armor/5.fullset_disuequip
