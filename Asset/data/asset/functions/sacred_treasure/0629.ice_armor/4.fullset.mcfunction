@@ -9,7 +9,7 @@
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,629,5]
+        data modify storage api: Argument.UUID set value [I;1,1,629,0]
     # 補正値
         data modify storage api: Argument.Amount set value 0.03
     # 補正方法
@@ -21,3 +21,6 @@
     particle falling_dust diamond_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
     particle falling_dust snow_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
     playsound block.glass.break master @a ~ ~ ~ 0.4 1.6 0
+
+# タグ付与
+    tag @s add HH.FullSet
