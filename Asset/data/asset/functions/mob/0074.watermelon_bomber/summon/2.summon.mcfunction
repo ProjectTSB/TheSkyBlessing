@@ -25,11 +25,11 @@
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:melon",Count:1b}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:2228097}}}
+        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:8973627}}}
     # 脚 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:2228097}}}
+        data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:8973627}}}
     # 足 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Feet set value {id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2228097}}}
+        data modify storage asset:mob Armor.Feet set value {id:"minecraft:leather_boots",Count:1b,tag:{display:{color:8973627}}}
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
