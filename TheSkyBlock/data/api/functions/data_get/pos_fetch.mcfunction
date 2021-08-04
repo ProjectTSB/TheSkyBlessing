@@ -5,7 +5,7 @@
 # @within function api:data_get/pos
 
 # fetch
-    tp @s ~ ~ ~
+    execute in overworld run tp @s ~ ~ ~
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Pos.Data set from entity @s Pos
 # リセット
-    tp @s 0.0 0.0 0.0 0.0 0.0
+    execute in overworld run tp @s 0.0 0.0 0.0 0.0 0.0
