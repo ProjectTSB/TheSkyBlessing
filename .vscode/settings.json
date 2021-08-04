@@ -334,7 +334,7 @@
     ],
     "datapack.lint.timeOmitTickUnit": false,
     "datapack.snippets": {
-        "forwardSpreadLib": "#> SpreadLib\n# @private\n#declare tag SpreadEntity\n\n# 拡散させるEntityを召喚する\n    summon marker ~ ~ ~ {Tags:[\"SpreadEntity\"]}\n# ステータス設定\n    data modify storage lib: Argument.Distance set value ${1:distance}\n    data modify storage lib: Argument.Spread set value ${2:spread}\n# 拡散\n    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/${3:circle/square}\n# 拡散\n    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] ${4:feet anchored eyes positioned ^ ^ ^ }run ${5:command}\n# リセット\n    kill @e[type=marker,tag=SpreadEntity]"
+        "forwardSpreadLib": "#> SpreadLib\n# @private\n#declare tag SpreadMarker\n\n# 拡散させるEntityを召喚する\n    summon marker ~ ~ ~ {Tags:[\"SpreadMarker\"]}\n# ステータス設定\n    data modify storage lib: Argument.Distance set value ${1:<distance>}\n    data modify storage lib: Argument.Spread set value ${2:<spread>}\n# 拡散\n    execute as @e[type=marker,tag=SpreadMarker,limit=1] ${3:}run function lib:forward_spreader/${4:<circle|square>}\n# 拡散\n    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] ${5:feet anchored eyes positioned ^ ^ ^ }run ${6:<command>}\n# リセット\n    kill @e[type=marker,tag=SpreadMarker]"
     },
     "mcdutil.createFile.fileTemplate": {
         "function": [
