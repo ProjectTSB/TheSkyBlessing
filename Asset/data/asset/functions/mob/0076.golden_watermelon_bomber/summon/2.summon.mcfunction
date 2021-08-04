@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '[{"text":"ゴー","color":"#59FF75"},{"text":"ルデンスイカボ","color":"#F0FF1F"},{"text":"マー","color":"#59FF75"}]'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:melon",Count:1b,tag:{Enchantments:[{}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:melon",Count:1b,tag:{Enchantments:[{}],CustomModelData:20018}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
