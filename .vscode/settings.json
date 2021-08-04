@@ -1,13 +1,13 @@
 {
-    "datapack.env.cmdVersion": "1.16",
+    "datapack.env.cmdVersion": "1.17",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.16.4",
+    "datapack.env.dataVersion": "1.17.1",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.16",
+    "datapack.env.jsonVersion": "1.17",
     "datapack.env.permissionLevel": 2,
     "datapack.lint.blockStateBracketSpacing": {
         "inside": 0
