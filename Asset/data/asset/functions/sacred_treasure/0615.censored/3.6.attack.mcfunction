@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0615.censored/3.main
 
 # 演出
-    execute positioned ~ ~1.5 ~ rotated 0 0 run function lib:particle/circle/dragon_breath/0.5
-    execute positioned ~ ~1.5 ~ rotated 45 0 run function lib:particle/circle/dragon_breath/0.5
-    execute positioned ~ ~1.5 ~ rotated 90 0 run function lib:particle/circle/dragon_breath/0.5
-    execute positioned ~ ~1.5 ~ rotated 135 0 run function lib:particle/circle/dragon_breath/0.5
+    execute positioned ~ ~1.5 ~ rotated 0 90 run function asset:sacred_treasure/0615.censored/particle.1
+    execute positioned ~ ~1.5 ~ rotated 45 90 run function asset:sacred_treasure/0615.censored/particle.1
+    execute positioned ~ ~1.5 ~ rotated 90 90 run function asset:sacred_treasure/0615.censored/particle.1
+    execute positioned ~ ~1.5 ~ rotated 135 90 run function asset:sacred_treasure/0615.censored/particle.1
     playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
 
 # ダメージを与える
