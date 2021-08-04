@@ -64,10 +64,16 @@ scoreboard objectives remove FirstJoinEvent
 kill 0-0-0-0-0
 
 
-#> ベクトル用等の汎用Entityのエイリアスの登録とsummon
-# @public
+#> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
+# @within *
+#   api:**
+#   asset_manager:**
+#   core:**
+#   lib:**
+#   mob_manager:**
+#   player_manager:**
     #alias entity commonEntity 0-0-0-0-0
-summon minecraft:area_effect_cloud 0.0 0.0 0.0 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,UUID:[I;0,0,0,0]}
+summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
 
 
 #> 当たり判定を消す汎用Teamの作成
