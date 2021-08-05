@@ -11,6 +11,6 @@
 # Frozenを取得
     execute store result score $Frozen Temporary run data get entity @s StrayConversionTime 100
 # 1以上なら負数に設定する
-    execute if score $Frozen Temporary matches 1.. run data modify entity @s StrayConversionTime set value 200000
+    execute if score $Frozen Temporary matches 1.. run data modify entity @s StrayConversionTime set value 100000
 # リセット
     scoreboard players reset $Frozen Temporary
