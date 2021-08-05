@@ -58,3 +58,4 @@
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
     #declare tag AutoKillWhenDieVehicle
+    #declare tag AntiFrozen
