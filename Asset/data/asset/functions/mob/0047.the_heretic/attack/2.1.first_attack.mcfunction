@@ -12,7 +12,7 @@
     playsound entity.enderman.teleport hostile @a ~ ~ ~ 1 1
 
 # 装備変更
-    replaceitem entity @s weapon stick{CustomModelData:219}
+    item replace entity @s weapon with stick{CustomModelData:219}
 
 # 移動する
     scoreboard players set $VectorMagnitude Lib 150

@@ -1,8 +1,9 @@
 {
     "values": [
-    "minecraft:torch",
-    "minecraft:wall_torch",
-    "minecraft:redstone_torch",
-    "minecraft:redstone_wall_torch"
+        "soul_torch",
+        "minecraft:torch",
+        "minecraft:wall_torch",
+        "minecraft:redstone_torch",
+        "minecraft:redstone_wall_torch"
     ]
 }
