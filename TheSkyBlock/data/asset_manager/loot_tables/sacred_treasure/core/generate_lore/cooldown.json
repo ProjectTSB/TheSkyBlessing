@@ -23,7 +23,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "LocalCooldown"
+                                        "nbt": "LocalCooldownSecond"
                                     },
                                     {
                                         "text": "."
@@ -75,7 +75,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "LocalCooldown"
+                                        "nbt": "LocalCooldownSecond"
                                     },
                                     {
                                         "text": "."

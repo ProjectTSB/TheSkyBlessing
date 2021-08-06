@@ -24,7 +24,7 @@
     execute if data storage asset:context {Inventory:[{Slot:100b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:iron_boots",Count:1b,tag:{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
 
 # 装備変更
-    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run replaceitem entity @s armor.head minecraft:iron_helmet{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run replaceitem entity @s armor.chest minecraft:iron_chestplate{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run replaceitem entity @s armor.legs minecraft:iron_leggings{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run replaceitem entity @s armor.feet minecraft:iron_boots{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run item replace entity @s armor.head with minecraft:iron_helmet{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run item replace entity @s armor.chest with minecraft:iron_chestplate{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run item replace entity @s armor.legs with minecraft:iron_leggings{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run item replace entity @s armor.feet with minecraft:iron_boots{display:{Name:'{"text":"簡易鉄防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
