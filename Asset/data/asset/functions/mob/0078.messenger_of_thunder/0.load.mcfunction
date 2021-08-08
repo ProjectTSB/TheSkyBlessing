@@ -8,3 +8,4 @@
 # @within function asset:mob/0078.messenger_of_thunder/**
     scoreboard objectives add 26.Tick dummy
     scoreboard objectives add 26.AccelCount dummy
+    scoreboard objectives add 26.FarCount dummy
