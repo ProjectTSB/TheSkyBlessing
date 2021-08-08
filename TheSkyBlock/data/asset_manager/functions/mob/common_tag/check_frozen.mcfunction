@@ -1,6 +1,6 @@
 #> asset_manager:mob/common_tag/check_frozen
 #
-#
+# StrayConversionTimeNBTの数値を巨大にしてストレイ化を延長させます
 #
 # @within function asset_manager:mob/common_tag/
 
