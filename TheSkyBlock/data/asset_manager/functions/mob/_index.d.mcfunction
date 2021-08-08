@@ -59,3 +59,4 @@
     #declare tag AlwaysInvisible
     #declare tag AutoKillWhenDieVehicle
     #declare tag AntiFrozen
+    #declare tag AntiDrown
