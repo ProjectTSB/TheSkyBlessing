@@ -7,6 +7,7 @@
         "asset:mob/0037.fire_spreader/attack/1.trigger",
         "asset:mob/0047.the_heretic/attack/1.trigger",
         "asset:mob/0023.chainsaw_zombie/attack/1.trigger",
-        "asset:mob/0007.ectoplasm/attack/1.trigger"
+        "asset:mob/0007.ectoplasm/attack/1.trigger",
+        "asset:mob/0078.messenger_of_thunder/attack/1.trigger"
     ]
 }
