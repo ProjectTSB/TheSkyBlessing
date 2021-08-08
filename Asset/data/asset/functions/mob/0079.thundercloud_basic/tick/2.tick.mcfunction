@@ -14,11 +14,7 @@
     execute if score @s 27.Tick matches ..40 run tp @s ^ ^ ^0.6 ~ ~-2
 
 # Projectileの雷を召喚(2Tickごとに1回を3回実行)
-    execute if score @s 27.Tick matches 50 run function asset:mob/0079.thundercloud_basic/tick/3.lightning
-
-    execute if score @s 27.Tick matches 52 run function asset:mob/0079.thundercloud_basic/tick/3.lightning
-
-    execute if score @s 27.Tick matches 54 run function asset:mob/0079.thundercloud_basic/tick/3.lightning
+    execute unless score @s 27.Tick matches ..49 unless score @s 27.Tick matches 51 unless score @s 27.Tick matches 53 unless score @s 27.Tick matches 55.. run function asset:mob/0079.thundercloud_basic/tick/3.lightning
 
 # 消滅
     kill @s[scores={27.Tick=70..}]
