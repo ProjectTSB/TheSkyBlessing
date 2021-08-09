@@ -5,7 +5,7 @@
 # @within function asset:mob/0064.artery/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0064.artery"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiDrown"],DeathLootTable:"asset:mob/death/0064.artery"}
 # ID (int)
     data modify storage asset:mob ID set value 64
 # Type (string) Wikiを参照
