@@ -9,7 +9,7 @@
     particle dust 1 0.6 0 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
     particle dust 0.851 0 1 1 ~ ~1.7 ~ 0.6 0.4 0.6 0 20 normal @a
     playsound entity.witch.celebrate master @a ~ ~ ~ 0.8 1.2 0
-    replaceitem entity @s armor.head jack_o_lantern{CustomModelData:20017}
+    item replace entity @s armor.head with jack_o_lantern{CustomModelData:20017}
     effect clear @s invisibility
 
 # 見破られた場合弱体化
