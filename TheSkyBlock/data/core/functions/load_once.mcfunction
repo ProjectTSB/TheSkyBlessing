@@ -5,13 +5,17 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 17
+data modify storage global Version set value 19
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
-forceload add 10000 10000
-forceload add -1 -1 0 0
+execute in overworld run forceload add 10000 10000
+execute in overworld run forceload add -1 -1 0 0
+execute in the_nether run forceload add 10000 10000
+execute in the_nether run forceload add -1 -1 0 0
+execute in the_end run forceload add 10000 10000
+execute in the_end run forceload add -1 -1 0 0
 
 
 #> gameruleの設定
@@ -60,10 +64,16 @@ scoreboard objectives remove FirstJoinEvent
 kill 0-0-0-0-0
 
 
-#> ベクトル用等の汎用Entityのエイリアスの登録とsummon
-# @public
+#> ベクトル用等のシステム内汎用Entityのエイリアスの登録とsummon
+# @within *
+#   api:**
+#   asset_manager:**
+#   core:**
+#   lib:**
+#   mob_manager:**
+#   player_manager:**
     #alias entity commonEntity 0-0-0-0-0
-summon minecraft:area_effect_cloud 0.0 0.0 0.0 {Age:-2147483648,Duration:-1,WaitTime:-2147483648,UUID:[I;0,0,0,0]}
+summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
 
 
 #> 当たり判定を消す汎用Teamの作成
@@ -120,6 +130,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob
     # @within function
     #   lib:debug/objective_view
+    #   asset:mob/*/**
     #   asset_manager:mob/**
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
@@ -129,7 +140,7 @@ team modify NoCollision collisionRule never
     #   core:load_once
     #   core:handler/*
     #   core:tick/*
-        scoreboard objectives add FirstJoinEvent custom:play_one_minute {"text":"イベント: 初回Join"}
+        scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
