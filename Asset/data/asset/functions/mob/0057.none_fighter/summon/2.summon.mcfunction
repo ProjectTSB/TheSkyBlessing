@@ -5,7 +5,7 @@
 # @within function asset:mob/0057.none_fighter/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0057.none_fighter"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0057.none_fighter"}
 # ID (int)
     data modify storage asset:mob ID set value 57
 # Type (string) Wikiを参照
