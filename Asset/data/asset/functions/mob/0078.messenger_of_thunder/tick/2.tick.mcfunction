@@ -9,8 +9,8 @@
     particle dust 0.3 0.3 0.3 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 1 normal @a
 
 # スコア類
-    scoreboard players add @s 26.Tick 1
-    scoreboard players add @s 26.AccelCount 1
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..30] run scoreboard players add @s 26.Tick 1
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..30] run scoreboard players add @s 26.AccelCount 1
 
     # 雷発射のスコア
         execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=10..20] unless score @s 26.FarCount matches 100.. run scoreboard players add @s 26.FarCount 1
