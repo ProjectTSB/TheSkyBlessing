@@ -14,7 +14,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージ対象
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1] run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"punch",lvl:1}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"power",lvl:5},{id:"punch",lvl:1}]}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
