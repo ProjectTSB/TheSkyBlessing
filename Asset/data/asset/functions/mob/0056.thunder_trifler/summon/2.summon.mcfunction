@@ -5,7 +5,7 @@
 # @within function asset:mob/0056.thunder_trifler/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0056.thunder_trifler"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0056.thunder_trifler"}
 # ID (int)
     data modify storage asset:mob ID set value 56
 # Type (string) Wikiを参照
