@@ -5,7 +5,7 @@
 # @within function asset:mob/0060.self_destructor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","1O.Explo"],DeathLootTable:"asset:mob/death/0060.self_destructor"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","1O.Explo","AntiDrown"],DeathLootTable:"asset:mob/death/0060.self_destructor"}
 # ID (int)
     data modify storage asset:mob ID set value 60
 # Type (string) Wikiを参照
