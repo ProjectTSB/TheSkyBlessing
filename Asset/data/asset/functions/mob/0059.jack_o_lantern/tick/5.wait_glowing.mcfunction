@@ -20,4 +20,4 @@
     execute unless score @s 1N.Glowing matches 60.. run effect give @s weakness 3 10 true
 
 # カボチャを外す
-    execute unless score @s 1N.Glowing matches 60.. run replaceitem entity @s armor.head air
+    execute unless score @s 1N.Glowing matches 60.. run item replace entity @s armor.head with air
