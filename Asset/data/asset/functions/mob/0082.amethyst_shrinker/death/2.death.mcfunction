@@ -10,3 +10,6 @@
     playsound block.amethyst_block.step master @a ~ ~ ~ 1 0.8 0
     playsound block.amethyst_block.step master @a ~ ~ ~ 1 1 0
     playsound block.amethyst_block.step master @a ~ ~ ~ 1 1.2 0
+
+# アメジストを設置
+    fill ~ ~ ~ ~ ~ ~ budding_amethyst replace #lib:air

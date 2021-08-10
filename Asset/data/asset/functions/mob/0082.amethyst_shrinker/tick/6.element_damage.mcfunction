@@ -18,3 +18,6 @@
 # リセット
     data remove storage lib: Argument
 
+
+# 演出
+    playsound block.amethyst_cluster.break master @p[distance=..1.5] ~ ~ ~ 1 0.1 0
