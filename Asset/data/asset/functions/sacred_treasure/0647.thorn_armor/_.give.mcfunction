@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:2454317},Unbreakable:1b,Enchantments:[{id:"thorns",lvl:5},{id:"protection",lvl:3}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1,1,647,5],Slot:"head"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:2454317},Unbreakable:1b,Enchantments:[{id:"thorns",lvl:5},{id:"protection",lvl:3}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1,1,647,5],Slot:"chest"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
