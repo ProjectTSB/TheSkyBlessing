@@ -13,7 +13,9 @@
     data modify storage lib: Argument.Distance set value 10.0
     data modify storage lib: Argument.Spread set value 4.5
     execute as @e[type=marker,tag=2A.SpreadMarker,limit=1] run function lib:forward_spreader/circle
-    execute facing entity @e[type=marker,tag=2A.SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
+    execute facing entity @e[type=marker,tag=2A.SpreadMarker,limit=1] feet run tp @s ~ ~-1.75 ~ ~ ~
 
 # リセット
     kill @e[type=marker,tag=2A.SpreadMarker]
+
+say a
