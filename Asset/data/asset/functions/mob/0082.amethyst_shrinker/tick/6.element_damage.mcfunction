@@ -6,7 +6,7 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 6.0d
+        data modify storage lib: Argument.Damage set value 4.0d
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -20,4 +20,4 @@
 
 
 # 演出
-    playsound block.amethyst_cluster.break master @p[distance=..1.5] ~ ~ ~ 1 0.1 0
+    playsound block.amethyst_cluster.break master @p[gamemode=!creative,gamemode=!spectator,distance=..1.5] ~ ~ ~ 1 0.1 0
