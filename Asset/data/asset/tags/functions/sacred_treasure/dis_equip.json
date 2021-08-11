@@ -5,6 +5,10 @@
         "asset:sacred_treasure/0625.flame_armor/dis_equip/",
         "asset:sacred_treasure/0626.flame_leggings/dis_equip/",
         "asset:sacred_treasure/0627.flame_boots/dis_equip/",
-        "asset:sacred_treasure/0562.heartland/dis_equip/"
+        "asset:sacred_treasure/0562.heartland/dis_equip/",
+        "asset:sacred_treasure/0668_brizzard_helm/dis_equip/",
+        "asset:sacred_treasure/0669.brizzard_armor/dis_equip/",
+        "asset:sacred_treasure/0670.brizzard_leggings/dis_equip/",
+        "asset:sacred_treasure/0671.brizzard_boots/dis_equip/"
     ]
 }

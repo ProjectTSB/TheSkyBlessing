@@ -1,0 +1,16 @@
+#> asset:sacred_treasure/0669.brizzard_armor/5.tick
+#
+#
+#
+# @within function asset:sacred_treasure/0669.brizzard_armor/4.tick_trigger
+
+# 演出
+    particle snowflake ~ ~1.5 ~ 2 0.6 2 0.15 6 normal @a
+
+    # 一定周期で音を出す
+    scoreboard players add @s IL.BrizzardLoop 1
+    execute if score @s IL.BrizzardLoop matches 1 run playsound item.elytra.flying master @a ~ ~ ~ 1 1 0
+    execute if score @s IL.BrizzardLoop matches 200.. run scoreboard players reset @s IL.BrizzardLoop
+
+# 吹雪
+    execute if entity @e[type=#lib:living,type=!player,distance=..4] as @e[type=#lib:living,type=!player,distance=..4] at @s run function asset:sacred_treasure/0669.brizzard_armor/6.brizzard
