@@ -1,0 +1,59 @@
+#> asset:sacred_treasure/0661.rainbow_armor/6.fullset_resist
+#
+#
+# @within function asset:sacred_treasure/0660.rainbow_helm/3.main
+# @within function asset:sacred_treasure/0661.rainbow_armor/3.main
+# @within function asset:sacred_treasure/0662.rainbow_leggings/3.main
+# @within function asset:sacred_treasure/0663.rainbow_boots/3.main
+
+    # 全属性耐性+6%の記述(物理、魔法、火、水、雷の順)
+
+# 引数の設定
+    # UUID
+        data modify storage api: Argument.UUID set value [I;1,1,661,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.06
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/physical/add
+
+# 引数の設定
+    # UUID
+        data modify storage api: Argument.UUID set value [I;1,1,661,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.06
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/magic/add
+
+# 引数の設定
+    # UUID
+        data modify storage api: Argument.UUID set value [I;1,1,661,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.06
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/fire/add
+
+# 引数の設定
+    # UUID
+        data modify storage api: Argument.UUID set value [I;1,1,661,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.06
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/water/add
+
+# 引数の設定
+    # UUID
+        data modify storage api: Argument.UUID set value [I;1,1,661,0]
+    # 補正値
+        data modify storage api: Argument.Amount set value 0.06
+    # 補正方法
+        data modify storage api: Argument.Operation set value "multiply_base"
+# 補正の追加
+    function api:player_modifier/defense/thunder/add

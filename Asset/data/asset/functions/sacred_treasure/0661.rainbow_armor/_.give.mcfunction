@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0660.rainbow_helm/_.give
+#> asset:sacred_treasure/0661.rainbow_armor/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -9,11 +9,11 @@
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 660
+    data modify storage asset:sacred_treasure ID set value 661
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:leather_helmet"
+    data modify storage asset:sacred_treasure Item set value "minecraft:leather_chestplate"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"レ","color":"#E60012"},{"text":"イ","color":"#F39800"},{"text":"ン","color":"#FFF100"},{"text":"ボ","color":"#009944"},{"text":"ー","color":"#0068B7"},{"text":"ヘ","color":"#1D2088"},{"text":"ル","color":"#920783"},{"text":"メ","color":"#E60012"},{"text":"ッ","color":"#F39800"},{"text":"ト","color":"#FFF100"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"レ","color":"#E60012"},{"text":"イ","color":"#F39800"},{"text":"ン","color":"#FFF100"},{"text":"ボ","color":"#009944"},{"text":"ー","color":"#0068B7"},{"text":"ア","color":"#1D2088"},{"text":"ー","color":"#920783"},{"text":"マ","color":"#E60012"},{"text":"ー","color":"#F39800"}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['[{"text":"全","color":"#E60012"},{"text":"耐","color":"#F39800"},{"text":"性","color":"#FFF100"},{"text":"+","color":"#009944"},{"text":"1","color":"#0068B7"},{"text":"%","color":"#1D2088"},{"text":" "},{"text":"一","color":"#920783"},{"text":"式","color":"#E60012"},{"text":"装","color":"#F39800"},{"text":"備","color":"#FFF100"},{"text":"時","color":"#009944"},{"text":"、","color":"#0068B7"},{"text":"追","color":"#1D2088"},{"text":"加","color":"#920783"},{"text":"で","color":"#E60012"},{"text":"全","color":"#F39800"},{"text":"耐","color":"#FFF100"},{"text":"性","color":"#009944"},{"text":"+","color":"#0068B7"},{"text":"6","color":"#1D2088"},{"text":"%","color":"#920783"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "head"
+    data modify storage asset:sacred_treasure Slot set value "chest"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "equipping"
 # 神器の発動条件 (TextComponentString) (オプション)
@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:15073298},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;1,1,660,6],Slot:"head"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:16773376},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1,1,661,5],Slot:"chest"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
