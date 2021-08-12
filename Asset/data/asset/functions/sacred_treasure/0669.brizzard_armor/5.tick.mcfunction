@@ -9,7 +9,7 @@
 
     # 一定周期で音を出す
     scoreboard players add @s IL.BrizzardLoop 1
-    execute if score @s IL.BrizzardLoop matches 1 run playsound item.elytra.flying master @a ~ ~ ~ 1 1 0
+    execute if score @s IL.BrizzardLoop matches 1 run playsound item.elytra.flying master @a ~ ~ ~ 0.7 1 0
     execute if score @s IL.BrizzardLoop matches 200.. run scoreboard players reset @s IL.BrizzardLoop
 
 # 吹雪
