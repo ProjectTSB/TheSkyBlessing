@@ -26,5 +26,7 @@
     execute unless score @s 1N.Glowing matches 60.. run effect give @s slowness 3 5 true
     execute unless score @s 1N.Glowing matches 60.. run effect give @s weakness 3 10 true
 
+# 燃えている場合火を消す
+    execute if predicate lib:is_burnning run data modify entity @s Fire set value 0
 # カボチャを外す
-    execute unless score @s 1N.Glowing matches 60.. run item replace entity @s armor.head with air
+    execute unless score @s 1N.Glowing matches 60.. run item replace entity @s armor.head with stone{CustomModelData:20019}
