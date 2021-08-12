@@ -31,3 +31,6 @@
 
 # 演出
     particle snowflake ~ ~1.7 ~ 0.4 0.1 0.4 0 10 normal @a
+
+# フルセットの演出
+      execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:668}}},{Slot:102b,tag:{TSB:{ID:669}}},{Slot:101b,tag:{TSB:{ID:670}}},{Slot:100b,tag:{TSB:{ID:671}}}]} run particle snowflake ~ ~1.4 ~ 0 0 0 1 80 normal @a
