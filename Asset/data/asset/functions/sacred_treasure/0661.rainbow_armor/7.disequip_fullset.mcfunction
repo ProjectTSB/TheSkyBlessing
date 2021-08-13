@@ -32,3 +32,6 @@
     data modify storage api: Argument.UUID set value [I;1,1,661,0]
 # 補正の削除
     function api:player_modifier/defense/thunder/remove
+
+# タグ削除
+    tag @s remove ID.FullSet

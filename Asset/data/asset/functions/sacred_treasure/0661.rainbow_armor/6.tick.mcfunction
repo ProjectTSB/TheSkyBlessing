@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0661.rainbow_armor/5.tick_main
+#> asset:sacred_treasure/0661.rainbow_armor/6.tick
 #
 #
 #
-# @within function asset:sacred_treasure/0661.rainbow_armor/4.tick_trigger
+# @within function asset:sacred_treasure/0661.rainbow_armor/5.schedule_loop
 
 # 演出
     execute positioned ~ ~1.70 ~ run particle dust 0.902 0.000 0.071 1 ^ ^ ^-0.5 0.2 0.1 0.2 0 1 normal

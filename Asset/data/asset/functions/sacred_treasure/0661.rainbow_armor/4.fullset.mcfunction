@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0661.rainbow_armor/6.fullset_resist
+#> asset:sacred_treasure/0661.rainbow_armor/4.fullset
 #
 #
 # @within function asset:sacred_treasure/0660.rainbow_helm/3.main
@@ -57,3 +57,9 @@
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
     function api:player_modifier/defense/thunder/add
+
+# タグを自分に付与
+    tag @s add ID.FullSet
+
+# スケジュールループの開始
+    schedule function asset:sacred_treasure/0661.rainbow_armor/5.schedule_loop 1t
