@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0668_brizzard_helm/_.give
+#> asset:sacred_treasure/0668.brizzard_helm/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

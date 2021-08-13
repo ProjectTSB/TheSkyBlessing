@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0669.brizzard_armor/6.brizzard
+#> asset:sacred_treasure/0669.brizzard_armor/7.brizzard
 #
 #
 #
-# @within function asset:sacred_treasure/0669.brizzard_armor/5.tick
+# @within function asset:sacred_treasure/0669.brizzard_armor/6.tick
 
 # 吹雪による鈍化
     effect give @s slowness 1 3 true

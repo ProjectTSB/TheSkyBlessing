@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0669.brizzard_armor/8.attack
+#> asset:sacred_treasure/0669.brizzard_armor/9.attack
 #
 #
 #
-# @within function asset:sacred_treasure/0669.brizzard_armor/7.attack_trigger
+# @within function asset:sacred_treasure/0669.brizzard_armor/8.attack_trigger
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim] run particle snowflake ~ ~1.5 ~ 2 0.6 2 0 40 normal @a

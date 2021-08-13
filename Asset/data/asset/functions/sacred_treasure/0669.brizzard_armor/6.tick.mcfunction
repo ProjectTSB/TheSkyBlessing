@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0669.brizzard_armor/5.tick
+#> asset:sacred_treasure/0669.brizzard_armor/6.tick
 #
 #
 #
-# @within function asset:sacred_treasure/0669.brizzard_armor/4.tick_trigger
+# @within function asset:sacred_treasure/0669.brizzard_armor/5.schedule_loop
 
 # 演出
     particle snowflake ~ ~1.5 ~ 2 0.6 2 0.15 6 normal @a
@@ -13,4 +13,4 @@
     execute if score @s IL.BrizzardLoop matches 200.. run scoreboard players reset @s IL.BrizzardLoop
 
 # 吹雪
-    execute if entity @e[type=#lib:living,type=!player,distance=..4] as @e[type=#lib:living,type=!player,distance=..4] at @s run function asset:sacred_treasure/0669.brizzard_armor/6.brizzard
+    execute if entity @e[type=#lib:living,type=!player,distance=..4] as @e[type=#lib:living,type=!player,distance=..4] at @s run function asset:sacred_treasure/0669.brizzard_armor/7.brizzard

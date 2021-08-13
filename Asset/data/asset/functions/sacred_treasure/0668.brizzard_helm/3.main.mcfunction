@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0668_brizzard_helm/3.main
+#> asset:sacred_treasure/0668.brizzard_helm/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0668_brizzard_helm/2.check_condition
+# @within function asset:sacred_treasure/0668.brizzard_helm/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/lib/use/head
@@ -32,5 +32,5 @@
 # 演出
     particle snowflake ~ ~1.7 ~ 0.4 0.1 0.4 0 10 normal @a
 
-# フルセットの演出
-      execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:668}}},{Slot:102b,tag:{TSB:{ID:669}}},{Slot:101b,tag:{TSB:{ID:670}}},{Slot:100b,tag:{TSB:{ID:671}}}]} run particle snowflake ~ ~1.4 ~ 0 0 0 1 80 normal @a
+# フルセット
+      execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:668}}},{Slot:102b,tag:{TSB:{ID:669}}},{Slot:101b,tag:{TSB:{ID:670}}},{Slot:100b,tag:{TSB:{ID:671}}}]} run function asset:sacred_treasure/0669.brizzard_armor/4.fullset
