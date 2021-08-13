@@ -7,7 +7,6 @@
         "asset:sacred_treasure/0204.spelunker_shoes/1.trigger",
         "asset:sacred_treasure/0207.life_is_transitory/1.trigger",
         "asset:sacred_treasure/0468.raging_demon/1.trigger",
-        "asset:sacred_treasure/0563.heartland/1.trigger",
-        "asset:sacred_treasure/0669.brizzard_armor/4.tick_trigger"
+        "asset:sacred_treasure/0563.heartland/1.trigger"
     ]
 }
