@@ -9,6 +9,11 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    particle flame ~ ~1.7 ~ 0.4 0.1 0.4 0 8 normal @s
+    particle soul_fire_flame ~ ~1.7 ~ 0.4 0.1 0.4 0 8 normal @s
+    playsound block.fire.ambient master @a ~ ~ ~ 0.8 0.5 0.6
+
 # 引数の設定
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,678,6]
