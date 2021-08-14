@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0647.thorn_armor/5.fullset_hurt
+#> asset:sacred_treasure/0647.thorn_armor/7.fullset_hurt
 #
 #
 #
-# @within function asset:sacred_treasure/0647.thorn_armor/4.damage_trigger
+# @within function asset:sacred_treasure/0647.thorn_armor/6.damage_trigger
 
 # 演出
 
@@ -10,8 +10,9 @@
         execute if entity @e[tag=Attacker,distance=..20] as @e[tag=Attacker,distance=..20] at @s run particle falling_dust nether_wart_block ~ ~1.2 ~ 0.5 0.5 0.5 0 20 normal @a
 
     # 再帰使用：相手に棘を伸ばす演出
-        execute if entity @e[tag=Attacker,distance=..20] positioned ~ ~1.5 ~ facing entity @e[tag=Attacker,distance=..20] eyes run function asset:sacred_treasure/0647.thorn_armor/6.exetend_thorn
+        execute if entity @e[tag=Attacker,distance=..20] positioned ~ ~1.5 ~ facing entity @e[tag=Attacker,distance=..20] eyes run function asset:sacred_treasure/0647.thorn_armor/8.exetend_thorn
         scoreboard players reset @s HZ.Tick
+
 
 # 被ダメージ時体力回復
 
