@@ -18,12 +18,27 @@
 
     # 回復する量 = 5
         data modify storage lib: Argument.Heal set value 5.0f
-# 補正function
-    function lib:heal/modifier
-# 自身を対象に
-    function lib:heal/
-# リセット
-    data remove storage lib: Argument
+    # 補正function
+        function lib:heal/modifier
+    # 自身を対象に
+        function lib:heal/
+    # リセット
+        data remove storage lib: Argument
+
+# 被ダメージ時攻撃者にダメージ
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 5.0
+    # 第一属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+    # 第二属性
+        data modify storage lib: Argument.ElementType set value "None"
+    # 補正functionを実行
+        function lib:damage/modifier
+    # ダメージ対象
+        execute as @e[type=#lib:living,type=!player,tag=Attacker] run function lib:damage/
+    # リセット
+        data remove storage lib: Argument
+
 
 # MP10消費
     scoreboard players set $Fluctuation Lib -10
