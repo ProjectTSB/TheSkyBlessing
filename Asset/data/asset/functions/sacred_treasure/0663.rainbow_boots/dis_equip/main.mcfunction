@@ -32,4 +32,4 @@
     function api:player_modifier/defense/thunder/remove
 
 # フルセット補正の削除
-    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:660}}},{Slot:102b,tag:{TSB:{ID:661}}},{Slot:101b,tag:{TSB:{ID:662}}},{Slot:100b,tag:{TSB:{ID:663}}}]} run function asset:sacred_treasure/0661.rainbow_armor/7.disequip_fullset
+    execute if entity @s[tag=ID.FullSet] run function asset:sacred_treasure/0661.rainbow_armor/7.disequip_fullset
