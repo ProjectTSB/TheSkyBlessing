@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ソーンアーマー","color":"#1D5923"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水耐性+5% ","color":"aqua"},{"text":"雷耐性+5%","color":"yellow"}]','{"text":"フルセット効果でMPを10消費する","color":"white"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水耐性+5% ","color":"aqua"},{"text":"雷耐性+5%","color":"yellow"}]','[{"text":"荊の鎧を全て纒いし時、血吸いの荊が目を覚ます","color":"#1D5923"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "equipping"
 # 神器の発動条件 (TextComponentString) (オプション)
-    data modify storage asset:sacred_treasure Condition set value '{"text":"荊の鎧を全て纒いし時、血吸いの荊が目を覚ます","color":"#1D5923"}'
+    # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
