@@ -7,9 +7,9 @@
 # 音
     playsound entity.item.break player @s
 # 削除
-    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run replaceitem entity @s weapon.mainhand air
-    execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run replaceitem entity @s weapon.offhand air
-    execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run replaceitem entity @s armor.feet air
-    execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run replaceitem entity @s armor.legs air
-    execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run replaceitem entity @s armor.chest air
-    execute if data storage asset:sacred_treasure {TargetSlot:"head"} run replaceitem entity @s armor.head air
+    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run item replace entity @s weapon.mainhand with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run item replace entity @s weapon.offhand with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run item replace entity @s armor.feet with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run item replace entity @s armor.legs with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run item replace entity @s armor.chest with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"head"} run item replace entity @s armor.head with air

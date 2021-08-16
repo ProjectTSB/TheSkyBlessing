@@ -10,7 +10,7 @@
     playsound entity.phantom.bite hostile @a ~ ~ ~ 1 0
 
 # 何故かこうするとプレイヤーと同じ剣の降り方をする
-    replaceitem entity @s weapon stick{CustomModelData:219}
+    item replace entity @s weapon with stick{CustomModelData:219}
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 7f
