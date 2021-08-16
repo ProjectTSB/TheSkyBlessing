@@ -11,4 +11,4 @@
     execute as @a[tag=HS.Complete] at @s if block ~ ~ ~ water run function asset:sacred_treasure/0639.neptune_armor/5.player_tick
 
 # スケジュールループ
-    execute if entity @a[tag=HS.Complete] run schedule function asset:sacred_treasure/0639.neptune_armor/4.schedule_loop 1t
+    execute if entity @a[tag=HS.Complete] run schedule function asset:sacred_treasure/0639.neptune_armor/4.schedule_loop 1t replace
