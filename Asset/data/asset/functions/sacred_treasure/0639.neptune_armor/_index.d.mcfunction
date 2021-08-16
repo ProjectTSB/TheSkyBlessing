@@ -4,3 +4,4 @@
 #
 # @within function aseet:sacred_treasure/????.neptune_?????/**
     #declare tag HS.Complete
+    #declare tag HS.Attack
