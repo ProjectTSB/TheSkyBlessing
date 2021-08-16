@@ -17,4 +17,4 @@
     execute if entity @e[scores={IV.Kitsunebi2=1..}] as @e[scores={IV.Kitsunebi2=1..}] at @s run function asset:sacred_treasure/0679.kitsunebi_armor/12.kitsunebi_state2
 
 # ループ
-    execute if entity @a[tag=IV.FullSet] run schedule function asset:sacred_treasure/0679.kitsunebi_armor/7.schedule_loop 1t
+    execute if entity @a[tag=IV.FullSet] run schedule function asset:sacred_treasure/0679.kitsunebi_armor/7.schedule_loop 1t replace
