@@ -19,5 +19,3 @@
         execute at @e[tag=Victim] as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
     # リセット
         data remove storage lib: Argument
-
-say a
