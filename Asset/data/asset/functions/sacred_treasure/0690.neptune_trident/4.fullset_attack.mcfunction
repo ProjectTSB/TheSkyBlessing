@@ -4,6 +4,9 @@
 #
 # @within function asset:sacred_treasure/0690.neptune_trident/2.check_condition
 
+# 演出
+    execute at @e[tag=Victim] as @e[type=!#lib:living,tag=!Victim,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 50 normal @a
+
 # ダメージ
     # ダメージ設定
     # 与えるダメージ
