@@ -5,7 +5,7 @@
 # @within function asset:mob/0077.golden_watermelon/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Silent:1b,NoGravity:1b,Invisible:1b,Tags:["MobInit"]}
+    summon armor_stand ~ ~ ~ {Silent:1b,Marker:1b,NoGravity:1b,Invisible:1b,Tags:["MobInit"]}
 # ID (int)
     data modify storage asset:mob ID set value 77
 # Type (string) Wikiを参照
