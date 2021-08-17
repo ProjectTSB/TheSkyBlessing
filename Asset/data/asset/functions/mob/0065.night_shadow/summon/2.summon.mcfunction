@@ -5,7 +5,11 @@
 # @within function asset:mob/0065.night_shadow/summon/1.trigger
 
 # 元となるMobを召喚する
+<<<<<<< HEAD:Asset/data/asset/functions/mob/0065.night_shadow/summon/2.summon.mcfunction
     summon phantom ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0065.night_shadow"}
+=======
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn","AntiFrozen"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
+>>>>>>> master:Asset/data/asset/functions/mob/0058.divide_haze/summon/2.summon.mcfunction
 # ID (int)
     data modify storage asset:mob ID set value 65
 # Type (string) Wikiを参照
