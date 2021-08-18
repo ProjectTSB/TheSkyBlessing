@@ -13,5 +13,3 @@
     data modify storage api: Argument.UUID set value [I;1,1,649,3]
 # 補正の削除
     function api:player_modifier/defense/thunder/remove
-
-tag @s[tag=HZ.FullSet] remove HZ.FullSet
