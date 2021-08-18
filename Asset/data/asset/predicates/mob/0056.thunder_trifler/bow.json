@@ -4,8 +4,10 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "item":
-                    "minecraft:bow"            }
+                "items": [
+                    "minecraft:bow"
+                ]
+            }
         }
     }
 }

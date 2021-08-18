@@ -5,7 +5,7 @@
 # @within function lib:forward_spreader/core/
 
 # 汎用Entityを原点にTP
-    tp 0-0-0-0-0 0.0 0.0 0.0 0.0 0.0
+    execute in overworld run tp 0-0-0-0-0 0.0 0.0 0.0 0.0 0.0
 # pitchを代入しベクトルをnormalize
     execute store result entity 0-0-0-0-0 Rotation[0] float 1 run data get storage lib: Rotation[1]
     execute as 0-0-0-0-0 at @s run tp @s ^ ^ ^1
