@@ -35,4 +35,4 @@
     function api:player_modifier/defense/fire/add
 
 # フルセット
-    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:678}}},{Slot:102b,tag:{TSB:{ID:679}}},{Slot:101b,tag:{TSB:{ID:680}}},{Slot:100b,tag:{TSB:{ID:681}}}]} run function asset:sacred_treasure/0679.kitsunebi_armor/4.fullset
+    execute if data storage asset:context id.all{head:678,chest:679,legs:680,feet:681} run function asset:sacred_treasure/0679.kitsunebi_armor/4.fullset
