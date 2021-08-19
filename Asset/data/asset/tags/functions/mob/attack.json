@@ -2,6 +2,7 @@
     "values": [
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
+        "asset:mob/0061.stray/attack/1.trigger",
         "asset:mob/0062.drowned/attack/1.trigger",
         "asset:mob/0055.hetukedah/attack/1.trigger",
         "asset:mob/0057.none_fighter/attack/1.trigger",
