@@ -9,10 +9,7 @@
 
 # 演出
     particle minecraft:lava ~ ~ ~ 0 2 0 1 100
-    execute rotated 0 90 run function lib:particle/circle/flame/3
-    execute rotated 5 90 run function lib:particle/circle/flame/3
-    execute rotated 0 90 run function lib:particle/circle/flame/2
-    execute rotated 0 90 run function lib:particle/circle/flame/1
+    execute rotated 0 0 run function asset:sacred_treasure/0370.burn_sorcery/particle.2
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 1 0

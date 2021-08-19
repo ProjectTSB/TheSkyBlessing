@@ -4,13 +4,17 @@
 #
 # @within function asset:sacred_treasure/0210.terra_blade/3.main
 
+#> SpreadLib
+# @private
+#declare tag SpreadMarker
 
 # 向き調整とタグ削除
 # 精度
+    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 21.0f
     data modify storage lib: Argument.Spread set value 0.5f
-    execute as @p[tag=this] at @s anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
-    execute facing entity 0-0-0-0-0 feet run tp @s ~ ~ ~ ~ ~
+    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=this] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
+    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
     tag @s remove ChuzTerraShotInit
     tag @s add ChuzTerraShot
 
@@ -19,3 +23,6 @@
 
 # IDコピー
     scoreboard players operation @s 5U.ID = @a[tag=this,limit=1] UserID
+
+# リセット
+    kill @e[type=marker,tag=SpreadMarker]
