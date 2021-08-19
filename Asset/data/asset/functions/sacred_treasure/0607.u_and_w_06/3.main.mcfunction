@@ -7,6 +7,7 @@
 # @private
     #declare score_holder $UseCount
     #declare score_holder $Random
+    #declare tag SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/lib/use/mainhand
@@ -18,12 +19,13 @@
     playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 0
     playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
 
-# 残り回数が1回の時発動した場合※何故か動く
+# 残り回数が1回の時発動した場合
     execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
     execute if score $UseCount Temporary matches 1 run function asset:sacred_treasure/0608.u_and_w_06_empty/_.give
     scoreboard players reset $UseCount Temporary
 
 # 前方拡散設定
+    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 2.0
     data modify storage lib: Argument.Spread set value 0.3
 
@@ -39,14 +41,15 @@
         execute if score $Random Temporary matches 10..69 run data modify storage lib: Argument.Spread set value 0.1
 
 # 前方拡散を実行する
-    function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # 発砲
-    execute facing entity 0-0-0-0-0 feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0607.u_and_w_06/3.1.bullet
+    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0607.u_and_w_06/3.1.bullet
     tag @s remove Landing
 
 # 向きを変える
     tp @s ~ ~ ~ ~ ~-1
 
 # リセット
+    kill @e[type=marker,tag=SpreadMarker]
     scoreboard players reset $Random Temporary

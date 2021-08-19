@@ -1,14 +1,15 @@
 {
-    "datapack.env.cmdVersion": "1.16",
+    "datapack.env.cmdVersion": "1.17",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.16.4",
+    "datapack.env.dataVersion": "1.17.1",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.16",
+    "datapack.env.jsonVersion": "1.17",
     "datapack.env.permissionLevel": 2,
+    "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
         "inside": 0
     },
@@ -332,7 +333,9 @@
         "prefer double"
     ],
     "datapack.lint.timeOmitTickUnit": false,
-    "datapack.features.semanticColoring": false,
+    "datapack.snippets": {
+        "forwardSpreadLib": "#> SpreadLib\n# @private\n#declare tag SpreadMarker\n\n# 拡散させるEntityを召喚する\n    summon marker ~ ~ ~ {Tags:[\"SpreadMarker\"]}\n# ステータス設定\n    data modify storage lib: Argument.Distance set value ${1:<distance>}\n    data modify storage lib: Argument.Spread set value ${2:<spread>}\n# 拡散\n    execute as @e[type=marker,tag=SpreadMarker,limit=1] ${3:}run function lib:forward_spreader/${4:<circle|square>}\n# 拡散\n    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] ${5:feet anchored eyes positioned ^ ^ ^ }run ${6:<command>}\n# リセット\n    kill @e[type=marker,tag=SpreadMarker]"
+    },
     "mcdutil.createFile.fileTemplate": {
         "function": [
             "#> %fileResourcePath%",
