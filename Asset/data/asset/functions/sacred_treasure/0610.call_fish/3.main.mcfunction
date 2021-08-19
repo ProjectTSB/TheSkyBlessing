@@ -10,9 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute positioned ~ ~0.5 ~ rotated ~ 90 run function lib:particle/circle/fishing/1
-    execute positioned ~ ~0.5 ~ rotated ~ 90 run function lib:particle/circle/fishing/1.25
-    execute positioned ~ ~0.5 ~ rotated ~ 90 run function lib:particle/circle/fishing/1.5
+    execute positioned ~ ~0.5 ~ rotated ~ 0 run function asset:sacred_treasure/0610.call_fish/particle.1
     playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 1 1.3
 
 # 魚召喚
