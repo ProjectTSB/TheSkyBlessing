@@ -62,4 +62,4 @@
     tag @s add ID.FullSet
 
 # スケジュールループの開始
-    schedule function asset:sacred_treasure/0661.rainbow_armor/5.schedule_loop 1t
+    schedule function asset:sacred_treasure/0661.rainbow_armor/5.schedule_loop 1t replace
