@@ -13,4 +13,4 @@
     playsound block.glass.break master @a ~ ~ ~ 0.4 0.8 0
 
 # フルセット効果削除
-    execute if entity @s[tag=HH.FullSet] run function asset:sacred_treasure/0629.ice_armor/5.fullset_disequip
+    execute if entity @s[tag=HH.FullSet] run function asset:sacred_treasure/0629.ice_armor/5.fullset_dis_equip
