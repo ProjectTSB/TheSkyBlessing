@@ -71,4 +71,4 @@
     particle dust 0.573 0.027 0.514 1 ~ ~1.3 ~ 0.4 0.4 0.4 0 4 normal
 
 # フルセット
-    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:660}}},{Slot:102b,tag:{TSB:{ID:661}}},{Slot:101b,tag:{TSB:{ID:662}}},{Slot:100b,tag:{TSB:{ID:663}}}]} run function asset:sacred_treasure/0661.rainbow_armor/4.fullset
+    execute if data storage asset:context id.all{head:660,chest:661,legs:662,feet:663} run function asset:sacred_treasure/0661.rainbow_armor/4.fullset
