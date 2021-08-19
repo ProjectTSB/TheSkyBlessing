@@ -15,4 +15,3 @@
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $Damage Temporary
-    scoreboard players reset $EPF Temporary

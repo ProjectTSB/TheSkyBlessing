@@ -13,6 +13,7 @@
     #declare score_holder $CalcC
     #declare score_holder $CalcD
     #declare score_holder $CalcE
+    #declare score_holder $CalcF
 
 # 計算式:
 # damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - (min(20, cappedEPF) / 25)) * (1 - min(5, resistanceLv) / 5)
@@ -45,25 +46,36 @@
     # $damage = $damage( * 100) * $CalcD( * 100 * 10) / 10;
         scoreboard players operation $Damage Temporary *= $CalcD Temporary
         scoreboard players operation $Damage Temporary /= $10 Const
+# エンチャントによる軽減計算部
+    # $EPF = min(20, $EPF) * 100 / 50
+        scoreboard players operation $EPF Temporary < $20 Const
+        scoreboard players operation $EPF Temporary *= $2 Const
+    # $CalcE = 1 * 100 - $EPF( * 100)
+        scoreboard players operation $CalcE Temporary = $100 Const
+        scoreboard players operation $CalcE Temporary -= $EPF Temporary
+    # $damage = $damage( * 100 * 100) * $CalcE( * 100) / 100
+        scoreboard players operation $Damage Temporary *= $CalcE Temporary
+        scoreboard players operation $Damage Temporary /= $100 Const
 # 耐性エフェクトによる軽減計算部
     # $Resistance *= min(5, $Resistance) * 10 / 5
         scoreboard players operation $Resistance Temporary < $5 Const
         scoreboard players operation $Resistance Temporary *= $2 Const
     # $CalcE = 1 * 10 - $Resistance( * 10)
-        scoreboard players operation $CalcE Temporary = $10 Const
-        scoreboard players operation $CalcE Temporary -= $Resistance Temporary
+        scoreboard players operation $CalcF Temporary = $10 Const
+        scoreboard players operation $CalcF Temporary -= $Resistance Temporary
     # $damage = $damage( * 100 * 100) * $CalcE( * 10) / 10
-        scoreboard players operation $Damage Temporary *= $CalcE Temporary
+        scoreboard players operation $Damage Temporary *= $CalcF Temporary
         scoreboard players operation $Damage Temporary /= $10 Const
 # Reset
-    scoreboard players reset $CalcA
-    scoreboard players reset $CalcB
-    scoreboard players reset $CalcB.2
-    scoreboard players reset $CalcB.3
-    scoreboard players reset $CalcC
-    scoreboard players reset $CalcD
-    scoreboard players reset $CalcE
-    scoreboard players reset $defensePoints
-    scoreboard players reset $toughness
-    scoreboard players reset $EPF
-    scoreboard players reset $Resistance
+    scoreboard players reset $CalcA Temporary
+    scoreboard players reset $CalcB Temporary
+    scoreboard players reset $CalcB.2 Temporary
+    scoreboard players reset $CalcB.3 Temporary
+    scoreboard players reset $CalcC Temporary
+    scoreboard players reset $CalcD Temporary
+    scoreboard players reset $CalcE Temporary
+    scoreboard players reset $CalcF Temporary
+    scoreboard players reset $defensePoints Temporary
+    scoreboard players reset $toughness Temporary
+    scoreboard players reset $EPF Temporary
+    scoreboard players reset $Resistance Temporary

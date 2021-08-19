@@ -5,10 +5,7 @@
 # @within function asset:sacred_treasure/0609.lunar_flare/2.check_condition
 
 # 演出をかける
-    execute anchored eyes positioned ^ ^ ^1 run function lib:particle/circle/composter/0.5
-    execute anchored eyes positioned ^ ^ ^1.4 run function lib:particle/circle/composter/1
-    execute anchored eyes positioned ^ ^ ^2.4 run function lib:particle/circle/composter/0.5
-    execute anchored eyes positioned ^ ^ ^2.4 run particle composter ~ ~ ~ 0 0 0 0 1 force
+    execute anchored eyes positioned ^ ^ ^2.7 rotated ~ ~90 run function asset:sacred_treasure/0609.lunar_flare/particle.1
 
 # 視点検知
     tag @p add Watcher

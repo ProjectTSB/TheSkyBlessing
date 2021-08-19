@@ -5,7 +5,7 @@
 # @within function lib:forward_spreader/*
 
 # 実行座標に汎用EntityをTP
-    tp 0-0-0-0-0 ~ ~ ~ ~ ~
+    execute in overworld run tp 0-0-0-0-0 0.0 0.0 0.0 ~ ~
 # 必要な実行座標のデータを取得
 # N/A => Rotation[], ($Distance, $Diameter)
     execute store result score $Distance Temporary run data get storage lib: Argument.Distance 10000
@@ -31,5 +31,8 @@
 # 適用
     function lib:forward_spreader/core/fetch
 # リセット
+    scoreboard players reset $X Temporary
+    scoreboard players reset $Y Temporary
+    scoreboard players reset $Z Temporary
     data remove storage lib: Argument
     data remove storage lib: Rotation
