@@ -1,8 +1,9 @@
 #> lib:forward_spreader/circle
 #
-# 汎用Entity(0-0-0-0-0)を前方の円状範囲内のランダムな座標に移動させます
+# 実行entityを前方の円状範囲内のランダムな座標に移動させます
 #
 # @input
+#   as entity
 #   position
 #   rotation
 #   storage lib:

@@ -27,7 +27,7 @@
     execute as @s[nbt={Inventory:[{Slot:100b}]}] at @s run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:leather_boots",Count:1b,tag:{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
 
 # 装備変更
-    replaceitem entity @s[nbt=!{Inventory:[{Slot:103b}]}] armor.head minecraft:leather_helmet{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    replaceitem entity @s[nbt=!{Inventory:[{Slot:102b}]}] armor.chest minecraft:leather_chestplate{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    replaceitem entity @s[nbt=!{Inventory:[{Slot:101b}]}] armor.legs minecraft:leather_leggings{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    replaceitem entity @s[nbt=!{Inventory:[{Slot:100b}]}] armor.feet minecraft:leather_boots{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    item replace entity @s[nbt=!{Inventory:[{Slot:103b}]}] armor.head with minecraft:leather_helmet{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    item replace entity @s[nbt=!{Inventory:[{Slot:102b}]}] armor.chest with minecraft:leather_chestplate{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    item replace entity @s[nbt=!{Inventory:[{Slot:101b}]}] armor.legs with minecraft:leather_leggings{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    item replace entity @s[nbt=!{Inventory:[{Slot:100b}]}] armor.feet with minecraft:leather_boots{display:{Name:'{"text":"簡易革防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
