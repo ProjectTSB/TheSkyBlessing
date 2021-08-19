@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    # data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set value '{"text":"断切者","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20022}}
@@ -45,7 +45,7 @@
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32
 # ノックバック耐性 (double) (オプション)
-    data modify storage asset:mob KnockBackResist set value 0.3
+    data modify storage asset:mob KnockBackResist set value 0.8
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
         data modify storage asset:mob Resist.Physical set value 0.5
