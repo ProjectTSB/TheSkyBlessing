@@ -23,6 +23,6 @@
     particle dust 1 1 0 1 ~ ~0.4 ~ 0.4 0.3 0.4 0 6 normal @a
     particle firework ~ ~0.4 ~ 0.4 0.3 0.4 0 6 normal @a
     playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.4 1.5 0
-    
+
 # 一式効果
-    execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:632}}},{Slot:102b,tag:{TSB:{ID:633}}},{Slot:101b,tag:{TSB:{ID:634}}},{Slot:100b,tag:{TSB:{ID:635}}}]} run function asset:sacred_treasure/0633.elec_armor/4.fullset
+    execute if data storage asset:context id.all{head:632,chest:633,legs:634,feet:635} run function asset:sacred_treasure/0633.elec_armor/4.fullset
