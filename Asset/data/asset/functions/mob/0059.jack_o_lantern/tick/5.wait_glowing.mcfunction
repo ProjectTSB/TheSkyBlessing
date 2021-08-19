@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing
+# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing_state
 
 
 #> SpreadLib

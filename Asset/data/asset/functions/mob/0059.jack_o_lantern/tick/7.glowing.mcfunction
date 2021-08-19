@@ -1,8 +1,8 @@
-#> asset:mob/0059.jack_o_lantern/tick/8.glowing_state
+#> asset:mob/0059.jack_o_lantern/tick/7.glowing
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing
+# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing_state
 
 # 発光状態演出
     particle dust 0.969 1 0.518 1 ~ ~1.6 ~ 0.3 0.3 0.3 0 2 normal @a
