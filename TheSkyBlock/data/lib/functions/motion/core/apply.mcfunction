@@ -12,7 +12,7 @@
     #declare score_holder $VectorZ
 
 # 初期化として視点を自分にあわせる & ^ ^ ^1を取得
-    execute positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^1
+    execute in overworld positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^1
 
 # 演算処理
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos

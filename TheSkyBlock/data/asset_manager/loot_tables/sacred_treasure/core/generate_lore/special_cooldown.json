@@ -23,7 +23,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "SpecialCooldown"
+                                        "nbt": "SpecialCooldownSecond"
                                     },
                                     {
                                         "text": "."
@@ -75,7 +75,7 @@
                                     },
                                     {
                                         "storage": "asset:sacred_treasure",
-                                        "nbt": "SpecialCooldown"
+                                        "nbt": "SpecialCooldownSecond"
                                     },
                                     {
                                         "text": "."

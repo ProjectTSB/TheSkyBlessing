@@ -17,9 +17,6 @@
     #playsound minecraft:entity.puffer_fish.death player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 1 0
 
-    execute anchored eyes positioned ^ ^ ^1.5 run function lib:particle/circle/flame/1
-    execute anchored eyes positioned ^ ^ ^1.5 run function lib:particle/circle/flame/1.25
-    execute anchored eyes positioned ^ ^ ^1.5 run function lib:particle/circle/flame/2
-
+    execute anchored eyes positioned ^ ^ ^1.5 rotated ~ ~90 run function asset:sacred_treasure/0370.burn_sorcery/particle.1
 # タグを消す
     tag @s remove Landing
