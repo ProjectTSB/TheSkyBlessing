@@ -1,7 +1,8 @@
 {
     "values": [
         "asset:mob/example/death/1.trigger",
-        "asset:mob/0016.shirker/death/1.trigger"
+        "asset:mob/0013.cluster_creeper/death/1.trigger",
+        "asset:mob/0016.shirker/death/1.trigger",
         "asset:mob/0055.hetukedah/death/1.trigger",
         "asset:mob/0057.none_fighter/death/1.trigger",
         "asset:mob/0049.ice_obstructor/death/1.trigger",
