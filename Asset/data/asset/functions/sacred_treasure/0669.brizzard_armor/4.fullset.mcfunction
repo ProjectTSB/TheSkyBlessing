@@ -13,4 +13,4 @@
     tag @s add IL.FullSet
 
 # スケジュールループ開始
-    schedule function asset:sacred_treasure/0669.brizzard_armor/5.schedule_loop 1t
+    schedule function asset:sacred_treasure/0669.brizzard_armor/5.schedule_loop 1t replace
