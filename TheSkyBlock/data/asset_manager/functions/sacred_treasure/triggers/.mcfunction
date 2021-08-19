@@ -24,6 +24,7 @@
     execute if entity @s[tag=TriggerFlag.Killed] run function asset_manager:sacred_treasure/triggers/killed
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:sacred_treasure/triggers/use_item
     execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:sacred_treasure/triggers/sneak/
+    execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:sacred_treasure/triggers/using_item
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/dis_equip
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/equip
 # EntityStorageにデータ突っ込む
@@ -41,3 +42,4 @@
     tag @s remove TriggerFlag.Killed
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak
+    tag @s remove TriggerFlag.UsingItem
