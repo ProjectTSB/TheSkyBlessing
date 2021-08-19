@@ -20,6 +20,3 @@
 # 演出
      particle flame ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
      playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 0.2 0
-
-# tagを自身に付与
-    tag @s add HC.FullSet

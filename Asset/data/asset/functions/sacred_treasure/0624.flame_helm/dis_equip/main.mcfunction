@@ -13,4 +13,4 @@
     playsound entity.generic.burn master @a ~ ~ ~ 0.2 1 0
 
 # フルセットの耐性削除
-    execute if entity @s[tag=HC.FullSet] run function asset:sacred_treasure/0625.flame_armor/5.fullset_disuequip
+    execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:sacred_treasure/0625.flame_armor/5.fullset_dis_equip
