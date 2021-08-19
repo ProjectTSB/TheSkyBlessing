@@ -13,7 +13,7 @@
 # 狐火状態のmob
     execute if entity @e[scores={IV.Kitsunebi=1..}] as @e[scores={IV.Kitsunebi=1..}] unless score @s IV.Kitsunebi2 matches 1.. at @s run function asset:sacred_treasure/0679.kitsunebi_armor/10.kitsunebi_state
 
-# 狐蒼火状態(狐火状態第2段階)
+# 狐蒼火状態のmob(狐火状態第2段階)
     execute if entity @e[scores={IV.Kitsunebi2=1..}] as @e[scores={IV.Kitsunebi2=1..}] at @s run function asset:sacred_treasure/0679.kitsunebi_armor/12.kitsunebi_state2
 
 # ループ
