@@ -22,5 +22,7 @@
 # 一定周期の特殊能力(分岐functionに記載)
     execute if score @s 29.SnowTick matches 60.. run function asset:mob/0081.snow_cloud/tick/5.snowing
 
+# 近くにプレイヤーがいない場合は消滅
+    execute unless entity @a[gamemode=!creative,gamemode=!spectator,distance=..30] if data storage asset:context {id:81} run kill @s
 
 
