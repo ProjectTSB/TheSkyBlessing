@@ -25,4 +25,4 @@
     playsound block.glass.break master @a ~ ~ ~ 0.4 1.2 0
 
 # フルセット
-execute if data storage asset:context {Inventory:[{Slot:103b,tag:{TSB:{ID:628}}},{Slot:102b,tag:{TSB:{ID:629}}},{Slot:101b,tag:{TSB:{ID:630}}},{Slot:100b,tag:{TSB:{ID:631}}}]} run function asset:sacred_treasure/0629.ice_armor/4.fullset
+execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/4.fullset
