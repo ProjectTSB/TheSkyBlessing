@@ -2,6 +2,17 @@
     "values": [
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
-        "asset:mob/0061.stray/attack/1.trigger"
+        "asset:mob/0061.stray/attack/1.trigger",
+        "asset:mob/0062.drowned/attack/1.trigger",
+        "asset:mob/0055.hetukedah/attack/1.trigger",
+        "asset:mob/0057.none_fighter/attack/1.trigger",
+        "asset:mob/0049.ice_obstructor/attack/1.trigger",
+        "asset:mob/0026.vein/attack/1.trigger",
+        "asset:mob/0058.divide_haze/attack/1.trigger",
+        "asset:mob/0056.thunder_trifler/attack/1.trigger",
+        "asset:mob/0037.fire_spreader/attack/1.trigger",
+        "asset:mob/0047.the_heretic/attack/1.trigger",
+        "asset:mob/0023.chainsaw_zombie/attack/1.trigger",
+        "asset:mob/0007.ectoplasm/attack/1.trigger"
     ]
 }

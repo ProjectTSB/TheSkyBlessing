@@ -1,6 +1,13 @@
 {
     "values": [
         "asset:mob/example/tick/1.trigger",
+        "asset:mob/0027.skull_sniper/tick/1.trigger",
+        "asset:mob/0055.hetukedah/tick/1.trigger",
+        "asset:mob/0049.ice_obstructor/tick/1.trigger",
+        "asset:mob/0058.divide_haze/tick/1.trigger",
+        "asset:mob/0038.laser_eye/tick/1.trigger",
+        "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
+        "asset:mob/0019.horus_priest/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger"
-    ]
+        ]
 }
