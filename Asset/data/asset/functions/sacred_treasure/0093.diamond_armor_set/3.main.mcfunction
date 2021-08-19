@@ -24,7 +24,7 @@
     execute if data storage asset:context {Inventory:[{Slot:100b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:diamond_boots",Count:1b,tag:{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
 
 # 装備変更
-    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run replaceitem entity @s armor.head minecraft:diamond_helmet{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run replaceitem entity @s armor.chest minecraft:diamond_chestplate{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run replaceitem entity @s armor.legs minecraft:diamond_leggings{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run replaceitem entity @s armor.feet minecraft:diamond_boots{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run item replace entity @s armor.head with minecraft:diamond_helmet{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run item replace entity @s armor.chest with minecraft:diamond_chestplate{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run item replace entity @s armor.legs with minecraft:diamond_leggings{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run item replace entity @s armor.feet with minecraft:diamond_boots{display:{Name:'{"text":"簡易ダイヤ防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
