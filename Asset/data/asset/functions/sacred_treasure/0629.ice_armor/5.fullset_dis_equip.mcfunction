@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0629.ice_armor/5.fullset_disequip
+#> asset:sacred_treasure/0629.ice_armor/5.fullset_dis_equip
 #
 #
 #
