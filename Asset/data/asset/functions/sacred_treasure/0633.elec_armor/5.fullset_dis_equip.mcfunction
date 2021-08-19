@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0633.elec_armor/5.fullset_disequip
+#> asset:sacred_treasure/0633.elec_armor/5.fullset_dis_equip
 #
 #
 # @within function asset:sacred_treasure/0632.elec_helm/dis_equip/main
