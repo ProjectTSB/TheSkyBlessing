@@ -37,10 +37,10 @@
     execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=this] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
 
 # 非収束ビーム
-    execute if score $Spread Temporary matches 2.. anchored eyes positioned ^ ^-0.25 ^ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0573.final_prism/laser
+    execute if score $Spread Temporary matches 2.. facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/laser
 
 # 完全収束ビーム
-    execute if score $Spread Temporary matches ..1 anchored eyes positioned ^ ^-0.25 ^ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0573.final_prism/final_laser
+    execute if score $Spread Temporary matches ..1 facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/final_laser
     execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/final_sound
 
 # サウンド
