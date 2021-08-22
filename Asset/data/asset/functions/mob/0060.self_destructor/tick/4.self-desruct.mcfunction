@@ -19,8 +19,8 @@
    data modify storage lib: Argument.ElementType set value "Fire"
     # 補正functionを実行
    execute if score @s 1O.ExploFuse matches 40 run function lib:damage/modifier
-    # 範囲5m以内のゾンビを対象に
-   execute as @a[gamemode=!adventure,gamemode=!creative,distance=..7.5] run function lib:damage/
+    # 範囲
+   execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
     # リセット
    data remove storage lib: Argument
 
