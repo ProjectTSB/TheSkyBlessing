@@ -5,7 +5,7 @@
 # @within function asset:mob/0017.fire_bird/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon phantom ~ ~ ~ {Size:1,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0017.fire_bird"}
+    summon phantom ~ ~ ~ {Size:1,Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0017.fire_bird"}
 # ID (int)
     data modify storage asset:mob ID set value 17
 # Type (string) Wikiを参照
