@@ -12,7 +12,7 @@
     execute unless entity @s[distance=..2] if score $Random Temporary matches 3 run particle minecraft:dust 1 1 0.678 1 ~ ~ ~ 0 0 0 0 1 force
 
 # 確率で派手派手だな
-    execute unless entity @s[distance=..2] if predicate lib:random_pass_per/5 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 1 force
+    execute unless entity @s[distance=..2] run particle minecraft:electric_spark ~ ~ ~ 0 0 0 0 1 force
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/10 run particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force
 
 # 接触時判定

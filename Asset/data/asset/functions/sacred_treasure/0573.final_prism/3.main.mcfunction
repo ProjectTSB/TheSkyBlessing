@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0573.final_prism/2.check_condition
 
+#> SpreadLib
+# @private
+#declare tag SpreadMarker
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/lib/use/mainhand
 
@@ -27,14 +31,16 @@
     execute if score $Spread Temporary matches ..0 run scoreboard players set $Spread Temporary 1
 
 # スコアを精度に
+    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     execute store result storage lib: Argument.Spread float 0.1 run scoreboard players get $Spread Temporary
-    execute anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
+    data modify storage lib: Argument.Distance set value 10.0f
+    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=this] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
 
 # 非収束ビーム
-    execute if score $Spread Temporary matches 2.. anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/laser
+    execute if score $Spread Temporary matches 2.. anchored eyes positioned ^ ^-0.25 ^ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0573.final_prism/laser
 
 # 完全収束ビーム
-    execute if score $Spread Temporary matches ..1 anchored eyes positioned ^-0.35 ^-0.25 ^ facing entity 0-0-0-0-0 feet run function asset:sacred_treasure/0573.final_prism/final_laser
+    execute if score $Spread Temporary matches ..1 anchored eyes positioned ^ ^-0.25 ^ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0573.final_prism/final_laser
     execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/final_sound
 
 # サウンド
@@ -45,3 +51,4 @@
 # リセット
     scoreboard players reset $Random Temporary
     scoreboard players reset $Temporary Temporary
+    kill @e[type=marker,tag=SpreadMarker]
