@@ -12,18 +12,19 @@
 
   # 火属性ダメージ
     # 与えるダメージ
-   data modify storage lib: Argument.Damage set value 16
+        data modify storage lib: Argument.Damage set value 16
     # 第一属性
-   data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
-   data modify storage lib: Argument.ElementType set value "Fire"
+        data modify storage lib: Argument.ElementType set value "Fire"
     # 補正functionを実行
-   execute if score @s 1O.ExploFuse matches 40 run function lib:damage/modifier
+        execute if score @s 1O.ExploFuse matches 40 run function lib:damage/modifier
     # 範囲
-   execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
+        execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
     # リセット
-   data remove storage lib: Argument
+        data remove storage lib: Argument
 
+# 連鎖爆発
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExploFuse 36
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplosionCo 8
 
