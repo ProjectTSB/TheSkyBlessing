@@ -7,11 +7,7 @@
 #        asset:sacred_treasure/0372.water_magic/3.1.loop
 
 # 演出
-    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 90 run function lib:particle/circle/fishing/5
-    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 90 run function lib:particle/circle/fishing/4
-    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 90 run function lib:particle/circle/fishing/3
-    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 90 run function lib:particle/circle/fishing/2
-    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 90 run function lib:particle/circle/fishing/1
+    execute as @e[type=area_effect_cloud,tag=AC.Water] at @s rotated ~ 0 run function asset:sacred_treasure/0372.water_magic/particle.1
 
 # 一定時間で発動
     execute as @e[type=area_effect_cloud,tag=AC.Water,scores={AC.Time=0}] at @s run function asset:sacred_treasure/0372.water_magic/3.2.damage
