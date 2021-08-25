@@ -9,6 +9,8 @@
         "asset:mob/0058.divide_haze/tick/1.trigger",
         "asset:mob/0038.laser_eye/tick/1.trigger",
         "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
-        "asset:mob/0019.horus_priest/tick/1.trigger"
+        "asset:mob/0019.horus_priest/tick/1.trigger",
+        "asset:mob/0099.witch_zombie/tick/1.trigger",
+        "asset:mob/0100.magic_bullet_of_witch_zombie/tick/1.trigger"
     ]
 }
