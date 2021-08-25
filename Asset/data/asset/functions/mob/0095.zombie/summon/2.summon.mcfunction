@@ -31,7 +31,7 @@
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob ArmorDropChances set value
+    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 50
 # 攻撃力 (double) (オプション)
@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.27
+    data modify storage asset:mob Speed set value 0.25
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
