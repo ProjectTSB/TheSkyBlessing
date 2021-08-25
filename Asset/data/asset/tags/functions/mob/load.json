@@ -8,6 +8,7 @@
         "asset:mob/0019.horus_priest/0.load",
         "asset:mob/0027.skull_sniper/0.load",
         "asset:mob/0099.witch_zombie/0.load",
-        "asset:mob/0100.magic_bullet_of_witch_zombie/0.load"
+        "asset:mob/0100.magic_bullet_of_witch_zombie/0.load",
+        "asset:mob/0101.admiral_zombie/0.load"
     ]
 }
