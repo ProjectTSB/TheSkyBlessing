@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"ゾンビ対象","color":"#3b622f"}'
+    data modify storage asset:mob Name set value '{"text":"ゾンビ大将","color":"#3b622f"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Mainhand set value {id:"diamond_sword",Count:1b}
@@ -27,9 +27,9 @@
     # 胴 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Chest set value {id:"diamond_chestplate",Count:1b,tag:{Unbreakable:1b}}
     # 脚 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Legs set value {id:"diamond_chestplate",Count:1b,tag:{Unbreakable:1b}}
+        data modify storage asset:mob Armor.Legs set value {id:"diamond_leggings",Count:1b,tag:{Unbreakable:1b}}
     # 足 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Feet set value {id:"diamond_chestplate",Count:1b,tag:{Unbreakable:1b}}
+        data modify storage asset:mob Armor.Feet set value {id:"diamond_boots",Count:1b,tag:{Unbreakable:1b}}
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)

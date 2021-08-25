@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0101.admiral_zombie/**
-    scoreboard objectives add 
+    scoreboard objectives add 2T.Tick dummy
+    scoreboard objectives add 2T.ZombieCount dummy
