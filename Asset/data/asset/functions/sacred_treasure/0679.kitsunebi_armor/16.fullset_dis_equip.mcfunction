@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/15.fullset_dis_equip
+#> asset:sacred_treasure/0679.kitsunebi_armor/16.fullset_dis_equip
 #
 #
 #

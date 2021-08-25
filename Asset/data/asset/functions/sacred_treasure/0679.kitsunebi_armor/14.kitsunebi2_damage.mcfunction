@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/13.spread_kitsunebi_damage
+#> asset:sacred_treasure/0679.kitsunebi_armor/14.kitsunebi2_damage
 #
 #
 #
-# @within function asset:sacred_treasure/0679.kitsunebi_armor/12.kitsunebi_state2
+# @within function asset:sacred_treasure/0679.kitsunebi_armor/13.kitsunebi_state2
 
 # 演出
     particle soul_fire_flame ~ ~1.3 ~ 1 0.4 1 0.1 30 normal @a

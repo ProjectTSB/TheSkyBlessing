@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/11.kitsunebi_damage
+#> asset:sacred_treasure/0679.kitsunebi_armor/12.kitsunebi_damage
 #
 #
 #
-# @within function asset:sacred_treasure/0679.kitsunebi_armor/10.kitsunebi_state
+# @within function asset:sacred_treasure/0679.kitsunebi_armor/11.kitsunebi_state
 
 # 演出
     particle flame ~ ~1.3 ~ 0.5 0.4 0.5 0 10 normal @a
