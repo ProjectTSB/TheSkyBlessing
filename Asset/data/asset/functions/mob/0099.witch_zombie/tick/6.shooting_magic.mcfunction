@@ -6,7 +6,7 @@
 
 # 魔法弾を召喚
     data modify storage api: Argument.ID set value 100
-    execute positioned ~ ~ ~ run function api:mob/summon
+    function api:mob/summon
 
 # 魔法弾の向きを最寄りのプレイヤーに向ける
     execute facing entity @p[gamemode=!creative,gamemode=!spectator] eyes run tp @e[type=marker,scores={MobID=100},distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~
