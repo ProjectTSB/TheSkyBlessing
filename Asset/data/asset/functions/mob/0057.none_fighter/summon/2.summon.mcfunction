@@ -17,11 +17,9 @@
 
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        #　武器分岐のための乱数
-            execute if predicate lib:random_pass_per/50 run tag @s add 1L.RandomWeapon
-        # タグがなければ剣に、あれば弓に
-            execute if entity @s[tag=!1L.RandomWeapon] run data modify storage asset:mob Weapon.Mainhand set value {id:"iron_sword",Count:1b}
-            execute if entity @s[tag=1L.RandomWeapon] run data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b}
+        #　一度剣にした後、乱数で弓に変更
+            data modify storage asset:mob Weapon.Mainhand set value {id:"iron_sword",Count:1b}
+            execute if predicate lib:random_pass_per/50 run data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b,tag:{Enchantments:[{id:"power",lvl:5}]}}
 
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:shield",Count:1b,tag:{BlockEntityTag:{Base:0}}}
