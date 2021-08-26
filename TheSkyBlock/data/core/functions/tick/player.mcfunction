@@ -18,6 +18,7 @@
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
+    execute if entity @s[scores={FlyingEvent=1..}] run function core:handler/flying.elytra
 # 神器処理
     function asset_manager:sacred_treasure/triggers/
 # MP回復処理
