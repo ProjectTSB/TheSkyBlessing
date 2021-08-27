@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0702.bright_black_lamp/5.scheduke_tick
 
 # ダメージ処理
-        data modify storage lib: Argument.Damage set value 35f
+        data modify storage lib: Argument.Damage set value 25f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Fire"
         function lib:damage/modifier
