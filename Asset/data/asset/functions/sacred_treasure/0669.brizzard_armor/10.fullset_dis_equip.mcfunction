@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0669.brizzard_armor/10.fullset_disequip
+#> asset:sacred_treasure/0669.brizzard_armor/10.fullset_dis_equip
 #
 #
 #
