@@ -13,7 +13,6 @@
         execute if entity @e[tag=Attacker,distance=..20] positioned ~ ~1.5 ~ facing entity @e[tag=Attacker,distance=..20] eyes run function asset:sacred_treasure/0647.thorn_armor/9.exetend_thorn
         scoreboard players reset @s HZ.Tick
 
-
 # 被ダメージ時体力回復
 
     # 回復する量 = 5
@@ -34,7 +33,6 @@
         execute as @e[type=#lib:living,type=!player,tag=Attacker] run function lib:damage/
     # リセット
         data remove storage lib: Argument
-
 
 # MP10消費
     scoreboard players set $Fluctuation Lib -10
