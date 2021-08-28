@@ -6,7 +6,7 @@
 
 # 演出
     particle dust 0 0 0 3 ~ ~1.2 ~ 0.4 0.4 0.4 0 10 normal @a
-    playsound minecraft:block.note_block.chime master @a ~ ~ ~ 1 0.4 0
+    playsound minecraft:block.note_block.chime master @a ~ ~ ~ 0.3 0.4 0
 
 # ダメージ処理
     data modify storage lib: Argument.Damage set value 25f
