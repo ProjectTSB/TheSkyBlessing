@@ -33,6 +33,8 @@
         "asset:sacred_treasure/0559.solitariness/1.trigger",
         "asset:sacred_treasure/0615.censored/1.trigger",
         "asset:sacred_treasure/0605.ambition/1.trigger",
-        "asset:sacred_treasure/0690.neptune_trident/1.trigger"
+        "asset:sacred_treasure/0690.neptune_trident/1.trigger",
+        "asset:sacred_treasure/0639.neptune_armor/1.1.attack_trigger"
+
     ]
 }
