@@ -8,7 +8,7 @@
     scoreboard players add @s JI.Tick 1
 
 # 盲目を解除し暗視を付与
-    effect give @a[distance=..15] night_vision 30 0 true
+    effect give @a[distance=..15] night_vision 60 0 true
     effect clear @a[distance=..15] blindness
 
 # 範囲攻撃(5段階)
