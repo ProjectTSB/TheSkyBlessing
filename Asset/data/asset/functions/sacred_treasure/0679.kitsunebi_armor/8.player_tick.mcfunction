@@ -13,4 +13,4 @@
     execute if score @s IV.SoundLoop matches 30.. run function asset:sacred_treasure/0679.kitsunebi_armor/13.sound_loop
 
 # 夜ならバフ
-    execute if predicate asset:sacred_treasure/0679.kitsunebi_armor/night run function asset:sacred_treasure/0679.kitsunebi_armor/9.night_buff
+    execute unless predicate lib:is_day run function asset:sacred_treasure/0679.kitsunebi_armor/9.night_buff
