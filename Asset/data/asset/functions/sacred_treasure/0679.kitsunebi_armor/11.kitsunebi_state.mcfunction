@@ -23,5 +23,5 @@
     execute if score @s IV.DamageTick matches 30.. run function asset:sacred_treasure/0679.kitsunebi_armor/12.kitsunebi_damage
 
 # 狐火状態終了
-    execute if score @s IV.Kitsunebi matches 160.. run scoreboard players reset @s IV.Kitsunebi
+    execute if score @s IV.Kitsunebi matches 200.. run scoreboard players reset @s IV.Kitsunebi
 
