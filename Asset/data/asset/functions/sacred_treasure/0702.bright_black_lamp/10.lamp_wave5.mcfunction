@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0702.bright_black_lamp/5.scheduke_tick
+# @within function asset:sacred_treasure/0702.bright_black_lamp/5.schedule_tick
 
 # ダメージ処理
     execute if entity @e[type=#lib:living,type=!player,distance=4..6] as @e[type=#lib:living,type=!player,distance=4..6] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/5
