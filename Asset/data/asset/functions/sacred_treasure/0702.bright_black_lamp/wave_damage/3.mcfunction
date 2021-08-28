@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0702.bright_black_lamp/8.lamp_wave3
 
 # 演出
-    particle dust 0 0 0 3 ~ ~1.2 ~ 0.4 0.4 0.4 0 10 normal @a
+    particle dust 0 0 0 2 ~ ~1.2 ~ 0.4 0.4 0.4 0 10 normal @a
     playsound minecraft:block.note_block.chime master @a ~ ~ ~ 0.3 0.4 0
 
 # ダメージ処理
