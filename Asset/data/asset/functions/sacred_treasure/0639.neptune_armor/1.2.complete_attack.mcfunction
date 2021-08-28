@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0639.neptune_armor/1.1.attack_trigger
 
 # 攻撃した時にタグを付与
-  #  tag @s add HS.Attack
+    tag @s add HS.Attack
 
 # スコア付与
     scoreboard players set @s HS.AttackCool 2

@@ -16,3 +16,7 @@
 
 # スコアをへらす
     scoreboard players remove @s HS.AttackCool 1
+
+# タグを消す(2tick後にこのタグを消さないとダメージライブラリでダメージトリガー炸裂する)
+    execute if score @s HS.AttackCool matches ..0 run tag @s remove HS.Attack
+    execute if score @s HS.AttackCool matches ..0 run scoreboard players reset @s HS.AttackCool 
