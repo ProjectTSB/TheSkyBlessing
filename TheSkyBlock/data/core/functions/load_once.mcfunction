@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 19
+data modify storage global Version set value 20
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -107,6 +107,7 @@ team modify NoCollision collisionRule never
     #> UserID
     # @public
         scoreboard objectives add UserID dummy {"text":"汎用固有ユーザーID"}
+        scoreboard objectives add MobUUID dummy {"text":"汎用固有MobID"}
 
     #> DEBUG用スコアボード
     # @within function core:load_once
@@ -127,12 +128,18 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
 
-    #> AssetManager: Mob
+    #> AssetManager: Mob -Public
     # @within function
     #   lib:debug/objective_view
     #   asset:mob/*/**
     #   asset_manager:mob/**
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
+
+    #> Assetmanager: Mob -Private
+    # @within function
+    #   asset_manager:mob/**
+        scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
+        scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
 
     #> イベントハンドラ用スコアボード
     # @within function
