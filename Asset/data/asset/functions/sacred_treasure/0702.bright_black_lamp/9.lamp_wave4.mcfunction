@@ -5,12 +5,7 @@
 # @within function asset:sacred_treasure/0702.bright_black_lamp/5.scheduke_tick
 
 # ダメージ処理
-        data modify storage lib: Argument.Damage set value 30f
-        data modify storage lib: Argument.AttackType set value "Magic"
-        data modify storage lib: Argument.ElementType set value "Fire"
-        function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,distance=3..5] run function lib:damage/
-        data remove storage lib: Argument
+    execute if entity @e[type=#lib:living,type=!player,distance=3..5] as @e[type=#lib:living,type=!player,distance=3..5] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/4
 
 # 演出
     playsound block.respawn_anchor.charge master @a ~ ~ ~ 0.6 1.8 0
