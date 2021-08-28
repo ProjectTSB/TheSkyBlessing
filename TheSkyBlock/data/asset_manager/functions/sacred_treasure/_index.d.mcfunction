@@ -37,6 +37,7 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
+    #declare tag TriggerFlag.FlyingElytra
 
 #> check用の失敗フラグ
 # @within function
