@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0689.soaring_wing/_.give
+#> asset:sacred_treasure/0687.soaring_wing/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -11,9 +11,9 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 687
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value
+    data modify storage asset:sacred_treasure Item set value "minecraft:elytra"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value
+    data modify storage asset:sacred_treasure Name set value '{"text":"天翔の翼","color":"#87FFD7"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value []
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "chest"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value
+    data modify storage asset:sacred_treasure Trigger set value "flying"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
@@ -39,7 +39,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value
+    data modify storage asset:sacred_treasure MPCost set value 1
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value []
+    data modify storage asset:sacred_treasure CanUsedGod set value [Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
