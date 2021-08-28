@@ -2,7 +2,9 @@
 #
 #
 #
-# @within tag/function asset:sacred_treasure/attack
+# @within tag/function asset:sacred_treasure/**
 
 # フルセットなら実行
-    execute if data storage asset:context id.all{head:678,chest:679,legs:680,feet:681} run function asset:sacred_treasure/0679.kitsunebi_armor/6.attack
+    execute if entity @s[tag=IV.FullSet] run function asset:sacred_treasure/0679.kitsunebi_armor/6.attack
+
+    say a
