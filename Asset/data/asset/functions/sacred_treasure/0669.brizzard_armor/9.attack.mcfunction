@@ -20,6 +20,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージ対象
-    execute at @e[type=#lib:living,type=!player,tag=Victim] as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,distance=..4] run function lib:damage/
 # リセット
     data remove storage lib: Argument
