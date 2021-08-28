@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/15.sound_loop
+#> asset:sacred_treasure/0679.kitsunebi_armor/13.sound_loop
 #
 #
 #

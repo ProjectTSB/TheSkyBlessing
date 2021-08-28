@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/16.fullset_dis_equip
+#> asset:sacred_treasure/0679.kitsunebi_armor/14.fullset_dis_equip
 #
 #
 #
@@ -9,7 +9,3 @@
 
 # Tag削除
     tag @s remove IV.FullSet
-
-# mobの狐火状態の消去
-    execute if entity @e[type=#lib:living,type=!player,scores={IV.Kitsunebi=1..}] run scoreboard players reset @s IV.Kitsunebi
-    execute if entity @e[type=#lib:living,type=!player,scores={IV.Kitsunebi2=1..}] run scoreboard players reset @s IV.Kitsunebi2

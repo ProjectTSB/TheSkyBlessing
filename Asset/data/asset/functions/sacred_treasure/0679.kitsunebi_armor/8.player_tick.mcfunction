@@ -10,7 +10,7 @@
 
 # 音を一定時間ごとに鳴らす
     scoreboard players add @s IV.SoundLoop 1
-    execute if score @s IV.SoundLoop matches 30.. run function asset:sacred_treasure/0679.kitsunebi_armor/15.sound_loop
+    execute if score @s IV.SoundLoop matches 30.. run function asset:sacred_treasure/0679.kitsunebi_armor/13.sound_loop
 
 # 夜ならバフ
     execute if predicate asset:sacred_treasure/0679.kitsunebi_armor/night run function asset:sacred_treasure/0679.kitsunebi_armor/9.night_buff

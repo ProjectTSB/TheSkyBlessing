@@ -24,8 +24,7 @@
     data remove storage lib: Argument
 
 # 攻撃時狐火状態にする
-    scoreboard players set @e[type=#lib:living,tag=Victim,scores={IV.Kitsunebi=1..}] IV.Kitsunebi2 100
-    scoreboard players set @e[type=#lib:living,tag=Victim] IV.Kitsunebi 100
+    scoreboard players set @e[type=#lib:living,type=!player,tag=Victim] IV.Kitsunebi 1
 
 # 狐火状態のMob用Schedule
     schedule function asset:sacred_treasure/0679.kitsunebi_armor/10.kitsunebi_state_schedule_loop 1t replace
