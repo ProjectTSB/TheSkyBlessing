@@ -39,7 +39,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 1
+    data modify storage asset:sacred_treasure MPCost set value 3
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    # data modify storage asset:sacred_treasure CustomNBT set value {}
+    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:68,display:{color:8912855},Enchantments:[{id:"minecraft:protection",lvl:5s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.02,Operation:0,UUID:[I;1,1,687,5],Slot:"chest"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give

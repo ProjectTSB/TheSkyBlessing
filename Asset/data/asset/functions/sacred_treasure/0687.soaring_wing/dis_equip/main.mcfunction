@@ -4,3 +4,5 @@
 #
 # @within function asset:sacred_treasure/0687.soaring_wing/dis_equip/
 
+# 専用スコアをリセット
+    scoreboard players reset @s J3.MPUseTick

@@ -5,4 +5,4 @@
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのchestに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{chest:689} run function asset:sacred_treasure/0687.soaring_wing/2.check_condition
+    execute if data storage asset:context id{chest:687} run function asset:sacred_treasure/0687.soaring_wing/2.check_condition
