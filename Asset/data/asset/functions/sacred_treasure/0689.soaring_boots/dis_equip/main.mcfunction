@@ -4,3 +4,5 @@
 #
 # @within function asset:sacred_treasure/0689.soaring_boots/dis_equip/
 
+# フルセットタグを削除
+    execute if entity @s[tag=J3.FullSet] run tag @s remove J3.FullSet

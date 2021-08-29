@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0687.soaring_wing/9.flying_attack
+#> asset:sacred_treasure/0687.soaring_wing/20.melee_attack
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/8.fullset_flying
+# @within function asset:sacred_treasure/0687.soaring_wing/19.melee_recursion
 
 # 無属性ダメージ
-    data modify storage lib: Argument.Damage set value 5f
+    data modify storage lib: Argument.Damage set value 15f
     data modify storage lib: Argument.AttackType set value "Physical"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
