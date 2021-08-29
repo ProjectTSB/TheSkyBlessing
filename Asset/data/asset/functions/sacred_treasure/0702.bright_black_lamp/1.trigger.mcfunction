@@ -5,4 +5,4 @@
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのmainhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{mainhand:702} run function asset:sacred_treasure/0702.bright_black_lamp/2.check_condition
+    execute if data storage asset:context id{auto:702} run function asset:sacred_treasure/0702.bright_black_lamp/2.check_condition
