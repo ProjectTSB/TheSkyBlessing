@@ -9,8 +9,9 @@
     particle cloud ~ ~ ~ 0.5 0.5 0.5 0.1 1 normal @a
    playsound entity.wither.shoot master @a ~ ~ ~ 0.075 2 0
 
-# 飛行中のみ耐性を得る
+# 飛行中のみ耐性を得て、低速落下を無効化
     effect give @s resistance 1 1 true
+    effect clear @s slow_falling
 
 # 飛行していない検知のためのスコア
     scoreboard players set @s J3.NotFlying 1
