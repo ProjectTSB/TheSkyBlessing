@@ -11,7 +11,7 @@
     playsound entity.wither.shoot master @a ~ ~ ~ 0.2 2 0
 
 # ダメージ判定
-    execute if entity @e[type=#lib:living,type=!player,distance=..1.5] run function asset:sacred_treasure/0687.soaring_wing/20.melee_attack
+    execute if entity @e[type=#lib:living,type=!player,distance=..1.0] run function asset:sacred_treasure/0687.soaring_wing/20.melee_attack
 
 # 再帰処理
     execute if entity @s[distance=..15] if block ^ ^ ^1 #lib:no_collision positioned ^ ^ ^1 run function asset:sacred_treasure/0687.soaring_wing/19.melee_recursion
