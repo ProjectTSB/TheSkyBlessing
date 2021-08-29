@@ -18,5 +18,6 @@
     execute if score @s JI.Tick matches 46 positioned ~ ~0.5 ~ rotated 0 0 run function asset:sacred_treasure/0702.bright_black_lamp/9.lamp_wave4
     execute if score @s JI.Tick matches 61 positioned ~ ~0.5 ~ rotated 0 0 run function asset:sacred_treasure/0702.bright_black_lamp/10.lamp_wave5
 
-# スコアリセット
+# スコアとタグリセット
+    execute if score @s JI.Tick matches 61.. run tag @s remove JI.Lamp
     execute if score @s JI.Tick matches 61.. run scoreboard players reset @s JI.Tick

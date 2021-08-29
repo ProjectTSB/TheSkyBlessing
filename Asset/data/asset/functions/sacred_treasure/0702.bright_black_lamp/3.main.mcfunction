@@ -11,6 +11,8 @@
 
 # 開始用スコア
     scoreboard players set @s JI.Tick 0
+# タグを付与
+    tag @s add JI.Lamp
 
 # スケジュールループ開始
     schedule function asset:sacred_treasure/0702.bright_black_lamp/4.schedule_loop 1t replace
