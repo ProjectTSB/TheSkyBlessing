@@ -19,4 +19,4 @@
 
 # 5秒以上存在か地面に接触でkill
     execute if score @s 2S.Tick matches 50.. run kill @s
-    execute unless block ~ ~ ~ #lib:no_collision run kill @s
+    execute unless block ~ ~ ~ #lib:no_collision_without_fluid run kill @s
