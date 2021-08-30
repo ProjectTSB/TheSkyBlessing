@@ -4,7 +4,9 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "item": "minecraft:golden_sword"
+                "items": [
+                    "minecraft:golden_sword"
+                ]
             }
         }
     }
