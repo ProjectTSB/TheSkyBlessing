@@ -14,4 +14,4 @@
     execute if entity @e[type=#lib:living,type=!player,distance=..1.0] run function asset:sacred_treasure/0687.soaring_wing/19.melee_recursion_attack
 
 # 再帰処理
-    execute if entity @s[distance=..15] if block ^ ^ ^1 #lib:no_collision positioned ^ ^ ^1 run function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
+    execute if entity @s[distance=..15] if block ^ ^ ^1 #lib:no_collision_without_fluid positioned ^ ^ ^1 run function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
