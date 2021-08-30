@@ -13,20 +13,12 @@
 # スイカスライスを召喚
     summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:16b}}
 
-# 水属性ダメージ
-
-    # 引数の設定
-    # 与えるダメージ
+# 雷属性ダメージ
         data modify storage lib: Argument.Damage set value 12.0
-    # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # 第二属性
         data modify storage lib: Argument.ElementType set value "Thunder"
-    # 補正functionを実行
         function lib:damage/modifier
-    # ダメージ対象
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function lib:damage/
-    # リセット
         data remove storage lib: Argument
 
 # 消滅
