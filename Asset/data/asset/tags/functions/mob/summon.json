@@ -30,6 +30,7 @@
         "asset:mob/0098.element_zombie/summon/1.trigger",
         "asset:mob/0099.witch_zombie/summon/1.trigger",
         "asset:mob/0100.magic_bullet_of_witch_zombie/summon/1.trigger",
-        "asset:mob/0101.admiral_zombie/summon/1.trigger"
+        "asset:mob/0101.admiral_zombie/summon/1.trigger",
+        "asset:mob/0089.decapitation/summon/1.trigger"
     ]
 }
