@@ -5,7 +5,7 @@
 # @within function asset:mob/0047.the_heretic/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","1B.First"],DeathLootTable:"asset:mob/death/0047.the_heretic"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","1B.First","AntiFrozen"],DeathLootTable:"asset:mob/death/0047.the_heretic"}
 # ID (int)
     data modify storage asset:mob ID set value 47
 # Type (string) Wikiを参照

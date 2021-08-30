@@ -5,7 +5,7 @@
 # @within function asset:mob/0019.horus_priest/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0019.horus_priest"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","AntiFrozen"],DeathLootTable:"asset:mob/death/0019.horus_priest"}
 # ID (int)
     data modify storage asset:mob ID set value 19
 # Type (string) Wikiを参照
