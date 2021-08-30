@@ -12,4 +12,4 @@
     execute if score @s J3.NotFlying matches 1 run scoreboard players reset @s J3.NotFlying
 
 # スニーク時以外スニーク時間を計測するスコアをリセット
-    execute unless predicate lib:is_sneaking run scoreboard players reset @s J3.SneakTime
+    execute if score @s J3.SneakTime matches 1.. unless predicate lib:is_sneaking run scoreboard players reset @s J3.SneakTime
