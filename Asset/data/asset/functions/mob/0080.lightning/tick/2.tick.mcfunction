@@ -23,5 +23,5 @@
 # ブロックに接触した際の処理
     execute unless block ^ ^ ^1 #lib:no_collision_without_fluid run function asset:mob/0080.lightning/tick/5.banish
 
-# 一艇時間たったらキル
+# 一定時間たったらキル
     kill @s[scores={28.Tick=100..}]
