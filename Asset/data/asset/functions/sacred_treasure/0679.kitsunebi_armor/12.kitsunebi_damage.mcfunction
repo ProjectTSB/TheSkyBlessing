@@ -5,8 +5,8 @@
 # @within function asset:sacred_treasure/0679.kitsunebi_armor/11.kitsunebi_state
 
 # 演出
-    particle flame ~ ~1.3 ~ 0.5 0.4 0.5 0.05 10 normal @a
-    particle soul_fire_flame ~ ~1.3 ~ 0.5 0.4 0.5 0.15 10 normal @a
+    particle flame ~ ~1.3 ~ 0.5 0.4 0.5 0.05 20 normal @a
+    particle soul_fire_flame ~ ~1.3 ~ 0.5 0.4 0.5 0.1 20 normal @a
     playsound block.fire.extinguish master @a ~ ~ ~ 0.4 1.5 0
 
 # スコアをリセット

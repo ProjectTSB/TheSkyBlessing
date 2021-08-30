@@ -16,7 +16,7 @@
 
 # 演出
     particle flame ~ ~1.3 ~ 0.3 0.4 0.3 0 1 normal @a
-    particle soul_fire_flame ~ ~1.3 ~ 0.3 0.4 0.3 0. 1 normal @a
+    particle soul_fire_flame ~ ~1.3 ~ 0.3 0.4 0.3 0 1 normal @a
 
 # 3秒ごとの火魔法属性ダメージと演出 unless scoreの方がコマンド数は少ないんですがどうしてもやりづらいのでこの手法です
     scoreboard players add @s IV.DamageTick 1
