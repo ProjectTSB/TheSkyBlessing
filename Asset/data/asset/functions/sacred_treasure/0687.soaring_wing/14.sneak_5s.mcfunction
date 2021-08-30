@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0687.soaring_wing/16.sneak_5s
+#> asset:sacred_treasure/0687.soaring_wing/14.sneak_5s
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/15.sneak_5s_trigger
+# @within function asset:sacred_treasure/0687.soaring_wing/13.sneak
 
 # 演出
     particle sweep_attack ~ ~0.2 ~ 0.6 0 0.6 0 30 normal @a
@@ -11,3 +11,6 @@
 
 # 浮遊
     effect give @s levitation 1 30 true
+
+# スニークスコアをリセット
+    scoreboard players reset @s J3.SneakTime
