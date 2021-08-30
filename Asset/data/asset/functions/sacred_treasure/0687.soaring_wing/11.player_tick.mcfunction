@@ -11,5 +11,5 @@
 # 飛行時以外を検知するスコアをリセット
     execute if score @s J3.NotFlying matches 1 run scoreboard players reset @s J3.NotFlying
 
-# スニーク時以外スニーク時間を計測するスコアリセット
+# スニーク時以外スニーク時間を計測するスコアをリセット
     execute unless predicate lib:is_sneaking run scoreboard players reset @s J3.SneakTime
