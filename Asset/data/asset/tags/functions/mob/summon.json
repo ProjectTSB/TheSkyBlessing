@@ -6,6 +6,7 @@
         "asset:mob/0019.horus_priest/summon/1.trigger",
         "asset:mob/0027.skull_sniper/summon/1.trigger",
         "asset:mob/0007.ectoplasm/summon/1.trigger",
+        "asset:mob/0031.tomb_robbing/summon/1.trigger",
         "asset:mob/0029.skeleton_archer/summon/1.trigger",
         "asset:mob/0005.thief/summon/1.trigger",
         "asset:mob/0017.fire_bird/summon/1.trigger",
@@ -23,6 +24,7 @@
         "asset:mob/0056.thunder_trifler/summon/1.trigger",
         "asset:mob/0037.fire_spreader/summon/1.trigger",
         "asset:mob/0047.the_heretic/summon/1.trigger",
-        "asset:mob/0059.jack_o_lantern/summon/1.trigger"
+        "asset:mob/0059.jack_o_lantern/summon/1.trigger",
+        "asset:mob/0089.decapitation/summon/1.trigger"
     ]
 }
