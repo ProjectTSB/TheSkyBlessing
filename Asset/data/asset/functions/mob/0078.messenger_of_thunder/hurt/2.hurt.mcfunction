@@ -8,7 +8,3 @@
     particle dust 1 1 0 1 ~ ~1.6 ~ 0.4 0.6 0.4 0 10 normal @a
     particle dust 0.3 0.3 0.3 1 ~ ~1.6 ~ 0.4 0.6 0.4 0 30 normal @a
     playsound block.respawn_anchor.deplete master @a ~ ~ ~ 0.6 2 0
-
-# スピードスコア蓄積
-    scoreboard players add @s 26.AccelCount 25
-

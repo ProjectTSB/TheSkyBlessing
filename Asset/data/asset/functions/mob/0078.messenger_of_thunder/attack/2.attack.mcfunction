@@ -23,7 +23,3 @@
         execute as @p[tag=Victim] run function lib:damage/
     # リセット
         data remove storage lib: Argument
-
-# スピードスコア蓄積
-    scoreboard players add @s 26.AccelCount 40
-
