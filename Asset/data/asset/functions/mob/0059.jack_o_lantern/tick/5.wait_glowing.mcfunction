@@ -14,9 +14,9 @@
     data modify storage lib: Argument.Distance set value 10
     data modify storage lib: Argument.Spread set value 4.633d
     execute as @e[type=marker,tag=1N.SpreadMarker,limit=1] at @p[gamemode=!creative,gamemode=!spectator,distance=..30] positioned ~ ~25 ~ rotated ~ 90 run function lib:forward_spreader/circle
-    execute at @p[gamemode=!creative,gamemode=!spectator,distance=..30] positioned ~ ~25 ~ facing entity @e[type=marker,tag=1N.SpreadMarker,limit=1] feet positioned ^ ^ ^25 if block ~ ~ ~ #asset:mob/0059.jack_o_lantern/no_collision unless block ~ ~-1 ~ #asset:mob/0059.jack_o_lantern/no_collision run tp @s ~ ~ ~
+    execute at @p[gamemode=!creative,gamemode=!spectator,distance=..30] positioned ~ ~25 ~ facing entity @e[type=marker,tag=1N.SpreadMarker,limit=1] feet positioned ^ ^ ^25 if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
 # ワープミスによる特殊攻撃割愛
-    execute at @p[gamemode=!creative,gamemode=!spectator,distance=..30] positioned ~ ~20 ~ facing entity 0-0-0-0-0 feet positioned ^ ^ ^20 unless block ~ ~ ~ #asset:mob/0059.jack_o_lantern/no_collision run scoreboard players set @s 1N.Glowing 60
+    execute at @p[gamemode=!creative,gamemode=!spectator,distance=..30] positioned ~ ~20 ~ facing entity 0-0-0-0-0 feet positioned ^ ^ ^20 unless block ~ ~ ~ #lib:no_collision_without_fluid run scoreboard players set @s 1N.Glowing 60
 # リセット
     kill @e[type=marker,tag=1N.SpreadMarker]
 # 特殊攻撃開始演出
