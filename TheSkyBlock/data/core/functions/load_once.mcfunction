@@ -10,12 +10,16 @@ tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "
 
 
 #> forceload chunksの設定
-execute in overworld run forceload add 10000 10000
-execute in overworld run forceload add -1 -1 0 0
-execute in the_nether run forceload add 10000 10000
-execute in the_nether run forceload add -1 -1 0 0
-execute in the_end run forceload add 10000 10000
-execute in the_end run forceload add -1 -1 0 0
+# Origin
+    execute in overworld run forceload add -1 -1 0 0
+    execute in the_nether run forceload add -1 -1 0 0
+    execute in the_end run forceload add -1 -1 0 0
+# ShulkerBox
+    execute in overworld run forceload add 10000 10000
+    execute in the_nether run forceload add 10000 10000
+    execute in the_end run forceload add 10000 10000
+# Item Return Point
+    execute in overworld run forceload add 2927 -1273
 
 
 #> gameruleの設定
