@@ -5,6 +5,10 @@
         "asset:sacred_treasure/0625.flame_armor/1.trigger",
         "asset:sacred_treasure/0626.flame_leggings/1.trigger",
         "asset:sacred_treasure/0627.flame_boots/1.trigger",
-        "asset:sacred_treasure/0562.heartland/1.trigger"
+        "asset:sacred_treasure/0562.heartland/1.trigger",
+        "asset:sacred_treasure/0703.wizard_hat/1.trigger",
+        "asset:sacred_treasure/0704.wizard_robe_upper/1.trigger",
+        "asset:sacred_treasure/0705.wizard_robe_lower/1.trigger",
+        "asset:sacred_treasure/0706.wizard_boots/1.trigger"
     ]
 }
