@@ -11,4 +11,4 @@
     tag @s remove IL.FullSet
 
 # 音用スコアのリセット
-    scoreboard players reset @s IL.BrizzardLoop
+    scoreboard players reset @s IL.SoundLoop
