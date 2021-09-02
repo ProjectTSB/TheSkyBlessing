@@ -13,3 +13,6 @@
     data modify storage api: Argument.UUID set value [I;1,1,647,5]
 # 補正の削除
     function api:player_modifier/defense/thunder/remove
+
+# フルセットタグを削除
+    execute if entity @s[tag=HZ.FullSet] run tag @s remove HZ.FullSet

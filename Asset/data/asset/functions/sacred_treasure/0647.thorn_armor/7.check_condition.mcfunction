@@ -3,6 +3,7 @@
 #
 #
 # @within function asset:sacred_treasure/0647.thorn_armor/6.damage_trigger
+    #declare score_holder $CheckMP
 
 # MPが10以上なら実行
     scoreboard players set $CheckMP Lib 10
