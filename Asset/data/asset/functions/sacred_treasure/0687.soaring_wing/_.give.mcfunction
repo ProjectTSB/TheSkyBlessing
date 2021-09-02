@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"天翔の翼","color":"#87FFD7"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"空を翔ける者のための翼 ","color":"#87FFD7"}','{"text":"全て装備した者は、より自由に空を翔けるだろう","color":"#87FFD7"}','{"text":"フルセット時、5秒間スニークすると空へ翔び立ち","color":"#87FFD7"}','{"text":"飛行時、周囲のMobにダメージを与える","color":"#87FFD7"}','{"text":"また、飛行せずに空中にいる場合低速落下を得る","color":"#87FFD7"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"空を翔ける者のための翼 ","color":"#87FFD7"}','{"text":"全て装備した者は、より自由に空を翔けるだろう","color":"#87FFD7"}','{"text":"フルセット時、5秒間スニークすると空へ翔び立ち","color":"#87FFD7"}','{"text":"飛行時、周囲のMobにダメージを与える","color":"#87FFD7"}','{"text":"近接攻撃時前方にいるMobに無属性ダメージを与える","color":"#87FFD7"}','{"text":"また、飛行せずに空中にいる場合低速落下を得る","color":"#87FFD7"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
