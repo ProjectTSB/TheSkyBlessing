@@ -7,10 +7,10 @@
 
 # 演出
     # 相手に赤いパーティクル
-        execute if entity @e[tag=Attacker,distance=..20] as @e[tag=Attacker,distance=..20] at @s run particle falling_dust redstone_block ~ ~1.2 ~ 0.5 0.5 0.5 0 20 normal @a
+        execute if entity @e[type=#lib:living,tag=Attacker,distance=..20] as @e[type=#lib:living,tag=Attacker,distance=..20] at @s run particle falling_dust redstone_block ~ ~1.2 ~ 0.5 0.5 0.5 0 20 normal @a
 
     # 再帰使用：相手に棘を伸ばす演出
-        execute if entity @e[tag=Attacker,distance=..20] positioned ~ ~1.5 ~ facing entity @e[tag=Attacker,distance=..20] eyes run function asset:sacred_treasure/0647.thorn_armor/9.exetend_thorn
+        execute if entity @e[type=#lib:living,tag=Attacker,distance=..20] positioned ~ ~1.5 ~ facing entity @e[type=#lib:living,tag=Attacker,distance=..20] eyes run function asset:sacred_treasure/0647.thorn_armor/9.exetend_thorn
         scoreboard players reset @s HZ.Tick
 
 # 被ダメージ時体力回復
