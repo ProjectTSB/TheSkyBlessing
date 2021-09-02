@@ -50,8 +50,8 @@
     execute if data storage asset:sacred_treasure {Trigger:"equipping"} run data modify storage asset:sacred_treasure Temp.Trigger.AB set value ""
     execute if data storage asset:sacred_treasure {Trigger:"equipping"} run data modify storage asset:sacred_treasure Temp.Trigger.B set value ""
 # 設定されてなかったらエラーメッセージ
-    execute unless data storage asset:sacred_treasure Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"},{"text":" UUID","color":"red"}]
-    execute unless data storage asset:sacred_treasure Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"},{"text":" UUID","color":"red"}]
+    execute unless data storage asset:sacred_treasure Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"}]
+    execute unless data storage asset:sacred_treasure Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"}]
 # 生成
     loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/core/generate_lore/trigger
 # リセット
