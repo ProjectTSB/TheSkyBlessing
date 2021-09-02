@@ -12,3 +12,6 @@
 
 # 音用スコアのリセット
     scoreboard players reset @s IL.SoundLoop
+
+# 音を消す
+    stopsound @a[distance=..15] master minecraft:item.elytra.flying
