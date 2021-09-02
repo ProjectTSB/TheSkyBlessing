@@ -3,6 +3,7 @@
 #
 #
 # @within function asset:sacred_treasure/0647.thorn_armor/7.check_condition
+    #declare score_holder $Fluctuation
 
 # 演出
     # 相手に赤いパーティクル
