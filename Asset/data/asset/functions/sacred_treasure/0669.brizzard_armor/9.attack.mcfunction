@@ -9,17 +9,9 @@
     execute at @e[type=#lib:living,type=!player,tag=Victim] run playsound item.elytra.flying master @a ~ ~ ~ 0.8 2 0
 
 # 水魔法属性攻撃
-
-    # 引数の設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 6.0d
-    # 第一属性
-        data modify storage lib: Argument.AttackType set value "Magic"
-    # 第二属性
-        data modify storage lib: Argument.ElementType set value "Water"
-# 補正functionを実行
+    data modify storage lib: Argument.Damage set value 6.0d
+    data modify storage lib: Argument.AttackType set value "Magic"
+    data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
-# ダメージ対象
     execute as @e[type=#lib:living,type=!player,distance=..4] run function lib:damage/
-# リセット
     data remove storage lib: Argument
