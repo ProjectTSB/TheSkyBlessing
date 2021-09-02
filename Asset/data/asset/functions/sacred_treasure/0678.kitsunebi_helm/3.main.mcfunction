@@ -14,24 +14,20 @@
     particle soul_fire_flame ~ ~1.7 ~ 0.4 0.1 0.4 0 8 normal @s
     playsound block.fire.ambient master @a ~ ~ ~ 0.8 0.5 0.6
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,678,6]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 火ダメージ量+5%、魔法耐性5%、火耐性5%
+    data modify storage api: Argument.UUID set value [I;1,1,678,6]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/fire/add
+
+    data modify storage api: Argument.UUID set value [I;1,1,678,6]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,678,6]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,678,6]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/fire/add
 
 # フルセット
