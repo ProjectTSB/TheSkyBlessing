@@ -51,6 +51,6 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value [Nyaptov,Wi-ki,Rumor]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:68,display:{color:8912855},Enchantments:[{id:"minecraft:protection",lvl:5s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.02,Operation:0,UUID:[I;1,1,688,4],Slot:"legs"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:7,Operation:0,UUID:[I;1,1,688,4],Slot:"legs"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1,1,688,4],Slot:"legs"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,HideFlags:68,display:{color:8912855},Enchantments:[{id:"minecraft:protection",lvl:5s}],AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.1,Operation:1,UUID:[I;1,1,688,4],Slot:"legs"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:7,Operation:0,UUID:[I;1,1,688,4],Slot:"legs"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,UUID:[I;1,1,688,4],Slot:"legs"}]}
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
