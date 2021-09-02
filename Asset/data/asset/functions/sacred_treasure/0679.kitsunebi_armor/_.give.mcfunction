@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"狐火","color":"#FFAB52"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔法耐性+5%","color":"dark_purple"},{"text":" "},{"text":"火耐性+5%","color":"red"}]','[{"text":"妖しき狐","color":"#6EFFFF"},{"text":"の毛皮でできた防具","color":"#FFAB52"}]','[{"text":"身に纏えば","color":"#FFAB52"},{"text":"狐火","color":"#FF3030"},{"text":"の如き焦熱を感じる","color":"#FFAB52"}]','[{"text":"全て身に纏いし者は","color":"#FFAB52"},{"text":"妖狐","color":"#FF3030"},{"text":"の","color":"#FFAB52"},{"text":"火","color":"#6EFFFF"},{"text":"を操る","color":"#FFAB52"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"火ダメージ量+5% ","color":"red"},{"text":"魔法耐性+5% ","color":"dark_purple"},{"text":"火耐性+5%","color":"red"}]','[{"text":"妖しき狐","color":"#6EFFFF"},{"text":"の毛皮でできた防具","color":"#FFAB52"}]','[{"text":"身に纏えば","color":"#FFAB52"},{"text":"狐火","color":"#FF3030"},{"text":"の如き焦熱を感じる","color":"#FFAB52"}]','[{"text":"全て身に纏いし者は","color":"#FFAB52"},{"text":"妖狐","color":"#FF3030"},{"text":"の","color":"#FFAB52"},{"text":"火","color":"#6EFFFF"},{"text":"を操る","color":"#FFAB52"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
