@@ -3,4 +3,4 @@
 #
 #
 # @within tag/function asset:sacred_treasure/load
-    scoreboard objectives add IL.BrizzardLoop dummy
+    scoreboard objectives add IL.SoundLoop dummy
