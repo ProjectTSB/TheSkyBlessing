@@ -9,24 +9,16 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,648,4]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 水耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,648,4]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,648,4]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 雷耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,648,4]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/thunder/add
 
 # 演出

@@ -9,24 +9,19 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,647,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 本来ならここにフルセット被ダメージ時の処理を置いて置くべきだと思うけど、流石に装備だし...となっているので
+# 被ダメージ時トリガーは別に使っています ダメなようならレビューしてください
+
+# 水耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,647,5]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,647,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 雷耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,647,5]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/thunder/add
 
 # 演出
@@ -34,4 +29,4 @@
     playsound minecraft:block.sweet_berry_bush.place master @a ~ ~ ~ 1 1 0
 
 # フルセット
-execute if data storage asset:context id.all{head:646,chest:647,legs:648,feet:649} run function asset:sacred_treasure/0647.thorn_armor/4.fullset
+    execute if data storage asset:context id.all{head:646,chest:647,legs:648,feet:649} run function asset:sacred_treasure/0647.thorn_armor/4.fullset
