@@ -19,7 +19,7 @@
     data modify storage lib: Argument.Distance set value 10
     data modify storage lib: Argument.Spread set value 4.633d
     execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=Attacker] positioned ~ ~25 ~ rotated ~ 90 run function lib:forward_spreader/circle
-    execute at @p[tag=Attacker] positioned ~ ~25 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^25 if block ~ ~ ~ #asset:mob/0056.thunder_trifler/no_collision unless block ~ ~-1 ~ #asset:mob/0056.thunder_trifler/no_collision run tp @s ~ ~ ~
+    execute at @p[tag=Attacker] positioned ~ ~25 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^25 if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
 # 武器が剣の場合弓に切替
    item replace entity @s[predicate=asset:mob/0056.thunder_trifler/golden_sword] weapon.mainhand with bow{Enchantments:[{id:"punch",lvl:2s}]}
 
