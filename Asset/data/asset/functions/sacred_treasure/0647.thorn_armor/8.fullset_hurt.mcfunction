@@ -20,7 +20,7 @@
     data remove storage lib: Argument
 
 # 被ダメージ時攻撃者にダメージ
-    data modify storage lib: Argument.Damage set value 5.0
+    data modify storage lib: Argument.Damage set value 12.0f
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Attacker] run function lib:damage/
     data remove storage lib: Argument

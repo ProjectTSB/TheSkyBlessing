@@ -12,16 +12,9 @@
     effect give @s wither 3 0 true
 
 # 少しダメージ
-    # 引数の設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 5.0
-    # 第一属性
-        data modify storage lib: Argument.AttackType set value "Physical"
-    # 第二属性
-        data modify storage lib: Argument.ElementType set value "None"
-# 補正functionを実行
+    data modify storage lib: Argument.Damage set value 12.0
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-# ダメージ対象
     function lib:damage/
-# リセット
     data remove storage lib: Argument
