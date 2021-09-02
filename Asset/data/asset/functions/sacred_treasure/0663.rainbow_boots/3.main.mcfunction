@@ -10,54 +10,31 @@
 # ここから先は神器側の効果の処理を書く
 
 # 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.01
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,663,3]
+    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.01
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,663,3]
+    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.01
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,663,3]
+    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/fire/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.01
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,663,3]
+    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.01
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+    data modify storage api: Argument.UUID set value [I;1,1,663,3]
+    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/thunder/add
+
 
 # 演出
     particle dust 0.902 0.000 0.071 1 ~ ~0.3 ~ 0.4 0.2 0.4 0 4 normal
