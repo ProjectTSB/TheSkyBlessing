@@ -1,8 +1,8 @@
-#> asset:mob/0104.mad_scientist/tick/5.throw_potion
+#> asset:mob/0104.mad_scientist/tick/4.throw_potion
 #
 #
 #
-# @within function asset:mob/0104.mad_scientist/tick/4.till_throw_potion
+# @within function asset:mob/0104.mad_scientist/tick/2.tick
 
 # 薬品投げ
     data modify storage api: Argument.ID set value 105
