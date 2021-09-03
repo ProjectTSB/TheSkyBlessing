@@ -6,7 +6,7 @@
 
 # 演出
     particle snowflake ~ ~1.2 ~ 1 0.4 1 0 50 normal @a
-    particle falling_dust diamond_block ~ ~ 1.2 ~ 1 0.4 1 20 normal @a
+    particle falling_dust diamond_block ~ ~1.2 ~ 1 0.4 1 0 20 normal @a
     playsound block.glass.break master @a ~ ~ ~ 1 2 0
 
 # ダメージとデバフ
