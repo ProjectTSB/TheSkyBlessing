@@ -11,7 +11,7 @@
     scoreboard players add @s 2X.Tick 1
 
 # 移動
-    execute if entity @s[tag=!2X.AlreadyBroken] if block ~ ~2.0 ~ #lib:no_collision run tp @s ^ ^ ^1 ~ ~1
+    execute if entity @s[tag=!2X.AlreadyBroken] if block ~ ~2.0 ~ #lib:no_collision run tp @s ^ ^ ^0.8 ~ ~1
 
 # プレイヤーとの接触判定
     execute if entity @s[tag=!2X.AlreadyBroken] if entity @a[distance=..1] run function asset:mob/0105.potion_projectile/tick/4.break_potion
