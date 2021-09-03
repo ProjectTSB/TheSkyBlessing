@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0105.potion_projectile/**
     scoreboard objectives add 2X.Tick dummy
+    scoreboard objectives add 2X.InBlockTime dummy

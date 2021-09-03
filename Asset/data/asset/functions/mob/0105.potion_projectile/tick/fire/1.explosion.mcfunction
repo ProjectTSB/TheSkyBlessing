@@ -1,0 +1,16 @@
+#> asset:mob/0105.potion_projectile/tick/fire/1.explosion
+#
+#
+#
+# @within function asset:mob/0105.potion_projectile/tick/fire/
+
+# 爆発演出
+    particle explosion ~ ~1.2 ~ 0.6 0.4 0.6 0 10 normal @a
+    particle lava ~ ~1.2 ~ 1 0.4 1 0 50 normal @a
+    playsound entity.generic.explode master @a ~ ~ ~ 0.7 1 0
+
+# ダメージ
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function asset:mob/0105.potion_projectile/tick/fire/2.fire_damage
+
+# キル
+    kill @s
