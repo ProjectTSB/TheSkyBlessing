@@ -5,7 +5,7 @@
 # @within function asset:mob/0080.lightning/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon marker ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0080.lightning"}
+    summon marker ~ ~ ~ {Tags:["MobInit"]}
 # ID (int)
     data modify storage asset:mob ID set value 80
 # Type (string) Wikiを参照
