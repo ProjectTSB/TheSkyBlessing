@@ -16,4 +16,4 @@
     data remove storage lib: Argument
 
 # 前方へ攻撃判定 再帰処理
-    execute positioned ^ ^1 ^1 run function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
+    execute positioned ^ ^1 ^ run function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
