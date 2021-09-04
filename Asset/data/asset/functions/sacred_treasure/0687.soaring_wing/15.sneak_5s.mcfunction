@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0687.soaring_wing/14.sneak_5s
+#> asset:sacred_treasure/0687.soaring_wing/15.sneak_5s
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/13.sneak
+# @within function asset:sacred_treasure/0687.soaring_wing/14.sneak_on_block
 
 # 演出
     particle sweep_attack ~ ~0.6 ~ 0.6 0.3 0.6 0 50 normal @a

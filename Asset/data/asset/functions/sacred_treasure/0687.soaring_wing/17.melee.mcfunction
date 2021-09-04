@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0687.soaring_wing/16.melee
+#> asset:sacred_treasure/0687.soaring_wing/17.melee
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/15.melee_trigger
+# @within function asset:sacred_treasure/0687.soaring_wing/16.melee_trigger
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..5] run particle cloud ~ ~1.2 ~ 0 0.4 0 0.1 10 normal @a
@@ -16,4 +16,4 @@
     data remove storage lib: Argument
 
 # 前方へ攻撃判定 再帰処理
-    execute positioned ^ ^1 ^ run function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
+    execute positioned ^ ^1 ^ run function asset:sacred_treasure/0687.soaring_wing/18.melee_recursion

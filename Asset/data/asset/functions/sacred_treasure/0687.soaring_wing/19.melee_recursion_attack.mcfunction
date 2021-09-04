@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/17.melee_recursion
+# @within function asset:sacred_treasure/0687.soaring_wing/18.melee_recursion
 
 # 無属性ダメージ
     data modify storage lib: Argument.Damage set value 15f
