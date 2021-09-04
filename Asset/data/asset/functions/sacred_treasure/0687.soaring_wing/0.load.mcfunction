@@ -7,5 +7,4 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0687.soaring_wing/**
     scoreboard objectives add J3.MPUseTick dummy
-    scoreboard objectives add J3.NotFlying dummy
     scoreboard objectives add J3.SneakTime dummy

@@ -13,8 +13,8 @@
     effect give @s resistance 1 1 true
     effect clear @s slow_falling
 
-# 飛行していない検知のためのスコア
-    scoreboard players set @s J3.NotFlying 1
+# 飛行していない検知のためのTagを削除
+    execute if entity @s[tag=J3.IsNotFlying] run tag @s remove J3.IsNotFlying
 
 # 敵がいればダメージ
     execute if entity @e[type=#lib:living,type=!player,distance=..3] run function asset:sacred_treasure/0687.soaring_wing/9.flying_attack
