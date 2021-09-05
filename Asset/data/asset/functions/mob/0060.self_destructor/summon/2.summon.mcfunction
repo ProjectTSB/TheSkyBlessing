@@ -31,7 +31,7 @@
     # 足 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Feet set value {id:"minecraft:leather_boots",Count:1b,tag:{display:{color:14221312}}}
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.f,0.f]
+    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.f,0.0f]
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 50
 # 攻撃力 (double) (オプション)
