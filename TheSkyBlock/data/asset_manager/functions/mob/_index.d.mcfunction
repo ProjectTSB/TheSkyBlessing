@@ -58,3 +58,13 @@
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
     #declare tag AutoKillWhenDieVehicle
+    #declare tag AntiFrozen
+    #declare tag AntiDrown
+
+#> 汎用奈落耐性処理用タグ
+# @within function
+#   asset_manager:mob/common_tag/anti_void_action/**
+    #declare tag AntiVoidTargets
+    #declare tag AntiVoidTarget
+    #declare tag DefaultNoGravity
+    #declare tag this
