@@ -5,7 +5,7 @@
 # @within function asset:mob/0078.messenger_of_thunder/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0078.messenger_of_thunder"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen","AntiVoid"],DeathLootTable:"asset:mob/death/0078.messenger_of_thunder"}
 # ID (int)
     data modify storage asset:mob ID set value 78
 # Type (string) Wikiを参照
