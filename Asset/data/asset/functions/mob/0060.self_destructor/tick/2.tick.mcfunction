@@ -11,7 +11,7 @@
 
 # 自爆
   # 爆破待機
-     execute if score @s 1O.ExplosionCo matches 8.. run function asset:mob/0060.self_destructor/tick/3.waiting_explosion
+     execute if score @s 1O.ExploCnt matches 8.. run function asset:mob/0060.self_destructor/tick/3.waiting_explosion
 
   # 演出
      execute if score @s 1O.ExploFuse matches 1..39 run particle smoke ~ ~1.2 ~ 0.4 0.5 0.4 0 6 normal @a

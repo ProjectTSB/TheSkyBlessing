@@ -6,5 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0060.self_destructor/**
-    scoreboard objectives add 1O.ExplosionCo dummy
+    scoreboard objectives add 1O.ExploCnt dummy
     scoreboard objectives add 1O.ExploFuse dummy

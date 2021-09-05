@@ -26,7 +26,7 @@
 
 # 連鎖爆発
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExploFuse 36
-   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplosionCo 8
+   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExploCnt 8
 
   # 消滅
       tp @s ~ -10 ~
