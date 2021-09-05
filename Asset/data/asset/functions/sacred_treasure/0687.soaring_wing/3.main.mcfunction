@@ -8,6 +8,6 @@
 
 # 1秒に15MPを消費
     scoreboard players add @s J3.MPUseTick 1
-    execute if score @s J3.MPUseTick matches 10.. run function asset:sacred_treasure/lib/use/chest
-    execute if score @s J3.MPUseTick matches 10.. run scoreboard players reset @s J3.MPUseTick
+    execute if score @s J3.MPUseTick matches 20.. run function asset:sacred_treasure/lib/use/chest
+    execute if score @s J3.MPUseTick matches 20.. run scoreboard players reset @s J3.MPUseTick
 # ここから先は神器側の効果の処理を書く
