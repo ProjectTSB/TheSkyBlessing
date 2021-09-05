@@ -6,7 +6,7 @@
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
 
-# 1秒に3MPを消費
+# 1秒に15MPを消費
     scoreboard players add @s J3.MPUseTick 1
     execute if score @s J3.MPUseTick matches 10.. run function asset:sacred_treasure/lib/use/chest
     execute if score @s J3.MPUseTick matches 10.. run scoreboard players reset @s J3.MPUseTick
