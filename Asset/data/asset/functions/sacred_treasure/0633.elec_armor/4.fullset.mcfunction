@@ -21,6 +21,3 @@
     particle dust 1 1 0 1 ~ ~1.2 ~ 0.4 0.5 0.4 0 25 normal @a
     particle firework ~ ~1.2 ~ 0.4 0.5 0.4 0 15 normal @a
     playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.4 1.7 0
-
-# タグ付与
-    tag @s add HL.FullSet
