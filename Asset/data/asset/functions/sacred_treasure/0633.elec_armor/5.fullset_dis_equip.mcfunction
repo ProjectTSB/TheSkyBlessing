@@ -18,5 +18,3 @@
 
 # タグ削除
     tag @s remove HL.FullSet
-
-    say b

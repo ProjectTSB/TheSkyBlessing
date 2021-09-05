@@ -24,5 +24,3 @@
 
 # タグ付与
     tag @s add HL.FullSet
-
-    say a
