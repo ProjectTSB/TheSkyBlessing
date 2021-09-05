@@ -14,4 +14,4 @@
     playsound entity.wither.shoot master @a ~ ~ ~ 0.5 2
 
 # フルセット
-    execute if data storage asset:context id.all{head:686,chest:687,legs:688,feet:689} run function asset:sacred_treasure/0687.soaring_wing/6.fullset
+    execute if data storage asset:context id.all{head:686,chest:687,legs:688,feet:689} run function asset:sacred_treasure/0687.soaring_wing/7.fullset

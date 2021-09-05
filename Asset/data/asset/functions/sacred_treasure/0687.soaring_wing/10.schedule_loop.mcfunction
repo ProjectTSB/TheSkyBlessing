@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0687.soaring_wing/6.fullset
+# @within function asset:sacred_treasure/0687.soaring_wing/7.fullset
 # @within function asset:sacred_treasure/0687.soaring_wing/10.schedule_loop
 # @within function asset:sacred_treasure/0687.soaring_wing/rejoin_process
 
