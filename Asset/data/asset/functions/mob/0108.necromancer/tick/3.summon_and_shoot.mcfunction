@@ -9,7 +9,7 @@
     execute if score @s 30.WaitSummon matches 2.. run function asset:mob/0108.necromancer/tick/4.summon_ectoplasm
 
 # 後ろ気味前方拡散ワープ
-    execute rotated ~ 0 positioned ^ ^ ^-2 run function asset:mob/0108.necromancer/hurt/2.hurt
+    execute rotated ~ 0 positioned ^ ^ ^-2 run function asset:mob/0108.necromancer/teleport_process
 
 # 魔術弾発射
     data modify storage api: Argument.ID set value 109
