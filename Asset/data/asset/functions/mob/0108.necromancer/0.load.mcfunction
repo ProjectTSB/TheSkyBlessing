@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0108.necromancer/**
-    scoreboard objectives add 
+    scoreboard objectives add 30.Tick dummy
+    scoreboard objectives add 30.WaitSummon dummy

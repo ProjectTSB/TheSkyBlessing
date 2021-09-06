@@ -10,6 +10,7 @@
         "asset:mob/0038.laser_eye/tick/1.trigger",
         "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
         "asset:mob/0019.horus_priest/tick/1.trigger",
-        "asset:mob/0108.necromancer/tick/1.trigger"
+        "asset:mob/0108.necromancer/tick/1.trigger",
+        "asset:mob/0109.magic_bullet_of_necromancer/tick/1.trigger"
     ]
 }
