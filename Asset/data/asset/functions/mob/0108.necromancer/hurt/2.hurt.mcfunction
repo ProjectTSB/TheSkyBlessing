@@ -8,6 +8,7 @@
 # 演出
     particle witch ~ ~1.2 ~ 0.4 0.3 0.4 0 20 normal @a
     particle dragon_breath ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
+    playsound entity.enderman.teleport master @a ~ ~ ~ 1 1 0
 
 # ワープ
     summon marker ~ ~ ~ {Tags:["30.SpreadMarker"]}
