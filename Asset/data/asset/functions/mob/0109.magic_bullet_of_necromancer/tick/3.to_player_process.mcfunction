@@ -6,7 +6,7 @@
     #declare score_holder $Fluctuation
 
 # 無魔法属性ダメージ
-    data modify storage lib: Argument.Damage set value 25.0d
+    data modify storage lib: Argument.Damage set value 12.5d
     data modify storage lib: Argument.AttackType set value "Magic"
     function lib:damage/modifier
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function lib:damage/

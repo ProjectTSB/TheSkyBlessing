@@ -15,6 +15,7 @@
 
 # 演出
     particle witch ~ ~ ~ 0.4 0.4 0.4 0.1 4 normal @a
+    playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.4 1 0
 
 # 近くのプレイヤーに対する処理
     execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function asset:mob/0109.magic_bullet_of_necromancer/tick/3.to_player_process
