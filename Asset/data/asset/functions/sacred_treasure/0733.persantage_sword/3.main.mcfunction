@@ -14,7 +14,7 @@
     playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
     playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1 1.75 0
     execute at @e[type=#lib:living,type=!player,distance=..5] run particle sweep_attack ~ ~1.2 ~ 0 0 0 1 1 normal @a
-    execute at @e[type=#lib:living,type=!player,distance=..5] run particle minecraft:dust_color_transition 0 0 1 1 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 40 normal @a
+    #execute at @e[type=#lib:living,type=!player,distance=..5] run particle minecraft:dust_color_transition 0 0 1 1 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 40 normal @a
 
 # 3割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Physical"
