@@ -24,8 +24,8 @@
     execute as @e[type=#lib:living,type=!player,distance=..5] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
 
 # 相手の最大体力が200(×0.3で最大ダメージの60)以上の場合ダメージを強制で75に
-    execute as @e[type=#lib:living,type=!player,distance=..5] store result score $KD.MaxHP KD.DamageValue run attribute @s generic.max_health get 1.0
-    execute if score $KD.MaxHP KD.DamageValue matches 201.. run data modify storage lib: Argument.Damage set value 75.0f
+    execute as @e[type=#lib:living,type=!player,distance=..5] store result score $KD.MaxHP Temporary run attribute @s generic.max_health get 1.0
+    execute if score $KD.MaxHP Temporary matches 201.. run data modify storage lib: Argument.Damage set value 75.0f
 
 # ダメージ
     function lib:damage/modifier
@@ -33,4 +33,4 @@
 
 # 色々リセット
     data remove storage lib: Argument
-    scoreboard players reset $KD.MaxHP KD.DamageValue
+    scoreboard players reset $KD.MaxHP Temporary
