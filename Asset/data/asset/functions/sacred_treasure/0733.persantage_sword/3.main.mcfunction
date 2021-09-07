@@ -23,9 +23,9 @@
     data modify storage lib: Argument.BypassResist set value 1b
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
 
-# 相手の最大体力が200(×0.3で最大ダメージの60)以上の場合ダメージを強制で75に
+# 相手の最大体力が200(×0.3で最大ダメージの50)以上の場合ダメージを強制で75に
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.MaxHP Temporary run data get storage lib: Argument.Damage 1.0
-    execute if score $KD.MaxHP Temporary matches 60.. run data modify storage lib: Argument.Damage set value 60.0f
+    execute if score $KD.MaxHP Temporary matches 50.. run data modify storage lib: Argument.Damage set value 50.0f
 
 # ダメージ
     function lib:damage/modifier
