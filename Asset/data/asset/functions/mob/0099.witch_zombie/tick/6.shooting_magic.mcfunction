@@ -9,7 +9,7 @@
     function api:mob/summon
 
 # 魔法弾の向きを最寄りのプレイヤーに向ける
-    execute facing entity @p[gamemode=!creative,gamemode=!spectator] eyes run tp @e[type=marker,scores={MobID=100},distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~
+    execute facing entity @p[gamemode=!creative,gamemode=!spectator] feet run tp @e[type=marker,scores={MobID=100},distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~
 
 # 2R.Elementがあれば水属性にする(2S.ElementTagがあれば魔法弾は水属性になる)
     execute if entity @s[tag=2R.Element] run tag @e[type=marker,scores={MobID=100},distance=..0.01,sort=nearest,limit=1] add 2S.Element
