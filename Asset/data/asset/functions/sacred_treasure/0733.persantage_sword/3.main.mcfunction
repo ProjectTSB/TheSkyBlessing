@@ -27,8 +27,8 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
     execute if score $KD.DamageValue Temporary matches 51.. run data modify storage lib: Argument.Damage set value 50.0f
 
-# ダメージ
-    function lib:damage/modifier
+# ダメージ modifierは割合固定ダメージのため無効化
+    # function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
 
 # 色々リセット
