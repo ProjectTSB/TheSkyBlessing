@@ -5,7 +5,7 @@
 # @within function asset:mob/0100.magic_bullet_of_witch_zombie/tick/2.tick
 
 # 演出
-    particle snowflake ~ ~ ~ 0.3 0.3 0.3 0 2 normal @a
+    particle dust 1 100000000 100000000 1 ~ ~ ~ 0.3 0.3 0.3 0 2 normal @a
     playsound block.glass.break master @a ~ ~ ~ 0.5 2 0
 
 # プレイヤーに対するダメージとデバフ
