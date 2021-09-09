@@ -13,6 +13,6 @@
 # トリガーの呼び出し
     function #asset:mob/death
 # リセット
-    data remove storage asset:mob id
+    data remove storage asset:context id
     data remove storage asset:mob UUID
     tag @a[tag=Killer] remove Killer
