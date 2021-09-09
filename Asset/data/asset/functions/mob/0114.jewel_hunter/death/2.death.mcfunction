@@ -9,8 +9,8 @@
     playsound minecraft:block.amethyst_cluster.hit master @a ~ ~ ~ 1 0 1
 
 # 全部確率で宝石系ドロップ
-    execute if predicate lib:random_pass_per/50 run summon item ~ ~ ~ {Item:{id:"minecraft:iron_block",Count:16b}}
-    execute if predicate lib:random_pass_per/40 run summon item ~ ~ ~ {Item:{id:"minecraft:gold_block",Count:16b}}
+    execute if predicate lib:random_pass_per/30 run summon item ~ ~ ~ {Item:{id:"minecraft:iron_block",Count:16b}}
+    execute if predicate lib:random_pass_per/30 run summon item ~ ~ ~ {Item:{id:"minecraft:gold_block",Count:16b}}
     execute if predicate lib:random_pass_per/30 run summon item ~ ~ ~ {Item:{id:"minecraft:emerald_block",Count:16b}}
     execute if predicate lib:random_pass_per/30 run summon item ~ ~ ~ {Item:{id:"minecraft:diamond_block",Count:16b}}
 
