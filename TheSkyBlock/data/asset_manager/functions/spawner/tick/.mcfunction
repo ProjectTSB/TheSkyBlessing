@@ -4,7 +4,6 @@
 #
 # @within function core:tick/
 
-
 # this付与
     tag @s add this
 # プレイヤーがRequiredPlayerRangeの範囲内に居るかのチェック

@@ -4,7 +4,8 @@
 #
 # @within function asset:spawner/common/register
 
-# スポナーの本体
-    summon marker ~ ~ ~ {Tags:["Object","Spawner","SpawnerInit"]}
+# スポナーの本体 // 機会があれば見た目を変えれるようにCMDを振っておく
+    summon snowball ~ ~0.4 ~ {Tags:["Object","Spawner","SpawnerInit","Uninterferable"],Item:{id:"ender_eye",Count:1b,tag:{CustomModelData:1}},NoGravity:1b}
+    setblock ~ ~ ~ barrier
 # データの適用
-    execute as @e[type=marker,tag=SpawnerInit,distance=..0.01,limit=1] run function asset_manager:spawner/register/set_data
+    execute positioned ~ ~0.4 ~ as @e[type=snowball,tag=SpawnerInit,distance=..0.01,limit=1] run function asset_manager:spawner/register/set_data

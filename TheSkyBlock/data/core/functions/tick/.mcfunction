@@ -18,7 +18,7 @@
     function asset_manager:common/reset_all_context
 
 # スポナー処理部
-    execute as @e[type=marker,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
+    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
 
 # Mob処理部
     # データ初期化部

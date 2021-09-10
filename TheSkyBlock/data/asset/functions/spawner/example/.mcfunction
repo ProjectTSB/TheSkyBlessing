@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:spawner/register
 
-execute positioned 8 8 8 unless entity @e[type=marker,tag=Spawner,distance=..0.1] run function asset:spawner/example/register
+execute positioned 8 10 8 unless entity @e[type=snowball,tag=Spawner,distance=..0.1] run function asset:spawner/example/register
