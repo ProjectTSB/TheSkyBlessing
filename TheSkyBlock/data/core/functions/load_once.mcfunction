@@ -149,6 +149,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**
+        scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
     #> イベントハンドラ用スコアボード

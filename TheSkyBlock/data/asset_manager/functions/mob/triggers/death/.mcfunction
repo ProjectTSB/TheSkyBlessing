@@ -10,6 +10,8 @@
     execute as @a run function asset_manager:mob/triggers/death/find_player
 # Contextの設定
     data modify storage asset:context id set from entity @s Item.tag.TSB.ID
+# スポナーへのダメージ処理
+    function asset_manager:spawner/subtract_hp/
 # トリガーの呼び出し
     function #asset:mob/death
 # リセット

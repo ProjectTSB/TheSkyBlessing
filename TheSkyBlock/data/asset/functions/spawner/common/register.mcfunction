@@ -6,6 +6,7 @@
 
 # パラメータチェック
     execute unless data storage asset:spawner SpawnPotentials run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MobID","color":"red"}]
+    execute unless data storage asset:spawner HP run data modify storage asset:spawner HP set value 2147483647
     execute unless data storage asset:spawner SpawnCount run data modify storage asset:spawner SpawnCount set value 3
     execute unless data storage asset:spawner SpawnRange run data modify storage asset:spawner SpawnRange set value 4
     execute unless data storage asset:spawner Delay run data modify storage asset:spawner Delay set value 20
@@ -17,6 +18,7 @@
     function asset_manager:spawner/register/
 # リセット
     data remove storage asset:spawner SpawnPotentials
+    data remove storage asset:spawner HP
     data remove storage asset:spawner SpawnCount
     data remove storage asset:spawner SpawnRange
     data remove storage asset:spawner Delay

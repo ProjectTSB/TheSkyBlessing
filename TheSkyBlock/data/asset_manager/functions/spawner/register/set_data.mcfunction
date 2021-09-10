@@ -7,6 +7,7 @@
 # EntityStorage呼び出し
     function oh_my_dat:please
 # スコアボードに入れるもの
+    execute store result score @s SpawnerHP run data get storage asset:spawner HP
     execute store result score @s SpawnerCooldown run data get storage asset:spawner Delay
 # SpawnPotentialsを正規化しWeightのSumを計算する
     function asset_manager:spawner/register/process_spawn_potentials/

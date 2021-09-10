@@ -50,3 +50,7 @@
 #> Choose
 # @within * asset_manager:spawner/spawn/choose_mob_id/*
     #declare score_holder $TargetWeight
+
+#> SubtractHPSystem
+# @within * asset_manager:spawner/subtract_hp/**
+    #declare score_holder $TargetMobID
