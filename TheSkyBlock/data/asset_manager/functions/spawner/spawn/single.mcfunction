@@ -11,8 +11,8 @@
     execute as @e[type=marker,tag=SpawnMarker,distance=..0.01] run function asset_manager:spawner/spawn/set_position
 # 召喚
     execute store result storage api: Argument.ID int 1 run scoreboard players get $MobID Temporary
-    execute at @e[type=marker,tag=SpawnMarker,distance=..100] if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run particle poof ~ ~ ~ 0.3 0.3 0.3 0 10 normal
-    execute at @e[type=marker,tag=SpawnMarker,distance=..100] if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run function api:mob/summon
+    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run particle poof ~ ~ ~ 0.3 0.3 0.3 0 10 normal
+    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run function api:mob/summon
 # リセット
     kill @e[type=marker,tag=SpawnMarker,distance=..100]
 # 召喚数を1減らす
