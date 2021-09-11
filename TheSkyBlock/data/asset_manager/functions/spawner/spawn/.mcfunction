@@ -9,6 +9,8 @@
     #declare score_holder $SpawnDelayBound
     #declare score_holder $NextDelay
 
+# 炎パーティクル
+    particle flame ~ ~0.1 ~ 0.3 0.3 0.3 0 10
 # スポナーデータの取得
     function oh_my_dat:please
     data modify storage asset:spawner NearbyEntityCache set value []
