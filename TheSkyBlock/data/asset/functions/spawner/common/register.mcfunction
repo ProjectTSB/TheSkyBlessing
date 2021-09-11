@@ -10,8 +10,8 @@
     execute unless data storage asset:spawner SpawnCount run data modify storage asset:spawner SpawnCount set value 3
     execute unless data storage asset:spawner SpawnRange run data modify storage asset:spawner SpawnRange set value 4
     execute unless data storage asset:spawner Delay run data modify storage asset:spawner Delay set value 20
-    execute unless data storage asset:spawner MinSpawnDelay run data modify storage asset:spawner MinSpawnDelay set value 5
-    execute unless data storage asset:spawner MaxSpawnDelay run data modify storage asset:spawner MaxSpawnDelay set value 20
+    execute unless data storage asset:spawner MinSpawnDelay run data modify storage asset:spawner MinSpawnDelay set value 100
+    execute unless data storage asset:spawner MaxSpawnDelay run data modify storage asset:spawner MaxSpawnDelay set value 400
     execute unless data storage asset:spawner MaxNearbyEntities run data modify storage asset:spawner MaxNearbyEntities set value 6
     execute unless data storage asset:spawner RequiredPlayerRange run data modify storage asset:spawner RequiredPlayerRange set value 16
 # 登録
