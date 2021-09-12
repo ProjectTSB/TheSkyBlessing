@@ -13,7 +13,7 @@
     effect give @s fire_resistance 1 0 true
 
 # 燃えてると追加でバフ
-    execute if predicate lib:is_burnning run scoreboard players add @s I3.BurnTick 1
+    execute if score @s I3.BurnTick matches ..600 if predicate lib:is_burnning run scoreboard players add @s I3.BurnTick 3
     execute if score @s I3.BurnTick matches 0.. run function asset:sacred_treasure/0651.prominence_armor/8.burning_buff
 
 # スコアをへらす
