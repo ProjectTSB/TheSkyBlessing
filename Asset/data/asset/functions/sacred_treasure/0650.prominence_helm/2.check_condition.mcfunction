@@ -10,5 +10,3 @@
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0650.prominence_helm/3.main
-
-say a
