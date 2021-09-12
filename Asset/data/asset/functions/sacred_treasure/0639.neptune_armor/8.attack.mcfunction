@@ -15,11 +15,9 @@
     execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable] run playsound entity.dolphin.splash master @a ~ ~ ~ 1 1 0
 
 # ダメージ設定
-    # 与えるダメージ
         data modify storage lib: Argument.Damage set value 20.0f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
-    # ダメージ
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable] run function lib:damage/
 # リセット
