@@ -5,6 +5,10 @@
         "asset:sacred_treasure/0625.flame_armor/dis_equip/",
         "asset:sacred_treasure/0626.flame_leggings/dis_equip/",
         "asset:sacred_treasure/0627.flame_boots/dis_equip/",
-        "asset:sacred_treasure/0562.heartland/dis_equip/"
+        "asset:sacred_treasure/0562.heartland/dis_equip/",
+        "asset:sacred_treasure/0715.solar_helm/dis_equip/",
+        "asset:sacred_treasure/0716.solar_armor/dis_equip/",
+        "asset:sacred_treasure/0717.solar_leggings/dis_equip/",
+        "asset:sacred_treasure/0718.solar_boots/dis_equip/"
     ]
 }
