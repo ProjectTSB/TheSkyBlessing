@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0702.bright_black_lamp/5.schedule_tick
 
 # ダメージとダメージ演出
-    execute if entity @e[type=#lib:living,type=!player,distance=1..3] as @e[type=#lib:living,type=!player,distance=1..3] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/2
+    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=1..3] as @e[type=#lib:living,type=!player,distance=1..3] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/2
 
 # 演出
     playsound block.respawn_anchor.charge master @a ~ ~ ~ 0.6 1.2 0
