@@ -5,6 +5,11 @@
         "asset:sacred_treasure/0625.flame_armor/dis_equip/",
         "asset:sacred_treasure/0626.flame_leggings/dis_equip/",
         "asset:sacred_treasure/0627.flame_boots/dis_equip/",
-        "asset:sacred_treasure/0562.heartland/dis_equip/"
+        "asset:sacred_treasure/0562.heartland/dis_equip/",
+        "asset:sacred_treasure/0650.prominence_helm/dis_equip/",
+        "asset:sacred_treasure/0651.prominence_armor/dis_equip/",
+        "asset:sacred_treasure/0653.prominence_boots/dis_equip/",
+        "asset:sacred_treasure/0652.prominence_leggings/dis_equip/",
+        "asset:sacred_treasure/0653.prominence_boots/dis_equip/"
     ]
 }
