@@ -17,7 +17,6 @@
 # ダメージ設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 20.0f
-    # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
