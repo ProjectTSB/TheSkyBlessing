@@ -8,7 +8,7 @@
     execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=4..6] as @e[type=#lib:living,type=!player,distance=4..6] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/5
 
 # 演出
-    playsound block.respawn_anchor.charge master @a ~ ~ ~ 0.6 2 0
+    playsound minecraft:block.end_portal_frame.fill master @a ~ ~ ~ 1 1 0
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAEYCcAbHKQOwCGAHALRwDMjl7ALEy7tKAJnHsArF2qV+9UimZd+YAgDtmAWwTJAYYoACAIxqwMZhm0BnJOBQB7QuohIjABjcEUcZ3Ay2wADdmbEJdcAAPJE8wKGiAX3iCS1I0QhtESQIrCAsXRBi4bGw0GCtddxiMe1yIXRi0KwBRYtLypoBHQhDsKABlc29yRAAzEPLEgF0gA_3
 # 円 1
