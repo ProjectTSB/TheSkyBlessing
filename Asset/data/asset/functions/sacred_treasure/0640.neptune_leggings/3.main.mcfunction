@@ -12,6 +12,12 @@
     particle splash ~ ~0.4 ~ 0.4 0.3 0.4 0 20 normal @a
     playsound entity.dolphin.swim master @a ~ ~ ~ 1.2 0.8 0
 
+# 水ダメージ量+10%
+    data modify storage api: Argument.UUID set value [I;1,1,640,4]
+    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/water/add
+
 # 物理耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,640,4]
     data modify storage api: Argument.Amount set value 0.05
