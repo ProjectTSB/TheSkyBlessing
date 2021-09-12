@@ -13,23 +13,23 @@
 # 演出
     playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
     playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1 1.75 0
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run particle sweep_attack ~ ~1.2 ~ 0 0 0 1 1 normal @a
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run particle minecraft:dust_color_transition 0 0 0.3 1 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 100 normal @a
+    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run particle sweep_attack ~ ~1.2 ~ 0 0 0 1 1 normal @a
+    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run particle minecraft:dust_color_transition 0 0 0.3 1 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 100 normal @a
 
 # 3割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.Fixed set value 1b
     data modify storage lib: Argument.BypassResist set value 1b
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
 
 # ダメージ量が51以上の場合強制的にダメージを50に
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
     execute if score $KD.DamageValue Temporary matches 51.. run data modify storage lib: Argument.Damage set value 50.0f
 
 # ダメージ modifierは割合固定ダメージのため無効化
     # function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run function lib:damage/
 
 # 色々リセット
     data remove storage lib: Argument
