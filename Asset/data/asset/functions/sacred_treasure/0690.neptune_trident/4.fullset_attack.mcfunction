@@ -4,8 +4,8 @@
 #
 # @within function asset:sacred_treasure/0690.neptune_trident/2.check_condition
 
-# 演出
-    execute at @e[tag=Victim] as @e[type=#lib:living,tag=!Victim,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 50 normal @a
+# 演出 as @e[tag=!Victim]なのは意図的です
+    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 50 normal @a
 
 # ダメージ
     # ダメージ設定
@@ -16,6 +16,6 @@
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
         function lib:damage/modifier
-        execute at @e[tag=Victim] as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
+        execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable] as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3] run function lib:damage/
     # リセット
         data remove storage lib: Argument
