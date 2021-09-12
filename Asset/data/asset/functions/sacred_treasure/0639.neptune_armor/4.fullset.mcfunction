@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0639.neptune_armor/3.1.complete_set
+#> asset:sacred_treasure/0639.neptune_armor/4.fullset
 #
 #
 #
@@ -16,4 +16,4 @@
     playsound block.end_portal.spawn master @a ~ ~ ~ 0.6 1.4 0
 
 # スケジュールループ
-    schedule function asset:sacred_treasure/0639.neptune_armor/4.schedule_loop 1t replace
+    schedule function asset:sacred_treasure/0639.neptune_armor/5.schedule_loop 1t replace

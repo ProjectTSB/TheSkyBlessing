@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0639.neptune_armor/5.player_tick
+#> asset:sacred_treasure/0639.neptune_armor/6.player_tick
 #
 #
 #
-# @within function asset:sacred_treasure/0639.neptune_armor/4.schedule_loop
+# @within function asset:sacred_treasure/0639.neptune_armor/5.schedule_loop
 
 # バフ
     effect give @s conduit_power 2 0 true

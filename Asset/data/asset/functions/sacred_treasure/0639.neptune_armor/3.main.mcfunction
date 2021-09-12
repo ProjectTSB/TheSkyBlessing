@@ -13,33 +13,23 @@
     particle splash ~ ~1.2 ~ 0.4 0.3 0.4 0 20 normal @a
     playsound entity.dolphin.swim master @a ~ ~ ~ 1.2 0.8 0
 
-# 属性耐性+
-    # 引数の設定
-            # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,639,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 物理耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,639,5]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
 
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,639,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.05
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 魔法耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,639,5]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,639,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.1
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 水耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,639,5]
+    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
+
 # フルセット判定
-    execute if data storage asset:context id.all{head:638,chest:639,legs:640,feet:641} run function asset:sacred_treasure/0639.neptune_armor/3.1.complete_set
+    execute if data storage asset:context id.all{head:638,chest:639,legs:640,feet:641} run function asset:sacred_treasure/0639.neptune_armor/4.fullset

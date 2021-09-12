@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0639.neptune_armor/1.2.complete_attack
+#> asset:sacred_treasure/0639.neptune_armor/8.attack
 #
 #
 #
-# @within function asset:sacred_treasure/0639.neptune_armor/1.1.attack_trigger
+# @within function asset:sacred_treasure/0639.neptune_armor/7.attack_trigger
 
 # 攻撃した時にタグを付与
     tag @s add HS.Attack
