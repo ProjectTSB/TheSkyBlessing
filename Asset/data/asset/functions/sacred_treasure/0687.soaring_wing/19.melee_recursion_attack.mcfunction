@@ -8,5 +8,5 @@
     data modify storage lib: Argument.Damage set value 15f
     data modify storage lib: Argument.AttackType set value "Physical"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..1.5] run function lib:damage/
     data remove storage lib: Argument
