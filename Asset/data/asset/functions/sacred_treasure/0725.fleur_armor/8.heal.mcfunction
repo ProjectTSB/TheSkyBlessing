@@ -12,7 +12,7 @@
     execute positioned ~ ~0.1 ~ rotated ~216 -10 positioned ^ ^ ^3 run function asset:sacred_treasure/0725.fleur_armor/fullset_particle/flower
     execute positioned ~ ~0.1 ~ rotated ~288 -10 positioned ^ ^ ^3 run function asset:sacred_treasure/0725.fleur_armor/fullset_particle/flower
 
-    playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 1 0 1
+    playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 1 1 1
     playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.6 2 0
     execute as @a[distance=..10] at @s run particle heart ~ ~1.2 ~ 0.5 0.5 0.5 0 5 normal @a
 
