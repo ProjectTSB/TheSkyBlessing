@@ -11,8 +11,8 @@
 
 # 演出
     playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 1 0 1
-    particle minecraft:falling_dust magenta_glazed_terracotta ~ ~1.3 ~ 0.4 0.25 0.4 0 20
-    particle minecraft:falling_dust prismarine_bricks ~ ~1.3 ~ 0.4 0.25 0.4 0 10
+    execute unless data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run particle minecraft:falling_dust magenta_glazed_terracotta ~ ~1.3 ~ 0.4 0.25 0.4 0 20
+    execute unless data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run particle minecraft:falling_dust prismarine_bricks ~ ~1.3 ~ 0.4 0.25 0.4 0 10
 
 # 魔法耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
@@ -33,4 +33,4 @@
     function api:player_modifier/heal/add
 
 # フルセット
-    execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0725.fluer_armor/4.fullset
+    execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0725.fleur_armor/4.fullset
