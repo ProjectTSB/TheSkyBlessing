@@ -19,7 +19,7 @@
 # 3割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
-    data modify storage lib: Argument.Fixed set value 1b
+    data modify storage lib: Argument.FixedDamage set value 1b
     data modify storage lib: Argument.BypassResist set value 1b
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
 
