@@ -1,0 +1,33 @@
+#> asset:sacred_treasure/0727.fleur_boots/3.main
+#
+# 神器のメイン処理部
+#
+# @within function asset:sacred_treasure/0727.fleur_boots/2.check_condition
+
+# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
+    function asset:sacred_treasure/lib/use/feet
+
+# ここから先は神器側の効果の処理を書く
+
+# 演出
+    playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 1 0 1
+    particle minecraft:falling_dust magenta_glazed_terracotta ~ ~0.3 ~ 0.4 0.1 0.4 0 20
+    particle minecraft:falling_dust prismarine_bricks ~ ~0.3 ~ 0.4 0.1 0.4 0 10
+
+# 魔法耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,727,3]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/magic/add
+
+# 水耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,727,3]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/magic/add
+
+# 体力回復量+12.5%
+    data modify storage api: Argument.UUID set value [I;1,1,727,3]
+    data modify storage api: Argument.Amount set value 0.125
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/heal/add
