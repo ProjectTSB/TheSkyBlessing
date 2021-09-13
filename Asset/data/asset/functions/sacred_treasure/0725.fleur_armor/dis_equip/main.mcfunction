@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0725.fluer_armor/dis_equip/main
+#> asset:sacred_treasure/0725.fleur_armor/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0725.fluer_armor/dis_equip/
+# @within function asset:sacred_treasure/0725.fleur_armor/dis_equip/
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,725,5]

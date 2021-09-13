@@ -32,3 +32,5 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/heal/add
 
+# フルセット
+    execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0725.fluer_armor/4.fullset

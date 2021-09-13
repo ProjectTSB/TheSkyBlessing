@@ -33,4 +33,4 @@
     function api:player_modifier/heal/add
 
 # フルセット
-    execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0725.fluer_armor/4.fullset
+    execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0725.fleur_armor/4.fullset

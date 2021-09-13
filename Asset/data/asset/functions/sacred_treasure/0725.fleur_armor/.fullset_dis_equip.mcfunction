@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0725.fluer_armor/5.fullset_dis_equip
+#> asset:sacred_treasure/0725.fleur_armor/.fullset_dis_equip
 #
 #
 #

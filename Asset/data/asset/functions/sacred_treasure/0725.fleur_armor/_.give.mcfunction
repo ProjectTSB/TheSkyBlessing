@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0725.fluer_armor/_.give
+#> asset:sacred_treasure/0725.fleur_armor/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

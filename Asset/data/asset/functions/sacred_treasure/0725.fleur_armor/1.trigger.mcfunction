@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0725.fluer_armor/1.trigger
+#> asset:sacred_treasure/0725.fleur_armor/1.trigger
 #
 # 指定したイベントタイミングで実行されるfunction
 #
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのchestに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{chest:725} run function asset:sacred_treasure/0725.fluer_armor/2.check_condition
+    execute if data storage asset:context id{chest:725} run function asset:sacred_treasure/0725.fleur_armor/2.check_condition
