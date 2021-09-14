@@ -16,7 +16,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"烈水","color":"#087BFF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理ダメージ量+5% ","color":"dark_green"},{"text":"水ダメージ量+7.5% 水耐性+5%","color":"aqua"}]','{"text":"どんなに穏やかな水でも時折鋼をも貫くだろう","color":"#087BFF"}','{"text":"一式装備時、攻撃時に前方に水属性ダメージを与える","color":"#087BFF"}','{"text":"走った時間に応じて移動速度上昇を得て","color":"#087BFF"}','{"text":"移動速度上昇の値に応じて与えるダメージが上がる","color":"#087BFF"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理ダメージ量+5% ","color":"dark_green"},{"text":"水ダメージ量+7.5% 水耐性+5%","color":"aqua"}]','{"text":"どんなに穏やかな水でも時折鋼をも貫くだろう","color":"#087BFF"}','{"text":"一式装備時、近接攻撃時に前方に水属性ダメージを与える","color":"#087BFF"}','{"text":"走った時間に応じて移動速度上昇を得て","color":"#087BFF"}','{"text":"移動速度上昇の値に応じて与えるダメージが上がる","color":"#087BFF"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
