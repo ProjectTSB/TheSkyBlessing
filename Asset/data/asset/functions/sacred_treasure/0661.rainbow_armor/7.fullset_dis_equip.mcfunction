@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0661.rainbow_armor/7.disequip_fullset
+#> asset:sacred_treasure/0661.rainbow_armor/7.fullset_dis_equip
 #
 #
 # @within function asset:sacred_treasure/0660.rainbow_helm/dis_equip/main

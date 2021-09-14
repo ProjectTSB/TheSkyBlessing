@@ -32,4 +32,4 @@
     function api:player_modifier/defense/thunder/remove
 
 # フルセット補正の削除
-    execute if entity @s[tag=ID.FullSet] run function asset:sacred_treasure/0661.rainbow_armor/7.disequip_fullset
+    execute if entity @s[tag=ID.FullSet] run function asset:sacred_treasure/0661.rainbow_armor/7.fullset_dis_equip

@@ -39,3 +39,8 @@
 
 # スケジュールループの開始
     schedule function asset:sacred_treasure/0661.rainbow_armor/5.schedule_loop 1t replace
+
+# 演出
+    execute rotated ~ 0 positioned ~ ~0.1 ~ run function asset:sacred_treasure/0661.rainbow_armor/8.rainbow_particle
+    playsound entity.player.levelup master @a ~ ~ ~ 1 1.2 0
+    playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1 2 0
