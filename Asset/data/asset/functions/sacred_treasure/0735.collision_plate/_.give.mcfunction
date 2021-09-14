@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0735.defensive_attack_sword/_.give
+#> asset:sacred_treasure/0735.collision_plate/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #
@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"防攻剣","color":"gray"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"コリジョンプレート","color":"gray"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"防御力で攻撃する剣","color":"gray"}','[{"text":"防御は最大の","color":"gray"},{"text":"攻撃","color":"red","bold":true},{"text":"である！","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
