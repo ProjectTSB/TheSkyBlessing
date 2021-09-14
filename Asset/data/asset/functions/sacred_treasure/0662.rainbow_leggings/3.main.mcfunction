@@ -46,6 +46,7 @@
     particle dust 0.000 0.408 0.718 1 ~ ~0.4 ~ 0.4 0.3 0.4 0 4 normal
     particle dust 0.114 0.125 0.533 1 ~ ~0.4 ~ 0.4 0.3 0.4 0 4 normal
     particle dust 0.573 0.027 0.514 1 ~ ~0.4 ~ 0.4 0.3 0.4 0 4 normal
+    playsound entity.player.levelup master @a ~ ~ ~ 1 1.2 0
 
 # フルセット
     execute if data storage asset:context id.all{head:660,chest:661,legs:662,feet:663} run function asset:sacred_treasure/0661.rainbow_armor/4.fullset
