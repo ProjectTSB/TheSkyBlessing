@@ -36,6 +36,7 @@
     #declare tag TriggerFlag.Damage
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
+    #declare tag TriggerFlag.UsingItem
 
 #> check用の失敗フラグ
 # @within function
