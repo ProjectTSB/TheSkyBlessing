@@ -16,7 +16,7 @@
     # data modify storage asset:mob Name set value
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Mainhand set value
+        data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
