@@ -9,6 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
 
+    # 全属性耐性+2%の記述(物理、魔法、火、水、雷の順)
+
 # 引数の設定
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
     data modify storage api: Argument.Amount set value 0.02
