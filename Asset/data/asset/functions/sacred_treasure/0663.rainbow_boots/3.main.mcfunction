@@ -11,27 +11,27 @@
 
 # 引数の設定
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
 
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/fire/add
 
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
 
     data modify storage api: Argument.UUID set value [I;1,1,663,3]
-    data modify storage api: Argument.Amount set value 0.01
+    data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/thunder/add
 

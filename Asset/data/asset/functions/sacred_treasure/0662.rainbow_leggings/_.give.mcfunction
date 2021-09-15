@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"レ","color":"#E60012"},{"text":"イ","color":"#F39800"},{"text":"ン","color":"#FFF100"},{"text":"ボ","color":"#009944"},{"text":"ー","color":"#0068B7"},{"text":"レ","color":"#1D2088"},{"text":"ギ","color":"#920783"},{"text":"ン","color":"#E60012"},{"text":"ス","color":"#F39800"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全","color":"#E60012"},{"text":"耐","color":"#F39800"},{"text":"性","color":"#FFF100"},{"text":"+","color":"#009944"},{"text":"1","color":"#0068B7"},{"text":"%","color":"#1D2088"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全","color":"#E60012"},{"text":"耐","color":"#F39800"},{"text":"性","color":"#FFF100"},{"text":"+","color":"#009944"},{"text":"2","color":"#0068B7"},{"text":"%","color":"#1D2088"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
