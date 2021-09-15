@@ -13,4 +13,4 @@
     execute if score @s IL.SoundLoop matches 200.. run scoreboard players reset @s IL.SoundLoop
 
 # 吹雪
-    execute if entity @e[type=#lib:living,type=!player,distance=..4] as @e[type=#lib:living,type=!player,distance=..4] at @s run function asset:sacred_treasure/0669.brizzard_armor/7.brizzard
+    execute if entity @e[type=#lib:living,type=!player,distance=..4] as @e[type=#lib:living,type=!player,distance=..3.2] at @s run function asset:sacred_treasure/0669.brizzard_armor/7.brizzard

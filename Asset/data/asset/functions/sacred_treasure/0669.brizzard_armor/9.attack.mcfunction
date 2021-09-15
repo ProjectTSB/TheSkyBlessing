@@ -13,5 +13,5 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..4] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3.2] run function lib:damage/
     data remove storage lib: Argument
