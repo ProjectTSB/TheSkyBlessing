@@ -10,4 +10,4 @@
    execute unless block ~ ~ ~ water run particle flame ~ ~1.8 ~ 0.3 0.25 0.3 0 5 normal @a
 
 # 自爆カウント
-   execute unless block ~ ~ ~ water run scoreboard players add @s 1O.ExploCnt 2
+   execute unless block ~ ~ ~ water run scoreboard players add @s 1O.ExplodeCnt 2

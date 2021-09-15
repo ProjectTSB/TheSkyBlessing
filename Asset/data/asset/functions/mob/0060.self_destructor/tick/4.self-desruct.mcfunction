@@ -18,15 +18,15 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Fire"
     # 補正functionを実行
-        execute if score @s 1O.ExploFuse matches 40 run function lib:damage/modifier
+        execute if score @s 1O.ExplodeFuse matches 40 run function lib:damage/modifier
     # 範囲
         execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
     # リセット
         data remove storage lib: Argument
 
 # 連鎖爆発
-   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExploFuse 36
-   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExploCnt 8
+   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplodeFuse 36
+   scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplodeCnt 8
 
   # 消滅
       tp @s ~ -10 ~
