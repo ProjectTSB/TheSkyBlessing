@@ -1,4 +1,4 @@
-#> asset:mob/0059.jack_o_lantern/tick/4.glowing_state
+#> asset:mob/0059.jack_o_lantern/tick/4.manage_glowing
 #
 #
 #

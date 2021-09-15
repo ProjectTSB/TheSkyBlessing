@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/4.glowing_state
+# @within function asset:mob/0059.jack_o_lantern/tick/4.manage_glowing
 
 # ただのカボチャに
     item replace entity @s armor.head with carved_pumpkin{CustomModelData:20016}
