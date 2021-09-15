@@ -9,6 +9,20 @@
         "asset:sacred_treasure/0742.fierce_water_helm/1.trigger",
         "asset:sacred_treasure/0743.fierce_water_armor/1.trigger",
         "asset:sacred_treasure/0744.fierce_water_leggings/1.trigger",
-        "asset:sacred_treasure/0745.fierce_water_boots/1.trigger"
+        "asset:sacred_treasure/0745.fierce_water_boots/1.trigger",
+        "asset:sacred_treasure/0628.ice_helm/1.trigger",
+        "asset:sacred_treasure/0629.ice_armor/1.trigger",
+        "asset:sacred_treasure/0630.ice_leggings/1.trigger",
+        "asset:sacred_treasure/0631.ice_boots/1.trigger",
+        "asset:sacred_treasure/0562.heartland/1.trigger",
+        "asset:sacred_treasure/0562.heartland/1.trigger",
+        "asset:sacred_treasure/0703.wizard_hat/1.trigger",
+        "asset:sacred_treasure/0704.wizard_robe_upper/1.trigger",
+        "asset:sacred_treasure/0705.wizard_robe_lower/1.trigger",
+        "asset:sacred_treasure/0706.wizard_boots/1.trigger",
+        "asset:sacred_treasure/0707.mage_hat/1.trigger",
+        "asset:sacred_treasure/0708.mage_robe_upper/1.trigger",
+        "asset:sacred_treasure/0709.mage_robe_lower/1.trigger",
+        "asset:sacred_treasure/0710.mage_boots/1.trigger"
     ]
 }
