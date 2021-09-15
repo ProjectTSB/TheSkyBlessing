@@ -11,27 +11,7 @@
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,661,0]
 # 補正の削除
-    function api:player_modifier/defense/physical/remove
-
-# UUID
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-# 補正の削除
-    function api:player_modifier/defense/magic/remove
-
-# UUID
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-# 補正の削除
-    function api:player_modifier/defense/fire/remove
-
-# UUID
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-# 補正の削除
-    function api:player_modifier/defense/water/remove
-
-# UUID
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-# 補正の削除
-    function api:player_modifier/defense/thunder/remove
+    function api:player_modifier/defense/base/remove
 
 # タグ削除
     tag @s remove ID.FullSet

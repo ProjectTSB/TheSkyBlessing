@@ -12,27 +12,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,661,0]
     data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/fire/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,661,0]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/thunder/add
+    function api:player_modifier/defense/base/add
 
 # タグを自分に付与
     tag @s add ID.FullSet

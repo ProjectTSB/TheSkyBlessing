@@ -15,28 +15,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,662,4]
     data modify storage api: Argument.Amount set value 0.02
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,662,4]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,662,4]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/fire/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,662,4]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
-
-    data modify storage api: Argument.UUID set value [I;1,1,662,4]
-    data modify storage api: Argument.Amount set value 0.02
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/thunder/add
-
+    function api:player_modifier/defense/base/add
 
 # 演出
     particle dust 0.902 0.000 0.071 1 ~ ~0.4 ~ 0.4 0.3 0.4 0 4 normal
