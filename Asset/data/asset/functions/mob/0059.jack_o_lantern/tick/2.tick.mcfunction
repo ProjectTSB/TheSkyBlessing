@@ -9,4 +9,4 @@
     execute if score @s 1N.Tick matches 60.. run function asset:mob/0059.jack_o_lantern/tick/3.tick_sound
 
 # 発光状態
-    execute if score @s 1N.Surprise matches 8.. run function asset:mob/0059.jack_o_lantern/tick/4.glowing_state
+    execute if score @s 1N.Surprise matches 8.. run function asset:mob/0059.jack_o_lantern/tick/4.manage_glowing
