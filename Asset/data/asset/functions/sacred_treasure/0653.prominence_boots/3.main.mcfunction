@@ -15,7 +15,7 @@
     particle lava ~ ~0.3 ~ 0.4 0.1 0.4 0 10 normal @a
     particle flame ~ ~0.3 ~ 0.4 0.1 0.4 0 10 normal @a
 
-# 火ダメージ量+10%
+# 火ダメージ量+12.5%
     data modify storage api: Argument.UUID set value [I;1,1,653,3]
     data modify storage api: Argument.Amount set value 0.125
     data modify storage api: Argument.Operation set value "multiply_base"
