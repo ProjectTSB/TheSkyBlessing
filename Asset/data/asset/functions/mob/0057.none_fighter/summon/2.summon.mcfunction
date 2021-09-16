@@ -17,7 +17,7 @@
 
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        #　一度剣にした後、乱数で弓に変更
+        # 一度剣にした後、乱数で弓に変更
             data modify storage asset:mob Weapon.Mainhand set value {id:"iron_sword",Count:1b}
             execute if predicate lib:random_pass_per/50 run data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b,tag:{Enchantments:[{id:"power",lvl:5}]}}
 
