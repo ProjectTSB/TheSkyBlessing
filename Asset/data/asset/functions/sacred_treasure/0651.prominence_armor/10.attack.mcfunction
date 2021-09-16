@@ -17,7 +17,7 @@
 # ダメージ処理 BurnTickスコアがあるかどうかで変動
     execute unless score @s I3.BurnTick matches 0.. run data modify storage lib: Argument.Damage set value 20f
     execute if score @s I3.BurnTick matches 0.. run data modify storage lib: Argument.Damage set value 30f
-    data modify storage lib: Argument.AttackType set value "Magic"
+    data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
     execute as @e[type=#lib:living,tag=Victim,tag=Enemy,tag=!Uninterferable,distance=..64] run function lib:damage/
