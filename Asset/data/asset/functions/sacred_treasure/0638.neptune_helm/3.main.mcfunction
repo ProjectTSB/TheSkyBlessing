@@ -15,7 +15,7 @@
 
 # 水ダメージ量+10%
     data modify storage api: Argument.UUID set value [I;1,1,638,6]
-    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Amount set value 0.125
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
 
