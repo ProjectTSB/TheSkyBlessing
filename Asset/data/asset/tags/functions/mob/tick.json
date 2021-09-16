@@ -12,6 +12,8 @@
         "asset:mob/0019.horus_priest/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger",
         "asset:mob/0081.snow_cloud/tick/1.trigger",
-        "asset:mob/0019.horus_priest/tick/1.trigger"
+        "asset:mob/0019.horus_priest/tick/1.trigger",
+        "asset:mob/0065.night_shadow/tick/1.trigger"
+
     ]
 }

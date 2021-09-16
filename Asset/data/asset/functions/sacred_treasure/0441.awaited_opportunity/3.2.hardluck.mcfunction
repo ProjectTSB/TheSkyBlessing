@@ -4,7 +4,7 @@
 #
 # @within function asset:sacred_treasure/0441.awaited_opportunity/3.1.message
 
-#　プレイヤーが"不運"と"踊"っちまった時
+# プレイヤーが"不運"と"踊"っちまった時
     tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"があああああッ･･！！"}]
     effect give @s unluck 30 1
 
