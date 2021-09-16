@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"フルールブーツ","color":"#FF96CE"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔法耐性+5% ","color":"dark_purple"},{"text":"水耐性+5% ","color":"aqua"},{"text":"体力回復量+12.5%","color":"light_purple"}]','{"text":"フローラの加護を受けた鎧","color":"#FF96CE"}','{"text":"全て装備すると、定期的に周囲の味方を回復し","color":"#FF96CE"}','{"text":"常時再生を得る","color":"#FF96CE"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔法耐性+5% ","color":"dark_purple"},{"text":"水耐性+5% ","color":"aqua"}]','[{"text":"体力回復量+12.5%","color":"light_purple"}]','{"text":"フローラの加護を受けた鎧","color":"#FF96CE"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
