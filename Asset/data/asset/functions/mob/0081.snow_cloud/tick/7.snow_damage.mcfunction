@@ -7,6 +7,9 @@
 # 粉雪が積もる
     fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
 
+# 音
+    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.3 1.5 0
+
 # 重めのデバフ
     effect give @s slowness 4 2 true
     effect give @s mining_fatigue 4 2 true

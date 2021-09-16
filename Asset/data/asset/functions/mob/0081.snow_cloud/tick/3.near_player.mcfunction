@@ -1,4 +1,4 @@
-#> asset:mob/0081.snow_cloud/tick/3.near_player_mcf
+#> asset:mob/0081.snow_cloud/tick/3.near_player
 #
 #
 #
