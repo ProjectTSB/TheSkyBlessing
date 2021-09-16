@@ -15,7 +15,7 @@
 # 攻撃当てた処理
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run function asset:sacred_treasure/0077.swords_of_waterfall_climbing/3.2.attack
 
-#　地面にいる時の処理
+# 地面にいる時の処理
     execute if data storage api: {OnGround:1b} run effect give @e[tag=25.Hit,distance=..10,sort=nearest,limit=1] levitation 1 10
     execute if data storage api: {OnGround:1b} run effect give @s levitation 1 10 true
 
