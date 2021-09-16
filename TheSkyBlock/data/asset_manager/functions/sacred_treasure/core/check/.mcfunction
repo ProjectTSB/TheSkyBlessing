@@ -8,10 +8,6 @@
 # @output tag @s CanUsed
 # @within function asset:sacred_treasure/lib/check_condition/*
 
-#> Private
-# @private
-    #declare score_holder $Temp
-
 # 対象スロットのデータの取得
     function asset_manager:sacred_treasure/core/data/get_data_from_slot
 # 事前にtag付与
