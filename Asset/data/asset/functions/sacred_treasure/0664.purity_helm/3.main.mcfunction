@@ -9,17 +9,23 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 属性ダメージ量+7.5%
+# 物理ダメージ量+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/base/add
+    function api:player_modifier/attack/physical/add
 
 # 物理耐性+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
+
+# 魔法ダメージ量+7.5%
+    data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    data modify storage api: Argument.Amount set value 0.075
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/magic/add
 
 # 魔法耐性+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
