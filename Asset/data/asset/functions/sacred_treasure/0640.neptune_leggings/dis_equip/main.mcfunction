@@ -18,9 +18,10 @@
 # 補正の削除
     function api:player_modifier/defense/magic/remove
 # UUID
-    data modify storage api: Argument.UUID set value [I;1,1,640,5]
+    data modify storage api: Argument.UUID set value [I;1,1,640,4]
 # 補正の削除
     function api:player_modifier/defense/water/remove
+
 # フルセット解除
-    tag @s[tag=HS.Complete] remove HS.Complete
+    execute if entity @s[tag=HS.Fullset] run function asset:sacred_treasure/0639.neptune_armor/9.fullset_dis_equip
 

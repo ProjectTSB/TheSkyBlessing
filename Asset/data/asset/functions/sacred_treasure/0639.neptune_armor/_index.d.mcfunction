@@ -3,5 +3,5 @@
 #
 #
 # @within function aseet:sacred_treasure/????.neptune_?????/**
-    #declare tag HS.Complete
+    #declare tag HS.Fullset
     #declare tag HS.Attack
