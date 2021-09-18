@@ -5,5 +5,5 @@
 # @within tag/function asset:sacred_treasure/attack
 
 # フルセットなら実行
-    execute if entity @s[tag=HS.Complete,tag=!HS.Attack] run function asset:sacred_treasure/0639.neptune_armor/8.attack
+    execute if entity @s[tag=HS.Fullset,tag=!HS.Attack] run function asset:sacred_treasure/0639.neptune_armor/8.attack
 
