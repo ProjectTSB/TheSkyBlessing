@@ -13,7 +13,7 @@
 # 演出
     particle lava ~ ~1.2 ~ 0.75 0.4 0.75 0 80 normal @a
     playsound entity.blaze.shoot master @a 0.5 0 0
-
+    playsound block.end_portal.spawn master @a ~ ~ ~ 0.6 1.4 0
 # 火ダメージ量+10%
     data modify storage api: Argument.UUID set value [I;1,1,651,0]
     data modify storage api: Argument.Amount set value 0.1
