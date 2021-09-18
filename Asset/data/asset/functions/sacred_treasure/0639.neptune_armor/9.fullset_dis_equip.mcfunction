@@ -10,3 +10,6 @@
 # 水ダメージ量+10%
     data modify storage api: Argument.UUID set value [I;1,1,639,0]
     function api:player_modifier/defense/water/remove
+
+# 専用スコアリセット
+    scoreboard players reset @s HS.AttackCool
