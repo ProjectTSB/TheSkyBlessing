@@ -10,6 +10,10 @@
 # タグ削除
     tag @s remove I3.Fullset
 
+# 火ダメージ量+10%
+    data modify storage api: Argument.UUID set value [I;1,1,651,0]
+    function api:player_modifier/attack/fire/remove
+
 # 専用スコアリセット
     scoreboard players reset @s I3.BurnTick
     scoreboard players reset @s I3.AttackCool

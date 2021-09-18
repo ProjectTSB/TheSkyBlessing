@@ -14,5 +14,11 @@
     particle lava ~ ~1.2 ~ 0.75 0.4 0.75 0 80 normal @a
     playsound entity.blaze.shoot master @a 0.5 0 0
 
+# 火ダメージ量+10%
+    data modify storage api: Argument.UUID set value [I;1,1,651,0]
+    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/fire/add
+
 # スケジュールループスタート
     schedule function asset:sacred_treasure/0651.prominence_armor/6.schedule_loop 1t replace
