@@ -16,11 +16,12 @@
     execute if score @s I3.IsFighting matches 150.. run particle soul_fire_flame ~ ~1.2 ~ 2 0.4 2 0 1 normal @a
 
 # 疑似戦闘検知スコア減少
-    execute unless score @s I3.IsFighting matches ..0 run scoreboard players remove @s I3.IsFighting 1
+    execute unless score @s I3.IsFighting matches ..0 run scoreboard players remove @s I3.IsFighting 2
 
-# スコアをへらす
-    scoreboard players remove @s I3.AttackCool 1
+# 攻撃のクールタイム
+    # スコアをへらす
+        scoreboard players remove @s I3.AttackCool 1
 
-# タグを消す(2tick後にこのタグを消さないとダメージライブラリでダメージトリガー炸裂する)
-    execute if score @s I3.AttackCool matches ..0 run tag @s remove I3.Attack
-    execute if score @s I3.AttackCool matches ..0 run scoreboard players reset @s I3.AttackCool
+    # タグを消す(2tick後にこのタグを消さないとダメージライブラリでダメージトリガー炸裂する)
+        execute if score @s I3.AttackCool matches ..0 run tag @s remove I3.Attack
+        execute if score @s I3.AttackCool matches ..0 run scoreboard players reset @s I3.AttackCool

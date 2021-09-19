@@ -20,5 +20,8 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 
+# 専用スコアを0に
+    scoreboard players set @s I3.IsFighting 0
+
 # スケジュールループスタート
     schedule function asset:sacred_treasure/0651.prominence_armor/6.schedule_loop 1t replace
