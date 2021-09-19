@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0651.prominence_armor/**
-    scoreboard objectives add I3.BurnTick dummy
+    scoreboard objectives add I3.IsFighting dummy
     scoreboard objectives add I3.AttackCool dummy
     scoreboard objectives add I3.ParticleTick dummy
