@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0665.purity_armor/8.attack_trigger
 
+# クールタイム用Tagとスコア
+    tag @s add IH.Attack
+    scoreboard players set @s IH.AttackCool 2
+
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable] run particle sweep_attack ~ ~1.2 ~ 0.2 0.2 0.2 0 8 force @a[distance=..50]
     execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable] run playsound entity.player.attack.sweep master @a ~ ~1.2 ~ 0.6 1 0
