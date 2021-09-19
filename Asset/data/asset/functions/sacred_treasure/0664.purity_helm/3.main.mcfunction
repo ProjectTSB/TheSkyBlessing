@@ -9,6 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound item.armor.equip_iron master @a ~ ~ ~ 1.5 1 0
+
 # 物理ダメージ量+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     data modify storage api: Argument.Amount set value 0.075
@@ -33,3 +36,5 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
+# フルセット
+    execute if data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} run function asset:sacred_treasure/0665.purity_armor/4.fullset

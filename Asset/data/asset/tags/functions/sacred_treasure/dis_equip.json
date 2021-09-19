@@ -16,7 +16,7 @@
         "asset:sacred_treasure/0632.elec_helm/dis_equip/",
         "asset:sacred_treasure/0633.elec_armor/dis_equip/",
         "asset:sacred_treasure/0634.elec_leggings/dis_equip/",
-        "asset:sacred_treasure/0635.elec_boots/dis_equip/"
+        "asset:sacred_treasure/0635.elec_boots/dis_equip/",
         "asset:sacred_treasure/0628.ice_helm/dis_equip/",
         "asset:sacred_treasure/0629.ice_armor/dis_equip/",
         "asset:sacred_treasure/0630.ice_leggings/dis_equip/",
@@ -31,6 +31,8 @@
         "asset:sacred_treasure/0709.mage_robe_lower/dis_equip/",
         "asset:sacred_treasure/0710.mage_boots/dis_equip/",
         "asset:sacred_treasure/0664.purity_helm/dis_equip/",
-        "asset:sacred_treasure/0665.purity_armor/dis_equip/"
+        "asset:sacred_treasure/0665.purity_armor/dis_equip/",
+        "asset:sacred_treasure/0666.purity_leggings/dis_equip/",
+        "asset:sacred_treasure/0667.purity_boots/dis_equip/"
     ]
 }

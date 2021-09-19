@@ -20,3 +20,5 @@
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     function api:player_modifier/defense/magic/remove
 
+# フルセット解除
+    execute if entity @s[tag=IH.Fullset] run function asset:sacred_treasure/0665.purity_armor/5.fullset_dis_equip
