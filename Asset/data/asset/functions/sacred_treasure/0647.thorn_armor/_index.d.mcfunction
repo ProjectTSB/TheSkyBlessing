@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0647.thorn_armor/_index.d
-#
-#
-#
-# @within function asset:sacred_treasure/0647.thorn_armor/0.load
+# @private
+
+#> Private
+# @within asset:sacred_treasure_treasure/0647.thorn_armor/**
     #declare tag HZ.FullSet

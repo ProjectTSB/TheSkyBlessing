@@ -3,6 +3,9 @@
 # 装備を外した時のメイン処理
 #
 # @within function asset:sacred_treasure/0644.raimei_leggings/dis_equip/
+
+#> Private
+# @private
     #declare tag HV.Full
 
 # タグを消す(チェストプレート側で実行)
