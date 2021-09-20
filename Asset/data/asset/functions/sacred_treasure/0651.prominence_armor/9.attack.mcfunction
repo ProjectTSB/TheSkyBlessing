@@ -18,7 +18,7 @@
     execute at @e[type=#lib:living,tag=Victim,tag=Enemy,tag=!Uninterferable,distance=..100] run playsound entity.blaze.shoot master @a ~ ~ ~ 0.6 1 0
 
 
-# ダメージ処理 IsFightingスコアがあるかどうかで変動
+# ダメージ処理 IsFightingスコアの数値で変動
     execute if score @s I3.IsFighting matches ..149 run data modify storage lib: Argument.Damage set value 20f
     execute if score @s I3.IsFighting matches 150.. run data modify storage lib: Argument.Damage set value 30f
     data modify storage lib: Argument.AttackType set value "Physical"
