@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0679.kitsunebi_armor/_index.d
 #
 #
-#
-# @within function asset:sacred_treasure/0679.kitsunebi_armor/3.main
+#> private
+# @within function asset:sacred_treasure/0679.kitsunebi_armor/**
     #declare tag IV.FullSet
