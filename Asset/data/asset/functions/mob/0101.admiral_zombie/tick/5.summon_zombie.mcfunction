@@ -1,8 +1,8 @@
-#> asset:mob/0101.admiral_zombie/tick/4.select_zombie
+#> asset:mob/0101.admiral_zombie/tick/5.summon_zombie
 #
 #
 #
-# @within function asset:mob/0101.admiral_zombie/tick/3.check_zombie_count
+# @within function asset:mob/0101.admiral_zombie/tick/4.summon
 #
     #declare score_holder $Random
     #declare score_holder $100
