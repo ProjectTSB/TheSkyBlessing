@@ -21,4 +21,4 @@
     function api:player_modifier/defense/magic/remove
 
 # フルセット解除
-    execute if entity @s[tag=IH.Fullset] run function asset:sacred_treasure/0665.purity_armor/5.fullset_dis_equip
+    execute if data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} run function asset:sacred_treasure/0665.purity_armor/5.fullset_dis_equip
