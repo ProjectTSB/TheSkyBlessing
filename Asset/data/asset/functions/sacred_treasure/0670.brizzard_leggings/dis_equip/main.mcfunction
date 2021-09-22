@@ -15,4 +15,4 @@
     function api:player_modifier/defense/water/remove
 
 # フルセット解除
-      execute if entity @s[tag=IL.FullSet] run function asset:sacred_treasure/0669.brizzard_armor/10.fullset_dis_equip
+      execute if data storage asset:context id.all{head:668,chest:669,legs:670,feet:671} run function asset:sacred_treasure/0669.brizzard_armor/10.fullset_dis_equip
