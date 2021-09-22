@@ -5,4 +5,4 @@
 # @within tag/function asset:sacred_treasure/attack/melee
 
 # フルセットなら実行
-    execute if entity @s[tag=J3.FullSet] run function asset:sacred_treasure/0687.soaring_wing/17.melee
+    execute if entity @s[tag=J3.Fullset] run function asset:sacred_treasure/0687.soaring_wing/17.melee
