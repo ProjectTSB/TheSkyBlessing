@@ -13,5 +13,5 @@
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed,tag=!HS.Fullset] run function asset:sacred_treasure/0690.neptune_trident/3.main
 
-# 自身が海神フルセットの場合攻撃力上昇
+# 自身が海神フルセットの場合範囲攻撃で実行
     execute if entity @s[tag=CanUsed,tag=HS.Fullset] run function asset:sacred_treasure/0690.neptune_trident/4.fullset_attack

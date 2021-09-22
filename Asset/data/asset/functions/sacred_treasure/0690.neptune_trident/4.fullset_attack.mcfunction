@@ -8,14 +8,9 @@
     execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 50 normal @a
 
 # ダメージ
-    # ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 50.0f
-    # 第一属性
-        data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.ElementType set value "Water"
-    # ダメージ
-        function lib:damage/modifier
-        execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable] as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3] run function lib:damage/
-    # リセット
-        data remove storage lib: Argument
+    data modify storage lib: Argument.Damage set value 50.0f
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Water"
+    function lib:damage/modifier
+    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable] as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3] run function lib:damage/
+    data remove storage lib: Argument
