@@ -2,8 +2,9 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0647.thorn_armor/8.fullset_hurt
-# @within function asset:sacred_treasure/0647.thorn_armor/9.exetend_thorn
+# @within function
+#   asset:sacred_treasure/0647.thorn_armor/8.fullset_hurt
+#   asset:sacred_treasure/0647.thorn_armor/9.exetend_thorn
 
 # スコア
     scoreboard players add @s HZ.Tick 1

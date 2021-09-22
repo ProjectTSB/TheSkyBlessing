@@ -32,7 +32,7 @@
     execute unless data storage asset:sacred_treasure MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
     execute unless data storage asset:sacred_treasure CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
 # 各データ設定
-    function asset_manager:sacred_treasure/core/create/set_data
+    function asset_manager:sacred_treasure/create/set_data
 # 神器give
     loot give @s mine 10000 0 10000 debug_stick
 # リセット

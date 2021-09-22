@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0649.thorn_boots/dis_equip/
 
+#> Private
+# @private
+    #declare tag HZ.FullSet
+
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,649,3]
 # 補正の削除
