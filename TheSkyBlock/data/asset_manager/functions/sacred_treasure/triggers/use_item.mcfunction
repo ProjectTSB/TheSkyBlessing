@@ -20,8 +20,8 @@
     # リセット
         scoreboard players reset $isSuccess Temporary
         data remove storage asset:sacred_treasure Temp
-    function asset_manager:sacred_treasure/core/data/pre_event_put/old
+    function asset_manager:sacred_treasure/data/pre_event_put/old
 # 神器側に受け渡し
     function #asset:sacred_treasure/use_item
 # イベント発火後に実行するやつ
-    function asset_manager:sacred_treasure/core/data/post_event_put/old
+    function asset_manager:sacred_treasure/data/post_event_put/old
