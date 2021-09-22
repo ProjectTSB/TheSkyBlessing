@@ -1,8 +1,8 @@
 #> asset:mob/0105.potion_projectile/_index.d
 #
 #
-#
-# @within function asset:mob/0105.potion_projectile/0.load
+#> private
+# @within function asset:mob/0105.potion_projectile/**
     #declare tag 2X.Poison
     #declare tag 2X.Fire
     #declare tag 2X.Water
