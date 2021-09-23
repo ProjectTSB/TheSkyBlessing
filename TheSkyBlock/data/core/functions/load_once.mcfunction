@@ -5,17 +5,21 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 21
+data modify storage global Version set value 22
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
-execute in overworld run forceload add 10000 10000
-execute in overworld run forceload add -1 -1 0 0
-execute in the_nether run forceload add 10000 10000
-execute in the_nether run forceload add -1 -1 0 0
-execute in the_end run forceload add 10000 10000
-execute in the_end run forceload add -1 -1 0 0
+# Origin
+    execute in overworld run forceload add -1 -1 0 0
+    execute in the_nether run forceload add -1 -1 0 0
+    execute in the_end run forceload add -1 -1 0 0
+# ShulkerBox
+    execute in overworld run forceload add 10000 10000
+    execute in the_nether run forceload add 10000 10000
+    execute in the_end run forceload add 10000 10000
+# Item Return Point
+    execute in overworld run forceload add 2927 -1273
 
 
 #> gameruleの設定
@@ -127,19 +131,28 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
         scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
+        scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
+        scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
 
     #> AssetManager: Mob -Public
     # @within function
     #   lib:debug/objective_view
     #   asset:mob/*/**
     #   asset_manager:mob/**
+    #   asset_manager:spawner/**
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
-    #> Assetmanager: Mob -Private
+    #> AssetManager: Mob -Private
     # @within function
     #   asset_manager:mob/**
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
+
+    #> AssetManager: Spawner
+    # @within function
+    #   asset_manager:spawner/**
+        scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
+        scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
     #> イベントハンドラ用スコアボード
     # @within function
