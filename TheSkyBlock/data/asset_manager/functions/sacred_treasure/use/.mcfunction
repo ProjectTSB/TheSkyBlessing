@@ -12,6 +12,9 @@
     execute if data storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown store result score $SacredTreasureSpecialCooldown Global run data get storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown
 # 最終使用tick保存
     execute store result storage asset:sacred_treasure Item.tag.TSB.LatestUseTick int 1 run time query gametime
+# クールダウン保存
+    execute store result score @s WeaponLogCD run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
+    execute store result score @s WeaponLogCDMax run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
 # アイテム更新
     execute unless data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run function asset_manager:sacred_treasure/use/item/update
     execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run function asset_manager:sacred_treasure/use/item/has_remain
