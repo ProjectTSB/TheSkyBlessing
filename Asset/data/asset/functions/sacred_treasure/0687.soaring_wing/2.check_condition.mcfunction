@@ -12,4 +12,4 @@
     execute if entity @s[tag=!CanUsed] run function asset:sacred_treasure/0687.soaring_wing/3.main
 
 # フルセットならMP消費無しで特殊効果
-    execute if entity @s[tag=J3.FullSet] run function asset:sacred_treasure/0687.soaring_wing/8.fullset_flying
+    execute if entity @s[tag=J3.Fullset] run function asset:sacred_treasure/0687.soaring_wing/8.fullset_flying
