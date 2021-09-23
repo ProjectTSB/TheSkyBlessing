@@ -69,3 +69,7 @@
     #declare tag ChangeChest
     #declare tag ChangeLegs
     #declare tag ChangeFeet
+
+#> クールダウン表示用
+# @within function asset_manager:sacred_treasure/show_cooldown/*
+    #declare score_holder $CoolDown

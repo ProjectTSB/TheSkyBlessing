@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 21
+data modify storage global Version set value 22
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -131,6 +131,8 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
         scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
+        scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
+        scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
 
     #> AssetManager: Mob -Public
     # @within function
