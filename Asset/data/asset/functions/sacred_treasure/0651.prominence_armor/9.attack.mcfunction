@@ -20,7 +20,7 @@
 
 # ダメージ処理 IsFightingスコアの数値で変動
     execute if score @s I3.IsFighting matches ..149 run data modify storage lib: Argument.Damage set value 20f
-    execute if score @s I3.IsFighting matches 150.. run data modify storage lib: Argument.Damage set value 30f
+    execute if score @s I3.IsFighting matches 150.. run data modify storage lib: Argument.Damage set value 25f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
