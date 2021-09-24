@@ -31,7 +31,7 @@
     execute if score $KD.DamageValue Temporary matches 51.. run data modify storage lib: Argument.Damage set value 50.0f
 
 # Mobが死んだときにエラー吐くのでそれ防止
-    data modify storage lib: Argument.Damage set value 1.0
+    execute unless data storage lib: Argument.Damage run data modify storage lib: Argument.Damage set value 1.0
 
 # ダメージ
     function lib:damage/modifier
