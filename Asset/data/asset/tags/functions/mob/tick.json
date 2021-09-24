@@ -10,7 +10,7 @@
         "asset:mob/0038.laser_eye/tick/1.trigger",
         "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
         "asset:mob/0019.horus_priest/tick/1.trigger",
-        "asset:mob/0065.night_shadow/tick/1.trigger"
-
+        "asset:mob/0065.night_shadow/tick/1.trigger",
+        "asset:mob/0124.skull_harpy/tick/1.trigger"
     ]
 }
