@@ -4,10 +4,22 @@
 #
 # @within function asset:mob/0124.skull_harpy/attack/1.trigger
 
-# 1tickだけ無敵にする
-    execute as @p at @s run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b}]}
-# くっそ強いヴィンディケーターを召喚する。死んでもらっちゃ困るからさっき無敵にした
-    execute as @p at @s run summon vindicator ~ ~ ~ {Johnny:1b,Tags:["111"],HandItems:[{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019,Enchantments:[{id:"minecraft:knockback",lvl:10s}]}},{}],ActiveEffects:[{Id:28b,Amplifier:0b,Duration:2147483647,ShowParticles:1b}],Attributes:[{Name:generic.attack_damage,Base:999}]}
-# 1tick後死んでもらう\
-    schedule function asset:mob/0124.skull_harpy/attack/2.1.vindicator_kill 1t
 
+
+# 演出
+   execute at @a[tag=Victim] run particle minecraft:dust 1 1 0 2 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
+   execute at @a[tag=Victim] run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 1.5 0
+
+# 引数の設定
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 5.0d
+    # 第一属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+    # 第二属性
+        data modify storage lib: Argument.ElementType set value "Thunder"
+# 補正functionを実行
+    function lib:damage/modifier
+# ダメージ対象
+    execute as @a[tag=Victim] run function lib:damage/
+# リセット
+    data remove storage lib: Argument

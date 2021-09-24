@@ -5,7 +5,7 @@
 # @within function asset:mob/0124.skull_harpy/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],NoGravity:1b,ActiveEffects:[{Id:28b,Amplifier:0b,Duration:2147483647,ShowParticles:1b}],DeathLootTable:"asset:mob/death/0124.skull_harpy"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","AntiFrozen"],NoGravity:1b,ActiveEffects:[{Id:28b,Amplifier:0b,Duration:2147483647,ShowParticles:1b}],DeathLootTable:"asset:mob/death/0124.skull_harpy"}
 # ID (int)
     data modify storage asset:mob ID set value 124
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Head set value
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019}}
     # 胴 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Chest set value {id:"minecraft:elytra",Count:1b}
     # 脚 (Compound(Item)) (オプション)
