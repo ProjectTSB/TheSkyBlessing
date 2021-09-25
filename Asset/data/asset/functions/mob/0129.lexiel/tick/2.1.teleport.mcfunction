@@ -20,11 +20,11 @@
 
 # アマスタにタグを付与
     tag @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] add 3L.ArmorStandThis
-
 # ワープ
     execute at @p positioned ~ ~40 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^40 if block ~ ~ ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~ facing entity @p
 # アマスタを持ってきてタグを消す
     tp @e[type=armor_stand,tag=3L.ArmorStandThis,sort=nearest,limit=1] @s
     tag @e[type=armor_stand,tag=3L.ArmorStandThis,sort=nearest,limit=1] remove 3L.ArmorStandThis
+
 # リセット
     kill @e[type=marker,tag=SpreadMarker]

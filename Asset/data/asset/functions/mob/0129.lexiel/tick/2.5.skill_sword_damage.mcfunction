@@ -9,6 +9,13 @@
     execute positioned ^ ^ ^3 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
     execute positioned ^ ^ ^4.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
 
+# 演出
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^1 0 0 0 1 2 normal
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^2 0 0 0 1 2 normal
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^3 0 0 0 1 2 normal
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^4 0 0 0 1 2 normal
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^5 0 0 0 1 2 normal
+    execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^6 0 0 0 1 2 normal
 
 # 引数の設定
     # 与えるダメージ
@@ -24,6 +31,3 @@
 # リセット
     data remove storage lib: Argument
     tag @a[tag=3L.SkillSwordDamageThis] remove 3L.SkillSwordDamageThis
-
-
-    say @a[tag=3L.SkillSwordDamageThis]

@@ -4,6 +4,8 @@
 #> tag
 # @within function
 #   asset:mob/0129.lexiel/**
+    #declare tag Landing
+    #declare tag LandingTarget
     #declare tag 3L.ArmorStand
     #declare tag 3L.ArmorStandThis
     #declare tag 3L.Angel

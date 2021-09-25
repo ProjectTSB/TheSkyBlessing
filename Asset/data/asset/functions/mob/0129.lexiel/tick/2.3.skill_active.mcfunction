@@ -7,3 +7,5 @@
 # 剣スキル
     execute if entity @s[tag=3L.SkillSword] run function asset:mob/0129.lexiel/tick/2.4.skill_sword
 
+# 魔法スキル
+    execute if entity @s[tag=3L.SkillMagic] run function asset:mob/0129.lexiel/tick/2.7.skill_magic

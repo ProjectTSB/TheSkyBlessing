@@ -27,6 +27,8 @@
         execute store result score $Count Temporary run execute if entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01]
     # もしいたらテレポ
         execute if score $Count Temporary matches 2.. run function asset:mob/0129.lexiel/tick/2.1.teleport
+    # スコアも一応戻す
+        execute if score $Count Temporary matches 2.. run scoreboard players reset @s 3L.Tick
     # リセット
         scoreboard players reset $Count
 
