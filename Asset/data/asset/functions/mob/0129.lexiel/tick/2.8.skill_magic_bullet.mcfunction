@@ -12,7 +12,10 @@
     execute if entity @e[type=player,gamemode=!spectator,distance=..1.7] run tag @e[type=player,gamemode=!spectator,distance=..1.7,limit=1] add LandingTarget
 
 # 演出
-    particle dust 1 1 0 1 ~ ~ ~ 0.2 0.2 0.2 0 6
+    particle dust 0.784 0.435 1 1 ~ ~ ~ 0.2 0.2 0.2 0 6
+    playsound item.trident.return master @a ~ ~ ~ 1 0
+    playsound item.chorus_fruit.teleport master @p ~ ~ ~ 0.6 2.0
+    playsound entity.blaze.shoot master @a ~ ~ ~ 0.4 2
 
 # 着弾
     execute if entity @s[tag=Landing] run function asset:mob/0129.lexiel/tick/2.9.skill_magic_damage
