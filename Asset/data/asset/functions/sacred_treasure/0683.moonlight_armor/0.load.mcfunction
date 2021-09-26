@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0683.moonlight_armor/**
     scoreboard objectives add IZ.SoundLoop dummy
+    scoreboard objectives add IZ.AttackCool dummy

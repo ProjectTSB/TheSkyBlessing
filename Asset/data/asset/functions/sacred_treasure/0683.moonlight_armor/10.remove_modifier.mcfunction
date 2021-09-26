@@ -9,6 +9,10 @@
     tag @s remove IZ.UnderTheMoon
 
 # 補正を削除
+
+    # 最大体力
+        attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-02ab00000005
+
     # 魔法ダメージ量
         data modify storage api: Argument.UUID set value [I;1,1,683,5]
         function api:player_modifier/attack/magic/remove
