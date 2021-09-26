@@ -15,8 +15,6 @@
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
 
-
-
 # ダメージ設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 20.0f
