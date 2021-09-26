@@ -22,8 +22,6 @@
 # 発動中
     execute if score @s 3L.Tick matches 85.. run function asset:mob/0129.lexiel/tick/2.3.skill_active
 
-
-
 # 以下エラー時の処理
 
 # もし同一座標に2体存在した場合瞬時にteleportする

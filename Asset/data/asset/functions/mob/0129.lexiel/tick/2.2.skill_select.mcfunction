@@ -13,5 +13,5 @@
     execute if score $Random Temporary matches 1 run tag @s add 3L.SkillMagic
     execute if score $Random Temporary matches 2 run tag @s add 3L.SkillExplode
     execute if score $Random Temporary matches 3 run tag @s add 3L.SkillThunder
-    # リセット
+# リセット
     scoreboard players reset $Random Temporary

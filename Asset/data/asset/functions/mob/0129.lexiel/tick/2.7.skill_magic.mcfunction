@@ -28,7 +28,6 @@
 # タグを消す
     tag @s remove Landing
 
-
 # タグを消す
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillMagic
 # スコアを戻す
