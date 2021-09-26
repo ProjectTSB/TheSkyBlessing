@@ -11,7 +11,7 @@
     particle explosion ~ ~1.6 ~ 1 1 1 0 10 normal @a
 
 # 鈍化を付与
-    effect give @a[distance=..2.5] slowness 1 1 true
+    effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] slowness 1 1 true
 
 # 水属性ダメージ
     data modify storage lib: Argument.Damage set value 8.0
@@ -21,5 +21,5 @@
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
     data remove storage lib: Argument
 
-# 自身に二段目爆発のためのタグを付与
-    tag @s add 25.ExploCharge
+# 自身に二段目爆発のためのスコアを付与
+    scoreboard players set @s 25.Tick 100

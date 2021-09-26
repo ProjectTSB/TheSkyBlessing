@@ -7,11 +7,11 @@
 # 演出
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1.6 1.7 0
     playsound entity.generic.explode master @a ~ ~ ~ 1.3 1 0
-    particle dust 1 0.941 0.141 2 ~ ~4 ~ 0.1 3 0.1 0 60 normal @a
+    particle dust 1 0.941 0.141 2 ~ ~5 ~ 0.1 3 0.1 0 60 normal @a
     particle smoke ~ ~1.5 ~ 2 0.5 2 0 100 normal @a
 
 # スイカスライスを召喚
-    summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:16b}}
+    summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:4b}}
 
 # 雷属性ダメージ
     data modify storage lib: Argument.Damage set value 12.0

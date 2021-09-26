@@ -7,4 +7,3 @@
 #> 定義類はここに
 # @within function asset:mob/0077.golden_watermelon/**
     scoreboard objectives add 25.Tick dummy
-    scoreboard objectives add 25.ExploLimit dummy
