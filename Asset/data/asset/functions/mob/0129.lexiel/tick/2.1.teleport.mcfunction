@@ -3,8 +3,6 @@
 # テレポート。このモブはこれでしか移動しない
 #
 # @within function asset:mob/0129.lexiel/tick/**
-# @private
-#declare tag SpreadMarker
 
 # 演出
    particle minecraft:dust 1 1 0 1 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
