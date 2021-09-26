@@ -10,7 +10,7 @@
     particle snowflake ~ ~1.4 ~ 0 0 0 1 80 normal @a
 
 # タグ付与
-    tag @s add IL.FullSet
+    tag @s add IL.Fullset
 
 # スケジュールループ開始
     schedule function asset:sacred_treasure/0669.blizzard_armor/5.schedule_loop 1t replace

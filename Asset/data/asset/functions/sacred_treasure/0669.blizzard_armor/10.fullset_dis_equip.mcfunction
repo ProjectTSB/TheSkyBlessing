@@ -8,7 +8,7 @@
 # @within function asset:sacred_treasure/0671.blizzard_boots/dis_equip/main
 
 # タグ削除
-    tag @s remove IL.FullSet
+    tag @s remove IL.Fullset
 
 # 音用スコアのリセット
     scoreboard players reset @s IL.SoundLoop
