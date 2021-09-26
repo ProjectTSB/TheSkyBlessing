@@ -8,7 +8,7 @@
 # 演出
     particle minecraft:explosion ~ ~ ~ 3 1 3 0 30
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
-    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 00
+    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 100
 
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
     playsound entity.generic.explode master @a ~ ~ ~ 1 0 1
