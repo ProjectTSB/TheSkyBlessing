@@ -6,6 +6,7 @@
         "asset:mob/0019.horus_priest/summon/1.trigger",
         "asset:mob/0027.skull_sniper/summon/1.trigger",
         "asset:mob/0007.ectoplasm/summon/1.trigger",
+        "asset:mob/0064.artery/summon/1.trigger",
         "asset:mob/0031.tomb_robbing/summon/1.trigger",
         "asset:mob/0029.skeleton_archer/summon/1.trigger",
         "asset:mob/0005.thief/summon/1.trigger",
@@ -28,6 +29,9 @@
         "asset:mob/0075.watermelon/summon/1.trigger",
         "asset:mob/0076.golden_watermelon_bomber/summon/1.trigger",
         "asset:mob/0077.golden_watermelon/summon/1.trigger",
-        "asset:mob/0089.decapitation/summon/1.trigger"
+        "asset:mob/0089.decapitation/summon/1.trigger",
+        "asset:mob/0065.night_shadow/summon/1.trigger",
+        "asset:mob/0089.decapitation/summon/1.trigger",
+        "asset:mob/0107.dark_ender/summon/1.trigger"
     ]
 }

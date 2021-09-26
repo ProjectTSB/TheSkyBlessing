@@ -2,6 +2,7 @@
     "values": [
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
+        "asset:mob/0064.artery/attack/1.trigger",
         "asset:mob/0017.fire_bird/attack/1.trigger",
         "asset:mob/0063.ghost/attack/1.trigger",
         "asset:mob/0061.stray/attack/1.trigger",
@@ -18,6 +19,9 @@
         "asset:mob/0007.ectoplasm/attack/1.trigger",
         "asset:mob/0074.watermelon_bomber/attack/1.trigger",
         "asset:mob/0076.golden_watermelon_bomber/attack/1.trigger",
-        "asset:mob/0089.decapitation/attack/1.trigger"
+        "asset:mob/0089.decapitation/attack/1.trigger",
+        "asset:mob/0065.night_shadow/attack/1.trigger",
+        "asset:mob/0089.decapitation/attack/1.trigger",
+        "asset:mob/0107.dark_ender/attack/1.trigger"
     ]
 }
