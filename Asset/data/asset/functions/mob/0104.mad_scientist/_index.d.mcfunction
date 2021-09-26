@@ -1,7 +1,7 @@
 #> asset:mob/0104.mad_scientist/_index.d
+# @private
 #
-#
-#> private
+#> tag
 # @within function asset:mob/0104.mad_scientist/**
     #declare tag 2W.Poison
     #declare tag 2W.Fire
