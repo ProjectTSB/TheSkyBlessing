@@ -13,7 +13,7 @@
     execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..100] run playsound minecraft:block.beacon.ambient master @a ~ ~ ~ 1 1.6 0
 
 # 範囲無属性魔法ダメージ
-    data modify storage lib: Argument.Damage set value 12.0f
+    data modify storage lib: Argument.Damage set value 15.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     function lib:damage/modifier
     execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..100] as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3] run function lib:damage/
