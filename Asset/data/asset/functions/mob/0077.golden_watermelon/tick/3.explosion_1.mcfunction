@@ -14,13 +14,12 @@
     effect give @a[distance=..2.5] slowness 1 1 true
 
 # 水属性ダメージ
-
-        data modify storage lib: Argument.Damage set value 8.0
-        data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.ElementType set value "Water"
-        function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
-        data remove storage lib: Argument
+    data modify storage lib: Argument.Damage set value 8.0
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Water"
+    function lib:damage/modifier
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
+    data remove storage lib: Argument
 
 # 自身に二段目爆発のためのタグを付与
     tag @s add 25.ExploCharge

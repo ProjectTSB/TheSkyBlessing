@@ -15,5 +15,5 @@
 
 # 炸裂
     execute if score @s 23.Tick matches 20.. run function asset:mob/0075.watermelon/tick/3.explosion
-    execute if block ~ ~ ~ #lib:air if entity @a[distance=..1.5] run function asset:mob/0075.watermelon/tick/3.explosion
+    execute if block ~ ~ ~ #lib:air if entity @a[gamemode=!spectator,distance=..1.5] run function asset:mob/0075.watermelon/tick/3.explosion
     execute unless block ^ ^1 ^1 #lib:no_collision run function asset:mob/0075.watermelon/tick/3.explosion

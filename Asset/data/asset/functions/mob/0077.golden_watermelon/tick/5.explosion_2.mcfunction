@@ -14,12 +14,12 @@
     summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:16b}}
 
 # 雷属性ダメージ
-        data modify storage lib: Argument.Damage set value 12.0
-        data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.ElementType set value "Thunder"
-        function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function lib:damage/
-        data remove storage lib: Argument
+    data modify storage lib: Argument.Damage set value 12.0
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Thunder"
+    function lib:damage/modifier
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function lib:damage/
+    data remove storage lib: Argument
 
 # 消滅
     kill @s
