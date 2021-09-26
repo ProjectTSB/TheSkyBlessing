@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0129.lexiel/**
     scoreboard objectives add 3L.Tick dummy
+    scoreboard objectives add 3L.Tick2 dummy

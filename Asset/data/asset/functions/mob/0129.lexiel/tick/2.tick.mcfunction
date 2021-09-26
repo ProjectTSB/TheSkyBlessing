@@ -6,6 +6,10 @@
 
 # スコアを増やす
     scoreboard players add @s 3L.Tick 1
+    scoreboard players add @s 3L.Tick2 1
+
+# 4tick毎に発動するコマンド
+    execute if score @s 3L.Tick2 matches 4.. run function asset:mob/0129.lexiel/tick/regularly
 
 # 80tickで発動
     execute if score @s 3L.Tick matches 80 run function asset:mob/0129.lexiel/tick/2.1.teleport

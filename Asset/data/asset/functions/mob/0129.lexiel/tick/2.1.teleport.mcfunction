@@ -1,6 +1,6 @@
 #> asset:mob/0129.lexiel/tick/2.1.teleport
 #
-#
+# テレポート。このモブはこれでしか移動しない
 #
 # @within function asset:mob/0129.lexiel/tick/**
 # @private

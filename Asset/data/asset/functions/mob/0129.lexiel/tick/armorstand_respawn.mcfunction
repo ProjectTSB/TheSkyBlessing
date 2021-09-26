@@ -16,6 +16,14 @@
 # スコアも一応戻す
     scoreboard players reset @s 3L.Tick
 
+# スキル発動中に移動した場合困るので消す
+    tag @s remove 3L.SkillSword
+    tag @s remove 3L.SkillMagic
+    tag @s remove 3L.SkillExplode
+    tag @s remove 3L.SkillExplodeParticle
+    tag @s remove 3L.SkillThunder
+
 # 強制的にテレポする
     function asset:mob/0129.lexiel/tick/2.1.teleport
+
 

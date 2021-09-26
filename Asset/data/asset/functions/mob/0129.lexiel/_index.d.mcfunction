@@ -14,5 +14,6 @@
     #declare tag 3L.SkillMagic
     #declare tag 3L.SkillExplode
     #declare tag 3L.SkillThunder
+    #declare tag 3L.SkillExplodeParticle
     #declare score_holder $Count
     #declare score_holder $Random

@@ -5,7 +5,7 @@
 # @within function asset:mob/0129.lexiel/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","3L.Angel"],NoAI:1b,DeathLootTable:"asset:mob/death/0129.lexiel"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","3L.Angel"],PersistenceRequired:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0129.lexiel"}
 # ID (int)
     data modify storage asset:mob ID set value 129
 # Type (string) Wikiを参照
