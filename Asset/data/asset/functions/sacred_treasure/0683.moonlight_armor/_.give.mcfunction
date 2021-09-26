@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ムーンライト","color":"#F7FCAB"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"でも、時が過ぎて再び月を見上げた時、","color":"#F7FCAB"}]','[{"text":"私達が愛したその本当の顔を知れば、","color":"#F7FCAB"}]','[{"text":""}]','[{"text":"一式装備していて、空に月があれば","color":"#F7FCAB"}]','[{"text":"魔法ダメージ量+50% 魔法耐性+40% ","color":"dark_purple"},{"text":"MP回復量+50%","color":"green"}]','[{"text":"攻撃時に無属性魔法ダメージを周囲に与える","color":"#F7FCAB"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"でも、時が過ぎて再び月を見上げた時、","color":"#F7FCAB"}]','[{"text":"私達が愛したその本当の顔を知れば、","color":"#F7FCAB"}]','[{"text":""}]','[{"text":"一式装備していて、空に月があれば","color":"#F7FCAB"}]','[{"text":"魔法ダメージ量+50% 魔法耐性+40% ","color":"dark_purple"},{"text":"MP回復量+50%","color":"green"}]','[{"text":"攻撃時に無属性魔法ダメージを対象の周囲に与える","color":"#F7FCAB"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
