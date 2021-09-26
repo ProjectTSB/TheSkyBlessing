@@ -9,7 +9,7 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $4 Const
     #scoreboard players set $Random Temporary 3
-# メッセージ出力
+# スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 3L.SkillSword
     execute if score $Random Temporary matches 1 run tag @s add 3L.SkillMagic
     execute if score $Random Temporary matches 2 run tag @s add 3L.SkillExplode

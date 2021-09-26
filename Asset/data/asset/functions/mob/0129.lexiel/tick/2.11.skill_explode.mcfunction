@@ -19,10 +19,6 @@
     execute if score @s 3L.Tick matches 110 positioned ^ ^ ^5 positioned ~ ~2 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.12.skill_explode_damage
     execute if score @s 3L.Tick matches 115 positioned ^ ^ ^5 positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.13.skill_explode_damage2
 
-
-
-
-
 # タグを消す
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillExplode
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillExplodeParticle

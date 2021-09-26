@@ -16,17 +16,18 @@
 # プレイヤーを向く
     execute if score @s 3L.Tick matches 100 run function asset:mob/0129.lexiel/tick/2.10.skill_magic_look_player
 
-# 攻撃
+# 攻撃二回目
     execute if score @s 3L.Tick matches 110 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
 # タグを消す
     tag @s remove Landing
 # プレイヤーを向く
     execute if score @s 3L.Tick matches 110 run function asset:mob/0129.lexiel/tick/2.10.skill_magic_look_player
 
-# 攻撃
+# 攻撃三回目
     execute if score @s 3L.Tick matches 120 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
 # タグを消す
     tag @s remove Landing
+
 
 # タグを消す
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillMagic
