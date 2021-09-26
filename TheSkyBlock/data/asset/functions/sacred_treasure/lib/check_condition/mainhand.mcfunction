@@ -9,4 +9,4 @@
 # @within function asset:sacred_treasure/*/2.check_condition
 
 data modify storage asset:sacred_treasure TargetSlot set value 'mainhand'
-function asset_manager:sacred_treasure/core/check/
+function asset_manager:sacred_treasure/check/
