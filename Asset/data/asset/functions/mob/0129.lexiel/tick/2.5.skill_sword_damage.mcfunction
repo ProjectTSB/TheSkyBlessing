@@ -26,10 +26,11 @@
     execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^7 0 0 0 1 2 normal
     execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^8 0 0 0 1 2 normal
     execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^9 0 0 0 1 2 normal
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 3.0
+        data modify storage lib: Argument.Damage set value 14.0
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

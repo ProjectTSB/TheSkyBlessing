@@ -10,6 +10,9 @@
     execute if score @s 3L.Tick matches 85 run data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [342f,217f,0f]
     execute if score @s 3L.Tick matches 85 run data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [179f,326f,332f]
 
+# 演出
+    execute if score @s 3L.Tick matches 85 run playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1.6
+
 # 攻撃判定
     execute if score @s 3L.Tick matches 95 run function asset:mob/0129.lexiel/tick/2.5.skill_sword_damage
 

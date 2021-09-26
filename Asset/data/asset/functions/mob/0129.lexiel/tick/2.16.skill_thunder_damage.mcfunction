@@ -19,11 +19,11 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 13.0f
+        data modify storage lib: Argument.Damage set value 20.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
-        data modify storage lib: Argument.ElementType set value "Fire"
+        data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
         execute as @e[type=player,gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/

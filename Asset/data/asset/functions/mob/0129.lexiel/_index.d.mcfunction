@@ -9,6 +9,8 @@
     #declare tag LandingTarget
     #declare tag 3L.ArmorStand
     #declare tag 3L.ArmorStandThis
+    #declare tag 3L.ArmorStandDeath
+    #declare tag 3L.ArmorStandDeathSword
     #declare tag 3L.Angel
     #declare tag 3L.SkillSword
     #declare tag 3L.SkillSwordDamageThis
