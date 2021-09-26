@@ -29,6 +29,10 @@
         "asset:sacred_treasure/0707.mage_hat/dis_equip/",
         "asset:sacred_treasure/0708.mage_robe_upper/dis_equip/",
         "asset:sacred_treasure/0709.mage_robe_lower/dis_equip/",
-        "asset:sacred_treasure/0710.mage_boots/dis_equip/"
+        "asset:sacred_treasure/0710.mage_boots/dis_equip/",
+        "asset:sacred_treasure/0682.moonlight_helm/dis_equip/",
+        "asset:sacred_treasure/0683.moonlight_armor/dis_equip/",
+        "asset:sacred_treasure/0684.moonlight_leggings/dis_equip/",
+        "asset:sacred_treasure/0685.moonlight_boots/dis_equip/"
     ]
 }
