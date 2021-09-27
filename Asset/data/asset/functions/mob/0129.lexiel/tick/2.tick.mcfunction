@@ -11,13 +11,16 @@
 # 4tick毎に発動するコマンド
     execute if score @s 3L.Tick2 matches 4.. run function asset:mob/0129.lexiel/tick/regularly
 
-# 80tickで発動
-    execute if score @s 3L.Tick matches 80 run function asset:mob/0129.lexiel/tick/2.1.teleport
+# プレイヤーが周囲にいたら80tickでテレポート
+    execute if score @s 3L.Tick matches 80 if entity @p[distance=..100] run function asset:mob/0129.lexiel/tick/2.1.teleport
 
 # その後発動するスキル
 
-# スキルをランダムに選択する
-    execute if score @s 3L.Tick matches 85 run function asset:mob/0129.lexiel/tick/2.2.skill_select
+# プレイヤーが周囲にいたら
+    execute if score @s 3L.Tick matches 85 if entity @p[distance=..100] run function asset:mob/0129.lexiel/tick/2.2.skill_select
+
+# プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
+    execute if score @s 3L.Tick matches 85 unless entity @p[distance=..100] run scoreboard players reset @s 3L.Tick
 
 # 発動中
     execute if score @s 3L.Tick matches 85.. run function asset:mob/0129.lexiel/tick/2.3.skill_active
