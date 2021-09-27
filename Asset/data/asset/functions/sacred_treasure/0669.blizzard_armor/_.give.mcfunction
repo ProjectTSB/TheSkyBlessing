@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:leather_chestplate"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"吹雪","color":"#C4FFFD"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ブリザードアーマー","color":"#C4FFFD"}'
 # 神器の説明文 (TextComponentString[]) ['[{"text":"あ"},{"text":"io"}]']
     data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理耐性+5%","color":"dark_green"},{"text":" "},{"text":"水耐性+5%","color":"aqua"}]','[{"text":"一式装備時、吹雪を呼ぶ","color":"#C4FFFD"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
