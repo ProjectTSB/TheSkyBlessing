@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute positioned ^ ^1.2 ^1.1 rotated ~ ~-4 run function asset:sacred_treasure/0672_aurora_blade/4.sweeping_particle
+    execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672_aurora_blade/4.sweeping_particle
     playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
     playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
 
