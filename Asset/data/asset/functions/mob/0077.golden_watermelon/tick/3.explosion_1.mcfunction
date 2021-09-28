@@ -22,4 +22,4 @@
     data remove storage lib: Argument
 
 # 自身に二段目爆発のためのスコアを付与
-    scoreboard players set @s 25.Tick 100
+    scoreboard players set @s 25.Tick 20
