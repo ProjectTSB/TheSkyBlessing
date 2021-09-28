@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0672_aurora_blade/_.give
+#> asset:sacred_treasure/0672.aurora_blade/_.give
 #
 # 神器の作成部 ここでID等を定義する
 #

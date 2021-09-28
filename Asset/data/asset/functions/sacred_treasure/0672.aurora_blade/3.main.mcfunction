@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0672_aurora_blade/3.main
+#> asset:sacred_treasure/0672.aurora_blade/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0672_aurora_blade/2.check_condition
+# @within function asset:sacred_treasure/0672.aurora_blade/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/lib/use/mainhand
@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672_aurora_blade/4.sweeping_particle
+    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/4.sweeping_particle
     execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
     execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
 
