@@ -8,9 +8,6 @@
     execute as @p[tag=Victim] at @s run particle lava ~ ~ ~ 0.1 0 0.1 0 10
     playsound minecraft:entity.blaze.death hostile @a ~ ~ ~ 1 2
 
-# 何故かこうするとプレイヤーと同じ剣の降り方をする
-    item replace entity @s weapon with stick{CustomModelData:20022}
-
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 10f
 # 属性
