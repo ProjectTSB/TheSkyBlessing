@@ -19,7 +19,7 @@
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
         # 剰余算する。0~35の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $46 Const
+            scoreboard players operation $RandomDamage Temporary %= $36 Const
         # 最低ダメージ設定
             scoreboard players add $RandomDamage Temporary 25
     #ダメージセット 天使なら1.5倍
