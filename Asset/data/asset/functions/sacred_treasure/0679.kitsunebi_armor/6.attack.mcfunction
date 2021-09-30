@@ -26,5 +26,8 @@
 # 攻撃時狐火状態にする
     scoreboard players set @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] IV.Kitsunebi 1
 
+# 鈍足を付与
+    effect give @e[type=#lib:living,type=!player,tag=Victim,tag=Uninterferable,distance=..6] slowness 10 0
+
 # 狐火状態のMob用Schedule
     schedule function asset:sacred_treasure/0679.kitsunebi_armor/10.kitsunebi_state_schedule_loop 1t replace

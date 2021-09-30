@@ -11,9 +11,6 @@
     scoreboard players add @s IV.SoundLoop 1
     execute if score @s IV.SoundLoop matches 30.. run function asset:sacred_treasure/0679.kitsunebi_armor/13.sound_loop
 
-# 鈍足
-    effect give @s slowness 1 0 true
-
 # 演出
     particle flame ~ ~1.3 ~ 0.3 0.4 0.3 0 1 normal @a
     particle soul_fire_flame ~ ~1.3 ~ 0.3 0.4 0.3 0 1 normal @a
