@@ -29,6 +29,10 @@
         "asset:sacred_treasure/0707.mage_hat/dis_equip/",
         "asset:sacred_treasure/0708.mage_robe_upper/dis_equip/",
         "asset:sacred_treasure/0709.mage_robe_lower/dis_equip/",
-        "asset:sacred_treasure/0710.mage_boots/dis_equip/"
+        "asset:sacred_treasure/0710.mage_boots/dis_equip/",
+        "asset:sacred_treasure/0674.holocaust_helm/dis_equip/",
+        "asset:sacred_treasure/0675.holocaust_armor/dis_equip/",
+        "asset:sacred_treasure/0676.holocaust_leggings/dis_equip/",
+        "asset:sacred_treasure/0677.holocaust_boots/dis_equip/"
     ]
 }
