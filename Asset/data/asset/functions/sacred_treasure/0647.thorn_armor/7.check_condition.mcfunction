@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:sacred_treasure/0647.thorn_armor/6.damage_trigger
+
+#> Private
+# @private
     #declare score_holder $CheckMP
 
 # MPが10以上なら実行
