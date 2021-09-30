@@ -13,13 +13,13 @@
     # 疑似乱数取得
         execute store result score $Random Temporary run function lib:random/
     # ほしい範囲に剰余算
-        scoreboard players operation $Random Temporary %= $100 Const
+        scoreboard players operation $Random Temporary %= $11 Const
     # ゾンビを召喚するためのIDを選択
-        execute if score $Random Temporary matches 00..40 run data modify storage api: Argument.ID set value 95
-        execute if score $Random Temporary matches 41..55 run data modify storage api: Argument.ID set value 96
-        execute if score $Random Temporary matches 56..70 run data modify storage api: Argument.ID set value 97
-        execute if score $Random Temporary matches 71..85 run data modify storage api: Argument.ID set value 98
-        execute if score $Random Temporary matches 86..100 run data modify storage api: Argument.ID set value 99
+        execute if score $Random Temporary matches 1..3 run data modify storage api: Argument.ID set value 95
+        execute if score $Random Temporary matches 4..5 run data modify storage api: Argument.ID set value 96
+        execute if score $Random Temporary matches 6..7 run data modify storage api: Argument.ID set value 97
+        execute if score $Random Temporary matches 8..9 run data modify storage api: Argument.ID set value 98
+        execute if score $Random Temporary matches 10..11 run data modify storage api: Argument.ID set value 99
 
 # リセット
     scoreboard players reset $Random Temporary
