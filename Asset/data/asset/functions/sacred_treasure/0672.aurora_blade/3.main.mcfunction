@@ -10,9 +10,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/4.sweeping_particle
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
+    execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/4.sweeping_particle
+    playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
+    playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
 
 # ダメージ
     #ダメージブレのための処理
@@ -23,7 +23,7 @@
         # 最低ダメージ設定
             scoreboard players add $RandomDamage Temporary 25
     #ダメージセット 天使なら1.5倍
-        execute if entity @e[type=#lib:living,tag=Victim,tag=!Enemy.Boss,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
+        execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
         execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 1.5 run scoreboard players get $RandomDamage Temporary
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
