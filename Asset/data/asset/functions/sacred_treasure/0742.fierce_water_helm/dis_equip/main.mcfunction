@@ -6,11 +6,11 @@
 
 # 補正削除
 
-# 物理ダメージ
+# 物理ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,742,6]
     function api:player_modifier/attack/physical/remove
 
-# 水ダメージ
+# 水ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,742,6]
     function api:player_modifier/attack/water/remove
 
@@ -19,4 +19,4 @@
     function api:player_modifier/defense/water/remove
 
 # フルセット解除
-    execute if data storage asset:context id.all{head:742,chest:743,legs:744,feet:745} run function asset:sacred_treasure/0743.fierce_water_armor/5.fullset_dis_equip
+    execute if entity @s[tag=KN.Fullset] run function asset:sacred_treasure/0743.fierce_water_armor/5.fullset_dis_equip

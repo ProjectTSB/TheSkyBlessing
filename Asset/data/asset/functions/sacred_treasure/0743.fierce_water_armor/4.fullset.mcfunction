@@ -2,10 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0742.fierce_water_helm/3.main
-# @within function asset:sacred_treasure/0743.fierce_water_armor/3.main
-# @within function asset:sacred_treasure/0744.fierce_water_leggings/3.main
-# @within function asset:sacred_treasure/0745.fierce_water_boots/3.main
+# @within function
+#   asset:sacred_treasure/0742.fierce_water_helm/3.main
+#   asset:sacred_treasure/0743.fierce_water_armor/3.main
+#   asset:sacred_treasure/0744.fierce_water_leggings/3.main
+#   asset:sacred_treasure/0745.fierce_water_boots/3.main
 
 # Tag付与
     tag @s add KN.Fullset

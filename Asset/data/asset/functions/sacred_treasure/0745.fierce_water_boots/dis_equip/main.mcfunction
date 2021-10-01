@@ -20,4 +20,4 @@
 
 
 # フルセット解除
-    execute if data storage asset:context id.all{head:742,chest:743,legs:744,feet:745} run function asset:sacred_treasure/0743.fierce_water_armor/5.fullset_dis_equip
+    execute if entity @s[tag=KN.Fullset] run function asset:sacred_treasure/0743.fierce_water_armor/5.fullset_dis_equip
