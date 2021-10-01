@@ -2,9 +2,10 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0716.solar_armor/4.fullset
-# @within function asset:sacred_treasure/0716.solar_armor/6.schedule_loop
-# @within function asset:sacred_treasure/0716.solar_armor/rejoin_process
+# @within function
+#   asset:sacred_treasure/0716.solar_armor/4.fullset
+#   asset:sacred_treasure/0716.solar_armor/6.schedule_loop
+#   asset:sacred_treasure/0716.solar_armor/rejoin_process
 
 # プレイヤー
     execute if entity @a[tag=JW.Fullset,limit=1] as @a[tag=JW.Fullset] at @s run function asset:sacred_treasure/0716.solar_armor/7.player_tick
