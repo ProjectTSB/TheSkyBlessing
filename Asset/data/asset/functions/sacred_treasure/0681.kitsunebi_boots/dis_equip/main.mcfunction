@@ -4,10 +4,6 @@
 #
 # @within function asset:sacred_treasure/0681.kitsunebi_boots/dis_equip/
 
-#> Private
-# @private
-    #declare tag IV.Fullset
-
 # 補性の削除
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,681,3]

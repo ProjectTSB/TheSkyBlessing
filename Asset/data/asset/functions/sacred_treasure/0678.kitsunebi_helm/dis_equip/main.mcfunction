@@ -4,10 +4,6 @@
 #
 # @within function asset:sacred_treasure/0678.kitsunebi_helm/dis_equip/
 
-#> Private
-# @private
-    #declare tag IV.Fullset
-
 # 補正の削除
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,678,6]
