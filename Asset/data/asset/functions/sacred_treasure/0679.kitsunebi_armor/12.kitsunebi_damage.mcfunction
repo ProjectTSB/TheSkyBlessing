@@ -20,7 +20,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
-    function lib:damage/modifier
+     execute as @a if score @s UserID = @e[type=#lib:living,tag=IV.Kitunebi,limit=1] IV.UserID run function lib:damage/modifier
 # ダメージ対象
     execute as @e[type=#lib:living,type=!player,distance=..2.5] run function lib:damage/
 # リセット
