@@ -23,4 +23,4 @@
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $defensePoints Temporary 0
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $toughness Temporary 0
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $Resistance Temporary 0
-    execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $EPF Temporary 1
+    execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $EPF Temporary 0

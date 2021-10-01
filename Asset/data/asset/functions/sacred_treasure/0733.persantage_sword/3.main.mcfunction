@@ -3,6 +3,9 @@
 # 神器のメイン処理部
 #
 # @within function asset:sacred_treasure/0733.persantage_sword/2.check_condition
+
+#> Private
+# @private
     #declare score_holder $KD.DamageValue
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
@@ -27,7 +30,10 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
     execute if score $KD.DamageValue Temporary matches 51.. run data modify storage lib: Argument.Damage set value 50.0f
 
-# ダメージ modifierは割合固定ダメージのため無効化
+# Mobが死んだときにエラー吐くのでそれ防止
+    execute unless data storage lib: Argument.Damage run data modify storage lib: Argument.Damage set value 1.0
+
+# ダメージ
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run function lib:damage/
 
