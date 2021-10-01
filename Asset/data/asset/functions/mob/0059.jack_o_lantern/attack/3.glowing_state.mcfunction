@@ -11,7 +11,7 @@
 
     #火属性ダメージ
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 5.0
+        data modify storage lib: Argument.Damage set value 9.0
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
