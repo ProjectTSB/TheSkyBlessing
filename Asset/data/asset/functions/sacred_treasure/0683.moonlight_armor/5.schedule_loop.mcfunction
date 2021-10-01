@@ -2,9 +2,10 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0683.moonlight_armor/4.fullset
-# @within function asset:sacred_treasure/0683.moonlight_armor/5.schedule_loop
-# @within function asset:sacred_treasure/0683.moonlight_armor/rejoin_process
+# @within function
+#   asset:sacred_treasure/0683.moonlight_armor/4.fullset
+#   asset:sacred_treasure/0683.moonlight_armor/5.schedule_loop
+#   asset:sacred_treasure/0683.moonlight_armor/rejoin_process
 
 # オーバーワールドでかつ晴れかつ夜ならtagと補正値
     execute if predicate lib:dimension/is_overworld if predicate lib:weather/is_sunny unless predicate lib:is_day as @a[tag=IZ.Fullset,tag=!IZ.UnderTheMoon] at @s run function asset:sacred_treasure/0683.moonlight_armor/6.under_the_moon
