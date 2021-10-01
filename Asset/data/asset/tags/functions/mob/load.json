@@ -8,6 +8,7 @@
         "asset:mob/0019.horus_priest/0.load",
         "asset:mob/0027.skull_sniper/0.load",
         "asset:mob/0104.mad_scientist/0.load",
-        "asset:mob/0105.potion_projectile/0.load"
+        "asset:mob/0105.potion_projectile/0.load",
+        "asset:mob/0065.night_shadow/0.load"
     ]
 }
