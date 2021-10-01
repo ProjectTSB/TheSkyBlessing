@@ -16,6 +16,5 @@
     function api:player_modifier/attack/fire/remove
 
 # 専用スコアリセット
-    scoreboard players reset @s I3.IsFighting
     scoreboard players reset @s I3.AttackCool
     scoreboard players reset @s I3.ParticleTick

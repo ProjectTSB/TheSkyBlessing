@@ -12,12 +12,6 @@
 # バフ
     effect give @s fire_resistance 1 0 true
 
-# 疑似戦闘検知スコアの演出
-    execute if score @s I3.IsFighting matches 150.. run particle soul_fire_flame ~ ~1.2 ~ 2 0.4 2 0 1 normal @a
-
-# 疑似戦闘検知スコア減少
-    execute unless score @s I3.IsFighting matches ..0 run scoreboard players remove @s I3.IsFighting 2
-
 # 攻撃のクールタイム
     # スコアをへらす
         scoreboard players remove @s I3.AttackCool 1
