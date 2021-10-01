@@ -21,5 +21,5 @@
 # 補正の削除
     function api:player_modifier/defense/fire/remove
 
-# フルセット判定
-    execute if data storage asset:context id.all{head:650,chest:651,legs:652,feet:653} run function asset:sacred_treasure/0651.prominence_armor/5.fullset_dis_equip
+# フルセット削除
+    execute if entity @s[tag=I3.Fullset] run function asset:sacred_treasure/0651.prominence_armor/5.fullset_dis_equip

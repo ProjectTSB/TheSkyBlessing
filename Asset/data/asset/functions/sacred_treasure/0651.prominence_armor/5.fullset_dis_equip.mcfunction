@@ -2,10 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0650.prominence_helm/dis_equip/main
-# @within function asset:sacred_treasure/0651.prominence_armor/dis_equip/main
-# @within function asset:sacred_treasure/0652.prominence_leggings/dis_equip/main
-# @within function asset:sacred_treasure/0653.prominence_boots/dis_equip/main
+# @within function
+#   asset:sacred_treasure/0650.prominence_helm/dis_equip/main
+#   asset:sacred_treasure/0651.prominence_armor/dis_equip/main
+#   asset:sacred_treasure/0652.prominence_leggings/dis_equip/main
+#   asset:sacred_treasure/0653.prominence_boots/dis_equip/main
 
 # タグ削除
     tag @s remove I3.Fullset
