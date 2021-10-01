@@ -2,10 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0668.blizzard_helm/dis_equip/main
-# @within function asset:sacred_treasure/0669.blizzard_armor/dis_equip/main
-# @within function asset:sacred_treasure/0670.blizzard_leggings/dis_equip/main
-# @within function asset:sacred_treasure/0671.blizzard_boots/dis_equip/main
+# @within function
+#   asset:sacred_treasure/0668.blizzard_helm/dis_equip/main
+#   asset:sacred_treasure/0669.blizzard_armor/dis_equip/main
+#   asset:sacred_treasure/0670.blizzard_leggings/dis_equip/main
+#   asset:sacred_treasure/0671.blizzard_boots/dis_equip/main
 
 # タグ削除
     tag @s remove IL.Fullset

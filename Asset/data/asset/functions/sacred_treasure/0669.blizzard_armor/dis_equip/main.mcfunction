@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0669.blizzard_armor/dis_equip/
 
+#> Private
+# @private
+    #declare tag IL.Fullset
+
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,669,5]
 # 補正の削除
@@ -15,4 +19,4 @@
     function api:player_modifier/defense/water/remove
 
 # フルセット解除
-      execute if data storage asset:context id.all{head:668,chest:669,legs:670,feet:671} run function asset:sacred_treasure/0669.blizzard_armor/10.fullset_dis_equip
+      execute if entity @s[tag=IL.Fullset] run function asset:sacred_treasure/0669.blizzard_armor/10.fullset_dis_equip
