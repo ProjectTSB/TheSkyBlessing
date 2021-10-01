@@ -1,8 +1,9 @@
 #> asset:mob/0104.mad_scientist/_index.d
 # @private
 #
-#> tag
+#> Tagとscore_holder
 # @within function asset:mob/0104.mad_scientist/**
+    #declare score_holder $Random
     #declare tag 2W.Poison
     #declare tag 2W.Fire
     #declare tag 2W.Water
