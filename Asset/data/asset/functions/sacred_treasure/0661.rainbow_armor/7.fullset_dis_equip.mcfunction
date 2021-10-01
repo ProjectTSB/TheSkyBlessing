@@ -1,11 +1,7 @@
 #> asset:sacred_treasure/0661.rainbow_armor/7.fullset_dis_equip
 #
 #
-# @within function asset:sacred_treasure/0660.rainbow_helm/dis_equip/main
-# @within function asset:sacred_treasure/0661.rainbow_armor/dis_equip/main
-# @within function asset:sacred_treasure/0662.rainbow_leggings/dis_equip/main
-# @within function asset:sacred_treasure/0663.rainbow_boots/dis_equip/main
-
+# @within function asset:sacred_treasure/066?.rainbow_*/dis_equip/main
 # 全属性の補正を削除
 
 # UUID

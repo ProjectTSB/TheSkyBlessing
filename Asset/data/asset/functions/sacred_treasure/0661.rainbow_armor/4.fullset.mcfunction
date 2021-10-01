@@ -1,12 +1,7 @@
 #> asset:sacred_treasure/0661.rainbow_armor/4.fullset
 #
 #
-# @within function asset:sacred_treasure/0660.rainbow_helm/3.main
-# @within function asset:sacred_treasure/0661.rainbow_armor/3.main
-# @within function asset:sacred_treasure/0662.rainbow_leggings/3.main
-# @within function asset:sacred_treasure/0663.rainbow_boots/3.main
-
-# 全属性耐性+6%の記述(物理、魔法、火、水、雷の順)
+# @within function asset:sacred_treasure/066?.rainbow_*/3.main
 
 # 引数の設定
     data modify storage api: Argument.UUID set value [I;1,1,661,0]
