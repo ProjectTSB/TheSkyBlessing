@@ -6,7 +6,7 @@
 
 # ダメージとデバフ
     effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] slowness 5 2 true
-    data modify storage lib: Argument.Damage set value 8.0
+    data modify storage lib: Argument.Damage set value 18.0
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
