@@ -4,10 +4,6 @@
 #
 # @within function asset:sacred_treasure/0669.blizzard_armor/dis_equip/
 
-#> Private
-# @private
-    #declare tag IL.Fullset
-
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,669,5]
 # 補正の削除
