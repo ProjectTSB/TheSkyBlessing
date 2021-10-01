@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0679.kitsunebi_armor/6.attack
+#> asset:sacred_treasure/0679.kitsunebi_armor/6.melee
 #
 #
 #
-# @within function asset:sacred_treasure/0679.kitsunebi_armor/5.attack_trigger
+# @within function asset:sacred_treasure/0679.kitsunebi_armor/5.melee_trigger
 
 # 演出
     execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run particle flame ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
@@ -23,8 +23,8 @@
 # リセット
     data remove storage lib: Argument
 
-# 攻撃時狐火状態にする
-    scoreboard players set @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] IV.Kitsunebi 1
+# 攻撃時狐火状態用Tagを付与する
+    tag @e[type=#lib:living,tag=Victim,distance=..6] add IV.Kitunebi
 
 # 鈍足を付与
     effect give @e[type=#lib:living,type=!player,tag=Victim,tag=Uninterferable,distance=..6] slowness 10 0

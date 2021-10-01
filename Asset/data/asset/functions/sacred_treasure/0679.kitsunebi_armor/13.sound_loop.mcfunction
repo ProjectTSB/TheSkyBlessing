@@ -7,7 +7,7 @@
 # @within function asset:sacred_treasure/0679.kitsunebi_armor/13.kitsunebi_state2
 
 # 音
-    playsound block.fire.ambient master @a ~ ~ ~ 0.8 0.5 0.6
+    playsound block.fire.ambient master @a ~ ~ ~ 0.8 0.5 0
 
 # スコアリセット
     scoreboard players reset @s IV.SoundLoop

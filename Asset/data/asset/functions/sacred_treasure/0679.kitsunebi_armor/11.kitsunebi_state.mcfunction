@@ -21,4 +21,4 @@
 
 # 狐火状態終了
     execute if score @s IV.Kitsunebi matches 200.. run scoreboard players reset @s IV.Kitsunebi
-
+    execute if score @s IV.Kitsunebi matches 200.. run tag @s remove IV.Kitunebi
