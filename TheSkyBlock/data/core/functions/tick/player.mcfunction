@@ -19,6 +19,8 @@
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
 # 神器処理
-    function asset_manager:sacred_treasure/triggers/
+    function asset_manager:sacred_treasure/tick
 # MP回復処理
     function player_manager:mp/regen/check
+# チーム処理
+    function player_manager:set_team
