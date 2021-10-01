@@ -6,7 +6,7 @@
 #   asset:sacred_treasure/0650.prominence_helm/3.main
 #   asset:sacred_treasure/0651.prominence_armor/3.main
 #   asset:sacred_treasure/0652.prominence_leggings/3.main
-#   function asset:sacred_treasure/0653.prominence_boots/3.main
+#   asset:sacred_treasure/0653.prominence_boots/3.main
 
 # タグ
     tag @s add I3.Fullset
