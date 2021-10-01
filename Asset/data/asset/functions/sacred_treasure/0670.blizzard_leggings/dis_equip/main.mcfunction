@@ -4,10 +4,6 @@
 #
 # @within function asset:sacred_treasure/0670.blizzard_leggings/dis_equip/
 
-#> Private
-# @private
-    #declare tag IL.Fullset
-
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,670,4]
 # 補正の削除
