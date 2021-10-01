@@ -5,7 +5,7 @@
 # @within function asset:mob/0059.jack_o_lantern/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiDrown"],DeathLootTable:"asset:mob/death/0059.jack_o_lantern"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiDrown","AntiVoid"],DeathLootTable:"asset:mob/death/0059.jack_o_lantern"}
 # ID (int)
     data modify storage asset:mob ID set value 59
 # Type (string) Wikiを参照
