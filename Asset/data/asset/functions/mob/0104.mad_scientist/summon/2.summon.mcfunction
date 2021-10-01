@@ -5,7 +5,7 @@
 # @within function asset:mob/0104.mad_scientist/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiDrown"],DeathLootTable:"asset:mob/death/0104.mad_scientist"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiFrozen","AntiVoid"],DeathLootTable:"asset:mob/death/0104.mad_scientist"}
 # ID (int)
     data modify storage asset:mob ID set value 104
 # Type (string) Wikiを参照
