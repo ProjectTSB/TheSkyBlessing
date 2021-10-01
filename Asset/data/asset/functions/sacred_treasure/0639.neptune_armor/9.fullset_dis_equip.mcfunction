@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/????.neptune_*/dis_equip/main
+# @within function asset:sacred_treasure/06??.neptune_*/dis_equip/main
 
 # Tag削除
     tag @s remove HS.Fullset
