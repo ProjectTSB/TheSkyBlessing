@@ -19,7 +19,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
     function api:player_modifier/attack/water/remove
 
-    # 火ダメージ量
+    # 雷ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
     function api:player_modifier/attack/thunder/remove
 
