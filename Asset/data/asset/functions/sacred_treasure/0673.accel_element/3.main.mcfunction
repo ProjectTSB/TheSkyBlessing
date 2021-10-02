@@ -29,13 +29,13 @@
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
     data modify storage api: Argument.Amount set value 0.4
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/fire/add
+    function api:player_modifier/attack/water/add
 
 # 火ダメージ量+20%
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
     data modify storage api: Argument.Amount set value 0.4
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/fire/add
+    function api:player_modifier/attack/thunder/add
 
 # 効果解除までのスケジュールループ開始
     schedule function asset:sacred_treasure/0673.accel_element/4.schedule_loop 1t replace

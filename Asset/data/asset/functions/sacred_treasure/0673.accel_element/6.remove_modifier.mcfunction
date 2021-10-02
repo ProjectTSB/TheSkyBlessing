@@ -17,11 +17,11 @@
 
     # 水ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
-    function api:player_modifier/attack/fire/remove
+    function api:player_modifier/attack/water/remove
 
     # 火ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,673,0]
-    function api:player_modifier/attack/fire/remove
+    function api:player_modifier/attack/thunder/remove
 
 # タグ削除&スコアリセット
     tag @s remove IP.InEffect
