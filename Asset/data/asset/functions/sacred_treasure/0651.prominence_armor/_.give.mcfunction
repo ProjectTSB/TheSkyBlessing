@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"紅焔","color":"dark_red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"火ダメージ量+10％ ","color":"red"}]','[{"text":"物理耐性+5％ ","color":"dark_green"},{"text":"魔法耐性+5％ ","color":"dark_purple"},{"text":"火耐性+10％ ","color":"red"}]','[{"text":"フルセット時、追加で火ダメージ量+10％ ","color":"red"}]','{"text":"灼熱の如き熱を秘めた鎧","color":"dark_red"}','{"text":"その全てを揃えたとき、紅焔の如く敵を焼き尽くす","color":"dark_red"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"火属性攻撃力+10％ ","color":"red"}]','[{"text":"物理耐性+5％ ","color":"dark_green"},{"text":"魔法耐性+5％ ","color":"dark_purple"},{"text":"火耐性+10％ ","color":"red"}]','[{"text":"フルセット時、追加で火属性攻撃力+10％ ","color":"red"}]','{"text":"灼熱の如き熱を秘めた鎧","color":"dark_red"}','{"text":"その全てを揃えたとき、紅焔の如く敵を焼き尽くす","color":"dark_red"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
