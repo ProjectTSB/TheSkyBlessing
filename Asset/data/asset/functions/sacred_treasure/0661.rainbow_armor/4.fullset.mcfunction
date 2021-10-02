@@ -17,4 +17,4 @@
 
 # 演出
     execute rotated ~ 0 positioned ~ ~0.1 ~ run function asset:sacred_treasure/0661.rainbow_armor/8.rainbow_particle
-    playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1 2 0
+    playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 0.5 0
