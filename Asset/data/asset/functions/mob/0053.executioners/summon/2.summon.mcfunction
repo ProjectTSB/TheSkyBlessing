@@ -16,14 +16,14 @@
     data modify storage asset:mob Name set value '{"text":"処刑人","color":"dark_purple"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"stick",Count:1b,tag:{CustomModelData:20029}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"stick",Count:1b,tag:{CustomModelData:20029}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:20045}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20045}}
     # 胴 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5395026}}}
     # 脚 (Compound(Item)) (オプション)
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 150
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 7
+    data modify storage asset:mob AttackDamage set value 4
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 15
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
