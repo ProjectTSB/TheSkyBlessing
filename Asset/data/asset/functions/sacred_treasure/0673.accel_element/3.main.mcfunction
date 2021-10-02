@@ -42,3 +42,6 @@
 
 # Tag付与
     tag @s add IP.InEffect
+
+# スコアセット
+    scoreboard players set @s IP.Tick 0
