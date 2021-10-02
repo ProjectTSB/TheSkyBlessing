@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0672.aurora_blade/2.check_condition
 
+#> Private
+# @private function asset:sacred_treasure/0672.aurora_blade/**
+    #declare score_holder $RandomDamage
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/lib/use/mainhand
 
@@ -13,10 +17,6 @@
     execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/4.sweeping_particle
     playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
     playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
-
-#> Private
-# @private function asset:sacred_treasure/0672.aurora_blade/**
-    #declare score_holder $RandomDamage
 
 # ダメージ
     #ダメージブレのための処理
