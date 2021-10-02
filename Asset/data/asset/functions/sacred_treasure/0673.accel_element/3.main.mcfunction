@@ -20,19 +20,19 @@
     playsound minecraft:block.beacon.power_select master @a ~ ~ ~ 0.6 2 0
 
 # 火ダメージ量+20%
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 
 # 水ダメージ量+20%
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 
 # 火ダメージ量+20%
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add

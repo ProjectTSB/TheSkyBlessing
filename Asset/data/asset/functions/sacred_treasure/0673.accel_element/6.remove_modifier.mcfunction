@@ -12,15 +12,15 @@
 # 補正削除
 
     # 火ダメージ量
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     function api:player_modifier/attack/fire/remove
 
     # 水ダメージ量
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     function api:player_modifier/attack/fire/remove
 
     # 火ダメージ量
-    data modify storage api: Argument.UUID set value [I;1,1,649,3]
+    data modify storage api: Argument.UUID set value [I;1,1,673,0]
     function api:player_modifier/attack/fire/remove
 
 # タグ削除&スコアリセット
