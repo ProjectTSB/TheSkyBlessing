@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"アクセ","color":"red"},{"text":"ル・エレ","color":"aqua"},{"text":"メント","color":"yellow"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"アクセル・エレメント","color":"green"}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"50秒間の間"}','[{"text":"火 ","color":"red"},{"text":"水 ","color":"aqua"},{"text":"雷","color":"yellow"},{"text":"属性ダメージ量を+20%する","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
