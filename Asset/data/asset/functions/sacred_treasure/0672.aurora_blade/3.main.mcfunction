@@ -14,6 +14,10 @@
     playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
     playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
 
+#> Private
+# @private function asset:sacred_treasure/0672.aurora_blade/**
+    #declare score_holder $RandomDamage
+
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
