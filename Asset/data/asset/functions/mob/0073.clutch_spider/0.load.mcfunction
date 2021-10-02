@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0073.clutch_spider/**
-    scoreboard objectives add 
+    scoreboard objectives add 21.Time dummy
