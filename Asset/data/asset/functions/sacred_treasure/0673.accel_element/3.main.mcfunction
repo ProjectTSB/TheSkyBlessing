@@ -17,6 +17,7 @@
     playsound entity.blaze.shoot master @a ~ ~ ~ 0.6 0.5 0
     playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.6 2 0
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.3 1.3 0
+    playsound minecraft:block.beacon.power_select master @a ~ ~ ~ 0.6 2 0
 
 # 火ダメージ量+20%
     data modify storage api: Argument.UUID set value [I;1,1,649,3]
