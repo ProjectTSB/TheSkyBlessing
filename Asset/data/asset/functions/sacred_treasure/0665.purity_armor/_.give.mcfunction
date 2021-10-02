@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"無垢","color":"white"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理ダメージ量+7.5% ","color":"dark_green"},{"text":"物理耐性+7.5% ","color":"dark_green"}]','[{"text":"魔法ダメージ量+7.5% ","color":"dark_purple"},{"text":"魔法耐性+7.5%","color":"dark_purple"}]','[{"text":"一式装備時、","color":"white"}]','[{"text":"追加で","color":"white"},{"text":"火耐性+10%","color":"red"},{"text":"、","color":"white"},{"text":"水耐性+10%","color":"aqua"},{"text":"、","color":"white"},{"text":"雷耐性+10%","color":"yellow"}]','[{"text":"攻撃時に無属性","color":"white"},{"text":"物理","color":"dark_green"},{"text":"/","color":"white"},{"text":"魔法","color":"dark_purple"},{"text":"ダメージを10ずつ与える","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理属性攻撃力+7.5% ","color":"dark_green"},{"text":"物理耐性+7.5% ","color":"dark_green"}]','[{"text":"魔法属性攻撃力+7.5% ","color":"dark_purple"},{"text":"魔法耐性+7.5%","color":"dark_purple"}]','[{"text":"一式装備時、","color":"white"}]','[{"text":"追加で","color":"white"},{"text":"火耐性+10%","color":"red"},{"text":"、","color":"white"},{"text":"水耐性+10%","color":"aqua"},{"text":"、","color":"white"},{"text":"雷耐性+10%","color":"yellow"}]','[{"text":"攻撃時に無属性","color":"white"},{"text":"物理","color":"dark_green"},{"text":"/","color":"white"},{"text":"魔法","color":"dark_purple"},{"text":"ダメージを10ずつ与える","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"無垢","color":"white"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理ダメージ量+7.5% ","color":"dark_green"},{"text":"物理耐性+7.5% ","color":"dark_green"}]','[{"text":"魔法ダメージ量+7.5% ","color":"dark_purple"},{"text":"魔法耐性+7.5%","color":"dark_purple"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"物理属性攻撃力+7.5% ","color":"dark_green"},{"text":"物理耐性+7.5% ","color":"dark_green"}]','[{"text":"魔法属性攻撃力+7.5% ","color":"dark_purple"},{"text":"魔法耐性+7.5%","color":"dark_purple"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
