@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ソーラーアーマー","color":"#198CFF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"雷ダメージ量+7.5%","color":"yellow"}]','[{"text":"火耐性+5% ","color":"red"},{"text":"雷耐性+5%","color":"yellow"}]','{"text":"光を吸収し、電気へと変換できる防具","color":"#198CFF"}','{"text":"フルセット時、近接攻撃時に","color":"#198CFF"}','{"text":"明るさで変動する雷ダメージを与え","color":"#198CFF"}','{"text":"明るければ移動速度上昇を得て","color":"#198CFF"}','{"text":"暗所で暗視を得る","color":"#198CFF"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"雷属性攻撃力+7.5%","color":"yellow"}]','[{"text":"火耐性+5% ","color":"red"},{"text":"雷耐性+5%","color":"yellow"}]','{"text":"光を吸収し、電気へと変換できる防具","color":"#198CFF"}','{"text":"フルセット時、近接攻撃時に","color":"#198CFF"}','{"text":"明るさで変動する雷ダメージを与え","color":"#198CFF"}','{"text":"明るければ移動速度上昇を得て","color":"#198CFF"}','{"text":"暗所で暗視を得る","color":"#198CFF"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
