@@ -1,8 +1,10 @@
-#> asset:mob/0022.red_knight/tick/teleport
+#> asset:mob/0022.red_knight/tick/2.1.teleport
 #
 #
 #
-# @within function asset:mob/0022.red_knight/tick/2.tick
+# @within function
+#   asset:mob/0022.red_knight/tick/2.tick
+#   asset:mob/0022.red_knight/tick/armorstand_respawn
 
 # 演出
    particle minecraft:dust 1 1 0 1 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
