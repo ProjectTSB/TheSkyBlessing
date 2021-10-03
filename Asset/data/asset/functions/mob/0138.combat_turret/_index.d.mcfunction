@@ -4,5 +4,5 @@
 #> tag
 # @within function asset:mob/0138.combat_turret/**
     #declare tag Landing
-    #declare tag Landing_Target
-    
+    #declare tag LandingTarget
+
