@@ -7,4 +7,3 @@
 #> 定義類はここに
 # @within function asset:mob/0099.witch_zombie/**
     scoreboard objectives add 2R.Tick dummy
-    scoreboard objectives add 2R.Shooting dummy

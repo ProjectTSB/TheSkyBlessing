@@ -4,8 +4,6 @@
 #
 # @within function asset:mob/0100.magic_bullet_of_witch_zombie/tick/1.trigger
 
-# 最初に火弾か氷弾かをウィッチゾンビが選択する
-
 # 移動
     tp @s ^ ^ ^1
 # スコア
