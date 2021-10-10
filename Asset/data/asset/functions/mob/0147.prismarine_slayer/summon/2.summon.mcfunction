@@ -20,7 +20,7 @@
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob WeaponDropChances set value
+    data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"dark_prismarine",Count:1b}
