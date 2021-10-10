@@ -12,12 +12,6 @@
 # 音
     playsound entity.splash_potion.throw master @a ~ ~ ~ 1 0.5 0
 
-# 薬品に属性別タグを付与
-    execute if entity @s[tag=2W.Poison] run tag @e[type=armor_stand,scores={MobID=105},distance=..1] add 2X.Poison
-    execute if entity @s[tag=2W.Fire] run tag @e[type=armor_stand,scores={MobID=105},distance=..1] add 2X.Fire
-    execute if entity @s[tag=2W.Water] run tag @e[type=armor_stand,scores={MobID=105},distance=..1] add 2X.Water
-    execute if entity @s[tag=2W.Thunder] run tag @e[type=armor_stand,scores={MobID=105},distance=..1] add 2X.Thunder
-
 # スコアリセット
     scoreboard players reset @s 2W.Tick
 

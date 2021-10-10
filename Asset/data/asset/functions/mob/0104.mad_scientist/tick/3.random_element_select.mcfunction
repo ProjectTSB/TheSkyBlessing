@@ -7,7 +7,7 @@
  # 25%ずつの確率で4つに分岐 それぞれ毒、火、水、雷
     execute store result score $Random Temporary run function lib:random/
     scoreboard players operation $Random Temporary %= $100 Const
-    execute if score $Random Temporary matches 00..24 run tag @s add 2W.Poison
+    execute if score $Random Temporary matches 0..24 run tag @s add 2W.Poison
     execute if score $Random Temporary matches 25..49 run tag @s add 2W.Fire
     execute if score $Random Temporary matches 50..74 run tag @s add 2W.Water
     execute if score $Random Temporary matches 75..99 run tag @s add 2W.Thunder

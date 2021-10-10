@@ -12,4 +12,3 @@
     #declare tag 2X.Fire
     #declare tag 2X.Water
     #declare tag 2X.Thunder
-    #declare tag 2X.AlreadyBroken

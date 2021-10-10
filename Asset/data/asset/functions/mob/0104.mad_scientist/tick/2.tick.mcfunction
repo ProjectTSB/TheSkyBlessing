@@ -10,6 +10,5 @@
 # 最初にまず4つの属性に分岐
     execute if score @s 2W.Tick matches 1 run function asset:mob/0104.mad_scientist/tick/3.random_element_select
 
-# スコアが80以上で実行するやつらをここに入れるコマンド数そこまで増やしたくないのでまとめる
 # ポーションを投げる(Projectile使用)
     execute if score @s 2W.Tick matches 120.. run function asset:mob/0104.mad_scientist/tick/4.throw_potion
