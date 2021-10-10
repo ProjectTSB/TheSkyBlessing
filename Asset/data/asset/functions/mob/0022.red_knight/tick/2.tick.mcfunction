@@ -8,6 +8,9 @@
 # スコアを増やす
     scoreboard players add @s M.Tick 1
 
+# たまにプレイヤーが周囲にいたら70tickでテレポート
+    execute if score @s M.Tick matches 50 if predicate lib:random_pass_per/40 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
+
 # プレイヤーが周囲にいたら80tickでテレポート
     execute if score @s M.Tick matches 80 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
 

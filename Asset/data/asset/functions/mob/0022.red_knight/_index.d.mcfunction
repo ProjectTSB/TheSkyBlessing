@@ -13,11 +13,11 @@
     #declare tag M.ArmorStandDeathSword
     #declare tag M.Angel
     #declare tag M.SkillSword
-    #declare tag M.SkillSwordDamageThis
-    #declare tag M.SkillMagic
-    #declare tag M.SkillExplode
-    #declare tag M.SkillThunder
-    #declare tag M.SkillThunderMaker
-    #declare tag M.SkillExplodeParticle
+    #declare tag M.SkillSlash
+    #declare tag M.SkillBeam
+    #declare tag M.SkillSword2
+    #declare tag M.Skill
+    #declare tag M.Skill
+    #declare tag M.Skill
     #declare score_holder $Count
     #declare score_holder $Random
