@@ -27,6 +27,7 @@
         "asset:mob/0047.the_heretic/summon/1.trigger",
         "asset:mob/0065.night_shadow/summon/1.trigger",
         "asset:mob/0089.decapitation/summon/1.trigger",
-        "asset:mob/0107.dark_ender/summon/1.trigger"
+        "asset:mob/0107.dark_ender/summon/1.trigger",
+        "asset:mob/0147.prismarine_slayer/summon/1.trigger"
     ]
 }
