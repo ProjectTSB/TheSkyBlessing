@@ -11,7 +11,7 @@
     execute at @p[tag=Victim,distance=..32] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.4 1.7 0
     execute at @p[tag=Victim,distance=..32] run playsound minecraft:item.trident.return master @a ~ ~ ~ 0.5 0 0
 
-# 一部バフを解除
+# バフを解除
     effect clear @p[tag=Victim,distance=..32] water_breathing
     effect clear @p[tag=Victim,distance=..32] night_vision
     effect clear @p[tag=Victim,distance=..32] dolphins_grace
