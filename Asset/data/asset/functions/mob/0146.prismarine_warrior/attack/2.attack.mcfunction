@@ -10,7 +10,7 @@
     execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.guardian.attack master @a ~ ~ ~ 0.8 1.5 0
     execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.4 1.7 0
 
-# 一部バフを解除
+# バフを解除
     effect clear @p[tag=Victim,distance=..6] water_breathing
     effect clear @p[tag=Victim,distance=..6] speed
     effect clear @p[tag=Victim,distance=..6] dolphins_grace
