@@ -14,12 +14,10 @@
     data modify storage asset:mob Interferable set value false
 
 # 向き
-    execute facing entity @a[gamemode=!spectator,distance=..30,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
+    execute as @e[type=marker,tag=MobInit,distance=..0.01] facing entity @a[gamemode=!spectator,distance=..30,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
 # 属性設定 2R.Elementを持ったウィッチゾンビがいれば自身に氷の魔法になるTagを付与
-    execute positioned ~ ~-3.5 ~ if entity @e[type=zombie,tag=2R.Element,scores={MobID=99},distance=..0.05,sort=nearest,limit=1] run tag @s add 2S.Element
+    execute as @e[type=marker,tag=MobInit,distance=..0.01] positioned ~ ~-3.5 ~ if entity @e[type=zombie,tag=2R.Element,scores={MobID=99},distance=..0.05,sort=nearest,limit=1] run tag @s add 2S.Element
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=marker,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
-
-say aaaaaaaaaaaa

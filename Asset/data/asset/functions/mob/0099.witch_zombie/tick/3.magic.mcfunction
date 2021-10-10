@@ -7,7 +7,8 @@
 # このfunctionが実行される最初のTickに、乱数Predicateによる火か水かへの分岐
     execute if score @s 2R.Tick matches 100 if predicate lib:random_pass_per/50 run tag @s add 2R.Element
 
-# 魔方陣を展開する間NoAIになる
+# 魔方陣を展開する間プレイヤーの方向を見てNoAIになる
+    execute if score @s 2R.Tick matches 100 run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,distance=..30] eyes
     execute if score @s 2R.Tick matches 100 run data modify entity @s NoAI set value 1b
 
 # 2R.ElementTagが付与されない場合火属性、2R.ElementTagが付与された場合水属性
