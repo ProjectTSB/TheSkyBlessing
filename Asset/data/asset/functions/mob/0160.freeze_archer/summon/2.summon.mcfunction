@@ -5,7 +5,7 @@
 # @within function asset:mob/0160.freeze_archer/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0160.freeze_archer"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0160.freeze_archer"}
 # ID (int)
     data modify storage asset:mob ID set value 160
 # Type (string) Wikiを参照
