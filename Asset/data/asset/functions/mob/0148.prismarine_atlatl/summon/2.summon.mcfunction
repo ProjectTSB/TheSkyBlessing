@@ -5,7 +5,7 @@
 # @within function asset:mob/0148.prismarine_atlatl/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon drowned ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0148.prismarine_atlatl"}
+    summon drowned ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0148.prismarine_atlatl"}
 # ID (int)
     data modify storage asset:mob ID set value 148
 # Type (string) Wikiを参照
