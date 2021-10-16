@@ -1,25 +1,25 @@
 {
-	"type": "entity",
+	"type": "minecraft:entity",
 	"pools": [
 		{
 			"rolls": 1,
 			"entries": [
 				{
-					"type": "item",
-					"name": "stone_button",
+					"type": "minecraft:item",
+					"name": "minecraft:stone_button",
 					"functions": [
 						{
-							"function": "set_nbt",
+							"function": "minecraft:set_nbt",
 							"tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:162}}"
 						},
 						{
-							"function": "copy_nbt",
+							"function": "minecraft:copy_nbt",
 							"source": "killer_player",
 							"ops": [
 								{
-									"op": "replace",
 									"source": "UUID",
-									"target": "TSB.KillerUUID"
+									"target": "TSB.KillerUUID",
+									"op": "replace"
 								}
 							]
 						}
@@ -75,50 +75,25 @@
 					"name": "minecraft:mutton",
 					"functions": [
 						{
-							"function": "minecraft:set_count",
-							"count": 1
-						}
-					],
-					"conditions": [
-						{
-							"condition": "minecraft:random_chance",
-							"chance": 0.05
-						},
-						{
-							"condition": "minecraft:entity_properties",
-							"entity": "this",
-							"predicate": {
-								"flags": {
-									"is_on_fire": false
+							"function": "minecraft:furnace_smelt",
+							"conditions": [
+								{
+									"condition": "minecraft:entity_properties",
+									"entity": "this",
+									"predicate": {
+										"flags": {
+											"is_on_fire": true
+										}
+									}
 								}
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:cooked_mutton",
-					"functions": [
+							]
+						},
 						{
 							"function": "minecraft:set_count",
 							"count": 1
 						}
 					],
 					"conditions": [
-						{
-							"condition": "minecraft:entity_properties",
-							"entity": "this",
-							"predicate": {
-								"flags": {
-									"is_on_fire": true
-								}
-							}
-						},
 						{
 							"condition": "minecraft:random_chance",
 							"chance": 0.05
