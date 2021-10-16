@@ -2,10 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0682.moonlight_helm/dis_equip/main
-# @within function asset:sacred_treasure/0683.moonlight_armor/dis_equip/main
-# @within function asset:sacred_treasure/0684.moonlight_leggings/dis_equip/main
-# @within function asset:sacred_treasure/0685.moonlight_boots/dis_equip/main
+# @within function
+#   asset:sacred_treasure/0682.moonlight_helm/dis_equip/main
+#   asset:sacred_treasure/0683.moonlight_armor/dis_equip/main
+#   asset:sacred_treasure/0684.moonlight_leggings/dis_equip/main
+#   asset:sacred_treasure/0685.moonlight_boots/dis_equip/main
 
 # Tag削除
     tag @s remove IZ.Fullset

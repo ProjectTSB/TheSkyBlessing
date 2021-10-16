@@ -2,10 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0682.moonlight_helm/3.main
-# @within function asset:sacred_treasure/0683.moonlight_armor/3.main
-# @within function asset:sacred_treasure/0684.moonlight_leggings/3.main
-# @within function asset:sacred_treasure/0685.moonlight_boots/3.main
+# @within function
+#   asset:sacred_treasure/0682.moonlight_helm/3.main
+#   asset:sacred_treasure/0683.moonlight_armor/3.main
+#   asset:sacred_treasure/0684.moonlight_leggings/3.main
+#   asset:sacred_treasure/0685.moonlight_boots/3.main
 
 # Tag付与
     tag @s add IZ.Fullset

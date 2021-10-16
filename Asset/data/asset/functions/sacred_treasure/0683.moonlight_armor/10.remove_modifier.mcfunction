@@ -2,8 +2,9 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0683.moonlight_armor/8.player_tick
-# @within function asset:sacred_treasure/0683.moonlight_armor/9.fullset_dis_equip
+# @within function
+#   asset:sacred_treasure/0683.moonlight_armor/8.player_tick
+#   asset:sacred_treasure/0683.moonlight_armor/9.fullset_dis_equip
 
 # タグ削除
     tag @s remove IZ.UnderTheMoon
