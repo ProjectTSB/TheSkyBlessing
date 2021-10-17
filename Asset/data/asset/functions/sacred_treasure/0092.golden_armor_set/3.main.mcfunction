@@ -24,7 +24,7 @@
     execute if data storage asset:context {Inventory:[{Slot:100b}]} run summon item ~ ~ ~ {Motion:[0.0,0.1,0.0],Item:{id:"minecraft:golden_boots",Count:1b,tag:{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]}}}
 
 # 装備変更
-    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run replaceitem entity @s armor.head minecraft:golden_helmet{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run replaceitem entity @s armor.chest minecraft:golden_chestplate{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run replaceitem entity @s armor.legs minecraft:golden_leggings{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
-    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run replaceitem entity @s armor.feet minecraft:golden_boots{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:103b}]} run item replace entity @s armor.head with minecraft:golden_helmet{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:102b}]} run item replace entity @s armor.chest with minecraft:golden_chestplate{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:101b}]} run item replace entity @s armor.legs with minecraft:golden_leggings{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1
+    execute unless data storage asset:context {Inventory:[{Slot:100b}]} run item replace entity @s armor.feet with minecraft:golden_boots{display:{Name:'{"text":"簡易金防具","italic":false}'},RepairCost:9999,Enchantments:[{}]} 1

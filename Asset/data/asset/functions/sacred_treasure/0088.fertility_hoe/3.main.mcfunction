@@ -11,7 +11,7 @@
     # 演出
         particle item bone_block ~ ~ ~ 3 3 3 0 50 normal @a
         particle composter ~ ~ ~ 3 3 3 0 100 normal @a
-        playsound block.pumpkin.carve master @a ~ ~ ~ 1 1 1
+        playsound block.pumpkin.carve master @a ~ ~ ~ 1 1
 
     # 処理
         clear @s bone_meal 8
@@ -23,4 +23,6 @@
         fill ~-4 ~-4 ~-4 ~4 ~4 ~4 melon_stem[age=7] replace melon_stem
         fill ~-4 ~-4 ~-4 ~4 ~4 ~4 pumpkin_stem[age=7] replace pumpkin_stem
         fill ~-4 ~-4 ~-4 ~4 ~4 ~4 sweet_berry_bush[age=3] replace sweet_berry_bush
+        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 cave_vines[berries=true] replace cave_vines
+        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 cave_vines_plant[berries=true] replace cave_vines_plant
         fill ~-4 ~-4 ~-4 ~4 ~4 ~4 nether_wart[age=3] replace nether_wart

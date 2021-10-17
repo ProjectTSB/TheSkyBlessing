@@ -10,16 +10,16 @@
 # ここから先は神器側の効果の処理を書く
 
 # ダメージ用AECを召喚
-    execute rotated ~ 0 positioned ~ ~0.3 ~ run summon area_effect_cloud ^ ^ ^5 {Radius:0f,Duration:21,Tags:["Uninterferable","60.Water","60.First"]}
+    execute rotated ~ 0 positioned ~ ~0.3 ~ run summon area_effect_cloud ^ ^ ^5 {Radius:0f,Duration:21,Tags:["Uninterferable","AC.Water","AC.First"]}
 
 # スコアセット
-    scoreboard players set @e[type=area_effect_cloud,tag=60.First] 60.Time 0
+    scoreboard players set @e[type=area_effect_cloud,tag=AC.First] AC.Time 0
 
 # ユーザーID適応
-    scoreboard players operation @e[type=area_effect_cloud,tag=60.First] 60.UserID = @s UserID
+    scoreboard players operation @e[type=area_effect_cloud,tag=AC.First] AC.UserID = @s UserID
 
 # タグを消す
-    tag @e[type=area_effect_cloud,tag=60.First] remove 60.First
+    tag @e[type=area_effect_cloud,tag=AC.First] remove AC.First
 
 # Scheduleセット
     schedule function asset:sacred_treasure/0372.water_magic/3.1.loop 1t replace

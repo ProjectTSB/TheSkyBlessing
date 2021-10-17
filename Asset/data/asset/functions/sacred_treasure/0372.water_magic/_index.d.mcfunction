@@ -4,7 +4,7 @@
 #> Temp
 #
 # @within function asset:sacred_treasure/0372.water_magic/**
-    #declare tag 60.Water
-    #declare tag 60.First
-    #declare tag 60.This
-    #declare tag 60.Target
+    #declare tag AC.Water
+    #declare tag AC.First
+    #declare tag AC.This
+    #declare tag AC.Target

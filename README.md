@@ -1,5 +1,6 @@
 # TheSkyBlock
 <!-- [![discord](https://img.shields.io/discord/serverID?logo=discord&label=discord)](https://discord.gg/inviteUrl) -->
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/TheSkyBlock/TheSkyBlock)
 [![stars](https://img.shields.io/github/stars/TheSkyBlock/TheSkyBlock?logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/stargazers)
 [![progress](https://img.shields.io/github/milestones/progress/TheSkyBlock/TheSkyBlock/1?label=devProgress&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/milestone/1)
 [![activity](https://img.shields.io/github/commit-activity/m/TheSkyBlock/TheSkyBlock?label=commit&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/commits/master)
@@ -15,14 +16,8 @@
 ## 開発のあれこれ
 [Wiki](https://github.com/TheSkyBlock/TheSkyBlock/wiki)見てね！
 
-## commit時のルール
-* 一つのcommitに複数の処理の変更や追加を極力避けること
-* masterはGitmojiを使いコミットメッセージの最初に絵文字をつける
-
 ## ライセンスについて
 このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
-
-CC0-1.0 Licenseが適用されないディレクトリ
 * [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
@@ -35,3 +30,4 @@ CC0-1.0 Licenseが適用されないディレクトリ
 * [NaturalMergeSort](https://github.com/Ai-Akaishi/NaturalMergeSort)
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
+* [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)

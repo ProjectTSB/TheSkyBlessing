@@ -1,14 +1,15 @@
 {
-    "datapack.env.cmdVersion": "1.16",
+    "datapack.env.cmdVersion": "1.17",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.16.4",
+    "datapack.env.dataVersion": "1.17.1",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.16",
+    "datapack.env.jsonVersion": "1.17",
     "datapack.env.permissionLevel": 2,
+    "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
         "inside": 0
     },
@@ -41,7 +42,7 @@
                 ]
             },
             {
-                "label":"id",
+                "label": "id",
                 "parts": "/^id$/"
             }
         ]
@@ -81,7 +82,13 @@
     ],
     "datapack.lint.nameOfTeams": [
         "error",
-        "PascalCase"
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "allowMoreParts": true,
+            "sep": ".",
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+        }
     ],
     "datapack.lint.nbtArrayBracketSpacing": {
         "inside": 0
@@ -332,7 +339,9 @@
         "prefer double"
     ],
     "datapack.lint.timeOmitTickUnit": false,
-    "datapack.features.semanticColoring": false,
+    "datapack.snippets": {
+        "forwardSpreadLib": "#> SpreadLib\n# @private\n#declare tag SpreadMarker\n\n# 拡散させるEntityを召喚する\n    summon marker ~ ~ ~ {Tags:[\"SpreadMarker\"]}\n# ステータス設定\n    data modify storage lib: Argument.Distance set value ${1:<distance>}\n    data modify storage lib: Argument.Spread set value ${2:<spread>}\n# 拡散\n    execute as @e[type=marker,tag=SpreadMarker,limit=1] ${3:}run function lib:forward_spreader/${4:<circle|square>}\n# 拡散\n    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] ${5:feet anchored eyes positioned ^ ^ ^ }run ${6:<command>}\n# リセット\n    kill @e[type=marker,tag=SpreadMarker]"
+    },
     "mcdutil.createFile.fileTemplate": {
         "function": [
             "#> %fileResourcePath%",
@@ -1238,6 +1247,8 @@
                         "        # data modify storage asset:mob Weapon.Mainhand set value ",
                         "    # オフハンド (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Weapon.Offhand set value ",
+                        "# 武器ドロップ率 ([float, float]) (オプション)",
+                        "    # data modify storage asset:mob WeaponDropChances set value ",
                         "# 防具",
                         "    # 頭 (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Armor.Head set value ",
@@ -1247,6 +1258,8 @@
                         "        # data modify storage asset:mob Armor.Legs set value ",
                         "    # 足 (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Armor.Feet set value ",
+                        "# 防具ドロップ率 ([float, float]) (オプション)",
+                        "    # data modify storage asset:mob ArmorDropChances set value ",
                         "# 体力 (double) (オプション)",
                         "    # data modify storage asset:mob Health set value ",
                         "# 攻撃力 (double) (オプション)",
@@ -1608,6 +1621,70 @@
                     "append": {
                         "key": "values",
                         "elem": "asset:mob/%namespace%/rejoin_process"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "スポナー/テンプレート",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/spawner/%namespace%/.mcfunction",
+                    "content": [
+                        "#> asset:spawner/%namespace%/",
+                        "#",
+                        "# スポナーの登録処理",
+                        "#",
+                        "# @within tag/function asset:spawner/register",
+                        "",
+                        "execute positioned <X> <Y> <Z> unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/%namespace%/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/spawner/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:spawner/%namespace%/register",
+                        "#",
+                        "# スポナーの定義処理",
+                        "#",
+                        "# @within function asset:spawner/%namespace%/",
+                        "",
+                        "# SpawnPotentials (int | int[] | ({ Weight: int, Id: int })[])",
+                        "    data modify storage asset:spawner SpawnPotentials set value ",
+                        "# 体力 (int) (オプション)",
+                        "    # data modify storage asset:spawner HP set value ",
+                        "# 一度に召喚する数 (int) (オプション)",
+                        "    # data modify storage asset:spawner SpawnCount set value ",
+                        "# 動作範囲 (int) (オプション) // distance <= 128",
+                        "    # data modify storage asset:spawner SpawnRange set value ",
+                        "# 初回召喚時間 (int) (オプション)",
+                        "    # data modify storage asset:spawner Delay set value ",
+                        "# 最低召喚間隔 (int) (オプション)",
+                        "    # data modify storage asset:spawner MinSpawnDelay set value ",
+                        "# 最大召喚間隔 (int) (オプション)",
+                        "    # data modify storage asset:spawner MaxSpawnDelay set value ",
+                        "# 近くのエンティティの最大数 (int) (オプション)",
+                        "    # data modify storage asset:spawner MaxNearbyEntities set value ",
+                        "# この範囲にプレイヤーが存在するとき、Mobの召喚を開始する (float) (オプション)",
+                        "    # data modify storage asset:spawner RequiredPlayerRange set value ",
+                        "",
+                        "# 登録処理",
+                        "    function asset:spawner/common/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/spawner/register.json",
+                    "content": {
+                        "values": [
+                            "asset:spawner/%namespace%/.mcfunction"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:spawner/%namespace%/"
                     }
                 }
             ]

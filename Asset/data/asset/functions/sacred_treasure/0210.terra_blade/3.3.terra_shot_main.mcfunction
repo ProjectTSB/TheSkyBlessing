@@ -16,20 +16,20 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0210.terra_blade/3.5.terra_shot_hit
 
 # 再帰カウントが0なら弾速からセット
-    execute unless entity @s[scores={210.Recursion=1..,210.Range=1..}] run scoreboard players set @s 210.Recursion 10
+    execute unless entity @s[scores={5U.Recursion=1..,5U.Range=1..}] run scoreboard players set @s 5U.Recursion 10
 
 # 前進
-    execute if entity @s[scores={210.Recursion=1..,210.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
+    execute if entity @s[scores={5U.Recursion=1..,5U.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
 
 # スコア減算
-    scoreboard players remove @s 210.Recursion 1
-    scoreboard players remove @s 210.Range 1
+    scoreboard players remove @s 5U.Recursion 1
+    scoreboard players remove @s 5U.Range 1
 
 # 壁の衝突判定
     execute at @s unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0210.terra_blade/terra_shot_break
 
 # 再帰
-    execute if entity @s[scores={210.Recursion=1..,210.Range=1..}] at @s run function asset:sacred_treasure/0210.terra_blade/3.3.terra_shot_main
+    execute if entity @s[scores={5U.Recursion=1..,5U.Range=1..}] at @s run function asset:sacred_treasure/0210.terra_blade/3.3.terra_shot_main
 
 # キル
-    execute if entity @s[scores={210.Range=0}] run function asset:sacred_treasure/0210.terra_blade/terra_shot_break
+    execute if entity @s[scores={5U.Range=0}] run function asset:sacred_treasure/0210.terra_blade/terra_shot_break

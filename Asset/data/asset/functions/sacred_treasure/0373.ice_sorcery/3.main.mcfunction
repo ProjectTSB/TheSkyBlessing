@@ -14,7 +14,7 @@
     playsound minecraft:entity.guardian.death master @a ~ ~ ~ 1 1
 
 # スコアを付与する。スコア分の時間ビームする
-    scoreboard players add @s 61.BeamTime 5
+    scoreboard players add @s AD.BeamTime 5
 
 # ビーム発射
     function asset:sacred_treasure/0373.ice_sorcery/3.1.beamshot

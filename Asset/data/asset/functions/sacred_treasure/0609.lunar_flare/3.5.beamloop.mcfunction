@@ -13,4 +13,4 @@
     function asset:sacred_treasure/0609.lunar_flare/3.3.beam
 
 # 再帰
-    execute if entity @e[tag=9P.Laser] run schedule function asset:sacred_treasure/0609.lunar_flare/3.5.beamloop 1t replace
+    execute if entity @e[tag=GX.Laser] run schedule function asset:sacred_treasure/0609.lunar_flare/3.5.beamloop 1t replace
