@@ -6,10 +6,10 @@
 
 # スコアを増やす
     scoreboard players add @s 3L.Tick 1
-    scoreboard players add @s 3L.Tick2 1
+    scoreboard players add @s 3L.4tInterval 1
 
 # 4tick毎に発動するコマンド
-    execute if score @s 3L.Tick2 matches 4.. run function asset:mob/0129.lexiel/tick/regularly
+    execute if score @s 3L.4tInterval matches 4.. run function asset:mob/0129.lexiel/tick/regularly
 
 # プレイヤーが周囲にいたら80tickでテレポート
     execute if score @s 3L.Tick matches 80 if entity @p[distance=..100] run function asset:mob/0129.lexiel/tick/2.1.teleport
