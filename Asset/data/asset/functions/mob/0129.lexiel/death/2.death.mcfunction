@@ -13,7 +13,7 @@
     tag @e[type=armor_stand,tag=3L.ArmorStandThis] remove 3L.ArmorStandThis
 
 # もともといるアマスタには死んでもらう(複数召喚されてる場合、巻き込まれても大丈夫)
-    execute as @e[type=armor_stand,tag=3L.ArmorStand] at @s unless entity @e[type=wither_skeleton,tag=3L.Angel,distance=..0.01] run kill @s
+    kill @e[type=armor_stand,tag=3L.ArmorStand]
 
 # スケジュールループを開始する
     schedule function asset:mob/0129.lexiel/death/2.1.death_animation 1t
