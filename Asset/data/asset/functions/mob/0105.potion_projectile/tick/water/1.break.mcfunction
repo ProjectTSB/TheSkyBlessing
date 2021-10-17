@@ -1,4 +1,4 @@
-#> asset:mob/0105.potion_projectile/tick/water/
+#> asset:mob/0105.potion_projectile/tick/water/1.break
 #
 #
 #
@@ -10,7 +10,7 @@
     playsound block.glass.break master @a ~ ~ ~ 1 2 0
 
 # ダメージとデバフ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0105.potion_projectile/tick/water/1.water_damage
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0105.potion_projectile/tick/water/2.water_damage
 
 # 自身をkill
     kill @s

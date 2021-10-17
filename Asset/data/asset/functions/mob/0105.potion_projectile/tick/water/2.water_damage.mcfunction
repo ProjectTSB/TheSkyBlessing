@@ -1,8 +1,8 @@
-#> asset:mob/0105.potion_projectile/tick/water/1.water_damage
+#> asset:mob/0105.potion_projectile/tick/water/2.water_damage
 #
 #
 #
-# @within function asset:mob/0105.potion_projectile/tick/water/
+# @within function asset:mob/0105.potion_projectile/tick/water/1.break
 
 # ダメージとデバフ
     effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] slowness 5 2 true

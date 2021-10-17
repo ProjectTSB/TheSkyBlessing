@@ -1,8 +1,8 @@
-#> asset:mob/0105.potion_projectile/tick/thunder/1.thunder_damage
+#> asset:mob/0105.potion_projectile/tick/thunder/2.thunder_damage
 #
 #
 #
-# @within function asset:mob/0105.potion_projectile/tick/thunder/
+# @within function asset:mob/0105.potion_projectile/tick/thunder/1.break
     #declare score_holder $Fluctuation
 
 # 雷属性ダメージ

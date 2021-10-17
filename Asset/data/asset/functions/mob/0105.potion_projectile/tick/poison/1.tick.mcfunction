@@ -1,4 +1,4 @@
-#> asset:mob/0105.potion_projectile/tick/poison/
+#> asset:mob/0105.potion_projectile/tick/poison/1.tick
 #
 #
 #

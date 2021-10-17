@@ -5,7 +5,7 @@
 # @within function asset:mob/0105.potion_projectile/tick/1.trigger
 
 # ポーションセットと向き合わせ
-    execute unless score @s 2X.Tick matches 1.. run function asset:mob/0105.potion_projectile/tick/3.potion_set
+    execute if entity @s[tag=2X.This] run function asset:mob/0105.potion_projectile/tick/3.potion_set
 
 # スコア
     scoreboard players add @s 2X.Tick 1

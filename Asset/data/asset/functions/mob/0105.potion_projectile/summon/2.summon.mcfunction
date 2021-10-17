@@ -5,7 +5,7 @@
 # @within function asset:mob/0105.potion_projectile/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit"]}
+    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit","2X.This"]}
 # ID (int)
     data modify storage asset:mob ID set value 105
 # Type (string) Wikiを参照

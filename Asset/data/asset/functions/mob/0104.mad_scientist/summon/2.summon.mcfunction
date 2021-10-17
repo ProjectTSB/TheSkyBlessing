@@ -20,7 +20,7 @@
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
+    # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"leather_helmet",Count:1b,tag:{display:{color:16777215}}}
@@ -31,7 +31,7 @@
     # 足 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Feet set value {id:"leather_boots",Count:1b,tag:{display:{color:16777215}}}
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
+    # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 700
 # 攻撃力 (double) (オプション)
