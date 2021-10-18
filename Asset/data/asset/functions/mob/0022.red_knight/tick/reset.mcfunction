@@ -17,7 +17,7 @@
     tag @s remove M.SkillBeam
 
 # スコアのリセット
-    scoreboard players set @s M.Tick 30
+    scoreboard players set @s M.Tick -30
 
 # テレポート
     function asset:mob/0022.red_knight/tick/2.1.teleport

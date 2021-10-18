@@ -1,8 +1,8 @@
-#> asset:mob/0022.red_knight/tick/2.9.skill_beam_damage
+#> asset:mob/0022.red_knight/tick/skill_beam/2.skill_beam_damage
 #
 #
 #
-# @within function asset:mob/0022.red_knight/tick/2.8.skill_beam
+# @within function asset:mob/0022.red_knight/tick/skill_beam/1.skill_beam
 
 # ダメージ設定
     # 与えるダメージ

@@ -8,21 +8,21 @@
 # スコアを増やす
     scoreboard players add @s M.Tick 1
 
-# たまにプレイヤーが周囲にいたら70tickでテレポート
-    execute if score @s M.Tick matches 50 if predicate lib:random_pass_per/40 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
+# たまにプレイヤーが周囲にいたらテレポート
+    execute if score @s M.Tick matches -15 if predicate lib:random_pass_per/40 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
 
-# プレイヤーが周囲にいたら80tickでテレポート
-    execute if score @s M.Tick matches 80 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
+# プレイヤーが周囲にいたらテレポート
+    execute if score @s M.Tick matches -5 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたら
-    execute if score @s M.Tick matches 85 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.2.skill_select
+    execute if score @s M.Tick matches 0 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.2.skill_select
 
 # プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
-    execute if score @s M.Tick matches 85 unless entity @p[distance=..100] run scoreboard players reset @s M.Tick
+    execute if score @s M.Tick matches 0 unless entity @p[distance=..100] run scoreboard players set @s M.Tick -30
 
 # 発動中
-    execute if score @s M.Tick matches 85.. run function asset:mob/0022.red_knight/tick/2.3.skill_active
+    execute if score @s M.Tick matches 0.. run function asset:mob/0022.red_knight/tick/2.3.skill_active
 
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする

@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/particle_6
 #
-#
+# キラキラ2
 #
 # @within function asset:mob/0022.red_knight/tick/**
 

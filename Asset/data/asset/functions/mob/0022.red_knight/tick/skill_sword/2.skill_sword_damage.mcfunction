@@ -1,8 +1,8 @@
-#> asset:mob/0022.red_knight/tick/2.5.skill_sword_damage
+#> asset:mob/0022.red_knight/tick/skill_sword/2.skill_sword_damage
 #
 #
 #
-# @within function asset:mob/0022.red_knight/tick/2.4.skill_sword
+# @within function asset:mob/0022.red_knight/tick/skill_sword/1.skill_sword
 
 # ダメージ設定
     # 与えるダメージ

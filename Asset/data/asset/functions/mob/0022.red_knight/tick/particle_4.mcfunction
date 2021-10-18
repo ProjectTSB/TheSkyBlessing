@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/particle_4
 #
-#
+# 縦に薙ぎ払う
 #
 # @within function asset:mob/0022.red_knight/tick/**
 
