@@ -1,4 +1,4 @@
-#> asset:mob/0129.lexiel/tick/2.7.skill_magic
+#> asset:mob/0129.lexiel/tick/skill_magic/1.skill_magic
 #
 # 魔法攻撃。3回撃つ
 #
@@ -10,21 +10,21 @@
     execute if score @s 3L.Tick matches 85 run data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [267f,334f,0f]
 
 # 攻撃
-    execute if score @s 3L.Tick matches 100 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+    execute if score @s 3L.Tick matches 100 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 # タグを消す
     tag @s remove Landing
 # プレイヤーを向く
-    execute if score @s 3L.Tick matches 100 run function asset:mob/0129.lexiel/tick/2.10.skill_magic_look_player
+    execute if score @s 3L.Tick matches 100 run function asset:mob/0129.lexiel/tick/skill_magic/4.skill_magic_look_player
 
 # 攻撃二回目
-    execute if score @s 3L.Tick matches 110 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+    execute if score @s 3L.Tick matches 110 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 # タグを消す
     tag @s remove Landing
 # プレイヤーを向く
-    execute if score @s 3L.Tick matches 110 run function asset:mob/0129.lexiel/tick/2.10.skill_magic_look_player
+    execute if score @s 3L.Tick matches 110 run function asset:mob/0129.lexiel/tick/skill_magic/4.skill_magic_look_player
 
 # 攻撃三回目
-    execute if score @s 3L.Tick matches 120 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+    execute if score @s 3L.Tick matches 120 positioned ~ ~1.4 ~ run function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 # タグを消す
     tag @s remove Landing
 

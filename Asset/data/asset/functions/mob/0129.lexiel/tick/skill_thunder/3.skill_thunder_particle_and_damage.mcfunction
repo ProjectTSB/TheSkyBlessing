@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.16.skill_thunder_damage
+#> asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
 #
 # 雷ダメージを発生させる
 #
-# @within function asset:mob/0129.lexiel/tick/2.14.skill_thunder
+# @within function asset:mob/0129.lexiel/tick/skill_thunder/1.skill_thunder
 
 
 # 演出

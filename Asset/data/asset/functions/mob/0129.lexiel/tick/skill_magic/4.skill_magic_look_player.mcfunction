@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.10.skill_magic_look_player
+#> asset:mob/0129.lexiel/tick/skill_magic/4.skill_magic_look_player
 #
 # プレイヤーを見る
 #
-# @within function asset:mob/0129.lexiel/tick/2.7.skill_magic
+# @within function asset:mob/0129.lexiel/tick/skill_magic/1.skill_magic
 
 # アマスタにタグを付与
     tag @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] add 3L.ArmorStandThis

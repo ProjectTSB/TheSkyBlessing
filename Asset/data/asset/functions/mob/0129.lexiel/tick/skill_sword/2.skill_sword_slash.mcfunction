@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.5.skill_sword_damage
+#> asset:mob/0129.lexiel/tick/skill_sword/2.skill_sword_slash
 #
 # 剣の攻撃判定
 #
-# @within function asset:mob/0129.lexiel/tick/2.4.skill_sword
+# @within function asset:mob/0129.lexiel/tick/skill_sword/1.skill_sword
 
 # 攻撃モーション
     execute if score @s 3L.Tick matches 95 run item replace entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stone{CustomModelData:20040}

@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.15.skill_thunder_summon
+#> asset:mob/0129.lexiel/tick/skill_thunder/2.skill_thunder_summon
 #
 # 雷を落とす位置を召喚する
 #
-# @within function asset:mob/0129.lexiel/tick/2.14.skill_thunder
+# @within function asset:mob/0129.lexiel/tick/skill_thunder/1.skill_thunder
 
 # 前方拡散でAECを召喚
     execute at @p run summon marker ~ ~20 ~ {Tags:["SpreadMarker"]}

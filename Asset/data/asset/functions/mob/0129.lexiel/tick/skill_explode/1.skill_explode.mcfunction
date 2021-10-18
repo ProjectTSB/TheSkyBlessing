@@ -1,4 +1,4 @@
-#> asset:mob/0129.lexiel/tick/2.11.skill_explode
+#> asset:mob/0129.lexiel/tick/skill_explode/1.skill_explode
 #
 # 爆破魔法
 #
@@ -14,10 +14,10 @@
     execute if score @s 3L.Tick matches 85 run tag @s add 3L.SkillExplodeParticle
 
 # 攻撃
-    execute if score @s 3L.Tick matches 100 positioned ^ ^ ^5 positioned ~ ~7 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.12.skill_explode_damage
-    execute if score @s 3L.Tick matches 105 positioned ^ ^ ^5 positioned ~ ~5 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.12.skill_explode_damage
-    execute if score @s 3L.Tick matches 110 positioned ^ ^ ^5 positioned ~ ~2 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.12.skill_explode_damage
-    execute if score @s 3L.Tick matches 115 positioned ^ ^ ^5 positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/2.13.skill_explode_damage2
+    execute if score @s 3L.Tick matches 100 positioned ^ ^ ^5 positioned ~ ~7 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/skill_explode/2.skill_explode_particle_and_damage
+    execute if score @s 3L.Tick matches 105 positioned ^ ^ ^5 positioned ~ ~5 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/skill_explode/2.skill_explode_particle_and_damage
+    execute if score @s 3L.Tick matches 110 positioned ^ ^ ^5 positioned ~ ~2 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/skill_explode/2.skill_explode_particle_and_damage
+    execute if score @s 3L.Tick matches 115 positioned ^ ^ ^5 positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/0129.lexiel/tick/skill_explode/3.skill_explode_particle_and_damage2
 
 # タグを消す
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillExplode

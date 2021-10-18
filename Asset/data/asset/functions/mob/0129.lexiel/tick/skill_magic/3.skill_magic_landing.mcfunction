@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.9.skill_magic_damage
+#> asset:mob/0129.lexiel/tick/skill_magic/3.skill_magic_landing
 #
 # ダメージ処理
 #
-# @within function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+# @within function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 
 # 演出
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10

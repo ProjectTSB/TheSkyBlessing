@@ -1,8 +1,8 @@
-#> asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+#> asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 #
 #　弾の再起部分（ヘトゥケダゥのやつとほぼ一緒）
 #
-# @within function asset:mob/0129.lexiel/tick/2.7.skill_magic
+# @within function asset:mob/0129.lexiel/tick/skill_magic/1.skill_magic
 
 # 着弾検知
     execute if entity @e[type=player,gamemode=!spectator,distance=..1.7] run tag @s add Landing
@@ -18,7 +18,7 @@
     playsound entity.blaze.shoot master @a ~ ~ ~ 0.4 2
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:mob/0129.lexiel/tick/2.9.skill_magic_damage
+    execute if entity @s[tag=Landing] run function asset:mob/0129.lexiel/tick/skill_magic/3.skill_magic_landing
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:mob/0129.lexiel/tick/2.8.skill_magic_bullet
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
