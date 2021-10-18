@@ -13,9 +13,11 @@
     function lib:heal/modifier
 # 対象探索
     function asset:sacred_treasure/0262.angel_ray_lv.1/effect/find_target
+# 自身を対象から外す
+    tag @s remove Target
 # 処理
-    execute as @e[type=#lib:living,tag=Enemy,distance=..12] run function lib:damage/
-    execute as @e[type=#lib:living,tag=Friend,distance=..12] run function lib:heal/
+    execute as @e[type=#lib:living,tag=Target,tag=Enemy,distance=..12] run function lib:damage/
+    execute as @e[type=#lib:living,tag=Target,tag=Friend,distance=..12] run function lib:heal/
     execute as @e[type=player,distance=..12] run function lib:heal/
 # リセット
     tag @e[type=#lib:living,tag=Target] remove Target
