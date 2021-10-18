@@ -28,6 +28,7 @@
         "asset:mob/0065.night_shadow/summon/1.trigger",
         "asset:mob/0089.decapitation/summon/1.trigger",
         "asset:mob/0107.dark_ender/summon/1.trigger",
+        "asset:mob/0166.flying_potion/summon/1.trigger",
         "asset:mob/0162.sheep_chan/summon/1.trigger"
     ]
 }
