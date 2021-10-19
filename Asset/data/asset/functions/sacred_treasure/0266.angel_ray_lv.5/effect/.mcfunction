@@ -9,11 +9,11 @@
 #declare tag Target
 
 # それぞれでmodifierを実行するのは面倒なので先に処理してしまう
-    data modify storage lib: Argument.Damage set value 42.3d
+    data modify storage lib: Argument.Damage set value 53.8d
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-    data modify storage lib: Argument.Heal set value 18.76d
+    data modify storage lib: Argument.Heal set value 28.3d
     function lib:heal/modifier
 # 対象探索
     function asset:sacred_treasure/0266.angel_ray_lv.5/effect/find_target

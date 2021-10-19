@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ホーリーシンボル レベル5"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"聖なる魔法陣を生成し"}','{"text":"発動者および味方の精神を浄化する。"}','""','{"text":"[詳細]","color":"#ffde6e"}','[{"text":"1秒ごとにMPを","color":"white"},{"text":"9","color":"#6e99ff"},{"text":"回復する。","color":"white"}]','{"text":"10秒間、物理/魔法ダメージ、攻撃速度が","color":"white"}','[{"text":"9","color":"#6e99ff"},{"text":"%増加する。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"聖なる魔法陣を生成し"}','{"text":"発動者および味方の精神を浄化する。"}','""','{"text":"[詳細]","color":"#ffde6e"}','[{"text":"1秒ごとにMPを","color":"white"},{"text":"9","color":"#6e99ff"},{"text":"回復する。","color":"white"}]','{"text":"16秒間、物理/魔法ダメージ、攻撃速度が","color":"white"}','[{"text":"9","color":"#6e99ff"},{"text":"%増加する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
