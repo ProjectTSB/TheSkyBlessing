@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0262.angel_ray_lv.1/3.main
 
+#> Target
+# @private
+#declare tag Target
+
 # それぞれでmodifierを実行するのは面倒なので先に処理してしまう
     data modify storage lib: Argument.Damage set value 33.1d
     data modify storage lib: Argument.AttackType set value "Magic"
@@ -14,11 +18,14 @@
 # 対象探索
     function asset:sacred_treasure/0262.angel_ray_lv.1/effect/find_target
 # 自身を対象から外す
-    tag @s remove Target
+    tag @s remove TargetCandidate
+# 対象を8体に絞る
+    tag @e[type=#lib:living,tag=TargetCandidate,distance=..13,sort=nearest,limit=8] add Target
 # 処理
-    execute as @e[type=#lib:living,tag=Target,tag=Enemy,distance=..12] run function lib:damage/
-    execute as @e[type=#lib:living,tag=Target,tag=Friend,distance=..12] run function lib:heal/
-    execute as @e[type=player,distance=..12] run function lib:heal/
+    execute as @e[type=#lib:living,tag=Target,tag=Enemy,distance=..13] run function lib:damage/
+    execute as @e[type=#lib:living,tag=Target,tag=Friend,distance=..13] run function lib:heal/
+    execute as @e[type=player,distance=..13] run function lib:heal/
 # リセット
-    tag @e[type=#lib:living,tag=Target] remove Target
+    tag @e[type=#lib:living,tag=TargetCandidate,distance=..13] remove TargetCandidate
+    tag @e[type=#lib:living,tag=Target,distance=..13] remove Target
     data remove storage lib: Argument

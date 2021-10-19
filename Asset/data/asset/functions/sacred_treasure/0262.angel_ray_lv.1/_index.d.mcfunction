@@ -5,4 +5,4 @@
 # @within function asset:sacred_treasure/0262.angel_ray_lv.1/**
     #declare tag 7A.AngelRay
     #declare tag Init
-    #declare tag Target
+    #declare tag TargetCandidate
