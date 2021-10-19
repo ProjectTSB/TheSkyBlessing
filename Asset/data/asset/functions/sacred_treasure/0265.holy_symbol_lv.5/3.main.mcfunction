@@ -8,5 +8,5 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["79.HolySymbol","Object","Uninterferable"]}
+    summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["7D.HolySymbol","Object","Uninterferable"]}
     function asset:sacred_treasure/0265.holy_symbol_lv.5/recursive

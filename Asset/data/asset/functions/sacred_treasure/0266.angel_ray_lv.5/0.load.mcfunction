@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0266.angel_ray_lv.5/**
-    scoreboard objectives add 7A.AngelRay dummy
+    scoreboard objectives add 7E.HolySymbol dummy

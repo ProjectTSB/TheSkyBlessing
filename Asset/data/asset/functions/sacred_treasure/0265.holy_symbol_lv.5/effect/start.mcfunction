@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0265.holy_symbol_lv.5/symbol/
 
 # 処理化
-    scoreboard players set @s 79.HolySymbol 0
+    scoreboard players set @s 7D.HolySymbol 0
 # ステータス強化
     # 攻撃速度
         attribute @s generic.attack_speed modifier add 1-0-1-0-10900000000 "HolySymbol-Modifier" 0.09 multiply
