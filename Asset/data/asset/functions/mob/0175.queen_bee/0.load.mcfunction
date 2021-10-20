@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0175.queen_bee/**
-    scoreboard objectives add 
+    scoreboard objectives add 4V.Tick
