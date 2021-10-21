@@ -2,9 +2,7 @@
 #
 #
 #
-# @within function
-#   asset:mob/0175.queen_bee/tick/2.tick
-#   asset:mob/0175.queen_bee/tick/armorstand_respawn
+# @within function asset:mob/0175.queen_bee/tick/**
 
 # 演出
    particle dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 10 normal @a

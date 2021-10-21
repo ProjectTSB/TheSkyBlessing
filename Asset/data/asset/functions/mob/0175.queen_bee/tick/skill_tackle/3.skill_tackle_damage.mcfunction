@@ -1,0 +1,21 @@
+#> asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+#
+#
+#
+# @within function asset:mob/0175.queen_bee/tick/skill_tackle/1.skill_tackle
+
+# ダメージ判定
+# 与えるダメージ
+    data modify storage lib: Argument.Damage set value 6f
+# 属性
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "None"
+# 補正functionを実行
+    function lib:damage/modifier
+# 対象
+    execute as @p[distance=..1] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
+
+# プレイヤーにダメージを与えたらタグを付与
+    execute if entity @p[distance=..1] run tag @s add 4V.SkillTackleDamageHit
