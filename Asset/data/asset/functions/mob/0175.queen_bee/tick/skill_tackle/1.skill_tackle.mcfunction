@@ -8,7 +8,9 @@
     execute if score @s 4V.Tick matches 10 run function asset:mob/0175.queen_bee/tick/look_player
 
 # 一定時間突進し続ける
-    execute if score @s 4V.Tick matches 15..20 run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
+    execute if score @s 4V.Tick matches 15..20 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
+    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 15..20 run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+    execute if score @s 4V.Tick matches 15..20 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
     execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 15..20 run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
 # タグを消す
     execute if score @s 4V.Tick matches 20 run tag @s remove 4V.SkillTackleDamageHit
