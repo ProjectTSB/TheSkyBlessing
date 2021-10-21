@@ -15,11 +15,11 @@
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $11 Const
     # ゾンビを召喚するためのIDを選択
-        execute if score $Random Temporary matches 1..3 run data modify storage api: Argument.ID set value 95
-        execute if score $Random Temporary matches 4..5 run data modify storage api: Argument.ID set value 96
-        execute if score $Random Temporary matches 6..7 run data modify storage api: Argument.ID set value 97
-        execute if score $Random Temporary matches 8..9 run data modify storage api: Argument.ID set value 98
-        execute if score $Random Temporary matches 10..11 run data modify storage api: Argument.ID set value 99
+        execute if score $Random Temporary matches 0..2 run data modify storage api: Argument.ID set value 95
+        execute if score $Random Temporary matches 3..4 run data modify storage api: Argument.ID set value 96
+        execute if score $Random Temporary matches 5..6 run data modify storage api: Argument.ID set value 97
+        execute if score $Random Temporary matches 7..8 run data modify storage api: Argument.ID set value 98
+        execute if score $Random Temporary matches 9..10 run data modify storage api: Argument.ID set value 99
 
 # リセット
     scoreboard players reset $Random Temporary
