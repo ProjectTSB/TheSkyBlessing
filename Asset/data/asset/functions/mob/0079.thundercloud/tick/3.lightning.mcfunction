@@ -1,8 +1,8 @@
-#> asset:mob/0079.thundercloud_basic/tick/3.lightning
+#> asset:mob/0079.thundercloud/tick/3.lightning
 #
 #
 #
-# @within function asset:mob/0079.thundercloud_basic/tick/2.tick
+# @within function asset:mob/0079.thundercloud/tick/2.tick
 
 # 雷を召喚
     data modify storage api: Argument.ID set value 80

@@ -1,8 +1,8 @@
-#> asset:mob/0079.thundercloud_basic/summon/2.summon
+#> asset:mob/0079.thundercloud/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0079.thundercloud_basic/summon/1.trigger
+# @within function asset:mob/0079.thundercloud/summon/1.trigger
 
 # 元となるMobを召喚する
     summon marker ~ ~ ~ {Tags:["MobInit"]}

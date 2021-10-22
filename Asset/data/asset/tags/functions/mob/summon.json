@@ -25,8 +25,7 @@
         "asset:mob/0037.fire_spreader/summon/1.trigger",
         "asset:mob/0047.the_heretic/summon/1.trigger",
         "asset:mob/0078.messenger_of_thunder/summon/1.trigger",
-        "asset:mob/0079.thundercloud_basic/summon/1.trigger",
-        "asset:mob/0080.lightning/summon/1.trigger",
+        "asset:mob/0079.thundercloud/summon/1.trigger",
         "asset:mob/0089.decapitation/summon/1.trigger"
     ]
 }
