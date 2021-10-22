@@ -20,6 +20,7 @@
         "asset:mob/0065.night_shadow/attack/1.trigger",
         "asset:mob/0089.decapitation/attack/1.trigger",
         "asset:mob/0107.dark_ender/attack/1.trigger",
-        "asset:mob/0166.flying_potion/attack/1.trigger"
+        "asset:mob/0166.flying_potion/attack/1.trigger",
+        "asset:mob/0177.pillager/attack/1.trigger"
     ]
 }
