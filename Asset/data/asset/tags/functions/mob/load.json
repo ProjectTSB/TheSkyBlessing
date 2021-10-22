@@ -9,6 +9,7 @@
         "asset:mob/0027.skull_sniper/0.load",
         "asset:mob/0078.messenger_of_thunder/0.load",
         "asset:mob/0079.thundercloud_basic/0.load",
-        "asset:mob/0080.lightning/0.load"
+        "asset:mob/0080.lightning/0.load",
+        "asset:mob/0065.night_shadow/0.load"
     ]
 }

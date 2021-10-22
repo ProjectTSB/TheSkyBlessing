@@ -6,6 +6,7 @@
         "asset:mob/0019.horus_priest/summon/1.trigger",
         "asset:mob/0027.skull_sniper/summon/1.trigger",
         "asset:mob/0007.ectoplasm/summon/1.trigger",
+        "asset:mob/0064.artery/summon/1.trigger",
         "asset:mob/0031.tomb_robbing/summon/1.trigger",
         "asset:mob/0029.skeleton_archer/summon/1.trigger",
         "asset:mob/0005.thief/summon/1.trigger",
@@ -26,6 +27,11 @@
         "asset:mob/0047.the_heretic/summon/1.trigger",
         "asset:mob/0078.messenger_of_thunder/summon/1.trigger",
         "asset:mob/0079.thundercloud/summon/1.trigger",
-        "asset:mob/0089.decapitation/summon/1.trigger"
+        "asset:mob/0089.decapitation/summon/1.trigger",
+        "asset:mob/0065.night_shadow/summon/1.trigger",
+        "asset:mob/0089.decapitation/summon/1.trigger",
+        "asset:mob/0107.dark_ender/summon/1.trigger",
+        "asset:mob/0166.flying_potion/summon/1.trigger",
+        "asset:mob/0162.sheep_chan/summon/1.trigger"
     ]
 }

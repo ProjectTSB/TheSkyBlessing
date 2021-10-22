@@ -42,7 +42,7 @@
                 ]
             },
             {
-                "label":"id",
+                "label": "id",
                 "parts": "/^id$/"
             }
         ]
@@ -82,7 +82,13 @@
     ],
     "datapack.lint.nameOfTeams": [
         "error",
-        "PascalCase"
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "allowMoreParts": true,
+            "sep": ".",
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+        }
     ],
     "datapack.lint.nbtArrayBracketSpacing": {
         "inside": 0
@@ -1615,6 +1621,70 @@
                     "append": {
                         "key": "values",
                         "elem": "asset:mob/%namespace%/rejoin_process"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "スポナー/テンプレート",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/spawner/%namespace%/.mcfunction",
+                    "content": [
+                        "#> asset:spawner/%namespace%/",
+                        "#",
+                        "# スポナーの登録処理",
+                        "#",
+                        "# @within tag/function asset:spawner/register",
+                        "",
+                        "execute positioned <X> <Y> <Z> unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/%namespace%/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/spawner/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:spawner/%namespace%/register",
+                        "#",
+                        "# スポナーの定義処理",
+                        "#",
+                        "# @within function asset:spawner/%namespace%/",
+                        "",
+                        "# SpawnPotentials (int | int[] | ({ Weight: int, Id: int })[])",
+                        "    data modify storage asset:spawner SpawnPotentials set value ",
+                        "# 体力 (int) (オプション)",
+                        "    # data modify storage asset:spawner HP set value ",
+                        "# 一度に召喚する数 (int) (オプション)",
+                        "    # data modify storage asset:spawner SpawnCount set value ",
+                        "# 動作範囲 (int) (オプション) // distance <= 128",
+                        "    # data modify storage asset:spawner SpawnRange set value ",
+                        "# 初回召喚時間 (int) (オプション)",
+                        "    # data modify storage asset:spawner Delay set value ",
+                        "# 最低召喚間隔 (int) (オプション)",
+                        "    # data modify storage asset:spawner MinSpawnDelay set value ",
+                        "# 最大召喚間隔 (int) (オプション)",
+                        "    # data modify storage asset:spawner MaxSpawnDelay set value ",
+                        "# 近くのエンティティの最大数 (int) (オプション)",
+                        "    # data modify storage asset:spawner MaxNearbyEntities set value ",
+                        "# この範囲にプレイヤーが存在するとき、Mobの召喚を開始する (float) (オプション)",
+                        "    # data modify storage asset:spawner RequiredPlayerRange set value ",
+                        "",
+                        "# 登録処理",
+                        "    function asset:spawner/common/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/spawner/register.json",
+                    "content": {
+                        "values": [
+                            "asset:spawner/%namespace%/.mcfunction"
+                        ]
+                    },
+                    "append": {
+                        "key": "values",
+                        "elem": "asset:spawner/%namespace%/"
                     }
                 }
             ]
