@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0079.thundercloud/**
     scoreboard objectives add 27.Tick dummy
+    scoreboard objectives add 27.FallThunder dummy
