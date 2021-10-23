@@ -16,6 +16,12 @@
         "asset:sacred_treasure/0369.fire_magic/0.load",
         "asset:sacred_treasure/0379.miracle_rod/0.load",
         "asset:sacred_treasure/0610.call_fish/0.load",
-        "asset:sacred_treasure/0647.thorn_armor/0.load"
+        "asset:sacred_treasure/0647.thorn_armor/0.load",
+        "asset:sacred_treasure/0261.holy_symbol_lv.1/0.load",
+        "asset:sacred_treasure/0262.angel_ray_lv.1/0.load",
+        "asset:sacred_treasure/0265.holy_symbol_lv.5/0.load",
+        "asset:sacred_treasure/0266.angel_ray_lv.5/0.load",
+        "asset:sacred_treasure/0269.holy_symbol_lv.10/0.load",
+        "asset:sacred_treasure/0270.angel_ray_lv.10/0.load"
     ]
 }
