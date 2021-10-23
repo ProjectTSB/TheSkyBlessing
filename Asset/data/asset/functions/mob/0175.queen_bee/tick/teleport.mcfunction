@@ -18,7 +18,7 @@
     tag @e[type=armor_stand,tag=4V.ArmorStand,distance=..0.01,sort=nearest,limit=1] add 4V.ArmorStandThis
 
 # ワープ
-    execute at @p positioned ~ ~40 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^40 if block ~ ~ ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~ facing entity @p
+    execute at @p positioned ~ ~40 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^40 if block ~ ~ ~ #lib:no_collision_without_fluid run tp @s ~ ~2 ~ facing entity @p
 # もし壁に埋まってたらちょっと前に出る(あくまで念の為の処理だし別に壁に埋まってようが問題はない)
     execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
 

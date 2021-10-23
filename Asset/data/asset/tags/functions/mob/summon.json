@@ -30,6 +30,7 @@
         "asset:mob/0107.dark_ender/summon/1.trigger",
         "asset:mob/0166.flying_potion/summon/1.trigger",
         "asset:mob/0162.sheep_chan/summon/1.trigger",
-        "asset:mob/0175.queen_bee/summon/1.trigger"
+        "asset:mob/0175.queen_bee/summon/1.trigger",
+        "asset:mob/0176.killer_bee/summon/1.trigger"
     ]
 }
