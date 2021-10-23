@@ -9,10 +9,10 @@
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
-    execute if score @s 4V.Tick matches 0 if entity @p[distance=..100] run function asset:mob/0175.queen_bee/tick/3.skill_select
+    execute if score @s 4V.Tick matches 0 if entity @p[gamemode=!spectator] run function asset:mob/0175.queen_bee/tick/3.skill_select
 
 # プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
-    execute if score @s 4V.Tick matches 0 unless entity @p[distance=..100] run scoreboard players set @s 4V.Tick -30
+    execute if score @s 4V.Tick matches 0 unless entity @p[gamemode=!spectator] run scoreboard players set @s 4V.Tick -30
 
 # 選択したスキル発動
     execute if score @s 4V.Tick matches 0.. run function asset:mob/0175.queen_bee/tick/4.skill_active
@@ -30,3 +30,6 @@
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
     execute at @s unless entity @e[type=armor_stand,tag=4V.ArmorStand,distance=..0.01] run function asset:mob/0175.queen_bee/tick/armorstand_respawn
+
+# アマスタデスポーン処理
+    execute if entity @p[distance=100..150] run kill @e[type=armor_stand,tag=4V.ArmorStand]
