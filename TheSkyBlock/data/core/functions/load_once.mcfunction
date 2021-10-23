@@ -236,11 +236,6 @@ team modify NoCollision collisionRule never
     #   function core:load_once
     #   * lib:**
     #   * player_manager:**
-        #declare tag Believe.Flora
-        #declare tag Believe.Urban
-        #declare tag Believe.Nyaptov
-        #declare tag Believe.Wi-ki
-        #declare tag Believe.Rumor
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
