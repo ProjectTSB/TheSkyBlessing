@@ -18,6 +18,8 @@
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
+# 信仰関連の処理
+    function world_manager:area/watch_change_area
 # 神器処理
     function asset_manager:sacred_treasure/tick
 # MP回復処理

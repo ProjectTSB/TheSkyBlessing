@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 23
+data modify storage global Version set value 24
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -242,6 +242,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+
+    #> WorldManager用スコアボード
+    # @within function
+    #   world_manager:**
+    #   player_manager:** @readonly
+        scoreboard objectives add InArea dummy {"text":"居るエリア"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
