@@ -180,6 +180,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
+    #> PlayerManager - 信仰
+    # @within function player_manager:god/**
+        scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
