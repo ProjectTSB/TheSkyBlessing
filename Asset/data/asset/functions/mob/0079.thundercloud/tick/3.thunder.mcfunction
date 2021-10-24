@@ -1,4 +1,4 @@
-#> asset:mob/0079.thundercloud/tick/3.spread_thunder
+#> asset:mob/0079.thundercloud/tick/3.thunder
 #
 #
 #
