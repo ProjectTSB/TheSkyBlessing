@@ -5,7 +5,7 @@
 # @within function asset:mob/0182.skull_raven/attack/1.trigger
 
 # 演出
-   execute at @a[tag=Victim,distance=..60] run particle minecraft:lava ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
+   execute at @a[tag=Victim,distance=..60] run particle minecraft:lava ~ ~0.5 ~ 0.8 0.8 0.8 0.1 20 normal @a
    execute at @a[tag=Victim,distance=..60] run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 0.8 0.8 0
 
 # エフェクト
