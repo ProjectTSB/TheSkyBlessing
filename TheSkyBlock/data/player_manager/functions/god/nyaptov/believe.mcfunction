@@ -8,6 +8,7 @@
     tellraw @s {"text":"ニャプトフ「そうかい、せいぜい頑張ってくれ給えよ」"}
 # 処理
     # 信仰タグ付与
+        tag @s remove Believe.None
         tag @s add Believe.Nyaptov
     # 回復+30%
         data modify storage api: Argument.UUID set value [1, 2, 0, 11]

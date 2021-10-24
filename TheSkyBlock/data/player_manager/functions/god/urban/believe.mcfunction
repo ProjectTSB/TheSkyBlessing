@@ -8,6 +8,7 @@
     tellraw @s {"text":"ウルバン「吾を選ぶか！よかろう、汝の活躍に期待しているぞ！」"}
 # 処理
     # 信仰タグ付与
+        tag @s remove Believe.None
         tag @s add Believe.Urban
     # 物理攻撃+25%
         data modify storage api: Argument.UUID set value [1, 2, 0, 13]

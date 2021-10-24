@@ -8,6 +8,7 @@
     tellraw @s {"text":"ルーモア「私を信仰してくれるの？大歓迎だからね！」"}
 # 処理
     # 信仰タグ付与
+        tag @s remove Believe.None
         tag @s add Believe.Rumor
     # 雷攻撃+15%
         data modify storage api: Argument.UUID set value [1, 2, 0, 12]

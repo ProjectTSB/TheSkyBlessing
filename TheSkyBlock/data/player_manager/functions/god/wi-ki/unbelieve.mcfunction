@@ -9,6 +9,7 @@
 # 処理
     # 信仰タグ削除
         tag @s remove Believe.Wi-ki
+        tag @s add Believe.None
     # 魔法攻撃+15%
         data modify storage api: Argument.UUID set value [1, 2, 0, 14]
         function api:player_modifier/attack/magic/remove

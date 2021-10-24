@@ -9,6 +9,7 @@
 # 処理
     # 信仰タグ削除
         tag @s remove Believe.Urban
+        tag @s add Believe.None
     # 物理攻撃+25%
         data modify storage api: Argument.UUID set value [1, 2, 0, 13]
         function api:player_modifier/attack/physical/remove

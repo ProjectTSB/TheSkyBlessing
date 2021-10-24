@@ -9,6 +9,7 @@
 # 処理
     # 信仰タグ削除
         tag @s remove Believe.Rumor
+        tag @s add Believe.None
     # 雷攻撃+15%
         data modify storage api: Argument.UUID set value [1, 2, 0, 12]
         function api:player_modifier/attack/thunder/remove

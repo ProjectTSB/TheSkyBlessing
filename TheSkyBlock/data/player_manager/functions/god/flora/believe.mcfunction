@@ -8,6 +8,7 @@
     tellraw @s {"text":"フローラ「よくきたね。君を歓迎するよ...」"}
 # 処理
     # 信仰タグ付与
+        tag @s remove Believe.None
         tag @s add Believe.Flora
     # 水攻撃+20%
         data modify storage api: Argument.UUID set value [1, 2, 0, 10]

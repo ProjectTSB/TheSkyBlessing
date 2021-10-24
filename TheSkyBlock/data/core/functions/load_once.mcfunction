@@ -194,6 +194,9 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:load_once
     #   player_manager:set_team
+        team add None.LowHP
+        team add None.MedHP
+        team add None.HighHP
         team add Flora.LowHP
         team add Flora.MedHP
         team add Flora.HighHP
@@ -209,6 +212,9 @@ team modify NoCollision collisionRule never
         team add Rumor.LowHP
         team add Rumor.MedHP
         team add Rumor.HighHP
+    team modify None.LowHP color red
+    team modify None.MedHP color yellow
+    team modify None.HighHP color green
     team modify Flora.LowHP color red
     team modify Flora.MedHP color yellow
     team modify Flora.HighHP color green
@@ -224,6 +230,9 @@ team modify NoCollision collisionRule never
     team modify Rumor.LowHP color red
     team modify Rumor.MedHP color yellow
     team modify Rumor.HighHP color green
+    team modify None.LowHP prefix {"text":"  ","color":"white"}
+    team modify None.MedHP prefix {"text":"  ","color":"white"}
+    team modify None.HighHP prefix {"text":"  ","color":"white"}
     team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
