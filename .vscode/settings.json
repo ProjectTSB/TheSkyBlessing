@@ -82,7 +82,13 @@
     ],
     "datapack.lint.nameOfTeams": [
         "error",
-        "PascalCase"
+        {
+            "label": "ChainedPascalCase",
+            "allowLessParts": true,
+            "allowMoreParts": true,
+            "sep": ".",
+            "parts": "/^([A-Z\\d]+[a-z\\d]*(-[a-z\\d]+)*)+$/"
+        }
     ],
     "datapack.lint.nbtArrayBracketSpacing": {
         "inside": 0
