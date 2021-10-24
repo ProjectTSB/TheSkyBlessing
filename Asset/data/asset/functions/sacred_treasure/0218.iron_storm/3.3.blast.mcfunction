@@ -25,7 +25,7 @@
     data remove storage lib: Argument
 
 # 音
-    playsound entity.generic.explode player @a ~ ~ ~ 1 1 1
+    playsound entity.generic.explode player @a[distance=..100] ~ ~ ~ 1 1 1
 
 # パーティクル
     particle explosion ~ ~1 ~ 1.5 1 1.5 0 15 force
