@@ -3,11 +3,9 @@
 # Mobの召喚時の処理
 #
 # @within function asset:mob/0176.killer_bee/summon/1.trigger
-# @private
-    #declare tag 4V.BeeThis
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","4V.BeeThis"],Silent:1b,LifeTicks:1,DeathLootTable:"asset:mob/death/0176.killer_bee"}
+    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,LifeTicks:1,DeathLootTable:"asset:mob/death/0176.killer_bee"}
 # ID (int)
     data modify storage asset:mob ID set value 176
 # Type (string) Wikiを参照
@@ -15,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    # data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set value '{"text":"キラービー"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value

@@ -18,5 +18,5 @@
     execute if score @s 4V.Tick matches 25 run function asset:mob/0175.queen_bee/tick/skill_summon/2.skill_summon_bee
 
 # 終了処理
-    execute if score @s 4V.Tick matches 60.. run tag @s remove 4V.SkillSummon
-    execute if score @s 4V.Tick matches 60.. run scoreboard players set @s 4V.Tick -50
+    execute if score @s 4V.Tick matches 30.. run tag @s remove 4V.SkillSummon
+    execute if score @s 4V.Tick matches 30.. run scoreboard players set @s 4V.Tick -50

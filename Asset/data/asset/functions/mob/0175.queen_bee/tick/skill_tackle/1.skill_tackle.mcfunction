@@ -43,6 +43,6 @@
 # 終了処理
 # モデル戻す
     execute if score @s 4V.Tick matches 80.. run item replace entity @e[type=armor_stand,tag=4V.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stone{CustomModelData:20052}
-# teleportして少し待つ
+# リセット処理
     execute if score @s 4V.Tick matches 80.. run tag @s remove 4V.SkillTackle
     execute if score @s 4V.Tick matches 80.. run scoreboard players set @s 4V.Tick -60

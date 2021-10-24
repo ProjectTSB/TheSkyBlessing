@@ -15,11 +15,6 @@
     data modify storage api: Argument.ID set value 176
     function api:mob/summon
 
-# でてきたモブをぶっ飛ばす
-    scoreboard players set $VectorMagnitude Lib 50
-    execute as @e[type=vex,tag=4V.BeeThis] at @s facing entity @p feet run function lib:motion/
-    tag @e[type=vex,tag=4V.BeeThis] remove 4V.BeeThis
-
 # リセット
     scoreboard players reset $VectorMagnitude
 
