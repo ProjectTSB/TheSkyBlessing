@@ -10,6 +10,12 @@
         "asset:mob/0038.laser_eye/tick/1.trigger",
         "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
         "asset:mob/0019.horus_priest/tick/1.trigger",
-        "asset:mob/0115.jewel_bullet/tick/1.trigger"
+        "asset:mob/0115.jewel_bullet/tick/1.trigger",
+        "asset:mob/0065.night_shadow/tick/1.trigger",
+        "asset:mob/0124.skull_harpy/tick/1.trigger",
+        "asset:mob/0129.lexiel/tick/1.trigger",
+        "asset:mob/0092.red_rose/tick/1.trigger",
+        "asset:mob/0073.clutch_spider/tick/1.trigger",
+        "asset:mob/0138.combat_turret/tick/1.trigger"
     ]
 }
