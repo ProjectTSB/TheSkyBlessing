@@ -3,4 +3,4 @@
 #
 #> tag
 # @within function asset:sacred_treasure/0690.neptune_trident/**
-    #declare tag HS.Fullset
+    #declare score_holder $RandomDamage
