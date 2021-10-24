@@ -34,6 +34,7 @@
         "asset:mob/0166.flying_potion/attack/1.trigger",
         "asset:mob/0178.vindicator/attack/1.trigger",
         "asset:mob/0177.pillager/attack/1.trigger",
-        "asset:mob/0179.trindicator/attack/1.trigger"
+        "asset:mob/0179.trindicator/attack/1.trigger",
+        "asset:mob/0182.skull_raven/attack/1.trigger"
     ]
 }
