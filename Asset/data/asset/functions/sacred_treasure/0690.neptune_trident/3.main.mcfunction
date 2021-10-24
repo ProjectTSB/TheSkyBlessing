@@ -11,6 +11,7 @@
 
 # 演出
     execute at @e[type=#lib:living,tag=Victim,distance=..6] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 50 normal @a
+    execute at @e[type=#lib:living,tag=Victim,distance=..6] run particle minecraft:dust 0 0 1 1 ~ ~1.2 ~ 0.3 0.4 0.3 0 50 normal @a
     execute at @e[type=#lib:living,tag=Victim,distance=..6] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.85 0.9 0
 
 # ダメージ

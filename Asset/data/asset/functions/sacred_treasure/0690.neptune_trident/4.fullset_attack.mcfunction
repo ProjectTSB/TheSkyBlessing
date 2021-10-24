@@ -6,6 +6,7 @@
 
 # 演出 as @e[tag=!Victim]なのは意図的です
     execute at @e[type=#lib:living,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 80 normal @a
+    execute at @e[type=#lib:living,tag=Victim,distance=..6] run particle minecraft:dust 0 0 1 1 ~ ~1.2 ~ 0.3 0.4 0.3 0 20 normal @a
     execute at @e[type=#lib:living,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.8 0.9 0
 # ダメージ
     #ダメージブレのための処理
