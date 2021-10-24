@@ -10,7 +10,7 @@
 
 # 演出
     particle minecraft:cloud ~ ~1 ~ 0 0 0 0.4 20
-    playsound entity.ender_dragon.flap hostile @a ~ ~ ~ 1 0.8
+    playsound entity.ender_dragon.flap hostile @a ~ ~ ~ 1 0.4 0
 
 # 浮遊を自分に付与
     effect give @s levitation 1 8 true
