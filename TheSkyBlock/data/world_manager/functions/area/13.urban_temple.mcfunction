@@ -5,6 +5,6 @@
 # @within function world_manager:area/watch_change_area
 
 # エリアセット
-    scoreboard players set @s InArea 13
+    scoreboard players set $NextInArea Temporary 13
 # 神殿の処理
-    function player_manager:god/urban/
+    execute unless score @s InArea matches 13 run function player_manager:god/urban/

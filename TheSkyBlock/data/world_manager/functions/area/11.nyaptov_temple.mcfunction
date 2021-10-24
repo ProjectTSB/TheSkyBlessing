@@ -5,6 +5,6 @@
 # @within function world_manager:area/watch_change_area
 
 # エリアセット
-    scoreboard players set @s InArea 11
+    scoreboard players set $NextInArea Temporary 11
 # 神殿の処理
-    function player_manager:god/nyaptov/
+    execute unless score @s InArea matches 11 run function player_manager:god/nyaptov/

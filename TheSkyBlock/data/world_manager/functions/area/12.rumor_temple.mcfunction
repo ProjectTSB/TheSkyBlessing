@@ -5,6 +5,6 @@
 # @within function world_manager:area/watch_change_area
 
 # エリアセット
-    scoreboard players set @s InArea 12
+    scoreboard players set $NextInArea Temporary 12
 # 神殿の処理
-    function player_manager:god/rumor/
+    execute unless score @s InArea matches 12 run function player_manager:god/rumor/
