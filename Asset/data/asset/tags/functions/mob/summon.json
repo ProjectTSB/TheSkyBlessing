@@ -28,6 +28,20 @@
         "asset:mob/0065.night_shadow/summon/1.trigger",
         "asset:mob/0089.decapitation/summon/1.trigger",
         "asset:mob/0107.dark_ender/summon/1.trigger",
-        "asset:mob/0073.clutch_spider/summon/1.trigger"
+        "asset:mob/0073.clutch_spider/summon/1.trigger",
+        "asset:mob/0138.combat_turret/summon/1.trigger",
+        "asset:mob/0141.honey_archer/summon/1.trigger",
+        "asset:mob/0142.honey_soldier/summon/1.trigger",
+        "asset:mob/0146.prismarine_warrior/summon/1.trigger",
+        "asset:mob/0147.prismarine_slayer/summon/1.trigger",
+        "asset:mob/0148.prismarine_atlatl/summon/1.trigger",
+        "asset:mob/0159.freeze_guardian/summon/1.trigger",
+        "asset:mob/0161.lumberjack/summon/1.trigger",
+        "asset:mob/0169.blaze/summon/1.trigger",
+        "asset:mob/0166.flying_potion/summon/1.trigger",
+        "asset:mob/0162.sheep_chan/summon/1.trigger",
+        "asset:mob/0178.vindicator/summon/1.trigger",
+        "asset:mob/0177.pillager/summon/1.trigger",
+        "asset:mob/0179.trindicator/summon/1.trigger"
     ]
 }
