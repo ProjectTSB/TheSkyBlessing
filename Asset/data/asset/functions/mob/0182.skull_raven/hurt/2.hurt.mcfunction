@@ -17,7 +17,7 @@
 
 # プレイヤーから離れる
     scoreboard players set $VectorMagnitude Lib 150
-    execute facing entity @p[gamemode=!spectator,tag=Attacker] eyes rotated ~180 -10 run function lib:motion/
+    execute facing entity @p[tag=Attacker] eyes rotated ~180 -10 run function lib:motion/
 
 # リセット
     scoreboard players reset $VectorMagnitude
