@@ -16,6 +16,7 @@
         "brown_stained_glass",
         "green_stained_glass",
         "red_stained_glass",
-        "black_stained_glass"
+        "black_stained_glass",
+        "tinted_glass"
     ]
 }

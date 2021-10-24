@@ -20,6 +20,16 @@
         "asset:mob/0065.night_shadow/attack/1.trigger",
         "asset:mob/0089.decapitation/attack/1.trigger",
         "asset:mob/0107.dark_ender/attack/1.trigger",
-        "asset:mob/0141.honey_archer/attack/1.trigger"
+        "asset:mob/0141.honey_archer/attack/1.trigger",
+        "asset:mob/0142.honey_soldier/attack/1.trigger",
+        "asset:mob/0146.prismarine_warrior/attack/1.trigger",
+        "asset:mob/0147.prismarine_slayer/attack/1.trigger",
+        "asset:mob/0148.prismarine_atlatl/attack/1.trigger",
+        "asset:mob/0159.freeze_guardian/attack/1.trigger",
+        "asset:mob/0169.blaze/attack/1.trigger",
+        "asset:mob/0166.flying_potion/attack/1.trigger",
+        "asset:mob/0178.vindicator/attack/1.trigger",
+        "asset:mob/0177.pillager/attack/1.trigger",
+        "asset:mob/0179.trindicator/attack/1.trigger"
     ]
 }
