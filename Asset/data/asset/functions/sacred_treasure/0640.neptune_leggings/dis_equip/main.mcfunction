@@ -22,5 +22,5 @@
     function api:player_modifier/defense/water/remove
 
 # フルセット解除
-    execute if entity @s[tag=HS.Fullset] run function asset:sacred_treasure/0639.neptune_armor/9.fullset_dis_equip
+    execute if entity @s[tag=HS.Fullset] run function asset:sacred_treasure/0639.neptune_armor/10.fullset_dis_equip
 

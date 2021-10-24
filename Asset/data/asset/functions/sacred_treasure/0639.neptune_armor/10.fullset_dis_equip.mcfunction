@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0639.neptune_armor/9.fullset_dis_equip
+#> asset:sacred_treasure/0639.neptune_armor/10.fullset_dis_equip
 #
 #
 #

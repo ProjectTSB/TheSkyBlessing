@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0639.neptune_armor/8.attack
+#> asset:sacred_treasure/0639.neptune_armor/9.attack
 #
 #
 #
-# @within function asset:sacred_treasure/0639.neptune_armor/7.attack_trigger
+# @within function asset:sacred_treasure/0639.neptune_armor/8.attack_trigger
 
 # 攻撃した時にタグを付与
     tag @s add HS.Attack
@@ -11,8 +11,8 @@
     scoreboard players set @s HS.AttackCool 2
 
 #　演出
-    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..100] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 100 force @a[distance=..40]
-    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..100] run playsound entity.dolphin.splash master @a ~ ~ ~ 1 1 0
+    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..100] run particle minecraft:splash ~ ~2 ~ 0.5 2 0.5 0 200 force @a[distance=..40]
+    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..100] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 1 0.9 0
 
 # ダメージ設定
         data modify storage lib: Argument.Damage set value 20.0f

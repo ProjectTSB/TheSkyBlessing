@@ -5,8 +5,8 @@
 # @within function asset:sacred_treasure/0690.neptune_trident/2.check_condition
 
 # 演出 as @e[tag=!Victim]なのは意図的です
-    execute at @e[type=#lib:living,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 50 normal @a
-
+    execute at @e[type=#lib:living,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run particle splash ~ ~1.2 ~ 0.3 0 0.3 0 80 normal @a
+    execute at @e[type=#lib:living,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,distance=..3] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.8 0.9 0
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
