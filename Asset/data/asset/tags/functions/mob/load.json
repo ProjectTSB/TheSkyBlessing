@@ -8,6 +8,9 @@
         "asset:mob/0019.horus_priest/0.load",
         "asset:mob/0027.skull_sniper/0.load",
         "asset:mob/0065.night_shadow/0.load",
-        "asset:mob/0129.lexiel/0.load"
+        "asset:mob/0129.lexiel/0.load",
+        "asset:mob/0092.red_rose/0.load",
+        "asset:mob/0073.clutch_spider/0.load",
+        "asset:mob/0138.combat_turret/0.load"
     ]
 }
