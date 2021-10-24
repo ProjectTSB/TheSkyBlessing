@@ -16,9 +16,7 @@
     execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:mob/0175.queen_bee/tick/skill_needle/3.skill_needle_shot
 
 # 演出
-    playsound minecraft:entity.zombie.attack_wooden_door hostile @a[distance=..30] ~ ~ ~ 1 2 0.6
-    playsound minecraft:entity.zombie.attack_wooden_door hostile @a[distance=..30] ~ ~ ~ 1 0 0.6
-    playsound minecraft:entity.generic.explode hostile @a[distance=..30] ~ ~ ~ 0.8 2 0.6
+    playsound minecraft:entity.bee.sting hostile @a[distance=..30] ~ ~ ~ 1 1 1
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker,limit=1]
