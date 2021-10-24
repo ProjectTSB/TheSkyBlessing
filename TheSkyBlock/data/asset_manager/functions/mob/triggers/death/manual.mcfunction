@@ -4,6 +4,7 @@
 #
 # @within function lib:damage/core/non-player-process
 
+say asset_manager:mob/triggers/death/manual
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
     data modify entity @s DeathLootTable set value "empty"
