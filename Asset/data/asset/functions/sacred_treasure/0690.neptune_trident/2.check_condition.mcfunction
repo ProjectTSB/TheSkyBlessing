@@ -2,7 +2,7 @@
 #
 # 神器の発動条件をチェックします
 #
-# フルセット時以外はMPを消費する過程があって、フルセット時はMPを消費せず攻撃
+#
 #
 # @within function asset:sacred_treasure/0690.neptune_trident/1.trigger
 

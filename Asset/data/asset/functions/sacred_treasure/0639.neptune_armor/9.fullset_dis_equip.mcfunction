@@ -7,7 +7,7 @@
 # Tag削除
     tag @s remove HS.Fullset
 
-# 水ダメージ量+10%
+# 水ダメージ量
     data modify storage api: Argument.UUID set value [I;1,1,639,0]
     function api:player_modifier/defense/water/remove
 
