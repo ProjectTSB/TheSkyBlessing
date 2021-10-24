@@ -21,5 +21,5 @@ say lib:damage/
     execute unless data storage lib: Argument.ElementType run data modify storage lib: Argument.ElementType set value "None"
     execute unless data storage lib: Argument.DisableParticle run data modify storage lib: Argument.DisableParticle set value 0b
     execute unless data storage lib: Argument.BypassResist run data modify storage lib: Argument.BypassResist set value 0b
-# Healthを持つEntityであれば実行
-    execute if entity @s[type=#lib:living,tag=!Uninterferable] run function lib:damage/core/attack
+# Healthを持つ干渉可能なEntityかつ死んでいなければ実行
+    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] run function lib:damage/core/attack
