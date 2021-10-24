@@ -48,6 +48,7 @@
         "asset:mob/0162.sheep_chan/summon/1.trigger",
         "asset:mob/0178.vindicator/summon/1.trigger",
         "asset:mob/0177.pillager/summon/1.trigger",
-        "asset:mob/0179.trindicator/summon/1.trigger"
+        "asset:mob/0179.trindicator/summon/1.trigger",
+        "asset:mob/0171.lumberjack_of_blue_forest/summon/1.trigger"
     ]
 }
