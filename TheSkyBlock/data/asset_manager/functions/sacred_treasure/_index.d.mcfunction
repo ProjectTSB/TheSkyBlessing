@@ -22,6 +22,7 @@
 # @within function
 #   asset_manager:sacred_treasure/check/check_special_cooldown
 #   asset_manager:sacred_treasure/use/
+#   asset_manager:sacred_treasure/tick
 #   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 
@@ -69,3 +70,7 @@
     #declare tag ChangeChest
     #declare tag ChangeLegs
     #declare tag ChangeFeet
+
+#> クールダウン表示用
+# @within function asset_manager:sacred_treasure/show_cooldown/*
+    #declare score_holder $CoolDown
