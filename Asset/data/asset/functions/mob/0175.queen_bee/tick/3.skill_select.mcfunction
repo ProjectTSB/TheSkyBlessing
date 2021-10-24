@@ -10,7 +10,7 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $2 Const
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 2
+    #scoreboard players set $Random Temporary 2
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 4V.SkillTackle
     execute if score $Random Temporary matches 1 run tag @s add 4V.SkillSummon
