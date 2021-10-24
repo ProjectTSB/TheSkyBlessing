@@ -12,4 +12,4 @@
     execute unless entity @a[gamemode=!creative,gamemode=!spectator,distance=..4] run effect give @s invisibility 1 0 true
 
 # 太陽が出ていればなると消滅
-    execute unless predicate lib:is_day run function asset:mob/0065.night_shadow/tick/3.sunrise_lapse
+    execute if predicate lib:is_day run function asset:mob/0065.night_shadow/tick/3.sunrise_lapse
