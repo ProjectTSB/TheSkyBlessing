@@ -14,7 +14,7 @@
     scoreboard players reset $Random Temporary
 
 # せっかくなら持ってるポーションの色合わせたい
-    item replace entity @s[tag=2W.Poison] weapon.mainhand with splash_potion{CustomPotionColor:26112}
-    item replace entity @s[tag=2W.Fire] weapon.mainhand with splash_potion{CustomPotionColor:13369344}
-    item replace entity @s[tag=2W.Water] weapon.mainhand with splash_potion{CustomPotionColor:8454143}
-    item replace entity @s[tag=2W.Thunder] weapon.mainhand with splash_potion{CustomPotionColor:16776960}
+    execute if entity @s[tag=2W.Poison] run item replace entity @s weapon.mainhand with splash_potion{CustomPotionColor:26112}
+    execute if entity @s[tag=2W.Fire] run item replace entity @s weapon.mainhand with splash_potion{CustomPotionColor:13369344}
+    execute if entity @s[tag=2W.Water] run item replace entity @s weapon.mainhand with splash_potion{CustomPotionColor:8454143}
+    execute if entity @s[tag=2W.Thunder] run item replace entity @s weapon.mainhand with splash_potion{CustomPotionColor:16776960}
