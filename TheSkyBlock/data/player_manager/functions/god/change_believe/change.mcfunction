@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   player_manager:god/change_believe/on_click_chat
+#   player_manager:god/change_believe/check-?/on_click
 #   player_manager:god/change_believe/change
 
 # 該当ユーザーのスコア加算

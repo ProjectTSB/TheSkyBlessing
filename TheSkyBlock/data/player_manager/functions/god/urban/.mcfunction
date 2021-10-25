@@ -7,4 +7,4 @@
 # 教徒
     execute if entity @s[tag=Believe.Urban] run function player_manager:god/urban/mercy
 # 異教徒
-    execute if entity @s[tag=!Believe.Urban] run function player_manager:god/change_believe/check
+    execute if entity @s[tag=!Believe.Urban] run function player_manager:god/change_believe/

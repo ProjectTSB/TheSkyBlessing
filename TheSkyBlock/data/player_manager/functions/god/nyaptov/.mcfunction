@@ -7,4 +7,4 @@
 # 教徒
     execute if entity @s[tag=Believe.Nyaptov] run function player_manager:god/nyaptov/mercy
 # 異教徒
-    execute if entity @s[tag=!Believe.Nyaptov] run function player_manager:god/change_believe/check
+    execute if entity @s[tag=!Believe.Nyaptov] run function player_manager:god/change_believe/
