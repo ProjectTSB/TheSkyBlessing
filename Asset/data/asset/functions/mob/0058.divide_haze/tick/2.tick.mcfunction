@@ -10,8 +10,8 @@
 # 周囲のプレイヤーにウィザー
     effect give @a[gamemode=!spectator,distance=..1.2] wither 1 2 false
 
-# 増殖スコア(周囲に増殖靄がいなければ増える)
-   execute unless entity @e[type=skeleton,scores={MobID=58},distance=0.0001..20] run scoreboard players add @s 1M.HazeCount 1
+# 増殖スコア
+   scoreboard players add @s 1M.Tick 1
 
 # 増殖
-   execute unless entity @e[type=skeleton,scores={MobID=58},distance=0.0001..20] if score @s 1M.HazeCount matches 300.. run function asset:mob/0058.divide_haze/tick/divide
+   execute if score @s 1M.Tick matches 200.. run function asset:mob/0058.divide_haze/tick/3.mob_count
