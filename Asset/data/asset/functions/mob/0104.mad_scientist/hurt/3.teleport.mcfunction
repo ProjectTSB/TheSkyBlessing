@@ -3,6 +3,7 @@
 # 殺意全開ぶっ殺す攻撃
 #
 # @within function asset:mob/0104.mad_scientist/hurt/2.hurt
+#> Private
 # @private
 #declare tag SpreadMarker
 #declare score_holder $VectorMagnitude

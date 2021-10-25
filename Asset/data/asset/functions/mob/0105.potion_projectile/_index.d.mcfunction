@@ -8,4 +8,4 @@
     #declare tag 2X.Water
     #declare tag 2X.Thunder
     #declare tag 2X.AlreadyBroken
-    #declare tag 2X.This
+    #declare tag 2X.Potion

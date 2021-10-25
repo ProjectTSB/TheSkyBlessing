@@ -4,11 +4,11 @@
 #
 # @within function asset:mob/0105.potion_projectile/tick/1.trigger
 
-# ポーションセットと向き合わせ
-    execute if entity @s[tag=2X.This] run function asset:mob/0105.potion_projectile/tick/3.potion_set
-
 # スコア
     scoreboard players add @s 2X.Tick 1
+
+# ポーションセットと向き合わせ
+    execute if score @s 2X.Tick matches 1 run function asset:mob/0105.potion_projectile/tick/3.potion_set
 
 # 移動
     execute if entity @s[tag=!2X.AlreadyBroken] if block ~ ~2.0 ~ #lib:no_collision run tp @s ^ ^ ^0.8 ~ ~1

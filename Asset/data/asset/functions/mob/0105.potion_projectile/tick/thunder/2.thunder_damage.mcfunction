@@ -3,6 +3,8 @@
 #
 #
 # @within function asset:mob/0105.potion_projectile/tick/thunder/1.break
+#> Private
+# @private
     #declare score_holder $Fluctuation
 
 # 雷属性ダメージ
