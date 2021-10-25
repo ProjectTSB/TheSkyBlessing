@@ -2,4 +2,4 @@
 #
 #
 #
-# @within function player_manager:god/rumor/
+# @within function player_manager:god/rumor/in_temple

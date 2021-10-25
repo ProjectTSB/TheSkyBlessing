@@ -7,4 +7,4 @@
 # エリアセット
     scoreboard players set $NextInArea Temporary 12
 # 神殿の処理
-    execute unless score @s InArea matches 12 run function player_manager:god/rumor/
+    execute unless score @s InArea matches 12 run function player_manager:god/rumor/in_temple

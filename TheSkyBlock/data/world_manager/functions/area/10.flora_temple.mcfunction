@@ -7,4 +7,4 @@
 # エリアセット
     scoreboard players set $NextInArea Temporary 10
 # 神殿の処理
-    execute unless score @s InArea matches 10 run function player_manager:god/flora/
+    execute unless score @s InArea matches 10 run function player_manager:god/flora/in_temple

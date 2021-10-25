@@ -1,4 +1,4 @@
-#> player_manager:god/urban/
+#> player_manager:god/urban/in_temple
 #
 #
 #

@@ -2,4 +2,4 @@
 #
 #
 #
-# @within function player_manager:god/nyaptov/
+# @within function player_manager:god/nyaptov/in_temple

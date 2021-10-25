@@ -1,4 +1,4 @@
-#> player_manager:god/wi-ki/
+#> player_manager:god/wi-ki/in_temple
 #
 #
 #

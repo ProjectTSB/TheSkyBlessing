@@ -2,4 +2,4 @@
 #
 #
 #
-# @within function player_manager:god/urban/
+# @within function player_manager:god/urban/in_temple

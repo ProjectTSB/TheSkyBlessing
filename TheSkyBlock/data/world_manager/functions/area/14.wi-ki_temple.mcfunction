@@ -7,4 +7,4 @@
 # エリアセット
     scoreboard players set $NextInArea Temporary 14
 # 神殿の処理
-    execute unless score @s InArea matches 14 run function player_manager:god/wi-ki/
+    execute unless score @s InArea matches 14 run function player_manager:god/wi-ki/in_temple

@@ -7,4 +7,4 @@
 # エリアセット
     scoreboard players set $NextInArea Temporary 11
 # 神殿の処理
-    execute unless score @s InArea matches 11 run function player_manager:god/nyaptov/
+    execute unless score @s InArea matches 11 run function player_manager:god/nyaptov/in_temple

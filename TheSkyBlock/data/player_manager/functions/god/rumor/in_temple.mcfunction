@@ -1,4 +1,4 @@
-#> player_manager:god/rumor/
+#> player_manager:god/rumor/in_temple
 #
 #
 #

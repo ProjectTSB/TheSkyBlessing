@@ -1,4 +1,4 @@
-#> player_manager:god/flora/
+#> player_manager:god/flora/in_temple
 #
 #
 #

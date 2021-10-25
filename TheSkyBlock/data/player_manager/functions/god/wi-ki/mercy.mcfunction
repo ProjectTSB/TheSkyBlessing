@@ -2,4 +2,4 @@
 #
 #
 #
-# @within function player_manager:god/wi-ki/
+# @within function player_manager:god/wi-ki/in_temple

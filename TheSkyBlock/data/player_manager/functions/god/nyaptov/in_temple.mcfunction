@@ -1,4 +1,4 @@
-#> player_manager:god/nyaptov/
+#> player_manager:god/nyaptov/in_temple
 #
 #
 #
