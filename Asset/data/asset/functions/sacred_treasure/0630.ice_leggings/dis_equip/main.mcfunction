@@ -13,7 +13,7 @@
     playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 0.8 0
 
 # フルセット効果削除
-    execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/5.fullset_dis_equip
+    execute if entity @s[tag=HH.Fullset] run function asset:sacred_treasure/0629.ice_armor/5.fullset_dis_equip
 
 
 

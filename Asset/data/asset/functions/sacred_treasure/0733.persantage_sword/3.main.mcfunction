@@ -14,10 +14,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
-    playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 1 1.75 0
-    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run particle sweep_attack ~ ~1.2 ~ 0 0 0 1 1 normal @a
-    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run particle minecraft:dust_color_transition 0 0 0.3 1 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 100 normal @a
+    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
+    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.6 1.7
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.persantage_sword/4.sweeping_particle
 
 # 3割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Magic"
