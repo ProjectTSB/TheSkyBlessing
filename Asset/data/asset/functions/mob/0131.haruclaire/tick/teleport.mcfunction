@@ -5,10 +5,8 @@
 # @within function asset:mob/0131.haruclaire/tick/**
 
 # 演出
-   particle minecraft:dust 1 1 0 1 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
-   particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0 10 normal @a
-   playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 1.4 0
-   playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 0.9 0
+   particle minecraft:dust 0.569 0.957 1 1 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
+   playsound minecraft:block.glass.break ambient @a
 
 # ワープ準備
     execute at @p[gamemode=!spectator] run summon marker ~ ~40 ~ {Tags:["SpreadMarker"]}

@@ -8,7 +8,7 @@
 # どっかいったアマスタを殺す
     execute as @e[type=armor_stand,tag=3N.ArmorStand] at @s unless entity @e[type=wither_skeleton,tag=3N.Angel,distance=0] run kill @s
 # 見た目用のアマスタを召喚
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["3N.ArmorStand","3N.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20035}},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20038}}],ArmorItems:[{},{},{},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20039}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["3N.ArmorStand","3N.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20055}},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20056}}],ArmorItems:[{},{},{},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20058}}]}
 # 位置をあわせる
     tp @e[type=armor_stand,tag=3N.ArmorStandThis,distance=..0.01] @s
 # タグを消す
