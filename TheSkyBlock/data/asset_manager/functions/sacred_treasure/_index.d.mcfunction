@@ -11,17 +11,18 @@
 #> LootTableに渡す用のscoreHolder
 # @within
 #   function
-#       asset_manager:sacred_treasure/core/create/set_data
-#       asset_manager:sacred_treasure/core/use/**
+#       asset_manager:sacred_treasure/create/set_data
+#       asset_manager:sacred_treasure/use/**
 #   loot_table
-#       asset_manager:sacred_treasure/core/get_name/has_remain
+#       asset_manager:sacred_treasure/get_name/has_remain
     #declare score_holder $Remain
     #declare score_holder $RemainMAX
 
 #> 特殊クールダウン
 # @within function
-#   asset_manager:sacred_treasure/core/check/check_special_cooldown
-#   asset_manager:sacred_treasure/core/use/
+#   asset_manager:sacred_treasure/check/check_special_cooldown
+#   asset_manager:sacred_treasure/use/
+#   asset_manager:sacred_treasure/tick
 #   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 
@@ -40,7 +41,7 @@
 
 #> check用の失敗フラグ
 # @within function
-#   asset_manager:sacred_treasure/core/check/*
+#   asset_manager:sacred_treasure/check/*
     #declare tag CheckFailed
 
 #> スニークの閾値用スコアホルダー
@@ -69,3 +70,7 @@
     #declare tag ChangeChest
     #declare tag ChangeLegs
     #declare tag ChangeFeet
+
+#> クールダウン表示用
+# @within function asset_manager:sacred_treasure/show_cooldown/*
+    #declare score_holder $CoolDown
