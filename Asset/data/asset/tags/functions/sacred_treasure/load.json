@@ -6,8 +6,8 @@
         "asset:sacred_treasure/0456.potion_of_stalling_power/0.load",
         "asset:sacred_treasure/0252.void_transaction/0.load",
         "asset:sacred_treasure/0078.self_destruct_order/0.load",
-        "asset:sacred_treasure/0456.potion_of_stalling_power/0.load",
         "asset:sacred_treasure/0297.spirit_world_trance/0.load",
+        "asset:sacred_treasure/0573.final_prism/0.load",
         "asset:sacred_treasure/0087.sheep_blessing/0.load",
         "asset:sacred_treasure/0210.terra_blade/0.load",
         "asset:sacred_treasure/0373.ice_sorcery/0.load",
@@ -16,6 +16,12 @@
         "asset:sacred_treasure/0369.fire_magic/0.load",
         "asset:sacred_treasure/0379.miracle_rod/0.load",
         "asset:sacred_treasure/0610.call_fish/0.load",
-        "asset:sacred_treasure/0647.thorn_armor/0.load"
+        "asset:sacred_treasure/0647.thorn_armor/0.load",
+        "asset:sacred_treasure/0261.holy_symbol_lv.1/0.load",
+        "asset:sacred_treasure/0262.angel_ray_lv.1/0.load",
+        "asset:sacred_treasure/0265.holy_symbol_lv.5/0.load",
+        "asset:sacred_treasure/0266.angel_ray_lv.5/0.load",
+        "asset:sacred_treasure/0269.holy_symbol_lv.10/0.load",
+        "asset:sacred_treasure/0270.angel_ray_lv.10/0.load"
     ]
 }
