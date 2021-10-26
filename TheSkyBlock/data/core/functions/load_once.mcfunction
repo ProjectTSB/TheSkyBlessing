@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 23
+data modify storage global Version set value 24
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -118,7 +118,10 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
     #> AssetManager: 神器
-    # @within function asset_manager:sacred_treasure/**
+    # @within function
+    #   core:load_once
+    #   asset_manager:sacred_treasure/**
+        bossbar add asset:special_cooldown {"text":"特殊クールダウン"}
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
         scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
@@ -133,6 +136,8 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
         scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
         scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
+    bossbar set asset:special_cooldown color green
+    bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
     # @within function
