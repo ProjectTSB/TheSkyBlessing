@@ -10,4 +10,4 @@
 # トリガー付きメッセージ
     tellraw @s [{"text":"今までに失ったアイテムが消滅しますが、本当に改宗しますか？\n"},{"text":"[改宗する]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger Believe set 2"}}]
 # リスナーの登録
-    function player_manager:god/change_believe/check-2/listener
+    schedule function player_manager:god/change_believe/check-2/listener 1t
