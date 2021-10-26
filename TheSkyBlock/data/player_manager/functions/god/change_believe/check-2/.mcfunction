@@ -5,6 +5,7 @@
 # @within function player_manager:god/change_believe/check-1/on_click
 
 # トリガー有効化
+    scoreboard players reset @s Believe
     scoreboard players enable @s Believe
 # トリガー付きメッセージ
     tellraw @s [{"text":"今までに失ったアイテムが消滅しますが、本当に改宗しますか？\n"},{"text":"[改宗する]","color":"gold","clickEvent":{"action":"run_command","value":"/trigger Believe set 2"}}]
