@@ -7,7 +7,13 @@
         "asset:mob/0023.chainsaw_zombie/0.load",
         "asset:mob/0019.horus_priest/0.load",
         "asset:mob/0027.skull_sniper/0.load",
-        "asset:mob/0059.jack_o_lantern/0.load",
-        "asset:mob/0065.night_shadow/0.load"
+        "asset:mob/0115.jewel_bullet/0.load",
+        "asset:mob/0065.night_shadow/0.load",
+        "asset:mob/0124.skull_harpy/0.load",
+        "asset:mob/0129.lexiel/0.load",
+        "asset:mob/0092.red_rose/0.load",
+        "asset:mob/0073.clutch_spider/0.load",
+        "asset:mob/0138.combat_turret/0.load",
+        "asset:mob/0059.jack_o_lantern/0.load"
     ]
 }
