@@ -5,5 +5,5 @@
 # @within function asset:sacred_treasure/*/3.main
 
 data modify storage asset:sacred_treasure TargetSlot set value 'legs'
-function asset_manager:sacred_treasure/core/use/
+function asset_manager:sacred_treasure/use/
 tag @s remove CanUsed
