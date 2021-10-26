@@ -7,7 +7,7 @@
 
     # 演出
         particle crit ~ ~3 ~ 0.025 3 0.025 0 100 normal @a
-        playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2 1
+        playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2
 
 # ダメージ設定
     # 与えるダメージ = 30

@@ -2,10 +2,14 @@
 #
 #
 #
-# @within function asset:sacred_treasure/????.ice_????/3.main
-# @within function asset:sacred_treasure/????.ice_?????/3.main
-# @within function asset:sacred_treasure/0630.ice_leggings/3.main
+# @within function
+#   asset:sacred_treasure/0628.ice_helm/3.main
+#   asset:sacred_treasure/0629.ice_armor/3.main
+#   asset:sacred_treasure/0630.ice_leggings/3.main
+#   asset:sacred_treasure/0631.ice_boots/3.main
 
+# Tag付与
+    tag @s add HH.Fullset
 
 # 引数の設定
     # UUID
@@ -17,7 +21,7 @@
 # 補正の追加
     function api:player_modifier/defense/water/add
 
-#ちょっとした演出
+# 演出
     particle falling_dust diamond_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
     particle falling_dust snow_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
     playsound block.glass.break master @a ~ ~ ~ 0.4 1.6 0
