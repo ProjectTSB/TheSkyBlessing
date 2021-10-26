@@ -7,7 +7,7 @@
 
 # ここから先は神器側の効果の処理を書く
 
-#　効果
+# 効果
     effect give @s[scores={CO.Tick=2400}] speed 20 9
     effect give @s[scores={CO.Tick=2000}] speed 20 5
     effect give @s[scores={CO.Tick=1800}] speed 20 2
