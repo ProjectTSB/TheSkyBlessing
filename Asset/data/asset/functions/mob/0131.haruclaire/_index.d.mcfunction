@@ -13,8 +13,12 @@
     #declare tag 3N.ArmorStandDeathSword
     #declare tag 3N.Angel
     #declare tag 3N.SkillIceArea
+    #declare tag 3N.SkillIceAreaHit
     #declare tag 3N.SkillIceCannon
+    #declare tag 3N.SkillIceCannonHit
+    #declare tag 3N.SkillIceCannonParticle
     #declare tag 3N.SkillIcePillar
     #declare score_holder $Count
     #declare score_holder $Random
+    #declare score_holder $4tInterval
 
