@@ -5,7 +5,7 @@
 # @within function asset:mob/0060.self_destructor/tick/1.trigger
 
 # 燃えてる場合爆発
-     execute if predicate lib:is_burnning run scoreboard players set @s 1O.ExplodeFuse 40
+     execute if predicate lib:is_burning run scoreboard players set @s 1O.ExplodeFuse 40
 # 信号のあるレッドストーンパウダーに触れると爆発
      execute if block ~ ~ ~ redstone_wire unless block ~ ~ ~ redstone_wire[power=0] run scoreboard players set @s 1O.ExplodeFuse 40
 
