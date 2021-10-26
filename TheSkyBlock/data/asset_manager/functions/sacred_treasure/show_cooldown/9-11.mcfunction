@@ -4,6 +4,6 @@
 #
 # @within function asset_manager:sacred_treasure/show_cooldown/6-11
 
-execute if score $CoolDown Temporary matches 9 run title @a actionbar [{"text":"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"|||||||||","color":"gray"}]
-execute if score $CoolDown Temporary matches 10 run title @a actionbar [{"text":"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"||||||||||","color":"gray"}]
-execute if score $CoolDown Temporary matches 11 run title @a actionbar [{"text":"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"|||||||||||","color":"gray"}]
+execute if score $CoolDown Temporary matches 9 run title @s actionbar [{"text":"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"|||||||||","color":"gray"}]
+execute if score $CoolDown Temporary matches 10 run title @s actionbar [{"text":"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"||||||||||","color":"gray"}]
+execute if score $CoolDown Temporary matches 11 run title @s actionbar [{"text":"|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||","color":"yellow"},{"text":"|||||||||||","color":"gray"}]
