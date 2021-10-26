@@ -7,6 +7,17 @@
         "asset:mob/0058.divide_haze/hurt/1.trigger",
         "asset:mob/0056.thunder_trifler/hurt/1.trigger",
         "asset:mob/0037.fire_spreader/hurt/1.trigger",
-        "asset:mob/0089.decapitation/hurt/1.trigger"
+        "asset:mob/0089.decapitation/hurt/1.trigger",
+        "asset:mob/0114.jewel_hunter/hurt/1.trigger",
+        "asset:mob/0124.skull_harpy/hurt/1.trigger",
+        "asset:mob/0129.lexiel/hurt/1.trigger",
+        "asset:mob/0053.executioners/hurt/1.trigger",
+        "asset:mob/0092.red_rose/hurt/1.trigger",
+        "asset:mob/0138.combat_turret/hurt/1.trigger",
+        "asset:mob/0141.honey_archer/hurt/1.trigger",
+        "asset:mob/0142.honey_soldier/hurt/1.trigger",
+        "asset:mob/0146.prismarine_warrior/hurt/1.trigger",
+        "asset:mob/0147.prismarine_slayer/hurt/1.trigger",
+        "asset:mob/0148.prismarine_atlatl/hurt/1.trigger"
     ]
 }

@@ -8,7 +8,6 @@
 # @private
     #declare tag HZ.FullSet
 
-
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,646,6]
 # 補正の削除

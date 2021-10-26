@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 22
+data modify storage global Version set value 24
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -118,7 +118,10 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Debug dummy {"text":"デバッグ"}
 
     #> AssetManager: 神器
-    # @within function asset_manager:sacred_treasure/**
+    # @within function
+    #   core:load_once
+    #   asset_manager:sacred_treasure/**
+        bossbar add asset:special_cooldown {"text":"特殊クールダウン"}
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
         scoreboard objectives add Sneak.Head custom:sneak_time {"text":"スニークタイム: 頭"}
@@ -133,6 +136,8 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
         scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
         scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
+    bossbar set asset:special_cooldown color green
+    bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
     # @within function
@@ -180,6 +185,56 @@ team modify NoCollision collisionRule never
     # @within function player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
+
+    #> PlayerManager - Teams
+    # @within function
+    #   core:load_once
+    #   player_manager:set_team
+        team add Flora.LowHP
+        team add Flora.MedHP
+        team add Flora.HighHP
+        team add Urban.LowHP
+        team add Urban.MedHP
+        team add Urban.HighHP
+        team add Nyaptov.LowHP
+        team add Nyaptov.MedHP
+        team add Nyaptov.HighHP
+        team add Wi-ki.LowHP
+        team add Wi-ki.MedHP
+        team add Wi-ki.HighHP
+        team add Rumor.LowHP
+        team add Rumor.MedHP
+        team add Rumor.HighHP
+    team modify Flora.LowHP color red
+    team modify Flora.MedHP color yellow
+    team modify Flora.HighHP color green
+    team modify Urban.LowHP color red
+    team modify Urban.MedHP color yellow
+    team modify Urban.HighHP color green
+    team modify Nyaptov.LowHP color red
+    team modify Nyaptov.MedHP color yellow
+    team modify Nyaptov.HighHP color green
+    team modify Wi-ki.LowHP color red
+    team modify Wi-ki.MedHP color yellow
+    team modify Wi-ki.HighHP color green
+    team modify Rumor.LowHP color red
+    team modify Rumor.MedHP color yellow
+    team modify Rumor.HighHP color green
+    team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
+    team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
+    team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
+    team modify Urban.LowHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
+    team modify Urban.MedHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
+    team modify Urban.HighHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
+    team modify Nyaptov.LowHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
+    team modify Nyaptov.MedHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
+    team modify Nyaptov.HighHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
+    team modify Wi-ki.LowHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
+    team modify Wi-ki.MedHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
+    team modify Wi-ki.HighHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
+    team modify Rumor.LowHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
+    team modify Rumor.MedHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
+    team modify Rumor.HighHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
 
     #> PlayerManager用スコアボード
     # @within
