@@ -1,4 +1,4 @@
-#> player_manager:god/rumor/passive/buff_remove
+#> player_manager:god/rumor/passive/remove
 #
 #
 #

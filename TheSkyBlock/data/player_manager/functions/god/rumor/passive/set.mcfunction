@@ -1,4 +1,4 @@
-#> player_manager:god/rumor/passive/buff_set
+#> player_manager:god/rumor/passive/set
 #
 #
 #
