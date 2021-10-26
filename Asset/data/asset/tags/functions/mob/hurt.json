@@ -18,6 +18,7 @@
         "asset:mob/0142.honey_soldier/hurt/1.trigger",
         "asset:mob/0146.prismarine_warrior/hurt/1.trigger",
         "asset:mob/0147.prismarine_slayer/hurt/1.trigger",
-        "asset:mob/0148.prismarine_atlatl/hurt/1.trigger"
+        "asset:mob/0148.prismarine_atlatl/hurt/1.trigger",
+        "asset:mob/0131.haruclaire/hurt/1.trigger"
     ]
 }
