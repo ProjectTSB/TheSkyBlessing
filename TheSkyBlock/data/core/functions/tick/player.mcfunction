@@ -22,3 +22,5 @@
     function asset_manager:sacred_treasure/tick
 # MP回復処理
     function player_manager:mp/regen/check
+# チーム処理
+    function player_manager:set_team
