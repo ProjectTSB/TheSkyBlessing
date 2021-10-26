@@ -4,4 +4,3 @@
 #> tag
 # @within function asset:sacred_treasure/06??.kitsunebi_*/**
     #declare tag IV.Fullset
-    #declare tag IV.Kitunebi

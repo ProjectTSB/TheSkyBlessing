@@ -22,4 +22,4 @@
     tag @s add IV.Fullset
 
 # スケジュールループ
-    schedule function asset:sacred_treasure/0679.kitsunebi_armor/7.schedule_loop 1t replace
+    schedule function asset:sacred_treasure/0679.kitsunebi_armor/5.schedule_loop 1t replace
