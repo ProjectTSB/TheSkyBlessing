@@ -6,5 +6,5 @@
 
 # 効果削除
     attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-00ab00000000
-    tag @s remove 4R.AttributeRemove
+    tag @s remove 4R.HealthDown
     scoreboard players reset @s 4R.Attribute

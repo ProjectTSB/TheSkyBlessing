@@ -3,4 +3,4 @@
 #
 #> Tag
 # @within function asset:mob/0171.lumberjack_of_blue_forest/**
-    #declare tag 4R.AttributeRemove
+    #declare tag 4R.HealthDown

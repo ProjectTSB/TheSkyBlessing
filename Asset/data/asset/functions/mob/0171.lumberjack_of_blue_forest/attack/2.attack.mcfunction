@@ -26,4 +26,4 @@
 
 # attribute消しのTagとスケジュールループ
     schedule function asset:mob/0171.lumberjack_of_blue_forest/attack/3.schedule_loop 1t replace
-    tag @p[tag=Victim,distance=..6] add 4R.AttributeRemove
+    tag @p[tag=Victim,distance=..6] add 4R.HealthDown
