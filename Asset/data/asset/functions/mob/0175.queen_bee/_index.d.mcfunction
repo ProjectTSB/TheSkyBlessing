@@ -9,8 +9,6 @@
     #declare tag LandingTarget
     #declare tag 4V.ArmorStand
     #declare tag 4V.ArmorStandThis
-    #declare tag 4V.ArmorStandDeath
-    #declare tag 4V.ArmorStandDeathSword
     #declare tag 4V.Angel
     #declare tag 4V.SkillTackle
     #declare tag 4V.SkillTackleDamageHit
