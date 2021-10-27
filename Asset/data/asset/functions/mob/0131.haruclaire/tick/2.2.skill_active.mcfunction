@@ -9,3 +9,6 @@
 
 # アイスキャノン
     execute if entity @s[tag=3N.SkillIceCannon] run function asset:mob/0131.haruclaire/tick/skill_ice_canon/1.skill_ice_cannon
+
+# アイスピラー
+    execute if entity @s[tag=3N.SkillIcePillar] run function asset:mob/0131.haruclaire/tick/skill_ice_pillar/1.skill_ice_pillar

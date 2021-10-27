@@ -9,7 +9,7 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $2 Const
 # デバッグ用スコア
-    #scoreboard players set $Random Temporary 1
+    scoreboard players set $Random Temporary 2
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 3N.SkillIceArea
     execute if score $Random Temporary matches 1 run tag @s add 3N.SkillIceCannon
