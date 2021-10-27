@@ -14,11 +14,11 @@
     tag @s[scores={3N.Tick=1}] add 3N.SkillIceCannonParticle
 
 # キャノン攻撃。あたった時に消える
-    execute if score @s 3N.Tick matches 15..28 if entity @s[tag=!3N.SkillIceCannonHit] run function asset:mob/0131.haruclaire/tick/skill_ice_canon/2.skill_ice_cannon_nohit
+    execute if score @s 3N.Tick matches 20..33 if entity @s[tag=!3N.SkillIceCannonHit] run function asset:mob/0131.haruclaire/tick/skill_ice_canon/2.skill_ice_cannon_nohit
 
 # タグを消す
-    tag @s[scores={3N.Tick=28}] remove 3N.SkillIceCannonParticle
-    tag @s[scores={3N.Tick=28}] remove 3N.SkillIceCannonHit
+    tag @s[scores={3N.Tick=33}] remove 3N.SkillIceCannonParticle
+    tag @s[scores={3N.Tick=33}] remove 3N.SkillIceCannonHit
 
 
 # タグを消す
