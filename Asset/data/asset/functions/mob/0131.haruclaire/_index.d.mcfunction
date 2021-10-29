@@ -8,6 +8,7 @@
     #declare tag 3N.ArmorStand
     #declare tag 3N.ArmorStandThis
     #declare tag 3N.ArmorStandDeath
+    #declare tag 3N.ArmorStandIce
     #declare tag 3N.Angel
     #declare tag 3N.SkillIceArea
     #declare tag 3N.SkillIceAreaHit

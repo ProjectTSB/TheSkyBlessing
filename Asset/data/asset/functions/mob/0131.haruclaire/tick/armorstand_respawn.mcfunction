@@ -14,7 +14,7 @@
 # タグを消す
     tag @e[type=armor_stand,tag=3N.ArmorStandThis,distance=..0.01] remove 3N.ArmorStandThis
 # スコアも一応戻す
-    scoreboard players reset @s 3N.Tick
+    scoreboard players set @s 3N.Tick -20
 
 # スキル発動中に移動した場合困るので消す
     tag @s remove 3N.SkillIceArea

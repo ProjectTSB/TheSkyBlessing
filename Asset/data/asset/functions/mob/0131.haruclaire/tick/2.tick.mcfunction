@@ -37,7 +37,7 @@
     # もしいたらテレポ
         execute if score $Count Temporary matches 2.. run function asset:mob/0131.haruclaire/tick/teleport
     # スコアも一応戻す
-        execute if score $Count Temporary matches 2.. run scoreboard players reset @s 3N.Tick
+        execute if score $Count Temporary matches 2.. run scoreboard players set @s 3N.Tick -20
     # リセット
         scoreboard players reset $Count
 
