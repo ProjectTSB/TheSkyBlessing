@@ -17,4 +17,4 @@
     scoreboard players add @s AD.BeamTime 5
 
 # ビーム発射
-    function asset:sacred_treasure/0373.ice_sorcery/3.1.beamshot
+    schedule function asset:sacred_treasure/0373.ice_sorcery/3.1.beamshot 1t replace

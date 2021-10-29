@@ -7,7 +7,7 @@
 #   asset:mob/0073.clutch_spider/tick/2.3.shot
 
 # 着弾検知
-    execute if entity @e[type=player,gamemode=!spectator,distance=..2] run tag @s add Landing
+    execute if entity @a[gamemode=!spectator,distance=..2] run tag @s add Landing
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 
 # 演出
