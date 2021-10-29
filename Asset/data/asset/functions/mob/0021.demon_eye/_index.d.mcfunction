@@ -1,4 +1,4 @@
-#> asset:mob/0021.demon_eye/_index.d.mcfunction
+#> asset:mob/0021.demon_eye/_index.d
 # @private
 
 #> tags
