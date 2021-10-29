@@ -7,11 +7,11 @@
 #   asset:mob/0138.combat_turret/tick/2.2.shot
 
 # 着弾検知
-    execute if entity @e[type=player,gamemode=!spectator,distance=..2] run tag @s add Landing
+    execute if entity @a[gamemode=!spectator,distance=..2] run tag @s add Landing
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 
 # ターゲットにタグ付与
-    execute if entity @e[type=player,gamemode=!spectator,distance=..2] run tag @e[type=player,gamemode=!spectator,distance=..2,limit=1] add LandingTarget
+    execute if entity @a[gamemode=!spectator,distance=..2] run tag @p[gamemode=!spectator,distance=..2] add LandingTarget
 
 # 演出
     particle dust 0.09 0.09 0.09 1 ~ ~ ~ 0 0 0 0 6
