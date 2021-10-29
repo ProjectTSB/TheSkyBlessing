@@ -17,6 +17,9 @@
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
 
+# スポナー処理部
+    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
+
 # Mob処理部
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
@@ -36,5 +39,5 @@
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
 
-# 汎用entityを常時ロードされているチャンクに戻す
-    tp 0-0-0-0-0 0.0 0.0 0.0 0.0 0.0
+# 0-0-0-0-0消失警告
+    execute unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]

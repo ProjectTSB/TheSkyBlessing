@@ -1,6 +1,14 @@
 {
     "values": [
         "asset:mob/0021.demon_eye/0.load",
-        "asset:mob/0027.skull_sniper/0.load"
+        "asset:mob/0027.skull_sniper/0.load",
+        "asset:mob/0027.skull_sniper/0.load",
+        "asset:mob/0055.hetukedah/0.load",
+        "asset:mob/0058.divide_haze/0.load",
+        "asset:mob/0038.laser_eye/0.load",
+        "asset:mob/0023.chainsaw_zombie/0.load",
+        "asset:mob/0019.horus_priest/0.load",
+        "asset:mob/0027.skull_sniper/0.load",
+        "asset:mob/0065.night_shadow/0.load"
     ]
 }
