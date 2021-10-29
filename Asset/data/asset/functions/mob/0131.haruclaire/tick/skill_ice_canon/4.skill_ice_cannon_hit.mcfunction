@@ -16,8 +16,8 @@
     effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2] slowness 10 2
 
 # ダメージ
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30f
+    # 与えるダメージ = 25
+        data modify storage lib: Argument.Damage set value 25f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
