@@ -8,7 +8,7 @@
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.6 2.0 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 12.5f
+    data modify storage lib: Argument.Damage set value 6.25f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
