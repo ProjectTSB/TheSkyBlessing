@@ -10,3 +10,6 @@
     execute if data storage lib: Argument{FixedDamage:0b} run function oh_my_dat:please
     execute if data storage lib: Argument{FixedDamage:0b} run data modify storage lib: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack
     execute if data storage lib: Argument{FixedDamage:0b} run function lib:damage/core/modify_damage
+    execute if data storage lib: Argument{FixedDamage:0b} run data modify storage lib: Argument.Damage set from storage lib: ModifiedDamage
+# リセット
+    data remove storage lib: ModifiedDamage
