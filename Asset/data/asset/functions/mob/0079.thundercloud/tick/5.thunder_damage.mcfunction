@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0079.thundercloud/tick/4.fall_thunder
 
+# 演出
+    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.6 2.0 0
+
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 12.5f
 # 属性
