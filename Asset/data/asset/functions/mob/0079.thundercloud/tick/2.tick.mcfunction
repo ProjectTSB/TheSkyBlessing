@@ -17,8 +17,5 @@
     execute if score @s 27.Tick matches 48..54 run scoreboard players add @s 27.FallThunder 1
     execute if score @s 27.FallThunder matches 2.. rotated ~ 0 run function asset:mob/0079.thundercloud/tick/3.thunder
 
-# 当たった判定Tag削除
-    execute if entity @a[tag=27.AlreadyHit] run tag @a[tag=27.AlreadyHit] remove 27.AlreadyHit
-
 # 消滅
     execute if score @s 27.Tick matches 70.. run kill @s

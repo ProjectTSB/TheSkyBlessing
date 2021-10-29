@@ -2,10 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0079.thundercloud/tick/4.lightning
-
-# 当たった判定
-    tag @s add 27.AlreadyHit
+# @within function asset:mob/0079.thundercloud/tick/4.fall_thunder
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 12.5f
