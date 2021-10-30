@@ -46,8 +46,11 @@
         "asset:mob/0169.blaze/summon/1.trigger",
         "asset:mob/0166.flying_potion/summon/1.trigger",
         "asset:mob/0162.sheep_chan/summon/1.trigger",
+        "asset:mob/0175.queen_bee/summon/1.trigger",
+        "asset:mob/0176.killer_bee/summon/1.trigger",
         "asset:mob/0178.vindicator/summon/1.trigger",
         "asset:mob/0177.pillager/summon/1.trigger",
-        "asset:mob/0179.trindicator/summon/1.trigger"
+        "asset:mob/0179.trindicator/summon/1.trigger",
+        "asset:mob/0181.magic_bookshelf/summon/1.trigger"
     ]
 }
