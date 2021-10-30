@@ -16,4 +16,4 @@
     execute unless predicate lib:is_day run function asset:sacred_treasure/0679.kitsunebi_armor/7.night_buff
 
 # 暗いと暗視
-    execute if predicate asset:sacred_treasure/0679.kitsunebi_armor/is_in_dark_place run effect give @s night_vision 12 0 true
+    execute if predicate asset:sacred_treasure/0679.kitsunebi_armor/is_in_dark_place run effect give @s night_vision 11 0 true
