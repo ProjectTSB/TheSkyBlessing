@@ -1,8 +1,9 @@
-#> asset:mob/0131.haruclaire/death/6.ice_kill
+#> asset:mob/0131.haruclaire/death/7.ice_kill
 #
 #
 #
 # @within function asset:mob/0131.haruclaire/death/4.animetion_main
+# 位置を指定してキル（なんとなく）
     execute positioned ~0.6 ~-1.5 ~0.4 run kill @e[type=armor_stand,tag=3N.ArmorStandIce,distance=..0.01]
     execute positioned ~0.4 ~-1.5 ~0.4 run kill @e[type=armor_stand,tag=3N.ArmorStandIce,distance=..0.01]
     execute positioned ~0.3 ~-1.4 ~-0.2 run kill @e[type=armor_stand,tag=3N.ArmorStandIce,distance=..0.01]

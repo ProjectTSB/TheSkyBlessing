@@ -21,10 +21,10 @@
     execute if score @s 3N.Tick matches 20 positioned ~0.1 ~-0.4 ~0 run function asset:mob/0131.haruclaire/death/5.ice_summon
 
 # 完全凍結
-    execute if score @s 3N.Tick matches 50 run function asset:mob/0131.haruclaire/death/7.freeze
+    execute if score @s 3N.Tick matches 50 run function asset:mob/0131.haruclaire/death/6.freeze
 
 # 氷を消す
-    execute if score @s 3N.Tick matches 100 run function asset:mob/0131.haruclaire/death/6.ice_kill
+    execute if score @s 3N.Tick matches 100 run function asset:mob/0131.haruclaire/death/7.ice_kill
 
 # 終了
     execute if score @s 3N.Tick matches 100 run kill @s

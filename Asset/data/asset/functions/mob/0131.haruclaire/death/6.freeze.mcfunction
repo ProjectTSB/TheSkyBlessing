@@ -1,4 +1,4 @@
-#> asset:mob/0131.haruclaire/death/7.freeze
+#> asset:mob/0131.haruclaire/death/6.freeze
 #
 #
 #
