@@ -17,7 +17,7 @@
     scoreboard players set $VectorMagnitude Lib 25
 
 # 飛ぶのに使う
-    execute if entity @s[nbt={HurtTime:0s}] at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
+    execute if data entity @s {HurtTime:0s} at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
 
 # 向き
     data modify entity @s Rotation set from storage asset:temp Rotation
