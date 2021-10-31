@@ -23,7 +23,7 @@
     data modify entity @s Rotation set from entity @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] Rotation
 
 # 接地で上を向く
-    execute if data entity @s {OnGround:1b} positioned ~ ~1.5 ~ as execute if data storage api: {OnGround:1b} positioned ~ ~1.5 ~ as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~ ~-35
+    execute if data entity @s {OnGround:1b} positioned ~ ~1.5 ~ as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~ ~-35
 
 # 安定してダメージを出すために
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0021.demon_eye/tick/attack
