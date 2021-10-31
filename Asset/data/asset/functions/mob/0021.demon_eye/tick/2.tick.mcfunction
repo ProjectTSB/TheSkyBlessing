@@ -20,7 +20,8 @@
     execute if entity @s[nbt={HurtTime:0s}] at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
 
 # 向き
-    data modify entity @s Rotation set from entity @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] Rotation
+    data modify entity @s Rotation set from storage asset:temp Rotation
+    data remove storage asset:temp Rotation
 
 # 接地で上を向く
     execute if data entity @s {OnGround:1b} positioned ~ ~1.5 ~ as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~ ~-35
