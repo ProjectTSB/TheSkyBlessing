@@ -13,7 +13,11 @@
 # 回転角度取得
     scoreboard players set $21.AngleX 21.Rot 0
     scoreboard players set $21.AngleY 21.Rot 0
+
+# X軸の振り向き速度
     scoreboard players add $21.AngleX 21.Rot 1500
+
+# Y軸の振り向き速度
     scoreboard players add $21.AngleY 21.Rot 3000
 
 # 回転角度加算

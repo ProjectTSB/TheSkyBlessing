@@ -12,7 +12,11 @@
 
 # 範囲内ならホーミングじみた移動、ただしダメージを受けていないなら
     execute at @s anchored eyes as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function asset:mob/0021.demon_eye/tick/rotater_tick
+
+# 速さ
     scoreboard players set $VectorMagnitude Lib 25
+
+# 飛ぶのに使う
     execute if entity @s[nbt={HurtTime:0s}] at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
 
 # 向き
