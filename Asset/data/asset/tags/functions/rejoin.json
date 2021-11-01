@@ -7,6 +7,11 @@
         "asset:sacred_treasure/0087.sheep_blessing/rejoin_process",
         "asset:sacred_treasure/0297.spirit_world_trance/rejoin_process",
         "asset:sacred_treasure/0456.potion_of_stalling_power/rejoin_process",
-        "asset:sacred_treasure/0643.raimei_chestplate/rejoin_process"
+        "asset:sacred_treasure/0643.raimei_chestplate/rejoin_process",
+        "asset:mob/0129.lexiel/rejoin_process",
+        "asset:sacred_treasure/0261.holy_symbol_lv.1/rejoin_process",
+        "asset:sacred_treasure/0265.holy_symbol_lv.5/rejoin_process",
+        "asset:sacred_treasure/0269.holy_symbol_lv.10/rejoin_process",
+        "asset:sacred_treasure/0373.ice_sorcery/rejoin_process"
     ]
 }

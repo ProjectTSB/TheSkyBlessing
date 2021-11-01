@@ -12,7 +12,7 @@
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
 
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 1
+    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
 
 # ダメージ設定
     # 与えるダメージ
@@ -23,9 +23,9 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=player,tag=LandingTarget,distance=..50,limit=1] at @s run function lib:damage/
+        execute as @p[gamemode=!creative,gamemode=!spectator,tag=LandingTarget,distance=..50] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # 着弾タグを消す
-    tag @e[type=player,tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
+    tag @p[tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
