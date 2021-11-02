@@ -31,7 +31,7 @@
     # もしいたらテレポ
         execute if score $Count Temporary matches 2.. run function asset:mob/0022.red_knight/tick/2.1.teleport
     # スコアも一応戻す
-        execute if score $Count Temporary matches 2.. run scoreboard players reset @s M.Tick
+        execute if score $Count Temporary matches 2.. run scoreboard players set @s M.Tick -10
     # リセット
         scoreboard players reset $Count
 

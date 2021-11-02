@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0022.red_knight/tick/2.tick
 
-# 剣スキル1
+# 剣スキル
     execute if entity @s[tag=M.SkillSword] run function asset:mob/0022.red_knight/tick/skill_sword/1.skill_sword
 
 # 乱切りスキル
@@ -13,5 +13,5 @@
 # 剣ビームスキル
     execute if entity @s[tag=M.SkillBeam] run function asset:mob/0022.red_knight/tick/skill_beam/1.skill_beam
 
-# 回転斬りスキル
+# teleportしてきて目の前でぶっ殺してくるスキル
     execute if entity @s[tag=M.SkillTpSlash] run function asset:mob/0022.red_knight/tick/skill_tp_slash/1.skill_tp_slash
