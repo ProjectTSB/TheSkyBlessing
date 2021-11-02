@@ -13,12 +13,13 @@
 # タグを消す
     tag @e[type=armor_stand,tag=M.ArmorStandThis,distance=..0.01] remove M.ArmorStandThis
 # スコアも一応戻す
-    scoreboard players set @s M.Tick 80
+    scoreboard players set @s M.Tick -1
 
 # スキル発動中に移動した場合困るので消す
     tag @s remove M.SkillSword
     tag @s remove M.SkillSlash
     tag @s remove M.SkillBeam
+    tag @s remove M.SkillTpSlash
 
 # 強制的にテレポする
     function asset:mob/0022.red_knight/tick/2.1.teleport

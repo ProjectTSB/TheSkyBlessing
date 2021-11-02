@@ -12,3 +12,6 @@
 
 # 剣ビームスキル
     execute if entity @s[tag=M.SkillBeam] run function asset:mob/0022.red_knight/tick/skill_beam/1.skill_beam
+
+# 回転斬りスキル
+    execute if entity @s[tag=M.SkillTpSlash] run function asset:mob/0022.red_knight/tick/skill_tp_slash/1.skill_tp_slash

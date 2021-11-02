@@ -9,7 +9,7 @@
     scoreboard players add @s M.Tick 1
 
 # たまにプレイヤーが周囲にいたらテレポート
-    execute if score @s M.Tick matches -15 if predicate lib:random_pass_per/40 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
+    execute if score @s M.Tick matches -15 if predicate lib:random_pass_per/20 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport
 
 # プレイヤーが周囲にいたらテレポート
     execute if score @s M.Tick matches -5 if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport

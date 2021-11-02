@@ -15,7 +15,7 @@
     #declare tag M.SkillSword
     #declare tag M.SkillSlash
     #declare tag M.SkillBeam
-    #declare tag M.SkillSword2
+    #declare tag M.SkillTpSlash
     #declare tag M.Skill
     #declare tag M.Skill
     #declare tag M.Skill

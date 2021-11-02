@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0022.red_knight/summon/1.trigger
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiDrown","M.Angel"],NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiDrown","M.Angel"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
 # ID (int)
     data modify storage asset:mob ID set value 22
 # Type (string) Wikiを参照
