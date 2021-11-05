@@ -18,6 +18,7 @@
         "asset:mob/0129.lexiel/tick/1.trigger",
         "asset:mob/0092.red_rose/tick/1.trigger",
         "asset:mob/0073.clutch_spider/tick/1.trigger",
-        "asset:mob/0138.combat_turret/tick/1.trigger"
+        "asset:mob/0138.combat_turret/tick/1.trigger",
+        "asset:mob/0158.sin/tick/1.trigger"
     ]
 }
