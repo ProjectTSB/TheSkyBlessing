@@ -14,5 +14,6 @@
     execute if entity @s[tag=Death] run tag @s remove 25.DefDown
 
 # 0になった時
+    execute if score @s 47.DefDownTime matches 0 run playsound entity.generic.extinguish_fire player @a ~ ~ ~ 1 1
     execute if score @s 47.DefDownTime matches 0 run attribute @s minecraft:generic.armor modifier remove 1-0-2-0-9700000000
     execute if score @s 47.DefDownTime matches 0 run tag @s remove 25.DefDown
