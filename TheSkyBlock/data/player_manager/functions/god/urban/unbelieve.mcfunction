@@ -7,13 +7,13 @@
 # 信仰タグ削除
     tag @s remove Believe.Urban
 # 物理攻撃+25%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     function api:player_modifier/attack/physical/remove
 # 火攻撃+10%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     function api:player_modifier/attack/fire/remove
 # 魔法攻撃-20%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     function api:player_modifier/attack/magic/remove
 # ノックバック軽減+30%
     attribute @s generic.knockback_resistance modifier remove 1-0-2-0-d

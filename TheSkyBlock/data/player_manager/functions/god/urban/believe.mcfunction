@@ -7,17 +7,17 @@
 # 信仰タグ付与
     tag @s add Believe.Urban
 # 物理攻撃+25%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     data modify storage api: Argument.Amount set value 0.25
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/physical/add
 # 火攻撃+10%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 # 魔法攻撃-20%
-    data modify storage api: Argument.UUID set value [1, 2, 0, 13]
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     data modify storage api: Argument.Amount set value -0.2
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/magic/add
