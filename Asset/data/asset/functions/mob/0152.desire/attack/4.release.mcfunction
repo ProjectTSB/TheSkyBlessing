@@ -17,6 +17,11 @@
 # リセット
     data remove storage lib: Argument
 
+# 演出
+    playsound minecraft:entity.evoker.prepare_summon hostile @a ~ ~ ~ 1 2
+    playsound minecraft:entity.wither.hurt hostile @a ~ ~ ~ 1 1
+    execute as @p[tag=Victim,distance=..10] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.03 200
+
 # タグリセット
     tag @s remove AttackThis
     tag @s remove 48.HasMP

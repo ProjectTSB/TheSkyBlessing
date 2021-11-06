@@ -14,7 +14,7 @@
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定
-        data modify storage lib: Argument.Damage set value 27f
+        data modify storage lib: Argument.Damage set value 17f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
@@ -36,8 +36,12 @@
     scoreboard players set $Fluctuation Lib -25
     execute as @p[tag=Victim] run function lib:mp/fluctuation
 
+# 演出
+    particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.2 100
+    playsound minecraft:entity.glow_squid.death hostile @a
+
 # 自分にタグを付与する
-    tag @s add 48.HasMP
+    execute if entity @p[tag=Victim,tag=!EmptyMP] run tag @s add 48.HasMP
 
 # タグリセット
     tag @p[tag=EmptyMP] remove EmptyMP
