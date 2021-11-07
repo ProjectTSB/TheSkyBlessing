@@ -52,6 +52,7 @@
         "asset:mob/0178.vindicator/summon/1.trigger",
         "asset:mob/0177.pillager/summon/1.trigger",
         "asset:mob/0179.trindicator/summon/1.trigger",
-        "asset:mob/0181.magic_bookshelf/summon/1.trigger"
+        "asset:mob/0181.magic_bookshelf/summon/1.trigger",
+        "asset:mob/0153.domination/summon/1.trigger"
     ]
 }
