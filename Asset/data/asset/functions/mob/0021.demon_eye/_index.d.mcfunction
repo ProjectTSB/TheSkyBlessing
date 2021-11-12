@@ -2,9 +2,7 @@
 # @private
 
 #> tags
-# @within function as asset:mob/0021.demon_eye/tick/**
-# @within function as asset:mob/0021.demon_eye/summon/**
-
+# @within function asset:mob/0021.demon_eye/**
     #declare tag 21.Rotater
     #declare score_holder $21.RotX
     #declare score_holder $21.RotY
