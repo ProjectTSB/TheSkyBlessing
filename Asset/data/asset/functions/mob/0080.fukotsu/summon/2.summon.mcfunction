@@ -20,7 +20,7 @@
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob WeaponDropChances set value [-327.67f,-327.67f]
+    # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{display:{Name:'{"text":"富骨の頭蓋骨","color":"yellow","italic":false}'},SkullOwner:{Id:[I;1,2,80,0],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDAxYjM1ZDkwYmFmMGM3NzA2OTU0YmEwYmFiOTE2M2EyNDNiZjU0MGZmN2Q1ZGE0NzdjMzcyOTE3YTEyMTg4In19fQ=="}]}}}}
@@ -31,7 +31,7 @@
     # 足 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Feet set value {id:"minecraft:golden_boots",Count:1b}
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,1.0f]
+    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0015f]
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 160.0
 # 攻撃力 (double) (オプション)
