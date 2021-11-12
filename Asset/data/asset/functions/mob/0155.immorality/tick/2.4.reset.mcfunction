@@ -11,11 +11,9 @@
 # 疑似乱数取得
     execute store result score $RandomDamage Temporary run function lib:random/
 # 剰余算する
-    scoreboard players operation $RandomDamage Temporary %= $31 Const
+    scoreboard players operation $RandomDamage Temporary %= $11 Const
 #スコアセットセット
     scoreboard players operation @s 4B.ShotTime = $RandomDamage Temporary
 
-
 # リセット処理
-    data modify entity @s NoAI set value 0
     scoreboard players reset $RandomDamage Temporary
