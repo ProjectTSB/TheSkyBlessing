@@ -567,6 +567,24 @@
             ]
         },
         {
+            "label": "神器/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function",
+                        "# asset:sacred_treasure/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: 人参棒クリック",
             "generates": [
                 {
@@ -1393,6 +1411,24 @@
                         "key": "values",
                         "elem": "asset:mob/%namespace%/0.load"
                     }
+                }
+            ]
+        },
+        {
+            "label": "MOB/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function",
+                        "# asset:mob/%namespace%/**",
+                        "    #declare"
+                    ]
                 }
             ]
         },
