@@ -32,7 +32,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "entities/zombie"
+                    "name": "entities/skeleton"
                 }
             ]
         }

@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0154.ruin/**
-    scoreboard objectives add 
+    scoreboard objectives add 4A.MadnessTime dummy
