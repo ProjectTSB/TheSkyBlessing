@@ -37,6 +37,7 @@
         "asset:mob/0177.pillager/attack/1.trigger",
         "asset:mob/0179.trindicator/attack/1.trigger",
         "asset:mob/0181.magic_bookshelf/attack/1.trigger",
-        "asset:mob/0080.fukotsu/attack/1.trigger"
+        "asset:mob/0080.fukotsu/attack/1.trigger",
+        "asset:mob/0154.ruin/attack/1.trigger"
     ]
 }
