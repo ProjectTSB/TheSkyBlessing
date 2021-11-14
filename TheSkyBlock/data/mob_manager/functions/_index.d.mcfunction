@@ -11,6 +11,12 @@
     #declare tag Object
     #declare tag Uninterferable
 
+#> 汎用タグ類
+# @within function
+#   asset_manager:mob/summon/set_tag
+    #declare tag AntiFrozen
+    #declare tag AntiDrown
+
 #> InitTag
 # @within function
 #   core:tick/
