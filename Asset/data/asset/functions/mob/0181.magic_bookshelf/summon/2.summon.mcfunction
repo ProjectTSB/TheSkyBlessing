@@ -5,7 +5,7 @@
 # @within function asset:mob/0181.magic_bookshelf/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiFrozen","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0181.magic_bookshelf"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0181.magic_bookshelf"}
 # ID (int)
     data modify storage asset:mob ID set value 181
 # Type (string) Wikiを参照
