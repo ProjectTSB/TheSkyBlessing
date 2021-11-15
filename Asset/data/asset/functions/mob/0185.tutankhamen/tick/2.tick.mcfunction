@@ -8,4 +8,4 @@
     scoreboard players add @s 55.Tick 1
 
 # 技
-    execute if score @s 55.Tick matches 100.. run
+    execute if score @s 55.Tick matches 100.. run function asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
