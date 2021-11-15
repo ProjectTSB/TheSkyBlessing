@@ -5,7 +5,7 @@
 # @within function asset:mob/0027.skull_sniper/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","AntiFrozen"],DeathLootTable:"asset:mob/death/0027.skull_sniper"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0027.skull_sniper"}
 # ID (int)
     data modify storage asset:mob ID set value 27
 # Type (string) Wikiを参照
