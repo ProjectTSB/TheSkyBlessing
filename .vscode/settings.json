@@ -577,8 +577,7 @@
                         "# @private",
                         "",
                         "#> tag",
-                        "# @within function",
-                        "# asset:sacred_treasure/%namespace%/**",
+                        "# @within function asset:sacred_treasure/%namespace%/**",
                         "    #declare"
                     ]
                 }
@@ -1425,8 +1424,7 @@
                         "# @private",
                         "",
                         "#> tag",
-                        "# @within function",
-                        "# asset:mob/%namespace%/**",
+                        "# @within function asset:mob/%namespace%/**",
                         "    #declare"
                     ]
                 }
