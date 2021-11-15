@@ -6,9 +6,6 @@
 
 # デフォルト
     tag @s add AssetMob
-# アンデット系に対して付与するタグ
-    execute if entity @s[type=#lib:drownable] run tag @s add AntiDrown
-    execute if entity @s[type=skeleton] run tag @s add AntiFrozen
 # Friend
     execute if data storage asset:mob {Type:"Friend"} run tag @s add Friend
 # Enemy
