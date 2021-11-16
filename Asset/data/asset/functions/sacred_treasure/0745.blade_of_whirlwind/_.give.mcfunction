@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"風巻之刀","color":"#58B09B"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"風巻之刀","color":"#2970FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"我は狂飆 並べて薙ぎ","color":"#9BE0D5","bold":true,"italic":true}','{"text":"楽土が辻の淵と成らん","color":"#9BE0D5","bold":true,"italic":true}','{"text":"攻撃対象を吹き飛ばす刀","color":"#A1FFD9"}','{"text":"自身の速度で吹き飛ばす距離と","color":"#A1FFD9"}','{"text":"ダメージが強化される","color":"#A1FFD9"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"我は","color":"#91CFFF","bold":true,"italic":true},{"text":"狂飆","color":"#2970FF","bold":true,"italic":true},{"text":" 並べて薙ぎ","color":"#91CFFF","bold":true,"italic":true}]','[{"text":"楽土が辻の淵と成らん","color":"#91CFFF","bold":true,"italic":true}]','{"text":"攻撃対象を吹き飛ばす刀","color":"#7AB4FF"}','{"text":"自身の速度で吹き飛ばす距離と","color":"#7AB4FF"}','{"text":"ダメージが強化される","color":"#7AB4FF"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -39,11 +39,11 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 30
+    data modify storage asset:sacred_treasure MPCost set value 22
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 24
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)

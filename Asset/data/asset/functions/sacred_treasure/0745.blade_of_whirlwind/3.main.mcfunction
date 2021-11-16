@@ -9,3 +9,52 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run particle cloud ~ ~1.2 ~ 0.6 0.4 0.6 0.3 50 normal @a
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run particle dust 0.337 0.557 0.906 1.5 ~ ~1.2 ~ 0.7 0.4 0.7 0 50 normal @a
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run particle sweep_attack ~ ~1.2 ~ 0.5 0.4 0.5 0 30 normal @a
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound entity.wither.shoot master @a ~ ~ ~ 0.5 1.6 0
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound item.trident.riptide_3 master @a ~ ~ ~ 0.7 1 0
+
+# 移動速度をスコア化する
+    execute store result score $MovementSpeed Temporary run attribute @s generic.movement_speed get 1000
+    scoreboard players operation $VectorMagnitude Lib += $MovementSpeed Temporary
+
+# 移動速度によりダメージが強化される、という仕組みはプレイヤーの本来の速度の1.0の分を引いて、×5した数値がダメージに加算されるので、5を掛け、100で割るので結果的に20で割る
+    execute store result score $AddDamage Temporary run scoreboard players operation $MovementSpeed Temporary -= $10 Const
+    scoreboard players operation $AddDamage Temporary %= $20 Const
+
+# ダメージ
+    #ダメージブレのための処理
+        # 疑似乱数取得
+            execute store result score $RandomDamage Temporary run function lib:random/
+        # 剰余算する。0~15の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $16 Const
+        # 最低ダメージ設定
+            scoreboard players add $RandomDamage Temporary 31
+        # 移動速度の追加分を加算
+            scoreboard players operation $RandomDamage Temporary += $AddDamage Temporary
+    #ダメージを代入
+        execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
+    # 第一属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+    # 第二属性
+        data modify storage lib: Argument.ElementType set value "Water"
+# 補正functionを実行
+    function lib:damage/modifier
+# ダメージ
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
+
+# Mobのノクバ耐性を100倍で取得 天使だったら実行しない
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6,limit=1] store result score $MobKnockbackResist Temporary run attribute @e[type=#lib:living,type=!player,tag=Victim,distance=..6,limit=1] generic.knockback_resistance get 100
+
+# ノクバ耐性が1.0でないなら実行
+    execute if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/4.knockback
+
+# リセット
+    scoreboard players reset $RandomDamage Temporary
+    scoreboard players reset $VectorMagnitude Lib
+    scoreboard players reset $MobKnockbackResist Temporary
+    scoreboard players reset $MovementSpeed Temporary
+    scoreboard players reset $AddDamage Temporary
+    tag @s remove this
