@@ -16,8 +16,7 @@
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000
     scoreboard players operation $VectorMagnitude Lib += $AddDamage Temporary
 
-# 移動速度によりダメージが強化される、という仕組みはプレイヤーの本来の速度の1.0の分を引いて、×5した数値がダメージに加算されるので、5を掛け、100で割るので結果的に20で割る
-    scoreboard players operation $AddDamage Temporary -= $10 Const
+# ×5した数値がダメージに加算されるので、5を掛け、100で割るので結果的に20で割る
     scoreboard players operation $AddDamage Temporary %= $20 Const
 
 # ダメージ
