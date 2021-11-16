@@ -7,6 +7,5 @@
     #declare score_holder $RandomDamage
     #declare score_holder $VectorMagnitude
     #declare score_holder $MobKnockbackResist
-    #declare score_holder $MovementSpeed
     #declare score_holder $AddDamage
 

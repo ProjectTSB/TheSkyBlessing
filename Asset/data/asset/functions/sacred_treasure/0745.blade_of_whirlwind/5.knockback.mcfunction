@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0745.blade_of_whirlwind/4.knockback
+#> asset:sacred_treasure/0745.blade_of_whirlwind/5.knockback
 #
 #
 #
@@ -17,5 +17,4 @@
     execute unless score $MobKnockbackResist Temporary matches 0 run scoreboard players operation $VectorMagnitude Lib %= $5 Const
 
 # 攻撃対象のMobをプレイヤーの向いてる方向にmotionで吹き飛ばす
-    tag @s add this
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] at @s rotated as @p[tag=this,distance=..6] rotated ~ ~-15 run function lib:motion/
