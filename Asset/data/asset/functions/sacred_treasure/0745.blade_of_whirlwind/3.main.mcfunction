@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function asset:sacred_treasure/0745.blade_of_whirlwind/4.performance
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function asset:sacred_treasure/0745.blade_of_whirlwind/4.vfx
 
 # 移動速度をスコア化する
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000

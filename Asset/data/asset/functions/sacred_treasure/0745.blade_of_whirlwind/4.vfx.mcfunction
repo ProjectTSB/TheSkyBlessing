@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0745.blade_of_whirlwind/4.performance
+#> asset:sacred_treasure/0745.blade_of_whirlwind/4.vfx
 #
 #
 #

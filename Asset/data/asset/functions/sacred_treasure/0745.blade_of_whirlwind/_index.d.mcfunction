@@ -3,7 +3,6 @@
 #
 #> Tag and Score_Holder
 # @within function asset:sacred_treasure/0745.blade_of_whirlwind/**
-    #declare tag this
     #declare score_holder $RandomDamage
     #declare score_holder $VectorMagnitude
     #declare score_holder $MobKnockbackResist
