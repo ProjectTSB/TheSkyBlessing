@@ -16,8 +16,10 @@
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000
     scoreboard players operation $VectorMagnitude Lib = $AddDamage Temporary
 
-# ×5した数値がダメージに加算されるので、5を掛け、50で割るので結果的に10で割る
-    scoreboard players operation $AddDamage Temporary /= $10 Const
+# 本来の補正一切なしの値を減算して、×5した数値がダメージに加算されるので、5を掛け、20で割るので結果的に4で割る
+    scoreboard players operation $AddDamage Temporary -= $100 Const
+    scoreboard players operation $AddDamage Temporary /= $4 Const
+    tellraw @p [{"text":"AddDamage"},{"score":{"name":"$AddDamage","objective":"Temporary"}}]
 
 # ダメージ
     #ダメージブレのための処理
