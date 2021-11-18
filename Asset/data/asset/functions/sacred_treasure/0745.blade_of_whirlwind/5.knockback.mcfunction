@@ -18,7 +18,7 @@
 
 # これを5で割る
     execute if score $MobKnockbackResist Temporary matches 1..99 run scoreboard players operation $VectorMagnitude Lib %= $5 Const
-           tellraw @p [{"text":"VectorMagnitude "},{"score":{"name":"$VectorMagnitude","objective":"Lib"}}]
+
 # 攻撃対象のMobをプレイヤーの向いてる方向にmotionで吹き飛ばす
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] at @s rotated as @p[tag=this,distance=..6] rotated ~ ~-15 run function lib:motion/
 
