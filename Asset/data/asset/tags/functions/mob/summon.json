@@ -54,6 +54,7 @@
         "asset:mob/0179.trindicator/summon/1.trigger",
         "asset:mob/0181.magic_bookshelf/summon/1.trigger",
         "asset:mob/0080.fukotsu/summon/1.trigger",
-        "asset:mob/0139.blast_eye/summon/1.trigger"
+        "asset:mob/0139.blast_eye/summon/1.trigger",
+        "asset:mob/0156.infringement/summon/1.trigger"
     ]
 }
