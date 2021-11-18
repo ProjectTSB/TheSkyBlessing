@@ -18,6 +18,7 @@
 
 # ×5した数値がダメージに加算されるので、5を掛け、100で割るので結果的に20で割る
     scoreboard players operation $AddDamage Temporary %= $20 Const
+           tellraw @p [{"text":"$AddDamage "},{"score":{"name":"$AddDamage","objective":"Temporary"}}]
 
 # ダメージ
     #ダメージブレのための処理
@@ -35,6 +36,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
+
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージ
@@ -49,6 +51,6 @@
 # リセット
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $VectorMagnitude Lib
+    scoreboard players reset $VectorMagnitude Temporary
     scoreboard players reset $MobKnockbackResist Temporary
     scoreboard players reset $AddDamage Temporary

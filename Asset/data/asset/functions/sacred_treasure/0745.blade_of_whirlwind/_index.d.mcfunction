@@ -7,4 +7,4 @@
     #declare score_holder $VectorMagnitude
     #declare score_holder $MobKnockbackResist
     #declare score_holder $AddDamage
-
+    #declare score_holder $KP.100
