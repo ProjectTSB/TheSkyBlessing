@@ -14,7 +14,7 @@
 
 # 移動速度をスコア化する
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000
-    scoreboard players operation $VectorMagnitude Lib += $AddDamage Temporary
+    scoreboard players operation $VectorMagnitude Lib = $AddDamage Temporary
 
 # ×5した数値がダメージに加算されるので、5を掛け、50で割るので結果的に10で割る
     scoreboard players operation $AddDamage Temporary /= $10 Const
