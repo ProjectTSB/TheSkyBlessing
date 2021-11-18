@@ -17,7 +17,7 @@
     scoreboard players operation $VectorMagnitude Lib += $AddDamage Temporary
 
 # ×5した数値がダメージに加算されるので、5を掛け、100で割るので結果的に20で割る
-    scoreboard players operation $AddDamage Temporary %= $20 Const
+    scoreboard players operation $AddDamage Temporary /= $20 Const
            tellraw @p [{"text":"$AddDamage "},{"score":{"name":"$AddDamage","objective":"Temporary"}}]
 
 # ダメージ
