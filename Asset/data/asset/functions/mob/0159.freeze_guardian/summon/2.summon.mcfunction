@@ -5,7 +5,7 @@
 # @within function asset:mob/0159.freeze_guardian/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0159.freeze_guardian"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0159.freeze_guardian"}
 # ID (int)
     data modify storage asset:mob ID set value 159
 # Type (string) Wikiを参照
