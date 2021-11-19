@@ -5,6 +5,7 @@
 # @within function
 #    asset:sacred_treasure/0373.ice_sorcery/3.main
 #    asset:sacred_treasure/0373.ice_sorcery/3.1.beamshot
+#    asset:sacred_treasure/0373.ice_sorcery/rejoin_process
 
 # またファンクション分岐
     execute as @a[scores={AD.BeamTime=1..}] at @s run function asset:sacred_treasure/0373.ice_sorcery/3.2.beamshot2
