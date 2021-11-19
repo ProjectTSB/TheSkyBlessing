@@ -5,7 +5,7 @@
 # @within function asset:mob/0082.amethyst_shrinker/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0082.amethyst_shrinker"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0082.amethyst_shrinker"}
 # ID (int)
     data modify storage asset:mob ID set value 82
 # Type (string) Wikiを参照
