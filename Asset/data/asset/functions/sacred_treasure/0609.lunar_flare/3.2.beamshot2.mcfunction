@@ -15,7 +15,7 @@
     data modify storage lib: Argument.Distance set value 5.0
     data modify storage lib: Argument.Spread set value 2.5
 # 前方拡散を実行する
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker] run function lib:forward_spreader/circle
 
 # ビームを飛ばす
     # 演出
@@ -28,6 +28,9 @@
         execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @e[type=armor_stand,tag=GX.First] ^ ^ ^-17 ~ ~
     # タグを消す
         tag @e[type=armor_stand,tag=GX.First] remove GX.First
+
+# 前方拡散を消す
+    kill @e[type=marker,tag=SpreadMarker]
 
 # Scheduleで実行。重複しないようにしてる。
     schedule function asset:sacred_treasure/0609.lunar_flare/3.5.beamloop 1t replace

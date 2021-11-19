@@ -5,7 +5,7 @@
 # @within function asset:mob/0023.chainsaw_zombie/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AntiDrown"],DeathLootTable:"asset:mob/death/0023.chainsaw_zombie"}
+    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0023.chainsaw_zombie"}
 # ID (int)
     data modify storage asset:mob ID set value 23
 # Type (string) Wikiを参照

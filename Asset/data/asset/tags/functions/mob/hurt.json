@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/hurt/1.trigger",
+        "asset:mob/0021.demon_eye/hurt/1.trigger",
         "asset:mob/0055.hetukedah/hurt/1.trigger",
         "asset:mob/0057.none_fighter/hurt/1.trigger",
         "asset:mob/0049.ice_obstructor/hurt/1.trigger",
@@ -8,6 +9,8 @@
         "asset:mob/0056.thunder_trifler/hurt/1.trigger",
         "asset:mob/0037.fire_spreader/hurt/1.trigger",
         "asset:mob/0089.decapitation/hurt/1.trigger",
+        "asset:mob/0175.queen_bee/hurt/1.trigger",
+        "asset:mob/0176.killer_bee/hurt/1.trigger",
         "asset:mob/0114.jewel_hunter/hurt/1.trigger",
         "asset:mob/0124.skull_harpy/hurt/1.trigger",
         "asset:mob/0129.lexiel/hurt/1.trigger",
@@ -19,6 +22,8 @@
         "asset:mob/0146.prismarine_warrior/hurt/1.trigger",
         "asset:mob/0147.prismarine_slayer/hurt/1.trigger",
         "asset:mob/0148.prismarine_atlatl/hurt/1.trigger",
-        "asset:mob/0171.lumberjack_of_blue_forest/hurt/1.trigger"
+        "asset:mob/0171.lumberjack_of_blue_forest/hurt/1.trigger",
+        "asset:mob/0181.magic_bookshelf/hurt/1.trigger",
+        "asset:mob/0139.blast_eye/hurt/1.trigger"
     ]
 }

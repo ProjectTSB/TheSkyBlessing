@@ -58,8 +58,8 @@
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
     #declare tag AutoKillWhenDieVehicle
-    #declare tag AntiFrozen
-    #declare tag AntiDrown
+    #declare tag Frozen
+    #declare tag Drown
 
 #> 汎用奈落耐性処理用タグ
 # @within function
