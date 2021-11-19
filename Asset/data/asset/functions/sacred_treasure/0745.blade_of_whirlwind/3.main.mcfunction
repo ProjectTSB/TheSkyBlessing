@@ -19,7 +19,6 @@
 # 本来の補正一切なしの値を減算して、×5した数値がダメージに加算されるので、5を掛け、20で割るので結果的に4で割る
     scoreboard players operation $AddDamage Temporary -= $100 Const
     scoreboard players operation $AddDamage Temporary /= $4 Const
-    tellraw @p [{"text":"AddDamage"},{"score":{"name":"$AddDamage","objective":"Temporary"}}]
 
 # ダメージ
     #ダメージブレのための処理
@@ -52,6 +51,6 @@
 # リセット
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $VectorMagnitude Temporary
+    scoreboard players reset $VectorMagnitude Lib
     scoreboard players reset $MobKnockbackResist Temporary
     scoreboard players reset $AddDamage Temporary
