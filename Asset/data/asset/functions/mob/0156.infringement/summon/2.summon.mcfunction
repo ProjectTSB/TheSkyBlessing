@@ -5,7 +5,7 @@
 # @within function asset:mob/0156.infringement/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0156.infringement"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/0156.infringement"}
 # ID (int)
     data modify storage asset:mob ID set value 156
 # Type (string) Wikiを参照
@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"侵害"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"stick",Count:1b,tag:{CustomModelData:20066}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20066,Enchantments:[{id:"minecraft:knockback",lvl:3s}]}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 280
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 25
+    data modify storage asset:mob AttackDamage set value 5
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 25
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす

@@ -4,6 +4,7 @@
 #
 # @within function asset:mob/0156.infringement/attack/1.trigger
 
+
 # 演出
     execute at @p[tag=Victim,distance=..32] run particle splash ~ ~1.2 ~ 0.6 0.5 0.6 0 50 normal @a
     execute at @p[tag=Victim,distance=..32] run particle dust 0.145 0.792 0.812 1.3 ~ ~1.2 ~ 0.5 0.4 0.5 1 30 normal @a
@@ -22,3 +23,6 @@
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# 鈍足を与える
+    effect give @p[tag=Victim,distance=..32] slowness 1 3
