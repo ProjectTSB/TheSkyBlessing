@@ -6,3 +6,4 @@
     #declare tag 55.BurnRazer
     #declare tag 55.Thunder
     #declare tag 55.MagicSquare
+    #declare tag 55.WarpAtack

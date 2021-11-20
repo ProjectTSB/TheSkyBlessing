@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0185.tutankhamen/**
     scoreboard objectives add 55.Tick dummy
+    scoreboard objectives add 55.AttackTick dummy
