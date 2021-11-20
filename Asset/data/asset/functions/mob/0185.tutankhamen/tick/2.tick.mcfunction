@@ -9,4 +9,3 @@
 
 # 技
     execute if score @s 55.Tick matches 100 run function asset:mob/0185.tutankhamen/tick/3.select_attack
-function asset:mob/
