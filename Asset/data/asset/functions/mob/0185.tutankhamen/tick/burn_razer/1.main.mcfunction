@@ -13,10 +13,10 @@
 # 一定間隔で実行
 
 # 照射
-    execute if score @s 55.Tick matches ..160 if score @s 55.AttackTick matches 1..11 run function asset:mob/0185.tutankhamen/tick/burn_razer/2.light
+    execute if score @s 55.Tick matches ..171 if score @s 55.AttackTick matches 1..11 run function asset:mob/0185.tutankhamen/tick/burn_razer/2.light
 
 # 発射
-    execute if score @s 55.Tick matches ..169 if score @s 55.AttackTick matches 20 run function asset:mob/0185.tutankhamen/tick/burn_razer/4.shoot
+    execute if score @s 55.Tick matches ..171 if score @s 55.AttackTick matches 20 run function asset:mob/0185.tutankhamen/tick/burn_razer/4.shoot
 
 # リセット
     execute if score @s 55.Tick matches 160.. run function asset:mob/0185.tutankhamen/tick/5.reset
