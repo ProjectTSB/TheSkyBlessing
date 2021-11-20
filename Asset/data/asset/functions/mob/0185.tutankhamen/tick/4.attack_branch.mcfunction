@@ -9,3 +9,6 @@
 
 # 雷落とし
     execute if entity @s[tag=55.Thunder] run function asset:mob/0185.tutankhamen/tick/thunder/1.main
+
+# 魔方陣展開
+    execute if entity @s[tag=55.MagicSquare] run function asset:mob/0185.tutankhamen/tick/magic_square/1.main

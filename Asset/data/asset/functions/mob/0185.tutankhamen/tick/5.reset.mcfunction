@@ -5,6 +5,7 @@
 # @within function
 #   asset:mob/0185.tutankhamen/tick/burn_lazer/1.main
 #   asset:mob/0185.tutankhamen/tick/thunder/1.main
+#   asset:mob/0185.tutankhamen/tick/magic_square/1.main
 
 # NoAI解除
     data modify entity @s NoAI set value 0b
