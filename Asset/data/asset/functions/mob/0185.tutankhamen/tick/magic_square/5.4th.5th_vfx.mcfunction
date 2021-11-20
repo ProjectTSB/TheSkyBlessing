@@ -8,7 +8,7 @@
     playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.7 1 0
 
 # ダメージ
-    execute if score @s 55.Tick matches 175 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..5] run function asset:mob/0185.tutankhamen/tick/magic_square/10.4th_damage
+    execute if score @s 55.Tick matches 175 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..7] run function asset:mob/0185.tutankhamen/tick/magic_square/10.4th_damage
 
 # 中円
     particle witch ^0 ^ ^-4 0 0 0 0 1
