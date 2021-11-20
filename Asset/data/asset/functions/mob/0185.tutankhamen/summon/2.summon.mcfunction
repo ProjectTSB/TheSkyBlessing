@@ -5,7 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0185.tutankhamen"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AntiVoid"],DeathLootTable:"asset:mob/death/0185.tutankhamen"}
 # ID (int)
     data modify storage asset:mob ID set value 185
 # Type (string) Wikiを参照
