@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/burn_razer/1.main
+# @within function
+#   asset:mob/0185.tutankhamen/tick/burn_lazer/1.main
+#   asset:mob/0185.tutankhamen/tick/thunder/1.main
 
 # NoAI解除
     data modify entity @s NoAI set value 0b
@@ -12,7 +14,8 @@
     scoreboard players reset @s 55.AttackTick
 
 # Tag削除
-    execute if entity @s[tag=55.BurnRazer] run tag @s remove 55.BurnRazer
+    execute if entity @s[tag=55.BurnLazer] run tag @s remove 55.BurnLazer
     execute if entity @s[tag=55.Thunder] run tag @s remove 55.Thunder
     execute if entity @s[tag=55.MagicSquare] run tag @s remove 55.MagicSquare
     execute if entity @s[tag=55.WarpAtack] run tag @s remove 55.WarpAtack
+    execute if entity @s[tag=55.4thLazer] run tag @s remove 55.4thLazer

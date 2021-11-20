@@ -1,11 +1,11 @@
-#> asset:mob/0185.tutankhamen/tick/burn_razer/6.damage
+#> asset:mob/0185.tutankhamen/tick/burn_lazer/6.damage
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/burn_razer/5.shoot_recursive
+# @within function asset:mob/0185.tutankhamen/tick/burn_lazer/5.shoot_recursive
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 12f
+    data modify storage lib: Argument.Damage set value 23f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"

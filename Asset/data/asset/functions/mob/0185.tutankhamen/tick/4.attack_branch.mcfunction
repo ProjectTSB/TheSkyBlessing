@@ -5,4 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/tick/2.tick
 
 # 炎レーザー
-    execute if entity @s[tag=55.BurnRazer] run function asset:mob/0185.tutankhamen/tick/burn_razer/1.main
+    execute if entity @s[tag=55.BurnLazer] run function asset:mob/0185.tutankhamen/tick/burn_lazer/1.main
+
+# 雷落とし
+    execute if entity @s[tag=55.Thunder] run function asset:mob/0185.tutankhamen/tick/thunder/1.main
