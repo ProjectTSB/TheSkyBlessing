@@ -14,4 +14,6 @@
 
 # 演出
     particle witch ~ ~1.2 ~ 0.4 0.5 0.4 1 200 normal @a
-    playsound entity.enderman.teleport master @a ~ ~ ~ 1 1 0
+    execute at @p[gamemode=!spectator] run particle witch ~ ~1.2 ~ 0.4 0.5 0.4 1 200 normal @a
+
+    playsound entity.enderman.teleport master @a[distance=..32] ~ ~ ~ 1.3 1 1

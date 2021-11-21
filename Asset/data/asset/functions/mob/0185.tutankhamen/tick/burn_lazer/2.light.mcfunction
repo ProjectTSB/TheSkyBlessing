@@ -14,4 +14,4 @@
     execute positioned ~ ~1.3 ~ run function asset:mob/0185.tutankhamen/tick/burn_lazer/3.light_recursive
 
 # 実行中の音
-    playsound block.note_block.bit master @a ~ ~ ~ 1 1
+    playsound block.note_block.bit master @a[distance=..30] ~ ~ ~ 1 1 0.5
