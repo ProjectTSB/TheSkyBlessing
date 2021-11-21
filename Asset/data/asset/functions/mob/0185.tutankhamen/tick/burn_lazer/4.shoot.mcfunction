@@ -12,6 +12,5 @@
 # 発射
     execute positioned ~ ~1.3 ~ run function asset:mob/0185.tutankhamen/tick/burn_lazer/5.shoot_recursive
 
-
 # 技用スコアリセット
     scoreboard players reset @s 55.AttackTick
