@@ -15,6 +15,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute as @p[distance=..0.75] run function lib:damage/
+    execute as @p[distance=..1.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument
