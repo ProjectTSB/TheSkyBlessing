@@ -17,6 +17,7 @@
         "asset:mob/0073.clutch_spider/0.load",
         "asset:mob/0138.combat_turret/0.load",
         "asset:mob/0139.blast_eye/0.load",
-        "asset:mob/0187.flame_mage/0.load"
+        "asset:mob/0187.flame_mage/0.load",
+        "asset:mob/0188.fireball/0.load"
     ]
 }

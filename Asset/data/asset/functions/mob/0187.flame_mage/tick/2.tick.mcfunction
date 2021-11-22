@@ -6,7 +6,9 @@
 
 # パーティクル
     particle minecraft:falling_dust red_terracotta ~ ~1 ~ 0.1 0 0.1 0 1
-    #particle minecraft:smoke ~ ~1 ~ 0.25 0.25 0.25 0 1
+
+# 足がない！！！！
+    effect give @s slow_falling 1 0 true
 
 # 付近にプレイヤーがいるならスコア加算 Predicateなどが完成したらそれに移行したい
     execute if entity @p[distance=..20] run scoreboard players add @s 0187.Attack 1
