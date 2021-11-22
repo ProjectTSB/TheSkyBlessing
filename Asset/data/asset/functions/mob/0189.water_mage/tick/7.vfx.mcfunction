@@ -10,3 +10,7 @@
 
 # ダメージ
     execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..0.75] run function asset:mob/0189.water_mage/tick/8.damage
+
+# 壁が目の前にあると終わる(スコアが170以上でリセットされる)
+    execute unless block ^ ^ ^1 #lib:no_collision run scoreboard players set @s 59.Tick 171
+    execute unless block ^ ^ ^1.5 #lib:no_collision run scoreboard players set @s 59.Tick 171
