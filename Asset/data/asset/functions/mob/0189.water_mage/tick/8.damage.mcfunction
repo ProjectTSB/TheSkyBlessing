@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0189.water_mage/tick/7.vfx
 
+# リセット
+    scoreboard players set @s 59.Tick 171
+
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 18f
 # 属性
