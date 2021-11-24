@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0278.reveille/**
-    scoreboard objectives add 0278.Timeline dummy
+    scoreboard objectives add 7Q.Timeline dummy

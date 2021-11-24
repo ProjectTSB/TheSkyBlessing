@@ -11,4 +11,4 @@
     playsound entity.player.levelup player @a ~ ~ ~ 1 1 1
 
 # scoreリセット
-    scoreboard players reset $Timeline 0278.Timeline
+    scoreboard players reset $Timeline 7Q.Timeline
