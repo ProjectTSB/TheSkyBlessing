@@ -17,4 +17,4 @@
     execute if score @s 0187.Attack matches 40.. run function asset:mob/0187.flame_mage/event/shoot_magic
 
 # 射撃攻撃キャンセル
-    execute unless entity @p[distance=..20] run scoreboard players reset @s 0187.Attack
+    execute unless entity @p[distance=..20] run scoreboard players reset @s 57.Attack
