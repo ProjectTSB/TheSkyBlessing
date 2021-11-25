@@ -5,7 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/tick/magic_square/1.main
 
 # 演出
-    playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 0.7 1 0.4
+    playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 0.9 1 0.4
 
 # ダメージ
     execute if score @s 55.Tick matches 175 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..7] run function asset:mob/0185.tutankhamen/tick/magic_square/10.4th_damage
