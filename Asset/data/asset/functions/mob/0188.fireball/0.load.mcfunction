@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:mob/0188.fireball/**
-    scoreboard objectives add Chuz.Range dummy
-    scoreboard objectives add Chuz.Speed dummy
-    scoreboard objectives add Chuz.Recursive dummy
+    scoreboard objectives add 58.Range dummy
+    scoreboard objectives add 58.Speed dummy
+    scoreboard objectives add 58.Recursive dummy
