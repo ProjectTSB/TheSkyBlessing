@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/4.attack_branch
+# @within function asset:mob/0185.tutankhamen/tick/04.attack_branch
 
 # 雷を落とすAECを5個呼ぶ
     execute if score @s 55.Tick matches 100 run function asset:mob/0185.tutankhamen/tick/thunder/02.summon_thunder1
