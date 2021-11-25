@@ -12,5 +12,5 @@
     scoreboard players set @s 58.Speed 4
 
 # タグ整理
-    tag @s remove 0188.Init
-    tag @s add 0188.Start
+    tag @s remove 58.Init
+    tag @s add 58.Start
