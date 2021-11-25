@@ -11,7 +11,7 @@
     scoreboard players add @s 55.AttackTick 1
 
 # 照射
-    execute if score @s 55.Tick matches ..159 if score @s 55.AttackTick matches 1..11 run function asset:mob/0185.tutankhamen/tick/burn_lazer/2.light
+    execute if score @s 55.Tick matches ..159 if score @s 55.AttackTick matches 2..11 run function asset:mob/0185.tutankhamen/tick/burn_lazer/2.light
 
 # 発射
     execute if score @s 55.Tick matches ..159 if score @s 55.AttackTick matches 20 run function asset:mob/0185.tutankhamen/tick/burn_lazer/4.shoot
