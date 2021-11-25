@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/6.5th_vfx
+#> asset:mob/0185.tutankhamen/tick/magic_square/06.5th_vfx
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/magic_square/1.main
+# @within function asset:mob/0185.tutankhamen/tick/magic_square/01.main
 
 # 演出
     playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 1.2 0.5 0.4

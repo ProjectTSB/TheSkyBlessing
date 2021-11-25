@@ -1,15 +1,14 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/5.4th.5th_vfx
+#> asset:mob/0185.tutankhamen/tick/magic_square/04.3rd_vfx
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/magic_square/1.main
+# @within function asset:mob/0185.tutankhamen/tick/magic_square/01.main
 
 # 演出
-    playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 0.9 1 0.4
+    playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 0.8 1 0.4
 
 # ダメージ
-    execute if score @s 55.Tick matches 175 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..7] run function asset:mob/0185.tutankhamen/tick/magic_square/10.4th_damage
-
+    execute if score @s 55.Tick matches 160 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..4] run function asset:mob/0185.tutankhamen/tick/magic_square/09.3rd_damage
 # 中円
     particle witch ^0 ^ ^-4 0 0 0 0 1
     particle witch ^0.27903 ^ ^-3.99026 0 0 0 0 1
@@ -253,154 +252,3 @@
     particle witch ^-0.61785 ^ ^-1.90156 0 0 0 0 1
     particle witch ^-0.41572 ^ ^-1.95584 0 0 0 0 1
     particle witch ^-0.20902 ^ ^-1.98877 0 0 0 0 1
-# 最外三角
-    particle witch ^0 ^ ^-8 0 0 0 0 1
-    particle witch ^0.13856 ^ ^-7.76 0 0 0 0 1
-    particle witch ^0.27713 ^ ^-7.52 0 0 0 0 1
-    particle witch ^0.41569 ^ ^-7.28 0 0 0 0 1
-    particle witch ^0.55426 ^ ^-7.04 0 0 0 0 1
-    particle witch ^0.69282 ^ ^-6.8 0 0 0 0 1
-    particle witch ^0.83138 ^ ^-6.56 0 0 0 0 1
-    particle witch ^0.96995 ^ ^-6.32 0 0 0 0 1
-    particle witch ^1.10851 ^ ^-6.08 0 0 0 0 1
-    particle witch ^1.24708 ^ ^-5.84 0 0 0 0 1
-    particle witch ^1.38564 ^ ^-5.6 0 0 0 0 1
-    particle witch ^1.5242 ^ ^-5.36 0 0 0 0 1
-    particle witch ^1.66277 ^ ^-5.12 0 0 0 0 1
-    particle witch ^1.80133 ^ ^-4.88 0 0 0 0 1
-    particle witch ^1.9399 ^ ^-4.64 0 0 0 0 1
-    particle witch ^2.07846 ^ ^-4.4 0 0 0 0 1
-    particle witch ^2.21703 ^ ^-4.16 0 0 0 0 1
-    particle witch ^2.35559 ^ ^-3.92 0 0 0 0 1
-    particle witch ^2.49415 ^ ^-3.68 0 0 0 0 1
-    particle witch ^2.63272 ^ ^-3.44 0 0 0 0 1
-    particle witch ^2.77128 ^ ^-3.2 0 0 0 0 1
-    particle witch ^2.90985 ^ ^-2.96 0 0 0 0 1
-    particle witch ^3.04841 ^ ^-2.72 0 0 0 0 1
-    particle witch ^3.18697 ^ ^-2.48 0 0 0 0 1
-    particle witch ^3.32554 ^ ^-2.24 0 0 0 0 1
-    particle witch ^3.4641 ^ ^-2 0 0 0 0 1
-    particle witch ^3.60267 ^ ^-1.76 0 0 0 0 1
-    particle witch ^3.74123 ^ ^-1.52 0 0 0 0 1
-    particle witch ^3.87979 ^ ^-1.28 0 0 0 0 1
-    particle witch ^4.01836 ^ ^-1.04 0 0 0 0 1
-    particle witch ^4.15692 ^ ^-0.8 0 0 0 0 1
-    particle witch ^4.29549 ^ ^-0.56 0 0 0 0 1
-    particle witch ^4.43405 ^ ^-0.32 0 0 0 0 1
-    particle witch ^4.57261 ^ ^-0.08 0 0 0 0 1
-    particle witch ^4.71118 ^ ^0.16 0 0 0 0 1
-    particle witch ^4.84974 ^ ^0.4 0 0 0 0 1
-    particle witch ^4.98831 ^ ^0.64 0 0 0 0 1
-    particle witch ^5.12687 ^ ^0.88 0 0 0 0 1
-    particle witch ^5.26543 ^ ^1.12 0 0 0 0 1
-    particle witch ^5.404 ^ ^1.36 0 0 0 0 1
-    particle witch ^5.54256 ^ ^1.6 0 0 0 0 1
-    particle witch ^5.68113 ^ ^1.84 0 0 0 0 1
-    particle witch ^5.81969 ^ ^2.08 0 0 0 0 1
-    particle witch ^5.95825 ^ ^2.32 0 0 0 0 1
-    particle witch ^6.09682 ^ ^2.56 0 0 0 0 1
-    particle witch ^6.23538 ^ ^2.8 0 0 0 0 1
-    particle witch ^6.37395 ^ ^3.04 0 0 0 0 1
-    particle witch ^6.51251 ^ ^3.28 0 0 0 0 1
-    particle witch ^6.65108 ^ ^3.52 0 0 0 0 1
-    particle witch ^6.78964 ^ ^3.76 0 0 0 0 1
-    particle witch ^6.9282 ^ ^4 0 0 0 0 1
-    particle witch ^6.65108 ^ ^4 0 0 0 0 1
-    particle witch ^6.37395 ^ ^4 0 0 0 0 1
-    particle witch ^6.09682 ^ ^4 0 0 0 0 1
-    particle witch ^5.81969 ^ ^4 0 0 0 0 1
-    particle witch ^5.54256 ^ ^4 0 0 0 0 1
-    particle witch ^5.26543 ^ ^4 0 0 0 0 1
-    particle witch ^4.98831 ^ ^4 0 0 0 0 1
-    particle witch ^4.71118 ^ ^4 0 0 0 0 1
-    particle witch ^4.43405 ^ ^4 0 0 0 0 1
-    particle witch ^4.15692 ^ ^4 0 0 0 0 1
-    particle witch ^3.87979 ^ ^4 0 0 0 0 1
-    particle witch ^3.60267 ^ ^4 0 0 0 0 1
-    particle witch ^3.32554 ^ ^4 0 0 0 0 1
-    particle witch ^3.04841 ^ ^4 0 0 0 0 1
-    particle witch ^2.77128 ^ ^4 0 0 0 0 1
-    particle witch ^2.49415 ^ ^4 0 0 0 0 1
-    particle witch ^2.21703 ^ ^4 0 0 0 0 1
-    particle witch ^1.9399 ^ ^4 0 0 0 0 1
-    particle witch ^1.66277 ^ ^4 0 0 0 0 1
-    particle witch ^1.38564 ^ ^4 0 0 0 0 1
-    particle witch ^1.10851 ^ ^4 0 0 0 0 1
-    particle witch ^0.83138 ^ ^4 0 0 0 0 1
-    particle witch ^0.55426 ^ ^4 0 0 0 0 1
-    particle witch ^0.27713 ^ ^4 0 0 0 0 1
-    particle witch ^0 ^ ^4 0 0 0 0 1
-    particle witch ^-0.27713 ^ ^4 0 0 0 0 1
-    particle witch ^-0.55426 ^ ^4 0 0 0 0 1
-    particle witch ^-0.83138 ^ ^4 0 0 0 0 1
-    particle witch ^-1.10851 ^ ^4 0 0 0 0 1
-    particle witch ^-1.38564 ^ ^4 0 0 0 0 1
-    particle witch ^-1.66277 ^ ^4 0 0 0 0 1
-    particle witch ^-1.9399 ^ ^4 0 0 0 0 1
-    particle witch ^-2.21703 ^ ^4 0 0 0 0 1
-    particle witch ^-2.49415 ^ ^4 0 0 0 0 1
-    particle witch ^-2.77128 ^ ^4 0 0 0 0 1
-    particle witch ^-3.04841 ^ ^4 0 0 0 0 1
-    particle witch ^-3.32554 ^ ^4 0 0 0 0 1
-    particle witch ^-3.60267 ^ ^4 0 0 0 0 1
-    particle witch ^-3.87979 ^ ^4 0 0 0 0 1
-    particle witch ^-4.15692 ^ ^4 0 0 0 0 1
-    particle witch ^-4.43405 ^ ^4 0 0 0 0 1
-    particle witch ^-4.71118 ^ ^4 0 0 0 0 1
-    particle witch ^-4.98831 ^ ^4 0 0 0 0 1
-    particle witch ^-5.26543 ^ ^4 0 0 0 0 1
-    particle witch ^-5.54256 ^ ^4 0 0 0 0 1
-    particle witch ^-5.81969 ^ ^4 0 0 0 0 1
-    particle witch ^-6.09682 ^ ^4 0 0 0 0 1
-    particle witch ^-6.37395 ^ ^4 0 0 0 0 1
-    particle witch ^-6.65108 ^ ^4 0 0 0 0 1
-    particle witch ^-6.9282 ^ ^4 0 0 0 0 1
-    particle witch ^-6.78964 ^ ^3.76 0 0 0 0 1
-    particle witch ^-6.65108 ^ ^3.52 0 0 0 0 1
-    particle witch ^-6.51251 ^ ^3.28 0 0 0 0 1
-    particle witch ^-6.37395 ^ ^3.04 0 0 0 0 1
-    particle witch ^-6.23538 ^ ^2.8 0 0 0 0 1
-    particle witch ^-6.09682 ^ ^2.56 0 0 0 0 1
-    particle witch ^-5.95825 ^ ^2.32 0 0 0 0 1
-    particle witch ^-5.81969 ^ ^2.08 0 0 0 0 1
-    particle witch ^-5.68113 ^ ^1.84 0 0 0 0 1
-    particle witch ^-5.54256 ^ ^1.6 0 0 0 0 1
-    particle witch ^-5.404 ^ ^1.36 0 0 0 0 1
-    particle witch ^-5.26543 ^ ^1.12 0 0 0 0 1
-    particle witch ^-5.12687 ^ ^0.88 0 0 0 0 1
-    particle witch ^-4.98831 ^ ^0.64 0 0 0 0 1
-    particle witch ^-4.84974 ^ ^0.4 0 0 0 0 1
-    particle witch ^-4.71118 ^ ^0.16 0 0 0 0 1
-    particle witch ^-4.57261 ^ ^-0.08 0 0 0 0 1
-    particle witch ^-4.43405 ^ ^-0.32 0 0 0 0 1
-    particle witch ^-4.29549 ^ ^-0.56 0 0 0 0 1
-    particle witch ^-4.15692 ^ ^-0.8 0 0 0 0 1
-    particle witch ^-4.01836 ^ ^-1.04 0 0 0 0 1
-    particle witch ^-3.87979 ^ ^-1.28 0 0 0 0 1
-    particle witch ^-3.74123 ^ ^-1.52 0 0 0 0 1
-    particle witch ^-3.60267 ^ ^-1.76 0 0 0 0 1
-    particle witch ^-3.4641 ^ ^-2 0 0 0 0 1
-    particle witch ^-3.32554 ^ ^-2.24 0 0 0 0 1
-    particle witch ^-3.18697 ^ ^-2.48 0 0 0 0 1
-    particle witch ^-3.04841 ^ ^-2.72 0 0 0 0 1
-    particle witch ^-2.90985 ^ ^-2.96 0 0 0 0 1
-    particle witch ^-2.77128 ^ ^-3.2 0 0 0 0 1
-    particle witch ^-2.63272 ^ ^-3.44 0 0 0 0 1
-    particle witch ^-2.49415 ^ ^-3.68 0 0 0 0 1
-    particle witch ^-2.35559 ^ ^-3.92 0 0 0 0 1
-    particle witch ^-2.21703 ^ ^-4.16 0 0 0 0 1
-    particle witch ^-2.07846 ^ ^-4.4 0 0 0 0 1
-    particle witch ^-1.9399 ^ ^-4.64 0 0 0 0 1
-    particle witch ^-1.80133 ^ ^-4.88 0 0 0 0 1
-    particle witch ^-1.66277 ^ ^-5.12 0 0 0 0 1
-    particle witch ^-1.5242 ^ ^-5.36 0 0 0 0 1
-    particle witch ^-1.38564 ^ ^-5.6 0 0 0 0 1
-    particle witch ^-1.24708 ^ ^-5.84 0 0 0 0 1
-    particle witch ^-1.10851 ^ ^-6.08 0 0 0 0 1
-    particle witch ^-0.96995 ^ ^-6.32 0 0 0 0 1
-    particle witch ^-0.83138 ^ ^-6.56 0 0 0 0 1
-    particle witch ^-0.69282 ^ ^-6.8 0 0 0 0 1
-    particle witch ^-0.55426 ^ ^-7.04 0 0 0 0 1
-    particle witch ^-0.41569 ^ ^-7.28 0 0 0 0 1
-    particle witch ^-0.27713 ^ ^-7.52 0 0 0 0 1
-    particle witch ^-0.13856 ^ ^-7.76 0 0 0 0 1

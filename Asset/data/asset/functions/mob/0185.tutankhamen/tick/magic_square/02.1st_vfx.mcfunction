@@ -1,14 +1,14 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/2.1st_vfx
+#> asset:mob/0185.tutankhamen/tick/magic_square/02.1st_vfx
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/magic_square/1.main
+# @within function asset:mob/0185.tutankhamen/tick/magic_square/01.main
 
 # 演出
     playsound entity.evoker.prepare_summon master @a[distance=..20] ~ ~ ~ 0.6 1 0.4
 
 # ダメージ
-    execute if score @s 55.Tick matches 130 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0185.tutankhamen/tick/magic_square/7.1st_damage
+    execute if score @s 55.Tick matches 130 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0185.tutankhamen/tick/magic_square/07.1st_damage
 
 # 最内円
     particle witch ^0 ^ ^-2 0 0 0 0 1

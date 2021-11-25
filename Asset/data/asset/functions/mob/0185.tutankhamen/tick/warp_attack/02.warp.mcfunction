@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/warp_attack/2.warp
+#> asset:mob/0185.tutankhamen/tick/warp_attack/02.warp
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/warp_attack/1.main
+# @within function asset:mob/0185.tutankhamen/tick/warp_attack/01.main
 
 # ワープ準備
     tag @s remove 55.WarpAtack
@@ -15,5 +15,4 @@
 # 演出
     particle witch ~ ~1.2 ~ 0.4 0.5 0.4 1 200 normal @a
     execute at @p[gamemode=!spectator] run particle witch ~ ~1.2 ~ 0.4 0.5 0.4 1 200 normal @a
-
     playsound entity.enderman.teleport master @a[distance=..32] ~ ~ ~ 1.3 1 1

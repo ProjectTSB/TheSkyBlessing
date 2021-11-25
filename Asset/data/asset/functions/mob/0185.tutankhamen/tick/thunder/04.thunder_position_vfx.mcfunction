@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/thunder/4.thunder_position_vfx
+#> asset:mob/0185.tutankhamen/tick/thunder/04.thunder_position_vfx
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/thunder/1.main
+# @within function asset:mob/0185.tutankhamen/tick/thunder/01.main
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGwDsAZnAEaVwAMAtACwBMDAHJwEZalNrxQoRXFgMqkAnAwGlejMAQB2AQwC2CZIDDFAAQC1YGJow6AzknAoA9oXUQkUgijjO4GW2ABumtiEeuAAHkgsBFARAL4xBJakaIQ2iAIEVhAWLoiRYHDY2GgwVnoCLHkY9lkQenloVgCihcWljQCOhIHYUADK5h7kiLSBpXEAukA_3
 # 円 1

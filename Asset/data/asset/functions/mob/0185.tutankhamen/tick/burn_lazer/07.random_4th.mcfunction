@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/burn_lazer/7.random_4th
+#> asset:mob/0185.tutankhamen/tick/burn_lazer/07.random_4th
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/burn_lazer/1.main
+# @within function asset:mob/0185.tutankhamen/tick/burn_lazer/01.main
 
 # 何度も撃たないためのTag
     tag @s add 55.4thLazer

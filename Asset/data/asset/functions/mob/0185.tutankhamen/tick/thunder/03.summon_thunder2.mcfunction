@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/thunder/3.summon_thunder2
+#> asset:mob/0185.tutankhamen/tick/thunder/03.summon_thunder2
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/thunder/2.summon_thunder1
+# @within function asset:mob/0185.tutankhamen/tick/thunder/02.summon_thunder1
 
 # 前方拡散でAECを召喚
     execute at @p run summon marker ~ ~20 ~ {Tags:["SpreadMarker"]}

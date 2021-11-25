@@ -1,4 +1,4 @@
-#> asset:mob/0185.tutankhamen/tick/3.select_attack
+#> asset:mob/0185.tutankhamen/tick/03.select_attack
 #
 #
 #

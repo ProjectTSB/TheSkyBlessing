@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/thunder/6.vfx_and_damage2
+#> asset:mob/0185.tutankhamen/tick/thunder/06.vfx_and_damage2
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/thunder/5.vfx_and_damage1
+# @within function asset:mob/0185.tutankhamen/tick/thunder/05.vfx_and_damage1
 
 # 演出
     particle dust 0.38 0 0.6 1 ~ ~3 ~ 0.7 3 0.7 0 300

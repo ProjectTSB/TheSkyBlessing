@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/8.2nd_damage
+#> asset:mob/0185.tutankhamen/tick/magic_square/08.2nd_damage
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/magic_square/3.2nd_vfx
+# @within function asset:mob/0185.tutankhamen/tick/magic_square/03.2nd_vfx
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 15f
