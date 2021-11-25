@@ -9,7 +9,7 @@
 
 
 # 移動
-    execute if entity @s[tag=0188.Start] run function asset:mob/0188.fireball/tick/move
+    execute if entity @s[tag=58.Start] run function asset:mob/0188.fireball/tick/move
 
 # Init
-    execute if entity @s[tag=0188.Init] run function asset:mob/0188.fireball/tick/init
+    execute if entity @s[tag=58.Init] run function asset:mob/0188.fireball/tick/init
