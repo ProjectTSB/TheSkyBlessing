@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0187.flame_mage/**
-    scoreboard objectives add 0187.Attack dummy
+    scoreboard objectives add 57.Attack dummy

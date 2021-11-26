@@ -15,4 +15,4 @@
     playsound minecraft:entity.witch.throw player @a ~ ~ ~ 2 0.7
 
 # リセット
-    scoreboard players reset @s 0187.Attack
+    scoreboard players reset @s 57.Attack
