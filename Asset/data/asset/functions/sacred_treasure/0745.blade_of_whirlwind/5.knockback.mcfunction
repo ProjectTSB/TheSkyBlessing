@@ -10,9 +10,6 @@
 # 補正の値を2倍する
     scoreboard players operation $VectorMagnitude Lib *= $2 Const
 
-tellraw @p [{"text":"ノクバ "},{"score":{"name":"$VectorMagnitude","objective":"Lib"}}]
-
-
 # ノクバ最低値的な
     scoreboard players add $VectorMagnitude Lib 180
 
