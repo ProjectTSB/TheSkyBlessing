@@ -16,18 +16,20 @@
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000
     scoreboard players operation $VectorMagnitude Lib = $AddDamage Temporary
 
-# 本来の補正一切なしの値を減算して、×5した数値がダメージに加算されるので、5を掛け、20で割るので結果的に4で割る
+# 本来の補正一切なしの値を減算
     scoreboard players operation $AddDamage Temporary -= $100 Const
+
+# attributeの補正の値×250だけダメージに加算されるので、1000×5÷20=250、より5を掛け、20で割るので結果的に4で割る
     scoreboard players operation $AddDamage Temporary /= $4 Const
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~15の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $16 Const
+        # 剰余算する。0~14の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $14 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 31
+            scoreboard players add $RandomDamage Temporary 41
         # 移動速度の追加分を加算
             scoreboard players operation $RandomDamage Temporary += $AddDamage Temporary
     #ダメージを代入

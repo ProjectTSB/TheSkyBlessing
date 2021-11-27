@@ -4,20 +4,21 @@
 #
 # @within function asset:sacred_treasure/0745.blade_of_whirlwind/3.main
 
-# Constではない100を設定
-    scoreboard players set $KP.100 Temporary 100
+# こっちも補正無しの分の値を引く
+    scoreboard players operation $VectorMagnitude Lib -= $100 Const
 
-# ノクバ耐性が0でない限り100から数値を引く
-    execute if score $MobKnockbackResist Temporary matches 1..99 store result score $MobKnockbackResist Temporary run scoreboard players operation $KP.100 Const -= $MobKnockbackResist Temporary
+# 補正の値を2倍する
+    scoreboard players operation $VectorMagnitude Lib *= $2 Const
 
-# 移動速度上昇ないとバニラと同じくらいで悲しいので
-    scoreboard players add $VectorMagnitude Lib 75
+tellraw @p [{"text":"ノクバ "},{"score":{"name":"$VectorMagnitude","objective":"Lib"}}]
 
-# $VectorMagnitudeの数値ととノクバ耐性を掛ける
-    execute if score $MobKnockbackResist Temporary matches 1..99 run scoreboard players operation $VectorMagnitude Lib *= $MobKnockbackResist Temporary
 
-# これを5で割る
-    execute if score $MobKnockbackResist Temporary matches 1..99 run scoreboard players operation $VectorMagnitude Lib %= $5 Const
+# ノクバ最低値的な
+    scoreboard players add $VectorMagnitude Lib 180
+
+# ノクバ耐性の計算
+    execute if score $MobKnockbackResist Temporary matches 1..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/6.knockback_resist
+tellraw @p [{"text":"ノクバ "},{"score":{"name":"$VectorMagnitude","objective":"Lib"}}]
 
 # 攻撃対象のMobをプレイヤーの向いてる方向にmotionで吹き飛ばす
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] at @s rotated as @p[tag=this,distance=..6] rotated ~ ~-15 run function lib:motion/
