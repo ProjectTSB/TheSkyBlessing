@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/tick/1.trigger",
+        "asset:mob/0021.demon_eye/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger",
         "asset:mob/0017.fire_bird/tick/1.trigger",
         "asset:mob/0063.ghost/tick/1.trigger",
@@ -10,6 +11,7 @@
         "asset:mob/0038.laser_eye/tick/1.trigger",
         "asset:mob/0023.chainsaw_zombie/tick/1.trigger",
         "asset:mob/0019.horus_priest/tick/1.trigger",
+        "asset:mob/0175.queen_bee/tick/1.trigger",
         "asset:mob/0115.jewel_bullet/tick/1.trigger",
         "asset:mob/0065.night_shadow/tick/1.trigger",
         "asset:mob/0124.skull_harpy/tick/1.trigger",
@@ -20,6 +22,7 @@
         "asset:mob/0074.watermelon_bomber/tick/1.trigger",
         "asset:mob/0075.watermelon/tick/1.trigger",
         "asset:mob/0076.golden_watermelon_bomber/tick/1.trigger",
-        "asset:mob/0077.golden_watermelon/tick/1.trigger"
+        "asset:mob/0077.golden_watermelon/tick/1.trigger",
+        "asset:mob/0139.blast_eye/tick/1.trigger"
     ]
 }

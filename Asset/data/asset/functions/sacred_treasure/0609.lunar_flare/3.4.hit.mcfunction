@@ -22,7 +22,7 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         execute as @a if score @s UserID = @e[type=armor_stand,tag=this,distance=..1,limit=1] GX.UserID run function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2,sort=nearest,limit=1] run function lib:damage/
+        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..3,sort=nearest,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
     kill @s

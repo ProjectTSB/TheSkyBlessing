@@ -15,9 +15,9 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=player,tag=LandingTarget,distance=..50,limit=1] run function lib:damage/
+        execute as @p[tag=LandingTarget,distance=..50,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # 着弾タグを消す
-    tag @e[type=player,tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
+    tag @p[tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
