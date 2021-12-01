@@ -38,6 +38,7 @@
         "asset:mob/0179.trindicator/attack/1.trigger",
         "asset:mob/0171.lumberjack_of_blue_forest/attack/1.trigger",
         "asset:mob/0181.magic_bookshelf/attack/1.trigger",
-        "asset:mob/0080.fukotsu/attack/1.trigger"
+        "asset:mob/0080.fukotsu/attack/1.trigger",
+        "asset:mob/0186.ferocious_bee/attack/1.trigger"
     ]
 }

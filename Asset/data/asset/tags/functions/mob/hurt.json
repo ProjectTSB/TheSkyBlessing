@@ -24,6 +24,7 @@
         "asset:mob/0148.prismarine_atlatl/hurt/1.trigger",
         "asset:mob/0171.lumberjack_of_blue_forest/hurt/1.trigger",
         "asset:mob/0181.magic_bookshelf/hurt/1.trigger",
-        "asset:mob/0139.blast_eye/hurt/1.trigger"
+        "asset:mob/0139.blast_eye/hurt/1.trigger",
+        "asset:mob/0186.ferocious_bee/hurt/1.trigger"
     ]
 }
