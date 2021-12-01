@@ -5,7 +5,7 @@
 # @within function asset:mob/0074.watermelon_bomber/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiDrown"],DeathLootTable:"asset:mob/death/0074.watermelon_bomber"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0074.watermelon_bomber"}
 # ID (int)
     data modify storage asset:mob ID set value 74
 # Type (string) Wikiを参照
