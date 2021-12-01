@@ -11,6 +11,8 @@
         "asset:mob/0129.lexiel/rejoin_process",
         "asset:sacred_treasure/0261.holy_symbol_lv.1/rejoin_process",
         "asset:sacred_treasure/0265.holy_symbol_lv.5/rejoin_process",
-        "asset:sacred_treasure/0269.holy_symbol_lv.10/rejoin_process"
+        "asset:sacred_treasure/0269.holy_symbol_lv.10/rejoin_process",
+        "asset:mob/0171.lumberjack_of_blue_forest/rejoin_process",
+        "asset:sacred_treasure/0373.ice_sorcery/rejoin_process"
     ]
 }
