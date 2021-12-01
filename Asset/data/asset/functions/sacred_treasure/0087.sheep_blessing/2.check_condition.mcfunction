@@ -14,8 +14,8 @@
 
 # 16個以上羊毛を持ってるかチェック
     execute store result score @s Temporary run clear @s #wool 0
-    execute if score @s Temporary matches 16.. run tag @s remove CanUsed
-    execute if score @s Temporary matches 16.. run function lib:message/sacred_treasure/dont_have_require_items
+    execute if score @s Temporary matches ..15 run tag @s remove CanUsed
+    execute if score @s Temporary matches ..15 run function lib:message/sacred_treasure/dont_have_require_items
 
 # リセット
     scoreboard players reset @s Temporary
