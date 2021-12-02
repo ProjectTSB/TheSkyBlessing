@@ -6,6 +6,8 @@
 
 # 共通処理
     tag @s add Believe.None
+    function oh_my_dat:please
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
 # 各神固有処理
     execute if entity @s[tag=Believe.Flora] run function lib:message/god/flora/unbelieve2
     execute if entity @s[tag=Believe.Flora] run function player_manager:god/flora/unbelieve
