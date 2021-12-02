@@ -5,7 +5,7 @@
 # @within function asset:mob/0101.admiral_zombie/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AntiDrown","AntiVoid"],DeathLootTable:"asset:mob/death/0101.admiral_zombie"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AntiVoid"],DeathLootTable:"asset:mob/death/0101.admiral_zombie"}
 # ID (int)
     data modify storage asset:mob ID set value 101
 # Type (string) Wikiを参照
