@@ -13,12 +13,15 @@
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,624,6]
     # 補正値
-        data modify storage api: Argument.Amount set value 0.1
+        data modify storage api: Argument.Amount set value 0.03
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
     function api:player_modifier/defense/fire/add
 
 #ちょっとした演出
-    particle flame ~ ~0.3 ~ 0.4 0.4 0.4 0 10 normal @s
-    playsound minecraft:entity.blaze.shoot master @s ~ ~ ~ 0.4 1
+    particle flame ~ ~1.6 ~ 0.4 0.2 0.4 0 10 normal @a
+    playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 0.4 1
+
+# 一式検知
+    execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:sacred_treasure/0625.flame_armor/4.fullset
