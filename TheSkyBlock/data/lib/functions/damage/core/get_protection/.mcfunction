@@ -1,4 +1,4 @@
-#> lib:damage/core/get_protection_lv
+#> lib:damage/core/get_protection/
 #
 # プロテクションのEPFを取得します
 #
@@ -10,8 +10,8 @@
 
 # Protectionを切り出す
     data modify storage lib: Protection set value []
-    execute if entity @s[type=player] run function lib:damage/core/get_player_protections
-    execute if entity @s[type=!player] run data modify storage lib: Protection append from entity @s ArmorItems[].tag.Enchantments[{id:"minecraft:protection"}].lvl
+    execute if entity @s[type=player] run function lib:damage/core/get_protection/player
+    execute if entity @s[type=!player] run function lib:damage/core/get_protection/non-player
 # 明示的に0に設定
     scoreboard players set $EPF Temporary 0
 # 足
