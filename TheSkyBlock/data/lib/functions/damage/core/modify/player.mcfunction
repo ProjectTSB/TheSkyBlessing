@@ -1,4 +1,4 @@
-#> lib:damage/core/modifier
+#> lib:damage/core/modify/player
 #
 # damageLibの中でも攻撃元に関係する処理部
 #

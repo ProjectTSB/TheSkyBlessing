@@ -1,8 +1,8 @@
-#> lib:damage/core/get_player_protections
+#> lib:damage/core/get_protection/player
 #
 # プレイヤーの防具のProtectionを軽量に取得します
 #
-# @within function lib:damage/core/get_protection_lv
+# @within function lib:damage/core/get_protection/
 
 function api:data_get/inventory
 data modify storage lib: Protection append from storage api: Inventory[{Slot:103b}].tag.Enchantments[{id:"minecraft:protection"}].lvl

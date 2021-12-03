@@ -1,8 +1,8 @@
-#> lib:damage/core/non-player-process
+#> lib:damage/core/health_subtract/non-player
 #
 # Mobに対するHP減算回りの処理
 #
-# @within function lib:damage/core/health_subtract
+# @within function lib:damage/core/health_subtract/
 
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
