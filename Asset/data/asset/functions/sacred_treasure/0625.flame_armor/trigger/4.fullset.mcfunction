@@ -3,10 +3,10 @@
 #
 #
 # @within function
-#   asset:sacred_treasure/0624.flame_helm/3.main
+#   asset:sacred_treasure/0624.flame_helm/trigger/3.main
 #   asset:sacred_treasure/0625.flame_armor/trigger/3.main
-#   asset:sacred_treasure/0626.flame_leggings/3.main
-#   asset:sacred_treasure/0627.flame_boots/3.main
+#   asset:sacred_treasure/0626.flame_leggings/trigger/3.main
+#   asset:sacred_treasure/0627.flame_boots/trigger/3.main
 
 # 引数の設定
     # UUID

@@ -3,10 +3,10 @@
 #
 #
 # @within function
-#   asset:sacred_treasure/0628.ice_helm/3.main
+#   asset:sacred_treasure/0628.ice_helm/trigger/3.main
 #   asset:sacred_treasure/0629.ice_armor/trigger/3.main
-#   asset:sacred_treasure/0630.ice_leggings/3.main
-#   asset:sacred_treasure/0631.ice_boots/3.main
+#   asset:sacred_treasure/0630.ice_leggings/trigger/3.main
+#   asset:sacred_treasure/0631.ice_boots/trigger/3.main
 
 # Tag付与
     tag @s add HH.Fullset

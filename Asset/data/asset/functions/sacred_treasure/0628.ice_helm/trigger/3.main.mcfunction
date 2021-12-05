@@ -25,4 +25,4 @@
     playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 1.2 0
 
 # フルセット
-execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/4.fullset
+execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/trigger/4.fullset

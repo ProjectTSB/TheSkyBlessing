@@ -23,4 +23,4 @@
     function api:player_modifier/defense/thunder/add
 
 #セット効果用のファンクション実行（実行はチェストプレートの方へ）
-    execute if data storage asset:context id.all{head:642,chest:643,legs:644,feet:645} run function asset:sacred_treasure/0643.raimei_chestplate/3.1.armorfullset
+    execute if data storage asset:context id.all{head:642,chest:643,legs:644,feet:645} run function asset:sacred_treasure/0643.raimei_chestplate/trigger/3.1.armorfullset
