@@ -21,7 +21,7 @@
         execute if score $BoneMeal Temporary matches ..7 run tag @s remove CanUsed
         execute if score $BoneMeal Temporary matches ..7 run function lib:message/sacred_treasure/dont_have_require_items
     # 周囲のブロック判定
-        execute store result score $AroundCrops Temporary run clone ~-4 ~-4 ~-4 ~4 ~4 ~4 ~-4 ~-4 ~-4 filtered #asset:sacred_treasure/0088.fertility_hoe/trigger/grow_target force
+        execute store result score $AroundCrops Temporary run clone ~-4 ~-4 ~-4 ~4 ~4 ~4 ~-4 ~-4 ~-4 filtered #asset:sacred_treasure/0088.fertility_hoe/grow_target force
         execute if score $AroundCrops Temporary matches 0 run tag @s remove CanUsed
         execute if score $AroundCrops Temporary matches 0 run tellraw @s [{"text": "近くに作物がある必要があります。"}]
     # リセット
