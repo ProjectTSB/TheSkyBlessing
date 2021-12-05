@@ -14,7 +14,8 @@
 
 # 残り回数が1回の時発動した場合
     execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
-    execute if score $UseCount Temporary matches 1 run function asset:sacred_treasure/0365.bloodthirsty_sword/_.give
+    execute if score $UseCount Temporary matches 1 run data modify storage api: Argument.ID set value 365
+    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give
     execute if score $UseCount Temporary matches 1 run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
     scoreboard players reset $UseCount Temporary
 

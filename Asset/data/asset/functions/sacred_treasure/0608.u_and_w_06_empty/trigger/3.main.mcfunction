@@ -11,4 +11,5 @@
     stopsound @a * entity.item.break
     playsound block.iron_trapdoor.close ambient @a ~ ~ ~ 1 0.5
     playsound entity.horse.armor master @p ~ ~ ~ 0.6 0.6
-    function asset:sacred_treasure/0607.u_and_w_06/_.give
+    data modify storage api: Argument.ID set value 607
+    function api:sacred_treasure/give

@@ -8,4 +8,5 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    function asset:sacred_treasure/0185.increased_cookie/_.give
+    data modify storage api: Argument.ID set value 185
+    function api:sacred_treasure/give

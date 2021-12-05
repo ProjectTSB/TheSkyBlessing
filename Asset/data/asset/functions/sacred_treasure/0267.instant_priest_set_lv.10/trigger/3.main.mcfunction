@@ -8,6 +8,9 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    function asset:sacred_treasure/0268.heal_lv.10/_.give
-    function asset:sacred_treasure/0269.holy_symbol_lv.10/_.give
-    function asset:sacred_treasure/0270.angel_ray_lv.10/_.give
+    data modify storage api: Argument.ID set value 268
+    function api:sacred_treasure/give
+    data modify storage api: Argument.ID set value 269
+    function api:sacred_treasure/give
+    data modify storage api: Argument.ID set value 270
+    function api:sacred_treasure/give

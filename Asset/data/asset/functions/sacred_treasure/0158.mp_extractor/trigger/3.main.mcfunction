@@ -9,7 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
     # あげる♡
-    function asset:sacred_treasure/0159.extracted_mp_bottle/_.give
+    data modify storage api: Argument.ID set value 159
+    function api:sacred_treasure/give
     # 演出
     execute anchored eyes run particle falling_obsidian_tear ^ ^ ^ 0.5 0.5 0.5 0 50 force @s
     clear @s glass_bottle 1

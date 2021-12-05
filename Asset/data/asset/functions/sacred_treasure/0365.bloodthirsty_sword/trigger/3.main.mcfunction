@@ -10,7 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 神器もらうよ
-    function asset:sacred_treasure/0364.red_knights_sword/_.give
+    data modify storage api: Argument.ID set value 364
+    function api:sacred_treasure/give
 
 # 演出
     particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.1 0.1 1 100

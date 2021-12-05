@@ -8,4 +8,5 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    function asset:sacred_treasure/0272.infinity_food/trigger/_.give
+    data modify storage api: Argument.ID set value 272
+    function api:sacred_treasure/give
