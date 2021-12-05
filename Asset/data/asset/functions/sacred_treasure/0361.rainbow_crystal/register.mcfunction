@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:sacred_treasure/register
 
-data modify storage asset:sacred_treasure Rarity[4] append value 361
+data modify storage asset:sacred_treasure RarityRegistry[4] append value 361
