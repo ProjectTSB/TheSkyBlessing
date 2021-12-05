@@ -2,7 +2,7 @@
 #
 # フルセット効果を消す
 #
-# @within function asset:sacred_treasure/????.raimei_*/dis_equip/main
+# @within function asset:sacred_treasure/????.raimei_*/trigger/dis_equip/main
 
 # タグを消す
     tag @s remove HV.Full

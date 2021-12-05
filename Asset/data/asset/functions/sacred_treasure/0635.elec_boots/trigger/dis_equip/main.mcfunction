@@ -14,4 +14,4 @@
     playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.4 1.1 0
 
 # 一式効果削除
-    execute if entity @s[tag=HL.Fullset] run function asset:sacred_treasure/0633.elec_armor/5.fullset_dis_equip
+    execute if entity @s[tag=HL.Fullset] run function asset:sacred_treasure/0633.elec_armor/trigger/5.fullset_dis_equip

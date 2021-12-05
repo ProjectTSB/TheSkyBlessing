@@ -3,10 +3,10 @@
 #
 #
 # @within function
-#   asset:sacred_treasure/0632.elec_helm/dis_equip/main
+#   asset:sacred_treasure/0632.elec_helm/trigger/dis_equip/main
 #   asset:sacred_treasure/0633.elec_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0634.elec_leggings/dis_equip/main
-#   asset:sacred_treasure/0635.elec_boots/dis_equip/main
+#   asset:sacred_treasure/0634.elec_leggings/trigger/dis_equip/main
+#   asset:sacred_treasure/0635.elec_boots/trigger/dis_equip/main
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,633,0]
