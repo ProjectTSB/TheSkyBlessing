@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/example/_.give
+#> asset:sacred_treasure/example/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
