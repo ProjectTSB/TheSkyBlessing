@@ -11,7 +11,7 @@
 
 # 神器もらうよ
     data modify storage api: Argument.ID set value 364
-    function api:sacred_treasure/give
+    function api:sacred_treasure/give/from_id
 
 # 演出
     particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.1 0.1 1 100

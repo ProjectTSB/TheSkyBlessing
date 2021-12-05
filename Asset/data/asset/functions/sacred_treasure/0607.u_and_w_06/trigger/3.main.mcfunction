@@ -22,7 +22,7 @@
 # 残り回数が1回の時発動した場合
     execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
     execute if score $UseCount Temporary matches 1 run data modify storage api: Argument.ID set value 608
-    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give
+    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give/from_id
     scoreboard players reset $UseCount Temporary
 
 # 前方拡散設定

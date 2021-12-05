@@ -9,8 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
     data modify storage api: Argument.ID set value 260
-    function api:sacred_treasure/give
+    function api:sacred_treasure/give/from_id
     data modify storage api: Argument.ID set value 261
-    function api:sacred_treasure/give
+    function api:sacred_treasure/give/from_id
     data modify storage api: Argument.ID set value 262
-    function api:sacred_treasure/give
+    function api:sacred_treasure/give/from_id

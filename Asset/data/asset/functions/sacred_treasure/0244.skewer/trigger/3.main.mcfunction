@@ -11,7 +11,7 @@
 
 # 神器give
     data modify storage api: Argument.ID set value 245
-    function api:sacred_treasure/give
+    function api:sacred_treasure/give/from_id
 
 # 演出
     particle minecraft:crit ~ ~1 ~ 0.25 0.5 0.25 0.1 20 force

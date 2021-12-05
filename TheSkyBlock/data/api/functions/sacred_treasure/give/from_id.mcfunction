@@ -1,4 +1,4 @@
-#> api:sacred_treasure/give
+#> api:sacred_treasure/give/from_id
 #
 # 神器Assetの入手処理を叩く処理
 #
