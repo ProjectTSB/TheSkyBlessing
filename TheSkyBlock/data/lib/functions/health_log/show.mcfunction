@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:damage/core/damage_indicator
+# @within function lib:damage/core/show_damage_log
 
 #> For Init
 # @private

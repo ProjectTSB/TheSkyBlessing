@@ -1,6 +1,6 @@
-#> lib:damage/core/damage_indicator
+#> lib:damage/core/show_damage_log
 #
-# 二分探索でparticleを表示する
+# ヘルスログシステムへのデータ受け渡し
 #
 # @within function lib:damage/core/health_subtract/
 
