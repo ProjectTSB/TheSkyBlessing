@@ -38,9 +38,9 @@
 
 # Posをセット
     data modify storage api: Pos set value [0d,0d,0d]
-    execute store result storage api: Pos[0] double 0.01 run scoreboard players get $RandX Temporary
-    execute store result storage api: Pos[1] double 0.01 run scoreboard players get $RandY Temporary
-    execute store result storage api: Pos[2] double 0.01 run scoreboard players get $RandZ Temporary
+    execute store result storage api: Pos[0] double 0.01 run scoreboard players get $PosX Temporary
+    execute store result storage api: Pos[1] double 0.01 run scoreboard players get $PosY Temporary
+    execute store result storage api: Pos[2] double 0.01 run scoreboard players get $PosZ Temporary
     data modify entity @s Pos set from storage api: Pos
 
 # リセット
