@@ -12,6 +12,7 @@
     #declare score_holder $Fluctuation
     #declare tag LogAECInit
     #declare score_holder $isNegative
+    #declare tag SummonPosStand
 
 # 負数の場合の処理
     execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..-1
@@ -24,10 +25,12 @@
     scoreboard players operation $Int Temporary = $Fluctuation Lib
     scoreboard players operation $Int Temporary /= $100 Const
 
-# 描画用AEC
-    execute anchored eyes positioned ^ ^ ^ run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
+# 設置位置用AEC
+    execute anchored eyes positioned ^ ^ ^ run summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["SummonPosStand"]}
 # 表示位置変更
-    execute anchored eyes positioned ^ ^ ^ as @e[type=armor_stand,tag=LogAECInit,distance=..0.001,limit=1] run function lib:health_log/core/set_position
+    execute anchored eyes positioned ^ ^ ^ as @e[type=armor_stand,tag=SummonPosStand,distance=..0.001,limit=1] run function lib:health_log/core/set_position
+# 描画用AEC
+    execute anchored eyes positioned ^ ^ ^ at @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1] run summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
 # 表示文字列生成
     execute if score $isNegative Temporary matches 0 run loot replace block 10000 0 10000 container.0 loot lib:health_log/heal
     execute if score $isNegative Temporary matches 1 run loot replace block 10000 0 10000 container.0 loot lib:health_log/damage
@@ -36,6 +39,7 @@
 # タグ削除
     execute anchored eyes positioned ^ ^ ^ run tag @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] remove LogAECInit
 # リセット
+    execute anchored eyes positioned ^ ^ ^ run kill @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1]
     scoreboard players reset $Fluctuation Lib
     scoreboard players reset $Frac Temporary
     scoreboard players reset $Int Temporary
