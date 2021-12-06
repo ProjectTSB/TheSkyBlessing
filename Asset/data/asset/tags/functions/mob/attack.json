@@ -20,6 +20,7 @@
         "asset:mob/0065.night_shadow/attack/1.trigger",
         "asset:mob/0089.decapitation/attack/1.trigger",
         "asset:mob/0107.dark_ender/attack/1.trigger",
+        "asset:mob/0176.killer_bee/attack/1.trigger",
         "asset:mob/0124.skull_harpy/attack/1.trigger",
         "asset:mob/0053.executioners/attack/1.trigger",
         "asset:mob/0092.red_rose/attack/1.trigger",
@@ -34,6 +35,13 @@
         "asset:mob/0166.flying_potion/attack/1.trigger",
         "asset:mob/0178.vindicator/attack/1.trigger",
         "asset:mob/0177.pillager/attack/1.trigger",
-        "asset:mob/0179.trindicator/attack/1.trigger"
+        "asset:mob/0179.trindicator/attack/1.trigger",
+        "asset:mob/0059.jack_o_lantern/attack/1.trigger",
+        "asset:mob/0074.watermelon_bomber/attack/1.trigger",
+        "asset:mob/0076.golden_watermelon_bomber/attack/1.trigger",
+        "asset:mob/0171.lumberjack_of_blue_forest/attack/1.trigger",
+        "asset:mob/0181.magic_bookshelf/attack/1.trigger",
+        "asset:mob/0080.fukotsu/attack/1.trigger",
+        "asset:mob/0186.ferocious_bee/attack/1.trigger"
     ]
 }

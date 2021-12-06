@@ -2,18 +2,23 @@
 #
 # プレイヤーのHealthを増減します。
 #
-# 値は100倍で入れる必要があります。
-#
 # @input
 #   as player
-#   score $Fluctuation Argument
+#   storage api: Argument.Fluctuation: double
+#   storage api: Argument.Attacker?: int(MobUUID)
+#   storage api: Argument.AttackType?: Enum(AttackType)
+#   storage api: Argument.ElementType?: Enum(ElementType)
 # @within function lib:**
 
 #> temp
 # @private
     #declare score_holder $Fluctuation
 
+# 取得
+    execute store result score $Fluctuation Temporary run data get storage api: Argument.Fluctuation 100
 # 増減
-    scoreboard players operation @s ScoreToHPFluc += $Fluctuation Lib
+    scoreboard players operation @s ScoreToHPFluc += $Fluctuation Temporary
+# 攻撃情報を記録する
+    execute if score $Fluctuation Temporary matches ..-1 run function lib:score_to_health_wrapper/core/store_attack_info
 # リセット
     scoreboard players reset $Fluctuation Lib
