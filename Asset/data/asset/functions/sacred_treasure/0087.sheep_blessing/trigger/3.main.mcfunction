@@ -9,6 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 羊毛消費
+    clear @s white_wool 16
+
 # 演出
     playsound entity.illusioner.prepare_mirror master @s ~ ~ ~ 1.0 1.0
 
