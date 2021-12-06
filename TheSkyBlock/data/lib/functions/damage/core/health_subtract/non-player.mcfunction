@@ -8,6 +8,7 @@
 # @private
 #declare score_holder $Fluctuation
 
+tellraw @a [{"text":"$Damage: "},{"score":{"objective":"Temporary","name":"$Damage"}}]
 # ダメージ表示
     execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib = $Damage Temporary
     execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib /= $-100 Const
