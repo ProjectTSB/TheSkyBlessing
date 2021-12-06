@@ -45,6 +45,9 @@
 
 # リセット
     data remove storage api: Pos
+    scoreboard players reset $PosX Temporary
+    scoreboard players reset $PosY Temporary
+    scoreboard players reset $PosZ Temporary
     scoreboard players reset $RandX Temporary
     scoreboard players reset $RandY Temporary
     scoreboard players reset $RandZ Temporary
