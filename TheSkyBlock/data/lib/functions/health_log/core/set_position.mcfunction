@@ -27,8 +27,8 @@
     execute store result score $RandY Temporary run function lib:random/
     scoreboard players operation $RandY Temporary %= $100 Const
     scoreboard players operation $PosY Temporary += $RandY Temporary
-    scoreboard players operation $PosX Temporary -= $50 Const
-    scoreboard players operation $RandY Temporary += $10 Const
+    scoreboard players operation $PosY Temporary -= $50 Const
+    scoreboard players operation $RandY Temporary += $30 Const
 # Z
     execute store result score $PosZ Temporary run data get storage api: Pos[2] 100
     execute store result score $RandZ Temporary run function lib:random/
