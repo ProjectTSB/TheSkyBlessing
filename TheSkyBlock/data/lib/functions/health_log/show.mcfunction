@@ -2,18 +2,22 @@
 #
 #
 #
-# @within function lib:damage/core/show_damage_log
+# @within function
+#   lib:damage/core/health_subtract/non-player
+#   lib:heal/core/non-player
+#   lib:score_to_health_wrapper/fluctuation
 
 #> For Init
 # @private
+    #declare score_holder $Fluctuation
     #declare tag LogAECInit
 
 # 少数部を取り出す
     scoreboard players operation $Frac Temporary = $Fluctuation Lib
-    scoreboard players operation $Frac Temporary /= $1000 Const
+    scoreboard players operation $Frac Temporary /= $10 Const
     scoreboard players operation $Frac Temporary %= $10 Const
-# 値は10000倍されたもの
-    scoreboard players operation $Int Temporary /= $10000 Const
+# 値は100倍されたもの
+    scoreboard players operation $Int Temporary /= $100 Const
 
 # 描画用AEC
     execute anchored eyes positioned ^ ^ ^ run summon minecraft:area_effect_cloud ~ ~0.4 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
