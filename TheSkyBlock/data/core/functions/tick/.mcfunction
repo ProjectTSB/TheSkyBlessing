@@ -30,6 +30,9 @@
 # ItemMetaDataチェック
     execute as @e[type=item] run function core:tick/check_item_meta/entity
 
+# ダメージログに対するtick処理
+    execute as @e[type=area_effect_cloud,tag=LogAEC] at @s run function lib:health_log/tick
+
 # tick処理後のプレイヤー処理部
     execute as @a at @s run function core:tick/post-tick-proc_player
 

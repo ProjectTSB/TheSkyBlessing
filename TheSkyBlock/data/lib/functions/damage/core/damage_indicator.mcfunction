@@ -4,36 +4,12 @@
 #
 # @within function lib:damage/core/health_subtract/
 
-# 値は10000倍されたものなのでDamage /= 10000する
-# 更に、damage_indicatorの表示はハート単位なのでDamage /= 2する
-# 合わせて Damage /= 20000すれば良い
-    scoreboard players operation $Damage Temporary /= $20000 Const
-# Damage << 19   有効範囲に合わせるため19ビット左へシフト
-    scoreboard players operation $Damage Temporary *= $2^19 Const
-# Damage << 1   1ビット左へシフト
-    scoreboard players operation $Damage Temporary *= $2 Const
-# オーバーフローしてたらParticle表示
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 2048
-# 0になるまでやる
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 1024
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 512
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 256
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 128
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 64
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 32
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 16
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 8
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 4
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 2
-    scoreboard players operation $Damage Temporary *= $2 Const
-    execute if score $Damage Temporary matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 1
+#>
+# @private
+#declare score_holder $Fluctuation
+
+# 引数
+    scoreboard players operation $Fluctuation Lib = $Damage Temporary
+    scoreboard players operation $Fluctuation Lib /= $1000 Const
+# 呼び出し
+    function lib:health_log/show
