@@ -8,6 +8,10 @@
 # @private
 #declare score_holder $Fluctuation
 
+# ダメージ表示
+    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib = $Damage Temporary
+    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib /= $-100 Const
+    execute if data storage lib: Argument{DisableParticle:0b} at @s run function lib:health_log/show
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
 # 減算
@@ -21,7 +25,3 @@
     execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead] run effect give @s instant_damage 1 31 true
 # onAttackのトリガー
     execute if score $Health Temporary matches 1.. run function lib:damage/core/trigger_on_attack
-# ダメージ表示
-    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib = $Damage Temporary
-    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib /= $-100 Const
-    execute if data storage lib: Argument{DisableParticle:0b} at @s run function lib:health_log/show
