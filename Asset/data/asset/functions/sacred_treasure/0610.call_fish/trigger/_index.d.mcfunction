@@ -7,6 +7,3 @@
     #declare tag GY.Fish
     #declare tag GY.First
     #declare tag GY.This
-
-#   asset:sacred_treasure/0610.call_fish/rejoin_process
-    #declare tag GY.Fish
