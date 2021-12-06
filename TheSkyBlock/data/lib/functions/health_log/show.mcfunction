@@ -13,7 +13,6 @@
     #declare tag LogAECInit
     #declare score_holder $isNegative
 
-tellraw @a [{"text":"$Fluctuation: "},{"score":{"objective":"Lib","name":"$Fluctuation"}}]
 # 負数の場合の処理
     execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..-1
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Fluctuation Lib *= $-1 Const
@@ -24,8 +23,6 @@ tellraw @a [{"text":"$Fluctuation: "},{"score":{"objective":"Lib","name":"$Fluct
 # 値は100倍されたもの
     scoreboard players operation $Int Temporary = $Fluctuation Lib
     scoreboard players operation $Int Temporary /= $100 Const
-tellraw @a [{"text":"$Int: "},{"score":{"objective":"Temporary","name":"$Int"}}]
-tellraw @a [{"text":"$Frac: "},{"score":{"objective":"Temporary","name":"$Frac"}}]
 
 # 描画用AEC
     execute anchored eyes positioned ^ ^ ^ run summon minecraft:armor_stand ~ ~0.4 ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
