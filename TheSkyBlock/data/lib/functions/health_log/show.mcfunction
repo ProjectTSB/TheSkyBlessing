@@ -18,6 +18,7 @@ tellraw @a [{"text":"$Fluctuation: "},{"score":{"objective":"Lib","name":"$Fluct
     scoreboard players operation $Frac Temporary /= $10 Const
     scoreboard players operation $Frac Temporary %= $10 Const
 # 値は100倍されたもの
+    scoreboard players operation $Int Temporary = $Fluctuation Lib
     scoreboard players operation $Int Temporary /= $100 Const
 tellraw @a [{"text":"$Int: "},{"score":{"objective":"Temporary","name":"$Int"}}]
 tellraw @a [{"text":"$Frac: "},{"score":{"objective":"Temporary","name":"$Frac"}}]
