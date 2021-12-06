@@ -25,14 +25,16 @@
     scoreboard players operation $Int Temporary /= $100 Const
 
 # 描画用AEC
-    execute anchored eyes positioned ^ ^ ^ run summon minecraft:armor_stand ~ ~0.1 ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
+    execute anchored eyes positioned ^ ^ ^ run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
+# 表示位置変更
+    execute anchored eyes positioned ^ ^ ^ as @e[type=armor_stand,tag=LogAECInit,distance=..0.001,limit=1] run function lib:health_log/core/set_position
 # 表示文字列生成
     execute if score $isNegative Temporary matches 0 run loot replace block 10000 0 10000 container.0 loot lib:health_log/heal
     execute if score $isNegative Temporary matches 1 run loot replace block 10000 0 10000 container.0 loot lib:health_log/damage
 # 文字列描画
-    execute anchored eyes positioned ^ ^ ^ positioned ~ ~0.1 ~ run data modify entity @e[type=armor_stand,tag=LogAECInit,distance=..0.001,limit=1] CustomName set from block 10000 0 10000 Items[0].tag.display.Name
+    execute anchored eyes positioned ^ ^ ^ run data modify entity @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] CustomName set from block 10000 0 10000 Items[0].tag.display.Name
 # タグ削除
-    execute anchored eyes positioned ^ ^ ^ positioned ~ ~0.1 ~ run tag @e[type=armor_stand,tag=LogAECInit,distance=..0.001,limit=1] remove LogAECInit
+    execute anchored eyes positioned ^ ^ ^ run tag @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] remove LogAECInit
 # リセット
     scoreboard players reset $Fluctuation Lib
     scoreboard players reset $Frac Temporary
