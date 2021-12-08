@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:status_log/show
+# @within function lib:status_log/show_*
 
 #> Pos
 # @private
