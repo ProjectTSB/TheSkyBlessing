@@ -23,6 +23,13 @@
         "asset:mob/0146.prismarine_warrior/hurt/1.trigger",
         "asset:mob/0147.prismarine_slayer/hurt/1.trigger",
         "asset:mob/0148.prismarine_atlatl/hurt/1.trigger",
-        "asset:mob/0181.magic_bookshelf/hurt/1.trigger"
+        "asset:mob/0182.skull_raven/hurt/1.trigger",
+        "asset:mob/0059.jack_o_lantern/hurt/1.trigger",
+        "asset:mob/0074.watermelon_bomber/hurt/1.trigger",
+        "asset:mob/0076.golden_watermelon_bomber/hurt/1.trigger",
+        "asset:mob/0171.lumberjack_of_blue_forest/hurt/1.trigger",
+        "asset:mob/0181.magic_bookshelf/hurt/1.trigger",
+        "asset:mob/0139.blast_eye/hurt/1.trigger",
+        "asset:mob/0186.ferocious_bee/hurt/1.trigger"
     ]
 }

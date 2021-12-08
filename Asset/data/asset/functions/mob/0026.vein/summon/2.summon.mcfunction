@@ -5,7 +5,7 @@
 # @within function asset:mob/0026.vein/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiDrown"],DeathLootTable:"asset:mob/death/0026.vein"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0026.vein"}
 # ID (int)
     data modify storage asset:mob ID set value 26
 # Type (string) Wikiを参照
