@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/1004.tultaria/rejoin_process",
         "asset:sacred_treasure/0033.magic_shield/trigger/rejoin_process",
         "asset:sacred_treasure/0252.void_transaction/trigger/rejoin_process",
         "asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/rejoin_process",

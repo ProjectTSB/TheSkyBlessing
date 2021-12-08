@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/1004.tultaria/attack/1.trigger",
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
         "asset:mob/0064.artery/attack/1.trigger",
