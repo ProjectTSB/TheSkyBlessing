@@ -188,10 +188,18 @@ team modify NoCollision collisionRule never
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
+    #> PlayerManager - 信仰
+    # @within function player_manager:god/**
+        scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
     #   player_manager:set_team
+        team add None.LowHP
+        team add None.MedHP
+        team add None.HighHP
         team add Flora.LowHP
         team add Flora.MedHP
         team add Flora.HighHP
@@ -207,6 +215,9 @@ team modify NoCollision collisionRule never
         team add Rumor.LowHP
         team add Rumor.MedHP
         team add Rumor.HighHP
+    team modify None.LowHP color red
+    team modify None.MedHP color yellow
+    team modify None.HighHP color green
     team modify Flora.LowHP color red
     team modify Flora.MedHP color yellow
     team modify Flora.HighHP color green
@@ -222,6 +233,9 @@ team modify NoCollision collisionRule never
     team modify Rumor.LowHP color red
     team modify Rumor.MedHP color yellow
     team modify Rumor.HighHP color green
+    team modify None.LowHP prefix {"text":"  ","color":"white"}
+    team modify None.MedHP prefix {"text":"  ","color":"white"}
+    team modify None.HighHP prefix {"text":"  ","color":"white"}
     team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
@@ -244,17 +258,18 @@ team modify NoCollision collisionRule never
     #   function core:load_once
     #   * lib:**
     #   * player_manager:**
-        #declare tag Believe.Flora
-        #declare tag Believe.Urban
-        #declare tag Believe.Nyaptov
-        #declare tag Believe.Wi-ki
-        #declare tag Believe.Rumor
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+
+    #> WorldManager用スコアボード
+    # @within function
+    #   world_manager:**
+    #   player_manager:** @readonly
+        scoreboard objectives add InArea dummy {"text":"居るエリア"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
