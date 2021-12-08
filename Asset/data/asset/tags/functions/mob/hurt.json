@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/example/hurt/1.trigger",
+        "asset:mob/0060.self_destructor/hurt/1.trigger",
         "asset:mob/0021.demon_eye/hurt/1.trigger",
         "asset:mob/0055.hetukedah/hurt/1.trigger",
         "asset:mob/0057.none_fighter/hurt/1.trigger",

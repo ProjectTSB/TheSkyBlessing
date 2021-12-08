@@ -3,6 +3,7 @@
         "asset:mob/example/tick/1.trigger",
         "asset:mob/0021.demon_eye/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger",
+        "asset:mob/0060.self_destructor/tick/1.trigger",
         "asset:mob/0017.fire_bird/tick/1.trigger",
         "asset:mob/0063.ghost/tick/1.trigger",
         "asset:mob/0055.hetukedah/tick/1.trigger",
