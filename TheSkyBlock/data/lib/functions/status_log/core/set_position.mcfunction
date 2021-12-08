@@ -1,8 +1,8 @@
-#> lib:health_log/core/set_position
+#> lib:status_log/core/set_position
 #
 #
 #
-# @within function lib:health_log/show
+# @within function lib:status_log/show
 
 #> Pos
 # @private
