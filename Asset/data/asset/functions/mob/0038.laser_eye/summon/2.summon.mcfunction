@@ -5,7 +5,7 @@
 # @within function asset:mob/0038.laser_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AntiDrown"],DeathLootTable:"asset:mob/death/0038.laser_eye",NoGravity:1b,Silent:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}]}
+    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0038.laser_eye",NoGravity:1b,Silent:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}]}
 # ID (int)
     data modify storage asset:mob ID set value 38
 # Type (string) Wikiを参照

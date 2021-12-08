@@ -1,16 +1,19 @@
 {
     "values": [
-        "asset:sacred_treasure/0033.magic_shield/rejoin_process",
-        "asset:sacred_treasure/0252.void_transaction/rejoin_process",
-        "asset:sacred_treasure/0077.swords_of_waterfall_climbing/rejoin_process",
-        "asset:sacred_treasure/0078.self_destruct_order/rejoin_process",
-        "asset:sacred_treasure/0087.sheep_blessing/rejoin_process",
-        "asset:sacred_treasure/0297.spirit_world_trance/rejoin_process",
-        "asset:sacred_treasure/0456.potion_of_stalling_power/rejoin_process",
-        "asset:sacred_treasure/0643.raimei_chestplate/rejoin_process",
+        "asset:sacred_treasure/0033.magic_shield/trigger/rejoin_process",
+        "asset:sacred_treasure/0252.void_transaction/trigger/rejoin_process",
+        "asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/rejoin_process",
+        "asset:sacred_treasure/0078.self_destruct_order/trigger/rejoin_process",
+        "asset:sacred_treasure/0087.sheep_blessing/trigger/rejoin_process",
+        "asset:sacred_treasure/0297.spirit_world_trance/trigger/rejoin_process",
+        "asset:sacred_treasure/0456.potion_of_stalling_power/trigger/rejoin_process",
+        "asset:sacred_treasure/0643.raimei_chestplate/trigger/rejoin_process",
         "asset:mob/0129.lexiel/rejoin_process",
-        "asset:sacred_treasure/0261.holy_symbol_lv.1/rejoin_process",
-        "asset:sacred_treasure/0265.holy_symbol_lv.5/rejoin_process",
-        "asset:sacred_treasure/0269.holy_symbol_lv.10/rejoin_process"
+        "asset:sacred_treasure/0261.holy_symbol_lv.1/trigger/rejoin_process",
+        "asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/rejoin_process",
+        "asset:sacred_treasure/0269.holy_symbol_lv.10/trigger/rejoin_process",
+        "asset:mob/0171.lumberjack_of_blue_forest/rejoin_process",
+        "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
+        "asset:sacred_treasure/0610.call_fish/rejoin_process"
     ]
 }

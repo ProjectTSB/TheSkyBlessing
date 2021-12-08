@@ -7,11 +7,11 @@
 
 # ここから先は神器側の効果の処理を書く
 # 着弾検知
-    execute if entity @e[type=player,gamemode=!spectator,distance=..3] run tag @s add Landing
+    execute if entity @a[gamemode=!spectator,distance=..3] run tag @s add Landing
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 
 # ターゲットにタグ付与
-    execute if entity @e[type=player,gamemode=!spectator,distance=..3] run tag @e[type=player,gamemode=!spectator,distance=..3,limit=1] add LandingTarget
+    execute if entity @a[gamemode=!spectator,distance=..3] run tag @a[gamemode=!spectator,distance=..3,limit=1] add LandingTarget
 
 # 演出
     particle dust 1 1 0 1 ~ ~ ~ 1 1 1 0 6
