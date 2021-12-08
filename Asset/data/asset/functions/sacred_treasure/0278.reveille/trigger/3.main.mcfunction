@@ -8,5 +8,5 @@
     function asset:sacred_treasure/lib/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    scoreboard players set $Timeline 0278.Timeline 0
+    scoreboard players set $Timeline 7Q.Timeline 0
     schedule function asset:sacred_treasure/0278.reveille/trigger/3.1.play_manager 1t
