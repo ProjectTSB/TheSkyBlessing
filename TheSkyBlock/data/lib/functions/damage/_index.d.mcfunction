@@ -2,7 +2,7 @@
 # @private
 
 #> 変数定義
-# @within function lib:damage/core/*
+# @within function lib:damage/core/**
     #declare score_holder $Damage
     #declare score_holder $EPF
     #declare score_holder $Health
@@ -11,3 +11,4 @@
     #declare score_holder $Resistance
     #declare score_holder $DisableParticle
     #declare score_holder $LatestModifiedUser
+    #declare score_holder $LatestModifiedEntity
