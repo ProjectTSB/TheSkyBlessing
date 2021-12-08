@@ -37,6 +37,7 @@
         "asset:mob/0178.vindicator/attack/1.trigger",
         "asset:mob/0177.pillager/attack/1.trigger",
         "asset:mob/0179.trindicator/attack/1.trigger",
+        "asset:mob/0160.freeze_archer/attack/1.trigger",
         "asset:mob/0182.skull_raven/attack/1.trigger",
         "asset:mob/0059.jack_o_lantern/attack/1.trigger",
         "asset:mob/0074.watermelon_bomber/attack/1.trigger",
