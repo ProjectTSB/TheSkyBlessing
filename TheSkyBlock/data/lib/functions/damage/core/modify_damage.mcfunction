@@ -3,7 +3,7 @@
 # ダメージをlib: Modifiersを元に補正します
 #
 # @within function
-#   lib:damage/core/modifier
+#   lib:damage/core/modify/player
 #   lib:damage/core/get_status
 
 #> Temp
