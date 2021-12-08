@@ -17,10 +17,14 @@
     execute if data storage lib: Argument{BypassResist:0b} run function oh_my_dat:please
     execute if data storage lib: Argument{BypassResist:0b} run data modify storage lib: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense
     execute if data storage lib: Argument{BypassResist:0b} run function lib:damage/core/modify_damage
+    execute if data storage lib: Argument{BypassResist:0b} store result score $Damage Temporary run data get storage lib: ModifiedDamage 100
 # Protectionの値の取得
-    execute if data storage lib: Argument{BypassResist:0b} run function lib:damage/core/get_protection_lv
+    execute if data storage lib: Argument{BypassResist:0b} run function lib:damage/core/get_protection/
 # 防御貫通の場合
+    execute if data storage lib: Argument{BypassResist:1b} store result score $Damage Temporary run data get storage lib: Argument.Damage 100
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $defensePoints Temporary 0
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $toughness Temporary 0
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $Resistance Temporary 0
     execute if data storage lib: Argument{BypassResist:1b} run scoreboard players set $EPF Temporary 0
+# リセット
+    data remove storage lib: ModifiedDamage
