@@ -15,6 +15,7 @@
     data modify storage asset:temp 01.Def set from storage api: Return.Defense.Magic
     data modify storage asset:temp 01.Type set value '{"text":"魔","color":"dark_purple"}'
     function asset:sacred_treasure/0001.book_of_all-seeing/trigger/print_message
+
 # 火
     function api:player_modifier/defense/fire/get
     data modify storage asset:temp 01.Def set from storage api: Return.Defense.Fire
