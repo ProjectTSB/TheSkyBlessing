@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 24
+data modify storage global Version set value 26
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -178,7 +178,10 @@ team modify NoCollision collisionRule never
 
     #> Library用スコアボード - PrivateUse
     # @within * lib:**
+        scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+        scoreboard objectives add LatestAttackMob dummy
+        scoreboard objectives add LatestAttackType dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
     # @within function player_manager:adjust_hunger/**
