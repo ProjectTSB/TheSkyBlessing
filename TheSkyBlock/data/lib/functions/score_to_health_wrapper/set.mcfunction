@@ -15,5 +15,6 @@
 
 # セット
     scoreboard players operation @s ScoreToHealth = $Set Lib
+    scoreboard players set @s LatestAttackType 0
 # リセット
     scoreboard players reset $Set Lib
