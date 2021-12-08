@@ -15,5 +15,6 @@
     scoreboard players reset $Fluctuation Temporary
 # 代入
     data modify storage api: Argument.Fluctuation set from storage lib: Argument.Heal
+    data modify storage api: Argument.DisableParticle set from storage lib: Argument.DisableParticle
 # Healthを持つEntityであれば実行
     function lib:score_to_health_wrapper/fluctuation

@@ -4,6 +4,14 @@
 #
 # @within function lib:damage/core/health_subtract/
 
+#>
+# @private
+#declare score_holder $Fluctuation
+
+# ダメージ表示
+    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib = $Damage Temporary
+    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib /= $-100 Const
+    execute if data storage lib: Argument{DisableParticle:0b} at @s run function lib:status_log/show_health
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
 # 減算
