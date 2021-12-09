@@ -20,4 +20,5 @@
     execute unless data storage lib: Argument{DisableParticle:1b} run function lib:status_log/show_mp
 # リセット
     scoreboard players reset $Fluctuation Lib
-    data remove storage lib: Argument
+    data remove storage lib: Argument.Fluctuation
+    data remove storage lib: Argument.DisableParticle

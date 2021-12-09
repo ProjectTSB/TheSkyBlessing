@@ -66,7 +66,7 @@
     data modify entity @s Pos set from storage lib: Pos
 # リセット
     data remove storage lib: Pos
-    data remove storage lib: Argument
+    data remove storage lib: Argument.Bounds
     scoreboard players reset $BoundsX- Temporary
     scoreboard players reset $BoundsX+ Temporary
     scoreboard players reset $BoundsY- Temporary
