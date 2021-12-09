@@ -1,4 +1,4 @@
-#> asset:mob/0131.haruclaire/tick/skill_ice_area/partile
+#> asset:mob/0131.haruclaire/tick/skill_ice_area/particle
 #
 #
 #

@@ -12,7 +12,7 @@
 
 # 演出
     execute if score @s 3N.Tick matches 1 run playsound minecraft:entity.puffer_fish.death hostile @a ~ ~ ~ 1 1
-    execute if score @s 3N.Tick matches 1 rotated ~ 0 run function asset:mob/0131.haruclaire/tick/skill_ice_area/partile
+    execute if score @s 3N.Tick matches 1 rotated ~ 0 run function asset:mob/0131.haruclaire/tick/skill_ice_area/particle
 # 攻撃
     execute if score @s 3N.Tick matches 30..35 if entity @s[tag=!3N.SkillIceAreaHit] run function asset:mob/0131.haruclaire/tick/skill_ice_area/2.skill_ice_area_attack
 
