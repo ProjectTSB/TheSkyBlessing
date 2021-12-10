@@ -13,9 +13,10 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"聖なる神器"}'
+    function asset:sacred_treasure/0002.holy_treasure/give/get_random_name
+    data modify storage asset:sacred_treasure Name set value '[{"storage":"asset:temp","nbt":"02.Name"},{"text":"の祝福"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"使用するとあなたはまた一つ強くなるだろう"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"この世界を浄化する者に祝福を与える"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -41,3 +42,6 @@
 
 # 神器の入手用function
     function asset:sacred_treasure/lib/give
+
+# リセット
+    data remove storage asset:temp 02.Name
