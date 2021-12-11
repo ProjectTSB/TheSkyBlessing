@@ -265,6 +265,21 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
 
+    #> 最大値用スコアホルダー
+    # @within function
+    #   core:load_once
+    #   core:handler/first_join
+    #   player_manager:bonus/**
+    #   asset:sacred_treasure/0002.holy_treasure/trigger/**
+        #declare score_holder $MaxHealth
+        #declare score_holder $MaxMP
+        #declare score_holder $AttackBonus
+        #declare score_holder $DefenseBonus
+    scoreboard players set $MaxHealth Global 200000
+    scoreboard players set $MaxMP Global 100
+    scoreboard players set $AttackBonus Global 0
+    scoreboard players set $DefenseBonus Global 0
+
     #> WorldManager用スコアボード
     # @within function
     #   world_manager:**
