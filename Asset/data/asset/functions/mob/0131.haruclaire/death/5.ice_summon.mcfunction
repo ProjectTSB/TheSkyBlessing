@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0131.haruclaire/death/4.animetion_main
+# @within function asset:mob/0131.haruclaire/death/4.animation_main
 
 # 召喚
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["3N.ArmorStandIce","Object","","Uninterferable"],ArmorItems:[{},{},{},{id:"minecraft:ice",Count:1b}]}

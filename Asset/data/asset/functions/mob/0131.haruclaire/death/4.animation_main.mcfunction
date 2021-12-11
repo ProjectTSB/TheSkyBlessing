@@ -1,4 +1,4 @@
-#> asset:mob/0131.haruclaire/death/4.animetion_main
+#> asset:mob/0131.haruclaire/death/4.animation_main
 #
 #
 #

@@ -7,4 +7,3 @@
 #> 定義類はここに
 # @within function asset:mob/0131.haruclaire/**
     scoreboard objectives add 3N.Tick dummy
-    scoreboard objectives add 3N.4tInterval dummy

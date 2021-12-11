@@ -16,4 +16,4 @@
     kill @e[type=armor_stand,tag=3N.ArmorStand]
 
 # スケジュールループを開始する
-    schedule function asset:mob/0131.haruclaire/death/3.animetion_schedule_loop 1t replace
+    schedule function asset:mob/0131.haruclaire/death/3.animation_schedule_loop 1t replace

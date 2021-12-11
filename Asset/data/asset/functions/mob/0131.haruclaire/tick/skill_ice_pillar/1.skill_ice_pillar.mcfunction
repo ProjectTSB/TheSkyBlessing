@@ -18,7 +18,7 @@
     execute if score @s 3N.Tick matches 30 run function asset:mob/0131.haruclaire/tick/skill_ice_pillar/2.skill_ice_pillar_aec_summon
 
 # 氷柱を召喚
-    execute if score @s 3N.Tick matches 45..50 at @e[type=area_effect_cloud,tag=3N.SkillPillarMaker,sort=random,limit=5] run function asset:mob/0131.haruclaire/tick/skill_ice_pillar/3.skill_ice_pillar_attack
+    execute if score @s 3N.Tick matches 45..50 at @e[type=area_effect_cloud,tag=3N.SkillPillarMaker,distance=..30,sort=random,limit=5] run function asset:mob/0131.haruclaire/tick/skill_ice_pillar/3.skill_ice_pillar_attack
 
 
 # タグを消す

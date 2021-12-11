@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0131.haruclaire/death/4.animetion_main
+# @within function asset:mob/0131.haruclaire/death/4.animation_main
 
 # 置き換え
     item replace entity @s armor.head with stick{CustomModelData:20062}
