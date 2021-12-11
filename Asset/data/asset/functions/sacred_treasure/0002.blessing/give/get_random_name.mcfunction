@@ -22,3 +22,4 @@
     data modify storage asset:temp 02.Name set from storage lib: Array[-1]
 # リセット
     data remove storage lib: Array
+    scoreboard players reset $CandidatesLength
