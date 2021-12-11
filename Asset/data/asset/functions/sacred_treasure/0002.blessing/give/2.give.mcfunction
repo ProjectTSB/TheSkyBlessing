@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0002.holy_treasure/give/2.give
+#> asset:sacred_treasure/0002.blessing/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0002.holy_treasure/give/1.trigger
+# @within function asset:sacred_treasure/0002.blessing/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
@@ -13,14 +13,14 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    function asset:sacred_treasure/0002.holy_treasure/give/get_random_name
+    function asset:sacred_treasure/0002.blessing/give/get_random_name
     data modify storage asset:sacred_treasure Name set value '[{"storage":"asset:temp","nbt":"02.Name"},{"text":"の祝福"}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"この世界を浄化する者に祝福を与える"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value
+    data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value 'auto'
 # 神器のトリガー (string) Wikiを参照

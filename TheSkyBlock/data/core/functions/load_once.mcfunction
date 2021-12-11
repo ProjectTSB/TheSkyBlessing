@@ -270,7 +270,7 @@ team modify NoCollision collisionRule never
     #   core:load_once
     #   core:handler/first_join
     #   player_manager:bonus/**
-    #   asset:sacred_treasure/0002.holy_treasure/trigger/**
+    #   asset:sacred_treasure/0002.blessing/trigger/**
         #declare score_holder $MaxHealth
         #declare score_holder $MaxMP
         #declare score_holder $AttackBonus
