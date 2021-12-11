@@ -37,8 +37,9 @@ attribute @s minecraft:generic.max_health modifier remove bab7cdc2-fb6a-47f6-000
 attribute @s minecraft:generic.max_health modifier remove bab7cdc2-fb6a-47f6-0002-01
 attribute @s minecraft:generic.max_health modifier remove bab7cdc2-fb6a-47f6-0002-00
 
-scoreboard players set $_ ScoreToMaxHealth 200000
-scoreboard players set $__ ScoreToMaxHealth 200000
+execute store result score $_ ScoreToMaxHealth run attribute @s generic.max_health base get 10000
+
+scoreboard players operation $__ ScoreToMaxHealth = $_ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-17 "ScoreToMaxHealth" -838.8607 add
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 8388607
@@ -101,87 +102,87 @@ execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard player
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0D "ScoreToMaxHealth" -0.8192 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 08192
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 8192
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0D "ScoreToMaxHealth" 0.8192 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 08192
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 8192
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0C "ScoreToMaxHealth" -0.4096 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 04096
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 4096
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0C "ScoreToMaxHealth" 0.4096 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 04096
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 4096
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0B "ScoreToMaxHealth" -0.2048 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 02048
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 2048
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0B "ScoreToMaxHealth" 0.2048 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 02048
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 2048
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0A "ScoreToMaxHealth" -0.1024 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 01024
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 1024
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-0A "ScoreToMaxHealth" 0.1024 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 01024
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 1024
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-09 "ScoreToMaxHealth" -0.0512 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00512
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0512
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-09 "ScoreToMaxHealth" 0.0512 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00512
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0512
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-08 "ScoreToMaxHealth" -0.0256 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00256
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0256
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-08 "ScoreToMaxHealth" 0.0256 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00256
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0256
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-07 "ScoreToMaxHealth" -0.0128 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00128
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0128
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-07 "ScoreToMaxHealth" 0.0128 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00128
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0128
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-06 "ScoreToMaxHealth" -0.0064 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00064
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0064
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-06 "ScoreToMaxHealth" 0.0064 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00064
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0064
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-05 "ScoreToMaxHealth" -0.0032 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00032
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0032
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-05 "ScoreToMaxHealth" 0.0032 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00032
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0032
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-04 "ScoreToMaxHealth" -0.0016 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00016
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0016
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-04 "ScoreToMaxHealth" 0.0016 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00016
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0016
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-03 "ScoreToMaxHealth" -0.0008 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00008
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0008
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-03 "ScoreToMaxHealth" 0.0008 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00008
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0008
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-02 "ScoreToMaxHealth" -0.0004 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00004
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0004
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-02 "ScoreToMaxHealth" 0.0004 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00004
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0004
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-01 "ScoreToMaxHealth" -0.0002 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00002
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0002
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-01 "ScoreToMaxHealth" 0.0002 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00002
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0002
 scoreboard players operation $_ ScoreToMaxHealth = $__ ScoreToMaxHealth
 
 execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-00 "ScoreToMaxHealth" -0.0001 add
-execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 00001
+execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard players remove $__ ScoreToMaxHealth 0001
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-00 "ScoreToMaxHealth" 0.0001 add
-execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 00001
+execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0001
 
 effect give @s minecraft:instant_health 1 252 true
 scoreboard players operation @s STMHBackup = @s ScoreToMaxHealth
