@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0131.haruclaire/death/3.animetion_schedule_loop
+# @within function asset:mob/0131.haruclaire/death/3.animation_schedule_loop
 
 
 # スコアを増やしていく
