@@ -14,19 +14,8 @@
                             "name": [
                                 {
                                     "score": {
-                                        "objective": "Temporary",
-                                        "name": "$Int"
-                                    },
-                                    "color": "blue"
-                                },
-                                {
-                                    "text": ".",
-                                    "color": "blue"
-                                },
-                                {
-                                    "score": {
-                                        "objective": "Temporary",
-                                        "name": "$Frac"
+                                        "objective": "Lib",
+                                        "name": "$Fluctuation"
                                     },
                                     "color": "blue"
                                 }
