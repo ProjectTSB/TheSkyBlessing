@@ -3,7 +3,9 @@
 # Mobのtick時の処理
 #
 # @within function asset:mob/1004.tultaria/tick/1.trigger
-
+#> private
+# @private
+    #declare score_holder $Count
 
 # スコアを増やす
     scoreboard players add @s RW.Tick 1
@@ -16,21 +18,21 @@
     execute if score @s RW.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick -60
 
 # 選択したスキル発動
-    execute if score @s RW.Tick matches 0.. run function
+    execute if score @s RW.Tick matches 0.. run function asset:mob/1004.tultaria/tick/4.skill_active
 
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする
     # 数のカウント
         execute store result score $Count Temporary run execute if entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01]
     # もしいたらテレポ
-        execute if score $Count Temporary matches 2.. run function 
+        execute if score $Count Temporary matches 2.. run function asset:mob/1004.tultaria/tick/move/spread
     # スコアも一応戻す
         execute if score $Count Temporary matches 2.. run scoreboard players reset @s RW.Tick
     # リセット
         scoreboard players reset $Count
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
-    execute at @s unless entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01] run function asset:mob/0175.queen_bee/tick/armorstand_respawn
+    execute at @s unless entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01] run function asset:mob/1004.tultaria/tick/armorstand_respawn
 
 # アマスタデスポーン処理
     execute if entity @p[distance=100..150] run kill @e[type=armor_stand,tag=RW.ArmorStand]
