@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:spread_entity/**
+# @within function lib:spread_entity/core/
 
 #> Pos
 # @private
