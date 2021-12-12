@@ -301,5 +301,9 @@ team modify NoCollision collisionRule never
         scoreboard objectives add AttackedEntity dummy
 
 
+#> 神の慈悲アイテムを定義する
+    function player_manager:god/mercy/offering/init
+
+
 #> Scheduleループの初期化(replace)
     schedule function core:tick/4_interval 4t
