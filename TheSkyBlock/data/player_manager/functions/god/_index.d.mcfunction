@@ -12,3 +12,7 @@
     #declare tag Believe.Nyaptov
     #declare tag Believe.Wi-ki
     #declare tag Believe.Rumor
+
+#> storage for process
+# @within function player_manager:god/mercy/**
+    #declare storage player_manager:god
