@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 26
+data modify storage global Version set value 27
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -299,6 +299,10 @@ team modify NoCollision collisionRule never
     #   asset_manager:*/triggers/
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
+
+
+#> 神の慈悲アイテムを定義する
+    function player_manager:god/mercy/offering/init
 
 
 #> Scheduleループの初期化(replace)
