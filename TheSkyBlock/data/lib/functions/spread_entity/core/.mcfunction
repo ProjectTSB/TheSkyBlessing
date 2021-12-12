@@ -1,4 +1,4 @@
-#> lib:spread_entity/core/from_player
+#> lib:spread_entity/core/
 #
 #
 #

@@ -10,5 +10,4 @@
 # 引数チェック
     execute unless data storage lib: Argument.Bounds run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Bounds","color":"red"}]
 # 実行
-    execute if entity @s[type=!player] run function lib:spread_entity/core/teleport
-    execute if entity @s[type=player] at @s run function lib:spread_entity/core/from_player
+    function lib:spread_entity/core/
