@@ -1,0 +1,20 @@
+#> asset:mob/1004.tultaria/tick/1.melee_attack/3.slash
+#
+#
+#
+# @within function asset:mob/1004.tultaria/tick/1.melee_attack/1.melee_attack
+
+# 腕を降る
+    data modify entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [173f,213f,121f]
+
+# 演出
+    execute positioned ^ ^ ^1 positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/1004.tultaria/tick/1.melee_attack/particle1
+
+# ダメージ
+    execute positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/1.melee_attack/5.vfx_damage
+
+# テレポートする
+    execute rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/1004.tultaria/tick/move/tereport
+
+# プレイヤーを見る
+    execute at @s facing entity @p feet positioned ~ ~0.4 ~ run function asset:mob/1004.tultaria/tick/move/tereport

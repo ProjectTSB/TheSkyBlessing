@@ -16,19 +16,23 @@
     scoreboard players operation $HealthPercent Temporary /= @s RW.HealthMax
 
 # タグを消す
-    tag @s remove RW.HPless75
-    tag @s remove RW.HPless50
+    tag @s remove RW.HPless75per
+    tag @s remove RW.HPless50per
 
 # タグ付与
-# HP50%より上75%未満
-    execute if score $HealthPercent Temporary matches 49..74 run tag @s add RW.HPless75
-    execute if score $HealthPercent Temporary matches 49..74 run say 75
+# 75%以下
+    execute if score $HealthPercent Temporary matches ..75 run tag @s add RW.HPless75per
+    execute if score $HealthPercent Temporary matches ..75 run say 75
 # HP50%以下
-    execute if score $HealthPercent Temporary matches ..50 run tag @s add RW.HPless50
+    execute if score $HealthPercent Temporary matches ..50 run tag @s add RW.HPless50per
     execute if score $HealthPercent Temporary matches ..50 run say 50
+# HP40%以下
+    execute if score $HealthPercent Temporary matches ..40 run tag @s add RW.HPless40per
+    execute if score $HealthPercent Temporary matches ..40 run say 40
+# HP30%以下
+    execute if score $HealthPercent Temporary matches ..30 run tag @s add RW.HPless30per
+    execute if score $HealthPercent Temporary matches ..30 run say 30
 
 # リセット
     scoreboard players reset $Health
     scoreboard players reset $HealthPercent
-
-say aa

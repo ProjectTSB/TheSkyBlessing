@@ -5,6 +5,6 @@
 # @within tag/function asset:mob/load
 
 #> 定義類はここに
-# @within function asset:mob/1004.tultaria/**
+# @within function asset:mob/1004.tultaria/**/**
     scoreboard objectives add RW.Tick dummy
     scoreboard objectives add RW.HealthMax dummy

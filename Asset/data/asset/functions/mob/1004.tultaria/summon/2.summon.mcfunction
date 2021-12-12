@@ -5,11 +5,11 @@
 # @within function asset:mob/1004.tultaria/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","RW.Boss"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
 # ID (int)
     data modify storage asset:mob ID set value 1004
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value ""
+    data modify storage asset:mob Type set value "Enemy.Boss"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)

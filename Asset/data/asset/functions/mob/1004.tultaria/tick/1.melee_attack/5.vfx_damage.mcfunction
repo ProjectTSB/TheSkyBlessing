@@ -1,0 +1,23 @@
+#> asset:mob/1004.tultaria/tick/1.melee_attack/5.vfx_damage
+#
+#
+#
+# @within
+#    function asset:mob/1004.tultaria/tick/1.melee_attack/3.slash
+#    function asset:mob/1004.tultaria/tick/1.melee_attack/4.slash2
+
+# 演出
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
+
+# ダメージ判定
+# 与えるダメージ
+    data modify storage lib: Argument.Damage set value 20f
+# 属性
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "None"
+# 補正functionを実行
+    function lib:damage/modifier
+# 対象
+    execute as @p[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
