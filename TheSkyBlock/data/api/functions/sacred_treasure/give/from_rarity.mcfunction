@@ -10,4 +10,4 @@
 # 呼び出し
     execute if data storage api: Argument.Rarity run function asset_manager:sacred_treasure/give
 # リセット
-    data remove storage api: Argument
+    data remove storage api: Argument.Rarity

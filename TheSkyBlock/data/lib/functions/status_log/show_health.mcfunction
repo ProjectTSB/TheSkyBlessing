@@ -28,7 +28,8 @@
 # 設置位置用AEC
     execute anchored eyes positioned ^ ^ ^ run summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["SummonPosStand"]}
 # 表示位置変更
-    execute anchored eyes positioned ^ ^ ^ as @e[type=armor_stand,tag=SummonPosStand,distance=..0.001,limit=1] run function lib:status_log/core/set_position
+    data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
+    execute anchored eyes positioned ^ ^ ^ as @e[type=armor_stand,tag=SummonPosStand,distance=..0.001,limit=1] run function lib:spread_entity/
 # 描画用AEC
     execute anchored eyes positioned ^ ^ ^ at @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1] run summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
 # 表示文字列生成

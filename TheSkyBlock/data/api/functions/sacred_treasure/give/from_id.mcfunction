@@ -13,4 +13,4 @@
     execute if data storage api: Argument.ID run function #asset:sacred_treasure/give
 # リセット
     data remove storage asset:context id
-    data remove storage api: Argument
+    data remove storage api: Argument.ID
