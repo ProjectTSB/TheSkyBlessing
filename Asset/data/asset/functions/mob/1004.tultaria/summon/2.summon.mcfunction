@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/1004.tultaria"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
 # ID (int)
     data modify storage asset:mob ID set value 1004
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    # data modify storage asset:mob Health set value
+    data modify storage asset:mob Health set value 100
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -57,6 +57,19 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
+
+# 見た目用のアマスタを召喚
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["RW.ArmorStand","RW.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20069}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20071}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20072}}]}
+# 位置をあわせる
+    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] @s
+# タグを消す
+    tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
+
+# スコアをセットする
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick -100
+
+# 最大HPをスコアに入れる
+    execute store result score @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.HealthMax run data get storage asset:mob Health 1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
