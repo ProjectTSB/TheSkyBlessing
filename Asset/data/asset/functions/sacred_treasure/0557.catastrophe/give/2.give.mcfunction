@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Nyaptov', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Enchantments:[{id:protection,lvl:7}],AttributeModifiers:[{UUID:[I;1,1,557,3],AttributeName:"generic.armor",Name:"armor",Slot:feet,Operation:0,Amount:3},{UUID:[I;1,1,557,3],AttributeName:"generic.armor_throughness",Name:"armor_throughness",Slot:feet,Operation:0,Amount:1}],Unbreakable:1b}
 
