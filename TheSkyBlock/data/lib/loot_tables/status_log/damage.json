@@ -1,0 +1,43 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:debug_stick",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "score": {
+                                        "objective": "Temporary",
+                                        "name": "$Int"
+                                    },
+                                    "color": "red",
+                                    "bold": true
+                                },
+                                {
+                                    "text": ".",
+                                    "color": "red",
+                                    "bold": true
+                                },
+                                {
+                                    "score": {
+                                        "objective": "Temporary",
+                                        "name": "$Frac"
+                                    },
+                                    "color": "red",
+                                    "bold": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

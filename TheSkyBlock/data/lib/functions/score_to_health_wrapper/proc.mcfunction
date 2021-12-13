@@ -12,7 +12,6 @@
 # 1<=体力: ダメージ演出
     execute if score @s ScoreToHPFluc matches ..-1 if score @s ScoreToHealth matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 # 0>=体力: kill処理
-    execute if score @s ScoreToHealth matches ..0 run kill @s
-    execute if score @s ScoreToHealth matches ..0 run scoreboard players reset @s ScoreToHealth
+    execute if score @s ScoreToHealth matches ..0 run function lib:score_to_health_wrapper/core/die
 # リセット
     scoreboard players reset @s ScoreToHPFluc
