@@ -5,7 +5,7 @@
 # @within function asset:mob/0142.honey_soldier/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0142.honey_soldier"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0142.honey_soldier"}
 # ID (int)
     data modify storage asset:mob ID set value 142
 # Type (string) Wikiを参照
