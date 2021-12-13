@@ -28,6 +28,8 @@
         "asset:mob/0079.thundercloud/tick/1.trigger",
         "asset:mob/0154.ruin/tick/1.trigger",
         "asset:mob/0138.combat_turret/tick/1.trigger",
+        "asset:mob/0190.thunder_mage/tick/1.trigger",
+        "asset:mob/0191.thunder_magic/tick/1.trigger",
         "asset:mob/0185.tutankhamen/tick/1.trigger",
         "asset:mob/0156.infringement/tick/1.trigger",
         "asset:mob/0182.skull_raven/tick/1.trigger",
