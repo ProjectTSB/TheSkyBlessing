@@ -20,4 +20,4 @@
         execute if data storage asset:sacred_treasure Argument{AutoSlot:"chest"} run data modify storage asset:context id.auto set from storage asset:context Items.chest.tag.TSB.ID
         execute if data storage asset:sacred_treasure Argument{AutoSlot:"head"} run data modify storage asset:context id.auto set from storage asset:context Items.head.tag.TSB.ID
     # リセット
-        data remove storage asset:sacred_treasure Argument
+        data remove storage asset:sacred_treasure Argument.AutoSlot

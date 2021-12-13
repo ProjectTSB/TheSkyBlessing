@@ -41,7 +41,7 @@
         {
             "label": "Open SkyBlock Server",
             "type": "shell",
-            "command": "java -Xms2G -Xmx4G -jar ./server.jar nogui",
+            "command": "java -Xms2G -Xmx4G -Dlog4j2.formatMsgNoLookups=true -jar ./server.jar nogui",
             "options": {
                 "cwd": "../../"
             },

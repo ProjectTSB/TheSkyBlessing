@@ -2,7 +2,7 @@
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
-# @within function lib:damage/core/non-player-process
+# @within function lib:damage/core/health_subtract/non-player
 
 #> Declare
 # @private

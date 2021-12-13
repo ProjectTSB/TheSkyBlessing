@@ -6,4 +6,4 @@
 
 #> Objective
 # @within asset:mob/0021.demon_eye/**
-    scoreboard objectives add 21.Rot dummy
+    scoreboard objectives add L.Rot dummy

@@ -1,4 +1,0 @@
-オリジナルよりの変更点:
-    ScoreToHealth\data\score_to_health\functions\load.mcfunctionにDHPのアクセス修飾子の記載
-    スコアホルダー名の変更
-    Attribute名に引用符を付与
