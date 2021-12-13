@@ -1,8 +1,8 @@
-#> asset:mob/0185.tutankhamen/tick/burn_lazer/06.damage
+#> asset:mob/0185.tutankhamen/tick/burn_laser/06.damage
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/burn_lazer/05.shoot_recursive
+# @within function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 23f
