@@ -32,7 +32,7 @@
 #> Killer
 # @within *
 #   asset_manager:mob/triggers/death/*
-#   lib:damage/core/non-player-process
+#   lib:damage/core/health_subtract/non-player
 #   asset:mob/*/death/**
     #declare tag Killer
 
@@ -58,8 +58,8 @@
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
     #declare tag AutoKillWhenDieVehicle
-    #declare tag AntiFrozen
-    #declare tag AntiDrown
+    #declare tag Frozen
+    #declare tag Drown
 
 #> 汎用奈落耐性処理用タグ
 # @within function

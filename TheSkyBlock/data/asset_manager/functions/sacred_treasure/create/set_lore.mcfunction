@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:sacred_treasure/create/set_data
 
+# 初期化
+    data modify block 10000 0 10000 Items set value []
 # 通常説明文
     function asset_manager:sacred_treasure/create/lore_append
 # 空行セパレータ

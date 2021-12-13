@@ -5,7 +5,7 @@
 # @within function asset:mob/0147.prismarine_slayer/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0147.prismarine_slayer"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0147.prismarine_slayer"}
 # ID (int)
     data modify storage asset:mob ID set value 147
 # Type (string) Wikiを参照
