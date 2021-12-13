@@ -57,6 +57,8 @@
         "asset:mob/0177.pillager/summon/1.trigger",
         "asset:mob/0179.trindicator/summon/1.trigger",
         "asset:mob/0151.recombined/summon/1.trigger",
+        "asset:mob/0150.contamination/summon/1.trigger",
+        "asset:mob/0158.sin/summon/1.trigger",
         "asset:mob/0131.haruclaire/summon/1.trigger",
         "asset:mob/0060.self_destructor/summon/1.trigger",
         "asset:mob/0160.freeze_archer/summon/1.trigger",
