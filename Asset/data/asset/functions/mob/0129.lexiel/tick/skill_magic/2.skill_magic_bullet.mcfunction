@@ -1,8 +1,10 @@
 #> asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 #
-#　弾の再起部分（ヘトゥケダゥのやつとほぼ一緒）
+# 弾の再起部分（ヘトゥケダゥのやつとほぼ一緒）
 #
-# @within function asset:mob/0129.lexiel/tick/skill_magic/1.skill_magic
+# @within function
+#   asset:mob/0129.lexiel/tick/skill_magic/1.skill_magic
+#   asset:mob/0129.lexiel/tick/skill_magic/2.skill_magic_bullet
 
 # 着弾検知
     execute if entity @a[gamemode=!spectator,distance=..1.7] run tag @s add Landing

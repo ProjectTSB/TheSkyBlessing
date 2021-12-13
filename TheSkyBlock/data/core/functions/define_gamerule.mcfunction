@@ -40,6 +40,6 @@ gamerule randomTickSpeed 3
     gamerule sendCommandFeedback true
 gamerule showDeathMessages true
 gamerule spawnRadius 0
-gamerule spectatorsGenerateChunks false
+gamerule spectatorsGenerateChunks true
 gamerule universalAnger false
 #TODO リリース時に上記のコメントを外してインデントのある行を削除する

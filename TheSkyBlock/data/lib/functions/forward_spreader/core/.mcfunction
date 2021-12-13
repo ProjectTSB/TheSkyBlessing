@@ -34,5 +34,6 @@
     scoreboard players reset $X Temporary
     scoreboard players reset $Y Temporary
     scoreboard players reset $Z Temporary
-    data remove storage lib: Argument
+    data remove storage lib: Argument.Distance
+    data remove storage lib: Argument.Spread
     data remove storage lib: Rotation
