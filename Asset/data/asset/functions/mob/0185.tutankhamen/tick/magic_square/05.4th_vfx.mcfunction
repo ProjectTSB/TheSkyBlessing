@@ -1,4 +1,4 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/05.4th.5th_vfx
+#> asset:mob/0185.tutankhamen/tick/magic_square/05.4th_vfx
 #
 #
 #
