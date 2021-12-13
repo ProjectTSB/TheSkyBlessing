@@ -14,4 +14,4 @@
 # 呼び出し
     execute if score $GiveCount Temporary matches 1.. run function player_manager:keep_lost_item/give_part/
 # リセット
-    data remove storage api: Argument
+    data remove storage api: Argument.Count
