@@ -4,7 +4,8 @@
 #> storage
 # @within *
 #   asset_manager:sacred_treasure/**
-#   asset:sacred_treasure/*/_.give
+#   asset:sacred_treasure/*/register
+#   asset:sacred_treasure/*/give/2.give
 #   asset:sacred_treasure/lib/**
     #declare storage asset:sacred_treasure
 

@@ -35,6 +35,8 @@
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
     execute store result storage asset:sacred_treasure Data.tag.TSB.UUID int 1 run scoreboard players get $SacredTreasureIndex Global
+# 扱える神のエイリアスを修正する
+    execute if data storage asset:sacred_treasure {CanUsedGod:"ALL"} run data modify storage asset:sacred_treasure CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
 # そのまま入れれるやつ
     data modify storage asset:sacred_treasure Data.id set from storage asset:sacred_treasure Item
     data modify storage asset:sacred_treasure Data.tag.CustomModelData set from storage asset:sacred_treasure ID
