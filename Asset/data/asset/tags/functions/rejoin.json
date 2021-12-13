@@ -10,7 +10,7 @@
         "asset:sacred_treasure/0456.potion_of_stalling_power/trigger/rejoin_process",
         "asset:sacred_treasure/0643.raimei_chestplate/trigger/rejoin_process",
         "asset:mob/0129.lexiel/rejoin_process",
-        "asset:sacred_treasure/0373.ice_sorcery/rejoin_process",
+        "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
         "asset:mob/0153.domination/rejoin_process",
         "asset:sacred_treasure/0261.holy_symbol_lv.1/trigger/rejoin_process",
         "asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/rejoin_process",
