@@ -21,4 +21,5 @@
     execute unless data storage lib: Argument.ElementType run data modify storage lib: Argument.ElementType set value "None"
     execute unless data storage lib: Argument.FixedDamage run data modify storage lib: Argument.FixedDamage set value 0b
 # 補正
-    execute if entity @s[type=player] run function lib:damage/core/modifier
+    execute if entity @s[type=player] run function lib:damage/core/modify/player
+    execute if entity @s[type=!player] run function lib:damage/core/modify/non-player
