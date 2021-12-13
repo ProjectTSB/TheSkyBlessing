@@ -1,4 +1,4 @@
-#> asset:mob/0185.tutankhamen/tick/magic_square/03.2nd_vfx
+#> asset:mob/0185.tutankhamen/tick/magic_square/03.2nd_square
 #
 #
 #

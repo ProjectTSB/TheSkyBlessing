@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0185.tutankhamen/tick/magic_square/02.1st_vfx
+# @within function asset:mob/0185.tutankhamen/tick/magic_square/02.1st_square
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 10f
