@@ -6,6 +6,7 @@
 #> private
 # @private
     #declare score_holder $Count
+    #declare score_holder $4tInterval
 
 # スコアを増やす
     scoreboard players add @s RW.Tick 1
@@ -19,6 +20,17 @@
 
 # 選択したスキル発動
     execute if score @s RW.Tick matches 0.. run function asset:mob/1004.tultaria/tick/4.skill_active
+
+
+# 4tickおきに実行するやつ
+# 実行時間を移す
+    scoreboard players operation $4tInterval Temporary = @s RW.Tick
+# 4tickおきに実行
+    scoreboard players operation $4tInterval Temporary %= $4 Const
+    execute if score $4tInterval Temporary matches 0 run function asset:mob/1004.tultaria/tick/interval
+# リセット
+    scoreboard players reset $4tInterval
+
 
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする
