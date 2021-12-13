@@ -17,6 +17,9 @@
 # 割合を計算する
     scoreboard players operation $Health Temporary /= $MaxHealth Temporary
 # 割合をもとにチーム振り分け
+    execute if score $Health Temporary matches 00..34 if entity @s[tag=Believe.None] run team join None.LowHP
+    execute if score $Health Temporary matches 35..79 if entity @s[tag=Believe.None] run team join None.MedHP
+    execute if score $Health Temporary matches 80..100 if entity @s[tag=Believe.None] run team join None.HighHP
     execute if score $Health Temporary matches 00..34 if entity @s[tag=Believe.Flora] run team join Flora.LowHP
     execute if score $Health Temporary matches 35..79 if entity @s[tag=Believe.Flora] run team join Flora.MedHP
     execute if score $Health Temporary matches 80..100 if entity @s[tag=Believe.Flora] run team join Flora.HighHP

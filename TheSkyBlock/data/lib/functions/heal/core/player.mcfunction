@@ -8,9 +8,13 @@
 # @private
     #declare score_holder $Fluctuation
 
-# 代入
-    execute store result score $Fluctuation Lib run data get storage lib: Argument.Heal 100
 # 負数の場合の処理
-    execute if score $Fluctuation Lib matches ..-1 run scoreboard players set $Fluctuation Lib 0
+    execute store result score $Fluctuation Temporary run data get storage lib: Argument.Heal
+    execute if score $Fluctuation Temporary matches ..-1 run data modify storage lib: Argument.Heal set value 0
+# リセット
+    scoreboard players reset $Fluctuation Temporary
+# 代入
+    data modify storage api: Argument.Fluctuation set from storage lib: Argument.Heal
+    data modify storage api: Argument.DisableParticle set from storage lib: Argument.DisableParticle
 # Healthを持つEntityであれば実行
     function lib:score_to_health_wrapper/fluctuation

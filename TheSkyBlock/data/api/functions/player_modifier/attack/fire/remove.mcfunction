@@ -9,4 +9,4 @@
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:player_modifier/core/attack/fire/remove
 # リセット
-    data remove storage api: Argument
+    data remove storage api: Argument.UUID

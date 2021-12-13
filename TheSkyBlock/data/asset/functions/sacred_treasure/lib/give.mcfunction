@@ -20,7 +20,7 @@
 #   DisableCooldownMessage? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
-# @within function asset:sacred_treasure/*/_.give
+# @within function asset:sacred_treasure/*/give/2.give
 
 # storage検証
     execute unless data storage asset:sacred_treasure ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
