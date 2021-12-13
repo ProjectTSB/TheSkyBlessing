@@ -5,7 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/tick/warp_attack/01.main
 
 # ワープ準備
-    tag @s remove 55.WarpAtack
+    tag @s remove 55.WarpAttack
     tag @s add 55.MagicSquare
     scoreboard players set @s 55.Tick 100
 
