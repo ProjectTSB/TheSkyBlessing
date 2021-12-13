@@ -57,6 +57,12 @@
         "asset:mob/0178.vindicator/summon/1.trigger",
         "asset:mob/0177.pillager/summon/1.trigger",
         "asset:mob/0179.trindicator/summon/1.trigger",
+        "asset:mob/0155.immorality/summon/1.trigger",
+        "asset:mob/0153.domination/summon/1.trigger",
+        "asset:mob/0151.recombined/summon/1.trigger",
+        "asset:mob/0150.contamination/summon/1.trigger",
+        "asset:mob/0158.sin/summon/1.trigger",
+        "asset:mob/0131.haruclaire/summon/1.trigger",
         "asset:mob/0060.self_destructor/summon/1.trigger",
         "asset:mob/0160.freeze_archer/summon/1.trigger",
         "asset:mob/0182.skull_raven/summon/1.trigger",
@@ -68,9 +74,13 @@
         "asset:mob/0077.golden_watermelon/summon/1.trigger",
         "asset:mob/0171.lumberjack_of_blue_forest/summon/1.trigger",
         "asset:mob/0181.magic_bookshelf/summon/1.trigger",
+        "asset:mob/0185.tutankhamen/summon/1.trigger",
         "asset:mob/0154.ruin/summon/1.trigger",
         "asset:mob/0080.fukotsu/summon/1.trigger",
         "asset:mob/0139.blast_eye/summon/1.trigger",
+        "asset:mob/0190.thunder_mage/summon/1.trigger",
+        "asset:mob/0191.thunder_magic/summon/1.trigger",
+        "asset:mob/0156.infringement/summon/1.trigger",
         "asset:mob/0186.ferocious_bee/summon/1.trigger"
     ]
 }

@@ -11,11 +11,14 @@
         "asset:sacred_treasure/0456.potion_of_stalling_power/trigger/rejoin_process",
         "asset:sacred_treasure/0643.raimei_chestplate/trigger/rejoin_process",
         "asset:mob/0129.lexiel/rejoin_process",
+        "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
+        "asset:mob/0153.domination/rejoin_process",
         "asset:sacred_treasure/0261.holy_symbol_lv.1/trigger/rejoin_process",
         "asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/rejoin_process",
         "asset:sacred_treasure/0269.holy_symbol_lv.10/trigger/rejoin_process",
         "asset:mob/0171.lumberjack_of_blue_forest/rejoin_process",
         "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
+        "asset:mob/0151.recombined/rejoin_process",
         "asset:sacred_treasure/0610.call_fish/rejoin_process"
     ]
 }
