@@ -13,7 +13,7 @@
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
     function lib:damage/modifier
-# 範囲5m以内のゾンビを対象に
+# ダメージを与える
     function lib:damage/
 # リセット
     data remove storage lib: Argument
