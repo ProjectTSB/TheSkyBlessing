@@ -1,8 +1,8 @@
-#> asset:mob/0189.water_mage/tick/5.magic_square
+#> asset:mob/0189.water_mage/tick/05.magic_square
 #
 #
 #
-# @within function asset:mob/0189.water_mage/tick/3.magic
+# @within function asset:mob/0189.water_mage/tick/03.magic
 
 # 音
     playsound entity.player.swim master @a ~ ~ ~ 0.3 1 0

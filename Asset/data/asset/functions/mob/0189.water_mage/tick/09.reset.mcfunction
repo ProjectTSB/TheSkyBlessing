@@ -1,8 +1,8 @@
-#> asset:mob/0189.water_mage/tick/9.reset
+#> asset:mob/0189.water_mage/tick/09.reset
 #
 #
 #
-# @within function asset:mob/0189.water_mage/tick/3.magic
+# @within function asset:mob/0189.water_mage/tick/03.magic
 
 # リセット
     scoreboard players reset @s 59.Tick

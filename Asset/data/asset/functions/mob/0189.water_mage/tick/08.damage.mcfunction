@@ -1,8 +1,8 @@
-#> asset:mob/0189.water_mage/tick/8.damage
+#> asset:mob/0189.water_mage/tick/08.damage
 #
 #
 #
-# @within function asset:mob/0189.water_mage/tick/7.vfx
+# @within function asset:mob/0189.water_mage/tick/07.vfx_and_hit_process
 
 # リセット
     scoreboard players set @s 59.Tick 171
