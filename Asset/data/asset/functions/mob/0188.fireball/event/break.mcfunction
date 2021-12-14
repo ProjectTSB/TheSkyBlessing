@@ -4,6 +4,5 @@
 #
 # @within function asset:mob/0188.fireball/**
 
-scoreboard players reset @s 58.Range
 execute positioned ^ ^ ^-1 run particle smoke ~ ~ ~ 0 0 0 0.05 10
 kill @s
