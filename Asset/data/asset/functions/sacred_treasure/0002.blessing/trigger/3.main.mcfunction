@@ -15,12 +15,9 @@
 
 # 固定加算
     scoreboard players add $MaxHealth Global 20000
-    function player_manager:bonus/update_health_bonus/
+    execute as @a run function player_manager:bonus/update_health_bonus
     scoreboard players add $MaxMP Global 5
-    function player_manager:bonus/update_mp_bonus/
-# メッセージ
-    tellraw @s [{"text":"最大体力が","color":"white"},{"text":"2","color":"aqua"},{"text":"増えた","color":"white"}]
-    tellraw @s [{"text":"最大MPが","color":"white"},{"text":"5","color":"aqua"},{"text":"増えた","color":"white"}]
+    execute as @a run function player_manager:bonus/update_mp_bonus
 # 選択トリガー
     scoreboard players enable @s 02.Trigger
 # チャット
