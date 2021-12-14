@@ -9,9 +9,6 @@
     particle flame ~ ~ ~ 0.25 0.25 0.25 0.005 1
     particle dust 1 0.5 0 1 ~ ~ ~ 0 0 0 0 1
 
-# 再帰カウントが0なら弾速からセット
-    execute unless entity @s[scores={58.Recursive=1..,58.Range=1..}] run scoreboard players operation @s 58.Recursive = @s 58.Speed
-
 # 前進
     execute if entity @s[scores={58.Recursive=1..,58.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
 
@@ -29,4 +26,4 @@
     execute if entity @s[scores={58.Recursive=1..,58.Range=1..}] at @s run function asset:mob/0188.fireball/tick/move
 
 # キル
-    execute if entity @s[scores={58.Range=0}] run function asset:mob/0188.fireball/event/break
+    execute if entity @s[scores={58.Range=0}] run kill @s

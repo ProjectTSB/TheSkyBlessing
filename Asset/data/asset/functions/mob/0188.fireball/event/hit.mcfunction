@@ -4,15 +4,19 @@
 #
 # @within function asset:mob/0188.fireball/tick/move
 
-# ヒット
-    #execute store result storage csr_score_damage: ChuzDamage.Body int 1 run data get entity @s data.ChuzData.BodyDamage
-    #execute store result storage csr_score_damage: ChuzDamage.Head int 1 run data get entity @s data.ChuzData.HeadDamage
-
-# ダメージを与える
-    execute as @p[dx=0] unless entity @s[gamemode=!adventure,gamemode=!survival] at @s run function asset:mob/0188.fireball/event/damage
-
+# 引数の設定
+    # 与えるダメージ = 7.5
+        data modify storage lib: Argument.Damage set value 15.0f
+    # 第一属性
+        data modify storage lib: Argument.AttackType set value "Magic"
+    # 第二属性
+        data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
     function lib:damage/modifier
+# ダメージを与える
+    execute as @p[dx=0] unless entity @s[gamemode=!adventure,gamemode=!survival] at @s run function lib:damage/
+# リセット
+    data remove storage lib: Argument
 
 # 消失
-    function asset:mob/0188.fireball/event/break
+    kill @s
