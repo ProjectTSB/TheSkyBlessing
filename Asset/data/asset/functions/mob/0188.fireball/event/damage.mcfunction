@@ -11,8 +11,6 @@
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Fire"
-# 補正functionを実行
-    function lib:damage/modifier
 # ダメージを与える
     function lib:damage/
 # リセット

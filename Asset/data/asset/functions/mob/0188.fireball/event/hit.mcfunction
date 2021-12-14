@@ -11,5 +11,8 @@
 # ダメージを与える
     execute as @p[dx=0] unless entity @s[gamemode=!adventure,gamemode=!survival] at @s run function asset:mob/0188.fireball/event/damage
 
+# 補正functionを実行
+    function lib:damage/modifier
+
 # 消失
     function asset:mob/0188.fireball/event/break
