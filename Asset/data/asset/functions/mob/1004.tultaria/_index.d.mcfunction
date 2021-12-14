@@ -3,6 +3,8 @@
 
 #> tag
 # @within function asset:mob/1004.tultaria/**/**
+    #declare tag RW.This
+
     #declare tag RW.Boss
     #declare tag RW.ArmorStand
     #declare tag RW.ArmorStandThis
@@ -23,3 +25,4 @@
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker
     #declare tag RW.MeteorMakerThis
+    #declare tag RW.CoordinateMarker

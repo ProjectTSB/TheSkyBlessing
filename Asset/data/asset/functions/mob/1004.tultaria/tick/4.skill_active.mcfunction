@@ -9,7 +9,7 @@
 # 範囲
     execute if entity @s[tag=RW.SkillMeteor] run function asset:mob/1004.tultaria/tick/2.meteor_attack/1.meteor_attack
 # 座標
-
+    execute if entity @s[tag=RW.SkillCoordinate] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.coordinate_attack
 # 座標外し
 
 # 波状

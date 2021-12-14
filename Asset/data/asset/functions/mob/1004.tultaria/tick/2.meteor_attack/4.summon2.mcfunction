@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/1.meteor_attack
+# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/2.first_tick
 
 # AECを召喚
     summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.BigMeteorMaker","RW.MeteorMakerThis"]}

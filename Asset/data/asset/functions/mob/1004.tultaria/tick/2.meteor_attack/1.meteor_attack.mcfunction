@@ -6,10 +6,6 @@
 
 # 最初に実行するの
     execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/2.meteor_attack/2.first_tick
-# 召喚5個
-    execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
-# 召喚3個（HP30%以下）
-    execute if entity @s[tag=RW.HPless30per] if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon2
 
 # 降らせる
     execute if score @s RW.Tick matches 10 at @e[tag=RW.MeteorMaker,distance=..100] positioned ~ ~5 ~ run function asset:mob/1004.tultaria/tick/2.meteor_attack/5.vfx

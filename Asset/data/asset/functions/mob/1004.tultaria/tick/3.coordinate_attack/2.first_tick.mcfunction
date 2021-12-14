@@ -12,3 +12,6 @@
 
 # 演出
     playsound minecraft:entity.zombie_villager.converted master @a[distance=..30] ~ ~ ~ 1 2 1
+
+# 召喚
+    execute at @a[distance=..100] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/3.summon

@@ -12,3 +12,8 @@
 
 # 演出
     playsound minecraft:entity.puffer_fish.death master @a[distance=..30] ~ ~ ~ 1 0.5 1
+
+# 召喚5個
+    function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
+# 召喚3個（HP30%以下）
+    execute if entity @s[tag=RW.HPless30per] run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon2

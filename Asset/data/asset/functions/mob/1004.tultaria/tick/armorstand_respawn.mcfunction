@@ -26,5 +26,3 @@
 
 # 強制的にテレポする
     function asset:mob/1004.tultaria/tick/move/spread
-
-    say kill
