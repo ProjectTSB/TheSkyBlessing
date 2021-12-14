@@ -6,7 +6,7 @@
 # @within function asset:mob/0187.flame_mage/event/shoot_magic
 
 # 元となるMobを召喚する
-    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"],DeathLootTable:"asset:mob/death/0188.fireball"}
+    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"],}
 # ID (int)
     data modify storage asset:mob ID set value 188
 # Type (string) Wikiを参照
