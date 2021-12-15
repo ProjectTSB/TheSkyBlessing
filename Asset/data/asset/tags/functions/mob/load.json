@@ -27,6 +27,8 @@
         "asset:mob/0079.thundercloud/0.load",
         "asset:mob/0154.ruin/0.load",
         "asset:mob/0138.combat_turret/0.load",
+        "asset:mob/0187.flame_mage/0.load",
+        "asset:mob/0188.fireball/0.load",
         "asset:mob/0189.water_mage/0.load",
         "asset:mob/0190.thunder_mage/0.load",
         "asset:mob/0191.thunder_magic/0.load",
