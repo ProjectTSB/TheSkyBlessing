@@ -9,7 +9,8 @@
     #declare storage core:temp
 
 # 負荷軽減のためstorageに代入する
-    data modify storage core:temp MetaData set from entity @s Inventory[].tag.TSB.ItemMetaData
+    function api:data_get/inventory
+    data modify storage core:temp MetaData set from storage api: Inventory[].tag.TSB.ItemMetaData
 # 各MetaData処理
     execute if data storage core:temp {MetaData:["BanPossession"]} run clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
 # リセット
