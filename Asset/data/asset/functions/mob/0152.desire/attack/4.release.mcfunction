@@ -23,5 +23,5 @@
     execute as @p[tag=Victim,distance=..10] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0.03 200
 
 # タグリセット
-    tag @s remove AttackThis
+    tag @s remove RunOnce
     tag @s remove 48.HasMP
