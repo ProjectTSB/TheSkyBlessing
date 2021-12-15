@@ -24,5 +24,5 @@
 
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker
-    #declare tag RW.MeteorMakerThis
     #declare tag RW.CoordinateMarker
+    #declare tag RW.OffCoordinateMarker

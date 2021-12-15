@@ -28,6 +28,5 @@
 # リセット
     data remove storage lib: Argument
 
-
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

@@ -18,7 +18,7 @@
     execute unless entity @s[tag=RW.HPless50per,tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $4 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 2
+    #scoreboard players set $Random Temporary 3
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee
     execute if score $Random Temporary matches 1 run tag @s add RW.SkillMeteor
