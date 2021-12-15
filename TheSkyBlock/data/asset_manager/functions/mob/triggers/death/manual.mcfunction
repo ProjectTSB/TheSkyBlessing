@@ -2,7 +2,7 @@
 #
 # 手動で死亡トリガーを呼び出します
 #
-# @within function lib:damage/core/non-player-process
+# @within function lib:damage/core/health_subtract/non-player
 
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
