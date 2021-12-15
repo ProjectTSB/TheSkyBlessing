@@ -13,6 +13,8 @@
     data modify storage asset:mob Type set value "Projectile"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value 0b
+# 名前 (TextComponentString) (オプション)
+    data modify storage asset:mob Name set value '{"text":"フレイムメイジ","color":"red"}'
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=marker,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
