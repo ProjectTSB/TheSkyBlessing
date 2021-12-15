@@ -8,10 +8,10 @@
     data modify storage asset:mob DeathLog set from entity @s Item.tag.TSB
 # 殺したユーザーの特定
     data modify storage asset:mob UUID set value [I;0,0,0,0]
-    data modify storage asset:mob UUID set from storage api: DeathLog.KillerUUID
+    data modify storage asset:mob UUID set from storage asset:mob DeathLog.KillerUUID
     execute as @a run function asset_manager:mob/triggers/death/find_player
 # Contextの設定
-    data modify storage asset:context id set from storage api: DeathLog.ID
+    data modify storage asset:context id set from storage asset:mob DeathLog.ID
 # スポナーへのダメージ処理
     function asset_manager:spawner/subtract_hp/
 # トリガーの呼び出し
