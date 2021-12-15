@@ -18,7 +18,7 @@
     #declare tag RW.SkillMeteor
     #declare tag RW.SkillCoordinate
     #declare tag RW.SkillOffCoordinate
-    #declare tag RW.SkillWavy
+    #declare tag RW.SkillBall
     #declare tag RW.SkillStarfury
     #declare tag RW.SkillSummon
 

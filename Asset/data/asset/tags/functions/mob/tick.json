@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/1008.ancient_light/tick/1.trigger",
         "asset:mob/1004.tultaria/tick/1.trigger",
         "asset:mob/example/tick/1.trigger",
         "asset:mob/0021.demon_eye/tick/1.trigger",

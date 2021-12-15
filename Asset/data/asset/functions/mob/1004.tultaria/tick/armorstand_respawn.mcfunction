@@ -20,7 +20,7 @@
     tag @s remove RW.SkillMeteor
     tag @s remove RW.SkillCoordinate
     tag @s remove RW.SkillOffCoordinate
-    tag @s remove RW.SkillWavy
+    tag @s remove RW.SkillBall
     tag @s remove RW.SkillStarfury
     tag @s remove RW.SkillSummon
 

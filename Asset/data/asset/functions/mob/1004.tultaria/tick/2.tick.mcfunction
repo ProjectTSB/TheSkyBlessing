@@ -11,6 +11,12 @@
 # スコアを増やす
     scoreboard players add @s RW.Tick 1
 
+# ランダムにちょっと移動してほしい
+# 向きをプレイヤー方向へ
+    #execute if score @s RW.Tick matches -20 run function asset:mob/1004.tultaria/tick/move/spread_facing
+# しばらくその方向へ動く
+    #execute if score @s RW.Tick matches -19..-1 rotated ~ 0 positioned ^ ^ ^0.6 run function asset:mob/1004.tultaria/tick/move/tereport
+
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
     execute if score @s RW.Tick matches 0 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
