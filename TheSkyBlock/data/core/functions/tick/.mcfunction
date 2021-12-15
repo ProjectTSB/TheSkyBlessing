@@ -8,6 +8,8 @@
 
 # 現在の時間をglobalに代入する
     execute store result storage global Time int 1 run time query gametime
+# プレイヤー数をGlobalオブジェクトに設定する
+    execute store result score $PlayerCount Global if entity @a
 
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player
