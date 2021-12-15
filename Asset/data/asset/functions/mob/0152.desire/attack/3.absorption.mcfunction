@@ -45,5 +45,5 @@
 
 # タグリセット
     tag @p[tag=EmptyMP] remove EmptyMP
-    tag @s remove AttackThis
+    tag @s remove RunOnce
     scoreboard players reset $MPCheck
