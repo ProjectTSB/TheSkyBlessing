@@ -1,0 +1,103 @@
+#> asset_manager:island/dispel/summon_boss/vfx/circle
+#
+#
+#
+# @within function asset_manager:island/dispel/summon_boss/task
+
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGYDsAnAKy0CMARkwLRwBsT17ALJSYcAHNXpd2TWvzgBDAMwtStWl0pgCAOzkBbBMkBhigAImmsDDkY9AZyTgUAe0JaISBQCYCKOK7gZ7MAA3OWxCA3AADyQABgIoWIBfRIJrUjRCO0QYgDoRAhsIKzdsgjhsbDQYGwMmGLiwDEciiAMGtBsAUQqqms6AR0JQ7CgAZUsfckRKUJrkvHBoeAoYRxGAc0ctc2IyCmoY6n4UFn4RdkoFFBiBWhjKdhEz+ilKOH4PLmu4ejh8MB0+gogCxNQBLkYAjfVM5ks1l0WQczlcSCY9G8vlaAUQ4BCYQiYGipTACWy80acnSmVieQKRQwJQa5Uq1Vq9VSzTkrVi3kcGC0-iQqLAACtCLoYEgvGAWHAAF5ofmIdi5FEEDrdJl9QbDMYTOBTGbYGqqmwAIVl8owAyGFR1ckmSANc0SAF0gA_3
+# 多角形 1
+particle dust 0.9 0.9 0.2 0.4 ^0 ^ ^-0.8 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.0136 ^ ^-0.69775 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.02973 ^ ^-0.59633 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.04839 ^ ^-0.49572 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.0696 ^ ^-0.39595 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.09334 ^ ^-0.29699 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.11962 ^ ^-0.19887 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.14843 ^ ^-0.10156 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.17978 ^ ^-0.00508 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.21366 ^ ^0.09058 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.25008 ^ ^0.18541 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.28904 ^ ^0.27942 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.33053 ^ ^0.3726 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.37456 ^ ^0.46496 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.42113 ^ ^0.5565 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.76085 ^ ^-0.24721 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.6678 ^ ^-0.20269 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.57633 ^ ^-0.156 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.48642 ^ ^-0.10716 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.39808 ^ ^-0.05616 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.3113 ^ ^-0.00301 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.14246 ^ ^0.10978 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.06038 ^ ^0.16941 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.02012 ^ ^0.23119 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.09906 ^ ^0.29514 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.17643 ^ ^0.36124 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.25223 ^ ^0.4295 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.32646 ^ ^0.49991 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.39913 ^ ^0.57248 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.47023 ^ ^0.64721 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.32646 ^ ^0.49991 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.25223 ^ ^0.4295 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.17643 ^ ^0.36124 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.09906 ^ ^0.29514 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.06038 ^ ^0.16941 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.14246 ^ ^0.10978 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.2261 ^ ^0.05231 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.3113 ^ ^-0.00301 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.39808 ^ ^-0.05616 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.48642 ^ ^-0.10716 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.57633 ^ ^-0.156 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.6678 ^ ^-0.20269 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.47023 ^ ^0.64721 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.37456 ^ ^0.46496 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.33053 ^ ^0.3726 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.28904 ^ ^0.27942 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.25008 ^ ^0.18541 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.17978 ^ ^-0.00508 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.14843 ^ ^-0.10156 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.11962 ^ ^-0.19887 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.09334 ^ ^-0.29699 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.0696 ^ ^-0.39595 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.04839 ^ ^-0.49572 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.02973 ^ ^-0.59633 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.76085 ^ ^-0.24721 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.55795 ^ ^-0.21255 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.45651 ^ ^-0.19921 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.35506 ^ ^-0.18855 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.25362 ^ ^-0.18055 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.05072 ^ ^-0.17255 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.05072 ^ ^-0.17255 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.25362 ^ ^-0.18055 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.35506 ^ ^-0.18855 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.45651 ^ ^-0.19921 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.55795 ^ ^-0.21255 0 0 0 0 1
+# 円 1
+particle dust 0.9 0.9 0.2 0.4 ^0.15607 ^ ^-0.78463 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.30615 ^ ^-0.7391 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.44446 ^ ^-0.66518 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.56569 ^ ^-0.56569 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.66518 ^ ^-0.44446 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.7391 ^ ^-0.30615 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.78463 ^ ^-0.15607 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.8 ^ ^0 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.78463 ^ ^0.15607 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.7391 ^ ^0.30615 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.66518 ^ ^0.44446 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.56569 ^ ^0.56569 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.30615 ^ ^0.7391 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0.15607 ^ ^0.78463 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^0 ^ ^0.8 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.15607 ^ ^0.78463 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.30615 ^ ^0.7391 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.56569 ^ ^0.56569 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.66518 ^ ^0.44446 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.7391 ^ ^0.30615 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.78463 ^ ^0.15607 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.8 ^ ^0 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.78463 ^ ^-0.15607 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.7391 ^ ^-0.30615 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.66518 ^ ^-0.44446 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.56569 ^ ^-0.56569 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.44446 ^ ^-0.66518 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.30615 ^ ^-0.7391 0 0 0 0 1
+particle dust 0.9 0.9 0.2 0.4 ^-0.15607 ^ ^-0.78463 0 0 0 0 1

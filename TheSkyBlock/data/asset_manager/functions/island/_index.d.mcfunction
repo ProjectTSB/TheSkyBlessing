@@ -25,3 +25,9 @@
 # @within function
 #   asset_manager:island/register/*
 #declare tag CursedTreasureInit
+
+#> Tag
+# @within function
+#   asset_manager:island/dispel/summon_boss/*
+#   asset_manager:island/tick/
+#declare tag CantDispel
