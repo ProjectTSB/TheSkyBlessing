@@ -1,0 +1,31 @@
+{
+    "type": "entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "stone_button",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:187}}"
+                        },
+                        {
+                            "function": "copy_nbt",
+                            "source": "killer_player",
+                            "ops": [
+                                {
+                                    "op": "replace",
+                                    "source": "UUID",
+                                    "target": "TSB.KillerUUID"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
