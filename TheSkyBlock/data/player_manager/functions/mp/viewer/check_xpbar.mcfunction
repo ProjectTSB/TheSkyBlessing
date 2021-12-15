@@ -12,7 +12,8 @@
 
 # 取得
     execute store result score $Lv Temporary run xp query @s levels
-    execute store result score $LvP Temporary run data get entity @s XpP 1000
+    function api:data_get/xp_p
+    execute store result score $LvP Temporary run data get storage api: XpP 1000
     execute unless score $LvP Temporary matches 0 run scoreboard players add $LvP Temporary 10
     scoreboard players operation $LvP Temporary /= $10 Const
 # 現在の%を計算

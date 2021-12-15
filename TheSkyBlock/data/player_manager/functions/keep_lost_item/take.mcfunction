@@ -5,7 +5,8 @@
 # @within core:handler/death
 
 # Inventory -> Temp
-    data modify storage player_manager:keep_lost_item Temp set from entity @s Inventory
+    function api:data_get/inventory
+    data modify storage player_manager:keep_lost_item Temp set from storage api: Inventory
 # Slotを削除
     data remove storage player_manager:keep_lost_item Temp[].Slot
 # UserStorage呼び出し
