@@ -5,7 +5,7 @@
 # @within function asset:mob/0189.water_mage/tick/2.tick
 
 # 魔法準備態勢
-    execute if score @s 59.Tick matches 100 run function asset:mob/0189.water_mage/tick/4.ready_magic
+    execute if score @s 59.Tick matches 100 run function asset:mob/0189.water_mage/tick/04.ready_magic
 
 # 魔方陣っぽい何か
     execute positioned ^ ^1 ^2 run function asset:mob/0189.water_mage/tick/05.magic_square
