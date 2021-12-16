@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/vfx
+#> asset_manager:island/dispel/vfx/dispelling
 #
 #
 #

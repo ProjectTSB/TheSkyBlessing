@@ -6,4 +6,4 @@
 
 # 解呪処理
     execute if entity @p[tag=!CantDispel,predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/
-    execute unless entity @p[predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/reset
+    execute unless entity @p[predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/cancelled

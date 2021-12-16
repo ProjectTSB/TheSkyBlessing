@@ -5,7 +5,7 @@
 # @within function asset_manager:island/dispel/
 
 # リセット
-    function asset_manager:island/dispel/reset
+    function asset_manager:island/dispel/cancelled
 # 一定時間祈れないようにする
     tag @s add CantDispel
 # 天使召喚済フラグを立てる

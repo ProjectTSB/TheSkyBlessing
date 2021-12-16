@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/reset
+#> asset_manager:island/dispel/cancelled
 #
 #
 #
