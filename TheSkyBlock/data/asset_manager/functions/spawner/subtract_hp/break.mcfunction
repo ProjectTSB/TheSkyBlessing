@@ -10,4 +10,4 @@
     tag @s add BreakSpawner
 # プレイヤーへの干渉をなくす
     setblock ~ ~ ~ air
-    data modify entity @s Item set value {id:"debug_stick",Count:1b,tag:{CustomModelData:404}}
+    data modify entity @s Item set value {id:"debug_stick",Count:1b,tag:{CustomModelData:4040}}
