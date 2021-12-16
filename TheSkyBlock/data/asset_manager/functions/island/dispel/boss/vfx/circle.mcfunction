@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/summon_boss/vfx/circle
+#> asset_manager:island/dispel/boss/vfx/circle
 #
 #
 #
-# @within function asset_manager:island/dispel/summon_boss/task
+# @within function asset_manager:island/dispel/boss/task
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdmAGjAFdiBLAEyTAFYAmOAYwEYAORugWgHYA2bgAycALDRq9OAQzoAjSZwDMFVq0mTu42a0JhckgLYJkgLE1AS5GAjfQAEzHTEkAnAwGck4RqmK4ISZryKM4Lzh7VzAAN0l0YiNwAA8kASIoBIBfFKJHCjJiF0QBADpWIicIB288ojh0dDIYJyNmAUSwe1RSiCNm93tcYKQ-MAArYn0YJDoiGTgALzI+xE4CibAyJwBRatr6tYBHYkjMAGU7AKpEADNI+qJVgCEZuftd-eqoY8lTpEv0erSCcGg8GojDI9kY6AQRFIlGozAUcjgzHOEjovBYImYkmEnBUrBoUjE3BUfFYzFEOj0hmogDDFay2BzOULuTzlBTLAJBEKIcARKIxMDxCpgZJ5P4tSRZHIJQrFUr2crNKo1OoNJoZNqSDoJG7rTYq54HN4nOBnb6-FIAXSAA_3
 # 円 1

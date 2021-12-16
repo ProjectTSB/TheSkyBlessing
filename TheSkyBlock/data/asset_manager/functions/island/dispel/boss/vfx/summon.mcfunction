@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/summon_boss/vfx/summon
+#> asset_manager:island/dispel/boss/vfx/summon
 #
 #
 #
-# @within function asset_manager:island/dispel/summon_boss/task
+# @within function asset_manager:island/dispel/boss/task
 
 playsound entity.wither.spawn hostile @a ~ ~ ~ 0.5 0.8
 

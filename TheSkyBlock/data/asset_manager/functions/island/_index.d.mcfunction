@@ -28,6 +28,6 @@
 
 #> Tag
 # @within function
-#   asset_manager:island/dispel/summon_boss/*
+#   asset_manager:island/dispel/boss/*
 #   asset_manager:island/tick/
 #declare tag CantDispel

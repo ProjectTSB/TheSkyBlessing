@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/summon_boss/
+#> asset_manager:island/dispel/boss/
 #
 #
 #
@@ -14,4 +14,4 @@
     summon marker ~ ~ ~ {Tags:["Object","Uninterferable","BossSummonMarker"]}
     execute store result score @e[type=marker,tag=BossSummonMarker,distance=..0.01] TargetBossID run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.BossID
 # 召喚
-    schedule function asset_manager:island/dispel/summon_boss/tick 1t
+    schedule function asset_manager:island/dispel/boss/tick 1t
