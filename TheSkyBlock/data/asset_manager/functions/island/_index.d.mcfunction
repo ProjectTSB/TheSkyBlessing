@@ -31,3 +31,10 @@
 #   asset_manager:island/dispel/boss/*
 #   asset_manager:island/tick/
 #declare tag CantDispel
+
+# MEMO
+# DispelPhase:
+#   1b: unknown(first boss waited/dispellable)
+#   2b: boss waited
+#   3b: dispellable
+#   4b: dispelled
