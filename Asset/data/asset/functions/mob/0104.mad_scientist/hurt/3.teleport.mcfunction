@@ -5,8 +5,8 @@
 # @within function asset:mob/0104.mad_scientist/hurt/2.hurt
 #> Private
 # @private
-#declare tag SpreadMarker
-#declare score_holder $VectorMagnitude
+    #declare tag SpreadMarker
+    #declare score_holder $VectorMagnitude
 
 # ワープ
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
