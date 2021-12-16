@@ -29,7 +29,7 @@
 # 解呪時間の3/4のタイミングでボス召喚フラグが立っていない場合召喚する
     execute if score @s DispelTime matches 120 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData{BossSummoned:false} at @p[predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/summon_boss/
 # 解呪時間を満たした場合解呪する
-    execute if score @s DispelTime matches 160 run function asset_manager:island/dispel/dispel
+    execute if score @s DispelTime matches 160 run function asset_manager:island/dispel/successful
 
 # リセット
     scoreboard players reset $nonPosEqual Temporary
