@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/task
+# @within function asset_manager:island/dispel/boss/pre_summon_task
 
 execute if score @s DispelTime matches 96 run particle electric_spark ~ ~3.8 ~ 0 0 0 0 1 force @a
 execute if score @s DispelTime matches 96 run particle electric_spark ~ ~3.6 ~ 0 0 0 0 1 force @a
