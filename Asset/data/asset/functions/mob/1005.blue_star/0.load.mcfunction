@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/1005.blue_star/**
-    scoreboard objectives add 
+   # scoreboard objectives add
