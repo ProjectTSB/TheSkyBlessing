@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/give
+#> asset:sacred_treasure/common/give
 #
 # 神器を入手します
 #

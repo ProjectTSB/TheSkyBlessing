@@ -6,7 +6,7 @@
 #   as player
 #   storage asset:sacred_treasure TargetSlot : Slot
 # @output tag @s CanUsed
-# @within function asset:sacred_treasure/lib/check_condition/*
+# @within function asset:sacred_treasure/common/check_condition/*
 
 # 対象スロットのデータの取得
     function asset_manager:sacred_treasure/data/get_data_from_slot

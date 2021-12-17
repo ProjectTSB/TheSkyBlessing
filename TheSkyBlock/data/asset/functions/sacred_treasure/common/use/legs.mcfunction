@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/use/legs
+#> asset:sacred_treasure/common/use/legs
 #
 # レギンスの神器の使用時共通処理を実行します
 #

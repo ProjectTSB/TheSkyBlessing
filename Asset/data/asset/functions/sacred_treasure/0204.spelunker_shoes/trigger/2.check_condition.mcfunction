@@ -9,7 +9,7 @@
     #declare score_holder $FallDistance
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/check_condition/feet
+    function asset:sacred_treasure/common/check_condition/feet
 # 他にアイテム等確認する場合はここに書く
 
 # 落下距離が2マス未満の場合は処理しない

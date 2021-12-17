@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0468.raging_demon/trigger/1.trigger
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/check_condition/offhand
+    function asset:sacred_treasure/common/check_condition/offhand
 # 他にアイテム等確認する場合はここに書く
 
 # 周囲10M以内に体力が20以下の敵がいるか確認

@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/use/mainhand
+#> asset:sacred_treasure/common/use/mainhand
 #
 # メインハンドの神器の使用時共通処理を実行します
 #

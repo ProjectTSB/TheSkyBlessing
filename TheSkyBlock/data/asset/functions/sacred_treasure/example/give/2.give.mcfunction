@@ -6,7 +6,7 @@
 # @private
 
 # 神器の説明や消費MPなどをここで設定する。
-# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
+# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 data modify storage asset:sacred_treasure ID set value 2147483647
 data modify storage asset:sacred_treasure Item set value "minecraft:leather_helmet"
@@ -25,4 +25,4 @@ data modify storage asset:sacred_treasure MPCost set value 0
 data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Wi-ki"]
 # data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b}
 
-function asset:sacred_treasure/lib/give
+function asset:sacred_treasure/common/give
