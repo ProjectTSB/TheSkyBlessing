@@ -6,7 +6,7 @@
 # @within function asset:sacred_treasure/0557.catastrophe/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
-# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
+# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 557
@@ -52,4 +52,4 @@
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Enchantments:[{id:protection,lvl:7}],AttributeModifiers:[{UUID:[I;1,1,557,3],AttributeName:"generic.armor",Name:"armor",Slot:feet,Operation:0,Amount:3},{UUID:[I;1,1,557,3],AttributeName:"generic.armor_throughness",Name:"armor_throughness",Slot:feet,Operation:0,Amount:1}],Unbreakable:1b}
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

@@ -6,7 +6,7 @@
 # @within function asset:sacred_treasure/0731.mouse_feet/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
-# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
+# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 731
@@ -54,4 +54,4 @@
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:9411002},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2,Operation:0,UUID:[I;1,1,624,6],Slot:"feet"},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.05,Operation:1,UUID:[I;1,1,731,3],Slot:"feet"}]}
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

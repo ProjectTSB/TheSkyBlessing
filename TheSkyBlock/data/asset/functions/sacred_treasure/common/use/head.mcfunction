@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/use/head
+#> asset:sacred_treasure/common/use/head
 #
 # ヘルメットの神器の使用時共通処理を実行します
 #

@@ -2,7 +2,7 @@
 #
 # 神器使用時の処理を実行します
 #
-# @within function asset:sacred_treasure/lib/use/*
+# @within function asset:sacred_treasure/common/use/*
 
 # 神器データの取得
     function asset_manager:sacred_treasure/data/get_data_from_slot

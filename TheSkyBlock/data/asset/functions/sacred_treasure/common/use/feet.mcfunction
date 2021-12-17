@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/use/feet
+#> asset:sacred_treasure/common/use/feet
 #
 # ブーツの神器の使用時共通処理を実行します
 #

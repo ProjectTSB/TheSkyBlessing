@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/use/chest
+#> asset:sacred_treasure/common/use/chest
 #
 # チェストプレートの神器の使用時共通処理を実行します
 #

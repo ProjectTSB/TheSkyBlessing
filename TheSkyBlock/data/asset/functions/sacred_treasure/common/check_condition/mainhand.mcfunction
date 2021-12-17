@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/lib/check_condition/mainhand
+#> asset:sacred_treasure/common/check_condition/mainhand
 #
 # メインハンドの神器の基礎的な発動条件をチェックします
 #
