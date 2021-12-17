@@ -14,5 +14,4 @@
 # 召喚
     execute if score @s DispelTime matches 100 run function asset_manager:island/dispel/boss/summon
 # 削除
-    execute if score @s DispelTime matches 100 run tag @e[type=armor_stand,tag=CursedTreasure,tag=CantDispel,distance=..2.5,limit=1] remove CantDispel
     execute if score @s DispelTime matches 100 run kill @s

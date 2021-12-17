@@ -15,3 +15,6 @@
     function player_manager:keep_lost_item/give_all/
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
+# DispelPhaseを進める
+    function oh_my_dat:please
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
