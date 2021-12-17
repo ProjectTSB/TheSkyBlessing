@@ -17,6 +17,12 @@
 #   mob_manager:init/
     #declare tag AlreadyInitMob
 
+#> FlagIndex
+# @within function
+#   mob_manager:init/
+#   asset_manager:island/dispel/boss/summon
+    #declare score_holder $FlagIndex
+
 #> FindFlag
 # @within *
 #   mob_manager:init/add_flag

@@ -3,4 +3,5 @@
 
 #>
 # @within function asset_manager:island/dispel/boss/*
-#declare tag BossSummonMarker
+    #declare tag BossSummonMarker
+    #declare tag this

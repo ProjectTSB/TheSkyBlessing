@@ -145,6 +145,7 @@ team modify NoCollision collisionRule never
     #   asset:mob/*/**
     #   asset_manager:mob/**
     #   asset_manager:spawner/**
+    #   asset_manager:island/dispel/boss/remove
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private

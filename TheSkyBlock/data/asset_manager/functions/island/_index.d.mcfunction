@@ -34,7 +34,7 @@
 
 # MEMO
 # DispelPhase:
-#   1b: unknown(first boss waited/dispellable)
-#   2b: boss waited
-#   3b: dispellable
-#   4b: dispelled
+#   0b: unknown(first boss waited/dispellable)
+#   1b: boss waited
+#   2b: dispellable
+#   3b: dispelled
