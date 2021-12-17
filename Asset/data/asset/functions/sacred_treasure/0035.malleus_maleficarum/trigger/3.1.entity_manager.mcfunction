@@ -5,7 +5,7 @@
 # @within function
 #   asset:sacred_treasure/0035.malleus_maleficarum/trigger/3.main
 #   asset:sacred_treasure/0035.malleus_maleficarum/trigger/3.1.entity_manager
-#   asset:sacred_treasure/0035.malleus_maleficarum/rejoin_process
+#   asset:sacred_treasure/0035.malleus_maleficarum/trigger/rejoin_process
 
 
 #アーマースタンドがエンダーパールの上に乗っていない状態なら命中処理
