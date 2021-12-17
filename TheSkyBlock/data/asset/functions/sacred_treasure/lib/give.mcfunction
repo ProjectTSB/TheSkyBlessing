@@ -40,11 +40,11 @@
 # インベントリのサイズ取得
     function api:data_get/inventory
     execute store result score $InvSize Temporary if data storage api: Inventory[]
-    execute if data storage asset:sacred_treasure Items[{Slot:100b}] run scoreboard players remove $InvSize Temporary 1
-    execute if data storage asset:sacred_treasure Items[{Slot:101b}] run scoreboard players remove $InvSize Temporary 1
-    execute if data storage asset:sacred_treasure Items[{Slot:102b}] run scoreboard players remove $InvSize Temporary 1
-    execute if data storage asset:sacred_treasure Items[{Slot:103b}] run scoreboard players remove $InvSize Temporary 1
-    execute if data storage asset:sacred_treasure Items[{Slot:-106b}] run scoreboard players remove $InvSize Temporary 1
+    execute if data storage api: Inventory[{Slot:100b}] run scoreboard players remove $InvSize Temporary 1
+    execute if data storage api: Inventory[{Slot:101b}] run scoreboard players remove $InvSize Temporary 1
+    execute if data storage api: Inventory[{Slot:102b}] run scoreboard players remove $InvSize Temporary 1
+    execute if data storage api: Inventory[{Slot:103b}] run scoreboard players remove $InvSize Temporary 1
+    execute if data storage api: Inventory[{Slot:-106b}] run scoreboard players remove $InvSize Temporary 1
 # 神器give
     execute if score $InvSize Temporary matches ..35 run loot give @s mine 10000 0 10000 debug_stick
     execute if score $InvSize Temporary matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
