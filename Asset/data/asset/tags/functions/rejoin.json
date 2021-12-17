@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0035.malleus_maleficarum/rejoin_process",
         "asset:sacred_treasure/0002.blessing/trigger/rejoin_process",
         "asset:sacred_treasure/0033.magic_shield/trigger/rejoin_process",
         "asset:sacred_treasure/0252.void_transaction/trigger/rejoin_process",
