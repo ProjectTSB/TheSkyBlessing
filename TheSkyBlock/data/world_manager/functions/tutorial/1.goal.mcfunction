@@ -7,4 +7,4 @@
 # フラグ付与
     tag @s add TutorialFlag1
 # メッセージ
-    function lib:message/tutorial/1.goal
+    function lib:message/tutorial/goal

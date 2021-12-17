@@ -1,4 +1,4 @@
-#> lib:message/tutorial/3.sacred_treasure
+#> lib:message/tutorial/sacred_treasure
 #
 # 「◆ 神器について
 #   この世界には、**神器**と呼ばれるアイテムが存在します。

@@ -1,4 +1,4 @@
-#> lib:message/tutorial/1.goal
+#> lib:message/tutorial/goal
 #
 # 「◆ 目標について
 #   あなた[たち]の目標はただ一つ。この世界の**全てを浄化**をすることです。」

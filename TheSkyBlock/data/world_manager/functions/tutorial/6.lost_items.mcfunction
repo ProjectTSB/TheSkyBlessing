@@ -1,4 +1,4 @@
-#> world_manager:tutorial/6.spawner
+#> world_manager:tutorial/6.lost_items
 #
 #
 #
@@ -7,4 +7,4 @@
 # フラグ付与
     tag @s add TutorialFlag6
 # メッセージ
-    function lib:message/tutorial/6.spawner
+    function lib:message/tutorial/lost_items

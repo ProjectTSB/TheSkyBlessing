@@ -1,4 +1,4 @@
-#> world_manager:tutorial/4.island
+#> world_manager:tutorial/4.religion
 #
 #
 #
@@ -7,4 +7,4 @@
 # フラグ付与
     tag @s add TutorialFlag4
 # メッセージ
-    function lib:message/tutorial/4.island
+    function lib:message/tutorial/religion

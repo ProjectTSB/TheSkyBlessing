@@ -7,4 +7,4 @@
 # フラグ付与
     tag @s add TutorialFlag3
 # メッセージ
-    function lib:message/tutorial/3.sacred_treasure
+    function lib:message/tutorial/sacred_treasure
