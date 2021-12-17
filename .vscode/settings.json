@@ -44,6 +44,10 @@
             {
                 "label": "id",
                 "parts": "/^id$/"
+            },
+            {
+                "label": "uuid",
+                "parts": "/^uuid$/"
             }
         ]
     ],

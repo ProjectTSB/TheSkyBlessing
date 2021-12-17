@@ -66,6 +66,8 @@
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
+# データ初期化
+    function mob_manager:init/
 # リセット
     data remove storage asset:mob HandItems
     data remove storage asset:mob ArmorItems

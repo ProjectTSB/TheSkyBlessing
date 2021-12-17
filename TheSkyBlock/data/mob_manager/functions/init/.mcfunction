@@ -2,7 +2,9 @@
 #
 # Mobのデータを初期化します
 #
-# @within function core:tick/
+# @within function
+#   core:tick/
+#   asset_manager:mob/summon/set_data
 
 # 識別用のフラグセット
     function mob_manager:init/add_flag
