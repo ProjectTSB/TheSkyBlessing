@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:171}}"
+                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:2147483647}}"
                         },
                         {
                             "function": "copy_nbt",
@@ -576,7 +576,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "entities/skeleton"
+                    "name": "entities/zombie"
                 }
             ]
         }
