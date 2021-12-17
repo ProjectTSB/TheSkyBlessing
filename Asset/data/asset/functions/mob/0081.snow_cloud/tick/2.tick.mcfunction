@@ -12,11 +12,11 @@
     particle dust 1 1000000000 1000000000 2 ~ ~ ~ 0.6 0.3 0.6 0 2 normal @a
 
 # 最も近いプレイヤーの上に移動
-    execute facing entity @p[gamemode=!spectator] feet rotated ~ 0 if block ^ ^ ^0.2 #lib:no_collision_without_fluid run tp @s ^ ^ ^0.1
-    execute if entity @a[gamemode=!spectator,distance=..4] if block ~ ~1 ~ #lib:no_collision_without_fluid run tp @s ~ ~1 ~
+    execute facing entity @p[gamemode=!spectator] feet rotated ~ 0 if block ^ ^ ^0.2 #lib:no_collision run tp @s ^ ^ ^0.1
+    execute if entity @a[gamemode=!spectator,distance=..4] if block ~ ~1 ~ #lib:no_collision run tp @s ~ ~1 ~
 
 # プレイヤーの上に移動しすぎたら降下(下30ブロック以内にプレイヤーがいて、下6ブロック以内にプレイヤーがいない場合降下)
-    execute positioned ~-1 ~-30 ~-1 if entity @a[gamemode=!spectator,dx=2,dy=30,dz=2] at @s positioned ~-1 ~-6 ~-1 unless entity @a[gamemode=!spectator,dx=2,dy=6,dz=2] at @s if block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~-1 ~
+    execute positioned ~-1 ~-30 ~-1 if entity @a[gamemode=!spectator,dx=2,dy=30,dz=2] at @s positioned ~-1 ~-6 ~-1 unless entity @a[gamemode=!spectator,dx=2,dy=6,dz=2] at @s if block ~ ~-1 ~ #lib:no_collision run tp @s ~ ~-1 ~
 # 近くのプレイヤーに水魔法ダメージ
     execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0081.snow_cloud/tick/4.near_damage
 
