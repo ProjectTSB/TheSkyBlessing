@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/1010.starfury/**
-    scoreboard objectives add 
+  #  scoreboard objectives add 
