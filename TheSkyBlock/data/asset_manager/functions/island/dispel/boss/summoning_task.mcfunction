@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/boss/pre_summon_task
+#> asset_manager:island/dispel/boss/summoning_task
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/pre_summon_task_repeater
+# @within function asset_manager:island/dispel/boss/summoning_task_repeater
 
 # スコア加算
     scoreboard players add @s DispelTime 1
