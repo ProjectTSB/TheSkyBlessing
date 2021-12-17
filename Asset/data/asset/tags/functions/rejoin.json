@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0609.lunar_flare/trigger/rejoin_process",
+        "asset:sacred_treasure/0369.fire_magic/trigger/rejoin_process",
+        "asset:sacred_treasure/0210.terra_blade/trigger/rejoin_process",
+        "asset:sacred_treasure/0035.malleus_maleficarum/trigger/rejoin_process",
         "asset:sacred_treasure/0002.blessing/trigger/rejoin_process",
         "asset:sacred_treasure/0033.magic_shield/trigger/rejoin_process",
         "asset:sacred_treasure/0252.void_transaction/trigger/rejoin_process",
@@ -18,6 +22,6 @@
         "asset:mob/0171.lumberjack_of_blue_forest/rejoin_process",
         "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
         "asset:mob/0151.recombined/rejoin_process",
-        "asset:sacred_treasure/0610.call_fish/rejoin_process"
+        "asset:sacred_treasure/0610.call_fish/trigger/rejoin_process"
     ]
 }
