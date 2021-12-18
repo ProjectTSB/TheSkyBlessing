@@ -13,6 +13,10 @@
                             "entity": "this",
                             "name": [
                                 {
+                                    "text": "#",
+                                    "font": "invisible_bg"
+                                },
+                                {
                                     "score": {
                                         "objective": "Temporary",
                                         "name": "$Int"
@@ -32,6 +36,10 @@
                                     },
                                     "color": "green",
                                     "bold": true
+                                },
+                                {
+                                    "text": "#",
+                                    "font": "invisible_bg"
                                 }
                             ]
                         }

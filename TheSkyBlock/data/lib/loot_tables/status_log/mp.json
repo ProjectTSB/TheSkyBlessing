@@ -13,11 +13,19 @@
                             "entity": "this",
                             "name": [
                                 {
+                                    "text": "#",
+                                    "font": "invisible_bg"
+                                },
+                                {
                                     "score": {
                                         "objective": "Lib",
                                         "name": "$Fluctuation"
                                     },
                                     "color": "blue"
+                                },
+                                {
+                                    "text": "#",
+                                    "font": "invisible_bg"
                                 }
                             ]
                         }
