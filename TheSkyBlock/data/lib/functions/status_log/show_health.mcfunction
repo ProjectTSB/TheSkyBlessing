@@ -14,8 +14,8 @@
     #declare score_holder $isNegative
     #declare tag SummonPosStand
 
-# 負数の場合の処理
-    execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..-1
+# 負数の場合の処理 // 0未満では無く、0以下なのは0の表記を赤くするため。
+    execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..0
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Fluctuation Lib *= $-1 Const
 # 少数部を取り出す
     scoreboard players operation $Frac Temporary = $Fluctuation Lib

@@ -13,25 +13,33 @@
                             "entity": "this",
                             "name": [
                                 {
+                                    "text": "#",
+                                    "font": "invisible_bg"
+                                },
+                                {
                                     "score": {
                                         "objective": "Temporary",
                                         "name": "$Int"
                                     },
-                                    "color": "red",
-                                    "bold": true
+                                    "color": "white",
+                                    "font": "damage"
                                 },
                                 {
                                     "text": ".",
-                                    "color": "red",
-                                    "bold": true
+                                    "color": "white",
+                                    "font": "damage"
                                 },
                                 {
                                     "score": {
                                         "objective": "Temporary",
                                         "name": "$Frac"
                                     },
-                                    "color": "red",
-                                    "bold": true
+                                    "color": "white",
+                                    "font": "damage"
+                                },
+                                {
+                                    "text": "#",
+                                    "font": "invisible_bg"
                                 }
                             ]
                         }
