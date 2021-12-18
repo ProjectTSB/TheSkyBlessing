@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/1008.yellow_star/rejoin_process",
+        "asset:mob/1005.blue_star/rejoin_process",
         "asset:mob/1004.tultaria/rejoin_process",
         "asset:sacred_treasure/0002.blessing/trigger/rejoin_process",
         "asset:sacred_treasure/0033.magic_shield/trigger/rejoin_process",

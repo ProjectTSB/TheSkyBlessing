@@ -1,6 +1,11 @@
 {
     "values": [
         "asset:mob/1008.ancient_light/summon/1.trigger",
+        "asset:mob/1010.starfury/summon/1.trigger",
+        "asset:mob/1008.yellow_star/summon/1.trigger",
+        "asset:mob/1007.red_star/summon/1.trigger",
+        "asset:mob/1006.green_star/summon/1.trigger",
+        "asset:mob/1005.blue_star/summon/1.trigger",
         "asset:mob/1004.tultaria/summon/1.trigger",
         "asset:mob/example/summon/1.trigger",
         "asset:mob/0021.demon_eye/summon/1.trigger",
