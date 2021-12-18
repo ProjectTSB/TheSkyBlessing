@@ -1,13 +1,13 @@
-#> asset:mob/1008.ancient_light/summon/2.summon
+#> asset:mob/1009.ancient_light/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/1008.ancient_light/summon/1.trigger
+# @within function asset:mob/1009.ancient_light/summon/1.trigger
 
 # 元となるMobを召喚する
     summon area_effect_cloud ~ ~ ~ {Tags:["MobInit"],CustomNameVisible:0b,Particle:"block air",Duration:50}
 # ID (int)
-    data modify storage asset:mob ID set value 1008
+    data modify storage asset:mob ID set value 1009
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Projectile"
 # 干渉可能か否か (boolean)
