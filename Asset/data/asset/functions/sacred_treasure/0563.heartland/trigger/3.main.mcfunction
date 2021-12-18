@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0563.heartland/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/lib/use/chest
+    function asset:sacred_treasure/common/use/chest
 
 # ここから先は神器側の効果の処理を書く
     # 周囲5mのプレイヤーに既に自然回復エフェクトが付与されているかどうかを検知し、自然回復エフェクトを付与

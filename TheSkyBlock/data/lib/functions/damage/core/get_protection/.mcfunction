@@ -2,7 +2,7 @@
 #
 # プロテクションのEPFを取得します
 #
-# @within function lib:damage/core/get_status
+# @within function lib:damage/core/get_status/cons_resist
 
 #> Temp
 # @private

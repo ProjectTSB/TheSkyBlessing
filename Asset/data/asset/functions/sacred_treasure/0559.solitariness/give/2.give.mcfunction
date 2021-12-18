@@ -6,7 +6,7 @@
 # @within function asset:sacred_treasure/0559.solitariness/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
-# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
+# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 559
@@ -52,4 +52,4 @@
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5}],AttributeModifiers:[{UUID:[I;1,1,559,5],AttributeName:"generic.movement_speed",Name:speed,Amount:0.1,Operation:1,Slot:chest}]}
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

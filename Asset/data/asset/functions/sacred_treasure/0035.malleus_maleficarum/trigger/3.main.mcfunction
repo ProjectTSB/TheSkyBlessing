@@ -4,12 +4,12 @@
 # @within function asset:sacred_treasure/0035.malleus_maleficarum/trigger/2.check_condition
 
 #> private
-# @private 
+# @private
     #declare tag MalleusMaleficarumInit
     #declare tag MalleusMaleficarumEntity
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/use/auto
+    function asset:sacred_treasure/common/use/auto
 
 # エンダーパールwithアーマースタンド召喚
     execute anchored eyes run summon ender_pearl ^ ^ ^1 {Tags:[MalleusMaleficarumInit,MalleusMaleficarumEntity],Passengers:[{id:"minecraft:armor_stand",Tags:[MalleusMaleficarumIndicator,MalleusMaleficarumInit],NoGravity:1b,Invisible:1b}]}

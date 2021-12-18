@@ -9,7 +9,7 @@
 
 # 最寄りのプレイヤーに対して発動（範囲内にいないなら不発）
     data modify storage api: Argument.ID set value 191
-    execute at @a[distance=..15] run function api:mob/summon
+    execute at @r[gamemode=!spectator,distance=..15] run function api:mob/summon
 
 
 # 次に攻撃するタイミングをランダムにする

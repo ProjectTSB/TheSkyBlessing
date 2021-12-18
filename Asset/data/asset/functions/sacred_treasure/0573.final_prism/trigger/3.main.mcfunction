@@ -9,7 +9,7 @@
 #declare tag SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/use/mainhand
+    function asset:sacred_treasure/common/use/mainhand
 
 # スコアを戻す
     #scoreboard players reset @s[scores={573.Laser=4..}] 573.Laser

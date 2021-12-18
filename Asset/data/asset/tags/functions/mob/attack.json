@@ -42,6 +42,7 @@
         "asset:mob/0178.vindicator/attack/1.trigger",
         "asset:mob/0177.pillager/attack/1.trigger",
         "asset:mob/0179.trindicator/attack/1.trigger",
+        "asset:mob/0152.desire/attack/1.trigger",
         "asset:mob/0153.domination/attack/1.trigger",
         "asset:mob/0151.recombined/attack/1.trigger",
         "asset:mob/0060.self_destructor/attack/1.trigger",

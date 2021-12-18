@@ -6,7 +6,7 @@
 # @within function asset:sacred_treasure/0164.blessing_boots/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
-# 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
+# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 164
@@ -40,4 +40,4 @@
     data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Amount:0.2,Operation:1,UUID:[I;1,1,164,6],Slot:"feet"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:-1,Operation:1,UUID:[I;1,1,164,6],Slot:"feet"}]}
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

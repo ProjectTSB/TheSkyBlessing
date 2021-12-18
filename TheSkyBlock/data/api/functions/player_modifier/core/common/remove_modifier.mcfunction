@@ -14,6 +14,8 @@
     data modify storage api: UUID set from storage api: Argument.UUID
 # 比較
     execute store success score $isSuccess Temporary run data modify storage api: UUID set from storage api: Modifiers[-1].UUID
+# 同じ場合はRemoveに設定する
+    execute if score $isSuccess Temporary matches 0 run data modify storage api: Removed set from storage api: Modifiers[-1]
 # 違う場合は新しい配列に追加
     execute if score $isSuccess Temporary matches 1 run data modify storage api: NewModifiers append from storage api: Modifiers[-1]
 # リストから削除

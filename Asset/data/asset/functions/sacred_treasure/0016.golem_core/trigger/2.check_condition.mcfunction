@@ -9,7 +9,7 @@
     #declare score_holder $IronBlockCount
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/lib/check_condition/auto
+    function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
     # 鉄ブロックを持ってるかチェック
         execute store result score $IronBlockCount Temporary run clear @s iron_block 0

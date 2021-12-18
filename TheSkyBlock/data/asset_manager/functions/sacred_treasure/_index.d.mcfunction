@@ -6,7 +6,7 @@
 #   asset_manager:sacred_treasure/**
 #   asset:sacred_treasure/*/register
 #   asset:sacred_treasure/*/give/2.give
-#   asset:sacred_treasure/lib/**
+#   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
 #> LootTableに渡す用のscoreHolder

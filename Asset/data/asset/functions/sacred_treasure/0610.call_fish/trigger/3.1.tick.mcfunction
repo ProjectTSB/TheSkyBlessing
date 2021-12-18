@@ -5,7 +5,7 @@
 # @within function
 #    asset:sacred_treasure/0610.call_fish/trigger/3.main
 #    asset:sacred_treasure/0610.call_fish/trigger/3.1.tick
-#    asset:sacred_treasure/0610.call_fish/rejoin_process
+#    asset:sacred_treasure/0610.call_fish/trigger/rejoin_process
 
 # スコアを増やす
     scoreboard players add @e[type=cod,tag=GY.Fish] GY.FishCool 1

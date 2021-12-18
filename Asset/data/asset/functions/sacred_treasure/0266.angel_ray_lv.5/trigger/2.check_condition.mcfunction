@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/1.trigger
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
-    function asset:sacred_treasure/lib/check_condition/auto
+    function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する

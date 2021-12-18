@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:sacred_treasure/give/from_rarity
+# @within function api:sacred_treasure/*/from_rarity
 
 #> For calc
 # @private

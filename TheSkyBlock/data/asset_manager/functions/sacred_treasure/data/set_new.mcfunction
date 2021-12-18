@@ -7,9 +7,11 @@
 # 初期化
     data remove storage asset:context New
 # Inventory
-    data modify storage asset:context New.Inventory set from entity @s Inventory
+    function api:data_get/inventory
+    data modify storage asset:context New.Inventory set from storage api: Inventory
 # Items
-    data modify storage asset:context New.Items.mainhand set from entity @s SelectedItem
+    function api:data_get/selected_item
+    data modify storage asset:context New.Items.mainhand set from storage api: SelectedItem
     data modify storage asset:context New.Items.offhand set from storage asset:context New.Inventory[{Slot:-106b}]
     data modify storage asset:context New.Items.feet set from storage asset:context New.Inventory[{Slot:100b}]
     data modify storage asset:context New.Items.legs set from storage asset:context New.Inventory[{Slot:101b}]

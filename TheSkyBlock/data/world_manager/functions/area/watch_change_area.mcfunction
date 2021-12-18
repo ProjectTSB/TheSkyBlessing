@@ -1,12 +1,13 @@
 #> world_manager:area/watch_change_area
 #
-# 信仰に関する処理をする
+# エリア管理
 #
 # @within function core:tick/player
 
 # 次のエリア情報をリセット
     scoreboard players set $NextInArea Temporary 0
 # 各エリア処理
+    execute if predicate world_manager:area/01.tutorial run function world_manager:area/01.tutorial
     execute if predicate world_manager:area/10.flora_temple run function world_manager:area/10.flora_temple
     execute if predicate world_manager:area/11.nyaptov_temple run function world_manager:area/11.nyaptov_temple
     execute if predicate world_manager:area/12.rumor_temple run function world_manager:area/12.rumor_temple
