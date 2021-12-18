@@ -12,7 +12,7 @@
     execute if entity @s[tag=RW.SkillCoordinate] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.coordinate_attack
 # 座標外し
     execute if entity @s[tag=RW.SkillOffCoordinate] run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/1.off_coordinate_attack
-# 波状
+# 弾攻撃
     execute if entity @s[tag=RW.SkillBall] run function asset:mob/1004.tultaria/tick/5.ball_attack/1.ball_attack
 # 流星
 
