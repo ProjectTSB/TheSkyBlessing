@@ -7,7 +7,10 @@
 # タグをつける
     execute at @s run tag @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] add RW.ArmorStandThis
 # テレポする
-    tp @s 100.5 107.5 2923.5 facing entity @p
+    tp @s @e[type=marker,tag=RW.XYZ,sort=nearest,limit=1]
+# 向き合わせる
+    execute at @s run tp @s ~ ~ ~ facing entity @p
+
 # 位置をあわせる
     tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s
 # タグを消す

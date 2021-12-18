@@ -6,6 +6,8 @@
 
 # もともといるアマスタには死んでもらう(複数召喚されてる場合、もし巻き込まれても大丈夫)
     kill @e[type=armor_stand,tag=RW.ArmorStand]
+# マーカー消す
+    kill @e[type=marker,tag=RW.XYZ,limit=1]
 
 # 演出
     playsound minecraft:entity.wither.death ambient @a ~ ~ ~ 1 2

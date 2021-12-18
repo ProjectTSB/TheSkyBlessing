@@ -8,7 +8,7 @@
     summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
 
 # 拡散する
-    data modify storage lib: Argument.Bounds set value [[25d,25d],[2d,5d],[25d,25d]]
+    data modify storage lib: Argument.Bounds set value [[35d,35d],[2d,5d],[35d,35d]]
     execute as @e[type=marker,tag=RW.This,distance=..100] at @s positioned ~ ~15 ~ run function lib:spread_entity/
 
 # モブを出す

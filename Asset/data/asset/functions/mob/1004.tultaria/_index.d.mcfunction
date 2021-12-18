@@ -8,6 +8,7 @@
     #declare tag RW.Boss
     #declare tag RW.ArmorStand
     #declare tag RW.ArmorStandThis
+    #declare tag RW.XYZ
 
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per

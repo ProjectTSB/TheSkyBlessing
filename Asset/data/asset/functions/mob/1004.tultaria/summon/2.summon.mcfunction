@@ -65,6 +65,9 @@
 # タグを消す
     tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
 
+# 座標を記憶するあれ
+    summon marker ~ ~ ~ {Tags:["RW.XYZ"]}
+
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick -100
 

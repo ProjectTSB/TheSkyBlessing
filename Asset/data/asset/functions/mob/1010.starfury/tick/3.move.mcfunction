@@ -7,7 +7,7 @@
 # particle
     execute if entity @s[tag=S2.Fire] run particle flame ~ ~ ~ 0 0 0 0 1
     execute if entity @s[tag=S2.Water] run particle dust 1 1000000000 1000000000 1 ~ ~ ~ 0 0 0 1 1
-    execute if entity @s[tag=S2.Thunder] run particle scrape ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[tag=S2.Thunder] run particle dust 10000000000 10000000000 1 1 ~ ~ ~ 0 0 0 1 1
 
 # TP
     tp ^ ^ ^1

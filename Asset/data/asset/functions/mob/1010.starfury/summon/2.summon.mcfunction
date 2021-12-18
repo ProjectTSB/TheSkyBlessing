@@ -24,7 +24,7 @@
 # ほしい範囲に剰余算する
     scoreboard players operation $Random Temporary %= $3 Const
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 0
+    #scoreboard players set $Random Temporary 0
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] add S2.Fire
     execute if score $Random Temporary matches 1 run tag @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] add S2.Water
