@@ -21,14 +21,12 @@
                                         "objective": "Temporary",
                                         "name": "$Int"
                                     },
-                                    "color": "red",
-                                    "bold": true,
+                                    "color": "white",
                                     "font": "damage"
                                 },
                                 {
                                     "text": ".",
-                                    "color": "red",
-                                    "bold": true,
+                                    "color": "white",
                                     "font": "damage"
                                 },
                                 {
@@ -36,8 +34,7 @@
                                         "objective": "Temporary",
                                         "name": "$Frac"
                                     },
-                                    "color": "red",
-                                    "bold": true,
+                                    "color": "white",
                                     "font": "damage"
                                 },
                                 {
