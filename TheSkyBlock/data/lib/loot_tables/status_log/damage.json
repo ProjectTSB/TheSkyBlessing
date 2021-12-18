@@ -22,12 +22,14 @@
                                         "name": "$Int"
                                     },
                                     "color": "red",
-                                    "bold": true
+                                    "bold": true,
+                                    "font": "damage"
                                 },
                                 {
                                     "text": ".",
                                     "color": "red",
-                                    "bold": true
+                                    "bold": true,
+                                    "font": "damage"
                                 },
                                 {
                                     "score": {
@@ -35,7 +37,8 @@
                                         "name": "$Frac"
                                     },
                                     "color": "red",
-                                    "bold": true
+                                    "bold": true,
+                                    "font": "damage"
                                 },
                                 {
                                     "text": "#",

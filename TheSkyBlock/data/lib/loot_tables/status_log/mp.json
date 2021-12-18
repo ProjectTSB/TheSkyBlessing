@@ -21,7 +21,8 @@
                                         "objective": "Lib",
                                         "name": "$Fluctuation"
                                     },
-                                    "color": "blue"
+                                    "color": "blue",
+                                    "font": "magic"
                                 },
                                 {
                                     "text": "#",
