@@ -1,4 +1,4 @@
-#> asset:mob/1010.starfury/tick/5.vfx
+#> asset:mob/1010.starfury/tick/5.randing
 #
 #
 #
