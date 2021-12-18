@@ -15,5 +15,5 @@
 # 弾攻撃
     execute if entity @s[tag=RW.SkillBall] run function asset:mob/1004.tultaria/tick/5.ball_attack/1.ball_attack
 # 流星
-
+    execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/6.starfury_attack/1.starfury_attack
 # 召喚

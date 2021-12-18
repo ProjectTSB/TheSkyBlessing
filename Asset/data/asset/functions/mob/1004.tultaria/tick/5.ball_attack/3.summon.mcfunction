@@ -13,7 +13,7 @@
     execute as @e[type=marker,tag=RW.This,distance=..100] at @s run function lib:spread_entity/
 
 # モブを出す
-    data modify storage api: Argument.ID set value 1008
+    data modify storage api: Argument.ID set value 1009
     execute at @e[type=marker,tag=RW.This,distance=..100] run function api:mob/summon
 
 # 演出

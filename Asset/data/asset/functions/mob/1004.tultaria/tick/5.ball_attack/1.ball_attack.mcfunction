@@ -7,6 +7,7 @@
 # 最初に実行するの
     execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/5.ball_attack/2.first_tick
 
+# 召喚する
     execute if score @s RW.Tick matches 20 positioned ^ ^ ^1 run function asset:mob/1004.tultaria/tick/5.ball_attack/3.summon
 
     execute if score @s RW.Tick matches 25 positioned ^ ^ ^1 run function asset:mob/1004.tultaria/tick/5.ball_attack/3.summon

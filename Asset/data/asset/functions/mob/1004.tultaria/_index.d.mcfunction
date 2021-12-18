@@ -26,3 +26,4 @@
     #declare tag RW.BigMeteorMaker
     #declare tag RW.CoordinateMarker
     #declare tag RW.OffCoordinateMarker
+    #declare tag S2.Wait
