@@ -145,6 +145,7 @@ team modify NoCollision collisionRule never
     #   asset:mob/*/**
     #   asset_manager:mob/**
     #   asset_manager:spawner/**
+    #   asset_manager:island/dispel/boss/remove
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
@@ -158,6 +159,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+
+    #> AssetManager: Island
+    # @within function
+    #   asset_manager:island/**
+        scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
+        scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
     #> イベントハンドラ用スコアボード
     # @within function
