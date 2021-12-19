@@ -1,0 +1,6 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "dimension": "the_nether"
+    }
+}

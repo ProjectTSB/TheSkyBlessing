@@ -1,5 +1,17 @@
 {
     "condition": "alternative",
     "terms": [
+        {
+            "condition": "reference",
+            "name": "world_manager:area/01.god_boundaries"
+        },
+        {
+            "condition": "reference",
+            "name": "world_manager:area/03.nether"
+        },
+        {
+            "condition": "reference",
+            "name": "world_manager:area/04.end"
+        }
     ]
 }

@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 27
+data modify storage global Version set value 28
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -284,7 +284,8 @@ team modify NoCollision collisionRule never
     # @within function
     #   world_manager:**
     #   player_manager:** @readonly
-        scoreboard objectives add InArea dummy {"text":"居るエリア"}
+        scoreboard objectives add InArea dummy {"text":"プレイヤーが居るエリア"}
+        scoreboard objectives add InSubArea dummy {"text":"どのサブエリアに居るか"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
