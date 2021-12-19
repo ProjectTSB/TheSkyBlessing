@@ -11,6 +11,8 @@
     execute if predicate world_manager:area/01-04.tutorial-religion run function world_manager:area/01-04.tutorial-religion
     execute if predicate world_manager:area/01-05.tutorial-spawner run function world_manager:area/01-05.tutorial-spawner
     execute if predicate world_manager:area/01-06.tutorial-lost_items run function world_manager:area/01-06.tutorial-lost_items
+    execute if predicate world_manager:area/01-07.tutorial-recommend run function world_manager:area/01-07.tutorial-recommend
+    execute if predicate world_manager:area/01-08.tutorial-tp_point run function world_manager:area/01-08.tutorial-tp_point
 # 神殿
     execute if predicate world_manager:area/01-10.flora_temple run function world_manager:area/01-10.flora_temple
     execute if predicate world_manager:area/01-11.nyaptov_temple run function world_manager:area/01-11.nyaptov_temple
