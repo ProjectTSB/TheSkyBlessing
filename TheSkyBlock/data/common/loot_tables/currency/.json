@@ -1,0 +1,35 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "nether_star",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "",
+                                    "color": "white"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": []
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{CustomModelData:20111}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
