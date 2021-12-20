@@ -1,4 +1,4 @@
-#> asset:mob/0189.water_mage/tick/4.ready_magic
+#> asset:mob/0189.water_mage/tick/04.ready_magic
 #
 #
 #
