@@ -19,8 +19,6 @@
             execute if entity @s[tag=D3.Critical] run data modify storage lib: Argument.Damage set value 6.0f
         # 第一属性
             data modify storage lib: Argument.AttackType set value "Physical"
-        # パーティクルを無効化
-            data modify storage lib: Argument.DisableParticle set value true
     # 補正
         execute as @a[tag=this,distance=..5] run function lib:damage/modifier
     # 実行

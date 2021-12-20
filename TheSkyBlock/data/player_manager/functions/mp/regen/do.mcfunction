@@ -34,7 +34,7 @@
     execute if score @s MPFloat matches ..-1 run scoreboard players remove $Fluctuation Lib 1
     execute if score @s MPFloat matches ..-1 run scoreboard players add @s MPFloat 10
 # 表示を無効化する
-    data modify storage lib: Argument.DisableParticle set value true
+    data modify storage lib: Argument.DisableLog set value true
 # 回復
     function lib:mp/fluctuation
 # クールダウンリセット

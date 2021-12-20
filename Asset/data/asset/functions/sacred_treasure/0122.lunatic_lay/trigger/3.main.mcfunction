@@ -18,7 +18,7 @@
         playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 1
         effect give @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] speed 15 30 true
     # ダメージ
-        data merge storage lib: {Argument:{Damage:40.0f,AttackType:Magic,ElementType:Thunder,DisableParticle:true}}
+        data merge storage lib: {Argument:{Damage:40.0f,AttackType:Magic,ElementType:Thunder}}
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run function lib:damage/
     # リセット

@@ -16,8 +16,6 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 炎属性
         data modify storage lib: Argument.ElementType set value "Fire"
-    # パーティクルを無効化するか否か
-        data modify storage lib: Argument.DisableParticle set value false
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value false
 # 補正functionを実行
