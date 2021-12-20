@@ -9,7 +9,6 @@
 #       Argument.FixedDamage : boolean
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
-#       Argument.DisableParticle? : boolean
 #       Argument.BypassArmor? : boolean
 #       Argument.BypassResist? : boolean
 # @output storage lib: Argument.Damage : float

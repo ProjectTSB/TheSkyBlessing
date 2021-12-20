@@ -26,7 +26,7 @@
 
     # Damage
         # PhysicalDamage
-            data merge storage lib: {Argument:{Damage:20.0f,AttackType:Physical,ElementType:None,DisableParticle:1b}}
+            data merge storage lib: {Argument:{Damage:20.0f,AttackType:Physical,ElementType:None}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
