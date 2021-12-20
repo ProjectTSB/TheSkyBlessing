@@ -13,7 +13,8 @@
                             "entity": "this",
                             "name": [
                                 {
-                                    "text": "",
+                                    "text": "大きな星のかけら",
+                                    "italic": false,
                                     "color": "yellow"
                                 }
                             ]
@@ -21,7 +22,29 @@
                         {
                             "function": "set_lore",
                             "entity": "this",
-                            "lore": []
+                            "lore": [
+                                [
+                                    {
+                                        "text": "空から降り注ぐ星が砕け、大きなかけらとなったもの",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "非常に希少な価値があり交易に使われる",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "強い力を感じる",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ]
+                            ]
                         },
                         {
                             "function": "set_nbt",
