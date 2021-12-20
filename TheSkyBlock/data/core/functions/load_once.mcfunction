@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 27
+data modify storage global Version set value 28
 tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -145,6 +145,7 @@ team modify NoCollision collisionRule never
     #   asset:mob/*/**
     #   asset_manager:mob/**
     #   asset_manager:spawner/**
+    #   asset_manager:island/dispel/boss/remove
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
@@ -158,6 +159,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+
+    #> AssetManager: Island
+    # @within function
+    #   asset_manager:island/**
+        scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
+        scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -284,7 +291,8 @@ team modify NoCollision collisionRule never
     # @within function
     #   world_manager:**
     #   player_manager:** @readonly
-        scoreboard objectives add InArea dummy {"text":"居るエリア"}
+        scoreboard objectives add InArea dummy {"text":"プレイヤーが居るエリア"}
+        scoreboard objectives add InSubArea dummy {"text":"どのサブエリアに居るか"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
