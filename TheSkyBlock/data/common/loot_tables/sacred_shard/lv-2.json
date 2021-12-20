@@ -13,7 +13,8 @@
                             "entity": "this",
                             "name": [
                                 {
-                                    "text": "ミスティカシャード",
+                                    "text": "ハイシャード",
+                                    "italic": false,
                                     "color": "aqua"
                                 }
                             ]
@@ -24,7 +25,7 @@
                             "lore": [
                                 [
                                     {
-                                        "text": "大量の不安定なマナが集まり結晶化した破片。",
+                                        "text": "少量の不安定なマナが集まり結晶化した破片。",
                                         "italic": false,
                                         "color": "light_purple"
                                     }
@@ -40,7 +41,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20093}"
+                            "tag": "{CustomModelData:20091}"
                         }
                     ]
                 }

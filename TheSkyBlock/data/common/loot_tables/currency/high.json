@@ -6,15 +6,16 @@
             "entries": [
                 {
                     "type": "item",
-                    "name": "stick",
+                    "name": "nether_star",
                     "functions": [
                         {
                             "function": "set_name",
                             "entity": "this",
                             "name": [
                                 {
-                                    "text": "シャード",
-                                    "color": "aqua"
+                                    "text": "大きな星のかけら",
+                                    "italic": false,
+                                    "color": "yellow"
                                 }
                             ]
                         },
@@ -24,14 +25,21 @@
                             "lore": [
                                 [
                                     {
-                                        "text": "微量の不安定なマナが集まり結晶化した破片。",
+                                        "text": "空から降り注ぐ星が砕け、大きなかけらとなったもの",
                                         "italic": false,
                                         "color": "light_purple"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "加工することで数多の可能性を呼び寄せ、神器として顕現させることができる。",
+                                        "text": "非常に希少な価値があり交易に使われる",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "強い力を感じる",
                                         "italic": false,
                                         "color": "light_purple"
                                     }
@@ -40,7 +48,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20090}"
+                            "tag": "{CustomModelData:20112}"
                         }
                     ]
                 }
