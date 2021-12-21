@@ -15,7 +15,7 @@
 # 向きをプレイヤー方向へ
     #execute if score @s RW.Tick matches -20 run function asset:mob/1004.tultaria/tick/move/spread_facing
 # しばらくその方向へ動く
-    #execute if score @s RW.Tick matches -19..-1 rotated ~ 0 positioned ^ ^ ^0.6 run function asset:mob/1004.tultaria/tick/move/tereport
+    #execute if score @s RW.Tick matches -100..-1 if entity @p[distance=4..32] facing entity @p eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-100 facing entity @s eyes positioned as @s positioned ^ ^ ^0.2 run function asset:mob/1004.tultaria/tick/move/tereport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択

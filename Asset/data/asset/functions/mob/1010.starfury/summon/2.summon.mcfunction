@@ -8,7 +8,7 @@
     #declare score_holder $Random
 
 # 元となるMobを召喚する
-    summon area_effect_cloud ~ ~ ~ {Tags:["MobInit","S2.Wait"],CustomNameVisible:0b,Particle:"block air",Duration:50}
+    summon area_effect_cloud ~ ~ ~ {Tags:["MobInit","S2.Wait"],CustomNameVisible:0b,Particle:"block air",Duration:100}
 # ID (int)
     data modify storage asset:mob ID set value 1010
 # Type (string) Wikiを参照

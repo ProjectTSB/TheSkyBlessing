@@ -1,9 +1,5 @@
 {
     "values": [
-        "asset:mob/1008.yellow_star/hurt/1.trigger",
-        "asset:mob/1007.red_star/hurt/1.trigger",
-        "asset:mob/1006.green_star/hurt/1.trigger",
-        "asset:mob/1005.blue_star/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",
         "asset:mob/example/hurt/1.trigger",
         "asset:mob/0060.self_destructor/hurt/1.trigger",

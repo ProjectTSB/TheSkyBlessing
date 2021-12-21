@@ -13,3 +13,6 @@
 
 # テレポート
     function asset:mob/1004.tultaria/tick/move/tereport_center
+
+# 演出
+    execute at @s run playsound entity.puffer_fish.death hostile @a[distance=..50] ~ ~ ~ 1 0 1

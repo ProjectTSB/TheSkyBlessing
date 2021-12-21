@@ -10,7 +10,7 @@
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 10.0f
     # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
+        data modify storage lib: Argument.AttackType set value "Physical"
     # 属性
         execute if entity @s[tag=S2.Fire] run data modify storage lib: Argument.ElementType set value "Fire"
         execute if entity @s[tag=S2.Water] run data modify storage lib: Argument.ElementType set value "Water"
