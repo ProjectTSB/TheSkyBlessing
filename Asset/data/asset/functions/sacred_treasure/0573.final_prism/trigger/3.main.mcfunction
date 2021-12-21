@@ -11,10 +11,6 @@
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/common/use/mainhand
 
-# スコアを戻す
-    #scoreboard players reset @s[scores={573.Laser=4..}] 573.Laser
-    #scoreboard players add @s 573.Laser 1
-
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
@@ -24,7 +20,7 @@
 
 # 精度をスニーク時間に
     scoreboard players set $Spread Temporary 45
-    execute store result score $SneakTime Temporary run data get storage asset:context SneakTime.mainhand 0.5
+    execute store result score $SneakTime Temporary run data get storage asset:context SneakTime.mainhand 1
     scoreboard players operation $Spread Temporary -= $SneakTime Temporary
 
 # マイナスになるとやばいんだって
@@ -32,21 +28,28 @@
 
 # スコアを精度に
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    execute store result storage lib: Argument.Spread float 0.1 run scoreboard players get $Spread Temporary
+    execute store result storage lib: Argument.Spread float 0.05 run scoreboard players get $Spread Temporary
     data modify storage lib: Argument.Distance set value 10.0f
     execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=this] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
 
 # 非収束ビーム
     execute if score $Spread Temporary matches 2.. facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/laser
+    # ダメージ設定
+        execute if score $Spread Temporary matches 2.. run data modify storage lib: Argument.Damage set value 6f
 
 # 完全収束ビーム
     execute if score $Spread Temporary matches ..1 facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/final_laser
-    execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/trigger/final_sound
+    execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_start
+    # ダメージ設定
+        execute if score $Spread Temporary matches ..1 run data modify storage lib: Argument.Damage set value 12f
 
 # サウンド
-    execute if score $Spread Temporary matches 2.. run playsound minecraft:block.portal.ambient player @s ~ ~ ~ 0.1 2
-    execute if score $Spread Temporary matches 1.. run playsound minecraft:block.water.ambient player @a ~ ~ ~ 2 2
-    execute if score $Spread Temporary matches 1 run playsound minecraft:block.water.ambient player @a ~ ~ ~ 2 1
+    execute if score $Spread Temporary matches 2.. run function asset:sacred_treasure/0573.final_prism/trigger/vfx/normal_laser
+    execute if score $Spread Temporary matches ..1 run function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_laser
+
+
+# ダメージはここで実行
+    function asset:sacred_treasure/0573.final_prism/trigger/damage
 
 # リセット
     scoreboard players reset $Random Temporary
