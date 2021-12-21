@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"緋の星","color":"red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Mainhand set value
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019,Enchantments:[{id:"minecraft:fire_aspect",lvl:3s}]}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)

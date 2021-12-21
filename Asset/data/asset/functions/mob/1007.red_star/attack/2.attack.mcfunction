@@ -17,3 +17,4 @@
         execute as @a[tag=Victim,distance=..30] run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
