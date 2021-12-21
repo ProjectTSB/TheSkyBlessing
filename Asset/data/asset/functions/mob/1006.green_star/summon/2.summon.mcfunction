@@ -5,7 +5,7 @@
 # @within function asset:mob/1006.green_star/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/1006.green_star"}
+    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],LifeTicks:1,Silent:1b,DeathLootTable:"asset:mob/death/1006.green_star"}
 # ID (int)
     data modify storage asset:mob ID set value 1006
 # Type (string) Wikiを参照

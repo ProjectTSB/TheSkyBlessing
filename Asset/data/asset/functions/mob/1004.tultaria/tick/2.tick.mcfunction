@@ -12,10 +12,10 @@
     scoreboard players add @s RW.Tick 1
 
 # ランダムにちょっと移動してほしい
-# 向きをプレイヤー方向へ
-    #execute if score @s RW.Tick matches -20 run function asset:mob/1004.tultaria/tick/move/spread_facing
-# しばらくその方向へ動く
-    #execute if score @s RW.Tick matches -100..-1 if entity @p[distance=4..32] facing entity @p eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-100 facing entity @s eyes positioned as @s positioned ^ ^ ^0.2 run function asset:mob/1004.tultaria/tick/move/tereport
+    execute if score @s RW.Tick matches -80 run data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
+# 拡散
+    execute if score @s RW.Tick matches -80 run function asset:mob/1004.tultaria/tick/move/spread
+    execute if score @s RW.Tick matches -80 at @s facing entity @p eyes positioned ~ ~0.5 ~ run function asset:mob/1004.tultaria/tick/move/tereport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択

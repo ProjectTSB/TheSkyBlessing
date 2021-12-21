@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/1008.yellow_star/**
-  #  scoreboard objectives add
+    scoreboard objectives add S0.Time dummy

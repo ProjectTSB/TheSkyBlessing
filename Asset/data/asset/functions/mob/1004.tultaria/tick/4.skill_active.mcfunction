@@ -17,3 +17,4 @@
 # 流星
     execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/6.starfury_attack/1.starfury_attack
 # 召喚
+    execute if entity @s[tag=RW.SkillSummon] run function asset:mob/1004.tultaria/tick/7.star_summon/1.star_summon

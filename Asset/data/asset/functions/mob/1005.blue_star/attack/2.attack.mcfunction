@@ -34,4 +34,4 @@
 # スコアを与える
     scoreboard players add @a[tag=Victim,distance=..30] RX.Time 40
 # Schedulelooopするやつ
-    function asset:mob/1005.blue_star/attack/3.scheduleloop
+    schedule function asset:mob/1005.blue_star/attack/3.scheduleloop 1t replace

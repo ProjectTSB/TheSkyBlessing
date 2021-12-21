@@ -11,14 +11,14 @@
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算するやーつ
 # HP50%以下
-    execute if entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $6 Const
+    execute if entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $7 Const
 # HP50%より上75%未満
     execute if entity @s[tag=RW.HPless75per] unless entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $6 Const
 # HP75%以上
     execute unless entity @s[tag=RW.HPless50per,tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $4 Const
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 5
+    scoreboard players set $Random Temporary 6
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee
     execute if score $Random Temporary matches 1 run tag @s add RW.SkillMeteor

@@ -5,4 +5,5 @@
 # @within function asset:mob/1005.blue_star/tick/1.trigger
 
 # 演出
-    particle soul_fire_flame ~ ~ ~ 0.2 0.2 0.2 0 7 force
+    particle dust 0.616 0.973 1 1 ~ ~ ~ 0.1 0.1 0.1 0 4 force
+    particle electric_spark ~ ~ ~ 0 0 0 0 1 force
