@@ -12,4 +12,3 @@
     tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s
 # タグを消す
     tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
-

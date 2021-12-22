@@ -18,10 +18,8 @@
 # リセット
     data remove storage lib: Argument
 
-execute as @a[distance=2.5..8] run say hit
-
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwCMpcAbPQOykC0pAzAKweuVcAjaqwCGAkV1bU4A2aSYoUTEfTAEAdiIC2CZIDDFAAQAmVigD2MKGrAwRGbQGck4c4XUQk1IwRRx3cDGcwADcRbEJdcAAPJAAGAitEWIBfZIJ7UjRCJ0QuAgcIOw8kgjhsbDQYB11qWPiwDDNCiF16tAcAUXLK6o6AR0Iw7CgAZVtfckQAMzDq1IBdIA_3
-# 円 2-copy
+# 落雷
     execute positioned ~0 ~ ~-5 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
     execute positioned ~2.5 ~ ~-4.33013 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
     execute positioned ~4.33013 ~ ~-2.5 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx

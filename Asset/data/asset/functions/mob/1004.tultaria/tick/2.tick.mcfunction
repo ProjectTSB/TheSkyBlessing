@@ -11,11 +11,11 @@
 # スコアを増やす
     scoreboard players add @s RW.Tick 1
 
-# ランダムにちょっと移動してほしい
-    execute if score @s RW.Tick matches -80 run data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
-# 拡散
-    execute if score @s RW.Tick matches -80 run function asset:mob/1004.tultaria/tick/move/spread
-    execute if score @s RW.Tick matches -80 at @s facing entity @p eyes positioned ~ ~0.5 ~ run function asset:mob/1004.tultaria/tick/move/tereport
+# テレポートさせる
+    execute if score @s RW.Tick matches -80 run function asset:mob/1004.tultaria/tick/5.tereport
+
+# プレイヤーを見る
+    execute if score @s RW.Tick matches 0 at @s facing entity @p eyes run function asset:mob/1004.tultaria/tick/move/tereport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
