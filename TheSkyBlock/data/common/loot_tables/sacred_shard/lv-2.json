@@ -41,7 +41,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20091}"
+                            "tag": "{CustomModelData:20091,Shard:1b}"
                         }
                     ]
                 }
