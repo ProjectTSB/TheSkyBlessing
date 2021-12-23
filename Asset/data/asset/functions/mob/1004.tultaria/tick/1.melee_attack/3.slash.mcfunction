@@ -6,7 +6,8 @@
 
 # 腕を降る
     data modify entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [173f,213f,121f]
-
+# 頭変える
+    item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20073}
 # 演出
     execute positioned ^ ^ ^1 positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/1004.tultaria/tick/1.melee_attack/particle1
 

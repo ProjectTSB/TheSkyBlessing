@@ -4,6 +4,7 @@
 #
 # @within function asset:mob/1004.tultaria/tick/**
 
+# 実行前に拡散値を設定！
 # タグをつける
     tag @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] add RW.ArmorStandThis
 # 拡散する

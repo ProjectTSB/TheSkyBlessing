@@ -9,7 +9,8 @@
     data modify entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [0f,0f,90f]
 # 腕を変える
     item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
-
+# 頭変える
+    item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20075}
 # 演出
     playsound minecraft:entity.puffer_fish.death master @a[distance=..30] ~ ~ ~ 1 0.5 1
 

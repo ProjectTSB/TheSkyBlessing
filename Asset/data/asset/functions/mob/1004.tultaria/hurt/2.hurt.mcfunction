@@ -22,16 +22,12 @@
 # タグ付与
 # 75%以下
     execute if score $HealthPercent Temporary matches ..75 run tag @s add RW.HPless75per
-    execute if score $HealthPercent Temporary matches ..75 run say 75
 # HP50%以下
     execute if score $HealthPercent Temporary matches ..50 run tag @s add RW.HPless50per
-    execute if score $HealthPercent Temporary matches ..50 run say 50
 # HP40%以下
     execute if score $HealthPercent Temporary matches ..40 run tag @s add RW.HPless40per
-    execute if score $HealthPercent Temporary matches ..40 run say 40
 # HP30%以下
     execute if score $HealthPercent Temporary matches ..30 run tag @s add RW.HPless30per
-    execute if score $HealthPercent Temporary matches ..30 run say 30
 
 # リセット
     scoreboard players reset $Health
