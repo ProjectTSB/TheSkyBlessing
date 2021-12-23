@@ -48,7 +48,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20111}"
+                            "tag": "{CustomModelData:20111,Currency:1b}"
                         }
                     ]
                 }
