@@ -23,6 +23,9 @@
 # スポナー処理部
     execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
 
+# テレポーター
+    function world_manager:teleporter/tick
+
 # Mob処理部
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/

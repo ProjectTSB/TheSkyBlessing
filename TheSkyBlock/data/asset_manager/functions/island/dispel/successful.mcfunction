@@ -15,6 +15,10 @@
     function player_manager:keep_lost_item/give_all/
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
+# 交易島へのテレポーターを設置する
+    summon marker ^ ^ ^2 {Tags:["Teleporter","Object","Uninterferable"]}
+    execute positioned ^ ^ ^2 as @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] run function oh_my_dat:please
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TargetPos set value [-15.5, 21.0, -1.5]
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
