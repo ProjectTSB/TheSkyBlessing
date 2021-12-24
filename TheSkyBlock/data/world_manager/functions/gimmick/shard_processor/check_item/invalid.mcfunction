@@ -12,4 +12,4 @@
     data modify storage world_manager:gimmick Items append from storage world_manager:gimmick FrameData.Item
     data modify storage world_manager:gimmick Items[-1].Slot set value 0b
     data modify block 10000 0 10000 Items set from storage world_manager:gimmick Items
-    loot spawn -33.5 21.5 -13.5 mine 10000 0 10000 debug_stick
+    loot spawn -33.8 21.5 -13.5 mine 10000 0 10000 debug_stick
