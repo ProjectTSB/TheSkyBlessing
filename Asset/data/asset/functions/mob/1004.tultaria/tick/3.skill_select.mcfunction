@@ -15,7 +15,7 @@
 # HP50%より上75%未満
     execute if entity @s[tag=RW.HPless75per] unless entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $6 Const
 # HP75%以上
-    execute unless entity @s[tag=RW.HPless50per,tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $4 Const
+    execute unless entity @s[tag=RW.HPless50per,tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $3 Const
 
 # デバッグのコマンド
     #scoreboard players set $Random Temporary 6
