@@ -300,11 +300,6 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
         scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
 
-    #> WorldManager用スコアボード - ギミック
-    # @within function
-    #   world_manager:gimmick/**
-        scoreboard objectives add ShardUX dummy {"text":"シャード加工速度をUXのために上げるための時間チェック"}
-
     #> MobManager用スコアボード - 攻撃元
     # @within function
     #   core:tick/
