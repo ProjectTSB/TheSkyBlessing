@@ -37,11 +37,11 @@
     scoreboard players operation $Count Temporary += $Min Temporary
     execute store result storage player_manager:god TargetOfferingData.Next.Amount int 1 run scoreboard players get $Count Temporary
 # セット
-    execute if score @s InArea matches 10 run data modify storage player_manager:god OfferingData.Flora set from storage player_manager:god TargetOfferingData
-    execute if score @s InArea matches 11 run data modify storage player_manager:god OfferingData.Nyaptov set from storage player_manager:god TargetOfferingData
-    execute if score @s InArea matches 12 run data modify storage player_manager:god OfferingData.Rumor set from storage player_manager:god TargetOfferingData
-    execute if score @s InArea matches 13 run data modify storage player_manager:god OfferingData.Urban set from storage player_manager:god TargetOfferingData
-    execute if score @s InArea matches 14 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 10 run data modify storage player_manager:god OfferingData.Flora set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 11 run data modify storage player_manager:god OfferingData.Nyaptov set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 12 run data modify storage player_manager:god OfferingData.Rumor set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 13 run data modify storage player_manager:god OfferingData.Urban set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 14 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
 # リセット
     data remove storage lib: Array
     scoreboard players reset $CandidatesLength Temporary

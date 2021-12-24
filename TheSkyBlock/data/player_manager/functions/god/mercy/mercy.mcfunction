@@ -14,8 +14,8 @@
     data modify storage api: Argument.Count set value 20
     execute at @s positioned ~ ~7 ~ run function api:lost_items/give
 # 神のメッセージ
-    execute if score @s InArea matches 10 run function lib:message/god/flora/mercy
-    execute if score @s InArea matches 11 run function lib:message/god/nyaptov/mercy
-    execute if score @s InArea matches 12 run function lib:message/god/rumor/mercy
-    execute if score @s InArea matches 13 run function lib:message/god/urban/mercy
-    execute if score @s InArea matches 14 run function lib:message/god/wi-ki/mercy
+    execute if score @s InSubArea matches 10 run function lib:message/god/flora/mercy
+    execute if score @s InSubArea matches 11 run function lib:message/god/nyaptov/mercy
+    execute if score @s InSubArea matches 12 run function lib:message/god/rumor/mercy
+    execute if score @s InSubArea matches 13 run function lib:message/god/urban/mercy
+    execute if score @s InSubArea matches 14 run function lib:message/god/wi-ki/mercy
