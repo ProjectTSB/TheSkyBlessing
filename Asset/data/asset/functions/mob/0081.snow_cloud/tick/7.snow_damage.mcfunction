@@ -18,6 +18,6 @@
     data modify storage lib: Argument.Damage set value 6.0
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
-    function lib:damage/modifier
-    execute as @s run function lib:damage/
+    execute as @e[type=polar_bear,tag=this,scores={MobID=81},distance=..8,limit=1] run function lib:damage/modifier
+    function lib:damage/
     data remove storage lib: Argument

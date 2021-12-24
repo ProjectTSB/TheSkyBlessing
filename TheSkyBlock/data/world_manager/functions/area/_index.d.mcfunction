@@ -2,5 +2,6 @@
 # @private
 
 #> Next
-# @within world_manager:area/*
+# @within world_manager:area/**
     #declare score_holder $NextInArea
+    #declare score_holder $NextInSubArea

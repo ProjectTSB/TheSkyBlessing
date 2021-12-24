@@ -1,0 +1,58 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "nether_star",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "小さな星のかけら",
+                                    "italic": false,
+                                    "color": "yellow"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "空から降り注ぐ星が砕け、小さなかけらとなったもの",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "希少な価値があり交易に使われる",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "微かに力を感じる",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{CustomModelData:20111,Currency:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

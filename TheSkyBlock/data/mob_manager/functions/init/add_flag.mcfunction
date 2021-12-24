@@ -6,7 +6,6 @@
 
 #> Private
 # @private
-    #declare score_holder $FlagIndex
     #declare score_holder $CloneFlagIndex
 
 # グローバルインデックス増加

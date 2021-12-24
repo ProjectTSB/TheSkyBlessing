@@ -19,9 +19,9 @@
 # 代入 / kill
     execute store result entity @s Health float 0.0001 run scoreboard players get $Health Temporary
 # 回復量表示
-    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib = $Heal Temporary
-    execute if data storage lib: Argument{DisableParticle:0b} run scoreboard players operation $Fluctuation Lib /= $100 Const
-    execute if data storage lib: Argument{DisableParticle:0b} at @s run function lib:status_log/show_health
+    scoreboard players operation $Fluctuation Lib = $Heal Temporary
+    scoreboard players operation $Fluctuation Lib /= $100 Const
+    execute at @s run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $Heal Temporary

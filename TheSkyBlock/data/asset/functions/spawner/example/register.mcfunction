@@ -4,6 +4,8 @@
 #
 # @within function asset:spawner/example/
 
+# ID (int)
+    data modify storage asset:spawner ID set value 2147483647
 # 体力 (int) このスポナーから召喚されたMobがN体殺されると破壊されるか
     data modify storage asset:spawner HP set value 1
 # SpawnPotentials(int | int[] | ({ Weight: int, Id: int })[]) MobAssetのIDを指定する

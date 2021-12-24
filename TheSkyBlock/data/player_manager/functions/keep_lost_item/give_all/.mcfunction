@@ -2,7 +2,7 @@
 #
 # 没収したアイテムをすべて返却します
 #
-# @
+# @within function asset_manager:island/dispel/successful
 
 # ItemのChestsへの梱包処理
     function player_manager:keep_lost_item/give_all/packing.user

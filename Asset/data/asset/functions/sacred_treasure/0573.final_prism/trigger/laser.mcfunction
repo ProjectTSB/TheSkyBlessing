@@ -16,8 +16,7 @@
     execute unless entity @s[distance=..2] if predicate lib:random_pass_per/10 run particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force
 
 # 接触時判定
-    execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=Enemy,dx=0] run function asset:sacred_treasure/0573.final_prism/trigger/damage
+    execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[tag=Enemy,dx=0] add PrismDamage
 
 # 前進
-    execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 unless entity @s[dx=0] unless entity @e[tag=Enemy,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:sacred_treasure/0573.final_prism/trigger/laser
-    execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0] positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:sacred_treasure/0573.final_prism/trigger/laser
+    execute if entity @s[distance=..45] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:sacred_treasure/0573.final_prism/trigger/laser
