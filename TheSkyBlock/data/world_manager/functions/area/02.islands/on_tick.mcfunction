@@ -4,4 +4,5 @@
 #
 # @within function world_manager:area/02.islands/
 
-# メモ 島々のギミック処理とかを小さなサブエリアを作った上で書く
+# シャード加工場
+    execute if predicate world_manager:area/02-01.shard_processor run function world_manager:area/02-01.shard_processor
