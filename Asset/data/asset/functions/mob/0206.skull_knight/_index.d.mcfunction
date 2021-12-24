@@ -3,4 +3,5 @@
 
 #> tag
 # @within function asset:mob/0206.skull_knight/**
-    #declare
+    #declare tag 5Q.Melee
+    #declare tag 5Q.Ranged
