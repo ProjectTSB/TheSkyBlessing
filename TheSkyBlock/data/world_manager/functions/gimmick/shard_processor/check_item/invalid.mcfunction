@@ -5,7 +5,8 @@
 # @within function world_manager:gimmick/shard_processor/check_item/
 
 # 額縁の中身を消す
-    data remove entity @s Item
+    data modify entity @s ItemRotation set value 0b
+    item replace entity @s container.0 with air
 # お返しする
     data modify storage world_manager:gimmick Items set value []
     data modify storage world_manager:gimmick Items append from storage world_manager:gimmick FrameData.Item
