@@ -22,4 +22,4 @@
     tag @s remove RW.SkillSummon
 
 # スコアを戻す
-    scoreboard players set @s RW.Tick -100
+    scoreboard players set @s RW.Tick -40
