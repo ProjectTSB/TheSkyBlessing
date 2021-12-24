@@ -8,7 +8,7 @@
     data modify entity @s ItemRotation set value 0b
     item replace entity @s container.0 with air
 # 神器を吐き出す
-    data modify storage api: Argument.Rarity set from storage world_manager:gimmick FrameData.Item.tag.TSB.ShardRarity
+    execute store result storage api: Argument.Rarity int 1 run data get storage world_manager:gimmick FrameData.Item.tag.TSB.ShardRarity
     execute positioned -33.8 21.5 -13.5 run function api:sacred_treasure/spawn/from_rarity
 # 一定時間素早く加工できるようにする(UXのため)
     scoreboard players set @s ShardUX 200
