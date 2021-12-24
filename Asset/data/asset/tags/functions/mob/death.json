@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0206.skull_knight/death/1.trigger",
         "asset:mob/example/death/1.trigger",
         "asset:mob/0060.self_destructor/death/1.trigger",
         "asset:mob/0021.demon_eye/death/1.trigger",

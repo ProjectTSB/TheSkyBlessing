@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0206.skull_knight/attack/1.trigger",
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
         "asset:mob/0064.artery/attack/1.trigger",

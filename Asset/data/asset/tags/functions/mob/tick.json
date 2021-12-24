@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0206.skull_knight/tick/1.trigger",
         "asset:mob/example/tick/1.trigger",
         "asset:mob/0021.demon_eye/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger",
