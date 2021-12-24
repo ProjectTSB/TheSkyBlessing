@@ -18,7 +18,6 @@
 # リセット
     data remove storage lib: Array
 # 明示的にstorageを綺麗にしておく
-    tellraw @a [{"text":"_[-4][-4][-4][-4][-4][-4][-4][-4].LostItems: "},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].LostItems"}]
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
 # ループ処理
     execute if data storage oh_my_dat: IDSet[-1] run function player_manager:keep_lost_item/give_all/packing.user
