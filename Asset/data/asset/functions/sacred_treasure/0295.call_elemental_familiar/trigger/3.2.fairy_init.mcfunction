@@ -9,7 +9,7 @@
 #    execute at @p run tp @s ~ ~ ~
 
 # 万が一仕様変更でunivrsalAngerがfalseになったとき用
-    execute at @s run summon area_effect_cloud ~ ~0.5 ~ {Particle:"crit",Tags:[295Fa.AEC],Radius:0.4f,Duration:6,DurationOnUse:0,Age:4,WaitTime:0,Owner:[],Effects:[{Id:22b,Amplifier:1b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute at @s run summon area_effect_cloud ~ ~0.5 ~ {Particle:"crit",Tags:[295Fa.AEC],Radius:0.4f,Duration:6,DurationOnUse:0,Age:4,WaitTime:0,Effects:[{Id:22b,Amplifier:1b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
     execute as @e[type=area_effect_cloud,tag=295Fa.AEC,sort=nearest,limit=1] run data modify entity @s Owner set from entity @p UUID
 
 # タグ整備
