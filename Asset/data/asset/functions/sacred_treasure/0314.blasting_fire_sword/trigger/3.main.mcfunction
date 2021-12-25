@@ -14,11 +14,10 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 100
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run function asset:sacred_treasure/0314.blasting_fire_sword/trigger/3.1.particle
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 20
+    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1 0.5
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
-    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6
-    playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 1 0
+    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 1
 
 # ダメージ
     #ダメージブレのための処理
