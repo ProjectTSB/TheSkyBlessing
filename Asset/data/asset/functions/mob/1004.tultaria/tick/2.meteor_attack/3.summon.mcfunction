@@ -4,17 +4,12 @@
 #
 # @within function asset:mob/1004.tultaria/tick/2.meteor_attack/2.first_tick
 
-# AECを召喚
-    summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.This"]}
-    summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.This"]}
-    summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.This"]}
-    summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.This"]}
-    summon area_effect_cloud ^ ^ ^ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","RW.MeteorMaker","RW.This"]}
+# モブを出す
+    data modify storage api: Argument.ID set value 1011
+    execute positioned ~ ~8 ~ run function api:mob/summon
 
-# 拡散する
-    spreadplayers ~ ~ 6 30 false @e[type=area_effect_cloud,tag=RW.This,distance=..0.01]
 # 演出
-    execute at @e[type=area_effect_cloud,tag=RW.This,distance=..100] run function asset:mob/1004.tultaria/tick/2.meteor_attack/particle1
-    execute at @e[type=area_effect_cloud,tag=RW.This,distance=..100] run playsound entity.blaze.shoot hostile @a ~ ~ ~ 1 1
-# タグ消す
-    tag @e[type=area_effect_cloud,tag=RW.This,distance=..100,sort=nearest] remove RW.This
+    function asset:mob/1004.tultaria/tick/2.meteor_attack/particle1
+
+# キル
+    kill @s

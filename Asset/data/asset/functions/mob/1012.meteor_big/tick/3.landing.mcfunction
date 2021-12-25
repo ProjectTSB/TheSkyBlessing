@@ -1,17 +1,17 @@
-#> asset:mob/1004.tultaria/tick/2.meteor_attack/7.explode2
+#> asset:mob/1012.meteor_big/tick/3.landing
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/1.meteor_attack
+# @within function asset:mob/1012.meteor_big/tick/2.tick
 
 # 演出
-    particle minecraft:explosion ~ ~ ~ 3 1 3 0 30
-    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
-    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 60
+    particle minecraft:explosion ~ ~ ~ 3 1 3 0 6
+    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 30
+    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 30
 
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
     playsound entity.generic.explode master @a ~ ~ ~ 1 0
-    playsound entity.generic.explode master @a[distance=..12] ~ ~ ~ 1 0.5 1
+    playsound entity.generic.explode master @a ~ ~ ~ 1 0.5
 
 # ダメージ設定
     # 与えるダメージ

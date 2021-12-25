@@ -17,10 +17,10 @@
     execute at @e[type=marker,tag=RW.This,distance=..100] run function api:mob/summon
 
 # 演出
-    playsound minecraft:entity.wither.shoot master @a[distance=..30] ~ ~ ~ 0.5 1.2 0.7
-    playsound minecraft:block.glass.break master @a[distance=..30] ~ ~ ~ 1 0 0.7
-    playsound item.trident.riptide_3 master @a[distance=..30] ~ ~ ~ 1 2 0.7
-    playsound item.trident.riptide_2 master @a[distance=..30] ~ ~ ~ 1 2 0.7
+    playsound minecraft:entity.wither.shoot master @a[distance=..60] ~ ~ ~ 0.5 1.2 1
+    playsound minecraft:block.glass.break master @a[distance=..60] ~ ~ ~ 1 0 1
+    playsound item.trident.riptide_3 master @a[distance=..60] ~ ~ ~ 1 2 1
+    playsound item.trident.riptide_2 master @a[distance=..60] ~ ~ ~ 1 2 1
 
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

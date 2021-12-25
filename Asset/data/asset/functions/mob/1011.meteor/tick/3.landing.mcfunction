@@ -1,17 +1,17 @@
-#> asset:mob/1004.tultaria/tick/2.meteor_attack/6.explode
+#> asset:mob/1011.meteor/tick/3.landing
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/1.meteor_attack
+# @within function asset:mob/1011.meteor/tick/2.tick
 
 # 演出
-    particle minecraft:explosion ~ ~ ~ 3 1 3 0 30
-    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
-    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 60
+    particle minecraft:explosion ~ ~ ~ 3 1 3 0 2
+    particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 30
+    particle minecraft:lava ~ ~ ~ 3 1 3 0.42 13
 
     playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
     playsound entity.generic.explode master @a ~ ~ ~ 1 0
-    playsound entity.generic.explode master @a[distance=..12] ~ ~ ~ 1 0.5 1
+    playsound entity.generic.explode master @a ~ ~ ~ 1 0.5
 
 # ダメージ設定
     # 与えるダメージ
@@ -25,3 +25,6 @@
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# 終了
+    kill @s

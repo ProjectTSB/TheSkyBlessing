@@ -14,7 +14,20 @@
 # 演出
     playsound minecraft:entity.puffer_fish.death master @a[distance=..30] ~ ~ ~ 1 0.5 1
 
-# 召喚5個
-    function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
-# 召喚3個（HP30%以下）
-    execute if entity @s[tag=RW.HPless30per] run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon2
+# マーカー召喚
+    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    execute if entity @s[tag=RW.HPless30per] run summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    execute if entity @s[tag=RW.HPless30per] run summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    execute if entity @s[tag=RW.HPless30per] run summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+
+# 拡散する
+    spreadplayers ~ ~ 4 22 false @e[type=marker,tag=RW.This,distance=..100]
+
+# 召喚
+    execute as @e[type=marker,tag=RW.This,sort=random,limit=5] at @s run function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
+# 召喚（HP30%以下）
+    execute as @e[type=marker,tag=RW.This,sort=random,limit=3] at @s run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon2
