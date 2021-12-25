@@ -12,8 +12,8 @@
 # 他にアイテム等確認する場合はここに書く
     # 矢を持ってるかチェック
         execute store result score $ArrowCount Temporary run clear @s arrow 0
-        execute if score $ArrowCount Temporary matches ..5 run tag @s remove CanUsed
-        execute if score $ArrowCount Temporary matches ..5 run function lib:message/sacred_treasure/dont_have_require_items
+        execute if score $ArrowCount Temporary matches ..0 run tag @s remove CanUsed
+        execute if score $ArrowCount Temporary matches ..0 run function lib:message/sacred_treasure/dont_have_require_items
         scoreboard players reset $ArrowCount Temporary
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
