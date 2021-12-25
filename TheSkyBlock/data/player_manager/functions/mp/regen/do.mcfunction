@@ -12,8 +12,10 @@
 
 # UserStorage呼び出し
     function oh_my_dat:please
-# 回復量取得
+# 回復量計算
     execute store result score $Fluctuation Lib run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPRegen 10
+    scoreboard players operation $Fluctuation Lib *= @s MPMax
+    scoreboard players operation $Fluctuation Lib /= $100 Const
 # 負数を強制する
     execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..-1
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Fluctuation Lib *= $-1 Const
