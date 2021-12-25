@@ -64,6 +64,20 @@
                     ]
                 },
                 {
+                    "weight": 40,
+                    "type": "item",
+                    "name": "coal_block",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
                     "weight": 80,
                     "type": "item",
                     "name": "iron_ingot",
@@ -78,6 +92,20 @@
                     ]
                 },
                 {
+                    "weight": 20,
+                    "type": "item",
+                    "name": "iron_block",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
                     "weight": 40,
                     "type": "item",
                     "name": "gold_ingot",
@@ -86,7 +114,7 @@
                             "function": "set_count",
                             "count": {
                                 "min": 1,
-                                "max": 4
+                                "max": 8
                             }
                         }
                     ]
@@ -94,7 +122,16 @@
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "trident"
+                    "name": "trident",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 200,
@@ -169,6 +206,20 @@
                 {
                     "weight": 60,
                     "type": "item",
+                    "name": "scute",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 60,
+                    "type": "item",
                     "name": "blaze_rod",
                     "functions": [
                         {
@@ -176,6 +227,20 @@
                             "count": {
                                 "min": 1,
                                 "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "bread",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 6
                             }
                         }
                     ]
@@ -281,37 +346,100 @@
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "oak_sapling"
+                    "name": "oak_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "spruce_sapling"
+                    "name": "spruce_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "birch_sapling"
+                    "name": "birch_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "jungle_sapling"
+                    "name": "jungle_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 10,
                     "type": "item",
-                    "name": "acacia_sapling"
+                    "name": "acacia_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 30,
                     "type": "item",
-                    "name": "dark_oak_sapling"
+                    "name": "dark_oak_sapling",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 60,
                     "type": "item",
-                    "name": "chorus_flower"
+                    "name": "chorus_flower",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 100,
@@ -324,6 +452,25 @@
                                 "min": 1,
                                 "max": 32
                             }
+                        }
+                    ]
+                },
+                {
+                    "weight": 40,
+                    "type": "item",
+                    "name": "enchanted_book",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        },
+                        {
+                            "function": "enchant_with_levels",
+                            "levels": 20,
+                            "treasure": false
                         }
                     ]
                 }
