@@ -12,9 +12,11 @@
 # UserStorage呼び出し
     function oh_its_dat:please
 # Arrayに移す
-    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1]
+    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
 # Chests構造へ梱包して追加
-    function player_manager:keep_lost_item/give_all/packing.chest
+    execute if data storage lib: Array[0] run function player_manager:keep_lost_item/give_all/packing.chest
+# リセット
+    data remove storage lib: Array
 # 明示的にstorageを綺麗にしておく
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems
 # ループ処理

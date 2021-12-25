@@ -57,6 +57,7 @@
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
         execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
+        data modify entity @s CustomNameVisible set value 0b
 # タグ周り
     function asset_manager:mob/summon/set_tag
 # 属性耐性
