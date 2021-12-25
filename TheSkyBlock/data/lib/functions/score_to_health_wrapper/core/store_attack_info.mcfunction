@@ -4,12 +4,20 @@
 #
 # @within function lib:score_to_health_wrapper/fluctuation
 
-# 攻撃者を記録する
-    execute store result score @s LatestAttackMob run data get storage api: Argument.Attacker
+#> ThisTag
+# @private
+    #declare score_holder $LatestAttacker
+
+# 攻撃者名を記録する
+    function oh_my_dat:please
+    execute store result score $LatestAttacker Temporary run data get storage api: Argument.Attacker
+    execute as @e[type=!player,distance=..150] if score @s MobUUID = $LatestAttacker Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name set from entity @s CustomName
 # 攻撃属性をEnumとして保存する
-    scoreboard players set @s LatestAttackType 0
-    execute if data storage api: Argument{ElementType:"Fire"} run scoreboard players set @s LatestAttackType 1
-    execute if data storage api: Argument{ElementType:"Water"} run scoreboard players set @s LatestAttackType 2
-    execute if data storage api: Argument{ElementType:"Thunder"} run scoreboard players set @s LatestAttackType 3
-    execute if data storage api: Argument{ElementType:"None"} if data storage api: Argument{AttackType:"Physical"} run scoreboard players set @s LatestAttackType 4
-    execute if data storage api: Argument{ElementType:"None"} if data storage api: Argument{AttackType:"Magic"} run scoreboard players set @s LatestAttackType 5
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
+    execute if data storage api: Argument{ElementType:"Fire"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 1
+    execute if data storage api: Argument{ElementType:"Water"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 2
+    execute if data storage api: Argument{ElementType:"Thunder"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 3
+    execute if data storage api: Argument{ElementType:"None"} if data storage api: Argument{AttackType:"Physical"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 4
+    execute if data storage api: Argument{ElementType:"None"} if data storage api: Argument{AttackType:"Magic"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 5
+# リセット
+    scoreboard players reset $LatestAttacker Temporary
