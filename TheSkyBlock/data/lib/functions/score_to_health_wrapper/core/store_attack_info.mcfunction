@@ -11,7 +11,7 @@
 # 攻撃者名を記録する
     function oh_my_dat:please
     execute store result score $LatestAttacker Temporary run data get storage api: Argument.Attacker
-    execute as @e[type=!player,distance=..150] if score @s MobUUID = $LatestAttacker Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name set from entity @s CustomName
+    execute at @s as @e[type=!player,distance=..150] if score @s MobUUID = $LatestAttacker Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name set from entity @s CustomName
 # 攻撃属性をEnumとして保存する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
     execute if data storage api: Argument{ElementType:"Fire"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 1
