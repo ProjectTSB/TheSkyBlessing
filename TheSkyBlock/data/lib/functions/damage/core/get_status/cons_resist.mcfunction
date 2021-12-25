@@ -21,4 +21,5 @@
 # Protectionの値の取得
     function lib:damage/core/get_protection/
 # リセット
+    data remove storage api: ActiveEffects
     data remove storage lib: ModifiedDamage
