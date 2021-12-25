@@ -11,8 +11,7 @@
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
 
     playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
+    playsound item.trident.throw player @a ~ ~ ~ 1 1
 
 #再起
     function asset:sacred_treasure/0320.divine_thunder_sword/trigger/3.2.particle_line
