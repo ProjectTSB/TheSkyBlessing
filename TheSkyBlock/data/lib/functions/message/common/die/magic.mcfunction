@@ -11,6 +11,6 @@
 execute store result score $Random Temporary run function lib:random/
 scoreboard players operation $Random Temporary %= $3 Const
 
-execute if score $Random Temporary matches 0 run tellraw @a [{"translate": "%1$sは%2$sによって跡形もなく消し飛ばされた。","with":[{"selector":"@s"},{"selector":"@e[type=!player,tag=LatestAttacker,distance=..150]"}]}]
-execute if score $Random Temporary matches 1 run tellraw @a [{"translate": "%1$sは%2$sの魔力に飲まれ死んだ。","with":[{"selector":"@s"},{"selector":"@e[type=!player,tag=LatestAttacker,distance=..150]"}]}]
-execute if score $Random Temporary matches 2 run tellraw @a [{"translate": "%1$sは%2$sの魔力衝撃によって幽体離脱を経験した。","with":[{"selector":"@s"},{"selector":"@e[type=!player,tag=LatestAttacker,distance=..150]"}]}]
+execute if score $Random Temporary matches 0 run tellraw @a [{"translate": "%1$sは%2$sによって跡形もなく消し飛ばされた。","with":[{"selector":"@s"},{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name","storage":"oh_my_dat:","interpret":true}]}]
+execute if score $Random Temporary matches 1 run tellraw @a [{"translate": "%1$sは%2$sの魔力に飲まれ死んだ。","with":[{"selector":"@s"},{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name","storage":"oh_my_dat:","interpret":true}]}]
+execute if score $Random Temporary matches 2 run tellraw @a [{"translate": "%1$sは%2$sの魔力衝撃によって幽体離脱を経験した。","with":[{"selector":"@s"},{"nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Name","storage":"oh_my_dat:","interpret":true}]}]

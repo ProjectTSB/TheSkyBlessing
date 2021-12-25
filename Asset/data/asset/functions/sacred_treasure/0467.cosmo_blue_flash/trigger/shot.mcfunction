@@ -10,7 +10,6 @@
 
 # 演出
     particle minecraft:dolphin ~ ~ ~ 0.1 0.1 0.1 1 30 force
-    playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
 
 # 着弾検知
     execute as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5,limit=1] run tag @s add CZ.HitEntity
