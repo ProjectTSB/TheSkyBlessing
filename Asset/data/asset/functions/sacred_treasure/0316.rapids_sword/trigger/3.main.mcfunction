@@ -13,10 +13,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
-    playsound minecraft:item.trident.riptide_3 player @a ~ ~ ~ 1 1.2
-    playsound minecraft:entity.squid.squirt player @a ~ ~ ~ 1 1.3
-    playsound minecraft:entity.player.swim ambient @a ~ ~ ~ 1 1.3
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 50
+    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1 1
+    playsound minecraft:entity.player.swim player @a ~ ~ ~ 1 1.5
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
 # ダメージ
