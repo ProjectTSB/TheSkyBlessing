@@ -14,3 +14,5 @@
     execute store result entity @s ItemRotation byte 1 run scoreboard players get $Rotation Temporary
 # 7以上で壊す
     execute if score $Rotation Temporary matches 7.. run function world_manager:gimmick/shard_processor/process/complete
+# リセット
+    scoreboard players reset $Rotation Temporary
