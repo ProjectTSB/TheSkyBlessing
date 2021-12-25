@@ -12,8 +12,8 @@
     playsound minecraft:entity.generic.swim ambient @a ~ ~ ~ 1 1
 
 # ダメージ設定
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30.0f
+    # 与えるダメージ = 40
+        data modify storage lib: Argument.Damage set value 40.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
