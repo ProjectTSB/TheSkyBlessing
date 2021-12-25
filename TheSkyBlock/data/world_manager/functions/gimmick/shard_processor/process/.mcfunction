@@ -19,6 +19,8 @@
     execute if score $Rotation Temporary matches 3 run playsound minecraft:block.stone_button.click_on block @a ~ ~ ~ 1.5 2
     execute if score $Rotation Temporary matches 5 run playsound minecraft:block.stone_button.click_on block @a ~ ~ ~ 1.5 2
 
+    execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.CustomModelData set value 20122
+    execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.display.Name set value '{"text":"#","font":"invisible_bg"}'
     execute if score $Rotation Temporary matches 1 positioned ^ ^ ^-0.5 run item replace entity @e[type=armor_stand,sort=nearest,limit=1] armor.head with stick{CustomModelData:20115}
     execute if score $Rotation Temporary matches 2 positioned ^ ^ ^-0.5 run item replace entity @e[type=armor_stand,sort=nearest,limit=1] armor.head with stick{CustomModelData:20116}
     execute if score $Rotation Temporary matches 3 positioned ^ ^ ^-0.5 run item replace entity @e[type=armor_stand,sort=nearest,limit=1] armor.head with stick{CustomModelData:20117}
