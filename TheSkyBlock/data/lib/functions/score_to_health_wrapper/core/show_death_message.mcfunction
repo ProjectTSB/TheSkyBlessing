@@ -6,7 +6,7 @@
 
 # Enumをもとにメッセージを表示
     function oh_my_dat:please
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:0} run function lib:message/common/die/water
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:0} run function lib:message/common/die/unknown
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:1} run function lib:message/common/die/fire
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:2} run function lib:message/common/die/water
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:3} run function lib:message/common/die/thunder
