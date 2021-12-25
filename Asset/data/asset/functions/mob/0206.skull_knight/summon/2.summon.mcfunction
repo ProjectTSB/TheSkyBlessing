@@ -5,7 +5,7 @@
 # @within function asset:mob/0206.skull_knight/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","5Q.Ranged"],DeathLootTable:"asset:mob/death/0206.skull_knight"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","5Q.Ranged"],DeathLootTable:"asset:mob/death/0206.skull_knight",Team:"ChuzTest"}
 # ID (int)
     data modify storage asset:mob ID set value 206
 # Type (string) Wikiを参照
