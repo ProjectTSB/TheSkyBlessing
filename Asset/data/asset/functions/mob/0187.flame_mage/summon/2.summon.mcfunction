@@ -39,15 +39,15 @@
     data modify storage asset:mob Speed set value 0.15d
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Physical set value
+        data modify storage asset:mob Resist.Physical set value 100d
     # 魔法倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Magic set value
+        data modify storage asset:mob Resist.Magic set value 70d
     # 火倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Fire set value
+        data modify storage asset:mob Resist.Fire set value 50d
     # 水倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Water set value
+        data modify storage asset:mob Resist.Water set value 100d
     # 雷倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Thunder set value
+        data modify storage asset:mob Resist.Thunder set value 100d
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
