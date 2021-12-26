@@ -1,12 +1,12 @@
-#> asset:island/6/register/register
+#> asset:island/05/register/register
 # 
 # 島の定義データ
 # 
-# @within function asset:island/6/register/
+# @within function asset:island/05/register/
 
 
 # ID (int)
-    data modify storage asset:island ID set value 6
+    data modify storage asset:island ID set value 5
 # Rotation (float)
     data modify storage asset:island Rotation set value -90f
 # BOSS ID (int) (Optional)

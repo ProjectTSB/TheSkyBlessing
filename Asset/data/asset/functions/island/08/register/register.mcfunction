@@ -1,8 +1,8 @@
-#> asset:island/8/register/register
+#> asset:island/08/register/register
 # 
 # 島の定義データ
 # 
-# @within function asset:island/8/register/
+# @within function asset:island/08/register/
 
 
 # ID (int)
