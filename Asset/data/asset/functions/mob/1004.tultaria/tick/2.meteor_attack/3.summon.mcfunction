@@ -9,7 +9,7 @@
     execute positioned ~ ~8 ~ run function api:mob/summon
 
 # 演出
-    function asset:mob/1004.tultaria/tick/2.meteor_attack/particle1
+    execute positioned ~ ~0.1 ~ run function asset:mob/1004.tultaria/tick/2.meteor_attack/particle1
 
 # キル
     kill @s
