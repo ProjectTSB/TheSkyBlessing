@@ -3,7 +3,10 @@
 # 神器のメイン処理部
 #
 # @within function asset:sacred_treasure/0522.humanism/trigger/2.check_condition
-    #declare tag EI.Target
+
+#>
+# @private
+#declare tag EI.Target
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/common/use/auto
