@@ -4,6 +4,10 @@
 #
 # @within function asset:trader/0007.currency_merchant/register/
 
+
+# 重複防止レジストリに登録
+    data modify storage asset:trader DPR append value {D:overworld,X:23,Y:15,Z:-29}
+
 # ID (int)
     data modify storage asset:trader ID set value 7
 # 名前 (TextComponent) (オプション)

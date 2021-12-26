@@ -1,9 +1,12 @@
 #> asset:spawner/019/register
-# 
+#
 # スポナーの定義データ
-# 
+#
 # @within function asset:spawner/019/
 
+
+# 重複防止レジストリに登録
+    data modify storage asset:spawner DPR append value {D:overworld,X:-121,Y:41,Z:79}
 
 # ID (int)
     data modify storage asset:spawner ID set value 19
@@ -12,7 +15,7 @@
 # SpawnPotentials(int | int[] | ({ Weight: int, Id: int })[]) MobAssetのIDを指定する
     data modify storage asset:spawner SpawnPotentials set value [38]
 # 一度に召喚する数 (int)
-    data modify storage asset:spawner SpawnCount set value 4
+    data modify storage asset:spawner SpawnCount set value 1
 # 動作範囲 (int) この範囲にプレイヤーが存在するとき、Mobの召喚を開始する
     data modify storage asset:spawner SpawnRange set value 4
 # 初回召喚時間 (int)
@@ -22,7 +25,7 @@
 # 最大召喚間隔 (int)
     data modify storage asset:spawner MaxSpawnDelay set value 400
 # 近くのエンティティの最大数 (int)
-    data modify storage asset:spawner MaxNearbyEntities set value 6
+    data modify storage asset:spawner MaxNearbyEntities set value 2
 # この範囲にプレイヤーが存在するとき、Mobの召喚を開始する // distance <= 100
     data modify storage asset:spawner RequiredPlayerRange set value 16
 

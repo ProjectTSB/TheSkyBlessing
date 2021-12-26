@@ -1,9 +1,12 @@
 #> asset:spawner/020/register
-# 
+#
 # スポナーの定義データ
-# 
+#
 # @within function asset:spawner/020/
 
+
+# 重複防止レジストリに登録
+    data modify storage asset:spawner DPR append value {D:overworld,X:-114,Y:41,Z:72}
 
 # ID (int)
     data modify storage asset:spawner ID set value 20
@@ -22,7 +25,7 @@
 # 最大召喚間隔 (int)
     data modify storage asset:spawner MaxSpawnDelay set value 400
 # 近くのエンティティの最大数 (int)
-    data modify storage asset:spawner MaxNearbyEntities set value 6
+    data modify storage asset:spawner MaxNearbyEntities set value 2
 # この範囲にプレイヤーが存在するとき、Mobの召喚を開始する // distance <= 100
     data modify storage asset:spawner RequiredPlayerRange set value 16
 

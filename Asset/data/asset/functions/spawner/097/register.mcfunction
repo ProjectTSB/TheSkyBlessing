@@ -1,9 +1,12 @@
 #> asset:spawner/097/register
-# 
+#
 # スポナーの定義データ
-# 
+#
 # @within function asset:spawner/097/
 
+
+# 重複防止レジストリに登録
+    data modify storage asset:spawner DPR append value {D:overworld,X:306,Y:106,Z:71}
 
 # ID (int)
     data modify storage asset:spawner ID set value 97

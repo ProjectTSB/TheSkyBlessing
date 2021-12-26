@@ -1,7 +1,7 @@
 #> asset:spawner/279/
-# 
+#
 # スポナーの呪われた神器の位置を書く
-# 
+#
 # @within tag/function asset:spawner/register
 
-execute in overworld positioned -200 152 120 unless block ~ ~ ~ barrier unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/279/register
+execute unless data storage asset:spawner DPR[{D:overworld,X:-185,Y:210,Z:4}] in overworld positioned -185 210 4 if entity @p[distance=..40] run function asset:spawner/279/register
