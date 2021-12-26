@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/change
+# @within function player_manager:god/change_believe/change_task
 
 # 共通処理
     tag @s add Believe.None
