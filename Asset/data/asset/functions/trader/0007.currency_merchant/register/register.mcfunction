@@ -1,23 +1,33 @@
-#> asset:trader/0006.armor_merchant/register/register
+#> asset:trader/0007.currency_merchant/register/register
 #
 #
 #
-# @within function asset:trader/0006.armor_merchant/register/
+# @within function asset:trader/0007.currency_merchant/register/
 
 # ID (int)
-    data modify storage asset:trader ID set value 6
+    data modify storage asset:trader ID set value 7
 # 名前 (TextComponent) (オプション)
-    data modify storage asset:trader Name set value '{"text":"防具商人"}'
+    data modify storage asset:trader Name set value '{"text":"両替商人"}'
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value 0f
 # 取引
     data modify storage asset:trader Trades append value {}
     # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:1b}
+        data modify storage asset:trader Trades[-1].BuyA set value {id:"minecraft:white_wool",Count:32b}
     # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
         # data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:egg",Count:1b}
     # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].Sell set value 90
+        data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"currency/",Count:1b}
+    # 取引可能回数 (int) (オプション)
+        # data modify storage asset:trader Trades[-1].MaxUses set value
+# 取引
+    data modify storage asset:trader Trades append value {}
+    # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
+        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:16b}
+    # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
+        # data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:egg",Count:1b}
+    # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
+        data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"currency/high",Count:1b}
     # 取引可能回数 (int) (オプション)
         # data modify storage asset:trader Trades[-1].MaxUses set value
 # 取引
@@ -25,32 +35,10 @@
     # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
         data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:1b}
     # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
-        # data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:egg",Count:1b}
+        # data modify storage asset:trader Trades[-1].BuyB set value
     # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].Sell set value 92
+        data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"currency/",Count:16b}
     # 取引可能回数 (int) (オプション)
         # data modify storage asset:trader Trades[-1].MaxUses set value
-# 取引
-    data modify storage asset:trader Trades append value {}
-    # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:2b}
-    # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
-        data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:iron_ingot",Count:12b}
-    # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].Sell set value 91
-    # 取引可能回数 (int) (オプション)
-        # data modify storage asset:trader Trades[-1].MaxUses set value
-# 取引
-    data modify storage asset:trader Trades append value {}
-    # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:2b}
-    # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
-        data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:diamond",Count:12d}
-    # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].Sell set value 93
-    # 取引可能回数 (int) (オプション)
-        # data modify storage asset:trader Trades[-1].MaxUses set value
-
-
 # 登録
     function asset:trader/common/register
