@@ -23,3 +23,5 @@
 
 # スコアを戻す
     scoreboard players set @s RW.Tick -40
+# 拡散値
+    data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,10d],[8d,8d]]

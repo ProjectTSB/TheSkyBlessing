@@ -15,3 +15,6 @@
     tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s
 # タグを消す
     tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
+
+# テレポート演出
+    execute at @s run function asset:mob/1004.tultaria/tick/move/vfx

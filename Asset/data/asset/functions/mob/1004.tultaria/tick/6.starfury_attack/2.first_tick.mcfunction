@@ -11,6 +11,9 @@
 # 腕を変える
     item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
 
+# テレポート演出
+    execute at @s run function asset:mob/1004.tultaria/tick/move/vfx
+
 # テレポート
     function asset:mob/1004.tultaria/tick/move/tereport_center
 
