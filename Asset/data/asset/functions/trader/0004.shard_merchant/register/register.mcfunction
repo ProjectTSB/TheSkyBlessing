@@ -6,7 +6,7 @@
 
 
 # 重複防止レジストリに登録
-    data modify storage asset:trader DPR append value {D:overworld,X:-36,Y:32,Z:-29}
+    data modify storage asset:trader DPR append value {D:overworld,X:-36,Y:21,Z:-29}
 
 # ID (int)
     data modify storage asset:trader ID set value 4
