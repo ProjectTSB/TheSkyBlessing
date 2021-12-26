@@ -8,7 +8,7 @@
     playsound minecraft:item.armor.equip_iron hostile @a ~ ~ ~ 1.5 1
 
 # 持ち替え
-    item replace entity @s weapon.mainhand with minecraft:iron_sword
+    item replace entity @s weapon.mainhand with minecraft:stone_axe
 
 # リセット
     tag @s add 5P.Melee
