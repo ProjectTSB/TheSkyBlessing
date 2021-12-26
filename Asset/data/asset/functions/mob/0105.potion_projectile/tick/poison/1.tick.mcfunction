@@ -11,8 +11,8 @@
     effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] poison 5 6 false
 
 # 演出
-    particle dust 0 0.4 0 2 ~ ~1.2 ~ 1 0.4 1 0 1 normal @a
-    particle dust 0.6 0 1 1 ~ ~1.2 ~ 1 0.4 1 0 1 normal @a
+    particle dust 0 0.4 0 1 ~ ~1.2 ~ 1 0.4 1 0 4 normal @a
+    particle dust 0.6 0 1 1 ~ ~1.2 ~ 1 0.4 1 0 4 normal @a
     playsound block.fire.extinguish master @a ~ ~ ~ 0.4 2 0
 
 # 一定時間経過によるkill

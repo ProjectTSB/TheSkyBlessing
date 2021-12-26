@@ -14,7 +14,7 @@
     summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:4b}}
 
 # 雷属性ダメージ
-    data modify storage lib: Argument.Damage set value 12.0
+    data modify storage lib: Argument.Damage set value 8.0
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
     function lib:damage/modifier
