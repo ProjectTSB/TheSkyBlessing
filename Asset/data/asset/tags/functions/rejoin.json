@@ -25,6 +25,7 @@
         "asset:mob/0171.lumberjack_of_blue_forest/rejoin_process",
         "asset:sacred_treasure/0373.ice_sorcery/trigger/rejoin_process",
         "asset:mob/0151.recombined/rejoin_process",
-        "asset:sacred_treasure/0610.call_fish/trigger/rejoin_process"
+        "asset:sacred_treasure/0610.call_fish/trigger/rejoin_process",
+        "asset:mob/0131.haruclaire/rejoin_process"
     ]
 }
