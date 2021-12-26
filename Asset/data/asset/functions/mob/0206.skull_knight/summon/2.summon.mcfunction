@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value {CustomName:'{"text":"スカルナイト"}'}
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:2s}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:power",lvl:5s}]}}
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
@@ -31,7 +31,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 170
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 3.0d
+    data modify storage asset:mob AttackDamage set value 6.0d
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 18.0d
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
