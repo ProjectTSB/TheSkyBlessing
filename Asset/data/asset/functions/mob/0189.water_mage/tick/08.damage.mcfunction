@@ -8,7 +8,7 @@
     scoreboard players set @s 59.Tick 171
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 18f
+    data modify storage lib: Argument.Damage set value 35f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
