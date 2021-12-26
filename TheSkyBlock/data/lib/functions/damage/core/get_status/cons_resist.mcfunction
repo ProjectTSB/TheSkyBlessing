@@ -15,8 +15,8 @@
     execute store result score $Resistance Temporary run data get storage api: ActiveEffects[{Id:11b}].Amplifier
     execute unless data storage api: ActiveEffects[{Id:11b}].Amplifier run scoreboard players set $Resistance Temporary -1
 
-    execute if score $Resistance Temporary matches 127 store result score $Resistance Temporary run data get storage api: ActiveEffects[{Id:11b}].HiddenEffect.Amplifier
     execute if score $Resistance Temporary matches 127 unless data storage api: ActiveEffects[{Id:11b}].HiddenEffect run scoreboard players set $Resistance Temporary -1
+    execute if score $Resistance Temporary matches 127 store result score $Resistance Temporary run data get storage api: ActiveEffects[{Id:11b}].HiddenEffect.Amplifier
 
     scoreboard players add $Resistance Temporary 1
 # 属性の耐性値で補正値する
