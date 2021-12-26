@@ -20,7 +20,7 @@
 
     execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.CustomModelData set value 20122
     execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.display.Name set value '{"text":"#","font":"invisible_bg"}'
-    execute positioned ^ ^ ^-0.5 as @e[type=armor_stand,tag=ShardProcessorModel,distance=..0.01,limit=1] run function world_manager:gimmick/shard_processor/process/model_modifier
+    execute positioned ~-0.5 ~-0.5 ~ as @e[type=armor_stand,tag=ShardProcessorModel,distance=..0.04,limit=1] run function world_manager:gimmick/shard_processor/process/model_modifier
 
 # 8で回転されないようにFixedをつける
     execute if score $Rotation Temporary matches 7 run data modify entity @s Fixed set value 1b
