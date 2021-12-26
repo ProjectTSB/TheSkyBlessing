@@ -1,11 +1,11 @@
-#> world_manager:teleporter/_index.d
+#> world_manager:gimmick/teleporter/_index.d
 # @private
 
 #> TeleportPoint
-# @within world_manager:teleporter/**
+# @within world_manager:gimmick/teleporter/**
     #declare tag this
     #declare tag FromTeleporter
-    #declare storage world_manager:teleporter
+    #declare storage world_manager:gimmick/teleporter
     #declare tag Teleporter
 
 #> OpenDeclares
