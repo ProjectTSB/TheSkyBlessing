@@ -10,6 +10,8 @@
     kill @e[type=marker,tag=RW.XYZ,limit=1]
 
 # 演出
-    #playsound minecraft:entity.wither.death ambient @a ~ ~ ~ 1 2
-    particle cloud ~ ~ ~ 1 1 1 0.1 100
-    particle explosion_emitter ~ ~ ~ 1 1 1 0.1 10
+    playsound minecraft:item.trident.thunder hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 2 2
+    particle minecraft:witch ~ ~1 ~ 1 1 1 0.1 50
+    particle cloud ~ ~1 ~ 1 1 1 0.1 50
+    particle explosion_emitter ~ ~1 ~ 0 0 0 0 1
