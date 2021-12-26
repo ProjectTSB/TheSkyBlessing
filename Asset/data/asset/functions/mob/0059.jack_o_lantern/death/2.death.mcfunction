@@ -9,4 +9,4 @@
     particle dust 0.851 0 1 1 ~ ~1.7 ~ 0.6 0.4 0.6 0 20 normal @a
 
 # 死亡時カボチャ設置
-    execute if block ~ ~ ~ #lib:air run setblock ~ ~ ~ carved_pumpkin
+    execute if predicate world_manager:area/02.islands if block ~ ~ ~ #lib:air run setblock ~ ~ ~ carved_pumpkin

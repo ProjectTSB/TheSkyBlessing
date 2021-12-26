@@ -5,7 +5,7 @@
 # @within function asset:mob/0081.snow_cloud/tick/6.recursion
 
 # 粉雪が積もる
-    fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
+    execute if entity @s[gamemode=survival] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
 
 # 音
     playsound minecraft:block.glass.break master @a ~ ~ ~ 0.3 1.5 0
