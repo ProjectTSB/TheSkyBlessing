@@ -2,11 +2,11 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/change
+# @within function player_manager:god/change_believe/change_task
 
 # 共通処理
-    effect give @s blindness 4 0 true
-    effect give @s slowness 4 3 true
+    effect give @s blindness 11 0 true
+    effect give @s slowness 11 5 true
 # 各神固有処理
     execute if entity @s[tag=Believe.Flora] run function lib:message/god/flora/unbelieve1
     execute if entity @s[tag=Believe.Nyaptov] run function lib:message/god/nyaptov/unbelieve1

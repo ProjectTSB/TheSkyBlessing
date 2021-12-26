@@ -3,7 +3,7 @@
 
 #> storage
 # @within *
-#   asset:spawner/*/register
+#   asset:spawner/*/*
 #   asset_manager:spawner/**
     #declare storage asset:spawner
 
