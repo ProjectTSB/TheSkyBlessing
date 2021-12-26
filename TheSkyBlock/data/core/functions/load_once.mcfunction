@@ -187,8 +187,6 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
-        scoreboard objectives add LatestAttackMob dummy
-        scoreboard objectives add LatestAttackType dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
     # @within function player_manager:adjust_hunger/**
