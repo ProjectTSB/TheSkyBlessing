@@ -17,14 +17,14 @@
     tag @a[gamemode=!survival,gamemode=!creative,tag=!2f.CanNotUse,scores={2f.TickCount=0..}] add 2f.CanNotUse
 
 # 15秒間羊毛置換
-    execute at @a[tag=!2f.CanNotUse,scores={2f.TickCount=..300}] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_wool keep
+    execute at @a[tag=!2f.CanNotUse,scores={2f.TickCount=..40}] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_wool keep
 
 # 再起処理
-    execute if entity @a[scores={2f.TickCount=..300}] run schedule function asset:sacred_treasure/0087.sheep_blessing/trigger/count_down 1t
+    execute if entity @a[scores={2f.TickCount=..40}] run schedule function asset:sacred_treasure/0087.sheep_blessing/trigger/count_down 1t
 
 # 演出
-    execute at @a[scores={2f.TickCount=301}] run playsound entity.illusioner.prepare_mirror master @a[scores={2f.TickCount=301}] ~ ~ ~ 1.0 1.0
+    execute at @a[scores={2f.TickCount=41}] run playsound entity.illusioner.prepare_mirror master @a[scores={2f.TickCount=41}] ~ ~ ~ 1.0 1.0
 
 # 初期化処理
-    tag @a[scores={2f.TickCount=301}] remove 2f.CanNotUse
-    scoreboard players reset @a[scores={2f.TickCount=301}] 2f.TickCount
+    tag @a[scores={2f.TickCount=41}] remove 2f.CanNotUse
+    scoreboard players reset @a[scores={2f.TickCount=41}] 2f.TickCount
