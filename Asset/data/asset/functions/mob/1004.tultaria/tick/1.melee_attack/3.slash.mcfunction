@@ -15,7 +15,7 @@
     execute positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/1.melee_attack/5.vfx_damage
 
 # テレポートする
-    execute rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/1004.tultaria/tick/move/tereport
+    execute positioned ^ ^ ^3 run function asset:mob/1004.tultaria/tick/move/tereport
 
 # プレイヤーを見る
     execute at @s facing entity @p feet positioned ~ ~0.4 ~ run function asset:mob/1004.tultaria/tick/move/tereport
