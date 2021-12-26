@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/change
+# @within function player_manager:god/change_believe/change_task
 
 execute if score @s InSubArea matches 10 run function lib:message/god/flora/believe1
 execute if score @s InSubArea matches 11 run function lib:message/god/nyaptov/believe1

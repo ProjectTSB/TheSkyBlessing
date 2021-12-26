@@ -4,6 +4,7 @@
 #> Global Vars
 # @public
     #declare score_holder $PlayerCount
+    #declare score_holder $LoadTime
 
 #> DeathTag
 # @public

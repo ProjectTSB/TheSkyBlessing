@@ -10,6 +10,8 @@
     execute store result storage global Time int 1 run time query gametime
 # プレイヤー数をGlobalオブジェクトに設定する
     execute store result score $PlayerCount Global if entity @a
+# 読み込み時間を加算
+    scoreboard players add $LoadTime Global 1
 
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player
@@ -21,7 +23,7 @@
     execute as @e[type=armor_stand,tag=CursedTreasure,tag=!DispelledCursedTreasure] at @s run function asset_manager:island/tick/
 
 # スポナー処理部
-    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
+    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
 
 # ワールドギミック
     function world_manager:gimmick/
