@@ -8,4 +8,4 @@
     kill @e[type=marker,tag=BetaEndingPortal]
 
 # 指定座標に召喚
-    summon marker ~ ~ ~ {Tags:["BetaEndingPortal"]}
+    summon marker 100 107 2925 {Tags:["BetaEndingPortal"]}
