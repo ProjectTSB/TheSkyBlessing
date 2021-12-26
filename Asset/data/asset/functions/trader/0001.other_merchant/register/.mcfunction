@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:trader/register
 
-execute positioned 23 15 -29 unless entity @e[type=villager,tag=Trader,distance=..0.001] run function asset:trader/0001.other_merchant/register/register
+execute positioned 23 15 -29 unless entity @e[type=villager,tag=Trader,distance=..0.001] run function asset:trader/0002.tool_merchant/register/register
