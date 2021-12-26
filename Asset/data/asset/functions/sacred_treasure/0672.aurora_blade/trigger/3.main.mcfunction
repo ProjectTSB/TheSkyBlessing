@@ -23,9 +23,9 @@
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
         # 剰余算する。0~35の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $36 Const
+            scoreboard players operation $RandomDamage Temporary %= $31 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 25
+            scoreboard players add $RandomDamage Temporary 35
     #ダメージセット 天使なら1.5倍
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
         execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 1.5 run scoreboard players get $RandomDamage Temporary

@@ -12,4 +12,4 @@
 
 # 回す
     scoreboard players add $Rotate Temporary 1
-    execute if score $Rotate Temporary matches ..35 rotated ~10 ~ run function asset:sacred_treasure/0375.thunder_magic/trigger/3.1.circle_particle
+    execute if score $Rotate Temporary matches ..35 rotated ~10 0 run function asset:sacred_treasure/0375.thunder_magic/trigger/3.1.circle_particle

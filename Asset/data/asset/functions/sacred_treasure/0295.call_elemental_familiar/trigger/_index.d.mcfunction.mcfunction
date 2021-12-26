@@ -9,7 +9,7 @@
     #declare tag 295Fa.Thunder
     #declare tag 295Fa.Normal
     #declare tag 295Fa.Init
-    #declare tag 295Fa.Snowball
+    #declare tag 295Fa.AEC
     #declare tag 295Fa.Shot
     #declare tag 295Fa.ShotInit
     #declare tag 295Fa.ShotNormal

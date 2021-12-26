@@ -15,7 +15,7 @@
 
 # ダメージ
     # 与えるダメージ = 60
-        data modify storage lib: Argument.Damage set value 60f
+        data modify storage lib: Argument.Damage set value 30f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 無属性

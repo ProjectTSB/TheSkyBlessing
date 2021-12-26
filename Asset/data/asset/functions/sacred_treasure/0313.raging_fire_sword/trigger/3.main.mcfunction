@@ -14,14 +14,15 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~0.5 ~ 0 0.5 0 0.1 40
-    playsound minecraft:entity.blaze.shoot ambient @a ~ ~ ~ 1 0.6
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~0.5 ~ 0 0.5 0 0.1 20
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.8
+    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 1.3
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~7の追加ダメージ
+        # 剰余算する。0~15の追加ダメージ
             scoreboard players operation $RandomDamage Temporary %= $16 Const
         # 最低ダメージ設定
             scoreboard players add $RandomDamage Temporary 23

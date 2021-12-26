@@ -10,7 +10,7 @@
     execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 0.6 1 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 6f
+    data modify storage lib: Argument.Damage set value 9f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"

@@ -11,4 +11,4 @@
     playsound entity.generic.explode master @a ~ ~ ~ 0.5 1 0
 
 # スイカ設置
-    fill ~ ~ ~ ~ ~ ~ melon replace #lib:air
+    execute if predicate world_manager:area/02.islands run fill ~ ~ ~ ~ ~ ~ melon replace #lib:air

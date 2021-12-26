@@ -12,7 +12,7 @@
     effect give @p[tag=Victim,distance=..32] slowness 3 2 true
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 15f
+    data modify storage lib: Argument.Damage set value 30f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
