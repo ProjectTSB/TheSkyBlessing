@@ -5,7 +5,7 @@
 # @within function asset:mob/0206.skull_knight/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","5Q.Ranged"],DeathLootTable:"asset:mob/death/0206.skull_knight",Team:"ChuzTest"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","5Q.Ranged"],DeathLootTable:"asset:mob/death/0206.skull_knight"}
 # ID (int)
     data modify storage asset:mob ID set value 206
 # Type (string) Wikiを参照
@@ -29,11 +29,11 @@
     # 足 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Feet set value {id:"minecraft:iron_boots",Count:1b}
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 170
+    data modify storage asset:mob Health set value 80
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 6.0d
+    data modify storage asset:mob AttackDamage set value 3.0d
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 18.0d
+    data modify storage asset:mob Defense set value 15.0d
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Physical set value
