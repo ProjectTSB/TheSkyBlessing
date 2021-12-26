@@ -28,7 +28,7 @@
     tag @e[tag=Enemy,tag=!Uninterferable,distance=..20,sort=nearest,limit=1] add CU.Target
 
 # ダメージ計算 出た目の5倍
-    scoreboard players operation @s Temporary *= $5 Const
+    scoreboard players operation @s Temporary *= $7 Const
 
 # ダメージ処理
     #ダメージ設定
