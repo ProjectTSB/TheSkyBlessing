@@ -1,8 +1,8 @@
-#> world_manager:teleporter/vfx/pre-tp/
+#> world_manager:gimmick/teleporter/vfx/pre-tp/
 #
 #
 #
-# @within function world_manager:teleporter/active
+# @within function world_manager:gimmick/teleporter/active
 
 #> PosMarker
 # @private
@@ -23,6 +23,6 @@
     execute store result entity @e[type=marker,tag=TPPosMarkerA,distance=..3,limit=1] Rotation[0] float 3.8 run scoreboard players get @s Teleporter
     execute store result entity @e[type=marker,tag=TPPosMarkerB,distance=..3,limit=1] Rotation[0] float -3.8 run scoreboard players get @s Teleporter
 # particle表示
-    execute at @e[type=marker,tag=TPPosMarker,distance=..3,limit=2] run function world_manager:teleporter/vfx/pre-tp/circle
+    execute at @e[type=marker,tag=TPPosMarker,distance=..3,limit=2] run function world_manager:gimmick/teleporter/vfx/pre-tp/circle
 # リセット
     kill @e[type=marker,tag=TPPosMarker,distance=..3,limit=2]

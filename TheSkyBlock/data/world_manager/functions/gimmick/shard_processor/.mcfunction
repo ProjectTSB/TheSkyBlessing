@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/02-01.shard_processor
+# @within function world_manager:gimmick/
 
 # カプセルの座標: -35 22 -14
 # 額縁の座標: -34.0 21.5 -13.5

@@ -15,7 +15,7 @@
 
 # 10の軽減貫通ダメージを与える
     # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10f
+        data modify storage lib: Argument.Damage set value 5f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

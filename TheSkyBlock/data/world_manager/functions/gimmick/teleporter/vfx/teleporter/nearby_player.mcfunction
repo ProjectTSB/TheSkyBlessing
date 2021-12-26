@@ -1,8 +1,8 @@
-#> world_manager:teleporter/vfx/teleporter/nearby_player
+#> world_manager:gimmick/teleporter/vfx/teleporter/nearby_player
 #
 #
 #
-# @within function world_manager:teleporter/vfx/teleporter/
+# @within function world_manager:gimmick/teleporter/vfx/teleporter/
 
 particle dust 1 1 1 0.6 ^0 ^ ^-1 0 0 0 0 1
 particle dust 1 1 1 0.6 ^0.86603 ^ ^-0.5 0 0 0 0 1

@@ -8,7 +8,7 @@
     #declare score_holder $Fluctuation
 
 # 雷属性ダメージ
-    data modify storage lib: Argument.Damage set value 16.0
+    data modify storage lib: Argument.Damage set value 25.0
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
     function lib:damage/modifier

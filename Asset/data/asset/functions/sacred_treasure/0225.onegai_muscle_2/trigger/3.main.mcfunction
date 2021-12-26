@@ -12,7 +12,7 @@
         scoreboard players set $Set Lib 100
         function lib:score_to_health_wrapper/set
     # 効果
-        effect give @s haste 10 100 true
+        effect give @s haste 10 10 true
     # 演出
         playsound entity.player.hurt player @a ~ ~ ~ 1 1
         playsound minecraft:entity.zombie_villager.cure master @s ~ ~ ~ 1 2

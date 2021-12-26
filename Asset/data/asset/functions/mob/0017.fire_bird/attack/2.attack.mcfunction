@@ -10,7 +10,7 @@
 
 # 属性ダメージ
    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 4.0f
+        data modify storage lib: Argument.Damage set value 9.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

@@ -15,7 +15,7 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 5.0f
+        data modify storage lib: Argument.Damage set value 3f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -26,6 +26,6 @@
     execute at @p[tag=Victim] as @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] run function lib:damage/
 
 # 粉雪を設置
-    execute at @p[tag=Victim] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
+    execute at @p[gamemode=survival,tag=Victim] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
 # リセット
     data remove storage lib: Argument

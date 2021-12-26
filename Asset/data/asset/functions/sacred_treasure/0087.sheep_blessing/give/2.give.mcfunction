@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"羊の加護","color":"green"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text": "15秒間、自身から周囲3マスの範囲の真下の"}','{"text": "空気ブロックが羊毛ブロックに置き換わるようになる"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text": "2秒間、自身から周囲3マスの範囲の真下の"}','{"text": "空気ブロックが羊毛ブロックに置き換わるようになる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.white_wool"},{"text":" x16"}]'
 # 使用回数 (int) (オプション)
