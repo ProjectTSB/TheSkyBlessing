@@ -37,6 +37,9 @@
 # リセット
     scoreboard players reset $4tInterval
 
+# HP減少時、パーティクルをまとう
+    execute if entity @s[tag=RW.HPless75per] run particle smoke ~ ~0.7 ~ 0.3 0.5 0.3 0 3
+    execute if entity @s[tag=RW.HPless50per] run particle end_rod ~ ~0.7 ~ 0.3 0.5 0.3 0 1
 
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする

@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1006.green_star/attack/1.trigger
 
+# 効果
+    effect give @a[tag=Victim,distance=..30] poison 10 2
+
 # ダメージを与える
 # ダメージ設定
     # 与えるダメージ
