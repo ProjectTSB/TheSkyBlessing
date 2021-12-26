@@ -2,10 +2,10 @@
 #
 #
 #
-# @within function asset:trader/0001.other_merchant/register/
+# @within function asset:trader/0002.tool_merchant/register/
 
 # ID (int)
-    data modify storage asset:trader ID set value 1
+    data modify storage asset:trader ID set value 2
 # 名前 (TextComponent) (オプション)
     data modify storage asset:trader Name set value '{"text":"道具商人"}'
 # 方向 (float) (オプション)
@@ -63,7 +63,7 @@
 # 取引
     data modify storage asset:trader Trades append value {}
     # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
-        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
+        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:b}
     # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
         # data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:egg",Count:1b}
     # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
