@@ -4,4 +4,4 @@
 # 
 # @within tag/function asset:island/register
 
-execute in overworld positioned 22 168 405 unless entity @e[type=armor_stand,tag=CursedTreasure,distance=..0.001] run function asset:island/48/register/register
+execute unless data storage asset:island DPR[{D:Overworld,X:22,Y:168,Z:22}] in overworld positioned 22 168 405 run function asset:island/48/register/register

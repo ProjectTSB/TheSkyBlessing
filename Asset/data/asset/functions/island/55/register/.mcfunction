@@ -4,4 +4,4 @@
 # 
 # @within tag/function asset:island/register
 
-execute in nether positioned 3 73 128 unless entity @e[type=armor_stand,tag=CursedTreasure,distance=..0.001] run function asset:island/55/register/register
+execute unless data storage asset:island DPR[{D:Nether,X:3,Y:73,Z:3}] in nether positioned 3 73 128 run function asset:island/55/register/register
