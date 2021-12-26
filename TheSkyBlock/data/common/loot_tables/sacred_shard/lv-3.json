@@ -41,7 +41,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20092,Shard:1b}"
+                            "tag": "{CustomModelData:20092,TSB:{Shard:1b,ShardRarity:3b}}"
                         }
                     ]
                 }
