@@ -4,4 +4,4 @@
 # 
 # @within tag/function asset:spawner/register
 
-execute in overworld positioned 31 130 -80 unless block ~ ~ ~ barrier unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/224/register
+execute unless data storage asset:spawner DPR[{D:overworld,X:31,Y:130,Z:31}] in overworld positioned 31 130 -80 run function asset:spawner/224/register
