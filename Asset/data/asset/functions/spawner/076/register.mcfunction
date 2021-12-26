@@ -1,17 +1,17 @@
 #> asset:spawner/076/register
-# 
+#
 # スポナーの定義データ
-# 
+#
 # @within function asset:spawner/076/
 
 
 # 重複防止レジストリに登録
-    data modify storage asset:spawner DPR append value {D:overworld,X:385,Y:128,Z:385}
+    data modify storage asset:spawner DPR append value {D:overworld,X:397,Y:149,Z:81}
 
 # ID (int)
     data modify storage asset:spawner ID set value 76
 # 体力 (int) このスポナーから召喚されたMobがN体殺されると破壊されるか
-    data modify storage asset:spawner HP set value 4
+    data modify storage asset:spawner HP set value 3
 # SpawnPotentials(int | int[] | ({ Weight: int, Id: int })[]) MobAssetのIDを指定する
     data modify storage asset:spawner SpawnPotentials set value [142]
 # 一度に召喚する数 (int)

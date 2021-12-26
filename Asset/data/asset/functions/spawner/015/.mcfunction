@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:spawner/register
 
-execute unless data storage asset:spawner DPR[{D:overworld,X:-121,Y:34,Z:-121}] in overworld positioned -121 34 72 if entity @p[distance=..40] run function asset:spawner/015/register
+execute unless data storage asset:spawner DPR[{D:overworld,X:-107,Y:34,Z:86}] in overworld positioned -107 34 86 if entity @p[distance=..40] run function asset:spawner/015/register

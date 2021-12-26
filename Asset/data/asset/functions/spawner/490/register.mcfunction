@@ -1,19 +1,19 @@
 #> asset:spawner/490/register
-# 
+#
 # スポナーの定義データ
-# 
+#
 # @within function asset:spawner/490/
 
 
 # 重複防止レジストリに登録
-    data modify storage asset:spawner DPR append value {D:the_end,X:107,Y:154,Z:107}
+    data modify storage asset:spawner DPR append value {D:the_end,X:94,Y:125,Z:1949}
 
 # ID (int)
     data modify storage asset:spawner ID set value 490
 # 体力 (int) このスポナーから召喚されたMobがN体殺されると破壊されるか
-    data modify storage asset:spawner HP set value 3
+    data modify storage asset:spawner HP set value 6
 # SpawnPotentials(int | int[] | ({ Weight: int, Id: int })[]) MobAssetのIDを指定する
-    data modify storage asset:spawner SpawnPotentials set value [155,156]
+    data modify storage asset:spawner SpawnPotentials set value [155,154]
 # 一度に召喚する数 (int)
     data modify storage asset:spawner SpawnCount set value 4
 # 動作範囲 (int) この範囲にプレイヤーが存在するとき、Mobの召喚を開始する
