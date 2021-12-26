@@ -9,4 +9,5 @@
 # タグを消す
     tag @s remove S2.Wait
 # 演出
-    playsound entity.blaze.shoot hostile @a[distance=..50] ~ ~ ~ 1 1 1
+    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 4 2
+    execute at @a[distance=..50] run playsound minecraft:block.amethyst_block.hit hostile @a ~ ~ ~ 1 1.5

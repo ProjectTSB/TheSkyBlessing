@@ -5,7 +5,7 @@
 # @within function asset:mob/1011.meteor/tick/2.tick
 
 # 演出
-    particle minecraft:explosion ~ ~ ~ 3 1 3 0 2
+    particle minecraft:explosion_emitter ~ ~ ~ 0 0 0 1 1
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 30
     particle minecraft:lava ~ ~ ~ 3 1 3 0.42 13
 

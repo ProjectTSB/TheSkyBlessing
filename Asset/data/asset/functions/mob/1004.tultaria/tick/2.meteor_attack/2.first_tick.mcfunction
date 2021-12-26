@@ -25,7 +25,7 @@
     execute if entity @s[tag=RW.HPless30per] run summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
 
 # 拡散する
-    spreadplayers ~ ~ 4 22 false @e[type=marker,tag=RW.This,distance=..100]
+    execute at @r run spreadplayers ~ ~ 4 12 false @e[type=marker,tag=RW.This,distance=..100]
 
 # 召喚
     execute as @e[type=marker,tag=RW.This,sort=random,limit=5] at @s run function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon

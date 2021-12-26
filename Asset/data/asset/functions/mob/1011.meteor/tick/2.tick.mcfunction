@@ -12,4 +12,4 @@
     execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/1011.meteor/tick/3.landing
 
 # 落下する
-    tp @s ~ ~-0.4 ~
+    tp @s ~ ~-0.3 ~

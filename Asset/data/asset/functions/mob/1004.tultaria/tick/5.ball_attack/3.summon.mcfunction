@@ -6,7 +6,7 @@
 
 
 # マーカー召喚
-    summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~1 ~ {Tags:["Object","RW.This"]}
 
 # 拡散する
     data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
@@ -17,10 +17,11 @@
     execute at @e[type=marker,tag=RW.This,distance=..100] run function api:mob/summon
 
 # 演出
-    playsound minecraft:entity.wither.shoot master @a[distance=..60] ~ ~ ~ 0.5 1.2 1
-    playsound minecraft:block.glass.break master @a[distance=..60] ~ ~ ~ 1 0 1
-    playsound item.trident.riptide_3 master @a[distance=..60] ~ ~ ~ 1 2 1
-    playsound item.trident.riptide_2 master @a[distance=..60] ~ ~ ~ 1 2 1
+    particle minecraft:explosion ~ ~1 ~ 0 0 0 0 0
+    playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 0.5 1.2
+    playsound minecraft:block.glass.break player @a ~ ~ ~ 1.5 0
+    playsound item.trident.riptide_3 player @a ~ ~ ~ 1 1.5
+    playsound item.trident.riptide_2 player @a ~ ~ ~ 1 1.5
 
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

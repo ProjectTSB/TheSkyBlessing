@@ -11,4 +11,4 @@
     particle dust 1 1000000000 1000000000 1 ~ ~ ~ 0.3 0.3 0.3 1 20 normal @a
 
 # ダメージ
-    execute if entity @a[gamemode=!spectator,distance=..3] run function asset:mob/1009.ancient_light/tick/3.damage
+    execute if entity @a[gamemode=!spectator,distance=..2] run function asset:mob/1009.ancient_light/tick/3.damage

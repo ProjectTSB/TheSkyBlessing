@@ -15,6 +15,9 @@
 # 現在HPの％を求める。
     scoreboard players operation $HealthPercent Temporary /= @s RW.HealthMax
 
+# VFX
+    playsound minecraft:entity.generic.hurt hostile @a ~ ~ ~ 1 0.7
+
 # タグを消す
     tag @s remove RW.HPless75per
     tag @s remove RW.HPless50per
