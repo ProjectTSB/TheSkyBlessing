@@ -67,7 +67,8 @@
     data modify storage asset:sacred_treasure Data.tag merge from storage asset:sacred_treasure CustomNBT
 
 # データの適用
-    data modify block 10000 0 10000 Items append from storage asset:sacred_treasure Data
+    item replace block 10000 0 10000 container.0 with stone
+    data modify block 10000 0 10000 Items[0] set from storage asset:sacred_treasure Data
 
 # リセット
     data remove storage asset:sacred_treasure Data
