@@ -1,0 +1,7 @@
+#> asset:spawner/479/
+# 
+# スポナーの呪われた神器の位置を書く
+# 
+# @within tag/function asset:spawner/register
+
+execute positioned 78 160 471 unless entity @e[type=armor_stand,tag=Spawner,distance=..0.001] run function asset:spawner/479/register
