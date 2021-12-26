@@ -34,4 +34,4 @@
     playsound block.beacon.ambient block @a ~ ~ ~ 0.5 1
 
 # 中に入った人を飛ばす
-    execute if entity @a[distance=..2] run tp @a[distance=..2] 23 3 24 180 0
+    execute if entity @a[distance=..2] as @a[distance=..2] run function world_manager:gimmick/ending_portal/return_to_overworld
