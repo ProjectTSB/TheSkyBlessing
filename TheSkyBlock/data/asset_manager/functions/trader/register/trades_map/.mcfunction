@@ -16,7 +16,7 @@
         data remove storage asset:trader Item
     # buyB
         data modify storage asset:trader Item set from storage asset:trader Trades[-1].BuyB
-        function asset_manager:trader/register/trades_map/item_normalize/
+        execute if data storage asset:trader Item run function asset_manager:trader/register/trades_map/item_normalize/
         data modify storage asset:trader Recipes[-1].buyB set from storage asset:trader Item
     # sell
         data modify storage asset:trader Item set from storage asset:trader Trades[-1].Sell
