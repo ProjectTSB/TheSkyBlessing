@@ -5,6 +5,7 @@
 # @input storage api: Argument.ID
 # @api
 
+tellraw @a [{"text":"AssetMob spawned: "},{"storage":"api:","nbt":"Argument.ID"}]
 # validate
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
 # 代入

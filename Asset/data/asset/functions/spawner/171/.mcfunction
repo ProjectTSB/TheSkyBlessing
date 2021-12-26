@@ -4,4 +4,4 @@
 # 
 # @within tag/function asset:spawner/register
 
-execute positioned -102 22 256 unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/171/register
+execute positioned -102 22 256 unless block ~ ~ ~ barrier unless entity @e[type=snowball,tag=Spawner,distance=..0.41] run function asset:spawner/171/register
