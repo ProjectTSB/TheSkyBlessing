@@ -12,7 +12,6 @@
     data modify entity @s CustomName set from storage asset:trader Name
     data modify entity @s Rotation[0] set from storage asset:trader Rotation
 # 取引データ
-tellraw @a [{"text":"Trades: "},{"storage":"asset:trader","nbt":"Trades"}]
     execute if data storage asset:trader Trades[0] run function asset_manager:trader/register/trades_map/
     data modify entity @s Offers.Recipes set from storage asset:trader Recipes
 
