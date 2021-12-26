@@ -288,13 +288,14 @@ team modify NoCollision collisionRule never
     #> WorldManager用スコアボード - Area
     # @within function
     #   world_manager:area/**
+    #   world_manager:** @readonly
     #   player_manager:** @readonly
         scoreboard objectives add InArea dummy {"text":"プレイヤーが居るエリア"}
         scoreboard objectives add InSubArea dummy {"text":"どのサブエリアに居るか"}
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   world_manager:teleporter/**
+    #   world_manager:gimmick/teleporter/**
         scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
         scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
 

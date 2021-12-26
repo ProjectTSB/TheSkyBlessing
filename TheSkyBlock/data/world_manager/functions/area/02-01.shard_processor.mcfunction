@@ -7,5 +7,3 @@
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 01
-# 処理
-    function world_manager:gimmick/shard_processor/

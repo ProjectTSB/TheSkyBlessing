@@ -23,8 +23,8 @@
 # スポナー処理部
     execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s run function asset_manager:spawner/tick/
 
-# テレポーター
-    function world_manager:teleporter/tick
+# ワールドギミック
+    function world_manager:gimmick/
 
 # Mob処理部
     # データ初期化部
