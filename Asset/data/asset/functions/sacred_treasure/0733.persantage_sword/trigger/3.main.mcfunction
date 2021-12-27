@@ -14,27 +14,27 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
-    execute if entity @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.6 1.7
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.persantage_sword/trigger/4.sweeping_particle
+    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
+    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.6 1.7
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.persantage_sword/trigger/4.sweeping_particle
 
-# 3割の割合追加ダメージまでの処理
+# 4割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6] run data modify storage lib: Argument.BypassResist set value 1b
-    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
+    data modify storage lib: Argument.BypassResist set value 1b
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.040 run attribute @s generic.max_health get 10
 
-# 対象が天使でダメージ量が51以上の場合強制的にダメージを50に
-    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] if score $KD.DamageValue Temporary matches 51.. run data modify storage lib: Argument.Damage set value 50.0f
+# 対象が天使でダメージ量が11以上の場合強制的にダメージを10に
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] if score $KD.DamageValue Temporary matches 11.. run data modify storage lib: Argument.Damage set value 10.0f
 
 # Mobが死んだときにエラー吐くのでそれ防止
     execute unless data storage lib: Argument.Damage run data modify storage lib: Argument.Damage set value 1.0
 
 # ダメージ
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
 
 # 色々リセット
     data remove storage lib: Argument
