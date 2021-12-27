@@ -7,9 +7,9 @@
 # フローラ
     data modify storage player_manager:god OfferingData.Flora.GodName set value "フローラ"
     data modify storage player_manager:god OfferingData.Flora.Items set value []
-    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:poppy"},Amount:[10,30],Name:'{"translate":"item.minecraft.poppy"}'}
-    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:dandelion"},Amount:[10,30],Name:'{"translate":"item.minecraft.dandelion"}'}
-    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:cornflower"},Amount:[10,30],Name:'{"translate":"item.minecraft.cornflower"}'}
+    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:poppy"},Amount:[10,30],Name:'{"translate":"block.minecraft.poppy"}'}
+    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:dandelion"},Amount:[10,30],Name:'{"translate":"block.minecraft.dandelion"}'}
+    data modify storage player_manager:god OfferingData.Flora.Items append value {Item:{id:"minecraft:cornflower"},Amount:[10,30],Name:'{"translate":"block.minecraft.cornflower"}'}
 # ニャプトフ
     data modify storage player_manager:god OfferingData.Nyaptov.GodName set value "ニャプトフ"
     data modify storage player_manager:god OfferingData.Nyaptov.Items set value []
@@ -19,9 +19,9 @@
 # ルーモア
     data modify storage player_manager:god OfferingData.Rumor.GodName set value "ルーモア"
     data modify storage player_manager:god OfferingData.Rumor.Items set value []
-    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:oak_log"},Amount:[30,60],Name:'{"translate":"item.minecraft.oak_log"}'}
+    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:oak_log"},Amount:[30,60],Name:'{"translate":"block.minecraft.oak_log"}'}
     data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:bread"},Amount:[15,25],Name:'{"translate":"item.minecraft.bread"}'}
-    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:string"},Amount:[10,20],Name:'{"translate":"item.minecraft.string"}'}
+    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:string"},Amount:[10,20],Name:'{"translate":"block.minecraft.string"}'}
 # ウルバン
     data modify storage player_manager:god OfferingData.Urban.GodName set value "ウルバン"
     data modify storage player_manager:god OfferingData.Urban.Items set value []
