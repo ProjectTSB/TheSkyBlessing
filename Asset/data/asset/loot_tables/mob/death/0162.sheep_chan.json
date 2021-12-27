@@ -650,12 +650,15 @@
             "rolls": 1,
             "entries": [
                 {
-                    "type": "minecraft:item",
-                    "name": "minecraft:emerald",
+                    "type": "minecraft:loot_table",
+                    "name": "common:currency/",
                     "functions": [
                         {
                             "function": "minecraft:set_count",
-                            "count": 5
+                            "count": {
+                                "min": 8,
+                                "max": 16
+                            }
                         }
                     ],
                     "conditions": [
