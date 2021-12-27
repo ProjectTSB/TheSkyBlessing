@@ -1,5 +1,14 @@
 {
     "values": [
+        "asset:mob/1009.ancient_light/tick/1.trigger",
+        "asset:mob/1010.starfury/tick/1.trigger",
+        "asset:mob/1011.meteor/tick/1.trigger",
+        "asset:mob/1012.meteor_big/tick/1.trigger",
+        "asset:mob/1008.yellow_star/tick/1.trigger",
+        "asset:mob/1007.red_star/tick/1.trigger",
+        "asset:mob/1006.green_star/tick/1.trigger",
+        "asset:mob/1005.blue_star/tick/1.trigger",
+        "asset:mob/1004.tultaria/tick/1.trigger",
         "asset:mob/example/tick/1.trigger",
         "asset:mob/0021.demon_eye/tick/1.trigger",
         "asset:mob/0027.skull_sniper/tick/1.trigger",

@@ -1,12 +1,16 @@
 {
     "values": [
+        "asset:mob/1008.yellow_star/attack/1.trigger",
+        "asset:mob/1007.red_star/attack/1.trigger",
+        "asset:mob/1006.green_star/attack/1.trigger",
+        "asset:mob/1005.blue_star/attack/1.trigger",
+        "asset:mob/1004.tultaria/attack/1.trigger",
         "asset:mob/example/attack/1.trigger",
         "asset:mob/0007.ectoplasm/attack/1.trigger",
         "asset:mob/0064.artery/attack/1.trigger",
         "asset:mob/0017.fire_bird/attack/1.trigger",
         "asset:mob/0063.ghost/attack/1.trigger",
         "asset:mob/0061.stray/attack/1.trigger",
-        "asset:mob/0062.drowned/attack/1.trigger",
         "asset:mob/0055.hetukedah/attack/1.trigger",
         "asset:mob/0057.none_fighter/attack/1.trigger",
         "asset:mob/0049.ice_obstructor/attack/1.trigger",

@@ -15,9 +15,9 @@
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle dust 0.867 0.667 0.161 1 ~ ~2 ~ 0 2.5 0 0 100
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle minecraft:explosion ~ ~ ~ 0.7 0.1 0.7 0 10
-    playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
-    playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1 1
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle minecraft:poof ~ ~ ~ 0.7 0.1 0.7 0.1 10
+    playsound minecraft:entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2
+    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 1 1.5
 
 # ダメージ
     #ダメージブレのための処理

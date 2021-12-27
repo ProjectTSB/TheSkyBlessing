@@ -10,4 +10,4 @@
     playsound block.respawn_anchor.deplete master @a ~ ~ ~ 0.6 2 0
 
 # 移動速度上昇
-    effect give @s speed 3 3 true
+    effect give @s speed 3 0 true

@@ -15,6 +15,9 @@
 # 没収されたアイテム / 3の値を設定
     scoreboard players operation @s Temporary /= $3 Const
 
+# 最大値をきめる
+    execute if score @s Temporary matches 300.. run scoreboard players set @s Temporary 300
+
 # ダメージ
     # 与えるダメージ
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get @s Temporary

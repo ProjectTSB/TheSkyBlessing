@@ -13,7 +13,7 @@
 
 # 雷属性攻撃
     # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 16f
+    data modify storage lib: Argument.Damage set value 28f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"

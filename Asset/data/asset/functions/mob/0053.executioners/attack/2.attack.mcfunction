@@ -20,7 +20,7 @@
     item replace entity @s weapon with stick{CustomModelData:20029}
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 7f
+    data modify storage lib: Argument.Damage set value 10f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"

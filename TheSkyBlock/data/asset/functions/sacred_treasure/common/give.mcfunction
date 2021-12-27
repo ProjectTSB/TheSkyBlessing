@@ -38,10 +38,11 @@
 # 各データ設定
     function asset_manager:sacred_treasure/create/set_data
 # 神器排出
-    execute if data storage asset:context {IsDrop:true} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
-    execute unless data storage asset:context {IsDrop:true} run function api:inventory/get_size
-    execute unless data storage asset:context {IsDrop:true} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
-    execute unless data storage asset:context {IsDrop:true} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    # execute if data storage asset:context {Type:"box"} // 何もする必要がない
+    execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute unless data storage asset:context {Type:"drop"} run function api:inventory/get_size
+    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
+    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
 # リセット
     scoreboard players reset $InvSize Lib
     data remove storage asset:sacred_treasure ID

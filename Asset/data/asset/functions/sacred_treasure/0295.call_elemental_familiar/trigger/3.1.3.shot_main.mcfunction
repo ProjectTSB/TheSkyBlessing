@@ -13,7 +13,9 @@
     execute if entity @s[tag=295Fa.ShotFire] run particle minecraft:flame ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
 
     execute if entity @s[tag=295Fa.ShotWater] run particle minecraft:dust 0.298 0.471 0.945 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+    execute if entity @s[tag=295Fa.ShotWater] run particle minecraft:scrape ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
     execute if entity @s[tag=295Fa.ShotThunder] run particle minecraft:dust 0.878 1 0.333 1 ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
+    execute if entity @s[tag=295Fa.ShotThunder] run particle minecraft:wax_on ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
 #    particle minecraft:soul_fire_flame ~ ~0.5 ~ 0 0 0 0 1 force @a[distance=..30]
 
 # 正面が地形なら消滅

@@ -3,7 +3,7 @@
 
 #> storage
 # @within *
-#   asset:island/*/register/register
+#   asset:island/*/register/*
 #   asset:island/common/register
 #   asset_manager:island/**
 #declare storage asset:island

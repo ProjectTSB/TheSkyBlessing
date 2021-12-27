@@ -18,3 +18,5 @@
 # テレポート
     tp @s @s
     tp @s 23.5 3.5 24.5 180 ~
+# チュートリアル完了済フラグ
+    tag @s add TutorialEnded

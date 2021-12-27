@@ -9,7 +9,7 @@
     #declare tag MalleusMaleficarumSacrifice
 
 #対象にタグ付け
-    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!MalleusMaleficarumIndicator,dx=1,dy=1,dz=1,sort=nearest,limit=1] run tag @s add MalleusMaleficarumSacrifice
+    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Enemy.Boss,tag=!MalleusMaleficarumIndicator,dx=1,dy=1,dz=1,sort=nearest,limit=1] run tag @s add MalleusMaleficarumSacrifice
 
 #効果音
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=MalleusMaleficarumSacrifice,dx=1,dy=1,dz=1,sort=nearest,limit=1] at @s run playsound entity.zombie_villager.converted player @a ~ ~ ~ 1 1

@@ -11,7 +11,7 @@
 
 # 効果
     effect give @a[distance=..10] strength 300 15
-    effect give @e[type=#lib:living,type=!player,tag=Friend,tag=!Uninterferable,distance=..10] strength 300 15
+    effect give @e[type=#lib:living,type=!player,tag=Friend,tag=!Uninterferable,distance=..10] strength 300 1
 # 演出
     tellraw @a[distance=..10] [{"text":"不思議なタンバリン","color":"yellow"},{"text":"の音が聞こえた。\n不思議と力がみなぎってくる。","color":"white"}]
     playsound minecraft:block.chain.place master @a ~ ~ ~ 1 1

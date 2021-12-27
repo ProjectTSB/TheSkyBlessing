@@ -33,10 +33,10 @@
     scoreboard players operation $PlayerX Temporary *= $PlayerX Temporary
     scoreboard players operation $PlayerY Temporary *= $PlayerY Temporary
     scoreboard players operation $PlayerZ Temporary *= $PlayerZ Temporary
-# プレイヤーにセット
     scoreboard players operation $SquaredDistance Temporary = $PlayerX Temporary
     scoreboard players operation $SquaredDistance Temporary += $PlayerY Temporary
     scoreboard players operation $SquaredDistance Temporary += $PlayerZ Temporary
+# プレイヤーにセット
     execute if score $SquaredDistance Temporary <= $RequiredPlayerRange Temporary run tag @e[type=snowball,tag=this,distance=..0.01] add Success
 # リセット
     scoreboard players reset $SpawnerX Temporary
