@@ -2,7 +2,7 @@
 #
 # 各トリガーに処理受け渡し
 #
-# @within function asset_manager:sacred_treasure/tick
+# @within function asset_manager:sacred_treasure/tick/player
 
 # thisタグ
     tag @s add this
