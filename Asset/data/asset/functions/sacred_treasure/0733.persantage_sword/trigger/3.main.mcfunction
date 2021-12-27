@@ -22,7 +22,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
-    data modify storage lib: Argument.BypassResist set value 1b
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6] run data modify storage lib: Argument.BypassResist set value 1b
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 0.030 run attribute @s generic.max_health get 10
 
 # 対象が天使でダメージ量が51以上の場合強制的にダメージを50に
