@@ -32,7 +32,14 @@
                                 ],
                                 [
                                     {
-                                        "text": "加工することで数多の可能性を呼び寄せ、神器として顕現させることができる。",
+                                        "text": "加工することで数多の可能性を呼び寄せ、",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "神器として顕現させることができる。",
                                         "italic": false,
                                         "color": "light_purple"
                                     }
