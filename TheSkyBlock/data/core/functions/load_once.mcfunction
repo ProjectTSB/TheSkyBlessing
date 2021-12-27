@@ -196,6 +196,7 @@ team modify NoCollision collisionRule never
     #> PlayerManager - 信仰
     # @within function player_manager:god/**
         scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
 
     #> PlayerManager - Teams

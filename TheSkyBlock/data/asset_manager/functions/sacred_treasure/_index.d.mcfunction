@@ -23,7 +23,7 @@
 # @within function
 #   asset_manager:sacred_treasure/check/check_special_cooldown
 #   asset_manager:sacred_treasure/use/
-#   asset_manager:sacred_treasure/tick
+#   asset_manager:sacred_treasure/tick/
 #   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 

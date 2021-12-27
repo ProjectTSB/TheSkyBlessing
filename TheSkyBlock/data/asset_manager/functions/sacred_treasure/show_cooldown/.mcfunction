@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:sacred_treasure/tick
+# @within function asset_manager:sacred_treasure/tick/player
 
 # 割合に変換
     scoreboard players operation $CoolDown Temporary = @s WeaponLogCD

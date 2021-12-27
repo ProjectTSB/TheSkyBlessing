@@ -13,6 +13,9 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
+# 神器のグローバルtick処理
+    function asset_manager:sacred_treasure/tick/
+
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player
 
@@ -51,4 +54,4 @@
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
 
 # 0-0-0-0-0消失警告
-    execute unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]
+    execute if score $LoadTime Global matches 160.. unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]

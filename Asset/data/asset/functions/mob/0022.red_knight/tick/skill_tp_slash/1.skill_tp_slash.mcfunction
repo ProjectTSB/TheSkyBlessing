@@ -8,7 +8,7 @@
     execute if score @s M.Tick matches 4 run tag @e[type=armor_stand,tag=M.ArmorStand,distance=..0.01,sort=nearest,limit=1] add M.ArmorStandThis
 # プレイヤーの顔面TP
     execute if score @s M.Tick matches 4 run tp @s @p[gamemode=!spectator]
-    execute if score @s M.Tick matches 4 at @s rotated ~ 0 run tp @s ^ ^ ^1.8 facing entity @p[gamemode=!spectator]
+    execute if score @s M.Tick matches 4 at @s rotated ~ 0 if entity @a[distance=..100] run tp @s ^ ^ ^1.8 facing entity @p[gamemode=!spectator]
 # アマスタを持ってきてタグを消す
     execute if score @s M.Tick matches 4 run tp @e[type=armor_stand,tag=M.ArmorStandThis,sort=nearest,limit=1] @s
     execute if score @s M.Tick matches 4 run tag @e[type=armor_stand,tag=M.ArmorStandThis,sort=nearest,limit=1] remove M.ArmorStandThis

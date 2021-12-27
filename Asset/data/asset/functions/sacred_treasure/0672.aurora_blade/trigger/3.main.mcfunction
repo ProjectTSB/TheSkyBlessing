@@ -28,7 +28,7 @@
             scoreboard players add $RandomDamage Temporary 20
     #ダメージセット 天使なら1.5倍
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
-        execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 1.5 run scoreboard players get $RandomDamage Temporary
+        execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..6] store result storage lib: Argument.Damage float 2 run scoreboard players get $RandomDamage Temporary
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性

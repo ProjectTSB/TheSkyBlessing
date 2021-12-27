@@ -4,4 +4,4 @@
 #
 # @within function player_manager:god/change_believe/unbelieve2
 
-tellraw @a {"text":"ルーモア「もういい！どっかに行ってればいいよ！」"}
+tellraw @s {"text":"ルーモア「もういい！どっかに行ってればいいよ！」"}
