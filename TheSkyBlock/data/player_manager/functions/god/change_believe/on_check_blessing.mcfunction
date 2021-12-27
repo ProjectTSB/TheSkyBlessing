@@ -9,3 +9,5 @@ execute if score @s InSubArea matches 11 run function lib:message/god/nyaptov/bl
 execute if score @s InSubArea matches 12 run function lib:message/god/rumor/blessing
 execute if score @s InSubArea matches 13 run function lib:message/god/urban/blessing
 execute if score @s InSubArea matches 14 run function lib:message/god/wi-ki/blessing
+
+function player_manager:god/change_believe/check-1/

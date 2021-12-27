@@ -5,7 +5,7 @@
 # @within function player_manager:god/change_believe/check-1/listener
 
 # エラー値
-    execute unless score @s Believe matches 1 run function lib:message/invalid_operation
+    execute unless score @s Believe matches 1..2 run function lib:message/invalid_operation
 # 正常値
     execute if score @s Believe matches 1 run function oh_my_dat:please
     execute if score @s Believe matches 1 unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[0] run function player_manager:god/change_believe/on_change
