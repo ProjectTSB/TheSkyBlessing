@@ -23,7 +23,7 @@
 # 神の処理
     function player_manager:god/tick
 # 神器処理
-    function asset_manager:sacred_treasure/tick
+    function asset_manager:sacred_treasure/tick/player
 # MP回復処理
     function player_manager:mp/regen/check
 # テレポーター処理
