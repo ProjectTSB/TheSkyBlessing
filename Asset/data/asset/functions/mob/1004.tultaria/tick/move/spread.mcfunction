@@ -8,7 +8,7 @@
 # タグをつける
     tag @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] add RW.ArmorStandThis
 # 拡散する
-    execute at @a[gamemode=!spectator,sort=random,limit=1] run function lib:spread_entity/
+    execute at @a[gamemode=!spectator,distance=..100,sort=random,limit=1] run function lib:spread_entity/
 # アマスタを持ってくる
     tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s
 # タグを消す
