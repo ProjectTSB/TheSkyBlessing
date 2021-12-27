@@ -26,10 +26,10 @@
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~14の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $14 Const
+        # 剰余算する。0~17の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $18 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 41
+            scoreboard players add $RandomDamage Temporary 28
         # 移動速度の追加分を加算
             scoreboard players operation $RandomDamage Temporary += $AddDamage Temporary
     #ダメージを代入
@@ -47,8 +47,8 @@
 # Mobのノクバ耐性を100倍で取得 天使だったら実行しない
     execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6,limit=1] store result score $MobKnockbackResist Temporary run attribute @e[type=#lib:living,type=!player,tag=Victim,distance=..6,limit=1] generic.knockback_resistance get 100
 
-# ノクバ耐性が1.0でないなら実行
-    execute if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
+# 自身の移動速度がマイナスではなく、ノクバ耐性が1.0でないなら実行
+    execute if score $VectorMagnitude Lib matches 1.. if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
 
 # リセット
     data remove storage lib: Argument

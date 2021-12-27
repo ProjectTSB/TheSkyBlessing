@@ -6,7 +6,7 @@
 
 #> バージョン情報の設定と通知
 data modify storage global Version set value 30
-tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
+execute if data storage global {IsProduction:0b} run tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
@@ -312,6 +312,11 @@ team modify NoCollision collisionRule never
     #   asset_manager:*/triggers/
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
+
+
+#> 各Asset側のロード処理
+    function #asset:sacred_treasure/load
+    function #asset:mob/load
 
 
 #> 神の慈悲アイテムを定義する
