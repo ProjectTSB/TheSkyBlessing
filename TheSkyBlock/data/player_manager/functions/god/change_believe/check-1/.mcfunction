@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/
+# @within function
+#   player_manager:god/change_believe/
+#   player_manager:god/change_believe/on_check_blessing
 
 # トリガー有効化
     scoreboard players enable @s Believe
