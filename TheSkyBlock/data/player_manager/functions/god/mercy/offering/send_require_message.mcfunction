@@ -6,4 +6,4 @@
 
 function player_manager:god/mercy/offering/get
 
-tellraw @a [{"storage":"player_manager:god","nbt":"TargetOfferingData.GodName","color":"white"},{"text":"に慈悲を乞うには","color":"white"},{"storage":"player_manager:god","nbt":"TargetOfferingData.Next.Name","interpret":true,"color":"green"},{"text":"が","color":"white"},{"storage":"player_manager:god","nbt":"TargetOfferingData.Next.Amount","color":"green"},{"text":"個必要なようだ...","color":"white"}]
+tellraw @s [{"storage":"player_manager:god","nbt":"TargetOfferingData.GodName","color":"white"},{"text":"に慈悲を乞うには","color":"white"},{"storage":"player_manager:god","nbt":"TargetOfferingData.Next.Name","interpret":true,"color":"green"},{"text":"が","color":"white"},{"storage":"player_manager:god","nbt":"TargetOfferingData.Next.Amount","color":"green"},{"text":"個必要なようだ...","color":"white"}]
