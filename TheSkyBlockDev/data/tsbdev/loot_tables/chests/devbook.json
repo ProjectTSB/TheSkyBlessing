@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:written_book",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{pages:['[\"\",{\"text\":\"Overworld\\\\n\\\\n\"},{\"text\":\"0 0 0\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:overworld run tp @s 0 0 0\"}},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"~ ~ ~\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:overworld run tp @s ~ ~ ~\"}},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u6700\\\\u521d\\\\u306e\\\\u5cf6\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:overworld run tp @s 23 3 24\"}}]','[\"\",{\"text\":\"The Nether\\\\n\\\\n\"},{\"text\":\"0 0 0\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:the_nether run tp @s 0 0 0\"}},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"~ ~ ~\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:the_nether run tp @s ~ ~ ~\"}},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u30b2\\\\u30fc\\\\u30c8\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:the_nether run tp @s 3 73 16\"}}]','[\"\",{\"text\":\"The End\\\\n\\\\n\"},{\"text\":\"0 0 0\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:the_end run tp @s 0 0 0\"}},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"~ ~ ~\",\"underlined\":true,\"color\":\"dark_aqua\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"\/execute in minecraft:the_end run tp @s ~ ~ ~\"}}]'],title:\"TSB DevBook\",author:TSB}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
