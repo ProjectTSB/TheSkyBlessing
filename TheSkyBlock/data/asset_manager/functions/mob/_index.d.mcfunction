@@ -57,6 +57,7 @@
     #declare tag AntiBurn
     #declare tag AlwaysBurn
     #declare tag AlwaysInvisible
+    #declare tag AlwaysSlowFall
     #declare tag AutoKillWhenDieVehicle
     #declare tag Frozen
     #declare tag Drown
