@@ -5,7 +5,7 @@
 # @within function asset:mob/0139.blast_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage"],Silent:1b,DeathLootTable:"asset:mob/death/0139.blast_eye"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],Silent:1b,DeathLootTable:"asset:mob/death/0139.blast_eye"}
 # ID (int)
     data modify storage asset:mob ID set value 139
 # Type (string) Wikiを参照
@@ -57,6 +57,16 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
+
+# 爆破時間ランダム化
+    # 取得
+        execute store result score $Random Temporary run function lib:random/
+    # mod100で下2桁
+        scoreboard players operation $Random Temporary %= $100 Const
+    # 代入
+        scoreboard players operation @e[type=zombie,tag=MobInit,distance=..0.01] 3v.Time = $Random Temporary
+    # Tempリセット
+        scoreboard players reset $Random Temporary
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
