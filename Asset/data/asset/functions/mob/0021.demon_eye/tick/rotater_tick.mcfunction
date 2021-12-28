@@ -20,7 +20,7 @@
     scoreboard players add $L.AngleX L.Rot 1500
 
 # Y軸の振り向き速度
-    scoreboard players add $L.AngleY L.Rot 3000
+    scoreboard players add $L.AngleY L.Rot 1500
 
 # 回転角度加算
     execute rotated as @s positioned as @a[distance=..100] positioned ^-100 ^ ^ positioned as @s[distance=..100] run scoreboard players operation $L.RotX L.Rot -= $L.AngleY L.Rot

@@ -14,7 +14,7 @@
     execute at @s anchored eyes as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function asset:mob/0021.demon_eye/tick/rotater_tick
 
 # 速さ
-    scoreboard players set $VectorMagnitude Lib 12
+    scoreboard players set $VectorMagnitude Lib 15
 
 # 飛ぶのに使う
     execute if data entity @s {HurtTime:0s} at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/
@@ -34,3 +34,7 @@
 
 # カベにぶつかった際の処理
     execute unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
+
+# 世界に存在しすぎた場合、消滅する
+    scoreboard players remove @s L.LifeTime 1
+    execute if score @s L.LifeTime matches ..0 run function asset:mob/0021.demon_eye/tick/event/suicide
