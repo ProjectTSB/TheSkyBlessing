@@ -5,7 +5,7 @@
 # @within function asset:mob/0021.demon_eye/tick/2.tick
 
 
-    data modify storage lib: Argument.Damage set value 9.8f
+    data modify storage lib: Argument.Damage set value 3f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function api:data_get/hurt_time
