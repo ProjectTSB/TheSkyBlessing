@@ -6,6 +6,7 @@
 
 #> バージョン情報の設定と通知
 data modify storage global Version set value 30
+data modify storage global GameVersion set value "v0.0.1"
 execute if data storage global {IsProduction:0b} run tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
