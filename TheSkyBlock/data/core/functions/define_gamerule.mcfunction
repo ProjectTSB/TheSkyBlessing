@@ -32,7 +32,7 @@ gamerule maxCommandChainLength 2147483647
 gamerule maxEntityCramming 24
 execute if data storage global {IsProduction:1b} run gamerule mobGriefing true
 execute if data storage global {IsProduction:0b} run gamerule mobGriefing false
-gamerule naturalRegeneration false
+gamerule naturalRegeneration true
 gamerule randomTickSpeed 3
 execute if data storage global {IsProduction:1b} run gamerule reducedDebugInfo true
 execute if data storage global {IsProduction:0b} run gamerule reducedDebugInfo false
