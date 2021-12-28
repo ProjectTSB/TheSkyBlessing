@@ -58,5 +58,15 @@
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
 
+# 爆破時間ランダム化
+    # 取得
+        execute store result score $Random Temporary run function lib:random/
+    # mod100で下2桁
+        scoreboard players operation $Random Temporary %= $100 Const
+    # 代入
+        scoreboard players operation @e[type=zombie,tag=MobInit,distance=..0.01] 3v.Time = $Random Temporary
+    # Tempリセット
+        scoreboard players reset $Random Temporary
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

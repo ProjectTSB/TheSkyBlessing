@@ -4,5 +4,9 @@
 #
 # @within function asset:mob/0139.blast_eye/tick/2.1.active_tick
 
-particle minecraft:explosion ~ ~ ~ 1 1 1 0 3
-execute if score @s 3v.Time matches 165 run particle minecraft:poof ~ ~ ~ 0.8 0.8 0.8 0 20
+# 演出
+    particle minecraft:explosion ~ ~ ~ 1 1 1 0 3
+    execute if score @s 3v.Time matches 245.. run particle minecraft:poof ~ ~ ~ 0.8 0.8 0.8 0 6
+
+# mob固定
+    tp @s @s
