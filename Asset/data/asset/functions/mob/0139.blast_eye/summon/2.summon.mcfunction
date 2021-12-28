@@ -5,7 +5,7 @@
 # @within function asset:mob/0139.blast_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage"],Silent:1b,DeathLootTable:"asset:mob/death/0139.blast_eye"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],Silent:1b,DeathLootTable:"asset:mob/death/0139.blast_eye"}
 # ID (int)
     data modify storage asset:mob ID set value 139
 # Type (string) Wikiを参照
