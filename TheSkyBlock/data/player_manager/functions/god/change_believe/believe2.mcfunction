@@ -6,6 +6,8 @@
 
 # 共通処理
     tag @s remove Believe.None
+# 共通演出
+    execute at @s run particle enchant ~ ~2 ~ 0.1 0.1 0.1 1 100
 # 各神固有処理
     execute if score @s InSubArea matches 10 run function lib:message/god/flora/believe2
     execute if score @s InSubArea matches 10 run function player_manager:god/flora/believe
