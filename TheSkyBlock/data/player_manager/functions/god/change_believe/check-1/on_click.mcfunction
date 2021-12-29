@@ -12,4 +12,4 @@
     execute if score @s Believe matches 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[0] run function player_manager:god/change_believe/check-2/
     execute if score @s Believe matches 2 run function player_manager:god/change_believe/on_check_blessing
 # リセット
-    execute unless score @s Believe matches 2 run scoreboard players reset @s Believe
+    execute unless score @s Believe matches 0 run scoreboard players reset @s Believe
