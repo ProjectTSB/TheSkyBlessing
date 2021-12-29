@@ -44,6 +44,7 @@
     execute if score @s InSubArea matches 14 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
 # リセット
     data remove storage lib: Array
+    function lib:array/force_delete_cache
     scoreboard players reset $CandidatesLength Temporary
     scoreboard players reset $Count Temporary
     scoreboard players reset $Diff Temporary
