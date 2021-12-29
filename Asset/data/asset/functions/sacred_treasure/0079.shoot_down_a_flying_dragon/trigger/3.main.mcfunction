@@ -21,8 +21,8 @@
             execute if predicate lib:weather/is_sunny run scoreboard players set $Weather Temporary 0
             execute if predicate lib:weather/is_raining run scoreboard players set $Weather Temporary 1
             execute if predicate lib:weather/is_thundering run scoreboard players set $Weather Temporary 2
-        # 周囲の水の数を取得 Yは同座標のみ
-            execute store result score $AroundWater Temporary run clone ~-0.5 ~ ~-0.5 ~0.5 ~ ~0.5 ~-0.5 ~ ~-0.5 filtered water force
+        # 周囲の水の数を取得
+            execute store result score $AroundWater Temporary run clone ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 ~-0.5 ~-0.5 ~-0.5 filtered water force
 
     # 対象を設定
         # 前提として近い1体はHit確定
@@ -31,7 +31,7 @@
         # 自身が水の近くにいた場合($AroundWater=1..)、「r=..10にいる、周囲に水がある敵」も対象となる
         # //要するに自分も相手も水の近くにいたら範囲攻撃！！
             # MobのTemporaryはMob周囲の水の数に設定(ちょっと広めに判定をとる)
-                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] at @s store result score @s Temporary run clone ~-1 ~ ~-1 ~1 ~ ~1 ~-1 ~ ~-1 filtered water force
+                execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] at @s store result score @s Temporary run clone ~-1 ~-0.5 ~-1 ~1 ~0.5 ~1 ~-1 ~-0.5 ~-1 filtered water force
             # as Mob：@s のTemporaryが1..ならHitする
                 execute if score $AroundWater Temporary matches 1.. as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..10] if score @s Temporary matches 1.. run tag @s add Hit
             # プレイヤーへの誤Hit処理 HitしたMobの0.05m以内にいると自分にもあたる やっぱPKしたいじゃぁん？
