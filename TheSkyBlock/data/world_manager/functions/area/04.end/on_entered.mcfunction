@@ -6,3 +6,5 @@
 
 # ゲームモードをアドベンチャーに
     gamemode adventure @s[gamemode=!creative]
+# エンドラが沸いてる可能性があるのでさよならしようね
+    kill @e[type=ender_dragon]
