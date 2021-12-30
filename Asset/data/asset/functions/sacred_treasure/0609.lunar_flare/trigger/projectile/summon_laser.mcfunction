@@ -18,9 +18,9 @@
 
 # ビームを飛ばす
     # 演出
-        playsound entity.blaze.shoot master @a ~ ~ ~ 1 2
+        playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 2
     # 判定用アマスタ召喚
-        summon armor_stand ~ ~ ~ {Invisible:1b,Tags:["GX.Laser","GX.First","Projectile"]}
+        summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["GX.Laser","GX.First","Projectile"]}
     # ユーザーIDを適応
         scoreboard players operation @e[type=armor_stand,tag=GX.First] GX.UserID = @s GX.UserID
     # 分散させる。着弾点がまとまる
