@@ -10,4 +10,4 @@
     execute if score @s Believe3 matches 1 run function player_manager:god/mercy/on_check_offering
     execute if score @s Believe3 matches 2 run function player_manager:god/mercy/on_mercy
 # リセット
-    execute unless score @s Believe3 matches 1 run scoreboard players reset @s Believe3
+    execute unless score @s Believe3 matches 0 run scoreboard players reset @s Believe3

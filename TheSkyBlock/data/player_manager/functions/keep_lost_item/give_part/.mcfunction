@@ -21,6 +21,7 @@
 # 実行座標から降らす
     function player_manager:keep_lost_item/give_part/falling_item
 # リセット
+    data remove storage lib: Array
     scoreboard players reset $GiveCount Temporary
     scoreboard players reset $ListLength Temporary
     scoreboard players reset $Index Temporary

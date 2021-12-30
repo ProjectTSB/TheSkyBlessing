@@ -37,5 +37,8 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 0
 
+# この世界に存在できる時間
+    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] L.LifeTime 800
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+
