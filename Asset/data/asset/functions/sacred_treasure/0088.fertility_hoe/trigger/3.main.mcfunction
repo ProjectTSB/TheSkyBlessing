@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0088.fertility_hoe/trigger/2.check_condition
 
+#> private
+# @private
+    #declare score_holder $PlayerHeight
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/common/use/auto
 
@@ -16,13 +20,21 @@
     # 処理
         clear @s bone_meal 8
 
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 wheat[age=7] replace wheat
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 beetroots[age=3] replace beetroots
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 carrots[age=7] replace carrots
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 potatoes[age=7] replace potatoes
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 melon_stem[age=7] replace melon_stem
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 pumpkin_stem[age=7] replace pumpkin_stem
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 sweet_berry_bush[age=3] replace sweet_berry_bush
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 cave_vines[berries=true] replace cave_vines
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 cave_vines_plant[berries=true] replace cave_vines_plant
-        fill ~-4 ~-4 ~-4 ~4 ~4 ~4 nether_wart[age=3] replace nether_wart
+        # 最下層
+        execute if score $PlayerHeight Temporary matches 4000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer1
+        # 第2層
+        execute if score $PlayerHeight Temporary matches 3000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer2
+        # 第3層
+        execute if score $PlayerHeight Temporary matches 2000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer3
+        # 第4層
+        execute if score $PlayerHeight Temporary matches 1000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer4
+        # 第5層 //プレイヤーと同座標
+        function asset:sacred_treasure/0088.fertility_hoe/layer/layer5
+        # 第6層
+        execute if score $PlayerHeight Temporary matches ..254999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer6
+        # 第7層
+        execute if score $PlayerHeight Temporary matches ..253999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer7
+        # 第8層
+        execute if score $PlayerHeight Temporary matches ..252999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer8
+        # 第9層
+        execute if score $PlayerHeight Temporary matches ..251999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer9
