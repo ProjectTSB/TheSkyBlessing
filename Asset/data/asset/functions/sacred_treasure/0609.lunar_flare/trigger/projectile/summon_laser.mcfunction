@@ -1,10 +1,9 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser
+#> asset:sacred_treasure/0609.lunar_flare/trigger/projectile/summon_laser
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0609.lunar_flare/trigger/3.main
-#    asset:sacred_treasure/0609.lunar_flare/trigger/3.1.beamshot
+#    asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beamshot
 
 #> SpreadLib
 # @private
