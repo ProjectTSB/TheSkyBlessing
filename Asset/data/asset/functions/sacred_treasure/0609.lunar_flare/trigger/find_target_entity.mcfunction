@@ -2,9 +2,11 @@
 #
 # 視点先みるやつ
 #
-# @within function asset:sacred_treasure/0609.lunar_flare/trigger/2.check_condition
+# @within function asset:sacred_treasure/0609.lunar_flare/trigger/3.main
 # @within function asset:sacred_treasure/0609.lunar_flare/trigger/find_target_entity
 
+# パーティクル
+    particle composter ~ ~ ~ 0 0 0 0 1 force @s[distance=14.5..15]
 
 # 視線先を見る
     execute positioned ~-1 ~-1 ~-1 as @e[type=#lib:living,type=!player,tag=!Object,tag=!Uninterferable,tag=!Projectile,tag=!Npc,dx=0,dy=0,dz=0] positioned ~1 ~1 ~1 if entity @s[dx=0,dy=0,dz=0] run tag @s add GX.Target

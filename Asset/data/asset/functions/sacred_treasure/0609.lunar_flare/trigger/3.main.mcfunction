@@ -7,6 +7,9 @@
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/auto
 
+#
+    execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0609.lunar_flare/trigger/find_target_entity
+
 # ここから先は神器側の効果の処理を書く
 
 # 演出
@@ -25,4 +28,4 @@
     tag @e[type=#lib:living,tag=GX.Target] remove GX.Target
 
 # ファンクション分岐
-    execute as @e[type=armor_stand,tag=GX.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/3.1.beamshot
+    execute as @e[type=armor_stand,tag=GX.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beamshot

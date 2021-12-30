@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/3.4.hit
+#> asset:sacred_treasure/0609.lunar_flare/trigger/projectile/hit
 #
 # ビーム部
 #
