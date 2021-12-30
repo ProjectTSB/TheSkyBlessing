@@ -9,7 +9,7 @@
 
 # 進ませる
     execute as @e[tag=GX.Laser] at @s run tp @s ^ ^ ^1
-    execute as @e[tag=GX.Laser] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0 0 0 0 1 force
+    execute as @e[tag=GX.Laser] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/particle
 
 # 攻撃する
     execute as @e[tag=GX.Laser] at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/hit

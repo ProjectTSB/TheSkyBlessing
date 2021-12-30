@@ -3,7 +3,7 @@
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beamshot
+#    asset:sacred_treasure/0609.lunar_flare/trigger/projectile/laser_pos_main
 
 #> SpreadLib
 # @private

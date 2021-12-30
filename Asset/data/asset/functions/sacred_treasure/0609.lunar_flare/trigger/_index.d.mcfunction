@@ -5,6 +5,7 @@
 # @within asset:sacred_treasure/0609.lunar_flare/trigger/**
     #declare tag GX.Target
     #declare tag GX.First
+    #declare tag GX.RecursiveEnd
     #declare tag Landing
     #declare tag LandingTarget
     #declare tag Watcher

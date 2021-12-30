@@ -6,9 +6,9 @@
 
 
 # 演出
-    particle explosion ~ ~ ~ 0 0 0 1 0
-    particle minecraft:block sea_lantern ~ ~ ~ 0.2 0.2 0.2 1 30
-    particle composter ~ ~ ~ 0.2 0.2 0.2 0.4 10
+    particle minecraft:dust 0 0.8 0.8 1 ~ ~-0.5 ~ 0.5 0.5 0.5 0 10 force @a[distance=..30]
+    particle minecraft:dust 0 0.8 0.6 0.8 ~ ~-0.5 ~ 0.5 0.5 0.5 0 10 force @a[distance=..30]
+    particle glow ~ ~-0.5 ~ 0.5 0.5 0.5 0 5 force @a[distance=..30]
     playsound entity.generic.explode master @a ~ ~ ~ 1 1
 
 # タグ付与
