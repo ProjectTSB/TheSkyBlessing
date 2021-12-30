@@ -28,4 +28,4 @@
     tag @e[type=#lib:living,tag=GX.Target] remove GX.Target
 
 # ファンクション分岐
-    execute as @e[type=armor_stand,tag=GX.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beamshot
+    execute as @e[type=armor_stand,tag=GX.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser
