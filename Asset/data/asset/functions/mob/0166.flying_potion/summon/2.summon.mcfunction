@@ -5,7 +5,7 @@
 # @within function asset:mob/0166.flying_potion/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0166.flying_potion"}
+    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0166.flying_potion",Passengers:[{id:"minecraft:potion",Tags:["4M.Potion"],Item:{id:"minecraft:splash_potion",Count:1b,tag:{CustomPotionColor:7289855}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 166
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:splash_potion",Count:1b,tag:{CustomPotionColor:7289855}}
+        # data modify storage asset:mob Armor.Head set value
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -43,7 +43,7 @@
 # 移動速度 (double) (オプション)
     # data modify storage asset:mob Speed set value
 # 索敵範囲 (double) (オプション)
-    data modify storage asset:mob FollowRange set value 32
+    data modify storage asset:mob FollowRange set value 64
 # ノックバック耐性 (double) (オプション)
     # data modify storage asset:mob KnockBackResist set value
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
