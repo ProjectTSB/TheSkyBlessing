@@ -5,7 +5,7 @@
 # @within function world_manager:gimmick/teleporter/tp/
 
 # TP先へ移動
-    data modify entity @s Pos set from storage world_manager:gimmick/teleporter TargetPos
+    data modify entity @s Pos set from storage world_manager:gimmick TargetPos
 # TP先テレポーターが存在しない場合設置する
     execute positioned as @s unless entity @e[type=marker,tag=Teleporter,distance=..0.5,limit=1] run summon marker ~ ~ ~ {Tags:["Teleporter","Object","Uninterferable"]}
 # TP先テレポーターの最終TP元を設定する
