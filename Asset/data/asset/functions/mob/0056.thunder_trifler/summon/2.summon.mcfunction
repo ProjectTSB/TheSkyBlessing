@@ -5,7 +5,7 @@
 # @within function asset:mob/0056.thunder_trifler/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiFrozen"],DeathLootTable:"asset:mob/death/0056.thunder_trifler"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0056.thunder_trifler"}
 # ID (int)
     data modify storage asset:mob ID set value 56
 # Type (string) Wikiを参照
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 65
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 5.0
+    data modify storage asset:mob AttackDamage set value 1.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 5.0
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす

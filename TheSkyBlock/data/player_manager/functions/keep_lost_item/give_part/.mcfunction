@@ -12,7 +12,6 @@
     data modify storage lib: Picks set value []
     execute store result score $ListLength Temporary if data storage lib: Array[]
     function player_manager:keep_lost_item/give_part/generate_index
-tellraw @a [{"text":"Picks: "},{"storage":"lib:","nbt":"Picks"}]
 # 添字配列を元にアイテムを取得する
     function lib:array/picks
 # もう現Arrayは要らないのでUserStorageに戻す
@@ -22,6 +21,7 @@ tellraw @a [{"text":"Picks: "},{"storage":"lib:","nbt":"Picks"}]
 # 実行座標から降らす
     function player_manager:keep_lost_item/give_part/falling_item
 # リセット
+    data remove storage lib: Array
     scoreboard players reset $GiveCount Temporary
     scoreboard players reset $ListLength Temporary
     scoreboard players reset $Index Temporary

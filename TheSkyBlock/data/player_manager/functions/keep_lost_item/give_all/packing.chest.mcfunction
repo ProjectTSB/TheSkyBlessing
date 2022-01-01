@@ -15,5 +15,7 @@
         function lib:array/packing_chest
     # チェストに突っ込む
         data modify storage player_manager:keep_lost_item Chests[-1].tag.BlockEntityTag.Items set from storage lib: Package
+    # リセット
+        data remove storage lib: Package
 # ループ処理
     execute if data storage lib: Array[0] run function player_manager:keep_lost_item/give_all/packing.chest

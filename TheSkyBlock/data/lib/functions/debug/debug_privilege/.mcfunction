@@ -5,4 +5,4 @@
 # @private
 # @user
 
-tag @s add DevPrivilege
+execute if data storage global {IsProduction:0b} run tag @s add DevPrivilege

@@ -42,6 +42,7 @@ data remove storage lib: Elements
         data modify storage lib: Array set from storage lib: ArrayTemp
 # リセット
     data remove storage lib: Picks
+    function lib:array/force_delete_cache
     data remove storage lib: ArrayTemp
     scoreboard players reset $Prev Temporary
     scoreboard players reset $Cur Temporary

@@ -4,8 +4,9 @@
 #> storage
 # @within *
 #   asset_manager:sacred_treasure/**
-#   asset:sacred_treasure/*/_.give
-#   asset:sacred_treasure/lib/**
+#   asset:sacred_treasure/*/register
+#   asset:sacred_treasure/*/give/2.give
+#   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
 #> LootTableに渡す用のscoreHolder
@@ -22,7 +23,7 @@
 # @within function
 #   asset_manager:sacred_treasure/check/check_special_cooldown
 #   asset_manager:sacred_treasure/use/
-#   asset_manager:sacred_treasure/tick
+#   asset_manager:sacred_treasure/tick/
 #   core:tick/
     #declare score_holder $SacredTreasureSpecialCooldown
 

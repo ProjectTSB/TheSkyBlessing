@@ -5,7 +5,8 @@
 # @within function asset:spawner/*/register
 
 # パラメータチェック
-    execute unless data storage asset:spawner SpawnPotentials run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MobID","color":"red"}]
+    execute unless data storage asset:spawner ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
+    execute unless data storage asset:spawner SpawnPotentials run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" SpawnPotentials","color":"red"}]
     execute unless data storage asset:spawner HP run data modify storage asset:spawner HP set value 2147483647
     execute unless data storage asset:spawner SpawnCount run data modify storage asset:spawner SpawnCount set value 3
     execute unless data storage asset:spawner SpawnRange run data modify storage asset:spawner SpawnRange set value 4

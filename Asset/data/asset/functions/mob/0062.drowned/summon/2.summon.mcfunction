@@ -13,10 +13,10 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    # data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set value '{"translate":"entity.minecraft.drowned","color":"gray"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:tridnet",Count:1b}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:trident",Count:1b}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 35
 # 攻撃力 (double) (オプション)
-    # data modify storage asset:mob AttackDamage set value
+    data modify storage asset:mob AttackDamage set value -6
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす

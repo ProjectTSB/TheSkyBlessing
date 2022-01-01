@@ -21,7 +21,7 @@
 #       SpecialCooldown : int
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
-# @within function asset:sacred_treasure/lib/give
+# @within function asset:sacred_treasure/common/give
 
 #> Private
 # @private
@@ -35,6 +35,8 @@
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
     execute store result storage asset:sacred_treasure Data.tag.TSB.UUID int 1 run scoreboard players get $SacredTreasureIndex Global
+# 扱える神のエイリアスを修正する
+    execute if data storage asset:sacred_treasure {CanUsedGod:"ALL"} run data modify storage asset:sacred_treasure CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
 # そのまま入れれるやつ
     data modify storage asset:sacred_treasure Data.id set from storage asset:sacred_treasure Item
     data modify storage asset:sacred_treasure Data.tag.CustomModelData set from storage asset:sacred_treasure ID
@@ -65,7 +67,8 @@
     data modify storage asset:sacred_treasure Data.tag merge from storage asset:sacred_treasure CustomNBT
 
 # データの適用
-    data modify block 10000 0 10000 Items append from storage asset:sacred_treasure Data
+    item replace block 10000 0 10000 container.0 with stone
+    data modify block 10000 0 10000 Items[0] set from storage asset:sacred_treasure Data
 
 # リセット
     data remove storage asset:sacred_treasure Data

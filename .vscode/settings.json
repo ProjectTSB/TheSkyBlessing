@@ -44,6 +44,10 @@
             {
                 "label": "id",
                 "parts": "/^id$/"
+            },
+            {
+                "label": "uuid",
+                "parts": "/^uuid$/"
             }
         ]
     ],
@@ -560,9 +564,27 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/0.load"
                     }
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:sacred_treasure/%namespace%/**",
+                        "    #declare"
+                    ]
                 }
             ]
         },
@@ -578,6 +600,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -596,6 +619,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -614,6 +638,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -632,6 +657,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -650,6 +676,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -668,6 +695,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -686,6 +714,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -704,6 +733,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -722,6 +752,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -740,6 +771,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -758,6 +790,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -776,6 +809,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -794,6 +828,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -812,6 +847,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -830,6 +866,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -848,6 +885,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -866,6 +904,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -884,6 +923,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -902,6 +942,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -920,6 +961,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -938,6 +980,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -956,6 +999,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -974,6 +1018,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -992,6 +1037,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1010,6 +1056,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1028,6 +1075,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1046,6 +1094,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1064,6 +1113,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1082,6 +1132,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1100,6 +1151,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1144,6 +1196,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/1.trigger"
                     }
@@ -1157,6 +1210,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/dis_equip/"
                     }
@@ -1200,6 +1254,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:sacred_treasure/%namespace%/rejoin_process"
                     }
@@ -1299,6 +1354,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/summon/1.trigger"
                     }
@@ -1390,9 +1446,27 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/0.load"
                     }
+                }
+            ]
+        },
+        {
+            "label": "MOB/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:mob/%namespace%/**",
+                        "    #declare"
+                    ]
                 }
             ]
         },
@@ -1432,6 +1506,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/attack/1.trigger"
                     }
@@ -1482,6 +1557,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/hurt/1.trigger"
                     }
@@ -1532,6 +1608,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/death/1.trigger"
                     }
@@ -1582,6 +1659,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/tick/1.trigger"
                     }
@@ -1619,6 +1697,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:mob/%namespace%/rejoin_process"
                     }
@@ -1683,6 +1762,7 @@
                         ]
                     },
                     "append": {
+                        "addFirst": true,
                         "key": "values",
                         "elem": "asset:spawner/%namespace%/"
                     }

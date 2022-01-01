@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":忌視者","color":"blue"}'
+    data modify storage asset:mob Name set value '{"text":"忌視者","color":"blue"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -48,9 +48,9 @@
     data modify storage asset:mob KnockBackResist set value 0.0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 0.7
+        data modify storage asset:mob Resist.Physical set value 1
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.7
+        data modify storage asset:mob Resist.Magic set value 1
     # 火倍率 (float) (オプション)
         data modify storage asset:mob Resist.Fire set value 0.25
     # 水倍率 (float) (オプション)

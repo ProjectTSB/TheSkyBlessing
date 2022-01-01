@@ -5,7 +5,7 @@
 # @within function asset:mob/0058.divide_haze/*/**
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn","AntiFrozen"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
 # ID (int)
     data modify storage asset:mob ID set value 58
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 40.0
+    data modify storage asset:mob Health set value 70.0
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 4.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -43,7 +43,7 @@
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.20
 # 索敵範囲 (double) (オプション)
-    data modify storage asset:mob FollowRange set value 10.0
+    data modify storage asset:mob FollowRange set value 25
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 1.0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る

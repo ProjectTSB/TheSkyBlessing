@@ -5,8 +5,9 @@
 # @within function core:load
 
 #> バージョン情報の設定と通知
-data modify storage global Version set value 24
-tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
+data modify storage global Version set value 30
+data modify storage global GameVersion set value "v0.0.1"
+execute if data storage global {IsProduction:0b} run tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
 #> forceload chunksの設定
@@ -145,6 +146,7 @@ team modify NoCollision collisionRule never
     #   asset:mob/*/**
     #   asset_manager:mob/**
     #   asset_manager:spawner/**
+    #   asset_manager:island/dispel/boss/remove
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
@@ -158,6 +160,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+
+    #> AssetManager: Island
+    # @within function
+    #   asset_manager:island/**
+        scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
+        scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -178,6 +186,7 @@ team modify NoCollision collisionRule never
 
     #> Library用スコアボード - PrivateUse
     # @within * lib:**
+        scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
     #> PlayerManager - AdjustHanger用スコアボード
@@ -185,10 +194,20 @@ team modify NoCollision collisionRule never
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
 
+    #> PlayerManager - 信仰
+    # @within function player_manager:god/**
+        scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
     #   player_manager:set_team
+        team add None.LowHP
+        team add None.MedHP
+        team add None.HighHP
         team add Flora.LowHP
         team add Flora.MedHP
         team add Flora.HighHP
@@ -204,6 +223,9 @@ team modify NoCollision collisionRule never
         team add Rumor.LowHP
         team add Rumor.MedHP
         team add Rumor.HighHP
+    team modify None.LowHP color red
+    team modify None.MedHP color yellow
+    team modify None.HighHP color green
     team modify Flora.LowHP color red
     team modify Flora.MedHP color yellow
     team modify Flora.HighHP color green
@@ -219,6 +241,9 @@ team modify NoCollision collisionRule never
     team modify Rumor.LowHP color red
     team modify Rumor.MedHP color yellow
     team modify Rumor.HighHP color green
+    team modify None.LowHP prefix {"text":"  ","color":"white"}
+    team modify None.MedHP prefix {"text":"  ","color":"white"}
+    team modify None.HighHP prefix {"text":"  ","color":"white"}
     team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
     team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
@@ -241,17 +266,41 @@ team modify NoCollision collisionRule never
     #   function core:load_once
     #   * lib:**
     #   * player_manager:**
-        #declare tag Believe.Flora
-        #declare tag Believe.Urban
-        #declare tag Believe.Nyaptov
-        #declare tag Believe.Wi-ki
-        #declare tag Believe.Rumor
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+
+    #> 最大値用スコアホルダー
+    # @within function
+    #   core:load_once
+    #   core:handler/first_join
+    #   player_manager:bonus/**
+    #   asset:sacred_treasure/0002.blessing/trigger/**
+        #declare score_holder $MaxHealth
+        #declare score_holder $MaxMP
+        #declare score_holder $AttackBonus
+        #declare score_holder $DefenseBonus
+    scoreboard players set $MaxHealth Global 200000
+    scoreboard players set $MaxMP Global 100
+    scoreboard players set $AttackBonus Global 0
+    scoreboard players set $DefenseBonus Global 0
+
+    #> WorldManager用スコアボード - Area
+    # @within function
+    #   world_manager:area/**
+    #   world_manager:** @readonly
+    #   player_manager:** @readonly
+        scoreboard objectives add InArea dummy {"text":"プレイヤーが居るエリア"}
+        scoreboard objectives add InSubArea dummy {"text":"どのサブエリアに居るか"}
+
+    #> WorldManager用スコアボード - テレポーター
+    # @within function
+    #   world_manager:gimmick/teleporter/**
+        scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
+        scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
@@ -266,6 +315,15 @@ team modify NoCollision collisionRule never
     #   asset_manager:*/triggers/
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
+
+
+#> 各Asset側のロード処理
+    function #asset:sacred_treasure/load
+    function #asset:mob/load
+
+
+#> 神の慈悲アイテムを定義する
+    function player_manager:god/mercy/offering/init
 
 
 #> Scheduleループの初期化(replace)
