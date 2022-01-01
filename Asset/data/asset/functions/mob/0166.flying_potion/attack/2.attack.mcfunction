@@ -29,9 +29,6 @@
     particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0.1 100
     playsound entity.splash_potion.break hostile @a ~ ~ ~ 1 1
 
-# ポーションには死んでもらう
-    kill @e[tag=4M.Potion,sort=nearest,limit=1]
-
 # 自殺する
     tp @s ~ ~-500 ~
     kill @s
