@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0702.bright_black_lamp/0.load
+#> asset:sacred_treasure/0702.bright_black_lamp/trigger/0.load
 #
 # 神器に利用するスコアボード等の初期化処理
 #

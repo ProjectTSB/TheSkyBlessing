@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0702.bright_black_lamp/_.give
+#> asset:sacred_treasure/0702.bright_black_lamp/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @private
+# @within function asset:sacred_treasure/0702.bright_black_lamp/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"明黒のランプ","color":"#C4C918"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"掲げればどんな暗闇も照らすランプ","color":"#E8E352"}','{"text":"自分含めた周囲のプレイヤーの盲目を解除し","color":"#A7AB14"}','{"text":"同範囲内のプレイヤーに暗視を付与","color":"#A7AB14"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"生物から光を奪い、その光でどんな暗闇も照らすランプ","color":"#E8E352"}','{"text":"自分含めた周囲のプレイヤーの盲目を解除し","color":"#A7AB14"}','{"text":"同範囲内のプレイヤーに暗視を付与する","color":"#A7AB14"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -54,4 +54,4 @@
     # data modify storage asset:sacred_treasure CustomNBT set value
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

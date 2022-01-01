@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0702.bright_black_lamp/9.lamp_wave4
+#> asset:sacred_treasure/0702.bright_black_lamp/trigger/09.lamp_wave4
 #
 #
 #
-# @within function asset:sacred_treasure/0702.bright_black_lamp/5.schedule_tick
+# @within function asset:sacred_treasure/0702.bright_black_lamp/trigger/05.schedule_tick
 
 # ダメージ処理
-    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=3..5] as @e[type=#lib:living,type=!player,distance=3..5] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/4
+    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=3..5] as @e[type=#lib:living,type=!player,distance=3..5] at @s run function asset:sacred_treasure/0702.bright_black_lamp/trigger/wave/04
 
 # 演出
     playsound minecraft:block.end_portal_frame.fill master @a ~ ~ ~ 1 1 0
-    
+
     # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAEYCcAbHKQOwCGAHALRwDMjl7ALEy7tKAJnHsArF2qV+9UimZd+YAgDtmAWwTJAYYoACAIxqwMZhm0BnJOBQB7QuohJWABgIo4zuBltgAN2ZsQl1wAA8kDzAoKIBfOIJLUjRCG0R+AisICxdEaLhsbDQYK10jN2iMexyIXWi0KwBRIpKypoBHQmDsKABlcy9yRAAzYLKEgF0gA_3
 # 円 1
     particle dust 1 0.9 0 2 ^0 ^ ^-4 0 0 0 0 1

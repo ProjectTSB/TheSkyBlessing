@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0702.bright_black_lamp/6.lamp_wave1
+#> asset:sacred_treasure/0702.bright_black_lamp/trigger/06.lamp_wave1
 #
 #
 #
-# @within function asset:sacred_treasure/0702.bright_black_lamp/5.schedule_tick
+# @within function asset:sacred_treasure/0702.bright_black_lamp/trigger/05.schedule_tick
 
 # ダメージとダメージ演出
-    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] as @e[type=#lib:living,type=!player,distance=..2] at @s run function asset:sacred_treasure/0702.bright_black_lamp/wave_damage/1
+    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] as @e[type=#lib:living,type=!player,distance=..2] at @s run function asset:sacred_treasure/0702.bright_black_lamp/trigger/wave/01
 
 # 演出
     playsound minecraft:block.end_portal_frame.fill master @a ~ ~ ~ 1 1 0
