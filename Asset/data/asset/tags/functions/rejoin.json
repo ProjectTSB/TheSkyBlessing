@@ -27,6 +27,6 @@
         "asset:mob/0151.recombined/rejoin_process",
         "asset:sacred_treasure/0610.call_fish/trigger/rejoin_process",
         "asset:mob/0131.haruclaire/rejoin_process",
-        "asset:sacred_treasure/0702.bright_black_lamp/rejoin_process"
+        "asset:sacred_treasure/0702.bright_black_lamp/trigger/rejoin_process"
     ]
 }
