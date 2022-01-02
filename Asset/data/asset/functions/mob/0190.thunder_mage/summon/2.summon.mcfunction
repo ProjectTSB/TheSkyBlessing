@@ -54,9 +54,9 @@
     # 火倍率 (float) (オプション)
         data modify storage asset:mob Resist.Fire set value 1
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 0.5
+        data modify storage asset:mob Resist.Water set value 1
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 1
+        data modify storage asset:mob Resist.Thunder set value 0.5
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
