@@ -1,8 +1,8 @@
-#> asset:mob/0138.combat_turret/tick/2.3.damage
+#> asset:mob/0138.combat_turret/tick/2.4.damage
 #
 # ダメージを与えます
 #
-# @within function asset:mob/0138.combat_turret/tick/2.2.shot
+# @within function asset:mob/0138.combat_turret/tick/2.3.shot
 
 # 演出
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 10
