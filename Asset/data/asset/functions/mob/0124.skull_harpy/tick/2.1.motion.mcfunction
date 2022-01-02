@@ -24,8 +24,6 @@
     # 近い場合
         execute if entity @p[tag=Target,distance=..9] facing entity @p eyes rotated ~180 ~-10 run function lib:motion/
 
-# リセット
-    scoreboard players reset $VectorMagnitude
 # タグを消す
     tag @a remove Target
 # スコアを消す
