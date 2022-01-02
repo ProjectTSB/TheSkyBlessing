@@ -11,6 +11,7 @@
 # Enemy
     execute if data storage asset:mob {Type:"Enemy"} run tag @s add Enemy
 
+    execute if data storage asset:mob {Type:"Enemy.Boss"} run data modify entity @s PersistenceRequired set value 1b
     execute if data storage asset:mob {Type:"Enemy.Boss"} run tag @s add Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run tag @s add Enemy.Boss
 # Projectile

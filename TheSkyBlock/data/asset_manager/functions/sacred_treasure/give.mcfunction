@@ -26,5 +26,7 @@
 # 呼び出し
     function api:sacred_treasure/give/from_id
 # リセット
+    data remove storage lib: Array
+    function lib:array/force_delete_cache
     scoreboard players reset $CandidateLength Temporary
     data remove storage lib: Array
