@@ -13,5 +13,5 @@
 # スコア
     scoreboard players add @s 59.Tick 1
 
-# 80tickごとに水魔法を召喚
-    execute if score @s 59.Tick matches 80.. run function asset:mob/0189.water_mage/tick/03.summon_water_magic
+# 100tickごとに水魔法を召喚
+    execute if score @s 59.Tick matches 100.. run function asset:mob/0189.water_mage/tick/03.summon_water_magic
