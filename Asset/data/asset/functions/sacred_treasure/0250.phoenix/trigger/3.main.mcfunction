@@ -30,7 +30,7 @@
         execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use master @a[distance=..100] ~ ~ ~ 10 1 1
         execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use master @a[distance=..100] ~ ~ ~ 10 1 1
     # だめーーじ
-        data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Thunder,BypassResist:0b}}
+        data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Fire,BypassResist:0b}}
         execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 50.0f
         execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 55.0f
         execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 60.0f
