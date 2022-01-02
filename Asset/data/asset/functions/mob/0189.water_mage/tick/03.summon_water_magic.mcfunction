@@ -12,5 +12,15 @@
 # プレイヤーが4m以上離れている場合、そっちの方向に召喚
     execute if entity @p[gamemode=!spectator,distance=4..30] facing entity @p[gamemode=!spectator,distance=4..30] feet positioned ^ ^ ^7 run function api:mob/summon
 
-# スコアリセット
-    scoreboard players reset @s 59.Tick
+# 次に攻撃するタイミングをランダムにする
+# 疑似乱数取得
+    execute store result score $Random Temporary run function lib:random/
+# 剰余算する
+    scoreboard players operation $Random Temporary %= $31 Const
+# スコアセットセット
+    scoreboard players operation @s 59.Tick = $Random Temporary
+# スコアセットされたものから少し減らす
+    scoreboard players remove @s 59.Tick 30
+
+# リセット
+    scoreboard players reset $Random Temporary
