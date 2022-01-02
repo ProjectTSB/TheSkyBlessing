@@ -1,8 +1,8 @@
-#> asset:mob/0138.combat_turret/tick/2.4.reset
+#> asset:mob/0138.combat_turret/tick/2.5.reset
 #
 #
 #
-# @within function asset:mob/0138.combat_turret/tick/2.tick
+# @within function asset:mob/0138.combat_turret/tick/2.1.near_player
 #> Private
 # @private
     #declare score_holder $RandomDamage
