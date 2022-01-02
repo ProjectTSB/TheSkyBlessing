@@ -1,8 +1,8 @@
-#> asset:mob/0214.water_magic/tick/05.vfx
+#> asset:mob/0214.water_magic/tick/06.vfx
 #
 #
 #
-# @within function asset:mob/0214.water_magic/tick/03.damage_and_vfx
+# @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
 # 音
     playsound entity.dolphin.splash master @a ~ ~ ~ 1 2 0

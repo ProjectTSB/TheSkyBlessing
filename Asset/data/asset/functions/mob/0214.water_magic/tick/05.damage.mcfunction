@@ -1,8 +1,8 @@
-#> asset:mob/0214.water_magic/tick/04.damage
+#> asset:mob/0214.water_magic/tick/05.damage
 #
 #
 #
-# @within function asset:mob/0214.water_magic/tick/03.damage_and_vfx
+# @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
 # ダメージ設定
     # 与えるダメージ
