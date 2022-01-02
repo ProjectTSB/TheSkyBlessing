@@ -15,8 +15,8 @@
     tag @s add this
 
 # ダメージ設定
-    # 与えるダメージ = 5
-        data modify storage lib: Argument.Damage set value 5
+    # 与えるダメージ = 10
+        data modify storage lib: Argument.Damage set value 20.0f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
