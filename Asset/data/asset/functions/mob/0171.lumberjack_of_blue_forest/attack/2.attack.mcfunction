@@ -6,7 +6,8 @@
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle soul ~ ~1.2 ~ 0.5 0.4 0.5 0.05 30 normal @a
-    execute at @p[tag=Victim,distance=..6] run particle falling_dust warped_planks ~ ~1.2 ~ 0.4 0.4 0.4 0 15 normal @a
+    execute at @p[tag=Victim,distance=..6] run particle falling_dust warped_stem ~ ~1.2 ~ 0.6 0.4 0.6 0 40 normal @a
+    execute at @p[tag=Victim,distance=..6] run particle block warped_planks ~ ~1.2 ~ 0.5 0.3 0.5 0 30 normal @a
     execute at @p[tag=Victim,distance=..6] run playsound entity.ghast.hurt master @a ~ ~ ~ 0.5 0.8 0
 
 # 最大体力-5
