@@ -9,14 +9,14 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 14f
+        data modify storage lib: Argument.Damage set value 10.5f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @p[gamemode=!creative,tag=LandingTarget,distance=..50] at @s run function lib:damage/
+        execute as @p[gamemode=!creative,tag=LandingTarget,distance=..30] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
