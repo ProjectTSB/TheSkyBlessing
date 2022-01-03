@@ -9,7 +9,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.ByPassResist set value 1b
-    execute as @a[distance=..1.5] run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,dx=1.5] run function lib:damage/
     data remove storage lib: Argument
 
 # 消滅
