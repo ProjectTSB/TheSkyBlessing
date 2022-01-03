@@ -5,7 +5,7 @@
 # @within function asset:mob/0065.night_shadow/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon phantom ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0065.night_shadow"}
+    summon phantom ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0065.night_shadow"}
 # ID (int)
     data modify storage asset:mob ID set value 65
 # Type (string) Wikiを参照
