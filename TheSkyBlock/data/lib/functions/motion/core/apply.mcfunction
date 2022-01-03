@@ -10,6 +10,7 @@
     #declare score_holder $VectorX
     #declare score_holder $VectorY
     #declare score_holder $VectorZ
+    #declare score_holder $KnockbackResist
 
 # 初期化として視点を自分にあわせる & ^ ^ ^1を取得
     execute in overworld positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^1
@@ -19,6 +20,10 @@
     execute store result score $VectorX Temporary run data get storage lib: Pos[0] 1000
     execute store result score $VectorY Temporary run data get storage lib: Pos[1] 1000
     execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 1000
+
+# ノックバック耐性を計算する
+    execute if data storage lib: Argument{KnockbackResist:1b} store result score $KnockbackResist Temporary run attribute @s generic.knockback_resistance get 100
+    execute if data storage lib: Argument{KnockbackResist:1b} if score $KnockbackResist Temporary matches 1.. run function lib:motion/core/knockback_resistance
 
     scoreboard players operation $VectorX Temporary *= $VectorMagnitude Lib
     scoreboard players operation $VectorY Temporary *= $VectorMagnitude Lib
@@ -30,9 +35,10 @@
     execute store result storage lib: Pos[2] double 0.00001 run scoreboard players get $VectorZ Temporary
     data modify entity @s Motion set from storage lib: Pos
 
-# リセット 複数Entityが利用する可能性がある都合上$VectorMagnitudeは1tick遅らせる
+# リセット 複数Entityが利用する可能性がある都合上$VectorMagnitude、Argument.KnockbackResistは1tick遅らせる
     scoreboard players reset $VectorX Temporary
     scoreboard players reset $VectorY Temporary
     scoreboard players reset $VectorZ Temporary
+    scoreboard players reset $KnockbackResist
     data remove storage lib: Pos
     schedule function lib:motion/core/reset 1t

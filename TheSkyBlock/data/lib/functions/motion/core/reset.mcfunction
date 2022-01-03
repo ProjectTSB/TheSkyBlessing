@@ -6,3 +6,4 @@
 
 # リセット処理
     scoreboard players reset $VectorMagnitude Lib
+    data remove storage lib: Argument.KnockbackResist
