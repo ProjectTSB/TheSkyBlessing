@@ -9,8 +9,6 @@
     #declare score_holder $KnockbackResist
     #declare score_holder $Calc
 
-# ノックバック耐性を取得
-    execute store result score $KnockbackResist Temporary run attribute @s generic.knockback_resistance get 100
 # 100からノックバック耐性を引いた値を出す
     scoreboard players set $Calc Temporary 100
     scoreboard players operation $Calc Temporary -= $KnockbackResist Temporary
