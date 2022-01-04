@@ -15,6 +15,8 @@
     execute as @a[scores={GodMessagePhase=280}] run function player_manager:god/change_believe/believe1
     execute as @a[scores={GodMessagePhase=380}] run function player_manager:god/change_believe/believe2
     scoreboard players reset @a[scores={GodMessagePhase=400}] GodMessagePhase
+# 途中退出時
+    execute unless score @s InSubArea matches 10..14 run scoreboard players reset @s GodMessagePhase
 
 # ループ
     execute if entity @a[scores={GodMessagePhase=0..},limit=1] run schedule function player_manager:god/change_believe/change_task 1t
