@@ -13,5 +13,6 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.ByPassResist set value 1b
+    function lib:damage/modifier
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
     data remove storage lib: Argument
