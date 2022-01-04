@@ -10,7 +10,7 @@
 
 
 # 初回限定ロード
-    execute unless data storage global {Version:30} run function core:load_once
+    execute unless data storage global {Version:31} run function core:load_once
 
 # マイグレーション
     function core:migration/

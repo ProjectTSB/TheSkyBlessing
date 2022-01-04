@@ -6,7 +6,11 @@
     #declare tag this
     #declare tag FromTeleporter
     #declare tag Teleporter
+    #declare tag TeleporterInit
+    #declare tag TPStar
+    #declare tag TPStarYellow
+    #declare score_holder $GroupID
 
 #> OpenDeclares
-# @within asset_manager:island/dispel/successful
+# @within asset_manager:island/dispel/register_tp
     #declare tag Teleporter
