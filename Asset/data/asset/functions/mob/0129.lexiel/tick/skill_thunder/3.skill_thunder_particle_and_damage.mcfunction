@@ -28,5 +28,5 @@
 # リセット
     data remove storage lib: Argument
 
-# 自害
-    kill @s
+# 切キル
+    kill @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=nearest,limit=1]
