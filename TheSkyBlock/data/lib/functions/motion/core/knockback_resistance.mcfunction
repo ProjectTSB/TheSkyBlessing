@@ -14,9 +14,9 @@
     scoreboard players operation $Calc Temporary -= $KnockbackResist Temporary
     scoreboard players operation $Calc Temporary >< $KnockbackResist Temporary
 # $VectorMagnitudeの数値ととノックバック耐性をかける
-    scoreboard players operation $VectorMagnitude Lib *= $KnockbackResist Temporary
+    scoreboard players operation $VectorMagnitude Temporary *= $KnockbackResist Temporary
 # 100で割る
-    scoreboard players operation $VectorMagnitude Lib /= $100 Const
+    scoreboard players operation $VectorMagnitude Temporary /= $100 Const
 
 # 計算用スコアホルダーをリセット
     scoreboard players reset $Calc
