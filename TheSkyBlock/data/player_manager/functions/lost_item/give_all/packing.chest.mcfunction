@@ -8,13 +8,13 @@
 
 # 梱包処理
     # チェストのAppend
-        data modify storage player_manager:keep_lost_item Chests append value {id:"chest",Count:1b}
+        data modify storage player_manager:lost_item Chests append value {id:"chest",Count:1b}
     # Name適用処理
         function player_manager:lost_item/give_all/name_to_textcomponent
     # 梱包
         function lib:array/packing_chest
     # チェストに突っ込む
-        data modify storage player_manager:keep_lost_item Chests[-1].tag.BlockEntityTag.Items set from storage lib: Package
+        data modify storage player_manager:lost_item Chests[-1].tag.BlockEntityTag.Items set from storage lib: Package
     # リセット
         data remove storage lib: Package
 # ループ処理

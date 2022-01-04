@@ -4,7 +4,7 @@
 #> Temp
 # @within *
 #   player_manager:lost_item/**
-    #declare storage player_manager:keep_lost_item
+    #declare storage player_manager:lost_item
 
 #> LoopCounter
 # @within function
