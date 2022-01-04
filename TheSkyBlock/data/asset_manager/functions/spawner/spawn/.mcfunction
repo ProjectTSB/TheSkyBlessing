@@ -13,7 +13,7 @@
     particle flame ~ ~0.1 ~ 0.3 0.3 0.3 0 10
 # スポナーデータの取得
     function oh_my_dat:please
-    data modify storage asset:spawner NearbyEntityCache set value []
+    data modify storage asset:spawner NearbyEntitiesCache set value []
     data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
     execute store result score $SpawnPotentialsWeightSum Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum
     execute store result score $PosX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 100
