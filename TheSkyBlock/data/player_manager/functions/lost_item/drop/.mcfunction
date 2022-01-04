@@ -24,7 +24,7 @@
     data modify block 10000 0 10000 Items set from storage lib: Package
     loot spawn ~ ~1 ~ mine 10000 0 10000 debug_stick
 
-# ベクトル3倍くらいにしよう
+# ベクトル大きくする
     execute positioned ~ ~1 ~ as @e[type=item,distance=..0.5] run function player_manager:lost_item/drop/motion_multiple
 
 

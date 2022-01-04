@@ -5,7 +5,6 @@
 # @within core:handler/death
 
 # Inventory -> Temp
-    function api:data_get/inventory
     data modify storage player_manager:lost_item Temp set from storage api: Inventory
 # Slotを削除
     data remove storage player_manager:lost_item Temp[].Slot
