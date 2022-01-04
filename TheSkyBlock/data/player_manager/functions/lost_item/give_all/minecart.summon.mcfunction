@@ -1,10 +1,10 @@
-#> player_manager:keep_lost_item/give_all/minecart.summon
+#> player_manager:lost_item/give_all/minecart.summon
 #
 # チェストトロッコへアイテムを追加する処理
 #
 # @within function
-#   player_manager:keep_lost_item/give_all/
-#   player_manager:keep_lost_item/give_all/minecart.summon
+#   player_manager:lost_item/give_all/
+#   player_manager:lost_item/give_all/minecart.summon
 
 #> Private
 # @private
@@ -12,7 +12,7 @@
 
 # チェストロッコに追加する処理
     scoreboard players set $i Temporary 0
-    function player_manager:keep_lost_item/give_all/packing.minecart
+    function player_manager:lost_item/give_all/packing.minecart
     scoreboard players reset $i Temporary
 # シャルカー -> チェスト
     summon chest_minecart ~ ~ ~ {Invulnerable:1b,Silent:1b,Tags:["LostItemChest","EmptyItems"],Items:[]}
@@ -20,4 +20,4 @@
     tag @e[type=chest_minecart,tag=EmptyItems,distance=0,limit=1] remove EmptyItems
     data remove storage player_manager:keep_lost_item MinecartItems
 # ループ処理
-    execute if data storage player_manager:keep_lost_item Chests[-1] run function player_manager:keep_lost_item/give_all/minecart.summon
+    execute if data storage player_manager:keep_lost_item Chests[-1] run function player_manager:lost_item/give_all/minecart.summon

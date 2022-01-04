@@ -1,4 +1,4 @@
-#> player_manager:keep_lost_item/take
+#> player_manager:lost_item/take
 #
 # プレイヤーのアイテムを保管するよ
 #

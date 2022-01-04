@@ -12,7 +12,7 @@
     data modify storage api: Argument.ID set value 2
     execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:sacred_treasure/give/from_id
 # アイテム返す
-    function player_manager:keep_lost_item/give_all/
+    function player_manager:lost_item/give_all/
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
 # 交易島へのテレポーターを設置する

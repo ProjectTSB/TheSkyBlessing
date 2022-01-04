@@ -1,10 +1,10 @@
-#> player_manager:keep_lost_item/give_part/generate_index
+#> player_manager:lost_item/give_part/generate_index
 #
 # 返却するアイテム配列の添字をランダムに一つ生成する
 #
 # @within function
-#   player_manager:keep_lost_item/give_part/
-#   player_manager:keep_lost_item/give_part/generate_index
+#   player_manager:lost_item/give_part/
+#   player_manager:lost_item/give_part/generate_index
 
 # 乱数生成
     execute store result score $Index Temporary run function lib:random/
@@ -16,4 +16,4 @@
 # GiveCountを減らす
     scoreboard players remove $GiveCount Temporary 1
 # GiveCountが残ってるなら繰り返す
-    execute if score $GiveCount Temporary matches 1.. run function player_manager:keep_lost_item/give_part/generate_index
+    execute if score $GiveCount Temporary matches 1.. run function player_manager:lost_item/give_part/generate_index
