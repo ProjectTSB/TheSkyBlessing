@@ -8,7 +8,7 @@
     particle dust 0.294 0.353 0.043 1.5 ^ ^1.7 ^-0.3 0.2 0.2 0.2 0 1 normal @a
 
 # 低速落下
-    effect give @s slowness 1 0 true
+    effect give @s slow_falling 1 0 true
 
 # プレイヤーが前方(視界内)にいるときのみスコア増加
     execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 if entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players add @s 61.Tick 1
