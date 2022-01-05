@@ -5,7 +5,7 @@
 # @within function asset:mob/0217.medousa_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiBurn","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0217.medousa_eye"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AntiBurn","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0217.medousa_eye"}
 # ID (int)
     data modify storage asset:mob ID set value 271
 # Type (string) Wikiを参照
