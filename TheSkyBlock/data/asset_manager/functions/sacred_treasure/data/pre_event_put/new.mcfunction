@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:sacred_treasure/triggers/**
 
+# 明示的にリセットする
+    function asset_manager:sacred_treasure/data/reset_context
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context id set from storage asset:context New.id
     data modify storage asset:context Items set from storage asset:context New.Items
