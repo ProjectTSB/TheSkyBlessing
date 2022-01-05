@@ -11,6 +11,11 @@
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $6 Const
+
+# ある程度はプレイヤーの距離で技を決めたい
+    execute if entity @p[gamemode=!spectator,distance=20..32] if predicate lib:random_pass_per/70 run scoreboard players set $Random Temporary 2
+    execute if entity @p[gamemode=!spectator,distance=..5] if predicate lib:random_pass_per/40 run scoreboard players set $Random Temporary 4
+
 # 技用Tagを付与
     execute if score $Random Temporary matches 0..1 run tag @s add 55.BurnLaser
     execute if score $Random Temporary matches 2..3 run tag @s add 55.Thunder
