@@ -11,4 +11,4 @@
     scoreboard players reset @s 61.StoneTime
 
 # attribute解除
-    attribute @p[gamemode=!spectator,dx=0] generic.knockback_resistance modifier remove 00000001-0000-0002-0000-00d900000000
+    attribute @s generic.knockback_resistance modifier remove 00000001-0000-0002-0000-00d900000000
