@@ -12,8 +12,8 @@
     playsound entity.ender_dragon.flap hostile @a ~ ~ ~ 1 1.3
 
 # プレイヤーから離れる
-    scoreboard players set $VectorMagnitude Lib 100
+    data modify storage lib: Argument.VectorMagnitude set value 100
     execute facing entity @p eyes rotated ~180 -10 run function lib:motion/
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+    data remove storage lib: Argument

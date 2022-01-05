@@ -8,11 +8,11 @@
     #declare score_holder $VectorMagnitude
 
 # バックステップ
-    scoreboard players set $VectorMagnitude Lib 100
+    data modify storage lib: Argument.VectorMagnitude set value 100
     execute facing entity @p feet rotated ~180 ~-10 run function lib:motion/
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+    data remove storage lib: Argument
 
 
 # 薬品投げ

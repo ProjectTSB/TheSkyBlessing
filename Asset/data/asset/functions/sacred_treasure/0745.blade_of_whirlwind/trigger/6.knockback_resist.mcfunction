@@ -11,10 +11,10 @@
     execute if score $MobKnockbackResist Temporary matches 1..99 store result score $MobKnockbackResist Temporary run scoreboard players operation $KP.100 Temporary -= $MobKnockbackResist Temporary
 
 # $VectorMagnitudeの数値ととノクバ耐性を掛ける
-    scoreboard players operation $VectorMagnitude Lib *= $MobKnockbackResist Temporary
+    scoreboard players operation $VectorMagnitude Temporary *= $MobKnockbackResist Temporary
 
 # 100で割る
-    scoreboard players operation $VectorMagnitude Lib /= $100 Const
+    scoreboard players operation $VectorMagnitude Temporary /= $100 Const
 
 # 100スコアをリセット
     scoreboard players reset $KP.100 Temporary
