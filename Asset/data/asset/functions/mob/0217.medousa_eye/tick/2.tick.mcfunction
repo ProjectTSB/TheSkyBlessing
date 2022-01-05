@@ -23,4 +23,4 @@
     execute if score @s 61.Tick matches 80.. positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/04.mineralization_beam
 
 # 80以上でリセット
-    execute if score @s 61.Tick matches 80.. run function asset:mob/0217.medousa_eye/tick/09.reset
+    execute if score @s 61.Tick matches 80.. run function asset:mob/0217.medousa_eye/tick/09.sound_and_reset
