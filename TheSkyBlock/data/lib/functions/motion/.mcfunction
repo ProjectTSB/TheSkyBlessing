@@ -8,7 +8,9 @@
 #
 # @input
 #   as entity
-#   score $VectorMagnitude Argument
+#   storage lib:
+#       Argument.KnockbackResist?: boolean
+#       Argument.VectorMagnitude: double
 # @api
 
 # 引数を設定
