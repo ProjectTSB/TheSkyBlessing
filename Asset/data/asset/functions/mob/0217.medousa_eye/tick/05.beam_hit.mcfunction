@@ -14,9 +14,6 @@
 # 石tag付与
     tag @p[gamemode=!spectator,dx=0] add 61.Stone
 
-# 自身の注視スコアリセット
-    scoreboard players reset @s 61.Tick
-
 # 石化時間スコア
     scoreboard players set @p[tag=LandingTarget,dx=0] 61.StoneTime 100
 
