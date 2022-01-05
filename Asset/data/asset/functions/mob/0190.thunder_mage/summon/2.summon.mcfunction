@@ -5,7 +5,7 @@
 # @within function asset:mob/0190.thunder_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/0190.thunder_mage"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],Silent:1b,DeathLootTable:"asset:mob/death/0190.thunder_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 190
 # Type (string) Wikiを参照
