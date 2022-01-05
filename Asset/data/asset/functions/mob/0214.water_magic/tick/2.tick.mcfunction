@@ -14,7 +14,7 @@
 
 # 実行時間を移す
     scoreboard players operation $Temp Temporary = @s 5Y.Tick
-# 一定間隔毎にMP回復と魔法陣の表示
+# 一定間隔毎に魔方陣とダメージ
     scoreboard players operation $Temp Temporary %= $5 Const
     execute if score @s 5Y.Tick matches 20.. if score $Temp Temporary matches 0 at @s run function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
