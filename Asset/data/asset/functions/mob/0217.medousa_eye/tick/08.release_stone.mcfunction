@@ -1,8 +1,8 @@
-#> asset:mob/0217.medousa_eye/tick/09.release_stone
+#> asset:mob/0217.medousa_eye/tick/08.release_stone
 #
 #
 #
-# @within function asset:mob/0217.medousa_eye/tick/08.stone_time
+# @within function asset:mob/0217.medousa_eye/tick/07.stone_time
 
 # タグ削除
     tag @s remove 61.Stone
