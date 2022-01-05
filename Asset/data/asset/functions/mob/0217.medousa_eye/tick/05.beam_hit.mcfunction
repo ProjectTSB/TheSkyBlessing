@@ -38,7 +38,7 @@
     data remove storage lib: Argument
 
 # マナを吸収
-    scoreboard players set $Fluctuation Lib -40
+    scoreboard players set $Fluctuation Lib -30
     execute as @p[tag=LandingTarget,dx=0] run function lib:mp/fluctuation
 
 # 着弾タグ削除

@@ -12,7 +12,7 @@
 
 # デバフ
     execute if score @s 61.StoneTime matches 20.. run effect give @s slowness 1 4 true
-    execute if score @s 61.StoneTime matches 20.. run effect give @s levitation 1 128 true
+    execute if score @s 61.StoneTime matches 20.. run effect give @s levitation 1 230 true
 
 # 石化解除
     execute if score @s 61.StoneTime matches ..0 run function asset:mob/0217.medousa_eye/tick/08.release_stone
