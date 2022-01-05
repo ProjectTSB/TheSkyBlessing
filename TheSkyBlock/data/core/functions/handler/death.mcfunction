@@ -2,7 +2,7 @@
 #
 # 死亡時に実行される
 #
-# @within function core:tick/player
+# @within function core:tick/post-tick-proc_player
 
 # 死亡時タグを付与
     tag @s add Death
