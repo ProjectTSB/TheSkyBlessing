@@ -15,5 +15,5 @@
     data modify storage api: Argument.ID set value 224
     execute positioned ~ ~1.7 ~ run function api:mob/summon
 
-# 確率でプレイヤーの前に召喚
-    execute if entity @p[tag=Attacker,distance=20..50] if predicate lib:random_pass_per/40 at @p[tag=Attacker,distance=20..50] positioned ^ ^1 ^2 run function asset:mob/0059.jack_o_lantern/hurt/5.at_player_summon
+# 距離に応じてプレイヤーの前に召喚
+    execute if entity @p[tag=Attacker,distance=15..50] at @p[tag=Attacker,distance=15..50] positioned ^ ^1 ^2 run function asset:mob/0059.jack_o_lantern/hurt/5.at_player_summon
