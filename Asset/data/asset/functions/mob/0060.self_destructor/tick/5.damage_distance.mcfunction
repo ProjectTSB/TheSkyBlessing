@@ -12,7 +12,7 @@
     execute if entity @s[distance=..1] run data modify storage lib: Argument.Damage set value 32f
 
 # modifier
-    execute as @e[type=zombie,scores={MobID=60},distance=..7,limit=1] run function lib:damage/modifier
+    execute as @e[type=zombie,tag=this,distance=..7,limit=1] run function lib:damage/modifier
 
 # ダメージ
     function lib:damage/
