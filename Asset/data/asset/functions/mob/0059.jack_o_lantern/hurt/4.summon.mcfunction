@@ -16,4 +16,4 @@
     execute positioned ~ ~1.7 ~ run function api:mob/summon
 
 # 距離に応じてプレイヤーの前に召喚
-    execute if entity @p[tag=Attacker,distance=15..50] at @p[tag=Attacker,distance=15..50] positioned ^ ^1 ^2 run function asset:mob/0059.jack_o_lantern/hurt/5.at_player_summon
+    execute if entity @p[tag=Attacker,distance=15..50] at @p[tag=Attacker,distance=15..50] positioned ^ ^1 ^3 run function asset:mob/0059.jack_o_lantern/hurt/5.at_player_summon
