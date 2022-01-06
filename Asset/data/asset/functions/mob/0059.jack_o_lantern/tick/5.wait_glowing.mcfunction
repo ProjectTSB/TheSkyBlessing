@@ -25,6 +25,8 @@
     execute unless score @s 1N.Glowing matches 60.. run playsound entity.witch.celebrate master @a ~ ~ ~ 0.8 1.5 0
     execute unless score @s 1N.Glowing matches 60.. run effect give @s slowness 3 5 true
     execute unless score @s 1N.Glowing matches 60.. run effect give @s weakness 3 10 true
+    execute unless score @s 1N.Glowing matches 60.. run effect give @s resistance 3 6 true
+
 
 # 燃えている場合火を消す
     execute if predicate lib:is_burning run data modify entity @s Fire set value 0
