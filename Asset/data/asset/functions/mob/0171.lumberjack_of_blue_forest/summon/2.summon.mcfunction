@@ -5,7 +5,7 @@
 # @within function asset:mob/0171.lumberjack_of_blue_forest/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0171.lumberjack_of_blue_forest"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0171.lumberjack_of_blue_forest"}
 # ID (int)
     data modify storage asset:mob ID set value 171
 # Type (string) Wikiを参照
