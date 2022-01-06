@@ -9,3 +9,4 @@
     scoreboard objectives add 1N.Surprise dummy
     scoreboard objectives add 1N.Glowing dummy
     scoreboard objectives add 1N.Tick dummy
+    scoreboard objectives add 1N.HurtCount dummy
