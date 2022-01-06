@@ -11,7 +11,7 @@
     execute if score @s 1N.Glowing matches 1 run function asset:mob/0059.jack_o_lantern/tick/5.wait_glowing
 
 # 発光状態待機の間のパーティクル(プレイヤーが発見できるように、このときに殴られると2.hurtへ)
-    execute if score @s 1N.Glowing matches 1..59 run particle dust 1 0.6 0 0.5 ~ ~1.6 ~ 0.3 0.3 0.3 0 1 normal @a[distance=..8]
+    execute if score @s 1N.Glowing matches 1..59 run particle dust 1 0.6 0 1 ~ ~1.6 ~ 0.3 0.3 0.3 0 1 normal @a[distance=..8]
 
 # 発光状態開始
     execute if score @s 1N.Glowing matches 60 run function asset:mob/0059.jack_o_lantern/tick/6.start_glowing
