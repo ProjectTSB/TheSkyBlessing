@@ -20,7 +20,7 @@
     # 補正functionを実行
         execute if score @s 1O.ExplodeFuse matches 40 run function lib:damage/modifier
     # 範囲
-        execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
+        execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function asset:mob/0060.self_destructor/tick/5.damage_distance
     # リセット
         data remove storage lib: Argument
 
