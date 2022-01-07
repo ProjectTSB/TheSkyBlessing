@@ -1,4 +1,4 @@
-#> lib:debug/change_believe/clear_lostitems
+#> lib:debug/clear_lostitems
 #
 # 失ったアイテムを削除します
 #
