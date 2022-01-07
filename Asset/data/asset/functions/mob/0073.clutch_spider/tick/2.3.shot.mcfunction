@@ -7,7 +7,7 @@
 #   asset:mob/0073.clutch_spider/tick/2.3.shot
 
 # 着弾検知
-    execute unless block ^ ^ ^1.5 #lib:no_collision run tag @s add Landing
+    execute unless block ^ ^ ^2 #lib:no_collision run tag @s add Landing
     execute if entity @p[gamemode=!spectator,distance=..3] run tag @s add Landing
     execute if entity @p[gamemode=!spectator,distance=..3] at @p[gamemode=!spectator,distance=..3] run particle cloud ~ ~1.5 ~ 0.6 0.4 0.6 0 30 normal @a
 
