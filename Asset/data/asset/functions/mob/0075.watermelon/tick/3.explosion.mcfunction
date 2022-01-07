@@ -12,7 +12,7 @@
     particle explosion ~ ~1.6 ~ 1 1 1 0 20 normal @a
 
 # スイカスライスを召喚
-    summon item ~ ~ ~ {Item:{id:"minecraft:melon_slice",Count:16b}}
+    summon item ~ ~ ~ {Age:5900s,PickupDelay:5s,Item:{id:"minecraft:melon_slice",Count:5b}}
 
 # 水属性ダメージ
 
