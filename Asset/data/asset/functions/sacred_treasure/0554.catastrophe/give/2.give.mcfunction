@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value head
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onDamage"
+    data modify storage asset:sacred_treasure Trigger set value "onDamageFromEntity"
 # 神器の発動条件 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure Condition set value '{"text":"繋がる総てを身に纏う"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
@@ -49,7 +49,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,SkullOwner:{Id:[I;994325293,-761705917,-1324473476,-101849626],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWRiN2Q4OGExNjhmNDg4MzU0Mjc0MDlmZGViYzVjOGRjYjQwNmI2ZGIyOGU1YTc5OWE4M2MzYzljMGNmNjQ4In19fQ=="}]}},Enchantments:[{id:protection,lvl:7}],AttributeModifiers:[{UUID:[I;1,1,554,6],AttributeName:"generic.armor",Name:"armor",Slot:head,Operation:0,Amount:3},{UUID:[I;1,1,554,6],AttributeName:"generic.armor_throughness",Name:"armor_throughness",Slot:head,Operation:0,Amount:1}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,SkullOwner:{Id:[I;994325293,-761705917,-1324473476,-101849626],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWRiN2Q4OGExNjhmNDg4MzU0Mjc0MDlmZGViYzVjOGRjYjQwNmI2ZGIyOGU1YTc5OWE4M2MzYzljMGNmNjQ4In19fQ=="}]}},AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;1,1,554,6],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2.5,Operation:0,UUID:[I;1,1,554,6],Slot:"head"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
