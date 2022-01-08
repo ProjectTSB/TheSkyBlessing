@@ -189,7 +189,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
-    #> PlayerManager - AdjustHanger用スコアボード
+    #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}
