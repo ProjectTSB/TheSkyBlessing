@@ -11,7 +11,7 @@
     execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 if entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players add @s 61.Tick 1
 
 # プレイヤーが視界内にいないとき、スコアリセット
-   execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 unless entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players reset @s 61.Tick
+  # execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 unless entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players reset @s 61.Tick
 
 # スコアが60の時、向きを固定する
     execute if score @s 61.Tick matches 60 run function asset:mob/0217.medousa_eye/tick/03.fix_direction
@@ -20,7 +20,7 @@
     execute if score @s 61.Tick matches 60.. run scoreboard players add @s 61.Tick 1
 
 # スコアが80以上で石化ビーム発射
-    execute if score @s 61.Tick matches 80.. positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/04.mineralization_beam
+    execute if score @s 61.Tick matches 80.. positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/05.mineralization_beam
 
-# 80以上でリセット
-    execute if score @s 61.Tick matches 80.. run function asset:mob/0217.medousa_eye/tick/09.sound_and_reset
+# 80以上で音とリセット
+    execute if score @s 61.Tick matches 80.. run function asset:mob/0217.medousa_eye/tick/10.sound_and_reset

@@ -1,8 +1,8 @@
-#> asset:mob/0217.medousa_eye/tick/05.beam_hit
+#> asset:mob/0217.medousa_eye/tick/06.beam_hit
 #
 # 石化ビームの着弾判定
 #
-# @within function asset:mob/0217.medousa_eye/tick/04.mineralization_beam
+# @within function asset:mob/0217.medousa_eye/tick/05.mineralization_beam
 
 #> Private
 # @private
@@ -45,4 +45,4 @@
     tag @a[tag=LandingTarget,dx=0] remove LandingTarget
 
 # スケジュールループスタート
-    schedule function asset:mob/0217.medousa_eye/tick/06.schedule_loop 1t replace
+    schedule function asset:mob/0217.medousa_eye/tick/07.schedule_loop 1t replace
