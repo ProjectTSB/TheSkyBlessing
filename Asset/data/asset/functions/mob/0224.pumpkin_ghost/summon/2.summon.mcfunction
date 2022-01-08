@@ -5,7 +5,7 @@
 # @within function asset:mob/0224.pumpkin_ghost/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
+    summon vex ~ ~ ~ {LifeTicks:200,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
 # ID (int)
     data modify storage asset:mob ID set value 224
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 40
+    data modify storage asset:mob Health set value 10
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 1
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
