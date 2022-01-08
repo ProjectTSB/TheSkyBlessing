@@ -14,4 +14,4 @@
     execute if entity @s[distance=..20] unless entity @p[gamemode=!spectator,dx=0] positioned ^ ^ ^1 if block ~ ~ ~ #asset:mob/0217.medousa_eye/passing_block run function asset:mob/0217.medousa_eye/tick/05.mineralization_beam
 
 # 石化ビームヒット
-    execute if entity @p[gamemode=!spectator,dx=0] run function asset:mob/0217.medousa_eye/tick/06.beam_hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[gamemode=!spectator,dx=0] run function asset:mob/0217.medousa_eye/tick/06.beam_hit
