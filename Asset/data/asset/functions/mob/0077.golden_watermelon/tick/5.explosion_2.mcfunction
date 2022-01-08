@@ -11,7 +11,7 @@
     particle smoke ~ ~1.5 ~ 2 0.5 2 0 100 normal @a
 
 # スイカスライスを召喚
-    summon item ~ ~ ~ {Item:{id:"minecraft:glistering_melon_slice",Count:4b}}
+    summon item ~ ~ ~ {Age:5940s,PickupDelay:5s,Item:{id:"minecraft:glistering_melon_slice",Count:4b}}
 
 # 雷属性ダメージ
     data modify storage lib: Argument.Damage set value 8.0
