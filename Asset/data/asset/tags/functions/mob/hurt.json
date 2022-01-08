@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0216.gray_guardian/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",
         "asset:mob/example/hurt/1.trigger",
         "asset:mob/0060.self_destructor/hurt/1.trigger",
