@@ -19,7 +19,7 @@
 
 # 演出
     execute at @p[tag=LandingTarget,distance=..2] run particle block stone ~ ~1.2 ~ 0.3 0.4 0.3 0 100 normal @a
-    execute at @p[tag=LandingTarget,distance=..2] run playsound entity.mooshroom.convert master @a ~ ~ ~ 0.7 0 0
+    execute at @p[tag=LandingTarget,distance=..2] run playsound entity.mooshroom.convert hostile @a ~ ~ ~ 0.5 0 0
 
 # attribute
     attribute @p[tag=LandingTarget,distance=..2] generic.knockback_resistance modifier add 00000001-0000-0002-0000-00d900000000 "217.KnockbackResist" 30 add

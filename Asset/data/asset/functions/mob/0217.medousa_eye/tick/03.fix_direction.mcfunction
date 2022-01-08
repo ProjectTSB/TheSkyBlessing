@@ -18,5 +18,3 @@
 # タグ削除
     tag @a[tag=Target,distance=..20] remove Target
 
-# 演出
-    execute positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/04.vfx
