@@ -29,8 +29,6 @@
     execute unless entity @a[tag=!this] run tag @s remove CanUsed
     execute unless entity @a[tag=!this] run tellraw @s [{"text": "なんなら今はボッチです☆","color": "gray"}]
 
-    tellraw @s ["DEBUG $SCUserHealth : ",{"score":{"name":"$SCUserHealth","objective": "Temporary"}}]
-
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0236.health_exchanger/trigger/3.main
 
