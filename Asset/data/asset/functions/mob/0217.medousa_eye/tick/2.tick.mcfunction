@@ -10,9 +10,6 @@
 # プレイヤーが前方(視界内)にいるときのみスコア増加
     execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 if entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players add @s 61.Tick 1
 
-# プレイヤーが視界内にいないとき、スコアリセット
-  # execute unless score @s 61.Tick matches 60.. positioned ^ ^ ^10 unless entity @p[gamemode=!spectator,tag=!61.Stone,distance=..10] at @s run scoreboard players reset @s 61.Tick
-
 # スコアが60の時、向きを固定する
     execute if score @s 61.Tick matches 60 run function asset:mob/0217.medousa_eye/tick/03.fix_direction
 
