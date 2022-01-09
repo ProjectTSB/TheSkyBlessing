@@ -8,8 +8,13 @@
 #
 # @input
 #   as entity
-#   score $VectorMagnitude Argument
+#   storage lib:
+#       Argument.KnockbackResist?: boolean
+#       Argument.VectorMagnitude: double
 # @api
+
+# 引数を設定
+    execute unless data storage lib: Argument.KnockbackResist run data modify storage lib: Argument.KnockbackResist set value 0b
 
 # PlayerならErrorを出力
     execute if entity @s[type=player] run tellraw @s [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"MotionLibの実行者はPlayer以外のEntityである必要があります"}]

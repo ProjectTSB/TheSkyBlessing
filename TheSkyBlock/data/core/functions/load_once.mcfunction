@@ -6,7 +6,7 @@
 
 #> バージョン情報の設定と通知
 data modify storage global Version set value 30
-data modify storage global GameVersion set value "v0.0.1"
+data modify storage global GameVersion set value "v0.0.2"
 execute if data storage global {IsProduction:0b} run tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
 
 
@@ -179,6 +179,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
         scoreboard objectives add Sneak custom:sneak_time {"text":"イベント: スニーク"}
+        scoreboard objectives add Elytra custom:aviate_one_cm {"text":"イベント: エリトラ"}
 
     #> Library用スコアボード
     # @public
@@ -189,7 +190,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
-    #> PlayerManager - AdjustHanger用スコアボード
+    #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
         scoreboard objectives add HungerTarget dummy {"text":"目標の満腹度"}
         scoreboard objectives add Hunger food {"text":"現在の満腹度"}

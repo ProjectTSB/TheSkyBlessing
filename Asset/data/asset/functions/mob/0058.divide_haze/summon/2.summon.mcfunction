@@ -5,7 +5,7 @@
 # @within function asset:mob/0058.divide_haze/*/**
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0058.divide_haze"}
 # ID (int)
     data modify storage asset:mob ID set value 58
 # Type (string) Wikiを参照
@@ -35,11 +35,11 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 70.0
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 4.0
+    data modify storage asset:mob AttackDamage set value 9.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 2.0
+    data modify storage asset:mob Defense set value 18
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 6.0
+    data modify storage asset:mob SpecialDefense set value 0
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.20
 # 索敵範囲 (double) (オプション)

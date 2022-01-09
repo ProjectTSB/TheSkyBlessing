@@ -7,7 +7,6 @@
 # Triggers
     execute if entity @s[scores={FirstJoinEvent=1}] run function core:handler/first_join
     execute if entity @s[scores={RejoinEvent=1..}] run function core:handler/rejoin
-    execute if entity @s[scores={DeathEvent=1..}] run function core:handler/death
     execute if entity @s[scores={RespawnEvent=1}] run function core:handler/respawn
     execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
     execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
@@ -18,6 +17,7 @@
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
+    execute if entity @s[scores={Elytra=1..}] run function core:handler/flying_elytra
 # エリア処理
     function world_manager:area/
 # 神の処理

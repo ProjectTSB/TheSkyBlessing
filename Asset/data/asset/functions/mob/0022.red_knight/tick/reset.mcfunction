@@ -21,4 +21,4 @@
     scoreboard players set @s M.Tick -50
 
 # テレポート
-    function asset:mob/0022.red_knight/tick/2.1.teleport
+    execute if entity @p[distance=..100] run function asset:mob/0022.red_knight/tick/2.1.teleport

@@ -11,11 +11,11 @@
     playsound item.trident.throw hostile @a ~ ~ ~ 1 0.8
 
 # 突進する
-    scoreboard players set $VectorMagnitude Lib 100
+    data modify storage lib: Argument.VectorMagnitude set value 100
     execute facing entity @p[gamemode=!spectator] feet rotated ~180 ~-10 run function lib:motion/
 
 # エフェクト
     effect give @s speed 1 6
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+data remove storage lib: Argument

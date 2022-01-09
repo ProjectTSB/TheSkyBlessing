@@ -5,7 +5,7 @@
 # @within function asset:mob/0124.skull_harpy/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],NoGravity:1b,ActiveEffects:[{Id:28b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],DeathLootTable:"asset:mob/death/0124.skull_harpy"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","AlwaysSlowFall"],NoGravity:1b,DeathLootTable:"asset:mob/death/0124.skull_harpy"}
 # ID (int)
     data modify storage asset:mob ID set value 124
 # Type (string) Wikiを参照

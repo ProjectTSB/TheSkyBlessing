@@ -2,8 +2,6 @@
 #
 # プレイヤーが$RequiredPlayerRangeより近くに居るかチェックする
 #
-# メモ: ここの処理は既にタグが付与されてるかの短絡評価することでより高速に動作するかもしれない
-#
 # @within function asset_manager:spawner/tick/
 
 #> temp
