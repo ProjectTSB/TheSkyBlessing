@@ -34,4 +34,4 @@
        tp @s[predicate=asset:mob/0056.thunder_trifler/bow] @a[tag=Victim,limit=1]
 
 # 攻撃が当たった場合武器が弓なら剣に切替(挙動の関係上最後に配置)
-    item replace entity @s[predicate=asset:mob/0056.thunder_trifler/bow] weapon.mainhand with golden_sword{Enchantments:[{id:"sharpness",lvl:3s}]}
+    item replace entity @s[predicate=asset:mob/0056.thunder_trifler/bow] weapon.mainhand with golden_sword{Enchantments:[{}]}

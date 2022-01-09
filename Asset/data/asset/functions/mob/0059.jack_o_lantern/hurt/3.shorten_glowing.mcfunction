@@ -13,3 +13,4 @@
 
 # 見破られた場合弱体化
     effect give @s slowness 3 10 true
+    effect clear @s resistance

@@ -8,7 +8,7 @@
     scoreboard players add @s 55.Tick 1
 
 # 技選択
-    execute if score @s 55.Tick matches 100 run function asset:mob/0185.tutankhamen/tick/03.select_attack
+    execute if score @s 55.Tick matches 80 run function asset:mob/0185.tutankhamen/tick/03.select_attack
 
 # 技分岐
-    execute if score @s 55.Tick matches 100.. run function asset:mob/0185.tutankhamen/tick/04.attack_branch
+    execute if score @s 55.Tick matches 80.. run function asset:mob/0185.tutankhamen/tick/04.attack_branch

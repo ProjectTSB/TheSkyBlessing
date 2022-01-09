@@ -5,7 +5,7 @@
 # @within function asset:mob/0189.water_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0189.water_mage"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0189.water_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 189
 # Type (string) Wikiを参照
@@ -50,7 +50,7 @@
     # 物理倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Physical set value
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.7
+        data modify storage asset:mob Resist.Magic set value 0.5
     # 火倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Fire set value
     # 水倍率 (float) (オプション)
