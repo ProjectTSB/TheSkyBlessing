@@ -16,7 +16,7 @@
 # 発光状態開始
     execute if score @s 1N.Glowing matches 60 run function asset:mob/0059.jack_o_lantern/tick/6.start_glowing
 
-# 発光状態(1N.Glowing>40の状態)
+# 発光状態
     execute if score @s 1N.Glowing matches 61.. run function asset:mob/0059.jack_o_lantern/tick/7.glowing
 
 # 発光状態終了
