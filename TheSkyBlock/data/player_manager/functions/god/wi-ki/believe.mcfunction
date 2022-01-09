@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/believe2
+# @within
+#   function player_manager:god/change_believe/believe2
+#   function lib:debug/change_believe/wi-ki
 
 # 信仰タグ付与
     tag @s add Believe.Wi-ki

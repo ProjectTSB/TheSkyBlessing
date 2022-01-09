@@ -3,7 +3,7 @@
 # asset:contextの最上層データをリセットします
 #
 # @within function
-#   asset_manager:sacred_treasure/data/post_event_put/*
+#   asset_manager:sacred_treasure/data/*_event_put/*
 #   asset_manager:sacred_treasure/triggers/
 
 # リセット

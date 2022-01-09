@@ -22,4 +22,5 @@
     data modify storage asset:temp 02.Name set from storage lib: Array[-1]
 # リセット
     data remove storage lib: Array
+    function lib:array/force_delete_cache
     scoreboard players reset $CandidatesLength

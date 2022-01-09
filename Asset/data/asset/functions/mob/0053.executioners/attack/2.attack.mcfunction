@@ -49,9 +49,9 @@
     execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
 
 # 突進する
-    scoreboard players set $VectorMagnitude Lib 200
+    data modify storage lib: Argument.VectorMagnitude set value 200
     execute at @s facing entity @p[gamemode=!spectator] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+    data remove storage lib: Argument
     kill @e[type=marker,tag=SpreadMarker]

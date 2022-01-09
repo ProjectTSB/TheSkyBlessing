@@ -20,8 +20,8 @@
     summon endermite ~ ~1.5 ~ {Silent:1b,Team:"NoCollision",FallDistance:99f,DeathTime:15s,Tags:["TNTStick"],Passengers:[{id:"minecraft:tnt",Fuse:40s}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2147483647}]}
 
 # TNTを飛ばす
-    scoreboard players set $VectorMagnitude Lib 200
+    data modify storage lib: Argument.VectorMagnitude set value 200
     execute as @e[type=endermite,tag=TNTStick,distance=..2] facing ^ ^ ^10 run function lib:motion/
-
+    data remove storage lib: Argument
 # スケジュール
     schedule function asset:sacred_treasure/0107.dispenser_canon/trigger/3.1.sticky 1t

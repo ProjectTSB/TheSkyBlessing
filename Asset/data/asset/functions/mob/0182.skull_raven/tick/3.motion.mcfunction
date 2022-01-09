@@ -14,17 +14,19 @@
 
 # 数値
     # デフォルト
-        scoreboard players set $VectorMagnitude Lib 120
+        data modify storage lib: Argument.VectorMagnitude set value 120
     # かなり離れてる時に実行
-        execute if entity @p[tag=Target,distance=30..60] run scoreboard players set $VectorMagnitude Lib 180
+        execute if entity @p[tag=Target,distance=30..60] run data modify storage lib: Argument.VectorMagnitude set value 180
     # 近い時に実行する
-        execute if entity @p[tag=Target,distance=..9] run scoreboard players set $VectorMagnitude Lib 90
+        execute if entity @p[tag=Target,distance=..9] run data modify storage lib: Argument.VectorMagnitude set value 90
 # 実行
     # 適正距離の場合
         execute if entity @p[tag=Target,distance=9..60] facing entity @p eyes rotated ~ ~-5 run function lib:motion/
     # 近い場合
         execute if entity @p[tag=Target,distance=..9] facing entity @p eyes rotated ~180 ~-10 run function lib:motion/
 
+# リセット
+    data remove storage lib: Argument
 # タグを消す
     tag @a remove Target
 # スコアリセット
