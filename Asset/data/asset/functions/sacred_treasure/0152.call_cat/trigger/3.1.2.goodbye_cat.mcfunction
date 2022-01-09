@@ -9,5 +9,5 @@
     playsound minecraft:item.chorus_fruit.teleport master @a ~ ~ ~ 1 0.75
     particle minecraft:reverse_portal ~ ~ ~ 0.1 0.1 0.1 0.01 200
     effect give @s invisibility 1 0 true
-    tp @s ~ ~-256 ~
+    tp @s ~ -256 ~
     data modify entity @s Health set value 0
