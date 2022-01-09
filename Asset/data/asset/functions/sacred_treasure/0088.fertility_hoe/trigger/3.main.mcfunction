@@ -20,21 +20,12 @@
     # 処理
         clear @s bone_meal 8
 
-        # 最下層
-        execute if score $PlayerHeight Temporary matches 4000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer1
-        # 第2層
-        execute if score $PlayerHeight Temporary matches 3000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer2
-        # 第3層
-        execute if score $PlayerHeight Temporary matches 2000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer3
-        # 第4層
-        execute if score $PlayerHeight Temporary matches 1000.. run function asset:sacred_treasure/0088.fertility_hoe/layer/layer4
-        # 第5層 //プレイヤーと同座標
-        function asset:sacred_treasure/0088.fertility_hoe/layer/layer5
-        # 第6層
-        execute if score $PlayerHeight Temporary matches ..254999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer6
-        # 第7層
-        execute if score $PlayerHeight Temporary matches ..253999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer7
-        # 第8層
-        execute if score $PlayerHeight Temporary matches ..252999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer8
-        # 第9層
-        execute if score $PlayerHeight Temporary matches ..251999 run function asset:sacred_treasure/0088.fertility_hoe/layer/layer9
+execute positioned ~ ~-4 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~-3 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~-2 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~-1 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~ ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~1 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~2 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~3 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+execute positioned ~ ~4 ~ run function asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
