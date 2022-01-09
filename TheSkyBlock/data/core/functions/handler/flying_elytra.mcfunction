@@ -6,3 +6,6 @@
 
 # Nyaptov恩恵で使用
     tag @s add Nyaptov.FlyingElytra
+
+# リセット
+    scoreboard players reset @s Elytra
