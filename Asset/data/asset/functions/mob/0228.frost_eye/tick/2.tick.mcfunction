@@ -3,3 +3,6 @@
 # Mobのtick時の処理
 #
 # @within function asset:mob/0228.frost_eye/tick/1.trigger
+
+# 演出
+    execute positioned ^ ^ ^-0.5 run particle snowflake ~ ~1.7 ~ 0.2 0.2 0.2 0 1 normal @a
