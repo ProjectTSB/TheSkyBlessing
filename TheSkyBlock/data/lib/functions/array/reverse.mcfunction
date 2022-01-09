@@ -10,4 +10,5 @@
 #   反転後の配列データ
 # @api
 
-function lib:array/core/reverse
+# 再帰的に反転する
+    function lib:array/core/reverse

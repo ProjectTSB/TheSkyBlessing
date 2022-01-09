@@ -12,4 +12,5 @@
 #   move前の配列構造
 # @api
 
-execute if data storage lib: Cache[0] run function lib:array/core/revert
+# Cacheを復元
+    execute if data storage lib: Cache[0] run function lib:array/core/revert
