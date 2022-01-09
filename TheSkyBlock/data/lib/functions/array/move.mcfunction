@@ -15,6 +15,9 @@
 #           移動されたデータ
 # @api
 
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
 # 動かす回数を算出する
     execute store result score $Index Temporary if data storage lib: Array[]
     scoreboard players remove $Index Temporary 1

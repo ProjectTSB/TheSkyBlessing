@@ -10,6 +10,9 @@
 #   ランダムな順の配列
 # @api
 
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
 # 配列サイズを取得
     execute store result score $ListSize Lib if data storage lib: Array[]
 # 初期化

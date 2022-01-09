@@ -14,6 +14,9 @@
 #   抜き取られた要素
 # @api
 
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
 # 初期化
     data remove storage lib: Elements
 # 添字配列をソートする
@@ -43,7 +46,6 @@
         data modify storage lib: Array set from storage lib: ArrayTemp
 # リセット
     data remove storage lib: Picks
-    function lib:array/force_delete_cache
     data remove storage lib: ArrayTemp
     scoreboard players reset $Prev Temporary
     scoreboard players reset $Cur Temporary
