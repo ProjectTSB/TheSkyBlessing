@@ -1,8 +1,8 @@
-#> asset:mob/0138.combat_turret/tick/2.1.ready
+#> asset:mob/0138.combat_turret/tick/2.2.ready
 #
 # 発砲準備をします
 #
-# @within function asset:mob/0138.combat_turret/tick/2.tick
+# @within function asset:mob/0138.combat_turret/tick/2.1.near_player
 #> tag
 # @private
     #declare tag SpreadMarker
@@ -17,7 +17,7 @@
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # 発砲
-    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:mob/0138.combat_turret/tick/2.2.shot
+    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:mob/0138.combat_turret/tick/2.3.shot
 
 # 演出
     playsound minecraft:entity.zombie.attack_wooden_door master @a ~ ~ ~ 1 2

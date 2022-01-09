@@ -1,10 +1,10 @@
-#> asset:mob/0138.combat_turret/tick/2.2.shot
+#> asset:mob/0138.combat_turret/tick/2.3.shot
 #
 # 発砲します
 #
 # @within function
-#   asset:mob/0138.combat_turret/tick/2.1.ready
-#   asset:mob/0138.combat_turret/tick/2.2.shot
+#   asset:mob/0138.combat_turret/tick/2.2.ready
+#   asset:mob/0138.combat_turret/tick/2.3.shot
 
 # 着弾検知
     execute if entity @a[gamemode=!spectator,distance=..2] run tag @s add Landing
@@ -17,7 +17,7 @@
     particle dust 0.09 0.09 0.09 1 ~ ~ ~ 0 0 0 0 6
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:mob/0138.combat_turret/tick/2.3.damage
+    execute if entity @s[tag=Landing] run function asset:mob/0138.combat_turret/tick/2.4.damage
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:mob/0138.combat_turret/tick/2.2.shot
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:mob/0138.combat_turret/tick/2.3.shot

@@ -9,9 +9,10 @@
     execute at @p[tag=Victim,distance=..6] run playsound minecraft:block.amethyst_cluster.fall master @a ~ ~ ~ 1 2 0
 
 # 固定7ダメージ
-    data modify storage lib: Argument.Damage set value 6.0f
+    data modify storage lib: Argument.Damage set value 12.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
-    data modify storage lib: Argument.Fixed set value 1b
+    data modify storage lib: Argument.ByPassResist set value 1b
+    function lib:damage/modifier
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
     data remove storage lib: Argument

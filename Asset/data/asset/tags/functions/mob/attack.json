@@ -55,6 +55,7 @@
         "asset:mob/0156.infringement/attack/1.trigger",
         "asset:mob/0154.ruin/attack/1.trigger",
         "asset:mob/0080.fukotsu/attack/1.trigger",
-        "asset:mob/0186.ferocious_bee/attack/1.trigger"
+        "asset:mob/0186.ferocious_bee/attack/1.trigger",
+        "asset:mob/0150.contamination/attack/1.trigger"
     ]
 }
