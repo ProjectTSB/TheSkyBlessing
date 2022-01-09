@@ -17,6 +17,7 @@
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
+    execute if entity @s[scores={Elytra=1..}] run function core:handler/flying_elytra
 # エリア処理
     function world_manager:area/
 # 神の処理

@@ -179,6 +179,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
         scoreboard objectives add Sneak custom:sneak_time {"text":"イベント: スニーク"}
+        scoreboard objectives add Elytra custom:aviate_one_cm {"text":"イベント: エリトラ"}
 
     #> Library用スコアボード
     # @public
@@ -200,7 +201,6 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
-        scoreboard objectives add Elytra custom:aviate_one_cm {"text":"恩恵用エリトラ飛行チェック"}
 
     #> PlayerManager - Teams
     # @within function
