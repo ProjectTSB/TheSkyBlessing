@@ -200,6 +200,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+        scoreboard objectives add Elytra custom:aviate_one_cm {"text":"恩恵用エリトラ飛行チェック"}
 
     #> PlayerManager - Teams
     # @within function
