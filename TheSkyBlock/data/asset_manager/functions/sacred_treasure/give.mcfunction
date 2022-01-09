@@ -9,6 +9,8 @@
     #declare score_holder $CandidateLength
     #declare score_holder $Argument.Index
 
+# セッション開ける
+    function lib:array/session/open
 # 該当レアリティのデータを取得
     execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[1]
     execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[2]
@@ -26,7 +28,6 @@
 # 呼び出し
     function api:sacred_treasure/give/from_id
 # リセット
-    data remove storage lib: Array
-    function lib:array/force_delete_cache
+    function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
     data remove storage lib: Array
