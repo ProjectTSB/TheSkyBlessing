@@ -5,6 +5,7 @@
       "minecraft:cave_air",
       "minecraft:void_air",
 
+      "minecraft:barrier",
       "minecraft:repeater",
       "minecraft:redstone_wire",
       "minecraft:comparator",
@@ -125,7 +126,7 @@
       "#minecraft:trapdoors",
       "#minecraft:wall_corals",
       "#minecraft:walls",
-      
+
       "minecraft:water",
       "minecraft:seagrass",
       "minecraft:tall_seagrass",
