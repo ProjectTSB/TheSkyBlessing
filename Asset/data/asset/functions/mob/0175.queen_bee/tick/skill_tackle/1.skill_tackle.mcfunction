@@ -16,10 +16,10 @@
 # プレイヤーを見る
     execute if score @s 4V.Tick matches 25 facing entity @p[gamemode=!spectator] eyes run function asset:mob/0175.queen_bee/tick/rotated
 # 一定時間突進し続ける.
-    execute if score @s 4V.Tick matches 35..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
-    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 35..70 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
-    execute if score @s 4V.Tick matches 35..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
-    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 35..70 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+    execute if score @s 4V.Tick matches 25..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
+    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 25..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+    execute if score @s 4V.Tick matches 25..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
+    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 25..40 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
 # 攻撃判定のタグを消す
     execute if score @s 4V.Tick matches 41 run tag @s remove 4V.SkillTackleDamageHit
 
@@ -30,10 +30,10 @@
     execute if score @s 4V.Tick matches 58 at @s facing entity @p[gamemode=!spectator] eyes run function asset:mob/0175.queen_bee/tick/rotated
 # 突進
     execute if score @s 4V.Tick matches 41..73 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
-    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 50..79 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 41..73 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
 # 突進の加速
     execute if score @s 4V.Tick matches 58..73 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/2.skill_tackle_tp
-    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 68..79 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
+    execute if entity @s[tag=!4V.SkillTackleDamageHit] if score @s 4V.Tick matches 58..73 at @s run function asset:mob/0175.queen_bee/tick/skill_tackle/3.skill_tackle_damage
 # 攻撃判定のタグを消す
     execute if score @s 4V.Tick matches 73 run tag @s remove 4V.SkillTackleDamageHit
 
