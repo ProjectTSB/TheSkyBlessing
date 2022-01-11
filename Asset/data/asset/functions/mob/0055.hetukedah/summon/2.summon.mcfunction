@@ -5,7 +5,7 @@
 # @within function asset:mob/0055.hetukedah/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0055.hetukedah"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiVoid"],DeathLootTable:"asset:mob/death/0055.hetukedah"}
 # ID (int)
     data modify storage asset:mob ID set value 55
 # Type (string) Wikiを参照

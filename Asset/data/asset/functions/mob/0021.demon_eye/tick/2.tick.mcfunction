@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0021.demon_eye/tick/1.trigger
 
-# 万が一剥がされでもしたらいやなのでエフェクト付与
-    effect give @s slow_falling 2 0 true
-
 # パーティクル
     particle dust 0.5 0 0 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 2 force @a[distance=..40]
 

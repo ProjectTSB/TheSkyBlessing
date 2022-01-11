@@ -14,7 +14,7 @@
     execute if score @s 3L.Tick matches 85 run playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1.6
 
 # 攻撃判定
-    execute if score @s 3L.Tick matches 95 run function asset:mob/0129.lexiel/tick/skill_sword/2.skill_sword_slash
+    execute if score @s 3L.Tick matches 100 run function asset:mob/0129.lexiel/tick/skill_sword/2.skill_sword_slash
 
 # タグを消す
     execute if score @s 3L.Tick matches 110 run tag @s remove 3L.SkillSword

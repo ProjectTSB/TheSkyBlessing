@@ -33,7 +33,7 @@
         data remove storage lib: Argument
 
 # マナを吸い取る
-    scoreboard players set $Fluctuation Lib -25
+    scoreboard players set $Fluctuation Lib -80
     execute as @p[tag=Victim] run function lib:mp/fluctuation
 
 # 演出

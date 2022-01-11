@@ -9,7 +9,7 @@
     execute at @p[gamemode=!spectator,tag=Victim,distance=..32] run playsound entity.blaze.burn master @a ~ ~ ~ 0.7 1 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 7f
+    data modify storage lib: Argument.Damage set value 5f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
