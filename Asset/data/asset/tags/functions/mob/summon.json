@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0229.burning_blaze.shot/summon/1.trigger",
+        "asset:mob/0174.burning_blaze/summon/1.trigger",
         "asset:mob/1012.meteor_big/summon/1.trigger",
         "asset:mob/1011.meteor/summon/1.trigger",
         "asset:mob/1009.ancient_light/summon/1.trigger",

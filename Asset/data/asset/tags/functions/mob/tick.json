@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0229.burning_blaze.shot/tick/1.trigger",
+        "asset:mob/0174.burning_blaze/tick/1.trigger",
         "asset:mob/0166.flying_potion/tick/1.trigger",
         "asset:mob/1009.ancient_light/tick/1.trigger",
         "asset:mob/1010.starfury/tick/1.trigger",
