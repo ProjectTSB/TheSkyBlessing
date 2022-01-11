@@ -433,7 +433,7 @@
                         "#",
                         "# @within tag/function asset:sacred_treasure/give",
                         "",
-                        "execute if data storage asset:context {id:%ItemID%} run function asset:sacred_treasure/%namespace%/give/2.give",
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:sacred_treasure/%namespace%/give/2.give"
                     ]
                 },
                 {
@@ -569,9 +569,9 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/0.load.mcfunction",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/register.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/0003.humanity/register",
+                        "#> asset:sacred_treasure/%namespace%/register",
                         "#",
                         "# 神器プールへの登録処理",
                         "#",
@@ -2017,7 +2017,7 @@
                 {
                     "name": "entity",
                     "question": "元となるentity",
-                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fishing_bobber|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|player|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
                     "patternErrorMessage": "Mobの名前のみが許されるよ"
                 }
             ]
