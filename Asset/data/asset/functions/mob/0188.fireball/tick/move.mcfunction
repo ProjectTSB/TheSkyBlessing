@@ -13,8 +13,8 @@
     execute if entity @s[scores={58.Recursive=1..,58.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
 
 # スコア減算
-    scoreboard players remove @s 58.Recursive 1
-    scoreboard players remove @s 58.Range 1
+    scoreboard players add @s 58.Recursive 1
+    scoreboard players add @s 58.Range 1
 
 # プレイヤーの衝突判定
     execute positioned ~-0.5 ~0.0 ~-0.5 if entity @p[dx=0] run function asset:mob/0188.fireball/event/hit
@@ -23,7 +23,7 @@
     execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/0188.fireball/event/hit
 
 # 再帰
-    execute if entity @s[scores={58.Recursive=1..,58.Range=1..}] at @s run function asset:mob/0188.fireball/tick/move
+    execute if entity @s[scores={58.Recursive=..4,58.Range=1..}] at @s run function asset:mob/0188.fireball/tick/move
 
 # キル
-    execute if entity @s[scores={58.Range=0}] run kill @s
+    execute if entity @s[scores={58.Range=30}] run kill @s
