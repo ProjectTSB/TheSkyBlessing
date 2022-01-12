@@ -5,6 +5,7 @@
 # @within
 #   function player_manager:god/**
 #   function player_manager:set_team
+#   function lib:debug/change_believe/*
 #   predicate player_manager:is_believe/*
     #declare tag Believe.None
     #declare tag Believe.Flora
@@ -16,3 +17,9 @@
 #> storage for process
 # @within function player_manager:god/mercy/**
     #declare storage player_manager:god
+
+#> Tag for Nyaptov Passive
+# @within
+#   function core:handler/flying_elytra
+#   function player_manager:god/nyaptov/passive
+    #declare tag Nyaptov.FlyingElytra

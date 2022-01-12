@@ -14,6 +14,8 @@
     #declare score_holder $Diff
     #declare score_holder $Count
 
+# セッション開ける
+    function lib:array/session/open
 # 供物リスト
     data modify storage lib: Array set from storage player_manager:god TargetOfferingData.Items
 # 候補リストの長さを取得
@@ -43,8 +45,7 @@
     execute if score @s InSubArea matches 13 run data modify storage player_manager:god OfferingData.Urban set from storage player_manager:god TargetOfferingData
     execute if score @s InSubArea matches 14 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
 # リセット
-    data remove storage lib: Array
-    function lib:array/force_delete_cache
+    function lib:array/session/close
     scoreboard players reset $CandidatesLength Temporary
     scoreboard players reset $Count Temporary
     scoreboard players reset $Diff Temporary

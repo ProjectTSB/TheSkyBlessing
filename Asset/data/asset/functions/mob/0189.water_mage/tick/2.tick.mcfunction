@@ -7,9 +7,6 @@
 # パーティクル
     particle minecraft:falling_dust blue_wool ~ ~1 ~ 0.1 0 0.1 0 1
 
-# 足がない！！！！
-    effect give @s slow_falling 1 0 true
-
 # スコア
     execute positioned ^ ^ ^10 if entity @p[gamemode=!spectator,distance=..10] run scoreboard players add @s 59.Tick 1
 

@@ -12,6 +12,6 @@
 # 代入
     execute store result score $GiveCount Temporary run data get storage api: Argument.Count
 # 呼び出し
-    execute if score $GiveCount Temporary matches 1.. run function player_manager:keep_lost_item/give_part/
+    execute if score $GiveCount Temporary matches 1.. run function player_manager:lost_item/give_part/
 # リセット
     data remove storage api: Argument.Count

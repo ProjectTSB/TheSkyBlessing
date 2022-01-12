@@ -6,7 +6,6 @@
 # @within function asset_manager:spawner/spawn/nearby_entities/get
 
 # 初期化
-    scoreboard players set $NearbyEntities Temporary -1
     data modify storage asset:spawner Temp set value []
 # 検索
     function asset_manager:spawner/spawn/nearby_entities/try_get_from_cache/find
