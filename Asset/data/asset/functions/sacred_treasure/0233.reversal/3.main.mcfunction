@@ -10,8 +10,6 @@
 # ここから先は神器側の効果の処理を書く
 
 # MP反転
-    scoreboard objectives add 6H.MP dummy
-    scoreboard objectives add 6H.SetMP dummy
     execute as @a store result score @s 6H.MP run function lib:mp/get
     execute as @a store result score @s 6H.SetMP run function lib:mp/get_max
     execute as @a run scoreboard players operation @s 6H.SetMP -= @s 6H.MP
@@ -24,5 +22,3 @@
 # 後処理
     scoreboard players reset @a 6H.MP
     scoreboard players reset @a 6H.SetMP
-    scoreboard objectives remove 6H.MP
-    scoreboard objectives remove 6H.SetMP
