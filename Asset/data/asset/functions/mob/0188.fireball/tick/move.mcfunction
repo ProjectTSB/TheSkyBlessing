@@ -2,8 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0188.fireball/tick/2.tick
-# @within function asset:mob/0188.fireball/tick/move
+# @within function
+#   asset:mob/0188.fireball/tick/2.tick
+#   asset:mob/0188.fireball/tick/move
 
 # パーティクル
     particle flame ~ ~ ~ 0.25 0.25 0.25 0.005 1
