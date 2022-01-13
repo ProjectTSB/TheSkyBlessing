@@ -13,6 +13,6 @@
 # EntityStorage呼び出し
     function oh_my_dat:please
 # キャッシュされていなければ取得
-    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data set from entity @s UUID
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data set from entity @s UUID
 # outputのstorageに移す
     data modify storage api: UUID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data

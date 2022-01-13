@@ -10,8 +10,8 @@ gamerule disableElytraMovementCheck false
 gamerule disableRaids true
 gamerule doDaylightCycle true
 gamerule doEntityDrops true
-# gamerule doFireTick true
-    gamerule doFireTick false
+execute if data storage global {IsProduction:1b} run gamerule doFireTick true
+execute if data storage global {IsProduction:0b} run gamerule doFireTick false
 gamerule doImmediateRespawn false
 gamerule doInsomnia true
 gamerule doLimitedCrafting false
@@ -26,20 +26,19 @@ gamerule fallDamage true
 gamerule fireDamage true
 gamerule forgiveDeadPlayers false
 gamerule keepInventory true
-# gamerule logAdminCommands false
-    gamerule logAdminCommands true
+execute if data storage global {IsProduction:1b} run gamerule logAdminCommands false
+execute if data storage global {IsProduction:0b} run gamerule logAdminCommands true
 gamerule maxCommandChainLength 2147483647
 gamerule maxEntityCramming 24
-# gamerule mobGriefing true
-    gamerule mobGriefing false
-gamerule naturalRegeneration false
+execute if data storage global {IsProduction:1b} run gamerule mobGriefing true
+execute if data storage global {IsProduction:0b} run gamerule mobGriefing false
+gamerule naturalRegeneration true
 gamerule randomTickSpeed 3
-# gamerule reducedDebugInfo true
-    gamerule reducedDebugInfo false
-# gamerule sendCommandFeedback false
-    gamerule sendCommandFeedback true
+execute if data storage global {IsProduction:1b} run gamerule reducedDebugInfo true
+execute if data storage global {IsProduction:0b} run gamerule reducedDebugInfo false
+execute if data storage global {IsProduction:1b} run gamerule sendCommandFeedback false
+execute if data storage global {IsProduction:0b} run gamerule sendCommandFeedback true
 gamerule showDeathMessages true
 gamerule spawnRadius 0
-gamerule spectatorsGenerateChunks false
+gamerule spectatorsGenerateChunks true
 gamerule universalAnger false
-#TODO リリース時に上記のコメントを外してインデントのある行を削除する

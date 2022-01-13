@@ -14,7 +14,11 @@
 #   抜き取られた要素
 # @api
 
-data remove storage lib: Elements
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
+# 初期化
+    data remove storage lib: Elements
 # 添字配列をソートする
     # 配列を入れ替える
         data modify storage lib: ArrayTemp set from storage lib: Array

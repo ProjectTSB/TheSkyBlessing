@@ -3,8 +3,8 @@
 # ダメージをlib: Modifiersを元に補正します
 #
 # @within function
-#   lib:damage/core/modifier
-#   lib:damage/core/get_status
+#   lib:damage/core/modify/player
+#   lib:damage/core/get_status/cons_resist
 
 #> Temp
 # @private
@@ -44,7 +44,7 @@
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
-    execute store result storage lib: Argument.Damage double 0.0001 run scoreboard players get $Damage Temporary
+    execute store result storage lib: ModifiedDamage double 0.0001 run scoreboard players get $Damage Temporary
 # リセット
     data remove storage lib: Modifiers
     scoreboard players reset $Average Temporary

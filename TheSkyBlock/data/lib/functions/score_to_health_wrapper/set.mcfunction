@@ -15,5 +15,7 @@
 
 # セット
     scoreboard players operation @s ScoreToHealth = $Set Lib
+    function oh_my_dat:please
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
 # リセット
     scoreboard players reset $Set Lib

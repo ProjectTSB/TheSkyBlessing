@@ -5,7 +5,7 @@
 # @within function asset:mob/example/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/example/death"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AntiVoid"],DeathLootTable:"asset:mob/death/example"}
 # ID (int)
     data modify storage asset:mob ID set value 2147483647
 # Type (string) Wikiを参照
@@ -41,7 +41,7 @@
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
-    data modify storage asset:mob KnockBackResist set value 1.0
+    data modify storage asset:mob KnockBackResist set value 0
 # 属性倍率 // 防御力,特殊防御力による軽減計算前に計算
     # 物理倍率 (int) (オプション)
         data modify storage asset:mob Resist.Physical set value 0.85f

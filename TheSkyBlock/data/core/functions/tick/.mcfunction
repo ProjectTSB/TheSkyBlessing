@@ -8,14 +8,28 @@
 
 # 現在の時間をglobalに代入する
     execute store result storage global Time int 1 run time query gametime
-# 神器のグローバルクールダウン
-    execute if score $SacredTreasureSpecialCooldown Global matches 1.. run scoreboard players remove $SacredTreasureSpecialCooldown Global 1
+# プレイヤー数をGlobalオブジェクトに設定する
+    execute store result score $PlayerCount Global if entity @a
+# 読み込み時間を加算
+    scoreboard players add $LoadTime Global 1
+
+# 神器のグローバルtick処理
+    function asset_manager:sacred_treasure/tick/
 
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
+
+# 解呪処理
+    execute as @e[type=armor_stand,tag=CursedTreasure,tag=!DispelledCursedTreasure] at @s run function asset_manager:island/tick/
+
+# スポナー処理部
+    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
+
+# ワールドギミック
+    function world_manager:gimmick/
 
 # Mob処理部
     # データ初期化部
@@ -29,6 +43,9 @@
 # ItemMetaDataチェック
     execute as @e[type=item] run function core:tick/check_item_meta/entity
 
+# ダメージログに対するtick処理
+    execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick
+
 # tick処理後のプレイヤー処理部
     execute as @a at @s run function core:tick/post-tick-proc_player
 
@@ -37,4 +54,4 @@
     execute if entity @a[scores={AttackedEntity=0..}] run function mob_manager:entity_finder/attacked_entity/reset
 
 # 0-0-0-0-0消失警告
-    execute unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]
+    execute if score $LoadTime Global matches 160.. unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]

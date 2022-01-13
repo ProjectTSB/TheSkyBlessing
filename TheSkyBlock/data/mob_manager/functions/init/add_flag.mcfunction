@@ -6,13 +6,14 @@
 
 #> Private
 # @private
-    #declare score_holder $FlagIndex
     #declare score_holder $CloneFlagIndex
 
 # グローバルインデックス増加
     scoreboard players add $FlagIndex Global 1
     scoreboard players operation $FlagIndex Global %= $2^15 Const
     execute if score $FlagIndex Global matches 0 run scoreboard players add $FlagIndex Global 1
+# 直接UUIDとして突っ込む
+    scoreboard players operation @s MobUUID = $FlagIndex Global
 # Clone
     scoreboard players operation $CloneFlagIndex Temporary = $FlagIndex Global
 # FlagIndex << 16

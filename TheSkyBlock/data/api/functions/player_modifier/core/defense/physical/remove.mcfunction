@@ -12,6 +12,8 @@
     data modify storage api: NewModifiers set value []
 # フィルタ
     function api:player_modifier/core/common/remove_modifier
+# 削除されたデータの加工
+    execute store result storage api: Removed.Amount double -0.001 run data get storage api: Removed.Amount 1000
 # 新しい配列を戻す
     data modify storage api: Modifiers set from storage api: NewModifiers
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Defense.Physical set from storage api: Modifiers

@@ -12,7 +12,7 @@
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 
 # ターゲットにタグ付与
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=player,dx=0] run tag @e[type=#lib:living,type=player,dx=0,limit=1] add LandingTarget
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=player,dx=0] run tag @e[type=#lib:living,type=player,gamemode=!spectator,dx=0,limit=1] add LandingTarget
 
 # 演出
     particle minecraft:composter ~ ~ ~ 0.1 0.1 0.1 0 1

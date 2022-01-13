@@ -39,7 +39,7 @@
     execute unless data storage asset:mob Armor.Chest run data modify storage asset:mob Armor.Chest set value {}
     execute unless data storage asset:mob Armor.Legs run data modify storage asset:mob Armor.Legs set value {}
     execute unless data storage asset:mob Armor.Feet run data modify storage asset:mob Armor.Feet set value {}
-    execute unless data storage asset:mob WeaponDropChances run data modify storage asset:mob HandDropChances set value [0f,0f]
+    execute unless data storage asset:mob WeaponDropChances run data modify storage asset:mob WeaponDropChances set value [0f,0f]
     execute unless data storage asset:mob ArmorDropChances run data modify storage asset:mob ArmorDropChances set value [0f,0f,0f,0f]
     # execute unless data storage asset:mob Health run
     # execute unless data storage asset:mob AttackDamage run
@@ -63,6 +63,8 @@
     data remove storage asset:mob Name
     data remove storage asset:mob Weapon
     data remove storage asset:mob Armor
+    data remove storage asset:mob WeaponDropChances
+    data remove storage asset:mob ArmorDropChances
     data remove storage asset:mob Health
     data remove storage asset:mob AttackDamage
     data remove storage asset:mob Defense
