@@ -5,7 +5,6 @@
 # @within function asset:mob/0124.skull_harpy/tick/2.tick
 #> private
 # @private
-    #declare score_holder $VectorMagnitude
     #declare tag Target
 
 # 最寄りのプレイヤーにタグをつける
@@ -13,11 +12,11 @@
 
 # 数値
     # デフォルト
-        data modify storage lib: Argument.VectorMagnitude set value 80
+        data modify storage lib: Argument.VectorMagnitude set value 0.8
     # かなり離れてる時に実行
-        execute if entity @p[tag=Target,distance=30..60] run data modify storage lib: Argument.VectorMagnitude set value 150
+        execute if entity @p[tag=Target,distance=30..60] run data modify storage lib: Argument.VectorMagnitude set value 1.5
     # 近い時に実行する
-        execute if entity @p[tag=Target,distance=..9] run data modify storage lib: Argument.VectorMagnitude set value 60
+        execute if entity @p[tag=Target,distance=..9] run data modify storage lib: Argument.VectorMagnitude set value 0.6
 # 実行
     # 適正距離の場合
         execute if entity @p[tag=Target,distance=9..60] facing entity @p eyes rotated ~ ~10 run function lib:motion/
