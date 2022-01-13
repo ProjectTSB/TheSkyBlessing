@@ -1,6 +1,6 @@
 {
     "values": [
-        "asset:mob/0237.lunatic_mage/0.load",
+        "asset:mob/0214.water_magic/0.load",
         "asset:mob/1008.yellow_star/0.load",
         "asset:mob/1005.blue_star/0.load",
         "asset:mob/1004.tultaria/0.load",
@@ -46,6 +46,7 @@
         "asset:mob/0076.golden_watermelon_bomber/0.load",
         "asset:mob/0077.golden_watermelon/0.load",
         "asset:mob/0139.blast_eye/0.load",
-        "asset:mob/0171.lumberjack_of_blue_forest/0.load"
+        "asset:mob/0171.lumberjack_of_blue_forest/0.load",
+        "asset:mob/0237.lunatic_mage/0.load"
     ]
 }
