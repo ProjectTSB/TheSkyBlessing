@@ -12,4 +12,9 @@
 #   move前の配列構造
 # @api
 
-execute if data storage lib: Cache[0] run function lib:array/core/revert
+
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
+# Cacheを復元
+    execute if data storage lib: Cache[0] run function lib:array/core/revert
