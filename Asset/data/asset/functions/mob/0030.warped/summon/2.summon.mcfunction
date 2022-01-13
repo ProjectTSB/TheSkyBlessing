@@ -9,11 +9,11 @@
 # ID (int)
     data modify storage asset:mob ID set value 30
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value ""
+    data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"歪んだ者","color":"dark_aqua","underlined":falce}'
+    data modify storage asset:mob Name set value '{"text":"歪んだ者","color":"dark_aqua","underlined":true}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:sea_lantern",Count:1b}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:tube_coral_block",Count:1b}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
