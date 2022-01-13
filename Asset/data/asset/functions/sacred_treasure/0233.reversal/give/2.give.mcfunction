@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0233.reversal/_.give
+#> asset:sacred_treasure/0233.reversal/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @private
+# @within function asset:sacred_treasure/0233.reversal/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/lib/giveを実行することで入手可能。
@@ -43,7 +43,7 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure LocalCooldown set value 12000
+    data modify storage asset:sacred_treasure LocalCooldown set value 2400
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
@@ -54,4 +54,4 @@
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
 # 神器の入手用function
-    function asset:sacred_treasure/lib/give
+    function asset:sacred_treasure/common/give

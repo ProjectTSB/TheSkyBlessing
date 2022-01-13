@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0233.reversal/2.check_condition
+#> asset:sacred_treasure/0233.reversal/trigger/2.check_condition
 #
 # 神器の発動条件をチェックします
 #
 # @within function asset:sacred_treasure/0233.reversal/1.trigger
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
-    function asset:sacred_treasure/lib/check_condition/auto
+    function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
 # 体力が10以下か確認
@@ -15,4 +15,4 @@
     scoreboard players reset @s Temporary
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0233.reversal/3.main
+    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0233.reversal/trigger/3.main
