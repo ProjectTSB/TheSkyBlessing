@@ -1,8 +1,5 @@
 #> lib:spread_entity/_index.d
-#
-#
-#
-# @within function lib:spread_entity/
+# @private
 
 #> for moving player
 # @within function lib:spread_entity/core/player/*
