@@ -5,7 +5,7 @@
 # @within function asset:mob/0188.fireball/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"],}
+    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"]}
 # ID (int)
     data modify storage asset:mob ID set value 188
 # Type (string) Wikiを参照
