@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:trader/register/
 
+# セッション開ける
+    function lib:array/session/open
 # storage呼び出し
     function oh_my_dat:please
 # ID
@@ -19,6 +21,6 @@
     data modify entity @s Offers.Recipes set from storage asset:trader Recipes
 
 # リセット
-    data remove storage lib: Array
+    function lib:array/session/close
     data remove storage asset:trader Recipes
     tag @s remove TraderInit
