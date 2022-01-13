@@ -2,7 +2,7 @@
 #
 # 神器の発動条件をチェックします
 #
-# @within function asset:sacred_treasure/0233.reversal/1.trigger
+# @within function asset:sacred_treasure/0233.reversal/trigger/1.trigger
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
     function asset:sacred_treasure/common/check_condition/auto
