@@ -17,7 +17,8 @@
 # ヒット処理
     execute positioned ~-0.5 ~ ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,limit=1] run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/03.hit
 
-# 壁が目の前にあると消える
+# 壁の中、壁が目の前にあると消える
+    execute unless block ~ ~ ~ #lib:no_collision run kill @s
     execute unless block ^ ^ ^1 #lib:no_collision run kill @s
 
 # 消滅

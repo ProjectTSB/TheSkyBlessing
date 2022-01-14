@@ -8,6 +8,9 @@
     playsound block.beacon.deactivate player @a ~ ~ ~ 0.8 0.8 0
     particle dust 0 1 1 1 ~ ~ ~ 0.4 0.4 0.4 0 30 normal @a
 
+# 自身にtagを付与
+    tag @s add MU.This
+
 # ダメージ設定
     # 与えるダメージ = 15
         data modify storage lib: Argument.Damage set value 50.0f
@@ -15,7 +18,7 @@
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
-        function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=marker,tag=MU.This,distance=..0.01,sort=nearest,limit=1] MU.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument

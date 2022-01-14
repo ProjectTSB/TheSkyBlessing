@@ -6,5 +6,6 @@
     #declare tag MU.Star
     #declare tag MU.2
     #declare tag MU.3
+    #declare tag MU.This
     #declare score_holder $MPMaxValue
     #declare score_holder $MPValue
