@@ -12,4 +12,4 @@ execute if score $SpawnRange Temporary matches 330.. run function asset_manager:
     execute store result storage asset:spawner NearbyEntitiesCache[-1][0] int 1 run scoreboard players get $MobID Temporary
     scoreboard players add $NearbyEntities Temporary 1
     execute store result storage asset:spawner NearbyEntitiesCache[-1][1] int 1 run scoreboard players get $NearbyEntities Temporary
-    scoreboard players add $NearbyEntities Temporary 1
+    scoreboard players remove $NearbyEntities Temporary 1
