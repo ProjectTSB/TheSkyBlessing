@@ -8,13 +8,13 @@
     function asset_manager:sacred_treasure/data/current/get
 # MP減少処理
     function asset_manager:sacred_treasure/use/remove_mp
-# クールダウン保存
+# 特殊クールダウン保存
     execute if data storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown store result score $SacredTreasureSpecialCooldown Global run data get storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown
     execute if data storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown store result bossbar asset:special_cooldown max run scoreboard players get $SacredTreasureSpecialCooldown Global
     execute if data storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown run bossbar set asset:special_cooldown players @a
 # 最終使用tick保存
     execute store result storage asset:sacred_treasure Item.tag.TSB.LatestUseTick int 1 run time query gametime
-# クールダウン保存
+# 通常クールダウン保存
     execute store result score @s WeaponLogCD run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
     execute store result score @s WeaponLogCDMax run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
 # アイテム更新
