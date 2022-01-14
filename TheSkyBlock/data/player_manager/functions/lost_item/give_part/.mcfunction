@@ -4,6 +4,8 @@
 #
 # @within function api:lost_items/give
 
+# セッション開ける
+    function lib:array/session/open
 # UserStorage呼び出し
     function oh_my_dat:please
 # picks用にlib: Arrayに入れる
@@ -21,7 +23,7 @@
 # 実行座標から降らす
     function player_manager:lost_item/give_part/falling_item
 # リセット
-    data remove storage lib: Array
+    function lib:array/session/close
     scoreboard players reset $GiveCount Temporary
     scoreboard players reset $ListLength Temporary
     scoreboard players reset $Index Temporary

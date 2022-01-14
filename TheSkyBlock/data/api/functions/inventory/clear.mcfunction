@@ -18,6 +18,8 @@
     execute unless data storage api: Argument.Amount run data modify storage api: Argument.Amount set value 8192
 # 削除個数の取得
     execute store result score $Amount Temporary run data get storage api: Argument.Amount
+# セッション開ける
+    function lib:array/session/open
 # インベントリを反転する
     data modify storage lib: Array set from storage api: Inventory
     function lib:array/reverse
@@ -25,7 +27,7 @@
     execute if score $Amount Temporary matches 0 run function api:inventory/core/clear/test/
     execute if score $Amount Temporary matches 1.. run function api:inventory/core/clear/remove/
 # リセット
-    data remove storage lib: Array
+    function lib:array/session/close
     data remove storage api: NewInv
     data remove storage api: Argument
     scoreboard players reset $Amount Temporary
