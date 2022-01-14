@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0213.terrible_scout_bomber/summon/1.trigger",
         "asset:mob/1012.meteor_big/summon/1.trigger",
         "asset:mob/1011.meteor/summon/1.trigger",
         "asset:mob/1009.ancient_light/summon/1.trigger",
