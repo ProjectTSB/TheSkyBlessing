@@ -5,7 +5,7 @@
 # @within function asset:mob/0239.poltergeist_bow/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0239.poltergeist_bow"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0239.poltergeist_bow"}
 # ID (int)
     data modify storage asset:mob ID set value 289
 # Type (string) Wikiを参照
