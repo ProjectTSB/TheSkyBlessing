@@ -25,10 +25,8 @@
                                     "text": " "
                                 },
                                 {
-                                    "score": {
-                                        "objective": "Temporary",
-                                        "name": "$Remain"
-                                    },
+                                    "nbt": "Item.tag.TSB.RemainingCount",
+                                    "storage": "asset:sacred_treasure",
                                     "color": "green"
                                 },
                                 {
@@ -36,10 +34,8 @@
                                     "color": "green"
                                 },
                                 {
-                                    "score": {
-                                        "objective": "Temporary",
-                                        "name": "$RemainMAX"
-                                    },
+                                    "nbt": "Item.tag.TSB.RemainingCountMAX",
+                                    "storage": "asset:sacred_treasure",
                                     "color": "green"
                                 }
                             ]

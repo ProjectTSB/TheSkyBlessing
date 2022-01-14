@@ -9,16 +9,6 @@
 #   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
-#> LootTableに渡す用のscoreHolder
-# @within
-#   function
-#       asset_manager:sacred_treasure/create/set_data
-#       asset_manager:sacred_treasure/use/**
-#   loot_table
-#       asset_manager:sacred_treasure/get_name/has_remain
-    #declare score_holder $Remain
-    #declare score_holder $RemainMAX
-
 #> 特殊クールダウン
 # @within function
 #   asset_manager:sacred_treasure/check/check_special_cooldown

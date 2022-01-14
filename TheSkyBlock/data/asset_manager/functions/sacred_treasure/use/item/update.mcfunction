@@ -9,8 +9,6 @@
 # データ更新処理
     data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure Item.tag.TSB.rawName
     # 残り回数が存在する場合
-        execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount store result score $Remain Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCount
-        execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount store result score $RemainMAX Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCountMAX
         execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/get_name/has_remain
     # 残り回数が存在しない場合
         execute unless data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/get_name/
@@ -31,4 +29,3 @@
 # リセット
     data remove storage asset:sacred_treasure Name
     data remove storage asset:sacred_treasure CopyItem
-    scoreboard players reset $RemainMAX Temporary
