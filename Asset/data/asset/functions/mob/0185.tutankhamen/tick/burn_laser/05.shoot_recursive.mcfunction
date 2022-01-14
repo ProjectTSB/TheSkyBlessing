@@ -17,4 +17,4 @@
     execute positioned ~-0.5 ~ ~-0.5 if entity @a[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0185.tutankhamen/tick/burn_laser/06.damage
 
 # 再帰
-    execute positioned ~-0.5 ~ ~-0.5 if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,dx=0] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^1 run function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive
+    execute positioned ~-0.5 ~ ~-0.5 if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,dx=0] if block ~ ~ ~ #lib:no_collision positioned ~0.5 ~ ~0.5 positioned ^ ^ ^1 run function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive
