@@ -16,7 +16,7 @@
     execute in overworld positioned 0.0 0.0 0.0 run tp 0-0-0-0-0 ^ ^ ^1
 
 # 必要なデータ取得
-    execute store result score $VectorMagnitude Temporary run data get storage lib: Argument.VectorMagnitude 1
+    execute store result score $VectorMagnitude Temporary run data get storage lib: Argument.VectorMagnitude 100
 
 # 演算処理
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos

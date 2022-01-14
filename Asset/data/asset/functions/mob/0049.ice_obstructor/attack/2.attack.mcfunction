@@ -10,7 +10,6 @@
 
 # デバフ
     effect give @p[tag=Victim] slowness 3 2 true
-    effect give @p[tag=Victim] weakness 3 2 true
     effect give @p[tag=Victim] mining_fatigue 3 2 true
 
 # 引数の設定

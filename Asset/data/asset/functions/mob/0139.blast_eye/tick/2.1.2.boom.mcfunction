@@ -16,6 +16,6 @@
 # 補正
     function lib:damage/modifier
 # 実行
-    execute as @a[distance=..3.5] run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function lib:damage/
 # リセット
     data remove storage lib: Argument

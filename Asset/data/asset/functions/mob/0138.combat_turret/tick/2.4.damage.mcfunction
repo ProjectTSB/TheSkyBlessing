@@ -1,22 +1,22 @@
-#> asset:mob/0138.combat_turret/tick/2.3.damage
+#> asset:mob/0138.combat_turret/tick/2.4.damage
 #
 # ダメージを与えます
 #
-# @within function asset:mob/0138.combat_turret/tick/2.2.shot
+# @within function asset:mob/0138.combat_turret/tick/2.3.shot
 
 # 演出
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 10
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 14f
+        data modify storage lib: Argument.Damage set value 10.5f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @p[gamemode=!creative,tag=LandingTarget,distance=..50] at @s run function lib:damage/
+        execute as @p[gamemode=!creative,tag=LandingTarget,distance=..30] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

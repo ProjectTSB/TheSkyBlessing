@@ -21,8 +21,8 @@
     execute unless score $Tick Temporary >= $Cooldown Temporary run tag @s add CheckFailed
 # クールダウン保存
     scoreboard players operation $Cooldown Temporary -= $Tick Temporary
-    execute unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} run scoreboard players operation @s WeaponLogCD = $Cooldown Temporary
-    execute unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} store result score @s WeaponLogCDMax run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
+    execute unless score $Tick Temporary >= $Cooldown Temporary unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} run scoreboard players operation @s WeaponLogCD = $Cooldown Temporary
+    execute unless score $Tick Temporary >= $Cooldown Temporary unless data storage asset:sacred_treasure Item.tag.TSB{DisableCooldownMessage:true} store result score @s WeaponLogCDMax run data get storage asset:sacred_treasure Item.tag.TSB.LocalCooldown
 # リセット
     scoreboard players reset $Cooldown Temporary
     scoreboard players reset $LatestUsedTick Temporary

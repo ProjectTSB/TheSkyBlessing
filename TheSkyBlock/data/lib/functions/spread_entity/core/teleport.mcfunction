@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:spread_entity/core/
+# @within function lib:spread_entity/core/**
 
 #> Pos
 # @private
@@ -23,7 +23,6 @@
     #declare score_holder $AddZ
 
 # Pos取得
-    data modify storage api: Pos set from entity @s Pos
     execute store result score $PosX Temporary run data get storage api: Pos[0] 100
     execute store result score $PosY Temporary run data get storage api: Pos[1] 100
     execute store result score $PosZ Temporary run data get storage api: Pos[2] 100
@@ -65,6 +64,7 @@
     execute store result storage lib: Pos[2] double 0.01 run scoreboard players get $PosZ Temporary
     data modify entity @s Pos set from storage lib: Pos
 # リセット
+    data remove storage api: Pos
     data remove storage lib: Pos
     data remove storage lib: Argument.Bounds
     scoreboard players reset $BoundsX- Temporary

@@ -14,7 +14,7 @@
     playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 0.04 0
 
 # ダメージ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function asset:mob/0185.tutankhamen/tick/burn_laser/06.damage
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0185.tutankhamen/tick/burn_laser/06.damage
 
 # 再帰
-    execute if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^1 run function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive
+    execute if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,dx=1.5,dy=1.5,dz=1.5] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^1 run function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive
