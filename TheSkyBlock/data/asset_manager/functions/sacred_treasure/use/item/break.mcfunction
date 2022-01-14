@@ -13,3 +13,7 @@
     execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run item replace entity @s armor.legs with air
     execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run item replace entity @s armor.chest with air
     execute if data storage asset:sacred_treasure {TargetSlot:"head"} run item replace entity @s armor.head with air
+# データ削除
+    data remove storage asset:sacred_treasure Item
+# current更新
+    function asset_manager:sacred_treasure/data/current/update/

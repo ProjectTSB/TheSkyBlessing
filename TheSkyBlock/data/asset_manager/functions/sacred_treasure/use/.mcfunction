@@ -22,4 +22,5 @@
     execute if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount run function asset_manager:sacred_treasure/use/item/has_remain
 # リセット
     data remove storage asset:sacred_treasure TargetSlot
+    data remove storage asset:sacred_treasure TargetDefaultSlot
     data remove storage asset:sacred_treasure Item

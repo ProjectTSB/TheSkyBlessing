@@ -37,4 +37,5 @@
     execute if entity @s[tag=!CanUsed] if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount if data storage asset:sacred_treasure Item.tag.TSB{Trigger:"itemUse"} run function asset_manager:sacred_treasure/use/item/has_remain
 # リセット
     data remove storage asset:sacred_treasure TargetSlot
+    data remove storage asset:sacred_treasure TargetDefaultSlot
     data remove storage asset:sacred_treasure Item
