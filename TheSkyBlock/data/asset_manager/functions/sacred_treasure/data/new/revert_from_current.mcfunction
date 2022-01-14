@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/new/revert_from_current
 #
-# 最上層のデータをNewデータに格納します
+# currentデータをNewに格納します
 #
 # @within function asset_manager:sacred_treasure/triggers/**
 

@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/new/init
 #
-# 神器のIDを取得します
+# プレイヤーデータから新しいcontextを生成してNewに突っ込む
 #
 # @within asset_manager:sacred_treasure/triggers/
 

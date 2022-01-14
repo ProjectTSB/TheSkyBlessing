@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/current/get
 #
-# TargetSlotを元にプレイヤーの神器データを取得する
+# TargetSlotを元にプレイヤーのデータを取得する
 #
 # @input
 #   as player

@@ -1,6 +1,6 @@
-#> asset_manager:sacred_treasure/data/new/stash_to_context
+#> asset_manager:sacred_treasure/data/new/stash_to_entity_storage
 #
-# contextをEntityStorageに退避させる
+# NewをEntityStorageに退避させる
 #
 # @within function asset_manager:sacred_treasure/triggers/
 

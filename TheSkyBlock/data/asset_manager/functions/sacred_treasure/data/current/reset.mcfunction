@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/current/reset
 #
-# asset:contextの最上層データをリセットします
+# currentデータをリセットします
 #
 # @within function
 #   asset_manager:sacred_treasure/data/*/*_current

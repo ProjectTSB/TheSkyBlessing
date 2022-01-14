@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/old/init
 #
-# EntityStorageからcontextにつっこむ
+# EntityStorageに退避された1tick前のデータをOldに突っ込む
 #
 # @within function asset_manager:sacred_treasure/triggers/
 

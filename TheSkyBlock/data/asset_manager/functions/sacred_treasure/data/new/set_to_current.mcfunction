@@ -1,6 +1,6 @@
 #> asset_manager:sacred_treasure/data/new/set_to_current
 #
-# 新しいデータをcontextにputします
+# Newをcurrentデータにsetします
 #
 # @within function asset_manager:sacred_treasure/triggers/**
 

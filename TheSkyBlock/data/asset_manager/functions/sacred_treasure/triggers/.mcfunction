@@ -28,7 +28,7 @@
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/dis_equip
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/equip
 # EntityStorageにデータ突っ込む
-    function asset_manager:sacred_treasure/data/new/stash_to_context
+    function asset_manager:sacred_treasure/data/new/stash_to_entity_storage
 # リセット
     function asset_manager:sacred_treasure/triggers/check_change_armor/reset
     function asset_manager:sacred_treasure/data/current/reset
