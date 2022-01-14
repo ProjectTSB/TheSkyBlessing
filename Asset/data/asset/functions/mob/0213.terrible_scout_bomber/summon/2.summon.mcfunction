@@ -58,5 +58,9 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.5f
 
+# 個別スコア初期化
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 5X.ActionPhase 0
+    execute store result score @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 5X.PhStartTime run time query gametime
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
