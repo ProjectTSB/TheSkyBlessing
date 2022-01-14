@@ -11,7 +11,7 @@
     particle lava ^ ^ ^0.25 0 0 0 0 1 normal @a
     particle lava ^ ^ ^0.5 0 0 0 0 1 normal @a
     particle lava ^ ^ ^0.75 0 0 0 0 1 normal @a
-    playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 0.04 0
+    playsound minecraft:entity.iron_golem.death hostile @a ~ ~ ~ 0.04 0
 
 # ダメージ
     execute if entity @a[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0185.tutankhamen/tick/burn_laser/06.damage
