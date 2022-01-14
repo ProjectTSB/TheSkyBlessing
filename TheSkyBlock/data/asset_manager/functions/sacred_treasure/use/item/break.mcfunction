@@ -10,7 +10,8 @@
 # 音
     playsound entity.item.break player @s
 # 削除
-    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run item replace entity @s weapon.mainhand with air
+    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
+    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_air
     execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run item replace entity @s weapon.offhand with air
     execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run item replace entity @s armor.feet with air
     execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run item replace entity @s armor.legs with air

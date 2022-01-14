@@ -10,6 +10,7 @@
     data modify storage asset:context id set from storage asset:context New.id
     data modify storage asset:context Items set from storage asset:context New.Items
     data modify storage asset:context Inventory set from storage asset:context New.Inventory
+    data modify storage asset:context SelectedItemSlot set from storage asset:context New.SelectedItemSlot
 # autoの処理
     # 初期化
         data modify storage asset:context id.auto set value -1

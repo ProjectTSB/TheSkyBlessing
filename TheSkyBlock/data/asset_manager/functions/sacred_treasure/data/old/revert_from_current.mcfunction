@@ -13,6 +13,7 @@
     execute unless data storage asset:context id{head:-1} run data modify storage asset:context Old.id.head set from storage asset:context id.head
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context Old.Items set from storage asset:context Items
+    data modify storage asset:context Old.SelectedItemSlot set from storage asset:context SelectedItemSlot
     data modify storage asset:context Old.Inventory set from storage asset:context Inventory
 # リセット
     function asset_manager:sacred_treasure/data/current/reset

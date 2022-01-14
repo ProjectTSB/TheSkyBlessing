@@ -9,6 +9,9 @@
 # Inventory
     function api:data_get/inventory
     data modify storage asset:context New.Inventory set from storage api: Inventory
+# SelectedItemSlot
+    function api:data_get/selected_item_slot
+    data modify storage asset:context New.SelectedItemSlot set from storage api: SelectedItemSlot
 # Items
     function api:data_get/selected_item
     data modify storage asset:context New.Items.mainhand set from storage api: SelectedItem

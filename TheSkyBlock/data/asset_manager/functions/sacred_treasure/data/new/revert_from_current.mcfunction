@@ -14,5 +14,6 @@
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context New.Items set from storage asset:context Items
     data modify storage asset:context New.Inventory set from storage asset:context Inventory
+    data modify storage asset:context New.SelectedItemSlot set from storage asset:context SelectedItemSlot
 # リセット
     function asset_manager:sacred_treasure/data/current/reset
