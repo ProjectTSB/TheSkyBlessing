@@ -18,6 +18,4 @@
     execute if score @s 6J.SkillTick matches 29 rotated ~ 0 positioned ^ ^0.5 ^9 run function asset:mob/0237.lunatic_mage/magic_summon/water
 
 # リセット
-    execute if score @s 6J.SkillTick matches 31.. run data modify entity @s NoAI set value 0b
-    execute if score @s 6J.SkillTick matches 31.. run scoreboard players reset @s 6J.Tick
-    execute if score @s 6J.SkillTick matches 31.. run scoreboard players reset @s 6J.SkillTick
+    execute if score @s 6J.SkillTick matches 31.. run function asset:mob/0237.lunatic_mage/tick/05.reset
