@@ -4,6 +4,9 @@
 #
 # @within function core:tick/
 
+# 死亡処理チェック
+    execute if entity @s[scores={DeathEvent=1..}] run function core:handler/death
+
 # プレイヤーの所持するアイテムのMetaチェック
     function core:tick/check_item_meta/inventory
 

@@ -12,7 +12,7 @@
     playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 0.4 1 0
 
 # プレイヤーへのダメージ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function asset:mob/0115.jewel_bullet/tick/3.damage
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,dx=1.5] run function asset:mob/0115.jewel_bullet/tick/3.damage
 
 # 移動
     tp @s ^ ^ ^1.5

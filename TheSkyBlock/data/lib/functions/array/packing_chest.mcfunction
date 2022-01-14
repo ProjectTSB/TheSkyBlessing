@@ -12,6 +12,9 @@
 #   Slotが付与された27個以下のリスト
 # @public
 
+# セッションチェック
+    execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
+
 # 初期化
     scoreboard players set $Index Temporary 0
 # 箱詰め

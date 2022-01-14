@@ -11,7 +11,7 @@
 # タグをつける
     tag @e[type=armor_stand,tag=4V.ArmorStand,distance=..0.01,sort=nearest,limit=1] add 4V.ArmorStandThis
 # 前進
-    tp @s ^ ^ ^2.5
+    tp @s ^ ^ ^2
 # 位置をあわせる
     tp @e[type=armor_stand,tag=4V.ArmorStandThis,distance=..0.01] @s
 # タグを消す

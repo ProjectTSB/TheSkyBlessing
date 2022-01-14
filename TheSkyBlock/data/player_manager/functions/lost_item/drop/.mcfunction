@@ -7,6 +7,10 @@
 # 消そうね
     clear @s
 
+
+# セッション開ける
+    function lib:array/session/open
+
 # 下ごしらえ
     data modify storage lib: Array set from storage api: Inventory
     data remove storage lib: Array[].Slot
@@ -29,5 +33,4 @@
 
 
 # リセット
-    data remove storage lib: Package
-    data remove storage lib: Array
+    function lib:array/session/close
