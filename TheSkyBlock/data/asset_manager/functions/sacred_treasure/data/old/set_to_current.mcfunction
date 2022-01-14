@@ -1,15 +1,15 @@
-#> asset_manager:sacred_treasure/data/pre_event_put/new
+#> asset_manager:sacred_treasure/data/old/set_to_current
 #
-# 新しいデータをcontextにputします
+# 古いデータをcontextにputします
 #
 # @within function asset_manager:sacred_treasure/triggers/**
 
-# 明示的にリセットする
-    function asset_manager:sacred_treasure/data/reset_context
+# リセット
+    function asset_manager:sacred_treasure/data/current/reset
 # 新しいデータを一つ上の階層に上げる
-    data modify storage asset:context id set from storage asset:context New.id
-    data modify storage asset:context Items set from storage asset:context New.Items
-    data modify storage asset:context Inventory set from storage asset:context New.Inventory
+    data modify storage asset:context id set from storage asset:context Old.id
+    data modify storage asset:context Items set from storage asset:context Old.Items
+    data modify storage asset:context Inventory set from storage asset:context Old.Inventory
 # autoの処理
     # 初期化
         data modify storage asset:context id.auto set value -1

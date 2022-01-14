@@ -9,8 +9,8 @@
 # 神器のリログ対策用トリガー呼び出し
     execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:rejoin
 # IDの代入
-    function asset_manager:sacred_treasure/data/set_old
-    function asset_manager:sacred_treasure/data/set_new
+    function asset_manager:sacred_treasure/data/old/init
+    function asset_manager:sacred_treasure/data/new/init
 # Attacker / Victimのセット
     execute as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s AttackingEntity = @a[tag=this,limit=1] AttackingEntity run tag @s add Attacker
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Victim
@@ -28,10 +28,10 @@
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/dis_equip
     execute unless entity @s[tag=!ChangeMainhand,tag=!ChangeOffhand,tag=!ChangeHead,tag=!ChangeChest,tag=!ChangeLegs,tag=!ChangeFeet] run function asset_manager:sacred_treasure/triggers/equip
 # EntityStorageにデータ突っ込む
-    function asset_manager:sacred_treasure/data/stash_context
+    function asset_manager:sacred_treasure/data/new/stash_to_context
 # リセット
     function asset_manager:sacred_treasure/triggers/check_change_armor/reset
-    function asset_manager:sacred_treasure/data/reset_context
+    function asset_manager:sacred_treasure/data/current/reset
     tag @e[tag=Attacker] remove Attacker
     tag @e[tag=Victim] remove Victim
     tag @s remove this

@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/data/stash_context
+#> asset_manager:sacred_treasure/data/new/stash_to_context
 #
 # contextをEntityStorageに退避させる
 #

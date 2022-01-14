@@ -5,7 +5,7 @@
 # @within function asset_manager:sacred_treasure/triggers/
 
 # イベント発火前に実行するやつ
-    function asset_manager:sacred_treasure/data/pre_event_put/old
+    function asset_manager:sacred_treasure/data/old/set_to_current
 # 全スロットを参照できるidを作る
     data modify storage asset:context id.all set from storage asset:context id
 # 変更があるかチェック
@@ -18,4 +18,4 @@
 # 神器側に受け渡し
     function #asset:sacred_treasure/dis_equip
 # イベント発火後に実行するやつ
-    function asset_manager:sacred_treasure/data/post_event_put/old
+    function asset_manager:sacred_treasure/data/old/revert_from_current

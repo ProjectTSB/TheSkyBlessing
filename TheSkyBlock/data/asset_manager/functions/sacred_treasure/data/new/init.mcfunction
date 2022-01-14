@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/data/set_new
+#> asset_manager:sacred_treasure/data/new/init
 #
 # 神器のIDを取得します
 #

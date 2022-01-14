@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/data/set_old
+#> asset_manager:sacred_treasure/data/old/init
 #
 # EntityStorageからcontextにつっこむ
 #

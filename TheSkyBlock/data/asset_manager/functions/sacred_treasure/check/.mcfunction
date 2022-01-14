@@ -9,7 +9,7 @@
 # @within function asset:sacred_treasure/common/check_condition/*
 
 # 対象スロットのデータの取得
-    function asset_manager:sacred_treasure/data/get_data_from_slot
+    function asset_manager:sacred_treasure/data/current/get
 # 事前にtag付与
     tag @s add CanUsed
 # 条件を満たしてなかったらtag削除

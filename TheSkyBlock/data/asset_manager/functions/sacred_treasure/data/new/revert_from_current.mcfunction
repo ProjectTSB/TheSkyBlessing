@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/data/post_event_put/new
+#> asset_manager:sacred_treasure/data/new/revert_from_current
 #
 # 最上層のデータをNewデータに格納します
 #
@@ -14,5 +14,5 @@
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context New.Items set from storage asset:context Items
     data modify storage asset:context New.Inventory set from storage asset:context Inventory
-# 初期化
-    function asset_manager:sacred_treasure/data/reset_context
+# リセット
+    function asset_manager:sacred_treasure/data/current/reset

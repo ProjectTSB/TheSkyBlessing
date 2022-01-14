@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/common/use/*
 
 # 神器データの取得
-    function asset_manager:sacred_treasure/data/get_data_from_slot
+    function asset_manager:sacred_treasure/data/current/get
 # MP減少処理
     function asset_manager:sacred_treasure/use/remove_mp
 # クールダウン保存
