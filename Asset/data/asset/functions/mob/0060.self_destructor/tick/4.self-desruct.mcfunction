@@ -7,8 +7,8 @@
 # 演出
     particle explosion ~ ~ ~ 5 5 5 1 140 normal @a
     particle flame ~ ~ ~ 5 5 5 0 140 normal @a
-    playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 1.2 0
-    playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 0.6 0
+    playsound entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 2 1.2 0
+    playsound entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 2 0.6 0
 
   # 火属性ダメージ
     # 与えるダメージ
@@ -20,7 +20,7 @@
     # 補正functionを実行
         execute if score @s 1O.ExplodeFuse matches 40 run function lib:damage/modifier
     # 範囲
-        execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function lib:damage/
+        execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function asset:mob/0060.self_destructor/tick/5.damage_distance
     # リセット
         data remove storage lib: Argument
 

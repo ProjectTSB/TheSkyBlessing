@@ -7,8 +7,8 @@
 # 演出
    particle minecraft:dust 1 1 0 2 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
    particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0 10 normal @a
-   playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 1.5 0
-   playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 2.0 0
+   playsound minecraft:entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.7 1.5 0
+   playsound minecraft:entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.7 2.0 0
 
 # 引数の設定
     # 与えるダメージ
@@ -34,4 +34,4 @@
        tp @s[predicate=asset:mob/0056.thunder_trifler/bow] @a[tag=Victim,limit=1]
 
 # 攻撃が当たった場合武器が弓なら剣に切替(挙動の関係上最後に配置)
-    item replace entity @s[predicate=asset:mob/0056.thunder_trifler/bow] weapon.mainhand with golden_sword{Enchantments:[{id:"sharpness",lvl:3s}]}
+    item replace entity @s[predicate=asset:mob/0056.thunder_trifler/bow] weapon.mainhand with golden_sword{Enchantments:[{}]}
