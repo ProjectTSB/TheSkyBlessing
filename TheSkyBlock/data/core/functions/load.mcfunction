@@ -11,7 +11,7 @@
 
 # 初回限定ロード
     execute if data storage global {IsProduction:1b} unless data storage global GameVersion run function core:load_once
-    execute if data storage global {IsProduction:0b} unless data storage global {Version:30} run function core:load_once
+    execute if data storage global {IsProduction:0b} run function core:load_once
 
 # マイグレーション
     function core:migration/
