@@ -5,5 +5,4 @@
 # @user
 # @private
 
-schedule clear lib:debug/tps/watch
 scoreboard players reset $AwaitTime Global
