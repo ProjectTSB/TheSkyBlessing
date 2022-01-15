@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0046.clock_of_despair/**
-    scoreboard objectives add 1A.Time
+    scoreboard objectives add 1A.Time dummy
+    scoreboard objectives add 1A.LifeTime dummy
