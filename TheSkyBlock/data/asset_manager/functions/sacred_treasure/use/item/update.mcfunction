@@ -17,7 +17,7 @@
         data remove storage asset:sacred_treasure CopyItem.tag.display.Name
         data remove storage asset:sacred_treasure CopyItem.Slot
         data modify block 10000 0 10000 Items[0] merge from storage asset:sacred_treasure CopyItem
-# replace
+# 新しい神器で上書きする
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_from_shulker_box
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"offhand"} run loot replace entity @s weapon.offhand 1 mine 10000 0 10000 debug_stick

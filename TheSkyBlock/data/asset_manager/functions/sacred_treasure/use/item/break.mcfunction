@@ -8,8 +8,8 @@
     scoreboard players set @s WeaponLogCD 0
     scoreboard players set @s WeaponLogCDMax 0
 # 音
-    playsound entity.item.break player @s
-# 削除
+    playsound entity.item.break player @a
+# そのスロットを消し飛ばす
     execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
     execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_air
     execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run item replace entity @s weapon.offhand with air
