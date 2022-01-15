@@ -14,15 +14,17 @@
 # 自身にtagを付与
     tag @s add MU.This
 
-# ダメージ設定
+# ダメージ設定5
     # 与えるダメージ = 15
-        data modify storage lib: Argument.Damage set value 60.0f
+        data modify storage lib: Argument.Damage set value 65.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
+    # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
-    # ダメージ
+    # 補正
         execute as @a if score @s UserID = @e[type=marker,tag=MU.This,distance=..0.01,sort=nearest,limit=1] MU.UserID run function lib:damage/modifier
-        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function lib:damage/
+    # ダメージ 一度dxとか設定されてるけど着弾範囲攻撃なので、一度at @sを挟んでわかりやすく
+        execute at @s positioned ~-0.75 ~ ~-0.75 as @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=1.5,dy=1.5,dz=1.5,sort=nearest] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
