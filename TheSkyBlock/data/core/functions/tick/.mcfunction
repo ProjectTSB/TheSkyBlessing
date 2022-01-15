@@ -6,6 +6,9 @@
 #
 # @within tag/function minecraft:tick
 
+# デバッグ用TickRate操作システム
+    execute if data storage global {IsProduction:0b} if score $AwaitTime Global matches -2147483648..2147483647 run function lib:debug/tps/watch
+
 # 現在の時間をglobalに代入する
     execute store result storage global Time int 1 run time query gametime
 # プレイヤー数をGlobalオブジェクトに設定する
