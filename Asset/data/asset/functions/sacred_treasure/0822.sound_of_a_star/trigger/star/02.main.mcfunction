@@ -23,5 +23,5 @@
 
 # 消滅
     execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 50.. run kill @s
-    execute if entity @s[tag=MU.2] if score @s MU.Time matches 50.. run kill @s
-    execute if entity @s[tag=MU.3] if score @s MU.Time matches 50.. run kill @s
+    execute if entity @s[tag=MU.2] if score @s MU.Time matches 55.. run kill @s
+    execute if entity @s[tag=MU.3] if score @s MU.Time matches 60.. run kill @s
