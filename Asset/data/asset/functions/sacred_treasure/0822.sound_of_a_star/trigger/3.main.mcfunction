@@ -37,8 +37,8 @@
 
     execute if score $MPValue Temporary matches 67.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.3"]}
     execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run tp @e[type=marker,tag=MU.Star,tag=MU.3,distance=..0.01,sort=nearest,limit=1] ^-0.4 ^ ^0.5 ~ ~
-    execute if score $MPValue Temporary matches 34.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
-    
+    execute if score $MPValue Temporary matches 67.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+
 # 星の処理開始
     schedule function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
 
