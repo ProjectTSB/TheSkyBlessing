@@ -22,4 +22,6 @@
     execute unless block ^ ^ ^1 #lib:no_collision run kill @s
 
 # 消滅
-    execute if score @s MU.Time matches 50.. run kill @s
+    execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 50.. run kill @s
+    execute if entity @s[tag=MU.2] if score @s MU.Time matches 50.. run kill @s
+    execute if entity @s[tag=MU.3] if score @s MU.Time matches 50.. run kill @s
