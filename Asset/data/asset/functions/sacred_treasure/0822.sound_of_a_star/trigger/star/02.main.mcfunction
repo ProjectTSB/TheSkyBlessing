@@ -20,7 +20,7 @@
 
 # 壁の中、壁が目の前にあると消える
     execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
-    execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
+    execute unless block ^ ^ ^1 #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
 
 # 消滅
     execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 50.. run kill @s
