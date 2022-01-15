@@ -7,6 +7,7 @@
 # スコア
     scoreboard players add @s MU.Time 1
 
+# 演出
     execute as @a[distance=..32] rotated as @a[distance=..32] run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/vfx
 
 # 少しとどまってから発射 何個目かでズレ
@@ -18,9 +19,8 @@
     execute positioned ~-0.5 ~ ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,limit=1] run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/03.hit
 
 # 壁の中、壁が目の前にあると消える
-    execute unless block ~ ~ ~ #lib:no_collision unless block ^ ^ ^1 #lib:no_collision run playsound block.beacon.deactivate player @a ~ ~ ~ 0.8 0.8 0
-    execute unless block ~ ~ ~ #lib:no_collision unless block ^ ^ ^1 #lib:no_collision run particle dust 0 1 1 2 ~ ~ ~ 0.4 0.4 0.4 0 30 normal @a
-    execute unless block ~ ~ ~ #lib:no_collision unless block ^ ^ ^1 #lib:no_collision run kill @s
+    execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
+    execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
 
 # 消滅
     execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 50.. run kill @s
