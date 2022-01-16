@@ -24,22 +24,6 @@ data modify storage global GameVersion set value "v0.0.3"
 function core:define_gamerule
 
 
-#> Datapackの順序の明示的設定
-# 0: TheSkyBlessing
-# 1: Asset
-# 2: ScoreToHealth
-# 3: OhMyDat
-# 4: NaturalMergeSort
-datapack disable "Asset"
-datapack disable "ScoreToHealth"
-datapack disable "OhMyDat"
-datapack disable "NaturalMergeSort"
-datapack enable "Asset" after "TheSkyBlessing"
-datapack enable "ScoreToHealth" after "Asset"
-datapack enable "OhMyDat" after "ScoreToHealth"
-datapack enable "NaturalMergeSort" after "OhMyDat"
-
-
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
     #alias vector shulkerA 10000 0 10000
