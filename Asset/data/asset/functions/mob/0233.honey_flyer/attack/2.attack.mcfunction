@@ -10,9 +10,9 @@
     execute at @p[tag=Victim,distance=..32] run playsound minecraft:block.honey_block.place master @a ~ ~ ~ 0.7 1 0
 
 # デバフ
-    effect give @a[tag=Victim,distance=..32] mining_fatigue 3 1 true
-    effect give @a[tag=Victim,distance=..32] poison 3 1 true
-    effect give @a[tag=Victim,distance=..32] slow_falling 3 1 true
+    effect give @p[tag=Victim,distance=..32] mining_fatigue 3 1 true
+    effect give @p[tag=Victim,distance=..32] poison 3 1 true
+    effect give @p[tag=Victim,distance=..32] slow_falling 3 1 true
 
 
 # 与えるダメージ
