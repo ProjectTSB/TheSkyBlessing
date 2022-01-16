@@ -6,7 +6,8 @@
 
 # 演出
     execute at @s run playsound block.beacon.deactivate player @a ~ ~ ~ 0.8 0.8 0
-    execute at @s run particle dust 0 1 1 2 ~ ~ ~ 0.4 0.4 0.4 0 30 normal @a
+    execute at @s run particle dust 0 1 1 2 ~ ~ ~ 0.4 0.4 0.4 0 15 normal @a
+    execute at @s run particle scrape ~ ~ ~ 0.5 0.5 0.5 0 30 normal @a
 
 # 鈍足を1秒付与
     effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] slowness 1 1 true
