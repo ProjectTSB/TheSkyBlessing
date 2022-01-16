@@ -15,15 +15,15 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
 
-# 魔法ダメージ量+7.5%
+# 魔法攻撃+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,709,4]
-    data modify storage api: Argument.Amount set value 0.075
+    data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/magic/add
 
 # MP回復量+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,709,4]
-    data modify storage api: Argument.Amount set value 0.075
+    data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
 
@@ -33,9 +33,9 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
 
-# 物理耐性-7.5%
+# 物理攻撃-7.5%
     data modify storage api: Argument.UUID set value [I;1,1,709,4]
-    data modify storage api: Argument.Amount set value -0.075
+    data modify storage api: Argument.Amount set value -0.05
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/physical/add
 
