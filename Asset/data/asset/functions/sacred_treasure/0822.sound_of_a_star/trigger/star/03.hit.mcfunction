@@ -24,7 +24,7 @@
     # 補正
         execute as @a if score @s UserID = @e[type=marker,tag=MU.This,distance=..0.01,sort=nearest,limit=1] MU.UserID run function lib:damage/modifier
     # ダメージ
-        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,limit=1] run function lib:damage/
+        execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
