@@ -10,7 +10,7 @@
 
 # プレイヤーのマナを検知する
     execute as @p[tag=Victim] store result score $MPCheck Temporary run function lib:mp/get
-    execute if score $MPCheck Temporary matches ..25 run tag @p[tag=Victim] add EmptyMP
+    execute if score $MPCheck Temporary matches ..80 run tag @p[tag=Victim] add EmptyMP
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定

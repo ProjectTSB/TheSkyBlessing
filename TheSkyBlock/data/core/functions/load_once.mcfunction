@@ -4,11 +4,8 @@
 #
 # @within function core:load
 
-#> バージョン情報の設定と通知
-data modify storage global Version set value 30
+#> バージョン情報の設定
 data modify storage global GameVersion set value "v0.0.3"
-execute if data storage global {IsProduction:0b} run tellraw @a [{"text": "Updated load version to ", "color": "green"},{"storage": "global","nbt":"Version","color": "aqua"}]
-
 
 #> forceload chunksの設定
 # Origin
@@ -180,6 +177,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
         scoreboard objectives add Sneak custom:sneak_time {"text":"イベント: スニーク"}
         scoreboard objectives add Elytra custom:aviate_one_cm {"text":"イベント: エリトラ"}
+        scoreboard objectives add DropEvent custom:drop {"text":"イベント: アイテムドロップ"}
 
     #> Library用スコアボード
     # @public

@@ -9,16 +9,6 @@
 #   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
-#> LootTableに渡す用のscoreHolder
-# @within
-#   function
-#       asset_manager:sacred_treasure/create/set_data
-#       asset_manager:sacred_treasure/use/**
-#   loot_table
-#       asset_manager:sacred_treasure/get_name/has_remain
-    #declare score_holder $Remain
-    #declare score_holder $RemainMAX
-
 #> 特殊クールダウン
 # @within function
 #   asset_manager:sacred_treasure/check/check_special_cooldown
@@ -48,6 +38,12 @@
 #> スニークの閾値用スコアホルダー
 # @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
+
+#> use_itemの誤検知対策タグ
+# @within function
+#   core:handler/drop
+#   asset_manager:sacred_treasure/triggers/use_item/check_item_drop
+    #declare tag StrictCheckMainhand
 
 #> 神器側にさらすタグ
 # @within *

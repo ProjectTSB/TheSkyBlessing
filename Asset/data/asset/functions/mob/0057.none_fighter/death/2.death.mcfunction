@@ -6,4 +6,4 @@
 
 # 演出
     particle minecraft:block white_concrete ~ ~1.2 ~ 0.2 0.5 0.2 0 30 normal @a
-    playsound minecraft:block.stone.break master @a ~ ~ ~ 1 0.5 0
+    playsound minecraft:block.stone.break hostile @a ~ ~ ~ 1 0.5 0

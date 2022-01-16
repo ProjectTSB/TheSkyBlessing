@@ -9,7 +9,7 @@
     #declare score_holder $Temp
 
 # イベント発火前に実行するやつ
-    function asset_manager:sacred_treasure/data/pre_event_put/new
+    function asset_manager:sacred_treasure/data/new/set_to_current
 
 # mainhand
     execute store result score $Temp Temporary run data get storage asset:context id.mainhand

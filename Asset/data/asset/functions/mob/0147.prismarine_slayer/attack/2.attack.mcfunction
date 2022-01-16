@@ -13,9 +13,9 @@
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle splash ~ ~1.2 ~ 0.6 0.5 0.6 0 50 normal @a
     execute at @p[tag=Victim,distance=..6] run particle dust 0.078 0.471 0.486 1.3 ~ ~1.2 ~ 0.5 0.4 0.5 1 30 normal @a
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.guardian.attack master @a ~ ~ ~ 0.8 1.5 0
-    execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 0.4 1.7 0
-    execute at @p[tag=Victim,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1.4 0
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.guardian.attack hostile @a ~ ~ ~ 0.8 1.5 0
+    execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash.high_speed hostile @a ~ ~ ~ 0.4 1.7 0
+    execute at @p[tag=Victim,distance=..6] run playsound entity.player.attack.sweep hostile @a ~ ~ ~ 0.4 1.4 0
 
 # バフを解除
     effect clear @p[tag=Victim,distance=..6] water_breathing
