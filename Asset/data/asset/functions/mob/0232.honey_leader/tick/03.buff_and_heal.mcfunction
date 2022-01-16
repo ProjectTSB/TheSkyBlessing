@@ -25,7 +25,7 @@
         data modify storage lib: Argument.Heal set value 25f
     # 補正function
         function lib:heal/modifier
-    # 範囲5m以内のプレイヤーを対象に
+    # 対象
         execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..5] run function lib:heal/
     # リセット
         data remove storage lib: Argument
