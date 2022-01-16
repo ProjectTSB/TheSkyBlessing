@@ -12,7 +12,7 @@
     particle minecraft:block honey_block ~ ~1.2 ~ 2 0.4 2 0 30
     particle dust 1.000 0.741 0.141 1.3 ~ ~1.2 ~ 2 0.4 2 0 160 normal
     particle minecraft:wax_on ~ ~ ~ 2 2 2 0 100
-    playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 0.8 1
+    playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 0.8 0
 
 # バフ
     tag @e[type=skeleton,scores={MobID=141..142},distance=..6] add 6G.HoneyMob
