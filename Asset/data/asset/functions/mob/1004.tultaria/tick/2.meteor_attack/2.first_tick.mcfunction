@@ -12,7 +12,7 @@
 # 頭変える
     item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20075}
 # 演出
-    playsound minecraft:entity.puffer_fish.death master @a[distance=..30] ~ ~ ~ 1 0.5 1
+    playsound minecraft:entity.puffer_fish.death hostile @a[distance=..30] ~ ~ ~ 1 0.5 1
 
 # マーカー召喚
     summon marker ~ ~ ~ {Tags:["Object","RW.This"]}

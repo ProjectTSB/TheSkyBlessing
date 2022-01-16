@@ -6,11 +6,10 @@
 
 # 演出
     execute at @p[tag=Victim] run particle minecraft:falling_dust diamond_block ~ ~1.75 ~ 0.4 0.4 0.4 1 15
-    execute at @p[tag=Victim] run playsound minecraft:block.glass.break master @p ~ ~ ~ 1.4 1.3 0
+    execute at @p[tag=Victim] run playsound minecraft:block.glass.break hostile @a ~ ~ ~ 0.8 1.3 0
 
 # デバフ
     effect give @p[tag=Victim] slowness 3 2 true
-    effect give @p[tag=Victim] weakness 3 2 true
     effect give @p[tag=Victim] mining_fatigue 3 2 true
 
 # 引数の設定
