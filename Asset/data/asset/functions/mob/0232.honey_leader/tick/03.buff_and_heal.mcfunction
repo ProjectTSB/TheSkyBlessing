@@ -26,7 +26,7 @@
     # 補正function
         function lib:heal/modifier
     # 対象
-        execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..5] run function lib:heal/
+        execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..6] run function lib:heal/
     # リセット
         data remove storage lib: Argument
 
