@@ -16,7 +16,7 @@
 
 # バフ
     tag @e[type=skeleton,scores={MobID=141..142},distance=..6] add 6G.HoneyMob
-    tag @e[type=skeleton,scores={MobID=232..233},distance=..6] add 6G.HoneyMob
+    tag @e[type=skeleton,tag=!this,scores={MobID=232..233},distance=..6] add 6G.HoneyMob
     effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] resistance 2 1 true
     effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] speed 2 1 true
 
