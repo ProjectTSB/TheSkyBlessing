@@ -13,7 +13,7 @@
 # スコアが60の時、向きを固定する
     execute if score @s 61.Tick matches 60 run function asset:mob/0217.medousa_eye/tick/03.fix_direction
 
-# スコアが61のとき、予備動
+# スコアが61のとき、予備動作
     execute if score @s 61.Tick matches 61 run execute positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/04.vfx
 
 # 60以上の場合スコア増加
