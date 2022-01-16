@@ -177,6 +177,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
         scoreboard objectives add Sneak custom:sneak_time {"text":"イベント: スニーク"}
         scoreboard objectives add Elytra custom:aviate_one_cm {"text":"イベント: エリトラ"}
+        scoreboard objectives add DropEvent custom:drop {"text":"イベント: アイテムドロップ"}
 
     #> Library用スコアボード
     # @public

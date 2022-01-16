@@ -9,6 +9,10 @@
 #   asset_manager:sacred_treasure/check/
 #   asset_manager:sacred_treasure/use/
 
+#> ScoreHolder
+# @private
+#declare score_holder $Remain
+
 # 対象スロットの残り使用回数取得
     execute store result score $Remain Temporary run data get storage asset:sacred_treasure Item.tag.TSB.RemainingCount
 # 減算

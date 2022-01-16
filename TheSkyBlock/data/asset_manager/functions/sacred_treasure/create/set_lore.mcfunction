@@ -9,7 +9,7 @@
 # 通常説明文
     function asset_manager:sacred_treasure/create/lore_append
 # 空行セパレータ
-    data modify storage asset:sacred_treasure Data.tag.display.Lore append value '""'
+    data modify storage asset:sacred_treasure Item.tag.display.Lore append value '""'
 # 0 使用方法
     function asset_manager:sacred_treasure/create/set_trigger
 # 1? 使用条件
@@ -29,6 +29,6 @@
 # 8 使える神
     function asset_manager:sacred_treasure/create/set_god
 # Lore一括追加
-    data modify storage asset:sacred_treasure Data.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
+    data modify storage asset:sacred_treasure Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
 # リセット
     data modify block 10000 0 10000 Items set value []

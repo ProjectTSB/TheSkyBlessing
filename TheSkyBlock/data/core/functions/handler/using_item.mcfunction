@@ -6,3 +6,6 @@
 
 # asset_managerへの引継ぎ
     tag @s add TriggerFlag.UsingItem
+
+# reset
+    advancement revoke @s only core:handler/using_item
