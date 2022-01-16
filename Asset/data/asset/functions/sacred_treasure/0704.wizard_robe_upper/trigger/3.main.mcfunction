@@ -9,17 +9,17 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 魔法ダメージ量+2.5%
-    data modify storage api: Argument.UUID set value [I;1,1,704,5]
-    data modify storage api: Argument.Amount set value 0.025
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/magic/add
-
 # 魔法耐性+2.5%
     data modify storage api: Argument.UUID set value [I;1,1,704,5]
     data modify storage api: Argument.Amount set value 0.025
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
+
+# 魔法攻撃+2.5%
+    data modify storage api: Argument.UUID set value [I;1,1,704,5]
+    data modify storage api: Argument.Amount set value 0.025
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/magic/add
 
 # MP回復量+2.5%
     data modify storage api: Argument.UUID set value [I;1,1,704,5]
