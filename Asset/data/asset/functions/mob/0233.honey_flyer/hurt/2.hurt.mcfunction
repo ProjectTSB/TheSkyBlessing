@@ -15,7 +15,7 @@
     function asset:mob/0233.honey_flyer/wing_particles/
 
 # プレイヤーから離れる
-    data modify storage lib: Argument.VectorMagnitude set value 60
+    data modify storage lib: Argument.VectorMagnitude set value 0.6
     execute facing entity @p[tag=Attacker,distance=..32] eyes rotated ~180 -10 run function lib:motion/
 
 # リセット
