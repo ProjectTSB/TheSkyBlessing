@@ -7,5 +7,5 @@
 # スコア付与
     scoreboard players add @s 6H.Tick 1
 
-# 周囲にプレイヤーがいる時、80tickに一度実行する
+# 周囲にプレイヤーがいる時、60tickに一度実行する
     execute if score @s 6H.Tick matches 60.. if entity @a[gamemode=!spectator,distance=..60] run function asset:mob/0233.honey_flyer/tick/3.motion
