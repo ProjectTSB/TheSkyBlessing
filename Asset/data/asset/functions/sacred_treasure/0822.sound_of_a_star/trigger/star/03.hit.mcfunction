@@ -9,7 +9,7 @@
     execute at @s run particle dust 0 1 1 2 ~ ~ ~ 0.4 0.4 0.4 0 30 normal @a
 
 # 鈍足を1秒付与
-    effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] slowness 1 0 true
+    effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,sort=nearest,limit=1] slowness 1 1 true
 
 # 自身にtagを付与
     tag @s add MU.This
