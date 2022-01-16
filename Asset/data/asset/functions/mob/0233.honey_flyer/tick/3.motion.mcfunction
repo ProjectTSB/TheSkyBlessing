@@ -9,7 +9,7 @@
     #declare tag Target
 
 # 翅演出
-    function asset:mob/0233.honey_flyer/wing_particles/
+    function asset:mob/0233.honey_flyer/wing_vfx/
 
 # 最寄りのプレイヤーにタグをつける
     tag @p[gamemode=!spectator] add Target
