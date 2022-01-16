@@ -1,8 +1,8 @@
-#> asset:mob/0234.honey_flyer/attack/2.attack
+#> asset:mob/0233.honey_flyer/attack/2.attack
 #
 # Mobの攻撃時の処理
 #
-# @within function asset:mob/0234.honey_flyer/attack/1.trigger
+# @within function asset:mob/0233.honey_flyer/attack/1.trigger
 
 # 演出
     execute at @p[tag=Victim,distance=..32] run particle falling_honey ~ ~1.2 ~ 0.4 0.4 0.4 0 30 normal @a

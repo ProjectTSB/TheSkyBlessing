@@ -1,15 +1,15 @@
-#> asset:mob/0234.honey_flyer/tick/3.motion
+#> asset:mob/0233.honey_flyer/tick/3.motion
 #
 #
 #
-# @within function asset:mob/0234.honey_flyer/tick/2.tick
+# @within function asset:mob/0233.honey_flyer/tick/2.tick
 
 #> Private
 # @private
     #declare tag Target
 
 # 翅演出
-    function asset:mob/0234.honey_flyer/wing_particles/
+    function asset:mob/0233.honey_flyer/wing_particles/
 
 # 最寄りのプレイヤーにタグをつける
     tag @p[gamemode=!spectator] add Target

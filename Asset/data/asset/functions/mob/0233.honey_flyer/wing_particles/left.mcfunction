@@ -1,8 +1,8 @@
-#> asset:mob/0234.honey_flyer/wing_particles/left
+#> asset:mob/0233.honey_flyer/wing_particles/left
 #
 # 翅の左側
 #
-# @within function asset:mob/0234.honey_flyer/wing_particles/
+# @within function asset:mob/0233.honey_flyer/wing_particles/
 
 # 左翅内
     particle dust 1 0.702 0 1 ^-0.15 ^ ^0 0 0 0 0 1
