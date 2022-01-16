@@ -21,7 +21,7 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/magic/add
 
-# MP回復量+7.5%
+# MP回復量+5%
     data modify storage api: Argument.UUID set value [I;1,1,710,3]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
