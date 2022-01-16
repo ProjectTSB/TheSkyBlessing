@@ -5,11 +5,10 @@
 # @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
 # 音
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 2 0
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 1 0
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 0 0
+    playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 2 0
+    playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 1 0
+    playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 0 0
 
-# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAOwAMAzKQwCwBmAtAEy0AcbjllAVlYAjAJyMurAIyNRANkbUuAQy4DKjMAQB2ygLYJkgMMUABFK1gYyjPoDOScCgD2hbRCRS5BFHDdwMDmAAbsrYhIbgAB5I1ARQMQC+CQQ2pGiE9ojsAHTsAgS2ENbuiLFgcNjYaDC2hlLUZRhORRCGZWi2AKKV1bWdAI6EodhQAMpWPuSIzKG1SXjg0PAUME4jAOZO2hbEZBQCwigo6gLUIqRS7KyMyijKrKLKjCisytTClMxwcpcflBa6AwUQBYmoAlyMARvomWgWKw2PSZRwuNwedjeXytAKIcAhMIRMDRUpxRLJMCpdKZHJ5ApFDAlMoVKo1OoNFLNZStGLeJwYbT+JBeMAAK0IehgSFRYGEcAAXmg+YSwB1uoy+oNhmMJnApjNsLUCB0AEIyuUYAZDSoa25apA6uYJAC6QA_3
 # 多角形 3
 particle fishing ^0 ^ ^-2.25 0 0 0 0 1
 particle fishing ^0.16238 ^ ^-1.96875 0 0 0 0 1

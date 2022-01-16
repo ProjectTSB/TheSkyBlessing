@@ -6,7 +6,7 @@
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle minecraft:dust 8 1 8 1 ~ ~1.2 ~ 0.5 0.4 0.5 1 50 normal @a
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:block.amethyst_cluster.fall master @a ~ ~ ~ 1 2 0
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:block.amethyst_cluster.fall hostile @a ~ ~ ~ 1 2 0
 
 # 固定7ダメージ
     data modify storage lib: Argument.Damage set value 12.0f
