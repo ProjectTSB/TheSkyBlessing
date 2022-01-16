@@ -73,4 +73,4 @@
     data modify block 10000 0 10000 Items[0] set from storage asset:sacred_treasure Item
 
 # リセット
-    data remove storage asset:sacred_treasure Item
+    data remove storage asset:sacred_treasure BaseItem
