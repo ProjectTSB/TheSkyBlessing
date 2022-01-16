@@ -10,13 +10,13 @@
 # 音
     playsound entity.item.break player @a
 # そのスロットを消し飛ばす
-    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
-    execute if data storage asset:sacred_treasure {TargetSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_air
-    execute if data storage asset:sacred_treasure {TargetSlot:"offhand"} run item replace entity @s weapon.offhand with air
-    execute if data storage asset:sacred_treasure {TargetSlot:"feet"} run item replace entity @s armor.feet with air
-    execute if data storage asset:sacred_treasure {TargetSlot:"legs"} run item replace entity @s armor.legs with air
-    execute if data storage asset:sacred_treasure {TargetSlot:"chest"} run item replace entity @s armor.chest with air
-    execute if data storage asset:sacred_treasure {TargetSlot:"head"} run item replace entity @s armor.head with air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"offhand"} run item replace entity @s weapon.offhand with air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"feet"} run item replace entity @s armor.feet with air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run item replace entity @s armor.legs with air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run item replace entity @s armor.chest with air
+    execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run item replace entity @s armor.head with air
 # データ削除
     data remove storage asset:sacred_treasure Item
 # current更新
