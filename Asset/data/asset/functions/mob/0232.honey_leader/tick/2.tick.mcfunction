@@ -5,7 +5,7 @@
 # @within function asset:mob/0232.honey_leader/tick/1.trigger
 
 # バフ間隔スコア
-    execute unless score @s 6G.BeamCool matches 99.. run scoreboard players add @s 6G.BuffCool 1
+    execute unless score @s 6G.BeamCool matches 60.. run scoreboard players add @s 6G.BuffCool 1
 
 # ビーム間隔スコア
     execute unless score @s 6G.BeamCool matches 99.. positioned ^ ^ ^10 if entity @a[gamemode=!spectator,distance=..10] run scoreboard players add @s 6G.BeamCool 1
