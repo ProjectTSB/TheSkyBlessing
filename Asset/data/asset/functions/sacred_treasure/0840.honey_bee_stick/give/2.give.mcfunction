@@ -33,11 +33,11 @@
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Water]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.BypassResist set value "every"
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value 5m
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value "every"
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 5
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 60
 # MP必要量 (int) (オプション)
