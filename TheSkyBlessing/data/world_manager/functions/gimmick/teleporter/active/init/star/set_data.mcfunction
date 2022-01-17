@@ -7,3 +7,4 @@
 scoreboard players operation @s TPStarFromUserID = @p[tag=this] UserID
 # execute if data storage world_manager:gimmick Teleporters[-1].Data{Color:"White"}
 execute if data storage world_manager:gimmick Teleporters[-1].Data{Color:"Green"} run tag @s add TPStarGreen
+tag @s remove TPStarInit

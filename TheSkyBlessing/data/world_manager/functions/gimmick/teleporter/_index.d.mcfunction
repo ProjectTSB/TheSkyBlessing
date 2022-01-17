@@ -10,6 +10,10 @@
     #declare tag TPStar
     #declare tag TPStarGreen
 
+#> for Init
+# @ world_manager:gimmick/teleporter/active/init/star/*
+    #declare tag TPStarInit
+
 #> OpenDeclares
 # @within asset_manager:island/dispel/register_tp
     #declare tag Teleporter
