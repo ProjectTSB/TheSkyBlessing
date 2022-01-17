@@ -5,7 +5,7 @@
 # @within function asset:mob/0202.hunters_dream/tick/2.skill_arrow/1.skill_arrow
 
 # 数値
-    data modify storage lib: Argument.VectorMagnitude set value 100
+    data modify storage lib: Argument.VectorMagnitude set value 1
 # 飛ぶ方向
     execute facing entity @p[gamemode=!spectator] eyes rotated ~ ~180 run function lib:motion/
 # リセット

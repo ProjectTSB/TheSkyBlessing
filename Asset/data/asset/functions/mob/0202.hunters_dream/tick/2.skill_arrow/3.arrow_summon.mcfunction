@@ -12,7 +12,7 @@
 
 # 矢を飛ばす
 # 数値
-    data modify storage lib: Argument.VectorMagnitude set value 150
+    data modify storage lib: Argument.VectorMagnitude set value 1.5
 # 飛ぶ方向
     execute as @e[tag=5M.ArrowThis,distance=..2,sort=nearest,limit=1] rotated as @e[type=skeleton,tag=this,distance=..5,limit=1] rotated ~-10 ~ run function lib:motion/
 # リセット
