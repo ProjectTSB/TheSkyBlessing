@@ -4,5 +4,5 @@
 #
 # @within function world_manager:gimmick/teleporter/active/
 
-execute if entity @s[tag=TPStarYellow] run particle wax_on
-execute if entity @s[tag=!TPStarYellow] run particle electric_spark
+execute if entity @s[tag=TPStarGreen] run particle composter ~ ~ ~ 0 0 0 0 1
+execute if entity @s[tag=!TPStarGreen] run particle electric_spark

@@ -8,8 +8,7 @@
     #declare tag Teleporter
     #declare tag TeleporterInit
     #declare tag TPStar
-    #declare tag TPStarYellow
-    #declare score_holder $GroupID
+    #declare tag TPStarGreen
 
 #> OpenDeclares
 # @within asset_manager:island/dispel/register_tp
