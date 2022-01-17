@@ -15,7 +15,7 @@
     effect give @a[tag=Victim,distance=..32] poison 3 1 true
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 28f
+    data modify storage lib: Argument.Damage set value 25f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
