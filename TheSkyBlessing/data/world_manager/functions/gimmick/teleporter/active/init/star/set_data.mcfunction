@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:gimmick/teleporter/active/init/star/foreach
+# @within function world_manager:gimmick/teleporter/active/init/star/summon
 
-execute store result score @s TPStarFromUserID run data get storage world_manager:gimmick Targets[-1].ID
-execute if data storage world_manager:gimmick Targets[-1].Data{Color:"Yellow"} run tag @s add TPStarYellow
+scoreboard players operation @s TPStarFromUserID = @p[tag=this] UserID
+execute if data storage world_manager:gimmick Teleporters[-1].Data{Color:"Yellow"} run tag @s add TPStarYellow

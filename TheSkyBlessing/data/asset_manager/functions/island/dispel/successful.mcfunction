@@ -16,7 +16,7 @@
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
 # 交易島へのテレポーターを設置する
-    execute if predicate lib:dimension/is_overworld run function asset_manager:island/dispel/register_tp
+    execute if predicate lib:dimension/is_overworld positioned ^ ^ ^2 run function asset_manager:island/dispel/register_tp
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
