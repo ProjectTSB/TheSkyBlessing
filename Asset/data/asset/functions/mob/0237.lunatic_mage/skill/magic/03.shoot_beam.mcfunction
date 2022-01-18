@@ -13,7 +13,7 @@
     execute positioned ^ ^ ^30 run function asset:mob/0237.lunatic_mage/skill/magic/04.shapes
     execute positioned ^ ^ ^35 run function asset:mob/0237.lunatic_mage/skill/magic/04.shapes
 
-    playsound block.portal.travel hostile @a[distance=..40] ~ ~ ~ 0.4 2 0.5
+    playsound block.portal.travel hostile @a[distance=..40] ~ ~ ~ 0.2 2 0.5
 
 # 再帰
     function asset:mob/0237.lunatic_mage/skill/magic/05.beam_recursive

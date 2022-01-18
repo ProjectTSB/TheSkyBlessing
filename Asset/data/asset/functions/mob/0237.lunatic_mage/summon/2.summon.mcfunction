@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 23
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.2
+    data modify storage asset:mob Speed set value 0.15
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32
 # ノックバック耐性 (double) (オプション)
@@ -60,7 +60,7 @@
 
 # スコアを与える
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6J.Tick -80
-    
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
 
