@@ -10,7 +10,8 @@
     #declare tag 6J.Fire2
 
 #> tag
-# @within function asset:mob/0237.lunatic_mage/skill/**
+# @within function asset:mob/0237.lunatic_mage/skill/magic/**
+    #declare tag LandingTarget
 
 #> tag
 # @within function
