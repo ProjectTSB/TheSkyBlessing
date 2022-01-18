@@ -22,5 +22,9 @@
 # スコアが80以上で石化ビーム発射
     execute if score @s 61.Tick matches 80.. positioned ^ ^1.7 ^ run function asset:mob/0217.medousa_eye/tick/05.mineralization_beam
 
-# 80以上で音とリセット
-    execute if score @s 61.Tick matches 80.. run function asset:mob/0217.medousa_eye/tick/10.sound_and_reset
+# 音
+    execute if score @s 61.Tick matches 80 run playsound minecraft:entity.elder_guardian.death hostile @a[distance=..25] ~ ~ ~ 0.6 2 0.1
+
+# リセット
+    execute if score @s 61.Tick matches 80.. run scoreboard players reset @s 61.Tick
+    execute if score @s 61.Tick matches 80.. run data modify entity @s NoAI set value 0b
