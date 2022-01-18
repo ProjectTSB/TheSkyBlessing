@@ -7,4 +7,3 @@
 #> 定義類はここに
 # @within function asset:mob/0237.lunatic_mage/**
     scoreboard objectives add 6J.Tick dummy
-    scoreboard objectives add 6J.SkillTick dummy
