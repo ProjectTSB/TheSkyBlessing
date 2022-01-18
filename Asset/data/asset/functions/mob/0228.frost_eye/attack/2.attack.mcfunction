@@ -6,7 +6,7 @@
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle snowflake ~ ~1.6 ~ 0.5 0.3 0.5 0 30 normal @a
-
+    execute at @p[tag=Victim,distance=..6] run playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
 # 攻撃
     # 与えるダメージ
     data modify storage lib: Argument.Damage set value 14f
