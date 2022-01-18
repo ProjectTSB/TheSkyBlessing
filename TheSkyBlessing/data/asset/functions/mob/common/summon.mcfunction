@@ -41,7 +41,7 @@
     execute unless data storage asset:mob Armor.Feet run data modify storage asset:mob Armor.Feet set value {}
     execute unless data storage asset:mob WeaponDropChances run data modify storage asset:mob WeaponDropChances set value [0f,0f]
     execute unless data storage asset:mob ArmorDropChances run data modify storage asset:mob ArmorDropChances set value [0f,0f,0f,0f]
-    # execute unless data storage asset:mob Health run
+    execute unless data storage asset:mob Health store result storage asset:mob Health double 0.01 run attribute @s generic.max_health get 100
     # execute unless data storage asset:mob AttackDamage run
     # execute unless data storage asset:mob Defense run
     # execute unless data storage asset:mob SpecialDefense run
