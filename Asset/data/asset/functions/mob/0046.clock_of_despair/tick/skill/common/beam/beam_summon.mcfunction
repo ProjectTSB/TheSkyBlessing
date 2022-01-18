@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/2_oclock/2_oclock
+# @within function asset:mob/0046.clock_of_despair/tick/**
 
 # 召喚
     summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:90,Tags:["Object","1A.SkillBeam"]}
