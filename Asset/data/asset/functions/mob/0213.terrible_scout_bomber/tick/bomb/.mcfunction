@@ -7,8 +7,7 @@
     #declare score_holder $5X.TpSuccess
 
 # move to above of target
-    execute if score $PhaseTime Temporary matches 1 as @a if score @s UserID = @e[tag=this,distance=..0.1,limit=1] 5X.TargetId at @s rotated ~90 0 positioned ^ ^ ^10 positioned ~ ~10 ~ facing ^ ^ ^-1 store result score $5X.TpSuccess Temporary run tp @e[tag=this,limit=1] ~ ~ ~ ~ ~
-    execute if score $PhaseTime Temporary matches 1 at @s run tp @s ~ ~ ~ ~ 90
+    execute if score $PhaseTime Temporary matches 1 as @a if score @s UserID = @e[tag=this,distance=..0.1,limit=1] 5X.TargetId at @s rotated ~90 0 positioned ^ ^ ^10 positioned ~ ~10 ~ facing ^ ^ ^-1 store result score $5X.TpSuccess Temporary run tp @e[tag=this,limit=1] ~ ~ ~ ~ 90
 # move to standby phase if no target found
     execute if score $PhaseTime Temporary matches 1 unless score $5X.TpSuccess Temporary matches 0.. run scoreboard players set @s 5X.ActionPhase 1
     execute if score $PhaseTime Temporary matches 1 unless score $5X.TpSuccess Temporary matches 0.. store result score @s 5X.PhStartTime run time query gametime

@@ -6,7 +6,7 @@
     #say climb
 
 # facing above
-    execute if score $PhaseTime Temporary matches 1 at @s run tp @s ~ ~ ~ ~ ~-30
+    execute if score $PhaseTime Temporary matches 1 at @s run tp @s ~ ~ ~ ~ 60
 
 # move forward
     execute if score $PhaseTime Temporary matches 2..17 at @s run tp @s ^ ^0.5 ^

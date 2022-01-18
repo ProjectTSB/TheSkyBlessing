@@ -11,3 +11,4 @@
     #declare tag 5X.Dummy
     #declare tag 5X.Kamikazeable
     #declare tag 5X.Shootable
+    #declare tag 5X.GunShotPosition

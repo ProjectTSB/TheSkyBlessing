@@ -33,3 +33,4 @@
     tag @a[tag=5X.Attackable] remove 5X.Attackable
     tag @a[tag=5X.RocketLaunchable] remove 5X.RocketLaunchable
     tag @a[tag=5X.Bombable] remove 5X.Bombable
+    tag @a[tag=5X.Shootable] remove 5X.Shootable
