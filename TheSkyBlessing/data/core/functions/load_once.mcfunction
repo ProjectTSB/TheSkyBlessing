@@ -295,6 +295,7 @@ team modify NoCollision collisionRule never
 
     #> MobManager用スコアボード - 最大体力
     # @within function
+    #   api:mob/get_max_health
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
         scoreboard objectives add MobHealthMax dummy
