@@ -15,4 +15,4 @@
     execute positioned ~ ~1.8 ~ positioned ^ ^ ^-0.3 rotated ~-20 90 run function asset:mob/0233.honey_flyer/wing_vfx/right
 
 # 演出
-    playsound minecraft:entity.bee.death master @a ~ ~ ~ 0.8 1.2 0
+    playsound minecraft:entity.bee.death hostile @a ~ ~ ~ 0.8 1.2 0
