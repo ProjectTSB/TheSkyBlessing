@@ -7,4 +7,4 @@
 # 召喚
     data modify storage api: Argument.ID set value 188
     function api:mob/summon
-    tp @e[type=marker,tag=58.Init,distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ 0
+    tp @e[type=marker,tag=58.Init,distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~

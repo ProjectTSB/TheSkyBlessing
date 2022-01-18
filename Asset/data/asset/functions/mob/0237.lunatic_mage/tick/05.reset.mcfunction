@@ -11,4 +11,5 @@
     tag @s remove 6J.Water
     tag @s remove 6J.Thunder
     tag @s remove 6J.Magic
+    tag @s remove 6J.Fire2
     tag @s remove 6J.LeftRotation
