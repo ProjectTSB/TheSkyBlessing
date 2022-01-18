@@ -26,5 +26,5 @@
     execute if score @s 61.Tick matches 80 run playsound minecraft:entity.elder_guardian.death hostile @a[distance=..25] ~ ~ ~ 0.6 2 0.1
 
 # リセット
-    execute if score @s 61.Tick matches 80.. run scoreboard players reset @s 61.Tick
     execute if score @s 61.Tick matches 80.. run data modify entity @s NoAI set value 0b
+    execute if score @s 61.Tick matches 80.. run scoreboard players reset @s 61.Tick
