@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0237.lunatic_mage/skill/**
 
+#> Private
+# @private function asset:mob/0237.lunatic_mage/magic_summon/fire
+    #declare tag 58.Init
+
 # 召喚
     data modify storage api: Argument.ID set value 188
     function api:mob/summon

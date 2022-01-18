@@ -11,8 +11,6 @@
 
 #> tag
 # @within function asset:mob/0237.lunatic_mage/skill/**
-    #declare tag 6J.AlreadyElement
-    #declare tag LandingTarget
 
 #> tag
 # @within function
@@ -26,6 +24,9 @@
 #   asset:mob/0237.lunatic_mage/tick/**
     #declare tag 6J.ElementalKill
 
-#> tag
-# @within function asset:mob/0237.lunatic_mage/magic_summon/fire
-    #declare tag 58.Init
+
+#> Tag
+# @within function
+#   asset:mob/0237.lunatic_mage/tick/03.select_skill
+#   asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
+    #declare tag 6J.AlreadyElement
