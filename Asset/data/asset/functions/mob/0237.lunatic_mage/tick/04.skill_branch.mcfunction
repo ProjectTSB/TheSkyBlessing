@@ -12,3 +12,6 @@
 
 # 雷
     execute if entity @s[tag=6J.Thunder] run function asset:mob/0237.lunatic_mage/skill/thunder/01.manage
+
+# 無
+    execute if entity @s[tag=6J.Magic] run function asset:mob/0237.lunatic_mage/skill/magic/01.manage
