@@ -37,9 +37,9 @@
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 10
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 0
+    data modify storage asset:mob Defense set value 10
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 0
+    data modify storage asset:mob SpecialDefense set value 4
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.2
 # 索敵範囲 (double) (オプション)
