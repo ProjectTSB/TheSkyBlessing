@@ -6,16 +6,12 @@
 
 # 予備動作的な
     execute if score @s 6J.SkillTick matches 1 run playsound block.portal.trigger hostile @a ~ ~ ~ 0.8 2 0
-    execute if score @s 6J.SkillTick matches ..20 run particle splash ~ ~1.2 ~ 1 0.5 1 0 6 normal @a
-
-# NoAIになる
-    execute if score @s 6J.SkillTick matches 20 run data modify entity @s NoAI set value 1b
-    execute if score @s 6J.SkillTick matches 20 run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,distance=..32]
+    execute if score @s 6J.SkillTick matches ..20 run particle fishing ~ ~1.2 ~ 1 0.5 1 0 4 normal @a
 
 # 魔法召喚
-    execute if score @s 6J.SkillTick matches 21 rotated ~ 0 positioned ^ ^0.5 ^3 run function asset:mob/0237.lunatic_mage/magic_summon/water
-    execute if score @s 6J.SkillTick matches 25 rotated ~ 0 positioned ^ ^0.5 ^6 run function asset:mob/0237.lunatic_mage/magic_summon/water
-    execute if score @s 6J.SkillTick matches 29 rotated ~ 0 positioned ^ ^0.5 ^9 run function asset:mob/0237.lunatic_mage/magic_summon/water
+    execute if score @s 6J.SkillTick matches 21 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
+    execute if score @s 6J.SkillTick matches 51 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
+    execute if score @s 6J.SkillTick matches 81 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
 
 # リセット
-    execute if score @s 6J.SkillTick matches 31.. run function asset:mob/0237.lunatic_mage/tick/05.reset
+    execute if score @s 6J.SkillTick matches 81.. run function asset:mob/0237.lunatic_mage/tick/05.reset
