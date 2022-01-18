@@ -57,6 +57,7 @@
     # そのまま適用するやつ
         data modify entity @s Health set value 0.01f
         data modify entity @s AbsorptionAmount set from storage asset:mob Health
+        execute store result score @s MobHealthMax run data get storage asset:mob Health 100
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
         data modify entity @s CustomNameVisible set value 0b
