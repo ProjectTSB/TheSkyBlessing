@@ -9,3 +9,4 @@
     #declare tag 6J.Magic
     #declare tag 58.Init
     #declare tag 6J.LeftRotation
+    #declare tag LandingTarget

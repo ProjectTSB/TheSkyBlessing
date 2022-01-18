@@ -10,8 +10,8 @@
 
 # 魔法召喚
     execute if score @s 6J.Tick matches 21 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
-    execute if score @s 6J.Tick matches 51 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
-    execute if score @s 6J.Tick matches 81 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
+    execute if score @s 6J.Tick matches 41 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
+    execute if score @s 6J.Tick matches 61 at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
 
 # リセット
     execute if score @s 6J.Tick matches 81.. run function asset:mob/0237.lunatic_mage/tick/05.reset

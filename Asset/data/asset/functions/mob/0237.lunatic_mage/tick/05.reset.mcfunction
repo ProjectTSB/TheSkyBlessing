@@ -6,8 +6,9 @@
 
 # リセット
     data modify entity @s NoAI set value 0b
-    scoreboard players set @s 6J.Tick -80
+    scoreboard players set @s 6J.Tick -60
     tag @s remove 6J.Fire
     tag @s remove 6J.Water
     tag @s remove 6J.Thunder
+    tag @s remove 6J.Magic
     tag @s remove 6J.LeftRotation

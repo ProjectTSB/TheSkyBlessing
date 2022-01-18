@@ -11,3 +11,6 @@
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# 多段ヒットしないようにTagをつけておくといいかも
+    tag @a[gamemode=!spectator,distance=..2] add LandingTarget

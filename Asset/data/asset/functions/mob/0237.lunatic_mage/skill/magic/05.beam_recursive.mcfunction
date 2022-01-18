@@ -15,3 +15,6 @@
 
 # 再帰 プレイヤーにも壁にも当たっても止まらない
     execute if entity @s[distance=..40] positioned ^ ^ ^2 run function asset:mob/0237.lunatic_mage/skill/magic/05.beam_recursive
+
+# 多段ヒットしないようにつけたTagを消す
+    execute if entity @s[distance=38..40] if entity @a[tag=LandingTarget,distance=..40] run tag @a[tag=LandingTarget,distance=..40] remove LandingTarget
