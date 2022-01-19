@@ -8,6 +8,9 @@
     particle dust 0.769 0 0 1 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a
     playsound block.conduit.ambient hostile @a ~ ~ ~ 0.8 1.5 0
 
+# 移動速度上昇を得る
+    effect give @s speed 3 1 true
+
 # 現在体力を数値化する
     execute store result score @s 63.Health run data get entity @s Health 1.0
 
