@@ -5,7 +5,7 @@
 # @within function asset:mob/0241.water_jail/tick/1.trigger
 
 # ダメージエリアの判定
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=3.5..9] run function asset:mob/0241.water_jail/tick/3.damage
+    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=4..9] run function asset:mob/0241.water_jail/tick/3.damage
 
 # スコア
     scoreboard players add @s 6P.Tick 1

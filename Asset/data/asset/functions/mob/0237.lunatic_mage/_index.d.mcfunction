@@ -3,11 +3,16 @@
 
 #> tag
 # @within function asset:mob/0237.lunatic_mage/tick/**
-    #declare tag 6J.Fire
     #declare tag 6J.Water
     #declare tag 6J.Thunder
     #declare tag 6J.Magic
     #declare tag 6J.Fire2
+
+#> tag
+# @within function
+#   asset:mob/0237.lunatic_mage/tick/**
+#   asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
+    #declare tag 6J.Fire
 
 #> tag
 # @within function asset:mob/0237.lunatic_mage/skill/magic/**

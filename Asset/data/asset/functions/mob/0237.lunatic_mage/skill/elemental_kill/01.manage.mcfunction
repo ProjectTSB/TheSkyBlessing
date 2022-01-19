@@ -4,12 +4,9 @@
 #
 # @within function asset:mob/0237.lunatic_mage/tick/04.skill_branch
 
-#> Private
-# @private
-    #declare tag 6J.ElementalKillPoint
-
 # 二回目を発動しないようにTagつけ
     tag @s add 6J.AlreadyElement
+
 
 # 予備動作的な
     execute if score @s 6J.Tick matches 2 run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
@@ -17,19 +14,23 @@
     execute if score @s 6J.Tick matches ..20 run particle splash ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
     execute if score @s 6J.Tick matches ..20 run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
 
-# AEC召喚
-    execute if score @s 6J.Tick matches 21 at @r[gamemode=!spectator,distance=..32] run summon area_effect_cloud ~ ~1.3 ~ {Tags:["6J.ElementalKillPoint"],Particle:"block air",Duration:120}
+# NoAIになる
+    execute if score @s 6J.Tick matches 20 run data modify entity @s NoAI set value 1b
 
+# プレイヤーの下にワープ
+    execute if score @s 6J.Tick matches 20 at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
 
+# 空中は嫌だ
+    execute if score @s 6J.Tick matches 21.. if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
-# 雷魔法
-    execute if score @s 6J.Tick matches 22 at @e[type=area_effect_cloud,tag=6J.ElementalKillPoint,distance=..40,limit=1] positioned ~ ~-1 ~ run function asset:mob/0237.lunatic_mage/magic_summon/thunder
-    execute if score @s 6J.Tick matches 62 at @e[type=area_effect_cloud,tag=6J.ElementalKillPoint,distance=..40,limit=1] positioned ~ ~-1 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.thunder_summon
-    execute if score @s 6J.Tick matches 102 at @e[type=area_effect_cloud,tag=6J.ElementalKillPoint,distance=..40,limit=1] positioned ~ ~-1 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/03.thunder_summon2
+# 水の檻
+    execute if score @s 6J.Tick matches 21.. run function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
 
-# 火魔法を飛ばす
-    execute if score @s 6J.Tick matches 60 positioned ~ ~1.6 ~ facing entity @e[type=area_effect_cloud,tag=6J.ElementalKillPoint,distance=..60,limit=1] feet run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_summon
-    execute if score @s 6J.Tick matches 110 positioned ~ ~1.6 ~ facing entity @e[type=area_effect_cloud,tag=6J.ElementalKillPoint,distance=..60,limit=1] feet run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_summon
+# 火の予告
+    execute if score @s 6J.Tick matches 50..53 positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_line
+
+# 火を使い始める
+    execute if score @s 6J.Tick matches 61.. run function asset:mob/0237.lunatic_mage/skill/elemental_kill/06.fire
 
 # リセット
-    execute if score @s 6J.Tick matches 141.. run function asset:mob/0237.lunatic_mage/tick/05.reset
+    execute if score @s 6J.Tick matches 201.. run function asset:mob/0237.lunatic_mage/tick/05.reset

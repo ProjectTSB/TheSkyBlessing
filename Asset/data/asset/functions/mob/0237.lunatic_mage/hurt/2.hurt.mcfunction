@@ -9,4 +9,4 @@
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.7
 
 # 現在体力を数値化する 300以下で技選択時にTagを自身に付与
-    execute if entity @s[tag=!6J.ElementalKill] store result score @s 6J.Health run data get entity @s Health 1.0
+    execute store result score @s 6J.Health run data get entity @s Health 1.0
