@@ -11,11 +11,11 @@
 
 # 乱数取得&範囲設定
     execute store result score $Argument.Index Lib run function lib:random/
-    execute store result score $Length Temporary if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DeathMessage[]
+    execute store result score $Length Temporary if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage[]
     scoreboard players operation $Argument.Index Lib %= $Length Temporary
 # 配列操作
     function lib:array/session/open
-    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DeathMessage
+    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
     function lib:array/move
 # メッセージ
     tellraw @a {"storage":"lib:","nbt":"Array[-1]","interpret": true}

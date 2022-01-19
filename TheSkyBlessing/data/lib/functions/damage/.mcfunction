@@ -19,8 +19,6 @@
     execute unless data storage lib: Argument.AttackType run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackType","color":"red"}]
     execute unless data storage lib: Argument.ElementType run data modify storage lib: Argument.ElementType set value "None"
     execute unless data storage lib: Argument.BypassResist run data modify storage lib: Argument.BypassResist set value 0b
-# 死亡メッセージが設定されていたらEntityStorageに保存
-    execute if data storage lib: Argument.DeathMessage if entity @s[type=player,tag=!Uninterferable,tag=!Death] run function lib:damage/core/save_death_message
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
     execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] run function lib:damage/core/attack
