@@ -6,7 +6,7 @@
 
 # 演出
     execute at @a[tag=Victim] run particle squid_ink ~ ~ ~ 0.3 0.3 0.3 0.4 100
-    execute at @a[tag=Victim] run playsound entity.squid.death master @a ~ ~ ~
+    execute at @a[tag=Victim] run playsound entity.squid.death hostile @a ~ ~ ~
 
 # 効果
     effect give @a[tag=Victim] blindness 1 0

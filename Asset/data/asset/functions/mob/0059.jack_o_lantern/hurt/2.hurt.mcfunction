@@ -5,7 +5,7 @@
 # @within function asset:mob/0059.jack_o_lantern/hurt/1.trigger
 
 # 演出
-    playsound entity.witch.celebrate master @a ~ ~ ~ 0.8 1.8 0
+    playsound entity.witch.celebrate hostile @a ~ ~ ~ 0.8 1.8 0
     particle dust 1 0.651 0 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
     particle dust 0.851 0 1 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
 

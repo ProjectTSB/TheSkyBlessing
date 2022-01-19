@@ -7,7 +7,7 @@
 #       asset:mob/0027.skull_sniper/tick/2.1.shot
 
 # 着弾の演出
-    playsound minecraft:entity.generic.explode block @a
+    playsound minecraft:entity.generic.explode hostile @a
 
 # 演出
     execute at @p[tag=LandingTarget] run particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 99
