@@ -12,7 +12,7 @@
     function oh_my_dat:please
 # 死亡メッセージ
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DeathMessage run function lib:score_to_health_wrapper/core/show_custom_death_message
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DeathMessage run function lib:score_to_health_wrapper/core/show_death_message
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DeathMessage run function lib:score_to_health_wrapper/core/show_common_death_message
 # リセット
     gamerule showDeathMessages true
     scoreboard players reset @s ScoreToHealth

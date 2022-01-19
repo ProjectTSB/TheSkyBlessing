@@ -1,4 +1,4 @@
-#> lib:score_to_health_wrapper/core/show_death_message
+#> lib:score_to_health_wrapper/core/show_common_death_message
 #
 #
 #
