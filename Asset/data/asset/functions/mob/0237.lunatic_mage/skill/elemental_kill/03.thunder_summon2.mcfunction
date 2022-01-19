@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/04.thunder_summon2
+#> asset:mob/0237.lunatic_mage/skill/elemental_kill/03.thunder_summon2
 #
 # 3回目の雷だよ
 #

@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/03.thunder_summon
+#> asset:mob/0237.lunatic_mage/skill/elemental_kill/02.thunder_summon
 #
 # 雷魔法を召喚するよ
 #
