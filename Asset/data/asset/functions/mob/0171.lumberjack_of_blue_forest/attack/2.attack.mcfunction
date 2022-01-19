@@ -26,7 +26,7 @@
     data remove storage lib: Argument
 
 # スコア
-    scoreboard players add @p[tag=Victim,distance=..6] 4R.Attribute 0
+    scoreboard players set @p[tag=Victim,distance=..6] 4R.Attribute 0
 
 # attribute消しのTagとスケジュールループ
     schedule function asset:mob/0171.lumberjack_of_blue_forest/attack/3.schedule_loop 1t replace
