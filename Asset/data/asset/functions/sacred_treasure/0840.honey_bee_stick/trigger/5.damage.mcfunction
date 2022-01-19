@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0840.honey_bee_stick/trigger/3.main
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 40.0f
+    data modify storage lib: Argument.Damage set value 60.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier

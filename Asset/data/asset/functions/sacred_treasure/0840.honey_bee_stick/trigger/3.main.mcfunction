@@ -14,7 +14,7 @@
     particle minecraft:block honey_block ~ ~1.2 ~ 3 0.4 3 0 50
     particle dust 1.000 0.741 0.141 1.3 ~ ~1.2 ~ 2 0.4 2 0 240 normal
     particle minecraft:wax_on ~ ~ ~ 2 2 2 0 100
-    playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 0.8 0
+    playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 0.8 0
 
 # 回復
     data modify storage lib: Argument.Heal set value 10f
@@ -23,4 +23,4 @@
     data remove storage lib: Argument
 
 # ダメージ
-    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..6] run function asset:sacred_treasure/0840.honey_bee_stick/trigger/5.damage
+    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] run function asset:sacred_treasure/0840.honey_bee_stick/trigger/5.damage
