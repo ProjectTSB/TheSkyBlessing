@@ -4,29 +4,21 @@
 #
 # @within function asset:mob/0076.golden_watermelon_bomber/attack/1.trigger
 
-# 引数の設定
+# 水属性ダメージ
+    data modify storage lib: Argument.Damage set value 17f
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Water"
+    function lib:damage/modifier
+# ダメージ対象
+    execute as @p[tag=Victim] run function lib:damage/
 
-    # 水属性ダメージ
-        # 与えるダメージ
-            data modify storage lib: Argument.Damage set value 5.0
-        # 第一属性
-            data modify storage lib: Argument.AttackType set value "Physical"
-        # 第二属性
-            data modify storage lib: Argument.ElementType set value "Water"
-        # 補正functionを実行
-            function lib:damage/modifier
-        # ダメージ対象
-            execute as @p[tag=Victim] run function lib:damage/
-
-    #　雷属性ダメージ
-        # 第二属性
-            data modify storage lib: Argument.ElementType set value "Thunder"
-        # 補正functionを実行
-            function lib:damage/modifier
-        # ダメージ対象
-            execute as @p[tag=Victim] run function lib:damage/
-        # リセット
-            data remove storage lib: Argument
+#　雷属性ダメージ
+    data modify storage lib: Argument.Damage set value 17f
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Thunder"
+    function lib:damage/modifier
+    execute as @p[tag=Victim] run function lib:damage/
+    data remove storage lib: Argument
 
 # 演出
     execute at @p[tag=Victim] run playsound entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.8 1.8 0
