@@ -12,7 +12,7 @@
 # 周囲を回復
     data modify storage lib: Argument.Heal set value 50f
     function lib:heal/modifier
-    execute as @e[type=#lib:living,type=!player,tag=!this,tag=!Uninterferable,distance=..5] run function lib:heal/
+    execute as @e[type=#lib:living,tag=Enemy,tag=!this,tag=!Uninterferable,distance=..5] run function lib:heal/
 
 # 死ぬ
     kill @s
