@@ -5,7 +5,7 @@
 # @within function asset:mob/0219.aorta/hurt/1.trigger
 
 # 演出
-    particle dust 0.769 0 0 2 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a
+    particle dust 0.769 0 0 1 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a
     playsound block.conduit.ambient hostile @a ~ ~ ~ 0.8 1.5 0
 
 # 現在体力を数値化する

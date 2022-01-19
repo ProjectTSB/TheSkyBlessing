@@ -17,3 +17,6 @@
 
 # 周囲に移動速度上昇を付与
     effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] speed 3 1 true
+
+# 現在体力を数値化する
+    execute store result score @s 63.Health run data get entity @s Health 1.0
