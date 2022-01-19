@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0219.aorta/**
-    scoreboard objectives add 63.HealValue dummy
+    scoreboard objectives add 63.Health dummy

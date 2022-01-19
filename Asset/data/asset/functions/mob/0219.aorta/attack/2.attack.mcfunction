@@ -16,4 +16,4 @@
     data remove storage lib: Argument
 
 # 周囲に移動速度上昇を付与
-    effect give @e[type=#lib:living,tag=!Uninterferable,distance=..5] speed 3 2 true
+    effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] speed 3 1 true

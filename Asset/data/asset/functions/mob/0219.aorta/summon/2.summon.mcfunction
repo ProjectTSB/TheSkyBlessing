@@ -5,7 +5,7 @@
 # @within function asset:mob/0219.aorta/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0219.aorta"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0219.aorta"}
 # ID (int)
     data modify storage asset:mob ID set value 219
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 30.0
+    data modify storage asset:mob Health set value 160.0
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 32
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 0.0
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.35
+    data modify storage asset:mob Speed set value 0.3
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
