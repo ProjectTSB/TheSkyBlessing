@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/triggers/check_change_armor/reset
+#> asset_manager:sacred_treasure/triggers/check_change_equipment/reset
 #
 # 付与された各スロットの変更記録タグを削除します
 #

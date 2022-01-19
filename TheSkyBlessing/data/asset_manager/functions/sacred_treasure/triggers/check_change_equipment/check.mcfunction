@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/triggers/check_change_armor/check
+#> asset_manager:sacred_treasure/triggers/check_change_equipment/check
 #
 # 各slotについて前のアイテムデータと一致していない場合、タグを付与します。
 #
