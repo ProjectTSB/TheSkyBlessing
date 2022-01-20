@@ -19,7 +19,7 @@
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
-    execute if data storage lib: Argument.DeathMessage run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage lib: Argument.DeathMessage
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage lib: Argument.DeathMessage
 # リセット
     scoreboard players reset $Set Lib
     # data remove storage lib: Argument.DeathMessage

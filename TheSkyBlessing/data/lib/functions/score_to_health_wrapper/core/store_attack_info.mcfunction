@@ -21,6 +21,6 @@
     execute if data storage api: Argument{ElementType:"None"} if data storage api: Argument{AttackType:"Magic"} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 5
 # 死亡メッセージが設定されていたら保存する
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
-    execute if data storage api: Argument.DeathMessage run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage api: Argument.DeathMessage
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage api: Argument.DeathMessage
 # リセット
     scoreboard players reset $LatestAttacker Temporary
