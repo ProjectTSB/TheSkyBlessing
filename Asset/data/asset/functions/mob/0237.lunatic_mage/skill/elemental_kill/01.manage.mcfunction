@@ -20,7 +20,7 @@
 # プレイヤーの下にワープ
     execute if score @s 6J.Tick matches 20 at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
 
-# 空中は嫌だ
+# 空中はダメです
     execute if score @s 6J.Tick matches 21.. if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 水の檻

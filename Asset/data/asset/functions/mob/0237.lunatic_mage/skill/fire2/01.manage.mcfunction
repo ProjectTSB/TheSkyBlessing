@@ -6,7 +6,7 @@
 
 # 予備動作的な
     execute if score @s 6J.Tick matches 2 run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
-    execute if score @s 6J.Tick matches ..20 run particle flame ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if score @s 6J.Tick matches ..20 run particle dust 1 0 0 1.5 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
 
 # 軽く炎弾を連射
     execute if score @s 6J.Tick matches 25 positioned ~ ~1.6 ~ facing entity @p[gamemode=!spectator,distance=..40] eyes run function asset:mob/0237.lunatic_mage/skill/fire2/02.shoot
