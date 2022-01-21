@@ -124,6 +124,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
         scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
         scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
+        scoreboard objectives add CondFailLogCD dummy {"text":"神器の条件失敗時のログクールダウン"}
     bossbar set asset:special_cooldown color green
     bossbar set asset:special_cooldown style notched_10
 

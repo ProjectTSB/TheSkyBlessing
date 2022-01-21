@@ -14,7 +14,7 @@
 # Attacker / Victimのセット
     execute as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s AttackingEntity = @a[tag=this,limit=1] AttackingEntity run tag @s add Attacker
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Victim
-# スロット毎のチェック
+# 装備の変更チェック
     function asset_manager:sacred_treasure/triggers/check_change_equipment/check
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:sacred_treasure/triggers/tick
