@@ -12,6 +12,8 @@
     data modify storage asset:trader ID set value 6
 # 名前 (TextComponent) (オプション)
     data modify storage asset:trader Name set value '{"text":"防具商人"}'
+# 場所 (double[3])
+    data modify storage asset:trader Pos set value [-28.5d,21.0d,-43.5d]
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value -45f
 
