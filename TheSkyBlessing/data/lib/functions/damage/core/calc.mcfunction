@@ -12,6 +12,7 @@
     #declare score_holder $CalcB3
     #declare score_holder $CalcC
     #declare score_holder $CalcD
+    #declare score_holder $CalcE
     #declare score_holder $CalcF
     #declare score_holder $CalcG
 
@@ -23,13 +24,18 @@
         scoreboard players operation $CalcA Temporary = $defensePoints Temporary
         scoreboard players operation $CalcA Temporary *= $20 Const
         scoreboard players operation $CalcA Temporary /= $100 Const
-    # $CalcB3 = $toughness( * 100) * 100 / 4 + 2 * 100 * 100;
+    # $CalcB3 = $toughness( * 100) * 100 / 4 / 100 + 2 * 100       : $damage >= 1000 * 100
+    # $CalcB3 = $toughness( * 100) * 100 / 4       + 2 * 100 * 100 : $damage  < 1000 * 100
         scoreboard players operation $CalcB3 Temporary = $toughness Temporary
         scoreboard players operation $CalcB3 Temporary *= $25 Const
-        scoreboard players operation $CalcB3 Temporary += $20000 Const
-    # $CalcB2 = $damage( * 100) * 100 * 100 / $CalcB3( * 100 * 100);
+        execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcB3 Temporary /= $100 Const
+        execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcB3 Temporary += $200 Const
+        execute if score $Damage Temporary matches ..099999 run scoreboard players operation $CalcB3 Temporary += $20000 Const
+    # $CalcB2 = $damage( * 100) * 100       / $CalcB3( * 100)       : $damage >= 1000 * 100
+    # $CalcB2 = $damage( * 100) * 100 * 100 / $CalcB3( * 100 * 100) : $damage  < 1000 * 100
         scoreboard players operation $CalcB2 Temporary = $Damage Temporary
-        scoreboard players operation $CalcB2 Temporary *= $10000 Const
+        execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcB2 Temporary *= $100 Const
+        execute if score $Damage Temporary matches ..099999 run scoreboard players operation $CalcB2 Temporary *= $10000 Const
         scoreboard players operation $CalcB2 Temporary /= $CalcB3 Temporary
     # $CalcB = $defensePoints( * 100) - $CalcB2( * 100);
         scoreboard players operation $CalcB Temporary = $defensePoints Temporary
@@ -39,13 +45,18 @@
         scoreboard players operation $CalcC Temporary > $CalcB Temporary
         scoreboard players operation $CalcC Temporary < $2000 Const
         scoreboard players operation $CalcC Temporary *= $4 Const
-    # $CalcD = (1 * 100 * 100 - $CalcC( * 100 * 100)) / 10;
+    # $CalcD = (1 * 100 * 100 - $CalcC( * 100 * 100)) / 10 : $damage >= 1000 * 100
+    # $CalcD = (1 * 100 * 100 - $CalcC( * 100 * 100))      : $damage  < 1000 * 100
         scoreboard players operation $CalcD Temporary = $10000 Const
         scoreboard players operation $CalcD Temporary -= $CalcC Temporary
-        scoreboard players operation $CalcD Temporary /= $10 Const
-    # $damage = $damage( * 100) * $CalcD( * 100 * 10) / 10;
-        scoreboard players operation $Damage Temporary *= $CalcD Temporary
-        scoreboard players operation $Damage Temporary /= $10 Const
+        execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcD Temporary /= $10 Const
+    # $damage = $damage( * 100) * $CalcD( * 100 * 10)  / 10      : $damage >= 1000 * 100
+    # $damage = $damage( * 100) * $CalcD( * 100 * 100) / 10 / 10 : $damage  < 1000 * 100
+        scoreboard players operation $CalcE Temporary = $Damage Temporary
+        scoreboard players operation $CalcE Temporary *= $CalcD Temporary
+        execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcE Temporary /= $10 Const
+        execute if score $Damage Temporary matches ..099999 run scoreboard players operation $CalcE Temporary /= $100 Const
+        scoreboard players operation $Damage Temporary = $CalcE Temporary
 # エンチャントによる軽減計算部
     # $EPF = min(20, $EPF) * 100 / 50
         scoreboard players operation $EPF Temporary < $20 Const
@@ -73,6 +84,7 @@
     scoreboard players reset $CalcB3 Temporary
     scoreboard players reset $CalcC Temporary
     scoreboard players reset $CalcD Temporary
+    scoreboard players reset $CalcE Temporary
     scoreboard players reset $CalcF Temporary
     scoreboard players reset $CalcG Temporary
     scoreboard players reset $defensePoints Temporary
