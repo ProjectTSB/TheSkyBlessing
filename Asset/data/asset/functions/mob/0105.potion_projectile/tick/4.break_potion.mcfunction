@@ -7,7 +7,7 @@
     item replace entity @s armor.head with air
 
 # 演出
-    playsound entity.splash_potion.break master @a ~ ~ ~ 1 1 0
+    playsound entity.splash_potion.break hostile @a ~ ~ ~ 1 1 0
     particle block glass ~ ~ ~ 0 0 0 0 5
 
 # 割れた判定Tagを付与

@@ -5,7 +5,7 @@
 # @within function asset:mob/0080.fukotsu/attack/1.trigger
 
     execute at @a[tag=Victim,distance=..5] run particle dust 1 1 0 1 ~ ~2 ~ 0 2.5 0 0 100
-    playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
+    playsound minecraft:entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2
 
 # 引数の設定
     # 与えるダメージ = 7.5

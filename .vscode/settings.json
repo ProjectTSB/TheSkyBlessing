@@ -320,7 +320,7 @@
     ],
     "datapack.lint.strictSoundEventCheck": [
         "error",
-        "always"
+        "only-default-namespace"
     ],
     "datapack.lint.strictStorageCheck": [
         "error",

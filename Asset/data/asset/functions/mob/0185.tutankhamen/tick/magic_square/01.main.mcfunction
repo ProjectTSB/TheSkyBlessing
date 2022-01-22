@@ -5,7 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/tick/04.attack_branch
 
 # 予備動作的な
-    execute if score @s 55.Tick matches 80 run playsound block.portal.trigger master @a ~ ~ ~ 0.5 2 0
+    execute if score @s 55.Tick matches 80 run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
 
 # 隙だらけなので耐性
     effect give @s resistance 1 2 true
