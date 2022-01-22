@@ -28,7 +28,7 @@
         data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
     # ダメージ
         execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
-        execute unless entity @s[gamemode=creative,gamemode=!spectator] run function lib:damage/
+        execute if entity @s[gamemode=!creative,gamemode=!spectator] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
