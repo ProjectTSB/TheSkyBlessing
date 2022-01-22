@@ -8,4 +8,5 @@
     function asset:sacred_treasure/common/use/offhand
 
 # ここから先は神器側の効果の処理を書く
-    tp @s 23 3 24
+    particle minecraft:nautilus ~ ~1.25 ~ 0.0 0.5 0.0 0.5 75
+    execute in overworld run tp @s 23.5 3.0 24.5

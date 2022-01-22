@@ -15,7 +15,7 @@
     execute store result score $DamageCoefficient Temporary run function lib:random/
     scoreboard players operation $DamageCoefficient Temporary %= $70 Const
     scoreboard players add $DamageCoefficient Temporary 30
-    execute store result score $BlastDamage Temporary run data get entity @s Health
+    execute store result score $BlastDamage Temporary run data get entity @s AbsorptionAmount
     scoreboard players operation $BlastDamage Temporary *= $DamageCoefficient Temporary
 
 # ダメージ

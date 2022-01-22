@@ -20,10 +20,8 @@
     playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
 
 # 残り回数が1回の時発動した場合
-    execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
-    execute if score $UseCount Temporary matches 1 run data modify storage api: Argument.ID set value 608
-    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give/from_id
-    scoreboard players reset $UseCount Temporary
+    execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 608
+    execute unless data storage asset:context Items.mainhand.id run function api:sacred_treasure/give/from_id
 
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
