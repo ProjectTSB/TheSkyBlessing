@@ -5,4 +5,4 @@
 # @within function asset:mob/0017.fire_bird/death/1.trigger
 
 particle flame ~ ~ ~ 0.5 0.5 0.5 0 60 normal @a
-playsound block.fire.ambient master @a ~ ~ ~ 2 0.4 0
+playsound block.fire.ambient hostile @a ~ ~ ~ 2 0.4 0

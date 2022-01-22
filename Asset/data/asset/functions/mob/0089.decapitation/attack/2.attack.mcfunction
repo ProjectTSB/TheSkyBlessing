@@ -6,7 +6,7 @@
 
 # 演出
     execute as @p[tag=Victim] at @s run particle block redstone_block ~ ~ ~ 0.1 0 0.1 0 10
-    playsound minecraft:entity.evoker_fangs.attack master @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.evoker_fangs.attack hostile @a ~ ~ ~ 1 1.5
 
 # 何故かこうするとプレイヤーと同じ剣の降り方をする
     item replace entity @s weapon with stick{CustomModelData:20022}

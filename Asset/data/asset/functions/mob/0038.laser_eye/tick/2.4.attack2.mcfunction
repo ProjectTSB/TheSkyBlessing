@@ -20,8 +20,8 @@
     execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:mob/0038.laser_eye/tick/2.2.shoot
 
 # 演出
-    playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 1 2
-    stopsound @a master minecraft:block.beacon.ambient
+    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 2
+    stopsound @a hostile minecraft:block.beacon.ambient
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker,limit=1]

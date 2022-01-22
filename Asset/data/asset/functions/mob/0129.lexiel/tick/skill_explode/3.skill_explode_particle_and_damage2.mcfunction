@@ -10,8 +10,8 @@
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
     particle minecraft:lava ~ ~ ~ 3 1 3 0.42 100
 
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
-    playsound entity.generic.explode master @a ~ ~ ~ 1 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0
+    playsound entity.generic.explode hostile @a ~ ~ ~ 1 0
 
 # ダメージ設定
     # 与えるダメージ
