@@ -23,7 +23,7 @@
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
     data modify storage lib: Argument.BypassResist set value 1b
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.040 run attribute @s generic.max_health get 10
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.0040 run function api:mob/get_max_health
 
 # 対象が天使でダメージ量が11以上の場合強制的にダメージを10に
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
