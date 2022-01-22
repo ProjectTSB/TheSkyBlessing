@@ -6,12 +6,10 @@
 
 # パラメータチェック
     execute unless data storage asset:trader ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
-    execute unless data storage asset:trader Pos run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Pos","color":"red"}]
 # 登録
     function asset_manager:trader/register/
 # リセット
     data remove storage asset:trader ID
-    data remove storage asset:trader Pos
     data remove storage asset:trader Name
     data remove storage asset:trader Rotation
     data remove storage asset:trader Trades
