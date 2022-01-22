@@ -13,6 +13,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.ByPassResist set value 1b
+    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sの宝石の煌びやかさにやられた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sの宝石の価値に敗北した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
     function lib:damage/modifier
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
     data remove storage lib: Argument

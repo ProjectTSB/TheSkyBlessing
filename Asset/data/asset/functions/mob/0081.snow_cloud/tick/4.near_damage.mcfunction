@@ -12,6 +12,8 @@
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
+    # デスログ
+        data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sに近づいて凍死した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sの冷たさにより全身が凍り付いた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
     # 補正functionを実行
         function lib:damage/modifier
     # ダメージ対象

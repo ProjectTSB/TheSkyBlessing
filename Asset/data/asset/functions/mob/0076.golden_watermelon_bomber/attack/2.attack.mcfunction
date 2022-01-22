@@ -13,6 +13,8 @@
             data modify storage lib: Argument.AttackType set value "Physical"
         # 第二属性
             data modify storage lib: Argument.ElementType set value "Water"
+        # デスログ
+            data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sの金色の輝きにより心停止した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sのスイカの電撃により死亡した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
         # 補正functionを実行
             function lib:damage/modifier
         # ダメージ対象
@@ -21,6 +23,8 @@
     #　雷属性ダメージ
         # 第二属性
             data modify storage lib: Argument.ElementType set value "Thunder"
+         # デスログ
+            data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sの金色の輝きにより心停止した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sの電撃により死亡した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
         # 補正functionを実行
             function lib:damage/modifier
         # ダメージ対象
