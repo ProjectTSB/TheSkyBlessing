@@ -9,7 +9,7 @@
     #declare score_holder $HealthPercent
 
 # 現在HPの100倍をスコアに
-    execute store result score $Health Temporary run data get entity @s Health 100
+    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
 # なんとなく代入する
     scoreboard players operation $HealthPercent Temporary = $Health Temporary
 # 現在HPの％を求める。

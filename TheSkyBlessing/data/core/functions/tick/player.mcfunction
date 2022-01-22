@@ -11,7 +11,7 @@
     execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
     execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
     execute if entity @s[advancements={core:handler/consume_item=true}] run function core:handler/consume_item
-    execute if entity @s[advancements={core:handler/attack=true}] run function core:handler/attack
+    execute if entity @s[scores={AttackEvent=1..}] run function core:handler/attack
     execute if entity @s[advancements={core:handler/damage=true}] run function core:handler/damage
     execute if entity @s[advancements={core:handler/killed=true}] run function core:handler/killed
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
