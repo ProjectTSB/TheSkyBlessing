@@ -1,6 +1,6 @@
 #> asset:mob/0217.medousa_eye/tick/07.schedule_loop
 #
-#
+# プレイヤー用スケジュールループだよ
 #
 # @within function
 #   asset:mob/0217.medousa_eye/tick/06.beam_hit
