@@ -8,4 +8,4 @@
    execute at @p[tag=Victim] run particle dust 0 0.2 0.1 1 ~ ~1 ~ 0.5 0.5 0.5 1 20 normal @a
 
 # 増殖カウント蓄積
-   scoreboard players add @s 1M.HazeCount 20
+   scoreboard players add @s 1M.Tick 20

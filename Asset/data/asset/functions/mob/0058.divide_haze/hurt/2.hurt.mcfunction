@@ -5,4 +5,4 @@
 # @within function asset:mob/0058.divide_haze/hurt/1.trigger
 
 # 増殖カウント減少
-   scoreboard players remove @s 1M.HazeCount 10
+   scoreboard players remove @s 1M.Tick 10
