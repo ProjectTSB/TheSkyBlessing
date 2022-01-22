@@ -25,7 +25,7 @@
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # デスログ
-        data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sと目を合わせてしまい、石となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+        data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
     # ダメージ
         execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
         function lib:damage/
