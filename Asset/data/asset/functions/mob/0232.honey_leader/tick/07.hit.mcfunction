@@ -13,7 +13,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
-    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sにべとべとにされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sのハチの巣の材料にされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sに全身べとべとにされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sのハチの巣の材料にされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
     execute as @p[gamemode=!creative,gamemode=!spectator,dx=0,limit=1] run function lib:damage/
 # リセット
     data remove storage lib: Argument
