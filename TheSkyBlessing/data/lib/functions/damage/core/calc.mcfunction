@@ -19,6 +19,26 @@
 # 計算式:
 # damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - (min(20, cappedEPF) / 25)) * (1 - min(5, resistanceLv) / 5)
 
+# エンチャントによる軽減計算部
+    # $EPF(e2) = min(20, $EPF(e0)) * e2 / 50
+        scoreboard players operation $EPF Temporary < $20 Const
+        scoreboard players operation $EPF Temporary *= $2 Const
+    # $CalcF(e2) = 1 * e2 - $EPF(e2)
+        scoreboard players operation $CalcF Temporary = $100 Const
+        scoreboard players operation $CalcF Temporary -= $EPF Temporary
+    # $damage(e4) = $damage(e4) * $CalcF(e2) / e2
+        scoreboard players operation $Damage Temporary *= $CalcF Temporary
+        scoreboard players operation $Damage Temporary /= $100 Const
+# 耐性エフェクトによる軽減計算部
+    # $Resistance(e1) *= min(5, $Resistance(e0)) * e1 / 5
+        scoreboard players operation $Resistance Temporary < $5 Const
+        scoreboard players operation $Resistance Temporary *= $2 Const
+    # $CalcF(e1) = 1 * e1 - $Resistance(e1)
+        scoreboard players operation $CalcG Temporary = $10 Const
+        scoreboard players operation $CalcG Temporary -= $Resistance Temporary
+    # $damage(e4) = $damage(e4) * $CalcF(e1) / e1
+        scoreboard players operation $Damage Temporary *= $CalcG Temporary
+        scoreboard players operation $Damage Temporary /= $10 Const
 # 防御による軽減計算部
     # $CalcA(e2) = $defensePoints(e2) * e2 / 5 / e2
         scoreboard players operation $CalcA Temporary = $defensePoints Temporary
@@ -57,26 +77,6 @@
         execute if score $Damage Temporary matches 100000.. run scoreboard players operation $CalcE Temporary /= $10 Const
         execute if score $Damage Temporary matches ..099999 run scoreboard players operation $CalcE Temporary /= $100 Const
         scoreboard players operation $Damage Temporary = $CalcE Temporary
-# エンチャントによる軽減計算部
-    # $EPF(e2) = min(20, $EPF(e0)) * e2 / 50
-        scoreboard players operation $EPF Temporary < $20 Const
-        scoreboard players operation $EPF Temporary *= $2 Const
-    # $CalcF(e2) = 1 * e2 - $EPF(e2)
-        scoreboard players operation $CalcF Temporary = $100 Const
-        scoreboard players operation $CalcF Temporary -= $EPF Temporary
-    # $damage(e4) = $damage(e4) * $CalcF(e2) / e2
-        scoreboard players operation $Damage Temporary *= $CalcF Temporary
-        scoreboard players operation $Damage Temporary /= $100 Const
-# 耐性エフェクトによる軽減計算部
-    # $Resistance(e1) *= min(5, $Resistance(e0)) * e1 / 5
-        scoreboard players operation $Resistance Temporary < $5 Const
-        scoreboard players operation $Resistance Temporary *= $2 Const
-    # $CalcF(e1) = 1 * e1 - $Resistance(e1)
-        scoreboard players operation $CalcG Temporary = $10 Const
-        scoreboard players operation $CalcG Temporary -= $Resistance Temporary
-    # $damage(e4) = $damage(e4) * $CalcF(e1) / e1
-        scoreboard players operation $Damage Temporary *= $CalcG Temporary
-        scoreboard players operation $Damage Temporary /= $10 Const
 # Reset
     scoreboard players reset $CalcA Temporary
     scoreboard players reset $CalcB Temporary
