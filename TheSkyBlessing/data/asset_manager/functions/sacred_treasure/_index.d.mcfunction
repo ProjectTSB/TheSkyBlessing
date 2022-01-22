@@ -20,6 +20,7 @@
 #> Trigger検知用
 # @within function
 #   asset_manager:sacred_treasure/triggers/**
+#   lib:damage/core/trigger_on_attack
 #   core:handler/**
     #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
