@@ -18,7 +18,3 @@
 
 # 着弾タグを消す
     tag @p[tag=LandingTarget] remove LandingTarget
-
-# 演出
-    playsound block.amethyst_block.chime hostile @a ~ ~ ~ 1.5 0.7
-    playsound block.amethyst_block.chime hostile @a ~ ~ ~ 1.5 0.5
