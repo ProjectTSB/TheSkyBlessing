@@ -13,7 +13,7 @@
     playsound item.trident.throw player @a ~ ~ ~ 1 1
 
 # 弾を召喚
-    summon armor_stand ~ ~-100 ~ {Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Small:1b,Pose:{Head:[10f,0f,0f]},Tags:["N9.First","N9.Knife","Projectile"],ArmorItems:[{},{},{},{id:"minecraft:iron_sword",Count:1b,tag:{CustomModelData:20012}}]}
+    summon armor_stand ~ ~-100 ~ {Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Small:1b,Pose:{Head:[10f,0f,0f]},Tags:["N9.First","N9.Knife","Projectile"],ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:837}}]}
     execute anchored eyes positioned ^ ^ ^2 run tp @e[type=armor_stand,tag=N9.First] ~ ~-1 ~ facing ^ ^ ^10
     data modify entity @e[type=armor_stand,tag=N9.First,distance=..10,sort=nearest,limit=1] Pose.Head[0] set from entity @s Rotation[1]
 # ユーザーID適応

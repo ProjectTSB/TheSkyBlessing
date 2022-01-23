@@ -17,12 +17,10 @@
     playsound item.trident.hit_ground player @a ~ ~ ~ 1 1
 
 # 攻撃を与える
-    # 与えるダメージ = 26
-        data modify storage lib: Argument.Damage set value 10f
-    # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
-    # 雷属性
-        data modify storage lib: Argument.ElementType set value "Fire"
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 20f
+    # 属性
+        data modify storage lib: Argument.AttackType set value "Physical"
 # 補正functionを実行
     execute as @a if score @s UserID = @e[type=armor_stand,tag=N9.This,limit=1] N9.UserID run function lib:damage/modifier
 # 攻撃した対象に実行

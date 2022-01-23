@@ -4,7 +4,7 @@
 #
 # @within function asset:sacred_treasure/0837.the_world_knife/trigger/4.tick
 
-# startがないならスコアを増やし続ける
+# スコアを増やし続ける
     scoreboard players add @s N9.Time 1
 
 # 一定時間になったら周囲のナイフにも動くタグを付与する。演出もする
