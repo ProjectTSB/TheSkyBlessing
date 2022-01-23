@@ -7,14 +7,12 @@
 #> SpreadLib
 # @private
 #declare tag SpreadMarker
+#declare score_holder $Spread
+#declare score_holder $SneakTime
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/common/use/mainhand
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $4 Const
 # ここから先は神器側の効果の処理を書く
     data modify storage lib: Argument.Distance set value 10.0f
 
@@ -52,6 +50,6 @@
     function asset:sacred_treasure/0573.final_prism/trigger/damage
 
 # リセット
-    scoreboard players reset $Random Temporary
-    scoreboard players reset $Temporary Temporary
+    scoreboard players reset $SneakTime Temporary
+    scoreboard players reset $Spread Temporary
     kill @e[type=marker,tag=SpreadMarker]
