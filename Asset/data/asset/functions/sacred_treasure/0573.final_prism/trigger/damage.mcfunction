@@ -4,15 +4,6 @@
 #
 # @within function asset:sacred_treasure/0573.final_prism/trigger/3.main
 
-#>
-# @private
-#declare score_holder $Random
-
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $4 Const
-
 # ダメージ
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
@@ -32,4 +23,3 @@
 
 # リセット
     data remove storage lib: Argument
-    scoreboard players reset $Random Temporary
