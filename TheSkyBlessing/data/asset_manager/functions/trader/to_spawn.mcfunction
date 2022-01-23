@@ -9,6 +9,5 @@
 # 移動
     data modify entity @s Pos set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultPos
     data modify entity @s Rotation[0] set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation
-    tp @s @s
 # ついでに回復
     data modify entity @s AbsorptionAmount set value 20.0f
