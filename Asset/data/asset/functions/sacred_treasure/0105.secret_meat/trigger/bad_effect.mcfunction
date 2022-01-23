@@ -31,16 +31,14 @@
 # 演出
     tellraw @s {"text":"うっ...変な感じだ","bold":true}
 
-# 追加でいいエフェクト
-    effect clear @s hunger
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $4 Const
 # 悪い効果
-    execute if score $Random Temporary matches 0 run effect give @s slowness 20 1
-    execute if score $Random Temporary matches 1 run effect give @s mining_fatigue 20 1
-    execute if score $Random Temporary matches 2 run effect give @s weakness 20 1
-    execute if score $Random Temporary matches 3 run effect give @s blindness 20 1
+    execute if score $Random Temporary matches 0 run effect give @s slowness 90 1
+    execute if score $Random Temporary matches 1 run effect give @s mining_fatigue 90 1
+    execute if score $Random Temporary matches 2 run effect give @s weakness 90 1
+    execute if score $Random Temporary matches 3 run effect give @s blindness 90 1
 # リセット
     scoreboard players reset $Random Temporary

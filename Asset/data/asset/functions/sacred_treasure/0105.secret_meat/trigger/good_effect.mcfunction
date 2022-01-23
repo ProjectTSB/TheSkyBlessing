@@ -30,11 +30,12 @@
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $4 Const
+    scoreboard players operation $Random Temporary %= $5 Const
 # いい効果
-    execute if score $Random Temporary matches 0 run effect give @s speed 20 1
-    execute if score $Random Temporary matches 1 run effect give @s haste 20 1
-    execute if score $Random Temporary matches 2 run effect give @s jump_boost 20 1
-    execute if score $Random Temporary matches 3 run effect give @s night_vision 20 1
+    execute if score $Random Temporary matches 0 run effect give @s speed 90 1
+    execute if score $Random Temporary matches 1 run effect give @s haste 90 1
+    execute if score $Random Temporary matches 2 run effect give @s jump_boost 90 1
+    execute if score $Random Temporary matches 3 run effect give @s night_vision 90 1
+    execute if score $Random Temporary matches 4 run effect give @s resistance 45 0
 # リセット
     scoreboard players reset $Random Temporary
