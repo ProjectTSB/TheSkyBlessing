@@ -322,7 +322,6 @@ team modify NoCollision collisionRule never
     #   asset_manager:mob/summon/set_data
         team add Enemy
 
-
 #> 各Asset側のロード処理
     function #asset:sacred_treasure/load
     function #asset:mob/load
