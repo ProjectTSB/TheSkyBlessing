@@ -14,11 +14,11 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージ対象
-    execute as @p[tag=Victim] run function lib:damage/
+    execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
 # 演出
-    execute at @p[tag=Victim] run playsound entity.player.splash hostile @a ~ ~ ~ 0.8 0.8 0
-    execute at @p[tag=Victim] run particle dust 1 0.141 0.141 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a
-    execute at @p[tag=Victim] run particle dust 0.173 1 0.243 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a
+    execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash hostile @a ~ ~ ~ 0.8 0.8 0
+    execute at @p[tag=Victim,distance=..6] run particle dust 1 0.141 0.141 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a
+    execute at @p[tag=Victim,distance=..6] run particle dust 0.173 1 0.243 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a
