@@ -24,3 +24,5 @@
 # リセット
     scoreboard players reset $Random Temporary
     data remove storage lib: Argument
+# MP0化が発生するとは限らないので一応リセ
+    scoreboard players reset $Fluctuation Lib
