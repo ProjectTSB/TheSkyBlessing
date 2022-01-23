@@ -11,6 +11,6 @@
 # 体力を緩衝体力に移す処理
     execute if entity @s[tag=!AssetMob] run function mob_manager:init/modify_health
 # AssetMobで無ければタグの付与
-    execute if entity @s[tag=!AssetMob] run function mob_manager:init/add_tag
+    execute if entity @s[tag=!AssetMob] run function mob_manager:init/set_option
 # 初期化フラグ追加
     tag @s add AlreadyInitMob

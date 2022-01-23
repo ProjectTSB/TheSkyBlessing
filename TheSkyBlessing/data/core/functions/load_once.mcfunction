@@ -315,6 +315,13 @@ team modify NoCollision collisionRule never
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
 
+    #> MobManager - Teams
+    # @within function
+    #   core:load_once
+    #   mob_manager:init/set_option
+    #   asset_manager:mob/summon/set_data
+        team add Enemy
+
 
 #> 各Asset側のロード処理
     function #asset:sacred_treasure/load
