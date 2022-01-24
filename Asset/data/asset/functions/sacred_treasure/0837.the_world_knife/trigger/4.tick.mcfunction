@@ -5,6 +5,7 @@
 # @within function
 #      asset:sacred_treasure/0837.the_world_knife/trigger/3.main
 #      asset:sacred_treasure/0837.the_world_knife/trigger/4.tick
+#      asset:sacred_treasure/0837.the_world_knife/trigger/rejoin_process
 
 
 # 動いていないナイフが実行する処理
