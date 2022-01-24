@@ -9,4 +9,4 @@
 
 # ここから先は神器側の効果の処理を書く
     effect give @s minecraft:jump_boost 2 2 true
-    effect give @s minecraft:speed 1 2 true
+    effect give @s minecraft:speed 2 1 true
