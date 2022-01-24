@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0826.scp-1689/give/2.give
+#> asset:sacred_treasure/0826.infinite_potatoes/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0826.scp-1689/give/1.trigger
+# @within function asset:sacred_treasure/0826.infinite_potatoes/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"SCP-1689","color":"#a24924"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"∞のじゃがいも袋","color":"#a24924"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"通称:じゃがいも入れの袋","color":"dark_aqua","bold":true,"italic":false}','{"text":"袋の中には無限のじゃがいもが入っている","color":"gray","italic":false}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"無限にじゃがいもが出てくる袋","color":"dark_aqua","bold":true,"italic":false}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

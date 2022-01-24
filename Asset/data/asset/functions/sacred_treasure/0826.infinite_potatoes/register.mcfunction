@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0826.scp-1689/register
+#> asset:sacred_treasure/0826.infinite_potatoes/register
 #
 # 神器プールへの登録処理
 #
