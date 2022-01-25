@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
         "asset:mob/0214.water_magic/summon/1.trigger",
         "asset:mob/1012.meteor_big/summon/1.trigger",
         "asset:mob/1011.meteor/summon/1.trigger",
