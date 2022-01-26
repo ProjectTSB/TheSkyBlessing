@@ -317,8 +317,7 @@ team modify NoCollision collisionRule never
 
     #> MobManager - Teams
     # @within function
-    #   core:load_once
-    #   mob_manager:init/set_option
+    #   mob_manager:init/set_tag_and_team
     #   asset_manager:mob/summon/set_data
         team add Enemy
 
