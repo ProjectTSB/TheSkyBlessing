@@ -18,7 +18,7 @@
     playsound minecraft:block.chain.place master @a ~ ~ ~ 1 0.6
     playsound minecraft:block.iron_door.open master @a ~ ~ ~ 0.7 1.5
     playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 0.8 0.8
-    playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.5 1.2
-    playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.7 1.5
-    playsound minecraft:entity.player.levelup master @a ~ ~ ~ 0.7 2
+    playsound ogg:random.levelup master @a ~ ~ ~ 0.5 1.2
+    playsound ogg:random.levelup master @a ~ ~ ~ 0.7 1.5
+    playsound ogg:random.levelup master @a ~ ~ ~ 0.7 2
     particle minecraft:crit ~ ~1 ~ 0.25 0.1 0.25 0.7 20

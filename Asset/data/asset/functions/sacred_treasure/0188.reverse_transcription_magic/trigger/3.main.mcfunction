@@ -13,6 +13,6 @@
         tellraw @s [{"text": "MPが ["},{"nbt": "Inventory[{Slot:-106b}].tag.display.Name","storage": "asset:context","interpret": true},{"text": "] の消費MP [ "},{"score": {"name": "$Set","objective": "Lib"}},{"text": " ] になった！"}]
         function lib:mp/set
     # 演出
-        playsound entity.player.levelup master @s ~ ~ ~ 1 1 1
+        playsound ogg:random.levelup master @s ~ ~ ~ 1 1 1
         stopsound @s * entity.item.break
         particle totem_of_undying ~ ~1.5 ~ 0.5 1 0.5 0 100 force @s
