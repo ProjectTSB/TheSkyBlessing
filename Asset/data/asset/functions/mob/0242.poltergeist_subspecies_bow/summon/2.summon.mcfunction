@@ -50,7 +50,7 @@
     # 物理倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Physical set value
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 50
+        data modify storage asset:mob Resist.Magic set value 0.5
     # 火倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Fire set value
     # 水倍率 (float) (オプション)
