@@ -8,7 +8,7 @@
     execute if entity @s[gamemode=survival] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
 
 # 音
-    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.3 1.5 0
+    playsound minecraft:block.glass.break hostile @a ~ ~ ~ 0.3 1.5 0
 
 # 重めのデバフ
     effect give @s slowness 4 2 true
