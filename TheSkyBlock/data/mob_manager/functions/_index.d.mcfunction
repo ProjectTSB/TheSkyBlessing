@@ -28,7 +28,7 @@
 #   mob_manager:init/add_flag
 #   mob_manager:entity_finder/**
 #   lib:damage/core/trigger_on_attack
-#   asset:mob/death/*
+#   asset:mob/death/abstract_detect_item
     #declare tag FindFlag0.0
     #declare tag FindFlag0.1
     #declare tag FindFlag1.0
