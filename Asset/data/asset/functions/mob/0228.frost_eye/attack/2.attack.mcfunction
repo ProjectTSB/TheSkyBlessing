@@ -28,4 +28,4 @@
     data remove storage lib: Argument
 
 # 鈍足を付与
-    effect give @p[tag=Victim,distance=..6] slowness 4 1 true
+    effect give @p[tag=Victim,distance=..6] slowness 4 2 true

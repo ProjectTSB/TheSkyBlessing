@@ -9,4 +9,4 @@
     playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
 
 # 周囲の鈍足
-    effect give @a[gamemode=!spectator,distance=..2.5] slowness 5 1 true
+    effect give @a[gamemode=!spectator,distance=..2.5] slowness 4 2 true
