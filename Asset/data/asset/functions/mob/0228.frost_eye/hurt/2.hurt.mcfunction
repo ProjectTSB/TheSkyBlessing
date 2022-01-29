@@ -8,5 +8,5 @@
     particle snowflake ~ ~1.7 ~ 1.2 0.1 1.2 0 70 normal @a
     playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
 
-# 周囲の鈍足
-    effect give @a[gamemode=!spectator,distance=..2.5] slowness 4 2 true
+# 周囲に鈍足
+    effect give @a[gamemode=!spectator,distance=..3] slowness 4 3 true
