@@ -13,11 +13,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 残り回数が1回の時発動した場合
-    execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
-    execute if score $UseCount Temporary matches 1 run data modify storage api: Argument.ID set value 365
-    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give/from_id
-    execute if score $UseCount Temporary matches 1 run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
-    scoreboard players reset $UseCount Temporary
+    execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 365
+    execute unless data storage asset:context Items.mainhand.id run function api:sacred_treasure/give/from_id
+    execute unless data storage asset:context Items.mainhand.id run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
 
 # 演出
     playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2

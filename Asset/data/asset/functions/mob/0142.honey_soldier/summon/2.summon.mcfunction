@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"ハニーソルジャー","color":"#FFBD24"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"golden_sword",Count:1b}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"stick",Count:1b,tag:{CustomModelData:20123}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)

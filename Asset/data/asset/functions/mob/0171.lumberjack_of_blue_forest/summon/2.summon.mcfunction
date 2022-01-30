@@ -5,7 +5,7 @@
 # @within function asset:mob/0171.lumberjack_of_blue_forest/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0171.lumberjack_of_blue_forest"}
+    summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0171.lumberjack_of_blue_forest"}
 # ID (int)
     data modify storage asset:mob ID set value 171
 # Type (string) Wikiを参照
@@ -50,13 +50,13 @@
     # 物理倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Physical set value
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.5
+        data modify storage asset:mob Resist.Magic set value 0.25
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 0.7
+        data modify storage asset:mob Resist.Fire set value 0.4
     # 水倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
-        # data modify storage asset:mob Resist.Thunder set value
+        data modify storage asset:mob Resist.Thunder set value 0.8
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

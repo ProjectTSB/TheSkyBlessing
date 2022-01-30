@@ -5,7 +5,7 @@
 # @within function asset:mob/0021.demon_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,DeathLootTable:"asset:mob/death/0021.demon_eye",Tags:["MobInit","Enemy","AlwaysInvisible"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["21.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
+    summon zombie ~ ~ ~ {Silent:1b,DeathLootTable:"asset:mob/death/0021.demon_eye",Tags:["MobInit","Enemy","AlwaysInvisible","AlwaysSlowFall"],Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["21.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 21
 # Type (string) Wikiを参照

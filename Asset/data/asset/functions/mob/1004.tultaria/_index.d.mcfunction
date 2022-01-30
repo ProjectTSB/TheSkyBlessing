@@ -15,8 +15,6 @@
     #declare tag RW.HPless40per
     #declare tag RW.HPless30per
     #
-    #declare tag RW.SkillFixed
-    #
     #declare tag RW.SkillMelee
     #declare tag RW.SkillMeteor
     #declare tag RW.SkillCoordinate

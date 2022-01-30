@@ -29,6 +29,6 @@
             data remove storage lib: Argument
 
 # 演出
-    execute at @p[tag=Victim] run playsound entity.firework_rocket.twinkle master @a ~ ~ ~ 0.8 1.8 0
+    execute at @p[tag=Victim] run playsound entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.8 1.8 0
     execute at @p[tag=Victim] run particle dust 1 0.941 0.141 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a
     execute at @p[tag=Victim] run particle dust 0.173 1 0.243 1 ~ ~1.2 ~ 1 1 1 0 10 normal @a

@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0030.warped/attack/1.trigger",
         "asset:mob/1008.yellow_star/attack/1.trigger",
         "asset:mob/1007.red_star/attack/1.trigger",
         "asset:mob/1006.green_star/attack/1.trigger",
@@ -55,6 +56,7 @@
         "asset:mob/0156.infringement/attack/1.trigger",
         "asset:mob/0154.ruin/attack/1.trigger",
         "asset:mob/0080.fukotsu/attack/1.trigger",
-        "asset:mob/0186.ferocious_bee/attack/1.trigger"
+        "asset:mob/0186.ferocious_bee/attack/1.trigger",
+        "asset:mob/0150.contamination/attack/1.trigger"
     ]
 }

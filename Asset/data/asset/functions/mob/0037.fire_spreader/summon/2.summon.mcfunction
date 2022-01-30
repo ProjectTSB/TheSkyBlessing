@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"炎延者","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:7s}]}}
+    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:2s}]}}
     # オフハンド (Compound(Item)) (オプション)
     # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)

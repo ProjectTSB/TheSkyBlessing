@@ -22,7 +22,7 @@
     data modify storage lib: Argument.Damage set value 30f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
-    data modify storage lib: Argument.ElementType set value "Fire"
+    data modify storage lib: Argument.ElementType set value "Water"
 # 補正functionを実行
     function lib:damage/modifier
 # 対象

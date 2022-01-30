@@ -5,7 +5,7 @@
 # @within function asset:mob/0089.decapitation/hurt/2.hurt
 
 # 演出
-    playsound entity.skeleton.death master @a ~ ~ ~
+    playsound entity.skeleton.death hostile @a ~ ~ ~
 # 骨召喚
     summon item ~ ~ ~ {Motion:[0.0,0.5,0.0],Item:{id:"minecraft:bone",Count:1b}}
 

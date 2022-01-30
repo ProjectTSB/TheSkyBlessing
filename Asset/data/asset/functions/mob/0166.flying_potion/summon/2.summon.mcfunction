@@ -5,7 +5,7 @@
 # @within function asset:mob/0166.flying_potion/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0166.flying_potion",Passengers:[{id:"minecraft:potion",Tags:["4M.Potion"],Item:{id:"minecraft:splash_potion",Count:1b,tag:{CustomPotionColor:7289855}}}]}
+    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0166.flying_potion",Passengers:[{id:"minecraft:potion",Tags:["4M.Potion","AutoKillWhenDieVehicle","AssetMob"],Item:{id:"minecraft:splash_potion",Count:1b,tag:{CustomPotionColor:7289855}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 166
 # Type (string) Wikiを参照

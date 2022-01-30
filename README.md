@@ -1,10 +1,10 @@
-# TheSkyBlock
-<!-- [![discord](https://img.shields.io/discord/serverID?logo=discord&label=discord)](https://discord.gg/inviteUrl) -->
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/TheSkyBlock/TheSkyBlock)
-[![stars](https://img.shields.io/github/stars/TheSkyBlock/TheSkyBlock?logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/stargazers)
-[![progress](https://img.shields.io/github/milestones/progress/TheSkyBlock/TheSkyBlock/1?label=devProgress&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/milestone/1)
-[![activity](https://img.shields.io/github/commit-activity/m/TheSkyBlock/TheSkyBlock?label=commit&logo=github)](https://github.com/TheSkyBlock/TheSkyBlock/commits/master)
-[![workflow](https://img.shields.io/github/workflow/status/TheSkyBlock/TheSkyBlock/lint-datapack/master?label=linter)](https://github.com/TheSkyBlock/TheSkyBlock/actions?query=workflow%3Alint-datapack)
+# TheSkyBlessing
+[![discord](https://img.shields.io/discord/742465492861845564?logo=discord&label=discord)](https://discord.gg/vPqHuQNMEv)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ProjectTSB/TheSkyBlessing)
+[![stars](https://img.shields.io/github/stars/ProjectTSB/TheSkyBlessing?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/stargazers)
+[![progress](https://img.shields.io/github/milestones/progress/ProjectTSB/TheSkyBlessing/1?label=devProgress&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/milestone/1)
+[![activity](https://img.shields.io/github/commit-activity/m/ProjectTSB/TheSkyBlessing?label=commit&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/commits/master)
+[![workflow](https://img.shields.io/github/workflow/status/ProjectTSB/TheSkyBlessing/lint-datapack/master?label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.carloscuesta.me/)
 
 ## 開発環境
@@ -14,7 +14,7 @@
 * [Gitmoji](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode)
 
 ## 開発のあれこれ
-[Wiki](https://github.com/TheSkyBlock/TheSkyBlock/wiki)見てね！
+[Wiki](https://github.com/ProjectTSB/TheSkyBlessing/wiki)見てね！
 
 ## ライセンスについて
 このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
@@ -31,3 +31,6 @@
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
 * [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)
+
+## コラボレーター以外によるプルリクエストについて
+コラボレーター以外によるプルリクエストは、最適化, バグ修正に限り歓迎しています。
