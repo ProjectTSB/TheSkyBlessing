@@ -38,7 +38,7 @@
     execute if score @s 4V.Tick matches 73 run tag @s remove 4V.SkillTackleDamageHit
 
 # 確率で突進二回目に戻す
-    execute if score @s 4V.Tick matches 73 if predicate lib:random_pass_per/20 run scoreboard players set @s 4V.Tick 41
+    execute if score @s 4V.Tick matches 73 if predicate lib:random_pass_per/30 run scoreboard players set @s 4V.Tick 40
 
 # 終了処理
 # モデル戻す

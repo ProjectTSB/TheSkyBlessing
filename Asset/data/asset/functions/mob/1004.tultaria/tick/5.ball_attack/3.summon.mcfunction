@@ -6,7 +6,7 @@
 
 
 # マーカー召喚
-    summon marker ~ ~1 ~ {Tags:["Object","RW.This"]}
+    summon marker ~ ~0.5 ~ {Tags:["Object","RW.This"]}
 
 # 拡散する
     data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
