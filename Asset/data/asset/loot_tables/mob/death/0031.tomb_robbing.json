@@ -21,7 +21,7 @@
             "entries": [
                 {
                     "type": "loot_table",
-                    "name": "entities/phantom"
+                    "name": "entities/vindicator"
                 }
             ]
         }
