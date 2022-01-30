@@ -1,4 +1,4 @@
-#> asset:mob/0216.gray_guardian/tick/3.skill_axe/3.stan
+#> asset:mob/0216.gray_guardian/tick/3.skill_axe/4.stan
 #
 #
 #
@@ -10,3 +10,6 @@
 
 # アイテムを外す
     item replace entity @e[type=armor_stand,tag=60.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20124}
+
+# 効果音
+    playsound block.anvil.land hostile @a ~ ~ ~ 1 1
