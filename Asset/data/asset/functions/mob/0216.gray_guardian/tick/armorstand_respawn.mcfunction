@@ -17,6 +17,8 @@
 
 # スキル発動中に移動した場合困るので消す
     tag @s remove 60.SkillMelee
+    tag @s remove 60.SkillBow
+    tag @s remove 60.SkillAxe
 
 # 強制的にテレポする
     function asset:mob/0216.gray_guardian/tick/move/spread

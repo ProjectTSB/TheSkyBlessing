@@ -9,3 +9,6 @@
 
 # 弓スキル
     execute if entity @s[tag=60.SkillBow] run function asset:mob/0216.gray_guardian/tick/2.skill_bow/1.skill_bow
+
+# 斧スキル
+    execute if entity @s[tag=60.SkillAxe] run function asset:mob/0216.gray_guardian/tick/3.skill_axe/1.skill_axe
