@@ -27,7 +27,7 @@
     tag @e[type=armor_stand,tag=2X.Potion] remove 2X.Potion
 
 # 音
-    playsound entity.splash_potion.throw master @a ~ ~ ~ 1 0.5 0
+    playsound entity.splash_potion.throw hostile @a ~ ~ ~ 1 0.5 0
 
 # スコアリセット
     scoreboard players reset @s 2W.Tick

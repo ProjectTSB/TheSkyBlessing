@@ -7,7 +7,7 @@
 # 演出
     execute at @p[tag=Victim] run particle dust 1 1 0 1.3 ~ ~3 ~ 0.25 2.5 0.25 0 80 normal @a
     execute at @p[tag=Victim] run particle dust 0.3 0.3 0.3 2 ~ ~6 ~ 1 0.3 1 0 40 normal @a
-    execute at @p[tag=Victim] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.6 2.0 0
+    execute at @p[tag=Victim] run playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.6 2.0 0
 
 # 雷魔法属性ダメージ
     # 引数の設定

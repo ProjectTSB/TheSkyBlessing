@@ -11,5 +11,5 @@
     execute positioned ~ ~0.3 ~ rotated 0 0 run function asset:mob/0214.water_magic/tick/06.vfx
 
 # vfxの円部分 回転する
-    tp @s ~ ~ ~ ~4 ~
+    tp @s ~ ~ ~ ~7.5 ~
     execute positioned ~ ~0.3 ~ run function asset:mob/0214.water_magic/tick/07.vfx_2
