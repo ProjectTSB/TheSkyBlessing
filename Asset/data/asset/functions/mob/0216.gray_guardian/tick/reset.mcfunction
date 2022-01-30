@@ -14,6 +14,7 @@
 
 # タグをリセットする
     tag @s remove 60.SkillMelee
+    tag @s remove 60.SkillBow
 
 # スコアを戻す
     scoreboard players set @s 60.Tick -40
