@@ -6,7 +6,7 @@
 
 
 # 演出
-    playsound minecraft:block.anvil.land ambient @a ~ ~ ~ 1 1
+    playsound minecraft:block.anvil.land hostile @a ~ ~ ~ 1 1
     playsound minecraft:entity.evoker.prepare_attack hostile @s ~ ~ ~ 1 1.4
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAEYAcADHAEwAstAzALQBmTnHPc1dtWoBDAJztSpJiO60A7J1o0wBAHYiAtgmSAwxQAEARlVgYIjFoDOScCgD2hNRCQsCKOE7gYbYAG4jsQh1wAA8kWgIocIBfaIILUjRCa0QmAksIc2dECLA4bGw0GEsdQ1pcjDtMiB1ctEsAUQKikoaAR0IA7CgAZTN3ckROAJLYvHBoeAp0LFwTYjJpkVYAVlZ6DjhuFfYeaiZ2SkpxdloGADZWSlZhw3l5VhMNbQoDQ3Z7GCiCMwtNFNsDicLly7k83kQ4H8gWCYDCOUiMTiYASSRSrHSmQw2Vy+UKxVK5XiVRENXCBHqTXxrQ6XV6-Tgg2G2FGcQmsB0qEwOHwRBIgzAhhWtBWTDgrEEhhoEh4Yg4lBW5x21E4cjE8kotBQIgYTy0nLeHzsXyNXxMvysPnsjmyDFBHhqEKhASCPnhuSiOTGKJEiWSSAYmKy5LyzQJSDKFRJZIRYEpYZpnQK9JEAyQzNZ40gHIoMDs3QA5nY1PN+RQxShDChSCgGOx7kwDkwGJx5Id5NRKOwxCJqOd5CgUKw4Irec9OYAsTUAS5GAI30jObzJbIaggdlqG4HV4fNDXcv3YivcjUf7UkHsSG8S1CVHqrU3HYMGot4hDIYCAArQiaGARgiUOAAF5oM+aRxo0CZwO0SbdH0qaMkgEAYEEFKWAAQoBwEYFBdKwWmiCIUEsQALpAA_3
 # 円 1-copy-copy

@@ -18,5 +18,5 @@
     data remove storage lib: Argument
 
 # マナ減少
-    scoreboard players set $Fluctuation Lib -12
+    scoreboard players set $Fluctuation Lib -24
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:mp/fluctuation

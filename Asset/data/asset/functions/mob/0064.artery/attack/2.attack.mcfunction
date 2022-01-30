@@ -8,5 +8,5 @@
     effect give @e[tag=AssetMob,distance=..5] strength 6 0 true
 
 # 演出
-    playsound block.note_block.basedrum master @a ~ ~ ~ 1.3 0.5 0
+    playsound block.note_block.basedrum hostile @a ~ ~ ~ 1.3 0.5 0
     particle dust 0.769 0 0 2 ~ ~1 ~ 0.6 0.6 0.6 0 30 normal @a

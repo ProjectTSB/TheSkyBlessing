@@ -9,4 +9,4 @@
 # 発動
     execute if score @s 5B.Tick matches 20 run function asset:mob/0191.thunder_magic/tick/3.attack
 # 演出
-    function asset:mob/0191.thunder_magic/tick/particle
+    execute if score @s 5B.Tick matches ..1 run function asset:mob/0191.thunder_magic/tick/particle

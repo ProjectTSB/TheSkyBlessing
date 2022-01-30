@@ -31,3 +31,6 @@
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
 * [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)
+
+## コラボレーター以外によるプルリクエストについて
+コラボレーター以外によるプルリクエストは、最適化, バグ修正に限り歓迎しています。

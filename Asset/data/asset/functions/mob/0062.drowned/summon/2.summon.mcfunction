@@ -5,7 +5,7 @@
 # @within function asset:mob/0062.drowned/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon drowned ~ ~ ~ {Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0062.drowned",ActiveEffects:[{Id:12b,Amplifier:1b,Duration:200000}]}
+    summon drowned ~ ~ ~ {Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0062.drowned"}
 # ID (int)
     data modify storage asset:mob ID set value 62
 # Type (string) Wikiを参照

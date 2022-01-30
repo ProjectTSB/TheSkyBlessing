@@ -15,7 +15,7 @@
     item replace entity @s weapon with stick{CustomModelData:219}
 
 # 移動する
-    data modify storage lib: Argument.VectorMagnitude set value 150
+    data modify storage lib: Argument.VectorMagnitude set value 1.5
     execute facing entity @e[type=#lib:living,tag=Victim] feet run function lib:motion/
     data remove storage lib: Argument
 # タグを消す

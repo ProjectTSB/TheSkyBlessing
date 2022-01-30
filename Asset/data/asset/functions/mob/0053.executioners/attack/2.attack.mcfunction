@@ -6,7 +6,6 @@
 #> tag
 # @within function asset:mob/0053.executioners/attack/2.attack
     #declare tag SpreadMarker
-    #declare score_holder $VectorMagnitude
 
 # 演出
 
@@ -49,7 +48,7 @@
     execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
 
 # 突進する
-    data modify storage lib: Argument.VectorMagnitude set value 200
+    data modify storage lib: Argument.VectorMagnitude set value 2
     execute at @s facing entity @p[gamemode=!spectator] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット

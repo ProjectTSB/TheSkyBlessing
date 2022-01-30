@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0021.demon_eye/tick/1.trigger
 
-# 万が一剥がされでもしたらいやなのでエフェクト付与
-    effect give @s slow_falling 2 0 true
-
 # パーティクル
     particle dust 0.5 0 0 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 2 force @a[distance=..40]
 
@@ -14,7 +11,7 @@
     execute at @s anchored eyes as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function asset:mob/0021.demon_eye/tick/rotater_tick
 
 # 速さ
-    data modify storage lib: Argument.VectorMagnitude set value 15
+    data modify storage lib: Argument.VectorMagnitude set value 0.15
 
 # 飛ぶのに使う
     execute if data entity @s {HurtTime:0s} at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/

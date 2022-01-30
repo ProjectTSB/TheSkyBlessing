@@ -5,7 +5,7 @@
 # @within function asset:mob/0061.stray/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon stray ~ ~ ~ {Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0061.stray",ActiveEffects:[{Id:12b,Amplifier:1b,Duration:200000}]}
+    summon stray ~ ~ ~ {Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0061.stray"}
 # ID (int)
     data modify storage asset:mob ID set value 61
 # Type (string) Wikiを参照

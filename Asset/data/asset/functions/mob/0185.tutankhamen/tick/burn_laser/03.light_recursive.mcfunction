@@ -10,5 +10,5 @@
     particle dust 1 0 0 1 ~ ~ ~ 0 0 0 0 1 normal @a
 
 # 再帰
-    execute if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:mob/0185.tutankhamen/tick/burn_laser/03.light_recursive
+    execute if entity @s[distance=..30] unless entity @a[gamemode=!creative,gamemode=!spectator,dx=0] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:mob/0185.tutankhamen/tick/burn_laser/03.light_recursive
 

@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"サンダーメイジ","color":"yellow"}'
+    data modify storage asset:mob Name set value '{"text":"サンダーマジック","color":"yellow"}'
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

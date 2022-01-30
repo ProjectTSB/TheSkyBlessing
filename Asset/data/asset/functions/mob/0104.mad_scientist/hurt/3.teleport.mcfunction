@@ -6,7 +6,6 @@
 #> Private
 # @private
     #declare tag SpreadMarker
-    #declare score_holder $VectorMagnitude
 
 # ワープ
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
@@ -22,7 +21,7 @@
    item replace entity @s weapon.mainhand with netherite_axe
 
 # 突進する
-    data modify storage lib: Argument.VectorMagnitude set value 200
+    data modify storage lib: Argument.VectorMagnitude set value 2
     execute at @s facing entity @p feet rotated ~ ~-10 run function lib:motion/
 
 # リセット

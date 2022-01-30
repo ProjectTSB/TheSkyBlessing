@@ -5,7 +5,7 @@
 # @within function asset:mob/0065.night_shadow/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon phantom ~ ~ ~ {Silent:1b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0065.night_shadow"}
+    summon phantom ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0065.night_shadow"}
 # ID (int)
     data modify storage asset:mob ID set value 65
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 90.0
+    data modify storage asset:mob Health set value 70
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 7.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -50,7 +50,7 @@
     # 物理倍率 (float) (オプション)
         data modify storage asset:mob Resist.Physical set value 1.0
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.6
+        data modify storage asset:mob Resist.Magic set value 0.4
     # 火倍率 (float) (オプション)
         data modify storage asset:mob Resist.Fire set value 1.0
     # 水倍率 (float) (オプション)

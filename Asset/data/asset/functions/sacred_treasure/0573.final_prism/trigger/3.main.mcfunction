@@ -53,5 +53,6 @@
 
 # リセット
     scoreboard players reset $Random Temporary
-    scoreboard players reset $Temporary Temporary
+    scoreboard players reset $Spread Temporary
+    scoreboard players reset $SneakTime Temporary
     kill @e[type=marker,tag=SpreadMarker]
