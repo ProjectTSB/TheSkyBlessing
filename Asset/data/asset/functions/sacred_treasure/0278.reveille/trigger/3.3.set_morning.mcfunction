@@ -8,7 +8,7 @@
     time set day
 
 # 音
-    playsound entity.player.levelup player @a ~ ~ ~ 1 1 1
+    playsound ogg:random.levelup player @a ~ ~ ~ 1 1 1
 
 # scoreリセット
     scoreboard players reset $Timeline 7Q.Timeline
