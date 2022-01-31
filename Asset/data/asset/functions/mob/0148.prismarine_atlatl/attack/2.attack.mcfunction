@@ -17,7 +17,7 @@
     effect clear @p[tag=Victim,distance=..32] dolphins_grace
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 26f
+    data modify storage lib: Argument.Damage set value 21f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
