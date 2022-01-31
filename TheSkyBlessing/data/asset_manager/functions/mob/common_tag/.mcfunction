@@ -4,7 +4,6 @@
 #
 # @within function asset_manager:mob/tick
 
-execute if entity @s[tag=Enemy.Boss] run effect give @s resistance 999999 2 true
 execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle run kill @s
 execute if entity @s[tag=AlwaysInvisible] run effect give @s invisibility 999999 0 true
 execute if entity @s[tag=AlwaysSlowFall] run effect give @s slow_falling 999999 0 true
