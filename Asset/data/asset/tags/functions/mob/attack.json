@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0233.honey_flyer/attack/1.trigger",
+        "asset:mob/0244.ignition_spider/attack/1.trigger",
+        "asset:mob/0030.warped/attack/1.trigger",
         "asset:mob/1008.yellow_star/attack/1.trigger",
         "asset:mob/1007.red_star/attack/1.trigger",
         "asset:mob/1006.green_star/attack/1.trigger",
