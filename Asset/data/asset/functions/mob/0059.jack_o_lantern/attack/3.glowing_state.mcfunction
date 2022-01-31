@@ -19,6 +19,6 @@
     # 補正functionを実行
         function lib:damage/modifier
     # ダメージ対象
-        execute as @p[tag=Victim] run function lib:damage/
+        execute as @p[tag=Victim,distance=..6] run function lib:damage/
     # リセット
         data remove storage lib: Argument

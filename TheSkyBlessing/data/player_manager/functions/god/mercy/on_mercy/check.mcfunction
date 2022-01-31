@@ -1,8 +1,8 @@
-#> player_manager:god/mercy/on_mercy
+#> player_manager:god/mercy/on_mercy/check
 #
 #
 #
-# @within function player_manager:god/mercy/on_click
+# @within function player_manager:god/mercy/on_mercy/pre
 
 #> 返り値
 # @private
