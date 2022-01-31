@@ -17,18 +17,18 @@
 # attribute
     attribute @s generic.knockback_resistance modifier add 00000001-0000-0002-0000-00d900000000 "217.KnockbackResist" 30 add
 
-# ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 16f
-    # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
-    # 無属性
-        data modify storage lib: Argument.ElementType set value "None"
-    # デスログ
-        data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-    # ダメージ
-        execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
-        execute if entity @s[gamemode=!creative,gamemode=!spectator] run function lib:damage/
+# ダメージ
+    data modify storage lib: Argument.Damage set value 16f
+# 属性
+    data modify storage lib: Argument.AttackType set value "Magic"
+    data modify storage lib: Argument.ElementType set value "None"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+# 補正
+    execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
+# 実行
+    execute if entity @s[gamemode=!creative,gamemode=!spectator] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

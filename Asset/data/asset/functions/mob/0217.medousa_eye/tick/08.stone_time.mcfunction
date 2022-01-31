@@ -14,12 +14,7 @@
     execute if score @s 61.StoneTime matches 20.. run effect give @s slowness 1 4 true
     execute if score @s 61.StoneTime matches 20.. run effect give @s jump_boost 1 128 true
 
-# 石化解除
-    # タグ削除
-        execute if score @s 61.StoneTime matches ..0 run tag @s remove 61.Stone
-
-    # attribute解除
-        execute if score @s 61.StoneTime matches ..0 run attribute @s generic.knockback_resistance modifier remove 00000001-0000-0002-0000-00d900000000
-
-    # スコアリセット
-        execute if score @s 61.StoneTime matches ..0 run scoreboard players reset @s 61.StoneTime
+# リセット処理
+    execute if score @s 61.StoneTime matches ..0 run tag @s remove 61.Stone
+    execute if score @s 61.StoneTime matches ..0 run attribute @s generic.knockback_resistance modifier remove 00000001-0000-0002-0000-00d900000000
+    execute if score @s 61.StoneTime matches ..0 run scoreboard players reset @s 61.StoneTime
