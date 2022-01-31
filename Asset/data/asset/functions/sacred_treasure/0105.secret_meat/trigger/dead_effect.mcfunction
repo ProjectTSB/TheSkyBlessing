@@ -13,6 +13,8 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
+    # 補正をしない
+        data modify storage lib: Argument.FixedDamage set value true
     # 死亡メッセージ
         data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは食べてはらない物を食べてしまった。","with":[{"selector":"@s"}]}]']
     # 補正functionを実行
