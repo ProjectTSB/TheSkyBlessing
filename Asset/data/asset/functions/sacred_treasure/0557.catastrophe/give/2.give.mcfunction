@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value feet
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "onDamage"
+    data modify storage asset:sacred_treasure Trigger set value "onDamageFromEntity"
 # 神器の発動条件 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure Condition set value '{"text":"繋がる総てを身に纏う"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
@@ -49,7 +49,8 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Enchantments:[{id:protection,lvl:7}],AttributeModifiers:[{UUID:[I;1,1,557,3],AttributeName:"generic.armor",Name:"armor",Slot:feet,Operation:0,Amount:3},{UUID:[I;1,1,557,3],AttributeName:"generic.armor_throughness",Name:"armor_throughness",Slot:feet,Operation:0,Amount:1}],Unbreakable:1b}
+    data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;1,1,557,3],Slot:"feet"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2.5,Operation:0,UUID:[I;1,1,557,3],Slot:"feet"}]}
+
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
