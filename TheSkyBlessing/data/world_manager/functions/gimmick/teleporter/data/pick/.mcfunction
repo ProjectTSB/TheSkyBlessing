@@ -8,6 +8,10 @@
 #   world_manager:gimmick/teleporter/active/init/
 #   world_manager:gimmick/teleporter/dynamic_register/do
 
+#> Temporary
+# @private
+#declare score_holder $GroupID
+
 # 初期化
     data remove storage world_manager:gimmick Target
     execute store result score $GroupID Temporary run data get storage world_manager:gimmick TargetGroupID
