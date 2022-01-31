@@ -12,3 +12,6 @@
     #declare tag 60.SkillMelee
     #declare tag 60.SkillBow
     #declare tag 60.SkillAxe
+    #
+    #declare tag Landing
+    #declare tag LandingTarget

@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0216.gray_guardian/tick/3.skill_axe/1.skill_axe
+# @within function asset:mob/0216.gray_guardian/tick/3.skill_axe/interval
 
 
 # ダメージ設定
@@ -14,7 +14,7 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=player,gamemode=!creative,gamemode=!spectator,distance=..2.2] at @s run function lib:damage/
-        execute as @e[type=#lib:living,tag=Friend,tag=!Uninterferable,distance=..2.2] at @s run function lib:damage/
+        execute as @e[type=player,gamemode=!creative,gamemode=!spectator,distance=..4] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Friend,tag=!Uninterferable,distance=..4] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument

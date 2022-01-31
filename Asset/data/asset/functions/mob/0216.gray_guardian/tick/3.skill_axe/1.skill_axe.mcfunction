@@ -11,15 +11,13 @@
     execute if score @s 60.Tick matches 22..154 as @e[type=armor_stand,tag=60.ArmorStand,distance=..0.01,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~45 ~
 
 # プレイヤーを追尾する
-    execute if score @s 60.Tick matches 25..151 facing entity @p[gamemode=!spectator,distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s feet positioned as @s positioned ^ ^ ^0.22 run function asset:mob/0216.gray_guardian/tick/move/tereport_non_facing
-# ダメージを発生させる
-    execute if score @s 60.Tick matches 25..151 at @s rotated as @e[type=armor_stand,tag=60.ArmorStand,distance=..0.01,sort=nearest,limit=1] positioned ^ ^ ^2 if entity @p[gamemode=!spectator,distance=..2.2] run function asset:mob/0216.gray_guardian/tick/3.skill_axe/3.damage
+    execute if score @s 60.Tick matches 25..151 facing entity @p[gamemode=!spectator,distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s positioned ^ ^ ^0.2 rotated ~ 0 run function asset:mob/0216.gray_guardian/tick/move/tereport_non_facing
 
-# 2tickおきに実行するやつ
+# 3tickおきに実行するやつ
 # 実行時間を移す
     scoreboard players operation $4tInterval Temporary = @s 60.Tick
-# 2tickおきに実行
-    scoreboard players operation $4tInterval Temporary %= $2 Const
+# 3tickおきに実行
+    scoreboard players operation $4tInterval Temporary %= $3 Const
     execute if score @s 60.Tick matches 25..151 if score $4tInterval Temporary matches 0 run function asset:mob/0216.gray_guardian/tick/3.skill_axe/interval
 # リセット
     scoreboard players reset $4tInterval

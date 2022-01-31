@@ -21,4 +21,4 @@
     tag @s remove 60.SkillAxe
 
 # 強制的にテレポする
-    function asset:mob/0216.gray_guardian/tick/move/spread
+    #function asset:mob/0216.gray_guardian/tick/move/spread

@@ -1,8 +1,8 @@
-#> asset:mob/0216.gray_guardian/tick/2.skill_bow/5.damage
+#> asset:mob/0216.gray_guardian/tick/2.skill_bow/4.hit
 #
 #
 #
-# @within function asset:mob/0216.gray_guardian/tick/2.skill_bow/4.shot
+# @within function asset:mob/0216.gray_guardian/tick/2.skill_bow/3.shot
 
 # 着弾の演出
     playsound minecraft:entity.generic.explode hostile @a
@@ -23,4 +23,6 @@
 
 # 着弾タグを消す
     tag @p[tag=LandingTarget] remove LandingTarget
-
+    tag @s remove Landing
+# 行動の終了処理
+    scoreboard players set @s 60.Tick 99
