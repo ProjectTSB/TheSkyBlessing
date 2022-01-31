@@ -9,6 +9,7 @@
     #declare tag TeleporterInit
     #declare tag TPStar
     #declare tag TPStarGreen
+    #declare tag Teleported
 
 #> for Init
 # @ world_manager:gimmick/teleporter/active/init/star/*
