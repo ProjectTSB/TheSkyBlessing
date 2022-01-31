@@ -17,9 +17,14 @@
     data modify storage lib: Argument.Damage set value 8.0
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
-    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sのスイカの金色の爆発により消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sのスイカの爆発により生命を終えた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sのスイカの金色の爆発により消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sのスイカの爆発により生命を終えた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+# 補正
     function lib:damage/modifier
+# 実行
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
+# リセット
     data remove storage lib: Argument
 
 # 自身に二段目爆発のためのスコアを付与

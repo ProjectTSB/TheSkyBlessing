@@ -10,7 +10,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
 # デスログ
-    data modify storage lib: Argument.DeathMessage set value ['{"translate": "%1$sは%2$sの溢れる魔力に飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}']
+    data modify storage lib: Argument.DeathMessage append value ['{"translate": "%1$sは%2$sの溢れる魔力に飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}']
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
