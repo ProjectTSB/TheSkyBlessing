@@ -2,6 +2,10 @@
     "values": [
         "asset:mob/0220.vena_cana/summon/1.trigger",
         "asset:mob/0220.vena_cana/summon/1.trigger",
+        "asset:mob/0239.poltergeist_bow/summon/1.trigger",
+        "asset:mob/0244.ignition_spider/summon/1.trigger",
+        "asset:mob/0238.poltergeist_armor/summon/1.trigger",
+        "asset:mob/0030.warped/summon/1.trigger",
         "asset:mob/0214.water_magic/summon/1.trigger",
         "asset:mob/1012.meteor_big/summon/1.trigger",
         "asset:mob/1011.meteor/summon/1.trigger",

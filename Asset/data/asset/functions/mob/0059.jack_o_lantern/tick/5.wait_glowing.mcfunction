@@ -22,7 +22,7 @@
 # 特殊攻撃開始演出
     execute unless score @s 1N.Glowing matches 60.. run particle dust 1 0.6 0 1 ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
     execute unless score @s 1N.Glowing matches 60.. run particle dust 0.851 0 1 1 ~ ~1.7 ~ 0.6 0.4 0.6 0 20 normal @a
-    execute unless score @s 1N.Glowing matches 60.. run playsound entity.witch.celebrate master @a ~ ~ ~ 0.8 1.5 0
+    execute unless score @s 1N.Glowing matches 60.. run playsound entity.witch.celebrate hostile @a ~ ~ ~ 0.8 1.5 0
     execute unless score @s 1N.Glowing matches 60.. run effect give @s slowness 3 5 true
     execute unless score @s 1N.Glowing matches 60.. run effect give @s weakness 3 10 true
     execute unless score @s 1N.Glowing matches 60.. run effect give @s resistance 3 6 true

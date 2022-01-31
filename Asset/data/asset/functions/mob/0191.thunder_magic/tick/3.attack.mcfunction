@@ -10,9 +10,9 @@
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 5
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 50
 
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.7 2 0
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 0.7 2 0
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 0.7 0 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.7 2 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.7 2 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.7 0 0
 
 # ダメージ設定
     # 与えるダメージ
