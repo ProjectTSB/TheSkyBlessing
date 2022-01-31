@@ -7,19 +7,17 @@
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle snowflake ~ ~1.6 ~ 0.5 0.3 0.5 0 30 normal @a
     execute at @p[tag=Victim,distance=..6] run playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
-# 攻撃
-    # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 14f
 
-    # 対象が鈍足状態ならダメージ増加
-    execute if entity @p[tag=Victim,predicate=asset:mob/0228.frost_eye/slowness,distance=..6] run data modify storage lib: Argument.Damage set value 20f
-
+# 与えるダメージ
+        data modify storage lib: Argument.Damage set value 14f
+# 対象が鈍足状態ならダメージ増加
+        execute if entity @p[tag=Victim,predicate=asset:mob/0228.frost_eye/slowness,distance=..6] run data modify storage lib: Argument.Damage set value 20f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
 # デスログ
-    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは%2$sによって凍り付いた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sによって全身が霜に覆われ、凍死した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sによって凍り付いた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sによって全身が霜に覆われ、凍死した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
