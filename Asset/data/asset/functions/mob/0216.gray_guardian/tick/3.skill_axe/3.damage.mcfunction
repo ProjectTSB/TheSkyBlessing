@@ -15,6 +15,6 @@
     # ダメージ
         function lib:damage/modifier
         execute as @e[type=player,gamemode=!creative,gamemode=!spectator,distance=..2.2] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Friend,tag=!Uninterferable,distance=..2.2] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
-

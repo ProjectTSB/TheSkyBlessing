@@ -13,7 +13,10 @@
     scoreboard players operation $Random Temporary %= $3 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 2
+    scoreboard players set $Random Temporary 1
+
+# プレイヤーが遠い場合、テレポできるスキルであるMeleeを使う
+    execute unless entity @a[distance=..15] run scoreboard players set $Random Temporary 0
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 60.SkillMelee

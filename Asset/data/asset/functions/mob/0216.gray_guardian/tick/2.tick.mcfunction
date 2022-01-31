@@ -10,8 +10,8 @@
 # スコアを増やす
     scoreboard players add @s 60.Tick 1
 
-# テレポートさせる
-    # execute if entity @p[gamemode=!spectator,distance=..100] if score @s 60.Tick matches -15 run function asset:mob/0216.gray_guardian/tick/move/spread
+# 壁に埋まっていたらテレポートさせる
+    execute if entity @p[gamemode=!spectator,distance=..100] if score @s 60.Tick matches -15 unless block ~ ~ ~ #lib:no_collision run function asset:mob/0216.gray_guardian/tick/move/spread
 
 # プレイヤーを見る
     execute if score @s 60.Tick matches 0 at @s facing entity @p eyes run function asset:mob/0216.gray_guardian/tick/move/tereport
@@ -41,5 +41,3 @@
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
     execute at @s unless entity @e[type=armor_stand,tag=60.ArmorStand,distance=..0.01] run function asset:mob/0216.gray_guardian/tick/armorstand_respawn
 
-# アマスタデスポーン処理
-    execute if entity @p[distance=100..150] run kill @e[type=armor_stand,tag=60.ArmorStand]
