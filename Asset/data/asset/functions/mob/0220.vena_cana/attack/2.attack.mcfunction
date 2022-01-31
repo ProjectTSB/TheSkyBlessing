@@ -1,19 +1,19 @@
 #> asset:mob/0220.vena_cana/attack/2.attack
 #
-# Mobの攻撃時の処理
+# Mobの攻撃時の処理 実行者はプレイヤー
 #
 # @within function asset:mob/0220.vena_cana/attack/1.trigger
 
 # 演出
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:block.conduit.ambient hostile @a ~ ~ ~ 0.7 0.8 0
-    execute at @p[tag=Victim,distance=..6] run particle dust 0.149 0.682 0.741 1 ~ ~1.2 ~ 0.6 0.3 0.6 0 30 normal @a
+    playsound minecraft:block.conduit.ambient hostile @a ~ ~ ~ 0.7 0.8 0
+    particle dust 0.149 0.682 0.741 1 ~ ~1.2 ~ 0.6 0.3 0.6 0 30 normal @a
 
 # 第一に攻撃対象の全effectをclear
-    effect clear @p[tag=Victim,distance=..6]
+    effect clear @s
 
 # 次にデバフ
-    effect give @p[tag=Victim,distance=..6] slowness 5 1 true
-    effect give @p[tag=Victim,distance=..6] mining_fatigue 5 1 true
+    effect give @s slowness 5 1 true
+    effect give @s mining_fatigue 5 1 true
 
 # 最後に属性攻撃力半減
     # 引数の設定
@@ -24,13 +24,13 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
-    execute as @p[tag=Victim,distance=..6] run function api:player_modifier/attack/base/add
+    function api:player_modifier/attack/base/add
 
 # タグを付与
-    tag @p[tag=Victim,tag=!64.ElementReduct,distance=..6] add 64.ElementReduct
+    tag @s[tag=!64.ElementReduct] add 64.ElementReduct
 
 # 効果時間を設定
-    scoreboard players set @p[tag=Victim,distance=..6] 64.DebuffTime 100
+    scoreboard players set @s 64.DebuffTime 100
 
 # スケジュールループ開始
     schedule function asset:mob/0220.vena_cana/attack/03.schedule_loop 1t replace
