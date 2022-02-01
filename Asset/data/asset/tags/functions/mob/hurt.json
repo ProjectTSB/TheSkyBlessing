@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0228.frost_eye/hurt/1.trigger",
+        "asset:mob/0219.aorta/hurt/1.trigger",
+        "asset:mob/0220.vena_cana/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",
         "asset:mob/example/hurt/1.trigger",
         "asset:mob/0060.self_destructor/hurt/1.trigger",
