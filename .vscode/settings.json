@@ -1213,6 +1213,25 @@
             ]
         },
         {
+            "label": "神器/トリガー: アイテム使用中",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: tick",
             "generates": [
                 {
