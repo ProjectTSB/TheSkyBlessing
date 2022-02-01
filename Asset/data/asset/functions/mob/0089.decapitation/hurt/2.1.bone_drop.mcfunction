@@ -10,9 +10,9 @@
     summon item ~ ~ ~ {Motion:[0.0,0.5,0.0],Item:{id:"minecraft:bone",Count:1b}}
 
 # 自爆ダメージ
-    data modify storage lib: Argument.Damage set value 12f
+    data modify storage lib: Argument.Damage set value 4f
 # 第一属性
-    data modify storage lib: Argument.AttackType set value "Magic"
+    data modify storage lib: Argument.AttackType set value "Physical"
 # 耐性を無視する
     data modify storage lib: Argument.BypassResist set value true
 # 自爆する
