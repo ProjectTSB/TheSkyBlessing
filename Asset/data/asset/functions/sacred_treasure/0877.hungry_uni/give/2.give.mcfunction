@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['[{"text":"UNIは棘皮動物に属す、","bold":false},{"text":"ヒトデやなまこの仲間","bold":true}]','{"text":"コンブを主食とし、餌を食べて身を太らせる","bold":false}','{"text":"食べる速度は非常に遅い","color":"dark_purple","bold":false,"italic":true}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value
+    data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.kelp"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 3
 # 神器を発動できるスロット (string) Wikiを参照
