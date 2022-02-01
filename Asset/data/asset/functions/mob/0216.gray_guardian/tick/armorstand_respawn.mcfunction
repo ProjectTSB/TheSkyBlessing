@@ -9,9 +9,9 @@
 # 見た目用のアマスタを召喚
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["60.ArmorStand","60.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20125}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20128}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20130}}]}
 # 位置をあわせる
-    tp @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] @s
+    tp @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.1,sort=nearest,limit=1] @s
 # タグを消す
-    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] remove 60.ArmorStandThis
+    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.1,sort=nearest,limit=1] remove 60.ArmorStandThis
 # スコアも一応戻す
     scoreboard players set @s 60.Tick -30
 
@@ -21,4 +21,4 @@
     tag @s remove 60.SkillAxe
 
 # 強制的にテレポする
-    #function asset:mob/0216.gray_guardian/tick/move/spread
+    function asset:mob/0216.gray_guardian/tick/move/spread

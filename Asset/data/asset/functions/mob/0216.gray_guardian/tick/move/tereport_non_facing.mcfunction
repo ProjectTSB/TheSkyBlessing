@@ -11,4 +11,4 @@
 # 位置をあわせる
     tp @e[type=armor_stand,tag=60.ArmorStandThis] ~ ~ ~
 # タグを消す
-    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] remove 60.ArmorStandThis
+    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..100] remove 60.ArmorStandThis

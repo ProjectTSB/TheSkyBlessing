@@ -11,6 +11,7 @@
 # 拡散する
     execute at @a[gamemode=!spectator,distance=..100,sort=random,limit=1] run function lib:spread_entity/
 # アマスタを持ってくる
-    tp @e[type=armor_stand,tag=60.ArmorStandThis] @s
+    tp @e[type=armor_stand,tag=60.ArmorStandThis,sort=nearest,limit=1] @s
+
 # タグを消す
-    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.1] remove 60.ArmorStandThis
+    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..100] remove 60.ArmorStandThis

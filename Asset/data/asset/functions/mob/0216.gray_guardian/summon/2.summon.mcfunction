@@ -37,9 +37,9 @@
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    # data modify storage asset:mob Defense set value
+    data modify storage asset:mob Defense set value 20
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    # data modify storage asset:mob SpecialDefense set value
+    data modify storage asset:mob SpecialDefense set value 20
 # 移動速度 (double) (オプション)
     # data modify storage asset:mob Speed set value
 # 索敵範囲 (double) (オプション)
@@ -63,7 +63,7 @@
 # 位置をあわせる
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] @s
 # タグを消す
-    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] remove 60.ArmorStandThis
+    tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..100] remove 60.ArmorStandThis
 
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 60.Tick -100
