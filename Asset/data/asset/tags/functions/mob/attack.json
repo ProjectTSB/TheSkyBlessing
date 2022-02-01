@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0220.vena_cana/attack/1.trigger",
         "asset:mob/0244.ignition_spider/attack/1.trigger",
         "asset:mob/0030.warped/attack/1.trigger",
         "asset:mob/1008.yellow_star/attack/1.trigger",
