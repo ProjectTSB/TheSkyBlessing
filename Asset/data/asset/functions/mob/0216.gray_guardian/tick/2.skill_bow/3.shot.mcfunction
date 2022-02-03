@@ -11,7 +11,7 @@
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add Landing
 # ターゲットにタグ付与
     execute positioned ~-1 ~-1 ~-1 as @p[gamemode=!spectator,dx=0,dy=0,dz=0] run tag @s add LandingTarget
-    particle composter ~ ~ ~ 0 0 0 0 1 force
+    particle minecraft:dust 0.58 0 0 0.5 ~ ~ ~ 0 0 0 0 1
 # 着弾
     execute if entity @a[tag=LandingTarget] run function asset:mob/0216.gray_guardian/tick/2.skill_bow/4.hit
 
