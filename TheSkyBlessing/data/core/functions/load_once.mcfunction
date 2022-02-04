@@ -108,7 +108,9 @@ team modify NoCollision collisionRule never
     #> AssetManager: 神器
     # @within function
     #   core:load_once
+    #   core:handler/using_item
     #   asset_manager:sacred_treasure/**
+    #   core:tick/post-tick-proc_player
         bossbar add asset:special_cooldown {"text":"特殊クールダウン"}
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
@@ -116,6 +118,10 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Sneak.Chest custom:sneak_time {"text":"スニークタイム: 胸"}
         scoreboard objectives add Sneak.Legs custom:sneak_time {"text":"スニークタイム: 脚"}
         scoreboard objectives add Sneak.Feet custom:sneak_time {"text":"スニークタイム: 足"}
+        # TODO 1.18になったら命名を元に戻す
+        scoreboard objectives add UsingItem dummy {"text":"アイテム使用時間"}
+        scoreboard objectives add UsingItem.MainH dummy {"text":"アイテム使用時間: メインハンド"}
+        scoreboard objectives add UsingItem.OffH dummy {"text":"アイテム使用時間: オフハンド"}
         scoreboard objectives add UUID.Mainhand dummy {"text":"メインハンド装備のUUID"}
         scoreboard objectives add UUID.Offhand dummy {"text":"オフハンド装備のUUID"}
         scoreboard objectives add UUID.Head dummy {"text":"頭装備のUUID"}
