@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0801.red_secret_stone/register",
         "asset:sacred_treasure/0003.humanity/register",
         "asset:sacred_treasure/0008.mysterious_tambourine/register",
         "asset:sacred_treasure/0010.attack_order/register",
@@ -188,6 +189,8 @@
         "asset:sacred_treasure/0733.persantage_sword/register",
         "asset:sacred_treasure/0735.collision_plate/register",
         "asset:sacred_treasure/0745.blade_of_whirlwind/register",
-        "asset:sacred_treasure/0860.angel_wing/register"
+        "asset:sacred_treasure/0860.angel_wing/register",
+        "asset:sacred_treasure/0826.infinite_potatoes/register",
+        "asset:sacred_treasure/0840.honey_bee_stick/register"
     ]
 }

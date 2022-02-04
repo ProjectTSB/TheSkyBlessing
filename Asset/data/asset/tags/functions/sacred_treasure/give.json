@@ -1,6 +1,9 @@
 {
     "values": [
         "asset:sacred_treasure/0860.angel_wing/give/1.trigger",
+        "asset:sacred_treasure/0840.honey_bee_stick/give/1.trigger",
+        "asset:sacred_treasure/0801.red_secret_stone/give/1.trigger",
+        "asset:sacred_treasure/0826.infinite_potatoes/give/1.trigger",
         "asset:sacred_treasure/0001.book_of_all-seeing/give/1.trigger",
         "asset:sacred_treasure/0002.blessing/give/1.trigger",
         "asset:sacred_treasure/0003.humanity/give/1.trigger",
