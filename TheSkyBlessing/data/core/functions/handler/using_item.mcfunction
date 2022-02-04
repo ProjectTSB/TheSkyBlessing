@@ -11,4 +11,4 @@
     scoreboard players add @s UsingItem.OffH 1
 
 # reset
-    advancement revoke @s only core:handler/using_item
+# core:tick/post-tick-proc_playerに移動
