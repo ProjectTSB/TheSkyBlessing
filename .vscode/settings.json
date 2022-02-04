@@ -1217,7 +1217,292 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/using_item.json",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 0.5秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/0.5s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 1秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 2秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 3秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 4秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 5秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 10秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/10s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 0秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 0.5秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/0.5.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 1秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 2秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 3秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 4秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 5秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中 - 10秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item/keep/10s.json",
                     "content": {
                         "values": [
                             "asset:sacred_treasure/%namespace%/trigger/1.trigger"
