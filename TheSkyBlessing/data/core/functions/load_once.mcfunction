@@ -158,11 +158,13 @@ team modify NoCollision collisionRule never
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:sacred_treasure/triggers/**
+    #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
     #   core:tick/*
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
+        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
@@ -292,6 +294,13 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
         scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
 
+    #> MobManager用スコアボード - 最大体力
+    # @within function
+    #   api:mob/get_max_health
+    #   asset_manager:mob/summon/set_data
+    #   mob_manager:init/modify_health
+        scoreboard objectives add MobHealthMax dummy
+
     #> MobManager用スコアボード - 攻撃元
     # @within function
     #   core:tick/
@@ -303,9 +312,15 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
 
+    #> MobManager - Teams
+    # @within function
+    #   mob_manager:init/set_tag_and_team
+    #   asset_manager:mob/summon/set_data
+        team add Enemy
 
 #> 各Asset側のロード処理
     function #asset:sacred_treasure/load

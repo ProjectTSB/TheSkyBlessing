@@ -13,7 +13,7 @@
 # 特定用タグ
     tag @s add LibraryDamage
 # トリガー
-    advancement grant @a[tag=Attacker] only core:handler/attack
+    tag @a[tag=Attacker] add TriggerFlag.Attack
     execute if entity @s[tag=FindFlag0.0] run advancement grant @a[tag=Attacker] only mob_manager:entity_finder/check_attacked_entity 0-0
     execute if entity @s[tag=FindFlag0.1] run advancement grant @a[tag=Attacker] only mob_manager:entity_finder/check_attacked_entity 0-1
     execute if entity @s[tag=FindFlag1.0] run advancement grant @a[tag=Attacker] only mob_manager:entity_finder/check_attacked_entity 1-0

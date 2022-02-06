@@ -36,7 +36,8 @@
         data modify entity @s HandDropChances set from storage asset:mob WeaponDropChances
         data modify entity @s ArmorDropChances set from storage asset:mob ArmorDropChances
     # Attributeの事前追加
-        execute if data storage asset:mob Health run data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
+        data modify storage asset:mob Attributes set value []
+        data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
         execute if data storage asset:mob AttackDamage run data modify storage asset:mob Attributes append value {Name:"generic.attack_damage"}
         execute if data storage asset:mob Defense run data modify storage asset:mob Attributes append value {Name:"generic.armor"}
         execute if data storage asset:mob SpecialDefense run data modify storage asset:mob Attributes append value {Name:"generic.armor_toughness"}
@@ -44,7 +45,7 @@
         execute if data storage asset:mob FollowRange run data modify storage asset:mob Attributes append value {Name:"generic.follow_range"}
         execute if data storage asset:mob KnockBackResist run data modify storage asset:mob Attributes append value {Name:"generic.knockback_resistance"}
     # Attribute
-        data modify storage asset:mob Attributes[{Name:"generic.max_health"}].Base set from storage asset:mob Health
+        data modify storage asset:mob Attributes[{Name:"generic.max_health"}].Base set value 0.01d
         data modify storage asset:mob Attributes[{Name:"generic.attack_damage"}].Base set from storage asset:mob AttackDamage
         data modify storage asset:mob Attributes[{Name:"generic.armor"}].Base set from storage asset:mob Defense
         data modify storage asset:mob Attributes[{Name:"generic.armor_toughness"}].Base set from storage asset:mob SpecialDefense
@@ -54,12 +55,17 @@
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
     # そのまま適用するやつ
+        data modify entity @s Health set value 0.01f
+        data modify entity @s AbsorptionAmount set from storage asset:mob Health
+        execute store result score @s MobHealthMax run data get storage asset:mob Health 100
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
-        execute if data storage asset:mob Health run data modify entity @s Health set from storage asset:mob Health
         data modify entity @s CustomNameVisible set value 0b
 # タグ周り
     function asset_manager:mob/summon/set_tag
+# Enemyのチーム設定
+    execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
+    execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy
 # 属性耐性
     # EntityStorage呼び出し
         function oh_my_dat:please
