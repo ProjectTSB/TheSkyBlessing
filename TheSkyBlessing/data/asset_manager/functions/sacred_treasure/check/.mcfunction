@@ -36,7 +36,7 @@
 # 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
     execute if entity @s[tag=!CanUsed] if data storage asset:sacred_treasure Item.tag.TSB.RemainingCount if data storage asset:sacred_treasure Item.tag.TSB{Trigger:"itemUse"} run function asset_manager:sacred_treasure/use/item/has_remain
 # 条件を満たしてない&& CondFailLogCDが0以上でない && トリガーがpassive ならば100tickのクールダウンを設定する
-    execute if entity @s[tag=!CanUsed] unless score @s CondFailLogCD matches 0.. if data storage asset:context Item.tag.TSB{Trigger:"passive"} run scoreboard players set @s CondFailLogCD 100
+    execute if entity @s[tag=!CanUsed] unless score @s CondFailLogCD matches 0.. if data storage asset:sacred_treasure Item.tag.TSB{Trigger:"passive"} run scoreboard players set @s CondFailLogCD 100
 # リセット
     data remove storage asset:sacred_treasure TargetSlot
     data remove storage asset:sacred_treasure TargetDefaultSlot
