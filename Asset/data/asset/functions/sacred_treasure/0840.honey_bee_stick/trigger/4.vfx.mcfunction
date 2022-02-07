@@ -5,353 +5,359 @@
 # @within function asset:sacred_treasure/0840.honey_bee_stick/trigger/3.main
 
 # パーティクル
-# [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdgWgENcBjAC1QCcwAaMAV3oEsATJMABg5bg8I4Cc+FgGYAZgEZ8AFgBGIgEz4BCgXHwcJAVgkkRJLWOkAOBbTC5CAWwTJAWJqAlyMBG+oCKGQM8MgaoZAPwwACCeZhCSmsAZyRwElR6XAgkCToSOBi4akRwADdCdHpbcAAPJA46KEKAX1K6YJYmejDEBQA6AHYROhCIINjEIrA4dHQmGBDbCS5K1A6IWx7IylwUpAA2OgAreisYOLpZOAAvJgXuug7KLDgu8BOzrrABA2MtEQ4m-DEOOClpDhJCfGNFxZiGQSMSERYSUQiWRg8xBLDsRLJagVMBMEIAUX6g2G6IAjvQspgAMqBRJsRCg9DDOhogBCewOlDxBP6UBJhDJSAglBy5Rol1gthQGGweHMjFY7DuWgeTxebw+Mm+v3+gOBoPBkOhi3Mlhs7EcTj8ASCoXCYEi0S6EgUCSSU1S4CsxEG9HQhCmXJ5cDoYkoqCs7C4PD4gmE4k+8iUKjUGm0un0hhMZjomWytlAqPJnG4vH4QlEkhkUeUqnUmh0egMRlMr0UEn0II0iwU6mkCjESmM0i06hEIhYsl0HLEskWsnMBSOYBKiHwjRaFXAkuQwbzYcLkcUpdjFYT1eT84+NtHJHwTTgcCUckIWj+Ai0HD+JE7CmkagUCi00knSEaIkWdt3xELQFH7eMWmKJB8AkBoAMfLhEKQrgFCXLMg1zUMCwjYttxjct4yrJNaw4LQWC0AEtBeH4FFkGRuzPAR+CkFgxDYz9dGMK8OF-eo4MAt8BBAsCRHjYwoMQWCAPfARZLk+ShLQlccxDfNwyLOQ8LLONK0TGslFkYwmgEMQtAEOiJGkECZBUKRjEIIz8FE3txAcuAWD4XiRDgqyFAeJpwUWJpPyaaR1AkZYZz-ZoRCU7M1yw9St2jbS9yI-TgSYwcSCfYwBDkGQmkIERlDEYyNBCkwdlUEgdToKd534oChNA8CdCaCSpMWBDkKQiQ4ow1SNxwzSUt3Qi9MPQhpRtDhFnwWQmhYT4BCaO9CEIJo6MWERjEWloFEIEE6rABr-wE4DWuciRIKiucup63rENQgBdOgMHJfJCgkjg+TAKoajqWDIvaTo-wEOg+gGIYRjGf6Jg9aYEioeZUkitYNi2MAdn2Q4ejRTFoZxfFCTZUl3KQSlqVREJ6VxpkSdZdlOQpLJhnKF6gA_3
+# [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdgWgENcBjAC1QCcwAaMAV3oEsATJMAFgAYAzLgdgAcXEvgBMAVhIAjfBwDMHUYP5dB+FoI6CW8gGxwu8uAE5aYXIQC2CZICxNQEuRgI31ARQyBnhkDVDIB+GAAQBGcxhCSmsAZyRwElR6XAgkPzoSOFi4akRwADdCdHpbcAAPJC46KCKAXzK6EJYmenDEMQA6fnk6UIhguMRisDh0dCYYUNs-Lh7KVA6IWx6oylxUpD06ACt6Kxh4umk4AC8mRe66DsosOC7wE7OusEJ5Pw4FMQ4iaQkJORIxFnxpPS4fhJ5IQdoJBBITA9BOZglh2EkUtRKmAmKEAKL9QbDNEAR3o2UwAGUgkk2IgeNlhnRUQAhPYHSi4-H9KDEwikpAQSi5Co0S6wWwoDDYPDmRisdh3B5PF4g96fb6-f6A4Gg8GQ7TmSw2diOJz+QLBMIRMBRGJdPxiRLJaZpcBWYiDejoQjTTncuB0HgTKzsbh8IQicRSWQKJT4FRqDRaHT6QzGMx0LI5WygFFksBjFiGQhcEwaeQ8PxyaTyMT4ExiExwfBcPwSPwkeQkCQ8bTlnhlvzNvw8Wt6MQ1jhiHjlrQSGvyeQsaSN9k8P7ScyFI5gUqIcTNeSVcAS5BZnN5gtFktlitVmt1htNlttwTlwd+S0L0T8OBwcscaSED6CEwSLgIxIUdnmrMRJA4ZckCafRhw4Ex5AkMQp3rPwWhKJB8D8Rp9AAsZ8IIsYxB3dN2APLhc3zXQTy-M9K2rWtUJvVt21rCQWAkPQ9Akfh8BIQgxFDLRRBMXNixYHhJPAxtBA-LgoIaHC9DghCkJQhtBAwxBsNgkw9P0gy9O3PlSP3AFDyowti1o8t6MvJjmxY+9fhUEweAhWQHkQuRK2LQRCBUfB7gnQsArgFgKIU+QcKecF+D0Pw9H4cD+A4GtEq0poWhIvdM3Miij2o6zS1si9GOvRy70-PxRJnEhAL-L85H4O4Kx4fh8y4FLtB2KsSD0BTN1g0DEOQ4K0K0nTuMIma-ByjNyMo49irosqr0bSrWMIEwW0tLg9F+fgWGskx+A+QhCH4WQ9HkQRpH4FoxEIXsBroFchuUka1PG9C10wqa8JmgjiIAXToDAyQKIotK4XkwGqWp6mwni2hOLp5B6PoBiGEYxiqSZXRmRIqAWNJljANYNi2MAdn2Q4elRDFsexPECVZElwqQCl0CpFFQjpOnGVZlk2Q5clKTgCoQaAA_3
 # 多角形 1
-    particle wax_on ^0.7757 ^ ^-4.12939 0 0 0 0 1
-    particle wax_on ^0.84437 ^ ^-4.0151 0 0 0 0 1
-    particle wax_on ^0.91304 ^ ^-3.90081 0 0 0 0 1
-    particle wax_on ^0.98171 ^ ^-3.78652 0 0 0 0 1
-    particle wax_on ^1.05038 ^ ^-3.67224 0 0 0 0 1
-    particle wax_on ^1.11905 ^ ^-3.55795 0 0 0 0 1
-    particle wax_on ^1.18773 ^ ^-3.44366 0 0 0 0 1
-    particle wax_on ^1.2564 ^ ^-3.32937 0 0 0 0 1
-    particle wax_on ^1.32507 ^ ^-3.21508 0 0 0 0 1
-    particle wax_on ^1.39374 ^ ^-3.10079 0 0 0 0 1
-    particle wax_on ^1.46241 ^ ^-2.9865 0 0 0 0 1
-    particle wax_on ^1.53108 ^ ^-2.87221 0 0 0 0 1
-    particle wax_on ^1.59976 ^ ^-2.75792 0 0 0 0 1
-    particle wax_on ^1.53512 ^ ^-2.64131 0 0 0 0 1
-    particle wax_on ^1.47047 ^ ^-2.52469 0 0 0 0 1
-    particle wax_on ^1.40583 ^ ^-2.40808 0 0 0 0 1
-    particle wax_on ^1.34119 ^ ^-2.29146 0 0 0 0 1
-    particle wax_on ^1.27655 ^ ^-2.17484 0 0 0 0 1
-    particle wax_on ^1.21191 ^ ^-2.05823 0 0 0 0 1
-    particle wax_on ^1.14727 ^ ^-1.94161 0 0 0 0 1
-    particle wax_on ^1.08263 ^ ^-1.825 0 0 0 0 1
-    particle wax_on ^1.01798 ^ ^-1.70838 0 0 0 0 1
-    particle wax_on ^0.95334 ^ ^-1.59176 0 0 0 0 1
-    particle wax_on ^0.8887 ^ ^-1.47515 0 0 0 0 1
-    particle wax_on ^0.82406 ^ ^-1.35853 0 0 0 0 1
-    particle wax_on ^0.69075 ^ ^-1.35621 0 0 0 0 1
-    particle wax_on ^0.55743 ^ ^-1.35388 0 0 0 0 1
-    particle wax_on ^0.42412 ^ ^-1.35155 0 0 0 0 1
-    particle wax_on ^0.29081 ^ ^-1.34922 0 0 0 0 1
-    particle wax_on ^0.1575 ^ ^-1.3469 0 0 0 0 1
-    particle wax_on ^0.02418 ^ ^-1.34457 0 0 0 0 1
-    particle wax_on ^-0.10913 ^ ^-1.34224 0 0 0 0 1
-    particle wax_on ^-0.24244 ^ ^-1.33992 0 0 0 0 1
-    particle wax_on ^-0.37576 ^ ^-1.33759 0 0 0 0 1
-    particle wax_on ^-0.50907 ^ ^-1.33526 0 0 0 0 1
-    particle wax_on ^-0.64238 ^ ^-1.33294 0 0 0 0 1
-    particle wax_on ^-0.7757 ^ ^-1.33061 0 0 0 0 1
-    particle wax_on ^-0.84437 ^ ^-1.4449 0 0 0 0 1
-    particle wax_on ^-0.91304 ^ ^-1.55919 0 0 0 0 1
-    particle wax_on ^-0.98171 ^ ^-1.67348 0 0 0 0 1
-    particle wax_on ^-1.05038 ^ ^-1.78776 0 0 0 0 1
-    particle wax_on ^-1.11905 ^ ^-1.90205 0 0 0 0 1
-    particle wax_on ^-1.18773 ^ ^-2.01634 0 0 0 0 1
-    particle wax_on ^-1.2564 ^ ^-2.13063 0 0 0 0 1
-    particle wax_on ^-1.32507 ^ ^-2.24492 0 0 0 0 1
-    particle wax_on ^-1.39374 ^ ^-2.35921 0 0 0 0 1
-    particle wax_on ^-1.46241 ^ ^-2.4735 0 0 0 0 1
-    particle wax_on ^-1.53108 ^ ^-2.58779 0 0 0 0 1
-    particle wax_on ^-1.59976 ^ ^-2.70208 0 0 0 0 1
-    particle wax_on ^-1.53512 ^ ^-2.81869 0 0 0 0 1
-    particle wax_on ^-1.47047 ^ ^-2.93531 0 0 0 0 1
-    particle wax_on ^-1.40583 ^ ^-3.05192 0 0 0 0 1
-    particle wax_on ^-1.34119 ^ ^-3.16854 0 0 0 0 1
-    particle wax_on ^-1.27655 ^ ^-3.28516 0 0 0 0 1
-    particle wax_on ^-1.21191 ^ ^-3.40177 0 0 0 0 1
-    particle wax_on ^-1.14727 ^ ^-3.51839 0 0 0 0 1
-    particle wax_on ^-1.08263 ^ ^-3.635 0 0 0 0 1
-    particle wax_on ^-1.01798 ^ ^-3.75162 0 0 0 0 1
-    particle wax_on ^-0.95334 ^ ^-3.86824 0 0 0 0 1
-    particle wax_on ^-0.8887 ^ ^-3.98485 0 0 0 0 1
-    particle wax_on ^-0.82406 ^ ^-4.10147 0 0 0 0 1
-    particle wax_on ^-0.69075 ^ ^-4.10379 0 0 0 0 1
-    particle wax_on ^-0.55743 ^ ^-4.10612 0 0 0 0 1
-    particle wax_on ^-0.42412 ^ ^-4.10845 0 0 0 0 1
-    particle wax_on ^-0.29081 ^ ^-4.11078 0 0 0 0 1
-    particle wax_on ^-0.1575 ^ ^-4.1131 0 0 0 0 1
-    particle wax_on ^-0.02418 ^ ^-4.11543 0 0 0 0 1
-    particle wax_on ^0.10913 ^ ^-4.11776 0 0 0 0 1
-    particle wax_on ^0.24244 ^ ^-4.12008 0 0 0 0 1
-    particle wax_on ^0.37576 ^ ^-4.12241 0 0 0 0 1
-    particle wax_on ^0.50907 ^ ^-4.12474 0 0 0 0 1
-    particle wax_on ^0.64238 ^ ^-4.12706 0 0 0 0 1
-    particle wax_on ^3.13994 ^ ^-2.76439 0 0 0 0 1
-    particle wax_on ^3.20862 ^ ^-2.6501 0 0 0 0 1
-    particle wax_on ^3.27729 ^ ^-2.53581 0 0 0 0 1
-    particle wax_on ^3.34596 ^ ^-2.42152 0 0 0 0 1
-    particle wax_on ^3.41463 ^ ^-2.30724 0 0 0 0 1
-    particle wax_on ^3.4833 ^ ^-2.19295 0 0 0 0 1
-    particle wax_on ^3.55198 ^ ^-2.07866 0 0 0 0 1
-    particle wax_on ^3.62065 ^ ^-1.96437 0 0 0 0 1
-    particle wax_on ^3.68932 ^ ^-1.85008 0 0 0 0 1
-    particle wax_on ^3.75799 ^ ^-1.73579 0 0 0 0 1
-    particle wax_on ^3.82666 ^ ^-1.6215 0 0 0 0 1
-    particle wax_on ^3.89533 ^ ^-1.50721 0 0 0 0 1
-    particle wax_on ^3.96401 ^ ^-1.39292 0 0 0 0 1
-    particle wax_on ^3.89936 ^ ^-1.27631 0 0 0 0 1
-    particle wax_on ^3.83472 ^ ^-1.15969 0 0 0 0 1
-    particle wax_on ^3.77008 ^ ^-1.04308 0 0 0 0 1
-    particle wax_on ^3.70544 ^ ^-0.92646 0 0 0 0 1
-    particle wax_on ^3.6408 ^ ^-0.80984 0 0 0 0 1
-    particle wax_on ^3.57616 ^ ^-0.69323 0 0 0 0 1
-    particle wax_on ^3.51152 ^ ^-0.57661 0 0 0 0 1
-    particle wax_on ^3.44688 ^ ^-0.46 0 0 0 0 1
-    particle wax_on ^3.38223 ^ ^-0.34338 0 0 0 0 1
-    particle wax_on ^3.31759 ^ ^-0.22676 0 0 0 0 1
-    particle wax_on ^3.25295 ^ ^-0.11015 0 0 0 0 1
-    particle wax_on ^3.18831 ^ ^0.00647 0 0 0 0 1
-    particle wax_on ^3.055 ^ ^0.00879 0 0 0 0 1
-    particle wax_on ^2.92168 ^ ^0.01112 0 0 0 0 1
-    particle wax_on ^2.78837 ^ ^0.01345 0 0 0 0 1
-    particle wax_on ^2.65506 ^ ^0.01578 0 0 0 0 1
-    particle wax_on ^2.52175 ^ ^0.0181 0 0 0 0 1
-    particle wax_on ^2.38843 ^ ^0.02043 0 0 0 0 1
-    particle wax_on ^2.25512 ^ ^0.02276 0 0 0 0 1
-    particle wax_on ^2.12181 ^ ^0.02508 0 0 0 0 1
-    particle wax_on ^1.98849 ^ ^0.02741 0 0 0 0 1
-    particle wax_on ^1.85518 ^ ^0.02974 0 0 0 0 1
-    particle wax_on ^1.72187 ^ ^0.03206 0 0 0 0 1
-    particle wax_on ^1.58855 ^ ^0.03439 0 0 0 0 1
-    particle wax_on ^1.51988 ^ ^-0.0799 0 0 0 0 1
-    particle wax_on ^1.45121 ^ ^-0.19419 0 0 0 0 1
-    particle wax_on ^1.38254 ^ ^-0.30848 0 0 0 0 1
-    particle wax_on ^1.31387 ^ ^-0.42276 0 0 0 0 1
-    particle wax_on ^1.2452 ^ ^-0.53705 0 0 0 0 1
-    particle wax_on ^1.17652 ^ ^-0.65134 0 0 0 0 1
-    particle wax_on ^1.10785 ^ ^-0.76563 0 0 0 0 1
-    particle wax_on ^1.03918 ^ ^-0.87992 0 0 0 0 1
-    particle wax_on ^0.97051 ^ ^-0.99421 0 0 0 0 1
-    particle wax_on ^0.90184 ^ ^-1.1085 0 0 0 0 1
-    particle wax_on ^0.83316 ^ ^-1.22279 0 0 0 0 1
-    particle wax_on ^1.80681 ^ ^-2.74112 0 0 0 0 1
-    particle wax_on ^1.94013 ^ ^-2.74345 0 0 0 0 1
-    particle wax_on ^2.07344 ^ ^-2.74578 0 0 0 0 1
-    particle wax_on ^2.20675 ^ ^-2.7481 0 0 0 0 1
-    particle wax_on ^2.34007 ^ ^-2.75043 0 0 0 0 1
-    particle wax_on ^2.47338 ^ ^-2.75276 0 0 0 0 1
-    particle wax_on ^2.60669 ^ ^-2.75508 0 0 0 0 1
-    particle wax_on ^2.74001 ^ ^-2.75741 0 0 0 0 1
-    particle wax_on ^2.87332 ^ ^-2.75974 0 0 0 0 1
-    particle wax_on ^3.00663 ^ ^-2.76206 0 0 0 0 1
-    particle wax_on ^3.27729 ^ ^0.19419 0 0 0 0 1
-    particle wax_on ^3.34596 ^ ^0.30848 0 0 0 0 1
-    particle wax_on ^3.41463 ^ ^0.42276 0 0 0 0 1
-    particle wax_on ^3.4833 ^ ^0.53705 0 0 0 0 1
-    particle wax_on ^3.55198 ^ ^0.65134 0 0 0 0 1
-    particle wax_on ^3.62065 ^ ^0.76563 0 0 0 0 1
-    particle wax_on ^3.68932 ^ ^0.87992 0 0 0 0 1
-    particle wax_on ^3.75799 ^ ^0.99421 0 0 0 0 1
-    particle wax_on ^3.82666 ^ ^1.1085 0 0 0 0 1
-    particle wax_on ^3.89533 ^ ^1.22279 0 0 0 0 1
-    particle wax_on ^3.96401 ^ ^1.33708 0 0 0 0 1
-    particle wax_on ^3.89936 ^ ^1.45369 0 0 0 0 1
-    particle wax_on ^3.83472 ^ ^1.57031 0 0 0 0 1
-    particle wax_on ^3.77008 ^ ^1.68692 0 0 0 0 1
-    particle wax_on ^3.70544 ^ ^1.80354 0 0 0 0 1
-    particle wax_on ^3.6408 ^ ^1.92016 0 0 0 0 1
-    particle wax_on ^3.57616 ^ ^2.03677 0 0 0 0 1
-    particle wax_on ^3.51152 ^ ^2.15339 0 0 0 0 1
-    particle wax_on ^3.44688 ^ ^2.27 0 0 0 0 1
-    particle wax_on ^3.38223 ^ ^2.38662 0 0 0 0 1
-    particle wax_on ^3.31759 ^ ^2.50324 0 0 0 0 1
-    particle wax_on ^3.25295 ^ ^2.61985 0 0 0 0 1
-    particle wax_on ^3.18831 ^ ^2.73647 0 0 0 0 1
-    particle wax_on ^3.055 ^ ^2.73879 0 0 0 0 1
-    particle wax_on ^2.92168 ^ ^2.74112 0 0 0 0 1
-    particle wax_on ^2.78837 ^ ^2.74345 0 0 0 0 1
-    particle wax_on ^2.65506 ^ ^2.74578 0 0 0 0 1
-    particle wax_on ^2.52175 ^ ^2.7481 0 0 0 0 1
-    particle wax_on ^2.38843 ^ ^2.75043 0 0 0 0 1
-    particle wax_on ^2.25512 ^ ^2.75276 0 0 0 0 1
-    particle wax_on ^2.12181 ^ ^2.75508 0 0 0 0 1
-    particle wax_on ^1.98849 ^ ^2.75741 0 0 0 0 1
-    particle wax_on ^1.85518 ^ ^2.75974 0 0 0 0 1
-    particle wax_on ^1.72187 ^ ^2.76206 0 0 0 0 1
-    particle wax_on ^1.58855 ^ ^2.76439 0 0 0 0 1
-    particle wax_on ^1.51988 ^ ^2.6501 0 0 0 0 1
-    particle wax_on ^1.45121 ^ ^2.53581 0 0 0 0 1
-    particle wax_on ^1.38254 ^ ^2.42152 0 0 0 0 1
-    particle wax_on ^1.31387 ^ ^2.30724 0 0 0 0 1
-    particle wax_on ^1.2452 ^ ^2.19295 0 0 0 0 1
-    particle wax_on ^1.17652 ^ ^2.07866 0 0 0 0 1
-    particle wax_on ^1.10785 ^ ^1.96437 0 0 0 0 1
-    particle wax_on ^1.03918 ^ ^1.85008 0 0 0 0 1
-    particle wax_on ^0.97051 ^ ^1.73579 0 0 0 0 1
-    particle wax_on ^0.90184 ^ ^1.6215 0 0 0 0 1
-    particle wax_on ^0.83316 ^ ^1.50721 0 0 0 0 1
-    particle wax_on ^0.76449 ^ ^1.39292 0 0 0 0 1
-    particle wax_on ^0.82913 ^ ^1.27631 0 0 0 0 1
-    particle wax_on ^0.89378 ^ ^1.15969 0 0 0 0 1
-    particle wax_on ^0.95842 ^ ^1.04308 0 0 0 0 1
-    particle wax_on ^1.02306 ^ ^0.92646 0 0 0 0 1
-    particle wax_on ^1.0877 ^ ^0.80984 0 0 0 0 1
-    particle wax_on ^1.15234 ^ ^0.69323 0 0 0 0 1
-    particle wax_on ^1.21698 ^ ^0.57661 0 0 0 0 1
-    particle wax_on ^1.28162 ^ ^0.46 0 0 0 0 1
-    particle wax_on ^1.34626 ^ ^0.34338 0 0 0 0 1
-    particle wax_on ^1.41091 ^ ^0.22676 0 0 0 0 1
-    particle wax_on ^1.47555 ^ ^0.11015 0 0 0 0 1
-    particle wax_on ^1.47047 ^ ^2.93531 0 0 0 0 1
-    particle wax_on ^1.40583 ^ ^3.05192 0 0 0 0 1
-    particle wax_on ^1.34119 ^ ^3.16854 0 0 0 0 1
-    particle wax_on ^1.27655 ^ ^3.28516 0 0 0 0 1
-    particle wax_on ^1.21191 ^ ^3.40177 0 0 0 0 1
-    particle wax_on ^1.14727 ^ ^3.51839 0 0 0 0 1
-    particle wax_on ^1.08263 ^ ^3.635 0 0 0 0 1
-    particle wax_on ^1.01798 ^ ^3.75162 0 0 0 0 1
-    particle wax_on ^0.95334 ^ ^3.86824 0 0 0 0 1
-    particle wax_on ^0.8887 ^ ^3.98485 0 0 0 0 1
-    particle wax_on ^0.82406 ^ ^4.10147 0 0 0 0 1
-    particle wax_on ^0.69075 ^ ^4.10379 0 0 0 0 1
-    particle wax_on ^0.55743 ^ ^4.10612 0 0 0 0 1
-    particle wax_on ^0.42412 ^ ^4.10845 0 0 0 0 1
-    particle wax_on ^0.29081 ^ ^4.11078 0 0 0 0 1
-    particle wax_on ^0.1575 ^ ^4.1131 0 0 0 0 1
-    particle wax_on ^0.02418 ^ ^4.11543 0 0 0 0 1
-    particle wax_on ^-0.10913 ^ ^4.11776 0 0 0 0 1
-    particle wax_on ^-0.24244 ^ ^4.12008 0 0 0 0 1
-    particle wax_on ^-0.37576 ^ ^4.12241 0 0 0 0 1
-    particle wax_on ^-0.50907 ^ ^4.12474 0 0 0 0 1
-    particle wax_on ^-0.64238 ^ ^4.12706 0 0 0 0 1
-    particle wax_on ^-0.7757 ^ ^4.12939 0 0 0 0 1
-    particle wax_on ^-0.84437 ^ ^4.0151 0 0 0 0 1
-    particle wax_on ^-0.91304 ^ ^3.90081 0 0 0 0 1
-    particle wax_on ^-0.98171 ^ ^3.78652 0 0 0 0 1
-    particle wax_on ^-1.05038 ^ ^3.67224 0 0 0 0 1
-    particle wax_on ^-1.11905 ^ ^3.55795 0 0 0 0 1
-    particle wax_on ^-1.18773 ^ ^3.44366 0 0 0 0 1
-    particle wax_on ^-1.2564 ^ ^3.32937 0 0 0 0 1
-    particle wax_on ^-1.32507 ^ ^3.21508 0 0 0 0 1
-    particle wax_on ^-1.39374 ^ ^3.10079 0 0 0 0 1
-    particle wax_on ^-1.46241 ^ ^2.9865 0 0 0 0 1
-    particle wax_on ^-1.53108 ^ ^2.87221 0 0 0 0 1
-    particle wax_on ^-1.59976 ^ ^2.75792 0 0 0 0 1
-    particle wax_on ^-1.53512 ^ ^2.64131 0 0 0 0 1
-    particle wax_on ^-1.47047 ^ ^2.52469 0 0 0 0 1
-    particle wax_on ^-1.40583 ^ ^2.40808 0 0 0 0 1
-    particle wax_on ^-1.34119 ^ ^2.29146 0 0 0 0 1
-    particle wax_on ^-1.27655 ^ ^2.17484 0 0 0 0 1
-    particle wax_on ^-1.21191 ^ ^2.05823 0 0 0 0 1
-    particle wax_on ^-1.14727 ^ ^1.94161 0 0 0 0 1
-    particle wax_on ^-1.08263 ^ ^1.825 0 0 0 0 1
-    particle wax_on ^-1.01798 ^ ^1.70838 0 0 0 0 1
-    particle wax_on ^-0.95334 ^ ^1.59176 0 0 0 0 1
-    particle wax_on ^-0.8887 ^ ^1.47515 0 0 0 0 1
-    particle wax_on ^-0.82406 ^ ^1.35853 0 0 0 0 1
-    particle wax_on ^-0.69075 ^ ^1.35621 0 0 0 0 1
-    particle wax_on ^-0.55743 ^ ^1.35388 0 0 0 0 1
-    particle wax_on ^-0.42412 ^ ^1.35155 0 0 0 0 1
-    particle wax_on ^-0.29081 ^ ^1.34922 0 0 0 0 1
-    particle wax_on ^-0.1575 ^ ^1.3469 0 0 0 0 1
-    particle wax_on ^-0.02418 ^ ^1.34457 0 0 0 0 1
-    particle wax_on ^0.10913 ^ ^1.34224 0 0 0 0 1
-    particle wax_on ^0.24244 ^ ^1.33992 0 0 0 0 1
-    particle wax_on ^0.37576 ^ ^1.33759 0 0 0 0 1
-    particle wax_on ^0.50907 ^ ^1.33526 0 0 0 0 1
-    particle wax_on ^0.64238 ^ ^1.33294 0 0 0 0 1
-    particle wax_on ^-1.58855 ^ ^-0.03439 0 0 0 0 1
-    particle wax_on ^-1.51988 ^ ^0.0799 0 0 0 0 1
-    particle wax_on ^-1.45121 ^ ^0.19419 0 0 0 0 1
-    particle wax_on ^-1.38254 ^ ^0.30848 0 0 0 0 1
-    particle wax_on ^-1.31387 ^ ^0.42276 0 0 0 0 1
-    particle wax_on ^-1.2452 ^ ^0.53705 0 0 0 0 1
-    particle wax_on ^-1.17652 ^ ^0.65134 0 0 0 0 1
-    particle wax_on ^-1.10785 ^ ^0.76563 0 0 0 0 1
-    particle wax_on ^-1.03918 ^ ^0.87992 0 0 0 0 1
-    particle wax_on ^-0.97051 ^ ^0.99421 0 0 0 0 1
-    particle wax_on ^-0.90184 ^ ^1.1085 0 0 0 0 1
-    particle wax_on ^-0.83316 ^ ^1.22279 0 0 0 0 1
-    particle wax_on ^-1.80681 ^ ^2.74112 0 0 0 0 1
-    particle wax_on ^-1.94013 ^ ^2.74345 0 0 0 0 1
-    particle wax_on ^-2.07344 ^ ^2.74578 0 0 0 0 1
-    particle wax_on ^-2.20675 ^ ^2.7481 0 0 0 0 1
-    particle wax_on ^-2.34007 ^ ^2.75043 0 0 0 0 1
-    particle wax_on ^-2.47338 ^ ^2.75276 0 0 0 0 1
-    particle wax_on ^-2.60669 ^ ^2.75508 0 0 0 0 1
-    particle wax_on ^-2.74001 ^ ^2.75741 0 0 0 0 1
-    particle wax_on ^-2.87332 ^ ^2.75974 0 0 0 0 1
-    particle wax_on ^-3.00663 ^ ^2.76206 0 0 0 0 1
-    particle wax_on ^-3.13994 ^ ^2.76439 0 0 0 0 1
-    particle wax_on ^-3.20862 ^ ^2.6501 0 0 0 0 1
-    particle wax_on ^-3.27729 ^ ^2.53581 0 0 0 0 1
-    particle wax_on ^-3.34596 ^ ^2.42152 0 0 0 0 1
-    particle wax_on ^-3.41463 ^ ^2.30724 0 0 0 0 1
-    particle wax_on ^-3.4833 ^ ^2.19295 0 0 0 0 1
-    particle wax_on ^-3.55198 ^ ^2.07866 0 0 0 0 1
-    particle wax_on ^-3.62065 ^ ^1.96437 0 0 0 0 1
-    particle wax_on ^-3.68932 ^ ^1.85008 0 0 0 0 1
-    particle wax_on ^-3.75799 ^ ^1.73579 0 0 0 0 1
-    particle wax_on ^-3.82666 ^ ^1.6215 0 0 0 0 1
-    particle wax_on ^-3.89533 ^ ^1.50721 0 0 0 0 1
-    particle wax_on ^-3.96401 ^ ^1.39292 0 0 0 0 1
-    particle wax_on ^-3.89936 ^ ^1.27631 0 0 0 0 1
-    particle wax_on ^-3.83472 ^ ^1.15969 0 0 0 0 1
-    particle wax_on ^-3.77008 ^ ^1.04308 0 0 0 0 1
-    particle wax_on ^-3.70544 ^ ^0.92646 0 0 0 0 1
-    particle wax_on ^-3.6408 ^ ^0.80984 0 0 0 0 1
-    particle wax_on ^-3.57616 ^ ^0.69323 0 0 0 0 1
-    particle wax_on ^-3.51152 ^ ^0.57661 0 0 0 0 1
-    particle wax_on ^-3.44688 ^ ^0.46 0 0 0 0 1
-    particle wax_on ^-3.38223 ^ ^0.34338 0 0 0 0 1
-    particle wax_on ^-3.31759 ^ ^0.22676 0 0 0 0 1
-    particle wax_on ^-3.25295 ^ ^0.11015 0 0 0 0 1
-    particle wax_on ^-3.18831 ^ ^-0.00647 0 0 0 0 1
-    particle wax_on ^-3.055 ^ ^-0.00879 0 0 0 0 1
-    particle wax_on ^-2.92168 ^ ^-0.01112 0 0 0 0 1
-    particle wax_on ^-2.78837 ^ ^-0.01345 0 0 0 0 1
-    particle wax_on ^-2.65506 ^ ^-0.01578 0 0 0 0 1
-    particle wax_on ^-2.52175 ^ ^-0.0181 0 0 0 0 1
-    particle wax_on ^-2.38843 ^ ^-0.02043 0 0 0 0 1
-    particle wax_on ^-2.25512 ^ ^-0.02276 0 0 0 0 1
-    particle wax_on ^-2.12181 ^ ^-0.02508 0 0 0 0 1
-    particle wax_on ^-1.98849 ^ ^-0.02741 0 0 0 0 1
-    particle wax_on ^-1.85518 ^ ^-0.02974 0 0 0 0 1
-    particle wax_on ^-1.72187 ^ ^-0.03206 0 0 0 0 1
-    particle wax_on ^-0.89378 ^ ^-1.15969 0 0 0 0 1
-    particle wax_on ^-0.95842 ^ ^-1.04308 0 0 0 0 1
-    particle wax_on ^-1.02306 ^ ^-0.92646 0 0 0 0 1
-    particle wax_on ^-1.0877 ^ ^-0.80984 0 0 0 0 1
-    particle wax_on ^-1.15234 ^ ^-0.69323 0 0 0 0 1
-    particle wax_on ^-1.21698 ^ ^-0.57661 0 0 0 0 1
-    particle wax_on ^-1.28162 ^ ^-0.46 0 0 0 0 1
-    particle wax_on ^-1.34626 ^ ^-0.34338 0 0 0 0 1
-    particle wax_on ^-1.41091 ^ ^-0.22676 0 0 0 0 1
-    particle wax_on ^-1.47555 ^ ^-0.11015 0 0 0 0 1
-    particle wax_on ^-3.27729 ^ ^-0.19419 0 0 0 0 1
-    particle wax_on ^-3.34596 ^ ^-0.30848 0 0 0 0 1
-    particle wax_on ^-3.41463 ^ ^-0.42276 0 0 0 0 1
-    particle wax_on ^-3.4833 ^ ^-0.53705 0 0 0 0 1
-    particle wax_on ^-3.55198 ^ ^-0.65134 0 0 0 0 1
-    particle wax_on ^-3.62065 ^ ^-0.76563 0 0 0 0 1
-    particle wax_on ^-3.68932 ^ ^-0.87992 0 0 0 0 1
-    particle wax_on ^-3.75799 ^ ^-0.99421 0 0 0 0 1
-    particle wax_on ^-3.82666 ^ ^-1.1085 0 0 0 0 1
-    particle wax_on ^-3.89533 ^ ^-1.22279 0 0 0 0 1
-    particle wax_on ^-3.96401 ^ ^-1.33708 0 0 0 0 1
-    particle wax_on ^-3.89936 ^ ^-1.45369 0 0 0 0 1
-    particle wax_on ^-3.83472 ^ ^-1.57031 0 0 0 0 1
-    particle wax_on ^-3.77008 ^ ^-1.68692 0 0 0 0 1
-    particle wax_on ^-3.70544 ^ ^-1.80354 0 0 0 0 1
-    particle wax_on ^-3.6408 ^ ^-1.92016 0 0 0 0 1
-    particle wax_on ^-3.57616 ^ ^-2.03677 0 0 0 0 1
-    particle wax_on ^-3.51152 ^ ^-2.15339 0 0 0 0 1
-    particle wax_on ^-3.44688 ^ ^-2.27 0 0 0 0 1
-    particle wax_on ^-3.38223 ^ ^-2.38662 0 0 0 0 1
-    particle wax_on ^-3.31759 ^ ^-2.50324 0 0 0 0 1
-    particle wax_on ^-3.25295 ^ ^-2.61985 0 0 0 0 1
-    particle wax_on ^-3.18831 ^ ^-2.73647 0 0 0 0 1
-    particle wax_on ^-3.055 ^ ^-2.73879 0 0 0 0 1
-    particle wax_on ^-2.92168 ^ ^-2.74112 0 0 0 0 1
-    particle wax_on ^-2.78837 ^ ^-2.74345 0 0 0 0 1
-    particle wax_on ^-2.65506 ^ ^-2.74578 0 0 0 0 1
-    particle wax_on ^-2.52175 ^ ^-2.7481 0 0 0 0 1
-    particle wax_on ^-2.38843 ^ ^-2.75043 0 0 0 0 1
-    particle wax_on ^-2.25512 ^ ^-2.75276 0 0 0 0 1
-    particle wax_on ^-2.12181 ^ ^-2.75508 0 0 0 0 1
-    particle wax_on ^-1.98849 ^ ^-2.75741 0 0 0 0 1
-    particle wax_on ^-1.85518 ^ ^-2.75974 0 0 0 0 1
-    particle wax_on ^-1.72187 ^ ^-2.76206 0 0 0 0 1
+particle wax_on ^0.785 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.85042 ^ ^-3.97635 0 0 0 0 1
+particle wax_on ^0.91583 ^ ^-3.86305 0 0 0 0 1
+particle wax_on ^0.98125 ^ ^-3.74974 0 0 0 0 1
+particle wax_on ^1.04667 ^ ^-3.63644 0 0 0 0 1
+particle wax_on ^1.11208 ^ ^-3.52313 0 0 0 0 1
+particle wax_on ^1.1775 ^ ^-3.40983 0 0 0 0 1
+particle wax_on ^1.24292 ^ ^-3.29652 0 0 0 0 1
+particle wax_on ^1.30833 ^ ^-3.18322 0 0 0 0 1
+particle wax_on ^1.37375 ^ ^-3.06991 0 0 0 0 1
+particle wax_on ^1.43917 ^ ^-2.95661 0 0 0 0 1
+particle wax_on ^1.50458 ^ ^-2.8433 0 0 0 0 1
+particle wax_on ^1.57 ^ ^-2.73 0 0 0 0 1
+particle wax_on ^1.50458 ^ ^-2.6167 0 0 0 0 1
+particle wax_on ^1.43917 ^ ^-2.50339 0 0 0 0 1
+particle wax_on ^1.37375 ^ ^-2.39009 0 0 0 0 1
+particle wax_on ^1.30833 ^ ^-2.27678 0 0 0 0 1
+particle wax_on ^1.24292 ^ ^-2.16348 0 0 0 0 1
+particle wax_on ^1.1775 ^ ^-2.05017 0 0 0 0 1
+particle wax_on ^1.11208 ^ ^-1.93687 0 0 0 0 1
+particle wax_on ^1.04667 ^ ^-1.82356 0 0 0 0 1
+particle wax_on ^0.98125 ^ ^-1.71026 0 0 0 0 1
+particle wax_on ^0.91583 ^ ^-1.59695 0 0 0 0 1
+particle wax_on ^0.85042 ^ ^-1.48365 0 0 0 0 1
+particle wax_on ^0.785 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0.65417 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0.52333 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0.3925 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0.26167 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0.13083 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^0 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.13083 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.26167 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.3925 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.52333 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.65417 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.785 ^ ^-1.37034 0 0 0 0 1
+particle wax_on ^-0.85042 ^ ^-1.48365 0 0 0 0 1
+particle wax_on ^-0.91583 ^ ^-1.59695 0 0 0 0 1
+particle wax_on ^-0.98125 ^ ^-1.71026 0 0 0 0 1
+particle wax_on ^-1.04667 ^ ^-1.82356 0 0 0 0 1
+particle wax_on ^-1.11208 ^ ^-1.93687 0 0 0 0 1
+particle wax_on ^-1.1775 ^ ^-2.05017 0 0 0 0 1
+particle wax_on ^-1.24292 ^ ^-2.16348 0 0 0 0 1
+particle wax_on ^-1.30833 ^ ^-2.27678 0 0 0 0 1
+particle wax_on ^-1.37375 ^ ^-2.39009 0 0 0 0 1
+particle wax_on ^-1.43917 ^ ^-2.50339 0 0 0 0 1
+particle wax_on ^-1.50458 ^ ^-2.6167 0 0 0 0 1
+particle wax_on ^-1.57 ^ ^-2.73 0 0 0 0 1
+particle wax_on ^-1.50458 ^ ^-2.8433 0 0 0 0 1
+particle wax_on ^-1.43917 ^ ^-2.95661 0 0 0 0 1
+particle wax_on ^-1.37375 ^ ^-3.06991 0 0 0 0 1
+particle wax_on ^-1.30833 ^ ^-3.18322 0 0 0 0 1
+particle wax_on ^-1.24292 ^ ^-3.29652 0 0 0 0 1
+particle wax_on ^-1.1775 ^ ^-3.40983 0 0 0 0 1
+particle wax_on ^-1.11208 ^ ^-3.52313 0 0 0 0 1
+particle wax_on ^-1.04667 ^ ^-3.63644 0 0 0 0 1
+particle wax_on ^-0.98125 ^ ^-3.74974 0 0 0 0 1
+particle wax_on ^-0.91583 ^ ^-3.86305 0 0 0 0 1
+particle wax_on ^-0.85042 ^ ^-3.97635 0 0 0 0 1
+particle wax_on ^-0.785 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^-0.65417 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^-0.52333 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^-0.3925 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^-0.26167 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^-0.13083 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.13083 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.26167 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.3925 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.52333 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^0.65417 ^ ^-4.08966 0 0 0 0 1
+particle wax_on ^3.14925 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^3.21467 ^ ^-2.61135 0 0 0 0 1
+particle wax_on ^3.28008 ^ ^-2.49805 0 0 0 0 1
+particle wax_on ^3.3455 ^ ^-2.38474 0 0 0 0 1
+particle wax_on ^3.41092 ^ ^-2.27144 0 0 0 0 1
+particle wax_on ^3.47633 ^ ^-2.15813 0 0 0 0 1
+particle wax_on ^3.54175 ^ ^-2.04483 0 0 0 0 1
+particle wax_on ^3.60717 ^ ^-1.93152 0 0 0 0 1
+particle wax_on ^3.67258 ^ ^-1.81822 0 0 0 0 1
+particle wax_on ^3.738 ^ ^-1.70491 0 0 0 0 1
+particle wax_on ^3.80342 ^ ^-1.59161 0 0 0 0 1
+particle wax_on ^3.86883 ^ ^-1.4783 0 0 0 0 1
+particle wax_on ^3.93425 ^ ^-1.365 0 0 0 0 1
+particle wax_on ^3.86883 ^ ^-1.2517 0 0 0 0 1
+particle wax_on ^3.80342 ^ ^-1.13839 0 0 0 0 1
+particle wax_on ^3.738 ^ ^-1.02509 0 0 0 0 1
+particle wax_on ^3.67258 ^ ^-0.91178 0 0 0 0 1
+particle wax_on ^3.60717 ^ ^-0.79848 0 0 0 0 1
+particle wax_on ^3.54175 ^ ^-0.68517 0 0 0 0 1
+particle wax_on ^3.47633 ^ ^-0.57187 0 0 0 0 1
+particle wax_on ^3.41092 ^ ^-0.45856 0 0 0 0 1
+particle wax_on ^3.3455 ^ ^-0.34526 0 0 0 0 1
+particle wax_on ^3.28008 ^ ^-0.23195 0 0 0 0 1
+particle wax_on ^3.21467 ^ ^-0.11865 0 0 0 0 1
+particle wax_on ^3.14925 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^3.01842 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.88758 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.75675 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.62592 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.49508 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.36425 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.23342 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^2.10258 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^1.97175 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^1.84092 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^1.71008 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^1.57925 ^ ^-0.00534 0 0 0 0 1
+particle wax_on ^1.51383 ^ ^-0.11865 0 0 0 0 1
+particle wax_on ^1.44842 ^ ^-0.23195 0 0 0 0 1
+particle wax_on ^1.383 ^ ^-0.34526 0 0 0 0 1
+particle wax_on ^1.31758 ^ ^-0.45856 0 0 0 0 1
+particle wax_on ^1.25217 ^ ^-0.57187 0 0 0 0 1
+particle wax_on ^1.18675 ^ ^-0.68517 0 0 0 0 1
+particle wax_on ^1.12133 ^ ^-0.79848 0 0 0 0 1
+particle wax_on ^1.05592 ^ ^-0.91178 0 0 0 0 1
+particle wax_on ^0.9905 ^ ^-1.02509 0 0 0 0 1
+particle wax_on ^0.92508 ^ ^-1.13839 0 0 0 0 1
+particle wax_on ^0.85967 ^ ^-1.2517 0 0 0 0 1
+particle wax_on ^1.71008 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^1.84092 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^1.97175 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.10258 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.23342 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.36425 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.49508 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.62592 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.75675 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^2.88758 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^3.01842 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^3.21467 ^ ^0.11865 0 0 0 0 1
+particle wax_on ^3.28008 ^ ^0.23195 0 0 0 0 1
+particle wax_on ^3.3455 ^ ^0.34526 0 0 0 0 1
+particle wax_on ^3.41092 ^ ^0.45856 0 0 0 0 1
+particle wax_on ^3.47633 ^ ^0.57187 0 0 0 0 1
+particle wax_on ^3.54175 ^ ^0.68517 0 0 0 0 1
+particle wax_on ^3.60717 ^ ^0.79848 0 0 0 0 1
+particle wax_on ^3.67258 ^ ^0.91178 0 0 0 0 1
+particle wax_on ^3.738 ^ ^1.02509 0 0 0 0 1
+particle wax_on ^3.80342 ^ ^1.13839 0 0 0 0 1
+particle wax_on ^3.86883 ^ ^1.2517 0 0 0 0 1
+particle wax_on ^3.93425 ^ ^1.365 0 0 0 0 1
+particle wax_on ^3.86883 ^ ^1.4783 0 0 0 0 1
+particle wax_on ^3.80342 ^ ^1.59161 0 0 0 0 1
+particle wax_on ^3.738 ^ ^1.70491 0 0 0 0 1
+particle wax_on ^3.67258 ^ ^1.81822 0 0 0 0 1
+particle wax_on ^3.60717 ^ ^1.93152 0 0 0 0 1
+particle wax_on ^3.54175 ^ ^2.04483 0 0 0 0 1
+particle wax_on ^3.47633 ^ ^2.15813 0 0 0 0 1
+particle wax_on ^3.41092 ^ ^2.27144 0 0 0 0 1
+particle wax_on ^3.3455 ^ ^2.38474 0 0 0 0 1
+particle wax_on ^3.28008 ^ ^2.49805 0 0 0 0 1
+particle wax_on ^3.21467 ^ ^2.61135 0 0 0 0 1
+particle wax_on ^3.14925 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^3.01842 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.88758 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.75675 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.62592 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.49508 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.36425 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.23342 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^2.10258 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^1.97175 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^1.84092 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^1.71008 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^1.57925 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^1.51383 ^ ^2.61135 0 0 0 0 1
+particle wax_on ^1.44842 ^ ^2.49805 0 0 0 0 1
+particle wax_on ^1.383 ^ ^2.38474 0 0 0 0 1
+particle wax_on ^1.31758 ^ ^2.27144 0 0 0 0 1
+particle wax_on ^1.25217 ^ ^2.15813 0 0 0 0 1
+particle wax_on ^1.18675 ^ ^2.04483 0 0 0 0 1
+particle wax_on ^1.12133 ^ ^1.93152 0 0 0 0 1
+particle wax_on ^1.05592 ^ ^1.81822 0 0 0 0 1
+particle wax_on ^0.9905 ^ ^1.70491 0 0 0 0 1
+particle wax_on ^0.92508 ^ ^1.59161 0 0 0 0 1
+particle wax_on ^0.85967 ^ ^1.4783 0 0 0 0 1
+particle wax_on ^0.79425 ^ ^1.365 0 0 0 0 1
+particle wax_on ^0.85967 ^ ^1.2517 0 0 0 0 1
+particle wax_on ^0.92508 ^ ^1.13839 0 0 0 0 1
+particle wax_on ^0.9905 ^ ^1.02509 0 0 0 0 1
+particle wax_on ^1.05592 ^ ^0.91178 0 0 0 0 1
+particle wax_on ^1.12133 ^ ^0.79848 0 0 0 0 1
+particle wax_on ^1.18675 ^ ^0.68517 0 0 0 0 1
+particle wax_on ^1.25217 ^ ^0.57187 0 0 0 0 1
+particle wax_on ^1.31758 ^ ^0.45856 0 0 0 0 1
+particle wax_on ^1.383 ^ ^0.34526 0 0 0 0 1
+particle wax_on ^1.44842 ^ ^0.23195 0 0 0 0 1
+particle wax_on ^1.51383 ^ ^0.11865 0 0 0 0 1
+particle wax_on ^1.50458 ^ ^2.8433 0 0 0 0 1
+particle wax_on ^1.43917 ^ ^2.95661 0 0 0 0 1
+particle wax_on ^1.37375 ^ ^3.06991 0 0 0 0 1
+particle wax_on ^1.30833 ^ ^3.18322 0 0 0 0 1
+particle wax_on ^1.24292 ^ ^3.29652 0 0 0 0 1
+particle wax_on ^1.1775 ^ ^3.40983 0 0 0 0 1
+particle wax_on ^1.11208 ^ ^3.52313 0 0 0 0 1
+particle wax_on ^1.04667 ^ ^3.63644 0 0 0 0 1
+particle wax_on ^0.98125 ^ ^3.74974 0 0 0 0 1
+particle wax_on ^0.91583 ^ ^3.86305 0 0 0 0 1
+particle wax_on ^0.85042 ^ ^3.97635 0 0 0 0 1
+particle wax_on ^0.785 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0.65417 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0.52333 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0.3925 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0.26167 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0.13083 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^0 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.13083 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.26167 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.3925 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.52333 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.65417 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.785 ^ ^4.08966 0 0 0 0 1
+particle wax_on ^-0.85042 ^ ^3.97635 0 0 0 0 1
+particle wax_on ^-0.91583 ^ ^3.86305 0 0 0 0 1
+particle wax_on ^-0.98125 ^ ^3.74974 0 0 0 0 1
+particle wax_on ^-1.04667 ^ ^3.63644 0 0 0 0 1
+particle wax_on ^-1.11208 ^ ^3.52313 0 0 0 0 1
+particle wax_on ^-1.1775 ^ ^3.40983 0 0 0 0 1
+particle wax_on ^-1.24292 ^ ^3.29652 0 0 0 0 1
+particle wax_on ^-1.30833 ^ ^3.18322 0 0 0 0 1
+particle wax_on ^-1.37375 ^ ^3.06991 0 0 0 0 1
+particle wax_on ^-1.43917 ^ ^2.95661 0 0 0 0 1
+particle wax_on ^-1.50458 ^ ^2.8433 0 0 0 0 1
+particle wax_on ^-1.57 ^ ^2.73 0 0 0 0 1
+particle wax_on ^-1.50458 ^ ^2.6167 0 0 0 0 1
+particle wax_on ^-1.43917 ^ ^2.50339 0 0 0 0 1
+particle wax_on ^-1.37375 ^ ^2.39009 0 0 0 0 1
+particle wax_on ^-1.30833 ^ ^2.27678 0 0 0 0 1
+particle wax_on ^-1.24292 ^ ^2.16348 0 0 0 0 1
+particle wax_on ^-1.1775 ^ ^2.05017 0 0 0 0 1
+particle wax_on ^-1.11208 ^ ^1.93687 0 0 0 0 1
+particle wax_on ^-1.04667 ^ ^1.82356 0 0 0 0 1
+particle wax_on ^-0.98125 ^ ^1.71026 0 0 0 0 1
+particle wax_on ^-0.91583 ^ ^1.59695 0 0 0 0 1
+particle wax_on ^-0.85042 ^ ^1.48365 0 0 0 0 1
+particle wax_on ^-0.785 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-0.65417 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-0.52333 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-0.3925 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-0.26167 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-0.13083 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0.13083 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0.26167 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0.3925 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0.52333 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^0.65417 ^ ^1.37034 0 0 0 0 1
+particle wax_on ^-1.57925 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-1.51383 ^ ^0.11865 0 0 0 0 1
+particle wax_on ^-1.44842 ^ ^0.23195 0 0 0 0 1
+particle wax_on ^-1.383 ^ ^0.34526 0 0 0 0 1
+particle wax_on ^-1.31758 ^ ^0.45856 0 0 0 0 1
+particle wax_on ^-1.25217 ^ ^0.57187 0 0 0 0 1
+particle wax_on ^-1.18675 ^ ^0.68517 0 0 0 0 1
+particle wax_on ^-1.12133 ^ ^0.79848 0 0 0 0 1
+particle wax_on ^-1.05592 ^ ^0.91178 0 0 0 0 1
+particle wax_on ^-0.9905 ^ ^1.02509 0 0 0 0 1
+particle wax_on ^-0.92508 ^ ^1.13839 0 0 0 0 1
+particle wax_on ^-0.85967 ^ ^1.2517 0 0 0 0 1
+particle wax_on ^-1.71008 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-1.84092 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-1.97175 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.10258 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.23342 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.36425 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.49508 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.62592 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.75675 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-2.88758 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-3.01842 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-3.14925 ^ ^2.72466 0 0 0 0 1
+particle wax_on ^-3.21467 ^ ^2.61135 0 0 0 0 1
+particle wax_on ^-3.28008 ^ ^2.49805 0 0 0 0 1
+particle wax_on ^-3.3455 ^ ^2.38474 0 0 0 0 1
+particle wax_on ^-3.41092 ^ ^2.27144 0 0 0 0 1
+particle wax_on ^-3.47633 ^ ^2.15813 0 0 0 0 1
+particle wax_on ^-3.54175 ^ ^2.04483 0 0 0 0 1
+particle wax_on ^-3.60717 ^ ^1.93152 0 0 0 0 1
+particle wax_on ^-3.67258 ^ ^1.81822 0 0 0 0 1
+particle wax_on ^-3.738 ^ ^1.70491 0 0 0 0 1
+particle wax_on ^-3.80342 ^ ^1.59161 0 0 0 0 1
+particle wax_on ^-3.86883 ^ ^1.4783 0 0 0 0 1
+particle wax_on ^-3.93425 ^ ^1.365 0 0 0 0 1
+particle wax_on ^-3.86883 ^ ^1.2517 0 0 0 0 1
+particle wax_on ^-3.80342 ^ ^1.13839 0 0 0 0 1
+particle wax_on ^-3.738 ^ ^1.02509 0 0 0 0 1
+particle wax_on ^-3.67258 ^ ^0.91178 0 0 0 0 1
+particle wax_on ^-3.60717 ^ ^0.79848 0 0 0 0 1
+particle wax_on ^-3.54175 ^ ^0.68517 0 0 0 0 1
+particle wax_on ^-3.47633 ^ ^0.57187 0 0 0 0 1
+particle wax_on ^-3.41092 ^ ^0.45856 0 0 0 0 1
+particle wax_on ^-3.3455 ^ ^0.34526 0 0 0 0 1
+particle wax_on ^-3.28008 ^ ^0.23195 0 0 0 0 1
+particle wax_on ^-3.21467 ^ ^0.11865 0 0 0 0 1
+particle wax_on ^-3.14925 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-3.01842 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.88758 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.75675 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.62592 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.49508 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.36425 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.23342 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-2.10258 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-1.97175 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-1.84092 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-1.71008 ^ ^0.00534 0 0 0 0 1
+particle wax_on ^-0.85967 ^ ^-1.2517 0 0 0 0 1
+particle wax_on ^-0.92508 ^ ^-1.13839 0 0 0 0 1
+particle wax_on ^-0.9905 ^ ^-1.02509 0 0 0 0 1
+particle wax_on ^-1.05592 ^ ^-0.91178 0 0 0 0 1
+particle wax_on ^-1.12133 ^ ^-0.79848 0 0 0 0 1
+particle wax_on ^-1.18675 ^ ^-0.68517 0 0 0 0 1
+particle wax_on ^-1.25217 ^ ^-0.57187 0 0 0 0 1
+particle wax_on ^-1.31758 ^ ^-0.45856 0 0 0 0 1
+particle wax_on ^-1.383 ^ ^-0.34526 0 0 0 0 1
+particle wax_on ^-1.44842 ^ ^-0.23195 0 0 0 0 1
+particle wax_on ^-1.51383 ^ ^-0.11865 0 0 0 0 1
+particle wax_on ^-3.21467 ^ ^-0.11865 0 0 0 0 1
+particle wax_on ^-3.28008 ^ ^-0.23195 0 0 0 0 1
+particle wax_on ^-3.3455 ^ ^-0.34526 0 0 0 0 1
+particle wax_on ^-3.41092 ^ ^-0.45856 0 0 0 0 1
+particle wax_on ^-3.47633 ^ ^-0.57187 0 0 0 0 1
+particle wax_on ^-3.54175 ^ ^-0.68517 0 0 0 0 1
+particle wax_on ^-3.60717 ^ ^-0.79848 0 0 0 0 1
+particle wax_on ^-3.67258 ^ ^-0.91178 0 0 0 0 1
+particle wax_on ^-3.738 ^ ^-1.02509 0 0 0 0 1
+particle wax_on ^-3.80342 ^ ^-1.13839 0 0 0 0 1
+particle wax_on ^-3.86883 ^ ^-1.2517 0 0 0 0 1
+particle wax_on ^-3.93425 ^ ^-1.365 0 0 0 0 1
+particle wax_on ^-3.86883 ^ ^-1.4783 0 0 0 0 1
+particle wax_on ^-3.80342 ^ ^-1.59161 0 0 0 0 1
+particle wax_on ^-3.738 ^ ^-1.70491 0 0 0 0 1
+particle wax_on ^-3.67258 ^ ^-1.81822 0 0 0 0 1
+particle wax_on ^-3.60717 ^ ^-1.93152 0 0 0 0 1
+particle wax_on ^-3.54175 ^ ^-2.04483 0 0 0 0 1
+particle wax_on ^-3.47633 ^ ^-2.15813 0 0 0 0 1
+particle wax_on ^-3.41092 ^ ^-2.27144 0 0 0 0 1
+particle wax_on ^-3.3455 ^ ^-2.38474 0 0 0 0 1
+particle wax_on ^-3.28008 ^ ^-2.49805 0 0 0 0 1
+particle wax_on ^-3.21467 ^ ^-2.61135 0 0 0 0 1
+particle wax_on ^-3.14925 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-3.01842 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.88758 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.75675 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.62592 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.49508 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.36425 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.23342 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-2.10258 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-1.97175 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-1.84092 ^ ^-2.72466 0 0 0 0 1
+particle wax_on ^-1.71008 ^ ^-2.72466 0 0 0 0 1
