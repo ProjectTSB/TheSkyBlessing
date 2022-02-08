@@ -1,6 +1,10 @@
 {
     "values": [
         "asset:mob/0217.medousa_eye/death/1.trigger",
+        "asset:mob/0242.poltergeist_subspecies_bow/death/1.trigger",
+        "asset:mob/0241.poltergeist_subspecies/death/1.trigger",
+        "asset:mob/0219.aorta/death/1.trigger",
+        "asset:mob/0220.vena_cana/death/1.trigger",
         "asset:mob/0244.ignition_spider/death/1.trigger",
         "asset:mob/1008.yellow_star/death/1.trigger",
         "asset:mob/1007.red_star/death/1.trigger",

@@ -19,5 +19,4 @@
     tellraw @s ["[ ",{"score": {"name": "$Random","objective": "Temporary"},"color": "light_purple"},{"text": " ] MPが天使の取り分となり、[ ","color": "white"},{"score": {"name": "$Fluctuation","objective": "Lib"},"color": "green"},{"text": " ] MPが回復した！","color": "white"}]
     function lib:mp/fluctuation
     scoreboard players reset $Random
-    clear @s glass_bottle 1
     execute anchored eyes run particle dust 1 0.31 0.91 0.3 ^ ^ ^ 0.4 0.4 0.4 0 20 normal @s
