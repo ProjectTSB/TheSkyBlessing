@@ -22,6 +22,9 @@
         data modify storage lib: Argument.ElementType set value "Fire"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] at @s run function lib:damage/
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# 自害する
+    kill @s
