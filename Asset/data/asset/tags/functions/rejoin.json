@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:sacred_treasure/0822.sound_of_a_star/trigger/rejoin_process",
+        "asset:sacred_treasure/0105.secret_meat/trigger/rejoin_process",
+        "asset:mob/0220.vena_cana/rejoin_process",
         "asset:mob/1008.yellow_star/rejoin_process",
         "asset:mob/1005.blue_star/rejoin_process",
         "asset:mob/1004.tultaria/rejoin_process",
