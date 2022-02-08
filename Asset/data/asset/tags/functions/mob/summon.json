@@ -1,6 +1,10 @@
 {
     "values": [
         "asset:mob/0233.honey_flyer/summon/1.trigger",
+        "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
+        "asset:mob/0241.poltergeist_subspecies/summon/1.trigger",
+        "asset:mob/0219.aorta/summon/1.trigger",
+        "asset:mob/0220.vena_cana/summon/1.trigger",
         "asset:mob/0239.poltergeist_bow/summon/1.trigger",
         "asset:mob/0244.ignition_spider/summon/1.trigger",
         "asset:mob/0238.poltergeist_armor/summon/1.trigger",
