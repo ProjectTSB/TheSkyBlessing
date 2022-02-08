@@ -8,6 +8,10 @@
     function asset_manager:sacred_treasure/data/new/set_to_current
 # スロット毎のチェック
     function asset_manager:sacred_treasure/triggers/using_item/reset_when_change_item
+# 使用している手を判別する
+    execute if entity @s[scores={UsingItem=1}] run function asset_manager:sacred_treasure/triggers/using_item/detect_usinghand/
+    execute if entity @s[tag=!CheckedUsingHand,scores={UsingItem.MainH=1}] run function asset_manager:sacred_treasure/triggers/using_item/detect_usinghand/
+    execute if entity @s[tag=!CheckedUsingHand,scores={UsingItem.OffH=1}] run function asset_manager:sacred_treasure/triggers/using_item/detect_usinghand/
 # asset:contextにアイテムを使用している時間を設定する
     function asset_manager:sacred_treasure/triggers/using_item/set_context
 # 神器側に受け渡し
@@ -78,3 +82,4 @@
     function asset_manager:sacred_treasure/data/new/revert_from_current
 # リセット
     data remove storage asset:context UsingItemTime
+    tag @s remove CheckedUsingHand

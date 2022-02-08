@@ -44,6 +44,13 @@
 # @within function asset_manager:sacred_treasure/triggers/using_item/*
     #declare score_holder $UsingItemThreshold
 
+#> アイテム使用中の手判別用タグ
+# @within function
+#   asset_manager:sacred_treasure/triggers/using_item/**
+    #declare tag CheckedUsingHand
+    #declare tag UsingItem.Mainhand
+    #declare tag UsingItem.Offhand
+
 #> use_itemの誤検知対策タグ
 # @within function
 #   core:handler/drop

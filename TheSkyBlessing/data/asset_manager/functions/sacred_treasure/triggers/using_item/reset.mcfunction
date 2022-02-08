@@ -6,3 +6,5 @@
 
 scoreboard players reset @s UsingItem.MainH
 scoreboard players reset @s UsingItem.OffH
+tag @s[tag=UsingItem.Mainhand] remove UsingItem.Mainhand
+tag @s[tag=UsingItem.Offhand] remove UsingItem.Offhand
