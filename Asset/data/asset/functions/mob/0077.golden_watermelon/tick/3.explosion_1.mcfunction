@@ -5,8 +5,8 @@
 # @within function asset:mob/0077.golden_watermelon/tick/2.tick
 
 # 演出
-    playsound entity.firework_rocket.twinkle master @a ~ ~ ~ 1.6 1.7 0
-    playsound entity.generic.explode master @a ~ ~ ~ 1.3 1 0
+    playsound entity.firework_rocket.twinkle hostile @a ~ ~ ~ 1.6 1.7 0
+    playsound entity.generic.explode hostile @a ~ ~ ~ 1.3 1 0
     particle dust 0.173 1 0.243 2 ~ ~1.6 ~ 0.8 0.8 0.8 0 30 normal @a
     particle explosion ~ ~1.6 ~ 1 1 1 0 10 normal @a
 

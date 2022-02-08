@@ -9,9 +9,9 @@
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 30
     particle minecraft:lava ~ ~ ~ 3 1 3 0.42 30
 
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
-    playsound entity.generic.explode master @a ~ ~ ~ 1 0
-    playsound entity.generic.explode master @a ~ ~ ~ 1 0.5
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0
+    playsound entity.generic.explode hostile @a ~ ~ ~ 1 0
+    playsound entity.generic.explode hostile @a ~ ~ ~ 1 0.5
 
 # ダメージ設定
     # 与えるダメージ
@@ -22,6 +22,9 @@
         data modify storage lib: Argument.ElementType set value "Fire"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] at @s run function lib:damage/
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
+
+# 自害する
+    kill @s

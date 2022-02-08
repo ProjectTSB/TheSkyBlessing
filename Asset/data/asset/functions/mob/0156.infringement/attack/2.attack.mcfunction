@@ -8,9 +8,9 @@
 # 演出
     execute at @p[tag=Victim,distance=..32] run particle splash ~ ~1.2 ~ 0.6 0.5 0.6 0 50 normal @a
     execute at @p[tag=Victim,distance=..32] run particle dust 0.145 0.792 0.812 1.3 ~ ~1.2 ~ 0.5 0.4 0.5 1 30 normal @a
-    playsound minecraft:entity.guardian.hurt master @a ~ ~ ~ 0.6 1 0
-    playsound minecraft:entity.generic.swim master @a ~ ~ ~ 0.5 0.7 0
-    playsound minecraft:block.glass.break master @p ~ ~ ~ 1.4 1.3 0
+    playsound minecraft:entity.guardian.hurt hostile @a ~ ~ ~ 0.6 1 0
+    playsound minecraft:entity.generic.swim hostile @a ~ ~ ~ 0.5 0.7 0
+    playsound minecraft:block.glass.break hostile @p ~ ~ ~ 1.4 1.3 0
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 12f

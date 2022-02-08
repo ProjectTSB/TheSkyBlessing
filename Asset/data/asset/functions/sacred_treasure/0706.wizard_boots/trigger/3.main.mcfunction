@@ -9,23 +9,35 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 魔法ダメージ量+5%
-    data modify storage api: Argument.UUID set value [I;1,1,706,3]
-    data modify storage api: Argument.Amount set value 0.05
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/magic/add
-
 # 魔法耐性+2.5%
     data modify storage api: Argument.UUID set value [I;1,1,706,3]
     data modify storage api: Argument.Amount set value 0.025
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/magic/add
-
-# MP回復量+5%
+    
+# 魔法攻撃+2.5%
     data modify storage api: Argument.UUID set value [I;1,1,706,3]
-    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Amount set value 0.025
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/magic/add
+
+# MP回復量+2.5%
+    data modify storage api: Argument.UUID set value [I;1,1,706,3]
+    data modify storage api: Argument.Amount set value 0.025
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
+
+# 物理耐性-2.5%
+    data modify storage api: Argument.UUID set value [I;1,1,706,3]
+    data modify storage api: Argument.Amount set value -0.025
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/physical/add
+
+# 物理攻撃-2.5%
+    data modify storage api: Argument.UUID set value [I;1,1,706,3]
+    data modify storage api: Argument.Amount set value -0.025
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/physical/add
 
 # 演出
     particle witch ~ ~0.3 ~ 0.3 0.1 0.3 1 10 normal @a

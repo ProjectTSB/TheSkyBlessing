@@ -10,7 +10,7 @@
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.ByPassResist set value 1b
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,dx=1.5] run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
     data remove storage lib: Argument
 
 # 消滅
