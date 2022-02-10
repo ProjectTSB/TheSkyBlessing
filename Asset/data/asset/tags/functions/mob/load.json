@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0245.fire_creeper/0.load",
         "asset:mob/0220.vena_cana/0.load",
         "asset:mob/0214.water_magic/0.load",
         "asset:mob/1008.yellow_star/0.load",
