@@ -1596,7 +1596,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
@@ -1647,7 +1647,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
@@ -1698,7 +1698,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
