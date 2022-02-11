@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0254.no_torso/hurt/1.trigger",
+        "asset:mob/0253.parasitic_soldiers/hurt/1.trigger",
         "asset:mob/0219.aorta/hurt/1.trigger",
         "asset:mob/0220.vena_cana/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",
