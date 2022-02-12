@@ -1,7 +1,7 @@
 {
     "values": [
         "asset:mob/0255.dependence_eye/summon/1.trigger",
-        "asset:mob/0254.no_torso/summon/1.trigger",
+        "asset:mob/0254.headless/summon/1.trigger",
         "asset:mob/0253.parasitic_soldiers/summon/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/summon/1.trigger",

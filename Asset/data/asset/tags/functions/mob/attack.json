@@ -1,6 +1,6 @@
 {
     "values": [
-        "asset:mob/0254.no_torso/attack/1.trigger",
+        "asset:mob/0254.headless/attack/1.trigger",
         "asset:mob/0253.parasitic_soldiers/attack/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/attack/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/attack/1.trigger",

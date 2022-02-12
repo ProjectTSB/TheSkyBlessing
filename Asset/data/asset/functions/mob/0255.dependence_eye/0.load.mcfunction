@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0255.dependence_eye/**
-    scoreboard objectives add 
+    scoreboard objectives add 73.AttackCT dummy

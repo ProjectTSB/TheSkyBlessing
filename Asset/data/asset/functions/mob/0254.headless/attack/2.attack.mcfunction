@@ -1,8 +1,8 @@
-#> asset:mob/0253.parasitic_soldiers/attack/2.attack
+#> asset:mob/0254.headless/attack/2.attack
 #
 # Mobの攻撃時の処理
 #
-# @within function asset:mob/0253.parasitic_soldiers/attack/1.trigger
+# @within function asset:mob/0254.headless/attack/1.trigger
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle dust 0.247 0 0 2 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a
