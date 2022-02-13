@@ -5,7 +5,7 @@
 # @within function asset:mob/0254.headless/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0254.headless"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0254.headless",ActiveEffects:[{Id:8b,Amplifier:3b,Duration:2147483647}]}
 # ID (int)
     data modify storage asset:mob ID set value 254
 # Type (string) Wikiを参照
@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.30
+    data modify storage asset:mob Speed set value 0.35
 # 索敵範囲 (double) (オプション)
     # data modify storage asset:mob FollowRange set value
 # ノックバック耐性 (double) (オプション)
