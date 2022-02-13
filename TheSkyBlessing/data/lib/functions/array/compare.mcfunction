@@ -18,3 +18,6 @@
 
 # 再帰的に動かす
     execute if score $Index Temporary matches 1.. run function lib:array/core/compare
+
+# リセット
+    scoreboard players reset $Temp Temporary

@@ -4,7 +4,8 @@
 
 # 比較/結果代入
     data modify storage lib: CompareResult append value -1
-    execute store success storage lib: CompareResult[-1] int 1 run data modify storage lib: Array[-1] set from storage lib: Array2[-1]
+    execute store success score $Temp Temporary run data modify storage lib: Array[-1] set from storage lib: Array2[-1]
+    execute store success storage lib: CompareResult[-1] byte 1 if score $Temp Temporary matches 0
 # 末尾削除
     data remove storage lib: Array[-1]
     data remove storage lib: Array2[-1]
