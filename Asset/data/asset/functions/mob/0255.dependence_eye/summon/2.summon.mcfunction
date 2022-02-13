@@ -5,7 +5,7 @@
 # @within function asset:mob/0255.dependence_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0255.dependence_eye",Tags:["MobInit","Enemy","AlwaysInvisible","AlwaysSlowFall"]}
+    summon zombie ~ ~ ~ {Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0255.dependence_eye",Tags:["MobInit","Enemy","AlwaysInvisible"]}
 # ID (int)
     data modify storage asset:mob ID set value 255
 # Type (string) Wikiを参照
