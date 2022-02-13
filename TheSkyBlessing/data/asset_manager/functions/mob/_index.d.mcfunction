@@ -59,6 +59,7 @@
     #declare tag AlwaysInvisible
     #declare tag AlwaysSlowFall
     #declare tag AutoKillWhenDieVehicle
+    #declare tag AutoKillWhenDiePassenger
     #declare tag Frozen
     #declare tag Drown
 
