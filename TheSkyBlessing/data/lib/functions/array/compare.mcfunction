@@ -17,7 +17,7 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # 再帰的に動かす
-    execute if score $Index Temporary matches 1.. run function lib:array/core/compare
+    execute if data storage lib: Array[0] if data storage lib: Array2[0] run function lib:array/core/compare
 
 # リセット
     scoreboard players reset $Temp Temporary
