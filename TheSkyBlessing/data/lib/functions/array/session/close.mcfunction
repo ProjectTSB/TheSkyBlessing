@@ -11,5 +11,6 @@
     data remove storage lib: Array
     data remove storage lib: Elements
     data remove storage lib: Package
+    data remove storage lib: CompareResult
 # セッションフラグを消す
     data modify storage lib: ArrayLibSessionOpened set value false
