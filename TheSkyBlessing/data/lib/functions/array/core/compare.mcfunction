@@ -3,7 +3,7 @@
 #   lib:array/**compare
 
 # 比較/結果代入
-    data modify storage lib: Array append value -1
+    data modify storage lib: Array append value -1b
     execute store success score $Temp Temporary run data modify storage lib: ArrayA[-1] set from storage lib: ArrayB[-1]
     execute store success storage lib: Array[-1] byte 1 if score $Temp Temporary matches 0
 # 末尾削除
