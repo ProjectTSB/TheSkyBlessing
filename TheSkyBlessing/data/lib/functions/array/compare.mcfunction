@@ -19,5 +19,11 @@
 # 再帰的に動かす
     execute if data storage lib: Array[0] if data storage lib: Array2[0] run function lib:array/core/compare
 
+# 結果を反転
+    data modify storage lib: Array set from storage lib: CompareResult
+    function lib:array/reverse
+    data modify storage lib: CompareResult set from storage lib: Array
+
 # リセット
+    data remove storage lib: Array
     scoreboard players reset $Temp Temporary
