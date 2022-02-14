@@ -5,9 +5,9 @@
 # Array, Array2の要素の数は同一である必要があります。
 #
 # @input
-#   storage lib: Array: [any] @ N
+#   storage lib: ArrayA: [any] @ N
 #   操作する配列データ
-#   storage lib: Array2: [any] @ N
+#   storage lib: ArrayB: [any] @ N
 #   目的の要素のindex
 # @output
 #   storage lib: CompareResult: [boolean] @ N
@@ -20,7 +20,6 @@
     execute if data storage lib: Array[0] if data storage lib: Array2[0] run function lib:array/core/compare
 
 # 結果を反転
-    data modify storage lib: Array set from storage lib: CompareResult
     function lib:array/reverse
     data modify storage lib: CompareResult set from storage lib: Array
 
