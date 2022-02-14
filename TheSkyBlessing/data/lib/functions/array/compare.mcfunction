@@ -6,9 +6,9 @@
 #
 # @input
 #   storage lib: ArrayA: [any] @ N
-#   操作する配列データ
+#   比較配列A
 #   storage lib: ArrayB: [any] @ N
-#   目的の要素のindex
+#   比較配列B
 # @output
 #   storage lib: CompareResult: [boolean] @ N
 # @api
