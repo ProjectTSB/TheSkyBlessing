@@ -8,13 +8,11 @@
     function asset_manager:sacred_treasure/data/old/set_to_current
 # 全スロットを参照できるidを作る
     data modify storage asset:context id.all set from storage asset:context id
-# 変更があるかチェック
-    execute if entity @s[tag=!ChangeMainhand] run data modify storage asset:context id.mainhand set value -1
-    execute if entity @s[tag=!ChangeOffhand] run data modify storage asset:context id.offhand set value -1
-    execute if entity @s[tag=!ChangeHead] run data modify storage asset:context id.head set value -1
-    execute if entity @s[tag=!ChangeChest] run data modify storage asset:context id.chest set value -1
-    execute if entity @s[tag=!ChangeLegs] run data modify storage asset:context id.legs set value -1
-    execute if entity @s[tag=!ChangeFeet] run data modify storage asset:context id.feet set value -1
+# 変更のなかったスロットをマスクする
+    function asset_manager:sacred_treasure/triggers/equipments/mask_slot/
+    tellraw @a [{"text":"dis_equip: "}]
+    tellraw @a [{"text":"  m: "},{"storage":"asset:context","nbt":"id.mainhand"},{"text":", o: "},{"storage":"asset:context","nbt":"id.offhand"},{"text":", h: "},{"storage":"asset:context","nbt":"id.head"},{"text":", c: "},{"storage":"asset:context","nbt":"id.chest"},{"text":", l: "},{"storage":"asset:context","nbt":"id.legs"},{"text":", f: "},{"storage":"asset:context","nbt":"id.feet"}]
+    tellraw @a [{"text":"  hotbar: "},{"storage":"asset:context","nbt":"id.hotbar"}]
 # 神器側に受け渡し
     function #asset:sacred_treasure/dis_equip
 # イベント発火後に実行するやつ

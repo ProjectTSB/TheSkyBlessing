@@ -60,15 +60,6 @@
 # @within * asset:sacred_treasure/**
     #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
 
-#> 防具変更情報の記録用タグ
-# @within function asset_manager:sacred_treasure/triggers/**
-    #declare tag ChangeMainhand
-    #declare tag ChangeOffhand
-    #declare tag ChangeHead
-    #declare tag ChangeChest
-    #declare tag ChangeLegs
-    #declare tag ChangeFeet
-
 #> クールダウン表示用
 # @within function asset_manager:sacred_treasure/show_cooldown/*
     #declare score_holder $CoolDown

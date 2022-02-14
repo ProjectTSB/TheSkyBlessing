@@ -20,6 +20,25 @@
     data modify storage asset:context New.Items.legs set from storage asset:context New.Inventory[{Slot:101b}]
     data modify storage asset:context New.Items.chest set from storage asset:context New.Inventory[{Slot:102b}]
     data modify storage asset:context New.Items.head set from storage asset:context New.Inventory[{Slot:103b}]
+
+    execute if data storage asset:context New.Inventory[{Slot:0b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:0b}]
+    execute unless data storage asset:context New.Inventory[{Slot:0b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:0b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:1b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:1b}]
+    execute unless data storage asset:context New.Inventory[{Slot:1b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:1b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:2b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:2b}]
+    execute unless data storage asset:context New.Inventory[{Slot:2b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:2b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:3b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:3b}]
+    execute unless data storage asset:context New.Inventory[{Slot:3b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:3b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:4b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:4b}]
+    execute unless data storage asset:context New.Inventory[{Slot:4b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:4b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:5b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:5b}]
+    execute unless data storage asset:context New.Inventory[{Slot:5b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:5b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:6b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:6b}]
+    execute unless data storage asset:context New.Inventory[{Slot:6b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:6b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:7b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:7b}]
+    execute unless data storage asset:context New.Inventory[{Slot:7b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:7b,tag:{TSB:{ID:-2}}}
+    execute if data storage asset:context New.Inventory[{Slot:8b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:8b}]
+    execute unless data storage asset:context New.Inventory[{Slot:8b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:8b,tag:{TSB:{ID:-2}}}
 # NullCheck
     execute unless data storage asset:context New.Items.mainhand run data modify storage asset:context New.Items.mainhand set value {}
     execute unless data storage asset:context New.Items.offhand run data modify storage asset:context New.Items.offhand set value {}
@@ -34,3 +53,4 @@
     data modify storage asset:context New.id.legs set from storage asset:context New.Items.legs.tag.TSB.ID
     data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.tag.TSB.ID
     data modify storage asset:context New.id.head set from storage asset:context New.Items.head.tag.TSB.ID
+    data modify storage asset:context New.id.hotbar append from storage asset:context New.Items.hotbar[].tag.TSB.ID
