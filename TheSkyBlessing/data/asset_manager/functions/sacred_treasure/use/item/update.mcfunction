@@ -25,6 +25,7 @@
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run loot replace entity @s armor.legs 1 mine 10000 0 10000 debug_stick
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run loot replace entity @s armor.chest 1 mine 10000 0 10000 debug_stick
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run loot replace entity @s armor.head 1 mine 10000 0 10000 debug_stick
+    # TODO ホットバースロットの神器更新処理
 # current更新
     function asset_manager:sacred_treasure/data/current/update/
 # リセット

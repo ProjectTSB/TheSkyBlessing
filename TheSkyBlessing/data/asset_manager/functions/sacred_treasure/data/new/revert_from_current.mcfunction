@@ -12,7 +12,7 @@
     execute unless data storage asset:context id{chest:-1} run data modify storage asset:context New.id.chest set from storage asset:context id.chest
     execute unless data storage asset:context id{head:-1} run data modify storage asset:context New.id.head set from storage asset:context id.head
     # TODO id.hotbar[i]が-1で無いものをNew.id.hotbar[i]に移す
-    
+
 # 新しいデータを一つ上の階層に上げる
     data modify storage asset:context New.Items set from storage asset:context Items
     data modify storage asset:context New.Inventory set from storage asset:context Inventory

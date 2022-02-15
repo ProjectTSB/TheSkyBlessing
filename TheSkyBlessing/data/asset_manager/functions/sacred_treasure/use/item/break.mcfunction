@@ -17,6 +17,7 @@
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run item replace entity @s armor.legs with air
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run item replace entity @s armor.chest with air
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run item replace entity @s armor.head with air
+    # TODO ホットバースロットの神器削除処理
 # データ削除
     data remove storage asset:sacred_treasure Item
 # current更新

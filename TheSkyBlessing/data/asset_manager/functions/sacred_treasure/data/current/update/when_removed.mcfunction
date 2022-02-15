@@ -30,3 +30,5 @@ execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run da
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data modify storage asset:context Items.head set value {}
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data remove storage asset:context id.head
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data remove storage asset:context id.all.head
+
+# TODO ホットバースロットの神器削除時のcontext更新処理

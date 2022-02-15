@@ -26,3 +26,4 @@
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run data modify storage asset:sacred_treasure Item set from storage asset:context Items.legs
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run data modify storage asset:sacred_treasure Item set from storage asset:context Items.chest
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data modify storage asset:sacred_treasure Item set from storage asset:context Items.head
+    # TODO ホットバースロットを神器データ取得処理

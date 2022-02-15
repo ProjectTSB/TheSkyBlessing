@@ -10,3 +10,4 @@ execute if data storage asset:sacred_treasure {TargetDefaultSlot:"feet"} run dat
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run data modify storage asset:context Items.legs set from storage asset:sacred_treasure Item
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"chest"} run data modify storage asset:context Items.chest set from storage asset:sacred_treasure Item
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data modify storage asset:context Items.head set from storage asset:sacred_treasure Item
+# TODO ホットバースロット神器更新時のcontext更新処理
