@@ -10,9 +10,6 @@
     data modify storage asset:context id.all set from storage asset:context id
 # 変更のなかったスロットをマスクする
     function asset_manager:sacred_treasure/triggers/equipments/mask_slot/
-    tellraw @a [{"text":"equip: "}]
-    tellraw @a [{"text":"  m: "},{"storage":"asset:context","nbt":"id.mainhand"},{"text":", o: "},{"storage":"asset:context","nbt":"id.offhand"},{"text":", h: "},{"storage":"asset:context","nbt":"id.head"},{"text":", c: "},{"storage":"asset:context","nbt":"id.chest"},{"text":", l: "},{"storage":"asset:context","nbt":"id.legs"},{"text":", f: "},{"storage":"asset:context","nbt":"id.feet"}]
-    tellraw @a [{"text":"  hotbar: "},{"storage":"asset:context","nbt":"id.hotbar"}]
 # 神器側に受け渡し
     function #asset:sacred_treasure/equip
 # イベント発火後に実行するやつ
