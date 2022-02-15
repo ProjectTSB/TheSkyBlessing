@@ -22,23 +22,23 @@
     data modify storage asset:context New.Items.head set from storage asset:context New.Inventory[{Slot:103b}]
 
     execute if data storage asset:context New.Inventory[{Slot:0b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:0b}]
-    execute unless data storage asset:context New.Inventory[{Slot:0b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:0b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:0b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:0b}
     execute if data storage asset:context New.Inventory[{Slot:1b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:1b}]
-    execute unless data storage asset:context New.Inventory[{Slot:1b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:1b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:1b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:1b}
     execute if data storage asset:context New.Inventory[{Slot:2b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:2b}]
-    execute unless data storage asset:context New.Inventory[{Slot:2b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:2b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:2b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:2b}
     execute if data storage asset:context New.Inventory[{Slot:3b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:3b}]
-    execute unless data storage asset:context New.Inventory[{Slot:3b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:3b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:3b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:3b}
     execute if data storage asset:context New.Inventory[{Slot:4b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:4b}]
-    execute unless data storage asset:context New.Inventory[{Slot:4b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:4b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:4b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:4b}
     execute if data storage asset:context New.Inventory[{Slot:5b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:5b}]
-    execute unless data storage asset:context New.Inventory[{Slot:5b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:5b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:5b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:5b}
     execute if data storage asset:context New.Inventory[{Slot:6b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:6b}]
-    execute unless data storage asset:context New.Inventory[{Slot:6b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:6b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:6b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:6b}
     execute if data storage asset:context New.Inventory[{Slot:7b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:7b}]
-    execute unless data storage asset:context New.Inventory[{Slot:7b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:7b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:7b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:7b}
     execute if data storage asset:context New.Inventory[{Slot:8b}] run data modify storage asset:context New.Items.hotbar append from storage asset:context New.Inventory[{Slot:8b}]
-    execute unless data storage asset:context New.Inventory[{Slot:8b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:8b,tag:{TSB:{ID:-2}}}
+    execute unless data storage asset:context New.Inventory[{Slot:8b}] run data modify storage asset:context New.Items.hotbar append value {id:"none",Slot:8b}
 # NullCheck
     execute unless data storage asset:context New.Items.mainhand run data modify storage asset:context New.Items.mainhand set value {}
     execute unless data storage asset:context New.Items.offhand run data modify storage asset:context New.Items.offhand set value {}
@@ -46,6 +46,22 @@
     execute unless data storage asset:context New.Items.legs run data modify storage asset:context New.Items.legs set value {}
     execute unless data storage asset:context New.Items.chest run data modify storage asset:context New.Items.chest set value {}
     execute unless data storage asset:context New.Items.head run data modify storage asset:context New.Items.head set value {}
+# 非TSBアイテムのNullCheck
+    execute unless data storage asset:context New.Items.mainhand.tag.TSB run data modify storage asset:context New.Items.mainhand.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.offhand.tag.TSB run data modify storage asset:context New.Items.offhand.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.feet.tag.TSB run data modify storage asset:context New.Items.feet.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.legs.tag.TSB run data modify storage asset:context New.Items.legs.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.chest.tag.TSB run data modify storage asset:context New.Items.chest.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.head.tag.TSB run data modify storage asset:context New.Items.head.tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:0b}].tag.TSB run data modify storage asset:context New.Items[{Slot:0b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:1b}].tag.TSB run data modify storage asset:context New.Items[{Slot:1b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:2b}].tag.TSB run data modify storage asset:context New.Items[{Slot:2b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:3b}].tag.TSB run data modify storage asset:context New.Items[{Slot:3b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:4b}].tag.TSB run data modify storage asset:context New.Items[{Slot:4b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:5b}].tag.TSB run data modify storage asset:context New.Items[{Slot:5b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:6b}].tag.TSB run data modify storage asset:context New.Items[{Slot:6b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:7b}].tag.TSB run data modify storage asset:context New.Items[{Slot:7b}].tag.TSB append value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items[{Slot:8b}].tag.TSB run data modify storage asset:context New.Items[{Slot:8b}].tag.TSB append value {ID:-2,UUID:-2}
 # id
     data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
     data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID

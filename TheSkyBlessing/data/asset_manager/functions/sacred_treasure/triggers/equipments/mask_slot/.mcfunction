@@ -5,18 +5,12 @@
 # @within function asset_manager:sacred_treasure/triggers/*equip
 
 # 元配列
-    execute if data storage asset:context id.mainhand run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.mainhand
-    execute unless data storage asset:context id.mainhand run data modify storage asset:sacred_treasure Equipments append value -2
-    execute if data storage asset:context id.offhand run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.offhand
-    execute unless data storage asset:context id.offhand run data modify storage asset:sacred_treasure Equipments append value -2
-    execute if data storage asset:context id.feet run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.feet
-    execute unless data storage asset:context id.feet run data modify storage asset:sacred_treasure Equipments append value -2
-    execute if data storage asset:context id.legs run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.legs
-    execute unless data storage asset:context id.legs run data modify storage asset:sacred_treasure Equipments append value -2
-    execute if data storage asset:context id.chest run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.chest
-    execute unless data storage asset:context id.chest run data modify storage asset:sacred_treasure Equipments append value -2
-    execute if data storage asset:context id.head run data modify storage asset:sacred_treasure Equipments append from storage asset:context id.head
-    execute unless data storage asset:context id.head run data modify storage asset:sacred_treasure Equipments append value -2
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.mainhand
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.offhand
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.feet
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.legs
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.chest
+    data modify storage asset:sacred_treasure Equipments append from storage asset:context id.head
     data modify storage asset:sacred_treasure Equipments append from storage asset:context id.hotbar[]
 
     data modify storage asset:sacred_treasure CopiedEquipChanges set from storage asset:sacred_treasure EquipmentChanges
