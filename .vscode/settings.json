@@ -48,6 +48,10 @@
             {
                 "label": "uuid",
                 "parts": "/^uuid$/"
+            },
+            {
+                "label": "_",
+                "parts": "/^_$/"
             }
         ]
     ],
