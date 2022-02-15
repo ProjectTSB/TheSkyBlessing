@@ -53,15 +53,15 @@
     execute unless data storage asset:context New.Items.legs.tag.TSB run data modify storage asset:context New.Items.legs.tag.TSB set value {ID:-2,UUID:-2}
     execute unless data storage asset:context New.Items.chest.tag.TSB run data modify storage asset:context New.Items.chest.tag.TSB set value {ID:-2,UUID:-2}
     execute unless data storage asset:context New.Items.head.tag.TSB run data modify storage asset:context New.Items.head.tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:0b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:0b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:1b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:1b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:2b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:2b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:3b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:3b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:4b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:4b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:5b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:5b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:6b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:6b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:7b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:7b}].tag.TSB set value {ID:-2,UUID:-2}
-    execute unless data storage asset:context New.Items.hotbar[{Slot:8b}].tag.TSB run data modify storage asset:context New.Items.hotbar[{Slot:8b}].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[0].tag.TSB run data modify storage asset:context New.Items.hotbar[0].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[1].tag.TSB run data modify storage asset:context New.Items.hotbar[1].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[2].tag.TSB run data modify storage asset:context New.Items.hotbar[2].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[3].tag.TSB run data modify storage asset:context New.Items.hotbar[3].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[4].tag.TSB run data modify storage asset:context New.Items.hotbar[4].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[5].tag.TSB run data modify storage asset:context New.Items.hotbar[5].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[6].tag.TSB run data modify storage asset:context New.Items.hotbar[6].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[7].tag.TSB run data modify storage asset:context New.Items.hotbar[7].tag.TSB set value {ID:-2,UUID:-2}
+    execute unless data storage asset:context New.Items.hotbar[8].tag.TSB run data modify storage asset:context New.Items.hotbar[8].tag.TSB set value {ID:-2,UUID:-2}
 # id
     data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
     data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID
