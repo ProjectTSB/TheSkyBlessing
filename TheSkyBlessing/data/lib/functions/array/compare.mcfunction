@@ -10,7 +10,7 @@
 #   storage lib: ArrayB: [any] @ N
 #   比較配列B
 # @output
-#   storage lib: CompareResult: [boolean] @ N
+#   storage lib: CompareResult: [{ _: { _: boolean } }] @ N
 # @api
 
 # セッションチェック
