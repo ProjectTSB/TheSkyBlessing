@@ -5,12 +5,12 @@
 # Array, Array2の要素の数は同一である必要があります。
 #
 # @input
-#   storage lib: Array: [any] @ N
-#   操作する配列データ
-#   storage lib: Array2: [any] @ N
-#   目的の要素のindex
+#   storage lib: ArrayA: [any] @ N
+#   比較配列A
+#   storage lib: ArrayB: [any] @ N
+#   比較配列B
 # @output
-#   storage lib: CompareResult: [boolean] @ N
+#   storage lib: CompareResult: [{ _: { _: boolean } }] @ N
 # @api
 
 # セッションチェック
@@ -19,5 +19,10 @@
 # 再帰的に動かす
     execute if data storage lib: Array[0] if data storage lib: Array2[0] run function lib:array/core/compare
 
+# 結果を反転
+    function lib:array/reverse
+    data modify storage lib: CompareResult set from storage lib: Array
+
 # リセット
+    data remove storage lib: Array
     scoreboard players reset $Temp Temporary
