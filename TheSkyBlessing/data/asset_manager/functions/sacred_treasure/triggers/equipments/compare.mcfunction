@@ -13,27 +13,25 @@
 # セッション開く
     function lib:array/session/open
 # データ設定
-    data modify storage lib: Array append from storage asset:context New.Items.mainhand.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.offhand.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.feet.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.legs.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.chest.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.head.tag.TSB.UUID
-    data modify storage lib: Array append from storage asset:context New.Items.hotbar[].tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.mainhand.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.offhand.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.feet.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.legs.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.chest.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.head.tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.hotbar[].tag.TSB.UUID
 
-    data modify storage lib: Array2 append from storage asset:context Old.Items.mainhand.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.offhand.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.feet.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.legs.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.chest.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.head.tag.TSB.UUID
-    data modify storage lib: Array2 append from storage asset:context Old.Items.hotbar[].tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.mainhand.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.offhand.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.feet.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.legs.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.chest.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.head.tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.hotbar[].tag.TSB.UUID
 # 比較
     function lib:array/compare
 # 比較結果を保存する
-    data modify storage lib: Array set from storage lib: CompareResult
-    function lib:array/reverse
-    data modify storage asset:sacred_treasure EquipmentChanges set from storage lib: Array
+    data modify storage asset:sacred_treasure EquipmentChanges set from storage lib: CompareResult
 # リセット
     function lib:array/session/close
     scoreboard players reset $Temp Temporary
