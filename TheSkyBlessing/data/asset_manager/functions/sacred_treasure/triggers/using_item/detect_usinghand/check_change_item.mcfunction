@@ -11,15 +11,15 @@
     #declare score_holder $slotNotEqual
 
 # mainhandのアイテムid比較
-    data modify storage asset:sacred_treasure Temp set from storage asset:context Items.mainhand.id
+    data modify storage asset:sacred_treasure Temp set from storage asset:context New.Items.mainhand.id
     execute store success score $idNotEqualM Temporary run data modify storage asset:sacred_treasure Temp set from storage asset:context Old.Items.mainhand.id
     data modify storage asset:sacred_treasure Temp set value {}
 # offhandのアイテムid比較
-    data modify storage asset:sacred_treasure Temp set from storage asset:context Items.offhand.id
+    data modify storage asset:sacred_treasure Temp set from storage asset:context New.Items.offhand.id
     execute store success score $idNotEqualO Temporary run data modify storage asset:sacred_treasure Temp set from storage asset:context Old.Items.offhand.id
     data modify storage asset:sacred_treasure Temp set value {}
 # mainhandのアイテムslot比較
-    data modify storage asset:sacred_treasure Temp set from storage asset:context SelectedItemSlot
+    data modify storage asset:sacred_treasure Temp set from storage asset:context New.SelectedItemSlot
     execute store success score $slotNotEqual Temporary run data modify storage asset:sacred_treasure Temp set from storage asset:context Old.SelectedItemSlot
 
 # 比較結果から判別tag付与

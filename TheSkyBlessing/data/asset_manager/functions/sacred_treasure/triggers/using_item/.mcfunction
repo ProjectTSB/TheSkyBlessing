@@ -4,12 +4,13 @@
 #
 # @within function asset_manager:sacred_treasure/triggers/
 
-# イベント発火前に実行するやつ
-    function asset_manager:sacred_treasure/data/new/set_to_current
-# スロット毎のチェック
-    function asset_manager:sacred_treasure/triggers/using_item/reset_when_change_item
 # 使用している手を判別する
     function asset_manager:sacred_treasure/triggers/using_item/detect_usinghand/
+# イベント発火前に実行するやつ
+    function asset_manager:sacred_treasure/data/new/set_to_current
+    data modify storage asset:context New.id.auto set from storage asset:context id.auto
+# スロット毎のチェック
+    function asset_manager:sacred_treasure/triggers/using_item/reset_when_change_item
 # asset:contextにアイテムを使用している時間を設定する
     function asset_manager:sacred_treasure/triggers/using_item/set_context
 # 神器側に受け渡し
@@ -45,6 +46,7 @@
         execute if score @s UsingItem matches 200.. run function #asset:sacred_treasure/using_item/keep/10s
 
     # 単発トリガー類
+
         scoreboard players set $UsingItemThreshold Temporary 1
         function asset_manager:sacred_treasure/triggers/using_item/reset_value_not-equal
         function #asset:sacred_treasure/using_item/
