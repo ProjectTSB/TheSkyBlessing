@@ -34,3 +34,5 @@
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
     function api:player_modifier/defense/water/add
+
+    function asset:sacred_treasure/0651.red_flame_chestplate/trigger/fullset/fullset

@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0651.red_flame_chestplate/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add I3.BeamCool dummy
