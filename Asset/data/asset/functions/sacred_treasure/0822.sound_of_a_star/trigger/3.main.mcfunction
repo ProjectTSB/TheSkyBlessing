@@ -27,15 +27,15 @@
     playsound minecraft:block.bell.resonate player @a ~ ~ ~ 0.8 0.5
 
 # 星を召喚 MP割合によって個数変化
-    summon marker ~ ~1.8 ~ {Tags:["MU.Star"]}
+    summon marker ~ ~1.8 ~ {Tags:["MU.Star","Projectile"]}
     execute positioned ~ ~1.8 ~ run tp @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] ^ ^ ^0.5 ~ ~
     scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
 
-    execute if score $MPValue Temporary matches 34.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.2"]}
+    execute if score $MPValue Temporary matches 34.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.2","Projectile"]}
     execute if score $MPValue Temporary matches 34.. positioned ~ ~1.3 ~ run tp @e[type=marker,tag=MU.Star,tag=MU.2,distance=..0.01,sort=nearest,limit=1] ^0.4 ^ ^0.5 ~ ~
     execute if score $MPValue Temporary matches 34.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
 
-    execute if score $MPValue Temporary matches 67.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.3"]}
+    execute if score $MPValue Temporary matches 67.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.3","Projectile"]}
     execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run tp @e[type=marker,tag=MU.Star,tag=MU.3,distance=..0.01,sort=nearest,limit=1] ^-0.4 ^ ^0.5 ~ ~
     execute if score $MPValue Temporary matches 67.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
 
