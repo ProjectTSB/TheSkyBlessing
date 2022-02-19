@@ -12,7 +12,7 @@
     playsound ogg:mob.blaze.breathe3 master @s ~ ~ ~ 1 0.8
 
 # 防御力
-    attribute @s generic.armor modifier add 00000001-0000-0001-0000-028c00000004 "1-1-652-6" 4 add
+    attribute @s generic.armor modifier add 00000001-0000-0001-0000-028c00000004 "1-1-652-6" 7 add
     attribute @s generic.armor_toughness modifier add 00000001-0000-0001-0000-028c00000004 "1-1-652-6" 5 add
 
 # 引数の設定

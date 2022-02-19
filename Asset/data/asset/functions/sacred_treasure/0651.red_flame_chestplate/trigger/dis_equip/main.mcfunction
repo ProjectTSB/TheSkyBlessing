@@ -6,13 +6,13 @@
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,641,5]
+        data modify storage api: Argument.UUID set value [I;1,1,651,5]
 # 補正の追加
     function api:player_modifier/defense/fire/remove
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,641,5]
+        data modify storage api: Argument.UUID set value [I;1,1,651,5]
 # 補正の追加
     function api:player_modifier/defense/water/remove
 
@@ -22,3 +22,5 @@
 
 # フルセット効果を外す
     tag @s remove I3.Fullset
+
+    say a

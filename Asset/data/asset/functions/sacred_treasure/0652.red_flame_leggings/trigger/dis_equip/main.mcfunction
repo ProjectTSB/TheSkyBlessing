@@ -6,13 +6,13 @@
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,642,4]
+        data modify storage api: Argument.UUID set value [I;1,1,652,4]
 # 補正の追加
     function api:player_modifier/defense/fire/remove
 
 # 引数の設定
     # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,642,4]
+        data modify storage api: Argument.UUID set value [I;1,1,652,4]
 # 補正の追加
     function api:player_modifier/defense/water/remove
 
