@@ -23,4 +23,4 @@
     data modify storage asset:context id.offhand set from storage asset:sacred_treasure NewEquips[13]
     data modify storage asset:context id.mainhand set from storage asset:sacred_treasure NewEquips[14]
 # リセット
-    data remove storage asset:context NewEquips
+    data remove storage asset:sacred_treasure NewEquips

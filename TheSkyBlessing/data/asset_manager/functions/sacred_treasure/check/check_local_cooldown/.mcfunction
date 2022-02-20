@@ -11,7 +11,7 @@
 # 時間を取得
     execute store result score $Tick Temporary run time query gametime
 # データをコピー
-    data modify storage asset:sacred_treasure CopiedItem set from storage asset:context Item
+    data modify storage asset:sacred_treasure CopiedItem set from storage asset:sacred_treasure Item
 # すべての要素についてチェックする
     function asset_manager:sacred_treasure/check/check_local_cooldown/foreach
 # リセット
