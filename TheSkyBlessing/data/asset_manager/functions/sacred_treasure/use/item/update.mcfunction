@@ -9,7 +9,9 @@
 # データ更新処理
     data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure TargetItems[-1].tag.TSB.rawName
     # 残り回数が存在する場合
+        execute if data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run data modify storage asset:sacred_treasure Item set from storage asset:sacred_treasure TargetItems[-1]
         execute if data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/get_name/has_remain
+        execute if data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run data remove storage asset:sacred_treasure Item
     # 残り回数が存在しない場合
         execute unless data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/get_name/
     # 不要な破壊的変更を阻止するためにコピーして生成する
