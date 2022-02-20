@@ -9,6 +9,8 @@
     #declare score_holder $LatestUsedTick
     #declare score_holder $Cooldown
 
+# 時間を取得
+    execute store result score $Tick Temporary run time query gametime
 # 最後に使用したtickとLocalCooldownを取得
     execute store result score $LatestUsedTick Temporary run data get storage asset:sacred_treasure CopiedItem[-1].tag.TSB.LatestUseTick
     execute store result score $Cooldown Temporary run data get storage asset:sacred_treasure CopiedItem[-1].tag.TSB.LocalCooldown
