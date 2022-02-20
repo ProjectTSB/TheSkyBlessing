@@ -11,10 +11,10 @@
     #declare score_holder $isMPEnough
 
 # MP必要量を取得
-    execute if data storage asset:sacred_treasure Item[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item[-1].tag.TSB.MPRequire
-    execute unless data storage asset:sacred_treasure Item[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item[-1].tag.TSB.MPCost
+    execute if data storage asset:sacred_treasure TargetItems[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure TargetItems[-1].tag.TSB.MPRequire
+    execute unless data storage asset:sacred_treasure TargetItems[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure TargetItems[-1].tag.TSB.MPCost
 # アイテム数だけ増やす
-    execute store result score $Length Temporary if data storage asset:sacred_treasure Item[]
+    execute store result score $Length Temporary if data storage asset:sacred_treasure TargetItems[]
     scoreboard players operation $CheckMP Temporary *= $Length Temporary
 # チェック
     execute store result score $isMPEnough Temporary run function lib:mp/check

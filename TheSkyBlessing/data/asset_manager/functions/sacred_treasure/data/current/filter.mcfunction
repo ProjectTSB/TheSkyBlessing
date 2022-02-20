@@ -14,7 +14,7 @@
     data modify storage asset:sacred_treasure Temp set from storage asset:sacred_treasure TargetID
     execute store success score $nonIDEquals Temporary run data modify storage asset:sacred_treasure Temp set from storage asset:sacred_treasure HotbarItems[-1].tag.TSB.ID
 # 一致してたら追加
-    execute if score $nonIDEquals Temporary matches 0 run data modify storage asset:sacred_treasure Item append from storage asset:sacred_treasure HotbarItems[-1]
+    execute if score $nonIDEquals Temporary matches 0 run data modify storage asset:sacred_treasure TargetItems append from storage asset:sacred_treasure HotbarItems[-1]
 # リセット
     scoreboard players reset $nonIDEquals Temporary
     data remove storage asset:sacred_treasure Temp
