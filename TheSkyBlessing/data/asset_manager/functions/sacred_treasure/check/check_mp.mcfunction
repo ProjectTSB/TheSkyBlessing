@@ -6,15 +6,21 @@
 
 #> Private
 # @private
+    #declare score_holder $Length
     #declare score_holder $CheckMP
-    #declare score_holder $CheckMPRes
+    #declare score_holder $isMPEnough
 
 # MP必要量を取得
-    execute if data storage asset:sacred_treasure Item.tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPRequire
-    execute unless data storage asset:sacred_treasure Item.tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item.tag.TSB.MPCost
+    execute if data storage asset:sacred_treasure Item[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item[-1].tag.TSB.MPRequire
+    execute unless data storage asset:sacred_treasure Item[0].tag.TSB.MPRequire store result score $CheckMP Lib run data get storage asset:sacred_treasure Item[-1].tag.TSB.MPCost
+# アイテム数だけ増やす
+    execute store result score $Length Temporary if data storage asset:sacred_treasure Item[]
+    scoreboard players operation $CheckMP Temporary *= $Length Temporary
 # チェック
-    execute store result score $CheckMPRes Temporary run function lib:mp/check
+    execute store result score $isMPEnough Temporary run function lib:mp/check
 # タグ付与
-    execute if score $CheckMPRes Temporary matches 0 run tag @s add CheckFailed
+    execute if score $isMPEnough Temporary matches 0 run tag @s add CheckFailed
 # リセット
-    scoreboard players reset $CheckMPRes Temporary
+    scoreboard players reset $Length Temporary
+    scoreboard players reset $CheckMP Temporary
+    scoreboard players reset $isMPEnough Temporary

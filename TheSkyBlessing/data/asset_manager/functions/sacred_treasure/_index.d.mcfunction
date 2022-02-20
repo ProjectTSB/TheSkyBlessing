@@ -6,6 +6,7 @@
 #   asset_manager:sacred_treasure/**
 #   asset:sacred_treasure/*/register
 #   asset:sacred_treasure/*/give/2.give
+#   asset:sacred_treasure/*/trigger/2.check_condition
 #   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
@@ -33,7 +34,7 @@
 
 #> check用の失敗フラグ
 # @within function
-#   asset_manager:sacred_treasure/check/*
+#   asset_manager:sacred_treasure/check/**
     #declare tag CheckFailed
 
 #> スニークの閾値用スコアホルダー
