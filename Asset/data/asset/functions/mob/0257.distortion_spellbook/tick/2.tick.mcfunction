@@ -1,8 +1,8 @@
-#> asset:mob/0257.book_of_transfer/tick/2.tick
+#> asset:mob/0257.distortion_spellbook/tick/2.tick
 #
 # Mobのtick時の処理
 #
-# @within function asset:mob/0257.book_of_transfer/tick/1.trigger
+# @within function asset:mob/0257.distortion_spellbook/tick/1.trigger
 
 
 
@@ -20,7 +20,7 @@
 # スコア増やす
     scoreboard players add @s 75.CoolTime 1
 # プレイヤーが周囲にいてスコア達したら実行
-    execute if score @s 75.CoolTime matches 90.. if entity @p[gamemode=!spectator,distance=..20] run function asset:mob/0257.book_of_transfer/tick/3.teleporter_set
+    execute if score @s 75.CoolTime matches 90.. if entity @p[gamemode=!spectator,distance=..20] run function asset:mob/0257.distortion_spellbook/tick/3.teleporter_set
 # プレイヤーが周囲にいない状態でスコア達したらスコア戻す
     execute if score @s 75.CoolTime matches 90.. unless entity @p[gamemode=!spectator,distance=..20] run scoreboard players set @s 75.CoolTime 0
 

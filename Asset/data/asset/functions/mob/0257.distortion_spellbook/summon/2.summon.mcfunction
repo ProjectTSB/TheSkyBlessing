@@ -1,11 +1,11 @@
-#> asset:mob/0257.book_of_transfer/summon/2.summon
+#> asset:mob/0257.distortion_spellbook/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0257.book_of_transfer/summon/1.trigger
+# @within function asset:mob/0257.distortion_spellbook/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],NoAI:1b,Silent:1b,DeathLootTable:"asset:mob/death/0257.book_of_transfer"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],NoAI:1b,Silent:1b,DeathLootTable:"asset:mob/death/0257.distortion_spellbook"}
 # ID (int)
     data modify storage asset:mob ID set value 257
 # Type (string) Wikiを参照
@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    # data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set value '{"text":"歪みの魔導書","color":"dark_purple","underlined":true}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value

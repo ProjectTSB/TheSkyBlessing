@@ -1,8 +1,8 @@
-#> asset:mob/0257.book_of_transfer/tick/3.teleporter_set
+#> asset:mob/0257.distortion_spellbook/tick/3.teleporter_set
 #
 #
 #
-# @within function asset:mob/0257.book_of_transfer/tick/2.tick
+# @within function asset:mob/0257.distortion_spellbook/tick/2.tick
 
 # プレイヤー位置にテレポーター召喚
     data modify storage api: Argument.ID set value 258

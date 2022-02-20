@@ -1,7 +1,7 @@
 {
     "values": [
         "asset:mob/0258.enemy_teleporter/summon/1.trigger",
-        "asset:mob/0257.book_of_transfer/summon/1.trigger",
+        "asset:mob/0257.distortion_spellbook/summon/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/summon/1.trigger",
         "asset:mob/0219.aorta/summon/1.trigger",

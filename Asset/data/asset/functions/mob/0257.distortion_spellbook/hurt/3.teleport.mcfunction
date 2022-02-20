@@ -1,8 +1,8 @@
-#> asset:mob/0257.book_of_transfer/hurt/3.teleport
+#> asset:mob/0257.distortion_spellbook/hurt/3.teleport
 #
 #
 #
-# @within function asset:mob/0257.book_of_transfer/hurt/2.hurt
+# @within function asset:mob/0257.distortion_spellbook/hurt/2.hurt
 
 # ランダムテレポート
     data modify storage lib: Argument.Bounds set value [[5d,5d],[0d,2d],[5d,5d]]
