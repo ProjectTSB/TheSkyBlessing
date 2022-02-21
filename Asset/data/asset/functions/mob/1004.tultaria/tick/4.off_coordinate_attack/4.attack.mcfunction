@@ -33,6 +33,6 @@
     execute positioned ~-4.33013 ~ ~-2.5 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
     execute positioned ~-2.5 ~ ~-4.33013 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
 
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0 0

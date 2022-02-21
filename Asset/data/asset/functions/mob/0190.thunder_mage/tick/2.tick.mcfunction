@@ -7,9 +7,6 @@
 # パーティクル
     particle minecraft:falling_dust yellow_terracotta ~ ~1 ~ 0.1 0 0.1 0 1
 
-# 足がない！！！！
-    effect give @s slow_falling 1 0 true
-
 # スコアを増やす
     scoreboard players add @s 5A.Tick 1
 

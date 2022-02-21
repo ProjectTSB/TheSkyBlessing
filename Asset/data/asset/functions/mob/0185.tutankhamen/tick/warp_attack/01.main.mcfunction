@@ -9,4 +9,4 @@
     particle witch ~ ~1.2 ~ 0.4 0.4 0.4 0 10 normal @a
 
 # ワープ
-    execute if score @s 55.Tick matches 150.. run function asset:mob/0185.tutankhamen/tick/warp_attack/02.warp
+    execute if score @s 55.Tick matches 130.. run function asset:mob/0185.tutankhamen/tick/warp_attack/02.warp

@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # Y座標が0未満のみ処理
-    execute if entity @s[y=0,dy=255] run tag @s remove CanUsed
+    execute unless predicate lib:is_void run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0164.blessing_boots/trigger/3.main
