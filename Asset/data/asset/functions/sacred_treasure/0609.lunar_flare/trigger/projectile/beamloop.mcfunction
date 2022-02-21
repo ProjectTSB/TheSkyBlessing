@@ -8,7 +8,7 @@
 # ここから先は神器側の効果の処理を書く
 
 
-# 2回実行させる早くなるため
+# 2回実行して早くする
     function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beam
     function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beam
 

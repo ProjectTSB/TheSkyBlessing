@@ -24,7 +24,7 @@
     # ユーザーIDを適応
         scoreboard players operation @e[type=armor_stand,tag=GX.First] GX.UserID = @s GX.UserID
     # 分散させる。着弾点がまとまる
-        execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @e[type=armor_stand,tag=GX.First] ^ ^ ^-17 ~ ~
+        execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @e[type=armor_stand,tag=GX.First] ^ ^ ^-17.2 ~ ~
     # タグを消す
         tag @e[type=armor_stand,tag=GX.First] remove GX.First
 
