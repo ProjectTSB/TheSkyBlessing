@@ -4,9 +4,6 @@
 #
 # @within function asset_manager:sacred_treasure/use/item/has_remain
 
-# クールダウン表示を消す
-    scoreboard players set @s WeaponLogCD 0
-    scoreboard players set @s WeaponLogCDMax 0
 # 音
     playsound entity.item.break player @a
 # そのスロットを消し飛ばす

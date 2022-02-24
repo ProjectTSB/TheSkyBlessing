@@ -62,5 +62,5 @@
     #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
 
 #> クールダウン表示用
-# @within function asset_manager:sacred_treasure/show_cooldown/*
-    #declare score_holder $CoolDown
+# @within function asset_manager:sacred_treasure/cooldown/main_bar/*
+    #declare score_holder $Cooldown

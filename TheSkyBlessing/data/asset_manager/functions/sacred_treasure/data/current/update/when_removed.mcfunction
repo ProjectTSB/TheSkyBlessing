@@ -35,7 +35,7 @@ execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run dat
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data modify storage asset:context id.head set value -2
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"head"} run data modify storage asset:context id.all.head set value -2
 
-
+# TODO mainhand -> hotbarを作る
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"hotbar"} run data modify storage asset:sacred_treasure TargetHotbarSlot set from storage asset:sacred_treasure TargetItems[-1].Slot
 
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"hotbar"} if data storage asset:sacred_treasure {TargetHotbarSlot:0b} run data modify storage asset:context Items.hotbar[0] set value {tag:{TSB:{ID:-2,UUID:-2}}}

@@ -6,6 +6,8 @@
 #   asset_manager:sacred_treasure/use/item/*
 #   asset_manager:sacred_treasure/use/item/has_remain
 
+# CT設定
+    function asset_manager:sacred_treasure/use/item/update_local_cooldown/
 # データ更新処理
     data modify storage asset:sacred_treasure Name set from storage asset:sacred_treasure TargetItems[-1].tag.TSB.rawName
     # 残り回数が存在する場合
@@ -14,11 +16,15 @@
         execute if data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run data remove storage asset:sacred_treasure Item
     # 残り回数が存在しない場合
         execute unless data storage asset:sacred_treasure TargetItems[-1].tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:sacred_treasure/get_name/
-    # 不要な破壊的変更を阻止するためにコピーして生成する
-        data modify storage asset:sacred_treasure CopyItem set from storage asset:sacred_treasure TargetItems[-1]
-        data remove storage asset:sacred_treasure CopyItem.tag.display.Name
-        data remove storage asset:sacred_treasure CopyItem.Slot
-        data modify block 10000 0 10000 Items[0] merge from storage asset:sacred_treasure CopyItem
+    # スロットをコピーしておく
+        data modify storage asset:sacred_treasure CopiedSlot set from storage asset:sacred_treasure TargetItems[-1].Slot
+    # shulker boxでデータを完成させる
+        data remove storage asset:sacred_treasure TargetItems[-1].tag.display.Name
+        data remove storage asset:sacred_treasure TargetItems[-1].Slot
+        data modify block 10000 0 10000 Items[0] merge from storage asset:sacred_treasure TargetItems[-1]
+    # storage側データ更新
+        data modify storage asset:sacred_treasure TargetItems[-1] set from block 10000 0 10000 Items[0]
+        data modify storage asset:sacred_treasure TargetItems[-1].Slot set from storage asset:sacred_treasure CopiedSlot
 # 新しい神器で上書きする
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_from_shulker_box
@@ -34,4 +40,4 @@
     function asset_manager:sacred_treasure/data/current/update/
 # リセット
     data remove storage asset:sacred_treasure Name
-    data remove storage asset:sacred_treasure CopyItem
+    data remove storage asset:sacred_treasure CopiedSlot

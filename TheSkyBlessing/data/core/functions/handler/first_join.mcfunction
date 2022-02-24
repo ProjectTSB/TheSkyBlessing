@@ -20,5 +20,7 @@
     function player_manager:bonus/update_mp_bonus
     function player_manager:bonus/update_attack_bonus
     function player_manager:bonus/update_defense_bonus
+# 神器クールダウンの初期化
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set value [{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0},{Value:-30,Max:0}]
 # リスポーンイベントが初回に発火しないように
     scoreboard players set @s RespawnEvent 81

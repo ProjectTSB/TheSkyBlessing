@@ -16,6 +16,8 @@
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Victim
 # 装備の変更チェック
     function asset_manager:sacred_treasure/triggers/equipments/compare
+# 変更時の更新処理
+    execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/equipments/update_cooldown
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:sacred_treasure/triggers/tick
     execute if entity @s[tag=TriggerFlag.Attack] run function asset_manager:sacred_treasure/triggers/attack
