@@ -44,7 +44,7 @@
     execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:sacred_treasure LCDMessages[13] set value 9
 # 出力
     # tellraw @a [{"text":"MainBarMessage: "},{"storage":"asset:sacred_treasure","nbt":"MainBarMessage"}]
-    title @s actionbar [{"storage":"asset:sacred_treasure","nbt":"MainBarMessage[]","separator":"","interpret":true},{"text":"   ","font":"minecraft:default"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[]","separator":"","interpret":true,"font":"minecraft:default"}]
+    title @s actionbar [{"storage":"asset:sacred_treasure","nbt":"MainBarMessage[]","separator":"","interpret":true},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[]","separator":"","interpret":true,"font":"minecraft:default"}]
 # 元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage asset:sacred_treasure LCDs
 # リセット
