@@ -36,7 +36,7 @@
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. if score $Value Temporary matches 1.. run function asset_manager:sacred_treasure/cooldown/main_bar/append_bar_right
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"-]","color":"white"}'
 # else
-    execute unless data storage asset:sacred_treasure MainBarMessage[0] run data modify storage asset:sacred_treasure MainBarMessage set value ['{"text":"#"}']
+    execute unless data storage asset:sacred_treasure MainBarMessage[0] run data modify storage asset:sacred_treasure MainBarMessage set value ['{"text":"#","font":"cooldown"}']
 # リセット
     scoreboard players reset $Max Temporary
     scoreboard players reset $Value Temporary
