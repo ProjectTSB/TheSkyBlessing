@@ -11,6 +11,17 @@
     #declare score_holder $Value
     #declare score_holder $Max
 
+# 0 8/8
+# 1 7/8
+# 2 6/8
+# 3 5/8
+# 4 4/8
+# 5 3/8
+# 6 2/8
+# 7 1/8
+# 8 0/8
+# 9 null
+
 # LCDにそのまま戻す
     data modify storage asset:sacred_treasure LCDs append from storage asset:sacred_treasure DecrementedLCDs[-1]
 # 表示する値を算出する

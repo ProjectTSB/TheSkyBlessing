@@ -30,13 +30,13 @@
     scoreboard players operation $LeftBar Temporary = $100 Const
     scoreboard players operation $LeftBar Temporary -= $Value Temporary
 # if (Maxが0では無い && valueが負数で無い) ならば表示バーを構築する // ここで負数であるのは-30の場合のみ。
-    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 1.. run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","font":"cooldown","color":"#00D3FF"}'
-    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","font":"cooldown","color":"#64FF00"}'
+    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 1.. run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","color":"#00D3FF"}'
+    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","color":"#64FF00"}'
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. if score $LeftBar Temporary matches 1.. run function asset_manager:sacred_treasure/cooldown/main_bar/append_bar_left
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. if score $Value Temporary matches 1.. run function asset_manager:sacred_treasure/cooldown/main_bar/append_bar_right
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"-]","color":"white"}'
 # else
-    execute unless data storage asset:sacred_treasure MainBarMessage[0] run data modify storage asset:sacred_treasure MainBarMessage set value ['{"text":"#","font":"cooldown"}']
+    execute unless data storage asset:sacred_treasure MainBarMessage[0] run data modify storage asset:sacred_treasure MainBarMessage set value ['{"text":"#"}']
 # リセット
     scoreboard players reset $Max Temporary
     scoreboard players reset $Value Temporary
