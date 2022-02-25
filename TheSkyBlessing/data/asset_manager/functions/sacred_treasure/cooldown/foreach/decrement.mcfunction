@@ -13,7 +13,7 @@
 # デクリメント
     data modify storage asset:sacred_treasure DecrementedLCDs append from storage asset:sacred_treasure LCDs[-1]
     execute store result score $Value Temporary run data get storage asset:sacred_treasure LCDs[-1].Value
-    execute if score $Value Temporary matches -29.. run scoreboard players remove $Value Temporary 1
+    execute if score $Value Temporary matches -14.. run scoreboard players remove $Value Temporary 1
     execute store result storage asset:sacred_treasure DecrementedLCDs[-1].Value int 1 run scoreboard players get $Value Temporary
 # 末尾削除
     data remove storage asset:sacred_treasure LCDs[-1]

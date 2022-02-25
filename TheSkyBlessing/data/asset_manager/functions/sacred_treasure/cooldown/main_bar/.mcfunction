@@ -21,8 +21,8 @@
 # 取得
     execute store result score $Value Temporary run data get storage asset:sacred_treasure TargetLCD.Value
     execute store result score $Max Temporary run data get storage asset:sacred_treasure TargetLCD.Max
-# valueが負数(!= -30)なら0にする
-    execute if score $Value Temporary matches -29..-1 run scoreboard players set $Value Temporary 0
+# valueが負数(!= -15)なら0にする
+    execute if score $Value Temporary matches -14..-1 run scoreboard players set $Value Temporary 0
 # 0~100の範囲にする
     scoreboard players operation $Value Temporary *= $-100 Const
     scoreboard players operation $Value Temporary /= $Max Temporary
@@ -30,7 +30,7 @@
 # $LeftBarを求める
     scoreboard players operation $LeftBar Temporary = $100 Const
     scoreboard players operation $LeftBar Temporary -= $Value Temporary
-# if (Maxが0では無い && valueが負数で無い) ならば表示バーを構築する // ここで負数であるのは-30の場合のみ。
+# if (Maxが0では無い && valueが負数で無い) ならば表示バーを構築する // ここで負数であるのは-15の場合のみ。
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 1.. run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","color":"#00D3FF"}'
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:sacred_treasure MainBarMessage append value '{"text":"","color":"#64FF00"}'
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. if score $LeftBar Temporary matches 1.. run function asset_manager:sacred_treasure/cooldown/main_bar/append_bar_left
