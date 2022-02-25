@@ -33,15 +33,15 @@
 # メインハンドを設定する
     function asset_manager:sacred_treasure/cooldown/main_bar/
 # メインハンドのスロットのホットバー側をマスクする
-    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:sacred_treasure LCDMessages[5] set value 9
-    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:sacred_treasure LCDMessages[6] set value 9
-    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:sacred_treasure LCDMessages[7] set value 9
-    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:sacred_treasure LCDMessages[8] set value 9
-    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:sacred_treasure LCDMessages[9] set value 9
-    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:sacred_treasure LCDMessages[10] set value 9
-    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:sacred_treasure LCDMessages[11] set value 9
-    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:sacred_treasure LCDMessages[12] set value 9
-    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:sacred_treasure LCDMessages[13] set value 9
+    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:sacred_treasure LCDMessages[5] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:sacred_treasure LCDMessages[6] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:sacred_treasure LCDMessages[7] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:sacred_treasure LCDMessages[8] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:sacred_treasure LCDMessages[9] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:sacred_treasure LCDMessages[10] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:sacred_treasure LCDMessages[11] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:sacred_treasure LCDMessages[12] set value '{"text":"9","color":"white"}'
+    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:sacred_treasure LCDMessages[13] set value '{"text":"9","color":"white"}'
 # 出力
     # tellraw @a [{"text":"MainBarMessage: "},{"storage":"asset:sacred_treasure","nbt":"MainBarMessage"}]
     title @s actionbar [{"text":">","font":"cooldown/main_bar"},{"storage":"asset:sacred_treasure","nbt":"MainBarMessage[]","separator":"","interpret":true},{"text":"~"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[0]","interpret":true,"font":"cooldown/mini_bar/offhand"},{"text":"<"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[1]","interpret":true,"font":"cooldown/mini_bar/feet"},{"text":"*"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[2]","interpret":true,"font":"cooldown/mini_bar/legs"},{"text":"*"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[3]","interpret":true,"font":"cooldown/mini_bar/chest"},{"text":"*"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[4]","interpret":true,"font":"cooldown/mini_bar/head"},{"text":">"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[5]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[6]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[7]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[8]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[9]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[10]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[11]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[12]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[13]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:sacred_treasure","nbt":"LCDMessages[14]","interpret":true,"font":"cooldown/mini_bar/"}]
