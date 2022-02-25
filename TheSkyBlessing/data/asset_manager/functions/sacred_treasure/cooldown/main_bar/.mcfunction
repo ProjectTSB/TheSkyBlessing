@@ -24,8 +24,9 @@
 # valueが負数(!= -30)なら0にする
     execute if score $Value Temporary matches -29..-1 run scoreboard players set $Value Temporary 0
 # 0~100の範囲にする
-    scoreboard players operation $Value Temporary *= $100 Const
+    scoreboard players operation $Value Temporary *= $-100 Const
     scoreboard players operation $Value Temporary /= $Max Temporary
+    scoreboard players operation $Value Temporary *= $-1 Const
 # $LeftBarを求める
     scoreboard players operation $LeftBar Temporary = $100 Const
     scoreboard players operation $LeftBar Temporary -= $Value Temporary
