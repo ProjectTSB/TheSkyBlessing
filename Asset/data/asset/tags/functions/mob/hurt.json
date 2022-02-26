@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0261.laser_eye_mk2/hurt/1.trigger",
         "asset:mob/0219.aorta/hurt/1.trigger",
         "asset:mob/0220.vena_cana/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",

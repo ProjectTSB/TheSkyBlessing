@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0261.laser_eye_mk2/tick/1.trigger",
         "asset:mob/0244.ignition_spider/tick/1.trigger",
         "asset:mob/0214.water_magic/tick/1.trigger",
         "asset:mob/0166.flying_potion/tick/1.trigger",

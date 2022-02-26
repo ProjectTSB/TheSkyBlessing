@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0261.laser_eye_mk2/death/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/death/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/death/1.trigger",
         "asset:mob/0219.aorta/death/1.trigger",
