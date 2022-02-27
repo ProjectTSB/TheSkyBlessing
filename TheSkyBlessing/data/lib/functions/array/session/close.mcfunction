@@ -9,7 +9,10 @@
 # リセット
     data remove storage lib: Cache
     data remove storage lib: Array
+    data remove storage lib: ArrayA
+    data remove storage lib: ArrayB
     data remove storage lib: Elements
     data remove storage lib: Package
+    data remove storage lib: CompareResult
 # セッションフラグを消す
     data modify storage lib: ArrayLibSessionOpened set value false
