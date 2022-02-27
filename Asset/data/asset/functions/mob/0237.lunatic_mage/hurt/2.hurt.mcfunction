@@ -8,5 +8,5 @@
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.5
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.7
 
-# 現在体力を数値化する 300以下で技選択時にTagを自身に付与
+# 現在体力を数値化する
     execute store result score @s 6J.Health run data get entity @s AbsorptionAmount 1.0
