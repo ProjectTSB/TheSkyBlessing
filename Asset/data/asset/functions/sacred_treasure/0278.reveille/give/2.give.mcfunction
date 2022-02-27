@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"起床ラッパ","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"朝を知らせるラッパ。この音色を聞いたら活動を始めなければならない。"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"朝を知らせるラッパ。"}','{"text":"この音色を聞いたら活動を始めなければならない。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

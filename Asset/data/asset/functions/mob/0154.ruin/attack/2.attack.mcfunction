@@ -12,8 +12,8 @@
 
 # 演出
     execute at @p[tag=Victim] run particle block redstone_block ~ ~1 ~ 0.1 0 0.1 4.2 80
-    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 2 2
-    playsound minecraft:item.trident.thunder player @a ~ ~ ~ 2 2
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 2 2
+    playsound minecraft:item.trident.thunder hostile @a ~ ~ ~ 2 2
 
 
 # 与えるダメージ

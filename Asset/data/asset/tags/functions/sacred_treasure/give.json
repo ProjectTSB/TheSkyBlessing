@@ -1,7 +1,5 @@
 {
     "values": [
-        "asset:sacred_treasure/0777.jade_armor/give/1.trigger",
-        "asset:sacred_treasure/0776.jade_armor/give/1.trigger",
         "asset:sacred_treasure/0001.book_of_all-seeing/give/1.trigger",
         "asset:sacred_treasure/0002.blessing/give/1.trigger",
         "asset:sacred_treasure/0003.humanity/give/1.trigger",
@@ -213,6 +211,8 @@
         "asset:sacred_treasure/0731.mouse_feet/give/1.trigger",
         "asset:sacred_treasure/0733.persantage_sword/give/1.trigger",
         "asset:sacred_treasure/0735.collision_plate/give/1.trigger",
-        "asset:sacred_treasure/0745.blade_of_whirlwind/give/1.trigger"
+        "asset:sacred_treasure/0745.blade_of_whirlwind/give/1.trigger",
+        "asset:sacred_treasure/0777.jade_armor/give/1.trigger",
+        "asset:sacred_treasure/0776.jade_armor/give/1.trigger"
     ]
 }

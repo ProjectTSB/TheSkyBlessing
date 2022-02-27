@@ -7,8 +7,8 @@
 # 演出
     particle explosion ~ ~ ~ 5 5 5 1 140 normal @a
     particle flame ~ ~ ~ 5 5 5 0 140 normal @a
-    playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 1.2 0
-    playsound entity.generic.explode master @a[distance=..20] ~ ~ ~ 2 0.6 0
+    playsound entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 2 1.2 0
+    playsound entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 2 0.6 0
 
   # 火属性ダメージ
     # 与えるダメージ

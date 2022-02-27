@@ -3,10 +3,9 @@
 # Mobの召喚時の処理
 #
 # @within function asset:mob/0188.fireball/summon/1.trigger
-# @within function asset:mob/0187.flame_mage/event/shoot_magic
 
 # 元となるMobを召喚する
-    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"],}
+    summon marker ~ ~ ~ {Tags:["MobInit","58.Init"]}
 # ID (int)
     data modify storage asset:mob ID set value 188
 # Type (string) Wikiを参照

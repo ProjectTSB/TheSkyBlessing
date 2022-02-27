@@ -9,6 +9,8 @@
     #declare score_holder $CandidatesLength
     #declare score_holder $Argument.Index
 
+# セッション開ける
+    function lib:array/session/open
 # 名前候補リスト
     data modify storage lib: Array set value ['深淵','奈落','天空','始原','神威','太陽','生命','満月','星雲','極光']
 # 候補リストの長さを取得
@@ -21,6 +23,5 @@
 # 取得
     data modify storage asset:temp 02.Name set from storage lib: Array[-1]
 # リセット
-    data remove storage lib: Array
-    function lib:array/force_delete_cache
+    function lib:array/session/close
     scoreboard players reset $CandidatesLength

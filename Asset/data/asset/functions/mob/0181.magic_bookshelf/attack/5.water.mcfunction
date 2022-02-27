@@ -7,8 +7,8 @@
 # 演出
     execute at @p[tag=Victim,distance=..6] positioned ~ ~0.2 ~ rotated ~ 0 run function asset:mob/0181.magic_bookshelf/attack/6.water_particle
     execute at @p[tag=Victim,distance=..6] run particle splash ~ ~1.2 ~ 0.4 0.5 0.4 0 200 normal @a
-    execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash.high_speed master @a ~ ~1.2 ~ 0.8 0.8 0
-    execute at @p[tag=Victim,distance=..6] run playsound block.beacon.power_select master @a ~ ~ ~ 0.6 0.8 0
+    execute at @p[tag=Victim,distance=..6] run playsound entity.player.splash.high_speed hostile @a ~ ~1.2 ~ 0.8 0.8 0
+    execute at @p[tag=Victim,distance=..6] run playsound block.beacon.power_select hostile @a ~ ~ ~ 0.6 0.8 0
 
 # 水属性攻撃
     # 与えるダメージ

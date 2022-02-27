@@ -1,13 +1,13 @@
 {
-    "datapack.env.cmdVersion": "1.17",
+    "datapack.env.cmdVersion": "1.18",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.17.1",
+    "datapack.env.dataVersion": "1.18.1",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.17",
+    "datapack.env.jsonVersion": "1.18",
     "datapack.env.permissionLevel": 2,
     "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
@@ -48,6 +48,10 @@
             {
                 "label": "uuid",
                 "parts": "/^uuid$/"
+            },
+            {
+                "label": "_",
+                "parts": "/^_$/"
             }
         ]
     ],
@@ -320,7 +324,7 @@
     ],
     "datapack.lint.strictSoundEventCheck": [
         "error",
-        "always"
+        "only-default-namespace"
     ],
     "datapack.lint.strictStorageCheck": [
         "error",
@@ -552,13 +556,13 @@
             "customQuestion": [
                 {
                     "name": "ItemID",
-                    "question": "ID",
+                    "question": "神器のID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 },
                 {
                     "name": "slot",
-                    "question": "Slot",
+                    "question": "使用できるスロット",
                     "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
                     "patternErrorMessage": "スロットのみが許されるよ"
                 }
@@ -579,6 +583,20 @@
                         "",
                         "data modify storage asset:sacred_treasure RarityRegistry[%Rarity%] append value %ItemID%"
                     ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/register.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/register"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/register"
+                    }
                 }
             ],
             "customQuestion": [
@@ -1199,6 +1217,25 @@
             ]
         },
         {
+            "label": "神器/トリガー: アイテム使用中",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/using_item.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: tick",
             "generates": [
                 {
@@ -1428,567 +1465,12 @@
                                 "rolls": 1,
                                 "entries": [
                                     {
-                                        "type": "item",
-                                        "name": "stone_button",
+                                        "type": "loot_table",
+                                        "name": "asset:mob/death/abstract_detect_item",
                                         "functions": [
                                             {
                                                 "function": "set_nbt",
-                                                "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:%id%}}"
-                                            },
-                                            {
-                                                "function": "copy_nbt",
-                                                "source": "killer_player",
-                                                "ops": [
-                                                    {
-                                                        "op": "replace",
-                                                        "source": "UUID",
-                                                        "target": "TSB.KillerUUID"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag0.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag0.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag1.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag1.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag2.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag2.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag3.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag3.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag4.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag4.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag5.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag5.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag6.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag6.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag7.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag7.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag8.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag8.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag9.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag9.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag10.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag10.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag11.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag11.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag12.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag12.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag13.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag13.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag14.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag14.1\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "0"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag15.0\"]}"
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "function": "set_lore",
-                                                "entity": "this",
-                                                "lore": [
-                                                    "1"
-                                                ],
-                                                "replace": false,
-                                                "conditions": [
-                                                    {
-                                                        "condition": "entity_properties",
-                                                        "entity": "this",
-                                                        "predicate": {
-                                                            "nbt": "{Tags:[\"FindFlag15.1\"]}"
-                                                        }
-                                                    }
-                                                ]
+                                                "tag": "{TSB:{ID:%id%}}"
                                             }
                                         ]
                                     }
@@ -2118,7 +1600,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
@@ -2169,7 +1651,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
@@ -2220,7 +1702,7 @@
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobID",
+                    "question": "MobのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
