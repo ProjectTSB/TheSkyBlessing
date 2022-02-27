@@ -21,7 +21,6 @@
 
 # HurTime取ってそれが0ならダメージを与える
     execute if data storage api: {HurtTime:0s} as @p[gamemode=!creative,gamemode=!spectator] run function lib:damage/
-
 # リセット
     data remove storage lib: Argument
 

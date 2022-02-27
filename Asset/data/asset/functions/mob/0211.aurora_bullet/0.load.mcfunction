@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0211.aurora_bullet/**
-    scoreboard objectives add 
+    scoreboard objectives add 5V.Tick dummy
