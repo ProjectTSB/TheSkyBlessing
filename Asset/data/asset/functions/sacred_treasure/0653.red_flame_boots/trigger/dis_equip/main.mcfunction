@@ -21,4 +21,4 @@
     attribute @s generic.armor_toughness modifier remove 00000001-0000-0001-0000-028d00000003
 
 # フルセット効果を外す
-    tag @s remove I3.Fullset
+    function asset:sacred_treasure/0651.red_flame_chestplate/trigger/fullset/dis_equip

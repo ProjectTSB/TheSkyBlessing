@@ -5,8 +5,12 @@
 # @within function asset:sacred_treasure/0651.red_flame_chestplate/trigger/fullset/schedule_loop
 
 # ダッシュ時
-    execute if predicate lib:is_sprinting run effect give @s speed 1 6 true
-    execute if predicate lib:is_sprinting run effect give @s jump_boost 1 6 true
+    execute if predicate lib:is_sprinting run effect give @s speed 1 2 true
+    execute if predicate lib:is_sprinting run particle flame ~ ~ ~ 0 0 0 0.05 3
+    execute if predicate lib:is_sprinting if predicate lib:random_pass_per/70 run particle cloud ~ ~ ~ 0 0 0 0.05 3
+
+# 演出
+    particle dust 1 0 0 1 ~ ~1 ~ 0.4 0.4 0.4 0 1
 
 # 発動中、一定間隔でレーザー放射
     scoreboard players add @s I3.BeamCool 1
