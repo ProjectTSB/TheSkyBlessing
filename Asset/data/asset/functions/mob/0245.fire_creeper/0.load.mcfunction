@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0245.fire_creeper/**
-    scoreboard objectives add 6T.Tick dummy
+    scoreboard objectives add 6T.FuseTime dummy
