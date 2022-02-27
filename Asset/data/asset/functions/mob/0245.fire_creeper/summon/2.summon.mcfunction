@@ -5,7 +5,7 @@
 # @within function asset:mob/0245.fire_creeper/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon creeper ~ ~ ~ {Tags:["MobInit"],HasVisualFire:1b,Fuse:100s,DeathLootTable:"asset:mob/death/0245.fire_creeper",Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:fire"},NoGravity:1b,Time:2147483647,Tags:["AutoKillWhenDieVehicle","AssetMob"]}]}
+    summon creeper ~ ~ ~ {Tags:["MobInit"],HasVisualFire:1b,Fuse:100s,ExplosionRadius:0b,DeathLootTable:"asset:mob/death/0245.fire_creeper",Passengers:[{id:"minecraft:falling_block",BlockState:{Name:"minecraft:fire"},NoGravity:1b,Time:2147483647,Tags:["AutoKillWhenDieVehicle","AssetMob"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 245
 # Type (string) Wikiを参照
