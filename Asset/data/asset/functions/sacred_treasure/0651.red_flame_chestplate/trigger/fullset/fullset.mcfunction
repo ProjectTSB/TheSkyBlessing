@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0651.red_flame_chestplate/trigger/3.main
+# @within function asset:sacred_treasure/065?.red_flame_*/trigger/3.main
 
 # tag付与
     tag @s add I3.Fullset
