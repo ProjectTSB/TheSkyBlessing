@@ -30,5 +30,7 @@
     function lib:array/reverse
 
 # リセット
+    data remove storage lib: Mask
     data remove storage lib: Masks
     data remove storage lib: MaskElement
+    data remove storage lib: CopiedArray
