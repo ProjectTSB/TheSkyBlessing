@@ -15,5 +15,5 @@
     #declare score_holder $Cur
 
 #> Compare処理用
-# @within function lib:array/**compare
+# @within function lib:array/**compare*
 #declare score_holder $Temp
