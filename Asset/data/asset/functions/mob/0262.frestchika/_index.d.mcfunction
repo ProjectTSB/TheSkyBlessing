@@ -21,7 +21,7 @@
     #declare tag 7A.SkillOffCoordinate
     #declare tag 7A.SkillBall
     #declare tag 7A.SkillStarfury
-    #declare tag 7A.SkillSummon
+    #declare tag 7A.SkillThunder
     #
     #declare tag 7A.MeteorMaker
     #declare tag 7A.BigMeteorMaker

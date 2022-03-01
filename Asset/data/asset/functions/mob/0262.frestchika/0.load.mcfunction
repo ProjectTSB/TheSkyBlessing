@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0262.frestchika/**
     scoreboard objectives add 7A.Tick dummy
+    scoreboard objectives add 7A.Heat dummy

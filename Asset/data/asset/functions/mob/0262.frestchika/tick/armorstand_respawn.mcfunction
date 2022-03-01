@@ -16,7 +16,7 @@
     scoreboard players set @s 7A.Tick -30
 
 # スキル発動中に移動した場合困るので消す
-    tag @s remove 7A.SkillMelee
+    function asset:mob/0262.frestchika/tick/skill_tag_remove
 
 # 強制的にテレポする
     execute at @s run function asset:mob/0262.frestchika/tick/move/spread

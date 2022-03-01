@@ -12,6 +12,6 @@
     item replace entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20147}
 
 # タグをリセットする
-    tag @s remove 7A.SkillMelee
-# スコアを戻す
+    function asset:mob/0262.frestchika/tick/skill_tag_remove
+# スコアを戻すt
     scoreboard players set @s 7A.Tick -40
