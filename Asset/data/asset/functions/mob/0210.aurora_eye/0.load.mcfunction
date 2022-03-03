@@ -6,7 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:mob/0210.aurora_eye/**
-    scoreboard objectives add 5U.Tick dummy
     scoreboard objectives add 5U.AttackCT dummy
     scoreboard objectives add 5U.Shoot dummy
 

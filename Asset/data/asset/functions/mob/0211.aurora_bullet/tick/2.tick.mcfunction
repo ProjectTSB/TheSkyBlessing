@@ -15,12 +15,9 @@
     tp @s ^ ^ ^0.8
 
 # 演出
+    particle dust_color_transition 0.000 1.000 0.886 1.8 0.000 0.545 1.000 ~ ~ ~ 0.4 0.4 0.4 0 3 normal @a
     scoreboard players operation $Temp Temporary = @s 5V.Tick
     scoreboard players operation $Temp Temporary %= $4 Const
-    execute if score $Temp Temporary matches 0 run particle dust 0.000 0.545 1.000 1.5 ~ ~ ~ 0.25 0.25 0.25 0 4 normal
-    execute if score $Temp Temporary matches 1 run particle dust 0.000 0.773 0.941 1.5 ~ ~ ~ 0.25 0.25 0.25 0 4 normal
-    execute if score $Temp Temporary matches 2 run particle dust 0.000 1.000 0.886 1.5 ~ ~ ~ 0.25 0.25 0.25 0 4 normal
-    execute if score $Temp Temporary matches 3 run particle dust 0.000 0.773 0.941 1.5 ~ ~ ~ 0.25 0.25 0.25 0 4 normal
     execute if score $Temp Temporary matches 3 run playsound block.beacon.power_select hostile @a ~ ~ ~ 0.2 2 0
     scoreboard players reset $Temp Temporary
 

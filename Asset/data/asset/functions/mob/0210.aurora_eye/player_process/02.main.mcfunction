@@ -5,8 +5,7 @@
 # @within function asset:mob/0210.aurora_eye/player_process/01.schedule_loop
 
 # vfx
-    particle dust 0.000 0.545 1.000 1 ~ ~1.2 ~ 0.4 0.5 0.4 1 2 normal
-    particle dust 0.000 1.000 0.886 1 ~ ~1.2 ~ 0.4 0.5 0.4 1 2 normal
+    particle dust_color_transition 0.000 1.000 0.886 1 0.000 0.545 1.000 ~ ~1.2 ~ 0.4 0.5 0.4 1 2 normal
 
 # 効果時間の処理
     scoreboard players remove @s 5U.DebuffTime 1

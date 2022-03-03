@@ -5,12 +5,7 @@
 # @within function asset:mob/0210.aurora_eye/tick/1.trigger
 
 # 演出
-    scoreboard players add @s 5U.Tick 1
-    execute if entity @s[scores={5U.Tick=1}] run particle dust 0.000 0.545 1.000 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
-    execute if entity @s[scores={5U.Tick=2}] run particle dust 0.000 0.773 0.941 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
-    execute if entity @s[scores={5U.Tick=3}] run particle dust 0.000 1.000 0.886 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
-    execute if entity @s[scores={5U.Tick=4}] run particle dust 0.000 0.773 0.941 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
-    execute if entity @s[scores={5U.Tick=4..}] run scoreboard players reset @s 5U.Tick
+    particle dust_color_transition 0.000 1.000 0.886 1 0.000 0.545 1.000 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
 
 # 接地で上を向く
     execute unless block ~ ~0.4 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~-35
@@ -31,4 +26,4 @@
 
 # 遠距離攻撃
     execute unless entity @a[gamemode=!spectator,distance=..8] run scoreboard players add @s 5U.Shoot 1
-    execute if entity @s[scores={5U.Shoot=100..}] run function asset:mob/0210.aurora_eye/tick/4.summon_bullet
+    execute if entity @s[scores={5U.Shoot=80..}] run function asset:mob/0210.aurora_eye/tick/4.summon_bullet
