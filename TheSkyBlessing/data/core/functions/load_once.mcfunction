@@ -309,6 +309,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/damage
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
@@ -316,6 +317,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
