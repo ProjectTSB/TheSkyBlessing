@@ -24,7 +24,8 @@
         data modify block 10000 0 10000 Items[0] merge from storage asset:sacred_treasure TargetItems[-1]
     # storage側データ更新
         data modify storage asset:sacred_treasure TargetItems[-1] set from block 10000 0 10000 Items[0]
-        data modify storage asset:sacred_treasure TargetItems[-1].Slot set from storage asset:sacred_treasure CopiedSlot
+        execute if data storage asset:sacred_treasure CopiedSlot run data modify storage asset:sacred_treasure TargetItems[-1].Slot set from storage asset:sacred_treasure CopiedSlot
+        execute unless data storage asset:sacred_treasure CopiedSlot run data remove storage asset:sacred_treasure TargetItems[-1].Slot
 # 新しい神器で上書きする
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
     execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_from_shulker_box

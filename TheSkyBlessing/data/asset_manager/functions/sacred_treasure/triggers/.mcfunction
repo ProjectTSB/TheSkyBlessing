@@ -14,7 +14,7 @@
 # 装備の変更チェック
     function asset_manager:sacred_treasure/triggers/equipments/compare
 # 変更時の更新処理
-    execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/equipments/update_cooldown
+    execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/equipments/update_cooldown/
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:sacred_treasure/triggers/tick
     execute if entity @s[tag=TriggerFlag.ClickCarrot] run function asset_manager:sacred_treasure/triggers/click.carrot

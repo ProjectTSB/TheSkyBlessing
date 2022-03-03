@@ -4,10 +4,8 @@
 #
 # @within function asset_manager:sacred_treasure/data/current/update/
 
-# TODO mainhand -> hotbar動いてない(Slotタグが無い)
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage asset:context Items.mainhand set from storage asset:sacred_treasure ProcessedItem
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run function asset_manager:sacred_treasure/data/current/update/when_modified/hotbar
-execute if data storage asset:sacred_treasure {TargetDefaultSlot:"mainhand"} run data modify storage asset:context Items.mainhand set from storage asset:sacred_treasure ProcessedItem
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"offhand"} run data modify storage asset:context Items.offhand set from storage asset:sacred_treasure ProcessedItem
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"feet"} run data modify storage asset:context Items.feet set from storage asset:sacred_treasure ProcessedItem
 execute if data storage asset:sacred_treasure {TargetDefaultSlot:"legs"} run data modify storage asset:context Items.legs set from storage asset:sacred_treasure ProcessedItem
