@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0259.shadow_stalker/summon/1.trigger",
         "asset:mob/0245.fire_creeper/summon/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/summon/1.trigger",

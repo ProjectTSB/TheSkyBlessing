@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0259.shadow_stalker/tick/1.trigger",
         "asset:mob/0245.fire_creeper/tick/1.trigger",
         "asset:mob/0244.ignition_spider/tick/1.trigger",
         "asset:mob/0214.water_magic/tick/1.trigger",
