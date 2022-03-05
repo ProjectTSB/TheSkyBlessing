@@ -36,13 +36,7 @@
     execute if score @s 7A.Tick matches 1012 at @s rotated ~40 ~ run function asset:mob/0262.frestchika/tick/move/tereport
     execute if score @s 7A.Tick matches 1012 at @s positioned ^ ^ ^1 run function asset:mob/0262.frestchika/tick/2.melee/4.slash
 
-    execute if score @s 7A.Tick matches 1014 run data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [201f,0f,314f]
-    execute if score @s 7A.Tick matches 1016 run data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [332f,0f,302f]
-    execute if score @s 7A.Tick matches 1016 positioned ^ ^ ^1 run function asset:mob/0262.frestchika/tick/2.melee/4.slash
-    execute if score @s 7A.Tick matches 1016 at @s rotated ~-40 ~ run function asset:mob/0262.frestchika/tick/move/tereport
-
-
-    execute if score @s 7A.Tick matches 1030 run scoreboard players set @s 7A.Tick 2000
+    execute if score @s 7A.Tick matches 1020 run scoreboard players set @s 7A.Tick 2000
 # 共通リセット
     execute if score @s 7A.Tick matches 2000 run function asset:mob/0262.frestchika/tick/move/spread
     execute if score @s 7A.Tick matches 2000 at @s run function asset:mob/0262.frestchika/tick/reset

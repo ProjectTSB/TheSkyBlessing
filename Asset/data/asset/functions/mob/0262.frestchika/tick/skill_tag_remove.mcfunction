@@ -7,3 +7,4 @@
 # スキル消す
     tag @s remove 7A.SkillThunder
     tag @s remove 7A.SkillMelee
+    tag @s remove 7A.SkillMelee2
