@@ -1,14 +1,12 @@
-#> lib:array/compare
+#> lib:array/compare_single
 #
-# 配列と比較対象配列の各要素について同一であるかを比較し、その結果の配列を返します。
-#
-# Array, Array2の要素の数は同一である必要があります。
+# 配列の各要素について比較対象と同一であるかを比較し、その結果の配列を返します。
 #
 # @input
 #   T extends any
-#   storage lib: ArrayA: [T] @ N
+#   storage lib: Array: [T] @ N
 #   比較配列A
-#   storage lib: ArrayB: [T] @ N
+#   storage lib: CompareTarget: T
 #   比較配列B
 # @output
 #   storage lib: CompareResult: [{ _: { _: boolean } }] @ N
@@ -17,8 +15,12 @@
 # セッションチェック
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
+# 移行する
+    data modify storage lib: CopiedArray set from storage lib: Array
+    data remove storage lib: Array
+
 # 再帰的に動かす
-    execute if data storage lib: ArrayA[0] if data storage lib: ArrayB[0] run function lib:array/core/compare
+    execute if data storage lib: CopiedArray[0] run function lib:array/core/compare_single
 
 # 結果を反転
     function lib:array/reverse
@@ -26,4 +28,6 @@
 
 # リセット
     data remove storage lib: Array
+    data remove storage lib: CopiedArray
+    data remove storage lib: CompareTarget
     scoreboard players reset $Temp Temporary

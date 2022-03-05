@@ -2,6 +2,7 @@
     "values": [
         "asset:mob/0211.aurora_bullet/tick/1.trigger",
         "asset:mob/0210.aurora_eye/tick/1.trigger",
+        "asset:mob/0245.fire_creeper/tick/1.trigger",
         "asset:mob/0244.ignition_spider/tick/1.trigger",
         "asset:mob/0214.water_magic/tick/1.trigger",
         "asset:mob/0166.flying_potion/tick/1.trigger",
