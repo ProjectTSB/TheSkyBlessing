@@ -33,7 +33,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
-    execute as @a[gamemode=!spectator,dx=0] run function api:player_modifier/mp_regen/add
+    execute as @p[gamemode=!spectator,dx=0] run function api:player_modifier/mp_regen/add
 
 # スコアを付与
     scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffTime 200
