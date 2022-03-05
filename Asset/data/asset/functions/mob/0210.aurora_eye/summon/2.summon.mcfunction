@@ -24,6 +24,7 @@
 
 #/give @p minecraft:player_head{SkullOwner:{Id:[I;1725447404,-1135126882,-2079282470,1109833247],Properties:{textures:[{Value:"e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjlkMWYwYTJmNjFlMjc1ZTlhZTQ1YTY5MjQwM2I5ZGI5NDM2YjYwNjg1NDJhMTNkMDYzOGI0OWI1ZjY1NjliMyJ9fX0="}]}},display:{Lore:["{\"text\":\"https://namemc.com/skin/49c7726be51018df\"}"]}}
 
+summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1b,tag:{display:{Name:'[{"text":"オ","color":"#00FFE2"},{"text":"ー","color":"#00E7E7"},{"text":"ロ","color":"#00D0ED"},{"text":"ラ","color":"#00B9F3"},{"text":"ア","color":"#00A2F9"},{"text":"イ","color":"#008BFF"},{"text":"の目","color":"white"}]'},SkullOwner:{Id:[I;1725447404,-1135126882,-2079282470,1109833247],Properties:{textures:[{Value:"e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjlkMWYwYTJmNjFlMjc1ZTlhZTQ1YTY5MjQwM2I5ZGI5NDM2YjYwNjg1NDJhMTNkMDYzOGI0OWI1ZjY1NjliMyJ9fX0="}]}}}}}
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"player_head",Count:1b,tag:{SkullOwner:{Id:[I;1725447404,-1135126882,-2079282470,1109833247],Properties:{textures:[{Value:"e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjlkMWYwYTJmNjFlMjc1ZTlhZTQ1YTY5MjQwM2I5ZGI5NDM2YjYwNjg1NDJhMTNkMDYzOGI0OWI1ZjY1NjliMyJ9fX0="}]}}}}

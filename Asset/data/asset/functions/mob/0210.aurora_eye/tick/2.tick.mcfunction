@@ -5,7 +5,7 @@
 # @within function asset:mob/0210.aurora_eye/tick/1.trigger
 
 # 演出
-    particle dust_color_transition 0.000 1.000 0.886 1 0.000 0.545 1.000 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
+    particle dust_color_transition 0.000 1.000 0.886 1 0 0.235 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 normal
 
 # 接地で上を向く
     execute unless block ~ ~0.4 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~-35
