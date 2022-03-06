@@ -14,3 +14,7 @@
     #declare tag 7A.SkillMelee2
     #declare tag 7A.SkillGun
     #declare tag 7A.SkillLaser
+    #
+    #declare tag SpreadMarker
+    #declare tag Landing
+    #declare tag LandingTarget

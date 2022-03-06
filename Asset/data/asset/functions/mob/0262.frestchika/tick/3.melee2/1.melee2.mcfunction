@@ -21,5 +21,4 @@
     execute if score @s 7A.Tick matches 20 rotated ~ 0 positioned ^ ^ ^-4 run function asset:mob/0262.frestchika/tick/3.melee2/3.thunder
     execute if score @s 7A.Tick matches 21 rotated ~ 0 positioned ^ ^ ^-2 run function asset:mob/0262.frestchika/tick/3.melee2/3.thunder
 # リセット
-
-execute if score @s 7A.Tick matches 100 at @s run function asset:mob/0262.frestchika/tick/reset
+    execute if score @s 7A.Tick matches 30 at @s run function asset:mob/0262.frestchika/tick/reset
