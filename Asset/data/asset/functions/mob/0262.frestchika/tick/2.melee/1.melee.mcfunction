@@ -11,12 +11,16 @@
     execute if score @s 7A.Tick matches 10..13 run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
     execute if score @s 7A.Tick matches 10..13 at @s run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
     execute if score @s 7A.Tick matches 10..13 at @s run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
+# 演出
+    execute if score @s 7A.Tick matches 10 run playsound minecraft:entity.wither.shoot hostile @a ~ ~ ~ 1 0.7
 # 向き転換
     execute if score @s 7A.Tick matches 15 facing entity @p feet run function asset:mob/0262.frestchika/tick/move/tereport
 # 再突進
     execute if score @s 7A.Tick matches 20..23 at @s run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
     execute if score @s 7A.Tick matches 20..23 at @s run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
     execute if score @s 7A.Tick matches 20..23 at @s run function asset:mob/0262.frestchika/tick/2.melee/3.tackle
+# 演出
+    execute if score @s 7A.Tick matches 20 run playsound minecraft:entity.wither.shoot hostile @a ~ ~ ~ 1 0.7
 # 突進で見つからなかった場合、スコアを飛ばす
     execute if score @s 7A.Tick matches 41 run scoreboard players set @s 7A.Tick 2000
 

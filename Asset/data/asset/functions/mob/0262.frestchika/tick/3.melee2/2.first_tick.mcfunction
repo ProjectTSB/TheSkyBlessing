@@ -9,3 +9,6 @@
 # 腕変更
     data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [342f,217f,0f]
     data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [179f,326f,332f]
+
+# 演出
+    playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1.6
