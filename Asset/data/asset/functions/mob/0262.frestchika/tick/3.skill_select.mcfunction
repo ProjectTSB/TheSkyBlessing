@@ -22,7 +22,6 @@
     execute if score $Random Temporary matches 1 run tag @s add 7A.SkillMelee
     execute if score $Random Temporary matches 2 run tag @s add 7A.SkillMelee2
     execute if score $Random Temporary matches 3 run tag @s add 7A.SkillGun
-    execute if score $Random Temporary matches 4 run tag @s add 7A.SkillLaser
 # リセット
     scoreboard players reset $Random Temporary
 
