@@ -10,3 +10,5 @@
     item replace entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20146}
 # 頭も
     item replace entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20149}
+# ヒート値を上げる
+    scoreboard players add @s 7A.Heat 2

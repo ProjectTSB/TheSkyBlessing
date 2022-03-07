@@ -27,6 +27,8 @@
     execute if score @s 7A.Tick matches 10 at @s positioned ^ ^ ^-9 if entity @a[distance=..1] run function asset:mob/0262.frestchika/tick/3.melee2/4.slash
     execute if score @s 7A.Tick matches 10 at @s positioned ^ ^ ^-10 if entity @a[distance=..1] run function asset:mob/0262.frestchika/tick/3.melee2/4.slash
 
+# 演出
+    execute if score @s 7A.Tick matches 10 at @s run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
 # 少し間を置いて雷を連続で出す
     execute if score @s 7A.Tick matches 17 rotated ~ 0 positioned ^ ^ ^-10 run function asset:mob/0262.frestchika/tick/3.melee2/3.thunder
     execute if score @s 7A.Tick matches 18 rotated ~ 0 positioned ^ ^ ^-8 run function asset:mob/0262.frestchika/tick/3.melee2/3.thunder

@@ -12,3 +12,6 @@
 
 # 演出
     playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1.6
+
+# ヒート値を上げる
+    scoreboard players add @s 7A.Heat 1

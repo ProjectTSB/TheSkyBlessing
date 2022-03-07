@@ -7,9 +7,6 @@
 # @private
     #declare score_holder $Random
 
-# スキルを選ぶたびにヒート値を上げる
-    scoreboard players add @s 7A.Heat 1
-
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算するやーつ
@@ -25,6 +22,6 @@
 # リセット
     scoreboard players reset $Random Temporary
 
-# ヒート値が一定以上だった場合強制的にスキルをオーバーヒートにする
-    execute if score @s 7A.Heat matches 5 run function asset:mob/0262.frestchika/tick/skill_tag_remove
-    execute if score @s 7A.Heat matches 5 run tag @s add 7A.SkillThunder
+# ヒート値が一定以上だった場合強制的にスキルをオーバーヒートにする。ヒート値はスキルによって異なる
+    execute if score @s 7A.Heat matches 10.. run function asset:mob/0262.frestchika/tick/skill_tag_remove
+    execute if score @s 7A.Heat matches 10.. run tag @s add 7A.SkillOverHeat

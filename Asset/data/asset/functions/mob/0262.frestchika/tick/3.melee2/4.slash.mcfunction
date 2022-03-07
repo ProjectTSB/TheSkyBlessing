@@ -18,5 +18,4 @@
     data remove storage lib: Argument
 
 # 演出
-    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
     execute as @a[gamemode=!spectator,distance=..1] at @s run particle dust 0.224 0.69 1 2 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a

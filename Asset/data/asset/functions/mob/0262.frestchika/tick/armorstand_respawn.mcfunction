@@ -13,7 +13,10 @@
 # タグを消す
     tag @e[type=armor_stand,tag=7A.ArmorStandThis,distance=..0.01] remove 7A.ArmorStandThis
 # スコアも一応戻す
-    scoreboard players set @s 7A.Tick -30
+    scoreboard players set @s 7A.Tick -2
+# ヒートをもどす
+    tag @s remove 7A.SkillOverHeat
+    scoreboard players set @s 7A.Heat 0
 
 # スキル発動中に移動した場合困るので消す
     function asset:mob/0262.frestchika/tick/skill_tag_remove

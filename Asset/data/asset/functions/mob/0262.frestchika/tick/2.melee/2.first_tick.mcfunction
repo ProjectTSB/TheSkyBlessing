@@ -11,3 +11,6 @@
 # 腕変更
     data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [38f,197f,296f]
     data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [48f,16f,0f]
+
+# ヒート値を上げる
+    scoreboard players add @s 7A.Heat 3

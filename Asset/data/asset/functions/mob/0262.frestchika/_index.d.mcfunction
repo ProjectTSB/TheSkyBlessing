@@ -13,6 +13,7 @@
     #declare tag 7A.SkillMelee
     #declare tag 7A.SkillMelee2
     #declare tag 7A.SkillGun
+    #declare tag 7A.SkillOverHeat
     #
     #declare tag SpreadMarker
     #declare tag Landing
