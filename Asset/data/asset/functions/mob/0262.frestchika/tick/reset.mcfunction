@@ -13,5 +13,8 @@
 
 # タグをリセットする
     function asset:mob/0262.frestchika/tick/skill_tag_remove
-# スコアを戻すt
-    scoreboard players set @s 7A.Tick -40
+# スコアを戻す
+    scoreboard players set @s 7A.Tick -10
+
+# 条件でテレポートする
+    function asset:mob/0262.frestchika/tick/move/teleport_check

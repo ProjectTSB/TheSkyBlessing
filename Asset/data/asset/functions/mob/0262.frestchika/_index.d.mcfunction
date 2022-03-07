@@ -18,3 +18,5 @@
     #declare tag SpreadMarker
     #declare tag Landing
     #declare tag LandingTarget
+    #declare tag PlayerCheck
+    #declare tag CanTeleport

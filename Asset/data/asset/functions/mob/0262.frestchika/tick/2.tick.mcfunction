@@ -24,16 +24,6 @@
 # 選択したスキル発動
     execute if score @s 7A.Tick matches 0.. run function asset:mob/0262.frestchika/tick/4.skill_active
 
-
-# 4tickおきに実行するやつ
-# 実行時間を移す
-    scoreboard players operation $4tInterval Temporary = @s 7A.Tick
-# 4tickおきに実行
-    scoreboard players operation $4tInterval Temporary %= $4 Const
-    execute if score $4tInterval Temporary matches 0 run function asset:mob/0262.frestchika/tick/interval
-# リセット
-    scoreboard players reset $4tInterval
-
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする
     # 数のカウント

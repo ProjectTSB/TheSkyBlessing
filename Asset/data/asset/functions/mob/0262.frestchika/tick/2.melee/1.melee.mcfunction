@@ -38,5 +38,4 @@
 
     execute if score @s 7A.Tick matches 1020 run scoreboard players set @s 7A.Tick 2000
 # 共通リセット
-    execute if score @s 7A.Tick matches 2000 run function asset:mob/0262.frestchika/tick/move/spread
     execute if score @s 7A.Tick matches 2000 at @s run function asset:mob/0262.frestchika/tick/reset
