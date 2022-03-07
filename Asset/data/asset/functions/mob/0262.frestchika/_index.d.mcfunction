@@ -8,6 +8,7 @@
     #declare tag 7A.Angel
     #declare tag 7A.ArmorStand
     #declare tag 7A.ArmorStandThis
+    #declare tag 7A.ArmorStandDeath
     #
     #declare tag 7A.SkillThunder
     #declare tag 7A.SkillMelee

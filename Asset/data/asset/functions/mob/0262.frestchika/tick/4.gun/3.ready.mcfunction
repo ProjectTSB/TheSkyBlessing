@@ -20,5 +20,6 @@
     playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 2
 
 # リセット
+    data remove storage lib: Argument
     kill @e[type=marker,tag=SpreadMarker,limit=1]
     tag @s remove Landing
