@@ -10,6 +10,6 @@
 
 # 既に発動している場合、テレポートはここで発動してしまう(MP消費したくないし)
     execute if entity @s[tag=CanUsed] as @e[type=area_effect_cloud,tag=P5.Bullet,distance=..150] if score @s P5.UserID = @p[tag=this] UserID run tag @s remove CanUsed
-    execute as @e[type=area_effect_cloud,tag=P5.Bullet,distance=..150] if score @s P5.UserID = @p[tag=this] UserID at @s run function asset:sacred_treasure/0905.book_of_metastasis/trigger/tereport
+    execute as @e[type=area_effect_cloud,tag=P5.Bullet,distance=..150] if score @s P5.UserID = @p[tag=this] UserID at @s run function asset:sacred_treasure/0905.book_of_metastasis/trigger/teleport
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0905.book_of_metastasis/trigger/3.main

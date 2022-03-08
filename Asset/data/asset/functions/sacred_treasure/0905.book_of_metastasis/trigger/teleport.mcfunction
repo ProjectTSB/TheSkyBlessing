@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0905.book_of_metastasis/trigger/tereport
+#> asset:sacred_treasure/0905.book_of_metastasis/trigger/teleport
 #
 #
 #
