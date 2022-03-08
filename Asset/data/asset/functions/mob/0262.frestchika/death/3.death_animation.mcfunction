@@ -17,15 +17,15 @@
     execute if score @s 7A.Tick matches 1..50 run function asset:mob/0262.frestchika/death/text_summon
 
 # オーバーヒート化する
-    execute if score @s 7A.Tick matches 10 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20153}
-    execute if score @s 7A.Tick matches 10 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] weapon.offhand with stick{CustomModelData:20152}
-    execute if score @s 7A.Tick matches 10 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20154}
+    execute if score @s 7A.Tick matches 10 run item replace entity @s weapon.mainhand with stick{CustomModelData:20153}
+    execute if score @s 7A.Tick matches 10 run item replace entity @s weapon.offhand with stick{CustomModelData:20152}
+    execute if score @s 7A.Tick matches 10 run item replace entity @s armor.head with stick{CustomModelData:20154}
 
 # ぶっ倒れる
     execute if score @s 7A.Tick matches 40 run playsound minecraft:block.grass.break ambient @a ~ ~ ~ 1 0
-    execute if score @s 7A.Tick matches 40 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with air
-    execute if score @s 7A.Tick matches 40 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] weapon.offhand with air
-    execute if score @s 7A.Tick matches 40 run item replace entity @e[type=armor_stand,tag=7A.ArmorStandDeath,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20155}
+    execute if score @s 7A.Tick matches 40 run item replace entity @s weapon.mainhand with air
+    execute if score @s 7A.Tick matches 40 run item replace entity @s weapon.offhand with air
+    execute if score @s 7A.Tick matches 40 run item replace entity @s armor.head with stick{CustomModelData:20155}
 
 # 演出
     execute if score @s 7A.Tick matches 40.. run particle smoke ^ ^ ^1 0.3 0.3 0.3 0 5
