@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0271.indomitable_warrior/attack/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/attack/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/attack/1.trigger",
         "asset:mob/0219.aorta/attack/1.trigger",
