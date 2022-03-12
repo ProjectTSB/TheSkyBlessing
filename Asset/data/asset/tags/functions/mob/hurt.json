@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0265.dark_familiar/hurt/1.trigger",
         "asset:mob/0264.dark_summoner/hurt/1.trigger",
         "asset:mob/0219.aorta/hurt/1.trigger",
         "asset:mob/0220.vena_cana/hurt/1.trigger",

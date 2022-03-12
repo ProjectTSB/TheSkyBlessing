@@ -3,4 +3,5 @@
 
 #> tag
 # @within function asset:mob/0264.dark_summoner/**
-    #declare scoreboard 7C.Tick
+    #declare tag 7C.Entity
+    #declare tag 7D.Entity

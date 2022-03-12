@@ -9,8 +9,10 @@
     execute rotated ~ 0 positioned ^-2 ^0.1 ^ run function asset:mob/0264.dark_summoner/tick/event/particle
 
 # 召喚
-    execute rotated ~ 0 positioned ^2 ^0.1 ^ run function asset:mob/0021.demon_eye/summon/2.summon
-    execute rotated ~ 0 positioned ^-2 ^0.1 ^ run function asset:mob/0021.demon_eye/summon/2.summon
+    data modify storage api: Argument.ID set value 265
+    execute rotated ~ 0 positioned ^2 ^0.1 ^ run function api:mob/summon
+    data modify storage api: Argument.ID set value 265
+    execute rotated ~ 0 positioned ^-2 ^0.1 ^ run function api:mob/summon
 
 # リセット
     scoreboard players reset @s 7C.Attack

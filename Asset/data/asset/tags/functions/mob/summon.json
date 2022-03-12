@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0265.dark_familiar/summon/1.trigger",
         "asset:mob/0264.dark_summoner/summon/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/summon/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/summon/1.trigger",

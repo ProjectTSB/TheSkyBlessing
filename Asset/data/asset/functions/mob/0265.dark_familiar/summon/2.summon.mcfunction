@@ -1,19 +1,19 @@
-#> asset:mob/0264.dark_summoner/summon/2.summon
+#> asset:mob/0265.dark_familiar/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0264.dark_summoner/summon/1.trigger
+# @within function asset:mob/0265.dark_familiar/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","7C.Entity"],DeathLootTable:"asset:mob/death/0264.dark_summoner",Silent:1b}
+    summon zombie ~ ~ ~ {Team:"NoCollision",Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","7D.Entity"],DeathLootTable:"asset:mob/death/0265.dark_familiar",IsBaby:1b,Silent:1b,Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["7D.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
 # ID (int)
-    data modify storage asset:mob ID set value 264
+    data modify storage asset:mob ID set value 265
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"ダークサモナー","color":"#B638FF","italic":false}'
+    data modify storage asset:mob Name set value '{"text":"ダークファミリア","color":"#B638FF","italic":false}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -23,9 +23,9 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1180339659,1568558558,-1186693271,-256707617],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmMyZTZiYTA3ZWZjZjYyZmZmYmRhZTMxZjY5NTZlZWUzM2UwOWMxZjNjYmIwODhiNDE3OWIwMWQ1ZWEyZDQ4NCJ9fX0="}]}}}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-743873856,1938375990,-1876854713,270852829],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODU1YWY2YzVmZjIxZWI1NTYzMWEyNTIyMWQ3NTNjZGM5YTBmNjc5ZDVjYWNmNTU1YjM1MGJhMGUzNTIxZTA5MiJ9fX0="}]}}}}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5843307}}}
+        # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Legs set value
     # 足 (Compound(Item)) (オプション)
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     # data modify storage asset:mob Health set value
 # 攻撃力 (double) (オプション)
-    # data modify storage asset:mob AttackDamage set value
+    data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
@@ -58,5 +58,7 @@
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
 
+# この世界に存在できる時間
+    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 7D.LifeTime 800
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
