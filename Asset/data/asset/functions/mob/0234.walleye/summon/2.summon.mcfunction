@@ -5,7 +5,7 @@
 # @within function asset:mob/0234.walleye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AntiBurn"],DeathLootTable:"asset:mob/death/0234.walleye",Silent:1b,NoAI:1b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AntiBurn","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0234.walleye",Silent:1b,NoAI:1b}
 # ID (int)
     data modify storage asset:mob ID set value 234
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value 
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Head set value 
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20176}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value 
     # 脚 (Compound(Item)) (オプション)
