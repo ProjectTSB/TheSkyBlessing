@@ -26,12 +26,13 @@
 # 接地で上を向く
     execute if data entity @s {OnGround:1b} positioned ~ ~1.5 ~ as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~ ~-35
 
-# クールタイムを減らす 0以下にはならない
-    scoreboard players remove @s[scores={7D.Move=1..}] 7D.Move 1
-
 # カベにぶつかった際の処理
     execute unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
 
 # 世界に存在しすぎた場合、消滅する
     scoreboard players remove @s 7D.LifeTime 1
     execute if score @s 7D.LifeTime matches ..0 run function asset:mob/0265.dark_familiar/tick/event/suicide
+
+# 攻撃
+    scoreboard players add @s 7D.Move 1
+    execute if score @s 7D.Move matches 40.. run function asset:mob/0265.dark_familiar/tick/event/shoot
