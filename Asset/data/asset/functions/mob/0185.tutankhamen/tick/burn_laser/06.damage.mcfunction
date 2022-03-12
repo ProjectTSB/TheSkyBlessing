@@ -12,7 +12,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value ['{"translate": "%1$sは%2$sによって灰塵と化した"},"with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]']
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによって灰塵と化した"},"with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]'
 # 対象
     execute as @p[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
 # リセット

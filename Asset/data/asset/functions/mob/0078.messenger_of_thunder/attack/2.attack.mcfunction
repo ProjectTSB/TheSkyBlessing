@@ -14,8 +14,8 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sの雷に撃たれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sの轟雷により力尽きた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの雷に撃たれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの轟雷により力尽きた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正
     function lib:damage/modifier
 # 実行

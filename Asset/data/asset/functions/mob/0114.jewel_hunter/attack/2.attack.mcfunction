@@ -14,8 +14,8 @@
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.ByPassResist set value 1b
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sの宝石の煌びやかさにやられた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sの宝石の価値に敗北した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの宝石の煌びやかさにやられた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの宝石の価値に敗北した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正
     function lib:damage/modifier
 # 実行

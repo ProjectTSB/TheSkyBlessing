@@ -10,8 +10,8 @@
     data modify storage lib: Argument.AttackType set value "Magic"
      data modify storage lib: Argument.ElementType set value "Water"
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sに飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sにより水底に沈んだ","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sに飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]','[{"translate": "%1$sは%2$sにより水底に沈んだ","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sに飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sにより水底に沈んだ","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正
     function lib:damage/modifier
 # ダメージ
