@@ -1,7 +1,7 @@
 #> asset:mob/0234.walleye/tick/2.3.explode
 #
 # @within
-#   function asset:mob/0234.walleye/tick/
+#   function asset:mob/0234.walleye/tick/2.tick
 
 # 音とパーティクル
 execute at @s run playsound entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 2 1 1
