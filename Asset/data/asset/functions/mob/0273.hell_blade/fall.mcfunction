@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0273.hell_blade/tick/2.tick
 
+# Motionを消す
+    data modify entity @s Motion[0] set value 0.0d
+    data modify entity @s Motion[2] set value 0.0d
+
 # NoAIを外す
     data modify entity @s NoAI set value 0b
 

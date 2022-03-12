@@ -7,10 +7,12 @@
 # Init処理
     execute as @s[tag=7L.Init] run function asset:mob/0273.hell_blade/init
 
+# 移動
+    execute as @s[tag=!7L.Fall] run function asset:mob/0273.hell_blade/move/
+
 # 下にブロックが無かったら落下タグをつけてOnGroundを0bに
-    execute if block ~ ~-1 ~ #lib:no_collision run tag @s add 7L.Fall
-    execute if block ~ ~-1 ~ #lib:no_collision run data modify entity @s OnGround set value 0b
+    execute if block ~ ~-0.01 ~ #lib:no_collision run tag @s add 7L.Fall
+    execute if block ~ ~-0.01 ~ #lib:no_collision run data modify entity @s OnGround set value 0b
 
 # 落下タグがついているなら
     execute as @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall
-
