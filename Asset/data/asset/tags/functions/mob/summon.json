@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0271.indomitable_warrior/summon/1.trigger",
         "asset:mob/0269.goblins/summon/1.trigger",
         "asset:mob/0258.enemy_teleporter/summon/1.trigger",
         "asset:mob/0257.distortion_spellbook/summon/1.trigger",
