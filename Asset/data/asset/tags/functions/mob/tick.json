@@ -2,6 +2,7 @@
     "values": [
         "asset:mob/0258.enemy_teleporter/tick/1.trigger",
         "asset:mob/0257.distortion_spellbook/tick/1.trigger",
+        "asset:mob/0245.fire_creeper/tick/1.trigger",
         "asset:mob/0244.ignition_spider/tick/1.trigger",
         "asset:mob/0214.water_magic/tick/1.trigger",
         "asset:mob/0166.flying_potion/tick/1.trigger",

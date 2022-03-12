@@ -9,7 +9,7 @@
 # 座標
     summon marker ~ ~ ~ {Tags:["SpawnMarker"]}
     data modify storage lib: Argument.Bounds set value [[-1d,-1d],[-1d,-1d],[-1d,-1d]]
-    execute store result storage lib: Argument.Bounds[][] double 0.1 run scoreboard players get $SpawnRange Temporary
+    execute store result storage lib: Argument.Bounds[][] double 0.0333333333 run scoreboard players get $SpawnRange Temporary
     data modify storage lib: Argument.Bounds[1] set value [0d,3.0d]
     execute as @e[type=marker,tag=SpawnMarker,distance=..0.01] run function lib:spread_entity/
 # 召喚
