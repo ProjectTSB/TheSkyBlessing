@@ -5,20 +5,21 @@
 # @within function asset:mob/0274.death_saw_jiki/tick/2.tick
 
 # 演出
-    particle flame ~ ~1 ~ 0.8 0.8 0.8 0 20 normal @a
-    playsound block.lava.extinguish hostile @a ~ ~ ~ 2 1 0
+    particle dust 1.000 0.741 0.141 1.3 ~ ~1.2 ~ 0.5 0.4 0.5 0 20 normal
+    playsound minecraft:entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.7 1.5 0
+    playsound minecraft:entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.7 2.0 0
 
 # 属性ダメージ
    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 10.4f
+        data modify storage lib: Argument.Damage set value 28.4f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
-        data modify storage lib: Argument.ElementType set value "Fire"
+        data modify storage lib: Argument.ElementType set value "Thunder"
     # 補正functionを実行
         function lib:damage/modifier
     # プレイヤー対象に
-        execute as @e[type=#lib:living,gamemode=!spectator,gamemode=!creative,tag=Friend,distance=..1] run function lib:damage/
+        execute as @e[type=#lib:living,tag=Friend,distance=..1] run function lib:damage/
     # リセット
         data remove storage lib: Argument
 
