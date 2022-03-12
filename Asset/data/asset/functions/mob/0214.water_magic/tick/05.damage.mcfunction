@@ -5,7 +5,7 @@
 # @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 21f
+    data modify storage lib: Argument.Damage set value 18f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
      data modify storage lib: Argument.ElementType set value "Water"
