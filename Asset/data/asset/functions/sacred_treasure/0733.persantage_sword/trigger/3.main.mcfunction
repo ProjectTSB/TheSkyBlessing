@@ -28,11 +28,6 @@
 # 天使の場合、1%にする
     execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0001 run function api:mob/get_max_health
 
-# ダメージの値が10000以上の場合、9999にする
-    execute store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
-    execute if score $KD.DamageValue Temporary matches 10000.. run scoreboard players set $KD.DamageValue Temporary 9999
-    execute store result storage lib: Argument.Damage float 1.0 run scoreboard players get $KD.DamageValue Temporary
-
 # ダメージ
     function lib:damage/modifier
     execute if data storage lib: Argument.Damage as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
