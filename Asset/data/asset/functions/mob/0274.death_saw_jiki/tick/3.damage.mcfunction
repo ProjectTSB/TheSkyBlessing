@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:mob/0274.death_saw_jiki/tick/2.tick
+#> private
+# @private
+    #declare tag DamageTarget
 
 # 演出
     particle dust 1.000 0.741 0.141 1.3 ~ ~1.2 ~ 0.5 0.4 0.5 0 20 normal
@@ -18,10 +21,13 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # 補正functionを実行
         function lib:damage/modifier
-    # プレイヤー対象に
-        execute as @e[type=#lib:living,tag=Friend,distance=..1] run function lib:damage/
+    # 対象に
+        tag @e[type=#lib:living,type=!player,tag=Friend,distance=..1] add DamageTarget
+        tag @a[gamemode=!creative,gamemode=!spectator,distance=..1] add DamageTarget
+        execute as @e[type=#lib:living,tag=DamageTarget,distance=..1] run function lib:damage/
     # リセット
         data remove storage lib: Argument
+        tag @e[type=#lib:living,tag=DamageTarget,distance=..2] remove DamageTarget
 
 # クールタイムを与える
     scoreboard players set @s 7M.CoolTime 20
