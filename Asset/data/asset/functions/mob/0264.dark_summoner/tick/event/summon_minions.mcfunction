@@ -2,17 +2,20 @@
 #
 #
 #
-# @within function asset:mob/0264.dark_summoner/tick/event/prepare_magic
+# @within function asset:mob/0264.dark_summoner/tick/event/casting
+
+#
 
 # パーティクル
-    execute rotated ~ 0 positioned ^2 ^0.1 ^ run function asset:mob/0264.dark_summoner/tick/event/particle
-    execute rotated ~ 0 positioned ^-2 ^0.1 ^ run function asset:mob/0264.dark_summoner/tick/event/particle
+    execute positioned ^ ^0.1 ^ run function asset:mob/0264.dark_summoner/tick/event/particle
 
 # 召喚
     data modify storage api: Argument.ID set value 265
-    execute rotated ~ 0 positioned ^2 ^0.1 ^ run function api:mob/summon
-    data modify storage api: Argument.ID set value 265
-    execute rotated ~ 0 positioned ^-2 ^0.1 ^ run function api:mob/summon
+    function api:mob/summon
 
-# リセット
-    scoreboard players reset @s 7C.Attack
+# 音とパーティクル
+    playsound minecraft:item.bottle.fill_dragonbreath hostile @a ~ ~ ~ 2 2
+    playsound minecraft:entity.enderman.ambient hostile @a ~ ~ ~ 2 1.2
+    playsound minecraft:entity.ender_eye.death hostile @a ~ ~ ~ 2 2
+    playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 1.75
+    playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 2

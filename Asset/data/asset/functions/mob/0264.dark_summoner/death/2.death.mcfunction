@@ -10,4 +10,4 @@
     playsound minecraft:entity.phantom.death hostile @a ~ ~ ~ 1 0.7
 
 # 付近のファミリアを消す
-    execute as @e[type=zombie,tag=7D.Entity,distance=..10,limit=2] at @s run function asset:mob/0265.dark_familiar/tick/event/suicide
+    execute as @e[type=zombie,tag=7D.Entity,distance=..10,limit=4] at @s run function asset:mob/0265.dark_familiar/tick/event/suicide

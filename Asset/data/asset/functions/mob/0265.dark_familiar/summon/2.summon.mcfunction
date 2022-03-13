@@ -59,6 +59,6 @@
         # data modify storage asset:mob Resist.Thunder set value
 
 # この世界に存在できる時間
-    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 7D.LifeTime 800
+    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 7D.LifeTime 200
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

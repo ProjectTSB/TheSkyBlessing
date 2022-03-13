@@ -16,10 +16,10 @@
     scoreboard players remove @s 7E.Range 1
 
 # プレイヤーの衝突判定
-    #execute positioned ~-0.5 ~0.0 ~-0.5 if entity @p[dx=0] run function asset:mob/0188.fireball/event/hit
+    execute positioned ~-0.5 ~0.0 ~-0.5 if entity @p[dx=0] run function asset:mob/0266.small_dark_ball/tick/event/hit
 
 # 壁の衝突判定
-    #execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/0188.fireball/event/hit
+    execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/0266.small_dark_ball/tick/event/hit
 
 # 再帰
     execute if entity @s[scores={7E.Recursive=1..,7E.Range=1..}] at @s run function asset:mob/0266.small_dark_ball/tick/move
