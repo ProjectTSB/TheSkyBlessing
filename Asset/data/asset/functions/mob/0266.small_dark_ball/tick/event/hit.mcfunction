@@ -5,8 +5,8 @@
 # @within function asset:mob/0266.small_dark_ball/tick/move
 
 # 引数の設定
-    # 与えるダメージ = 7.5
-        data modify storage lib: Argument.Damage set value 28.0f
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 6.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性

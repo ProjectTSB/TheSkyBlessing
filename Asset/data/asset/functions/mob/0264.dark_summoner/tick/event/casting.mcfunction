@@ -10,8 +10,9 @@
 
 # SFX
     particle minecraft:witch ~ ~1 ~ 0.2 0.5 0.2 0 1
-    execute if score @s 7C.Attack matches 40 run playsound minecraft:block.beacon.ambient hostile @a ~ ~ ~ 3 2
-    execute if score @s 7C.Attack matches 40.. run particle minecraft:dust 0.545 0.11 0.655 2 ~ ~0.5 ~ 0.2 0.5 0.2 0 1
+    execute if score @s 7C.Attack matches 40 run playsound minecraft:block.beacon.ambient hostile @a ~ ~ ~ 4 2
+    execute if score @s 7C.Attack matches 40..100 run particle minecraft:dust 0.545 0.11 0.655 2 ~ ~0.5 ~ 0.2 0.5 0.2 0 1
+    execute if score @s 7C.Attack matches 100.. run particle minecraft:dust 0.545 0.5 0.655 2 ~ ~0.5 ~ 0.2 0.5 0.2 0 1
 
 # 実行
     execute if score @s 7C.Attack matches 80 rotated ~ 0 positioned ^2 ^ ^ if block ~ ~ ~ #lib:no_collision run function asset:mob/0264.dark_summoner/tick/event/summon_minions
