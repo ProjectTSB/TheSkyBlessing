@@ -23,18 +23,19 @@
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
     data modify storage lib: Argument.BypassResist set value 1b
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result storage lib: Argument.Damage float 0.0040 run function api:mob/get_max_health
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0040 run function api:mob/get_max_health
 
-# 対象が天使でダメージ量が11以上の場合強制的にダメージを10に
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] if score $KD.DamageValue Temporary matches 11.. run data modify storage lib: Argument.Damage set value 10.0f
+# 天使の場合、1%にする
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0001 run function api:mob/get_max_health
 
-# Mobが死んだときにエラー吐くのでそれ防止
-    execute unless data storage lib: Argument.Damage run data modify storage lib: Argument.Damage set value 1.0
+# ダメージの値が10000以上の場合、9999にする
+    execute store result score $KD.DamageValue Temporary run data get storage lib: Argument.Damage 1.0
+    execute if score $KD.DamageValue Temporary matches 10000.. run scoreboard players set $KD.DamageValue Temporary 9999
+    execute store result storage lib: Argument.Damage float 1.0 run scoreboard players get $KD.DamageValue Temporary
 
 # ダメージ
     function lib:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
+    execute if data storage lib: Argument.Damage as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
 
 # 色々リセット
     data remove storage lib: Argument
