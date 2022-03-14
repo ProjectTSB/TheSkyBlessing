@@ -37,26 +37,26 @@
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value 
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 20d
+    data modify storage asset:mob Defense set value 20
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 20d
+    data modify storage asset:mob SpecialDefense set value 20
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0d
+    data modify storage asset:mob Speed set value 0
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 16
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 1.0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 1.0f
+        data modify storage asset:mob Resist.Physical set value 1.0
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 1.0f
+        data modify storage asset:mob Resist.Magic set value 1.0
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 1.0f
+        data modify storage asset:mob Resist.Fire set value 1.0
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 1.0f
+        data modify storage asset:mob Resist.Water set value 1.0
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 1.0f
+        data modify storage asset:mob Resist.Thunder set value 1.0
 
 # Phaseの初期状態セット
     scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 6i.Phase 0
