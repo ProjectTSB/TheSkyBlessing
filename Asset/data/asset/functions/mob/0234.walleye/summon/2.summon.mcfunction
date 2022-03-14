@@ -45,14 +45,14 @@
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 16
 # ノックバック耐性 (double) (オプション)
-    # data modify storage asset:mob KnockBackResist set value 
+    data modify storage asset:mob KnockBackResist set value 1.0
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
         data modify storage asset:mob Resist.Physical set value 1.0f
     # 魔法倍率 (float) (オプション)
         data modify storage asset:mob Resist.Magic set value 1.0f
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 2.0f
+        data modify storage asset:mob Resist.Fire set value 1.0f
     # 水倍率 (float) (オプション)
         data modify storage asset:mob Resist.Water set value 1.0f
     # 雷倍率 (float) (オプション)
