@@ -16,6 +16,9 @@
     tag @s remove 7L.Fall
 
 # 面のタグをつける
+    tag @s remove 7L.FaceWallUp
+    tag @s remove 7L.FaceWallDown
+    tag @s remove 7L.FaceCeiling
     tag @s add 7L.FaceFloor
 
 # スコアを初期化

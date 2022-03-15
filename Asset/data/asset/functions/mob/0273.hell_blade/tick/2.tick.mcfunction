@@ -11,7 +11,7 @@
     execute as @s[tag=!7L.Fall] run function asset:mob/0273.hell_blade/move/
 
 # 落ちるかどうかチェック
-    execute as @s[tag=!7L.Fall] align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
+    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
 
 # 落下タグがついているなら
     execute as @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall
