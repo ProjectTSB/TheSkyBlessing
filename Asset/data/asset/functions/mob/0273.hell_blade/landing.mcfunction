@@ -14,3 +14,9 @@
 
 # 落下タグを消す
     tag @s remove 7L.Fall
+
+# 面のタグをつける
+    tag @s add 7L.FaceFloor
+
+# スコアを初期化
+    scoreboard players set @s 7L.Timer 1
