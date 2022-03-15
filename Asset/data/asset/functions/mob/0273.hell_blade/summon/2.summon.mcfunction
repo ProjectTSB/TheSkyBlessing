@@ -5,7 +5,7 @@
 # @within function asset:mob/0273.hell_blade/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["7L.Init","MobInit","AntiBurn","AntiFallDamage"],DeathLootTable:"asset:mob/death/0273.hell_blade",IsBaby:1b,Silent:1b}
+    summon zombie ~ ~ ~ {Tags:["7L.Init","MobInit","AntiBurn","AntiFallDamage","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0273.hell_blade",IsBaby:1b,Silent:1b}
 # ID (int)
     data modify storage asset:mob ID set value 273
 # Type (string) Wikiを参照

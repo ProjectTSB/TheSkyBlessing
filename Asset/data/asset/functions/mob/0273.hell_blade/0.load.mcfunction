@@ -7,4 +7,5 @@
 #> 定義類はここに
 # @within function asset:mob/0273.hell_blade/**
     scoreboard objectives add 7L.Timer dummy
+    scoreboard objectives add 7L.RotateTimer dummy
     scoreboard objectives add 7L.FallingRotation dummy
