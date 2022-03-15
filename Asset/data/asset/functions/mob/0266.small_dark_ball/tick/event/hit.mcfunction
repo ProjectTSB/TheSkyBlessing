@@ -6,7 +6,7 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 6.0f
+        data modify storage lib: Argument.Damage set value 20.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性

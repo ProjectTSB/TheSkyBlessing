@@ -5,7 +5,7 @@
 # @within function asset:mob/0265.dark_familiar/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Team:"NoCollision",Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","7D.Entity"],DeathLootTable:"asset:mob/death/0265.dark_familiar",IsBaby:1b,Silent:1b,Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["7D.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
+    summon zombie ~ ~ ~ {Team:"NoCollision",Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","7D.Entity"],DeathTime:19s,DeathLootTable:"asset:mob/death/0265.dark_familiar",IsBaby:1b,Silent:1b,Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["7D.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 265
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-743873856,1938375990,-1876854713,270852829],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODU1YWY2YzVmZjIxZWI1NTYzMWEyNTIyMWQ3NTNjZGM5YTBmNjc5ZDVjYWNmNTU1YjM1MGJhMGUzNTIxZTA5MiJ9fX0="}]}}}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20177}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -31,9 +31,9 @@
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob ArmorDropChances set value
+    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    # data modify storage asset:mob Health set value
+    data modify storage asset:mob Health set value 1500
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち

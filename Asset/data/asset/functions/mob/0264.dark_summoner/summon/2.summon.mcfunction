@@ -5,7 +5,7 @@
 # @within function asset:mob/0264.dark_summoner/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","7C.Entity"],DeathLootTable:"asset:mob/death/0264.dark_summoner",Silent:1b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","7C.Entity","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0264.dark_summoner",Silent:1b}
 # ID (int)
     data modify storage asset:mob ID set value 264
 # Type (string) Wikiを参照
@@ -16,26 +16,27 @@
     data modify storage asset:mob Name set value '{"text":"ダークサモナー","color":"#B638FF","italic":false}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Mainhand set value
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20179}}
+
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob WeaponDropChances set value
+    data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1180339659,1568558558,-1186693271,-256707617],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmMyZTZiYTA3ZWZjZjYyZmZmYmRhZTMxZjY5NTZlZWUzM2UwOWMxZjNjYmIwODhiNDE3OWIwMWQ1ZWEyZDQ4NCJ9fX0="}]}}}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20178}}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5843307}}}
+        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:4404559}}}
     # 脚 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Legs set value
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob ArmorDropChances set value
+    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    # data modify storage asset:mob Health set value
+    data modify storage asset:mob Health set value 2500
 # 攻撃力 (double) (オプション)
-    # data modify storage asset:mob AttackDamage set value
+    data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす

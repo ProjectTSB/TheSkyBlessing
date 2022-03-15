@@ -8,7 +8,8 @@
     execute unless entity @s[tag=7D.Init] run function asset:mob/0265.dark_familiar/tick/event/init
 
 # パーティクル
-    execute anchored eyes run particle dust 0.5 0 0.6 0.5 ^ ^ ^ 0.1 0.1 0.1 0 4 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0 0.6 0.5 ~ ~-0.2 ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~-0.2 ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
 
 # 範囲内ならホーミングじみた移動、ただしダメージを受けていないなら
     execute at @s anchored eyes as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] run function asset:mob/0265.dark_familiar/tick/rotater/tick
