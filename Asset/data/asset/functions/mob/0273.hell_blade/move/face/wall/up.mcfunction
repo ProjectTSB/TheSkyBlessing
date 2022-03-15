@@ -3,13 +3,10 @@
 #
 #
 # @within function asset:mob/0273.hell_blade/move/face/
-
+#execute at @s run summon armor_stand ~ ~ ~ {NoGravity:1b}
 # 位置調整
     execute at @s[tag=7L.FaceFloor] run tp @s ~ ~-.125 ~
-    execute at @s[tag=7L.FaceCeiling] run tp @s ^ ^.875 ^.25 ~180 0
-
-# 向きのスコアを更新
-    execute store result score @s[tag=7L.FaceCeiling] 7L.FallingRotation run data get entity @s Rotation[0] 1
+    execute at @s[tag=7L.FaceCeiling] run tp @s ^ ^.875 ^-.25
 
 # タグ更新
     tag @s remove 7L.FaceCheck

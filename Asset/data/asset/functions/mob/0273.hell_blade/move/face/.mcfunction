@@ -26,14 +26,14 @@
         execute as @s[tag=7L.FaceWallDown,tag=7L.FaceCheck] unless block ~ ~-1 ~ #lib:no_collision run function asset:mob/0273.hell_blade/move/face/floor
 
     # ブロック終わったなら天井タグ
-        execute as @s[tag=7L.FaceWallDown,tag=7L.FaceCheck] if block ^ ^-1 ^1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/ceiling
+        execute as @s[tag=7L.FaceWallDown,tag=7L.FaceCheck] if block ^ ^-1 ^-1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/ceiling
 
 # 天井の時
     # ぶつかったなら壁下りタグ
-        execute as @s[tag=7L.FaceCeiling,tag=7L.FaceCheck] unless block ^ ^ ^1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/wall/down
+        execute as @s[tag=7L.FaceCeiling,tag=7L.FaceCheck] unless block ^ ^ ^-1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/wall/down
 
     # ブロック終わったなら壁上りタグ
-        execute as @s[tag=7L.FaceCeiling,tag=7L.FaceCheck] if block ^ ^1 ^1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/wall/up
+        execute as @s[tag=7L.FaceCeiling,tag=7L.FaceCheck] if block ^ ^1 ^-1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/wall/up
 
 
 

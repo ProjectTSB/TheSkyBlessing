@@ -6,7 +6,7 @@
 
 # 位置調整
     execute at @s[tag=7L.FaceWallUp] run tp @s ~ ~.125 ~
-    execute at @s[tag=7L.FaceWallDown] run tp @s ^ ^-.125 ^.25 ~180 0
+    execute at @s[tag=7L.FaceWallDown] run tp @s ^ ^-.125 ^-.25
 
 # 向きのスコアを更新
     execute store result score @s[tag=7L.FaceWallDown] 7L.FallingRotation run data get entity @s Rotation[0] 1

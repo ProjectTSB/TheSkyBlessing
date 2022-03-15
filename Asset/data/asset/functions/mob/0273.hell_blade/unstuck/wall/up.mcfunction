@@ -1,4 +1,4 @@
-#> asset:mob/0273.hell_blade/unstuck/wall
+#> asset:mob/0273.hell_blade/unstuck/wall/up
 #
 #
 #
