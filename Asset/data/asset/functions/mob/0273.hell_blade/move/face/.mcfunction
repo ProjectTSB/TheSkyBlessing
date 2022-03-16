@@ -34,7 +34,3 @@
 
     # ブロック終わったなら壁上りタグ
         execute as @s[tag=7L.FaceCeiling,tag=7L.FaceCheck] if block ^ ^1 ^-1 #lib:no_collision run function asset:mob/0273.hell_blade/move/face/wall/up
-
-
-
-

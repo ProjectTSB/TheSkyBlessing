@@ -24,5 +24,10 @@
     scoreboard players add @s 7L.Timer 1
     execute if score @s 7L.Timer matches 4.. run scoreboard players set @s 7L.Timer 0
 
-
-
+# SFX
+    #execute at @s run playsound entity.ender_dragon.growl hostile @a ~ ~ ~ .03 2
+    execute at @s run playsound entity.player.hurt_sweet_berry_bush hostile @a ~ ~ ~ .4 2
+    execute at @s run playsound item.trident.return hostile @a ~ ~ ~ .3 2
+    execute at @s[tag=7L.FaceFloor] run particle minecraft:item gunpowder ~ ~ ~ 0 0 0 0.12 5
+    execute at @s unless entity @s[tag=!7L.FaceWallUp,tag=!7L.FaceWallDown] run particle minecraft:item gunpowder ~ ~.2 ~ 0 0 0 0.12 5
+    execute at @s[tag=7L.FaceCeiling] run particle minecraft:item gunpowder ~ ~.8 ~ 0 0 0 0.12 5
