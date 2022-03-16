@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0273.hell_blade/tick/2.tick
+# @within function asset:mob/0273.hell_blade/**
 
 # 付いてる面で分岐
     # 床

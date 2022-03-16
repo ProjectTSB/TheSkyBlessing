@@ -12,7 +12,7 @@
 
     execute if score @s 7L.Timer matches 0 run function asset:mob/0273.hell_blade/chase/rotate/0
 
-
-
+# 落下チェック
+    execute at @s align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
 
 
