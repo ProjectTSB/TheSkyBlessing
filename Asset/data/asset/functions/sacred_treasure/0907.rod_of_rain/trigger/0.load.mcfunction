@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0907.rod_of_rain/trigger/**
     scoreboard objectives add P8.Tick dummy
+    scoreboard objectives add P8.UserID dummy
