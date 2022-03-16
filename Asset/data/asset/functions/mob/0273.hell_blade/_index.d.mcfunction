@@ -10,6 +10,8 @@
     #declare tag 7L.FaceWallDown
     #declare tag 7L.FaceCeiling
     #declare tag 7L.Fall
+    #declare tag 7L.RotateLeft
+    #declare tag 7L.RotateRight
 
 
 

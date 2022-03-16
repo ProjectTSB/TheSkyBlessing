@@ -20,9 +20,13 @@
     # 天井
         execute as @s[tag=7L.FaceCeiling] at @s run function asset:mob/0273.hell_blade/move/ceiling
 
-# タイミングのスコア
+# タイマー
     scoreboard players add @s 7L.Timer 1
     execute if score @s 7L.Timer matches 4.. run scoreboard players set @s 7L.Timer 0
+
+# 横にプレイヤーがいるかチェック
+    execute if score @s 7L.Timer matches 1 if score @s 7L.RotateTimer matches 1.. run scoreboard players remove @s 7L.RotateTimer 1
+    execute as @s[tag=7L.FaceFloor] if score @s 7L.RotateTimer matches 0 align xyz run function asset:mob/0273.hell_blade/chase/check
 
 # SFX
     #execute at @s run playsound entity.ender_dragon.growl hostile @a ~ ~ ~ .03 2

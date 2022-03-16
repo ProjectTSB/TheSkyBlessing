@@ -8,14 +8,13 @@
     execute as @s[tag=7L.Init] run function asset:mob/0273.hell_blade/init
 
 # 移動
-    execute as @s[tag=!7L.Fall] run function asset:mob/0273.hell_blade/move/
+    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches 0..3 run function asset:mob/0273.hell_blade/move/
+
+# 曲がる
+    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches ..-1 run function asset:mob/0273.hell_blade/chase/rotate/
 
 # 落ちるかどうかチェック
-    execute if score @s 7L.Timer matches 2 as @s[tag=!7L.Fall] align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
-
-# 横にプレイヤーがいるかチェック
-    execute if score @s 7L.Timer matches 1 if score @s 7L.RotateTimer matches 1.. run scoreboard players remove @s 7L.RotateTimer 1
-    execute if score @s 7L.RotateTimer matches 0 align xyz as @s[tag=7L.FaceFloor] run function asset:mob/0273.hell_blade/rotate/
+    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
 
 # 落下タグがついているなら
     execute as @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall

@@ -12,11 +12,15 @@
     data modify entity @s NoAI set value 1b
     data modify entity @s OnGround set value 1b
 
+# モデル適応
+    data modify entity @s ArmorItems[3].tag.CustomModelData set value 20160
+
 # 落下タグを消す
     tag @s remove 7L.Fall
 
-# モデル適応
-    data modify entity @s ArmorItems[3].tag.CustomModelData set value 20160
+# 曲がるタグを消す
+    tag @s remove 7L.RotateLeft
+    tag @s remove 7L.RotateRight
 
 # 面のタグをつける
     tag @s remove 7L.FaceWallUp
