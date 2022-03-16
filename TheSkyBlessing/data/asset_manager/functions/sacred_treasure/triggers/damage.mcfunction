@@ -6,6 +6,8 @@
 
 # イベント発火前に実行するやつ
     function asset_manager:sacred_treasure/data/new/set_to_current
+# Attackerのセット
+    execute as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s AttackingEntity = @a[tag=this,limit=1] AttackingEntity run tag @s add Attacker
 # 神器側に受け渡し
     function #asset:sacred_treasure/damage
     execute if entity @s[advancements={asset_manager:sacred_treasure/damage/fire=true}] run function #asset:sacred_treasure/damage/fire
