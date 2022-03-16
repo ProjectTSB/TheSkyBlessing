@@ -32,9 +32,10 @@
 
 # 水攻撃補正をstorageに入れる (補正1.2の場合、0.2が補正に入るようにする)
     execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run function api:player_modifier/attack/water/get
-    execute store result score $AttackWater Temporary run data get storage api: Return.Attack.Water 10
-    scoreboard players operation $AttackWater Temporary -= $10 Const
-    execute store result storage api: Argument.Amount double 0.1 run scoreboard players get $AttackWater Temporary
+    execute store result score $AttackWater Temporary run data get storage api: Return.Attack.Water 100
+    scoreboard players operation $AttackWater Temporary -= $100 Const
+    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $AttackWater Temporary
+
 # 体力回復量補正に水攻撃補正を掛ける
     data modify storage api: Argument.UUID set value [I;1,1,907,0]
     data modify storage api: Argument.Operation set value "multiply"
