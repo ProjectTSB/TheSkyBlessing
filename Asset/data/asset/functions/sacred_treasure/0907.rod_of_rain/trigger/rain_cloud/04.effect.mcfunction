@@ -8,6 +8,11 @@
 # @private
     #declare score_holder $AttackWater
 
+# 演出
+    playsound minecraft:entity.dolphin.swim player @a ~ ~ ~ 0.7 1.5
+    execute positioned ~ ~0.25 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
+    execute positioned ~ ~0.8 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
+
 # 自身を判別するTagを自身に付与
     tag @s add P8.This
 

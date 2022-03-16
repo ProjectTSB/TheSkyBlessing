@@ -17,7 +17,6 @@
     scoreboard players operation $Temp Temporary = @s P8.Tick
     scoreboard players operation $Temp Temporary %= $22 Const
     execute if score $Temp Temporary matches 0 run playsound weather.rain player @a ~ ~ ~ 0.5 1.5 0
-    execute if score $Temp Temporary matches 0 run playsound minecraft:entity.dolphin.swim player @a ~ ~ ~ 0.3 1.5
     scoreboard players reset $Temp Temporary
 
 # 当たり判定の演出
