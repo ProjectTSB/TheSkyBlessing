@@ -5,10 +5,18 @@
 # @within function asset:mob/0273.hell_blade/chase/rotate/
 
 # 回転
-    execute at @s[tag=7L.RotateLeft] align xyz positioned ~.5 ~ ~.5 rotated ~-90 0 run tp @s ^ ^ ^-.375 ~ ~
-    execute at @s[tag=7L.RotateRight] align xyz positioned ~.5 ~ ~.5 rotated ~90 0 run tp @s ^ ^ ^-.375 ~ ~
+    execute align xyz positioned ~.5 ~ ~.5 run tp @s ^ ^ ^-.375 ~ ~
     execute run tag @s remove 7L.RotateLeft
     execute run tag @s remove 7L.RotateRight
 
 # 向きのスコアを更新
     execute store result score @s 7L.FallingRotation run data get entity @s Rotation[0] 1
+
+# クールタイム
+    scoreboard players set @s 7L.RotateTimer 3
+
+# SFX
+    playsound block.piston.extend player @a ~ ~ ~ 1 2
+
+# モデル適応
+    data modify entity @s ArmorItems[3].tag.CustomModelData set value 20160
