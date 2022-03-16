@@ -1,5 +1,8 @@
 {
     "values": [
+        "asset:mob/0266.small_dark_ball/tick/1.trigger",
+        "asset:mob/0265.dark_familiar/tick/1.trigger",
+        "asset:mob/0264.dark_summoner/tick/1.trigger",
         "asset:mob/0274.death_saw_jiki/tick/1.trigger",
         "asset:mob/0259.shadow_stalker/tick/1.trigger",
         "asset:mob/0258.enemy_teleporter/tick/1.trigger",
