@@ -5,7 +5,7 @@
 # @within function asset:mob/0147.prismarine_slayer/attack/1.trigger
 
 # 自身に移動速度上昇
-    effect give @s speed 2 2 true
+    effect give @s speed 2 1 true
 
 # プレイヤーと同じ剣(鎌)の振り方
     item replace entity @s weapon.mainhand with stick{CustomModelData:20048}
@@ -23,7 +23,7 @@
     effect clear @p[tag=Victim,distance=..6] dolphins_grace
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 29f
+    data modify storage lib: Argument.Damage set value 28f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
