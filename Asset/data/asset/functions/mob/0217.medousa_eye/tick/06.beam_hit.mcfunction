@@ -2,7 +2,7 @@
 #
 # 石化ビームの着弾判定
 #
-# @within function asset:mob/0217.medousa_eye/tick/05.mineralization_beam
+# @within function asset:mob/0217.medousa_eye/tick/2.tick
 
 # 石tag付与
     tag @s add 61.Stone
@@ -23,8 +23,8 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
 # デスログ
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
-    data modify storage lib: Argument.DeathMessage append value ['[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]']
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sにより石化した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sと目を合わせてしまい、石像となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正
     execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
 # 実行
@@ -33,7 +33,7 @@
     data remove storage lib: Argument
 
 # マナを吸収
-    scoreboard players set $Fluctuation Lib -30
+    scoreboard players set $Fluctuation Lib -60
     function lib:mp/fluctuation
 
 # スケジュールループスタート
