@@ -5,7 +5,7 @@
 # @within function asset:mob/0265.dark_familiar/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Team:"NoCollision",Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","7D.Entity"],DeathTime:19s,DeathLootTable:"asset:mob/death/0265.dark_familiar",IsBaby:1b,Silent:1b,Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["7D.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
+    summon husk ~ ~-100 ~ {Team:"NoCollision",Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","7D.Entity"],DeathTime:19s,DeathLootTable:"asset:mob/death/0265.dark_familiar",IsBaby:1b,Silent:1b,Passengers:[{id:"minecraft:area_effect_cloud",Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["7D.Rotater","AutoKillWhenDieVehicle","AssetMob"]}]}
 # ID (int)
     data modify storage asset:mob ID set value 265
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20177}}
+        #data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20177}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -58,7 +58,5 @@
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
 
-# この世界に存在できる時間
-    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 7D.LifeTime 200
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute positioned ~ ~-100 ~ as @e[type=husk,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
