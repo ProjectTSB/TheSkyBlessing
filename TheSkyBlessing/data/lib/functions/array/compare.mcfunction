@@ -1,13 +1,14 @@
 #> lib:array/compare
 #
-# 配列の各要素について同一であるかを比較し、その結果の配列を返します。
+# 配列と比較対象配列の各要素について同一であるかを比較し、その結果の配列を返します。
 #
 # Array, Array2の要素の数は同一である必要があります。
 #
 # @input
-#   storage lib: ArrayA: [any] @ N
+#   T extends any
+#   storage lib: ArrayA: [T] @ N
 #   比較配列A
-#   storage lib: ArrayB: [any] @ N
+#   storage lib: ArrayB: [T] @ N
 #   比較配列B
 # @output
 #   storage lib: CompareResult: [{ _: { _: boolean } }] @ N

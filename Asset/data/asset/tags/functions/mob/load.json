@@ -1,6 +1,10 @@
 {
     "values": [
         "asset:mob/0233.honey_flyer/0.load",
+        "asset:mob/0274.death_saw_jiki/0.load",
+        "asset:mob/0258.enemy_teleporter/0.load",
+        "asset:mob/0257.distortion_spellbook/0.load",
+        "asset:mob/0245.fire_creeper/0.load",
         "asset:mob/0220.vena_cana/0.load",
         "asset:mob/0214.water_magic/0.load",
         "asset:mob/1008.yellow_star/0.load",
