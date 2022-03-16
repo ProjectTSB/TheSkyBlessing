@@ -6,4 +6,4 @@
 
 # SFX
     playsound entity.generic.explode hostile @a ~ ~ ~ 1 1
-    particle explosion ~ ~ ~ 0 0 0 1 2 normal @a
+    particle explosion ~ ~ ~ .5 .5 .5 1 4 normal @a
