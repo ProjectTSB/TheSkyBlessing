@@ -24,7 +24,6 @@
 # 処理
     execute as @e[type=#lib:living,tag=Target,tag=Enemy,distance=..13] run function lib:damage/
     execute as @e[type=#lib:living,tag=Target,tag=Friend,distance=..13] run function lib:heal/
-    execute as @a[distance=..13] run function lib:heal/
 # リセット
     tag @e[type=#lib:living,tag=TargetCandidate] remove TargetCandidate
     tag @e[type=#lib:living,tag=Target] remove Target
