@@ -45,7 +45,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-   # data modify storage asset:sacred_treasure SpecialCooldown set value 1200
+   data modify storage asset:sacred_treasure SpecialCooldown set value 1200
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照

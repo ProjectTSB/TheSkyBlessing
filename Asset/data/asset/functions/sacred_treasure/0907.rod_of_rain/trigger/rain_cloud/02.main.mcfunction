@@ -10,7 +10,7 @@
 # 演出
     particle minecraft:rain ~ ~ ~ 1.8 0 1.8 0 40 normal @a
     particle dolphin ~ ~-3 ~ 2.4 2 2.4 0 20 normal @a
-    particle dolphin ~ ~-5.7 ~ 2.4 0.1 2.4 0 10 normal @a
+    particle dolphin ~ ~-5.7 ~ 2.4 0.1 2.4 0 20 normal @a
     particle dust 0 5000000 100000000 2 ~ ~ ~ 2.3 0.2 2.3 0 8
 
 # 音
@@ -31,7 +31,7 @@
     scoreboard players operation $Temp Temporary %= $50 Const
     execute if score $Temp Temporary matches 0 positioned ~ ~-6 ~ run tag @e[type=#lib:living,tag=!Uninterferable,tag=!Object,distance=..4.5] add P8.TargetEntity
     execute if score $Temp Temporary matches 0 positioned ~ ~-3 ~ run tag @e[type=#lib:living,tag=!Uninterferable,tag=!Object,distance=..4.5] add P8.TargetEntity
-    execute if score $Temp Temporary matches 0 positioned ~ ~-6 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/04.damage
+    execute if score $Temp Temporary matches 0 positioned ~ ~-6 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/04.effect
     scoreboard players reset $Temp Temporary
 
 # スコア
