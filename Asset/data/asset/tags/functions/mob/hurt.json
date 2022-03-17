@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0273.hell_blade/hurt/1.trigger",
+        "asset:mob/0274.death_saw_jiki/hurt/1.trigger",
         "asset:mob/0259.shadow_stalker/hurt/1.trigger",
         "asset:mob/0257.distortion_spellbook/hurt/1.trigger",
         "asset:mob/0219.aorta/hurt/1.trigger",
