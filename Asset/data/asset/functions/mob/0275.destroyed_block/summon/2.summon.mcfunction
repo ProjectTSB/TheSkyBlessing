@@ -7,7 +7,7 @@
 #   asset:mob/0273.hell_blade/break
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Tags:["7N.Init","MobInit"],Small:1b,NoGravity:1b,Marker:0b}
+    summon armor_stand ~ ~ ~ {Tags:["7N.Init","MobInit"],Small:1b,NoGravity:1b,Marker:1b,Invisible:1b}
 # ID (int)
     data modify storage asset:mob ID set value 275
 # Type (string) Wikiを参照
@@ -25,7 +25,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Head set value
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20175}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)

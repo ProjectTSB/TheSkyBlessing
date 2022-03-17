@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0275.destroyed_block/**
+    scoreboard objectives add 7N.RemainingTime dummy
     scoreboard objectives add 7N.Timer dummy

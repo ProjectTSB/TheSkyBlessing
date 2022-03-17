@@ -9,7 +9,7 @@
     execute at @s[tag=7L.FaceWallDown] run tp @s ~ ~-1.125 ~
 
 # モデル適応
-    data modify entity @s ArmorItems[3].tag.CustomModelData set value 20166
+    data modify entity @s ArmorItems[3].tag.CustomModelData set value 20165
 
 # タグ更新
     tag @s remove 7L.FaceCheck
