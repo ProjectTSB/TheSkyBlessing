@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0275.destroyed_block/summon/1.trigger",
         "asset:mob/0273.hell_blade/summon/1.trigger",
         "asset:mob/0259.shadow_stalker/summon/1.trigger",
         "asset:mob/0271.indomitable_warrior/summon/1.trigger",
