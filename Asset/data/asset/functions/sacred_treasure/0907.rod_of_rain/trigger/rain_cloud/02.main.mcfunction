@@ -11,7 +11,7 @@
     particle minecraft:rain ~ ~ ~ 1.8 0 1.8 0 40 normal @a
     particle dolphin ~ ~-3 ~ 2.4 2 2.4 0 20 normal @a
     particle dolphin ~ ~-5.7 ~ 2.4 0.1 2.4 0 20 normal @a
-    particle dust 0 5000000 100000000 2 ~ ~ ~ 2.3 0.2 2.3 0 8
+    particle dust 0 5000000 100000000 2 ~ ~ ~ 1.5 0.2 1.5 0 8
 
 # 音
     scoreboard players operation $Temp Temporary = @s P8.Tick
