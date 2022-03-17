@@ -1,11 +1,8 @@
 {
     "values": [
-<<<<<<< HEAD
         "asset:mob/0275.destroyed_block/0.load",
         "asset:mob/0273.hell_blade/0.load",
-=======
         "asset:mob/0274.death_saw_jiki/0.load",
->>>>>>> master
         "asset:mob/0258.enemy_teleporter/0.load",
         "asset:mob/0257.distortion_spellbook/0.load",
         "asset:mob/0245.fire_creeper/0.load",

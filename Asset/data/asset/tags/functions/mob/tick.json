@@ -1,11 +1,8 @@
 {
     "values": [
-<<<<<<< HEAD
         "asset:mob/0275.destroyed_block/tick/1.trigger",
         "asset:mob/0273.hell_blade/tick/1.trigger",
-=======
         "asset:mob/0274.death_saw_jiki/tick/1.trigger",
->>>>>>> master
         "asset:mob/0259.shadow_stalker/tick/1.trigger",
         "asset:mob/0258.enemy_teleporter/tick/1.trigger",
         "asset:mob/0257.distortion_spellbook/tick/1.trigger",
