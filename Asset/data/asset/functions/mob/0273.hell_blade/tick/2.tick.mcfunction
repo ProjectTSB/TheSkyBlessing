@@ -11,7 +11,7 @@
     execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 0..3 run function asset:mob/0273.hell_blade/move/
 
 # 攻撃
-    execute at @s[tag=!7L.Fall] if entity @p[gamemode=!creative,gamemode=!spectator,distance=..1] run function asset:mob/0273.hell_blade/attack
+    execute at @s[tag=!7L.Fall] if entity @p[gamemode=!creative,gamemode=!spectator,distance=...8] run function asset:mob/0273.hell_blade/attack
 
 # 曲がる
     execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches ..-1 run function asset:mob/0273.hell_blade/chase/rotate/
