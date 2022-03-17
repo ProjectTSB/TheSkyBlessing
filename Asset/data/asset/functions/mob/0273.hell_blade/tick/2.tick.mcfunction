@@ -5,19 +5,25 @@
 # @within function asset:mob/0273.hell_blade/tick/1.trigger
 
 # Init処理
-    execute as @s[tag=7L.Init] run function asset:mob/0273.hell_blade/init
+    execute at @s[tag=7L.Init] run function asset:mob/0273.hell_blade/init
 
 # 移動
-    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches 0..3 run function asset:mob/0273.hell_blade/move/
+    execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 0..3 run function asset:mob/0273.hell_blade/move/
 
 # 攻撃
-    execute as @s[tag=!7L.Fall] if entity @p[gamemode=!creative,gamemode=!spectator,distance=...6] run function asset:mob/0273.hell_blade/attack
+    execute at @s[tag=!7L.Fall] if entity @p[gamemode=!creative,gamemode=!spectator,distance=..1] run function asset:mob/0273.hell_blade/attack
 
 # 曲がる
-    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches ..-1 run function asset:mob/0273.hell_blade/chase/rotate/
+    execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches ..-1 run function asset:mob/0273.hell_blade/chase/rotate/
 
 # 落ちるかどうかチェック
-    execute as @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
+    execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
+
+# ブロック破壊
+    execute at @s[tag=7L.FaceFloor,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~-1 ~ run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceWallUp,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ^ ^ ^1 run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceWallDown,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ^ ^ ^-1 run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceCeiling,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~1 ~ run function asset:mob/0273.hell_blade/break
 
 # 落下タグがついているなら
-    execute as @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall
+    execute at @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall
