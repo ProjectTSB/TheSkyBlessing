@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/01.schedule_loop
 
+
+# スコア
+    scoreboard players add @s P8.Tick 1
+
 # 回転
     tp @s ~ ~ ~ ~2 ~
 
@@ -32,9 +36,6 @@
     execute if score $Temp Temporary matches 0 positioned ~ ~-3 ~ run tag @e[type=#lib:living,tag=!Uninterferable,tag=!Object,distance=..4.5] add P8.TargetEntity
     execute if score $Temp Temporary matches 0 positioned ~ ~-6 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/04.effect
     scoreboard players reset $Temp Temporary
-
-# スコア
-    scoreboard players add @s P8.Tick 1
 
 # 消滅
     execute unless block ~ ~ ~ #lib:no_collision_without_fluid run kill @s
