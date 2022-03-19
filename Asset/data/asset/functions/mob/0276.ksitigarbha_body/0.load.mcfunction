@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0276.ksitigarbha_body/**
     scoreboard objectives add 7O.PairID dummy
+    scoreboard objectives add 7O.SurcideTime dummy

@@ -7,15 +7,19 @@
 #> prv
 # @private
     #declare tag 7O.KillTarget
-    #declare score_holder $7O.IsSnowCapped
+    #declare score_holder $7O.IsSnowRemoved
 
 
 # 自分に雪が乗っているか確認
-    execute unless data entity @s ArmorItems[3].Count run scoreboard players set $7O.IsSnowCapped Temporary 1
+    execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 unless data entity @s ArmorItems[3].Count run scoreboard players set $7O.IsSnowRemoved Temporary 1
 
 # 雪が乗っていないならペアを検索してkill
-    execute if score $7O.IsSnowCapped Temporary matches 1 as @e[scores={MobID=236},distance=..0.01] if score @s MobUUID = $7O.PairID Temporary run tag @s add 7O.KillTarget
-    execute if score $7O.IsSnowCapped Temporary matches 1 run kill @e[tag=7O.KillTarget,distance=..0.01,limit=1]
+    execute if score $7O.IsSnowRemoved Temporary matches 1 as @e[scores={MobID=236},distance=..0.01] if score @s MobUUID = $7O.PairID Temporary run tag @s add 7O.KillTarget
+    execute if score $7O.IsSnowRemoved Temporary matches 1 run kill @e[tag=7O.KillTarget,distance=..0.01,limit=1]
+
+# 雪が乗っていない場合周囲のプレイヤーにバフをかける
+    execute if score $7O.IsSnowRemoved Temporary matches 1 run effect give @a[distance=..5] regeneration 5 1
+    execute if score $7O.IsSnowRemoved Temporary matches 1 run tellraw @a[distance=..5] [{"translate": "お地蔵さんは雪をはらった恩返しをした","color": "yellow"}]
 
 # reset 
-    scoreboard players reset $7O.IsSnowCapped Temporary
+    scoreboard players reset $7O.IsSnowRemoved Temporary

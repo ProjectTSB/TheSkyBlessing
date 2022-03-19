@@ -8,17 +8,21 @@
 # @private
     #declare tag 7O.ExistPair
     #declare tag 7O.TpTarget
+    #declare score_holder $7O.SurcideTime
 
 # ペアが同座標にいるか確認
-    execute as @e[scores={MobID=236},distance=..0.01] if score @s MobUUID = $7O.PairID Temporary run tag @e[tag=this,distance=..0.01] add 7O.ExistPair
+    execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 as @e[scores={MobID=236},distance=..0.01] if score @s MobUUID = $7O.PairID Temporary run tag @e[tag=this,distance=..0.01] add 7O.ExistPair
 
 # いなかった場合ペアを検索してTP
-    execute unless entity @s[tag=7O.ExistPair] as @e[scores={MobID=236},distance=0.01..] if score @s MobUUID = $7O.PairID Temporary run tag @s add 7O.TpTarget
-    execute unless entity @s[tag=7O.ExistPair] run tp @s @e[tag=7O.TpTarget,limit=1]
+    execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 unless entity @s[tag=7O.ExistPair] as @e[scores={MobID=236},distance=0.01..] if score @s MobUUID = $7O.PairID Temporary run tag @s add 7O.TpTarget
+    execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 unless entity @s[tag=7O.ExistPair] run tp @s @e[tag=7O.TpTarget,limit=1]
 
-# ペアがいない場合自分自身をkill
-    execute at @s unless entity @s[tag=7O.ExistPair] unless entity @e[tag=7O.TpTarget,distance=..0.01,limit=1] run kill @s
+# ペアがいない場合自分自身にキルフラグをつける
+    execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 at @s unless entity @s[tag=7O.ExistPair] unless entity @e[tag=7O.TpTarget,distance=..0.01,limit=1] store result score $7O.SurcideTime Temporary run time query gametime
+    execute if score $7O.SurcideTime Temporary matches -2147483648..2147483647 run scoreboard players add $7O.SurcideTime Temporary 20
+    execute if score $7O.SurcideTime Temporary matches -2147483648..2147483647 run scoreboard players operation @s 7O.SurcideTime = $7O.SurcideTime Temporary
 
 # タグリセット
     tag @s[tag=7O.ExistPair] remove 7O.ExistPair
-    execute as @s run tag @e[tag=7O.TpTarget,distance=..0.01] remove 7O.ExistPair
+    execute as @s run tag @e[tag=7O.TpTarget,distance=..0.01] remove 7O.TpTarget
+    execute if score $7O.SurcideTime Temporary matches -2147483648..2147483647 run scoreboard players reset $7O.SurcideTime Temporary
