@@ -5,7 +5,7 @@
 # @within function asset:mob/0276.ksitigarbha_body/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Tags:["MobInit"],Invisible:1b,Pose:{RightArm:[0f,0f,0f]},DisabledSlots:4129024}
+    summon armor_stand ~ ~ ~ {Tags:["MobInit"],Invisible:1b,Pose:{RightArm:[0f,0f,0f],Head:[0f,0f,0f]},DisabledSlots:4129024,NoBasePlate:0b,NoGravity:1b}
 # ID (int)
     data modify storage asset:mob ID set value 276
 # Type (string) Wikiを参照
@@ -59,7 +59,7 @@
         # data modify storage asset:mob Resist.Thunder set value 
 
 # ペアとなるお地蔵さん本体のIDをセット
-    scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..0.01] 7O.PairID = @e[type=zombie,scores={MobID=236},distance=..0.01,limit=1] MobUUID
+    scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..1] 7O.PairID = @e[type=zombie,scores={MobID=236},distance=..1,limit=1] MobUUID
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

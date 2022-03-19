@@ -5,7 +5,7 @@
 # @within function asset:mob/0236.ksitigarbha/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:1b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:0b}
 # ID (int)
     data modify storage asset:mob ID set value 236
 # Type (string) Wikiを参照
@@ -63,5 +63,4 @@
 
 # 見た目用Mob召喚
     data modify storage api: Argument.ID set value 276
-    function api:mob/summon
-
+    execute positioned ~ ~0.5 ~ run function api:mob/summon
