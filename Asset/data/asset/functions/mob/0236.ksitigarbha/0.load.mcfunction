@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0236.ksitigarbha/**
-    scoreboard objectives add 
+    scoreboard objectives add 6K.PairID dummy
