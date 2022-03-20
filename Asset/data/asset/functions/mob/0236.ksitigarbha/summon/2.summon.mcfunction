@@ -4,8 +4,14 @@
 #
 # @within function asset:mob/0236.ksitigarbha/summon/1.trigger
 
+#> 見た目mobリンク用
+# @within
+#   function asset:mob/0236.ksitigarbha/summon/2.summon
+#   function asset:mob/0276.ksitigarbha_body/summon/2.summon
+    #declare tag 6K.LinkInit
+
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:0b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn","6K.LinkInit"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:0b}
 # ID (int)
     data modify storage asset:mob ID set value 236
 # Type (string) Wikiを参照
@@ -64,3 +70,6 @@
 # 見た目用Mob召喚
     data modify storage api: Argument.ID set value 276
     execute positioned ~ ~0.5 ~ run function api:mob/summon
+
+# リンク用初期化タグリセット
+    tag @e[type=zombie,tag=6K.LinkInit,distance=..0.01] remove 6K.LinkInit
