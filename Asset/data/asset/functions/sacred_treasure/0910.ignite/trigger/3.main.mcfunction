@@ -42,8 +42,8 @@
 
 # 近接で殴った相手以外に600ダメ
 # 殴った相手以外にタグを付ける
-    execute positioned ^ ^ ^1.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,distance=..3] add PA.MeleeNoHit
-    execute positioned ^ ^ ^2.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,distance=..3] add PA.MeleeNoHit
+    execute positioned ^ ^ ^1.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.MeleeNoHit
+    execute positioned ^ ^ ^2.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.MeleeNoHit
 # ダメージセット
     data modify storage lib: Argument.Damage set value 200.0f
 # 補正functionを実行
