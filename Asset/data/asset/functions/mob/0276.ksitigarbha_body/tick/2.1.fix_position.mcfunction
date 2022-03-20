@@ -17,7 +17,7 @@
     execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 unless entity @s[tag=7O.ExistPair] as @e[scores={MobID=236},distance=0.01..] if score @s MobUUID = $7O.PairID Temporary run tag @s add 7O.TpTarget
     execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 unless entity @s[tag=7O.ExistPair] at @e[tag=7O.TpTarget,limit=1] run tp @s ~ ~0.15 ~
 
-# ペアがいない場合自分自身にキルフラグをつける
+# ペアがいない場合自分自身に自殺時間をつける
     execute unless score @s 7O.SurcideTime matches -2147483648..2147483647 at @s unless entity @s[tag=7O.ExistPair] unless entity @e[tag=7O.TpTarget,distance=..0.2,limit=1] store result score $7O.SurcideTime Temporary run time query gametime
     execute if score $7O.SurcideTime Temporary matches -2147483648..2147483647 run scoreboard players add $7O.SurcideTime Temporary 20
     execute if score $7O.SurcideTime Temporary matches -2147483648..2147483647 run scoreboard players operation @s 7O.SurcideTime = $7O.SurcideTime Temporary
