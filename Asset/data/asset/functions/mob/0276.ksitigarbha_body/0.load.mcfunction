@@ -7,4 +7,9 @@
 #> 定義類はここに
 # @within function asset:mob/0276.ksitigarbha_body/**
     scoreboard objectives add 7O.PairID dummy
+
+#> お地蔵さん本体からも参照されるやつ
+# @within
+#   function asset:mob/0276.ksitigarbha_body/**
+#   function asset:mob/0236.ksitigarbha/**
     scoreboard objectives add 7O.SurcideTime dummy
