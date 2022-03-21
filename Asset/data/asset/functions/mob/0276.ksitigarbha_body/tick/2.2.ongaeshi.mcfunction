@@ -21,6 +21,9 @@
     execute if score $7O.IsSnowRemoved Temporary matches 1 run effect give @a[distance=..5] regeneration 5 1
     execute if score $7O.IsSnowRemoved Temporary matches 1 run tellraw @a[distance=..5] [{"translate": "お地蔵さんは雪を払ってもらった恩返しをした","color": "yellow"}]
 
+# 音
+    execute if score $7O.IsSnowRemoved Temporary matches 1 run playsound ogg:random.levelup hostile @a[distance=..5] ~ ~ ~ 2 1.5 1
+
 # 恩返しを実行したフラグをつける
     execute if score $7O.IsSnowRemoved Temporary matches 1 run tag @s add 7O.Ongaeshied
 
