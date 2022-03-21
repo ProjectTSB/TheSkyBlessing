@@ -6,7 +6,7 @@
 #> Private
 # @private
     #declare tag PA.MeleeHit
-    #declare tag PA.MeleeNoHit
+    #declare tag PA.SlashHit
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/mainhand
@@ -17,7 +17,7 @@
     tag @e[type=#lib:living,type=!player,tag=Victim,distance=..10,limit=1] add PA.MeleeHit
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 20
+    execute as @e[type=#lib:living,type=!player,tag=PA.MeleeHit,distance=..10] at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 20
     #playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
     playsound minecraft:item.trident.return player @a ~ ~ ~ 1 2
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0.6
@@ -42,16 +42,17 @@
 
 # 近接で殴った相手以外に600ダメ
 # 殴った相手以外にタグを付ける
-    execute positioned ^ ^ ^1.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.MeleeNoHit
-    execute positioned ^ ^ ^2.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.MeleeNoHit
+    execute positioned ^ ^ ^1.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.SlashHit
+    execute positioned ^ ^ ^2.5 run tag @e[type=#lib:living,type=!player,tag=!PA.MeleeHit,tag=!Uninterferable,distance=..3] add PA.SlashHit
 # ダメージセット
     data modify storage lib: Argument.Damage set value 200.0f
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @e[type=#lib:living,type=!player,tag=PA.MeleeNoHit,distance=..10] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,tag=PA.SlashHit,distance=..10] run function lib:damage/
 
 
 # リセット
     data remove storage lib: Argument
     tag @e[type=#lib:living,type=!player,tag=PA.MeleeHit,distance=..10] remove PA.MeleeHit
+    tag @e[type=#lib:living,type=!player,tag=PA.SlashHit,distance=..10] remove PA.SlashHit
