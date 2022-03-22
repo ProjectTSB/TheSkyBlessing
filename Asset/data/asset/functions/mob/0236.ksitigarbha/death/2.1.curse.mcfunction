@@ -14,8 +14,8 @@
 # Killerがいた場合Killerとその周囲のFriendにデバフとダメージ
     execute as @e[type=!player,tag=Friend,distance=..5] run function lib:damage/
     execute as @a[gamemode=!creative,tag=Friend,distance=..5] run function lib:damage/
-    effect give @e[type=!player,tag=Friend,distance=..5] blindness 10 1
-    effect give @a[gamemode=!creative,tag=Friend,distance=..5] blindness 10 1
+    effect give @e[type=!player,tag=Friend,distance=..5] poison 5 1
+    effect give @a[gamemode=!creative,tag=Friend,distance=..5] poison 5 1
     effect give @e[type=!player,tag=Friend,distance=..5] slowness 10 3
     effect give @a[gamemode=!creative,tag=Friend,distance=..5] slowness 10 3
 
