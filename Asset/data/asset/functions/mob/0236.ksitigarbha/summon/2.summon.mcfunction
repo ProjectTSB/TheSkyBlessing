@@ -11,7 +11,7 @@
     #declare tag 6K.LinkInit
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn","6K.LinkInit"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:0b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiBurn","6K.LinkInit","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0236.ksitigarbha",Silent:1b,IsBaby:0b}
 # ID (int)
     data modify storage asset:mob ID set value 236
 # Type (string) Wikiを参照

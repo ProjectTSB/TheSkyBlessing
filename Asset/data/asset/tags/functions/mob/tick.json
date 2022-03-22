@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0236.ksitigarbha/tick/1.trigger",
         "asset:mob/0276.ksitigarbha_body/tick/1.trigger",
         "asset:mob/0274.death_saw_jiki/tick/1.trigger",
         "asset:mob/0259.shadow_stalker/tick/1.trigger",
