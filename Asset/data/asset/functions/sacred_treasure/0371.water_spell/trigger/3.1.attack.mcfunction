@@ -13,8 +13,8 @@
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
 # ダメージ
-    # 与えるダメージ = 9
-        data modify storage lib: Argument.Damage set value 9f
+    # 与えるダメージ = 13
+        data modify storage lib: Argument.Damage set value 13f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
