@@ -1,8 +1,8 @@
-#> asset:mob/0217.medousa_eye/tick/06.beam_hit
+#> asset:mob/0217.medousa_eye/tick/07.beam_hit
 #
 # 石化ビームの着弾判定
 #
-# @within function asset:mob/0217.medousa_eye/tick/2.tick
+# @within function asset:mob/0217.medousa_eye/tick/05.beam_shoot
 
 # 石tag付与
     tag @s add 61.Stone
@@ -18,7 +18,7 @@
     attribute @s generic.knockback_resistance modifier add 00000001-0000-0002-0000-00d900000000 "217.KnockbackResist" 30 add
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 16f
+    data modify storage lib: Argument.Damage set value 20f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
@@ -37,4 +37,7 @@
     function lib:mp/fluctuation
 
 # スケジュールループスタート
-    schedule function asset:mob/0217.medousa_eye/tick/07.schedule_loop 1t replace
+    schedule function asset:mob/0217.medousa_eye/player_process/01.schedule_loop 1t replace
+
+# ヒットTag削除
+    tag @s remove LandingTarget

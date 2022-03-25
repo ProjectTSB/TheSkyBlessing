@@ -1,8 +1,8 @@
-#> asset:mob/0217.medousa_eye/tick/08.stone_time
+#> asset:mob/0217.medousa_eye/player_process/02.stone_time
 #
 # プレイヤーの石化状態時の処理だよ
 #
-# @within function asset:mob/0217.medousa_eye/tick/07.schedule_loop
+# @within function asset:mob/0217.medousa_eye/player_process/01.schedule_loop
 
 # 演出
     particle block stone ~ ~1.2 ~ 0.1 0.4 0.1 0 4 normal @a
@@ -13,6 +13,9 @@
 # デバフ
     execute if score @s 61.StoneTime matches 20.. run effect give @s slowness 1 4 true
     execute if score @s 61.StoneTime matches 20.. run effect give @s jump_boost 1 128 true
+
+# スケジュールループ
+    execute if entity @s[scores={61.StoneTime=0..}] run schedule function asset:mob/0217.medousa_eye/player_process/01.schedule_loop 1t replace
 
 # リセット処理
     execute if score @s 61.StoneTime matches ..0 run tag @s remove 61.Stone
