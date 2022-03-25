@@ -15,7 +15,7 @@
     execute if entity @s[scores={6G.BuffCool=80..}] run function asset:mob/0232.honey_leader/tick/03.buff_and_heal
 
 # ビームの予備動作演出
-    execute if entity @s[scores={6G.BeamCool=90}] anchored eyes positioned ^ ^ ^0.3 run function asset:mob/0232.honey_leader/tick/04.vfx
+    execute if entity @s[scores={6G.BeamCool=90}] anchored eyes positioned ^ ^ ^0.3 run function asset:mob/0232.honey_leader/tick/04.ready_shoot
 
 # ビーム発射とリセット
     execute if entity @s[scores={6G.BeamCool=100..}] run function asset:mob/0232.honey_leader/tick/05.shoot_and_reset
