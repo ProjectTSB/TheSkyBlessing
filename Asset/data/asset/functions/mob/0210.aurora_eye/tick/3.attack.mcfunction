@@ -13,10 +13,11 @@
     data modify storage lib: Argument.Damage set value 33f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
-
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによってオーロラに包まれ消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによって空の塵となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正実行
     function lib:damage/modifier
-
 # 一番最寄りのプレイヤー（今回は接触したやつのハズ）のHurtTimeを取る
     execute as @p[gamemode=!spectator] run function api:data_get/hurt_time
 
