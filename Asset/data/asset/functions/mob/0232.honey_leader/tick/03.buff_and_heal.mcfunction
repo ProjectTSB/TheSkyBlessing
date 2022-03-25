@@ -22,7 +22,7 @@
 
 # 引数の設定
     # 値
-        data modify storage lib: Argument.Heal set value 25f
+        data modify storage lib: Argument.Heal set value 400f
     # 補正function
         function lib:heal/modifier
     # 対象
