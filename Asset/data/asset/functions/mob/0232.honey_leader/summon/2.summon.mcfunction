@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.18
+    data modify storage asset:mob Speed set value 0.23
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32.0
 # ノックバック耐性 (double) (オプション)
