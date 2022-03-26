@@ -1,6 +1,11 @@
 {
     "values": [
         "asset:mob/0046.clock_of_despair/hurt/1.trigger",
+        "asset:mob/0274.death_saw_jiki/hurt/1.trigger",
+        "asset:mob/0259.shadow_stalker/hurt/1.trigger",
+        "asset:mob/0257.distortion_spellbook/hurt/1.trigger",
+        "asset:mob/0219.aorta/hurt/1.trigger",
+        "asset:mob/0220.vena_cana/hurt/1.trigger",
         "asset:mob/1004.tultaria/hurt/1.trigger",
         "asset:mob/example/hurt/1.trigger",
         "asset:mob/0060.self_destructor/hurt/1.trigger",

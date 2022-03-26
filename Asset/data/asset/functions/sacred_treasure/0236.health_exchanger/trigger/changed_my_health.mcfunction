@@ -13,10 +13,8 @@
     #declare score_holder $UserHealthInt 神器使用者の体力小数部分が代入されています
     #declare score_holder $TargetHealthDecimal 体力交換先(このfunction実行者)の体力整数部分を代入します
     #declare score_holder $TargetHealthInt 体力交換先(このfunction実行者)の体力小数部分を代入します
+    #declare score_holder $SCUserHealth
 
-    # 体力設定
-        scoreboard players operation $Set Lib = @a[tag=this,limit=1] Temporary
-        execute as @a[tag=HasMaxHealth] run function lib:score_to_health_wrapper/set
 
     # 表示用体力演算
         # //下のy.yy部分
@@ -27,4 +25,8 @@
         scoreboard players operation $TargetHealthDecimal Temporary %= $100 Const
 
     # 表示 「A と体力が交換された！ x.xx => y.yy」
-        tellraw @s [{"selector":"@a[tag=this,limit=1]"},{"text": " と体力が交換された！ "},{"score":{"name": "$TargetHealthInt","objective": "Temporary"}},".",{"score":{"name": "$TargetHealthDecimal","objective": "Temporary"}},{"text": " => "},{"score":{"name": "$UserHealthInt","objective": "Temporary"}},".",{"score":{"name": "$UserHealthDecimal","objective": "Temporary"}}]
+        tellraw @s [{"text":"","color": "red"},{"selector":"@a[tag=this,limit=1]","color":"red"},{"text": " と体力が交換された！ "},{"score":{"name": "$TargetHealthInt","objective": "Temporary"}},".",{"score":{"name": "$TargetHealthDecimal","objective": "Temporary"}},{"text": " => "},{"score":{"name": "$UserHealthInt","objective": "Temporary"}},".",{"score":{"name": "$UserHealthDecimal","objective": "Temporary"}}]
+
+    # 体力設定
+        scoreboard players operation $Set Lib = $SCUserHealth Temporary
+        function lib:score_to_health_wrapper/set
