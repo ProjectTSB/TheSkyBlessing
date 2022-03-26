@@ -15,14 +15,18 @@
 # 名前 (TextComponentString) (オプション)
     data modify storage asset:mob Name set value '{"text":"マッドサイエンティスト","color":"white"}'
 
-# 向き合わせ
-    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run tp @s ~ ~ ~ facing entity @p[gamemode=!creative,gamemode=!spectator] feet
-
 # ポーションの色を合わせる
-    execute if entity @s[tag=2X.Poison] run item replace entity @e[type=armor_stand,tag=MobInit,distance=..0.01] armor.head with splash_potion{CustomPotionColor:26112}
-    execute if entity @s[tag=2X.Fire] run item replace entity @e[type=armor_stand,tag=MobInit,distance=..0.01] armor.head with splash_potion{CustomPotionColor:13369344}
-    execute if entity @s[tag=2X.Water] run item replace entity @e[type=armor_stand,tag=MobInit,distance=..0.01] armor.head with splash_potion{CustomPotionColor:8454143}
-    execute if entity @s[tag=2X.Thunder] run item replace entity @e[type=armor_stand,tag=MobInit,distance=..0.01] armor.head with splash_potion{CustomPotionColor:16776960}
+    execute if entity @s[tag=2W.Poison] run data modify storage asset:mob Armor.Head set value {id:"splash_potion",Count:1b,tag:{CustomPotionColor:26112}}
+    execute if entity @s[tag=2W.Fire] run data modify storage asset:mob Armor.Head set value {id:"splash_potion",Count:1b,tag:{CustomPotionColor:13369344}}
+    execute if entity @s[tag=2W.Water] run data modify storage asset:mob Armor.Head set value {id:"splash_potion",Count:1b,tag:{CustomPotionColor:8454143}}
+    execute if entity @s[tag=2W.Thunder] run data modify storage asset:mob Armor.Head set value {id:"splash_potion",Count:1b,tag:{CustomPotionColor:16776960}}
+
+# ポーションにタグ付け
+    execute if entity @s[tag=2W.Poison] run tag @e[type=armor_stand,tag=MobInit,distance=..0.01] add 2X.Poison
+    execute if entity @s[tag=2W.Fire] run tag @e[type=armor_stand,tag=MobInit,distance=..0.01] add 2X.Fire
+    execute if entity @s[tag=2W.Water] run tag @e[type=armor_stand,tag=MobInit,distance=..0.01] add 2X.Water
+    execute if entity @s[tag=2W.Thunder] run tag @e[type=armor_stand,tag=MobInit,distance=..0.01] add 2X.Thunder
+
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

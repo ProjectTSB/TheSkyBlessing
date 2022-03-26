@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"leather_helmet",Count:1b,Unbreakable:1b,tag:{display:{color:16777215}}}
+        data modify storage asset:mob Armor.Head set value {id:"leather_helmet",Count:1b,tag:{Unbreakable:1b,display:{color:16777215}}}
     # 胴 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Chest set value {id:"leather_chestplate",Count:1b,tag:{display:{color:16777215}}}
     # 脚 (Compound(Item)) (オプション)
@@ -37,9 +37,9 @@
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 16
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 19
+    data modify storage asset:mob Defense set value -7
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 13
+    # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.25
 # 索敵範囲 (double) (オプション)

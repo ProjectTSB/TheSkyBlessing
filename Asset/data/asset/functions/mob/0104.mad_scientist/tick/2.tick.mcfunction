@@ -14,4 +14,4 @@
     execute if score @s 2W.Tick matches 100 run playsound minecraft:entity.wither.ambient hostile @a ~ ~ ~ 1 1.5
 
 # ポーションを投げる(Projectile使用)
-    execute if score @s 2W.Tick matches 120 run function asset:mob/0104.mad_scientist/tick/4.throw_potion
+    execute if score @s 2W.Tick matches 120.. run function asset:mob/0104.mad_scientist/tick/4.throw_potion

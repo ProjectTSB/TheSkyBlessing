@@ -11,19 +11,22 @@
 # リセット
     data remove storage lib: Argument
 
-
 # 薬品投げ
     data modify storage api: Argument.ID set value 105
     function api:mob/summon
-    execute rotated ~ -10 run tp @e[type=armor_stand,scores={MobID=105},distance=..0.01] ~ ~1 ~ facing entity @p[gamemode=!creative,gamemode=!spectator]
-
+    execute facing entity @p[gamemode=!creative,gamemode=!spectator] feet run tp @e[type=armor_stand,scores={MobID=105},distance=..0.01] ~ ~1 ~ ~ ~
 
 # 音
     playsound entity.splash_potion.throw hostile @a ~ ~ ~ 1 0.5 0
 
+# 体力が半分以下であることを検知して3way弾にする
+    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 1.0
+    execute if score $Health Temporary matches ..12500 facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+    execute if score $Health Temporary matches ..12500 facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~-20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+
 # スコアリセット
     scoreboard players reset @s 2W.Tick
-
+    scoreboard players reset $Health Temporary
 # タグを全消し
     execute if entity @s[tag=2W.Poison] run tag @s remove 2W.Poison
     execute if entity @s[tag=2W.Fire] run tag @s remove 2W.Fire

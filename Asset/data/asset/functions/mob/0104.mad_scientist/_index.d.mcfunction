@@ -14,7 +14,7 @@
 #   asset:mob/0104.mad_scientist/tick/**
 #   asset:mob/0105.potion_projectile/summon/2.summon
 #   asset:mob/0105.potion_projectile/tick/**
-    #declare tag 2X.Poison
-    #declare tag 2X.Fire
-    #declare tag 2X.Water
-    #declare tag 2X.Thunder
+    #declare tag 2W.Poison
+    #declare tag 2W.Fire
+    #declare tag 2W.Water
+    #declare tag 2W.Thunder
