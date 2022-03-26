@@ -10,7 +10,7 @@
     scoreboard players operation $Random Temporary %= $5 Const
 
 # 体力300以下の時に1回だけ行う技
-    execute if entity @s[tag=!6J.AlreadyElement] if score @s 6J.Health matches ..300 run scoreboard players set $Random Temporary 10
+    execute if entity @s[tag=!6J.AlreadyElement] if score @s 6J.Health matches ..27000 run scoreboard players set $Random Temporary 10
 
 # 技用Tagを付与
     execute if score $Random Temporary matches 0 run tag @s add 6J.Fire
