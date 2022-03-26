@@ -9,6 +9,7 @@
     #declare tag 1A.SkillThunderMaker
     #declare tag 1A.SkillBallAEC
     #declare tag 1A.SkillBeam
+    #declare tag 1A.This
 
     #declare tag Landing
     #declare tag LandingTarget
