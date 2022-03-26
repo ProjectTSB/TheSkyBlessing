@@ -4,8 +4,9 @@
 #
 # @within function asset:mob/0232.honey_leader/tick/2.tick
 
-# 自身に鈍足を付与
-    effect give @s slowness 1 10
+# 視点固定&NoAI
+    data modify entity @s NoAI set value 1b
+    tp @s ~ ~ ~ facing entity @p[gamemode=!spectator] eyes
 
 # 予備動作演出
     playsound entity.zombie_villager.converted hostile @a ~ ~ ~ 1.2 2 0

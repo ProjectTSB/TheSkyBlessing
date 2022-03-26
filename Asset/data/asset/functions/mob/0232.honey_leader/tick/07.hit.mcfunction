@@ -26,5 +26,6 @@
     effect give @s[gamemode=!creative] poison 3 1 true
     effect give @s[gamemode=!creative] mining_fatigue 3 1 true
 
-# タグ消し
+# リセット処理
     tag @s remove LandingTarget
+    data modify entity @s NoAI set value 0b

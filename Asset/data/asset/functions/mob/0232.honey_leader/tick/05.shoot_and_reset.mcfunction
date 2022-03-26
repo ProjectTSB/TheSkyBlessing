@@ -12,7 +12,6 @@
 # ヒット処理
     execute as @a[tag=LandingTarget,distance=..20] run function asset:mob/0232.honey_leader/tick/07.hit
 
-# NoAIとビームスコアリセットと鈍足削除
+# NoAIとビームスコアリセット
     data modify entity @s NoAI set value 0b
     scoreboard players reset @s 6G.BeamCool
-    effect clear @s slowness
