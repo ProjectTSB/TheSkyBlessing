@@ -4,6 +4,9 @@
 #
 # @within function core:tick/
 
+# Deathタグ付与
+    execute if entity @s[scores={DeathEvent=1..}] run tag @s add Death
+
 # Triggers
     execute if entity @s[scores={FirstJoinEvent=1}] run function core:handler/first_join
     execute if entity @s[scores={RejoinEvent=1..}] run function core:handler/rejoin
