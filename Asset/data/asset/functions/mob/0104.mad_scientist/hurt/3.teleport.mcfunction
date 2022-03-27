@@ -22,7 +22,7 @@
 
 # 突進する
     data modify storage lib: Argument.VectorMagnitude set value 2
-    execute at @s facing entity @p feet rotated ~ ~-10 run function lib:motion/
+    execute at @s facing entity @p[tag=Attacker] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット
     data remove storage lib: Argument

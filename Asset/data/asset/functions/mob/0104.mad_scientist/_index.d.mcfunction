@@ -8,6 +8,7 @@
     #declare tag 2W.Fire
     #declare tag 2W.Water
     #declare tag 2W.Thunder
+    #declare tag 2W.HalfHealth
 
 #> ポーション側と共通のTag
 # @within function

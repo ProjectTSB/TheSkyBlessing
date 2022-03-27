@@ -6,7 +6,7 @@
 
 # バックステップ
     data modify storage lib: Argument.VectorMagnitude set value 1
-    execute facing entity @p feet rotated ~180 ~-10 run function lib:motion/
+    execute facing entity @p[gamemode=!spectator] feet rotated ~180 ~-10 run function lib:motion/
 
 # リセット
     data remove storage lib: Argument
@@ -20,13 +20,11 @@
     playsound entity.splash_potion.throw hostile @a ~ ~ ~ 1 0.5 0
 
 # 体力が半分以下であることを検知して3way弾にする
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 1.0
-    execute if score $Health Temporary matches ..12500 facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
-    execute if score $Health Temporary matches ..12500 facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~-20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+    execute if entity @s[tag=2W.HalfHealth] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+    execute if entity @s[tag=2W.HalfHealth] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~-20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
 
 # スコアリセット
     scoreboard players reset @s 2W.Tick
-    scoreboard players reset $Health Temporary
 # タグを全消し
     execute if entity @s[tag=2W.Poison] run tag @s remove 2W.Poison
     execute if entity @s[tag=2W.Fire] run tag @s remove 2W.Fire
