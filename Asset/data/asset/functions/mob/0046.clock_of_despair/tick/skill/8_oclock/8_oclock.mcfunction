@@ -15,4 +15,7 @@
     execute if score @s 1A.LifeTime matches 821..830 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~6 ~
     execute if score @s 1A.LifeTime matches 831..840 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~8 ~
     execute if score @s 1A.LifeTime matches 841..850 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
-    execute if score @s 1A.LifeTime matches 851..860 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
+    execute if score @s 1A.LifeTime matches 851..890 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
+
+# 前の時間で出したスカルレイブンを消す
+    execute if score @s 1A.LifeTime matches 890 run kill @e[type=wither_skeleton,scores={MobID=182}]
