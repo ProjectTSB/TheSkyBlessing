@@ -8,7 +8,7 @@
     scoreboard players add @s MU.Time 1
 
 # 演出
-    execute as @a[distance=..32] rotated as @a[distance=..32] run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/vfx
+    execute as @a[distance=..32] facing entity @s eyes run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/vfx
 
 # 少しとどまってから発射 何個目かでズレ
     execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 10.. run tp @s ^ ^ ^1
@@ -21,6 +21,9 @@
 # 壁の中、壁が目の前にあると消える
     execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
     execute unless block ^ ^ ^1 #lib:no_collision run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/04.banish
+
+# スケジュールループ
+    schedule function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
 
 # 消滅
     execute if entity @s[tag=!MU.2,tag=!MU.3] if score @s MU.Time matches 50.. run kill @s

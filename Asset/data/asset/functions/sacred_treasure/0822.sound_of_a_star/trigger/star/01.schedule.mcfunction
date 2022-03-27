@@ -4,11 +4,8 @@
 #
 # @within function
 #   asset:sacred_treasure/0822.sound_of_a_star/trigger/3.main
-#   asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule
+#   asset:sacred_treasure/0822.sound_of_a_star/trigger/star/02.main
 #   asset:sacred_treasure/0822.sound_of_a_star/trigger/rejoin_process
 
 # 処理
     execute if entity @e[type=marker,tag=MU.Star,limit=1] as @e[type=marker,tag=MU.Star] at @s run function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/02.main
-
-# スケジュールループ
-    execute if entity @e[type=marker,tag=MU.Star,limit=1] run schedule function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
