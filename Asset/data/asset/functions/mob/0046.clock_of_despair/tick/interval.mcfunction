@@ -12,9 +12,10 @@
     execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..0.1,sort=nearest,limit=1] at @s rotated ~ 0 run function asset:mob/0046.clock_of_despair/tick/particle_clockhand
     function asset:mob/0046.clock_of_despair/tick/particle_clock
     execute as @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] at @s rotated ~ 0 run function asset:mob/0046.clock_of_despair/tick/paticle_thunder
+    execute as @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] at @s rotated ~ 0 run function asset:mob/0046.clock_of_despair/tick/particle_fire
 
 
 
 
 # 演出
-    playsound minecraft:block.stone_button.click_on hostile @a ~ ~ ~ 1 1.4
+    playsound minecraft:block.stone_button.click_on hostile @a ~ ~ ~ 0.6 1.4
