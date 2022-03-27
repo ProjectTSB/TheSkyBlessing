@@ -1,6 +1,6 @@
 #> asset:mob/0104.mad_scientist/tick/4.throw_potion
 #
-#
+# ポーション投げるタイミングの処理
 #
 # @within function asset:mob/0104.mad_scientist/tick/2.tick
 

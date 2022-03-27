@@ -1,6 +1,6 @@
 #> asset:mob/0104.mad_scientist/tick/5.addition_throw
 #
-#
+# 追加でポーション投げるfunction
 #
 # @within function asset:mob/0104.mad_scientist/tick/4.throw_potion
 
