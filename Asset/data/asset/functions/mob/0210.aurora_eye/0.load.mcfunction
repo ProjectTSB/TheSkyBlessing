@@ -14,3 +14,4 @@
 #   asset:mob/0210.aurora_eye/**
 #   asset:mob/0211.aurora_bullet/tick/3.hit
     scoreboard objectives add 5U.DebuffTime dummy
+    scoreboard objectives add 5U.DebuffLimit dummy

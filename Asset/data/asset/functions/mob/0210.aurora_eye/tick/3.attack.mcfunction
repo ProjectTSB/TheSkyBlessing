@@ -10,7 +10,7 @@
     execute at @p[gamemode=!spectator] run playsound entity.evoker.prepare_summon hostile @a ~ ~ ~ 0.5 2 0
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 33f
+    data modify storage lib: Argument.Damage set value 40f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
@@ -35,6 +35,7 @@
 
 # スコアを付与
     scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffTime 0
+    scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffLimit 200
 
 # スケジュールループを開始
     schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
