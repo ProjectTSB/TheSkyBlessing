@@ -10,6 +10,12 @@
 # 効果時間の処理
     scoreboard players remove @s 5U.DebuffTime 1
 
+# 定期的にMPを減少させる
+    scoreboard players operation $Interval Temporary = @s 5U.DebuffTime
+    scoreboard players operation $Interval Temporary /= $40 Const
+    execute if score $Interval Temporary matches 0 run scoreboard players set $Fluctuation Lib -30
+    execute if score $Interval Temporary matches 0 run function lib:mp/fluctuation
+
 # スケジュールループ
     execute if entity @s[scores={5U.DebuffTime=0..}] run schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
 
