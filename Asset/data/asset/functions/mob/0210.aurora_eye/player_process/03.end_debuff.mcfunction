@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0210.aurora_eye/player_process/02.main
 
-# タグ削除
-    tag @s remove 5U.Debuff
-
 # スコアリセット
     scoreboard players reset @s 5U.DebuffTime
 
