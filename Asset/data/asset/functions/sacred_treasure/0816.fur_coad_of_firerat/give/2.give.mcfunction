@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:diamond_chestplate"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"火鼠の皮衣","color":"green"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"火鼠の皮衣","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"1行目"}','{"text":"2行目"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"火鼠の皮で作った衣"}','{"text":"火への耐性を与えてくれる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value 
 # 使用回数 (int) (オプション)
