@@ -1,0 +1,15 @@
+#> asset:sacred_treasure/0818.bhuddas_bowl/trigger/3.main
+#
+# 神器のメイン処理部
+#
+# @within function asset:sacred_treasure/0818.bhuddas_bowl/trigger/2.check_condition
+
+# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
+    function asset:sacred_treasure/common/use/legs
+
+# ここから先は神器側の効果の処理を書く
+# バフを付与
+    effect give @s fire_resistance 1000000 2 
+    effect give @s strength 1000000 2 
+    effect give @s resistance 1000000 2 
+    effect give @s slow_falling 1000000 1
