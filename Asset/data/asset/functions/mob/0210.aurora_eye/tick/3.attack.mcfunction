@@ -26,21 +26,15 @@
 # リセット
     data remove storage lib: Argument
 
-# MP回復量減少デバフを付与
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,2,210,0]
-    # 補正値
-        data modify storage api: Argument.Amount set value -0.75
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply"
+# MPに関するデバフを付与(MP回復量-75%、2秒毎にMPが30減少する)
+    data modify storage api: Argument.UUID set value [I;1,2,210,0]
+    data modify storage api: Argument.Amount set value -0.75
+    data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
     execute as @p[gamemode=!spectator,dx=0] run function api:player_modifier/mp_regen/add
 
 # スコアを付与
-    scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffTime 200
-
-# タグを付与
-    tag @p[gamemode=!spectator,dx=0] add 5U.Debuff
+    scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffTime 0
 
 # スケジュールループを開始
     schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
