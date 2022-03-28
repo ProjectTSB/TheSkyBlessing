@@ -4,10 +4,13 @@
 #
 # @within function asset:sacred_treasure/0817.dragons_neck_ball/trigger/2.check_condition
 
-# ここから先は神器側の効果の処理を書く
-# かぐや姫装備がフルセットか確認
-    function asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.1.is_fullset
+# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
+    function asset:sacred_treasure/common/use/head
 
-# フルセットならバフを付与
-    execute if score $MP.fullset Temporary matches 1 run function asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.2.add_buff
+# ここから先は神器側の効果の処理を書く
+# バフを付与
+    effect give @s fire_resistance 1000000 2 
+    effect give @s strength 1000000 2 
+    effect give @s resistance 1000000 2 
+    effect give @s slow_falling 1000000 1
 

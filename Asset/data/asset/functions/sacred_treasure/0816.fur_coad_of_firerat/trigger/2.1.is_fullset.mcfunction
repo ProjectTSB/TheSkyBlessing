@@ -1,11 +1,10 @@
-#> asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/3.1.is_fullset
+#> asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/2.1.is_fullset
 #
 # @output
 #   score $MO.fullset
 #   0:フルセットでない 1:フルセット
 # @within function
-#   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/3.main
-#   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/dis_equip/main
+#   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/2.check_condition
 
 
 # インベントリの情報取得

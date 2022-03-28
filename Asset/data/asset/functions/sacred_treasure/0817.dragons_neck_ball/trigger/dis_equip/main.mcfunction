@@ -4,8 +4,8 @@
 #
 # @within function asset:sacred_treasure/0817.dragons_neck_ball/trigger/dis_equip/
 
-# かぐや姫装備がフルセットか確認
-    function asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.1.is_fullset
-
-# フルセットではないならバフを削除
-    execute if score $MP.fullset Temporary matches 0 run function asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.2.remove_buff
+# バフを削除
+    effect clear @s fire_resistance
+    effect clear @s strength
+    effect clear @s resistance
+    effect clear @s slow_falling

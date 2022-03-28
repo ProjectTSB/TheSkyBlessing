@@ -1,11 +1,10 @@
-#> asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.1.is_fullset
+#> asset:sacred_treasure/0817.dragons_neck_ball/trigger/2.1.is_fullset
 #
 # @output
 #   score $MP.fullset
 #   0:フルセットでない 1:フルセット
 # @within function
-#   asset:sacred_treasure/0817.dragons_neck_ball/trigger/3.main
-#   asset:sacred_treasure/0817.dragons_neck_ball/trigger/dis_equip/main
+#   asset:sacred_treasure/0817.dragons_neck_ball/trigger/2.check_condition
 
 
 # インベントリの情報取得

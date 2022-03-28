@@ -8,9 +8,9 @@
     function asset:sacred_treasure/common/use/chest
 
 # ここから先は神器側の効果の処理を書く
-# かぐや姫装備がフルセットか確認
-    function asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/3.1.is_fullset
-
-# フルセットならバフを付与
-    execute if score $MO.fullset Temporary matches 1 run function asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/3.2.add_buff
+# バフを付与
+    effect give @s fire_resistance 1000000 2 
+    effect give @s strength 1000000 2 
+    effect give @s resistance 1000000 2 
+    effect give @s slow_falling 1000000 1
 
