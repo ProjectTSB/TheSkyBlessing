@@ -9,4 +9,4 @@
 #   asset:mob/0211.aurora_bullet/tick/3.hit
 
 # プレイヤーの処理
-    execute as @a[tag=5U.Debuff] at @s run function asset:mob/0210.aurora_eye/player_process/02.main
+    execute as @a[scores={5U.DebuffTime=0..}] at @s run function asset:mob/0210.aurora_eye/player_process/02.main
