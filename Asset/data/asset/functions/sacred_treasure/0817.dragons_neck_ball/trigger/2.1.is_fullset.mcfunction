@@ -6,7 +6,6 @@
 # @within function
 #   asset:sacred_treasure/0817.dragons_neck_ball/trigger/2.check_condition
 
-
 # インベントリの情報取得
     function api:data_get/inventory
 

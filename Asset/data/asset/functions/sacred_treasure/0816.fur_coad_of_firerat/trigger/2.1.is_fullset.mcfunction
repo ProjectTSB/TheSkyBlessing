@@ -6,7 +6,6 @@
 # @within function
 #   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/2.check_condition
 
-
 # インベントリの情報取得
     function api:data_get/inventory
 
