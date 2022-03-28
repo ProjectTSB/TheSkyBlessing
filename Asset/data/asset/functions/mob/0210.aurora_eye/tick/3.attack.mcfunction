@@ -26,7 +26,7 @@
 # リセット
     data remove storage lib: Argument
 
-# MPに関するデバフを付与(MP回復量-75%、2秒毎にMPが30減少する)
+# MPに関するデバフを付与(MP回復量-75%、2秒毎にMPが20減少する)
     data modify storage api: Argument.UUID set value [I;1,2,210,0]
     data modify storage api: Argument.Amount set value -0.75
     data modify storage api: Argument.Operation set value "multiply"
