@@ -2,6 +2,11 @@
 #
 # @output
 #   score $MO.fullset
+#   0:フルセットでない 1:フルセット
+# @within function
+#   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/3.main
+#   asset:sacred_treasure/0816.fur_coad_of_firerat/trigger/dis_equip/main
+
 
 # インベントリの情報取得
     function api:data_get/inventory
