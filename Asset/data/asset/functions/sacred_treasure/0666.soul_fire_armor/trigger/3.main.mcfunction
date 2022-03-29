@@ -29,13 +29,13 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/fire/add
 
-# 火攻撃+10%
+# 火攻撃+8%
     data modify storage api: Argument.UUID set value [I;1,1,666,4]
-    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 
-# 火攻撃+8%
+# MP回復量+8%
     data modify storage api: Argument.UUID set value [I;1,1,666,4]
     data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
