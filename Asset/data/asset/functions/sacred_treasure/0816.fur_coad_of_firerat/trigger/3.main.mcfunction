@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 # バフを付与
     effect give @s fire_resistance 1000000 0 
-    effect give @s haste 1000000 1 
+    effect give @s haste 1000000 0
     effect give @s resistance 1000000 0 
     effect give @s slow_falling 1000000 0
 
