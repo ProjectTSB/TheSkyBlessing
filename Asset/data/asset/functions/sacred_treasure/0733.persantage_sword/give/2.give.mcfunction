@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"百分一剣","color":"blue"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"生ける者全てを平等に斬ることが出来る剣","color":"blue"}','{"text":"攻撃時、対象に","color":"blue"}','{"text":"最大体力の40%の割合ダメージを与える","color":"blue","bold":true}','{"text":"天使に対しては最大10ダメージ","color":"blue"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"生ける者全てを平等に斬ることが出来る剣","color":"blue"}','{"text":"攻撃時、対象に","color":"blue"}','{"text":"最大体力の40%の割合ダメージを与える","color":"blue","bold":true}','{"text":"天使には1%分のダメージを与える","color":"blue"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
