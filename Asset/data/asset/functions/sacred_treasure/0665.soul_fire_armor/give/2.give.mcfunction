@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"魂炎纏","color":"#01A7AC","bold":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"魂炎を纏う者に代償を。","color":"aqua"}','{"text":"代償背負いし者へ力を。","color":"aqua"}','[{"text":"物理耐性+5% ","color":"dark_green"},{"text":"火耐性+10% 火攻撃+8% ","color":"red"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"最大体力-10% 魔法耐性-5%","color":"dark_red"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魂炎を纏う者に代償を。","color":"aqua"}]','[{"text":"代償背負いし者へ力を。","color":"aqua"}]','[{"text":"物理耐性+5% ","color":"dark_green"},{"text":"火耐性+10% 火攻撃+8% ","color":"red"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"最大体力-10% 魔法耐性-5%","color":"dark_red"}]','[{"text":"魂炎を完全に纏いし時","color":"#01A7AC"}]','[{"text":"火攻撃+8% ","color":"red"},{"text":"MP回復量+8% ","color":"green"},{"text":"最大体力-10%","color":"dark_red"}]','[{"text":"の効果を追加で得て","color":"#01A7AC"}]','[{"text":"近接攻撃時に魂炎で対象を攻撃する。","color":"#01A7AC"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

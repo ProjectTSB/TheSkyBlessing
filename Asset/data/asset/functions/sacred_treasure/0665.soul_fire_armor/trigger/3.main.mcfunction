@@ -10,9 +10,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute positioned ~ ~0.8 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
-    execute positioned ~ ~1.1 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
-    execute positioned ~ ~1.4 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
+    execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~0.8 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
+    execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~1.1 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
+    execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~1.4 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
@@ -53,3 +53,6 @@
 
 # 最大体力を反映するための即時回復
     effect give @s instant_health 1 0
+
+# フルセット検知
+    execute if data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} run function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/

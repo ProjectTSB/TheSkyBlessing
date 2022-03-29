@@ -5,9 +5,9 @@
 # @within function asset:sacred_treasure/0665.soul_fire_armor/trigger/dis_equip/
 
 # 演出
-    execute positioned ~ ~0.8 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
-    execute positioned ~ ~1.1 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
-    execute positioned ~ ~1.4 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+    execute if entity @s[tag=!IG.Fullset] positioned ~ ~0.8 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+    execute if entity @s[tag=!IG.Fullset] positioned ~ ~1.1 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+    execute if entity @s[tag=!IG.Fullset] positioned ~ ~1.4 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
@@ -34,3 +34,6 @@
 
 # 最大体力-10%
     attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-029900000005
+
+# フルセット解除
+    execute if entity @s[tag=IG.Fullset] run function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
