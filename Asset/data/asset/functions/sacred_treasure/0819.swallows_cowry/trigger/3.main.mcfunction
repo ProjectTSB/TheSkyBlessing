@@ -13,3 +13,7 @@
     effect give @s strength 1000000 2 
     effect give @s resistance 1000000 2 
     effect give @s slow_falling 1000000 1
+
+# 音
+    playsound ogg:ambient.nether.crimson_forest.shine3 master @a ~ ~ ~ 1 1
+    playsound ogg:ambient.nether.crimson_forest.shine1 master @a ~ ~ ~ 1 2
