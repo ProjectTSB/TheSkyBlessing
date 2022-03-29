@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"龍の頸の玉","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"龍の首元にある珠"}','{"text":"攻撃力を上昇させる"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"龍の首元にある珠"}','{"text":"攻撃速度を上昇させる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value 
 # 使用回数 (int) (オプション)
