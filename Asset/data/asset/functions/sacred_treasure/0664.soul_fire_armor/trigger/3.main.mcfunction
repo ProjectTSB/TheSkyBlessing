@@ -46,4 +46,4 @@
     function api:player_modifier/defense/magic/add
 
 # 最大体力-10%
-    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-029800000006 "IG.MaxHealthDown" -0.1 multiply_base
+    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-029800000006 "MaxHealthDown" -0.1 multiply_base
