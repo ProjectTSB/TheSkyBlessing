@@ -13,7 +13,6 @@
     execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~1.7 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
-    playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
 
 # 物理耐性+5%

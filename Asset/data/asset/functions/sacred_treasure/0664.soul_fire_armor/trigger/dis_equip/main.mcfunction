@@ -8,7 +8,6 @@
     execute if entity @s[tag=!IG.Fullset] positioned ~ ~1.7 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
-    playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
 
 # 物理耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]

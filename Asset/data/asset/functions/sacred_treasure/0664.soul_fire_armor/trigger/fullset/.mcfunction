@@ -12,7 +12,6 @@
     function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle
     playsound block.fire.ambient player @a ~ ~ ~ 2 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
-    playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 2 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.6 0.4 0
     playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~ 0.6 1 0
 
