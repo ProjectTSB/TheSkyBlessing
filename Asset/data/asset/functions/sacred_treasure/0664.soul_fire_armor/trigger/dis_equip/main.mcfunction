@@ -18,6 +18,10 @@
 
 # 魔法耐性-5%
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    function api:player_modifier/mp_regen/remove
+
+# 魔法耐性-5%
+    data modify storage api: Argument.UUID set value [I;1,1,664,6]
     function api:player_modifier/defense/magic/remove
 
 # 最大体力-10%
