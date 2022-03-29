@@ -14,7 +14,7 @@
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.6 0.4 0
     playsound minecraft:block.respawn_anchor.set_spawn master @a ~ ~ ~ 0.6 1 0
-
+    playsound ogg:mob.vex.idle1 player @a ~ ~ ~ 1 0 0
 # 最大体力-10%
     attribute @s generic.max_health modifier add 00000001-0000-0001-0000-029800000003 "FullsetMaxHealthDown" -0.1 multiply_base
 

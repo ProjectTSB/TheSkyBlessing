@@ -16,6 +16,7 @@
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
+    playsound ogg:mob.vex.idle1 player @a ~ ~ ~ 1 0 0
 
 # 物理耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,665,5]
