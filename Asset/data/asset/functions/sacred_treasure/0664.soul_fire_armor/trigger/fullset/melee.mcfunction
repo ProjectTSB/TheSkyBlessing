@@ -21,4 +21,4 @@
     data remove storage lib: Argument
 
 # クールタイム設定
-    scoreboard players set @s IG.AttackCT 60
+    scoreboard players set @s IG.AttackCT 40
