@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle soul_fire_flame ~ ~0.6 ~ 0.4 0.25 0.4 0.05 20 normal @a
-    particle soul ~ ~0.6 ~ 0.4 0.25 0.4 0.02 20 normal @a
+    execute positioned ~ ~0.4 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
+    execute positioned ~ ~0.6 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
@@ -50,9 +50,5 @@
 # 最大体力-10%
     attribute @s generic.max_health modifier add 00000001-0000-0001-0000-029a00000004 "MaxHealthDown" -0.1 multiply_base
 
-# 体力が更新されないのが気に入らないので補正無しの0.1ダメを与える
-    data modify storage lib: Argument.Damage set value 0.1f
-    data modify storage lib: Argument.AttackType set value "Physical"
-    data modify storage lib: Argument.ByPassResist set value 1b
-    function lib:damage/
-    data remove storage lib: Argument
+# 最大体力を反映するための即時回復
+    effect give @s instant_health 1 0

@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0666.soul_fire_armor/trigger/dis_equip/
 
+# 演出
+    execute positioned ~ ~0.4 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+    execute positioned ~ ~0.6 ~ run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+
 # 物理耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,666,4]
     function api:player_modifier/defense/physical/remove
