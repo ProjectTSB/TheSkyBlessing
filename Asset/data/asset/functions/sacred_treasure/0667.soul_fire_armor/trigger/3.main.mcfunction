@@ -14,8 +14,8 @@
     particle soul ~ ~0.2 ~ 0.4 0.1 0.4 0.02 20 normal @a
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
-    playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
-    playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
+    playsound entity.vex.ambient player @a ~ ~ ~ 1 0 0
+    playsound block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0 0
 
 # 物理耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,667,3]
