@@ -12,9 +12,9 @@
 # 演出
     particle soul_fire_flame ~ ~1.7 ~ 0.4 0.2 0.4 0.05 20 normal @a
     particle soul ~ ~1.7 ~ 0.4 0.2 0.4 0.02 20 normal @a
-    playsound block.fire.ambient player @a ~ ~ ~ 1 0.8 0
+    playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
-    playsound particle.soul_escape player @a ~ ~ ~ 2 0.2 0
+    playsound minecraft:entity.vex.ambient player @a ~ ~ ~ 1 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
 
 # 物理耐性+5%
