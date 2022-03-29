@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0665.soul_fire_armor/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add IH.AttackCT dummy
