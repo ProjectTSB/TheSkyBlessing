@@ -25,5 +25,8 @@
 # リセット
     data remove storage lib: Argument
 
+# 1%で蜜柑をドロップ
+    execute if predicate lib:random_pass_per/1 run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1b,tag:{display:{Name:'{"text":"みかん","color":"#FFAA00"}',Lore:['[{"text":"みかんを投げる者","color":"#FFAA00"},{"text":"の落としたみかん"}]','{"text":"極稀に形が残るが"}','{"text":"食べることが出来ず"}','{"text":"飾ることしかできない"}']},SkullOwner:{Id:[I;463153349,-1660531863,-1823714981,703784498],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjViMWRiNTQ3ZDFiNzk1NmQ0NTExYWNjYjE1MzNlMjE3NTZkN2NiYzM4ZWI2NDM1NWEyNjI2NDEyMjEyIn19fQ=="}]}}}}}
+
 # 消滅
     kill @s
