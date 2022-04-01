@@ -7,7 +7,7 @@
 # 一定間隔で音を鳴らす
     scoreboard players operation $Temp Temporary = @s 7B.Tick
     scoreboard players operation $Temp Temporary %= $8 Const
-    execute if score $Temp Temporary matches 0 run playsound block.note_block.bit hostile @a[distance=..5] ~ ~ ~ 0.8 1.4 0
+    execute if score $Temp Temporary matches 0 run playsound block.note_block.bit hostile @a[distance=..5] ~ ~ ~ 0.8 0.5 0
     scoreboard players reset $Temp Temporary
 
 # スコア
