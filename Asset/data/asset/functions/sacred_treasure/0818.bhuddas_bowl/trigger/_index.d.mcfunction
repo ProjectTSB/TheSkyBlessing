@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/0818.bhuddas_bowl/trigger/**
-    #declare score_holder $MQ.fullset
+    #declare score_holder $MQ.Fullset

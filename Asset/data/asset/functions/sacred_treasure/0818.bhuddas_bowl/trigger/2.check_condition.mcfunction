@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 # かぐや姫装備がフルセットか確認
     function asset:sacred_treasure/0818.bhuddas_bowl/trigger/2.1.is_fullset
-    execute if score $MQ.fullset Temporary matches 0 run tag @s remove CanUsed
+    execute if score $MQ.Fullset Temporary matches 0 run tag @s remove CanUsed
     
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0818.bhuddas_bowl/trigger/3.main
