@@ -10,7 +10,7 @@
     particle dust 0 1 0 1 ~ ~0.7 ~ 0.02 0.02 0.02 0 5 normal @a
     particle dust 1 0.5 0 1 ~ ~0.2 ~ 0.4 0.4 0.4 0 200 normal @a
     playsound entity.item.pickup hostile @a ~ ~ ~ 1 0.5 0
-    playsound entity.generic.explode hostile @a ~ ~ ~ 0.5 1 0
+    playsound entity.generic.explode hostile @a ~ ~ ~ 0.1 1 0
 
 # 効果を付与
     effect give @a[gamemode=!spectator,distance=..1.5] saturation 3 0 true
