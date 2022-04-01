@@ -42,7 +42,7 @@
     execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run function api:player_modifier/heal/add
 
 # 範囲内のプレイヤーを回復
-    data modify storage lib: Argument.Heal set value 7.0f
+    data modify storage lib: Argument.Heal set value 5.0f
     execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run function lib:heal/modifier
     execute as @a[tag=P8.TargetEntity,distance=..10] run function lib:heal/
 
