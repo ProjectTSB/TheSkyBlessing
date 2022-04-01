@@ -59,7 +59,7 @@
         data modify storage asset:mob Resist.Thunder set value 0.5
 
 # スコアを与えておく
-    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 6J.Tick -70
+    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 6J.Tick -50
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

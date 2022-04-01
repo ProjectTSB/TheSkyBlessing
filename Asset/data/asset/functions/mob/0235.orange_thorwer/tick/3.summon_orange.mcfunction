@@ -20,4 +20,4 @@
     scoreboard players add @s 6J.Tick 1
 
 # リセット
-    execute if entity @s[scores={6J.Tick=30..}] run scoreboard players set @s 6J.Tick -70
+    execute if entity @s[scores={6J.Tick=30..}] run scoreboard players set @s 6J.Tick -50
