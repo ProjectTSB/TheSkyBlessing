@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0263.orange/0.load",
+        "asset:mob/0235.orange_thorwer/0.load",
         "asset:mob/0274.death_saw_jiki/0.load",
         "asset:mob/0258.enemy_teleporter/0.load",
         "asset:mob/0257.distortion_spellbook/0.load",

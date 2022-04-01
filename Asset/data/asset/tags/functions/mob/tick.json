@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0263.orange/tick/1.trigger",
+        "asset:mob/0235.orange_thorwer/tick/1.trigger",
         "asset:mob/0274.death_saw_jiki/tick/1.trigger",
         "asset:mob/0259.shadow_stalker/tick/1.trigger",
         "asset:mob/0258.enemy_teleporter/tick/1.trigger",
