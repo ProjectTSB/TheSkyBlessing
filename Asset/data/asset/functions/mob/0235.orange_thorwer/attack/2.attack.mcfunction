@@ -14,7 +14,7 @@
     effect give @p[tag=Victim,distance=..6] slowness 3 2 true
 
 # 爆発ダメージ
-    data modify storage lib: Argument.Damage set value 12f
+    data modify storage lib: Argument.Damage set value 22f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
