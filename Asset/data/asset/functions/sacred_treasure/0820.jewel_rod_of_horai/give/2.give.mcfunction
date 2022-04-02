@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"蓬莱","color":"red"},{"text":"の","color":"yellow"},{"text":"玉","color":"green"},{"text":"の","color":"blue"},{"text":"枝","color":"purple"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"蓬莱","color":"red"},{"text":"の","color":"yellow"},{"text":"玉","color":"green"},{"text":"の","color":"blue"},{"text":"枝","color":"dark_purple"}]'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"美しい実をつけた枝。","color":"white"}','{"text":"同種の宝を装備していほど力を発揮する。","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
