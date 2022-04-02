@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add MS.TargetUUID dummy

@@ -15,7 +15,7 @@
 #dummy エンティティセット
 execute rotated as @s run tp 0-0-0-0-0 0.0 0.0 0.0 ~ ~
 tag 0-0-0-0-0 add MS.BlockChecker
-summon area_effect_cloud 0.0 0.01 0.0 {Duration:1,Tags:[MS.BlockChecker]}
+summon area_effect_cloud 0.0 0.01 0.0 {Duration:21,Tags:["MS.BlockChecker","MS.AttackPosition"]}
 execute rotated as @s facing ^ ^ ^-1 as @e[type=area_effect_cloud,tag=MS.BlockChecker] run tp @s 0.0 0.01 0.0 ~ ~
 
 # 自分の視線上の1番手前の通過不可のブロック位置にAECを移動、ブロックがなかったら12.8ブロック先に移動
@@ -29,8 +29,8 @@ execute positioned ^ ^ ^6.4 as @e[type=#lib:living,tag=MS.TargetCandidate,distan
 
 #1番手前の候補のUUID取得
 execute store result score $MS.TargetUUID Temporary run scoreboard players get @e[type=#lib:living,tag=MS.TargetCandidate,distance=..13,sort=nearest,limit=1] MobUUID
-tellraw @p [{"score":{"name": "$MS.TargetUUID","objective": "Temporary"}}]
 
 #リセット
 tag 0-0-0-0-0 remove MS.BlockChecker
+tag @e[type=area_effect_cloud,tag=MS.BlockChecker,tag=!Friend,distance=..13] remove MS.BlockChecker
 tag @e[type=#lib:living,tag=MS.TargetCandidate,tag=!Friend,distance=..13] remove MS.TargetCandidate
