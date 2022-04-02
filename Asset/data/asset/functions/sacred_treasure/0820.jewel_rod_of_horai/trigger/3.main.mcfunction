@@ -8,4 +8,5 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_0
+    function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.2.set_target
+    #function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_0
