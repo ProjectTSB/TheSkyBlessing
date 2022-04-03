@@ -12,7 +12,7 @@
     function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.2.set_target
 
 # ターゲットのUUIDをAECにセットし攻撃発生地点に移動
-    function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.3.set_attack_position
+    function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.3.set_attack_data
 
 # 音
     playsound ogg:ambient.nether.warped_forest.here1 master @a ~ ~ ~ 1 2 1

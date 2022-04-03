@@ -12,8 +12,8 @@ scoreboard players operation $MS.TargetUUID Temporary = @s MS.TargetUUID
 execute as @e[type=#lib:living,tag=!Friend,distance=..25] if score @s MobUUID = $MS.TargetUUID Temporary run tag @s add MS.AttackTarget
 
 # パーティクル
-execute if entity @s[scores={MS.AttackLevel=4}] run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_4
-execute if entity @s[nbt={Age:20}] run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_attack
+execute if score @s MS.AttackLevel matches 4 run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_4
+execute if data entity @s {Age:20} run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_attack
 
 # タグリセット
 tag @e[type=#lib:living,tag=!Friend,distance=..25] remove MS.AttackTarget
