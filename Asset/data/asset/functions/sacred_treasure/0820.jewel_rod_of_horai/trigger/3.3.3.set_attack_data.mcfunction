@@ -23,7 +23,6 @@
     execute if data storage api: Inventory[{Slot:101b}].tag.TSB{ID:818} run scoreboard players add $MS.EquipNumber Temporary 1
     execute if data storage api: Inventory[{Slot:102b}].tag.TSB{ID:816} run scoreboard players add $MS.EquipNumber Temporary 1
     execute if data storage api: Inventory[{Slot:103b}].tag.TSB{ID:817} run scoreboard players add $MS.EquipNumber Temporary 1
-    tellraw @p [{"score":{"name": "$MS.EquipNumber","objective": "Temporary"}}]
 
 # AECに攻撃レベル代入
     scoreboard players operation @e[type=area_effect_cloud,tag=MS.AttackPosition,distance=..4] MS.AttackLevel = $MS.EquipNumber Temporary
