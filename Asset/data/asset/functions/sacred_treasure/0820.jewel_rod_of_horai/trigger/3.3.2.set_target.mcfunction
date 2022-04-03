@@ -11,13 +11,13 @@
   #declare tag MS.BlockChecker
   #declare tag MS.TargetCandidate
 
-# dummyエンティティセット
+# ブロック検知用のdummyエンティティと攻撃発生地点のエンティティセット
 execute rotated as @s run tp 0-0-0-0-0 0.0 0.0 0.0 ~ ~
 tag 0-0-0-0-0 add MS.BlockChecker
 summon area_effect_cloud 0.0 0.01 0.0 {Duration:21,Tags:["MS.BlockChecker","MS.AttackPosition"]}
 execute rotated as @s facing ^ ^ ^-1 as @e[type=area_effect_cloud,tag=MS.BlockChecker] run tp @s 0.0 0.01 0.0 ~ ~
 
-# 自分の視線上の1番手前の通過不可のブロック位置にAECを移動、ブロックがなかったら12.8ブロック先に移動
+# 自分の視線上の1番手前の通過不可のブロック位置に攻撃発生地点AECを移動、ブロックがなかったら12.8ブロック先に移動
 execute anchored eyes at @s positioned ^ ^ ^6.4 rotated as @e[tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0,sort=furthest,limit=2] positioned ^ ^ ^3.2 rotated as @e[tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0,sort=furthest,limit=2] positioned ^ ^ ^1.6 rotated as @e[tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0,sort=furthest,limit=2] positioned ^ ^ ^0.8 rotated as @e[tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0,sort=furthest,limit=2] positioned ^ ^ ^0.4 rotated as @e[tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0,sort=furthest,limit=2] positioned ^ ^ ^0.2 unless block ~ ~ ~ #lib:no_collision run tp @e[type=area_effect_cloud,tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0] ~ ~ ~
 execute anchored eyes at @s positioned ^ ^ ^12.8 run tp @e[type=area_effect_cloud,tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0] ~ ~ ~
 

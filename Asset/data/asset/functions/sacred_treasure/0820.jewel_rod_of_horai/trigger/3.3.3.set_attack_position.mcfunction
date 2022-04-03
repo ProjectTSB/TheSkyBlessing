@@ -6,7 +6,7 @@
 #
 # @within function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.main
 
-# AECを移動
+# AECを攻撃発生地点に移動
     execute anchored eyes positioned ^ ^ ^2 run tp @e[type=area_effect_cloud,tag=MS.AttackPosition,distance=..13] ~ ~ ~ ~ ~
 
 # AECにターゲットのUUID代入
