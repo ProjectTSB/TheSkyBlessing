@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_attack
 #
-# @within function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.5.attack_effect
+# @within function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.5.attack
 
 # 攻撃対象への攻撃パーティクル
     execute if score @s MS.AttackLevel matches 3.. positioned ^0 ^1 ^ as @e[type=#lib:living,tag=MS.AttackTarget,distance=..25,limit=1] facing entity @s eyes run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_beam_blue
