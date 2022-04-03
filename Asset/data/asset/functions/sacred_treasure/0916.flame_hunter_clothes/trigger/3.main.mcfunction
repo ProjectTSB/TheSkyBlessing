@@ -15,3 +15,6 @@
     playsound block.grass.break player @a ~ ~ ~ 0.4 1.2 0
     playsound block.grass.break player @a ~ ~ ~ 0.4 1.4 0
     playsound block.fire.ambient player @a ~ ~ ~ 0.8 1 0
+
+# 装備時の共通処理
+    function asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/equip
