@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0918.flame_hunter_boots/trigger/dis_equip/",
+        "asset:sacred_treasure/0917.flame_hunter_clothes/trigger/dis_equip/",
+        "asset:sacred_treasure/0916.flame_hunter_clothes/trigger/dis_equip/",
+        "asset:sacred_treasure/0915.flame_hunter_hat/trigger/dis_equip/",
         "asset:sacred_treasure/example/trigger/dis_equip/",
         "asset:sacred_treasure/0624.flame_helm/trigger/dis_equip/",
         "asset:sacred_treasure/0625.flame_armor/trigger/dis_equip/",

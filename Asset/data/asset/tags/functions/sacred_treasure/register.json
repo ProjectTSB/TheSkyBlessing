@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0918.flame_hunter_boots/register",
+        "asset:sacred_treasure/0917.flame_hunter_clothes/register",
+        "asset:sacred_treasure/0916.flame_hunter_clothes/register",
+        "asset:sacred_treasure/0915.flame_hunter_hat/register",
         "asset:sacred_treasure/0801.red_secret_stone/register",
         "asset:sacred_treasure/0003.humanity/register",
         "asset:sacred_treasure/0008.mysterious_tambourine/register",
