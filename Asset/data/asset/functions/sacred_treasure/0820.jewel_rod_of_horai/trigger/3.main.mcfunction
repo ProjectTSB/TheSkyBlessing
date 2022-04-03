@@ -14,5 +14,11 @@
 # ターゲットのUUIDをAECにセットし攻撃発生地点に移動
     function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.3.set_attack_position
 
+# 音
+    playsound ogg:ambient.nether.warped_forest.here1 master @a ~ ~ ~ 1 2 1
+
 # 攻撃発生までのscheduleループ実行
-    #function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.4.attack_effect_loop
+    schedule function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.4.attack_effect_loop 1t
+
+# reset
+    scoreboard players reset $MS.TargetUUID Temporary

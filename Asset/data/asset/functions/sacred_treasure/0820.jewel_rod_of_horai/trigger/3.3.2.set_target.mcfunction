@@ -9,10 +9,9 @@
 #> prv
 # @private
   #declare tag MS.BlockChecker
-  #declare score_holder $MS.DetectFlag
   #declare tag MS.TargetCandidate
 
-#dummy エンティティセット
+# dummyエンティティセット
 execute rotated as @s run tp 0-0-0-0-0 0.0 0.0 0.0 ~ ~
 tag 0-0-0-0-0 add MS.BlockChecker
 summon area_effect_cloud 0.0 0.01 0.0 {Duration:21,Tags:["MS.BlockChecker","MS.AttackPosition"]}
@@ -32,5 +31,5 @@ execute store result score $MS.TargetUUID Temporary run scoreboard players get @
 
 #リセット
 tag 0-0-0-0-0 remove MS.BlockChecker
-tag @e[type=area_effect_cloud,tag=MS.BlockChecker,tag=!Friend,distance=..13] remove MS.BlockChecker
+tag @e[type=area_effect_cloud,tag=MS.BlockChecker,distance=..13] remove MS.BlockChecker
 tag @e[type=#lib:living,tag=MS.TargetCandidate,tag=!Friend,distance=..13] remove MS.TargetCandidate
