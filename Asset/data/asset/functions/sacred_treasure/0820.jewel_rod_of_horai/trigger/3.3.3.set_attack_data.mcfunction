@@ -16,6 +16,9 @@
 # AECにターゲットのUUID代入
     scoreboard players operation @e[type=area_effect_cloud,tag=MS.AttackPosition,distance=..4] MS.TargetUUID = $MS.TargetUUID Temporary
 
+# AECに実行者のUUID代入
+    scoreboard players operation @e[type=area_effect_cloud,tag=MS.AttackPosition,distance=..4] MS.OwnerID = @s UserID
+
 # 装備状況確認
     scoreboard players set $MS.EquipNumber Temporary 0
     function api:data_get/inventory

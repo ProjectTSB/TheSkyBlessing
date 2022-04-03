@@ -11,4 +11,5 @@
 # @within
 #   function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.5.attack
 #   function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_*
+#   function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.6.damage
     #declare tag MS.AttackTarget

@@ -20,7 +20,7 @@
     execute if data entity @s {Age:20} run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.1.particle_attack
 
 # ダメージ
-    
+    execute if data entity @s {Age:20} run function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.6.damage
 
 # タグリセット
-    tag @e[type=#lib:living,tag=!Friend,distance=..25] remove MS.AttackTarget
+    tag @e[type=#lib:living,tag=MS.AttackTarget,distance=..25] remove MS.AttackTarget

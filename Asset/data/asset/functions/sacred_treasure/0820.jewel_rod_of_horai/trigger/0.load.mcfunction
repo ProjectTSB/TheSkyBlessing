@@ -10,3 +10,5 @@
     scoreboard objectives add MS.TargetUUID dummy
 # かぐや姫装備の装備数に応じた攻撃レベル
     scoreboard objectives add MS.AttackLevel dummy
+# 攻撃実行者のID
+    scoreboard objectives add MS.OwnerID dummy
