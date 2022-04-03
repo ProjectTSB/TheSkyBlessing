@@ -16,4 +16,4 @@
 
 # 装備数スコアを減らす
     scoreboard players remove @s PF.ArmorCount 1
-    execute if entity @s[scores={PF.ArmorCount=0}] run scoreboard players reset @s PF.ArmorCount
+    execute if entity @s[scores={PF.ArmorCount=..0}] run scoreboard players reset @s PF.ArmorCount
