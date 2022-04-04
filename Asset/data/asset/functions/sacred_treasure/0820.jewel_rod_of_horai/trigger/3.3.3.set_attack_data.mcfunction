@@ -2,6 +2,7 @@
 #
 # ターゲットのUUIDをAECにセットし攻撃発生地点に移動
 # @input
+#   as @p[tag=this]
 #   MS.TargetUUID Temporary 攻撃対象のUUID
 #
 # @within function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.main

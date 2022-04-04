@@ -14,7 +14,7 @@
 # ターゲットのUUIDをAECにセットし攻撃発生地点に移動
     function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.3.set_attack_data
 
-# 音
+# 攻撃音
     playsound ogg:ambient.nether.warped_forest.here1 master @a ~ ~ ~ 1 2 1
 
 # 攻撃発生までのscheduleループ実行
