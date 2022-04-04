@@ -15,10 +15,12 @@
     function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.3.set_attack_data
 
 # 攻撃音
-    playsound ogg:ambient.nether.warped_forest.here1 master @a ~ ~ ~ 1 2 1
+    execute if score @e[type=area_effect_cloud,tag=MS.AttackPosition,tag=MS.Init,distance=..4,limit=1] MS.AttackLevel matches 1.. run playsound ogg:ambient.nether.warped_forest.here1 master @a ~ ~ ~ 1 2 1
+    execute if score @e[type=area_effect_cloud,tag=MS.AttackPosition,tag=MS.Init,distance=..4,limit=1] MS.AttackLevel matches 0 run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 2
 
 # 攻撃発生までのscheduleループ実行
     schedule function asset:sacred_treasure/0820.jewel_rod_of_horai/trigger/3.3.4.attack_loop 1t
 
 # reset
     scoreboard players reset $MS.TargetUUID Temporary
+    tag @e[type=area_effect_cloud,tag=MS.AttackPosition,tag=MS.Init,distance=..4] remove MS.Init
