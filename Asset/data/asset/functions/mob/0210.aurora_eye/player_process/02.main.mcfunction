@@ -17,7 +17,7 @@
 # 定期的にMPを減少させる
     scoreboard players operation $Interval Temporary = @s 5U.DebuffTime
     scoreboard players operation $Interval Temporary %= $40 Const
-    execute if score $Interval Temporary matches 0 run scoreboard players set $Fluctuation Lib -20
+    execute if score $Interval Temporary matches 0 run scoreboard players set $Fluctuation Lib -12
     execute if score $Interval Temporary matches 0 run function lib:mp/fluctuation
     execute if score $Interval Temporary matches 0 run playsound block.beacon.power_select player @a ~ ~ ~ 0.2 2 0
     scoreboard players reset $Interval Temporary
