@@ -9,7 +9,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,distance=..3] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
     data remove storage lib: Argument
 
 # プレイヤーへのダメージ

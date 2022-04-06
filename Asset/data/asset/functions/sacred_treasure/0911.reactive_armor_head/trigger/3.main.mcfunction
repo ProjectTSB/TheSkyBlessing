@@ -11,8 +11,5 @@
 # 爆発で周囲にダメージを与える
     function asset:sacred_treasure/0911.reactive_armor_head/trigger/3.1.explosion
 
-# アーマータフネスを0にして耐久値を減らす
-    function asset:sacred_treasure/0911.reactive_armor_head/trigger/3.2.disable_armor
-
-# アーマータフネス復活までのスケジュールループ
-    schedule function asset:sacred_treasure/0911.reactive_armor_head/trigger/3.3.enable_armor_loop 1t
+# アーマータフネスと耐久値を減らす
+    item modify entity @s armor.head asset:sacred_treasure/0911.reactive_armor_head/decrease_toughness

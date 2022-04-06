@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "netherite_helmet"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"リアクティブアーマー(頭)","color":"orange","bold":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"リアクティブアーマー(頭)","color":"red","bold":true}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"爆発によりダメージを軽減する鎧","color":"white"}','{"text":"ただし爆発は自分以外の周囲を巻き込む","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    #data modify storage asset:sacred_treasure CustomNBT set value 
+    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1.0,Operation:0,UUID:[I;1,1,911,6],Slot:"head"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
