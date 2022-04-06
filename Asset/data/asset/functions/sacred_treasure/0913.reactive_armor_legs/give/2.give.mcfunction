@@ -1,19 +1,19 @@
-#> asset:sacred_treasure/0912.reactive_armor_chest/give/2.give
+#> asset:sacred_treasure/0913.reactive_armor_legs/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0912.reactive_armor_chest/give/1.trigger
+# @within function asset:sacred_treasure/0913.reactive_armor_legs/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 912
+    data modify storage asset:sacred_treasure ID set value 913
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "netherite_chestplate"
+    data modify storage asset:sacred_treasure Item set value "netherite_leggings"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"リアクティブアーマー(胴)","color":"red","bold":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"リアクティブアーマー(足)","color":"red","bold":true}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"爆発によりダメージを軽減する鎧","color":"white"}','{"text":"ただし爆発は自分以外の周囲を巻き込む","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value 
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "chest"
+    data modify storage asset:sacred_treasure Slot set value "legs"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onDamageFromEntity"
 # 神器の発動条件 (TextComponentString) (オプション)
@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1.0,Operation:0,UUID:[I;1,1,912,5],Slot:"chest"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1.0,Operation:0,UUID:[I;1,1,913,4],Slot:"legs"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
