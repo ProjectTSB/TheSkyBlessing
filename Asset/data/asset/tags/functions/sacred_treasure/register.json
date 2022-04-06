@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0912.reactive_armor_chest/register",
         "asset:sacred_treasure/0911.reactive_armor_head/register",
         "asset:sacred_treasure/0801.red_secret_stone/register",
         "asset:sacred_treasure/0003.humanity/register",
