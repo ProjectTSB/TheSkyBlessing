@@ -7,8 +7,7 @@
                 "amount": -0.5,
                 "operation": "addition",
                 "slot": "chest",
-                "name": "decrease_toughness",
-                "id": "00000001-0000-0001-0000-039000000005"
+                "name": "decrease_toughness"
             }
         ]
     },

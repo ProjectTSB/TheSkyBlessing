@@ -7,8 +7,7 @@
                 "amount": -0.5,
                 "operation": "addition",
                 "slot": "head",
-                "name": "decrease_toughness",
-                "id": "00000001-0000-0001-0000-038f00000006"
+                "name": "decrease_toughness"
             }
         ]
     },
