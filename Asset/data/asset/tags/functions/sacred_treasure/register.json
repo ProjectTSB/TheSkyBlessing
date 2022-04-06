@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0914.reactive_armor_feet/register",
         "asset:sacred_treasure/0913.reactive_armor_legs/register",
         "asset:sacred_treasure/0912.reactive_armor_chest/register",
         "asset:sacred_treasure/0911.reactive_armor_head/register",
