@@ -25,5 +25,5 @@
 # スケジュールループ
     execute if entity @s[scores={5U.DebuffTime=0..}] run schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
 
-# 付与されたデバフ時間上限と同じスコアになった場合効果時間終了
-    execute if score @s 5U.DebuffTime = @s 5U.DebuffLimit run function asset:mob/0210.aurora_eye/player_process/03.end_debuff
+# 付与されたデバフ時間上限のスコア以上になった場合効果時間終了
+    execute if score @s 5U.DebuffTime >= @s 5U.DebuffLimit run function asset:mob/0210.aurora_eye/player_process/03.end_debuff
