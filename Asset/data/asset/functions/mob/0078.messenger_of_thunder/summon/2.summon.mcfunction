@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"power",lvl:5},{id:"punch",lvl:1}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:378}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -48,15 +48,15 @@
     data modify storage asset:mob KnockBackResist set value 0.5
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 1.0
+        data modify storage asset:mob Resist.Physical set value 0.5
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.8
+        data modify storage asset:mob Resist.Magic set value 1
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 0.8
+        data modify storage asset:mob Resist.Fire set value 1
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 0.6
+        data modify storage asset:mob Resist.Water set value 0.8
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 0.25
+        data modify storage asset:mob Resist.Thunder set value 0
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
