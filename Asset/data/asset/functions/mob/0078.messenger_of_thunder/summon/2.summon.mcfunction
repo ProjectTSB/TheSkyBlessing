@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:378}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -57,6 +57,9 @@
         data modify storage asset:mob Resist.Water set value 0.8
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0
+
+# スコアを付与
+    scoreboard players set @e[type=skeleton,tag=MobInit,distance=..0.01] 26.Tick -80
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
