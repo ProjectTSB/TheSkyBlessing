@@ -9,9 +9,9 @@
     execute at @p[tag=Victim,distance=..6] run playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
 
 # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 17f
+        data modify storage lib: Argument.Damage set value 12f
 # 対象が鈍足状態ならダメージ増加
-        execute if entity @p[tag=Victim,predicate=asset:mob/0228.frost_eye/slowness,distance=..6] run data modify storage lib: Argument.Damage set value 24f
+        execute if entity @p[tag=Victim,predicate=asset:mob/0228.frost_eye/slowness,distance=..6] run data modify storage lib: Argument.Damage set value 18f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
