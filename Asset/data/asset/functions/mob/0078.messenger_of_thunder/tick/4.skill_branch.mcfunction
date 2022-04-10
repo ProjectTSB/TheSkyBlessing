@@ -4,11 +4,11 @@
 #
 # @within function asset:mob/0078.messenger_of_thunder/tick/2.tick
 
-# スキル1
+# 震雷
     execute if entity @s[scores={26.SkillSelect=0}] run function asset:mob/0078.messenger_of_thunder/skill/1/1
 
-# スキル2
-
+# 執雷
+    
 
 # スキル3
 

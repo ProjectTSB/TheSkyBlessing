@@ -5,8 +5,8 @@
 # @within function asset:mob/0078.messenger_of_thunder/tick/1.trigger
 
 # 演出
-    particle dust 1 1 0 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 1 normal @a
-    particle dust 0.3 0.3 0.3 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 1 normal @a
+    particle dust 1 1 0 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 3 normal @a
+    particle dust 0.2 0.2 0.2 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 3 normal @a
 
 # スコア
     execute unless entity @s[scores={26.Tick=100..}] if entity @a[distance=..50] run scoreboard players add @s 26.Tick 1

@@ -7,3 +7,4 @@
 # リセット
     scoreboard players reset @s 26.SkillSelect
     scoreboard players set @s 26.Tick -80
+    data modify entity @s NoAI set value 0b
