@@ -15,7 +15,7 @@
     effect give @s mining_fatigue 4 2 true
 
 # 水魔法ダメージ
-    data modify storage lib: Argument.Damage set value 17f
+    data modify storage lib: Argument.Damage set value 12f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     execute as @e[type=polar_bear,tag=this,scores={MobID=81},distance=..8,limit=1] run function lib:damage/modifier
