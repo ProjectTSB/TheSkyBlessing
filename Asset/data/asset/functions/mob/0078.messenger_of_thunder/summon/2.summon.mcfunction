@@ -16,9 +16,9 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"punch",lvl:2s}]}}
     # オフハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Offhand set value
+        data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
@@ -41,7 +41,7 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 10
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.23
+    data modify storage asset:mob Speed set value 0.4
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 30
 # ノックバック耐性 (double) (オプション)
