@@ -11,3 +11,6 @@
 
 # 演出
     playsound minecraft:entity.zombie_villager.converted hostile @a ^ ^ ^ 1 1.2 0
+
+# リセット
+    data remove storage lib: Argument

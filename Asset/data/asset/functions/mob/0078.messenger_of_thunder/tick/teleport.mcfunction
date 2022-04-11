@@ -1,0 +1,17 @@
+#> asset:mob/0078.messenger_of_thunder/tick/teleport
+#
+#
+#
+# @within function
+#   asset:mob/0078.messenger_of_thunder/tick/2.tick
+#   asset:mob/0078.messenger_of_thunder/tick/teleport
+
+# 演出
+    playsound block.respawn_anchor.charge hostile @a ~ ~ ~ 1 2 0
+
+# ランダムでワープ
+    data modify storage lib: Argument.Bounds set value [[8d,8d],[0],[8d,8d]]
+    function lib:spread_entity/
+
+# リセット
+    data remove storage lib: Argument

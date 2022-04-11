@@ -8,10 +8,10 @@
     execute if entity @s[scores={26.SkillSelect=0}] run function asset:mob/0078.messenger_of_thunder/skill/1/1
 
 # 執雷
-     execute if entity @s[scores={26.SkillSelect=1}] run function asset:mob/0078.messenger_of_thunder/skill/2/1
+    execute if entity @s[scores={26.SkillSelect=1}] run function asset:mob/0078.messenger_of_thunder/skill/2/1
 
-# スキル3
-
+# 瞬雷
+    execute if entity @s[scores={26.SkillSelect=2}] run function asset:mob/0078.messenger_of_thunder/skill/3/1
 
 # スキル4
 
