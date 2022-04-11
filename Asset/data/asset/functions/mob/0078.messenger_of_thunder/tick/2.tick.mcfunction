@@ -9,7 +9,7 @@
     particle dust 0.2 0.2 0.2 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 3 normal @a
 
 # ハメ対策
-    execute unless block ~ ~ ~ #lib:no_collision_without_fluid run function asset:mob/0078.messenger_of_thunder/tick/teleport
+    execute unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
 
 # スコア
     execute unless entity @s[scores={26.Tick=0..}] run scoreboard players add @s 26.Tick 1

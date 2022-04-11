@@ -13,7 +13,7 @@
     execute if entity @s[scores={26.Tick=20}] as @e[type=marker,scores={MobID=79},distance=..0.001,sort=nearest,limit=1] at @s facing entity @p[distance=..50] feet run tp @s ~ ~ ~ ~ ~
 
 # モーション
-    execute if entity @s[scores={26.Tick=20}] run data modify storage lib: Argument.VectorMagnitude set value 0.8
+    execute if entity @s[scores={26.Tick=20}] run data modify storage lib: Argument.VectorMagnitude set value 1.2
     execute if entity @s[scores={26.Tick=20}] facing entity @p[gamemode=!spectator,distance=..50] eyes rotated ~-180 ~-20 run function lib:motion/
 
 # リセット
