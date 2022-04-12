@@ -5,23 +5,12 @@
             "rolls": 1,
             "entries": [
                 {
-                    "type": "item",
-                    "name": "stone_button",
+                    "type": "loot_table",
+                    "name": "asset:mob/death/abstract_detect_item",
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:27}}"
-                        },
-                        {
-                            "function": "copy_nbt",
-                            "source": "killer_player",
-                            "ops": [
-                                {
-                                    "op": "replace",
-                                    "source": "UUID",
-                                    "target": "TSB.KillerUUID"
-                                }
-                            ]
+                            "tag": "{TSB:{ID:27}}"
                         }
                     ]
                 }

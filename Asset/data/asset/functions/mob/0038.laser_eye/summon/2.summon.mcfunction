@@ -5,7 +5,7 @@
 # @within function asset:mob/0038.laser_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0038.laser_eye",NoGravity:1b,Silent:1b,NoAI:1b,ActiveEffects:[{Id:14b,Amplifier:0b,Duration:2147483647}]}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0038.laser_eye",NoGravity:1b,Silent:1b,NoAI:1b}
 # ID (int)
     data modify storage asset:mob ID set value 38
 # Type (string) Wikiを参照
@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"レーザーアイ"}'
+    data modify storage asset:mob Name set value '{"text":"レーザーアイ","color":"green"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -29,11 +29,11 @@
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 50
+    data modify storage asset:mob Health set value 35
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 1
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 3
+    data modify storage asset:mob Defense set value 11
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)

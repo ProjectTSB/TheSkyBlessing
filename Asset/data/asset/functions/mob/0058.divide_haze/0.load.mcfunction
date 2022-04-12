@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0058.divide_haze/**
-    scoreboard objectives add 1M.HazeCount dummy
+    scoreboard objectives add 1M.Tick dummy

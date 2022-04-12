@@ -6,7 +6,7 @@
 
 
 # スコアを増やしていく
-    execute if entity @p[distance=..10] run scoreboard players add @s N.Zombietime 1
+    execute if entity @p[gamemode=!spectator,distance=..10] run scoreboard players add @s N.Zombietime 1
 
 # 突進時になんかケツアタックするのを防止する
     execute if entity @s[scores={N.Zombietime=102}] run tp @s ~ ~ ~ facing entity @p

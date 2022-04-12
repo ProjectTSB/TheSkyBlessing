@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"炎延者","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:7s}]}}
+    data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:golden_sword",Count:1b,tag:{Enchantments:[{id:"minecraft:fire_aspect",lvl:2s}]}}
     # オフハンド (Compound(Item)) (オプション)
     # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -35,11 +35,11 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 65
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 6
+    data modify storage asset:mob AttackDamage set value -2
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 5
+    data modify storage asset:mob Defense set value 18
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 3
+    # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.25
 # 索敵範囲 (double) (オプション)
