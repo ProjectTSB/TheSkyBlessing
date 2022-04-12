@@ -12,3 +12,6 @@
 # 雨雲を召喚
     summon marker ~ ~6 ~ {Tags:["P8.RainClowd","Object","Uninterferable"]}
     execute positioned ~ ~6 ~ run scoreboard players operation @e[type=marker,tag=P8.RainClowd,distance=..0.01] P8.UserID = @s UserID
+
+# スケジュールループスタート
+    schedule function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/01.schedule_loop 1t replace
