@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0120.convict/summon/1.trigger",
         "asset:mob/0274.death_saw_jiki/summon/1.trigger",
         "asset:mob/0259.shadow_stalker/summon/1.trigger",
         "asset:mob/0271.indomitable_warrior/summon/1.trigger",
