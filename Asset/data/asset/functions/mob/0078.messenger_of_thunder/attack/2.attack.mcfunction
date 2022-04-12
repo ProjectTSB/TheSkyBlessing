@@ -14,7 +14,7 @@
 
 # ダメージ
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 25.0d
+        data modify storage lib: Argument.Damage set value 22.5d
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Thunder"
     # 補正functionを実行
