@@ -9,7 +9,7 @@
     particle dust 0.2 0.2 0.2 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 3 normal @a
 
 # ハメ対策
-    execute unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
+    execute unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] unless block ~ ~ ~ #walls run function asset:mob/0078.messenger_of_thunder/tick/teleport
 
 # 落下対策
     execute if block ~ ~-0.5 ~ #lib:no_collision if block ~ ~-1.5 ~ #lib:no_collision if block ~ ~-2.5 ~ #lib:no_collision if block ~ ~-3.5 ~ #lib:no_collision at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
