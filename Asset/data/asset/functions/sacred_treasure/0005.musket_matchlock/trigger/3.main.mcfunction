@@ -7,7 +7,6 @@
 #> private
 # @private 
     #declare tag 5.MatchlockInit
-    #declare tag 5.MatchlockEntity
     #declare tag 5.SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
@@ -50,6 +49,6 @@
     execute anchored eyes run particle cloud ^ ^ ^1 0.2 0.2 0.2 0.2 15 normal
 
 # reset
-    execute positioned as @s run tag @e[tag=5.MatchlockInit,distance=..3] remove 5.MatchlockInit
+    tag @e[tag=5.MatchlockInit,distance=..3] remove 5.MatchlockInit
     data remove storage lib: Argument
-    kill @e[type=marker,tag=5.SpreadMarker,limit=1]
+    kill @e[type=marker,tag=5.SpreadMarker]
