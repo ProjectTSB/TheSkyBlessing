@@ -11,9 +11,6 @@
 # スコアを増やす
     scoreboard players add @s 3C.Tick 1
 
-# プレイヤーを見る
-    execute if score @s 3C.Tick matches 0 at @s facing entity @p feet run function asset:mob/0120.convict/tick/move/tereport
-
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
     execute if score @s 3C.Tick matches 0 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0120.convict/tick/3.skill_select

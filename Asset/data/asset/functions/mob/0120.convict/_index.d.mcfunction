@@ -10,11 +10,7 @@
     #declare tag 3C.ArmorStandThis
     #declare tag 3C.ArmorStandDeath
     #
-    #declare tag 3C.SkillThunder
-    #declare tag 3C.SkillMelee
-    #declare tag 3C.SkillMelee2
-    #declare tag 3C.SkillGun
-    #declare tag 3C.SkillOverHeat
+    #declare tag 3C.SkillAxe
     #
     #declare tag SpreadMarker
     #declare tag Landing
