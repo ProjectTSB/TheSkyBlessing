@@ -2,7 +2,7 @@
 #
 # Mobの被ダメージ時の処理
 #
-# @within function asset:mob/0090.deca
+# @within function asset:mob/0090.decapitation/hurt/1.trigger
 
 # 一定確率でダメージを受けて骨を落とす
     execute if predicate lib:random_pass_per/30 run function asset:mob/0090.decapitation/hurt/3.bone_drop
