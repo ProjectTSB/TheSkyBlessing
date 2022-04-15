@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"マスケット銃(マッチロック)","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"俗に言う火縄銃。"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"マッチロック式の銃、俗に言う火縄銃。"}','{"text":"命中精度は悪い。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"item.minecraft.gunpower"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
