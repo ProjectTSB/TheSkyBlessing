@@ -14,3 +14,6 @@
 
 # リセット
     data remove storage lib: Argument
+
+# ワープのクールダウンを設定
+    scoreboard players set @s 26.TPCool 30
