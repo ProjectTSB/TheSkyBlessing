@@ -7,14 +7,11 @@
 # 予備動作
     execute if entity @s[scores={26.Tick=0}] run playsound entity.zombie_villager.converted hostile @a ~ ~ ~ 1 1.5 0
 
-# 召喚
-    execute if entity @s[scores={26.Tick=20}] run data modify storage api: Argument.ID set value 79
-    execute if entity @s[scores={26.Tick=20}] run function api:mob/summon
-    execute if entity @s[scores={26.Tick=20}] as @e[type=marker,scores={MobID=79},distance=..0.001,sort=nearest,limit=1] at @s facing entity @p[distance=..50] feet run tp @s ~ ~ ~ ~ ~
+# 技を使う
+    execute if entity @s[scores={26.Tick=20}] run function asset:mob/0078.messenger_of_thunder/skill/2/2.skill
 
-# モーション
-    execute if entity @s[scores={26.Tick=20}] run data modify storage lib: Argument.VectorMagnitude set value 1.2
-    execute if entity @s[scores={26.Tick=20}] facing entity @p[gamemode=!spectator,distance=..50] eyes rotated ~-180 ~-20 run function lib:motion/
+# HP半分以下で少し遅れて追加で2本召喚
+    execute if entity @s[tag=26.HalfHP,scores={26.Tick=30}] run function asset:mob/0078.messenger_of_thunder/skill/2/3.addition_thunder
 
 # リセット
     execute if entity @s[scores={26.Tick=50..}] run function asset:mob/0078.messenger_of_thunder/tick/reset

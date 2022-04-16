@@ -9,11 +9,11 @@
     #declare score_holder $Temp
 
 # AECを召喚
-    execute if entity @s[scores={26.Tick=0}] at @p run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
-    execute if entity @s[scores={26.Tick=0}] at @p run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
-    execute if entity @s[scores={26.Tick=0}] at @p run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
-    execute if entity @s[scores={26.Tick=0}] at @p run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
-    execute if entity @s[scores={26.Tick=0}] at @p run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
+    execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
+    execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
+    execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
+    execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
+    execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point
 
 # 演出
     scoreboard players operation $Temp Temporary = @s 26.Tick
