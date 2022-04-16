@@ -28,3 +28,5 @@
     execute if score @s 1A.LifeTime matches 1000..1099 run function asset:mob/0046.clock_of_despair/tick/skill/10_oclock/10_oclock
 # 11時
     execute if score @s 1A.LifeTime matches 1100..1199 run function asset:mob/0046.clock_of_despair/tick/skill/11_oclock/11_oclock
+# 12時
+    execute if score @s 1A.LifeTime matches 1200.. run function asset:mob/0046.clock_of_despair/tick/skill/12_oclock/12_oclock
