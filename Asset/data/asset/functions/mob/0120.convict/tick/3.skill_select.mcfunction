@@ -13,10 +13,10 @@
     scoreboard players operation $Random Temporary %= $3 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 0
+    #838scoreboard players set $Random Temporary 2
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 3C.SkillAxe
-    execute if score $Random Temporary matches 0 run tag @s add 3C.SkillSummon
-    
+    execute if score $Random Temporary matches 1 run tag @s add 3C.SkillSummon
+    execute if score $Random Temporary matches 2 run tag @s add 3C.SkillSlash
 # リセット
     scoreboard players reset $Random Temporary

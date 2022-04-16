@@ -11,6 +11,8 @@
     #declare tag 3C.ArmorStandDeath
     #
     #declare tag 3C.SkillAxe
+    #declare tag 3C.SkillSummon
+    #declare tag 3C.SkillSlash
     #
     #declare tag SpreadMarker
     #declare tag Landing

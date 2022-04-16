@@ -6,3 +6,5 @@
 
 # スキル消す
     tag @s remove 3C.SkillAxe
+    tag @s remove 3C.SkillSummon
+    tag @s remove 3C.SkillSlash
