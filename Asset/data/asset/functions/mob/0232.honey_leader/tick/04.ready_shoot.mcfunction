@@ -6,10 +6,9 @@
 
 # 視点固定&NoAI
     data modify entity @s NoAI set value 1b
-    tp @s ~ ~ ~ facing entity @p[gamemode=!spectator] eyes
+    execute at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator] eyes
 
 # 予備動作演出
-    playsound entity.zombie_villager.converted hostile @a ~ ~ ~ 1.2 2 0
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdmAGjAFdiBLAEyTACYaBmGgNgpoA4BaATnoGMKOAFiYB2AEYc29AAwBDDjS4BGWUorTeg6UoCshMLlkBbBMkBYmoCXIwEb6AAiX6YsgE7GAzknC9UxXBCRsiXjhfOCcPMAA3WXRiU3AADyRpIigkgF80ohcKMmJ3RCUiVwhnP0QuZLA4dHQyGFdTERos1BKIU0qvJ1xQpCYiACtiIxgkQrAxOAAvMl7ESrJXAFEauoalgEdiaMwAZUcgqkQAM2iGokWAIWnZp03tmqh92UOkU-QGjIBdIA_3
 # 多角形 1
