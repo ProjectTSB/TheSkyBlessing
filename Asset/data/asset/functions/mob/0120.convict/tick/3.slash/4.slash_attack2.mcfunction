@@ -4,12 +4,13 @@
 #
 # @within function asset:mob/0120.convict/tick/3.slash/1.slash
 
-# ダメージ設定
+# 範囲内のプレイヤーに割合ダメージ
     data modify storage lib: Argument.Damage set value 20.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
+
 # リセット
     data remove storage lib: Argument
 
