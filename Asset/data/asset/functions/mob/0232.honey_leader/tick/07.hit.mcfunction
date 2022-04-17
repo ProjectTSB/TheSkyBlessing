@@ -5,8 +5,8 @@
 # @within function asset:mob/0232.honey_leader/tick/05.shoot_and_reset
 
 # 演出
-    particle block honey_block ~ ~1.2 ~ 0.4 0.4 0.4 0 60 normal @a
-    playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 0.8 1 0
+    playsound entity.glow_squid.squirt hostile @a[distance=..20] ~ ~ ~ 1 1.5 0.5
+    playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1 0.5
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 40f

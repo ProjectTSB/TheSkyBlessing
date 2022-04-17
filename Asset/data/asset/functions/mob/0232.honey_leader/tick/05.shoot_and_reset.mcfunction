@@ -5,9 +5,9 @@
 # @within function asset:mob/0232.honey_leader/tick/2.tick
 
 # ビーム発射
-    execute positioned ~ ~1.5 ~ run playsound entity.glow_squid.squirt hostile @a[distance=..20] ~ ~ ~ 1 2 0.5
-    execute positioned ~ ~1.5 ~ run playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1 0.5
-    execute positioned ~ ~1.5 ~ run playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1.2 0.5
+    playsound entity.glow_squid.squirt hostile @a[distance=..20] ~ ~ ~ 1 1.5 0.8
+    playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1 0.8
+    playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1.2 0.8
     execute positioned ~ ~1.5 ~ run function asset:mob/0232.honey_leader/tick/06.beam
 
 # ヒット処理

@@ -21,7 +21,7 @@
     effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] speed 2 1 true
 
 # 回復
-    data modify storage lib: Argument.Heal set value 400f
+    data modify storage lib: Argument.Heal set value 750f
     function lib:heal/modifier
     execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..10] run function lib:heal/
     data remove storage lib: Argument
