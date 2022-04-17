@@ -13,6 +13,17 @@
 # リセット
     data remove storage lib: Argument
 
+# 体力回復量-50%を付与
+    data modify storage api: Argument.UUID set value [I;1,2,120,0]
+    data modify storage api: Argument.Amount set value -0.8
+    data modify storage api: Argument.Operation set value "multiply"
+    execute as @a[distance=..2] run function api:player_modifier/heal/add
+
+# スコアを与える
+    scoreboard players add @a[distance=..2] 3C.Time 300
+# Schedulelooopするやつ
+    schedule function asset:mob/0120.convict/player_process/1.loop 1t replace
+
 # 盲目を与える
     effect give @a[distance=..2] blindness 4 0 false
 

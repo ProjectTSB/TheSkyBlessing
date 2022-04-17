@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0120.convict/rejoin_process",
+        "asset:mob/0120.convict/rejoin_process",
         "asset:sacred_treasure/0105.secret_meat/trigger/rejoin_process",
         "asset:mob/0220.vena_cana/rejoin_process",
         "asset:mob/1008.yellow_star/rejoin_process",
