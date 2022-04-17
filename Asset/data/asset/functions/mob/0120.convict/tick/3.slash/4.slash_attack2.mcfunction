@@ -8,7 +8,6 @@
     data modify storage lib: Argument.Damage set value 20.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
-    function lib:damage/modifier
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
 
 # リセット
