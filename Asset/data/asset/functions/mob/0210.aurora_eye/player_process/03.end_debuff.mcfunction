@@ -6,7 +6,6 @@
 
 # スコアリセット
     scoreboard players reset @s 5U.DebuffTime
-    scoreboard players reset @s 5U.DebuffLimit
 
 # MP消費量減少を削除
     data modify storage api: Argument.UUID set value [I;1,2,210,0]
