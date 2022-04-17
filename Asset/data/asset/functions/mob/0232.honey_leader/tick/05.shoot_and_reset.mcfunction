@@ -11,7 +11,7 @@
     execute positioned ~ ~1.5 ~ run function asset:mob/0232.honey_leader/tick/06.beam
 
 # ヒット処理
-    execute as @a[tag=LandingTarget,distance=..20] run function asset:mob/0232.honey_leader/tick/07.hit
+    execute as @a[tag=LandingTarget,distance=..20] at @s run function asset:mob/0232.honey_leader/tick/07.hit
 
 # NoAIとビームスコアリセット
     data modify entity @s NoAI set value 0b

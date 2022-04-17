@@ -15,10 +15,10 @@
     playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 0.8 0
 
 # バフ
-    tag @e[type=skeleton,scores={MobID=141..142},distance=..6] add 6G.HoneyMob
-    tag @e[type=skeleton,tag=!this,scores={MobID=232..233},distance=..6] add 6G.HoneyMob
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] resistance 2 1 true
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] speed 2 1 true
+    tag @e[type=skeleton,scores={MobID=141..142},distance=..10] add 6G.HoneyMob
+    tag @e[type=skeleton,scores={MobID=233},distance=..10] add 6G.HoneyMob
+    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..10] resistance 2 1 true
+    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..10] speed 2 1 true
 
 # 回復
     data modify storage lib: Argument.Heal set value 750f
@@ -27,7 +27,7 @@
     data remove storage lib: Argument
 
 # タグを消しておく
-    tag @e[type=skeleton,tag=6G.HoneyMob,distance=..6] remove 6G.HoneyMob
+    tag @e[type=skeleton,tag=6G.HoneyMob,distance=..10] remove 6G.HoneyMob
 
 # 自身のスコアリセット
     scoreboard players reset @s 6G.BuffCool
