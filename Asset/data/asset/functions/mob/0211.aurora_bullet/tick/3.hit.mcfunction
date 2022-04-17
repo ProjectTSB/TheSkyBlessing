@@ -26,8 +26,7 @@
     execute as @a[gamemode=!spectator,dx=0] run function api:player_modifier/mp_regen/add
 
 # スコアを付与
-    scoreboard players set @a[gamemode=!spectator,dx=0] 5U.DebuffTime 0
-    scoreboard players set @p[gamemode=!spectator,dx=0] 5U.DebuffLimit 80
+    scoreboard players set @a[gamemode=!spectator,dx=0] 5U.DebuffTime 80
 
 # スケジュールループを開始
     schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
