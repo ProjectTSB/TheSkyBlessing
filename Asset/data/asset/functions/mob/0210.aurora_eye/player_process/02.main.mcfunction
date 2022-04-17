@@ -23,7 +23,6 @@
 # 効果時間の処理
     scoreboard players add @s 5U.DebuffTime 1
 
-
 # スケジュールループ
     execute if entity @s[scores={5U.DebuffTime=0..}] run schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
 
