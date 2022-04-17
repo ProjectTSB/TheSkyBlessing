@@ -14,20 +14,21 @@
     particle minecraft:wax_on ~ ~ ~ 2 2 2 0 100
     playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 0.8 0
 
-# バフ
-    tag @e[type=skeleton,scores={MobID=141..142},distance=..10] add 6G.HoneyMob
-    tag @e[type=skeleton,scores={MobID=233},distance=..10] add 6G.HoneyMob
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..10] resistance 2 1 true
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..10] speed 2 1 true
+# バフ/回復のターゲット
+    tag @e[type=skeleton,scores={MobID=141..142},distance=..15] add 6G.HoneyMob
+    tag @e[type=skeleton,scores={MobID=233},distance=..15] add 6G.HoneyMob
 
+# バフ
+    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] resistance 2 1 true
+    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] speed 2 1 true
 # 回復
     data modify storage lib: Argument.Heal set value 750f
     function lib:heal/modifier
-    execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..10] run function lib:heal/
+    execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..15] run function lib:heal/
     data remove storage lib: Argument
 
 # タグを消しておく
-    tag @e[type=skeleton,tag=6G.HoneyMob,distance=..10] remove 6G.HoneyMob
+    tag @e[type=skeleton,tag=6G.HoneyMob,distance=..15] remove 6G.HoneyMob
 
 # 自身のスコアリセット
     scoreboard players reset @s 6G.BuffCool
