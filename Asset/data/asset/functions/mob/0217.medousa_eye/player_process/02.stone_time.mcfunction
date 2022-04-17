@@ -14,8 +14,11 @@
     execute if score @s 61.StoneTime matches 20.. run effect give @s slowness 1 4 true
     execute if score @s 61.StoneTime matches 20.. run effect give @s jump_boost 1 128 true
 
+# 死んだ場合リセット
+    execute if entity @s[tag=Death] run scoreboard players set @s 61.StoneTime 0
+
 # スケジュールループ
-    execute if entity @s[scores={61.StoneTime=0..}] run schedule function asset:mob/0217.medousa_eye/player_process/01.schedule_loop 1t replace
+    execute if entity @s[scores={61.StoneTime=1..}] run schedule function asset:mob/0217.medousa_eye/player_process/01.schedule_loop 1t replace
 
 # リセット処理
     execute if score @s 61.StoneTime matches ..0 run tag @s remove 61.Stone
