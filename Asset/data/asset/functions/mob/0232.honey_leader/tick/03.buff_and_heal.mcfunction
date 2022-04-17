@@ -20,15 +20,11 @@
     effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] resistance 2 1 true
     effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..6] speed 2 1 true
 
-# 引数の設定
-    # 値
-        data modify storage lib: Argument.Heal set value 400f
-    # 補正function
-        function lib:heal/modifier
-    # 対象
-        execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..6] run function lib:heal/
-    # リセット
-        data remove storage lib: Argument
+# 回復
+    data modify storage lib: Argument.Heal set value 400f
+    function lib:heal/modifier
+    execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..6] run function lib:heal/
+    data remove storage lib: Argument
 
 # タグを消しておく
     tag @e[type=skeleton,tag=6G.HoneyMob,distance=..6] remove 6G.HoneyMob
