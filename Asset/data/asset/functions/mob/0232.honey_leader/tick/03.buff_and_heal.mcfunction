@@ -23,7 +23,7 @@
 # 回復
     data modify storage lib: Argument.Heal set value 400f
     function lib:heal/modifier
-    execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..6] run function lib:heal/
+    execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..10] run function lib:heal/
     data remove storage lib: Argument
 
 # タグを消しておく

@@ -6,7 +6,7 @@
 
 # 視点固定&NoAI
     data modify entity @s NoAI set value 1b
-    execute at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator] eyes
+    execute at @s anchored eyes run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator] eyes
 
 # 予備動作演出
 
