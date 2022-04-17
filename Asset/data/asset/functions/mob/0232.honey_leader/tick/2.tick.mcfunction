@@ -8,7 +8,7 @@
     execute unless entity @s[scores={6G.BeamCool=50..}] run scoreboard players add @s 6G.BuffCool 1
 
 # ビーム間隔スコア
-    execute unless entity @s[scores={6G.BeamCool=89..}] positioned ^ ^ ^10 if entity @a[gamemode=!spectator,distance=..10] run scoreboard players add @s 6G.BeamCool 1
+    execute unless entity @s[scores={6G.BeamCool=89..}] positioned ^ ^ ^16 if entity @a[gamemode=!spectator,distance=..16] run scoreboard players add @s 6G.BeamCool 1
     execute if entity @s[scores={6G.BeamCool=89..}] run scoreboard players add @s 6G.BeamCool 1
 
 # 周囲にバフ&回復
