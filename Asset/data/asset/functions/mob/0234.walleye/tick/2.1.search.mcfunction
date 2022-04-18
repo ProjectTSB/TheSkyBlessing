@@ -17,8 +17,8 @@
 
 #攻撃範囲内にプレイヤーか友好mobがいる場合ロックオン終了予定時間をセットして向きを変える
     execute positioned ~-5 ~-20 ~-5 if entity @e[tag=Friend,dx=10,dy=20,dz=10] unless score @s 6i.LockOnTime matches -2147483648..2147483647 run tag @e[tag=Friend,dx=10,dy=20,dz=10] add 6i.TargetCandidate
-    execute positioned ~-5 ~-20 ~-5 if entity @e[tag=Friend,dx=10,dy=20,dz=10] unless score @s 6i.LockOnTime matches -2147483648..2147483647 at @s positioned ~ ~1.5 ~ run tp @s ~ ~-1.5 ~ facing entity @e[tag=Friend,tag=6i.TargetCandidate,distance=..25,sort=nearest,limit=1]
-    execute positioned ~-5 ~-20 ~-5 if entity @e[tag=Friend,dx=10,dy=20,dz=10] unless score @s 6i.LockOnTime matches -2147483648..2147483647 store result score @s 6i.LockOnTime run scoreboard players get $6i.LockTime Temporary
+    execute positioned ~-5 ~-20 ~-5 if entity @e[tag=6i.TargetCandidate,dx=10,dy=20,dz=10] at @s positioned ~ ~1.5 ~ run tp @s ~ ~-1.5 ~ facing entity @e[tag=6i.TargetCandidate,distance=..25,sort=nearest,limit=1]
+    execute positioned ~-5 ~-20 ~-5 if entity @e[tag=6i.TargetCandidate,dx=10,dy=20,dz=10] run scoreboard players operation @s 6i.LockOnTime = $6i.LockTime Temporary
 
 #攻撃範囲内にプレイヤーか友好mobがいない場合ロックオン終了予定時間をリセット
     execute positioned ~-5 ~-20 ~-5 unless entity @e[tag=Friend,dx=10,dy=20,dz=10] run scoreboard players reset @s 6i.LockOnTime
