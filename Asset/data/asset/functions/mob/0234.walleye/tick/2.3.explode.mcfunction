@@ -4,9 +4,9 @@
 #   function asset:mob/0234.walleye/tick/2.tick
 
 # 音とパーティクル
-    execute at @s run playsound entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 2 1 1
-    execute at @s run particle large_smoke ~ ~ ~ 2 2 2 0 1000 normal
-    execute at @s run particle flame ~ ~ ~ 2 2 2 0 1000 normal
+    playsound entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 2 1 1
+    particle large_smoke ~ ~ ~ 2 2 2 0 1000 normal
+    particle flame ~ ~ ~ 2 2 2 0 1000 normal
 
 # ダメージ: 半径1ブロック以内は60ダメージ、1ブロック離れるごとに10減少
 # 攻撃データ設定
