@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0090.decapitation/attack/1.trigger",
         "asset:mob/0280.the_desire_for_burning/attack/1.trigger",
         "asset:mob/0259.shadow_stalker/attack/1.trigger",
         "asset:mob/0271.indomitable_warrior/attack/1.trigger",
