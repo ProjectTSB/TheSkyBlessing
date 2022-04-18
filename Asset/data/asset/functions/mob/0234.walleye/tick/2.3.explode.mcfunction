@@ -48,4 +48,4 @@
     data remove storage lib: Argument
 
 # 自死
-kill @s
+    kill @s
