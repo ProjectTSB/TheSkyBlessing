@@ -1,9 +1,9 @@
 #> asset:mob/0234.walleye/tick/2.tick
 #
 # Mobのtick時の処理
-# phase=1: 索敵
-# phase=2: 移動
-# phase=3: 起爆
+# phase=0: 索敵
+# phase=1: 移動
+# phase=2: 起爆
 #
 # @within function asset:mob/0234.walleye/tick/1.trigger
 
