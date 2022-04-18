@@ -7,4 +7,4 @@
 #> 定義類はここに
 # @within function asset:mob/0234.walleye/**
     scoreboard objectives add 6i.Phase dummy
-    scoreboard objectives add 6i.LockonTime dummy
+    scoreboard objectives add 6i.LockOnTime dummy
