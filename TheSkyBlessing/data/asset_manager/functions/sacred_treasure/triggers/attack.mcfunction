@@ -6,6 +6,8 @@
 
 # イベント発火前に実行するやつ
     function asset_manager:sacred_treasure/data/new/set_to_current
+# Victim付与
+    execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Victim
 # 神器側に受け渡し
     function #asset:sacred_treasure/attack
     execute if entity @s[advancements={asset_manager:sacred_treasure/attack/melee=true}] run function #asset:sacred_treasure/attack/melee
