@@ -7,7 +7,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.Damage set value 15.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 無属性
