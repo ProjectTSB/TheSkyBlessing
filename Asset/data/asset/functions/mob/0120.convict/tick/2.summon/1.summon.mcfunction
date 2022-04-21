@@ -24,4 +24,4 @@
     execute if score @s 3C.Tick matches 20 rotated ~ 0 positioned ^-1.73205 ^ ^1 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
 
 # リセット
-    execute if score @s 3C.Tick matches 95 run function asset:mob/0120.convict/tick/reset
+    execute if score @s 3C.Tick matches 55 run function asset:mob/0120.convict/tick/reset

@@ -10,7 +10,7 @@
     playsound entity.generic.explode hostile @a ~ ~ ~ 0.7 1 0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 25f
+    data modify storage lib: Argument.Damage set value 18f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier

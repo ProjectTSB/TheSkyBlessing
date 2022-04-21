@@ -9,7 +9,7 @@
     playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 2
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 30.0f
+    data modify storage lib: Argument.Damage set value 20.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier

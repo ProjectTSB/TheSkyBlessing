@@ -14,7 +14,7 @@
 # タグをリセットする
     function asset:mob/0120.convict/tick/skill_tag_remove
 # スコアを戻す
-    scoreboard players set @s 3C.Tick -10
+    scoreboard players set @s 3C.Tick -40
 
 # 条件でテレポートする
     function asset:mob/0120.convict/tick/move/teleport_check
