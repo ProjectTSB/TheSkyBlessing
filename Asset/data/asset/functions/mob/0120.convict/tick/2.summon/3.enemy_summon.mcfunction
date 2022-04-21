@@ -5,7 +5,7 @@
 # @within function asset:mob/0120.convict/tick/2.summon/1.summon
 
 # プレイヤー位置にテレポーター召喚
-    data modify storage api: Argument.ID set value 89
+    data modify storage api: Argument.ID set value 90
     function api:mob/summon
 
 # 演出
