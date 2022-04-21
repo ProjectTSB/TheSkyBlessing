@@ -30,4 +30,4 @@
     tag @s[tag=GX.RecursiveEnd] remove GX.RecursiveEnd
 
 # ファンクション分岐
-    execute as @e[type=marker,tag=GX.LaserPos] at @s run function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/laser_pos_main
+    schedule function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/laser_pos_main 1t
