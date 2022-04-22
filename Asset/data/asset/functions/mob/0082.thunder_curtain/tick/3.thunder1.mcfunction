@@ -17,7 +17,7 @@
     execute positioned ^-4.5 ^ ^ run function asset:mob/0082.thunder_curtain/tick/4.thunder2
 
 # 範囲内にいたプレイヤーにダメージを与える
-    data modify storage lib: Argument.Damage set value 18.0f
+    data modify storage lib: Argument.Damage set value 28.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
     function lib:damage/modifier
