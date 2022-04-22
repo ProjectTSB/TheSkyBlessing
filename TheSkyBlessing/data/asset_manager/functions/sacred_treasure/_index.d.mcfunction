@@ -50,7 +50,6 @@
 # @within *
 #   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**
-    #declare tag this
     #declare tag Attacker
     #declare tag Victim
     #declare tag Equip

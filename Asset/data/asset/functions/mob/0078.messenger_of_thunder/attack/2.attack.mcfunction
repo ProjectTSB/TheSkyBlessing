@@ -12,14 +12,16 @@
     playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.5 2 0
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.5 0 0
 
-# ダメージ
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 22.5d
-        data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.ElementType set value "Thunder"
-    # 補正functionを実行
-        function lib:damage/modifier
-    # ダメージ対象
-        execute as @p[tag=Victim,distance=..50] run function lib:damage/
-    # リセット
-        data remove storage lib: Argument
+# ダメージ設定
+    data modify storage lib: Argument.Damage set value 22.5d
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Thunder"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの雷に撃たれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの轟雷により力尽きた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+# 補正
+    function lib:damage/modifier
+# 実行
+    execute as @p[tag=Victim,distance=..50] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
