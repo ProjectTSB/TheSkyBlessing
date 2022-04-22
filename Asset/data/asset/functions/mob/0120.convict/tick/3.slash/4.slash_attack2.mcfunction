@@ -19,7 +19,7 @@
     execute as @a[distance=..2] run function api:player_modifier/heal/add
 
 # スコアを与える
-    scoreboard players set @a[distance=..2] 3C.Time 300
+    scoreboard players set @a[distance=..2] 3C.Time 160
 # Schedulelooopするやつ
     schedule function asset:mob/0120.convict/player_process/1.loop 1t replace
 
