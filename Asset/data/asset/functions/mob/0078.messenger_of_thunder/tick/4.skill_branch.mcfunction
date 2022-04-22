@@ -13,8 +13,8 @@
 # 瞬雷
     execute if entity @s[scores={26.SkillSelect=2}] run function asset:mob/0078.messenger_of_thunder/skill/3/1
 
-# スキル4
-
+# 幕雷
+    execute if entity @s[scores={26.SkillSelect=3}] run function asset:mob/0078.messenger_of_thunder/skill/4/1
 
 # スコア
     scoreboard players add @s 26.Tick 1
