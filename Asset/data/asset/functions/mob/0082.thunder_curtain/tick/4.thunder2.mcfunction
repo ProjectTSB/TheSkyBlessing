@@ -5,7 +5,7 @@
 # @within function asset:mob/0082.thunder_curtain/tick/3.thunder1
 
 # 演出
-    particle dust 1 1 0 1 ~ ~4 ~ 0.2 3 0.2 0 65
+    particle dust 1 1 0 1 ~ ~3 ~ 0.2 2.5 0.2 0 50
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 1
     playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.1 2 0
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.1 0 0

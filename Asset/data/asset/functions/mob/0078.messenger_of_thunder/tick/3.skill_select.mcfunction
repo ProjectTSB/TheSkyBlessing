@@ -16,5 +16,3 @@
     scoreboard players operation @s 26.SkillSelect = $Random Temporary
 # リセット
     scoreboard players reset $Random Temporary
-
-    scoreboard players set @s 26.SkillSelect 3
