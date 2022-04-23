@@ -8,8 +8,5 @@
     function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
-# 視点先に敵がいたらCanUsedタグが付く
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0609.lunar_flare/trigger/2.1.check_viewpoint
-
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0609.lunar_flare/trigger/3.main
