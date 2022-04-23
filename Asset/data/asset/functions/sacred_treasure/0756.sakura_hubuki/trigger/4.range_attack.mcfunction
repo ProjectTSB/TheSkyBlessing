@@ -13,7 +13,7 @@
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.5 1.8
 
 # 鈍足を付与
-    effect give @e[type=#lib:living,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true
+    effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true
 
 # 範囲でのダメージ(Victimに与えるダメージの0.7倍)
     execute store result storage lib: Argument.Damage float 0.7 run scoreboard players get $RandomDamage Temporary
