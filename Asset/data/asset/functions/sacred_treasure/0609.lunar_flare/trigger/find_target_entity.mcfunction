@@ -9,7 +9,7 @@
     execute unless entity @s[tag=GX.RecursiveEnd] unless block ^ ^ ^1 #lib:no_collision run function asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser_pos
 
 # 限界距離なら
-    execute unless entity @s[tag=GX.RecursiveEnd] unless entity @s[distance=..19.7] run function asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser_pos
+    execute unless entity @s[tag=GX.RecursiveEnd] unless entity @s[distance=..20] run function asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser_pos
 
 # 敵にぶつかったとき
     execute unless entity @s[tag=GX.RecursiveEnd] positioned ~-0.5 ~-0.5 ~-0.5 at @e[type=#lib:living,type=!player,tag=!Object,tag=!Uninterferable,tag=!Projectile,tag=!Npc,dx=0,dy=0,dz=0,limit=1] run function asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser_pos
