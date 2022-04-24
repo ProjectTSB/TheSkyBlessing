@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0046.clock_of_despair/summon/1.trigger",
+        "asset:mob/0090.decapitation/summon/1.trigger",
+        "asset:mob/0280.the_desire_for_burning/summon/1.trigger",
         "asset:mob/0274.death_saw_jiki/summon/1.trigger",
         "asset:mob/0259.shadow_stalker/summon/1.trigger",
         "asset:mob/0271.indomitable_warrior/summon/1.trigger",

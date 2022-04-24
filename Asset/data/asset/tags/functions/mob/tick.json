@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0046.clock_of_despair/tick/1.trigger",
+        "asset:mob/0280.the_desire_for_burning/tick/1.trigger",
         "asset:mob/0274.death_saw_jiki/tick/1.trigger",
         "asset:mob/0259.shadow_stalker/tick/1.trigger",
         "asset:mob/0258.enemy_teleporter/tick/1.trigger",

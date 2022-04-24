@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0046.clock_of_despair/hurt/1.trigger",
+        "asset:mob/0090.decapitation/hurt/1.trigger",
+        "asset:mob/0280.the_desire_for_burning/hurt/1.trigger",
         "asset:mob/0274.death_saw_jiki/hurt/1.trigger",
         "asset:mob/0259.shadow_stalker/hurt/1.trigger",
         "asset:mob/0257.distortion_spellbook/hurt/1.trigger",
