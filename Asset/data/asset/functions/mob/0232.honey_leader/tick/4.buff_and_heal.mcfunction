@@ -1,4 +1,4 @@
-#> asset:mob/0232.honey_leader/tick/03.buff_and_heal
+#> asset:mob/0232.honey_leader/tick/4.buff_and_heal
 #
 # ハニー系のMobにバフを付与して回復するよ
 #
@@ -31,4 +31,4 @@
     tag @e[type=skeleton,tag=6G.HoneyMob,distance=..15] remove 6G.HoneyMob
 
 # 自身のスコアリセット
-    scoreboard players reset @s 6G.BuffCool
+    scoreboard players reset @s 6G.Tick

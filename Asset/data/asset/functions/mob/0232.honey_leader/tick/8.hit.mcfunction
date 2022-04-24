@@ -1,8 +1,8 @@
-#> asset:mob/0232.honey_leader/tick/07.hit
+#> asset:mob/0232.honey_leader/tick/8.hit
 #
 # ヒット処理
 #
-# @within function asset:mob/0232.honey_leader/tick/05.shoot_and_reset
+# @within function asset:mob/0232.honey_leader/tick/6.shoot_and_reset
 
 # 演出
     playsound entity.glow_squid.squirt hostile @a[distance=..20] ~ ~ ~ 1 1.5 0.5

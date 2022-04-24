@@ -3,7 +3,7 @@
 #
 #> Tag
 # @within function
-#   asset:mob/0232.honey_leader/tick/05.shoot_and_reset
-#   asset:mob/0232.honey_leader/tick/06.beam
-#   asset:mob/0232.honey_leader/tick/07.hit
+#   asset:mob/0232.honey_leader/tick/6.shoot_and_reset
+#   asset:mob/0232.honey_leader/tick/7.beam
+#   asset:mob/0232.honey_leader/tick/8.hit
     #declare tag LandingTarget

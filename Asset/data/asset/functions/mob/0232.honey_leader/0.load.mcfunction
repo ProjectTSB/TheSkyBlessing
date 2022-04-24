@@ -6,5 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0232.honey_leader/**
-    scoreboard objectives add 6G.BuffCool dummy
-    scoreboard objectives add 6G.BeamCool dummy
+    scoreboard objectives add 6G.Tick dummy
+    scoreboard objectives add 6G.SkillSelect dummy

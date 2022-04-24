@@ -4,18 +4,17 @@
 #
 # @within function asset:mob/0232.honey_leader/tick/1.trigger
 
-# バフ間隔スコア
-    execute unless entity @s[scores={6G.BeamCool=50..}] run scoreboard players add @s 6G.BuffCool 1
+# スキルスコア
+    scoreboard players add @s 6G.Tick 1
 
-# ビーム間隔スコア
-    execute unless entity @s[scores={6G.BeamCool=89..}] positioned ^ ^ ^16 if entity @a[gamemode=!spectator,distance=..16] run scoreboard players add @s 6G.BeamCool 1
-    execute if entity @s[scores={6G.BeamCool=89..}] run scoreboard players add @s 6G.BeamCool 1
+# スキルを選択
+    execute if entity @s[scores={6G.Tick=0}] run function asset:mob/0232.honey_leader/tick/3.skill_select
 
 # 周囲にバフ&回復
-    execute if entity @s[scores={6G.BuffCool=80..}] run function asset:mob/0232.honey_leader/tick/03.buff_and_heal
+    execute if entity @s[scores={6G.SkillSelect=0}] run function asset:mob/0232.honey_leader/tick/4.buff_and_heal
 
 # ビームの予備動作演出
-    execute if entity @s[scores={6G.BeamCool=90}] anchored eyes positioned ^ ^ ^0.3 run function asset:mob/0232.honey_leader/tick/04.ready_shoot
+    execute if entity @s[scores={6G.SkillSelect=1,6G.Tick=0}] anchored eyes positioned ^ ^ ^0.3 run function asset:mob/0232.honey_leader/tick/5.ready_beam
 
 # ビーム発射とリセット
-    execute if entity @s[scores={6G.BeamCool=100..}] run function asset:mob/0232.honey_leader/tick/05.shoot_and_reset
+    execute if entity @s[scores={6G.SkillSelect=1,6G.Tick=10..}] run function asset:mob/0232.honey_leader/tick/6.shoot_and_reset

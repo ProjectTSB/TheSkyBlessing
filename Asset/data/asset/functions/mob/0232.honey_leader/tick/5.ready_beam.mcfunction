@@ -1,4 +1,4 @@
-#> asset:mob/0232.honey_leader/tick/04.ready_shoot
+#> asset:mob/0232.honey_leader/tick/5.ready_beam
 #
 # 予備動作演出です
 #
