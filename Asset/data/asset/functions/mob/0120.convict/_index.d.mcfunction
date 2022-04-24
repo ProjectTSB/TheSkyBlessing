@@ -3,6 +3,8 @@
 
 #> tag
 # @within function asset:mob/0120.convict/**
+    #declare tag 3C.This
+    #
     #declare tag 3C.Angel
     #declare tag 3C.ArmorStand
     #declare tag 3C.ArmorStandThis
