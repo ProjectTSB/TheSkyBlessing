@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0281.terra_doublis_attack/tick/1.trigger",
         "asset:mob/0234.walleye/tick/1.trigger",
         "asset:mob/0233.honey_flyer/tick/1.trigger",
         "asset:mob/0280.the_desire_for_burning/tick/1.trigger",

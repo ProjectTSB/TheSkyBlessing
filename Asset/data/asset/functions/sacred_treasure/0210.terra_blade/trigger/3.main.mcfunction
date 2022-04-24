@@ -19,6 +19,9 @@
     execute anchored eyes run particle minecraft:dust 0 1 0.5 0.75 ^-0.35 ^ ^ 0.1 0.1 0.1 0 2
     execute anchored eyes run particle minecraft:sweep_attack ^-0.35 ^ ^1 0.1 0.1 0.1 0 1
 
+# 剣を回す
+    function asset:mob/0281.terra_doublis_attack/summon/2.summon
+
 # テラショット(召喚)
     execute anchored eyes run summon armor_stand ^-0.35 ^-0.25 ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile","Uninterferable"]}
 
