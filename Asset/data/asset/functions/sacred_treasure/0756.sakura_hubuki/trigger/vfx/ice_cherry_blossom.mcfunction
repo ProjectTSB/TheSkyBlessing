@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0756.sakura_hubuki/trigger/3.main
+# @within function asset:sacred_treasure/0756.sakura_hubuki/trigger/4.range_attack
 
 particle dust 1 1000000000 1000000000 1.5 ^0.0 ^0.0 ^-0.18
 particle dust 1 1000000000 1000000000 1.5 ^0.142704 ^0.0 ^-0.306576
