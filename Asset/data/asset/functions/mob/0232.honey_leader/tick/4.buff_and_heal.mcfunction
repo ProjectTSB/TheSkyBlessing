@@ -31,4 +31,5 @@
     tag @e[type=skeleton,tag=6G.HoneyMob,distance=..15] remove 6G.HoneyMob
 
 # 自身のスコアリセット
-    scoreboard players reset @s 6G.Tick
+    scoreboard players set @s 6G.Tick -60
+    scoreboard players reset @s 6G.SkillSelect

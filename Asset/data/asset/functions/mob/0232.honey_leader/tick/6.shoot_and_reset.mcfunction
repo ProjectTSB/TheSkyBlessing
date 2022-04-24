@@ -15,4 +15,5 @@
 
 # NoAIとビームスコアリセット
     data modify entity @s NoAI set value 0b
-    scoreboard players reset @s 6G.Tick
+    scoreboard players set @s 6G.Tick -60
+    scoreboard players reset @s 6G.SkillSelect

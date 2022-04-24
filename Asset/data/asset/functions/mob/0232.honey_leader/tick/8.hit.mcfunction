@@ -28,4 +28,3 @@
 
 # リセット処理
     tag @s remove LandingTarget
-    data modify entity @s NoAI set value 0b

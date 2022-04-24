@@ -16,4 +16,7 @@
     scoreboard players operation @s 6G.SkillSelect = $Random Temporary
 
 # もし視点先にプレイヤーがいたなら確率でビームを優先する
-    execute positioned ^ ^ ^16 if entity @p[gamemode=!spectator,distance=..16] if predicate lib:random_pass_per/75 run scoreboard players set @s 6G.SkillSelect 1
+    execute positioned ^ ^ ^16 if entity @p[gamemode=!spectator,distance=..16] if predicate lib:random_pass_per/60 run scoreboard players set @s 6G.SkillSelect 1
+
+# リセット
+    scoreboard players reset $Random Temporary
