@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:32,CustomPotionColor:12850219}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:32,CustomPotionColor:15220575}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
