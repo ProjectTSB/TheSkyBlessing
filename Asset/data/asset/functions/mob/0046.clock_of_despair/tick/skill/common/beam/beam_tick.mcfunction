@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/2.tick
+# @within function asset:mob/0046.clock_of_despair/tick/schedule
 
 # 演出
     playsound item.spyglass.use hostile @a ~ ~ ~ 1 1.4

@@ -32,8 +32,7 @@
     execute at @s unless entity @e[type=armor_stand,tag=1A.ClockHand,distance=..0.01] run function asset:mob/0046.clock_of_despair/tick/armorstand_respawn
 
 # スキル用の常時実行
-    execute as @e[type=area_effect_cloud,tag=1A.SkillBallAEC,distance=..100] at @s run function asset:mob/0046.clock_of_despair/tick/skill/common/ball/ball_tick
-    execute as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/beam_tick
+    schedule function asset:mob/0046.clock_of_despair/tick/schedule 1t replace
 
 # プレイヤーを引き寄せる
     execute as @a[distance=10..30] at @s facing entity @e[type=zombie,tag=this,distance=..100,sort=nearest,limit=1] eyes run tp @s ^ ^ ^0.05
