@@ -11,6 +11,8 @@
     data modify storage lib: Argument.ElementType set value "None"
 # 補正functionを実行
     function lib:damage/modifier
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sの溢れる魔力に飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
 # 対象
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..4] run function lib:damage/
 # リセット
