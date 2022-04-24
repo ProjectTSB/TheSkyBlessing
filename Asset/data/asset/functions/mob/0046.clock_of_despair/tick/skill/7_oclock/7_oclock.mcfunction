@@ -7,16 +7,16 @@
 # 開幕
     execute if score @s 1A.LifeTime matches 700 run playsound minecraft:block.bell.use master @a
 
-# スカルレイブンを召喚
-    execute if score @s 1A.LifeTime matches 710 run data modify storage api: Argument.ID set value 182
+# メイジを召喚
+    execute if score @s 1A.LifeTime matches 710 run data modify storage api: Argument.ID set value 187
     execute if score @s 1A.LifeTime matches 710 positioned ^ ^ ^5 run function api:mob/summon
     execute if score @s 1A.LifeTime matches 710 positioned ^ ^ ^5 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/fire_damage
 
-    execute if score @s 1A.LifeTime matches 730 run data modify storage api: Argument.ID set value 182
+    execute if score @s 1A.LifeTime matches 730 run data modify storage api: Argument.ID set value 189
     execute if score @s 1A.LifeTime matches 730 rotated ~120 ~ positioned ^ ^ ^5 run function api:mob/summon
     execute if score @s 1A.LifeTime matches 730 rotated ~120 ~ positioned ^ ^ ^5 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/fire_damage
 
-    execute if score @s 1A.LifeTime matches 750 run data modify storage api: Argument.ID set value 182
+    execute if score @s 1A.LifeTime matches 750 run data modify storage api: Argument.ID set value 190
     execute if score @s 1A.LifeTime matches 750 rotated ~-120 ~ positioned ^ ^ ^5 run function api:mob/summon
     execute if score @s 1A.LifeTime matches 750 rotated ~-120 ~ positioned ^ ^ ^5 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/fire_damage
 
