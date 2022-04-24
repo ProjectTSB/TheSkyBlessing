@@ -36,7 +36,7 @@
     # 属性
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Water"
-    # スコアが4ならVictimにダメージを与える前に範囲攻撃を行う
+    # スコアが3ならVictimにダメージを与える前に範囲攻撃を行う
         execute if score $Random Temporary matches 3 at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function asset:sacred_treasure/0756.sakura_hubuki/trigger/4.range_attack
     # 補正
         function lib:damage/modifier
