@@ -7,11 +7,11 @@
 
 # ダメージ設定
     # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.Damage set value 30.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # ダメージ
-        execute as @e[type=zombie,tag=this,distance=..100,sort=nearest,limit=1] run function lib:damage/modifier
+    # ダメージ(厳密な紐づけじゃないけど許して)
+        execute as @e[type=zombie,scores={MobID=46},distance=..100,limit=1] run function lib:damage/modifier
         execute as @p[gamemode=!creative,tag=LandingTarget] run function lib:damage/
 # リセット
     data remove storage lib: Argument

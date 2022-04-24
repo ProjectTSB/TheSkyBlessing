@@ -17,13 +17,13 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 20.0f
+        data modify storage lib: Argument.Damage set value 50.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Thunder"
-    # ダメージ
-        execute as @e[type=zombie,tag=this,distance=..100,limit=1] run function lib:damage/modifier
+    # ダメージ(厳密な紐づけじゃないけど許して)
+        execute as @e[type=zombie,scores={MobID=46},distance=..100,limit=1] run function lib:damage/modifier
         execute as @a[gamemode=!creative,distance=..2] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument

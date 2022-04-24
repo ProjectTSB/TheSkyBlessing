@@ -11,7 +11,7 @@
     execute if score @s 1A.LifeTime matches 901 run tp @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] ~ ~10 ~ 180 90
 
 # ビームが追尾する
-    execute if score @s 1A.LifeTime matches 921..999 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run execute if entity @p[distance=..32] facing entity @p eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
+    execute if score @s 1A.LifeTime matches 921..999 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run execute if entity @p[distance=..32] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
 
 # 火召喚
     execute if score @s 1A.LifeTime matches 970 rotated ~45 ~ positioned ^ ^ ^1 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/fire_summon
