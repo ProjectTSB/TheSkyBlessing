@@ -7,6 +7,8 @@
 # 演出
     particle snowflake ~ ~0.3 ~ 1 0 1 0.45 250 normal @a
     playsound ogg:block.amethyst.shimmer player @a ~ ~ ~ 0.8 2
+    playsound ogg:block.amethyst.shimmer player @a ~ ~ ~ 0.8 1.2
+    playsound ogg:block.amethyst.shimmer player @a ~ ~ ~ 0.8 0.6
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.6
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.4
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 2
