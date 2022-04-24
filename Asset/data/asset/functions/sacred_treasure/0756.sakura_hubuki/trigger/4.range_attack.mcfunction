@@ -9,8 +9,8 @@
     playsound ogg:block.amethyst.shimmer player @a ~ ~ ~ 0.8 2
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.6
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.4
-    playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.5 2
-    playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.5 1.8
+    playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 2
+    playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 1.8
 
 # 鈍足を付与
     effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true

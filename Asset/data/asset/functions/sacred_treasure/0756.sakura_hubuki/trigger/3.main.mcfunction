@@ -25,12 +25,12 @@
     playsound entity.player.attack.sweep player @a ~ ~ ~ 0.8 1.2 0
 
 # ダメージ
-    # 先に301を定義
-        scoreboard players set $301 Temporary 301
+    # 先に201を定義
+        scoreboard players set $201 Temporary 201
     # ブレ
         execute store result score $RandomDamage Temporary run function lib:random/
         scoreboard players operation $RandomDamage Temporary %= $301 Temporary
-        scoreboard players add $RandomDamage Temporary 600
+        scoreboard players add $RandomDamage Temporary 300
     # 数値を代入
         execute store result storage lib: Argument.Damage float 1.0 run scoreboard players get $RandomDamage Temporary
     # 属性
@@ -46,5 +46,5 @@
 # リセット
     scoreboard players reset $Random Temporary
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $301 Temporary
+    scoreboard players reset $201 Temporary
     data remove storage lib: Argument
