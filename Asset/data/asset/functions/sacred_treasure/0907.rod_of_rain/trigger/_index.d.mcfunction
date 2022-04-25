@@ -3,6 +3,6 @@
 
 #> tag
 # @within function asset:sacred_treasure/0907.rod_of_rain/trigger/**
-    #declare tag P8.RainClowd
+    #declare tag P8.RainCloud
     #declare tag P8.TargetEntity
     #declare tag P8.This
