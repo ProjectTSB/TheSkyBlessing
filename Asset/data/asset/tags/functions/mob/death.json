@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0217.medousa_eye/death/1.trigger",
         "asset:mob/0090.decapitation/death/1.trigger",
         "asset:mob/0280.the_desire_for_burning/death/1.trigger",
         "asset:mob/0274.death_saw_jiki/death/1.trigger",
