@@ -10,3 +10,4 @@
     scoreboard objectives add 5U.ID dummy
     scoreboard objectives add 5U.Range dummy
     scoreboard objectives add 5U.Recursion dummy
+    scoreboard objectives add 5U.Burst dummy
