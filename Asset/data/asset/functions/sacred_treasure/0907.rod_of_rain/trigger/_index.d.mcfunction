@@ -6,3 +6,4 @@
     #declare tag P8.RainCloud
     #declare tag P8.TargetEntity
     #declare tag P8.This
+    #declare tag P8.Owner
