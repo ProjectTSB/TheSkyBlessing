@@ -14,6 +14,7 @@
     effect give @s slowness 4 2 true
     effect give @s mining_fatigue 4 2 true
 
+
 # ダメージ
     data modify storage lib: Argument.Damage set value 17f
     data modify storage lib: Argument.AttackType set value "Magic"
