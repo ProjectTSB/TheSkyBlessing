@@ -8,7 +8,7 @@
     execute at @a[tag=Victim] run playsound block.anvil.land hostile @a ~ ~ ~ 1 1.3
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 30f
+    data modify storage lib: Argument.Damage set value 35f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
