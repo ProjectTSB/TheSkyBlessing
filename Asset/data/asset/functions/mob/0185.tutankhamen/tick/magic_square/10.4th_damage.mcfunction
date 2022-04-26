@@ -5,7 +5,7 @@
 # @within function asset:mob/0185.tutankhamen/tick/magic_square/05.4th_square
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 35f
+    data modify storage lib: Argument.Damage set value 45f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
