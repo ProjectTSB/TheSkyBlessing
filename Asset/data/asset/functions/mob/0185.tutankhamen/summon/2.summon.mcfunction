@@ -58,5 +58,8 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.7
 
+# スコアを設定しておく
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 55.Tick -80
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
