@@ -14,7 +14,7 @@
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定
-        data modify storage lib: Argument.Damage set value 60f
+        data modify storage lib: Argument.Damage set value 38f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
@@ -24,7 +24,7 @@
 
 # マナが十分にあるプレイヤーを殴ったとき
     # ダメージ設定
-        data modify storage lib: Argument.Damage set value 40f
+        data modify storage lib: Argument.Damage set value 27f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
