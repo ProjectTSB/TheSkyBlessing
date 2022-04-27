@@ -15,9 +15,9 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"窒素固定器","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"水入り瓶を消費し窒素を固定する。","color":"white"}','{"text":"信仰神によって効果が変わる。","color":"white"}','{"text":"その神器は平時には空気からパンを生み出し、","color":"dark_purple","italic":"true"}','{"text":"戦時には空気から火薬を生み出した。","color":"dark_purple","italic":"true"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    data modify storage asset:sacred_treasure CostText set value '[{"translate":"item.minecraft.potion"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value 
 # 神器を発動できるスロット (string) Wikiを参照
