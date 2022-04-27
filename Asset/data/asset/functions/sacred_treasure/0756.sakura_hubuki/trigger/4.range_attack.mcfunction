@@ -15,7 +15,6 @@
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 1.8
     execute positioned ~ ~0.3 ~ rotated ~180 0 run function asset:sacred_treasure/0756.sakura_hubuki/trigger/vfx/ice_cherry_blossom
 
-
 # 鈍足を付与
     effect give @e[type=#lib:living,type=!player,tag=!Friend,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true
 
