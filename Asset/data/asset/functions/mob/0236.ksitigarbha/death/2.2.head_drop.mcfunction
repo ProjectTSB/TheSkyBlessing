@@ -6,4 +6,4 @@
 
 # 首落ちモデルに変更し、頭の雪を消す
     data modify entity @s HandItems[0].tag.CustomModelData set value 20181
-    data modify entity @s ArmorItems[3].id set value air
+    item replace entity @s armor.head with air
