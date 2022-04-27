@@ -8,19 +8,23 @@ gamerule announceAdvancements true
 gamerule commandBlockOutput false
 gamerule disableElytraMovementCheck false
 gamerule disableRaids true
-gamerule doDaylightCycle true
+execute if data storage global {IsProduction:1b} run gamerule doDaylightCycle true
+execute if data storage global {IsProduction:0b} run gamerule doDaylightCycle false
 gamerule doEntityDrops true
 execute if data storage global {IsProduction:1b} run gamerule doFireTick true
 execute if data storage global {IsProduction:0b} run gamerule doFireTick false
 gamerule doImmediateRespawn false
-gamerule doInsomnia true
+execute if data storage global {IsProduction:1b} run gamerule doInsomnia true
+execute if data storage global {IsProduction:0b} run gamerule doInsomnia false
 gamerule doLimitedCrafting false
 gamerule doMobLoot true
-gamerule doMobSpawning true
+execute if data storage global {IsProduction:1b} run gamerule doMobSpawning true
+execute if data storage global {IsProduction:0b} run gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops true
 gamerule doTraderSpawning false
-gamerule doWeatherCycle true
+execute if data storage global {IsProduction:1b} run gamerule doWeatherCycle true
+execute if data storage global {IsProduction:0b} run gamerule doWeatherCycle false
 gamerule drowningDamage true
 gamerule fallDamage true
 gamerule fireDamage true
