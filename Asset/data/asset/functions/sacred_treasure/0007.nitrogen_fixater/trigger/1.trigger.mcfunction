@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0009.nitrogen_fixater/trigger/1.trigger
+#> asset:sacred_treasure/0007.nitrogen_fixater/trigger/1.trigger
 #
 # 指定したイベントタイミングで実行されるfunction
 #
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのautoに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{auto:9} run function asset:sacred_treasure/0009.nitrogen_fixater/trigger/2.check_condition
+    execute if data storage asset:context id{auto:7} run function asset:sacred_treasure/0007.nitrogen_fixater/trigger/2.check_condition

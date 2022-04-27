@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0009.nitrogen_fixater/give/2.give
+#> asset:sacred_treasure/0007.nitrogen_fixater/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0009.nitrogen_fixater/give/1.trigger
+# @within function asset:sacred_treasure/0007.nitrogen_fixater/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 9
+    data modify storage asset:sacred_treasure ID set value 7
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
