@@ -14,6 +14,6 @@
     execute store result score $MaxHealth Temporary run function api:mob/get_max_health
     scoreboard players operation $Health Temporary /= $MaxHealth Temporary
     execute if score $Health Temporary matches ..50 run item replace entity @s weapon.mainhand with bow{Enchantments:[{id:"punch",lvl:3s}]}
-    execute if score $Health Temporary matches ..50 run tag @s add 26.HalfHP
+    execute if score $Health Temporary matches ..50 run tag @s add 26.HPLess50Per
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary

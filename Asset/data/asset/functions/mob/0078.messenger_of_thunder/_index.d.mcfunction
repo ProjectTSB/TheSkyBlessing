@@ -3,7 +3,7 @@
 #
 # > Tag
 # @within function asset:mob/0078.messenger_of_thunder/**
-    #declare tag 26.HalfHP
+    #declare tag 26.HPLess50Per
 
 #> スキル用Tag
 # @within function asset:mob/0078.messenger_of_thunder/skill/**/**
