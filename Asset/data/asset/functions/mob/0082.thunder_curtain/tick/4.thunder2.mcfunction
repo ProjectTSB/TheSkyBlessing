@@ -16,4 +16,3 @@
     execute positioned ~ ~2.4 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
     execute positioned ~ ~3.6 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
     execute positioned ~ ~4.8 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
-    execute positioned ~ ~6.0 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
