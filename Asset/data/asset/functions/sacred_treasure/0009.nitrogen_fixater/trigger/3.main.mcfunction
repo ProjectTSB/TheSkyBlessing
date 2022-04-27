@@ -28,3 +28,6 @@
 # アイテム付与
     execute if score $9.IsPeace Temporary matches 0 run give @s gunpowder 1
     execute if score $9.IsPeace Temporary matches 1 run give @s bone_meal 1
+
+# reset
+    scoreboard players reset $9.IsPeace Temporary
