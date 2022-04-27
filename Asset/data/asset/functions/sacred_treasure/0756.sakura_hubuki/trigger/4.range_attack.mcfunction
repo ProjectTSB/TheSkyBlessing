@@ -17,7 +17,7 @@
 
 
 # 鈍足を付与
-    effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true
+    effect give @e[type=#lib:living,type=!player,tag=!Friend,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true
 
 # 範囲でのダメージ(Victimに与えるダメージの0.7倍)
     execute store result storage lib: Argument.Damage float 0.7 run scoreboard players get $RandomDamage Temporary
@@ -27,7 +27,7 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,tag=!Object,distance=..3] at @s run function lib:damage/
+    execute at @e[type=#lib:living,type=!player,tag=Victim,tag=!Friend,distance=..6] as @e[type=#lib:living,tag=!Victim,tag=!Uninterferable,tag=!Object,distance=..3] at @s run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
