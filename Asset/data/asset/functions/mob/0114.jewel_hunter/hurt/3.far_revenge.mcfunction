@@ -9,4 +9,4 @@
     function api:mob/summon
 
 # 方向合わせ
-    tp @e[type=marker,scores={MobID=115},distance=..0.1,limit=1] ~ ~1.5 ~ facing entity @p[gamemode=!spectator,tag=Attacker] feet
+    tp @e[type=marker,scores={MobID=115},distance=..0.1,limit=1] ~ ~ ~ ~ ~
