@@ -13,7 +13,8 @@
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.5 0 0
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 22.5d
+    data modify storage lib: Argument.Damage set value 20d
+    execute if entity @s[tag=26.HPLess50Per] run data modify storage lib: Argument.Damage set value 27.5d
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
