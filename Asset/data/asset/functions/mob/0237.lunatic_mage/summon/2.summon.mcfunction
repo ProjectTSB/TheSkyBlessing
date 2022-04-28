@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 237
 # Type (string) Wikiを参照

@@ -7,10 +7,10 @@
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 50f
     data modify storage lib: Argument.AttackType set value "Magic"
-    function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,tag=!LandingTarget,distance=..2] run function lib:damage/
+    execute as @e[type=zombie,tag=this,distance=..50,limit=1] run function lib:damage/modifier
+    execute as @a[tag=LandingTarget,distance=..50] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
-# 多段ヒットしないようにTagをつけておくといいかも
-    tag @a[gamemode=!spectator,distance=..2] add LandingTarget
+# Tag削除
+    tag @a[tag=LandingTarget,distance=..50] remove LandingTarget

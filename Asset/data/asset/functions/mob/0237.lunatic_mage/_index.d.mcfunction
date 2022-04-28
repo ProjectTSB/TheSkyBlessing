@@ -7,12 +7,8 @@
     #declare tag 6L.Thunder
     #declare tag 6L.Magic
     #declare tag 6L.Fire2
-
-#> tag
-# @within function
-#   asset:mob/0237.lunatic_mage/tick/**
-#   asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
     #declare tag 6L.Fire
+    #declare tag 6L.ElementalKill
 
 #> tag
 # @within function asset:mob/0237.lunatic_mage/skill/magic/**
@@ -25,15 +21,7 @@
 #   asset:mob/0237.lunatic_mage/skill/fire/03.shoot
     #declare tag 6L.LeftRotation
 
-#> tag
-# @within function
-#   asset:mob/0237.lunatic_mage/hurt/2.hurt
-#   asset:mob/0237.lunatic_mage/tick/**
-    #declare tag 6L.ElementalKill
-
-
-#> Tag
-# @within function
-#   asset:mob/0237.lunatic_mage/tick/03.select_skill
-#   asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
-    #declare tag 6L.AlreadyElement
+#> score_holder
+# @within function asset:mob/0237.lunatic_mage/**
+    #declare score_holder $Random
+    #declare score_holder $Temp

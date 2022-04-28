@@ -12,3 +12,6 @@
 
 # 水の檻のダメージ
     execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=4..9] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/04.water_jail_damage
+
+# 炎弾を範囲内に入ったらキルしたい
+    execute if entity @e[type=marker,scores={MobID=188},distance=4..9] run kill @e[type=marker,scores={MobID=188},distance=4..9]
