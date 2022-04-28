@@ -9,4 +9,4 @@
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.7
 
 # 現在体力を数値化する
-    execute store result score @s 6J.Health run data get entity @s AbsorptionAmount 1.0
+    execute store result score @s 6L.Health run data get entity @s AbsorptionAmount 1.0
