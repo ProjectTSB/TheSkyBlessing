@@ -21,6 +21,9 @@
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによって水底に沈んだ","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによって貫かれ海の藻屑となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
