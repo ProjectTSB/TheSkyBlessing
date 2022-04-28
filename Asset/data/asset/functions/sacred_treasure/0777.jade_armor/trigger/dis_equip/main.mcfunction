@@ -19,6 +19,3 @@
 # MP回復量+4%
     data modify storage api: Argument.UUID set value [I;1,1,777,4]
     function api:player_modifier/mp_regen/remove
-
-# 最大体力+2
-    attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-030900000005
