@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0933.auto_torch/trigger/2.check_condition
 
+#> Private
+# @private
+    #declare tag CanUsed
+
 # 松明を持ってるかチェック
     execute store result score $Count Temporary run clear @s torch 0
     execute if score $Count Temporary matches ..0 run tag @s remove CanUsed
