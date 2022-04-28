@@ -1,8 +1,8 @@
-#> asset:mob/0235.orange_thorwer/attack/2.attack
+#> asset:mob/0235.orange_thrower/attack/2.attack
 #
 # Mobの攻撃時の処理
 #
-# @within function asset:mob/0235.orange_thorwer/attack/1.trigger
+# @within function asset:mob/0235.orange_thrower/attack/1.trigger
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle block orange_concrete ~ ~1.2 ~ 0.5 0.5 0.5 0 100 normal @a

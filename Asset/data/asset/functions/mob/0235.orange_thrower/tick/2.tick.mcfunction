@@ -1,8 +1,8 @@
-#> asset:mob/0235.orange_thorwer/tick/2.tick
+#> asset:mob/0235.orange_thrower/tick/2.tick
 #
 # Mobのtick時の処理
 #
-# @within function asset:mob/0235.orange_thorwer/tick/1.trigger
+# @within function asset:mob/0235.orange_thrower/tick/1.trigger
 
 # 演出
     particle dust 0 1 0 1.3 ~ ~2 ~ 0.05 0 0.05 0 1 normal @a
@@ -14,4 +14,4 @@
     execute unless entity @a[gamemode=!survival,gamemode=!spectator,distance=..32] run scoreboard players set @s 6J.Tick -60
 
 # オレンジ召喚
-    execute if entity @s[scores={6J.Tick=0..}] run function asset:mob/0235.orange_thorwer/tick/3.summon_orange
+    execute if entity @s[scores={6J.Tick=0..}] run function asset:mob/0235.orange_thrower/tick/3.summon_orange

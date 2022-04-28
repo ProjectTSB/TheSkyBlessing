@@ -1,11 +1,11 @@
-#> asset:mob/0235.orange_thorwer/summon/2.summon
+#> asset:mob/0235.orange_thrower/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0235.orange_thorwer/summon/1.trigger
+# @within function asset:mob/0235.orange_thrower/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0235.orange_thorwer"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0235.orange_thrower"}
 # ID (int)
     data modify storage asset:mob ID set value 235
 # Type (string) Wikiを参照

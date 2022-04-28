@@ -1,8 +1,8 @@
-#> asset:mob/0235.orange_thorwer/tick/3.summon_orange
+#> asset:mob/0235.orange_thrower/tick/3.summon_orange
 #
 # みかんをしょうかんするよ
 #
-# @within function asset:mob/0235.orange_thorwer/tick/2.tick
+# @within function asset:mob/0235.orange_thrower/tick/2.tick
 
 #> Private
 # @private
