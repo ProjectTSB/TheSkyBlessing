@@ -5,32 +5,32 @@
 # @within function asset:mob/0237.lunatic_mage/tick/04.skill_branch
 
 # 二回目を発動しないようにTagつけ
-    tag @s add 6J.AlreadyElement
+    tag @s add 6L.AlreadyElement
 
 
 # 予備動作的な
-    execute if score @s 6J.Tick matches 2 run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
-    execute if score @s 6J.Tick matches ..20 run particle flame ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
-    execute if score @s 6J.Tick matches ..20 run particle splash ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
-    execute if score @s 6J.Tick matches ..20 run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
+    execute if entity @s[scores={6L.Tick=..20}] run particle flame ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle splash ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
 
 # NoAIになる
-    execute if score @s 6J.Tick matches 20 run data modify entity @s NoAI set value 1b
+    execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b
 
 # プレイヤーの下にワープ
-    execute if score @s 6J.Tick matches 20 at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
+    execute if entity @s[scores={6L.Tick=20}] at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
 
 # 空中はダメです
-    execute if score @s 6J.Tick matches 21.. if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
+    execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 水の檻
-    execute if score @s 6J.Tick matches 21.. run function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
+    execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
 
 # 火の予告
-    execute if score @s 6J.Tick matches 50..53 positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_line
+    execute if entity @s[scores={6L.Tick=50..53}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_line
 
 # 火を使い始める
-    execute if score @s 6J.Tick matches 61.. run function asset:mob/0237.lunatic_mage/skill/elemental_kill/06.fire
+    execute if entity @s[scores={6L.Tick=61..}] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/06.fire
 
 # リセット
-    execute if score @s 6J.Tick matches 201.. run function asset:mob/0237.lunatic_mage/tick/05.reset
+    execute if entity @s[scores={6L.Tick=201..}] run function asset:mob/0237.lunatic_mage/tick/05.reset

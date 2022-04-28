@@ -5,19 +5,19 @@
 # @within function asset:mob/0237.lunatic_mage/tick/2.tick
 
 # 火
-    execute if entity @s[tag=6J.Fire] run function asset:mob/0237.lunatic_mage/skill/fire/01.manage
+    execute if entity @s[tag=6L.Fire] run function asset:mob/0237.lunatic_mage/skill/fire/01.manage
 
 # 水
-    execute if entity @s[tag=6J.Water] run function asset:mob/0237.lunatic_mage/skill/water/01.manage
+    execute if entity @s[tag=6L.Water] run function asset:mob/0237.lunatic_mage/skill/water/01.manage
 
 # 雷
-    execute if entity @s[tag=6J.Thunder] run function asset:mob/0237.lunatic_mage/skill/thunder/01.manage
+    execute if entity @s[tag=6L.Thunder] run function asset:mob/0237.lunatic_mage/skill/thunder/01.manage
 
 # 無
-    execute if entity @s[tag=6J.Magic] run function asset:mob/0237.lunatic_mage/skill/magic/01.manage
+    execute if entity @s[tag=6L.Magic] run function asset:mob/0237.lunatic_mage/skill/magic/01.manage
 
 # 火2
-    execute if entity @s[tag=6J.Fire2] run function asset:mob/0237.lunatic_mage/skill/fire2/01.manage
+    execute if entity @s[tag=6L.Fire2] run function asset:mob/0237.lunatic_mage/skill/fire2/01.manage
 
 # 属性キル
-    execute if entity @s[tag=6J.ElementalKill] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
+    execute if entity @s[tag=6L.ElementalKill] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage

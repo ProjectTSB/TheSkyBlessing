@@ -14,5 +14,5 @@
     execute anchored eyes positioned ^0.25 ^ ^ rotated ~180 0 run function asset:mob/0237.lunatic_mage/magic_summon/fire
 
 # 回転
-    execute if entity @s[tag=6J.LeftRotation] run tp @s ~ ~ ~ ~-15 ~
-    execute if entity @s[tag=!6J.LeftRotation] run tp @s ~ ~ ~ ~15 ~
+    execute if entity @s[tag=6L.LeftRotation] run tp @s ~ ~ ~ ~-15 ~
+    execute if entity @s[tag=!6L.LeftRotation] run tp @s ~ ~ ~ ~15 ~

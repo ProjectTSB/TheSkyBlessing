@@ -9,6 +9,6 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $2 Const
 # 0なら左回転Tagを付与
-    execute if score $Random Temporary matches 0 run tag @s add 6J.LeftRotation
+    execute if score $Random Temporary matches 0 run tag @s add 6L.LeftRotation
 # リセット
     scoreboard players reset $Random Temporary
