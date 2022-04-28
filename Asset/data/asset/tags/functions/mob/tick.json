@@ -1,5 +1,10 @@
 {
     "values": [
+        "asset:mob/0263.orange/tick/1.trigger",
+        "asset:mob/0235.orange_thrower/tick/1.trigger",
+        "asset:mob/0236.ksitigarbha/tick/1.trigger",
+        "asset:mob/0276.ksitigarbha_body/tick/1.trigger",
+        "asset:mob/0217.medousa_eye/tick/1.trigger",
         "asset:mob/0234.walleye/tick/1.trigger",
         "asset:mob/0233.honey_flyer/tick/1.trigger",
         "asset:mob/0280.the_desire_for_burning/tick/1.trigger",
