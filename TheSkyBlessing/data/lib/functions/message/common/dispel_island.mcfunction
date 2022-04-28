@@ -5,6 +5,6 @@
 # @within function asset_manager:island/dispel/successful
 
 title @a times 10 60 30
-title @a title [{"text":"ISLAND PURIFICATION","bold":true,"color":"light_purple"}]
+title @a title [{"text":"ISLAND PURIFIED","bold":true,"color":"light_purple"}]
 
-tellraw @a [{"text":"[!] すべてのアイテムが返還された。","color":"yellow"}]
+tellraw @a [{"text":"[!] すべてのアイテムが神殿に返還された。","color":"yellow"}]
