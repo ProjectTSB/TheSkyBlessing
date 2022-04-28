@@ -10,6 +10,6 @@
     function asset:sacred_treasure/common/check_condition/hotbar
 # 他にアイテム等確認する場合はここに書く
 # 5%の確率でしか発動しない
-    #execute unless predicate lib:random_pass_per/5 run tag @s remove CanUsed
+    execute unless predicate lib:random_pass_per/5 run tag @s remove CanUsed
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0928.ankh/trigger/3.main
