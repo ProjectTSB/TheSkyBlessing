@@ -5,11 +5,11 @@
 # @within function asset:mob/0232.honey_leader/tick/6.shoot_and_reset
 
 # 演出
-    playsound entity.glow_squid.squirt hostile @a[distance=..20] ~ ~ ~ 1 1.5 0.5
-    playsound block.honey_block.hit hostile @a[distance=..20] ~ ~ ~ 1 1 0.5
+    playsound entity.glow_squid.squirt hostile @a ~ ~ ~ 1 1.5 0
+    playsound block.honey_block.hit hostile @a ~ ~ ~ 1 1 0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 40f
+    data modify storage lib: Argument.Damage set value 42f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
