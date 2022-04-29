@@ -6,21 +6,21 @@
 
 #> Private
 # @private
-    #declare tag CanUsed
+    #declare score_holder $Count
 
 # 松明を持ってるかチェック
     execute store result score $Count Temporary run clear @s torch 0
-    execute if score $Count Temporary matches ..0 run tag @s remove CanUsed
+    execute if score $Count Temporary matches ..0 run tag @s add FailRecovery
 # これtickだとうるさそうだからとりあえずコメントアウト
     # execute if score $Count Temporary matches ..0 run function lib:message/sacred_treasure/dont_have_require_items
     scoreboard players reset $Count Temporary
 
 # プレイヤーがサバイバルかどうかを確認
-    execute unless entity @s[gamemode=!spectator,gamemode=!adventure] run tag @s remove CanUsed
+    execute unless entity @s[gamemode=!spectator,gamemode=!adventure] run tag @s add FailRecovery
 
 # 暗い場所かどうかを確認
-    execute if predicate lib:light_level/min/7 run tag @s remove CanUsed
+    execute if predicate lib:light_level/min/7 run tag @s add FailRecovery
 
 # 設置可能かどうかを確認
-    execute unless block ~ ~ ~ #lib:air run tag @s remove CanUsed
-    execute if block ~ ~-1 ~ #lib:air run tag @s remove CanUsed
+    execute unless block ~ ~ ~ #lib:air run tag @s add FailRecovery
+    execute if block ~ ~-1 ~ #lib:air run tag @s add FailRecovery
