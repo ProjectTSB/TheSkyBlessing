@@ -13,13 +13,13 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "glass_pane"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ホーリー・バリア","color":"green"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ホーリー・バリア","color":"white"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"罠カード","color":"light_purple"}','{"text":"(1)相手モンスターの攻撃時に発動する。"}','{"text":"発動プレイヤーを攻撃対象に"}','{"text":"しているモンスターを全て破壊する。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value 
 # 使用回数 (int) (オプション)
-    data modify storage asset:sacred_treasure RemainingCount set value 1000
+    data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "hotbar"
 # 神器のトリガー (string) Wikiを参照
@@ -45,7 +45,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value 
 # グローバルクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure SpecialCooldown set value 20
+    data modify storage asset:sacred_treasure SpecialCooldown set value 16000
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value 
 # 扱える神 (string[]) Wikiを参照

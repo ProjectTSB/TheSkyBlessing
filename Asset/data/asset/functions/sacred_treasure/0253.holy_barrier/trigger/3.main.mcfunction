@@ -23,7 +23,7 @@
     execute anchored eyes rotated ~ 0 positioned ^ ^ ^0.2 run function asset:sacred_treasure/0253.holy_barrier/trigger/3.1.particle_barrier
     execute at @e[type=#lib:living,tag=71.Target] run function asset:sacred_treasure/0253.holy_barrier/trigger/3.2.particle_reflect
 
-    # ダメージ設定
+    # ダメージ
     data modify storage lib: Argument.Damage set value 9999f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.FixedDamage set value true
