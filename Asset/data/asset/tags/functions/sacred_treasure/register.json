@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0937.ideal_boots/register",
+        "asset:sacred_treasure/0936.ideal_leggings/register",
+        "asset:sacred_treasure/0935.ideal_chestplate/register",
+        "asset:sacred_treasure/0934.ideal_helmet/register",
         "asset:sacred_treasure/0933.auto_torch/register",
         "asset:sacred_treasure/0905.book_of_metastasis/register",
         "asset:sacred_treasure/0007.nitrogen_fixater/register",

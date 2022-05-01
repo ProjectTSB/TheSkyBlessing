@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0937.ideal_boots/give/1.trigger",
+        "asset:sacred_treasure/0936.ideal_leggings/give/1.trigger",
+        "asset:sacred_treasure/0935.ideal_chestplate/give/1.trigger",
+        "asset:sacred_treasure/0934.ideal_helmet/give/1.trigger",
         "asset:sacred_treasure/0933.auto_torch/give/1.trigger",
         "asset:sacred_treasure/0776.jade_armor/give/1.trigger",
         "asset:sacred_treasure/0777.jade_armor/give/1.trigger",
