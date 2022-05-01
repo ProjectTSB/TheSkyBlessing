@@ -11,11 +11,11 @@
 # 演出
     function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle2
 
-# 火攻撃+8%
+# 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,664,0]
     function api:player_modifier/attack/fire/remove
 
-# MP回復量+8%
+# MP回復量
     data modify storage api: Argument.UUID set value [I;1,1,664,0]
     function api:player_modifier/mp_regen/remove
 
