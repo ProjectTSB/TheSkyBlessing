@@ -15,8 +15,12 @@
     # 攻撃対象にタグ付け
     tag @e[type=#lib:living,tag=!Enemy.Boss,predicate=asset:sacred_treasure/0253.holy_barrier/is_angry] add 71.Target
 
+    #音
+    playsound minecraft:block.respawn_anchor.deplete master @a[distance=..16] ~ ~ ~ 1 1 1
+    playsound entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~ 1 1.2 1
+
     # particle
-    execute anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0253.holy_barrier/trigger/3.1.particle_barrier
+    execute anchored eyes rotated ~ 0 positioned ^ ^ ^0.2 run function asset:sacred_treasure/0253.holy_barrier/trigger/3.1.particle_barrier
     execute at @e[type=#lib:living,tag=71.Target] run function asset:sacred_treasure/0253.holy_barrier/trigger/3.2.particle_reflect
 
     # ダメージ設定
