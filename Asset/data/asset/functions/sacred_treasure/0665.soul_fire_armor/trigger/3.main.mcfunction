@@ -18,11 +18,11 @@
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
     playsound ogg:mob.vex.idle1 player @a ~ ~ ~ 1 0 0
 
-# 物理耐性+5%
+# 物理攻撃+5%
     data modify storage api: Argument.UUID set value [I;1,1,665,5]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
+    function api:player_modifier/attack/physical/add
 
 # 火耐性+10%
     data modify storage api: Argument.UUID set value [I;1,1,665,5]
@@ -30,9 +30,9 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/fire/add
 
-# 火攻撃+8%
+# 火攻撃+10%
     data modify storage api: Argument.UUID set value [I;1,1,665,5]
-    data modify storage api: Argument.Amount set value 0.08
+    data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
 
@@ -41,12 +41,6 @@
     data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
-
-# 魔法耐性-5%
-    data modify storage api: Argument.UUID set value [I;1,1,665,5]
-    data modify storage api: Argument.Amount set value -0.05
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
 
 # 最大体力-10%
     attribute @s generic.max_health modifier add 00000001-0000-0001-0000-029900000005 "MaxHealthDown" -0.1 multiply_base
