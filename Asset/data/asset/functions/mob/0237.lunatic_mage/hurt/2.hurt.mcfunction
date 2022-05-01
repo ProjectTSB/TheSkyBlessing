@@ -4,14 +4,9 @@
 #
 # @within function asset:mob/0237.lunatic_mage/hurt/1.trigger
 
-#> Priuvate
-# @private
-    #declare score_holder $Health
-    #declare score_holder $MaxHealth
-
 # 演出
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.5
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.7
 
-# 現在体力を割合で出す
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 1.0
+# 体力が50%であることを検知
+    execute if entity @s[tag=!6L.HealthLess50Per] run function asset:mob/0237.lunatic_mage/hurt/3.check_health

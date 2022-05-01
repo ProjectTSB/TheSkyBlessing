@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/03.water_jail_vfx
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/03.water_jail_vfx
 #
 #
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/02.water_jail
 
 # 音
     playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 2

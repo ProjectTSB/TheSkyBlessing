@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/01.manage
 #
 # プレイヤーを殺す技
 #
@@ -20,13 +20,13 @@
     execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 水の檻
-    execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
+    execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/02.water_jail
 
 # 火の予告
-    execute if entity @s[scores={6L.Tick=50..53}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_kill/05.fire_line
+    execute if entity @s[scores={6L.Tick=50..53}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/05.fire_line
 
 # 火を使い始める
-    execute if entity @s[scores={6L.Tick=61..}] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/06.fire
+    execute if entity @s[scores={6L.Tick=61..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/06.fire
 
 # リセット
     execute if entity @s[scores={6L.Tick=201..}] run function asset:mob/0237.lunatic_mage/tick/05.reset

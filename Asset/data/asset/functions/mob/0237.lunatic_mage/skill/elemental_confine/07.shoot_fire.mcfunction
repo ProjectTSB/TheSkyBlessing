@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/07.shoot_fire
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/07.shoot_fire
 #
 #
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_kill/06.fire
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/06.fire
 
 # 音
     playsound entity.blaze.shoot hostile @a[distance=..25] ~ ~ ~ 1.2 1.5 0.9

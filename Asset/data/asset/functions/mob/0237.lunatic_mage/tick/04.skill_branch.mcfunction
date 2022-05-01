@@ -20,4 +20,4 @@
     execute if entity @s[tag=6L.Fire2] run function asset:mob/0237.lunatic_mage/skill/fire2/01.manage
 
 # 属性キル
-    execute if entity @s[tag=6L.ElementalKill] run function asset:mob/0237.lunatic_mage/skill/elemental_kill/01.manage
+    execute if entity @s[tag=6L.ElementalConfine] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/01.manage

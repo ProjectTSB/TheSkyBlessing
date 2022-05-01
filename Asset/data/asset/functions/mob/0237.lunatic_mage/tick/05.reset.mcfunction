@@ -12,5 +12,5 @@
     tag @s remove 6L.Thunder
     tag @s remove 6L.Magic
     tag @s remove 6L.Fire2
-    tag @s remove 6L.ElementalKill
+    tag @s remove 6L.ElementalConfine
     tag @s remove 6L.LeftRotation

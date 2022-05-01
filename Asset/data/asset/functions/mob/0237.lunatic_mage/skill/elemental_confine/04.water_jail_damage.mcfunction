@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_kill/04.water_jail_damage
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/04.water_jail_damage
 #
 #
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_kill/02.water_jail
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/02.water_jail
 
 # ダメージ設定
     # 与えるダメージ
