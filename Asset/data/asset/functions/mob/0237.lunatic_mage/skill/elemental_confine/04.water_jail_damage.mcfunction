@@ -10,6 +10,6 @@
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
         function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=4..9] at @s run function lib:damage/
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=4..9] run function lib:damage/
 # リセット
     data remove storage lib: Argument
