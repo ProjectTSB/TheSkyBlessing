@@ -16,7 +16,9 @@
     tag @s add MU.This
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 65.0f
+    data modify storage lib: Argument.Damage set value 700.0f
+    execute if entity @s[tag=MU.2] run data modify storage lib: Argument.Damage set value 900.0f
+    execute if entity @s[tag=MU.3] run data modify storage lib: Argument.Damage set value 1100.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     execute as @a if score @s UserID = @e[type=marker,tag=MU.This,distance=..0.01,sort=nearest,limit=1] MU.UserID run function lib:damage/modifier
