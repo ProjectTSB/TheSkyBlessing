@@ -2,7 +2,7 @@
 #
 # ヒット処理だよ
 #
-# @within function asset:mob/0237.lunatic_mage/skill/magic/05.beam_recursive
+# @within function asset:mob/0237.lunatic_mage/skill/magic/03.shoot_beam
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 50f

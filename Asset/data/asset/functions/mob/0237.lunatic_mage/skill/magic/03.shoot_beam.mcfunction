@@ -17,3 +17,6 @@
 
 # 再帰
     function asset:mob/0237.lunatic_mage/skill/magic/05.beam_recursive
+
+# ダメージ
+    execute as @a[tag=LandingTarget,distance=..50] run function asset:mob/0237.lunatic_mage/skill/magic/06.hit

@@ -12,7 +12,7 @@
     execute if entity @s[scores={6L.Tick=2}] run data modify entity @s NoAI set value 1b
 
 # 最も最寄りのプレイヤーをターゲットとして予告線を出す
-    execute if entity @s[scores={6L.Tick=20..45}] positioned ~ ~1.6 ~ facing entity @p[gamemode=!spectator,distance=..40] eyes anchored eyes run function asset:mob/0237.lunatic_mage/skill/magic/02.warning_line
+    execute if entity @s[scores={6L.Tick=20..45}] anchored eyes facing entity @p[gamemode=!spectator,distance=..40] eyes anchored eyes run function asset:mob/0237.lunatic_mage/skill/magic/02.warning_line
 
 # 向き合わせ
     execute if entity @s[scores={6L.Tick=45}] anchored eyes run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,distance=..40] eyes
