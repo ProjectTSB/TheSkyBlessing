@@ -13,4 +13,4 @@
     data remove storage lib: Argument
 
 # Tag削除
-    tag @a[tag=LandingTarget,distance=..50] remove LandingTarget
+    tag @s remove LandingTarget
