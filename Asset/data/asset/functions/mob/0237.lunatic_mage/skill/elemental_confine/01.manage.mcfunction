@@ -16,7 +16,7 @@
 # プレイヤーの下にワープ
     execute if entity @s[scores={6L.Tick=20}] at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
 
-# 空中はダメです
+# 空中の場合降下
     execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 水の檻
