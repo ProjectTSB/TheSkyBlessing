@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"ルナティックメイジ","color":"white"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:379}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:20187}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
