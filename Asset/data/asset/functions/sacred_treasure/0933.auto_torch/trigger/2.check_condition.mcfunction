@@ -11,8 +11,8 @@
 # 他にアイテム等確認する場合はここに書く
 # いろいろチェックする
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0933.auto_torch/trigger/can_set_check
-    execute if entity @s[tag=CanUsed,tag=FailRecovery] run tag @s remove CanUsed
-    execute if entity @s[tag=FailRecovery] run tag @s remove FailRecovery
+    execute if entity @s[tag=CanUsed,tag=ExtraCheckFailed] run tag @s remove CanUsed
+    execute if entity @s[tag=ExtraCheckFailed] run tag @s remove ExtraCheckFailed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0933.auto_torch/trigger/3.main
