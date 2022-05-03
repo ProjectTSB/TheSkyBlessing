@@ -11,7 +11,7 @@
 # スコア増やす
     scoreboard players add @s M1.Time 1
 # 時間経過で殺す
-    execute if score @s M1.Time matches 200.. run kill @s
+    execute if score @s M1.Time matches 100.. run kill @s
 
 
 # 着弾検知
@@ -22,7 +22,7 @@
     execute if entity @s[tag=M1.Landing] run function asset:sacred_treasure/0793.queen_bee_rocket/trigger/attack
 
 # 演出
-    particle smoke ~ ~ ~ 0.1 0.1 0.1 0 1 normal
+    particle minecraft:campfire_cosy_smoke ~ ~0.3 ~ 0.1 0.1 0.1 0 1 force
 
 # 前方にいる敵をターゲットする
     execute positioned ^ ^ ^10 if entity @e[type=#lib:living,tag=Enemy,tag=!M1.Bee,distance=..10] run tag @e[type=#lib:living,tag=Enemy,tag=!M1.Bee,distance=..10,limit=1] add M1.Target

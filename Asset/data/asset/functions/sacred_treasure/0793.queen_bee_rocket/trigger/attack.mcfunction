@@ -11,18 +11,20 @@
     tag @e[type=#lib:living,type=!player,tag=!M1.Bee,distance=..2,sort=nearest,limit=1] add M1.Target
 
 # 演出
-    particle lava ~ ~1 ~ 0 1 0 0 20 force
+    particle flash ~ ~ ~ 0 0 0 4 0 force
     particle flame ~ ~ ~ 0 0 0 0.3 20 force
+    particle campfire_signal_smoke ~ ~ ~ 0 0 0 0.05 30 force
     particle explosion ~ ~ ~ 0 0 0 0 1 force
     playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 1 0.3
     playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 0 0.3
     playsound entity.blaze.burn master @a[distance=..50] ~ ~ ~ 1 1 0.3
+    summon firework_rocket ~ ~ ~ {Silent:1b,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16774912],FadeColors:[I;0,5526612]}]}}}}
 
 # 攻撃を与える
     # 与えるダメージ = 26
-        data modify storage lib: Argument.Damage set value 36f
+        data modify storage lib: Argument.Damage set value 360f
     # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
+        data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
