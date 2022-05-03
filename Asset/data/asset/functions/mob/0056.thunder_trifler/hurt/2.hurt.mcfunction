@@ -14,12 +14,12 @@
 # @private
     #declare tag SpreadMarker
 
-# ワープ
-    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 10
-    data modify storage lib: Argument.Spread set value 4.633d
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=Attacker] positioned ~ ~25 ~ rotated ~ 90 run function lib:forward_spreader/circle
-    execute at @p[tag=Attacker] positioned ~ ~25 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^25 if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
+# マーカーをワープさせて、そこが安全地帯ならワープする
+    execute at @p[tag=Attacker,distance=..50] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
+    execute at @p[tag=Attacker,distance=..50] run data modify storage lib: Argument.Bounds set value [[5d,5d],[0],[5d,5d]]
+    execute as @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] at @s run function lib:spread_entity/
+    execute at @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
+
 # 武器が剣の場合弓に切替
    execute if entity @s[tag=1K.Sword] run item replace entity @s weapon.mainhand with bow{Enchantments:[{id:"punch",lvl:2s}]}
 
