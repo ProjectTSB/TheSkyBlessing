@@ -3,3 +3,12 @@
 # Mobの死亡時の処理
 #
 # @within function asset:mob/0237.lunatic_mage/death/1.trigger
+
+# 演出
+    playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1 0.5
+    playsound minecraft:entity.phantom.hurt hostile @a ~ ~ ~ 1 0
+    playsound item.trident.thunder hostile @a ~ ~ ~ 1 1.3 0
+    particle end_rod ~ ~1.2 ~ 0.3 1 0.3 0.3 200 normal @a
+
+# 初期地点markerをキル
+    kill @e[type=marker,tag=6L.SpawnPoint,distance=..100,limit=1]

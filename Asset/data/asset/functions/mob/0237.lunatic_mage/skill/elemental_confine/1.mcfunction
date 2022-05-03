@@ -13,8 +13,9 @@
 # NoAIになる
     execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b
 
-# プレイヤーの下にワープ
-    execute if entity @s[scores={6L.Tick=20}] at @p[gamemode=!spectator,distance=..40] run tp @s ~ ~ ~ ~ 0
+# 召喚地点にプレイヤー1人とともにワープ
+    execute if entity @s[scores={6L.Tick=20}] run tp @s @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
+    execute if entity @s[scores={6L.Tick=20}] run tp @p[gamemode=!spectator,distance=..100] @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
 
 # 空中の場合降下
     execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
