@@ -10,7 +10,8 @@
     execute if entity @s[tag=!6L.HealthLess50Per] run scoreboard players operation $Random Temporary %= $5 Const
     execute if entity @s[tag=6L.HealthLess50Per] run scoreboard players operation $Random Temporary %= $6 Const
 
-  scoreboard players set $Random Temporary 5
+# デバッグ用
+   #scoreboard players set $Random Temporary 5
 # 技用Tagを付与
     execute if score $Random Temporary matches 0 run tag @s add 6L.Fire
     execute if score $Random Temporary matches 1 run tag @s add 6L.Water
