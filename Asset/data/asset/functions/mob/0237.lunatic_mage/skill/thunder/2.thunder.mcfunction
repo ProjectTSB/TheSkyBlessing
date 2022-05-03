@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/thunder/02.thunder
+#> asset:mob/0237.lunatic_mage/skill/thunder/2.thunder
 #
 # 雷落とす
 #
-# @within function asset:mob/0237.lunatic_mage/skill/thunder/01.manage
+# @within function asset:mob/0237.lunatic_mage/skill/thunder/1
 
 # 召喚
     function asset:mob/0237.lunatic_mage/magic_summon/thunder

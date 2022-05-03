@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/water/01.manage
+#> asset:mob/0237.lunatic_mage/skill/water/1
 #
 # 水魔法を管理します
 #
-# @within function asset:mob/0237.lunatic_mage/tick/04.skill_branch
+# @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=1}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.8 2 0
@@ -14,4 +14,4 @@
     execute if entity @s[scores={6L.Tick=61}] at @a[gamemode=!spectator,distance=..32] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
 
 # リセット
-    execute if entity @s[scores={6L.Tick=81..}] run function asset:mob/0237.lunatic_mage/tick/05.reset
+    execute if entity @s[scores={6L.Tick=81..}] run function asset:mob/0237.lunatic_mage/tick/5.reset

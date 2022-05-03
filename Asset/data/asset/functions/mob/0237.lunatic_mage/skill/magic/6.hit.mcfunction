@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/magic/06.hit
+#> asset:mob/0237.lunatic_mage/skill/magic/6.hit
 #
 # ヒット処理だよ
 #
-# @within function asset:mob/0237.lunatic_mage/skill/magic/03.shoot_beam
+# @within function asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 50f

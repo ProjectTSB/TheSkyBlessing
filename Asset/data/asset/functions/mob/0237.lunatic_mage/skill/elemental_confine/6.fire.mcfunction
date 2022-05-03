@@ -1,0 +1,18 @@
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/6.fire
+#
+#
+#
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
+
+# 火を使い始める
+# 実行時間を移す
+    scoreboard players operation $Temp Temporary = @s 6L.Tick
+# 4tickおきに実行
+    scoreboard players operation $Temp Temporary %= $4 Const
+    execute if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.shoot_fire
+    execute if score $Temp Temporary matches 0 run tp @s ~ ~ ~ ~-15 ~
+# リセット
+    scoreboard players reset $Temp Temporary
+
+# 炎弾を範囲内に入ったらキルしたい
+    execute if entity @e[type=marker,scores={MobID=188},distance=8..9] run kill @e[type=marker,scores={MobID=188},distance=8..9]

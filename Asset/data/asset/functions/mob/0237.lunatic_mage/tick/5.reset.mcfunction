@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/tick/05.reset
+#> asset:mob/0237.lunatic_mage/tick/5.reset
 #
 # リセットします
 #
-# @within function asset:mob/0237.lunatic_mage/skill/*/01.manage
+# @within function asset:mob/0237.lunatic_mage/skill/*/1
 
 # リセット
     data modify entity @s NoAI set value 0b

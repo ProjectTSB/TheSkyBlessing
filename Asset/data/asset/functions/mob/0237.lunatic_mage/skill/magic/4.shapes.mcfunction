@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/magic/04.shapes
+#> asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 #
 # ビーム発射のときの形
 #
-# @within function asset:mob/0237.lunatic_mage/skill/magic/03.shoot_beam
+# @within function asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwCsAnAEYAcjpATALSsDMXAjO5V6t67egDMAbI3YAGevS6UA7LRkqJ9MAQB2AQwC2CZIDDFAAS8tYGLowGAzknAoA9oW0QkrGQRRx3cDEcwADddbEIjcAAPJG8wKFiAX0SCW1I0QgdEXgI7CBsPRDi4bGw0GDsjXhk4jGd8iCM4tDsAUVLyytaAR0Iw7CgAZWtfckQxMMrkvHBoeAp0LFxLYjIKShQuehlqJWp2XSUtgUZ6fl1qai52CVoJJRRaOCUJFCUZSz1DCjNWS2tbPosk5XO4kNUfH5GoFEOBQuFImAYkUCAkitMwGkMlkZAA6ai5fIYQrFDoVKo1VL1XSNWIEFrtMrknp9UpDEZwMYTbBTRIAXSAA_3
 # 円 2

@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/fire2/02.shoot
+#> asset:mob/0237.lunatic_mage/skill/fire2/2.shoot
 #
 # 3way弾を打つよ
 #
-# @within function asset:mob/0237.lunatic_mage/skill/fire2/01.manage
+# @within function asset:mob/0237.lunatic_mage/skill/fire2/1
 
 # 演出
     playsound entity.blaze.shoot hostile @a[distance=..25] ~ ~ ~ 1.2 1.5 0.9

@@ -1,11 +1,11 @@
-#> asset:mob/0237.lunatic_mage/skill/fire/03.shoot
+#> asset:mob/0237.lunatic_mage/skill/fire/3.shoot
 #
 # 発射します
 #
-# @within function asset:mob/0237.lunatic_mage/skill/fire/01.manage
+# @within function asset:mob/0237.lunatic_mage/skill/fire/1
 
 # 音
-    playsound entity.blaze.shoot hostile @a[distance=..25] ~ ~ ~ 1.2 1.5 0.9
+    playsound entity.blaze.shoot hostile @a[distance=..25] ~ ~ ~ 1.2 1.5 1
 
 # 発射
     execute anchored eyes positioned ^-0.25 ^ ^ rotated ~ 0 run function asset:mob/0237.lunatic_mage/magic_summon/fire

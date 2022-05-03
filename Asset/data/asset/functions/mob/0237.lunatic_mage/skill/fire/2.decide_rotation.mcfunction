@@ -1,8 +1,8 @@
-#> asset:mob/0237.lunatic_mage/skill/fire/02.decide_rotation
+#> asset:mob/0237.lunatic_mage/skill/fire/2.decide_rotation
 #
 # 炎発射の時の回転の角度を決めるよ
 #
-# @within function asset:mob/0237.lunatic_mage/skill/fire/01.manage
+# @within function asset:mob/0237.lunatic_mage/skill/fire/1
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
