@@ -1,0 +1,36 @@
+#> asset:sacred_treasure/0793.queen_bee_rocket/trigger/attack
+#
+# 弾が着弾した時
+#
+# @within function asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee
+
+# 自身にタグ付与
+    tag @s add M1.This
+
+# 周囲2mから最寄りの敵にタグを付与
+    tag @e[type=#lib:living,type=!player,tag=!M1.Bee,distance=..2,sort=nearest,limit=1] add M1.Target
+
+# 演出
+    particle lava ~ ~1 ~ 0 1 0 0 20 force
+    particle flame ~ ~ ~ 0 0 0 0.3 20 force
+    particle explosion ~ ~ ~ 0 0 0 0 1 force
+    playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 1 0.3
+    playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 0 0.3
+    playsound entity.blaze.burn master @a[distance=..50] ~ ~ ~ 1 1 0.3
+
+# 攻撃を与える
+    # 与えるダメージ = 26
+        data modify storage lib: Argument.Damage set value 36f
+    # 魔法属性
+        data modify storage lib: Argument.AttackType set value "Magic"
+    # 雷属性
+        data modify storage lib: Argument.ElementType set value "Fire"
+# 補正functionを実行
+    execute as @a if score @s UserID = @e[type=armor_stand,tag=M1.This,limit=1] M1.UserID run function lib:damage/modifier
+# 攻撃した対象に実行
+    execute as @e[tag=M1.Target] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
+
+#自身を殺す
+    kill @s
