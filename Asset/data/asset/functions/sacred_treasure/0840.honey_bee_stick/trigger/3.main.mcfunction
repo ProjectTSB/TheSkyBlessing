@@ -23,7 +23,7 @@
     data remove storage lib: Argument
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 60.0f
+    data modify storage lib: Argument.Damage set value 800.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
