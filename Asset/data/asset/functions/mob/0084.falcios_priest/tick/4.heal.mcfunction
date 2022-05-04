@@ -6,7 +6,8 @@
 
 # 演出
     particle soul ~ ~1.2 ~ 2.5 0.5 2.5 0.3 200 normal
-    playsound block.sculk_sensor.clicking hostile @a ~ ~ ~ 0.8 2 0
+    playsound block.sculk_sensor.clicking hostile @a ~ ~ ~ 0.8 0 0
+    playsound block.fire.ambient hostile @a ~ ~ ~ 1.5 0.8 0
     playsound ogg:mob.vex.idle1 hostile @a ~ ~ ~ 0.8 0 0
     execute at @e[type=#lib:living,tag=Enemy,distance=..10] run particle heart ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a
 
