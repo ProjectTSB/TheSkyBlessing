@@ -15,5 +15,6 @@ jobs:
         uses: ChenCMD/datapack-linter@v1
         with:
           outputDefine: public
+          notOutputSuccess: true
           ignoreLintPathPattern: |
             world_manager:gimmick/shard_processor/check_item/invalid
