@@ -9,7 +9,7 @@
     #declare tag 2C.Already
 
 # 演出
-    playsound ogg:mob.vex.idle1 hostile @a ~ ~ ~ 1 0.5 0
+    playsound entity.blaze.shoot hostile @a ~ ~ ~ 1 1.3 0
 
 # 召喚
     data modify storage api: Argument.ID set value 85

@@ -20,6 +20,8 @@
     scoreboard players operation $Temp Temporary %= $5 Const
     execute if score $Temp Temporary matches 0 run function asset:mob/0085.soul_bullet/tick/vfx
     execute if score $Temp Temporary matches 0 run playsound ogg:mob.vex.idle1 hostile @a ~ ~ ~ 0.8 0.5 0
+    execute if score $Temp Temporary matches 0 run playsound entity.blaze.shoot hostile @a ~ ~ ~ 0.15 1.8 0
+
     scoreboard players reset $Temp Temporary
 
 # tp
