@@ -9,4 +9,4 @@
     playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1 0.7
 
 # 体力が50%であることを検知
-    execute if entity @s[tag=!6L.HealthLess50Per] run function asset:mob/0237.lunatic_mage/hurt/3.check_health
+    execute if entity @s[tag=!6L.HealthLess40Per] run function asset:mob/0237.lunatic_mage/hurt/3.check_health
