@@ -20,4 +20,11 @@
 
     execute if score $PU.ItemNumber Temporary matches ..1 if entity @s[tag=PU.Modifier] run tag @s[tag=PU.Modifier] remove PU.Modifier
 
+
+# APIの引数が残ったままfunctionを抜けるの防止用
+    execute if score $PU.ItemNumber Temporary matches 2.. run data remove storage api: Argument.UUID
+    execute if score $PU.ItemNumber Temporary matches 2.. run data remove storage api: Argument.Amount
+    execute if score $PU.ItemNumber Temporary matches 2.. run data remove storage api: Argument.Operation
+
+
     

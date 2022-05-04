@@ -20,5 +20,10 @@
     data modify storage api: Argument.Operation set value "multiply"
     execute if entity @s[tag=!PU.Modifier] run function api:player_modifier/defense/base/add
 
+# APIの引数が残ったままfunctionを抜けるの防止用
+    execute if entity @s[tag=PU.Modifier] run data remove storage api: Argument.UUID
+    execute if entity @s[tag=PU.Modifier] run data remove storage api: Argument.Amount
+    execute if entity @s[tag=PU.Modifier] run data remove storage api: Argument.Operation
+
 # 効果付与のフラグ設定
     tag @s[tag=!PU.Modifier] add PU.Modifier
