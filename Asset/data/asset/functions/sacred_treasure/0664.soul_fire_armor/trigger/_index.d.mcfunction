@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0664.soul_fire_armor/trigger/_index.d
 # @private
-#
+
 #> フルセットTag
 # @within function
 #   asset:sacred_treasure/0664.soul_fire_armor/trigger/**
