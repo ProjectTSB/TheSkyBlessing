@@ -13,7 +13,7 @@
 
 # ここから先は神器側の効果の処理を書く
 # 攻撃対象にタグ付け
-    tag @e[type=#lib:living,tag=!Enemy.Boss,predicate=asset:sacred_treasure/0253.holy_barrier/is_angry] add 71.Target
+    tag @e[type=#lib:living,tag=!Enemy.Boss,tag=!Uninterferable,predicate=asset:sacred_treasure/0253.holy_barrier/is_angry] add 71.Target
 
 #音
     playsound minecraft:block.respawn_anchor.deplete master @a[distance=..16] ~ ~ ~ 1 1 1
