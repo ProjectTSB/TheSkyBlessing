@@ -55,6 +55,3 @@
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
     execute at @s unless entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01] run function asset:mob/1004.tultaria/tick/armorstand_respawn
-
-# アマスタデスポーン処理
-    execute if entity @p[distance=100..150] run kill @e[type=armor_stand,tag=RW.ArmorStand]
