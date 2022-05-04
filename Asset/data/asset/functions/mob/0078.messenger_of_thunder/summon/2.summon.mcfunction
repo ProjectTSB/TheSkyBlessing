@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"punch",lvl:1s}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{CustomModelData:20188,Enchantments:[{id:"punch",lvl:1s}]}}
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -33,13 +33,13 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 400
+    data modify storage asset:mob Health set value 25000
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 1
+    # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 8
+    data modify storage asset:mob Defense set value -5
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 10
+    # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0.4
 # 索敵範囲 (double) (オプション)
