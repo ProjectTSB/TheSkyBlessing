@@ -13,7 +13,7 @@
     playsound entity.blaze.shoot hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 2
-    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 2 0.7
+    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 2 0.7
 
 # リセット
     scoreboard players reset @s 57.Attack
