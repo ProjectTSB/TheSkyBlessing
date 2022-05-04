@@ -14,8 +14,8 @@
     execute positioned ~ ~0.8 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
 
 # 自身を判別するTagを自身に付与
-    tag @s add P8.Owner
-    execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run tag @s add P8.This
+    tag @s add P8.This
+    execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run tag @s add P8.Owner
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 300.0f
