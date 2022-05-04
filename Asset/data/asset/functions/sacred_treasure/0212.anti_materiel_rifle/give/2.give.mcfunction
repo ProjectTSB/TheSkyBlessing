@@ -29,7 +29,7 @@
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 80
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [200]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [1500]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
