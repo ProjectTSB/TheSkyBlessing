@@ -14,11 +14,11 @@
 # @within function asset:mob/0237.lunatic_mage/skill/magic/**
     #declare tag LandingTarget
 
-#> 体力50%以下のTag
+#> 体力40%以下のTag
 # @within function
 #   asset:mob/0237.lunatic_mage/hurt/**
 #   asset:mob/0237.lunatic_mage/tick/3.select_skill
-    #declare tag 6L.HealthLess50Per
+    #declare tag 6L.HealthLess40Per
 
 #> 炎1の回転の向き
 # @within function
