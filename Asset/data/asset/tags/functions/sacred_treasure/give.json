@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0253.holy_barrier/give/1.trigger",
         "asset:sacred_treasure/0005.musket_matchlock/give/1.trigger",
         "asset:sacred_treasure/0933.auto_torch/give/1.trigger",
         "asset:sacred_treasure/0928.ankh/give/1.trigger",
