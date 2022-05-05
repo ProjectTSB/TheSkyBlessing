@@ -14,7 +14,7 @@
 
 # 体力回復量-50%を付与
     data modify storage api: Argument.UUID set value [I;1,2,120,0]
-    data modify storage api: Argument.Amount set value -0.8
+    data modify storage api: Argument.Amount set value -0.5
     data modify storage api: Argument.Operation set value "multiply"
     execute as @a[distance=..2] run function api:player_modifier/heal/add
 
