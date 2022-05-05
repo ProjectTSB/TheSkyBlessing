@@ -16,8 +16,8 @@
     playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
 
 # ダメージ設定
-    # 与えるダメージ = 54
-        data modify storage lib: Argument.Damage set value 124.0f
+    # 与えるダメージ = 580
+        data modify storage lib: Argument.Damage set value 580.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 無属性
