@@ -35,3 +35,4 @@
 
 # 消滅
     execute if entity @s[scores={2D.Tick=64..}] run kill @s
+    execute unless block ^ ^ ^0.5 #lib:no_collision run kill @s
