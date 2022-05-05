@@ -13,7 +13,6 @@
 
 # ここから先は神器側の効果の処理を書く
 
-
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle sweep_attack ~ ~1 ~ 0 0 0 1 20
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle end_rod ~ ~1 ~ 0 0 0 0.1 20
@@ -38,7 +37,7 @@
         data modify storage lib: Argument.ElementType set value "None"
 
 # 確率で相手に9999ダメージ
-    execute if predicate lib:random_pass_per/99 run function asset:sacred_treasure/0927.lexiel_s_oath/trigger/4.critical_hit
+    execute if predicate lib:random_pass_per/5 run function asset:sacred_treasure/0927.lexiel_s_oath/trigger/4.critical_hit
 
 # 対象がトゥルタリアなら2ダメージ
     execute if entity @e[type=#lib:living,tag=Victim,scores={MobID=1004},distance=..10] run data modify storage lib: Argument.Damage set value 2f
