@@ -33,5 +33,5 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @a[gamemode=!spectator,dx=0] run function asset:mob/0085.soul_bullet/tick/3.hit
 
 # 消滅
-    execute if entity @s[scores={2D.Tick=64..}] run kill @s
+    execute if entity @s[scores={2D.Tick=40..}] run kill @s
     execute unless block ^ ^ ^0.8 #lib:no_collision run kill @s
