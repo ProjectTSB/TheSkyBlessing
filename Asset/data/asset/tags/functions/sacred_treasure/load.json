@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:sacred_treasure/0822.sound_of_a_star/trigger/0.load",
+        "asset:sacred_treasure/0005.musket_matchlock/trigger/0.load",
         "asset:sacred_treasure/0905.book_of_metastasis/trigger/0.load",
         "asset:sacred_treasure/0907.rod_of_rain/trigger/0.load",
         "asset:sacred_treasure/0218.iron_storm/trigger/0.load",

@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0232.honey_leader/tick/1.trigger",
         "asset:mob/0263.orange/tick/1.trigger",
         "asset:mob/0235.orange_thrower/tick/1.trigger",
         "asset:mob/0236.ksitigarbha/tick/1.trigger",

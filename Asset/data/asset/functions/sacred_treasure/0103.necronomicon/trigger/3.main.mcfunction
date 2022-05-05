@@ -18,8 +18,8 @@
         effect give @a[distance=..10] minecraft:blindness 3 1
 
 # ダメージ
-    # 与えるダメージ = 80
-        data modify storage lib: Argument.Damage set value 80f
+    # 与えるダメージ = 380
+        data modify storage lib: Argument.Damage set value 380f
     # 第一属性 (第二属性なし)
         data modify storage lib: Argument.AttackType set value "Magic"
     # ダメージを与える
