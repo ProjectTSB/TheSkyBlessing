@@ -8,4 +8,4 @@
     scoreboard players set @s 2C.Skill 0
 
 # プレイヤーが視点先にいる場合高確率で二つ目のスキル
-    execute positioned ^ ^ ^16 if entity @a[gamemode=!spectator] if predicate lib:random_pass_per/70 run scoreboard players set @s 2C.Skill 1
+    execute positioned ^ ^ ^16 if entity @a[gamemode=!spectator,distance=..16] if predicate lib:random_pass_per/70 run scoreboard players set @s 2C.Skill 1
