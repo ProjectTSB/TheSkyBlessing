@@ -12,7 +12,7 @@
     function asset:sacred_treasure/0273.tonbo_gaeri/trigger/3.1.warp_effect
 
 # ぶん殴ったやつに物理、無属性のダメージをぶちかます
-    data modify storage lib: Argument.Damage set value 100.0f
+    data modify storage lib: Argument.Damage set value 555.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
