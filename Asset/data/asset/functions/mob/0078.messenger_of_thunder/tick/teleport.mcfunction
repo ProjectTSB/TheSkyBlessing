@@ -9,7 +9,7 @@
     playsound block.respawn_anchor.charge hostile @a ~ ~ ~ 1 2 0
 
 # ランダムでワープ
-    data modify storage lib: Argument.Bounds set value [[8d,8d],[0],[8d,8d]]
+    data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
     function lib:spread_entity/
 
 # リセット
