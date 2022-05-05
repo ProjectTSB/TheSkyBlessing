@@ -13,6 +13,10 @@
     execute at @p[gamemode=!spectator,distance=..50] run data modify storage lib: Argument.Bounds set value [[5d,5d],[0d,0d],[5d,5d]]
     execute as @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] at @s run function lib:spread_entity/
     execute at @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
+
+# もしもマーカーの位置がダメだった場合即発光状態になる
+    execute at @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] unless block ~ ~-1 ~ #lib:no_collision_without_fluid unless block ~ ~1 ~ #lib:no_collision_without_fluid run scoreboard players set @s 1N.Glowing 60
+
 # リセット
     kill @e[type=marker,tag=SpreadMarker]
 # 特殊攻撃開始演出
