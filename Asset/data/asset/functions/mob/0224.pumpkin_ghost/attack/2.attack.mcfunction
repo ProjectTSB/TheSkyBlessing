@@ -16,17 +16,16 @@
     effect give @p[tag=Victim,distance=..6] hunger 3 1 false
 
 # ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 7f
-    # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
-    # 火属性
-        data modify storage lib: Argument.ElementType set value "Fire"
-    # ダメージ
-        function lib:damage/modifier
-        execute as @a[tag=Victim,distance=..6] at @s run function lib:damage/
+    data modify storage lib: Argument.Damage set value 9f
+    data modify storage lib: Argument.AttackType set value "Magic"
+    data modify storage lib: Argument.ElementType set value "Fire"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによりカボチャの怨念を受け、燃え尽きた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sにより呪いの炎を受けた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    function lib:damage/modifier
+    execute as @a[tag=Victim,distance=..6] at @s run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
-# 自害
+# 消滅
     kill @s
