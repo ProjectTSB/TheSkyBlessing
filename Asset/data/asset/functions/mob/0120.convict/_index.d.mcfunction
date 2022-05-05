@@ -8,14 +8,11 @@
     #declare tag 3C.Angel
     #declare tag 3C.ArmorStand
     #declare tag 3C.ArmorStandThis
-    #declare tag 3C.ArmorStandDeath
     #
     #declare tag 3C.SkillAxe
     #declare tag 3C.SkillSummon
     #declare tag 3C.SkillSlash
     #
     #declare tag SpreadMarker
-    #declare tag Landing
-    #declare tag LandingTarget
     #declare tag PlayerCheck
     #declare tag CanTeleport
