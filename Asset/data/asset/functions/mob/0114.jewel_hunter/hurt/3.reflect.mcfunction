@@ -1,4 +1,4 @@
-#> asset:mob/0114.jewel_hunter/hurt/3.far_revenge
+#> asset:mob/0114.jewel_hunter/hurt/3.reflect
 #
 #
 #
