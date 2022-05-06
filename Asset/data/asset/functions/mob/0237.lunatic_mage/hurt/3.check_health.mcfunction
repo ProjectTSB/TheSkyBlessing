@@ -16,3 +16,6 @@
 
 # 50%以下でTagを付与
     execute if entity @s[tag=!6L.HealthLess40Per] if score $Health Temporary matches ..40 run tag @s add 6L.HealthLess40Per
+
+# リセット
+    scoreboard players reset $Health Temporary
