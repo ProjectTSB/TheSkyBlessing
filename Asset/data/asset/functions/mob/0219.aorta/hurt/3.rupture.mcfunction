@@ -9,10 +9,16 @@
     particle dust 0.769 0 0 2.5 ~ ~1.2 ~ 2 0.4 2 0 150 normal @a
     playsound block.conduit.ambient hostile @a ~ ~ ~ 1 1.2 0
 
+# 透明化する
+    effect give @s invisibility 10 10 true
+
 # 周囲を回復
-    data modify storage lib: Argument.Heal set value 50f
+    data modify storage lib: Argument.Heal set value 400f
     function lib:heal/modifier
     execute as @e[type=#lib:living,tag=Enemy,tag=!this,tag=!Uninterferable,distance=..5] run function lib:heal/
+
+# 移動速度上昇を付与
+    effect give @e[type=#lib:living,tag=Enemy,tag=!this,tag=!Uninterferable,distance=..5] speed 3 2 true
 
 # 死ぬ
     kill @s
