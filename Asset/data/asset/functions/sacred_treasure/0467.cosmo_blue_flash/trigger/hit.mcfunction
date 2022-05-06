@@ -9,7 +9,7 @@
     playsound block.bubble_column.upwards_inside master @a ~ ~ ~ 1.0 1.0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 130f
+    data modify storage lib: Argument.Damage set value 1029f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     execute as @a[tag=this] run function lib:damage/modifier

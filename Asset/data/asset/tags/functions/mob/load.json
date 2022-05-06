@@ -1,6 +1,9 @@
 {
     "values": [
         "asset:mob/0237.lunatic_mage/0.load",
+        "asset:mob/0085.soul_bullet/0.load",
+        "asset:mob/0084.falcios_priest/0.load",
+        "asset:mob/0232.honey_leader/0.load",
         "asset:mob/0263.orange/0.load",
         "asset:mob/0235.orange_thrower/0.load",
         "asset:mob/0276.ksitigarbha_body/0.load",
