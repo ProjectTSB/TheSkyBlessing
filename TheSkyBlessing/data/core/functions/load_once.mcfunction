@@ -133,12 +133,7 @@ team modify NoCollision collisionRule never
     bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
-    # @within function
-    #   lib:debug/objective_view
-    #   asset:mob/*/**
-    #   asset_manager:mob/**
-    #   asset_manager:spawner/**
-    #   asset_manager:island/dispel/boss/remove
+    # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
