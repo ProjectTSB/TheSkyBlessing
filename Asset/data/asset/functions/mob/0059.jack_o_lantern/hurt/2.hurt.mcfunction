@@ -16,9 +16,9 @@
 # 眷属召喚までの被ダメカウント
     scoreboard players add @s 1N.HurtCount 1
 
-# 被ダメカウントが5以上で周囲に眷属が3体以下なら3体召喚
+# 被ダメカウントが5以上で周囲に眷属が2体以下なら3体召喚
     execute store result score $MobCount Temporary if entity @e[type=vex,scores={MobID=224},distance=..50]
-    execute if entity @s[scores={1N.HurtCount=5..}] if score $MobCount Temporary matches ..3 run function asset:mob/0059.jack_o_lantern/hurt/4.summon
+    execute if entity @s[scores={1N.HurtCount=5..}] if score $MobCount Temporary matches ..2 run function asset:mob/0059.jack_o_lantern/hurt/4.summon
     scoreboard players reset $MobCount Temporary
 
 # スコア蓄積
