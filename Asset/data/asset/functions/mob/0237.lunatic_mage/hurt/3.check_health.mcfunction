@@ -10,11 +10,11 @@
     #declare score_holder $MaxHealth
 
 # 現在体力を割合で出す
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
+    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 10000
     execute store result score $MaxHealth Temporary run function api:mob/get_max_health
     scoreboard players operation $Health Temporary /= $MaxHealth Temporary
 
-# 50%以下でTagを付与
+# 40%以下でTagを付与
     execute if entity @s[tag=!6L.HealthLess40Per] if score $Health Temporary matches ..40 run tag @s add 6L.HealthLess40Per
 
 # リセット
