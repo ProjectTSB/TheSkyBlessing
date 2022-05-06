@@ -9,3 +9,4 @@
 # 5tickごとに水の檻を表示
     scoreboard players operation $Temp Temporary %= $6 Const
     execute if score $Temp Temporary matches 0 rotated 0 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/3.water_jail
+    scoreboard players reset $Temp Temporary
