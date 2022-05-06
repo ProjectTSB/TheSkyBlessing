@@ -25,6 +25,6 @@
     execute if entity @s[scores={6L.Tick=20..}] if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/3.shoot
 
 # リセット
-    scoreboard players reset $Temp
+    scoreboard players reset $Temp Temporary
 # リセット
     execute if entity @s[scores={6L.Tick=80..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
