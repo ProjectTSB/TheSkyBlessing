@@ -59,7 +59,7 @@
         data modify storage asset:mob Resist.Thunder set value 1
 
 # スコアを与える
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -40
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
 # 召喚地点用Markerを召喚
     summon marker ~ ~ ~ {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
