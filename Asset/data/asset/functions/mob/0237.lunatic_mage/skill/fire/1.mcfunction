@@ -15,10 +15,9 @@
     execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b
     execute if entity @s[scores={6L.Tick=20}] facing entity @p[gamemode=!spectator,distance=..32] eyes run tp @s ~ ~ ~ ~ ~
 
-# 空中はダメです
+# 空中なら降りる
     execute if entity @s[scores={6L.Tick=20..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
-# Tempスコア
 # 実行時間を移す
     execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary = @s 6L.Tick
 # 4tickおきに実行
