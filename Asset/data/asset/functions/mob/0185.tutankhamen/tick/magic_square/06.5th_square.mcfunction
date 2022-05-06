@@ -8,7 +8,7 @@
     playsound entity.evoker.prepare_summon hostile @a[distance=..20] ~ ~ ~ 1.2 0.5 0.4
 
 # ダメージ
-    execute if score @s 55.Tick matches 170 if entity @a[gamemode=!creative,gamemode=!spectator,distance=..8] run function asset:mob/0185.tutankhamen/tick/magic_square/11.5th_damage
+    execute if entity @s[scores={55.Tick=90}] if entity @a[gamemode=!creative,gamemode=!spectator,distance=..8] run function asset:mob/0185.tutankhamen/tick/magic_square/11.5th_damage
 
 # 円 5
     particle witch ^0 ^ ^-8 0 0 0 0 1
