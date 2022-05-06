@@ -1,12 +1,22 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_confine/3.water_jail_vfx
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/3.water_jail
 #
 #
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.water_jail
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.water_jail_interval
 
 # 音
     playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 2
     playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 1
+
+# ダメージ設定
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 40f
+        data modify storage lib: Argument.AttackType set value "Magic"
+        data modify storage lib: Argument.ElementType set value "Water"
+        function lib:damage/modifier
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=4..9] run function lib:damage/
+# リセット
+    data remove storage lib: Argument
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAMyUCMpALAAyWMC0AhiowGav0BsAJhQd2ADhqtuAIwCcY7u0E1K3GgHYwBAHbsAtgmSAwxQAE9LWBjsM+gM5JwKAPaFtEJP0YEUcN3AwOYABu7NiEhuAAHkheYFAxAL4JBDakaIT2iLIEthDW7oixcNjYaDC2hjSMsRhOeRCGsWi2AKIlZRUtAI6EodhQAMpWPuSIitgVSXjg0PAUME79AOZO2hbEZBQoAKzs0mKy+6yksuqCfAxirHKk54Kk6uoH6jTSjD4WugYUgFiagEuRgCN9EyCCxWGx6TKOFxuJCCfjeXwNAKIcAhMIRMDRQoEeKFKZgVLpTLZMC5fIxAjFUrlSrVFJ1dgNCmoJwYbT+JBVAgAK0IehgSHoBGkcAAXmgOYhBAA6eFgZptamdHp9QbDOCjcYVAjNABCYolGG6vRKas4GqQEAw4SSAF0gA_3
 # 円 4

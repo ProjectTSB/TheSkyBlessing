@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire_line
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 #
 # 炎の予告線
 #
