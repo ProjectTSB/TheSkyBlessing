@@ -24,7 +24,7 @@
 
 # ダメージ設定
     # 与えるダメージ = 90
-        data modify storage lib: Argument.Damage set value 90.0f
+        data modify storage lib: Argument.Damage set value 800.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ

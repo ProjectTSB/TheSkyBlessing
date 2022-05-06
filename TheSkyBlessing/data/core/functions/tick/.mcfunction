@@ -44,7 +44,7 @@
     function asset_manager:common/reset_all_context
 
 # ItemMetaDataチェック
-    execute as @e[type=item] run function core:tick/check_item_meta/entity
+    execute as @e[type=item,tag=!ItemMetaChecked] run function core:tick/check_item_meta/entity
 
 # ダメージログに対するtick処理
     execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick

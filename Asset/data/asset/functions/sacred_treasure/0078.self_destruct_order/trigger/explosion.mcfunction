@@ -6,8 +6,8 @@
 #    asset:sacred_treasure/0078.self_destruct_order/trigger/count_down
 
 # ダメージ処理(アイアンゴーレム)
-    # 与えるダメージ = 50
-        data modify storage lib: Argument.Damage set value 50.0f
+    # 与えるダメージ = 250
+        data modify storage lib: Argument.Damage set value 250.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -20,8 +20,8 @@
     data remove storage lib: Argument
 
 # ダメージ処理(スノウゴーレム)
-    # 与えるダメージ = 25
-        data modify storage lib: Argument.Damage set value 25.0f
+    # 与えるダメージ = 125
+        data modify storage lib: Argument.Damage set value 125.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
