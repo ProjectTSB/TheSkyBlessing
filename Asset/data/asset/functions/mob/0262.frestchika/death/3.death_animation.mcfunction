@@ -13,7 +13,7 @@
 # 地面につくまで落下する
     execute if block ~ ~-0.1 ~ #lib:air run tp ~ ~-0.25 ~
 # 埋まった場合上に上がる
-    execute unless block ~ ~ ~ #lib:air run tp ~ ~0.25 ~
+    execute unless block ~ ~ ~ #lib:air run tp ~ ~0.2 ~
 
 # 文字いっぱいだす
     execute if score @s 7A.Tick matches 1..50 run function asset:mob/0262.frestchika/death/text_summon
