@@ -9,13 +9,13 @@
     particle dust 0.2 0.2 0.2 1 ~ ~1.7 ~ 0.2 0.2 0.2 0 3 normal @a
 
 # ハメ対策
-    execute unless entity @s[scores={26.TPCool=0..}] unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] unless block ~ ~ ~ #walls run function asset:mob/0078.messenger_of_thunder/tick/teleport
+    execute if entity @s[scores={26.TPCool=30..}] unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] unless block ~ ~ ~ #walls run function asset:mob/0078.messenger_of_thunder/tick/teleport
 
 # 落下対策
-    execute unless entity @s[scores={26.TPCool=0..}] if block ~ ~-0.5 ~ #lib:no_collision if block ~ ~-1.5 ~ #lib:no_collision if block ~ ~-2.5 ~ #lib:no_collision if block ~ ~-3.5 ~ #lib:no_collision at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
+    execute if entity @s[scores={26.TPCool=30..}] if block ~ ~-0.5 ~ #lib:no_collision if block ~ ~-1.5 ~ #lib:no_collision if block ~ ~-2.5 ~ #lib:no_collision if block ~ ~-3.5 ~ #lib:no_collision at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
 
 # スコア
-    execute unless entity @s[scores={26.Tick=0..}] run scoreboard players add @s 26.Tick 1
+    scoreboard players add @s 26.Tick 1
 
 # 技選択
     execute if entity @s[scores={26.Tick=0}] run function asset:mob/0078.messenger_of_thunder/tick/3.skill_select
@@ -23,5 +23,5 @@
 # スキル
     execute if entity @s[scores={26.Tick=0..}] run function asset:mob/0078.messenger_of_thunder/tick/4.skill_branch
 
-# ワープのクールダウン処理
-    execute if entity @s[scores={26.TPCool=0..}] run scoreboard players remove @s 26.TPCool 1
+# ワープのクールダウン処理(30以上ならワープ可能になる)
+    execute if entity @s[scores={26.TPCool=..30}] run scoreboard players add @s 26.TPCool 1
