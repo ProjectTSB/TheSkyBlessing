@@ -21,8 +21,7 @@
     scoreboard players add @s 27.Tick 1
 
 # 途中で向きを変える
-    execute if entity @s[scores={27.Tick=60}] unless entity @a[gamemode=!spectator,distance=..50] facing entity @p[distance=..50] feet run tp @s ~ ~ ~ ~ ~
-    execute if entity @s[scores={27.Tick=60}] if entity @a[gamemode=!spectator,distance=..50] facing entity @p[gamemode=!spectator,distance=..50] feet run tp @s ~ ~ ~ ~ ~
+    execute if entity @s[scores={27.Tick=60}] facing entity @p[distance=..50] feet run tp @s ~ ~ ~ ~ ~
 
 # 消滅
     execute if entity @s[scores={27.Tick=100..}] run kill @s
