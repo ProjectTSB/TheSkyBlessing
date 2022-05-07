@@ -43,7 +43,7 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 100
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:63,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,562,6],AttributeName:"generic.armor",Name:"armor",Amount:3,Operation:0,Slot:head},{UUID:[I;1,1,562,6],AttributeName:"generic.max_health",Name:"max_health",Amount:4,Operation:0,Slot:head}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:64,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,562,6],AttributeName:"generic.armor",Name:"armor",Amount:3,Operation:0,Slot:head},{UUID:[I;1,1,562,6],AttributeName:"generic.max_health",Name:"max_health",Amount:4,Operation:0,Slot:head}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
