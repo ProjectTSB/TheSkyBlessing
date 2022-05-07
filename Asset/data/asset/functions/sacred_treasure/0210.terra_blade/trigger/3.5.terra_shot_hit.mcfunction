@@ -7,7 +7,7 @@
 
 
 # 魔法、無属性のダメージをぶちかます
-    data modify storage lib: Argument.Damage set value 30.0f
+    data modify storage lib: Argument.Damage set value 70.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     tag @s add this

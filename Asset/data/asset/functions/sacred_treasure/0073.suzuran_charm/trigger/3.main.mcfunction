@@ -9,8 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 物理無属性ダメージ:25
-    data modify storage lib: Argument.Damage set value 25.0f
+# 物理無属性ダメージ:50
+    data modify storage lib: Argument.Damage set value 50.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
