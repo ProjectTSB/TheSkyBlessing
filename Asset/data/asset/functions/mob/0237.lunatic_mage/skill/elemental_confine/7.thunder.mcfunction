@@ -9,15 +9,17 @@
     scoreboard players operation $Temp Temporary = @s 6L.Tick
     scoreboard players operation $Temp Temporary %= $60 Const
 
-# 0のとき3つ落とす
+# 0のとき4つ落とす
     execute if score $Temp Temporary matches 0 positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
-    execute if score $Temp Temporary matches 0 rotated ~120 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
-    execute if score $Temp Temporary matches 0 rotated ~240 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 0 rotated ~90 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 0 rotated ~180 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 0 rotated ~270 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
 
-# 30のときも3つ落とす
-    execute if score $Temp Temporary matches 30 rotated ~60 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
-    execute if score $Temp Temporary matches 30 rotated ~180 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
-    execute if score $Temp Temporary matches 30 rotated ~300 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+# 30のときも4つ落とす
+    execute if score $Temp Temporary matches 30 rotated ~45 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 30 rotated ~135 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 30 rotated ~225 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Temp Temporary matches 30 rotated ~315 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/magic_summon/thunder
 
 # リセット
     scoreboard players reset $Temp Temporary

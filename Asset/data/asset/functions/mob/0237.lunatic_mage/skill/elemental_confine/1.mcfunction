@@ -30,7 +30,7 @@
     execute if entity @s[scores={6L.Tick=61..157}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire
 
 # 雷を落とす
-    execute if entity @s[scores={6L.Tick=180..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.thunder
+    execute if entity @s[scores={6L.Tick=180..}] rotated 0 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.thunder
 
 # 再度火の予告
     execute if entity @s[scores={6L.Tick=220..229}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
