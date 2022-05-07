@@ -16,13 +16,10 @@
 # デスログ
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによってオーロラに包まれ消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによって空の塵となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
-# 補正実行
+# 補正
     execute as @e[type=zombie,tag=this,distance=..5,sort=nearest,limit=1] run function lib:damage/modifier
-# HurtTimeを取る
-    function api:data_get/hurt_time
-
-# HurTime取ってそれが0ならダメージを与える
-    execute if data storage api: {HurtTime:0s} run function lib:damage/
+# ダメージ
+    function lib:damage/
 # リセット
     data remove storage lib: Argument
 
@@ -40,4 +37,4 @@
     schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
 
 # クールタイム設定
-    scoreboard players set @s 5U.AttackCT 20
+    scoreboard players set @e[type=zombie,tag=this,distance=..5,sort=nearest,limit=1] 5U.AttackCT 20
