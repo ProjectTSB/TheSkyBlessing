@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0897.lightning_broach/register",
+        "asset:sacred_treasure/0253.holy_barrier/register",
         "asset:sacred_treasure/0005.musket_matchlock/register",
         "asset:sacred_treasure/0933.auto_torch/register",
         "asset:sacred_treasure/0905.book_of_metastasis/register",
