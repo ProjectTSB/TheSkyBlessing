@@ -10,9 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 0.8 2 0
-    playsound entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 1.6 0
-    playsound entity.wither.shoot player @a ~ ~ ~ 0.3 1.6 0
+    playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 1 1.6
+    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 2
 
 # 残り回数が1回の時発動した場合
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 949

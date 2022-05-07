@@ -12,7 +12,7 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0,limit=1] add LandingTarget
 
 # 演出
-    particle dust 0.161 0.161 0.161 0.5 ~ ~ ~ 0 0 0 0 0
+    particle dust 0 0.733 1 0.5 ~ ~ ~ 0 0 0 0 6
 
 # 距離減衰をするためにスコアを増やす
     scoreboard players add $Distance_Damping Temporary 1
