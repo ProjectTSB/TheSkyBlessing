@@ -15,7 +15,7 @@
 
 # 召喚地点にプレイヤー1人とともにワープ
     execute if entity @s[scores={6L.Tick=20}] run tp @s @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
-    execute if entity @s[scores={6L.Tick=20}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @p[gamemode=!spectator,distance=..100] ~ ~ ~
+    execute if entity @s[scores={6L.Tick=20}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @r[distance=..100] ~ ~ ~
 
 # 空中の場合降下
     execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
