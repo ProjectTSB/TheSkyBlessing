@@ -7,4 +7,4 @@
 
 # リセット
     scoreboard players reset @s 26.SkillSelect
-    execute if entity @s[scores={26.Tick=0..}] run scoreboard players set @s 26.Tick -80
+    scoreboard players set @s 26.Tick -80
