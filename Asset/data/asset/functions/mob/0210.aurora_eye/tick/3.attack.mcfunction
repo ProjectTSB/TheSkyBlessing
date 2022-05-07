@@ -34,7 +34,7 @@
     function api:player_modifier/mp_regen/add
 
 # スコアを付与
-    scoreboard players set @s 5U.DebuffTime 160
+    scoreboard players set @s 5U.DebuffTime 120
 
 # スケジュールループを開始
     schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
