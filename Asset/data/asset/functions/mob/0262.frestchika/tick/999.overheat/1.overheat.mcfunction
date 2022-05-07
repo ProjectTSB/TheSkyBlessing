@@ -13,9 +13,11 @@
     execute if score @s 7A.Tick matches 20 run function asset:mob/0262.frestchika/tick/999.overheat/vfx
     execute if score @s 7A.Tick matches 40 run function asset:mob/0262.frestchika/tick/999.overheat/vfx
     execute if score @s 7A.Tick matches 60 run function asset:mob/0262.frestchika/tick/999.overheat/vfx
+    execute if score @s 7A.Tick matches 80 run function asset:mob/0262.frestchika/tick/999.overheat/vfx
+    execute if score @s 7A.Tick matches 100 run function asset:mob/0262.frestchika/tick/999.overheat/vfx
 
 
 # リセット7
-    execute if score @s 7A.Tick matches 100 run tag @s remove 7A.SkillOverHeat
-    execute if score @s 7A.Tick matches 100 positioned ~ ~0.5 ~ run function asset:mob/0262.frestchika/tick/move/tereport
-    execute if score @s 7A.Tick matches 100 at @s run function asset:mob/0262.frestchika/tick/reset
+    execute if score @s 7A.Tick matches 140 run tag @s remove 7A.SkillOverHeat
+    execute if score @s 7A.Tick matches 140 positioned ~ ~0.5 ~ run function asset:mob/0262.frestchika/tick/move/tereport
+    execute if score @s 7A.Tick matches 140 at @s run function asset:mob/0262.frestchika/tick/reset
