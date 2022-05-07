@@ -6,9 +6,9 @@
 
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
-    execute if entity @s[scores={6L.Tick=..20}] run particle flame ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
-    execute if entity @s[scores={6L.Tick=..20}] run particle splash ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0 0 1.5 ~ ~1.2 ~ 1 0.5 1 0.3 2 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 0 0 1 1.5 ~ ~1.2 ~ 1 0.5 1 0 2 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 2 normal @a
 
 # NoAIになる
     execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b
