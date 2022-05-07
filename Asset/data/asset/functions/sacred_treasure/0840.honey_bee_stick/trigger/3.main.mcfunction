@@ -17,7 +17,7 @@
     playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 0.8 0
 
 # 回復
-    data modify storage lib: Argument.Heal set value 10f
+    data modify storage lib: Argument.Heal set value 20f
     function lib:heal/modifier
     execute as @a[distance=..5] run function lib:heal/
     data remove storage lib: Argument
