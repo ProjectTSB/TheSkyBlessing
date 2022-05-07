@@ -18,4 +18,4 @@
     tag @s remove 60.SkillAxe
 
 # スコアを戻す
-    scoreboard players set @s 60.Tick -40
+    scoreboard players set @s 60.Tick -20

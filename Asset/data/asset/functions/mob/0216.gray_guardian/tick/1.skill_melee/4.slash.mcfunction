@@ -11,8 +11,8 @@
 
 # タグ付与
     tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add Hit
-    execute positioned ^0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1] add Hit
-    execute positioned ^-0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1] add Hit
+    execute positioned ^0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2] add Hit
+    execute positioned ^-0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2] add Hit
 
 # ダメージ設定
     # 与えるダメージ
