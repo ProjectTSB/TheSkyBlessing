@@ -4,6 +4,11 @@
 #
 # @within function asset:sacred_treasure/0948.ft_139_rifle/trigger/2.check_condition
 
+#> Private
+# @private
+    #declare tag SpreadMarker
+    #declare score_holder $Random
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/mainhand
 
@@ -20,7 +25,7 @@
 # 前方拡散設定
     execute anchored eyes positioned ^-0.35 ^-0.15 ^ run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 2.0
-    data modify storage lib: Argument.Spread set value 0.6
+    data modify storage lib: Argument.Spread set value 0.8
 # スニークしてるなら集弾性能が上がる
     execute if predicate lib:is_sneaking run data modify storage lib: Argument.Spread set value 0.2
 # 前方拡散を実行する
@@ -34,9 +39,9 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $3 Const
 # 向きを適当に変える
-    execute if score $Random Temporary matches 0 run tp @s ~ ~ ~ ~ ~-1
-    execute if score $Random Temporary matches 1 run tp @s ~ ~ ~ ~-1 ~-1
-    execute if score $Random Temporary matches 2 run tp @s ~ ~ ~ ~1 ~-1
+    execute unless predicate lib:is_sneaking if score $Random Temporary matches 0 run tp @s ~ ~ ~ ~ ~-1
+    execute unless predicate lib:is_sneaking if score $Random Temporary matches 1 run tp @s ~ ~ ~ ~-1 ~-1
+    execute unless predicate lib:is_sneaking if score $Random Temporary matches 2 run tp @s ~ ~ ~ ~1 ~-1
     scoreboard players reset $Random Temporary
 
 # リセット

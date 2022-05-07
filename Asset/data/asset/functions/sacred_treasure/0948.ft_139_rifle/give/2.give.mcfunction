@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:ender_eye"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"FT-139 RIFLE","color":"dark_gray","bold":true,"underlined":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"FT-139 RIFLE","color":"#00A3FF","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"エネルギー弾を発射するアサルトライフル"}','{"text":"命中精度は低いが、スニークをして発砲することで"}','{"text":"安定した精度を出すことができる"}','{"text":" "}','{"text":"リロード可能な神器だ"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,9 +27,9 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [2,20]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [60,210]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical]
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Thunder]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)

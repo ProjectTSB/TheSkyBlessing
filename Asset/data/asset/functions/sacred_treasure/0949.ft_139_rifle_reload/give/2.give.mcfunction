@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"FT-139 RIFLE <Reload!!>","color":"dark_gray","bold":true,"underlined":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"FT-139 RIFLE<Reload!!>","color":"#00A3FF","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"エネルギー弾を発射するアサルトライフル"}','{"text":"命中精度は低いが、スニークをして発砲することで"}','{"text":"安定した精度を出すことができる"}','{"text":" "}','{"text":"弾が入っていない"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

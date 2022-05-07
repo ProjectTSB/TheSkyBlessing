@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0948.ft_139_rifle/trigger/3.main
+# @within function
+#       asset:sacred_treasure/0948.ft_139_rifle/trigger/3.main
+#       asset:sacred_treasure/0948.ft_139_rifle/trigger/bullet
 
 # 着弾検知
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @s add Landing
