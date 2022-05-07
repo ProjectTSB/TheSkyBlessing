@@ -13,7 +13,7 @@
 #   Armor.Chest? : Item
 #   Armor.Legs? : Item
 #   Armor.Feet? : Item
-#   Health? : double (x <= 2048.0)
+#   Health? : double (x <= 2147483.647)
 #   AttackDamage? : double (x <= 2048.0)
 #   Defense? : double (x <= 30.0)
 #   SpecialDefense? : double (x <= 20.0)

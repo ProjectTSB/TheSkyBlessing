@@ -14,8 +14,8 @@
     playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1 1
 
 # ダメージ
-    # 与えるダメージ = 26
-        data modify storage lib: Argument.Damage set value 26f
+    # 与えるダメージ = 80
+        data modify storage lib: Argument.Damage set value 80f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
