@@ -1,12 +1,12 @@
 #> asset:sacred_treasure/0075.whirlpool_wand/trigger/3.1.insidewater
 #
-# 水の中に敵がいる場合ダメージを基本値40の倍80に
+# 水の中に敵がいる場合ダメージを基本値100の倍200に
 #
 # @within function asset:sacred_treasure/0075.whirlpool_wand/trigger/3.main
 
 # ダメージ
-    # 与えるダメージ = 80
-        data modify storage lib: Argument.Damage set value 80f
+    # 与えるダメージ = 200
+        data modify storage lib: Argument.Damage set value 200f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性

@@ -16,10 +16,10 @@
 
 # まず防具と防具強度をスコアに代入
     execute store result score $KF.Armor Temporary run attribute @s generic.armor get 1.0
-    execute store result score $KF.ArmorTough Temporary run attribute @s generic.armor_toughness get 2.5
+    execute store result score $KF.ArmorTough Temporary run attribute @s generic.armor_toughness get 1
 
 # 計算結果をArgument.Damageに代入
-    execute store result storage lib: Argument.Damage float 1.0 run scoreboard players operation $KF.Armor Temporary += $KF.ArmorTough Temporary
+    execute store result storage lib: Argument.Damage float 20.0 run scoreboard players operation $KF.Armor Temporary += $KF.ArmorTough Temporary
 
 # ダメージ
     data modify storage lib: Argument.AttackType set value "Physical"
