@@ -5,7 +5,7 @@
 # @within function asset:mob/0262.frestchika/tick/4.skill_active
 
 # 最初に実行
-    execute if score @s 7A.Tick matches 0 run function asset:mob/0262.frestchika/tick/4.gun/2.first_tick
+    execute if score @s 7A.Tick matches 0 as @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/0262.frestchika/tick/4.gun/2.first_tick
 
 # 発砲
     execute if score @s 7A.Tick matches 15..30 run function asset:mob/0262.frestchika/tick/4.gun/3.ready
