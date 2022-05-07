@@ -13,7 +13,7 @@
     execute if score @s 7A.Tick matches 10 run data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [342f,217f,0f]
     execute if score @s 7A.Tick matches 10 run data modify entity @e[type=armor_stand,tag=7A.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [326f,0f,324f]
 # 数m先にTPする
-    execute if score @s 7A.Tick matches 10 positioned ^ ^ ^10 run function asset:mob/0262.frestchika/tick/move/tereport
+    execute if score @s 7A.Tick matches 10 positioned ^ ^ ^10 run function asset:mob/0262.frestchika/tick/move/teleport
 
 # 攻撃した後間にいる敵にダメ
     execute if score @s 7A.Tick matches 10 at @s positioned ^ ^ ^-1 if entity @a[distance=..1] run function asset:mob/0262.frestchika/tick/3.melee2/4.slash

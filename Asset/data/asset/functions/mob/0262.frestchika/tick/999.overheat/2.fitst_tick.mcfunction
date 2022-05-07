@@ -16,7 +16,7 @@
     scoreboard players set @s 7A.Heat 0
 
 # あと少ししたに下げる
-    execute at @s positioned ~ ~-0.5 ~ run function asset:mob/0262.frestchika/tick/move/tereport
+    execute at @s positioned ~ ~-0.5 ~ run function asset:mob/0262.frestchika/tick/move/teleport
 
 # 耐性を消す
     effect clear @s resistance

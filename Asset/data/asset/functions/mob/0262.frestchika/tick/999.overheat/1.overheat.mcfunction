@@ -19,5 +19,5 @@
 
 # リセット7
     execute if score @s 7A.Tick matches 140 run tag @s remove 7A.SkillOverHeat
-    execute if score @s 7A.Tick matches 140 positioned ~ ~0.5 ~ run function asset:mob/0262.frestchika/tick/move/tereport
+    execute if score @s 7A.Tick matches 140 positioned ~ ~0.5 ~ run function asset:mob/0262.frestchika/tick/move/teleport
     execute if score @s 7A.Tick matches 140 at @s run function asset:mob/0262.frestchika/tick/reset

@@ -1,4 +1,4 @@
-#> asset:mob/0262.frestchika/tick/move/tereport
+#> asset:mob/0262.frestchika/tick/move/teleport
 #
 # 彼女をテレポートする時はコレを使う。アマスタ死ぬからね
 #

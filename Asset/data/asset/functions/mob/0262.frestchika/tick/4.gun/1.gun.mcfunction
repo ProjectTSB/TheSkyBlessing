@@ -11,7 +11,7 @@
     execute if score @s 7A.Tick matches 15..30 run function asset:mob/0262.frestchika/tick/4.gun/3.ready
 
 # 向き転換
-    execute if score @s 7A.Tick matches 30 facing entity @p feet run function asset:mob/0262.frestchika/tick/move/tereport
+    execute if score @s 7A.Tick matches 30 facing entity @p feet run function asset:mob/0262.frestchika/tick/move/teleport
 
 # 発砲
     execute if score @s 7A.Tick matches 45..60 run function asset:mob/0262.frestchika/tick/4.gun/3.ready
