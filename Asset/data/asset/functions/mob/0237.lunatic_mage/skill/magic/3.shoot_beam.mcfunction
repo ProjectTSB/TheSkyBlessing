@@ -12,11 +12,13 @@
     execute positioned ^ ^ ^25 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
     execute positioned ^ ^ ^30 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
     execute positioned ^ ^ ^35 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
+    execute positioned ^ ^ ^40 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
+    execute positioned ^ ^ ^45 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 
-    playsound block.portal.travel hostile @a[distance=..40] ~ ~ ~ 0.2 2 0.2
+    playsound block.portal.travel hostile @a[distance=..50] ~ ~ ~ 0.2 2 0.2
 
 # 再帰
     function asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive
 
-# ダメージ
-    execute as @a[tag=LandingTarget,distance=..50] run function asset:mob/0237.lunatic_mage/skill/magic/6.hit
+# ヒット処理
+    execute as @a[tag=LandingTarget,distance=..55] run function asset:mob/0237.lunatic_mage/skill/magic/6.hit

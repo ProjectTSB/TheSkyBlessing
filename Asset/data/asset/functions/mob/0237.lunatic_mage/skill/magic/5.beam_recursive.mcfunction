@@ -14,4 +14,4 @@
     tag @a[gamemode=!creative,gamemode=!spectator,distance=..2] add LandingTarget
 
 # 再帰
-    execute if entity @s[distance=..40] positioned ^ ^ ^1 run function asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive
+    execute if entity @s[distance=..50] positioned ^ ^ ^1 run function asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive
