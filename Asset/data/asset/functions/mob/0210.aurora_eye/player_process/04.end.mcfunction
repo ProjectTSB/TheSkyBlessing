@@ -1,4 +1,4 @@
-#> asset:mob/0210.aurora_eye/player_process/03.end_debuff
+#> asset:mob/0210.aurora_eye/player_process/04.end
 #
 # デバフの終了処理だよ
 #
