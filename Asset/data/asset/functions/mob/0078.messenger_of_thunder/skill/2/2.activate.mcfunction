@@ -7,7 +7,7 @@
 # 雷を召喚
     data modify storage api: Argument.ID set value 79
     function api:mob/summon
-    tp @e[type=marker,scores={MobID=79},distance=..0.001,sort=nearest,limit=1] ~ ~ ~ facing entity @p[distance=..50] feet
+    tp @e[type=marker,tag=!26.Already,scores={MobID=79},distance=..0.001,sort=nearest,limit=1] ~ ~ ~ facing entity @p[distance=..50] feet
     tag @e[type=marker,tag=!26.Already,scores={MobID=79},distance=..0.001,sort=nearest,limit=1] add 26.Already
 
 # モーション
