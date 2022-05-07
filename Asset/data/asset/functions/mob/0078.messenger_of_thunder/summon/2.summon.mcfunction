@@ -20,7 +20,7 @@
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
 # 武器ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
+    # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019}}
