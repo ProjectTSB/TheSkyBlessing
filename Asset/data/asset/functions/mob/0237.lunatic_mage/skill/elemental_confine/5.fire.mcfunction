@@ -14,5 +14,5 @@
 # リセット
     scoreboard players reset $Temp Temporary
 
-# 炎弾を範囲内に入ったらキルしたい
-    execute if entity @e[type=marker,scores={MobID=188},distance=8..9] run kill @e[type=marker,scores={MobID=188},distance=8..9]
+# 炎弾が範囲外に行ったらキルしたい
+    execute if entity @e[type=marker,scores={MobID=188},distance=8..9] run kill @e[type=marker,scores={MobID=188},distance=12..15]
