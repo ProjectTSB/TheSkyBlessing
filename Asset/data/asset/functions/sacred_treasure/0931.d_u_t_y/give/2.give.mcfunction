@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/931.d_u_t_y/give/2.give
+#> asset:sacred_treasure/0931.d_u_t_y/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/931.d_u_t_y/give/1.trigger
+# @within function asset:sacred_treasure/0931.d_u_t_y/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"D・U・T。Y","color":"red"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"D・U・T・Y","color":"red"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"攻撃対象に周囲の敵の数に応じたダメージを与える"}','{"text":"England expects that every","italic":"true","color":"dark_purple"}','{"text":"man will do his duty","italic":"true","color":"dark_purple"}']
 # MP以外の消費物 (TextComponentString) (オプション)

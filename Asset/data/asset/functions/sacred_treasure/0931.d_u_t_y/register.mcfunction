@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/931.d_u_t_y/register
+#> asset:sacred_treasure/0931.d_u_t_y/register
 #
 # 神器プールへの登録処理
 #
