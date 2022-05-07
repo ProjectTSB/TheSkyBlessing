@@ -36,7 +36,7 @@
     execute if entity @s[scores={6L.Tick=220..229}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 
 # 再度火を使い始める
-    execute if entity @s[scores={6L.Tick=230..350}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire2
+    execute if entity @s[scores={6L.Tick=230..400}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire2
 
 # リセット
-    execute if entity @s[scores={6L.Tick=350..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
+    execute if entity @s[scores={6L.Tick=400..}] run function asset:mob/0237.lunatic_mage/tick/5.reset

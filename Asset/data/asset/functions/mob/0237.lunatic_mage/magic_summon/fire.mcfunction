@@ -11,5 +11,5 @@
 # 召喚
     data modify storage api: Argument.ID set value 188
     function api:mob/summon
-    tp @e[type=marker,tag=5L.Already,scores={MobID=188},distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~
-    tag @e[type=marker,tag=5L.Already,scores={MobID=188},distance=..0.01,sort=nearest,limit=1] add 5L.Already
+    tp @e[type=marker,tag=!5L.Already,scores={MobID=188},distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~ ~
+    tag @e[type=marker,tag=!5L.Already,scores={MobID=188},distance=..0.01,sort=nearest,limit=1] add 5L.Already
