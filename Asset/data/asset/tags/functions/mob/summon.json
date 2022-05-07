@@ -2,6 +2,9 @@
     "values": [
         "asset:mob/0211.aurora_bullet/summon/1.trigger",
         "asset:mob/0210.aurora_eye/summon/1.trigger",
+        "asset:mob/0085.soul_bullet/summon/1.trigger",
+        "asset:mob/0084.falcios_priest/summon/1.trigger",
+        "asset:mob/0232.honey_leader/summon/1.trigger",
         "asset:mob/0263.orange/summon/1.trigger",
         "asset:mob/0235.orange_thrower/summon/1.trigger",
         "asset:mob/0276.ksitigarbha_body/summon/1.trigger",
