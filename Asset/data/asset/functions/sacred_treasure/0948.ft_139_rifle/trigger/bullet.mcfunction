@@ -21,4 +21,4 @@
     execute if entity @s[tag=Landing] run function asset:sacred_treasure/0948.ft_139_rifle/trigger/hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..10] run function asset:sacred_treasure/0948.ft_139_rifle/trigger/bullet
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:sacred_treasure/0948.ft_139_rifle/trigger/bullet
