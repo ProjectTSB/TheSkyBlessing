@@ -13,15 +13,15 @@
 # 壁に埋まっていたらテレポートさせる
     execute if entity @p[gamemode=!spectator,distance=..100] if score @s 60.Tick matches -15 unless block ~ ~ ~ #lib:no_collision run function asset:mob/0216.gray_guardian/tick/move/spread
 
+# プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
+    execute if score @s 60.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 60.Tick -60
+
 # プレイヤーを見る
     execute if score @s 60.Tick matches 0 at @s facing entity @p eyes run function asset:mob/0216.gray_guardian/tick/move/tereport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
-    execute if score @s 60.Tick matches 0 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0216.gray_guardian/tick/3.skill_select
-
-# プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
-    execute if score @s 60.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 60.Tick -60
+    execute if score @s 60.Tick matches 0 run function asset:mob/0216.gray_guardian/tick/3.skill_select
 
 # 選択したスキル発動
     execute if score @s 60.Tick matches 0.. run function asset:mob/0216.gray_guardian/tick/4.skill_active
