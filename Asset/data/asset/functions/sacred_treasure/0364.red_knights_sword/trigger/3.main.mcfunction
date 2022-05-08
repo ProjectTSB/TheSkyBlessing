@@ -30,8 +30,6 @@
     # ダメージ
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
-# リセット
-    data remove storage lib: Argument
 
 # 自身の最大体力の5%分のダメージを与える
     # ダメージ量
