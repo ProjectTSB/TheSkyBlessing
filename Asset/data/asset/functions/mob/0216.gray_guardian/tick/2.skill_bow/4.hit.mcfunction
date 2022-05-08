@@ -23,6 +23,3 @@
 
 # 着弾タグを消す
     tag @p[tag=LandingTarget] remove LandingTarget
-    tag @s remove Landing
-# 行動の終了処理
-    scoreboard players set @s 60.Tick 99
