@@ -5,7 +5,7 @@
 # @within function asset:mob/0216.gray_guardian/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","60.Angel"],NoAI:1b,Silent:1b,PersistenceRequired:1b,DeathLootTable:"asset:mob/death/0216.gray_guardian"}
+    summon iron_golem ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","60.Angel"],NoAI:1b,Silent:1b,PersistenceRequired:1b,DeathLootTable:"asset:mob/death/0216.gray_guardian"}
 # ID (int)
     data modify storage asset:mob ID set value 216
 # Type (string) Wikiを参照
@@ -61,12 +61,12 @@
 # 見た目用のアマスタを召喚
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["60.ArmorStand","60.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20125}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20128}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20130}}]}
 # 位置をあわせる
-    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] @s
+    execute as @e[type=iron_golem,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=60.ArmorStandThis,distance=..0.01] @s
 # タグを消す
     tag @e[type=armor_stand,tag=60.ArmorStandThis,distance=..100] remove 60.ArmorStandThis
 
 # スコアをセットする
-    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 60.Tick -100
+    scoreboard players set @e[type=iron_golem,tag=MobInit,distance=..0.01] 60.Tick -100
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=iron_golem,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
