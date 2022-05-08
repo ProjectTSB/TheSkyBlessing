@@ -15,5 +15,3 @@
 
 # 移動
     function asset:mob/0266.small_dark_ball/tick/move
-
-# 行動準備
