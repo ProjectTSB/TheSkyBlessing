@@ -9,14 +9,14 @@
 
 # テレポート
     execute if score @s 60.Tick matches 20 rotated ~70 ~0 positioned ~ ~1 ~ run function asset:mob/0216.gray_guardian/tick/1.skill_melee/vfx1
-    execute if score @s 60.Tick matches 20 rotated ~70 ~0 positioned ^ ^ ^6 run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 20 rotated ~70 ~0 positioned ^ ^ ^6 run function asset:mob/0216.gray_guardian/tick/move/teleport
 
 # テレポート
     execute if score @s 60.Tick matches 23 rotated ~-140 ~0 positioned ~ ~1 ~ run function asset:mob/0216.gray_guardian/tick/1.skill_melee/vfx2
-    execute if score @s 60.Tick matches 23 rotated ~-140 ~0 positioned ^ ^ ^12 run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 23 rotated ~-140 ~0 positioned ^ ^ ^12 run function asset:mob/0216.gray_guardian/tick/move/teleport
 
 # 向き転換
-    execute if score @s 60.Tick matches 28 facing entity @p[distance=..100] feet run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 28 facing entity @p[distance=..100] feet run function asset:mob/0216.gray_guardian/tick/move/teleport
 # 演出
     execute if score @s 60.Tick matches 28 run function asset:mob/0216.gray_guardian/tick/1.skill_melee/vfx3
 # もう一回突進

@@ -1,4 +1,4 @@
-#> asset:mob/0216.gray_guardian/tick/move/tereport
+#> asset:mob/0216.gray_guardian/tick/move/teleport
 #
 # 移動するときはコレを使う
 #

@@ -18,7 +18,7 @@
     execute if score @s 60.Tick matches 30 positioned ^-0.8 ^ ^2.5 positioned ~ ~1.2 ~ rotated ~12 ~10 run function asset:mob/0216.gray_guardian/tick/2.skill_bow/3.shot
     execute if score @s 60.Tick matches 30 run tag @s remove Landing
 
-    execute if score @s 60.Tick matches 35 run execute at @s facing entity @p[distance=..100] eyes run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 35 at @s facing entity @p[distance=..100] eyes run function asset:mob/0216.gray_guardian/tick/move/teleport
 
     execute if score @s 60.Tick matches 40 positioned ^-0.8 ^ ^2.5 positioned ~ ~1.2 ~ rotated ~-8 ~10 run function asset:mob/0216.gray_guardian/tick/2.skill_bow/3.shot
     execute if score @s 60.Tick matches 40 run tag @s remove Landing
@@ -27,7 +27,7 @@
     execute if score @s 60.Tick matches 40 positioned ^-0.8 ^ ^2.5 positioned ~ ~1.2 ~ rotated ~12 ~10 run function asset:mob/0216.gray_guardian/tick/2.skill_bow/3.shot
     execute if score @s 60.Tick matches 40 run tag @s remove Landing
 
-    execute if score @s 60.Tick matches 45 run execute at @s facing entity @p[distance=..100] eyes run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 45 at @s facing entity @p[distance=..100] eyes run function asset:mob/0216.gray_guardian/tick/move/teleport
 
     execute if score @s 60.Tick matches 50 positioned ^-0.8 ^ ^2.5 positioned ~ ~1.2 ~ rotated ~-8 ~10 run function asset:mob/0216.gray_guardian/tick/2.skill_bow/3.shot
     execute if score @s 60.Tick matches 50 run tag @s remove Landing

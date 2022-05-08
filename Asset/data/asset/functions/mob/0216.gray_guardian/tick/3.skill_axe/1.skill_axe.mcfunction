@@ -11,7 +11,7 @@
     execute if score @s 60.Tick matches 22..154 as @e[type=armor_stand,tag=60.ArmorStand,distance=..0.01,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~45 ~
 
 # プレイヤーを追尾する
-    execute if score @s 60.Tick matches 25..151 facing entity @p[gamemode=!spectator,distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s positioned ^ ^ ^0.2 rotated ~ 0 run function asset:mob/0216.gray_guardian/tick/move/tereport_non_facing
+    execute if score @s 60.Tick matches 25..151 facing entity @p[gamemode=!spectator,distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s positioned ^ ^ ^0.2 rotated ~ 0 run function asset:mob/0216.gray_guardian/tick/move/teleport_non_facing
 
 # 3tickおきに実行するやつ
 # 実行時間を移す

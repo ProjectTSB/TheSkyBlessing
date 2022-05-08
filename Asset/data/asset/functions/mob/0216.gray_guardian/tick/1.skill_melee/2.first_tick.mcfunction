@@ -10,4 +10,4 @@
 # テレポート
     data modify storage lib: Argument.Bounds set value [[15d,15d],[0d,0d],[15d,15d]]
     function asset:mob/0216.gray_guardian/tick/move/spread
-    execute at @s facing entity @p[distance=..100] feet run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute at @s facing entity @p[distance=..100] feet run function asset:mob/0216.gray_guardian/tick/move/teleport

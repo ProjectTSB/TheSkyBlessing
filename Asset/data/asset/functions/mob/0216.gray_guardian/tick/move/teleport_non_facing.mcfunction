@@ -1,4 +1,4 @@
-#> asset:mob/0216.gray_guardian/tick/move/tereport_non_facing
+#> asset:mob/0216.gray_guardian/tick/move/teleport_non_facing
 #
 # 位置のみずらす(アマスタのみ)
 #

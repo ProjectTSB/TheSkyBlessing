@@ -17,7 +17,7 @@
     execute if score @s 60.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 60.Tick -60
 
 # プレイヤーを見る
-    execute if score @s 60.Tick matches 0 at @s facing entity @p eyes run function asset:mob/0216.gray_guardian/tick/move/tereport
+    execute if score @s 60.Tick matches 0 at @s facing entity @p eyes run function asset:mob/0216.gray_guardian/tick/move/teleport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
