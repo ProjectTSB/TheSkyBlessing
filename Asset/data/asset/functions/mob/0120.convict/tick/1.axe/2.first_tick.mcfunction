@@ -12,4 +12,4 @@
     data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [177f,336f,0f]
 
 # プレイヤーを見る
-    execute at @s facing entity @p eyes run function asset:mob/0120.convict/tick/move/tereport
+    execute at @s facing entity @p eyes run function asset:mob/0120.convict/tick/move/teleport

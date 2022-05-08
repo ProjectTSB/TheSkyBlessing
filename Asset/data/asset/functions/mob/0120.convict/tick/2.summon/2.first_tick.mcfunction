@@ -5,7 +5,7 @@
 # @within function asset:mob/0120.convict/tick/2.summon/1.summon
 
 # プレイヤーを見る
-    execute at @s facing entity @p eyes run function asset:mob/0120.convict/tick/move/tereport
+    execute at @s facing entity @p eyes run function asset:mob/0120.convict/tick/move/teleport
 
 # 演出
     playsound ogg:block.sculk_sensor.sculk_clicking4 hostile @a ~ ~ ~ 1 0.6

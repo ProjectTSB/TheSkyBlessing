@@ -1,4 +1,4 @@
-#> asset:mob/0120.convict/tick/move/tereport
+#> asset:mob/0120.convict/tick/move/teleport
 #
 # 彼女をテレポートする時はコレを使う。アマスタ死ぬからね
 #

@@ -13,7 +13,7 @@
     execute if score @s 3C.Tick matches 35 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/particle/particle_3
     execute if score @s 3C.Tick matches 35 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/3.slash_attack1
 # テレポートする
-    execute if score @s 3C.Tick matches 35 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/tereport
+    execute if score @s 3C.Tick matches 35 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/teleport
 
 # ポーズ変えるの
     execute if score @s 3C.Tick matches 37 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,0f]
@@ -23,7 +23,7 @@
     execute if score @s 3C.Tick matches 39 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/particle/particle_3
     execute if score @s 3C.Tick matches 39 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/3.slash_attack1
 # テレポートする
-    execute if score @s 3C.Tick matches 39 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/tereport
+    execute if score @s 3C.Tick matches 39 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/teleport
 
 # ポーズ変えるの
     execute if score @s 3C.Tick matches 41 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [0f,177f,36f]
@@ -32,7 +32,7 @@
     execute if score @s 3C.Tick matches 43 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/particle/particle_2
     execute if score @s 3C.Tick matches 43 rotated ~ 0 positioned ~ ~1 ~ run function asset:mob/0120.convict/tick/3.slash/3.slash_attack1
 # テレポートする
-    execute if score @s 3C.Tick matches 43 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/tereport
+    execute if score @s 3C.Tick matches 43 facing entity @p eyes rotated ~ 0 positioned ^ ^ ^3 run function asset:mob/0120.convict/tick/move/teleport
 
 # リセット
     execute if score @s 3C.Tick matches 130 run function asset:mob/0120.convict/tick/reset
@@ -42,7 +42,7 @@
 # プレイヤーを捕まえる
     execute if score @s 3C.Tick matches 1000.. rotated ~ 0 positioned ^ ^ ^1 as @a[distance=..2] at @s run tp @s @s
 # プレイヤーの眼の前にTP
-    execute if score @s 3C.Tick matches 1005 at @p rotated ~ 0 positioned ^ ^ ^1.2 facing entity @p eyes run function asset:mob/0120.convict/tick/move/tereport
+    execute if score @s 3C.Tick matches 1005 at @p rotated ~ 0 positioned ^ ^ ^1.2 facing entity @p eyes run function asset:mob/0120.convict/tick/move/teleport
 # ポーズを変える
     execute if score @s 3C.Tick matches 1007 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [183f,28f,0f]
     execute if score @s 3C.Tick matches 1007 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [177f,336f,0f]
