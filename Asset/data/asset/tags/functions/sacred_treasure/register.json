@@ -1,5 +1,15 @@
 {
     "values": [
+        "asset:sacred_treasure/0930.z_flag/register",
+        "asset:sacred_treasure/0931.d_u_t_y/register",
+        "asset:sacred_treasure/0897.lightning_broach/register",
+        "asset:sacred_treasure/0253.holy_barrier/register",
+        "asset:sacred_treasure/0005.musket_matchlock/register",
+        "asset:sacred_treasure/0933.auto_torch/register",
+        "asset:sacred_treasure/0905.book_of_metastasis/register",
+        "asset:sacred_treasure/0007.nitrogen_fixater/register",
+        "asset:sacred_treasure/0756.sakura_hubuki/register",
+        "asset:sacred_treasure/0907.rod_of_rain/register",
         "asset:sacred_treasure/0910.ignite/register",
         "asset:sacred_treasure/0801.red_secret_stone/register",
         "asset:sacred_treasure/0003.humanity/register",

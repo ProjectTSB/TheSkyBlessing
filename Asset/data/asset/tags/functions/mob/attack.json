@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0083.thunder_trifler/attack/1.trigger",
+        "asset:mob/0235.orange_thrower/attack/1.trigger",
         "asset:mob/0233.honey_flyer/attack/1.trigger",
         "asset:mob/0090.decapitation/attack/1.trigger",
         "asset:mob/0280.the_desire_for_burning/attack/1.trigger",
