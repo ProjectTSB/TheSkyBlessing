@@ -10,4 +10,4 @@
     execute if data storage api: {OnGround:1b} run function lib:damage/
 
 # 上に飛ばす
-    execute if data storage api: {OnGround:1b} run effect give @s levitation 1 20 true
+    execute if data storage api: {OnGround:1b} run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:25b,Amplifier:80b,Duration:3,ShowParticles:0b},{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
