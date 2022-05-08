@@ -1,5 +1,8 @@
 {
     "values": [
+        "asset:sacred_treasure/0905.book_of_metastasis/trigger/rejoin_process",
+        "asset:sacred_treasure/0907.rod_of_rain/trigger/rejoin_process",
+        "asset:mob/0217.medousa_eye/rejoin_process",
         "asset:sacred_treasure/0105.secret_meat/trigger/rejoin_process",
         "asset:mob/0220.vena_cana/rejoin_process",
         "asset:mob/1008.yellow_star/rejoin_process",

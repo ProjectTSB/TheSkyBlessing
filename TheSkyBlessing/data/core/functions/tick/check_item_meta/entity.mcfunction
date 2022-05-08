@@ -13,5 +13,7 @@
 # 各MetaData処理
     execute if data storage core:temp {MetaData:["MobDeathTrigger"]} at @s run function asset_manager:mob/triggers/death/
     execute if data storage core:temp {MetaData:["BanEntityConditionItem"]} run kill @s
+# 二度と処理しないように
+    tag @s add ItemMetaChecked
 # リセット
     data remove storage core:temp MetaData
