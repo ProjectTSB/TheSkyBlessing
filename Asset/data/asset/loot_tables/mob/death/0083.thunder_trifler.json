@@ -10,9 +10,18 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ID:257}}"
+                            "tag": "{TSB:{ID:83}}"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "entities/skeleton"
                 }
             ]
         }
