@@ -21,7 +21,8 @@
 
 # 自身の現在体力の30%分のダメージを与える
     # ダメージ量
-        execute store result storage lib: Argument.Damage float 0.3 run data get entity @s Health
+        function api:data_get/health
+        execute store result storage lib: Argument.Damage float 0.3 run data get storage api: Health
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か
