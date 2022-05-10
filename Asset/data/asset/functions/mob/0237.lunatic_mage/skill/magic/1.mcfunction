@@ -8,10 +8,10 @@
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
     execute if entity @s[scores={6L.Tick=..20}] run particle end_rod ~ ~1.2 ~ 1 0.5 1 0.3 3 normal @a
 
-# NoAIになっておきましょう
+# NoAIになる
     execute if entity @s[scores={6L.Tick=2}] run data modify entity @s NoAI set value 1b
 
-# 最も最寄りのプレイヤーをターゲットとして予告線を出す
+# 1回目のみ最も最寄りのプレイヤーをターゲットとして予告線を出す
     execute if entity @s[scores={6L.Tick=20..45}] positioned ~ ~1.6 ~ facing entity @p[gamemode=!spectator,distance=..50] eyes run function asset:mob/0237.lunatic_mage/skill/magic/2.warning_line
 
 # 向き合わせ
