@@ -14,7 +14,6 @@
     execute positioned ^ ^ ^35 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
     execute positioned ^ ^ ^40 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
     execute positioned ^ ^ ^45 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
-
     playsound block.portal.travel hostile @a[distance=..50] ~ ~ ~ 0.2 2 0.2
 
 # 再帰

@@ -10,9 +10,10 @@
     #declare tag 6L.Fire
     #declare tag 6L.ElementalConfine
 
-#> 再帰ビームの対象
+#> 無属性攻撃で使うTag
 # @within function asset:mob/0237.lunatic_mage/skill/magic/**
     #declare tag LandingTarget
+    #declare tag 6L.RotationMarker
 
 #> 体力40%以下のTag
 # @within function
