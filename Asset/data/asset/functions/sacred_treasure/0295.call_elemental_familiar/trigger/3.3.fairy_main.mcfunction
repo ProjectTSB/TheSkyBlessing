@@ -34,14 +34,14 @@
     execute if entity @e[type=#lib:hostile,distance=..10] run scoreboard players add @s 295Fa.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={295Fa.Tick=60..}] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.4.fairy_shoot
+    execute if entity @s[scores={295Fa.Tick=20..}] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.4.fairy_shoot
 
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[type=#lib:hostile,distance=..10] run scoreboard players reset @s 295Fa.Tick
 
 # ヘルス
     scoreboard players add @s 295Fa.Health 1
-    kill @s[scores={295Fa.Health=400..}]
+    kill @s[scores={295Fa.Health=300..}]
 
 # 透明化
     effect give @s invisibility 1 0 true

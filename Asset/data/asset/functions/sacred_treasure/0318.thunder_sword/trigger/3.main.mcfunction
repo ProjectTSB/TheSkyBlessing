@@ -14,16 +14,16 @@
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle dust 1 1 0 1 ~ ~2 ~ 0 2.5 0 0 100
-    playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
+    playsound minecraft:entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~2の追加ダメージ
-          scoreboard players operation $RandomDamage Temporary %= $3 Const
+        # 剰余算する。0~5の追加ダメージ
+          scoreboard players operation $RandomDamage Temporary %= $11 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 7
+            scoreboard players add $RandomDamage Temporary 40
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性

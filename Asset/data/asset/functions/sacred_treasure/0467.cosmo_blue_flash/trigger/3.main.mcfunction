@@ -8,6 +8,10 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
+
+# 演出
+    playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
+
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
 
 # リセット

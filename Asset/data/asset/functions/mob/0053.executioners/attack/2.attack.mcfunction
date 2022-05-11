@@ -6,7 +6,6 @@
 #> tag
 # @within function asset:mob/0053.executioners/attack/2.attack
     #declare tag SpreadMarker
-    #declare score_holder $VectorMagnitude
 
 # 演出
 
@@ -20,7 +19,7 @@
     item replace entity @s weapon with stick{CustomModelData:20029}
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 7f
+    data modify storage lib: Argument.Damage set value 10f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
@@ -49,9 +48,9 @@
     execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
 
 # 突進する
-    scoreboard players set $VectorMagnitude Lib 200
+    data modify storage lib: Argument.VectorMagnitude set value 2
     execute at @s facing entity @p[gamemode=!spectator] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+    data remove storage lib: Argument
     kill @e[type=marker,tag=SpreadMarker]

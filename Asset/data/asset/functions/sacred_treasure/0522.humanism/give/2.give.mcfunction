@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"人","color":"yellow"},{"text":"が","color":"white"},{"text":"人","color":"dark_red"},{"text":"であるために","color":"white"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全てのプレイヤーの","color":"white"},{"text":"HPを全回復","color":"light_purple"},{"text":"し、","color":"white"}]','[{"text":"自分以外の全てのプレイヤーの","color":"white"},{"text":"MPを全回復","color":"dark_purple"},{"text":"する。","color":"white"}]','{"text":"さらに、全てのプレイヤーの","color":"white"}','[{"text":"周囲の敵全てに","color":"white"},{"text":"ダメージ","color":"red"},{"text":"を与える。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全てのプレイヤーの","color":"white"},{"text":"HPを全回復","color":"light_purple"},{"text":"し、","color":"white"}]','[{"text":"自分以外の全てのプレイヤーの","color":"white"},{"text":"MPを150回復","color":"dark_purple"},{"text":"する。","color":"white"}]','{"text":"さらに、全てのプレイヤーの","color":"white"}','[{"text":"周囲の敵全てに","color":"white"},{"text":"ダメージ","color":"red"},{"text":"を与える。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -26,8 +26,18 @@
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
-# 攻撃に関する情報 (Component) (オプション)
-    data modify storage asset:sacred_treasure AttackInfo set value {Damage:200,AttackType:[Magic],ElementType:[Water]}
+# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [1700]
+# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
+# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Water]
+# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
+# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value every
+# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 50
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 99999
 # MP必要量 (int) (オプション)
@@ -35,7 +45,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure SpecialCooldown set value 6
+    data modify storage asset:sacred_treasure SpecialCooldown set value 3600
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

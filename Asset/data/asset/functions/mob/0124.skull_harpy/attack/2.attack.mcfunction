@@ -8,13 +8,13 @@
 
 # 演出
    execute at @a[tag=Victim] run particle minecraft:dust 1 1 0 2 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
-   execute at @a[tag=Victim] run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.7 1.5 0
+   execute at @a[tag=Victim] run playsound minecraft:entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.7 1.5 0
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 5.0d
+        data modify storage lib: Argument.Damage set value 8.0d
     # 第一属性
-        data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Thunder"
 # 補正functionを実行

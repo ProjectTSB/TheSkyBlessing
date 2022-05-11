@@ -14,22 +14,22 @@
 
 # 移動速度をスコア化する
     execute store result score $AddDamage Temporary run attribute @s generic.movement_speed get 1000
-    scoreboard players operation $VectorMagnitude Lib = $AddDamage Temporary
+    scoreboard players operation $VectorMagnitude Temporary = $AddDamage Temporary
 
 # 本来の補正一切なしの値を減算
     scoreboard players operation $AddDamage Temporary -= $100 Const
 
 # attributeの補正の値×250だけダメージに加算されるので、1000×5÷20=250、より5を掛け、20で割るので結果的に4で割る
-    scoreboard players operation $AddDamage Temporary /= $4 Const
+    scoreboard players operation $AddDamage Temporary /= $2 Const
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~14の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $14 Const
+        # 剰余算する。0~26の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $27 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 41
+            scoreboard players add $RandomDamage Temporary 252
         # 移動速度の追加分を加算
             scoreboard players operation $RandomDamage Temporary += $AddDamage Temporary
     #ダメージを代入
@@ -47,12 +47,12 @@
 # Mobのノクバ耐性を100倍で取得 天使だったら実行しない
     execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6,limit=1] store result score $MobKnockbackResist Temporary run attribute @e[type=#lib:living,type=!player,tag=Victim,distance=..6,limit=1] generic.knockback_resistance get 100
 
-# ノクバ耐性が1.0でないなら実行
-    execute if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
+# 自身の移動速度がマイナスではなく、ノクバ耐性が1.0でないなら実行
+    execute if score $VectorMagnitude Temporary matches 1.. if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
 
 # リセット
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $VectorMagnitude Lib
+    scoreboard players reset $VectorMagnitude Temporary
     scoreboard players reset $MobKnockbackResist Temporary
     scoreboard players reset $AddDamage Temporary

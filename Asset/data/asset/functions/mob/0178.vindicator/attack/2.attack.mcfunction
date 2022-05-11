@@ -7,11 +7,11 @@
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle dust 0.867 0.667 0.161 1 ~ ~2 ~ 0 2.5 0 0 100
     execute at @p[tag=Victim,distance=..6] run particle minecraft:explosion ~ ~ ~ 0.7 0.1 0.7 0 10
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 0.7 2
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 0.7 1
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.7 2
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.7 1
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 6f
+    data modify storage lib: Argument.Damage set value 9f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"

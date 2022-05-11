@@ -12,7 +12,7 @@
 # 召喚
     execute at @p positioned ~ ~20 ~ facing entity @e[type=marker,tag=SpreadMarker] feet run summon area_effect_cloud ^ ^ ^20 {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","3L.SkillThunderMaker"]}
 # 演出
-    playsound minecraft:entity.puffer_fish.death ambient @a ^ ^ ^20 1 0.3
+    playsound minecraft:entity.puffer_fish.death hostile @a ^ ^ ^20 1 0.3
 
 # キル
     kill @e[tag=SpreadMarker]

@@ -3,9 +3,6 @@
 #
 #
 # @within function asset:mob/0175.queen_bee/tick/skill_summon/1.skill_summon
-#> private
-# @private
-    #declare score_holder $VectorMagnitude
 
 # 演出
     playsound entity.bee.death hostile @a ~ ~ ~ 1 1
@@ -14,7 +11,3 @@
 # モブを出す
     data modify storage api: Argument.ID set value 176
     function api:mob/summon
-
-# リセット
-    scoreboard players reset $VectorMagnitude
-

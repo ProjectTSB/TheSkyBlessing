@@ -10,11 +10,11 @@
 
 # プレイヤーのマナを検知する
     execute as @p[tag=Victim] store result score $MPCheck Temporary run function lib:mp/get
-    execute if score $MPCheck Temporary matches ..25 run tag @p[tag=Victim] add EmptyMP
+    execute if score $MPCheck Temporary matches ..80 run tag @p[tag=Victim] add EmptyMP
 
 # マナが無いプレイヤーを殴った時
     # ダメージ設定
-        data modify storage lib: Argument.Damage set value 17f
+        data modify storage lib: Argument.Damage set value 38f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
@@ -24,7 +24,7 @@
 
 # マナが十分にあるプレイヤーを殴ったとき
     # ダメージ設定
-        data modify storage lib: Argument.Damage set value 7.5f
+        data modify storage lib: Argument.Damage set value 27f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージを与える
@@ -33,7 +33,7 @@
         data remove storage lib: Argument
 
 # マナを吸い取る
-    scoreboard players set $Fluctuation Lib -25
+    scoreboard players set $Fluctuation Lib -80
     execute as @p[tag=Victim] run function lib:mp/fluctuation
 
 # 演出

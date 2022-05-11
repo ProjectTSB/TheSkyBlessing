@@ -12,8 +12,8 @@
         scoreboard players set $Set Lib 100
         function lib:score_to_health_wrapper/set
     # 効果
-        effect give @s strength 10 10 true
-        execute if predicate player_manager:is_believe/urban run effect give @s strength 10 15 true
+        effect give @s strength 10 5 true
+        execute if predicate player_manager:is_believe/urban run effect give @s strength 10 1 true
     # 演出
         playsound entity.player.hurt player @a ~ ~ ~ 1 1
         playsound minecraft:entity.zombie_villager.cure master @s ~ ~ ~ 1 2

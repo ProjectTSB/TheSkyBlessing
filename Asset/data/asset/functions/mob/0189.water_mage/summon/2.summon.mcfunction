@@ -5,7 +5,7 @@
 # @within function asset:mob/0189.water_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0189.water_mage"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0189.water_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 189
 # Type (string) Wikiを参照
@@ -33,11 +33,11 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 180
+    data modify storage asset:mob Health set value 2900
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 20
+    data modify storage asset:mob Defense set value -3
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
@@ -50,7 +50,7 @@
     # 物理倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Physical set value
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.7
+        data modify storage asset:mob Resist.Magic set value 0.5
     # 火倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Fire set value
     # 水倍率 (float) (オプション)

@@ -11,13 +11,13 @@
     scoreboard players add @s 55.AttackTick 1
 
 # 照射
-    execute if score @s 55.Tick matches ..159 if score @s 55.AttackTick matches 2..11 run function asset:mob/0185.tutankhamen/tick/burn_laser/02.light
+    execute if entity @s[scores={55.Tick=..59,55.AttackTick=2..11}] run function asset:mob/0185.tutankhamen/tick/burn_laser/02.light
 
 # 発射
-    execute if score @s 55.Tick matches ..159 if score @s 55.AttackTick matches 20 run function asset:mob/0185.tutankhamen/tick/burn_laser/04.shoot
+    execute if entity @s[scores={55.Tick=..59,55.AttackTick=20}] run function asset:mob/0185.tutankhamen/tick/burn_laser/04.shoot
 
 # たまに4回目
-    execute if entity @s[tag=!55.4thLaser] if score @s 55.Tick matches 159 if predicate lib:random_pass_per/40 run function asset:mob/0185.tutankhamen/tick/burn_laser/07.random_4th
+    execute if entity @s[tag=!55.4thLaser,scores={55.Tick=59}] if predicate lib:random_pass_per/40 run function asset:mob/0185.tutankhamen/tick/burn_laser/07.random_4th
 
 # リセット
-    execute if score @s 55.Tick matches 159.. run function asset:mob/0185.tutankhamen/tick/05.reset
+    execute if entity @s[scores={55.Tick=59}] run function asset:mob/0185.tutankhamen/tick/05.reset

@@ -8,11 +8,11 @@
 # 演出
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 13.0f
+        data modify storage lib: Argument.Damage set value 23.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性

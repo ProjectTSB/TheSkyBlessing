@@ -29,3 +29,7 @@
     #declare tag ScoreToHealth.Modified
     #declare tag ScoreToHealth.Return
     scoreboard objectives add STMHBackup dummy {"text":"ScoreToMaxHealthのBackup"}
+
+#> RespawnCheck
+# @within function core:handler/respawn
+#declare objective STMHBackup

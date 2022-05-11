@@ -13,7 +13,7 @@
     execute if score $MagicalCane Temporary matches 120.. run function asset:sacred_treasure/0246.magical_cane/trigger/3.3.hyper_hit
 
 # $MagicalCaneに現在のスコアx3の数値を持たせる
-    scoreboard players operation $MagicalCane Temporary *= $3 Const
+    scoreboard players operation $MagicalCane Temporary *= $2 Const
 
 # ぶん殴ったやつにさっきもたせた数値ぶんの魔法無属性のダメージをぶちかます
     execute store result storage lib: Argument.Damage float 1 run scoreboard players get $MagicalCane Temporary

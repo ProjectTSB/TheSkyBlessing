@@ -7,7 +7,6 @@
         "asset:mob/0017.fire_bird/attack/1.trigger",
         "asset:mob/0063.ghost/attack/1.trigger",
         "asset:mob/0061.stray/attack/1.trigger",
-        "asset:mob/0062.drowned/attack/1.trigger",
         "asset:mob/0055.hetukedah/attack/1.trigger",
         "asset:mob/0057.none_fighter/attack/1.trigger",
         "asset:mob/0049.ice_obstructor/attack/1.trigger",
@@ -52,6 +51,7 @@
         "asset:mob/0156.infringement/attack/1.trigger",
         "asset:mob/0154.ruin/attack/1.trigger",
         "asset:mob/0080.fukotsu/attack/1.trigger",
-        "asset:mob/0186.ferocious_bee/attack/1.trigger"
+        "asset:mob/0186.ferocious_bee/attack/1.trigger",
+        "asset:mob/0150.contamination/attack/1.trigger"
     ]
 }

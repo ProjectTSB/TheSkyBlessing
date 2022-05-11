@@ -86,6 +86,7 @@
         "asset:mob/0190.thunder_mage/summon/1.trigger",
         "asset:mob/0191.thunder_magic/summon/1.trigger",
         "asset:mob/0156.infringement/summon/1.trigger",
-        "asset:mob/0186.ferocious_bee/summon/1.trigger"
+        "asset:mob/0186.ferocious_bee/summon/1.trigger",
+        "asset:mob/0214.water_magic/summon/1.trigger"
     ]
 }

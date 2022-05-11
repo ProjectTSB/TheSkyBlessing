@@ -6,11 +6,11 @@
 
 # 自分にタグ付与
     tag @s add AC.This
-    tag @e[tag=Enemy,distance=..5,sort=random,limit=1] add AC.Target
+    tag @e[tag=Enemy,distance=..5] add AC.Target
 
 # ダメージを与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 5.2f
+        data modify storage lib: Argument.Damage set value 20f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"

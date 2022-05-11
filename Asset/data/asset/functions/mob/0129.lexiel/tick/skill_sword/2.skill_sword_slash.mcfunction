@@ -5,16 +5,16 @@
 # @within function asset:mob/0129.lexiel/tick/skill_sword/1.skill_sword
 
 # 攻撃モーション
-    execute if score @s 3L.Tick matches 95 run item replace entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stone{CustomModelData:20040}
-    execute if score @s 3L.Tick matches 95 run data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [342f,217f,0f]
-    execute if score @s 3L.Tick matches 95 run data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [326f,0f,324f]
+    item replace entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stone{CustomModelData:20040}
+    data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [342f,217f,0f]
+    data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [326f,0f,324f]
 
 # 前方にいるプレイヤーにタグをつける
-    execute positioned ^ ^ ^1.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^3 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^4.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^6 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^7.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^1.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^3 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^4.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^6 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^7.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
 
 # 演出
     execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^1 0 0 0 1 2 normal
@@ -30,7 +30,7 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 14.0
+        data modify storage lib: Argument.Damage set value 28.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

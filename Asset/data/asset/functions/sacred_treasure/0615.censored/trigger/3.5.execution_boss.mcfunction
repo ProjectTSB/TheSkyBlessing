@@ -20,7 +20,7 @@
 
 # ダメージを与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 80.0f
+        data modify storage lib: Argument.Damage set value 666.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正function

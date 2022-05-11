@@ -4,12 +4,16 @@
 #
 # @within function asset:mob/0058.divide_haze/tick/2.tick
 
-# 数をチェック
-    execute store result score @s 1M.HazeCount run execute if entity @e[type=skeleton,scores={MobID=58},distance=..20,limit=6]
+#> Private
+# @private
+    #declare score_holder $MobCount
 
-# 5体以下なら数を増やす
-    execute if score @s 1M.HazeCount matches ..5 run function asset:mob/0058.divide_haze/tick/4.divide
+# 数をチェック
+    execute store result score $MobCount Temporary if entity @e[type=skeleton,scores={MobID=58},distance=..20,limit=6]
+
+# 5体未満なら数を増やす
+    execute if score $MobCount Temporary matches ..4 run function asset:mob/0058.divide_haze/tick/4.divide
 
 # スコアリセット
     scoreboard players reset @s 1M.Tick
-    scoreboard players reset @s 1M.HazeCount
+    scoreboard players reset $MobCount Temporary

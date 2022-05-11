@@ -6,7 +6,7 @@
 
 # 演出
    particle minecraft:dust 0.569 0.957 1 1 ~ ~ ~ 0.8 0.8 0.8 0.1 20 normal @a
-   playsound minecraft:block.glass.break ambient @a
+   playsound minecraft:block.glass.break hostile @a
 
 # ワープ準備
     execute at @p[gamemode=!spectator] run summon marker ~ ~40 ~ {Tags:["SpreadMarker"]}
@@ -19,8 +19,6 @@
 
 # ワープ
     execute at @p positioned ~ ~40 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^40 if block ~ ~ ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~ facing entity @p
-# もし壁に埋まってたらちょっと前に出る(あくまで念の為の処理だし別に壁に埋まってようが問題はない)
-    execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
 
 # アマスタを持ってきてタグを消す
     tp @e[type=armor_stand,tag=3N.ArmorStandThis,sort=nearest,limit=1] @s

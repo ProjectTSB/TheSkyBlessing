@@ -6,10 +6,10 @@
 
 # 演出
     execute at @p[tag=Victim,distance=..32] run particle lava ~ ~1 ~ 0.4 0.3 0.4 0 20 normal @a
-    execute at @p[tag=Victim,distance=..32] run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 0.6 0
+    execute at @p[tag=Victim,distance=..32] run playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1 0.6 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 5f
+    data modify storage lib: Argument.Damage set value 9f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"

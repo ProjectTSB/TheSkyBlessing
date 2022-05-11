@@ -13,20 +13,19 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 200
-    playsound minecraft:item.trident.riptide_3 player @a ~ ~ ~ 1 1.2
-    playsound minecraft:entity.squid.squirt player @a ~ ~ ~ 1 1.3
-    playsound minecraft:entity.player.swim ambient @a ~ ~ ~ 1 1.3
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:block blue_ice ~ ~1 ~ 0.5 0.5 0.5 2 50
+    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1 1
+    playsound minecraft:entity.player.swim player @a ~ ~ ~ 1 1.5
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~7の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $8 Const
+        # 剰余算する。0~30の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $31 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 23
+            scoreboard players add $RandomDamage Temporary 90
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性

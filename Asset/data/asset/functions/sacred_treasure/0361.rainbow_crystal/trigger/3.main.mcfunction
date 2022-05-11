@@ -26,36 +26,36 @@
 
     # Damage
         # PhysicalDamage
-            data merge storage lib: {Argument:{Damage:20.0f,AttackType:Physical,ElementType:None}}
+            data merge storage lib: {Argument:{Damage:187.5f,AttackType:Physical,ElementType:None}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Fire}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Water}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Thunder}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
         # MagicDamage
-            data merge storage lib: {Argument:{Damage:20.0f,AttackType:Magic,ElementType:None}}
+            data merge storage lib: {Argument:{Damage:187.5f,AttackType:Magic,ElementType:None}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Fire}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Fire}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Water}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Water}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:20.0f,ElementType:Thunder}}
+            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Thunder}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 

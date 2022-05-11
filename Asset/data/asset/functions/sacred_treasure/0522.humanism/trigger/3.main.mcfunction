@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0522.humanism/trigger/2.check_condition
 
+#>
+# @private
+#declare tag EI.Target
+
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
     function asset:sacred_treasure/common/use/auto
 
@@ -22,14 +26,18 @@
 
 # MP回復処理
     # 自身以外のプレイヤー全回復
-            scoreboard players set $Fluctuation Lib 10000
+            scoreboard players set $Fluctuation Lib 150
             execute as @a[tag=!this] run function lib:mp/fluctuation
 
 # ダメージ処理
     # 全プレイヤーの周囲50Mの敵に魔法・水属性ダメージ
-        data modify storage lib: Argument.Damage set value 200f
+        data modify storage lib: Argument.Damage set value 1700f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
         function lib:damage/modifier
-        execute at @a as @e[tag=Enemy,tag=!Uninterferable,distance=..50] run function lib:damage/
+        execute at @a run tag @e[tag=Enemy,tag=!Uninterferable,distance=..50] add EI.Target
+        execute as @e[tag=EI.Target] run function lib:damage/
         data remove storage lib: Argument
+
+# タグリセット
+    execute at @a run tag @e[tag=EI.Target,tag=!Uninterferable,distance=..50] remove EI.Target
