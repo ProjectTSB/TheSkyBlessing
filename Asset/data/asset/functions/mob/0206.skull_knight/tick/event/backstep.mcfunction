@@ -12,7 +12,7 @@
     execute facing entity @p feet run tp @s @s
 
 # 速さ
-    data modify storage lib: Argument.VectorMagnitude set value 0.7
+    data modify storage lib: Argument.VectorMagnitude set value -0.7
 
 # 飛ぶのに使う
     execute rotated ~ ~0 run function lib:motion/
