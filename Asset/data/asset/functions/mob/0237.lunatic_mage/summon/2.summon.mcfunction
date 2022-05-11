@@ -16,16 +16,16 @@
     data modify storage asset:mob Name set value '{"text":"ルナティックメイジ","color":"white"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:20187}}
+        # data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20187}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20067}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20189}}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",tag:{display:{color:16777215}},Count:1b}
+        # data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",tag:{display:{color:16777215}},Count:1b}
     # 脚 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Legs set value
     # 足 (Compound(Item)) (オプション)
