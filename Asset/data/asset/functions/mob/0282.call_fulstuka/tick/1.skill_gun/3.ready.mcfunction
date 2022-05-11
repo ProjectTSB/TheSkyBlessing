@@ -10,11 +10,11 @@
 
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 4.0
-    data modify storage lib: Argument.Spread set value 0.2
+    data modify storage lib: Argument.Distance set value 10.0
+    data modify storage lib: Argument.Spread set value 2
 
 # 前方拡散を実行する
-    execute positioned ^-0.4 ^ ^1.4 positioned ~ ~-0.425 ~ anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # 発砲
     execute positioned ^-0.4 ^ ^1.4 facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ~ ~-0.425 ~ anchored eyes positioned ^ ^ ^ run function asset:mob/0282.call_fulstuka/tick/1.skill_gun/4.shot

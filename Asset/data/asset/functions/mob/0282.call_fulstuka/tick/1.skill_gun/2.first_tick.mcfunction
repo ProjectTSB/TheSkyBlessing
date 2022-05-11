@@ -7,9 +7,8 @@
 # 腕を変える
     data modify entity @s Pose.RightArm set value [270f,0f,0f]
     data modify entity @s Pose.LeftArm set value [267f,46f,0f]
-    item replace entity @s weapon.mainhand with stick{CustomModelData:20146}
 # 頭も
-    item replace entity @s armor.head with stick{CustomModelData:20149}
+    item replace entity @s armor.head with stick{CustomModelData:20191}
 
 # 向きかえる
     tp @s ~ ~ ~ facing entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..30,sort=nearest,limit=1]

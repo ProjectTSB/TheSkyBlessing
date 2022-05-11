@@ -5,7 +5,7 @@
 # @within function asset:mob/0282.call_fulstuka/tick/2.skill_melee/1.skill_melee
 
 # 武器変更
-    item replace entity @s weapon.mainhand with stick{CustomModelData:20145}
+    item replace entity @s weapon.mainhand with stick{CustomModelData:20195}
 # 腕変更
     data modify entity @s Pose.RightArm set value [38f,197f,296f]
     data modify entity @s Pose.LeftArm set value [48f,16f,0f]
