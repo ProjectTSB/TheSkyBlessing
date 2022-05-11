@@ -9,7 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# スイカ投げ
+# 召喚
     data modify storage api: Argument.ID set value 282
     function api:mob/summon
 
