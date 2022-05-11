@@ -6,11 +6,11 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 10.5f
+        data modify storage lib: Argument.Damage set value 85f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
-        data modify storage lib: Argument.ElementType set value "None"
+        data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
         execute as @e[type=#lib:living,tag=LandingTarget,tag=Enemy,tag=!Uninterferable,distance=..30] at @s run function lib:damage/
