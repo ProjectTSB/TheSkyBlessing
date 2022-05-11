@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0613.call_sun/register
+#> asset:sacred_treasure/0613.call_fulstuka/register
 #
 # 神器プールへの登録処理
 #
