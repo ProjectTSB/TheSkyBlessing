@@ -5,7 +5,7 @@
 # @within function asset:mob/0282.call_fulstuka/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Tags:["MobInit"]}
+    summon armor_stand ~ ~ ~ {Tags:["MobInit"],Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
 # ID (int)
     data modify storage asset:mob ID set value 282
 # Type (string) Wikiを参照
