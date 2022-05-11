@@ -17,8 +17,8 @@
     execute if entity @s[scores={6L.Tick=20}] run tp @s @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
     execute if entity @s[scores={6L.Tick=20}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @r[distance=..100] ~ ~ ~
 
-# 空中の場合降下
-    execute if entity @s[scores={6L.Tick=21..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
+# Markerの位置を基準として周囲のブロックを破壊する
+    execute if entity @s[scores={6L.Tick=21..}] if predicate world_manager:area/02.islands at @e[type=marker,tag=6L.SpawnPoint,sort=nearest,limit=1] run fill ~6 ~ ~6 ~-6 ~3 ~-6 air replace #lib:unbreakable
 
 # 水の檻
     execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.water_jail_interval
