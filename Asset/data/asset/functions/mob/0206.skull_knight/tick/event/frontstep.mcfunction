@@ -13,7 +13,7 @@
     execute facing entity @p feet run tp @s @s
 
 # 速さ
-    scoreboard players set $VectorMagnitude Lib 70
+    data modify storage lib: Argument.VectorMagnitude set value 0.7
 
 # 飛ぶのに使う
     execute rotated ~ ~0 run function lib:motion/
@@ -23,3 +23,4 @@
 
 # リセット
     scoreboard players reset @s 5Q.Move
+    data remove storage lib: Argument
