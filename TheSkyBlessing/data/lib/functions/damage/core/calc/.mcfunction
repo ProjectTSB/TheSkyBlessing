@@ -22,7 +22,7 @@
     execute unless score $isDefenseCalcSkip Temporary matches 1 run function lib:damage/core/calc/defense
     execute if score $isDefenseCalcSkip Temporary matches 1 run scoreboard players operation $Damage Temporary *= $100 Const
 # システム的なダメージ上限(9999.99/99999999(e4))チェック
-    execute if score $Damage Temporary matches 99999999.. run scoreboard players set $Damage Temporary 99999999
+    execute if score $Damage Temporary matches 99999000.. run scoreboard players set $Damage Temporary 99999000
 # Reset
     scoreboard players reset $isDefenseCalcSkip Temporary
     scoreboard players reset $defensePoints Temporary
