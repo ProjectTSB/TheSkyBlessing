@@ -8,6 +8,4 @@
 # @within function asset:mob/0285.meteor_rain_emitter/**
     scoreboard objectives add 7X.MoveTime dummy
     scoreboard objectives add 7X.Count dummy
-#> 別の場所でも使うスコア
-# @within function asset:mob/028?.meteor_rain*/**
     scoreboard objectives add 7X.UserID dummy
