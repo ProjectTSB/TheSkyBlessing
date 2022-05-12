@@ -21,19 +21,19 @@
     execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
 
 # 火の予告
-    execute if entity @s[scores={6L.Tick=50..53}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
+    execute if entity @s[scores={6L.Tick=50..64}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 
 # 火を使い始める
-    execute if entity @s[scores={6L.Tick=61..157}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire
+    execute if entity @s[scores={6L.Tick=65..161}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire
 
 # 雷を落とす
-    execute if entity @s[scores={6L.Tick=180..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.thunder
+    execute if entity @s[scores={6L.Tick=175..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.thunder
 
 # 再度火の予告
-    execute if entity @s[scores={6L.Tick=250..270}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
+    execute if entity @s[scores={6L.Tick=230..245}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 
 # 再度火を使い始める
-    execute if entity @s[scores={6L.Tick=270..400}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire2
+    execute if entity @s[scores={6L.Tick=245..400}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire2
 
 # リセット
     execute if entity @s[scores={6L.Tick=450..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
