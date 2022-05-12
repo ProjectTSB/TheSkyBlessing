@@ -14,4 +14,4 @@
     execute if entity @s[scores={6L.Tick=61}] at @a[gamemode=!spectator,distance=..50,sort=random,limit=5] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
 
 # リセット
-    execute if entity @s[scores={6L.Tick=71..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
+    execute if entity @s[scores={6L.Tick=66..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
