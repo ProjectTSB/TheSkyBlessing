@@ -8,8 +8,6 @@
 # @private
     #declare tag SpreadMarker
 
-# 向き
-    #execute facing entity @e[tag=Enemy,distance=..64,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
     #execute unless entity @e[tag=Enemy,distance=..64,limit=1] run tp @s ~ ~ ~ ~ 90
 
 # 前方拡散設定
@@ -17,7 +15,7 @@
     data modify storage lib: Argument.Distance set value 1.0
     data modify storage lib: Argument.Spread set value 1
 
-# 前方拡散を実行する
+# 前方2散を実行する
     execute as @e[type=marker,tag=SpreadMarker,limit=1] rotated ~ 90 run function lib:forward_spreader/circle
 
 # 発砲

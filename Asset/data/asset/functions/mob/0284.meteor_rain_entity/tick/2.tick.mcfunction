@@ -12,7 +12,7 @@
     kill @s[scores={7W.LifeTime=120..}]
 
 # 遊動
-    execute unless entity @e[tag=Enemy,distance=..64,limit=1] run tp @s ~ ~ ~ ~ ~5
+    #execute unless entity @e[tag=Enemy,distance=..64,limit=1] run tp @s ~ ~ ~ ~ ~
 
 # 移動
     execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
@@ -20,3 +20,5 @@
 
 # ホーミング
     #function asset:mob/0284.meteor_rain_entity/tick/event/homing
+# 追尾する
+    execute if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..20] facing entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..20] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.5 ~ ~
