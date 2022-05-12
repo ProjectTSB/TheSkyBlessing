@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
 # 最初に左回転か右回転か決める
-    execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/fire/2.decide_rotation
+    execute if entity @s[scores={6L.Tick=1}] if predicate lib:random_pass_per/50 run tag @s add 6L.LeftRotation
 
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
@@ -22,7 +22,7 @@
     execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary = @s 6L.Tick
 # 4tickおきに実行
     execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary %= $5 Const
-    execute if entity @s[scores={6L.Tick=20..}] if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/3.shoot
+    execute if entity @s[scores={6L.Tick=20..}] if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/2.shoot
 
 # リセット
     scoreboard players reset $Temp Temporary

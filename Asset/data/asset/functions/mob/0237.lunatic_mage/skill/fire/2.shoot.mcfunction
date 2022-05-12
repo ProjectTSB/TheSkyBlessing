@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/fire/3.shoot
+#> asset:mob/0237.lunatic_mage/skill/fire/2.shoot
 #
 # 発射します
 #
