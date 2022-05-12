@@ -10,5 +10,8 @@
 # 一定の数値で隕石を撃つ
     execute if score @s 7X.MoveTime matches 20.. run function asset:mob/0285.meteor_rain_emitter/tick/event/cast_meteor
 
+# ここは熱いですよ感を出す
+    particle lava ~ ~ ~ 10 10 10 0 1
+
 # 消滅
     kill @s[scores={7X.Count=10..}]

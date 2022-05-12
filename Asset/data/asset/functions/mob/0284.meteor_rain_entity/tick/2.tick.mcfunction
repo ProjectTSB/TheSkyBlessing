@@ -19,5 +19,5 @@
     execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
     execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
 
-# 着弾
-    execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/0284.meteor_rain_entity/tick/event/explosion
+# ホーミングテスト
+    function asset:mob/0284.meteor_rain_entity/tick/event/homing

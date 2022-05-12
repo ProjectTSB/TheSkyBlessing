@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 
-# ユーザーIDを渡す
+# ユーザーIDを受け取る
     scoreboard players operation @e[type=marker,tag=MobInit,distance=..0.01] 7X.UserID = @p[tag=this] UserID
     
 # MobInitタグ持ちを対象にして召喚関数呼び出し
