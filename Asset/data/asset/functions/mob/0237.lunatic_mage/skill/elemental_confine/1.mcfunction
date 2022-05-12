@@ -17,13 +17,8 @@
     execute if entity @s[scores={6L.Tick=20}] run tp @s @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
     execute if entity @s[scores={6L.Tick=20}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @r[distance=..100] ~ ~ ~
 
-# Markerの位置を基準として周囲のブロックを破壊する
-    #execute if entity @s[scores={6L.Tick=21..}] if predicate world_manager:area/02.islands at @e[type=marker,tag=6L.SpawnPoint,sort=nearest,limit=1] run fill ~6 ~ ~6 ~-6 ~3 ~-6 air replace #lib:unbreakable
-
-# もしもなんらかの理由で移動した場合対策でMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
-    execute if entity @s[scores={6L.Tick=21..}] unless entity @e[type=marker,tag=6L.SpawnPoint,distance=..0.01,sort=nearest,limit=1] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..50,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
-# 水の檻
-    execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.water_jail_interval
+# アクティブ中に実行するコマンド
+    execute if entity @s[scores={6L.Tick=21..}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
 
 # 火の予告
     execute if entity @s[scores={6L.Tick=50..53}] positioned ~ ~1.6 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line

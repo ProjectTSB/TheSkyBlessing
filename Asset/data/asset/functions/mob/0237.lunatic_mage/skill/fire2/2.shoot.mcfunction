@@ -9,5 +9,5 @@
 
 # 発射
     execute positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
-    execute rotated ~20 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
-    execute rotated ~-20 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
+    execute rotated ~25 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
+    execute rotated ~-25 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
