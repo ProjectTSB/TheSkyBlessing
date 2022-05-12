@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0284.meteor_rain_entity/tick/1.trigger",
         "asset:mob/0085.soul_bullet/tick/1.trigger",
         "asset:mob/0084.falcios_priest/tick/1.trigger",
         "asset:mob/0232.honey_leader/tick/1.trigger",
