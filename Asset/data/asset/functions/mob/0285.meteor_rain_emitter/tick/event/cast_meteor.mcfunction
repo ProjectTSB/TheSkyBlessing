@@ -8,8 +8,6 @@
     function asset:mob/0285.meteor_rain_emitter/tick/event/summon_meteor
     function asset:mob/0285.meteor_rain_emitter/tick/event/summon_meteor
     function asset:mob/0285.meteor_rain_emitter/tick/event/summon_meteor
-    function asset:mob/0285.meteor_rain_emitter/tick/event/summon_meteor
-    function asset:mob/0285.meteor_rain_emitter/tick/event/summon_meteor
 
 # スコア調整
     scoreboard players add @s 7X.Count 1

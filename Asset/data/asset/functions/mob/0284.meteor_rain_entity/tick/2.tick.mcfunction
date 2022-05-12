@@ -17,6 +17,9 @@
 # 移動
     execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
     execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
+    execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
+    execute at @s run function asset:mob/0284.meteor_rain_entity/tick/event/move
+    particle flame ~ ~ ~ 0.2 0.2 0.2 0 2 force
 
 # ホーミング
     #function asset:mob/0284.meteor_rain_entity/tick/event/homing
