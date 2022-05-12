@@ -16,10 +16,6 @@
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker] run function lib:forward_spreader/circle
 
-# 演出
-    playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 2
-# ユーザーIDを適応
-    #scoreboard players operation @e[type=armor_stand,tag=7W.Init] GX.UserID = @s GX.UserID
 # ID定義
     data modify storage api: Argument.ID set value 284
 # 分散させる。着弾点がまとまる
