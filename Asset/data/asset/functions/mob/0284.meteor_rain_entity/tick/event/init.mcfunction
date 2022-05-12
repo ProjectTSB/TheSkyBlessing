@@ -8,8 +8,7 @@
 # @private
     #declare tag SpreadMarker
 
-
-# コッチ向く
+# 向き
     #execute facing entity @e[tag=Enemy,distance=..64,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
     #execute unless entity @e[tag=Enemy,distance=..64,limit=1] run tp @s ~ ~ ~ ~ 90
 
