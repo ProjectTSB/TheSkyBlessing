@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:mob/0284.meteor_rain_entity/**
-    #declare
+    #declare tag 7W.Init

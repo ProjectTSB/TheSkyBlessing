@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0284.meteor_rain_entity/**
-    scoreboard objectives add 
+    scoreboard objectives add 7W.LifeTime dummy

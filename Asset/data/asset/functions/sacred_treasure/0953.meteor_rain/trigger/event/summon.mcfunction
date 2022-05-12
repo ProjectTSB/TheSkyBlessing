@@ -10,8 +10,9 @@
 
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 5.0
-    data modify storage lib: Argument.Spread set value 2.5
+    data modify storage lib: Argument.Distance set value 1
+    data modify storage lib: Argument.Spread set value 4.0
+
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker] run function lib:forward_spreader/circle
 
@@ -20,11 +21,11 @@
         playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 2
     # ユーザーIDを適応
         #scoreboard players operation @e[type=armor_stand,tag=7W.Init] GX.UserID = @s GX.UserID
+    # ID定義
+        data modify storage api: Argument.ID set value 284
     # 分散させる。着弾点がまとまる
-        execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^-20 run
-        execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^-20 run 
+        execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^10 positioned ~ ~30 ~ run function api:mob/summon
     # タグを消す
-        tag @e[type=armor_stand,tag=7W.Init] remove 7W.Init
 
 # 前方拡散を消す
     kill @e[type=marker,tag=SpreadMarker]
