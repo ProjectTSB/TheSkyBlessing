@@ -5,7 +5,7 @@
 # @within function asset:mob/0284.meteor_rain_entity/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {NoGravity:1b,Marker:1b,Invisible:1b,Tags:["MobInit","7W.Init"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:5}}}]}
+    summon armor_stand ~ ~ ~ {NoGravity:1b,Marker:1b,Invisible:1b,Tags:["MobInit","7W.Init"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20197}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 284
 # Type (string) Wikiを参照

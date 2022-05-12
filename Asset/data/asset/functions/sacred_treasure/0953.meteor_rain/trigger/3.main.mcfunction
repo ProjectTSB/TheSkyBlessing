@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 隕石を召喚
-    execute positioned ~20 ~ ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
-    execute positioned ~-20 ~ ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
-    execute positioned ~ ~ ~20 run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
-    execute positioned ~ ~ ~-20 run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
+    execute positioned ~25 ~ ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
+    execute positioned ~-25 ~ ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
+    execute positioned ~ ~ ~25 run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
+    execute positioned ~ ~ ~-25 run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
     execute positioned ~ ~ ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/event/summon
