@@ -18,13 +18,14 @@
     # chat
         tellraw @a [{"text": "天鍵杖","color": "aqua"},{"text": "の効果で天候が固定された！","color": "white"}]
     # Sound
-        # //重ねて疑似音量UP
         playsound ui.button.click master @a ~ ~ ~ 1000000 1 1
         playsound ui.button.click master @a ~ ~ ~ 1000000 1 1
         playsound ui.button.click master @a ~ ~ ~ 1000000 1 1
-    # Particle
-        execute at @a run particle dripping_water ~ ~ ~ 5 5 5 0 100 force @p
 
+    # Particle
+        execute if data storage asset:temp BZ{Weather:Sunny} as @a at @s run function asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/sunny
+        execute if data storage asset:temp BZ{Weather:Rain} as @a at @s run function asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/rain
+        execute if data storage asset:temp BZ{Weather:Thunder} as @a at @s run function asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/thunder
 # 補正の追加
     execute as @a run function asset:sacred_treasure/0431.weather_lock_cane/trigger/4.weather_effect
 
