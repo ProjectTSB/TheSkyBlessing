@@ -10,5 +10,5 @@
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 5
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 75
 
-    playsound entity.lightning_bolt.thunder player @s ~ ~ ~ 2 0
+    playsound entity.lightning_bolt.thunder player @s ~ ~ ~ 2 1
     playsound entity.lightning_bolt.impact player @s ~ ~ ~ 1 0
