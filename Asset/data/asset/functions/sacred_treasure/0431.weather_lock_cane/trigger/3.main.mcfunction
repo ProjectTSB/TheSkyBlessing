@@ -35,5 +35,5 @@
 
 # 処理
     gamerule doWeatherCycle false
-    schedule function asset:sacred_treasure/0431.weather_lock_cane/trigger/end 100t replace
+    schedule function asset:sacred_treasure/0431.weather_lock_cane/trigger/end 3600t replace
 
