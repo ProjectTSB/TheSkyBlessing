@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/lock
+#> asset:sacred_treasure/0431.weather_lock_cane/trigger/end
 #
 # lockを解除します
 #
@@ -15,3 +15,6 @@
         playsound block.glass.break master @a ~ ~ ~ 1000000 1 1
     # Particle
         execute at @a run particle dripping_water ~ ~ ~ 5 5 5 0 100 force @p
+
+# ストレージを消す
+    data remove storage asset:temp BZ
