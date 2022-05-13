@@ -8,7 +8,7 @@
 
 # 補正値
     data modify storage api: Argument.UUID set value [I;1,1,624,6]
-    data modify storage api: Argument.Amount set value 0.2
+    data modify storage api: Argument.Amount set value 0.4
     data modify storage api: Argument.Operation set value "multiply_base"
 
 # 各天候により属性を分離する
@@ -16,7 +16,9 @@
     execute if data storage asset:temp BZ{Weather:Rain} run function api:player_modifier/attack/water/add
     execute if data storage asset:temp BZ{Weather:Thunder} run function api:player_modifier/attack/thunder/add
 
+    execute if data storage asset:temp BZ{Weather:Sunny} run tellraw @s {"text":"火属性攻撃が40%上がった！"}
+    execute if data storage asset:temp BZ{Weather:Rain} run tellraw @s {"text":"水属性攻撃が40%上がった！"}
+    execute if data storage asset:temp BZ{Weather:Thunder} run tellraw @s {"text":"雷属性攻撃が40%上がった！"}
+
 # タグ付与
     tag @s add BZ.Activate
-
-    say 効果発動

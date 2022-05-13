@@ -14,4 +14,3 @@
     execute if data storage asset:temp BZ{Weather:Thunder} run function api:player_modifier/attack/thunder/remove
 
     tag @s remove BZ.Activate
-    say 効果解除
