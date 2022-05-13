@@ -1,6 +1,18 @@
 {
     "values": [
         "asset:mob/0206.skull_knight/hurt/1.trigger",
+        "asset:mob/0083.thunder_trifler/hurt/1.trigger",
+        "asset:mob/0232.honey_leader/hurt/1.trigger",
+        "asset:mob/0217.medousa_eye/hurt/1.trigger",
+        "asset:mob/0233.honey_flyer/hurt/1.trigger",
+        "asset:mob/0090.decapitation/hurt/1.trigger",
+        "asset:mob/0280.the_desire_for_burning/hurt/1.trigger",
+        "asset:mob/0274.death_saw_jiki/hurt/1.trigger",
+        "asset:mob/0259.shadow_stalker/hurt/1.trigger",
+        "asset:mob/0257.distortion_spellbook/hurt/1.trigger",
+        "asset:mob/0219.aorta/hurt/1.trigger",
+        "asset:mob/0220.vena_cana/hurt/1.trigger",
+        "asset:mob/1004.tultaria/hurt/1.trigger",
         "asset:mob/example/hurt/1.trigger",
         "asset:mob/0060.self_destructor/hurt/1.trigger",
         "asset:mob/0021.demon_eye/hurt/1.trigger",
