@@ -16,5 +16,8 @@
     # Particle
         execute at @a run particle dripping_water ~ ~ ~ 5 5 5 0 100 force @p
 
+# タグを消す
+    execute as @a run function asset:sacred_treasure/0431.weather_lock_cane/trigger/weather_effect_clear
+
 # ストレージを消す
     data remove storage asset:temp BZ
