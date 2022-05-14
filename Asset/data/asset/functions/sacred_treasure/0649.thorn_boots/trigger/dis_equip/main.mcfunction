@@ -19,4 +19,4 @@
     function api:player_modifier/defense/thunder/remove
 
 # フルセット解除
-    execute if entity @s[tag=HZ.FullSet] run function asset:sacred_treasure/0647.thorn_armor/trigger/6.fullset_dis_equip
+    execute if entity @s[tag=HZ.FullSet] run function asset:sacred_treasure/0647.thorn_armor/trigger/5.fullset_dis_equip

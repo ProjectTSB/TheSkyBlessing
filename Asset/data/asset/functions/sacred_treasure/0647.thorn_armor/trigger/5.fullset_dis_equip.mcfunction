@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0647.thorn_armor/trigger/6.fullset_dis_equip
+#> asset:sacred_treasure/0647.thorn_armor/trigger/5.fullset_dis_equip
 #
 # フルセット解除の処理
 #

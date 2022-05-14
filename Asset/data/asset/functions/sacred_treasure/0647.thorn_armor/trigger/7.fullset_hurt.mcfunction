@@ -2,7 +2,7 @@
 #
 # 被ダメ時の特殊効果
 #
-# @within function asset:sacred_treasure/0647.thorn_armor/trigger/5.hurt_trigger
+# @within function asset:sacred_treasure/0647.thorn_armor/trigger/6.hurt_trigger
 
 #> Private
 # @private
