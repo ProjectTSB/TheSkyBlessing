@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
+#> Private
+# @private
+    #declare tag 6L.RotationMarker
+
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
     execute if entity @s[scores={6L.Tick=..20}] run particle end_rod ~ ~1.2 ~ 1 0.5 1 0.3 3 normal @a

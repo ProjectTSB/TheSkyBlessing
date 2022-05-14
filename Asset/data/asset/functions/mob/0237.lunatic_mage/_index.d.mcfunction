@@ -10,10 +10,11 @@
     #declare tag 6L.Fire2
     #declare tag 6L.ElementalConfine
 
-#> 無属性攻撃で使うTag
-# @within function asset:mob/0237.lunatic_mage/skill/magic/**
+#> 再帰のヒットの処理用Tag
+# @within function
+#   asset:mob/0237.lunatic_mage/skill/magic/**
+#   asset:mob/0237.lunatic_mage/skill/elemental_confine/**
     #declare tag LandingTarget
-    #declare tag 6L.RotationMarker
 
 #> 体力40%以下のTag
 # @within function
