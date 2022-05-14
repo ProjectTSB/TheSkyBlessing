@@ -21,9 +21,6 @@
     # 0~2の値を4~6になるように4加算
         scoreboard players add @s Temporary 4
 
-# メッセージ表示
-    tellraw @s [{"selector":"@s"},{"text":"はダイスを振った..."}]
-
 # ダメージを与えるエンティティの絞り込み
     tag @e[tag=Enemy,tag=!Uninterferable,distance=..20,sort=nearest,limit=1] add CU.Target
 

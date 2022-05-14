@@ -3,8 +3,8 @@
 #
 #
 # @within function
-#   asset:mob/0286.456_dice_entity/tick/2.tick
-#   asset:mob/0286.456_dice_entity/tick/event/attack
+#   asset:mob/0286.456_dice_entity/tick/event/beam_recursion
+#   asset:mob/0286.456_dice_entity/tick/event/shoot_beam
 
 # 着弾検知
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @s add Landing

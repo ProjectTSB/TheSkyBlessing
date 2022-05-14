@@ -7,6 +7,3 @@
     #declare tag S2.Fire
     #declare tag S2.Water
     #declare tag S2.Thunder
-
-
-
