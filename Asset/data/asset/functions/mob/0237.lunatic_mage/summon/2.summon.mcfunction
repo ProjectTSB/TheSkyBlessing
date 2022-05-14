@@ -61,6 +61,9 @@
 # スコアを与える
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
+# ブロックを破壊を無しにする用
+    tag @e[type=zombie,tag=MobInit,distance=..0.01] add 6L.NoBreak
+
 # 召喚地点用Markerを召喚
     summon marker ~ ~ ~ {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
 

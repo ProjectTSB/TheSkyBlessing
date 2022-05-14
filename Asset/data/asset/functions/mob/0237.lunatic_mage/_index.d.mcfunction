@@ -36,6 +36,12 @@
 #   asset:mob/0237.lunatic_mage/remove/2.remove
     #declare tag 6L.SpawnPoint
 
+#> デバッグ用に召喚すると周囲のブロックを破壊能力が致命的になるので一時的にそこを対策する用
+# @within function
+#   asset:mob/0237.lunatic_mage/summon/2.summon
+#   asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
+    #declare tag 6L.NoBreak
+
 #> score_holder
 # @within function asset:mob/0237.lunatic_mage/**
     #declare score_holder $Random

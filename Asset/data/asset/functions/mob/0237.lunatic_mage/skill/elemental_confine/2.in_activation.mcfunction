@@ -21,8 +21,8 @@
 # もしもなんらかの理由で移動した場合対策でMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
     execute unless entity @e[type=marker,tag=6L.SpawnPoint,distance=..0.01,sort=nearest,limit=1] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..50,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
 
-# Markerの位置を基準として周囲の羊毛を破壊する
-    execute if predicate world_manager:area/02.islands at @e[type=marker,tag=6L.SpawnPoint,sort=nearest,limit=1] run fill ~6 ~ ~6 ~-6 ~3 ~-6 air replace #wool
+# Markerの位置を基準として周囲のブロックを破壊する
+    execute if entity @s[tag=!6L.NoBreak] if predicate world_manager:area/02.islands at @e[type=marker,tag=6L.SpawnPoint,sort=nearest,limit=1] run fill ~6 ~ ~6 ~-6 ~3 ~-6 air replace #lib:breakable
 
 # エンパをkill
     execute if entity @e[type=ender_pearl,tag=!Projectile,distance=5.5..9] run kill @e[type=ender_pearl,tag=!Projectile,distance=5.5..9]
