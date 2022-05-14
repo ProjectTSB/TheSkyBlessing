@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"4・5・6ダイス","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"出目が4・5・6のみのサイコロ"}','[{"text":"振ることで近くの敵1体に"},{"text":"火 ","color":"red"},{"text":"水 ","color":"aqua"},{"text":"雷","color":"yellow"},{"text":"の属性から","color":"white"}]','{"text":"ランダムな属性の出た目 * 50ダメージを与える"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"4・5・6しか出ない変なサイコロ。"}','[{"text":"振ることで近くの敵1体に"},{"text":"火 ","color":"red"},{"text":"水 ","color":"aqua"},{"text":"雷","color":"yellow"},{"text":"の属性から","color":"white"}]','{"text":"ランダムな属性の出た目 * 50ダメージを与える"}','{"text":"\\"バレバレのイカサマ\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

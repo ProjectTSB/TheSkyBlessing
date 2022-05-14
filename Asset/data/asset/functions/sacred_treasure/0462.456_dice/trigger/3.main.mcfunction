@@ -58,6 +58,10 @@
     # 近くの敵1体を対象にダメージを与える
         execute as @e[tag=CU.Target] run function lib:damage/
 
+# ダイス召喚
+    
+
+
 # リセット
     scoreboard players reset @s Temporary
     data remove storage lib: Argument
