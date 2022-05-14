@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"メテオレイン","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"燃え盛る破壊的な流星群を呼び出す！","color":"white","italic":false}','{"text":"\\"Alea iacta est\\"","color":"gray","italic":false}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"燃え盛る流星が天から降り注ぐ！","color":"white","italic":false}','{"text":"\\"破壊の星々に願いを\\"","color":"gray","italic":false}']
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
