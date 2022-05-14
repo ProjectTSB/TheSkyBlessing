@@ -5,7 +5,7 @@
 # @within function asset:mob/0082.thunder_curtain/tick/2.tick
 
 # 移動
-    tp @s ^ ^ ^0.3
+    tp @s ^ ^ ^0.6
 
 # 雷を落とす
     function asset:mob/0082.thunder_curtain/tick/4.thunder2
