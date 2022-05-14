@@ -9,3 +9,4 @@
     scoreboard objectives add CU.MoveTime dummy
     scoreboard objectives add CU.MoveCount dummy
     scoreboard objectives add CU.RandomCount dummy
+    scoreboard objectives add CU.UserID dummy

@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:mob/0286.456_dice_entity/**
-    #declare
+    #declare tag CU.This
