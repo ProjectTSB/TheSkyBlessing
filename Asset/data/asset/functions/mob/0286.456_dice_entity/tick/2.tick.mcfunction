@@ -19,7 +19,7 @@
 
 # ドラムロール！
     scoreboard players add @s CU.MoveTime2 1
-    execute if score @s[scores={CU.MoveTime2=2}] CU.MoveTime matches ..19 run particle note ~ ~2 ~ 0 0 0 0 1 force
+    execute if score @s[scores={CU.MoveTime2=2}] CU.MoveTime matches ..19 run particle note ~ ~2.5 ~ 0 0 0 0 1 force
     execute if score @s[scores={CU.MoveTime2=2}] CU.MoveTime matches ..19 run playsound minecraft:block.note_block.snare neutral @a ~ ~ ~ 1 1.5
     execute if score @s[scores={CU.MoveTime2=4}] CU.MoveTime matches ..19 run playsound minecraft:block.note_block.snare neutral @a ~ ~ ~ 1 1
     scoreboard players reset @s[scores={CU.MoveTime2=4..}] CU.MoveTime2
