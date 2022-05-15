@@ -9,10 +9,10 @@
 
 # 突進する
     data modify storage lib: Argument.VectorMagnitude set value 1
-    execute facing entity @p[gamemode=!spectator] feet rotated ~180 ~-10 run function lib:motion/
+    execute facing entity @p[tag=Attacker,distance=..100] feet rotated ~180 -10 run function lib:motion/
 
 # エフェクト
     effect give @s speed 1 6
 
 # リセット
-data remove storage lib: Argument
+    data remove storage lib: Argument
