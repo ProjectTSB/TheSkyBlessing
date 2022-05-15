@@ -8,4 +8,4 @@
     function asset:sacred_treasure/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0932.equal_speed_charlie_london
+    effect give @s speed 1000000 1 true
