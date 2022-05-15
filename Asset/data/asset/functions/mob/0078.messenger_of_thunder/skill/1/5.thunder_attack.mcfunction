@@ -1,4 +1,4 @@
-#> asset:mob/0078.messenger_of_thunder/skill/1/4.thunder_attack
+#> asset:mob/0078.messenger_of_thunder/skill/1/5.thunder_attack
 #
 #
 #
