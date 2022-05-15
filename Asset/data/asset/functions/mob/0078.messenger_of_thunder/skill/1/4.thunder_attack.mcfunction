@@ -5,8 +5,8 @@
 # @within function asset:mob/0078.messenger_of_thunder/skill/1/1
 
 # 演出
-    particle dust 1 1 0 1 ~ ~3 ~ 0.7 3 0.7 0 200
-    particle dust 1 1 0 1 ~ ~5 ~ 0.1 5 0.1 0 200
+    particle dust 1 1 0 1 ~ ~3 ~ 0.7 3 0.7 0 250
+    particle dust 1 1 0 1 ~ ~5 ~ 0.1 5 0.1 0 250
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
 
@@ -22,7 +22,7 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 

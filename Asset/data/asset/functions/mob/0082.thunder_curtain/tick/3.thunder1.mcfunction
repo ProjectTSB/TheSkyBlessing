@@ -23,7 +23,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの雷に撃たれ消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの稲妻に焼け落ちた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     function lib:damage/modifier
-    execute as @a[tag=ThunderTarget,distance=..30] at @s run function lib:damage/
+    execute as @a[tag=ThunderTarget,distance=..30] run function lib:damage/
 
 # リセット
     data remove storage lib: Argument
