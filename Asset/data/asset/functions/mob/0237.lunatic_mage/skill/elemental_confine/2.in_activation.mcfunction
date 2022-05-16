@@ -12,7 +12,7 @@
 
 # 外にプレイヤーがいる場合、最大5人までを対象とし、それなりの頻度で雷を落とし続ける
     scoreboard players operation $Interval Temporary = @s 6L.Tick
-    scoreboard players operation $Interval Temporary %= $20 Const
+    scoreboard players operation $Interval Temporary %= $10 Const
     execute if score $Interval Temporary matches 0 if entity @a[gamemode=!spectator,distance=9..30] at @a[gamemode=!spectator,distance=9..30,sort=random,limit=5] positioned ~ ~0.2 ~ run function asset:mob/0237.lunatic_mage/magic_summon/thunder
 
 # リセット
