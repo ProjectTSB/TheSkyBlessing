@@ -15,6 +15,7 @@
 
 # VFX
     playsound block.beacon.activate player @a ~ ~ ~ 1 1.3
+    particle dust 0.2 0.9 10000000 0.7 ~ ~1 ~ 0.5 0.8 0.5 1 100
 # 補正を削除
     attribute @s generic.movement_speed modifier remove 1-0-1-0-38200000007
 # 補正を追加
