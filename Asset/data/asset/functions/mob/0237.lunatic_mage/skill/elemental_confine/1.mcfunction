@@ -36,4 +36,4 @@
     execute if entity @s[scores={6L.Tick=245..450}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/6.fire2
 
 # リセット
-    execute if entity @s[scores={6L.Tick=500..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
+    execute if entity @s[scores={6L.Tick=520..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
