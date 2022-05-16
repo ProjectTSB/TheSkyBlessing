@@ -6,14 +6,14 @@
 
 # 一定間隔で実行
     # 実行時間を移す
-    scoreboard players operation $Temp Temporary = @s 6L.Tick
-    scoreboard players operation $Temp Temporary %= $72 Const
+    scoreboard players operation $Interval Temporary = @s 6L.Tick
+    scoreboard players operation $Interval Temporary %= $72 Const
 
 # 4つ落とす
-    execute if score $Temp Temporary matches 0 positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/11.thunder2
+    execute if score $Interval Temporary matches 0 positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/11.thunder2
 
 # 4つ落とす
-    execute if score $Temp Temporary matches 36 rotated ~45 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/11.thunder2
+    execute if score $Interval Temporary matches 36 rotated ~45 ~ positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/11.thunder2
 
 # リセット
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset $Interval Temporary

@@ -19,12 +19,12 @@
     execute if entity @s[scores={6L.Tick=20..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 実行時間を移す
-    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary = @s 6L.Tick
+    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Interval Temporary = @s 6L.Tick
 # 4tickおきに実行
-    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary %= $5 Const
-    execute if entity @s[scores={6L.Tick=20..}] if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/2.shoot
+    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Interval Temporary %= $5 Const
+    execute if entity @s[scores={6L.Tick=20..}] if score $Interval Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/2.shoot
 
 # リセット
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset $Interval Temporary
 # リセット
     execute if entity @s[scores={6L.Tick=80..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
