@@ -1,4 +1,4 @@
-#> asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire2
+#> asset:mob/0237.lunatic_mage/skill/elemental_confine/6.fire2
 #
 #
 #
@@ -9,8 +9,8 @@
     scoreboard players operation $Temp Temporary = @s 6L.Tick
 # 5tickおきに実行
     scoreboard players operation $Temp Temporary %= $6 Const
-    execute if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/6.shoot_fire
+    execute if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.fire_shoot
 # 回転
-    execute if score $Temp Temporary matches 0 run tp @s ~ ~ ~ ~-16 ~
+    execute if score $Temp Temporary matches 0 run tp @s ~ ~ ~ ~-15 ~
 # リセット
     scoreboard players reset $Temp Temporary
