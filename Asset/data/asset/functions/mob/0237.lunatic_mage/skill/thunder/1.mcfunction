@@ -16,7 +16,7 @@
     execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.5 ~ ~1.2 ~ 1 0.5 1 0 5 normal @a
 
 # 一度プレイヤーを二人指定し、その位置で雷の召喚地点となるAECを召喚する
-    execute if entity @s[scores={6L.Tick=20}] run tag @a[gamemode=!spectator,distance=..50,limit=2] add TargetPlayer
+    execute if entity @s[scores={6L.Tick=20}] run tag @a[gamemode=!spectator,distance=..50,sort=random,limit=2] add TargetPlayer
     execute if entity @s[scores={6L.Tick=20}] at @a[tag=TargetPlayer,distance=..50,limit=2] run summon area_effect_cloud ~ ~ ~ {Tags:["6L.ThunderSummonPoint"],Particle:"block air",Duration:21}
 
 # ターゲットとなったプレイヤーの位置で、ルナティックメイジの方を見て5ブロック先に雷召喚地点をワープさせる
