@@ -3,7 +3,6 @@
 
 #> TeleportPoint
 # @within world_manager:gimmick/teleporter/**
-    #declare tag this
     #declare tag FromTeleporter
     #declare tag Teleporter
     #declare tag TeleporterInit

@@ -9,7 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
     # 樽召喚
-        execute at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..8] run summon armor_stand ~ ~1.8 ~ {Tags:["9V.Barrel","Friend","Projectile","Uninterferable"],Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:barrel",Count:1b}]}
+        execute at @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..8] run summon armor_stand ~ ~1.8 ~ {Tags:["9V.Barrel","Projectile","Uninterferable"],Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:barrel",Count:1b}]}
     # tick予約
         schedule function asset:sacred_treasure/0355.barrel/trigger/3.1.tick_base 1t replace
     # 演出

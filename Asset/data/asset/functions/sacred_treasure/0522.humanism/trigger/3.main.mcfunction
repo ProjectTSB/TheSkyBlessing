@@ -31,7 +31,7 @@
 
 # ダメージ処理
     # 全プレイヤーの周囲50Mの敵に魔法・水属性ダメージ
-        data modify storage lib: Argument.Damage set value 150f
+        data modify storage lib: Argument.Damage set value 1700f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
         function lib:damage/modifier
