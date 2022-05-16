@@ -7,7 +7,7 @@
 # 一定間隔で実行
     # 実行時間を移す
     scoreboard players operation $Interval Temporary = @s 6L.Tick
-    scoreboard players operation $Interval Temporary %= $72 Const
+    scoreboard players operation $Interval Temporary %= $80 Const
 
 # 4つ落とす
     execute if score $Interval Temporary matches 0 positioned ^ ^ ^3.5 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/11.thunder2
