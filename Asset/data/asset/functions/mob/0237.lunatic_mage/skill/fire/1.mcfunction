@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
 # 最初に左回転か右回転か決める
-    execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/fire/2.decide_rotation
+    execute if entity @s[scores={6L.Tick=1}] if predicate lib:random_pass_per/50 run tag @s add 6L.LeftRotation
 
 # ポーズ変更
     execute if entity @s[scores={6L.Tick=2}] run item replace entity @s armor.head with stick{CustomModelData:20200}
@@ -22,12 +22,12 @@
     execute if entity @s[scores={6L.Tick=20..}] if block ~ ~-0.2 ~ #lib:no_collision_without_fluid run tp @s ~ ~-0.2 ~
 
 # 実行時間を移す
-    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary = @s 6L.Tick
+    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Interval Temporary = @s 6L.Tick
 # 4tickおきに実行
-    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Temp Temporary %= $5 Const
-    execute if entity @s[scores={6L.Tick=20..}] if score $Temp Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/3.shoot
+    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Interval Temporary %= $5 Const
+    execute if entity @s[scores={6L.Tick=20..}] if score $Interval Temporary matches 0 run function asset:mob/0237.lunatic_mage/skill/fire/2.shoot
 
 # リセット
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset $Interval Temporary
 # リセット
     execute if entity @s[scores={6L.Tick=80..}] run function asset:mob/0237.lunatic_mage/tick/5.reset

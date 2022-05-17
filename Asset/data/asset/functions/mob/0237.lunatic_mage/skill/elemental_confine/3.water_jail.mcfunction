@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.water_jail_interval
+# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
 
 # 音
     playsound entity.dolphin.splash hostile @a ~ ~ ~ 1 2
@@ -10,7 +10,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 65f
+        data modify storage lib: Argument.Damage set value 70f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
         function lib:damage/modifier

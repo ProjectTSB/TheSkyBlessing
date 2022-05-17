@@ -15,3 +15,6 @@
 
 # スコア
     scoreboard players add @s 6L.Tick 1
+
+# Yのrotationを0で固定
+    data modify entity @s Rotation[1] set value 0f

@@ -7,7 +7,7 @@
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 50f
     data modify storage lib: Argument.AttackType set value "Magic"
-    execute as @e[type=zombie,tag=this,distance=..50,limit=1] run function lib:damage/modifier
+    execute as @e[type=zombie,tag=this,distance=..0.01,limit=1] run function lib:damage/modifier
     function lib:damage/
 # リセット
     data remove storage lib: Argument
