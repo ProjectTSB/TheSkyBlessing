@@ -22,7 +22,7 @@
     execute anchored eyes at @s positioned ^ ^ ^12.8 run tp @e[type=area_effect_cloud,tag=MS.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0] ~ ~ ~
 
 # 視線上かつブロック検知位置より手前にいるエンティティに候補タグ付け
-    execute positioned ^ ^ ^6.4 as @e[type=#lib:living,tag=!Friend,distance=..6.4] positioned as @s anchored eyes positioned ^ ^ ^1000 facing entity @p eyes positioned ^ ^ ^1000 positioned ~-0.2 ~-0.2 ~-0.2 if entity @s[dx=0.3,dy=0.3,dz=0.3] run tag @s add MS.TargetCandidate
+    execute positioned ^ ^ ^6.4 as @e[type=#lib:living,tag=!Friend,distance=..6.4] positioned as @s anchored eyes positioned ^ ^ ^1000 facing entity @p eyes positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run tag @s add MS.TargetCandidate
     execute positioned ^ ^ ^6.4 as @e[type=#lib:living,tag=MS.TargetCandidate,distance=..6.4] at @e[type=area_effect_cloud,tag=MS.BlockChecker,distance=..7] facing entity @p[tag=this] feet positioned ^ ^ ^1000 unless entity @s[distance=..1000] run tag @s remove MS.TargetCandidate
     execute positioned ^ ^ ^6.4 as @e[type=#lib:living,tag=MS.TargetCandidate,distance=..6.4] at @p[tag=this] positioned ^ ^ ^1002 unless entity @s[distance=..1000] run tag @s remove MS.TargetCandidate
 
