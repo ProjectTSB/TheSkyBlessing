@@ -33,11 +33,11 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 65
+    data modify storage asset:mob Health set value 1065
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 1.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 18
+    # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
@@ -50,11 +50,11 @@
     # 物理倍率 (float) (オプション)
         data modify storage asset:mob Resist.Physical set value 1.0
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.75
+        data modify storage asset:mob Resist.Magic set value 1
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 0.5
+        data modify storage asset:mob Resist.Fire set value 0.75
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 0.5
+        data modify storage asset:mob Resist.Water set value 0.75
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.25
 

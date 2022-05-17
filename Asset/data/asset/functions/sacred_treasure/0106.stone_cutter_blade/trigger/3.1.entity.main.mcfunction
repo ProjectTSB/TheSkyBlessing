@@ -12,7 +12,7 @@
 # ダメージ処理
     # 引数の設定
     # 与えるダメージ: 8
-        data modify storage lib: Argument.Damage set value 8.0f
+        data modify storage lib: Argument.Damage set value 28.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正

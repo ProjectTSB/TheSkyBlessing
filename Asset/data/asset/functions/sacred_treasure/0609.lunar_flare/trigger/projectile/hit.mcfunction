@@ -18,8 +18,8 @@
     tag @s add GX.This
 
 # ダメージ設定
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30.0f
+    # 与えるダメージ = 60
+        data modify storage lib: Argument.Damage set value 40.0f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"

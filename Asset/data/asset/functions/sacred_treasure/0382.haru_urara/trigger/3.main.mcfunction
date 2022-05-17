@@ -14,8 +14,8 @@
     playsound minecraft:entity.ender_dragon.flap master @a[distance=..15] ~ ~ ~ 1 1
 
 # ダメージ
-    # 与えるダメージ = 60
-        data modify storage lib: Argument.Damage set value 30f
+    # 与えるダメージ = 42
+        data modify storage lib: Argument.Damage set value 42f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 無属性
