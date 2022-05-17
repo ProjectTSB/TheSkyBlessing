@@ -10,6 +10,7 @@
     #declare tag 6L.Fire2
     #declare tag 6L.ElementalConfine
 
+
 #> 再帰のヒットの処理用Tag
 # @within function
 #   asset:mob/0237.lunatic_mage/skill/magic/**

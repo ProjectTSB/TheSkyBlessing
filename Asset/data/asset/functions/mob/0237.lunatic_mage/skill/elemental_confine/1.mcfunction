@@ -7,11 +7,15 @@
 # スポーン地点にワープ
     execute if entity @s[scores={6L.Tick=1}] run tp @s @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1]
 
+# ポーズ変更
+    execute if entity @s[scores={6L.Tick=2}] run item replace entity @s armor.head with stick{CustomModelData:20200}
+
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0 0 1.5 ~ ~1.2 ~ 1 0.5 1 0.3 2 normal @a
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 0.17 0.34 1 1.5 ~ ~1.2 ~ 1 0.5 1 0 2 normal @a
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.3 ~ ~1.2 ~ 1 0.5 1 0.3 2 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 1 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 3 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0.2 0.2 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 0.376 0.494 0.965 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0.596 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
 
 # NoAIになる
     execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b

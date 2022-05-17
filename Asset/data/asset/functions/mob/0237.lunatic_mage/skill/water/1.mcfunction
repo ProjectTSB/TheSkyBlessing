@@ -9,7 +9,8 @@
 
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=1}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.8 2 0
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 0.17 0.34 1 1.5 ~ ~1.2 ~ 1 0.5 1 0 5 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 0.17 0.34 1 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 2 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] positioned ~ ~2.4 ~ positioned ^-0.6 ^ ^0.4 run particle splash ~ ~ ~ 0 0 0 0.02 10
 
 # 魔法召喚
     execute if entity @s[scores={6L.Tick=21}] at @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water

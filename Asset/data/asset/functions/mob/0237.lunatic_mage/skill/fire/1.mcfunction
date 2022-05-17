@@ -12,7 +12,8 @@
 
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0 0 1.5 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0 0 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 2 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] positioned ~ ~2.4 ~ positioned ^-0.6 ^ ^0.4 run particle flame ~ ~ ~ 0 0 0 0.02 1
 
 # NoAIと向きをセット
     execute if entity @s[scores={6L.Tick=20}] run data modify entity @s NoAI set value 1b
