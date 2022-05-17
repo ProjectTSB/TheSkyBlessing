@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/tick/1.trigger
 
 # パーティクル
-    particle minecraft:falling_dust white_concrete ~ ~1 ~ 0.1 0 0.1 0 1
+    particle minecraft:falling_dust black_concrete ~ ~0.5 ~ 0.1 0 0.1 0 1
 
 # 技決定
     execute if entity @s[scores={6L.Tick=0}] run function asset:mob/0237.lunatic_mage/tick/3.select_skill

@@ -9,6 +9,9 @@
     #declare tag TargetPlayer
     #declare tag 6L.ThunderSummonPoint
 
+# ポーズ変更
+    execute if entity @s[scores={6L.Tick=2}] run item replace entity @s armor.head with stick{CustomModelData:20200}
+
 # 音
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.8 2 0
 

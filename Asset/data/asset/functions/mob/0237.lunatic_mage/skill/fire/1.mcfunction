@@ -7,6 +7,9 @@
 # 最初に左回転か右回転か決める
     execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/fire/2.decide_rotation
 
+# ポーズ変更
+    execute if entity @s[scores={6L.Tick=2}] run item replace entity @s armor.head with stick{CustomModelData:20200}
+
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.5 2 0
     execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 0 0 1.5 ~ ~1.2 ~ 1 0.5 1 0.3 5 normal @a

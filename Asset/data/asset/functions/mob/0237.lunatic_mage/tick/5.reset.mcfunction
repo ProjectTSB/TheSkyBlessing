@@ -14,3 +14,6 @@
     tag @s remove 6L.Fire2
     tag @s remove 6L.ElementalConfine
     tag @s remove 6L.LeftRotation
+
+# ポーズもリセット
+    item replace entity @s armor.head with stick{CustomModelData:20198}
