@@ -34,6 +34,7 @@
 #   asset:mob/0237.lunatic_mage/summon/2.summon
 #   asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 #   asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
+#   asset:mob/0237.lunatic_mage/skill/elemental_confine/start
 #   asset:mob/0237.lunatic_mage/death/2.death
 #   asset:mob/0237.lunatic_mage/remove/2.remove
     #declare tag 6L.SpawnPoint

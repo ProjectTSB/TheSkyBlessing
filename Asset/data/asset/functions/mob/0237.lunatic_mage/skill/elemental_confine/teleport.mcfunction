@@ -2,7 +2,7 @@
 #
 # テレポート時のパーティクル
 #
-# @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
+# @within function asset:mob/0237.lunatic_mage/**
 
 # 演出
     particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 20
