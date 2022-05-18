@@ -3,8 +3,8 @@
 #
 #
 # @within function
-#asset:sacred_treasure/0210.terra_blade/trigger/3.main
-# asset:mob/0281.terra_doublis_attack/tick/2.tick
+#   asset:sacred_treasure/0210.terra_blade/trigger/3.main
+#   asset:mob/0281.terra_doublis_attack/tick/2.tick
 
 # サウンド
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 2 1.5
@@ -12,9 +12,6 @@
 
 # ランダムな位置から発射
     function asset:sacred_treasure/0210.terra_blade/trigger/event/random_position
-
-# テラショット(召喚)
-    #execute anchored eyes run summon armor_stand ^-0.35 ^-0.25 ^ {Marker:1b,Invisible:1b,Tags:["ChuzTerraShotInit","Projectile","Uninterferable"]}
 
 # テラショットにInitコマンド実行
     execute as @e[type=armor_stand,tag=ChuzTerraShotInit] at @s run function asset:sacred_treasure/0210.terra_blade/trigger/3.2.terra_shot_init
