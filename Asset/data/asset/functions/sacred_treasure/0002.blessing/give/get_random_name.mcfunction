@@ -12,7 +12,7 @@
 # セッション開ける
     function lib:array/session/open
 # 名前候補リスト
-    data modify storage lib: Array set value ['深淵','奈落','天空','始原','神威','太陽','生命','満月','星雲','極光']
+    data modify storage lib: Array set value ['深淵','奈落','天空','始原','神威','太陽','生命','満月','星雲','極光','蒼天','夜闇']
 # 候補リストの長さを取得
     execute store result score $CandidatesLength Temporary if data storage lib: Array[]
 # ターゲットの名前をランダムに決める
