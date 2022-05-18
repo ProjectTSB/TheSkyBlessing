@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/dis_equip
 
 # 火耐性
-    data modify storage api: Argument.UUID set value [I;1,2,915,5]
+    data modify storage api: Argument.UUID set value [I;1,2,915,6]
     function api:player_modifier/defense/fire/remove
 
 # 火攻撃
