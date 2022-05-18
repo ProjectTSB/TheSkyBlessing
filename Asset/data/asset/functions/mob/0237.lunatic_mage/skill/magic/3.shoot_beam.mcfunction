@@ -16,6 +16,7 @@
     execute positioned ^ ^ ^45 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 
     #playsound block.portal.travel hostile @a[distance=..50] ~ ~ ~ 0.2 2 0.2
+    execute positioned ~ ~0.2 ~ run particle explosion ^ ^ ^1 0 0 0 0 1
     playsound minecraft:entity.glow_squid.ambient hostile @a[distance=..50] ~ ~ ~ 3 1.5
     playsound minecraft:block.respawn_anchor.deplete hostile @a[distance=..50] ~ ~ ~ 3 2
     playsound minecraft:block.respawn_anchor.deplete hostile @a[distance=..50] ~ ~ ~ 3 1.5
