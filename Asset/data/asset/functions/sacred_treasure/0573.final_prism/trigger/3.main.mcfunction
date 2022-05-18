@@ -35,13 +35,13 @@
 # 非収束ビーム
     execute if score $Spread Temporary matches 2.. facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/laser
     # ダメージ設定
-        execute if score $Spread Temporary matches 2.. run data modify storage lib: Argument.Damage set value 15f
+        execute if score $Spread Temporary matches 2.. run data modify storage lib: Argument.Damage set value 45f
 
 # 完全収束ビーム
     execute if score $Spread Temporary matches ..1 facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/final_laser
     execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_start
     # ダメージ設定
-        execute if score $Spread Temporary matches ..1 run data modify storage lib: Argument.Damage set value 30f
+        execute if score $Spread Temporary matches ..1 run data modify storage lib: Argument.Damage set value 65f
 
 # サウンド
     execute if score $Spread Temporary matches 2.. run function asset:sacred_treasure/0573.final_prism/trigger/vfx/normal_laser
@@ -53,5 +53,6 @@
 
 # リセット
     scoreboard players reset $Random Temporary
-    scoreboard players reset $Temporary Temporary
+    scoreboard players reset $Spread Temporary
+    scoreboard players reset $SneakTime Temporary
     kill @e[type=marker,tag=SpreadMarker]

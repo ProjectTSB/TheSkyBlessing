@@ -11,8 +11,8 @@
     tag @s add 25.Hit
 
 # 攻撃処理
-    # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10f
+    # 与えるダメージ = 45
+        data modify storage lib: Argument.Damage set value 45f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

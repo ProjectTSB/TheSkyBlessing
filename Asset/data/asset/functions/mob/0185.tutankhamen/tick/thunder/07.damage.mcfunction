@@ -11,6 +11,8 @@
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Thunder"
+    # デスログ
+        data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sの蒼雷によって滅せられた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
     # ダメージ
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/

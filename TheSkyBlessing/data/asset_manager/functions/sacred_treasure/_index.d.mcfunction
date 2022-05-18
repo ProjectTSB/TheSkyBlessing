@@ -6,6 +6,7 @@
 #   asset_manager:sacred_treasure/**
 #   asset:sacred_treasure/*/register
 #   asset:sacred_treasure/*/give/2.give
+#   asset:sacred_treasure/*/trigger/2.check_condition
 #   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
@@ -20,6 +21,7 @@
 #> Trigger検知用
 # @within function
 #   asset_manager:sacred_treasure/triggers/**
+#   lib:damage/core/trigger_on_attack
 #   core:handler/**
     #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
@@ -32,7 +34,7 @@
 
 #> check用の失敗フラグ
 # @within function
-#   asset_manager:sacred_treasure/check/*
+#   asset_manager:sacred_treasure/check/**
     #declare tag CheckFailed
 
 #> スニークの閾値用スコアホルダー
@@ -49,7 +51,6 @@
 # @within *
 #   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**
-    #declare tag this
     #declare tag Attacker
     #declare tag Victim
     #declare tag Equip
@@ -59,15 +60,6 @@
 # @within * asset:sacred_treasure/**
     #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
 
-#> 防具変更情報の記録用タグ
-# @within function asset_manager:sacred_treasure/triggers/**
-    #declare tag ChangeMainhand
-    #declare tag ChangeOffhand
-    #declare tag ChangeHead
-    #declare tag ChangeChest
-    #declare tag ChangeLegs
-    #declare tag ChangeFeet
-
 #> クールダウン表示用
-# @within function asset_manager:sacred_treasure/show_cooldown/*
-    #declare score_holder $CoolDown
+# @within function asset_manager:sacred_treasure/cooldown/main_bar/*
+    #declare score_holder $Cooldown
