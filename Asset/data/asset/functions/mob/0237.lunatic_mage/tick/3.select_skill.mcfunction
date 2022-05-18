@@ -8,14 +8,13 @@
 # @private
     #declare tag 6L.AlreadyElement
 
-
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $8 Const
 
 # デバッグ用
-   scoreboard players set $Random Temporary 8
+   #scoreboard players set $Random Temporary 1
 
 # 体力が40%以下になった時、一度だけ確定で必殺技を使う
     execute if entity @s[tag=6L.HealthLess40Per,tag=!6L.AlreadyElement] run scoreboard players set $Random Temporary 8

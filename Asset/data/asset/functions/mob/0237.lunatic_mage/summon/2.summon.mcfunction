@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~-100 ~ {DeathTime:19s,Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
+    summon husk ~ ~-100 ~ {DeathTime:19s,Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 237
 # Type (string) Wikiを参照
@@ -47,10 +47,10 @@
         data modify storage asset:mob Resist.Thunder set value 1
 
 # 降ろす
-    execute positioned ~ ~-100 ~ as @e[type=zombie,tag=MobInit,distance=..0.01] run tp @s ~ ~100 ~
+    execute positioned ~ ~-100 ~ as @e[type=husk,tag=MobInit,distance=..0.01] run tp @s ~ ~100 ~
 
 # スコアを与える
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
+    execute as @e[type=husk,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
 # 登場演出
     function asset:mob/0237.lunatic_mage/skill/teleport/vfx
@@ -59,4 +59,4 @@
     execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=husk,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

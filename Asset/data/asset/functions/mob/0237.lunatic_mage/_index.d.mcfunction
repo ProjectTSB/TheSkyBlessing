@@ -20,7 +20,9 @@
 #> 体力40%以下のTag
 # @within function
 #   asset:mob/0237.lunatic_mage/hurt/**
+#   asset:mob/0237.lunatic_mage/tick/5.reset
 #   asset:mob/0237.lunatic_mage/tick/3.select_skill
+#   asset:mob/0237.lunatic_mage/tick/2.tick
     #declare tag 6L.HealthLess40Per
 
 #> 炎1の回転の向き
