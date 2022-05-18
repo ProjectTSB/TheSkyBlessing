@@ -46,11 +46,11 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 1
 
-# スコアを与える
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
-
 # 降ろす
     execute positioned ~ ~-100 ~ as @e[type=zombie,tag=MobInit,distance=..0.01] run tp @s ~ ~100 ~
+
+# スコアを与える
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
 # 演出
     particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 20
