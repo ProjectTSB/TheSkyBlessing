@@ -16,7 +16,7 @@
     execute if entity @s[scores={6L.Tick=2}] run playsound block.portal.trigger hostile @a ~ ~ ~ 0.8 2 0
 
 # パーティクル
-    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 2 force @a[distance=..20]
+    execute if entity @s[scores={6L.Tick=..20}] run particle dust 1 1 0 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 3 force @a[distance=..20]
     execute if entity @s[scores={6L.Tick=..20}] positioned ~ ~2.4 ~ positioned ^-0.6 ^ ^0.4 run particle glow ~ ~ ~ 0 0 0 0.02 1
 
 # 一度プレイヤーを二人指定し、その位置で雷の召喚地点となるAECを召喚する

@@ -28,13 +28,11 @@
 # 予備動作的な
     execute if entity @s[scores={6L.Tick=22}] at @a[distance=..20] run playsound minecraft:block.portal.travel hostile @a ~ ~ ~ 0.2 2 0
     execute if entity @s[scores={6L.Tick=..40}] run particle dust 1 1 1 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 3 force @a[distance=..20]
-    execute if entity @s[scores={6L.Tick=..40}] run particle dust 1 0.2 0.2 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
-    execute if entity @s[scores={6L.Tick=..40}] run particle dust 0.376 0.494 0.965 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
-    execute if entity @s[scores={6L.Tick=..40}] run particle dust 1 1 0.596 1 ~ ~1 ~ 0.4 0.5 0.4 0.3 1 force @a[distance=..20]
 
 # 召喚された地点にランダムなプレイヤー一人と、水の檻範囲内にいたプレイヤーと共にワープ
-    #execute if entity @s[scores={6L.Tick=40}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @r[distance=..100] ~ ~ ~
-    #execute if entity @s[scores={6L.Tick=40}] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @a[distance=..9] ~ ~ ~
+    execute if entity @s[scores={6L.Tick=40}] positioned as @s run tp @r[distance=..30] ^ ^ ^2
+    execute if entity @s[scores={6L.Tick=40}] positioned as @s run tp @a[distance=..9] ^ ^ ^2
+    execute if entity @s[scores={6L.Tick=40}] as @a[distance=..9] at @s run function asset:mob/0237.lunatic_mage/skill/elemental_confine/player_pull
 
 # アクティブ中に実行するコマンド
     execute if entity @s[scores={6L.Tick=41..450}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
