@@ -11,8 +11,6 @@
     playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.75
     playsound minecraft:entity.player.attack.sweep player @a ~ ~ ~ 1.5 1.25
 
-# 剣を回す
-    function asset:mob/0281.terra_doublis_attack/summon/2.summon
-
-# テラショット
-    #execute anchored eyes run function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+# 剣を召喚
+    data modify storage api: Argument.ID set value 281
+    execute positioned ^ ^ ^1.2 run function api:mob/summon
