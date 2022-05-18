@@ -59,7 +59,7 @@
     playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 2 2
 
 # 召喚地点用Markerを召喚
-    summon marker ~ ~ ~ {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
+    execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
