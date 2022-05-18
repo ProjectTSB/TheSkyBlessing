@@ -19,7 +19,7 @@
 # リセット
     scoreboard players reset $Interval Temporary
 
-# もしもなんらかの理由で移動した場合対策でMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
+# もしもなんらかの理由で移動してMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
     execute positioned ~ ~-2 ~ unless entity @e[type=marker,tag=6L.SpawnPoint,distance=..0.01,sort=nearest,limit=1] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..50,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
 
 # エンパをkill
