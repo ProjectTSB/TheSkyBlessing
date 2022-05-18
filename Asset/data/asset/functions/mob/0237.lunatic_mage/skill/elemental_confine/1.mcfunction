@@ -5,23 +5,8 @@
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
 
-# 頭装備解除
-    execute if entity @s[scores={6L.Tick=1}] run item replace entity @s armor.head with minecraft:air
-
-# 演出
-    execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/teleport
-
-# スポーン地点にワープ
-    execute if entity @s[scores={6L.Tick=1}] at @e[type=marker,tag=6L.SpawnPoint,distance=..100,sort=nearest,limit=1] run tp @s ~ ~2 ~
-
-# 演出
-    execute if entity @s[scores={6L.Tick=1}] at @s run function asset:mob/0237.lunatic_mage/skill/elemental_confine/teleport
-
-# 頭装備再装備
-    execute if entity @s[scores={6L.Tick=1}] run item replace entity @s armor.head with stick{CustomModelData:20199}
-
-# NoAIになる
-    execute if entity @s[scores={6L.Tick=1}] run data modify entity @s NoAI set value 1b
+# 開始のもろもろ
+    execute if entity @s[scores={6L.Tick=1}] run 
 
 # 大技にはかっこいい詠唱が付き物です
     execute if entity @s[scores={6L.Tick=2}] run summon area_effect_cloud ~ ~2 ~ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"Get over here","font":"illageralt","color":"light_purple"}'}
