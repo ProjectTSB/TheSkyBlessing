@@ -9,3 +9,4 @@
     scoreboard objectives add 7T.Spin dummy
     scoreboard objectives add 7T.Owner dummy
     scoreboard objectives add 7T.Life dummy
+    scoreboard objectives add 7T.Burst dummy

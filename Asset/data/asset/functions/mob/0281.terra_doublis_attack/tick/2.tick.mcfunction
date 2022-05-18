@@ -20,9 +20,9 @@
     execute store result entity @s Pose.Head[0] float 1 run data get storage api: Rotation[1]
 
 # 射撃攻撃
-    scoreboard players add @s 5U.Burst 1
-    scoreboard players reset @s[scores={5U.Burst=2,7T.Life=10..}] 5U.Burst
-    execute if entity @s[scores={5U.Burst=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+    scoreboard players add @s 7T.Burst 1
+    scoreboard players reset @s[scores={7T.Burst=2,7T.Life=10..}] 7T.Burst
+    execute if entity @s[scores={7T.Burst=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_tolureasure/0210.terra_blade/trigger/event/summon_shot
 
 # タグ削除
     tag @p[tag=7T.This] remove 7T.This

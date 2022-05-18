@@ -26,7 +26,7 @@
     scoreboard players set @s 5U.Range 100
 
 # IDコピー
-    scoreboard players operation @s 5U.ID = @a[tag=this,limit=1] UserID
+    scoreboard players operation @s 5U.ID = @a[tag=7T.This,limit=1] UserID
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]
