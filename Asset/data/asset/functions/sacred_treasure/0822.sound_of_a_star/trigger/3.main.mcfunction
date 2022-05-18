@@ -28,8 +28,14 @@
 
 # 星を召喚 MP割合によって個数変化
     summon marker ~ ~1.8 ~ {Tags:["MU.Star","Projectile"]}
+
+# UseIDをコピー
     execute positioned ~ ~1.8 ~ run scoreboard players operation @e[type=marker,tag=MU.Star,tag=!MU.Already,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+
+# 所定の位置に移動させる
     execute positioned ~ ~1.8 ~ run tp @e[type=marker,tag=MU.Star,tag=!MU.Already,distance=..0.01,sort=nearest,limit=1] ^ ^ ^0.5 ~ ~
+
+# 誤動作しないようにTagを付与
     execute positioned ~ ~1.8 ~ positioned ^ ^ ^0.5 run tag @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] add MU.Already
 
 # MP割合が34%以上なら2個目
