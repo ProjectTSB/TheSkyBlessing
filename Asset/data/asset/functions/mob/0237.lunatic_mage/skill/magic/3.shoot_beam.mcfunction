@@ -16,7 +16,7 @@
     execute positioned ^ ^ ^45 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 
 # 音で相手の位置がわかるように
-    execute at @a facing entity @s eyes as @p positioned ^ ^ ^3 run function asset:mob/0237.lunatic_mage/skill/magic/sound
+    execute at @a[distance=..50] facing entity @s eyes as @p positioned ^ ^ ^3 run function asset:mob/0237.lunatic_mage/skill/magic/sound
 
 
 # 再帰
