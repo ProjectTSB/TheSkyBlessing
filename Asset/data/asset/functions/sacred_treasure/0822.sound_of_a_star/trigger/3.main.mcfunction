@@ -28,16 +28,15 @@
 
 # 星を召喚 MP割合によって個数変化
     summon marker ~ ~1.8 ~ {Tags:["MU.Star","Projectile"]}
-    execute positioned ~ ~1.8 ~ run tp @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] ^ ^ ^0.5 ~ ~
-    scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+    execute positioned ~ ~1.8 ~ run scoreboard players operation @e[type=marker,tag=MU.Star,tag=!MU.Already,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+    execute positioned ~ ~1.8 ~ run tp @e[type=marker,tag=MU.Star,tag=!MU.Already,distance=..0.01,sort=nearest,limit=1] ^ ^ ^0.5 ~ ~
+    execute positioned ~ ~1.8 ~ positioned ^ ^ ^0.5 run tag @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] add MU.Already
 
-    execute if score $MPValue Temporary matches 34.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.2","Projectile"]}
-    execute if score $MPValue Temporary matches 34.. positioned ~ ~1.3 ~ run tp @e[type=marker,tag=MU.Star,tag=MU.2,distance=..0.01,sort=nearest,limit=1] ^0.4 ^ ^0.5 ~ ~
-    execute if score $MPValue Temporary matches 34.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+# MP割合が34%以上なら2個目
+    execute if score $MPValue Temporary matches 34.. positioned ~ ~1.3 ~ run function asset:sacred_treasure/0822.sound_of_a_star/trigger/4.summon_2nd
 
-    execute if score $MPValue Temporary matches 67.. run summon marker ~ ~1.3 ~ {Tags:["MU.Star","MU.3","Projectile"]}
-    execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run tp @e[type=marker,tag=MU.Star,tag=MU.3,distance=..0.01,sort=nearest,limit=1] ^-0.4 ^ ^0.5 ~ ~
-    execute if score $MPValue Temporary matches 67.. run scoreboard players operation @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] MU.UserID = @s UserID
+# MP割合が67%以上なら3個目
+    execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run function asset:sacred_treasure/0822.sound_of_a_star/trigger/5.summon_3rd
 
 # 星の処理開始
     schedule function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
