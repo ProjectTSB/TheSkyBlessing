@@ -6,7 +6,7 @@
 
 
 # 開始のもろもろ
-    execute if entity @s[scores={6L.Tick=1}] run 
+    execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/start
 
 # 大技にはかっこいい詠唱が付き物です
     execute if entity @s[scores={6L.Tick=2}] run summon area_effect_cloud ~ ~2 ~ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"Get over here","font":"illageralt","color":"light_purple"}'}
