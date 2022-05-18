@@ -5,10 +5,9 @@
 # @within function asset:mob/0237.lunatic_mage/skill/fire/1
 
 # 音
-    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 3 2
-    playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 3 2
+    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 3 1.5
+    playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 3 1.5
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 3 0.7
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 3 0.7
 
 # 発射
     execute anchored eyes positioned ^-0.25 ^-0.25 ^ rotated ~ 0 run function asset:mob/0237.lunatic_mage/magic_summon/fire
