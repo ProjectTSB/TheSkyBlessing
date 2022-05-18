@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1.0,Operation:0,UUID:[I;1,1,913,4],Slot:"feet"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3.0,Operation:0,UUID:[I;1,1,913,3],Slot:"feet"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:3.0,Operation:0,UUID:[I;1,1,914,3],Slot:"feet"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
