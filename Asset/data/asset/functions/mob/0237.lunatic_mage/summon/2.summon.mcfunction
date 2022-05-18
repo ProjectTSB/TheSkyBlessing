@@ -52,11 +52,8 @@
 # スコアを与える
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
-# 演出
-    particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 20
-    particle minecraft:explosion ~ ~1 ~ 0 0 0 0 1
-    playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 2 1.5
-    playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 2 2
+# 登場演出
+    function asset:mob/0237.lunatic_mage/skill/teleport/vfx
 
 # 召喚地点用Markerを召喚
     execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["Object","Uninterferable","6L.SpawnPoint"]}

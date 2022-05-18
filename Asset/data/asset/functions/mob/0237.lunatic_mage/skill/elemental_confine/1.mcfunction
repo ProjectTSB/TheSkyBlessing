@@ -5,8 +5,12 @@
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
 
+
 # 開始のもろもろ
     execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/start
+
+# 頭装備再装備
+    execute if entity @s[scores={6L.Tick=4}] run item replace entity @s armor.head with stick{CustomModelData:20199}
 
 # 大技にはかっこいい詠唱が付き物です
     execute if entity @s[scores={6L.Tick=2}] run summon area_effect_cloud ~ ~2 ~ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"Get over here","font":"illageralt","color":"light_purple"}'}

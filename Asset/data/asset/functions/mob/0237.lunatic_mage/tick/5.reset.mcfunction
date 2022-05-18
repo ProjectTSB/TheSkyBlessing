@@ -15,5 +15,8 @@
     tag @s remove 6L.ElementalConfine
     tag @s remove 6L.LeftRotation
 
+# ワープ
+    function asset:mob/0237.lunatic_mage/skill/teleport/main
+
 # ポーズもリセット
-    item replace entity @s armor.head with stick{CustomModelData:20198}
+    #item replace entity @s armor.head with stick{CustomModelData:20198}
