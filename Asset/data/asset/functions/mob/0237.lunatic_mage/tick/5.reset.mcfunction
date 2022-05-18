@@ -15,14 +15,11 @@
     tag @s remove 6L.ElementalConfine
     tag @s remove 6L.LeftRotation
 
-
 # ポーズもリセット
     item replace entity @s armor.head with stick{CustomModelData:20198}
 
-# 本気ワープ
+# 本気ワープのスコア
     execute if entity @s[tag=6L.HealthLess40Per] run scoreboard players add @s 6L.Count 1
 
 # ワープ
     execute if entity @s[scores={6L.Count=2..}] run function asset:mob/0237.lunatic_mage/skill/teleport/main
-    scoreboard players set @s[scores={6L.Count=2..}] 6L.Tick -10
-    scoreboard players reset @s[scores={6L.Count=2..}] 6L.Count

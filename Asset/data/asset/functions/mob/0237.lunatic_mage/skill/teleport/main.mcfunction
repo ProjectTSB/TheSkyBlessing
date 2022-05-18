@@ -21,3 +21,7 @@
 
 # パーティクル
     execute at @s run function asset:mob/0237.lunatic_mage/skill/teleport/vfx
+
+# 色々リセット
+    scoreboard players set @s 6L.Tick -10
+    scoreboard players reset @s 6L.Count
