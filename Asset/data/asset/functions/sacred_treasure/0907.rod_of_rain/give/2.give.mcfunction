@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"彩雨の杖","color":"blue"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"鮮やかに彩られた雨乞いに使われた杖。","color":"aqua"}','{"text":"ひとたび振るえば辺りに祝福の雨を降らすという。","color":"aqua"}','{"text":"雨は癒やしをもたらし、時には罪を洗い流す。","color":"aqua"}','{"text":"使用時、雨の降るエリアを設置する。","color":"blue"}','{"text":"エリア内の存在に対して","color":"blue"}','{"text":"敵Mobにはダメージを与え","color":"blue"}','{"text":"プレイヤーなら、体力を5.0回復する。","color":"blue"}','{"text":"この回復には水攻撃補正が追加で乗る。","color":"blue"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"鮮やかに彩られた雨乞いに使われた杖。","color":"aqua"}','{"text":"ひとたび振るえば辺りに祝福の雨を降らすという。","color":"aqua"}','{"text":"雨は癒やしをもたらし、時には罪を洗い流す。","color":"aqua"}','{"text":"使用時、雨の降るエリアを設置する。","color":"blue"}','{"text":"エリア内の存在に対して","color":"blue"}','{"text":"敵Mobにはダメージを与え","color":"blue"}','{"text":"プレイヤーなら体力を20.0回復する。","color":"blue"}','{"text":"この回復には水攻撃補正が追加で乗る。","color":"blue"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [300]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [1200]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
