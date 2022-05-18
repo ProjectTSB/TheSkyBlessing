@@ -15,6 +15,7 @@
     execute as @e[type=armor_stand,tag=N9.Start] at @s run function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
     execute as @e[type=armor_stand,tag=N9.Start] at @s run function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
     execute as @e[type=armor_stand,tag=N9.Start] at @s run function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
+    execute as @e[type=armor_stand,tag=N9.Start] at @s run function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
 
 # Scheduleループ
     execute if entity @e[type=armor_stand,tag=N9.Knife,limit=1] run schedule function asset:sacred_treasure/0837.the_world_knife/trigger/4.tick 1t replace

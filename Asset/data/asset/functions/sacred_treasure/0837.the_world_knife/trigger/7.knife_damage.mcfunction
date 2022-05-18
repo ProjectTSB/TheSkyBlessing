@@ -13,12 +13,12 @@
     tag @e[type=#lib:living,type=!player,tag=!N9.Knife,distance=..2,sort=nearest,limit=1] add N9.Target
 
 # 演出
-    particle sweep_attack ~ ~ ~ 0 0 0 0 1 force
     playsound item.trident.hit_ground player @a ~ ~ ~ 1 1
-
+    particle dust 1 1 1 1 ~ ~ ~ 0.2 0.2 0.2 0 20
+    particle end_rod ~ ~ ~ 0 0 0 0.5 7
 # 攻撃を与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 20f
+        data modify storage lib: Argument.Damage set value 141f
     # 属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正functionを実行

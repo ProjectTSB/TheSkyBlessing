@@ -11,7 +11,7 @@
     # 数のカウント
         execute store result score $Count Temporary run execute if entity @e[type=armor_stand,tag=N9.Knife,distance=..30]
     # もしいたらタグ消し
-        execute if score $Count Temporary matches 20.. run tag @s remove CanUsed
+        #execute if score $Count Temporary matches 20.. run tag @s remove CanUsed
     # リセット
         scoreboard players reset $Count
 # CanUsedタグをチェックして3.main.mcfunctionを実行する

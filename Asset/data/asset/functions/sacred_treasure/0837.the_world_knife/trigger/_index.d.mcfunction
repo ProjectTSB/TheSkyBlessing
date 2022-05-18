@@ -6,3 +6,4 @@
     #declare tag N9.First
     #declare tag N9.Knife
     #declare tag N9.Start
+    #declare tag N9.Target
