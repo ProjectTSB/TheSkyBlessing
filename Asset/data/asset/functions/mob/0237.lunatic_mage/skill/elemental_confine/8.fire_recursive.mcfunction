@@ -7,8 +7,9 @@
 #   asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire_recursive
 
 # パーティクル
-    particle flame ~ ~ ~ 0.25 0.25 0.25 0.005 1
-    particle dust 1 0.5 0 1 ~ ~ ~ 0 0 0 0 1
+    #particle flame ~ ~ ~ 0.02 0.022 00.2 0.001 1 force @a[distance=..20]
+    particle dust 1 0.5 0 1 ~ ~ ~ 0 0 0 0 1 force @a[distance=..20]
+    particle minecraft:dust 100000000 1 0 1 ~ ~ ~ 0.02 0.02 0.02 0 1 force @a[distance=..20]
 
 # ヒット処理
     execute positioned ~-0.5 ~-0.5 ~-0.5 run tag @a[gamemode=!creative,gamemode=!spectator,dx=0] add LandingTarget

@@ -5,7 +5,7 @@
 # @within function asset:mob/0237.lunatic_mage/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
+    summon zombie ~ ~-100 ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0237.lunatic_mage"}
 # ID (int)
     data modify storage asset:mob ID set value 237
 # Type (string) Wikiを参照
@@ -49,9 +49,17 @@
 # スコアを与える
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run scoreboard players set @s 6L.Tick -60
 
+# 降ろす
+    execute positioned ~ ~-100 ~ as @e[type=zombie,tag=MobInit,distance=..0.01] run tp @s ~ ~100 ~
+
+# 演出
+    particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 20
+    particle minecraft:explosion ~ ~1 ~ 0 0 0 0 1
+    playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 2 2
+
 # 召喚地点用Markerを召喚
     summon marker ~ ~ ~ {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
-
