@@ -6,7 +6,7 @@
 # @within function asset:mob/0281.terra_doublis_attack/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Invisible:1b,Pose:{Head:[0.1f,0.1f,0.1f]},Tags:["MobInit"]}
+    summon armor_stand ~ ~ ~ {DisabledSlots:4144959,Invisible:1b,Pose:{Head:[0.1f,0.1f,0.1f]},Tags:["MobInit"]}
 # ID (int)
     data modify storage asset:mob ID set value 281
 # Type (string) Wikiを参照
