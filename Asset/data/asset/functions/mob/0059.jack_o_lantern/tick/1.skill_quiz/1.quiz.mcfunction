@@ -17,10 +17,9 @@
     execute if score @s 1N.Tick matches 20 run item replace entity @s armor.head with carved_pumpkin{CustomModelData:20016}
 
 # hurt時につく被ダメタグがあった場合、クイズに正解して、このスキルを終える
-    execute if score @s 1N.Tick matches 20..259 if entity @s[tag=1N.Hurt] run schedule function asset:mob/0059.jack_o_lantern/tick/dummy_kill 1t replace
-    execute if score @s 1N.Tick matches 20..259 if entity @s[tag=1N.Hurt] run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end
+    execute if score @s 1N.Tick matches 20..159 if entity @s[tag=1N.Hurt] run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/4.quiz_clear
 
 # クイズに失敗した場合、発光する
-    #execute if score @s 1N.Tick matches 260 run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/3.glow
+    execute if score @s 1N.Tick matches 160 run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/3.glow
 
-    execute if score @s 1N.Tick matches 300.. run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end
+    execute if score @s 1N.Tick matches 200.. run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end

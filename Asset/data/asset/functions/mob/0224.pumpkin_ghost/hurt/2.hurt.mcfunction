@@ -19,10 +19,7 @@
 
 # 演出
     particle block_marker barrier ~ ~1 ~ 0 0 0 0 0
-    playsound minecraft:block.note_block.bass hostile @a ~ ~ ~ 1 0.5
-    playsound minecraft:block.note_block.bass hostile @a ~ ~ ~ 1 0.6
-    playsound minecraft:block.note_block.bass hostile @a ~ ~ ~ 1 0.7
-    playsound minecraft:block.note_block.bass hostile @a ~ ~ ~ 1 0.8
+    playsound minecraft:entity.witch.celebrate hostile @a ~ ~ ~ 1 2
 
 say aaa
 # 撤退

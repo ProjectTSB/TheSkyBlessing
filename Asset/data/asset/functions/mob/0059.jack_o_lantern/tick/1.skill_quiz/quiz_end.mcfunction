@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/1.quiz
+# @within function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/**
 
 # 頭を変える
     item replace entity @s armor.head with carved_pumpkin{CustomModelData:20016}

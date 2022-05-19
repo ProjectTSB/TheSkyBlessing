@@ -7,7 +7,12 @@
 # 発光
     item replace entity @s armor.head with jack_o_lantern{CustomModelData:20017}
     tag @s add 1N.Glow
-    effect give @s speed 4 9 true
+    effect clear @s slowness
+    effect give @s speed 2 9 true
+
+# 演出
+    particle minecraft:witch ~ ~1 ~ 0 0 0 0.7 100
+    playsound minecraft:entity.witch.celebrate hostile @a ~ ~ ~ 1 2
 
 # キル
     tp @e[type=zombie,scores={MobID=224},distance=..30,limit=8] ~ -100 ~
