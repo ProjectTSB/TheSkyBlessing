@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam
 #
-# ビーム発射の時の演出で再帰に入れたくないのがここに入っています
+# ビームの発射処理
 #
 # @within function asset:mob/0237.lunatic_mage/skill/magic/1
 
@@ -17,7 +17,6 @@
 
 # 音で相手の位置がわかるように
     execute at @a[distance=..50] facing entity @s eyes as @p positioned ^ ^ ^3 run function asset:mob/0237.lunatic_mage/skill/magic/sound
-
 
 # 再帰
     function asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive

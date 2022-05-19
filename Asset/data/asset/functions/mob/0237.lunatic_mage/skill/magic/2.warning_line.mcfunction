@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/2.warning_line
 #
-# 予告線
+# 予告線を出す処理
 #
 # @within function
 #   asset:mob/0237.lunatic_mage/skill/magic/1

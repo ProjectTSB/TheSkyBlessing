@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/10.thunder
 #
-# 雷を落とす
+# 雷を一定間隔で落とす処理
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 

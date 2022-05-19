@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/6.hit
 #
-# ヒット処理だよ
+# ヒット処理
 #
 # @within function asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam
 

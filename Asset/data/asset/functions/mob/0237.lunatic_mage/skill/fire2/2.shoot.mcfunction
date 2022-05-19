@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/fire2/2.shoot
 #
-# 3way弾を打つよ
+# 3wayの火の弾を発射する処理
 #
 # @within function asset:mob/0237.lunatic_mage/skill/fire2/1
 

@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/7.fire_shoot
 #
-#
+# 火の弾の発射処理
 #
 # @within function
 #   asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire

@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 #
-# ビーム発射のときの形
+# ビームの演出として使う円
 #
 # @within function asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam
 

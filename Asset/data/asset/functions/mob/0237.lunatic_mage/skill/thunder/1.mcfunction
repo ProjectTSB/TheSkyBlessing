@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/thunder/1
 #
-# 雷スキルを管理します
+# 雷スキルのメイン処理
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 

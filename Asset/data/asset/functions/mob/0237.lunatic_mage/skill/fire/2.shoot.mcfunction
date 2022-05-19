@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/fire/2.shoot
 #
-# 発射します
+# 火の弾を発射する
 #
 # @within function asset:mob/0237.lunatic_mage/skill/fire/1
 

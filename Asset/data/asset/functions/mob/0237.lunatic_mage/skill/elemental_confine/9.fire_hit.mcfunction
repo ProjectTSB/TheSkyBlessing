@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/9.fire_hit
 #
-#
+# 火の弾のヒット処理
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/7.fire_shoot
 

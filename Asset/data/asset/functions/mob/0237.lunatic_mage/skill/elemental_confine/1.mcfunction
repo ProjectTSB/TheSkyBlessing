@@ -1,10 +1,8 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 #
-# プレイヤーを殺す技
+# メイン処理部
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
-
-
 
 # 開始のもろもろ
     execute if entity @s[scores={6L.Tick=1}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/start

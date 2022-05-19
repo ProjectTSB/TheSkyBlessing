@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/8.fire_recursive
 #
-# 火の再帰を行う
+# 火の弾の再帰を行う
 #
 # @within function
 #   asset:mob/0237.lunatic_mage/skill/elemental_confine/7.fire_shoot

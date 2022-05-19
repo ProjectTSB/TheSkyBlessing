@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/water/1
 #
-# 水魔法を管理します
+# 水スキルのメイン処理
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 

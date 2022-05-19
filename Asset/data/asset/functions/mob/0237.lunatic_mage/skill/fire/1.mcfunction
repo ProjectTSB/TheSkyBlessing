@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/fire/1
 #
-# 火スキルを管理します
+# 火スキルのメイン処理
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 

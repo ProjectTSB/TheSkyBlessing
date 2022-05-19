@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive
 #
-# 再帰ビームだよ
+# ビームの再帰処理部
 #
 # @within function
 #   asset:mob/0237.lunatic_mage/skill/magic/3.shoot_beam

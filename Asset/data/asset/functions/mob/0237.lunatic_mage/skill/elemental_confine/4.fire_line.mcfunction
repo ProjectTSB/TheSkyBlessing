@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 #
-# 炎の予告線
+# 炎の予告線を出す
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 

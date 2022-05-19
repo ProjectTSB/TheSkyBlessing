@@ -1,6 +1,6 @@
 #> asset:mob/0237.lunatic_mage/skill/magic/1
 #
-# 魔法属性ビーム！
+# 無属性魔法のメイン処理部
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
