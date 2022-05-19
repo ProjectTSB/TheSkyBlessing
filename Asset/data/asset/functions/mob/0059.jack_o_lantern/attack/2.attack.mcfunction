@@ -11,8 +11,3 @@
 
 # 不運を付与
     effect give @p[tag=Victim,distance=..6] unluck 15 2 false
-# スコア蓄積
-    execute unless score @s 1N.Surprise matches 8.. run scoreboard players add @s 1N.Surprise 1
-
-# 発光状態の時に火属性攻撃
-    execute if score @s 1N.Glowing matches 40.. run function asset:mob/0059.jack_o_lantern/attack/3.glowing_state

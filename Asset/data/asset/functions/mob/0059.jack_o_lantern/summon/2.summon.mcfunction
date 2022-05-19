@@ -31,7 +31,7 @@
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
+    # data modify storage asset:mob ArmorDropChances set value 
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 5000
 # 攻撃力 (double) (オプション)
