@@ -5,8 +5,7 @@
 # @within function
 #   api:mob/summon
 #   api:sacred_treasure/*/from_id
-#   asset_manager:mob/triggers/death/*
-#   asset_manager:island/dispel/successful
+#   asset_manager:mob/triggers/death/manual
 
 # スタックに新しい空間を追加する
     data modify storage asset:context IDStashStack set value {}
