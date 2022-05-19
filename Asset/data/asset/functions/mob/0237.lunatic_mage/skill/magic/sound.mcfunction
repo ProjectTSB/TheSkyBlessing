@@ -10,5 +10,4 @@
     playsound item.trident.return hostile @s ~ ~ ~ 0.6 2
     playsound entity.blaze.shoot hostile @s ~ ~ ~ 0.5 2
     playsound minecraft:block.respawn_anchor.deplete hostile @s ~ ~ ~ 0.4 2
-    playsound ogg:block.respawn_anchor.set_spawn1 hostile @s ~ ~ ~ 1 1.4
-    #playsound minecraft:block.respawn_anchor.deplete hostile @s ~ ~ ~ 0.4 1.5
+    playsound minecraft:block.respawn_anchor.set_spawn hostile @a ~ ~ ~ 1 1.4
