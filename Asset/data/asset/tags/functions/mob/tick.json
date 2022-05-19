@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0054.pumpkin_meteor/tick/1.trigger",
         "asset:mob/0224.pumpkin_ghost/tick/1.trigger",
         "asset:mob/0085.soul_bullet/tick/1.trigger",
         "asset:mob/0084.falcios_priest/tick/1.trigger",
