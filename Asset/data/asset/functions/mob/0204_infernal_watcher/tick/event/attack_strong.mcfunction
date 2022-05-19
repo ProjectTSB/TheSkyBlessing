@@ -1,16 +1,16 @@
-#> asset:mob/0204_infernal_watcher/tick/event/attack
+#> asset:mob/0204_infernal_watcher/tick/event/attack_strong
 #
-# 接触ダメージ 実行しているのはプレイヤー自身
+#
 #
 # @within function asset:mob/0204_infernal_watcher/tick/2.tick
 
 # VFX
-    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.spider.step hostile @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:block.wart_block.break hostile @a ~ ~ ~ 1.5 1
+    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.phantom.bite hostile @a ~ ~ ~ 1 1
+    playsound minecraft:entity.blaze.hurt hostile @a ~ ~ ~ 1 1.5
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 25f
+    data modify storage lib: Argument.Damage set value 40f
     data modify storage lib: Argument.AttackType set value "Fire"
     data modify storage lib: Argument.ElementType set value "None"
 
@@ -27,4 +27,4 @@
     data remove storage lib: Argument
 
 # クールタイム設定
-    scoreboard players set @s 5O.AttackCT 20
+    scoreboard players set @s 5O.AttackCT 15

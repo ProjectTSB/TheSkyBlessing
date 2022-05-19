@@ -3,3 +3,8 @@
 # Mobの被ダメージ時の処理
 #
 # @within function asset:mob/0204_infernal_watcher/hurt/1.trigger
+
+playsound minecraft:entity.spider.step hostile @a ~ ~ ~ 1.5 1.5
+playsound minecraft:entity.blaze.hurt hostile @a ~ ~ ~ 1 1.5
+particle block coal_block ~ ~1.68 ~ 0 0 0 0 25
+particle flame ~ ~1.68 ~ 0 0 0 0.2 5
