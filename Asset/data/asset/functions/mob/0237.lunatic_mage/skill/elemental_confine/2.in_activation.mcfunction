@@ -18,7 +18,7 @@
     scoreboard players operation $Interval Temporary = @s 6L.Tick
     scoreboard players operation $Interval Temporary %= $10 Const
     execute positioned ~-9 ~-2 ~-9 run tag @a[dx=17,dy=0,dz=17] add 6L.InSafeArea
-    execute if score $Interval Temporary matches 0 at @a[tag=!6L.InSafeArea,gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.2 ~ run function asset:mob/0237.lunatic_mage/magic_summon/thunder
+    execute if score $Interval Temporary matches 0 at @a[gamemode=!spectator,tag=!6L.InSafeArea,distance=..50,sort=random,limit=5] positioned ~ ~0.2 ~ run function asset:mob/0237.lunatic_mage/magic_summon/thunder
 
 # リセット
     scoreboard players reset $Interval Temporary
