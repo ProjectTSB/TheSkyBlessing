@@ -6,8 +6,8 @@
 
 # 回転
     execute align xyz positioned ~.5 ~ ~.5 run tp @s ^ ^ ^-.375 ~ ~
-    execute run tag @s remove 7L.RotateLeft
-    execute run tag @s remove 7L.RotateRight
+    tag @s remove 7L.RotateLeft
+    tag @s remove 7L.RotateRight
 
 # 向きのスコアを更新
     execute store result score @s 7L.FallingRotation run data get entity @s Rotation[0] 1
