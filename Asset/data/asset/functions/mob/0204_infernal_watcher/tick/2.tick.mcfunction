@@ -20,7 +20,7 @@
     scoreboard players remove @s[scores={5O.AttackCT=1..}] 5O.AttackCT 1
 
 # クールタイム中じゃないなら接触時に攻撃
-    execute unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[gamemode=!creative,gamemode=!spectator,dx=0] run function 
+    execute unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0204_infernal_watcher/tick/event/attack
 
 # カベにぶつかった際の処理
     execute unless block ^ ^ ^0.5 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
