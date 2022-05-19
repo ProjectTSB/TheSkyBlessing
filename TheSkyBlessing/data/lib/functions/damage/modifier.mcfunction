@@ -1,6 +1,6 @@
 #> lib:damage/modifier
 #
-# ヒールライブラリの引数を実行者の補正値で補正します
+# Argument.Damageを実行者の補正値で補正します
 #
 # @input
 #   as entity
@@ -9,8 +9,6 @@
 #       Argument.FixedDamage : boolean
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
-#       Argument.BypassArmor? : boolean
-#       Argument.BypassResist? : boolean
 # @output storage lib: Argument.Damage : float
 # @api
 
