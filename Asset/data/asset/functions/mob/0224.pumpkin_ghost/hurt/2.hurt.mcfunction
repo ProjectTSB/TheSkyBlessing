@@ -11,7 +11,7 @@
     data modify storage lib: Argument.ByPassResist set value 1b
     data modify storage lib: Argument.FixedDamage set value 1b
 # 死亡メッセージ
-    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは呪われてしまった！","with":[{"selector":"@p[tag=Attacker,distance=..50]"}]}]']
+    data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは呪われてしまった！","with":[{"selector":"@s"}]}]']
 # 補正（つかうかわからん）
     # function lib:damage/modifier
 # ダメージ
@@ -21,7 +21,6 @@
     particle block_marker barrier ~ ~1 ~ 0 0 0 0 0
     playsound minecraft:entity.witch.celebrate hostile @a ~ ~ ~ 1 2
 
-say aaa
 # 撤退
     tp ~ -1000 ~
     kill @s
