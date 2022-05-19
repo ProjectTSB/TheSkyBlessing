@@ -5,7 +5,7 @@
 # @within function asset:mob/0224.pumpkin_ghost/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
 # ID (int)
     data modify storage asset:mob ID set value 224
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"jack_o_lantern",Count:1,tag:{CustomModelData:20017}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:carved_pumpkin"}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 1
+    data modify storage asset:mob Health set value 9999
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -41,9 +41,9 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    # data modify storage asset:mob Speed set value
+    data modify storage asset:mob Speed set value 0
 # 索敵範囲 (double) (オプション)
-    data modify storage asset:mob FollowRange set value 0
+    data modify storage asset:mob FollowRange set value 16
 # ノックバック耐性 (double) (オプション)
     # data modify storage asset:mob KnockBackResist set value
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
@@ -57,6 +57,7 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.9
-
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=vex,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+
+

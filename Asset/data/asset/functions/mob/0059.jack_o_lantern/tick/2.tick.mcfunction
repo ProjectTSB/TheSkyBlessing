@@ -4,7 +4,9 @@
 #
 # @within function asset:mob/0059.jack_o_lantern/tick/1.trigger
 
-
+# 演出
+    particle dust 1 0.6 0 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
+    particle dust 0.851 0 1 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
 
 # スコアを増やす
     scoreboard players add @s 1N.Tick 1
