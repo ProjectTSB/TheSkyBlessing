@@ -11,8 +11,8 @@
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 40f
-    data modify storage lib: Argument.AttackType set value "Fire"
-    data modify storage lib: Argument.ElementType set value "None"
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Fire"
 
 # 補正実行
     function lib:damage/modifier

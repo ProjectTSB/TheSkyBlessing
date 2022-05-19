@@ -29,9 +29,9 @@
     data modify entity @s[scores={5O.HurtTime=10}] NoAI set value 0b
 
 # パーティクル
-    particle dust 0.761 0.267 0 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 force @a[distance=..40]
-    particle dust 0.792 0 0 1 ~ ~1.68 ~ 0.25 0.25 0.25 0 1 force @a[distance=..40]
-    execute if entity @s[scores={5O.MoveTime=60..100}] run particle flame ~ ~1.68 ~ 0.25 0.25 0.25 0 1
+    particle dust 0.761 0.267 0 1 ~ ~1.5 ~ 0.25 0.25 0.25 0 1 force @a[distance=..40]
+    particle dust 0.792 0 0 1 ~ ~1.5 ~ 0.25 0.25 0.25 0 1 force @a[distance=..40]
+    execute if entity @s[scores={5O.MoveTime=60..100}] run particle flame ~ ~1.5 ~ 0.25 0.25 0.25 0 1
 
 # 接地で上を向く
     execute positioned ~ ~1.68 ~ unless block ~ ~-1 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~-35
