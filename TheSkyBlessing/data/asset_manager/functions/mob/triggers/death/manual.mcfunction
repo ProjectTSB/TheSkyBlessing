@@ -6,16 +6,18 @@
 
 # 既存にasset:context idが存在する場合に退避させる
     function asset_manager:common/context_id/stash
-# Contextの設定
+# すでにCommandSourceStackとしてこのentityを掴んでいて同tick内にlib:damage/を実行する可能性に備えてタグを付与する
+    tag @s add Death
+# 引数の設定
+    execute store result storage api: Argument.ID int 1 run scoreboard players get @s MobID
+# スポナーへのダメージ処理
+    function api:spawner/subtract_hp
+# contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
 # 実際の死亡時にもう一度Deathが実行されないためにDeathLootTableを消し飛ばす
     data modify entity @s DeathLootTable set value "empty"
-# すでにCommandSourceStackとしてこのentityを掴んでいて同tick内にlib:damage/を実行する可能性に備えてタグを付与する
-    tag @s add Death
 # さよなら～
     kill @s
-# スポナーへのダメージ処理
-    function asset_manager:spawner/subtract_hp/
 # トリガーの呼び出し
     function #asset:mob/death
 # 退避させたasset:context idを戻す
