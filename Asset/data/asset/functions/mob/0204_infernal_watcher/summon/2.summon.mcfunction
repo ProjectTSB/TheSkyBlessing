@@ -5,7 +5,7 @@
 # @within function asset:mob/0204_infernal_watcher/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0204_infernal_watcher"}
+    summon zombie ~ ~ ~ {NoAI:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],Silent:1b,DeathLootTable:"asset:mob/death/0204_infernal_watcher"}
 # ID (int)
     data modify storage asset:mob ID set value 204
 # Type (string) Wikiを参照
