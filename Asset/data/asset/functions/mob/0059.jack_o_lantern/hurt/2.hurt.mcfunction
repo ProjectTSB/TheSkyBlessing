@@ -19,7 +19,7 @@
 # 発光状態までのスコア蓄積
     scoreboard players add @s 1N.Surprise 3
 
-# 5回被ダメ時に周囲に眷属が2体以下なら3体召喚
+# 5回以上被ダメ時に周囲に眷属が2体以下なら3体召喚
     execute store result score $MobCount Temporary if entity @e[type=vex,scores={MobID=224},distance=..50]
     execute if entity @s[scores={1N.HurtCount=5..}] if score $MobCount Temporary matches ..2 run function asset:mob/0059.jack_o_lantern/hurt/4.summon
     scoreboard players reset $MobCount Temporary
