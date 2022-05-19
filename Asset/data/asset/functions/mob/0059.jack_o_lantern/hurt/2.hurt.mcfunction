@@ -17,7 +17,7 @@
     scoreboard players add @s 1N.HurtCount 1
 
 # 発光状態までのスコア蓄積
-    scoreboard players add @s 1N.Surprise 3
+    execute unless entity @s[scores={1N.Surprise=8..}] run scoreboard players add @s 1N.Surprise 3
 
 # 5回以上被ダメ時に周囲に眷属が2体以下なら3体召喚
     execute store result score $MobCount Temporary if entity @e[type=vex,scores={MobID=224},distance=..50]
