@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 
-
 # 演出
     particle flame ^ ^ ^0.5 0 0 0 0 1 force @a[distance=..20]
     particle flame ^ ^ ^1 0 0 0 0 1 force @a[distance=..20]

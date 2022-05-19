@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 
-
 # 実行時間を移す
     scoreboard players operation $Interval Temporary = @s 6L.Tick
 

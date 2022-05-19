@@ -4,15 +4,21 @@
 #
 # @within function asset:mob/0237.lunatic_mage/skill/elemental_confine/1
 
-#> 安全地帯チェック
+#> 安全地帯チェックのTag
 # @private
-#declare tag 6L.InSafeArea
+    #declare tag 6L.InSafeArea
 
 # 実行時間を移す
     scoreboard players operation $Interval Temporary = @s 6L.Tick
 # 6tickごとに水の檻を表示
     scoreboard players operation $Interval Temporary %= $6 Const
     execute positioned ~ ~-2 ~ if score $Interval Temporary matches 0 rotated 0 0 run function asset:mob/0237.lunatic_mage/skill/elemental_confine/3.water_jail
+
+# もしもなんらかの理由で移動してMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
+    execute positioned ~ ~-2 ~ unless entity @e[type=marker,tag=6L.SpawnPoint,distance=..0.01,sort=nearest,limit=1] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..50,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
+
+# エンパをkill
+    execute if entity @e[type=ender_pearl,tag=!Projectile,distance=5.5..9] run kill @e[type=ender_pearl,tag=!Projectile,distance=5.5..9]
 
 # 技の範囲外にいる最大5人を対象とし、ペナルティとして雷撃をくらわせる
     scoreboard players operation $Interval Temporary = @s 6L.Tick
@@ -23,9 +29,3 @@
 # リセット
     scoreboard players reset $Interval Temporary
     tag @a[tag=6L.InSafeArea,distance=..50] remove 6L.InSafeArea
-
-# もしもなんらかの理由で移動してMarkerから離れた場合戻る positioned asが入っているのは移動した際の向き保存のため
-    execute positioned ~ ~-2 ~ unless entity @e[type=marker,tag=6L.SpawnPoint,distance=..0.01,sort=nearest,limit=1] positioned as @e[type=marker,tag=6L.SpawnPoint,distance=..50,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
-
-# エンパをkill
-    execute if entity @e[type=ender_pearl,tag=!Projectile,distance=5.5..9] run kill @e[type=ender_pearl,tag=!Projectile,distance=5.5..9]
