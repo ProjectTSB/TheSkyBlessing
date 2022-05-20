@@ -16,7 +16,9 @@
     item replace entity @s armor.head with stick{CustomModelData:20210}
 
 # こっちに対してMotionで飛ぶ
-    data modify storage lib: Argument.VectorMagnitude set value 1
+    execute if entity @a[distance=..7] run data modify storage lib: Argument.VectorMagnitude set value 1
+    execute if entity @a[distance=7..14] run data modify storage lib: Argument.VectorMagnitude set value 1.5
+    execute if entity @a[distance=14..30] run data modify storage lib: Argument.VectorMagnitude set value 2
     execute facing entity @p feet run function lib:motion/
     data remove storage lib: Argument
 
