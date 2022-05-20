@@ -14,11 +14,11 @@
     execute store result score @s 5O.HurtTime run data get entity @s HurtTime
 
 # スコアによって速度が変わる、最高速のときはダメージを受けても止まらない
-    execute if entity @s[scores={5O.MoveTime=..59,5O.HurtTime=0}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
-    execute if entity @s[scores={5O.MoveTime=60..}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.5 ~ ~
+    execute if entity @s[scores={5O.MoveTime=..39,5O.HurtTime=0}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+    execute if entity @s[scores={5O.MoveTime=40..}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.5 ~ ~
 
 # サウンド
-    execute if entity @s[scores={5O.MoveTime=60}] run function asset:mob/0204_infernal_watcher/tick/event/start_frenzy
+    execute if entity @s[scores={5O.MoveTime=40}] run function asset:mob/0204_infernal_watcher/tick/event/start_frenzy
     execute if entity @s[scores={5O.MoveTime=100}] run function asset:mob/0204_infernal_watcher/tick/event/end_frenzy
 
 # スコアリセット
