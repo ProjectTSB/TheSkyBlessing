@@ -9,3 +9,6 @@
 
 # メテオ
     execute if entity @s[tag=1N.SkillMeteor] run function asset:mob/0059.jack_o_lantern/tick/2.skill_meteor/1.meteor
+
+# ミサイル
+    execute if entity @s[tag=1N.SkillMissile] run function asset:mob/0059.jack_o_lantern/tick/3.missile/1.missile

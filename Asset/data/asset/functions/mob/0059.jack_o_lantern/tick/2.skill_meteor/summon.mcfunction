@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0059.jack_o_lantern/tick/2.skill_meteor/1.meteor
 
+# 演出
+    playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1 2
+
 # 最寄りのプレイヤーに対して発動（範囲内にいないなら不発）
     data modify storage api: Argument.ID set value 54
     function api:mob/summon
