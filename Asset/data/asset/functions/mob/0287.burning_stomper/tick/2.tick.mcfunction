@@ -15,7 +15,7 @@
 
 # ゴリ押しで着地ダメージ無効化
     scoreboard players add @s 7Z.FallResist 1
-    execute if entity @s[scores={7Z.FallResist=3..,7Z.MoveTime=11..}] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:0.5f,Particle:"lava",Duration:6,Age:4,Effects:[{Id:28b,Amplifier:0b,Duration:2,ShowParticles:0b}]}
+    execute if entity @s[scores={7Z.FallResist=3..,7Z.MoveTime=30..}] run summon minecraft:area_effect_cloud ~ ~ ~ {Radius:0.5f,Particle:"lava",Duration:6,Age:4,Effects:[{Id:28b,Amplifier:0b,Duration:2,ShowParticles:0b}]}
     scoreboard players reset @s[scores={7Z.FallResist=3..}] 7Z.FallResist
 
 # 首固定
