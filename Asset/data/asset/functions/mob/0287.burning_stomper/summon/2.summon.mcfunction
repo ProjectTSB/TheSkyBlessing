@@ -5,7 +5,7 @@
 # @within function asset:mob/0287.burning_stomper/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {CustomNameVisible:0b,Tags:["MobInit"],DeathLootTable:"asset:mob/death/0287.burning_stomper"}
+    summon wither_skeleton ~ ~ ~ {CustomNameVisible:0b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0287.burning_stomper"}
 # ID (int)
     data modify storage asset:mob ID set value 287
 # Type (string) Wikiを参照
@@ -16,11 +16,12 @@
     data modify storage asset:mob Name set value '{"text":"バーニングストンパー","color":"red"}'
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-672593164,1073039141,-1481174912,860659466],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JjYmJmOTRkNjAzNzQzYTFlNzE0NzAyNmUxYzEyNDBiZDk4ZmU4N2NjNGVmMDRkY2FiNTFhMzFjMzA5MTRmZCJ9fX0="}]}}}}
+        #data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-672593164,1073039141,-1481174912,860659466],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JjYmJmOTRkNjAzNzQzYTFlNzE0NzAyNmUxYzEyNDBiZDk4ZmU4N2NjNGVmMDRkY2FiNTFhMzFjMzA5MTRmZCJ9fX0="}]}}}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20209}}
     # 脚 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:7015424}}}
+        #data modify storage asset:mob Armor.Legs set value {id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:7015424}}}
     # 足 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Feet set value {id:"minecraft:diamond_boots",Count:1b,tag:{Enchantments:[{id:"minecraft:blast_protection",lvl:1s}]}}
+        #data modify storage asset:mob Armor.Feet set value {id:"minecraft:diamond_boots",Count:1b,tag:{Enchantments:[{id:"minecraft:blast_protection",lvl:1s}]}}
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 3000
 # 攻撃力 (double) (オプション)

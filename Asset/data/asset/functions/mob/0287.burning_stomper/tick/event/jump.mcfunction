@@ -8,9 +8,12 @@
     particle minecraft:poof ~ ~0.2 ~ 0.25 0 0.25 0 20
     playsound minecraft:entity.iron_golem.attack hostile @a ~ ~ ~ 1.5 1
     playsound minecraft:entity.goat.long_jump hostile @a ~ ~ ~ 1.5 1
-    
+
 # こっちを向く
     execute facing entity @p eyes run tp @s ~ ~ ~ ~ ~
+
+# モデル変更
+    item replace entity @s armor.head with stick{CustomModelData:20210}
 
 # こっちに対してMotionで飛ぶ
     data modify storage lib: Argument.VectorMagnitude set value 1

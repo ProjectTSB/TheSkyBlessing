@@ -10,6 +10,8 @@
     playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1.5 1
     scoreboard players reset @s 7Z.MoveTime
 
+# モデル変更
+    item replace entity @s armor.head with stick{CustomModelData:20209}
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 40f
