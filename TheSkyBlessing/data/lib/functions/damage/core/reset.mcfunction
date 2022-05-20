@@ -12,3 +12,4 @@ data remove storage lib: Argument.DeathMessage
 data remove storage lib: Argument.FixedDamage
 
 scoreboard players reset $LatestModifiedUser UserID
+scoreboard players reset $LatestModifiedEntity MobUUID
