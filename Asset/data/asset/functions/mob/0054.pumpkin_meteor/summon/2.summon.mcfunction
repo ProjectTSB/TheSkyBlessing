@@ -58,8 +58,8 @@
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
 
-# 召喚者の反対方向を見る
-    execute facing entity @s eyes run tp @e[type=zombie,tag=MobInit,distance=..0.01] ~ ~ ~ ~180 -10
+# プレイヤーをみる
+    tp @e[type=zombie,tag=MobInit,distance=..0.01] ~ ~ ~ facing entity @p
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
