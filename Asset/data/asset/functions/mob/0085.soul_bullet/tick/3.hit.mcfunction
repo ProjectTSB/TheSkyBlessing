@@ -10,7 +10,7 @@
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
     execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 消滅
     kill @s
