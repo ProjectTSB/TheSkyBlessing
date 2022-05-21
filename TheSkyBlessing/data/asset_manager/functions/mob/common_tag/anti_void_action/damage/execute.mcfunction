@@ -9,5 +9,5 @@ execute if entity @s[distance=..4] store result storage lib: Argument.Damage flo
 execute if entity @s[distance=..3] store result storage lib: Argument.Damage float 0.050 run attribute @s generic.max_health get 10
 execute if entity @s[distance=..2] store result storage lib: Argument.Damage float 0.065 run attribute @s generic.max_health get 10
 execute if entity @s[distance=..1] store result storage lib: Argument.Damage float 0.080 run attribute @s generic.max_health get 10
-execute as @e[tag=AntiVoidTarget,distance=..0.01,limit=1] run function lib:damage/modifier
+execute as @e[tag=AntiVoidTarget,distance=..0.01,limit=1] run function lib:damage/modifier_continuation
 function lib:damage/
