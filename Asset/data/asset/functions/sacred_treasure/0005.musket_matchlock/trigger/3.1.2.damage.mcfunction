@@ -11,7 +11,7 @@
     #declare tag 5.Owner
     #declare tag 5.BlockChecker
     #declare score_holder $5.OwnerId
-    
+
 # 命中判定用AEC召喚
     summon area_effect_cloud ~ ~-0.1875 ~ {Duration:1,Tags:["5.HitPosition"]}
 
@@ -45,6 +45,7 @@
     kill @s
 
 # reset
+    function lib:damage/reset
     tag @a[tag=5.Owner] remove 5.Owner
     tag @e[type=#lib:living,tag=5.BulletHit,distance=..6] remove 5.BulletHit
     tag 0-0-0-0-0 remove 5.BlockChecker
