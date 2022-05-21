@@ -26,7 +26,7 @@
         function lib:damage/modifier
         execute at @e[type=marker,tag=RW.This,distance=..100] as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

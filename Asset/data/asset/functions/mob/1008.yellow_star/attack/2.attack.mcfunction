@@ -16,7 +16,7 @@
         function lib:damage/modifier
         execute as @a[tag=Victim,distance=..30] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーの防具力を下げる(40)
     attribute @p[tag=Victim] minecraft:generic.armor modifier add 1-0-2-0-3f000000000 "1-2-1008-0" -0.4 multiply
