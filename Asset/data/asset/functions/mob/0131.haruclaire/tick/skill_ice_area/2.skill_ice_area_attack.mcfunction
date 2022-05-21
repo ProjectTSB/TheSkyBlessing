@@ -29,7 +29,7 @@
 # 対象に
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 周囲にプレイヤーがいたら
     execute if entity @a[gamemode=!spectator,distance=..6] run tag @s add 3N.SkillIceAreaHit
