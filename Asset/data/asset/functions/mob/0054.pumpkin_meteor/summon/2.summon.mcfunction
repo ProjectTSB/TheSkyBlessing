@@ -5,7 +5,7 @@
 # @within function asset:mob/0054.pumpkin_meteor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],NoAI:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,NoAI:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
 # ID (int)
     data modify storage asset:mob ID set value 54
 # Type (string) Wikiを参照
