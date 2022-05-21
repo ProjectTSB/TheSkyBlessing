@@ -41,7 +41,7 @@
     # 補正をしない
         data modify storage lib: Argument.FixedDamage set value true
     # ダメージ
-        function lib:damage/modifier
+        function lib:damage/modifier_continuation
         function lib:damage/
 # リセット
     function lib:damage/reset

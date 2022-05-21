@@ -17,7 +17,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーをパニック状態にする
 # プレイヤーにタグ、スコアを付与する
