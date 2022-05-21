@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"カボチャの偽物","color":"#FFAA00"}'
+    data modify storage asset:mob Name set value '{"text":"ジッャク・オ・ランタン","color":"#FFAA00"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
