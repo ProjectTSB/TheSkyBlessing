@@ -53,6 +53,6 @@
 
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @e[type=#lib:living,type=!player,tag=PA.MeleeHit,distance=..10] remove PA.MeleeHit
     tag @e[type=#lib:living,type=!player,tag=PA.SlashHit,distance=..10] remove PA.SlashHit
