@@ -11,4 +11,4 @@
     tag @s remove 1N.SkillQuiz
 
 # スコアを変える
-    scoreboard players set @s 1N.Tick -260
+    scoreboard players set @s 1N.Tick -100

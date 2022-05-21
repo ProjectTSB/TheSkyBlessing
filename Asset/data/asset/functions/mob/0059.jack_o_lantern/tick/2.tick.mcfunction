@@ -8,6 +8,9 @@
     particle dust 1 0.6 0 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
     particle dust 0.851 0 1 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
 
+# 常時耐性
+    effect give @s resistance 9 1 true
+
 # スコアを増やす
     scoreboard players add @s 1N.Tick 1
 
