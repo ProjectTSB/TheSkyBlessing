@@ -9,7 +9,7 @@
     playsound entity.generic.explode hostile @a ~ ~ ~ 0.5 1 0
 
 # 割合ダメージ
-    execute store result storage lib: Argument.Damage float 0.0004 as @e[type=zombie,scores={MobID=59},distance=..2,sort=nearest,limit=1] run function api:mob/get_max_health
+    execute store result storage lib: Argument.Damage float 0.0004 as @e[type=zombie,scores={MobID=59},distance=..3,sort=nearest,limit=1] run function api:mob/get_max_health
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ByPassResist set value 1b
@@ -17,7 +17,7 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute as @e[type=zombie,scores={MobID=59},distance=..2,sort=nearest,limit=1] run function lib:damage/
+    execute as @e[type=zombie,scores={MobID=59},distance=..3,sort=nearest,limit=1] run function lib:damage/
 
 # キル
     kill @s

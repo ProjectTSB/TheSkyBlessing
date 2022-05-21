@@ -23,5 +23,8 @@
 # リセット
     scoreboard players reset $Random Temporary
 
+# 最寄りのプレイヤーを見る
+    tp @s ~ ~ ~ facing entity @p
+
 # タグつける
     tag @s add 68.Init

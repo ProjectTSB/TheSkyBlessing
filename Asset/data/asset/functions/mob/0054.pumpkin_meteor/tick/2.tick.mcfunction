@@ -20,4 +20,4 @@
 # ダメージ
     execute if entity @a[gamemode=!spectator,distance=..1.5] run function asset:mob/0054.pumpkin_meteor/tick/damage
 # ジャックオランタンにもダメージがはいる
-    execute if entity @e[type=zombie,scores={MobID=59},distance=..2] run function asset:mob/0054.pumpkin_meteor/tick/suicide
+    execute if entity @e[type=zombie,scores={MobID=59},distance=..3] run function asset:mob/0054.pumpkin_meteor/tick/suicide
