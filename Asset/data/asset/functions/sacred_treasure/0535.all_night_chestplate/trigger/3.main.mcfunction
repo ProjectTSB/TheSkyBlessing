@@ -23,7 +23,7 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 引数の設定
     # 回復する量 = 2
@@ -33,4 +33,4 @@
 # 自分を対象に
     function lib:heal/
 # リセット
-    function lib:damage/reset
+    data remove storage lib: Argument

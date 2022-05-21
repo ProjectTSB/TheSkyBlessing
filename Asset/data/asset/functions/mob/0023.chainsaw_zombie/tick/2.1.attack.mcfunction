@@ -12,4 +12,4 @@
     execute facing entity @p[gamemode=!spectator] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット
-    function lib:damage/reset
+    data remove storage lib: Argument
