@@ -16,4 +16,4 @@
     function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
