@@ -16,7 +16,7 @@
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 敵に衰弱を付与
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run effect give @s wither 1000000 4 false
