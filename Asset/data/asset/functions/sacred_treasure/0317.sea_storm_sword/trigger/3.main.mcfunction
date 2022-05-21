@@ -41,6 +41,6 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $Rotate Temporary

@@ -27,6 +27,6 @@
 # 対象に
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 # 攻撃があたったらタグを付与
     tag @s add 3N.SkillIceCannonHit

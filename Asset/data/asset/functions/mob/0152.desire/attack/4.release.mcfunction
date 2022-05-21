@@ -15,7 +15,7 @@
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     playsound minecraft:entity.evoker.prepare_summon hostile @a ~ ~ ~ 1 2
