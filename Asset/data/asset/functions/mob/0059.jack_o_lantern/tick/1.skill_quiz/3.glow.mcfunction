@@ -8,7 +8,7 @@
     item replace entity @s armor.head with jack_o_lantern{CustomModelData:20017}
     tag @s add 1N.Glow
     effect clear @s slowness
-    effect give @s speed 2 9 true
+    effect give @s speed 5 6 true
 
 # 演出
     particle minecraft:witch ~ ~1 ~ 0 0 0 0.7 100

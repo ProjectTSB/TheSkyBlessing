@@ -22,4 +22,4 @@
 # クイズに失敗した場合、発光する
     execute if score @s 1N.Tick matches 160 run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/3.glow
 
-    execute if score @s 1N.Tick matches 200.. run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end
+    execute if score @s 1N.Tick matches 260.. run function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end
