@@ -20,7 +20,7 @@
     # ダメージを与える
         function lib:damage/modifier
         execute as @p[tag=EmptyMP] run function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
     # 演出
         execute as @p[tag=EmptyMP] at @s run playsound entity.puffer_fish.hurt player @a ~ ~ ~ 1 0
         execute as @p[tag=EmptyMP] at @s run particle soul ~ ~1 ~ 0 0 0 0.1 10

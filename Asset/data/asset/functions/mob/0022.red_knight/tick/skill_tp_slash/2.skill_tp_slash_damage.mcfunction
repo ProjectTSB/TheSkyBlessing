@@ -15,7 +15,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 移動速度を落とす
     effect give @a[gamemode=!creative,gamemode=!spectator,distance=..1] slowness 1 9 true
