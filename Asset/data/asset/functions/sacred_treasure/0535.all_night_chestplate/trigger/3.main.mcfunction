@@ -33,4 +33,4 @@
 # 自分を対象に
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
