@@ -51,7 +51,7 @@
     execute if score $VectorMagnitude Temporary matches 1.. if score $MobKnockbackResist Temporary matches 0..99 run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $VectorMagnitude Temporary
     scoreboard players reset $MobKnockbackResist Temporary
