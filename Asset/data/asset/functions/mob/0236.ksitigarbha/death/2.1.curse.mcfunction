@@ -18,6 +18,7 @@
     effect give @a[gamemode=!creative,tag=Friend,distance=..5] poison 5 1
     effect give @e[type=!player,tag=Friend,distance=..5] slowness 10 3
     effect give @a[gamemode=!creative,tag=Friend,distance=..5] slowness 10 3
+    function lib:damage/reset
 
 # 音
     playsound entity.elder_guardian.curse hostile @a[gamemode=!creative,tag=Friend,distance=..5] ~ ~ ~ 1 1 1
