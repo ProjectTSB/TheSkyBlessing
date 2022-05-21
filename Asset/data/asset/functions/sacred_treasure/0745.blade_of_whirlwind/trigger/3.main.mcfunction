@@ -52,6 +52,7 @@
 
 # リセット
     function lib:damage/reset
+    data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $VectorMagnitude Temporary
     scoreboard players reset $MobKnockbackResist Temporary
