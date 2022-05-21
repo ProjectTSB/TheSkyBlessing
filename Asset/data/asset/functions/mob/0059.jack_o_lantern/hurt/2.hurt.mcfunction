@@ -6,3 +6,5 @@
 
 # タグをつける
     tag @s add 1N.Hurt
+# 演出
+    playsound entity.witch.celebrate hostile @a ~ ~ ~ 0.8 1.8 0
