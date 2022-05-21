@@ -16,7 +16,7 @@
 # ダメージ対象
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 #　雷属性ダメージ
     data modify storage lib: Argument.Damage set value 17f
@@ -30,7 +30,7 @@
 # ダメージ対象
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run playsound entity.firework_rocket.twinkle hostile @a ~ ~ ~ 0.8 1.8 0
