@@ -22,7 +22,7 @@
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 鈍足を与える
     effect give @p[tag=Victim,distance=..32] slowness 1 3
