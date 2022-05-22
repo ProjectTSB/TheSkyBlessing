@@ -25,7 +25,7 @@
     scoreboard players set $Base Temporary 100
 
 # 複数個ある場合の追加する値 (X=20×Count)
-    execute store result score $Multi Temporary run scoreboard players operation $Count Temporary *= $20 Const
+    execute if score $Count Temporary matches 2.. store result score $Multi Temporary run scoreboard players operation $Count Temporary *= $20 Const
 
 # 合算する
     execute store result storage lib: Argument.VectorMagnitude float 0.01 run scoreboard players operation $Base Temporary += $Multi Temporary
