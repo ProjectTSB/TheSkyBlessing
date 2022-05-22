@@ -14,6 +14,7 @@
 # 下ごしらえ
     data modify storage lib: Array set from storage api: Inventory
     data remove storage lib: Array[].Slot
+    data remove storage player_manager:lost_item Temp[{tag:{Enchantments:[{Id:"vanishing_curse"}]}}]
 
 # 一回目
     function lib:array/packing_chest
