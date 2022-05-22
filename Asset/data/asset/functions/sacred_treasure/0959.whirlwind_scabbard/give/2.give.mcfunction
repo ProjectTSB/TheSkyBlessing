@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"旋風の鞘","color":"#7DFF9B"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"刀ではなく旋風を収めている鞘","color":"#B0FFC5"}','{"text":"その旋風を抜きし時、前塞ぎし者を吹き飛ばす","color":"#B0FFC5"}','{"text":"多く携えるほど旋風は強くなる","color":"#B0FFC5"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"刀ではなく旋風を収めている鞘","color":"#B0FFC5"}','{"text":"その旋風を抜いた時、前を塞ぐ者を吹き飛ばす","color":"#B0FFC5"}','{"text":"多く携えるほど旋風は強くなる","color":"#B0FFC5"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
