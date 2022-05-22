@@ -16,7 +16,7 @@
             execute as @e[type=#lib:living,tag=Victim] at @s facing entity @a[tag=this] feet rotated ~180 -15 run function lib:motion/
             data remove storage lib: Argument
         # Damage
-            data modify storage lib: Argument set value {Damage:10,AttackType:Physical,ElementType:None}
+            data modify storage lib: Argument set value {Damage:60,AttackType:Physical,ElementType:None}
             function lib:damage/modifier
             execute as @e[type=#lib:living,tag=Victim] run function lib:damage/
 
