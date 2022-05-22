@@ -22,10 +22,10 @@
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:959}}}]
 
 # motionの値の最低値
-    scoreboard players set $Base Temporary 100
+    scoreboard players set $Base Temporary 140
 
-# 複数個ある場合の追加する値 (X=20×Count)
-    execute if score $Count Temporary matches 2.. store result score $Multi Temporary run scoreboard players operation $Count Temporary *= $20 Const
+# 複数個ある場合の追加する値 (X=40×Count)
+    execute if score $Count Temporary matches 2.. store result score $Multi Temporary run scoreboard players operation $Count Temporary *= $40 Const
 
 # 合算する
     execute store result storage lib: Argument.VectorMagnitude float 0.01 run scoreboard players operation $Base Temporary += $Multi Temporary
