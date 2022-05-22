@@ -4,6 +4,9 @@
 #
 # @within function asset:sacred_treasure/0172.icicle/trigger/laser/1.laser
 
+# 演出
+    particle flash ~ ~ ~ 0 0 0 0 0
+    particle dust 1 1000000000 1000000000 2.5 ^ ^ ^ 1 1 1 0 100
     function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~10 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~20 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
@@ -40,4 +43,3 @@
     execute rotated ~330 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~340 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~350 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
-
