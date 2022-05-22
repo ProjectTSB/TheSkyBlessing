@@ -11,3 +11,4 @@
     playsound entity.wither.shoot player @a ~ ~ ~ 0.2 1.6 0
     playsound entity.wither.shoot player @a ~ ~ ~ 0.2 1.4 0
     playsound entity.wither.shoot player @a ~ ~ ~ 0.2 1.2 0
+    playsound entity.player.attack.sweep player @a ~ ~ ~ 0.5 1 0
