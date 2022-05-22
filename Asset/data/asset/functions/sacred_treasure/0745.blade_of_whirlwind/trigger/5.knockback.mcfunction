@@ -16,6 +16,9 @@
 # 代入する
     execute store result storage lib: Argument.VectorMagnitude double 0.01 run scoreboard players get $VectorMagnitude Temporary
 
+# 対象が天使の場合に効果を半減
+    execute store result storage lib: Argument.VectorMagnitude double 0.005 run scoreboard players get $VectorMagnitude Temporary
+
 # 引数の設定
     data modify storage lib: Argument.KnockbackResist set value 1b
 

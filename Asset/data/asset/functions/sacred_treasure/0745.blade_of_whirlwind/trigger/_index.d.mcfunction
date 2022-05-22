@@ -5,5 +5,4 @@
 # @within function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/**
     #declare score_holder $RandomDamage
     #declare score_holder $VectorMagnitude
-    #declare score_holder $MobKnockbackResist
     #declare score_holder $AddDamage
