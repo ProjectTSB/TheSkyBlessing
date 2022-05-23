@@ -12,3 +12,6 @@
 
 # タグ消し
     tag @a[tag=Hit,distance=..5] remove Hit
+
+# 自殺
+    kill @s
