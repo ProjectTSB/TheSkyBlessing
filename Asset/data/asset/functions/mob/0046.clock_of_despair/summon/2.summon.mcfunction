@@ -63,7 +63,6 @@
     execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..1,sort=nearest,limit=1] run tp @e[type=zombie,tag=MobInit,distance=..0.01]
 
 # スコアを設定
-    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 1A.Time -1
     scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 1A.LifeTime -1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
