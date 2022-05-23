@@ -5,7 +5,7 @@
 # @within function asset:mob/0174.burning_blaze/action/rush.tick
 
 
-data modify storage lib: Argument set value {Damage:15,AttackType:Physical,AttackElement:Fire}
+data modify storage lib: Argument set value {Damage:25,AttackType:Physical,AttackElement:Fire}
 function lib:damage/modifier
 execute as @a[tag=Hit] run function lib:damage/
 data remove storage lib: Argument

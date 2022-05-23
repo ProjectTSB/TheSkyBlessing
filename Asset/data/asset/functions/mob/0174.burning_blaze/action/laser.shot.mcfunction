@@ -5,7 +5,7 @@
 # @within function asset:mob/0174.burning_blaze/action/laser.tick
 
 
-data modify storage lib: Argument set value {Damage:15,AttackType:Physical,AttackElement:Fire}
+data modify storage lib: Argument set value {Damage:30,AttackType:Physical,AttackElement:Fire}
 
 execute facing entity @p[tag=!PlayerShouldInvulnerable,distance=..32] feet anchored eyes run function asset:mob/0174.burning_blaze/action/laser.shot.loop
 
