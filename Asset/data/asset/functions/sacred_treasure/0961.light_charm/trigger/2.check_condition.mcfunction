@@ -4,6 +4,8 @@
 #
 # @within function asset:sacred_treasure/0961.light_charm/trigger/1.trigger
 
+# 神器IDの設定
+    data modify storage asset:sacred_treasure TargetID set value 961
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
     function asset:sacred_treasure/common/check_condition/hotbar
 # 他にアイテム等確認する場合はここに書く
