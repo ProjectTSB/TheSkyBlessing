@@ -8,4 +8,9 @@
     function asset:sacred_treasure/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0961.light_charm
+    playsound minecraft:block.anvil.place player @a ~ ~ ~ 1 2
+    playsound minecraft:entity.player.attack.sweep player @a ~ ~ ~ 1 1
+    particle crit ~ ~1 ~ 0 0 0 0.5 10
+
+# 補正を追加
+    function asset:sacred_treasure/0961.light_charm/trigger/add_modifier
