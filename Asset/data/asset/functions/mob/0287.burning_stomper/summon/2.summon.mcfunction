@@ -5,7 +5,7 @@
 # @within function asset:mob/0287.burning_stomper/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {CustomNameVisible:0b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0287.burning_stomper"}
+    summon wither_skeleton ~ ~ ~ {CustomNameVisible:0b,Tags:["MobInit","AlwaysInvisible","AntiFallDamage"],DeathLootTable:"asset:mob/death/0287.burning_stomper"}
 # ID (int)
     data modify storage asset:mob ID set value 287
 # Type (string) Wikiを参照
