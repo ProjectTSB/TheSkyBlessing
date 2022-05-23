@@ -13,7 +13,7 @@
 #   Armor.Chest? : Item
 #   Armor.Legs? : Item
 #   Armor.Feet? : Item
-#   Health? : double (x <= 2048.0)
+#   Health? : double (x <= 2147483.647)
 #   AttackDamage? : double (x <= 2048.0)
 #   Defense? : double (x <= 30.0)
 #   SpecialDefense? : double (x <= 20.0)
@@ -41,7 +41,7 @@
     execute unless data storage asset:mob Armor.Feet run data modify storage asset:mob Armor.Feet set value {}
     execute unless data storage asset:mob WeaponDropChances run data modify storage asset:mob WeaponDropChances set value [0f,0f]
     execute unless data storage asset:mob ArmorDropChances run data modify storage asset:mob ArmorDropChances set value [0f,0f,0f,0f]
-    # execute unless data storage asset:mob Health run
+    execute unless data storage asset:mob Health store result storage asset:mob Health double 0.01 run attribute @s generic.max_health get 100
     # execute unless data storage asset:mob AttackDamage run
     # execute unless data storage asset:mob Defense run
     # execute unless data storage asset:mob SpecialDefense run

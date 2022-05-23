@@ -5,7 +5,7 @@
 # @within function asset:mob/0064.artery/attack/1.trigger
 
 # 周りのmobにパワー付与
-    effect give @e[tag=AssetMob,distance=..5] strength 6 0 true
+    effect give @e[type=#lib:living,tag=Enemy,distance=..5] strength 6 0 true
 
 # 演出
     playsound block.note_block.basedrum hostile @a ~ ~ ~ 1.3 0.5 0

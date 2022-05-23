@@ -17,8 +17,8 @@
 
 
 # 与えるダメージ
-    execute unless entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 25f
-    execute if entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 36f
+    execute unless entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 30f
+    execute if entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 66f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
