@@ -10,4 +10,4 @@
     function api:player_modifier/defense/base/remove
 
 # 補正を追加
-    execute unless entity @s[tag=!DevPrivilege,predicate=!player_manager:is_believe/null] run function asset:sacred_treasure/0960.heavy_charm/trigger/add_modifier
+    execute unless entity @s[tag=!DevPrivilege,predicate=player_manager:is_believe/null] run function asset:sacred_treasure/0960.heavy_charm/trigger/add_modifier
