@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '[{"text":"バーニング・ブレイズ","color":"dark_red"}]'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Mainhand set value
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stone",tag:{Enchantments:[{id:"fire_aspect",lvl:2}]}}
     # オフハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)

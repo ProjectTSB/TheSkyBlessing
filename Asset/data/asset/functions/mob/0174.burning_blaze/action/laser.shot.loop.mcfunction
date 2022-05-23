@@ -6,7 +6,8 @@
 # @within function asset:mob/0174.burning_blaze/action/laser.shot.loop
 
 # 演出
-    particle dripping_lava ^ ^ ^ 0 0 0 0 5 force @a
+    particle dripping_lava ^ ^ ^ 0.1 0.1 0.1 0 5 force @a
+    particle lava ~ ~ ~ 0.1 0.1 0.1 0 3 force @a
 
 # ヒット判定
     execute positioned ~-1 ~-1 ~-1 run tag @a[tag=!PlayerShouldInvulnerable,dx=1,dz=1] add Hit
