@@ -9,7 +9,7 @@
 # Slotを削除
     data remove storage player_manager:lost_item Temp[].Slot
 # 消滅の呪い付きアイテムを削除
-    data remove storage player_manager:lost_item Temp[{tag:{Enchantments:[{id:"vanishing_curse"}]}}]
+    data remove storage player_manager:lost_item Temp[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
 # UserStorage呼び出し
     function oh_my_dat:please
 # IDをIDSetに追加
