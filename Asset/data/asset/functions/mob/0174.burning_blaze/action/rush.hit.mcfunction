@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0174.burning_blaze/action/rush.tick
 
-#> private
-# @private
-    #declare tag Hit
 
 data modify storage lib: Argument set value {Damage:15,AttackType:Physical,AttackElement:Fire}
 function lib:damage/modifier

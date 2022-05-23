@@ -24,8 +24,8 @@
     execute if score @s 4U.NowAction matches 2 run function asset:mob/0174.burning_blaze/action/laser.tick
 
 # 行動決定
-    execute if entity @p[gamemode=!creative,gamemode=!spectator,distance=..32] if score $Random Temporary matches 0..5 if score @s 4U.ActionTime matches ..0 run function asset:mob/0174.burning_blaze/action/rush
-    execute if entity @p[gamemode=!creative,gamemode=!spectator,distance=..32] if score $Random Temporary matches 6..10 if score @s 4U.ActionTime matches ..0 run function asset:mob/0174.burning_blaze/action/laser
+    execute if entity @p[tag=!PlayerShouldInvulnerable,distance=..32] if score $Random Temporary matches 0..5 if score @s 4U.ActionTime matches ..0 run function asset:mob/0174.burning_blaze/action/rush
+    execute if entity @p[tag=!PlayerShouldInvulnerable,distance=..32] if score $Random Temporary matches 6..10 if score @s 4U.ActionTime matches ..0 run function asset:mob/0174.burning_blaze/action/laser
 
 # バニラ火球を置き換え
     execute if entity @e[type=small_fireball,distance=..3] run function asset:mob/0174.burning_blaze/action/shot

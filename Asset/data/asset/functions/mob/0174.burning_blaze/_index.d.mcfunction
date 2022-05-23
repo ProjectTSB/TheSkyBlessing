@@ -6,3 +6,4 @@
     #declare objective 4U.ActionTime
     #declare objective 4U.NowAction
     #declare tag Hit
+    #declare tag Line
