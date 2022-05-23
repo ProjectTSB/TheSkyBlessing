@@ -4,17 +4,24 @@
 #
 # @within function asset:mob/0174.burning_blaze/action/laser.tick
 
+# ダメージ設定
+    data modify storage lib: Argument set value {Damage:30,AttackType:Physical,AttackElement:Fire}
 
-data modify storage lib: Argument set value {Damage:30,AttackType:Physical,AttackElement:Fire}
+# プレイヤー方向にレーザー発射
+    execute facing entity @p[tag=!PlayerShouldInvulnerable,distance=..32] feet anchored eyes run function asset:mob/0174.burning_blaze/action/laser.shot.loop
 
-execute facing entity @p[tag=!PlayerShouldInvulnerable,distance=..32] feet anchored eyes run function asset:mob/0174.burning_blaze/action/laser.shot.loop
+# ダメージ補正
+    function lib:damage/modifier
+# ヒット対象にダメージ
+    execute as @a[tag=Hit] run function lib:damage/
 
-function lib:damage/modifier
-execute as @a[tag=Hit] run function lib:damage/
-data remove storage lib: Argument
-tag @a[tag=Hit] remove Hit
+# リセット
+    data remove storage lib: Argument
+    tag @a[tag=Hit] remove Hit
 
-scoreboard players set @s 4U.ActionTime 0
-scoreboard players set @s 4U.NowAction 0
+# スコア戻す
+    scoreboard players set @s 4U.ActionTime 0
+    scoreboard players set @s 4U.NowAction 0
 
-playsound entity.generic.explode hostile @a ~ ~ ~ 1 2 0.1
+# 演出
+    playsound entity.generic.explode hostile @a ~ ~ ~ 1 2 0.1
