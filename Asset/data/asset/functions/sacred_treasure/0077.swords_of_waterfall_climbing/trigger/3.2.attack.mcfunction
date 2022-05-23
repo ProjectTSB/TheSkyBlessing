@@ -21,7 +21,7 @@
     execute as @a[tag=this] run function lib:damage/modifier
     function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     particle minecraft:rain ~ ~ ~ 0 2 0 1 100

@@ -24,5 +24,5 @@
     execute as @e[type=#lib:living,tag=Victim,distance=..5] run function lib:damage/
 
 # reset
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $PV.EnemyNum Temporary

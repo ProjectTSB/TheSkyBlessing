@@ -9,7 +9,7 @@
     execute at @p[tag=Victim,distance=..6] run playsound block.conduit.ambient hostile @a ~ ~ ~ 0.8 1.5 0
 
 # 自身を回復
-    data modify storage lib: Argument.Heal set value 20f
+    data modify storage lib: Argument.Heal set value 500f
     function lib:heal/modifier
     function lib:heal/
 # リセット
