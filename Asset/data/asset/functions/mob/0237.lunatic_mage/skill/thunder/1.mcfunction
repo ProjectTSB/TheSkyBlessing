@@ -23,8 +23,8 @@
     execute if entity @s[scores={6L.Tick=20}] run tag @a[gamemode=!spectator,distance=..50,sort=random,limit=2] add TargetPlayer
     execute if entity @s[scores={6L.Tick=20}] at @a[tag=TargetPlayer,distance=..50,limit=2] run summon area_effect_cloud ~ ~ ~ {Tags:["6L.ThunderSummonPoint"],Particle:"block air",Duration:21}
 
-# ターゲットとなったプレイヤーの位置で、ルナティックメイジの方を見て5ブロック先に雷召喚地点をワープさせる
-    execute if entity @s[scores={6L.Tick=20}] positioned as @a[tag=TargetPlayer,distance=..50,limit=2] facing entity @s eyes rotated ~ 0 run tp @e[type=area_effect_cloud,tag=6L.ThunderSummonPoint,distance=..0.01,sort=nearest,limit=1] ^ ^ ^5 ~180 0
+# ターゲットとなったプレイヤーの位置で、ルナティックメイジの方を見て5ブロック先に雷召喚地点のAECをワープさせる
+    execute if entity @s[scores={6L.Tick=20}] at @a[tag=TargetPlayer,distance=..50,limit=2] facing entity @s eyes rotated ~ 0 run tp @e[type=area_effect_cloud,tag=6L.ThunderSummonPoint,distance=..0.01,sort=nearest,limit=1] ^ ^ ^5 ~180 0
     execute if entity @s[scores={6L.Tick=20}] run tag @a[tag=TargetPlayer,distance=..50,limit=2] remove TargetPlayer
 
 # 1回目の雷
