@@ -7,4 +7,3 @@
 #> 定義類はここに
 # @within function asset:mob/0287.burning_stomper/**
     scoreboard objectives add 7Z.MoveTime dummy
-    scoreboard objectives add 7Z.FallResist dummy
