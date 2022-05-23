@@ -6,7 +6,7 @@
 #> private
 # @private
     #declare score_holder $Count
-    #declare score_holder $4tInterval
+    #declare score_holder $2tInterval
 
 # スコアを増やす
     scoreboard players add @s 1A.LifeTime 1
@@ -21,12 +21,12 @@
 
 # 2tickおきに実行するやつ
 # 実行時間を移す
-    scoreboard players operation $4tInterval Temporary = @s 1A.LifeTime
+    scoreboard players operation $2tInterval Temporary = @s 1A.LifeTime
 # 2tickおきに実行
-    scoreboard players operation $4tInterval Temporary %= $2 Const
-    execute if score $4tInterval Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/interval
+    scoreboard players operation $2tInterval Temporary %= $2 Const
+    execute if score $2tInterval Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/interval
 # リセット
-    scoreboard players reset $4tInterval
+    scoreboard players reset $2tInterval
 
 # もしアマスタがどっかいってしまったら
     execute at @s unless entity @e[type=armor_stand,tag=1A.ClockHand,distance=..0.01] run function asset:mob/0046.clock_of_despair/tick/armorstand_respawn

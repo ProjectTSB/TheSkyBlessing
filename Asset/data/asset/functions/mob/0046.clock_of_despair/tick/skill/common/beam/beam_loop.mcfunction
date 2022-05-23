@@ -14,8 +14,8 @@
     execute if entity @p[distance=..1] run tag @p[distance=..1] add LandingTarget
 
 # 演出
-    execute run particle minecraft:dust 1 1 1 1 ~ ~ ~ 0.1 0.1 0.1 0 1
-    execute run particle minecraft:electric_spark ~ ~ ~ 0.15 0.15 0.15 0.1 2
+    particle minecraft:dust 1 1 1 1 ~ ~ ~ 0.1 0.1 0.1 0 1
+    particle minecraft:electric_spark ~ ~ ~ 0.15 0.15 0.15 0.1 2
     execute if predicate lib:random_pass_per/5 run particle minecraft:end_rod ~ ~ ~ 0.15 0.15 0.15 0 1
     execute if predicate lib:random_pass_per/25 run particle minecraft:glow ~ ~ ~ 0.15 0.15 0.15 0 1
 # 着弾
