@@ -16,10 +16,10 @@
     execute positioned ^ ^ ^45 run function asset:mob/0237.lunatic_mage/skill/magic/4.shapes
 
 # 音で相手の位置がわかるように
-    execute at @a[distance=..50] facing entity @s eyes as @p positioned ^ ^ ^3 run function asset:mob/0237.lunatic_mage/skill/magic/sound
+    execute as @a[distance=..50] at @s facing entity @e[type=husk,tag=this,distance=..52] eyes positioned ^ ^ ^3 run function asset:mob/0237.lunatic_mage/skill/magic/sound
 
 # 再帰
     function asset:mob/0237.lunatic_mage/skill/magic/5.beam_recursive
 
 # ヒット処理
-    execute as @a[tag=LandingTarget,distance=..55] run function asset:mob/0237.lunatic_mage/skill/magic/6.hit
+    execute as @a[tag=LandingTarget,distance=..52] run function asset:mob/0237.lunatic_mage/skill/magic/6.hit
