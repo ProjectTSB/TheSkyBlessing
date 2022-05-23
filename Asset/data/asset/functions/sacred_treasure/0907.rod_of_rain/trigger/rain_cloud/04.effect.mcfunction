@@ -9,16 +9,18 @@
     #declare score_holder $AttackWater
 
 # 演出
-    playsound minecraft:entity.dolphin.swim player @a ~ ~ ~ 0.7 1.5
+    playsound entity.dolphin.swim player @a ~ ~ ~ 0.7 1.5 0
+    playsound entity.dolphin.swim player @a ~ ~ ~ 0.7 1.8 0
+    playsound ogg:ambient.underwater.additions.bubbles6 player @a ~ ~ ~ 0.5 1.5 0
     execute positioned ~ ~0.25 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
     execute positioned ~ ~0.8 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
 
 # 自身を判別するTagを自身に付与
-    tag @s add P8.Owner
-    execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run tag @s add P8.This
+    tag @s add P8.This
+    execute as @a if score @s UserID = @e[type=marker,tag=P8.This,limit=1] P8.UserID run tag @s add P8.Owner
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 300.0f
+    data modify storage lib: Argument.Damage set value 1200.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     execute as @p[tag=P8.Owner] run function lib:damage/modifier
@@ -34,11 +36,11 @@
 
 # 体力回復量補正に水攻撃補正を掛ける
     data modify storage api: Argument.UUID set value [I;1,1,907,0]
-    data modify storage api: Argument.Operation set value "multiply"
+    data modify storage api: Argument.Operation set value "multiply_base"
     execute as @p[tag=P8.Owner] run function api:player_modifier/heal/add
 
 # 範囲内のプレイヤーを回復
-    data modify storage lib: Argument.Heal set value 5.0f
+    data modify storage lib: Argument.Heal set value 20.0f
     execute as @p[tag=P8.Owner] run function lib:heal/modifier
     execute as @a[tag=P8.TargetEntity,distance=..10] run function lib:heal/
 
