@@ -23,5 +23,5 @@
     scoreboard players set @s 4U.ActionTime 0
     scoreboard players set @s 4U.NowAction 0
 
-# 演出
-    playsound entity.generic.explode hostile @a ~ ~ ~ 1 2 0.1
+# 射程内のプレイヤーがこいつの方向からレーザー発射音を聞けるように
+    execute as @a[distance=..32] at @s facing entity @e[type=blaze,tag=this,distance=..32] eyes positioned ^ ^ ^3 run playsound entity.generic.explode hostile @s ~ ~ ~ 1 2
