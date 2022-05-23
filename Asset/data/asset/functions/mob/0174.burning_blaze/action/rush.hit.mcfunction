@@ -8,7 +8,7 @@
 # @private
     #declare tag Hit
 
-data modify storage lib: Argument set value {Damage:15,AttackType:Physical,AttackElement:Fire}
+data modify storage lib: Argument set value {Damage:25,AttackType:Physical,AttackElement:Fire}
 function lib:damage/modifier
 execute as @a[tag=Hit] run function lib:damage/
 data remove storage lib: Argument
