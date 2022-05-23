@@ -38,15 +38,15 @@
     data modify storage asset:mob KnockBackResist set value 1
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 80
+        data modify storage asset:mob Resist.Physical set value 0.8f
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 100
+        data modify storage asset:mob Resist.Magic set value 1.0f
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 80
+        data modify storage asset:mob Resist.Fire set value 0.8f
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 100
+        data modify storage asset:mob Resist.Water set value 1.0f
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 100
+        data modify storage asset:mob Resist.Thunder set value 1.0f
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
