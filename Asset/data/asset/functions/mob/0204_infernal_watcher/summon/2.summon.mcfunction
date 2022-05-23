@@ -26,6 +26,18 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     data modify storage asset:mob SpecialDefense set value 0
 
+# 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
+    # 物理倍率 (float) (オプション)
+        data modify storage asset:mob Resist.Physical set value 1.0f
+    # 魔法倍率 (float) (オプション)
+        data modify storage asset:mob Resist.Magic set value 1.0f
+    # 火倍率 (float) (オプション)
+        data modify storage asset:mob Resist.Fire set value 0.8f
+    # 水倍率 (float) (オプション)
+        data modify storage asset:mob Resist.Water set value 1.0f
+    # 雷倍率 (float) (オプション)
+        data modify storage asset:mob Resist.Thunder set value 1.0f
+
 # 降りてくる
     execute positioned ~ ~-100 ~ run tp @e[type=zombie,tag=MobInit,distance=..0.01] ~ ~100 ~
 
