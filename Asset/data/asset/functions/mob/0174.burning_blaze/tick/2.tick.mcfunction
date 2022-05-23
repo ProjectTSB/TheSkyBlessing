@@ -8,6 +8,7 @@
 # @private
     #declare score_holder $Random
     #declare score_holder $Probability
+
 # 演出
     particle falling_lava ~ ~0.8 ~ 0.5 0.5 0.5 0 10 force @a
     particle dust 1 0.149 0 1 ~ ~0.7 ~ 0.3 0.3 0.3 0 10 force @a
