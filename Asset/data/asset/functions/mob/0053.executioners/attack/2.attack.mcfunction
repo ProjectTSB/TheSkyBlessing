@@ -28,7 +28,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 以下自分がテレポートする処理
 # 演出

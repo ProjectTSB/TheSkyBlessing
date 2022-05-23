@@ -21,7 +21,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 自爆ダメージ
     data modify storage lib: Argument.Damage set value 3f
@@ -32,4 +32,4 @@
 # 自爆する
     function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

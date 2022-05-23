@@ -13,4 +13,4 @@
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
     execute as @p[tag=Victim,distance=..50] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset

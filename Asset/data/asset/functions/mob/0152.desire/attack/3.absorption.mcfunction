@@ -20,7 +20,7 @@
     # ダメージを与える
         function lib:damage/modifier
         execute as @p[tag=Victim,tag=EmptyMP] run function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # マナが十分にあるプレイヤーを殴ったとき
     # ダメージ設定
@@ -30,7 +30,7 @@
     # ダメージを与える
         function lib:damage/modifier
         execute as @p[tag=Victim,tag=!EmptyMP] run function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # マナを吸い取る
     scoreboard players set $Fluctuation Lib -80
