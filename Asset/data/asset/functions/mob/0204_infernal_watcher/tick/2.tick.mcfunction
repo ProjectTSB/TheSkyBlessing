@@ -7,14 +7,12 @@
 # デーモンアイからコピーされたのをさらにコピー。幾何学って素敵！
 
 
-# スコア加算
+# スコア関連
     scoreboard players add @s 5O.MoveTime 1
-
-# HurtTimeをスコア化したら軽いのでは？
-    execute store result score @s 5O.HurtTime run data get entity @s HurtTime
+    scoreboard players remove @s[scores={5O.HurtTime=0..}] 5O.HurtTime 1
 
 # スコアによって速度が変わる、最高速のときはダメージを受けても止まらない
-    execute if entity @s[scores={5O.MoveTime=..39,5O.HurtTime=0}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+    execute if entity @s[scores={5O.MoveTime=..39}] unless score @s 5O.HurtTime matches 0.. facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
     execute if entity @s[scores={5O.MoveTime=40..}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.5 ~ ~
 
 # サウンド
@@ -24,9 +22,8 @@
 # スコアリセット
     scoreboard players reset @s[scores={5O.MoveTime=100..}] 5O.MoveTime
 
-# ダメージ時にノックバックする
-    data modify entity @s[scores={5O.HurtTime=0}] NoAI set value 1b
-    data modify entity @s[scores={5O.HurtTime=10}] NoAI set value 0b
+# のけぞりから復帰
+    data modify entity @s[scores={5O.HurtTime=..0}] NoAI set value 1b
 
 # パーティクル
     particle dust 0.761 0.267 0 1 ~ ~1.5 ~ 0.25 0.25 0.25 0 1 force @a[distance=..40]
