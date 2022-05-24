@@ -11,7 +11,7 @@
     execute as @e[type=zombie,tag=this,distance=..0.01,limit=1] run function lib:damage/modifier
     function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # Tag削除
     tag @s remove LandingTarget

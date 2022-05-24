@@ -16,7 +16,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=5.5..9] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAJyUoAMAZnAIYBMAtACwAcA7AMycARvUpsuKOAEY2KRoMml6klFz4swBAHZMAtgmSAwxQAEHDWBhMMugM5JwKAPaFNEJADZaBCS7gY7YADcmbEJ9cAAPJE8wKCiAXziCK1I0QltESgJrCEtXRGi4bGw0GGt9SVpojAcciH1otGsAUSKSsqaAR0Jg7CgAZQsJckR6YLKEvHBoeAoYB16AcwdNM2IyCm4WQTg4ejc2HkpSQU4mDgBWMUlJOE5KHjdZRUpaPnwwbT0KQCxNQCXIwCN9IzqAgWKw6dL2JwuJAsNxeOA+PyIcBBEJhMCRfIEWL5CZgZKpdKZMDZXJRAiFYqlcqVJI1Jh1cmoBwYTS+JAVAgAK0IOhgSA4BG2AC80OzEOcAHQ8AiNFpU9pdHr9QZwYajbBlWXWABCcFFvk63SKKqYQyQEAwoQSAF0gA_3
 # 多角形 2
