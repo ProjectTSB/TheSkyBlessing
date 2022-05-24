@@ -11,6 +11,8 @@
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] rotated ~ 0 run function asset:sacred_treasure/0320.divine_thunder_sword/trigger/3.1.particle
+    playsound item.trident.throw player @a ~ ~ ~ 1 1
+
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
@@ -31,5 +33,5 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary

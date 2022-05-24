@@ -30,7 +30,7 @@
 # 攻撃した対象に実行
     execute as @e[tag=A9.Target] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 #自身を殺す
     kill @s

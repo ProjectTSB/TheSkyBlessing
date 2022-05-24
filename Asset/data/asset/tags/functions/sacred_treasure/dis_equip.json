@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0961.light_charm/trigger/dis_equip/",
+        "asset:sacred_treasure/0960.heavy_charm/trigger/dis_equip/",
         "asset:sacred_treasure/0954.inverted_parachute/trigger/dis_equip/",
         "asset:sacred_treasure/0930.z_flag/trigger/dis_equip/",
         "asset:sacred_treasure/0777.jade_armor/trigger/dis_equip/",
