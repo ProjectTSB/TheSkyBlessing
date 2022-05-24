@@ -26,5 +26,5 @@
     execute as @a[tag=ThunderTarget,distance=..30] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @a[tag=ThunderTarget,distance=..30] remove ThunderTarget

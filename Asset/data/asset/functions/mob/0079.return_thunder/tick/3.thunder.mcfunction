@@ -20,9 +20,9 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 円
     particle electric_spark ^0 ^ ^-1 0 0 0 0 1
