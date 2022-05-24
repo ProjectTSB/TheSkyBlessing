@@ -1,12 +1,8 @@
 #> asset:mob/0104.mad_scientist/tick/3.random_element_select
 #
-#
+# 次に投げるポーションを設定
 #
 # @within function asset:mob/0104.mad_scientist/tick/2.tick
-
-#> Private
-# @private
-    #declare score_holder $Random
 
  # 25%ずつの確率で4つに分岐 それぞれ毒、火、水、雷
     execute store result score $Random Temporary run function lib:random/
