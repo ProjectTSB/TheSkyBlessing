@@ -5,7 +5,7 @@
 # @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 18f
+    data modify storage lib: Argument.Damage set value 24.5f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
      data modify storage lib: Argument.ElementType set value "Water"
@@ -17,4 +17,4 @@
 # ダメージ
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -21,5 +21,5 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] remove Hit

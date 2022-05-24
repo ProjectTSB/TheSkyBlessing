@@ -32,4 +32,4 @@
 
 # リセット
     scoreboard players reset @s Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset
