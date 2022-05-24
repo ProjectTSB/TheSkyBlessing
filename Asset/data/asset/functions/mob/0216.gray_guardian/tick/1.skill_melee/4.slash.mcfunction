@@ -10,9 +10,9 @@
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
 
 # タグ付与
-    tag @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] add Hit
-    execute positioned ^0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2] add Hit
-    execute positioned ^-0.5 ^ ^1 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..2] add Hit
+    tag @a[tag=!PlayerShouldInvulnerable,distance=..2.5] add Hit
+    execute positioned ^0.5 ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add Hit
+    execute positioned ^-0.5 ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add Hit
 
 # ダメージ設定
     # 与えるダメージ

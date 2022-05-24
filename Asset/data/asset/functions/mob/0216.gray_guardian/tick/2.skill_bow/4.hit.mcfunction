@@ -17,7 +17,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
-        execute as @p[gamemode=!creative,tag=LandingTarget] run function lib:damage/
+        execute as @p[tag=LandingTarget,tag=!PlayerShouldInvulnerable] run function lib:damage/
 # リセット
     data remove storage lib: Argument
 
