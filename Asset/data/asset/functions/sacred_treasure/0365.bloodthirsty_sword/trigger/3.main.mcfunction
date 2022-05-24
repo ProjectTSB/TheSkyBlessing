@@ -19,14 +19,18 @@
     playsound minecraft:entity.ravager.celebrate player @a ~ ~ ~ 1 2
     tellraw @s {"text":"赤い騎士の剣は満足そうだ","color":"dark_red","bold":true}
 
-    # 与えるダメージ = 18
-        data modify storage lib: Argument.Damage set value 18.0f
+# 自身の現在体力の30%分のダメージを与える
+    # ダメージ量
+        function api:data_get/health
+        execute store result storage lib: Argument.Damage float 0.3 run data get storage api: Health
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か
         data modify storage lib: Argument.BypassResist set value true
+    # 補正をしない
+        data modify storage lib: Argument.FixedDamage set value true
     # ダメージ
         function lib:damage/modifier
         function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

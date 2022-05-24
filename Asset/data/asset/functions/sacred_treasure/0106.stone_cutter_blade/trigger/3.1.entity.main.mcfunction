@@ -20,4 +20,4 @@
 # 実行
     function lib:damage/
 # 開放
-    data remove storage lib: Argument
+    function lib:damage/reset

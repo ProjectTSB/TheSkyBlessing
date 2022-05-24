@@ -28,5 +28,5 @@
     function asset:sacred_treasure/common/use/mainhand
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $MagicalCane
