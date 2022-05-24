@@ -20,6 +20,7 @@
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..100,limit=1] run function lib:damage/
+    function lib:damage/reset
 
 # テレポート処理
     execute if predicate lib:random_pass_per/25 as @e[type=#lib:living,type=!player,tag=Victim,distance=..100] run tag @s add RandomTP
