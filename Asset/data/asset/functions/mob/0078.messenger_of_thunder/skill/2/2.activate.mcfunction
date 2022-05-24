@@ -13,3 +13,4 @@
 # モーション
     data modify storage lib: Argument.VectorMagnitude set value 1.2
     execute facing entity @p[gamemode=!spectator,distance=..50] eyes rotated ~-180 -20 run function lib:motion/
+    data remove storage lib: Argument
