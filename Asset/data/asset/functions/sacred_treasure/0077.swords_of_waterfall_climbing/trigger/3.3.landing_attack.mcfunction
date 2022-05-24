@@ -21,7 +21,7 @@
     function lib:damage/modifier
     execute as @e[tag=Enemy,distance=..4] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     particle minecraft:rain ~ ~ ~ 1 1 1 1 100

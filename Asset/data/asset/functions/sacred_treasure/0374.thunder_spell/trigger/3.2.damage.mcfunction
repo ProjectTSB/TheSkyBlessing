@@ -25,4 +25,4 @@
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..1,sort=nearest,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

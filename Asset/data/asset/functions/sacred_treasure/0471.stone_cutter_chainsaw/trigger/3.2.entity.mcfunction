@@ -24,7 +24,7 @@
     # 実行
         function lib:damage/
     # 開放
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # タグの開放
     tag @s remove D3.Critical

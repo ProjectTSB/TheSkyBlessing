@@ -18,5 +18,5 @@
     execute as @e[tag=D0.Target] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @e[tag=D0.Target] remove D0.Target

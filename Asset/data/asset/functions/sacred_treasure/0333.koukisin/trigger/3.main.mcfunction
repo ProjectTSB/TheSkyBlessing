@@ -23,4 +23,4 @@
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Uninterferable,distance=..10,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

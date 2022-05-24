@@ -6,7 +6,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 25.0f
+        data modify storage lib: Argument.Damage set value 35.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -17,7 +17,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # マナ減少
     scoreboard players set $Fluctuation Lib -24
