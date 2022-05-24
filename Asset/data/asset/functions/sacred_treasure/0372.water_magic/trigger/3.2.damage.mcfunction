@@ -26,6 +26,6 @@
     playsound entity.dolphin.splash master @a ~ ~ ~ 1 0
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @s remove AC.This
     tag @e[tag=AC.Target] remove AC.Target

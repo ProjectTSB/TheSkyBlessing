@@ -5,9 +5,9 @@
 # @within function asset:mob/0090.decapitation/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit"],DeathLootTable:"asset:mob/death/0090.decapitation"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0090.decapitation"}
 # ID (int)
-    data modify storage asset:mob ID set value 210
+    data modify storage asset:mob ID set value 90
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)

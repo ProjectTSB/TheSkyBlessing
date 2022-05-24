@@ -28,6 +28,6 @@
     execute as @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run function lib:damage/
 
 # スコアとかストレージとかリセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $KF.Armor Temporary
     scoreboard players reset $KF.ArmorTough Temporary

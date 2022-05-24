@@ -27,4 +27,5 @@
 # リセット
     tag @e[type=#lib:living,tag=TargetCandidate,distance=..13] remove TargetCandidate
     tag @e[type=#lib:living,tag=Target,distance=..13] remove Target
+    function lib:damage/reset
     data remove storage lib: Argument
