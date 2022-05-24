@@ -13,7 +13,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによってオーロラに包まれ消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによって空の塵となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,dx=0] run function lib:damage/
 
 # MP回復量減少デバフを付与
     # UUID
