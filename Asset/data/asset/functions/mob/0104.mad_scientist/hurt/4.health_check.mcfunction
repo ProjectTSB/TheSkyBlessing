@@ -1,6 +1,6 @@
 #> asset:mob/0104.mad_scientist/hurt/4.health_check
 #
-#
+# 体力をチェックする
 #
 # @within function asset:mob/0104.mad_scientist/hurt/2.hurt
 
