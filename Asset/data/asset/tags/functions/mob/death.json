@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0210.aurora_eye/death/1.trigger",
+        "asset:mob/0262.frestchika/death/1.trigger",
+        "asset:mob/0083.thunder_trifler/death/1.trigger",
         "asset:mob/0084.falcios_priest/death/1.trigger",
         "asset:mob/0235.orange_thrower/death/1.trigger",
         "asset:mob/0236.ksitigarbha/death/1.trigger",

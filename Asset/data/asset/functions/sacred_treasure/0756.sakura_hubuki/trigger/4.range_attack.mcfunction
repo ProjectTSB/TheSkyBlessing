@@ -29,4 +29,4 @@
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] as @e[type=#lib:living,type=!player,tag=!Victim,tag=!Friend,tag=!Uninterferable,tag=!Object,distance=..3] at @s run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

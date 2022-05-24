@@ -1,5 +1,8 @@
 {
     "values": [
+        "asset:sacred_treasure/0930.z_flag/register",
+        "asset:sacred_treasure/0954.inverted_parachute/register",
+        "asset:sacred_treasure/0931.d_u_t_y/register",
         "asset:sacred_treasure/0897.lightning_broach/register",
         "asset:sacred_treasure/0253.holy_barrier/register",
         "asset:sacred_treasure/0005.musket_matchlock/register",

@@ -28,7 +28,7 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] remove LandingTarget

@@ -16,6 +16,9 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
+# プレイヤーのタグ管理
+    execute as @a run function player_manager:manage_tag/
+
 # 神器のグローバルtick処理
     function asset_manager:sacred_treasure/tick/
 
