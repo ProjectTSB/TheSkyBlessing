@@ -49,5 +49,5 @@
     execute positioned ~ ~1.68 ~ unless block ^ ^ ^0.2 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
 
 # 世界に存在しすぎた場合、消滅する
-#    scoreboard players remove @s 5O.LifeTime 1
+    scoreboard players remove @s 5O.LifeTime 1
     execute if score @s 5O.LifeTime matches ..0 run function asset:mob/0204_infernal_watcher/tick/event/suicide
