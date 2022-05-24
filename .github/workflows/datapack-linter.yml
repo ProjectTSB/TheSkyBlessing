@@ -15,3 +15,4 @@ jobs:
         uses: ChenCMD/datapack-linter@v1
         with:
           outputDefine: public
+          notOutputSuccess: true

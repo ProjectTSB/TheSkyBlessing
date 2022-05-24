@@ -14,8 +14,8 @@
     playsound minecraft:entity.ender_dragon.flap master @a[distance=..15] ~ ~ ~ 1 1
 
 # ダメージ
-    # 与えるダメージ = 60
-        data modify storage lib: Argument.Damage set value 30f
+    # 与えるダメージ = 42
+        data modify storage lib: Argument.Damage set value 42f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 無属性
@@ -27,7 +27,7 @@
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 吹っ飛び効果
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run effect give @s minecraft:levitation 1 30 true

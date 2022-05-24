@@ -29,7 +29,7 @@
     # 足 (Compound(Item)) (オプション)
         #data modify storage asset:mob Armor.Feet set value {}
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 30
+    data modify storage asset:mob Health set value 125
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 3.8
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち

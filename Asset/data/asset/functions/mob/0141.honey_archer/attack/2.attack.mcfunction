@@ -19,9 +19,12 @@
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによってべとべとに射抜かれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sにハチの巣の材料にされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
