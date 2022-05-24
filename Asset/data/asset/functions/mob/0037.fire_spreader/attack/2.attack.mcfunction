@@ -26,4 +26,4 @@
 # 対象
     execute at @p[tag=Victim,distance=..6] as @a[gamemode=!spectator,predicate=lib:is_burning,distance=..4.0] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -17,7 +17,7 @@
 # 実行
     execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 消滅
     kill @s
