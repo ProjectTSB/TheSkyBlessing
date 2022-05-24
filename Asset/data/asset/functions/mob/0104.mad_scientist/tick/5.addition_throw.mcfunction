@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0104.mad_scientist/tick/4.throw_potion
 
+#> Private
+# @private
+    #declare score_holder $Random
+
 # 一度タグを全消し
     execute if entity @s[tag=2W.Poison] run tag @s remove 2W.Poison
     execute if entity @s[tag=2W.Fire] run tag @s remove 2W.Fire

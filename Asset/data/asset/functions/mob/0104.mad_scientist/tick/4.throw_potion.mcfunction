@@ -20,8 +20,8 @@
     playsound entity.splash_potion.throw hostile @a ~ ~ ~ 1 0.5 0
 
 # 体力が半分以下であることを検知して3way弾にする
-    execute if entity @s[tag=2W.HalfHealth] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
-    execute if entity @s[tag=2W.HalfHealth] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~-20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+    execute if entity @s[tag=2W.HPless50Per] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
+    execute if entity @s[tag=2W.HPless50Per] facing entity @p[gamemode=!creative,gamemode=!spectator] feet rotated ~-20 ~ run function asset:mob/0104.mad_scientist/tick/5.addition_throw
 
 # スコアリセット
     scoreboard players reset @s 2W.Tick
