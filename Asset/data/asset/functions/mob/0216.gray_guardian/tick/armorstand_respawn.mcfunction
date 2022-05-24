@@ -19,6 +19,7 @@
     tag @s remove 60.SkillMelee
     tag @s remove 60.SkillBow
     tag @s remove 60.SkillAxe
+    tag @s remove 60.SkillImpact
 
 # 強制的にテレポする
     function asset:mob/0216.gray_guardian/tick/move/spread
