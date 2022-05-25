@@ -17,7 +17,7 @@
 
 # ダメージ
     # 与えるダメージ = 25
-        data modify storage lib: Argument.Damage set value 33f
+        data modify storage lib: Argument.Damage set value 55f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -27,6 +27,6 @@
 # 対象に
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 # 攻撃があたったらタグを付与
     tag @s add 3N.SkillIceCannonHit

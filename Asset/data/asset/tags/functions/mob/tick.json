@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0287.burning_stomper/tick/1.trigger",
+        "asset:mob/0262.frestchika/tick/1.trigger",
         "asset:mob/0085.soul_bullet/tick/1.trigger",
         "asset:mob/0084.falcios_priest/tick/1.trigger",
         "asset:mob/0232.honey_leader/tick/1.trigger",

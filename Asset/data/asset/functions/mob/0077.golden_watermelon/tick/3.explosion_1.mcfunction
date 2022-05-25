@@ -25,7 +25,7 @@
 # 実行
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 自身に二段目爆発のためのスコアを付与
     scoreboard players set @s 25.Tick 20

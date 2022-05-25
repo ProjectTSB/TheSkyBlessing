@@ -63,4 +63,4 @@
 # 範囲5m以内のエンティティを対象に
     execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
