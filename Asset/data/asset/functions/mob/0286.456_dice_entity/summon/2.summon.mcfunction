@@ -20,5 +20,5 @@
     scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..0.01] CU.UserID = @p[tag=this] UserID
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/0286.456_dice_entity/tick/event/init
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/0286.456_dice_entity/summon/init
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
