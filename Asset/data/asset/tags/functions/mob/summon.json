@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0282.call_fulstuka/summon/1.trigger",
+        "asset:mob/0205.skull_warrior/summon/1.trigger",
         "asset:mob/0211.aurora_bullet/summon/1.trigger",
         "asset:mob/0210.aurora_eye/summon/1.trigger",
         "asset:mob/0287.burning_stomper/summon/1.trigger",
