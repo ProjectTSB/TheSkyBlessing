@@ -23,7 +23,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーの方向へ前進
  tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]
