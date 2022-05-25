@@ -20,11 +20,11 @@
 # 効果時間の処理
     scoreboard players remove @s 5U.DebuffTime 1
 
-# スケジュールループ
-    execute if entity @s[scores={5U.DebuffTime=0..}] run schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
-
 # プレイヤー死亡時に終了
     execute if entity @s[tag=Death] run function asset:mob/0210.aurora_eye/player_process/04.end
 
 # 終了
     execute if entity @s[scores={5U.DebuffTime=..0}] run function asset:mob/0210.aurora_eye/player_process/04.end
+
+# スケジュールループ
+    execute if entity @s[scores={5U.DebuffTime=0..}] run schedule function asset:mob/0210.aurora_eye/player_process/01.schedule_loop 1t replace
