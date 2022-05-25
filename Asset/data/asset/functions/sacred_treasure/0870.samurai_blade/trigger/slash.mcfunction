@@ -19,4 +19,4 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..4] positioned ^ ^ ^3 run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
