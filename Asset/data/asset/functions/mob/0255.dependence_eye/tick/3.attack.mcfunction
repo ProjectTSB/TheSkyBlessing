@@ -22,7 +22,7 @@
     execute if data storage api: {HurtTime:0s} as @p run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # クールタイム設定
     scoreboard players set @s 73.AttackCT 20
