@@ -15,20 +15,21 @@
     summon item ~ ~ ~ {Age:5900s,PickupDelay:5s,Item:{id:"minecraft:melon_slice",Count:5b}}
 
 # 水属性ダメージ
-
-    # 引数の設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 13.0
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
+    # デスログ
+        data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sによってスイカの爆発に巻き込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+        data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sのスイカの爆発の衝撃波に巻き込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     # 補正functionを実行
         function lib:damage/modifier
     # ダメージ対象
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # 消滅
     kill @s

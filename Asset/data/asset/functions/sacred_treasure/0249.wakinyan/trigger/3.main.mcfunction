@@ -35,12 +35,12 @@
         # execute at @e[type=#lib:living,tag=Hit,distance=..100,limit=1] run summon lightning_bolt ~ ~ ~ {damage:0.001d,CustomName:'[{"text": "雷鳥の囃子","color":"yellow"}]'}
     # だめーーじ
         data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Thunder,BypassResist:0b}}
-        execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 80.0f
-        execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 100.0f
-        execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 120.0f
+        execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 120.0f
+        execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 180.0f
+        execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 240.0f
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run function lib:damage/
     # リセット
         scoreboard players reset @s Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] remove Hit
