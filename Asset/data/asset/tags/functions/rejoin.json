@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:sacred_treasure/0837.the_world_knife/trigger/rejoin_process",
         "asset:mob/0210.aurora_eye/rejoin_process",
         "asset:sacred_treasure/0664.soul_fire_armor/trigger/rejoin_process",
         "asset:sacred_treasure/0822.sound_of_a_star/trigger/rejoin_process",
