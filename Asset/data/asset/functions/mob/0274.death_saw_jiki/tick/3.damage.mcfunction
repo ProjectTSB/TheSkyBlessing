@@ -26,7 +26,7 @@
         tag @a[gamemode=!creative,gamemode=!spectator,distance=..1] add DamageTarget
         execute as @e[type=#lib:living,tag=DamageTarget,distance=..1] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,tag=DamageTarget,distance=..2] remove DamageTarget
 
 # クールタイムを与える

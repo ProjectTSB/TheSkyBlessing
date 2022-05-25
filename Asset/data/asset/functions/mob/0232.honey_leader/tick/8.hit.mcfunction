@@ -21,7 +21,7 @@
 # 実行
     execute if entity @s[gamemode=!creative] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 # デバフ
     effect give @s[gamemode=!creative] poison 3 1 true
     effect give @s[gamemode=!creative] mining_fatigue 3 1 true
