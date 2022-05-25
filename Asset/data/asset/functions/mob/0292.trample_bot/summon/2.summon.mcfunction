@@ -5,7 +5,7 @@
 # @within function asset:mob/0292.trample_bot/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {CustomNameVisible:0b,Tags:["MobInit","AlwaysInvisible","AntiFallDamage"],DeathLootTable:"asset:mob/death/0292.trample_bot"}
+    summon skeleton ~ ~ ~ {Silent:1b,CustomNameVisible:0b,Tags:["MobInit","AlwaysInvisible","AntiFallDamage"],DeathLootTable:"asset:mob/death/0292.trample_bot"}
 # ID (int)
     data modify storage asset:mob ID set value 292
 # Type (string) Wikiを参照

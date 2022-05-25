@@ -32,6 +32,6 @@
 
 # パーティクル
     particle smoke ~ ~0.1 ~ 1 0.1 1 0.02 100
-    particle dust 1 1 0 1.5 ~ ~0.1 ~ 1 0.1 1 0.02 30
-    particle dust 0.867 1 0 1.5 ~ ~0.1 ~ 1 0.1 1 0.02 30
+    particle dust 1000000000 1 0 1.5 ~ ~0.1 ~ 1 0.1 1 0.02 30
+    particle dust 1 1 0 1 ~ ~0.1 ~ 1 0.1 1 0.02 30
     execute positioned ~ ~0.1 ~ run function asset:mob/0292.trample_bot/tick/event/shape
