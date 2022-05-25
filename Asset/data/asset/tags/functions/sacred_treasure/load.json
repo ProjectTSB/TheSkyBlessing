@@ -1,5 +1,16 @@
 {
     "values": [
+        "asset:sacred_treasure/0793.queen_bee_rocket/trigger/0.load",
+        "asset:sacred_treasure/0870.samurai_blade/trigger/0.load",
+        "asset:sacred_treasure/0915.flame_hunter_hat/trigger/0.load",
+        "asset:sacred_treasure/0837.the_world_knife/trigger/0.load",
+        "asset:sacred_treasure/0664.soul_fire_armor/trigger/0.load",
+        "asset:sacred_treasure/0822.sound_of_a_star/trigger/0.load",
+        "asset:sacred_treasure/0005.musket_matchlock/trigger/0.load",
+        "asset:sacred_treasure/0905.book_of_metastasis/trigger/0.load",
+        "asset:sacred_treasure/0907.rod_of_rain/trigger/0.load",
+        "asset:sacred_treasure/0218.iron_storm/trigger/0.load",
+        "asset:sacred_treasure/0105.secret_meat/trigger/0.load",
         "asset:sacred_treasure/0002.blessing/trigger/0.load",
         "asset:sacred_treasure/0152.call_cat/trigger/0.load",
         "asset:sacred_treasure/0295.call_elemental_familiar/trigger/0.load",

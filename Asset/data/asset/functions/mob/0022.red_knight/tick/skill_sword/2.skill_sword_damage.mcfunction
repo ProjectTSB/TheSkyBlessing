@@ -6,13 +6,13 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 30.0f
+        data modify storage lib: Argument.Damage set value 50.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=player,gamemode=!creative,gamemode=!spectator,distance=..4] at @s run function lib:damage/
+        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..4] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
