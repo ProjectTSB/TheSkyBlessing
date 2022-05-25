@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0292.trample_bot/tick/1.trigger",
         "asset:mob/0287.burning_stomper/tick/1.trigger",
         "asset:mob/0228.frost_eye/tick/1.trigger",
         "asset:mob/0262.frestchika/tick/1.trigger",
