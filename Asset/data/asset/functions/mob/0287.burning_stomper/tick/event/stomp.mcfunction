@@ -28,7 +28,7 @@
     execute at @a[gamemode=!spectator,distance=..3] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:7,ShowParticles:0b}]}
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # パーティクル
     particle smoke ~ ~0.1 ~ 1 0.1 1 0.02 100
