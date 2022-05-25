@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "mainhand"
+    data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # 神器の発動条件 (TextComponentString) (オプション)
