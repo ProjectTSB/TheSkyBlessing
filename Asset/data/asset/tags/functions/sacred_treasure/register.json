@@ -1,5 +1,19 @@
 {
     "values": [
+        "asset:sacred_treasure/0920.dal_i_thalion/register",
+        "asset:sacred_treasure/0918.flame_hunter_boots/register",
+        "asset:sacred_treasure/0917.flame_hunter_clothes/register",
+        "asset:sacred_treasure/0916.flame_hunter_clothes/register",
+        "asset:sacred_treasure/0915.flame_hunter_hat/register",
+        "asset:sacred_treasure/0937.ideal_boots/register",
+        "asset:sacred_treasure/0936.ideal_leggings/register",
+        "asset:sacred_treasure/0935.ideal_chestplate/register",
+        "asset:sacred_treasure/0934.ideal_helmet/register",
+        "asset:sacred_treasure/0667.soul_fire_armor/register",
+        "asset:sacred_treasure/0666.soul_fire_armor/register",
+        "asset:sacred_treasure/0665.soul_fire_armor/register",
+        "asset:sacred_treasure/0664.soul_fire_armor/register",
+        "asset:sacred_treasure/0954.inverted_parachute/register",
         "asset:sacred_treasure/0932.equal_speed_charlie_london/register",
         "asset:sacred_treasure/0930.z_flag/register",
         "asset:sacred_treasure/0954.inverted_parachute/register",
@@ -202,8 +216,9 @@
         "asset:sacred_treasure/0733.persantage_sword/register",
         "asset:sacred_treasure/0735.collision_plate/register",
         "asset:sacred_treasure/0745.blade_of_whirlwind/register",
-        "asset:sacred_treasure/0860.angel_wing/register",
+        "asset:sacred_treasure/0822.sound_of_a_star/register",
         "asset:sacred_treasure/0826.infinite_potatoes/register",
-        "asset:sacred_treasure/0840.honey_bee_stick/register"
+        "asset:sacred_treasure/0840.honey_bee_stick/register",
+        "asset:sacred_treasure/0860.angel_wing/register"
     ]
 }
