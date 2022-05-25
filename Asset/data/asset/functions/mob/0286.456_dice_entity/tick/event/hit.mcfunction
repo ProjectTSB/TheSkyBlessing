@@ -39,7 +39,7 @@
         execute as @e[tag=LandingTarget] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @s remove CU.This
 
 # 着弾タグを消す
