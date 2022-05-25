@@ -47,12 +47,12 @@
 # ダメージセット
     data modify storage lib: Argument.Damage set value 200.0f
 # 補正functionを実行
-    function lib:damage/modifier
+    function lib:damage/modifier_continuation
 # ダメージを与える
     execute as @e[type=#lib:living,type=!player,tag=PA.SlashHit,distance=..10] run function lib:damage/
 
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @e[type=#lib:living,type=!player,tag=PA.MeleeHit,distance=..10] remove PA.MeleeHit
     tag @e[type=#lib:living,type=!player,tag=PA.SlashHit,distance=..10] remove PA.SlashHit

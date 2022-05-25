@@ -42,5 +42,5 @@
         execute as @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run function lib:damage/
     # リセット
         scoreboard players reset @s Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] remove Hit

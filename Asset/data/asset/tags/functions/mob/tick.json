@@ -1,6 +1,11 @@
 {
     "values": [
         "asset:mob/0286.456_dice_entity/tick/1.trigger",
+        "asset:mob/0211.aurora_bullet/tick/1.trigger",
+        "asset:mob/0210.aurora_eye/tick/1.trigger",
+        "asset:mob/0287.burning_stomper/tick/1.trigger",
+        "asset:mob/0228.frost_eye/tick/1.trigger",
+        "asset:mob/0262.frestchika/tick/1.trigger",
         "asset:mob/0085.soul_bullet/tick/1.trigger",
         "asset:mob/0084.falcios_priest/tick/1.trigger",
         "asset:mob/0232.honey_leader/tick/1.trigger",
