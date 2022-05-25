@@ -11,4 +11,4 @@
     playsound block.beacon.power_select player @a ~ ~ ~ 0.2 2 0
 
 # リセット
-    data remove storage asset:temp MP4Per
+    data remove storage asset:temp MP8Per
