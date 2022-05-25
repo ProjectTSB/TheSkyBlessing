@@ -23,9 +23,9 @@
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;1076876798,-181975559,-1455522315,1508980085],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI0MGYyYjFhNjgxMzY2NDU2YmY5ODkyZDFjMGY0NzMzOTliOTZiYTkwYmNhYjY4ZTc3YjY4NDg0NjllYjU3In19fQ=="}]}}}}
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 120
+    data modify storage asset:mob Health set value 100
 # 攻撃力 (double) (オプション) 数値が異常なのは石の斧を持ったときを基準としているため
-    data modify storage asset:mob AttackDamage set value -5.0d
+    data modify storage asset:mob AttackDamage set value -4.0d
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 0.0d
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
