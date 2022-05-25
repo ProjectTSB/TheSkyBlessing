@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0046.clock_of_despair/death/1.trigger",
         "asset:mob/0210.aurora_eye/death/1.trigger",
         "asset:mob/0228.frost_eye/death/1.trigger",
         "asset:mob/0262.frestchika/death/1.trigger",
