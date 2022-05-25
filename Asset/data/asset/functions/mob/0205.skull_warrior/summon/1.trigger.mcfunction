@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/summon
 
-execute if data storage asset:context {id:295} run function asset:mob/0205.skull_warrior/summon/2.summon
+execute if data storage asset:context {id:205} run function asset:mob/0205.skull_warrior/summon/2.summon
