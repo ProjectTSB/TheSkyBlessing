@@ -13,12 +13,12 @@
     execute facing entity @p eyes run tp @s ~ ~ ~ ~ ~
 
 # モデル変更
-    item replace entity @s armor.head with stick{CustomModelData:20210}
+    item replace entity @s armor.head with stick{CustomModelData:20212}
 
 # こっちに対してMotionで飛ぶ 近いやつを優先
-    execute if entity @a[distance=14..30] run data modify storage lib: Argument.VectorMagnitude set value 2
-    execute if entity @a[distance=7..14] run data modify storage lib: Argument.VectorMagnitude set value 1.5
-    execute if entity @a[distance=..7] run data modify storage lib: Argument.VectorMagnitude set value 0.7
+    execute if entity @a[distance=14..30] run data modify storage lib: Argument.VectorMagnitude set value 2.2
+    execute if entity @a[distance=7..14] run data modify storage lib: Argument.VectorMagnitude set value 1.7
+    execute if entity @a[distance=..7] run data modify storage lib: Argument.VectorMagnitude set value 0.9
     execute facing entity @p feet run function lib:motion/
     data remove storage lib: Argument
 
