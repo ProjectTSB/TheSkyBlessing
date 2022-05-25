@@ -22,4 +22,4 @@
 # ダメージ対象
     execute as @a[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

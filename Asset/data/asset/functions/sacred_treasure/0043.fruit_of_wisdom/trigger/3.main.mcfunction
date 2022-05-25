@@ -19,6 +19,6 @@
         data modify storage lib: Argument set value {AttackType:Physical,BypassResist:1b}
         execute store result storage lib: Argument.Damage float 0.01 run data get storage api: Health 75
         function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
         playsound entity.player.hurt player @a ~ ~ ~ 1 1
         particle enchant ~ ~1 ~ 0.5 0.5 0.5 0 300 force @a

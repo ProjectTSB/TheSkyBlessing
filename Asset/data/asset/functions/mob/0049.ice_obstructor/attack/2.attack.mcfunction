@@ -30,4 +30,4 @@
 # 粉雪を設置
     execute at @p[gamemode=survival,tag=Victim,distance=..32] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

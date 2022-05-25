@@ -25,28 +25,28 @@
     data modify storage lib: Argument.ElementType set value "Water"
     execute as @p[tag=P8.Owner] run function lib:damage/modifier
     execute as @e[type=#lib:living,tag=Enemy,tag=P8.TargetEntity,distance=..10] run function lib:damage/
+    function lib:damage/reset
 
 # 回復
+    # 水攻撃補正をstorageに入れる (補正1.2の場合、0.2になるように計算)
+        execute as @p[tag=P8.Owner] run function api:player_modifier/attack/water/get
+        execute store result score $AttackWater Temporary run data get storage api: Return.Attack.Water 100
+        scoreboard players operation $AttackWater Temporary -= $100 Const
+        execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $AttackWater Temporary
 
-# 水攻撃補正をstorageに入れる (補正1.2の場合、0.2になるように計算)
-    execute as @p[tag=P8.Owner] run function api:player_modifier/attack/water/get
-    execute store result score $AttackWater Temporary run data get storage api: Return.Attack.Water 100
-    scoreboard players operation $AttackWater Temporary -= $100 Const
-    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $AttackWater Temporary
+    # 体力回復量補正に水攻撃補正を掛ける
+        data modify storage api: Argument.UUID set value [I;1,1,907,0]
+        data modify storage api: Argument.Operation set value "multiply_base"
+        execute as @p[tag=P8.Owner] run function api:player_modifier/heal/add
 
-# 体力回復量補正に水攻撃補正を掛ける
-    data modify storage api: Argument.UUID set value [I;1,1,907,0]
-    data modify storage api: Argument.Operation set value "multiply_base"
-    execute as @p[tag=P8.Owner] run function api:player_modifier/heal/add
+    # 範囲内のプレイヤーを回復
+        data modify storage lib: Argument.Heal set value 20.0f
+        execute as @p[tag=P8.Owner] run function lib:heal/modifier
+        execute as @a[tag=P8.TargetEntity,distance=..10] run function lib:heal/
 
-# 範囲内のプレイヤーを回復
-    data modify storage lib: Argument.Heal set value 20.0f
-    execute as @p[tag=P8.Owner] run function lib:heal/modifier
-    execute as @a[tag=P8.TargetEntity,distance=..10] run function lib:heal/
-
-# 体力回復補正から水攻撃補正を取り除く
-    data modify storage api: Argument.UUID set value [I;1,1,907,0]
-    execute as @p[tag=P8.Owner] run function api:player_modifier/heal/remove
+    # 体力回復補正から水攻撃補正を取り除く
+        data modify storage api: Argument.UUID set value [I;1,1,907,0]
+        execute as @p[tag=P8.Owner] run function api:player_modifier/heal/remove
 
 # リセット
     tag @e[type=#lib:living,tag=P8.TargetEntity,distance=..10] remove P8.TargetEntity
