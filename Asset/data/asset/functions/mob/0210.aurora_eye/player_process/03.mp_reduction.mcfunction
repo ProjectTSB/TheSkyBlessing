@@ -1,6 +1,6 @@
 #> asset:mob/0210.aurora_eye/player_process/03.mp_reduction
 #
-#
+# 最大MPの8%分減少させる
 #
 # @within function asset:mob/0210.aurora_eye/player_process/02.main
 
