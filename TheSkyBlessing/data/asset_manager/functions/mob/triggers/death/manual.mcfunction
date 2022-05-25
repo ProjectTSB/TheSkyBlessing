@@ -4,6 +4,8 @@
 #
 # @within function lib:damage/core/health_subtract/non-player
 
+# 既存にasset:context idが存在する場合に退避させる
+    function asset_manager:common/context_id/stash
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
 # 実際の死亡時にもう一度Deathが実行されないためにDeathLootTableを消し飛ばす
@@ -16,6 +18,7 @@
     function asset_manager:spawner/subtract_hp/
 # トリガーの呼び出し
     function #asset:mob/death
+# 退避させたasset:context idを戻す
+    function asset_manager:common/context_id/pop
 # リセット
-    data remove storage asset:context id
     tag @a[tag=Killer] remove Killer
