@@ -49,4 +49,4 @@
     scoreboard players reset $Count Temporary
     scoreboard players reset $CountMul Temporary
     scoreboard players reset $Health Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset

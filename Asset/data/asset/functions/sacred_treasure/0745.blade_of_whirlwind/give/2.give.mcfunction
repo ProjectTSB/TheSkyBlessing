@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"風巻之刀","color":"#2970FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"我は","color":"#91CFFF","bold":true,"italic":true},{"text":"狂飆","color":"#2970FF","bold":true,"italic":true},{"text":" 並べて薙ぎ","color":"#91CFFF","bold":true,"italic":true}]','[{"text":"楽土が辻の淵と成らん","color":"#91CFFF","bold":true,"italic":true}]','{"text":"攻撃対象を吹き飛ばす刀","color":"#7AB4FF"}','{"text":"自身の速度で吹き飛ばす距離と","color":"#7AB4FF"}','{"text":"ダメージが強化される","color":"#7AB4FF"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"攻撃対象を吹き飛ばす刀","color":"#7AB4FF"}','{"text":"自身の速度で吹き飛ばす距離と","color":"#7AB4FF"}','{"text":"ダメージが強化される","color":"#7AB4FF"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

@@ -8,7 +8,7 @@
 # ダメージを与える
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.Damage set value 30.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 属性
@@ -19,7 +19,7 @@
         function lib:damage/modifier
         execute at @s as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @s
