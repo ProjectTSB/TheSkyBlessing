@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0282.call_fulstuka/tick/1.trigger",
+        "asset:mob/0211.aurora_bullet/tick/1.trigger",
+        "asset:mob/0210.aurora_eye/tick/1.trigger",
         "asset:mob/0287.burning_stomper/tick/1.trigger",
         "asset:mob/0228.frost_eye/tick/1.trigger",
         "asset:mob/0262.frestchika/tick/1.trigger",
