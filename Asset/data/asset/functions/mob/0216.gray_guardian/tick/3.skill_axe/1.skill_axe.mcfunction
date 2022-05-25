@@ -3,7 +3,9 @@
 #
 #
 # @within function asset:mob/0216.gray_guardian/tick/4.skill_active
-    #declare score_holder $4tInterval
+#> Val
+# @private
+#declare score_holder $4tInterval
 # 最初に実行
     execute if score @s 60.Tick matches 0 run function asset:mob/0216.gray_guardian/tick/3.skill_axe/2.first_tick
 
