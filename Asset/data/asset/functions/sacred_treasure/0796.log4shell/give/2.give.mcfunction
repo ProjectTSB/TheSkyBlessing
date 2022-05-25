@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"原木を消費して弾丸を発射する。"}','{"text":"${jndi:ldap://tsb.com/sacred_tresure}","color":"dark_purple","italic":false}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    data modify storage asset:sacred_treasure CostText set value '[{"text":"原木"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value 
 # 神器を発動できるスロット (string) Wikiを参照
