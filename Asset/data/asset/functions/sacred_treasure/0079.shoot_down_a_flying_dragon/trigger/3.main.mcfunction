@@ -80,4 +80,4 @@
         scoreboard players reset $Weather Temporary
         scoreboard players reset $AroundWater Temporary
         scoreboard players reset $AttackStrength Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset

@@ -10,7 +10,7 @@
 # ダメージを与える
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 15.0f
+        data modify storage lib: Argument.Damage set value 40.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 属性
@@ -19,7 +19,7 @@
         function lib:damage/modifier
         execute as @a[tag=Victim,distance=..30] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 引数の設定
     # UUID
