@@ -33,5 +33,4 @@
 
 # リセット
     scoreboard players reset @s Temporary
-    data remove storage lib: Argument
     tag @e[tag=CU.Target] remove CU.Target
