@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value {CustomName:'{"text":"スカルソルジャー"}'}
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stone_axe",Count:1b}
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
