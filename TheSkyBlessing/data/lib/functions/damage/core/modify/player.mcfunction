@@ -2,7 +2,7 @@
 #
 # damageLibの中でも攻撃元に関係する処理部
 #
-# @within function lib:damage/modifier
+# @within function lib:damage/modifier*
 
 # プレイヤー情報の記録
     scoreboard players operation $LatestModifiedUser UserID = @s UserID
