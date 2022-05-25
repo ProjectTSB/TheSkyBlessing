@@ -17,7 +17,7 @@
 
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 20f
+        data modify storage lib: Argument.Damage set value 50f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -27,7 +27,7 @@
 # 対象に
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 # あたったらAECkill
     execute if entity @a[gamemode=!spectator,distance=..2] run kill @e[type=area_effect_cloud,tag=3N.SkillPillarMaker,distance=0..1,sort=nearest,limit=1]
 # スコアが50なら死ぬ

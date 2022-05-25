@@ -6,11 +6,11 @@
 
 # 演出
     execute at @p[tag=Victim,distance=..6] run particle minecraft:splash ~ ~1 ~ 0.5 0.5 0.5 2 200
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.player.splash.high_speed ambient @a ~ ~ ~ 0.6 1.3 0
-    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 0.6 1 0
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.player.splash.high_speed hostile @a ~ ~ ~ 0.6 1.3 0
+    execute at @p[tag=Victim,distance=..6] run playsound minecraft:entity.dolphin.splash hostile @a ~ ~ ~ 0.6 1 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 6f
+    data modify storage lib: Argument.Damage set value 9f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
@@ -19,4 +19,4 @@
 # 対象
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

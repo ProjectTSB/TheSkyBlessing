@@ -5,7 +5,7 @@
 # @within function asset:mob/0151.recombined/attack/1.trigger
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 18f
+    data modify storage lib: Argument.Damage set value 25f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
@@ -14,7 +14,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     playsound minecraft:entity.ghast.hurt hostile @a ~ ~ ~ 0.3 1.6

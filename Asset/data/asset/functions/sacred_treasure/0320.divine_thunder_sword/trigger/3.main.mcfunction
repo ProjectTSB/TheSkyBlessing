@@ -11,14 +11,16 @@
 
 # 演出
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] rotated ~ 0 run function asset:sacred_treasure/0320.divine_thunder_sword/trigger/3.1.particle
+    playsound item.trident.throw player @a ~ ~ ~ 1 1
+
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~15の追加ダメージ
-            scoreboard players operation $RandomDamage Temporary %= $16 Const
+        # 剰余算する。0~40の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $41 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 45
+            scoreboard players add $RandomDamage Temporary 280
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性
@@ -31,5 +33,5 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary

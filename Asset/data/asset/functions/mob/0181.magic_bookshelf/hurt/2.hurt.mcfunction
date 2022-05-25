@@ -6,4 +6,4 @@
 
 # 演出
     particle witch ~ ~1.2 ~ 0.5 0.4 0.5 0 20 normal @a
-    playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 0.8 0
+    playsound entity.evoker.prepare_summon hostile @a ~ ~ ~ 0.8 0.8 0

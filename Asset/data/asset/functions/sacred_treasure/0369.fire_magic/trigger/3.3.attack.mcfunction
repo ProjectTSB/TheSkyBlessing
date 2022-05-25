@@ -19,8 +19,8 @@
     playsound entity.blaze.burn master @a ~ ~ ~ 1 1
 
 # 攻撃を与える
-    # 与えるダメージ = 26
-        data modify storage lib: Argument.Damage set value 26f
+    # 与えるダメージ = 100
+        data modify storage lib: Argument.Damage set value 100f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -30,7 +30,7 @@
 # 攻撃した対象に実行
     execute as @e[tag=A9.Target] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 #自身を殺す
     kill @s

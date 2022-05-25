@@ -10,7 +10,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 20.0f
+        data modify storage lib: Argument.Damage set value 12.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 火属性
@@ -19,4 +19,4 @@
         function lib:damage/modifier
         execute as @p[gamemode=!creative,gamemode=!spectator,distance=..4] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

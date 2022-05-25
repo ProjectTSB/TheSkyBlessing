@@ -9,8 +9,8 @@
     effect give @s unluck 30 1
 
 # ダメージを受ける
-    # 与えるダメージ = 7.5
-        data modify storage lib: Argument.Damage set value 7.5f
+    # 与えるダメージ = 3.5
+        data modify storage lib: Argument.Damage set value 3.5f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正function
@@ -18,4 +18,4 @@
 # 対象は自分
     function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

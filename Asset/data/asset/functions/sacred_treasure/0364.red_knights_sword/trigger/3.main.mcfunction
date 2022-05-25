@@ -13,11 +13,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 残り回数が1回の時発動した場合
-    execute store result score $UseCount Temporary run data get storage asset:context Items.mainhand.tag.TSB.RemainingCount
-    execute if score $UseCount Temporary matches 1 run data modify storage api: Argument.ID set value 365
-    execute if score $UseCount Temporary matches 1 run function api:sacred_treasure/give/from_id
-    execute if score $UseCount Temporary matches 1 run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
-    scoreboard players reset $UseCount Temporary
+    execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 365
+    execute unless data storage asset:context Items.mainhand.id run function api:sacred_treasure/give/from_id
+    execute unless data storage asset:context Items.mainhand.id run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
 
 # 演出
     playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
@@ -26,11 +24,24 @@
 
 # ダメージ設定
     # 与えるダメージ = 90
-        data modify storage lib: Argument.Damage set value 90.0f
+        data modify storage lib: Argument.Damage set value 800.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
+
+# 自身の最大体力の5%分のダメージを与える
+    # ダメージ量
+        execute store result storage lib: Argument.Damage float 0.05 run attribute @s generic.max_health get 1.0
+    # 第一属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+    # 耐性エフェクトを無視するか否か
+        data modify storage lib: Argument.BypassResist set value true
+    # 補正をしない
+        data modify storage lib: Argument.FixedDamage set value true
+    # ダメージ
+        function lib:damage/modifier_continuation
+        function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -18,11 +18,11 @@
     execute if score @s 3L.Tick matches 85 run function asset:mob/0129.lexiel/tick/skill_thunder/2.skill_thunder_summon
     execute if score @s 3L.Tick matches 85 run function asset:mob/0129.lexiel/tick/skill_thunder/2.skill_thunder_summon
 # 攻撃
-    execute if score @s 3L.Tick matches 104 as @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] at @s run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
-    execute if score @s 3L.Tick matches 106 as @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] at @s run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
-    execute if score @s 3L.Tick matches 108 as @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] at @s run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
-    execute if score @s 3L.Tick matches 110 as @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] at @s run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
-    execute if score @s 3L.Tick matches 112 as @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] at @s run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
+    execute if score @s 3L.Tick matches 104 at @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
+    execute if score @s 3L.Tick matches 106 at @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
+    execute if score @s 3L.Tick matches 108 at @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
+    execute if score @s 3L.Tick matches 110 at @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
+    execute if score @s 3L.Tick matches 112 at @e[type=area_effect_cloud,tag=3L.SkillThunderMaker,sort=random,limit=1] run function asset:mob/0129.lexiel/tick/skill_thunder/3.skill_thunder_particle_and_damage
 
 # タグを消す
     execute if score @s 3L.Tick matches 130 run tag @s remove 3L.SkillThunder

@@ -7,7 +7,7 @@
 # 演出
     particle dust 1 1 0 1 ~ ~1.6 ~ 0.4 0.6 0.4 0 10 normal @a
     particle dust 0.3 0.3 0.3 1 ~ ~1.6 ~ 0.4 0.6 0.4 0 30 normal @a
-    playsound block.respawn_anchor.deplete master @a ~ ~ ~ 0.6 2 0
+    playsound block.respawn_anchor.deplete hostile @a ~ ~ ~ 0.6 2 0
 
 # 移動速度上昇
-    effect give @s speed 3 3 true
+    effect give @s speed 3 0 true

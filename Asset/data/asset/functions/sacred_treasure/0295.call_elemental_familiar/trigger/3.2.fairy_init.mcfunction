@@ -9,8 +9,8 @@
 #    execute at @p run tp @s ~ ~ ~
 
 # 万が一仕様変更でunivrsalAngerがfalseになったとき用
-    execute at @s run summon snowball ~ ~-1 ~ {Owner:[I;0,0,0,0],Motion:[0.0,1.0,0.0],Tags:["295Fa.Snowball","295Fa.Snowball"],Item:{id:"minecraft:white_stained_glass",Count:1b}}
-    execute as @e[type=snowball,tag=295Fa.Snowball,sort=nearest,limit=1] run data modify entity @s Owner set from entity @p UUID
+    execute at @s run summon area_effect_cloud ~ ~0.5 ~ {Particle:"crit",Tags:[295Fa.AEC],Radius:0.4f,Duration:6,DurationOnUse:0,Age:4,WaitTime:0,Effects:[{Id:22b,Amplifier:1b,Duration:1,ShowParticles:0b},{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute as @e[type=area_effect_cloud,tag=295Fa.AEC,sort=nearest,limit=1] run data modify entity @s Owner set from entity @p UUID
 
 # タグ整備
     tag @s remove 295Fa.Init

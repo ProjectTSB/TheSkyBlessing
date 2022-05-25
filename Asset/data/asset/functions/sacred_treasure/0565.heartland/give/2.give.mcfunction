@@ -51,7 +51,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:63,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,565,3],AttributeName:"generic.armor",Name:"armor",Slot:feet,Operation:0,Amount:3},{UUID:[I;1,1,565,3],AttributeName:"generic.max_health",Name:"max_health",Slot:feet,Operation:0,Amount:4},{UUID:[I;1,1,565,3],AttributeName:"generic.movement_speed",Name:"speed",Slot:feet,Operation:1,Amount:0.8}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:64,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,565,3],AttributeName:"generic.armor",Name:"armor",Slot:feet,Operation:0,Amount:3},{UUID:[I;1,1,565,3],AttributeName:"generic.max_health",Name:"max_health",Slot:feet,Operation:0,Amount:4},{UUID:[I;1,1,565,3],AttributeName:"generic.movement_speed",Name:"speed",Slot:feet,Operation:1,Amount:0.3}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

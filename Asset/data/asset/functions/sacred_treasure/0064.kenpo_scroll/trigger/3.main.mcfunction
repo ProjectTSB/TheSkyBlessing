@@ -14,8 +14,8 @@
     playsound minecraft:entity.firework_rocket.blast master @s ~ ~ ~ 1 2
 
 # 10の軽減貫通ダメージを与える
-    # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10f
+    # 与えるダメージ = 28
+        data modify storage lib: Argument.Damage set value 28f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -27,7 +27,4 @@
     # ダメージを与える
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
-
-# リセット
-    data remove storage lib: Argument
+        function lib:damage/reset

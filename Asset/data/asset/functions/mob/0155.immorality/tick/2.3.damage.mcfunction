@@ -9,7 +9,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 15.0f
+        data modify storage lib: Argument.Damage set value 30.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -18,7 +18,7 @@
         function lib:damage/modifier
         execute as @p[gamemode=!creative,tag=LandingTarget,distance=..50] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # ウィザーを付与
     effect give @p[gamemode=!creative,tag=LandingTarget,distance=..50] wither 6 0

@@ -18,5 +18,17 @@
     particle explosion_emitter ~ ~ ~ 0 0 0 1 2
     playsound entity.generic.explode hostile @a ~ ~ ~
 
+# 与えるダメージ
+    data modify storage lib: Argument.Damage set value 35f
+# 属性
+    data modify storage lib: Argument.AttackType set value "Physical"
+    data modify storage lib: Argument.ElementType set value "Water"
+# 補正functionを実行
+    function lib:damage/modifier
+# 対象
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] run function lib:damage/
+# リセット
+    function lib:damage/reset
+
 # キル
     kill @s

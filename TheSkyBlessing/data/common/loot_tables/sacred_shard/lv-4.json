@@ -1,0 +1,58 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "ミスティカシャード",
+                                    "italic": false,
+                                    "color": "aqua"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "大量の不安定なマナが集まり結晶化した破片。",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "加工することで数多の可能性を呼び寄せ、",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "神器として顕現させることができる。",
+                                        "italic": false,
+                                        "color": "light_purple"
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{CustomModelData:20093,TSB:{Shard:1b,ShardRarity:4b}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

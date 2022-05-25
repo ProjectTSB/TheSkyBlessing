@@ -27,19 +27,19 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [6,12]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [45,65]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.BypassResist set value 1b
+    #data modify storage asset:sacred_treasure AttackInfo.BypassResist set value 1b
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value every
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 45
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 3
+    data modify storage asset:sacred_treasure MPCost set value 2
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)

@@ -5,7 +5,7 @@
 # @within function asset:mob/0058.divide_haze/tick/1.trigger
 
 # 演出
-    particle dust 0 0.2 0.1 1 ~ ~1 ~ 0.5 0.3 0.5 1 6 normal @a[distance=..12]
+    particle dust 0 0.2 0.1 1 ~ ~1 ~ 0.5 0.3 0.5 1 6 normal @a[distance=..16]
 
 # 周囲のプレイヤーにウィザー
     effect give @a[gamemode=!spectator,distance=..1.2] wither 1 2 false

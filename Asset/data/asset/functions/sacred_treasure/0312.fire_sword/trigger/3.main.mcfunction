@@ -13,17 +13,20 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:flame ~ ~0.5 ~ 0 0.5 0 0.1 100
-    playsound minecraft:entity.blaze.shoot ambient @a ~ ~ ~ 1 0.6
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:flame ~ ~1 ~ 0 0 0 0.05 10
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:flame ~ ~1 ~ 0 0 0 0.05 10
+
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 1
+    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 1.5
 
 # ダメージ
     #ダメージブレのための処理
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~2の追加ダメージ
-          scoreboard players operation $RandomDamage Temporary %= $3 Const
+        # 剰余算する。0~10の追加ダメージ
+          scoreboard players operation $RandomDamage Temporary %= $11 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 7
+            scoreboard players add $RandomDamage Temporary 40
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性
@@ -36,5 +39,5 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary

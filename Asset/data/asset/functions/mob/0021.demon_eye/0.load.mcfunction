@@ -7,3 +7,5 @@
 #> Objective
 # @within asset:mob/0021.demon_eye/**
     scoreboard objectives add L.Rot dummy
+    scoreboard objectives add L.LifeTime dummy
+    scoreboard objectives add L.AttackCT dummy

@@ -6,7 +6,6 @@
 #> tag
 # @within function asset:mob/0053.executioners/attack/2.attack
     #declare tag SpreadMarker
-    #declare score_holder $VectorMagnitude
 
 # 演出
 
@@ -20,7 +19,7 @@
     item replace entity @s weapon with stick{CustomModelData:20029}
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 7f
+    data modify storage lib: Argument.Damage set value 10f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
@@ -29,29 +28,19 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
-
+    function lib:damage/reset
 
 # 以下自分がテレポートする処理
 # 演出
    particle minecraft:firework ~ ~1 ~ 0.5 0.5 0.5 0 10 normal @a
    playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 1
 
-# ワープ準備
-    execute at @p[gamemode=!spectator] run summon marker ~ ~40 ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 4
-    data modify storage lib: Argument.Spread set value 2d
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p positioned ~ ~40 ~ rotated ~ 90 run function lib:forward_spreader/circle
-
-# ワープ
-    execute at @p[gamemode=!spectator] positioned ~ ~40 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^40 if block ~ ~ ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator]
-# もし壁に埋まってたらちょっと前に出る(あくまで念の為の処理だし別に壁に埋まってようが問題はない)
-    execute unless block ~ ~1 ~ #lib:no_collision run tp @s ^ ^ ^1
-
-# 突進する
-    scoreboard players set $VectorMagnitude Lib 200
-    execute at @s facing entity @p[gamemode=!spectator] feet rotated ~ ~-10 run function lib:motion/
+# マーカーをワープさせて、そこが安全地帯ならワープする
+    execute at @p[tag=Victim,distance=..50] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
+    execute at @p[tag=Victim,distance=..50] run data modify storage lib: Argument.Bounds set value [[4d,4d],[0d,0d],[4d,4d]]
+    execute as @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] at @s run function lib:spread_entity/
+    execute at @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
 
 # リセット
-    scoreboard players reset $VectorMagnitude
+    data remove storage lib: Argument
     kill @e[type=marker,tag=SpreadMarker]

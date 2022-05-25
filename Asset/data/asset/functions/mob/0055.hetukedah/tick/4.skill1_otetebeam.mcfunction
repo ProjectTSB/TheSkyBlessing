@@ -11,7 +11,7 @@
 
 # 演出
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
-    playsound minecraft:entity.wither.hurt neutral @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.wither.hurt hostile @a ~ ~ ~ 1 1.5
 
 # タグを消す
     tag @s remove Landing
