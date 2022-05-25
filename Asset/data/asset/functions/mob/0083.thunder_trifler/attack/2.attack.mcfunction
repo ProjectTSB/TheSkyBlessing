@@ -25,7 +25,7 @@
 # ダメージ対象
     execute as @p[tag=Victim,distance=..50] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # マナ減少
     scoreboard players set $Fluctuation Lib -30
