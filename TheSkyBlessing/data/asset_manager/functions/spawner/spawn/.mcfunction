@@ -22,7 +22,7 @@
     execute store result score $MinSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MinSpawnDelay
     execute store result score $MaxSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxSpawnDelay
     execute store result score $SpawnCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnCount
-    execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange 10
+    execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange 30
     execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
 # 召喚するMobをランダムに選択する
     function asset_manager:spawner/spawn/choose_mob_id/

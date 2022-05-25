@@ -16,7 +16,7 @@
 
 # ダメージを与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 30.0f
+        data modify storage lib: Argument.Damage set value 50.0f
     # 属性
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Water"
@@ -26,5 +26,5 @@
         execute as @e[tag=Enemy,sort=nearest,limit=1] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @s remove GY.This

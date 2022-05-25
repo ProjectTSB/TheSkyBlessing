@@ -13,3 +13,7 @@
 #   lib:array/core/picks
     #declare score_holder $Prev
     #declare score_holder $Cur
+
+#> Compare処理用
+# @within function lib:array/**compare*
+#declare score_holder $Temp
