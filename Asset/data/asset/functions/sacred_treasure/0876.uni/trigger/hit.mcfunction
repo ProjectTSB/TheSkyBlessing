@@ -30,7 +30,7 @@
         function lib:damage/modifier
         execute as @e[tag=LandingTarget] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 
 # 着弾タグを消す
