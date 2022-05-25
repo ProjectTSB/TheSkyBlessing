@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0292.trample_bot/**
-    scoreboard objectives add 
+    scoreboard objectives add 84.MoveTime dummy
