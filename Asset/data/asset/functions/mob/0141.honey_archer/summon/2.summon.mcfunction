@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"ハニーアーチャー","color":"#FFBD24"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b,tag:{Enchantments:[{id:"punch",lvl:1}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b,tag:{CustomModelData:20186}}
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:16760100}}
 # 武器ドロップ率 ([float, float]) (オプション)
@@ -33,11 +33,11 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 160
+    data modify storage asset:mob Health set value 2900
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 18
+    data modify storage asset:mob Defense set value -6
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)

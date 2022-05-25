@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"ハニーフライヤー","color":"#FFBD24"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"bow",Count:1b,tag:{CustomModelData:20186}}
     # オフハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:16760100}}
 # 武器ドロップ率 ([float, float]) (オプション)

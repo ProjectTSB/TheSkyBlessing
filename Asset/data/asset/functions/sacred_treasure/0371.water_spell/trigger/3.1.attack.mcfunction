@@ -13,8 +13,8 @@
     playsound minecraft:entity.dolphin.splash player @a ~ ~ ~ 1 1
 
 # ダメージ
-    # 与えるダメージ = 5
-        data modify storage lib: Argument.Damage set value 7f
+    # 与えるダメージ = 13
+        data modify storage lib: Argument.Damage set value 13f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -24,4 +24,4 @@
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..1,sort=nearest,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

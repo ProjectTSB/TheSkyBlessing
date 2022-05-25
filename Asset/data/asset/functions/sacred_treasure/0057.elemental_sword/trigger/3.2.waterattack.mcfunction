@@ -13,7 +13,7 @@
 
 # ダメージ設定
     # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30.0f
+        data modify storage lib: Argument.Damage set value 80.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -22,4 +22,4 @@
         function lib:damage/modifier
         function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
