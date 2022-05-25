@@ -1,5 +1,16 @@
 {
     "values": [
+        "asset:mob/0228.frost_eye/attack/1.trigger",
+        "asset:mob/0283.guardian/attack/1.trigger",
+        "asset:mob/0083.thunder_trifler/attack/1.trigger",
+        "asset:mob/0235.orange_thrower/attack/1.trigger",
+        "asset:mob/0233.honey_flyer/attack/1.trigger",
+        "asset:mob/0090.decapitation/attack/1.trigger",
+        "asset:mob/0280.the_desire_for_burning/attack/1.trigger",
+        "asset:mob/0259.shadow_stalker/attack/1.trigger",
+        "asset:mob/0271.indomitable_warrior/attack/1.trigger",
+        "asset:mob/0269.goblins/attack/1.trigger",
+        "asset:mob/0270.who_hate/attack/1.trigger",
         "asset:mob/0242.poltergeist_subspecies_bow/attack/1.trigger",
         "asset:mob/0241.poltergeist_subspecies/attack/1.trigger",
         "asset:mob/0219.aorta/attack/1.trigger",

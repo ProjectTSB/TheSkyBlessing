@@ -10,7 +10,7 @@
 
 # ダメージを与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 15.2f
+        data modify storage lib: Argument.Damage set value 20f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
@@ -26,6 +26,6 @@
     playsound entity.dolphin.splash master @a ~ ~ ~ 1 0
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @s remove AC.This
     tag @e[tag=AC.Target] remove AC.Target

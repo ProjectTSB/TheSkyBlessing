@@ -4,6 +4,21 @@
 #
 # @within function core:tick/
 
+#> this
+# @within *
+#   core:tick/player
+#   player_manager:vanilla_attack/show_log
+#   asset_manager:sacred_treasure/triggers/**
+#   asset:sacred_treasure/**
+#   world_manager:gimmick/teleporter/**
+    #declare tag this
+
+# thisタグ付与
+    tag @s add this
+
+# Deathタグ付与
+    execute if entity @s[scores={DeathEvent=1..}] run tag @s add Death
+
 # Triggers
     execute if entity @s[scores={FirstJoinEvent=1}] run function core:handler/first_join
     execute if entity @s[scores={RejoinEvent=1..}] run function core:handler/rejoin
@@ -31,3 +46,6 @@
     function world_manager:gimmick/teleporter/
 # チーム処理
     function player_manager:set_team
+
+# リセット
+    tag @s remove this

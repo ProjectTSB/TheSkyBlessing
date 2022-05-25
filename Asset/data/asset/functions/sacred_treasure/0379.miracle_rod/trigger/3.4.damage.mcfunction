@@ -16,8 +16,8 @@
     playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
 
 # ダメージ設定
-    # 与えるダメージ = 54
-        data modify storage lib: Argument.Damage set value 124.0f
+    # 与えるダメージ = 580
+        data modify storage lib: Argument.Damage set value 580.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 無属性
@@ -26,7 +26,7 @@
         execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0},sort=nearest,limit=1] AJ.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] remove LandingTarget
