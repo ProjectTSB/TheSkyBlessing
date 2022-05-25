@@ -5,23 +5,12 @@
             "rolls": 1,
             "entries": [
                 {
-                    "type": "item",
-                    "name": "stone_button",
+                    "type": "loot_table",
+                    "name": "asset:mob/death/abstract_detect_item",
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ItemMetaData:[\"MobDeathTrigger\",\"BanEntityConditionItem\",\"BanPossession\"],ID:295}}"
-                        },
-                        {
-                            "function": "copy_nbt",
-                            "source": "killer_player",
-                            "ops": [
-                                {
-                                    "op": "replace",
-                                    "source": "UUID",
-                                    "target": "TSB.KillerUUID"
-                                }
-                            ]
+                            "tag": "{TSB:{ID:205}}"
                         }
                     ]
                 }
@@ -31,8 +20,34 @@
             "rolls": 1,
             "entries": [
                 {
-                    "type": "loot_table",
-                    "name": "entities/skeleton"
+                    "type": "minecraft:item",
+                    "name": "minecraft:bone"
+                }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_count",
+                    "count": {
+                        "min": 1,
+                        "max": 2
+                    },
+                    "add": false
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 0,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potato"
                 }
             ]
         }
