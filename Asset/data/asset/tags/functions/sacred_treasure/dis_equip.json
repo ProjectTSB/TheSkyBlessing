@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0667.soul_fire_armor/trigger/dis_equip/",
+        "asset:sacred_treasure/0666.soul_fire_armor/trigger/dis_equip/",
+        "asset:sacred_treasure/0665.soul_fire_armor/trigger/dis_equip/",
+        "asset:sacred_treasure/0664.soul_fire_armor/trigger/dis_equip/",
         "asset:sacred_treasure/0932.equal_speed_charlie_london/trigger/dis_equip/",
         "asset:sacred_treasure/0961.light_charm/trigger/dis_equip/",
         "asset:sacred_treasure/0960.heavy_charm/trigger/dis_equip/",
