@@ -30,7 +30,7 @@
 # 実行
     execute if entity @s[gamemode=!creative,gamemode=!spectator] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # マナを吸収
     scoreboard players set $Fluctuation Lib -60

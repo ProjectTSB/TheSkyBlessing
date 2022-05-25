@@ -28,7 +28,7 @@
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 鈍足付与
     effect give @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] slowness 2 2 true

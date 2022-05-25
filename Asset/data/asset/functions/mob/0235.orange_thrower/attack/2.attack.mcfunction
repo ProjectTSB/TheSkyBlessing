@@ -25,4 +25,4 @@
 # ダメージ
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
