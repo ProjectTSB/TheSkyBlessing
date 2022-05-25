@@ -38,6 +38,3 @@
 
 # リセット
     execute if score @s 60.Tick matches 1030.. run function asset:mob/0216.gray_guardian/tick/reset
-
-# リセット
-    execute if score @s 60.Tick matches 2000.. run function asset:mob/0216.gray_guardian/tick/reset

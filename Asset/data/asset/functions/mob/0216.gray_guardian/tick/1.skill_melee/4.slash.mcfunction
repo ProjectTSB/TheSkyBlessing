@@ -10,9 +10,9 @@
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
 
 # タグ付与
-    tag @a[tag=!PlayerShouldInvulnerable,distance=..2.5] add Hit
-    execute positioned ^0.5 ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add Hit
-    execute positioned ^-0.5 ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add Hit
+    tag @e[type=#lib:living,tag=Friend,tag=!Uninterferable,tag=!PlayerShouldInvulnerable,distance=..2.5] add Hit
+    execute positioned ^0.5 ^ ^1 run tag @e[type=#lib:living,tag=Friend,tag=!Uninterferable,tag=!PlayerShouldInvulnerable,distance=..2] add Hit
+    execute positioned ^-0.5 ^ ^1 run tag @e[type=#lib:living,tag=Friend,tag=!Uninterferable,tag=!PlayerShouldInvulnerable,distance=..2] add Hit
 
 # ダメージ設定
     # 与えるダメージ
@@ -23,7 +23,7 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[tag=Hit,distance=..5] at @s run function lib:damage/
+        execute as @e[type=#lib:living,tag=Friend,tag=Hit,tag=!Uninterferable,tag=!PlayerShouldInvulnerable,distance=..5] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
-    tag @e[tag=Hit,distance=..10] remove Hit
+    function lib:damage/reset
+    tag @e[type=#lib:living,tag=Friend,tag=Hit,tag=!Uninterferable,distance=..10] remove Hit
