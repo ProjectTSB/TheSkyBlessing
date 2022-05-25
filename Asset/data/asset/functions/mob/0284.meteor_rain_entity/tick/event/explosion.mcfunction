@@ -23,8 +23,8 @@
             data modify storage lib: Argument.ElementType set value "Fire"
         # ダメージ
             execute as @a if score @s UserID = @e[type=armor_stand,tag=7W.This,distance=..1,limit=1] 7W.UserID run function lib:damage/modifier
-            execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..4] run function lib:damage/
-            execute positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..4] run function lib:damage/
+            execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0] as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..4] run function lib:damage/
+            execute positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..4] run function lib:damage/
     # リセット
         function lib:damage/reset
 
