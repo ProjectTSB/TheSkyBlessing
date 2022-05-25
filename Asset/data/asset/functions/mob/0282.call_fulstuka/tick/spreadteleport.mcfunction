@@ -11,4 +11,4 @@
 
 # 演出
    execute at @s run particle dragon_breath ~ ~1 ~ 0.5 0.5 0.5 0 10 normal @a
-   execute at @s run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 0.7 0.9 0
+   execute at @s run playsound minecraft:entity.enderman.teleport player @a ~ ~ ~ 0.7 0.9 0

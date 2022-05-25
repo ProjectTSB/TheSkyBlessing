@@ -15,8 +15,8 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
-    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 2
+    playsound minecraft:item.trident.return player @a ~ ~ ~ 1 2
     execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] at @s run particle dust 1 0 0.749 2 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a

@@ -8,10 +8,9 @@
     execute if score @s 7U.Tick matches 0 as @s run function asset:mob/0282.call_fulstuka/tick/2.skill_melee/2.first_tick
 
 
-# 突進でプレイヤーが見つかってスコアが飛んだ先
+# テレポしてぶった切る
     execute if score @s 7U.Tick matches 01 positioned ^ ^ ^1 run function asset:mob/0282.call_fulstuka/tick/2.skill_melee/3.slash
     execute if score @s 7U.Tick matches 01 run data modify entity @s Pose.RightArm set value [197f,197f,296f]
-
 
     execute if score @s 7U.Tick matches 04 run data modify entity @s Pose.RightArm set value [201f,0f,314f]
     execute if score @s 7U.Tick matches 06 run data modify entity @s Pose.RightArm set value [332f,0f,302f]
