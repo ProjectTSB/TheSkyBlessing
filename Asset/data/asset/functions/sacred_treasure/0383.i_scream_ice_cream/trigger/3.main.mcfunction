@@ -52,8 +52,8 @@
     effect give @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] slowness 30 4
 
 # ダメージ
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30f
+    # 与えるダメージ = 113
+        data modify storage lib: Argument.Damage set value 113f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -63,4 +63,4 @@
 # 範囲5m以内のエンティティを対象に
     execute as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

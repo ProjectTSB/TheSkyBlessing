@@ -25,7 +25,7 @@
     # 範囲
         execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function asset:mob/0060.self_destructor/tick/5.damage_distance
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # 連鎖爆発
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplodeFuse 36

@@ -13,14 +13,14 @@
 
 # ダメージ設定
     # ダメージ
-        data modify storage lib: Argument.Damage set value 40.0f
+        data modify storage lib: Argument.Damage set value 20.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
         execute as @e[tag=LandingTarget] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @e[tag=LandingTarget] remove LandingTarget
