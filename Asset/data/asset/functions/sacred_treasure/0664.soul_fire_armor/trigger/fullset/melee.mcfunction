@@ -6,7 +6,6 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] at @s run function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] at @s run tp @s @s
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound block.fire.ambient player @a ~ ~ ~ 2 0.8 0
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.6 0.4 0
