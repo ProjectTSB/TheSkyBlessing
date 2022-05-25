@@ -11,7 +11,7 @@
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.6 0.4 0
 
 # ダメージ設定
-        data modify storage lib: Argument.Damage set value 60.0f
+        data modify storage lib: Argument.Damage set value 80.0f
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Fire"
         function lib:damage/modifier
