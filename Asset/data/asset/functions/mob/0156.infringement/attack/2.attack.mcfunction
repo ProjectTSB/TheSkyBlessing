@@ -13,7 +13,7 @@
     playsound minecraft:block.glass.break hostile @p ~ ~ ~ 1.4 1.3 0
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 12f
+    data modify storage lib: Argument.Damage set value 30f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
@@ -22,7 +22,7 @@
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 鈍足を与える
     effect give @p[tag=Victim,distance=..32] slowness 1 3

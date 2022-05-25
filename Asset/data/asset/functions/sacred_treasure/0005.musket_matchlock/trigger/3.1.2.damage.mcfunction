@@ -11,7 +11,7 @@
     #declare tag 5.Owner
     #declare tag 5.BlockChecker
     #declare score_holder $5.OwnerId
-    
+
 # 命中判定用AEC召喚
     summon area_effect_cloud ~ ~-0.1875 ~ {Duration:1,Tags:["5.HitPosition"]}
 
@@ -36,14 +36,16 @@
     execute as @e[type=area_effect_cloud,tag=5.HitPosition,distance=..1,limit=1] anchored eyes at @s positioned ^ ^ ^6.4 run tp @e[type=area_effect_cloud,tag=5.BlockChecker,distance=..0.1,x=0.0,y=0.0,z=0.0] ~ ~ ~
 
 # MatchlockIndicatorの前方かつ、MatchlockIndicatorの視線の直線上かつブロック検知用のdummyの手前にいる敵にダメージ
-    execute as @e[type=#lib:living,distance=..6] anchored eyes positioned as @s positioned ^ ^ ^1000 facing entity @e[type=area_effect_cloud,tag=5.HitPosition] eyes positioned ^ ^ ^1000 positioned ~-0.25 ~-0.25 ~-0.25 if entity @s[dx=0.5,dy=0.5,dz=0.5] run tag @s add 5.BulletHit
+    execute as @e[type=#lib:living,type=!player,distance=..6] anchored eyes positioned as @s positioned ^ ^ ^1000 facing entity @e[type=area_effect_cloud,tag=5.HitPosition] eyes positioned ^ ^ ^1000 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] run tag @s add 5.BulletHit
     execute as @e[type=#lib:living,tag=5.BulletHit,distance=..6] positioned as @s positioned ^ ^ ^-5 if entity @e[type=area_effect_cloud,tag=5.BlockChecker,distance=..4] run tag @s remove 5.BulletHit
-    execute as @e[type=#lib:living,tag=5.BulletHit,tag=!5.Owner,distance=..6,sort=nearest,limit=1] run function lib:damage/
+    execute as @p[tag=5.Owner] run function lib:damage/modifier
+    execute as @e[type=#lib:living,tag=5.BulletHit,distance=..6,sort=nearest,limit=1] run function lib:damage/
 
 # Indicator削除
     kill @s
 
 # reset
+    function lib:damage/reset
     tag @a[tag=5.Owner] remove 5.Owner
     tag @e[type=#lib:living,tag=5.BulletHit,distance=..6] remove 5.BulletHit
     tag 0-0-0-0-0 remove 5.BlockChecker

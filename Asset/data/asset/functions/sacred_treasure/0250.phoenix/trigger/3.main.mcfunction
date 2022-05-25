@@ -39,5 +39,5 @@
         data modify entity @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] Fire set value 200s
     # リセット
         scoreboard players reset @s Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] remove Hit

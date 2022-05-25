@@ -27,7 +27,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Attacker] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # MP10消費
     scoreboard players set $Fluctuation Lib -10
