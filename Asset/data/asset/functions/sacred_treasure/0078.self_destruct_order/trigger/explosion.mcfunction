@@ -6,8 +6,8 @@
 #    asset:sacred_treasure/0078.self_destruct_order/trigger/count_down
 
 # ダメージ処理(アイアンゴーレム)
-    # 与えるダメージ = 50
-        data modify storage lib: Argument.Damage set value 50.0f
+    # 与えるダメージ = 250
+        data modify storage lib: Argument.Damage set value 250.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -17,11 +17,11 @@
 # 対象指定
     execute at @e[type=iron_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # ダメージ処理(スノウゴーレム)
-    # 与えるダメージ = 25
-        data modify storage lib: Argument.Damage set value 25.0f
+    # 与えるダメージ = 125
+        data modify storage lib: Argument.Damage set value 125.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -31,7 +31,7 @@
 # 対象指定
     execute at @e[type=snow_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出(アイアンゴーレム)
     execute at @e[type=iron_golem,tag=26.GolemBomb] run particle minecraft:explosion ~ ~ ~ 3 3 3 1 100 force @a[distance=..30]
