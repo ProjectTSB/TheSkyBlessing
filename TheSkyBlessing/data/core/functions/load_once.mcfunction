@@ -116,24 +116,24 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Sneak.Chest custom:sneak_time {"text":"スニークタイム: 胸"}
         scoreboard objectives add Sneak.Legs custom:sneak_time {"text":"スニークタイム: 脚"}
         scoreboard objectives add Sneak.Feet custom:sneak_time {"text":"スニークタイム: 足"}
-        scoreboard objectives add UUID.Mainhand dummy {"text":"メインハンド装備のUUID"}
-        scoreboard objectives add UUID.Offhand dummy {"text":"オフハンド装備のUUID"}
-        scoreboard objectives add UUID.Head dummy {"text":"頭装備のUUID"}
-        scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
-        scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
-        scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
-        scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
-        scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
+        scoreboard objectives add Sneak.Hotbar0 custom:sneak_time {"text":"スニークタイム: ホットバー0"}
+        scoreboard objectives add Sneak.Hotbar1 custom:sneak_time {"text":"スニークタイム: ホットバー1"}
+        scoreboard objectives add Sneak.Hotbar2 custom:sneak_time {"text":"スニークタイム: ホットバー2"}
+        scoreboard objectives add Sneak.Hotbar3 custom:sneak_time {"text":"スニークタイム: ホットバー3"}
+        scoreboard objectives add Sneak.Hotbar4 custom:sneak_time {"text":"スニークタイム: ホットバー4"}
+        scoreboard objectives add Sneak.Hotbar5 custom:sneak_time {"text":"スニークタイム: ホットバー5"}
+        scoreboard objectives add Sneak.Hotbar6 custom:sneak_time {"text":"スニークタイム: ホットバー6"}
+        scoreboard objectives add Sneak.Hotbar7 custom:sneak_time {"text":"スニークタイム: ホットバー7"}
+        scoreboard objectives add Sneak.Hotbar8 custom:sneak_time {"text":"スニークタイム: ホットバー8"}
+        scoreboard objectives add MPLogCD dummy {"text":"神器をMP枯渇で失敗した際のログのクールダウン"}
+        scoreboard objectives add BelieveLogCD dummy {"text":"神器を信仰で失敗した際のログのクールダウン"}
+        scoreboard objectives add LocalCDLogCD dummy {"text":"神器をローカルクールダウンで失敗した際のログのクールダウン"}
+        scoreboard objectives add SpecialCDLogCD dummy {"text":"神器を特殊クールダウンで失敗した際のログのクールダウン"}
     bossbar set asset:special_cooldown color green
     bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
-    # @within function
-    #   lib:debug/objective_view
-    #   asset:mob/*/**
-    #   asset_manager:mob/**
-    #   asset_manager:spawner/**
-    #   asset_manager:island/dispel/boss/remove
+    # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
@@ -304,6 +304,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/damage
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
@@ -311,6 +312,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy

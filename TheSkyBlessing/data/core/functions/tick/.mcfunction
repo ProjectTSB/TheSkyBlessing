@@ -16,6 +16,9 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
+# プレイヤーのタグ管理
+    execute as @a run function player_manager:manage_tag/
+
 # 神器のグローバルtick処理
     function asset_manager:sacred_treasure/tick/
 
@@ -44,7 +47,7 @@
     function asset_manager:common/reset_all_context
 
 # ItemMetaDataチェック
-    execute as @e[type=item] run function core:tick/check_item_meta/entity
+    execute as @e[type=item,tag=!ItemMetaChecked] run function core:tick/check_item_meta/entity
 
 # ダメージログに対するtick処理
     execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick

@@ -11,7 +11,7 @@
     data modify entity @s NoAI set value 0b
 
 # スコアリセット
-    scoreboard players reset @s 55.Tick
+    scoreboard players set @s 55.Tick -80
     scoreboard players reset @s 55.AttackTick
 
 # Tag削除

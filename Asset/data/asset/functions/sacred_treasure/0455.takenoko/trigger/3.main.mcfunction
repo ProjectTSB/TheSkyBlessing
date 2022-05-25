@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
     # 演出
         stopsound @s * entity.item.break
-        tellraw @s [{"text": "<"},{"selector":"@s"},{"text": "> た け の こ 万 歳 ！","hoverEvent": {"action": "show_text","contents": [{"text": ">> Twitterフォロワーはきのこの方が多いぞ^^ <<"}]},"clickEvent": {"action": "run_command","value": "/me (やっぱきのこなんだよなぁ...)"}}]
+        tellraw @s [{"text": "<"},{"selector":"@s"},{"text": "> た け の こ 万 歳 ！"}]
     # 処理
         function api:data_get/health
         execute store result storage lib: Argument.Heal double 0.01 run data get storage api: Health 50

@@ -12,7 +12,7 @@
 
 # ダメージ設定
     # 与えるダメージ = 15
-        data modify storage lib: Argument.Damage set value 15.0f
+        data modify storage lib: Argument.Damage set value 40.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Thunder"
@@ -20,4 +20,4 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

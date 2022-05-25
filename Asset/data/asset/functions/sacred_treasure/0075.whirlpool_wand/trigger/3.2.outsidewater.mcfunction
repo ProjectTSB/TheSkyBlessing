@@ -1,12 +1,12 @@
 #> asset:sacred_treasure/0075.whirlpool_wand/trigger/3.2.outsidewater
 #
-# 水の中に敵がいない場合ダメージは基本値40
+# 水の中に敵がいない場合ダメージは基本値100
 #
 # @within function asset:sacred_treasure/0075.whirlpool_wand/trigger/3.main
 
 # ダメージ
-    # 与えるダメージ = 40
-        data modify storage lib: Argument.Damage set value 40f
+    # 与えるダメージ = 100
+        data modify storage lib: Argument.Damage set value 100f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -15,7 +15,7 @@
         function lib:damage/modifier
         function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     playsound minecraft:block.bubble_column.upwards_inside master @a ~ ~ ~ 1 1.8

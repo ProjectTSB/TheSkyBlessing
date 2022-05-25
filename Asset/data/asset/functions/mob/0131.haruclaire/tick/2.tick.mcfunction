@@ -33,7 +33,7 @@
 # 以下エラー時の処理
 # もし同一座標に2体存在した場合瞬時にteleportする
     # 数のカウント
-        execute store result score $Count Temporary run execute if entity @e[type=armor_stand,tag=3N.ArmorStand,distance=..0.01]
+        execute store result score $Count Temporary if entity @e[type=armor_stand,tag=3N.ArmorStand,distance=..0.01]
     # もしいたらテレポ
         execute if score $Count Temporary matches 2.. run function asset:mob/0131.haruclaire/tick/teleport
     # スコアも一応戻す

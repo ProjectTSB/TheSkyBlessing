@@ -17,4 +17,4 @@
         execute as @e[type=#lib:living,tag=Attacker,limit=1] run function lib:damage/
 
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
