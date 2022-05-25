@@ -18,7 +18,7 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # クールタイム設定
     scoreboard players set @s IG.AttackCT 40
