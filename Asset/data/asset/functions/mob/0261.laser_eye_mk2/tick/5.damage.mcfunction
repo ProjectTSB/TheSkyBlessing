@@ -20,7 +20,7 @@
         function lib:damage/modifier
         execute as @p[gamemode=!creative,gamemode=!spectator,tag=LandingTarget,distance=..20,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @p[tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
