@@ -18,6 +18,8 @@
 #   LocalCooldown? : int
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
+#   DisableBelieveMessage? : boolean
+#   DisableMPMessage? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:sacred_treasure/*/give/2.give
@@ -63,3 +65,5 @@
     data remove storage asset:sacred_treasure LocalCooldown
     data remove storage asset:sacred_treasure SpecialCooldown
     data remove storage asset:sacred_treasure DisableCooldownMessage
+    data remove storage asset:sacred_treasure DisableBelieveMessage
+    data remove storage asset:sacred_treasure DisableMPMessage
