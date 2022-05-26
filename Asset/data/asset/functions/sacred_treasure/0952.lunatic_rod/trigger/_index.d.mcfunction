@@ -3,4 +3,5 @@
 
 #> tag
 # @within function asset:sacred_treasure/0952.lunatic_rod/trigger/**
-    #declare
+    #declare tag Hit
+    #declare score_holder $Temp

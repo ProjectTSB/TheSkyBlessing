@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0952.lunatic_rod/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add QG.EffectTime dummy
