@@ -22,5 +22,5 @@
     data modify entity @s Motion[1] set value 0.4
 
 # リセット
-    scoreboard players reset @s 5Q.Move
+    scoreboard players reset @s 5Q.MoveTime
     data remove storage lib: Argument
