@@ -8,4 +8,7 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0952.lunatic_rod
+
+# 演出
+
+# 発射
