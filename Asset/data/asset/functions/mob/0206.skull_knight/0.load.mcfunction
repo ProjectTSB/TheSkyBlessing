@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0206.skull_knight/**
-    scoreboard objectives add 
+    scoreboard objectives add 5Q.MoveTime dummy
+    scoreboard objectives add 5Q.MoveTime2 dummy
