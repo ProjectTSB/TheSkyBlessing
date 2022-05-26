@@ -7,7 +7,7 @@
 # 演出
     playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1.5 1.5
     playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.zombie_villager.cure neutral @a ~ ~ ~ 1 2
+    playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 1 2
     scoreboard players reset @s 84.MoveTime
 
 # モデル変更
