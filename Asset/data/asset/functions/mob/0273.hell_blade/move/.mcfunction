@@ -9,16 +9,16 @@
 
 # 付いてる面で分岐
     # 床
-        execute as @s[tag=7L.FaceFloor] at @s run function asset:mob/0273.hell_blade/move/floor
+        execute as @s[tag=7L.FaceFloor] at @s run tp @s ^ ^ ^0.25
 
     # 壁上
-        execute as @s[tag=7L.FaceWallUp] at @s run function asset:mob/0273.hell_blade/move/wall/up
+        execute as @s[tag=7L.FaceWallUp] at @s run tp @s ~ ~0.25 ~
 
     # 壁下
-        execute as @s[tag=7L.FaceWallDown] at @s run function asset:mob/0273.hell_blade/move/wall/down
+        execute as @s[tag=7L.FaceWallDown] at @s run tp @s ~ ~-0.25 ~
 
     # 天井
-        execute as @s[tag=7L.FaceCeiling] at @s run function asset:mob/0273.hell_blade/move/ceiling
+        execute as @s[tag=7L.FaceCeiling] at @s run tp @s ^ ^ ^-0.25
 
 # タイマー
     scoreboard players add @s 7L.Timer 1
@@ -29,7 +29,6 @@
     execute at @s[tag=7L.FaceFloor] if score @s 7L.RotateTimer matches 0 align xyz positioned ~ ~-1 ~ run function asset:mob/0273.hell_blade/chase/check
 
 # SFX
-    #execute at @s run playsound entity.ender_dragon.growl hostile @a ~ ~ ~ .03 2
     execute at @s run playsound entity.player.hurt_sweet_berry_bush hostile @a ~ ~ ~ .3 2
     execute at @s run playsound item.trident.return hostile @a ~ ~ ~ .2 2
     execute at @s[tag=7L.FaceFloor] run particle minecraft:item gunpowder ~ ~ ~ 0 0 0 0.12 5
