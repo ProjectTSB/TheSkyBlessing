@@ -12,13 +12,14 @@
 
 # 火属性攻撃
     # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 28f
+    data modify storage lib: Argument.Damage set value 33f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sの炎の魔法で燃え尽きた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
     execute as @p[tag=Victim,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -13,14 +13,17 @@
 
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 14.0d
+        data modify storage lib: Argument.Damage set value 16.0d
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Fire"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによって燃え尽き、灰となった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
+    data modify storage lib: Argument.DeathMessage append value '{"translate": "%1$sは%2$sによって魂諸共焼失した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}'
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージ対象
     execute as @p[tag=Victim,distance=..60] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

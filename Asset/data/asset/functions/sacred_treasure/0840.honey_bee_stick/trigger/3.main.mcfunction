@@ -17,18 +17,18 @@
     playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 0.8 0
 
 # 回復
-    data modify storage lib: Argument.Heal set value 10f
+    data modify storage lib: Argument.Heal set value 20f
     function lib:heal/modifier
     execute as @a[distance=..5] run function lib:heal/
     data remove storage lib: Argument
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 60.0f
+    data modify storage lib: Argument.Damage set value 800.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 鈍足付与
     effect give @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] slowness 2 2 true
