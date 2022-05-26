@@ -15,7 +15,7 @@
     #declare score_holder $MultiplayMultiPlier
 
 # 周囲のプレイヤー数を取得する (e0)
-    execute store result score $NearbyPlayerCount Temporary if entity @a[distance=..75]
+    execute at @s store result score $NearbyPlayerCount Temporary if entity @a[distance=..75]
 # ベース倍率 0.3(e1)
     scoreboard players set $MultiplayMultiPlierBase Temporary 3
 # マルチ補正倍率 0.7(e1)
