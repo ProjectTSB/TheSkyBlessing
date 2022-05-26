@@ -8,4 +8,8 @@
     function asset:sacred_treasure/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0844.closed_eyes_of_love
+# vfx
+    function asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.1.vfx
+
+# damage
+    function asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.1.damage
