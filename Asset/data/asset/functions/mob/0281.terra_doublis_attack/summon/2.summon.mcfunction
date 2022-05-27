@@ -10,7 +10,7 @@
 # ID (int)
     data modify storage asset:mob ID set value 281
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value "Npc"
+    data modify storage asset:mob Type set value "Object"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value 0b
 # 防具
