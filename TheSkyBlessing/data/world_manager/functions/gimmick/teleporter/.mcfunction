@@ -18,5 +18,4 @@
     execute if entity @s[tag=TPCancel] run function world_manager:gimmick/teleporter/cancelled
 # リセット
     tag @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] remove FromTeleporter
-    tag @s remove TPCancel
     tag @s remove this
