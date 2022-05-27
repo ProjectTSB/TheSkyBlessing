@@ -1,4 +1,4 @@
-#> world_manager:gimmick/teleporter/cancelled
+#> world_manager:gimmick/teleporter/cancel/
 #
 #
 #

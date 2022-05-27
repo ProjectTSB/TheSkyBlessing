@@ -13,6 +13,6 @@
     execute if entity @s[tag=Teleported] unless predicate lib:is_sneaking run tag @s remove Teleported
 # キャンセル処理
     execute if entity @s[tag=TeleporterInit] run function world_manager:gimmick/teleporter/cancel/check
-    execute if entity @s[tag=TPCancel] run function world_manager:gimmick/teleporter/cancelled
+    execute if entity @s[tag=TPCancel] run function world_manager:gimmick/teleporter/cancel/
 # リセット
     tag @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] remove FromTeleporter
