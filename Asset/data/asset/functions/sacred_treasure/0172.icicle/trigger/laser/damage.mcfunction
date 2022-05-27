@@ -4,7 +4,9 @@
 #
 # @within function asset:sacred_treasure/0172.icicle/trigger/laser/5.damage_laser
 
-# ここから先は神器側の効果の処理を書く
+
+# タグ付与する
+    tag @s add 4S.This
 
 # ダメージ設定
     # ダメージ
@@ -14,12 +16,15 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
-        function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=4S.This,limit=1] 4S.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Enemy,distance=..4] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 # 演出
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1 0
+
+# タグを消す
+    tag @s remove 4S.This
 
 # 吸引
 # 突進する

@@ -6,3 +6,4 @@
     #declare tag Landing
     #declare tag LandingTarget
     #declare tag 4S.Laser
+    #declare tag 4S.This

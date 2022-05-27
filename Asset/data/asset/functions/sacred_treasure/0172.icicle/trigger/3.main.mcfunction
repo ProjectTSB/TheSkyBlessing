@@ -9,6 +9,10 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound minecraft:block.glass.break player @a ~ ~ ~ 1 0
+
+
 # 着弾地点にマーカー召喚
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0172.icicle/trigger/4.block_check
 
