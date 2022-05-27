@@ -176,7 +176,9 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
 
     #> Library用スコアボード - PrivateUse
-    # @within * api:**
+    # @within *
+    #   api:**
+    #   lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
