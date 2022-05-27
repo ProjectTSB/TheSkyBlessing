@@ -31,9 +31,9 @@
     tag @e[type=#lib:living,tag=Hit,distance=..40] remove Hit
     scoreboard players reset $Interval Temporary
 
-# 魔法20%のバフ
+# 魔法攻撃バフ
     data modify storage api: Argument.UUID set value [I;1,1,952,0]
-    data modify storage api: Argument.Amount set value 0.25
+    data modify storage api: Argument.Amount set value 0.4
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/magic/add
 
