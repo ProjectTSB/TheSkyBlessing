@@ -10,7 +10,7 @@
 #   player_manager:vanilla_attack/show_log
 #   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**
-#   world_manager:gimmick/teleporter/**
+#   asset_manager:teleporter/**
     #declare tag this
 
 # thisタグ付与
@@ -43,7 +43,7 @@
 # MP回復処理
     function player_manager:mp/regen/check
 # テレポーター処理
-    function world_manager:gimmick/teleporter/
+    function asset_manager:teleporter/
 # チーム処理
     function player_manager:set_team
 
