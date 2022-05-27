@@ -11,7 +11,7 @@
 # 引数代入
     data modify storage world_manager:gimmick TargetGroupID set from storage api: Argument.GroupID
 # グループデータの取得
-    function world_manager:gimmick/teleporter/data/pick/
+    function world_manager:gimmick/teleporter/data/pick
 # グループデータがまだ存在しなかった場合の処理
     execute unless data storage world_manager:gimmick TeleporterGroup run data modify storage world_manager:gimmick TeleporterGroup set value {ID:"",Teleporters:[]}
     data modify storage world_manager:gimmick TeleporterGroup.ID set from storage api: Argument.GroupID
