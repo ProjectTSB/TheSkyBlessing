@@ -1,6 +1,6 @@
-#> lib:array/mask
+#> lib:array/mask_inverted
 #
-# 対象配列の要素iについてマスク配列の要素iが**trueである場合**はMaskElementに置換した配列を返します。
+# 対象配列の要素iについてマスク配列の要素iが**falseである場合**はMaskElementに置換した配列を返します。
 #
 # Array, Masksの要素の数は同一である必要があります。
 #
@@ -24,7 +24,7 @@
     data remove storage lib: Array
 
 # 再帰的に動かす
-    execute if data storage lib: CopiedArray[0] if data storage lib: Masks[0] run function lib:array/core/mask
+    execute if data storage lib: CopiedArray[0] if data storage lib: Masks[0] run function lib:array/core/mask_inverted
 
 # 結果を反転
     function lib:array/reverse
