@@ -3,8 +3,8 @@
 #
 #
 # @within function
-#   asset:sacred_treasure/0210.terra_blade/trigger/3.main
-#   asset:sacred_treasure/0210.terra_blade/trigger/sword/sword
+#       asset:sacred_treasure/0210.terra_blade/trigger/3.main
+#       asset:sacred_treasure/0210.terra_blade/trigger/sword/sword
 
 # サウンド
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 2 1.5
