@@ -29,16 +29,16 @@
 
 # 再帰処理のリセット
     tag @e[type=#lib:living,tag=Hit,distance=..40] remove Hit
-    scoreboard players reset $Temp Temporary
+    scoreboard players reset $Interval Temporary
 
 # 魔法20%のバフ
     data modify storage api: Argument.UUID set value [I;1,1,952,0]
-    data modify storage api: Argument.Amount set value 0.2
+    data modify storage api: Argument.Amount set value 0.25
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/magic/add
 
 # 効果時間設定
-    scoreboard players set @s QG.EffectTime 200
+    scoreboard players set @s QG.EffectTime 300
 
 # スケジュールループ開始
     schedule function asset:sacred_treasure/0952.lunatic_rod/trigger/effect/loop 1t replace

@@ -11,9 +11,9 @@
     particle end_rod ^ ^ ^1 0.2 0.2 0.2 0.01 8 normal @a
 
 # 定期的に光の輪を出す
-    scoreboard players add $Temp Temporary 1
-    execute if score $Temp Temporary matches 5 run function asset:sacred_treasure/0952.lunatic_rod/trigger/vfx
-    execute if score $Temp Temporary matches 5.. run scoreboard players reset $Temp Temporary
+    scoreboard players add $Interval Temporary 1
+    execute if score $Interval Temporary matches 5 run function asset:sacred_treasure/0952.lunatic_rod/trigger/vfx
+    execute if score $Interval Temporary matches 5.. run scoreboard players reset $Interval Temporary
 
 # ヒット
     tag @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,tag=!Object,distance=..2] add Hit
