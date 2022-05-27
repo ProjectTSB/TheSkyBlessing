@@ -23,6 +23,8 @@
 # マルチ補正倍率の計算 0.7(e1) * N(e0) + 0.3(e1)
     scoreboard players operation $MultiplayMultiPlier Temporary *= $NearbyPlayerCount Temporary
     scoreboard players operation $MultiplayMultiPlier Temporary += $MultiplayMultiPlierBase Temporary
+# マルチ補正倍率の保存
+    scoreboard players operation @s MobMaxHealthMultiplier = $MultiplayMultiPlier Temporary
 # マルチ補正の適用 (e1 -> e0)
     scoreboard players operation @s MobHealthMax *= $MultiplayMultiPlier Temporary
     scoreboard players operation @s MobHealthMax /= $10 Const
