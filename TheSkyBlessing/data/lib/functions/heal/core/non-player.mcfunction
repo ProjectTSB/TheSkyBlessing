@@ -6,11 +6,11 @@
 
 #> Private
 # @private
-    #declare score_holder $Health
-    #declare score_holder $MaxHealth
-    #declare score_holder $MaxHealthMultiplier
-    #declare score_holder $Heal
-    #declare score_holder $Fluctuation
+    #declare score_holder $Health (e2)
+    #declare score_holder $MaxHealth (e2)
+    #declare score_holder $MaxHealthMultiplier (e1)
+    #declare score_holder $Heal (e2)
+    #declare score_holder $Fluctuation (e2)
 
 # HP取得
     execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
