@@ -1,7 +1,8 @@
-#> lib:status_log/show_mp
+#> api:status_log/show_mp
 #
 #
 #
+# @input storage api: Argument.Fluctuation : int
 # @within function lib:mp/fluctuation
 
 #> For Init
@@ -17,11 +18,10 @@
 # 描画用AEC
     execute anchored eyes positioned ^ ^ ^ at @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1] run summon armor_stand ~ ~ ~ {Marker:1b,Silent:1b,Small:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
 # 表示文字列生成
-    loot replace block 10000 0 10000 container.0 loot lib:status_log/mp
+    loot replace block 10000 0 10000 container.0 loot api:status_log/mp
 # 文字列描画
     execute anchored eyes positioned ^ ^ ^ run data modify entity @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] CustomName set from block 10000 0 10000 Items[0].tag.display.Name
 # タグ削除
     execute anchored eyes positioned ^ ^ ^ run tag @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] remove LogAECInit
 # リセット
     execute anchored eyes positioned ^ ^ ^ run kill @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1]
-    scoreboard players reset $Fluctuation Lib

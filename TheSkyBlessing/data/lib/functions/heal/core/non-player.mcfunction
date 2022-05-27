@@ -24,8 +24,8 @@
 # 代入 / kill
     execute store result entity @s AbsorptionAmount float 0.01 run scoreboard players get $Health Temporary
 # 回復量表示
-    scoreboard players operation $Fluctuation Lib = $Heal Temporary
-    execute at @s run function lib:status_log/show_health
+    execute store result storage api: Argument.Fluctuation double 0.01 run scoreboard players get $Heal Temporary
+    execute at @s run function api:status_log/show_health
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary

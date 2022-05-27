@@ -4,14 +4,9 @@
 #
 # @within function lib:damage/core/health_subtract/
 
-#>
-# @private
-#declare score_holder $Fluctuation
-
 # ダメージ表示
-    scoreboard players operation $Fluctuation Lib = $Damage Temporary
-    scoreboard players operation $Fluctuation Lib /= $-100 Const
-    execute at @s run function lib:status_log/show_health
+    execute store result storage api: Argument.Fluctuation double -0.01 run scoreboard players get $Damage Temporary
+    execute at @s run function api:status_log/show_health
 # ダメージを一桁下げる
     scoreboard players operation $Damage Temporary /= $10 Const
 # MobのHealthよりダメージが高い場合Healthに設定

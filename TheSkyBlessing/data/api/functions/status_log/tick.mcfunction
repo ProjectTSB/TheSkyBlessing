@@ -1,4 +1,4 @@
-#> lib:status_log/tick
+#> api:status_log/tick
 #
 #
 #

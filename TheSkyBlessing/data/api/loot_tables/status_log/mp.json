@@ -17,10 +17,8 @@
                                     "font": "invisible_bg"
                                 },
                                 {
-                                    "score": {
-                                        "objective": "Lib",
-                                        "name": "$Fluctuation"
-                                    },
+                                    "storage": "api:",
+                                    "nbt": "Argument.Fluctuation",
                                     "color": "white",
                                     "font": "magic"
                                 },
