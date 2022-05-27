@@ -14,3 +14,6 @@
     scoreboard players operation @e[type=area_effect_cloud,tag=4S.First] 4S.UserID = @s UserID
 # タグを消す
     tag @e[tag=4S.First] remove 4S.First
+
+#演出
+    function asset:sacred_treasure/0172.icicle/trigger/particle
