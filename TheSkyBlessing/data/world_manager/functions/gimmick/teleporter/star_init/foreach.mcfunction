@@ -2,11 +2,10 @@
 #
 #
 #
+# @input storage world_manager:gimmick Teleporters: [ { Pos: [double] @ 3, Data: { Activate: boolean, Color?: "Green" } } ]
 # @within function
 #   world_manager:gimmick/teleporter/star_init/
 #   world_manager:gimmick/teleporter/star_init/foreach
-
-# { Pos: [double, double, double], Data: { Activate: boolean, Color?: "Yellow" } }[]
 
 # アクティブなら召喚する
     execute unless data storage world_manager:gimmick Teleporters[-1].Data{Activate:false} as 0-0-0-0-0 run function world_manager:gimmick/teleporter/star_init/summon
