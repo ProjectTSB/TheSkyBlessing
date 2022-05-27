@@ -17,4 +17,4 @@
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
     function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset

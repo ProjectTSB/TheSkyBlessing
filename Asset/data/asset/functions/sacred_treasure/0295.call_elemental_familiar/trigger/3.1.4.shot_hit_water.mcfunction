@@ -14,7 +14,7 @@
     effect give @s minecraft:levitation 1 1 true
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # ショットを消す
     kill @e[type=armor_stand,tag=295Fa.Shot,sort=nearest,limit=1]

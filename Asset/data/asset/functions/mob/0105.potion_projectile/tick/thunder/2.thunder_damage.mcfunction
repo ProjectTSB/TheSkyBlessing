@@ -14,7 +14,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの雷の薬品により感電死した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     function lib:damage/modifier
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # MP減少
     scoreboard players set $Fluctuation Lib -20

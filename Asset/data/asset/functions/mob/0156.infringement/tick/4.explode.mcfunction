@@ -19,7 +19,7 @@
     playsound entity.generic.explode hostile @a ~ ~ ~
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 30f
+    data modify storage lib: Argument.Damage set value 35f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
@@ -28,7 +28,7 @@
 # 対象
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @s

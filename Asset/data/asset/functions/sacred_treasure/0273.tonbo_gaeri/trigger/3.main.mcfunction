@@ -18,7 +18,7 @@
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 初期島に行くぞ！
     execute in minecraft:overworld run tp @s 23 3 24

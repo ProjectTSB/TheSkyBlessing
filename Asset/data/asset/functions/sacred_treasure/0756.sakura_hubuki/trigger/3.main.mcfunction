@@ -48,4 +48,4 @@
     scoreboard players reset $Random Temporary
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $201 Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset
