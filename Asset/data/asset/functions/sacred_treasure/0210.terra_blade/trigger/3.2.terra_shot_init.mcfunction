@@ -2,7 +2,7 @@
 #
 # テラショット発射直後の動作。向きを発射者に揃えて、発射者の目線の高さに移動
 #
-# @within asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+# @within function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
 
 #> SpreadLib
 # @private
