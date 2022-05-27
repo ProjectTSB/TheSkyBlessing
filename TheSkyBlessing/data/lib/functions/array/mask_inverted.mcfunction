@@ -1,6 +1,6 @@
 #> lib:array/mask_inverted
 #
-# 対象配列の要素iについてマスク配列の要素iがfalseである場合はMaskElementに置換した配列を返します。
+# 対象配列の要素iについてマスク配列の要素iが**falseである場合**はMaskElementに置換した配列を返します。
 #
 # Array, Masksの要素の数は同一である必要があります。
 #
