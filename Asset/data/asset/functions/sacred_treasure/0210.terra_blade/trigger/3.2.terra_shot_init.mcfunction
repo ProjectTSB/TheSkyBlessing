@@ -19,8 +19,8 @@
     data modify storage lib: Argument.Spread set value 0.5f
     execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=5U.This] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
     execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
-    tag @s remove ChuzTerraShotInit
-    tag @s add ChuzTerraShot
+    tag @s remove 5U.ShotInit
+    tag @s add 5U.Shot
 
 # スコアセット
     scoreboard players set @s 5U.Range 100

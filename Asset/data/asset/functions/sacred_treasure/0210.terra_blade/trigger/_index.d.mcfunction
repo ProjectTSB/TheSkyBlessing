@@ -6,8 +6,9 @@
 
 #> tags
 # @within function asset:sacred_treasure/0210.terra_blade/trigger/**
-    #declare tag ChuzTerraShotInit
-    #declare tag ChuzTerraShot
-    #declare tag ChuzTerraSpread
+    #declare tag 5U.ShotInit
+    #declare tag 5U.Shot
+    #declare tag 5U.Spread
     #declare tag 5U.This
+    #
     #declare tag 5U.Sword
