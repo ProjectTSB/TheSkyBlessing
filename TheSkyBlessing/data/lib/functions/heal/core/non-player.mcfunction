@@ -8,15 +8,20 @@
 # @private
     #declare score_holder $Health
     #declare score_holder $MaxHealth
+    #declare score_holder $MaxHealthMultiplier
     #declare score_holder $Heal
     #declare score_holder $Fluctuation
 
 # HP取得
     execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
-# 最大体力取得
+# 最大体力/最大体力倍率取得
     execute store result score $MaxHealth Temporary run function api:mob/get_max_health
+    execute store result score $MaxHealthMultiplier Temporary run function api:mob/get_max_health_multiplier
 # 代入
     execute store result score $Heal Temporary run data get storage lib: Argument.Heal 100
+# マルチ補正
+    execute unless data storage lib: Argument{FixedHeal:true} run scoreboard players operation $Heal Temporary *= $MaxHealthMultiplier Temporary
+    execute unless data storage lib: Argument{FixedHeal:true} run scoreboard players operation $Heal Temporary /= $10 Const
 # 減算
     scoreboard players operation $Health Temporary += $Heal Temporary
 # 最大体力チェック
@@ -29,4 +34,5 @@
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary
+    scoreboard players reset $MaxHealthMultiplier Temporary
     scoreboard players reset $Heal Temporary
