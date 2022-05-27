@@ -1,4 +1,4 @@
-#> world_manager:gimmick/teleporter/active/
+#> world_manager:gimmick/teleporter/active
 #
 #
 #
@@ -7,7 +7,7 @@
 # 接地しているかの取得
     function api:data_get/on_ground
 # 初期化
-    execute if data storage api: {OnGround:true} if entity @s[tag=!TeleporterInit] run function world_manager:gimmick/teleporter/active/init/
+    execute if data storage api: {OnGround:true} if entity @s[tag=!TeleporterInit] run function world_manager:gimmick/teleporter/init/
 # ジャンプ検知
     execute if data storage api: {OnGround:false} if entity @s[tag=TeleporterInit] run function world_manager:gimmick/teleporter/tp/
 # VFX

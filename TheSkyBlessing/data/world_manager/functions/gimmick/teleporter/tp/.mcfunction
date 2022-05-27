@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:gimmick/teleporter/active/
+# @within function world_manager:gimmick/teleporter/active
 
 execute anchored eyes positioned ^ ^ ^1 positioned ~ ~-0.4 ~ run function world_manager:gimmick/teleporter/tp/find_target
 

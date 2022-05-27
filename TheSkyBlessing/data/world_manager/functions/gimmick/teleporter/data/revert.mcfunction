@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   world_manager:gimmick/teleporter/active/init/
+#   world_manager:gimmick/teleporter/init/
 #   world_manager:gimmick/teleporter/dynamic_register/do
 
 # データ戻す(順不同なので)
