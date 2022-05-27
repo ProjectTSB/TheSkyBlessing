@@ -5,7 +5,6 @@
 # @within function
 #   asset:sacred_treasure/0210.terra_blade/trigger/3.1.terra_shot_tick
 #   asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
-#   asset:sacred_treasure/0210.terra_blade/trigger/3.main
 #   asset:sacred_treasure/0210.terra_blade/trigger/rejoin_process
 
 # テラショットにコマンド実行
