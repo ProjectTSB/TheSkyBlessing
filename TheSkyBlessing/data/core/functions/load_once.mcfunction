@@ -289,7 +289,7 @@ team modify NoCollision collisionRule never
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   asset_manager:teleporter/**
+    #   asset_manager:teleporter/tick/**
         scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
     #> MobManager用スコアボード - 最大体力

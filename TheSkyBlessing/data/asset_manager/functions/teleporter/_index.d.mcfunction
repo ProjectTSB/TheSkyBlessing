@@ -4,11 +4,11 @@
 #> storage
 # @within *
 #   asset:teleporter/*/*
-#   asset_manager:teleporter/**
+#   asset_manager:teleporter/tick/**
     #declare storage asset:teleporter
 
 #> TeleportPoint
-# @within asset_manager:teleporter/**
+# @within asset_manager:teleporter/tick/**
     #declare tag FromTeleporter
     #declare tag Teleporter
     #declare tag TeleporterInit
@@ -18,7 +18,7 @@
     #declare tag TPCancel
 
 #> for Init
-# @within asset_manager:teleporter/star_init/*
+# @within asset_manager:teleporter/tick/star_init/*
     #declare tag TPStarInit
 
 #> OpenDeclares
