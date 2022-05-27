@@ -4,8 +4,6 @@
 #
 # @within function core:tick/player
 
-# this
-    tag @s add this
 # 対象テレポーターの特定及びタグ付与
     tag @e[type=marker,tag=Teleporter,distance=..1,limit=1] add FromTeleporter
 
@@ -18,4 +16,3 @@
     execute if entity @s[tag=TPCancel] run function world_manager:gimmick/teleporter/cancelled
 # リセット
     tag @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] remove FromTeleporter
-    tag @s remove this
