@@ -1,8 +1,8 @@
-#> world_manager:gimmick/teleporter/init/star/set_data
+#> world_manager:gimmick/teleporter/star_init/set_data
 #
 #
 #
-# @within function world_manager:gimmick/teleporter/init/star/summon
+# @within function world_manager:gimmick/teleporter/star_init/summon
 
 scoreboard players operation @s TPStarFromUserID = @p[tag=this] UserID
 function oh_my_dat:please

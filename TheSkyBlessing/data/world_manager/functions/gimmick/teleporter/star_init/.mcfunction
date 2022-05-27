@@ -1,4 +1,4 @@
-#> world_manager:gimmick/teleporter/init/
+#> world_manager:gimmick/teleporter/star_init/
 #
 #
 #
@@ -13,7 +13,7 @@
 # 破壊的変更を行うとまずいのでコピーする
     data modify storage world_manager:gimmick Teleporters set from storage world_manager:gimmick TeleporterGroup.Teleporters
 # 星を召喚する
-    execute if data storage world_manager:gimmick Teleporters[1] anchored eyes positioned ^ ^ ^ run function world_manager:gimmick/teleporter/init/star/foreach
+    execute if data storage world_manager:gimmick Teleporters[1] anchored eyes positioned ^ ^ ^ run function world_manager:gimmick/teleporter/star_init/foreach
 # テレポート先が無いならメッセージ
     execute at @s anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=TPStar,distance=..1.51] if score @s TPStarFromUserID = @p[tag=this] UserID run data modify storage world_manager:gimmick IsTPStarExists set value true
     execute unless data storage world_manager:gimmick {IsTPStarExists:true} run tellraw @p[tag=this] {"text":"このテレポーターはどこにも繋がっていないようだ...","color":"light_purple"}
