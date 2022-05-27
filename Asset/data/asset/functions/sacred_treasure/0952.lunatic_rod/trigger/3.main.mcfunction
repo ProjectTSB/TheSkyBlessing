@@ -10,12 +10,12 @@
 # ここから先は神器側の効果の処理を書く
 
 # 音
-    playsound block.portal.travel hostile @a ~ ~ ~ 0.05 2
-    playsound item.trident.return hostile @a ~ ~ ~ 0.6 0.8
-    playsound item.trident.return hostile @a ~ ~ ~ 0.6 2
-    playsound entity.blaze.shoot hostile @a ~ ~ ~ 0.5 2
-    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 0.4 2
-    playsound minecraft:block.respawn_anchor.set_spawn hostile @a ~ ~ ~ 1 1.4
+    playsound block.portal.travel player @a ~ ~ ~ 0.05 2
+    playsound item.trident.return player @a ~ ~ ~ 0.6 0.8
+    playsound item.trident.return player @a ~ ~ ~ 0.6 2
+    playsound entity.blaze.shoot player @a ~ ~ ~ 0.5 2
+    playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 0.4 2
+    playsound minecraft:block.respawn_anchor.set_spawn player @a ~ ~ ~ 1 1.4
 
 # 発射
     execute anchored eyes run function asset:sacred_treasure/0952.lunatic_rod/trigger/4.recursive
