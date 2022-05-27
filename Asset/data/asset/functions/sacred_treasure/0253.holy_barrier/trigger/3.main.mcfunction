@@ -30,4 +30,4 @@
     data modify storage lib: Argument.BypassResist set value true
     function lib:damage/modifier
     execute as @e[type=#lib:living,tag=71.Target] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset

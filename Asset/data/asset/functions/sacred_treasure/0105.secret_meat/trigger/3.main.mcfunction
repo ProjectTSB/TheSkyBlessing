@@ -24,6 +24,6 @@
     execute if score $Random Temporary matches 90..99 run function asset:sacred_treasure/0105.secret_meat/trigger/dead_effect
 # リセット
     scoreboard players reset $Random Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset
 # MP0化が発生するとは限らないので一応リセ
     scoreboard players reset $Fluctuation Lib
