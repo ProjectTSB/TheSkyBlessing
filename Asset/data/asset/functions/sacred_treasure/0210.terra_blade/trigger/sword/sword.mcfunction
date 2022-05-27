@@ -21,7 +21,6 @@
 # スコアID使って対象を特定
     execute at @a if score @s 5U.Owner = @p UserID run tag @p add 5U.This
 
-    say @p[tag=5U.This]
 # 持ち主にTP
     execute at @p[tag=5U.This] positioned ^ ^ ^1.2 run tp @s ~ ~ ~
     execute as @p[tag=5U.This] run function api:data_get/rotation
