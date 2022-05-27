@@ -18,6 +18,8 @@
     function lib:damage/modifier
 # ダメージ
     execute as @e[type=zombie,scores={MobID=59},distance=..3,sort=nearest,limit=1] run function lib:damage/
+# リセット
+    function lib:damage/reset
 
 # キル
     kill @s
