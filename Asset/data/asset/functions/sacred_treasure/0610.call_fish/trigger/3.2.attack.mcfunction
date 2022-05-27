@@ -26,5 +26,5 @@
         execute as @e[tag=Enemy,sort=nearest,limit=1] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @s remove GY.This

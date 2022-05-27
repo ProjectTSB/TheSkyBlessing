@@ -297,6 +297,7 @@ team modify NoCollision collisionRule never
     #   api:mob/get_max_health
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
+    #   mob_manager:init/multiplay_multiplier/*
         scoreboard objectives add MobHealthMax dummy
 
     #> MobManager用スコアボード - 攻撃元

@@ -43,6 +43,7 @@
     execute unless data storage asset:context {Type:"drop"} run function api:inventory/get_size
     execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
     execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run data merge entity @s {Glowing:1b,Age:-32768}
 # リセット
     scoreboard players reset $InvSize Lib
     data remove storage asset:sacred_treasure ID
