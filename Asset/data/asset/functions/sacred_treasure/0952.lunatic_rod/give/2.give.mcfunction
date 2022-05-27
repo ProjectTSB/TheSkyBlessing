@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"狂月の杖","color":"white"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"ルナティックメイジの持っていた杖"}]','{"text":"使用者の魔力を高める魔法を放つ"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"ルナティックメイジの持っていた杖","color":"gray","italic":"true"}]','[{"text":"この杖の持つ魔力は強大だが、","color":"gray","italic":"true"}]','[{"text":"彼の者にとっては枷でしかなかった。","color":"gray","italic":"true"}]','[{"text":"使用時、強力な魔法を放つと同時に、","color":"white"}]','[{"text":"自身に魔法攻撃+25%を15秒間付与する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -43,7 +43,7 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 600
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
