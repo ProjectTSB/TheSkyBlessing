@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"狂月の杖","color":"white"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"ルナティックメイジの持っていた杖"}]','{"text":"使用者の魔力を高める魔法を放つ"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -35,9 +35,9 @@
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value "every"
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 32
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 150
 # MP必要量 (int) (オプション)
