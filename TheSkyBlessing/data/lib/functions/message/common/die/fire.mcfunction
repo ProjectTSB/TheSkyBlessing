@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:score_to_health_wrapper/core/show_common_death_message
+# @within function api:concurrent_health_manager/core/show_common_death_message
 
 #> Random
 # @private

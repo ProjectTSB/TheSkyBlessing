@@ -1,8 +1,8 @@
-#> lib:score_to_health_wrapper/core/show_custom_death_message
+#> api:concurrent_health_manager/core/show_custom_death_message
 #
 # カスタム死亡メッセージを配列内から1つ選んで表示
 #
-# @within function lib:score_to_health_wrapper/core/die
+# @within function api:concurrent_health_manager/core/die
 
 #> ListLength
 # @private

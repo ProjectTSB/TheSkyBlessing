@@ -1,8 +1,8 @@
-#> lib:score_to_health_wrapper/core/show_common_death_message
+#> api:concurrent_health_manager/core/show_common_death_message
 #
 #
 #
-# @within function lib:score_to_health_wrapper/core/die
+# @within function api:concurrent_health_manager/core/die
 
 # Enumをもとにメッセージを表示
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo{Type:0} run function lib:message/common/die/unknown

@@ -16,6 +16,7 @@
 # @within *
 #   score_to_health:**
 #   lib:score_to_health_wrapper/**
+#   api:concurrent_health_manager/**
 #   lib:has_health_modify_score
 #   player_manager:bonus/**
 #   core:handler/first_join

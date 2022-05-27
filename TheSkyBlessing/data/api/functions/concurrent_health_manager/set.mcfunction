@@ -1,4 +1,4 @@
-#> lib:score_to_health_wrapper/set
+#> api:concurrent_health_manager/set
 #
 # プレイヤーのHPをその値に設定します。
 #
@@ -7,20 +7,19 @@
 # @input
 #   as player
 #   score $Set Argument
-#   storage lib: Argument.DeathMessage? : TextComponent || TextComponent[]
+#   storage api: Argument.DeathMessage? : TextComponent || TextComponent[]
 # @api
-# @deprecated Use api:concurrent_health_manager/set
 
 #> temp
 # @private
     #declare score_holder $Set
 
 # セット
-    scoreboard players operation @s ScoreToHealth = $Set Lib
+    scoreboard players operation @s ScoreToHealth = $Set Api
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.Type set value 0
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage lib: Argument.DeathMessage
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage api: Argument.DeathMessage
 # リセット
-    scoreboard players reset $Set Lib
-    # data remove storage lib: Argument.DeathMessage
+    scoreboard players reset $Set Api
+    # data remove storage api: Argument.DeathMessage
