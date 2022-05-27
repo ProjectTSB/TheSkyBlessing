@@ -6,3 +6,4 @@
 
 # このfunctionをループさせる
     execute if entity @e[type=armor_stand,tag=ChuzTerraShot,limit=1] run schedule function asset:sacred_treasure/0210.terra_blade/trigger/3.1.terra_shot_tick 1t
+    execute if entity @e[type=armor_stand,tag=5U.Sword,limit=1] run schedule function asset:sacred_treasure/0210.terra_blade/trigger/sword/sword_schedule 1t

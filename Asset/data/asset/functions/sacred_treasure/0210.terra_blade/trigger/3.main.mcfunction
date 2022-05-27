@@ -12,5 +12,4 @@
     playsound minecraft:entity.player.attack.sweep player @a ~ ~ ~ 1.5 1.25
 
 # 剣を召喚
-    data modify storage api: Argument.ID set value 281
-    execute positioned ^ ^ ^1.2 run function api:mob/summon
+    function asset:sacred_treasure/0210.terra_blade/trigger/sword/summon_sword

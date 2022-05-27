@@ -17,7 +17,7 @@
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 21.0f
     data modify storage lib: Argument.Spread set value 0.5f
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=7T.This] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=5U.This] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
     execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
     tag @s remove ChuzTerraShotInit
     tag @s add ChuzTerraShot
@@ -26,7 +26,7 @@
     scoreboard players set @s 5U.Range 100
 
 # IDコピー
-    scoreboard players operation @s 5U.ID = @a[tag=7T.This,limit=1] UserID
+    scoreboard players operation @s 5U.ID = @a[tag=5U.This,limit=1] UserID
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]

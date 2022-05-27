@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:sacred_treasure/0210.terra_blade/trigger/3.main
-#   asset:mob/0281.terra_doublis_attack/tick/2.tick
+#   asset:sacred_treasure/0210.terra_blade/trigger/sword/sword
 
 # サウンド
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 2 1.5

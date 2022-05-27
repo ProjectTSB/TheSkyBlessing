@@ -10,3 +10,4 @@
     #declare tag ChuzTerraShot
     #declare tag ChuzTerraSpread
     #declare tag 5U.This
+    #declare tag 5U.Sword
