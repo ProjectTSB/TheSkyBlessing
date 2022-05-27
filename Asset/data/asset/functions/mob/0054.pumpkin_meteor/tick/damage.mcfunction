@@ -21,7 +21,7 @@
         function lib:damage/modifier
         execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @s

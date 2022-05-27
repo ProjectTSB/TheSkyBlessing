@@ -16,6 +16,8 @@
     # function lib:damage/modifier
 # ダメージ
     execute as @p[tag=Attacker,distance=..50] run function lib:damage/
+# リセット
+    function lib:damage/reset
 
 # 演出
     particle block_marker barrier ~ ~1 ~ 0 0 0 0 0
