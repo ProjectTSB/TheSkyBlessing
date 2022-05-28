@@ -5,7 +5,7 @@
 # @within function asset:mob/0054.pumpkin_meteor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,NoAI:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
+    summon zombie ~ ~ ~ {DeathTime:19s,Tags:["MobInit","AlwaysInvisible"],Silent:1b,NoAI:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
 # ID (int)
     data modify storage asset:mob ID set value 54
 # Type (string) Wikiを参照
@@ -23,7 +23,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:carved_pumpkin",Count:1b}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20213}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)

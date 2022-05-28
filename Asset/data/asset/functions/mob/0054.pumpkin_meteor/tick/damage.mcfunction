@@ -5,9 +5,8 @@
 # @within function asset:mob/0054.pumpkin_meteor/tick/2.tick
 
 # 演出
-    particle explosion ~ ~1.5 ~ 0.4 0.4 0.4 0 10 normal @a
+    particle explosion ~ ~1.5 ~ 0 0 0 0 1 normal @a
     playsound entity.generic.explode hostile @a ~ ~ ~ 0.5 1 0
-
 
 # ダメージを与える
 # ダメージ設定
