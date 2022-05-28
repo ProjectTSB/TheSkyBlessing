@@ -9,16 +9,16 @@
     #declare score_holder $PU.ItemNumber
 
 # 神器ID930がホットバー内にあるか確認する。
-    execute store result score $PU.ItemNumber Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:930}}}]
+    execute store result score $PU.ItemNumber Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:930}}}]
 
-# ホットバー内に残ってない場合（$PU.ItemNumber<=1)modifierと効果付与済みフラグのタグを消す
+# ホットバー内に残ってない場合（$PU.ItemNumber<=0)modifierと効果付与済みフラグのタグを消す
     data modify storage api: Argument.UUID set value [I;1,1,930,7]
-    execute if score $PU.ItemNumber Temporary matches ..1 if entity @s[tag=PU.Modifier] run function api:player_modifier/attack/physical/remove
+    execute if score $PU.ItemNumber Temporary matches ..0 if entity @s[tag=PU.Modifier] run function api:player_modifier/attack/physical/remove
 
     data modify storage api: Argument.UUID set value [I;1,1,930,7]
-    execute if score $PU.ItemNumber Temporary matches ..1 if entity @s[tag=PU.Modifier] run function api:player_modifier/defense/base/remove
+    execute if score $PU.ItemNumber Temporary matches ..0 if entity @s[tag=PU.Modifier] run function api:player_modifier/defense/base/remove
 
-    execute if score $PU.ItemNumber Temporary matches ..1 if entity @s[tag=PU.Modifier] run tag @s[tag=PU.Modifier] remove PU.Modifier
+    execute if score $PU.ItemNumber Temporary matches ..0 if entity @s[tag=PU.Modifier] run tag @s[tag=PU.Modifier] remove PU.Modifier
 
 
 # APIの引数が残ったままfunctionを抜けるの防止用
