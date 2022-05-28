@@ -3,7 +3,7 @@
 # 棘が伸びる演出
 #
 # @within function
-#   asset:sacred_treasure/0647.thorn_armor/trigger/7.fullset_hurt
+#   asset:sacred_treasure/0647.thorn_armor/trigger/7.hurt
 #   asset:sacred_treasure/0647.thorn_armor/trigger/8.exetend_thorn
 
 # 演出
