@@ -10,7 +10,7 @@
     playsound entity.blaze.hurt player @a ~ ~ ~ 0.8 1.5 0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 13f
+    data modify storage lib: Argument.Damage set value 15f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
