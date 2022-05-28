@@ -15,7 +15,7 @@
         function lib:damage/modifier
         function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     playsound minecraft:block.bubble_column.upwards_inside master @a ~ ~ ~ 1 1.8

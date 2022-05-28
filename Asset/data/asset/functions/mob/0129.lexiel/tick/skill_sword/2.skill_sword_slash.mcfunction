@@ -40,7 +40,7 @@
 # 前方にいたプレイヤーにダメージ
     execute as @a[tag=3L.SkillSwordDamageThis] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @a[tag=3L.SkillSwordDamageThis] remove 3L.SkillSwordDamageThis
 
 # 前方にテレポート

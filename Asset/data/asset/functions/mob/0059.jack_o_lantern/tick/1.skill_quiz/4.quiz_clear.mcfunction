@@ -20,7 +20,8 @@
     function lib:damage/modifier
 # ダメージ
     function lib:damage/
-
+# リセット
+    function lib:damage/reset
 
 # クイズエンド
     function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/quiz_end

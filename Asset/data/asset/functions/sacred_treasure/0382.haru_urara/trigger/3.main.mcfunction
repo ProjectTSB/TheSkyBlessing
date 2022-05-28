@@ -27,7 +27,7 @@
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 吹っ飛び効果
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run effect give @s minecraft:levitation 1 30 true
