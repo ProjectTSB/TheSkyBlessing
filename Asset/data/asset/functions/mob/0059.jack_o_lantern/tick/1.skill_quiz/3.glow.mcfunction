@@ -11,8 +11,9 @@
     effect give @s speed 5 6 true
 
 # 演出
+    playsound minecraft:entity.wither.hurt hostile @a ~ ~ ~ 0.5 1.5
     particle minecraft:witch ~ ~1 ~ 0 0 0 0.7 100
     playsound minecraft:entity.witch.celebrate hostile @a ~ ~ ~ 1 2
 
 # キル
-    tp @e[type=zombie,scores={MobID=224},distance=..30,limit=8] ~ -100 ~
+    tp @e[type=husk,scores={MobID=224},distance=..30,limit=8] ~ -100 ~

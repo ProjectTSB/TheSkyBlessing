@@ -5,7 +5,7 @@
 # @within function asset:mob/0224.pumpkin_ghost/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
+    summon husk ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,DeathLootTable:"asset:mob/death/0224.pumpkin_ghost"}
 # ID (int)
     data modify storage asset:mob ID set value 224
 # Type (string) Wikiを参照
@@ -57,7 +57,8 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.9
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=husk,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
 
 

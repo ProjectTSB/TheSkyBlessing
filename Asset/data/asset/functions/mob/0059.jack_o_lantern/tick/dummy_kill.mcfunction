@@ -5,4 +5,4 @@
 # @within function asset:mob/0059.jack_o_lantern/tick/**
 
 # 殺す
-    tp @e[type=zombie,scores={MobID=224}] ~ -100 ~
+    tp @e[type=husk,scores={MobID=224}] ~ -100 ~

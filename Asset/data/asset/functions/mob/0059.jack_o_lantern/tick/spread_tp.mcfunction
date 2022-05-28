@@ -11,3 +11,8 @@
 
 # プレイヤーを見る
     execute at @s run tp @s ~ ~ ~ facing entity @p
+
+# 演出
+    execute at @s run playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1.5 1
+    execute at @s run playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 1.5 1.5
+    execute at @s run particle minecraft:large_smoke ~ ~1 ~ 0.3 0.5 0.3 0 50
