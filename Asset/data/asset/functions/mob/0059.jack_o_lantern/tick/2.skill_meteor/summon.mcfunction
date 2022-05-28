@@ -12,5 +12,6 @@
     function api:mob/summon
 # 拡散値
     data modify storage lib: Argument.Bounds set value [[7d,7d],[0d,0d],[7d,7d]]
+
 # 拡散する
     execute as @e[type=#lib:living,scores={MobID=54},distance=..3,sort=nearest,limit=1] run function lib:spread_entity/

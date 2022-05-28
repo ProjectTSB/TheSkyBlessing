@@ -5,7 +5,7 @@
 # @within function asset:mob/0054.pumpkin_meteor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {DeathTime:19s,Tags:["MobInit","AlwaysInvisible"],Silent:1b,NoAI:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
+    summon zombie ~ ~-100 ~ {DeathTime:19s,Tags:["MobInit","AlwaysInvisible"],Silent:1b,NoAI:1b,IsBaby:0b,DeathLootTable:"asset:mob/death/0054.pumpkin_meteor"}
 # ID (int)
     data modify storage asset:mob ID set value 54
 # Type (string) Wikiを参照
@@ -57,6 +57,9 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
+
+# 上に持ってくる
+    execute positioned ~ ~-100 ~ run tp @e[type=zombie,tag=MobInit,distance=..0.01] ~ ~100 ~
 
 # プレイヤーをみる
     tp @e[type=zombie,tag=MobInit,distance=..0.01] ~ ~ ~ facing entity @p

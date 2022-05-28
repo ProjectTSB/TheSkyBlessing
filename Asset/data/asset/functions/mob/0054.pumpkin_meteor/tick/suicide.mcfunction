@@ -7,7 +7,7 @@
 # 演出
     particle explosion ~ ~1.5 ~ 0 0 0 0 1 normal @a
     playsound entity.generic.explode hostile @a ~ ~ ~ 0.5 1 0
-    playsound entity.pillager.celebrate hostile @a ~ ~ ~ 0.8 1.8 0
+    playsound ogg:mob.pillager.celebrate2 hostile @a ~ ~ ~ 1 2
 
 # 割合ダメージ
     execute store result storage lib: Argument.Damage float 0.0004 as @e[type=zombie,scores={MobID=59},distance=..3,sort=nearest,limit=1] run function api:mob/get_max_health

@@ -8,6 +8,7 @@
     execute if score @s 1N.Tick matches 0 run effect give @s slowness 12 100 true
 
 # 演出
+    execute if score @s 1N.Tick matches 0 run playsound minecraft:block.beacon.activate hostile @a ~ ~ ~ 1.5 1.5
     execute if score @s 1N.Tick matches 0 run playsound minecraft:entity.witch.celebrate hostile @a ~ ~ ~ 1 2
     execute if score @s 1N.Tick matches 0..20 run particle dust 1 0 0 1 ~ ~1.2 ~ 0.8 0.8 0.8 0 20 normal @a
 # 眷属をいっぱいだす

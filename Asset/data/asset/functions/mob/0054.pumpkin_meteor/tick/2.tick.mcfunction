@@ -8,9 +8,9 @@
     execute if entity @p[distance=..32] facing entity @p eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-1000 facing entity @s feet positioned as @s run tp @s ^ ^ ^0.5 ~ ~
 
 # 演出
-    particle dust 1 0.6 0 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
-    particle dust 0.851 0 1 1 ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
-    particle flame ~ ~0.5 ~ 0.2 0.2 0.2 0 1 normal @a
+    particle dust 1 0.6 0 1 ~ ~1.5 ~ 0.2 0.2 0.2 0 1 force @a[distance=..40]
+    particle dust 0.851 0 1 1 ~ ~1.5 ~ 0.2 0.2 0.2 0 1 force @a[distance=..40]
+    particle flame ~ ~1.5 ~ 0.2 0.2 0.2 0 1 force @a[distance=..40]
 
 # スコアを増やす
     scoreboard players add @s 1I.Time 1
