@@ -4,31 +4,20 @@
 #
 # @within function asset:mob/0265.dark_familiar/tick/1.trigger
 
-# 召喚されたときの処理
-    execute unless entity @s[tag=7D.Init] run function asset:mob/0265.dark_familiar/tick/event/init
-
 # パーティクル
-    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0 0.6 0.5 ~ ~-0.2 ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
-    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~-0.2 ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0 0.6 0.5 ~ ~ ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~ ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
 
-# 範囲内ならホーミングじみた移動、ただしダメージを受けていないなら
-    execute at @s anchored eyes as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] run function asset:mob/0265.dark_familiar/tick/rotater/tick
-
-# 速さ
-    data modify storage lib: Argument.VectorMagnitude set value 0.15
-
-# 飛ぶのに使う
-    execute if data entity @s {HurtTime:0s} at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] run function lib:motion/
-    data remove storage lib: Argument
-# 向き
-    data modify entity @s Rotation set from storage asset:temp Rotation
-    data remove storage asset:temp Rotation
+# 範囲内ならホーミングじみた移動
+    execute facing entity @e[type=zombie,scores={MobID=264},distance=..100] feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
 
 # 接地で上を向く
-    execute if data entity @s {OnGround:1b} positioned ~ ~1.5 ~ as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~ ~-35
+    execute positioned ~ ~1.68 ~ unless block ~ ~-1 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~-35
+    execute positioned ~ ~1.68 ~ unless block ~ ~1 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~80
 
 # カベにぶつかった際の処理
-    execute unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=7D.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
+    execute positioned ~ ~1.68 ~ unless block ^ ^ ^0.5 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
+    execute positioned ~ ~1.68 ~ unless block ^ ^ ^0.2 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
 
 # 世界に存在しすぎた場合、消滅する
     scoreboard players remove @s 7D.LifeTime 1
