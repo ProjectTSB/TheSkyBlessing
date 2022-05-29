@@ -4,9 +4,12 @@
 #
 # @within function asset:mob/0265.dark_familiar/tick/2.tick
 
-data modify storage api: Argument.ID set value 266
-execute anchored eyes positioned ^ ^ ^ run function api:mob/summon
-scoreboard players reset @s 7D.Move
+# 召喚
+    data modify storage api: Argument.ID set value 266
+    execute anchored eyes positioned ^ ^ ^ run function api:mob/summon
+
+# スコアのリセット
+    scoreboard players reset @s 7D.Move
 
 # サウンド
     playsound minecraft:entity.shulker_bullet.hurt neutral @a ~ ~ ~ 1.5 2

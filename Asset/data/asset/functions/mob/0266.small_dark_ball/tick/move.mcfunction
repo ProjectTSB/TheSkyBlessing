@@ -2,8 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0266.small_dark_ball/tick/2.tick
-# @within function asset:mob/0266.small_dark_ball/tick/move
+# @within function
+#   asset:mob/0266.small_dark_ball/tick/2.tick
+#   asset:mob/0266.small_dark_ball/tick/move
 
 # パーティクル
     particle minecraft:dust 0.5 0 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]

@@ -1,8 +1,7 @@
 # TheSkyBlessing
 [![discord](https://img.shields.io/discord/742465492861845564?logo=discord&label=discord)](https://discord.gg/vPqHuQNMEv)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/ProjectTSB/TheSkyBlessing)
 [![stars](https://img.shields.io/github/stars/ProjectTSB/TheSkyBlessing?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/stargazers)
-[![progress](https://img.shields.io/github/milestones/progress/ProjectTSB/TheSkyBlessing/1?label=devProgress&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/milestone/1)
+[![downloads](https://img.shields.io/github/downloads/ProjectTSB/TheSkyBlessing/total?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/releases/latest)
 [![activity](https://img.shields.io/github/commit-activity/m/ProjectTSB/TheSkyBlessing?label=commit&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/commits/master)
 [![workflow](https://img.shields.io/github/workflow/status/ProjectTSB/TheSkyBlessing/lint-datapack/master?label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.carloscuesta.me/)

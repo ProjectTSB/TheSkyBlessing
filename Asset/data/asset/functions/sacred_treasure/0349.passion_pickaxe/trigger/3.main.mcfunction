@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # ダメージ
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30f
+    # 与えるダメージ = 550
+        data modify storage lib: Argument.Damage set value 550f
     # 物理属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 炎属性

@@ -1,6 +1,6 @@
 {
     "values": [
-        "asset:sacred_treasure/example/trigger/1.trigger",
+        "asset:sacred_treasure/0253.holy_barrier/trigger/1.trigger",
         "asset:sacred_treasure/0555.catastrophe/trigger/1.trigger",
         "asset:sacred_treasure/0647.thorn_armor/trigger/6.damage_trigger",
         "asset:sacred_treasure/0731.mouse_feet/trigger/1.trigger"

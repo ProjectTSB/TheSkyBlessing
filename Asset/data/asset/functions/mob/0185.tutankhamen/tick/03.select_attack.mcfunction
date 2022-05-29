@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0185.tutankhamen/tick/2.tick
 
+#> Private
+# @private
+    #declare score_holder $Random
+
 # NoAIになる (解除は各技の最後)
     data modify entity @s NoAI set value 1b
 
