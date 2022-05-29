@@ -23,8 +23,8 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
 
 # ダメージ設定
-    # 与えるダメージ = 90
-        data modify storage lib: Argument.Damage set value 800.0f
+    # 与えるダメージ = 800
+        data modify storage lib: Argument.Damage set value 900f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
