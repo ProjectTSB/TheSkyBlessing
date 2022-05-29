@@ -31,9 +31,6 @@
     execute if score @s 4S.Time matches 110 run particle end_rod ~ ~15 ~ 0 0 0 1 100
     execute if score @s 4S.Time matches 110 run playsound minecraft:block.end_portal.spawn player @a ~ ~ ~ 1 1
 
-# タグ消し
-    execute if score @s 4S.Time matches 110.. run tag @s remove Landing
-
 # 2tickおきにVFX
 # 実行時間を移す
     scoreboard players operation $2tInterval Temporary = @s 4S.Time
@@ -49,10 +46,9 @@
 # 4tickおきに実行
     scoreboard players operation $4tInterval Temporary %= $4 Const
     execute if score $4tInterval Temporary matches 0 if score @s 4S.Time matches 110.. positioned ~ ~15 ~ rotated 0 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/5.damage_laser
+    execute if score $4tInterval Temporary matches 0 if score @s 4S.Time matches 110.. run tag @s remove Landing
 # リセット
     scoreboard players reset $4tInterval
 
 # 回転
     tp @s ~ ~ ~ ~3 ~
-# タグ消し
-    tag @s remove Landing

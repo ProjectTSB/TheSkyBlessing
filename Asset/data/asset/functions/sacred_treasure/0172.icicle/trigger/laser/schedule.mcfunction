@@ -4,6 +4,7 @@
 #
 # @within function
 #    asset:sacred_treasure/0172.icicle/trigger/3.main
+#    asset:sacred_treasure/0172.icicle/trigger/rejoin_process
 #    asset:sacred_treasure/0172.icicle/trigger/laser/schedule
 
 # 実行する

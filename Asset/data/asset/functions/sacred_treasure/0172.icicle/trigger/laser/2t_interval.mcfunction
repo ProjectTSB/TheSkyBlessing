@@ -14,3 +14,6 @@
     execute if score @s 4S.Time matches 110.. run particle snowflake ~ ~7.5 ~ 1 7 1 0 30
     execute if score @s 4S.Time matches 110.. positioned ~ ~15 ~ rotated 0 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/3.laser_circle
     execute if score @s 4S.Time matches 110.. positioned ~ ~15 ~ rotated 0 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/4.laser_line
+
+# タグ消し
+    tag @s remove Landing
