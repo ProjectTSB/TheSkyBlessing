@@ -13,8 +13,9 @@
     execute if data storage asset:sacred_treasure TargetItems[0].tag.TSB.SpecialCooldown store result bossbar asset:special_cooldown max run scoreboard players get $SacredTreasureSpecialCooldown Global
     execute if data storage asset:sacred_treasure TargetItems[0].tag.TSB.SpecialCooldown run bossbar set asset:special_cooldown players @a
 # すべてのアイテムについて更新処理を行う
-    function asset_manager:sacred_treasure/use/item/
+    execute unless data storage asset:sacred_treasure {IgnoreItemUpdate:true} run function asset_manager:sacred_treasure/use/item/
 # リセット
+    data remove storage asset:sacred_treasure IgnoreUpdate
     data remove storage asset:sacred_treasure TargetSlot
     data remove storage asset:sacred_treasure TargetDefaultSlot
     data remove storage asset:sacred_treasure TargetItems

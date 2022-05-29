@@ -14,10 +14,10 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:lava ~ ~ ~ 0 0 0 1 20
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle minecraft:lava ~ ~ ~ 0 0 0 1 20
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 1
     playsound minecraft:item.trident.throw player @a ~ ~ ~ 1 0.5
-    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
-    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 1
 
 # ダメージ
     #ダメージブレのための処理
@@ -39,6 +39,6 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $Rotate Temporary

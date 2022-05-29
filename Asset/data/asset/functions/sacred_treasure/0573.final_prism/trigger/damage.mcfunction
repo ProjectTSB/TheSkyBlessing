@@ -22,4 +22,4 @@
     tag @e[type=#lib:living,tag=PrismDamage,distance=..50] remove PrismDamage
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

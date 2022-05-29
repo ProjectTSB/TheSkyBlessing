@@ -19,7 +19,7 @@
 
 # ダメージ
     # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30f
+        data modify storage lib: Argument.Damage set value 50f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -29,7 +29,7 @@
 # 対象に
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..6] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 周囲にプレイヤーがいたら
     execute if entity @a[gamemode=!spectator,distance=..6] run tag @s add 3N.SkillIceAreaHit
