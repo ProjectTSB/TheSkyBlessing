@@ -12,8 +12,6 @@
 # スコア加算
     scoreboard players add @s 4S.Time 1
 
-# パーティクル
-    execute if score @s 4S.Time matches 10..110 run particle end_rod ~ ~15 ~ 0 -1 0 4 0
 # 一段目展開
     execute if score @s 4S.Time matches 30 run playsound entity.puffer_fish.death player @a ~ ~ ~ 1 2
 # 二段目展開
@@ -28,7 +26,7 @@
     execute if score @s 4S.Time matches 87..110 positioned ~ ~17 ~ rotated ~ 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/2.laser_directing
 
 # 放射
-    execute if score @s 4S.Time matches 110 run particle end_rod ~ ~15 ~ 0 0 0 1 100
+    execute if score @s 4S.Time matches 110 run particle firework ~ ~15 ~ 0 0 0 1 100
     execute if score @s 4S.Time matches 110 run playsound minecraft:block.end_portal.spawn player @a ~ ~ ~ 1 1
 
 # 2tickおきにVFX

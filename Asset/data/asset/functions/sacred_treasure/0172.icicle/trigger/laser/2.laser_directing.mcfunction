@@ -9,7 +9,7 @@
     #declare tag SpreadMarker
 
 # 演出
-    particle end_rod ~ ~ ~ 0 0 0 1 10
+    particle firework ~ ~ ~ 0 0 0 1 10
     particle electric_spark ~ ~ ~ 0.5 0.4 0.5 1 20 normal
     playsound minecraft:entity.firework_rocket.twinkle_far player @a[distance=..30  ] ~ ~ ~ 0.72 2 0.72
 
