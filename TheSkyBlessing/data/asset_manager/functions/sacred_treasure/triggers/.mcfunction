@@ -10,7 +10,7 @@
     function asset_manager:sacred_treasure/data/old/init
     function asset_manager:sacred_treasure/data/new/init
 # 装備の変更チェック
-    function asset_manager:sacred_treasure/triggers/equipments/compare
+    execute if data storage asset:context Old run function asset_manager:sacred_treasure/triggers/equipments/compare
 # 変更時の更新処理
     execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/equipments/update_cooldown/
 # 各トリガーに処理受け渡し & AutoSlotのリセット
