@@ -2,11 +2,11 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/laser/1.laser
+# @within function asset:sacred_treasure/0172.icicle/trigger/laser/2t_interval
 
 # 演出
     particle flash ~ ~ ~ 0 0 0 0 0
-    particle dust 1 1000000000 1000000000 2.5 ^ ^ ^ 1 1 1 0 100
+    particle dust 1 1000000000 1000000000 2.5 ^ ^ ^ 1 1 1 0 10
     function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~10 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
     execute rotated ~20 ~ run function asset:sacred_treasure/0172.icicle/trigger/laser/particle4
