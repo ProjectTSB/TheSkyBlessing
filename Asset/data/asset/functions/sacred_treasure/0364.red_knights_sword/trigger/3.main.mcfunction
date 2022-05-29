@@ -19,9 +19,8 @@
     execute unless data storage asset:context Items.mainhand.id run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
 
 # 演出
-    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
-    playsound minecraft:entity.wither.hurt player @a ~ ~ ~ 1 1
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
+    playsound minecraft:item.trident.return player @a ~ ~ ~ 1 2
+
 
 # ほしい範囲に剰余算
     execute store result score $Random Temporary run function lib:random/
