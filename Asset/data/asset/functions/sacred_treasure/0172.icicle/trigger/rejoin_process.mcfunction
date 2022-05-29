@@ -6,4 +6,3 @@
 
 # ループする
     execute if entity @e[type=area_effect_cloud,tag=4S.Laser,limit=1] run schedule function asset:sacred_treasure/0172.icicle/trigger/laser/schedule 1t replace
-    execute if entity @e[type=area_effect_cloud,tag=4S.Laser,limit=1] run say aa
