@@ -10,8 +10,5 @@
 # 再帰カウントが0なら弾速からセット
     scoreboard players operation @s 7E.Recursive = @s 7E.Speed
 
-# Init
-    execute if entity @s[tag=7E.Init] run function asset:mob/0266.small_dark_ball/tick/init
-
 # 移動
     function asset:mob/0266.small_dark_ball/tick/move
