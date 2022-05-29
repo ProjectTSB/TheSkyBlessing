@@ -13,7 +13,7 @@
 
 # ダメージ判定
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 20f
+    data modify storage lib: Argument.Damage set value 50f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
@@ -22,4 +22,4 @@
 # 対象
     execute as @p[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

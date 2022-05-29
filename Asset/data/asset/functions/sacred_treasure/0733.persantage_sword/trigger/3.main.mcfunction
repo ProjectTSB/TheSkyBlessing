@@ -33,5 +33,5 @@
     execute if data storage lib: Argument.Damage as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function lib:damage/
 
 # 色々リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     scoreboard players reset $KD.DamageValue Temporary

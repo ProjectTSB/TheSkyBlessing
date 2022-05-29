@@ -8,7 +8,7 @@
     execute at @a[tag=Victim] run playsound block.anvil.land hostile @a ~ ~ ~ 1 1.3
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 30f
+    data modify storage lib: Argument.Damage set value 33f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
@@ -17,7 +17,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーをパニック状態にする
 # プレイヤーにタグ、スコアを付与する
