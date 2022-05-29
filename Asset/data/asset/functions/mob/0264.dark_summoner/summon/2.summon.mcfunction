@@ -5,7 +5,7 @@
 # @within function asset:mob/0264.dark_summoner/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","7C.Entity","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0264.dark_summoner",Silent:1b}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0264.dark_summoner",Silent:1b}
 # ID (int)
     data modify storage asset:mob ID set value 264
 # Type (string) Wikiを参照
@@ -16,21 +16,14 @@
     data modify storage asset:mob Name set value '{"text":"ダークサモナー","color":"#B638FF","italic":false}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20179}}
-
-    # オフハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Offhand set value
+        #data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20179}}
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20178}}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20214}}
     # 胴 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:4404559}}}
-    # 脚 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Legs set value
-    # 足 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Feet set value
+        #data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:4404559}}}
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)

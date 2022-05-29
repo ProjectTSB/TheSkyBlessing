@@ -3,6 +3,4 @@
 
 #> tag
 # @within function asset:mob/0264.dark_summoner/**
-    #declare tag 7C.Entity
     #declare tag 7C.CastStart
-    #declare tag 7D.Entity

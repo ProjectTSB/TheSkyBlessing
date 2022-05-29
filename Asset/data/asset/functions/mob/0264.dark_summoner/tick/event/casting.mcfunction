@@ -20,5 +20,8 @@
     execute if score @s 7C.Attack matches 85 rotated ~ 0 positioned ^-2 ^ ^ if block ~ ~ ~ #lib:no_collision run function asset:mob/0264.dark_summoner/tick/event/summon_minions
     execute if score @s 7C.Attack matches 95 rotated ~ 0 positioned ^-5 ^ ^ if block ~ ~ ~ #lib:no_collision run function asset:mob/0264.dark_summoner/tick/event/summon_minions
 
+# ポーズ変更
+    item replace entity @s[scores={7C.Attack=120}] armor.head with stick{CustomModelData:20214}
+
 # 終了
     execute if score @s 7C.Attack matches 160.. run function asset:mob/0264.dark_summoner/tick/event/cast_finish

@@ -15,3 +15,6 @@
 
 # 攻撃キャンセル
     execute unless entity @p[distance=..20] run function asset:mob/0264.dark_summoner/tick/event/cast_finish
+
+# 首固定
+    data modify entity @s Rotation[1] set value 0.0f

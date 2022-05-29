@@ -13,3 +13,6 @@
 
 # タグ付与
     tag @s add 7C.CastStart
+
+# ポーズ変更
+    item replace entity @s armor.head with stick{CustomModelData:20215}
