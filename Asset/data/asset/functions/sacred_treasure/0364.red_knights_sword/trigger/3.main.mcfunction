@@ -2,7 +2,7 @@
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/2.check_condition
+# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_1
 #> Private
 # @private
     #declare score_holder $UseCount
@@ -21,6 +21,18 @@
     playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
     playsound minecraft:entity.wither.hurt player @a ~ ~ ~ 1 1
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
+
+# ほしい範囲に剰余算
+    execute store result score $Random Temporary run function lib:random/
+# 疑似乱数取得
+    scoreboard players operation $Random Temporary %= $3 Const
+# メッセージ出力
+    execute if score $Random Temporary matches 0 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_1
+    execute if score $Random Temporary matches 1 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_2
+    execute if score $Random Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_3
+# リセット
+    scoreboard players reset $Random Temporary
+
 
 # ダメージ設定
     # 与えるダメージ = 800
@@ -44,6 +56,6 @@
         data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは赤い騎士の剣に呑まれた。","with":[{"selector":"@s"}]}]']
     # ダメージ
         function lib:damage/modifier_continuation
-        function lib:damage/
+        execute as @s[tag=!PlayerShouldInvulnerable] run function lib:damage/
 # リセット
     function lib:damage/reset
