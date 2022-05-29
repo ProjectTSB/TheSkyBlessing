@@ -48,6 +48,7 @@
     execute if score $VectorMagnitude Temporary matches 1.. run function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
 
 # リセット
+    function lib:damage/reset
     data remove storage lib: Argument
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $VectorMagnitude Temporary

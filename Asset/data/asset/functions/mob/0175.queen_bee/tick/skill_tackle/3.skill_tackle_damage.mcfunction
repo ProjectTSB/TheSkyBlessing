@@ -15,7 +15,7 @@
 # 対象
     execute as @p[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーにダメージを与えたらタグを付与
     execute if entity @p[gamemode=!creative,gamemode=!spectator,distance=..2] run tag @s add 4V.SkillTackleDamageHit

@@ -14,7 +14,7 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     playsound minecraft:entity.ghast.hurt hostile @a ~ ~ ~ 0.3 1.6
