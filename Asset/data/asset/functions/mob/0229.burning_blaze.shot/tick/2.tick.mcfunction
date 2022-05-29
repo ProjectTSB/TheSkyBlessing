@@ -4,10 +4,6 @@
 #
 # @within function asset:mob/0229.burning_blaze.shot/tick/1.trigger
 
-#> private
-# @private
-    #declare tag Hit
-
 # ヒット検知
     execute positioned ^ ^ ^0.5 positioned ~-1 ~-1 ~-1 run tag @a[tag=!PlayerShouldInvulnerable,dx=1,dz=1] add Hit
     execute positioned ^ ^ ^1 positioned ~-1 ~-1 ~-1 run tag @a[tag=!PlayerShouldInvulnerable,dx=1,dz=1] add Hit

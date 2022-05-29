@@ -7,8 +7,11 @@
 # ダメージ
     data modify storage lib: Argument set value {Damage:22,AttackType:Physical,AttackElement:Fire}
     function lib:damage/modifier
-    execute as @a[tag=Hit,distance=..2] run function lib:damage/
+    execute as @a[tag=Hit,distance=..5] run function lib:damage/
     data remove storage lib: Argument
 
 # タグ消し
     tag @a[tag=Hit,distance=..5] remove Hit
+
+# 自殺
+    kill @s
