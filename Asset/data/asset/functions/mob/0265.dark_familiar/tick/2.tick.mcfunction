@@ -5,8 +5,8 @@
 # @within function asset:mob/0265.dark_familiar/tick/1.trigger
 
 # パーティクル
-    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0 0.6 0.5 ~ ~ ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
-    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~ ~ 0.1 0.1 0.1 0 2 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0 0.6 0.5 ~ ~ ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~ ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
 # 範囲内ならホーミングじみた移動
     execute facing entity @e[type=zombie,scores={MobID=264},distance=..100] feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~

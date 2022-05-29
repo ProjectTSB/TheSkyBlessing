@@ -20,7 +20,7 @@
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20177}}
 
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 1500
+    data modify storage asset:mob Health set value 500
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち

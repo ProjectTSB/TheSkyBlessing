@@ -12,8 +12,8 @@
     execute facing entity @p[gamemode=!spectator,distance=..30] eyes run tp @s ~ ~ ~ ~ ~
 
 # スコア
-    scoreboard players set @s 7E.Range 100
-    scoreboard players set @s 7E.Speed 2
+    scoreboard players set @s 7E.Range 200
+    scoreboard players set @s 7E.Speed 5
 
 # 拡散させるEntityを召喚する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
