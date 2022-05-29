@@ -19,4 +19,4 @@
     function lib:damage/reset
 
 # 消失
-    kill @s
+    function asset:mob/0266.small_dark_ball/tick/event/kill

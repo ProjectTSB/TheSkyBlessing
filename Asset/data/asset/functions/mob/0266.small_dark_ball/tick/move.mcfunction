@@ -26,4 +26,4 @@
     execute if entity @s[scores={7E.Recursive=1..,7E.Range=1..}] at @s run function asset:mob/0266.small_dark_ball/tick/move
 
 # キル
-    execute if entity @s[scores={7E.Range=0}] run kill @s
+    execute if entity @s[scores={7E.Range=0}] run function asset:mob/0266.small_dark_ball/tick/event/kill

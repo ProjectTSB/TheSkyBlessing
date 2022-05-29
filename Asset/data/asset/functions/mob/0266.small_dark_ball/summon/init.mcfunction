@@ -20,7 +20,7 @@
 
 # ステータス設定
     data modify storage lib: Argument.Distance set value 5
-    data modify storage lib: Argument.Spread set value 2
+    data modify storage lib: Argument.Spread set value 1
 
 # 拡散
     execute facing entity @p[gamemode=!spectator,distance=..30] eyes as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
