@@ -2,7 +2,8 @@
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_1
+# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/2.check_condition
+
 #> Private
 # @private
     #declare score_holder $UseCount
