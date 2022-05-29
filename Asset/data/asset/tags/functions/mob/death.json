@@ -1,5 +1,15 @@
 {
     "values": [
+        "asset:mob/0255.dependence_eye/death/1.trigger",
+        "asset:mob/0254.headless/death/1.trigger",
+        "asset:mob/0253.parasitic_soldiers/death/1.trigger",
+        "asset:mob/0202.hunters_dream/death/1.trigger",
+        "asset:mob/0046.clock_of_despair/death/1.trigger",
+        "asset:mob/0210.aurora_eye/death/1.trigger",
+        "asset:mob/0228.frost_eye/death/1.trigger",
+        "asset:mob/0262.frestchika/death/1.trigger",
+        "asset:mob/0083.thunder_trifler/death/1.trigger",
+        "asset:mob/0084.falcios_priest/death/1.trigger",
         "asset:mob/0235.orange_thrower/death/1.trigger",
         "asset:mob/0236.ksitigarbha/death/1.trigger",
         "asset:mob/0217.medousa_eye/death/1.trigger",

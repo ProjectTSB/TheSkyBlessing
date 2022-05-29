@@ -133,12 +133,7 @@ team modify NoCollision collisionRule never
     bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
-    # @within function
-    #   lib:debug/objective_view
-    #   asset:mob/*/**
-    #   asset_manager:mob/**
-    #   asset_manager:spawner/**
-    #   asset_manager:island/dispel/boss/remove
+    # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
@@ -303,6 +298,7 @@ team modify NoCollision collisionRule never
     #   api:mob/get_max_health
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
+    #   mob_manager:init/multiplay_multiplier/*
         scoreboard objectives add MobHealthMax dummy
 
     #> MobManager用スコアボード - 攻撃元

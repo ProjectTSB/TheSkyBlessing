@@ -8,7 +8,7 @@
     execute at @p[tag=Victim,distance=..32] run function asset:mob/0150.contamination/gus_summon
 
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 30f
+    data modify storage lib: Argument.Damage set value 36f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
@@ -17,4 +17,4 @@
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

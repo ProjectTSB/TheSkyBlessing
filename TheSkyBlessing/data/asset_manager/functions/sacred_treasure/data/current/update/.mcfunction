@@ -16,3 +16,5 @@
 # 削除されたときの処理
     execute unless data storage asset:sacred_treasure ProcessedItem if data storage asset:sacred_treasure {TargetDefaultSlot:"hotbar"} run function asset_manager:sacred_treasure/data/current/update/when_removed/hotbar
     execute unless data storage asset:sacred_treasure ProcessedItem unless data storage asset:sacred_treasure {TargetDefaultSlot:"hotbar"} run function asset_manager:sacred_treasure/data/current/update/when_removed/non-hotbar
+# リセット
+    data remove storage asset:sacred_treasure ProcessedItem

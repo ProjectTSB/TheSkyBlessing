@@ -31,13 +31,13 @@
 
 # ダメージ処理
     # 全プレイヤーの周囲50Mの敵に魔法・水属性ダメージ
-        data modify storage lib: Argument.Damage set value 150f
+        data modify storage lib: Argument.Damage set value 1700f
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "Water"
         function lib:damage/modifier
         execute at @a run tag @e[tag=Enemy,tag=!Uninterferable,distance=..50] add EI.Target
         execute as @e[tag=EI.Target] run function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # タグリセット
     execute at @a run tag @e[tag=EI.Target,tag=!Uninterferable,distance=..50] remove EI.Target

@@ -11,3 +11,7 @@
     #declare score_holder $Resistance
     #declare score_holder $LatestModifiedUser
     #declare score_holder $LatestModifiedEntity
+
+#> Declare
+# @within function lib:damage/core/trigger_on_damage/**
+    #declare tag TargetAttacker

@@ -12,11 +12,11 @@
 # 没収されたアイテムの個数を取得
     execute store result score @s Temporary run function api:lost_items/get_length
 
-# 没収されたアイテム / 3の値を設定
-    scoreboard players operation @s Temporary /= $3 Const
+# 没収されたアイテム * 4の値を設定
+    scoreboard players operation @s Temporary *= $4 Const
 
 # 最大値をきめる
-    execute if score @s Temporary matches 300.. run scoreboard players set @s Temporary 300
+    execute if score @s Temporary matches 2300.. run scoreboard players set @s Temporary 2300
 
 # ダメージ
     # 与えるダメージ
@@ -32,4 +32,4 @@
 
 # リセット
     scoreboard players reset @s Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset

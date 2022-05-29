@@ -11,4 +11,4 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの炎の薬品により焼け焦げた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     function lib:damage/modifier
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..4] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset

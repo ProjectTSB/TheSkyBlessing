@@ -33,6 +33,3 @@
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
     execute at @s unless entity @e[type=armor_stand,tag=4V.ArmorStand,distance=..0.01] run function asset:mob/0175.queen_bee/tick/armorstand_respawn
-
-# アマスタデスポーン処理
-    execute if entity @p[distance=100..150] run kill @e[type=armor_stand,tag=4V.ArmorStand]

@@ -18,8 +18,8 @@
     tag @s add GX.This
 
 # ダメージ設定
-    # 与えるダメージ = 30
-        data modify storage lib: Argument.Damage set value 30.0f
+    # 与えるダメージ = 60
+        data modify storage lib: Argument.Damage set value 40.0f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
@@ -29,5 +29,5 @@
         execute positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2.5] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     kill @s
