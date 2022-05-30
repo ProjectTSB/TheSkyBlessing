@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:sacred_treasure/give
 
-execute if data storage asset:context {id:295} run function asset:sacred_treasure/0973.call_rod_spirit/give/2.give
+execute if data storage asset:context {id:973} run function asset:sacred_treasure/0973.call_rod_spirit/give/2.give

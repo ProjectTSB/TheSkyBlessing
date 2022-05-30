@@ -9,7 +9,7 @@
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 295
+    data modify storage asset:sacred_treasure ID set value 973
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
