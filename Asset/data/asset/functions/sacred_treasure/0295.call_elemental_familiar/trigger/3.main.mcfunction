@@ -18,8 +18,8 @@
 # 音とパーティクル
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 1.75
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 2 1
-    playsound minecraft:block.end_portal_frame.fill neutral @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 1.5
+    playsound minecraft:block.amethyst_cluster.break neutral @a ~ ~ ~ 1.5 1.5
+    playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # 精霊さんを動かす
     function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick
