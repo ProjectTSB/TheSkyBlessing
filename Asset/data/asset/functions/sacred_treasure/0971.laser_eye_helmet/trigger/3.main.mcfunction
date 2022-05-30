@@ -6,7 +6,6 @@
 
 #> Private
 # @private
-    #declare score_holder $Random
     #declare tag SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
@@ -29,7 +28,6 @@
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]
-    scoreboard players reset $Random Temporary
     scoreboard players reset $Appropriate_Distance Temporary
     scoreboard players reset $Distance_Damping Temporary
     scoreboard players reset $MinDamage Temporary
