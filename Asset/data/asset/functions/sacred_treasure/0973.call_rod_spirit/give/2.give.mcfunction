@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"コール: ロッドスピリット","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う精霊を呼び出す。","color":"white"}','{"text":"自分の精霊を既に出している状態では使用できない。","color":"white"}','{"text":"\\"私が手伝ってあげる！\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う精霊を呼び出す。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"私が手伝ってあげる！\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
