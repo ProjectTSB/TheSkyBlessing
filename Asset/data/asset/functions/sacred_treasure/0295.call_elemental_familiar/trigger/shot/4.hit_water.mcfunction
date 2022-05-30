@@ -11,7 +11,7 @@
     function lib:damage/
 
 # ふわり
-    effect give @s minecraft:levitation 1 1 true
+    #effect give @s minecraft:levitation 1 1 true
 
 # リセット
     function lib:damage/reset

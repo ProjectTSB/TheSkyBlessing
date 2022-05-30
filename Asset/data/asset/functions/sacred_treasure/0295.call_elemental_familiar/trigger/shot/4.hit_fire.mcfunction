@@ -11,7 +11,7 @@
     function lib:damage/
 
 # 燃える
-    data modify entity @s Fire set value 60.0
+    #data modify entity @s Fire set value 60.0
 
 # リセット
     function lib:damage/reset

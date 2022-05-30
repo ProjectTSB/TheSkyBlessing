@@ -41,7 +41,7 @@
     execute if entity @e[tag=Enemy,distance=..10] run scoreboard players add @s 87.Tick 1
 
 # 魔法攻撃
-    #execute if entity @s[scores={87.Tick=20..}] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
+    execute if entity @s[scores={87.Tick=20..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
 
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[tag=Enemy,distance=..10] run scoreboard players reset @s 87.Tick

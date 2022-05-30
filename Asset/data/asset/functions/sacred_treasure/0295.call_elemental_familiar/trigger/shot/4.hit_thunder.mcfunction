@@ -11,7 +11,7 @@
     function lib:damage/
 
 # しびれる
-    effect give @s slowness 3 1
+    #effect give @s slowness 3 1
 
 # リセット
     function lib:damage/reset
