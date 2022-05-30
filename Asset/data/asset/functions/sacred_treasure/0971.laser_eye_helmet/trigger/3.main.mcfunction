@@ -19,8 +19,8 @@
 
 # 前方拡散設定
     execute anchored eyes positioned ^ ^ ^ run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 4.0
-    data modify storage lib: Argument.Spread set value 0.2
+    data modify storage lib: Argument.Distance set value 3.0
+    data modify storage lib: Argument.Spread set value 0.5
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 # 発砲
