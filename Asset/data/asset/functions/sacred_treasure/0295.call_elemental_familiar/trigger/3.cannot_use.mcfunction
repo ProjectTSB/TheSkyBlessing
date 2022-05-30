@@ -17,3 +17,4 @@
 
 # 使用不可に
     tag @s remove CanUsed
+    tag @s remove 87.NoUse

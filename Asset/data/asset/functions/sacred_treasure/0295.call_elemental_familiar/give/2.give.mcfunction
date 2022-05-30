@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"コール: エレメンタル・ファミリア","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔法攻撃を行う眷属を複数体召喚する。。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"ふよふよ漂う、ふしぎなヤツ\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔法攻撃を行う眷属を複数体召喚する。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"ふよふよ漂う、ふしぎなヤツ\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -35,7 +35,7 @@
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 100
 # 神器のクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure LocalCooldown set value 600
+    data modify storage asset:sacred_treasure LocalCooldown set value 20
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
