@@ -20,7 +20,7 @@
 # 代入
     execute store result score $Heal Temporary run data get storage lib: Argument.Heal 100
 # マルチ補正
-    execute unless data storage lib: Argument{FixedHeal:true} run scoreboard players operation $Heal Temporary *= $MaxHealthMultiplier Temporary
+    execute unless data storage lib: Argument{FixedHeal:true} if score $MaxHealthMultiplier Temporary matches 1.. run scoreboard players operation $Heal Temporary *= $MaxHealthMultiplier Temporary
     execute unless data storage lib: Argument{FixedHeal:true} run scoreboard players operation $Heal Temporary /= $10 Const
 # 減算
     scoreboard players operation $Health Temporary += $Heal Temporary
