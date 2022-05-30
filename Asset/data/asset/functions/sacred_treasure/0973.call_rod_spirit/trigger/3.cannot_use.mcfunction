@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.cannot_use
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/3.cannot_use
 #
 #
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition
+# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condition
 
 #> 使用不可タグ
 # @private

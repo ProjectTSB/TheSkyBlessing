@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit_thunder
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/4.hit_thunder
 #
 #
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/3.main
+# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/3.main
 
 # 魔法、雷属性のダメージをぶちかます
     data modify storage lib: Argument.Damage set value 60.0f

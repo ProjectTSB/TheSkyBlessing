@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/1.init
 #
 #
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.main
+# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.main
 
 # パーティクル
     particle poof ~ ~0.5 ~ 0.1 0.1 0.1 0.05 10

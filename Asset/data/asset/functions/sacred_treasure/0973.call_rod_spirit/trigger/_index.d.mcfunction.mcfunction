@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/_index.d.mcfunction
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/_index.d.mcfunction
 # @private
 
 #> tags
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/**
+# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/**
     #declare tag 87.Main
     #declare tag 87.Fire
     #declare tag 87.Water
