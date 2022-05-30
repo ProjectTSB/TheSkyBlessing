@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 精霊召喚
-    execute if score $Random Temporary matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_normal
+    function asset:sacred_treasure/0295.call_elemental_familiar/trigger/4.summon_spirit
 
 # 精霊Init
     execute as @e[type=armor_stand,tag=87.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/init

@@ -6,3 +6,4 @@
 
 # このfunctionをループさせる
     execute if entity @e[type=armor_stand,tag=87.Main,limit=1] run schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/tick 1t
+    execute if entity @e[type=armor_stand,tag=87.Shot,limit=1] run schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick 1t

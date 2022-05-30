@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.3.shot_main
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/3.main
 #
 # ショットが飛んでいく！
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.1.shot_tick
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick
 
 # 移動とパーティクル
     tp @s ^ ^ ^0.5
@@ -23,7 +23,7 @@
 
 # モブに接触
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:crit ~ ~ ~ 0 0 0 0.5 10
-    execute if entity @s[tag=87.ShotNormal] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.4.shot_hit
-    execute if entity @s[tag=87.ShotFire] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.4.shot_hit_fire
-    execute if entity @s[tag=87.ShotWater] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.4.shot_hit_water
-    execute if entity @s[tag=87.ShotThunder] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.4.shot_hit_thunder
+    execute if entity @s[tag=87.ShotNormal] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit_normal
+    execute if entity @s[tag=87.ShotFire] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit_fire
+    execute if entity @s[tag=87.ShotWater] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit_water
+    execute if entity @s[tag=87.ShotThunder] positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,type=!player,tag=!87.Main,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit_thunder

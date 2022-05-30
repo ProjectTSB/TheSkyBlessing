@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.2.shot_init
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/1.init
 #
 # 付近の敵へと向きを変える
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.4.fairy_shoot
+# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
 
 # 敵の方を向き、タグを変更
     execute facing entity @e[type=#lib:hostile,tag=!Uninterferable,distance=..20,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~-2
