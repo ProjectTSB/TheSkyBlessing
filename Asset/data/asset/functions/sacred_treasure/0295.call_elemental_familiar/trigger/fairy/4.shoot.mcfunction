@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
 #
 # ショット発射！
 #
-# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/main
+# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/

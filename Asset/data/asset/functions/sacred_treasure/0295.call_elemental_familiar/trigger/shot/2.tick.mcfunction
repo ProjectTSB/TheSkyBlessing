@@ -3,7 +3,7 @@
 # ショット動かすやつ
 #
 # @within function
-#   asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
+#   asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
 #   asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick
 #   asset:sacred_treasure/0295.call_elemental_familiar/trigger/rejoin_process
 

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/main
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
 #
 # ゴーストちゃんの動作部分
 #
-# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/tick
+# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick
 
 #> ゴーストちゃんの移動先を決定するマーカーのタグ
 # @private
@@ -30,31 +30,21 @@
     execute facing entity @e[tag=Enemy,distance=..10,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
 
 # パーティクル
-    particle minecraft:dust 1 1 1 1 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
-    particle minecraft:dust 1 0.451 0 0.5 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
-    particle minecraft:dust 1 1 0.5 0.5 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
-    particle minecraft:dust 0.576 0.733 0.973 0.5 ~ ~0.5 ~ 0.1 0.1 0.1 0 1 force @a[distance=..30]
+    execute rotated ~ 0 run particle minecraft:dust 1 1 1 1 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
+    execute rotated ~ 0 run particle minecraft:dust 0.435 0.537 0.69 0.7 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
 
-# 付近に敵がいるならスコア加算
+# 付近に敵がいるならスコ12507390
     execute if entity @e[tag=Enemy,distance=..10] run scoreboard players add @s 87.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={87.Tick=10..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/shoot
+    execute if entity @s[scores={87.Tick=10..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
 
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[tag=Enemy,distance=..10] run scoreboard players reset @s 87.Tick
 
 # ヘルス
-    #scoreboard players remove @s 87.Health 1
-    kill @s[scores={87.Health=..0}]
-
-# ダメージを受けるとショットになる
-#    execute if entity @s[tag=HurtEntity] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.4.fairy_shoot
-#    execute if entity @s[tag=HurtEntity] run kill @s
-
-# Y0以下で死ぬ
-    execute if entity @s[y=0,dy=-255] run kill @s
+    scoreboard players remove @s 87.Health 1
+    execute if score @s 87.Health matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # リセット
     kill @e[type=marker,tag=87.MoveMarker]
-    #kill @s

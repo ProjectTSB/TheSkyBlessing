@@ -8,18 +8,12 @@
 # @private
 #declare tag CanUsed
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $3 Const
+# 効果音
+    playsound minecraft:block.note_block.bass player @s ~ ~ ~ 5 1
+    playsound minecraft:block.stone_button.click_on player @s ~ ~ ~ 2 1.5
 
 # メッセージ
-    execute if score $Random Temporary matches 0 run tellraw @s [{"text":"<","color":"white"},{"text":"Spirit","color":"#a9b9ca"},{"text":"> ","color":"white"},{"text":"I am already here.","font":"illageralt"}]
-    execute if score $Random Temporary matches 1 run tellraw @s [{"text":"<","color":"white"},{"text":"Spirit","color":"#a9b9ca"},{"text":"> ","color":"white"},{"text":"I cannot be the two.","font":"illageralt"}]
-
-# リセット
-    scoreboard players reset $Random Temporary
+    tellraw @s [{"text":"既に召喚しています。","color":"red"}]
 
 # 使用不可に
     tag @s remove CanUsed

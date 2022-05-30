@@ -1,8 +1,11 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/init
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
 #
 #
 #
 # @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.main
+
+# パーティクル
+    particle poof ~ ~0.5 ~ 0.1 0.1 0.1 0.05 10
 
 # 体力設定
     scoreboard players set @s 87.Health 400
