@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"コール: エレメンタル・ファミリア","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"コール: エレメンタル・スピリット","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う眷属たちを呼び出す。","color":"white"}','{"text":"\\"私と一緒に戦ってくれるかい？\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う精霊を呼び出す。","color":"white"}','{"text":"自分の精霊が既にいる状態では使用できない。","color":"white"}','{"text":"\\"私が手伝ってあげる！\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

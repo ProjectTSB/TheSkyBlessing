@@ -1,12 +1,23 @@
 #> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_normal
 #
-# 無属性のを4体召喚
+# かわいいかわいいオバケを召喚
 #
 # @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.main
 
+# 本体を召喚
+    execute rotated ~ 0 run summon armor_stand ^-2 ^ ^-2 {DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["87.Init","87.Normal","Friend"]}
 
-    summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Tags:["87.Main","87.Normal","Friend"]}
-    #summon bee ~1 ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["87.Init","87.Normal","Friend"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
-    #summon bee ~-1 ~256 ~ {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["87.Init","87.Normal","Friend"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
-    #summon bee ~ ~256 ~1 {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["87.Init","87.Normal","Friend"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
-    #summon bee ~ ~256 ~-1 {Silent:1b,Invulnerable:0b,Team:"NoCollision",DeathTime:19s,Health:16777215f,HasStung:0b,Tags:["87.Init","87.Normal","Friend"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:light_gray_shulker_box",Count:1b}}]}
+# 疑似乱数取得
+    execute store result score $Random Temporary run function lib:random/
+
+# ほしい範囲に剰余算
+    scoreboard players operation $Random Temporary %= $4 Const
+
+# メッセージ
+    #execute if score $Random Temporary matches 0 run
+    #execute if score $Random Temporary matches 1 run
+    #execute if score $Random Temporary matches 2 run
+    #execute if score $Random Temporary matches 3 run
+
+# リセット
+    scoreboard players reset $Random Temporary
