@@ -16,6 +16,8 @@
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $4 Const
+
+    scoreboard players set $Random Temporary 0
 # 精霊召喚
     execute if score $Random Temporary matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_normal
     execute if score $Random Temporary matches 1 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_fire
@@ -23,7 +25,7 @@
     execute if score $Random Temporary matches 3 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_thunder
 
 # 精霊Init
-    execute as @e[type=bee,tag=295Fa.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.2.fairy_init
+    execute as @e[type=armor_stand,tag=87.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.2.fairy_init
 
 # リセット
     scoreboard players reset $Random Temporary
@@ -36,4 +38,4 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # ハチを動かすやつ
-    function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.fairy_tick
+    function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/tick

@@ -14,4 +14,4 @@
     function lib:damage/reset
 
 # ショットを消す
-    kill @e[type=armor_stand,tag=295Fa.Shot,sort=nearest,limit=1]
+    kill @e[type=armor_stand,tag=87.Shot,sort=nearest,limit=1]
