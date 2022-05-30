@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:leather_leggings"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の冠","color":"#95C3FF"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の袴","color":"#95C3FF"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value []
 # MP以外の消費物 (TextComponentString) (オプション)
