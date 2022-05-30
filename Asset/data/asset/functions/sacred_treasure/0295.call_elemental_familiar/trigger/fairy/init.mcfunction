@@ -10,6 +10,9 @@
 # 頭防具
     item replace entity @s armor.head with stick{CustomModelData:20229}
 
+# 使用者のユーザーIDをコピー
+    scoreboard players operation @s 87.UserID = @p[tag=this] UserID
+
 # タグ整備
     tag @s remove 87.Init
     tag @s add 87.Main

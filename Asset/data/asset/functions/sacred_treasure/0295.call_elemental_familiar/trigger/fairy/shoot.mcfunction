@@ -29,4 +29,4 @@
 
 # リセット
     scoreboard players reset $Random Temporary
-    scoreboard players reset @s[scores={87.Tick=20..}] 87.Tick
+    scoreboard players reset @s 87.Tick
