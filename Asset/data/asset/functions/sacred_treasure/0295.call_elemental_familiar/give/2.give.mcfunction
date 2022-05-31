@@ -15,13 +15,13 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"コール: エレメンタル・ファミリア","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔法攻撃を行う眷属を複数体召喚する。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"ふよふよ漂う、ふしぎなヤツ\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"魔法攻撃を行う眷属を3体召喚する。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"ふよふよ漂う、ふしぎなヤツ\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [60]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [40]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
