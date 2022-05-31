@@ -21,7 +21,7 @@
     execute at @e[type=marker,tag=87.MoveMarker] if score @s 87.UserID = @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] 87.UserID run tag @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] add 87.MarkerThis
 
 # マスターのマーカーに誘導移動
-    execute facing entity @e[type=marker,tag=87.MarkerThis,distance=..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.15 ~ ~
+    execute facing entity @e[type=marker,tag=87.MarkerThis,distance=..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
 
 # 頭の向き
     execute store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]

@@ -35,9 +35,9 @@
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 100
 # 神器のクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure LocalCooldown set value 20
+    data modify storage asset:sacred_treasure LocalCooldown set value 600
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value false
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
