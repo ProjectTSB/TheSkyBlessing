@@ -14,5 +14,5 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
-    execute as @e[tag=Friend,tag=!Uninterferable,distance=..2.3] run function lib:damage/
-    data remove storage lib: Argument
+    execute as @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,distance=..2.3] run function lib:damage/
+    function lib:damage/reset

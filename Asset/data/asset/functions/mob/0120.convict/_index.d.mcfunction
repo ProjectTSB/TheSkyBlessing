@@ -14,5 +14,5 @@
     #declare tag 3C.SkillSlash
     #
     #declare tag SpreadMarker
-    #declare tag PlayerCheck
+    #declare tag ExistsPassablePlayer
     #declare tag CanTeleport

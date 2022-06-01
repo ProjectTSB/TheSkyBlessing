@@ -10,7 +10,7 @@
     execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 体力回復量-50%を付与
     data modify storage api: Argument.UUID set value [I;1,2,120,0]
@@ -19,7 +19,7 @@
     execute as @a[distance=..2] run function api:player_modifier/heal/add
 
 # スコアを与える
-    scoreboard players set @a[distance=..2] 3C.Time 160
+    scoreboard players set @a[distance=..2] 3C.BuffTime 160
 # Schedulelooopするやつ
     schedule function asset:mob/0120.convict/player_process/1.loop 1t replace
 

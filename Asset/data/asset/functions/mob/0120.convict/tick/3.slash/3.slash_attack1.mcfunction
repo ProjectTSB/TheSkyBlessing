@@ -13,9 +13,9 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] at @s run function lib:damage/
+    execute as @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,distance=..3] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/
 
 # スコアをぶっ飛ばす
     execute if entity @p[distance=..3] run scoreboard players set @s 3C.Tick 1000

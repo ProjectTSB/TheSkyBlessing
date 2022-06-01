@@ -3,10 +3,10 @@
 # Mobのtick時の処理
 #
 # @within function asset:mob/0120.convict/tick/1.trigger
+
 #> private
 # @private
     #declare score_holder $Count
-    #declare score_holder $4tInterval
 
 # スコアを増やす
     scoreboard players add @s 3C.Tick 1
