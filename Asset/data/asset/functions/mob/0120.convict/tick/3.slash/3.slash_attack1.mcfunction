@@ -15,7 +15,7 @@
     function lib:damage/modifier
     execute as @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,distance=..3] at @s run function lib:damage/
 # リセット
-    function lib:damage/
+    function lib:damage/reset
 
 # スコアをぶっ飛ばす
     execute if entity @p[distance=..3] run scoreboard players set @s 3C.Tick 1000
