@@ -8,4 +8,4 @@
 #   asset:sacred_treasure/0952.lunatic_rod/trigger/rejoin_process
 
 # ループ
-    execute if entity @a[scores={QG.EffectTime=0..}] as @a[scores={QG.EffectTime=0..}] at @s run function asset:sacred_treasure/0952.lunatic_rod/trigger/effect/main
+    execute as @a[scores={QG.EffectTime=0..}] at @s run function asset:sacred_treasure/0952.lunatic_rod/trigger/effect/main
