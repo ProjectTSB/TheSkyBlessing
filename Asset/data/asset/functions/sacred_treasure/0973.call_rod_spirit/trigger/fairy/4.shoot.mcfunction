@@ -4,14 +4,17 @@
 #
 # @within asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/3.main
 
+# タグ付与
+    tag @s add R1.This
+
 # 属性弾を放つ 無属性弾は現状撃たない
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotNormal"]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit","R1.ShotNormal"]}
 
 # カウントを増やす
-    scoreboard players add @s 87.CTCount 1
+    scoreboard players add @s R1.CTCount 1
 
 # ショットのInit発動
-    execute as @e[type=armor_stand,tag=87.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
+    execute as @e[type=armor_stand,tag=R1.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
 
 # scheduleループ開始
     function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/2.tick
@@ -23,4 +26,5 @@
 
 # リセット
     scoreboard players reset $Random Temporary
-    scoreboard players reset @s 87.Tick
+    scoreboard players reset @s R1.Tick
+    tag @s remove R1.This

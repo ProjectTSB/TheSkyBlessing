@@ -8,10 +8,18 @@
     data modify storage lib: Argument.Damage set value 65.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
-    function lib:damage/
+
+# 演出
+    particle minecraft:electric_spark ~ ~ ~ 0 0 0 0.5 5
+
+# マスターとして補正functionを実行
+    execute at @a if score @s R1.UserID = @p UserID as @p run function lib:damage/modifier
+
+# ダメージ実行
+    execute as @e[tag=Enemy,tag=!Uninterferable,sort=nearest,limit=1] run function lib:damage/
 
 # リセット
     function lib:damage/reset
 
 # ショットを消す
-    kill @e[type=armor_stand,tag=87.Shot,sort=nearest,limit=1]
+    kill @s

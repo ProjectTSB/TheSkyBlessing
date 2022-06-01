@@ -6,7 +6,7 @@
 
 #> Objective
 # @within asset:sacred_treasure/0973.call_rod_spirit/trigger/**
-    scoreboard objectives add 87.Tick dummy
-    scoreboard objectives add 87.Health dummy
-    scoreboard objectives add 87.UserID dummy
-    scoreboard objectives add 87.CTCount dummy
+    scoreboard objectives add R1.Tick dummy
+    scoreboard objectives add R1.Health dummy
+    scoreboard objectives add R1.UserID dummy
+    scoreboard objectives add R1.CTCount dummy

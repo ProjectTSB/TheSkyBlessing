@@ -8,6 +8,9 @@
 # @private
 #declare tag SpreadMarker
 
+# IDコピー
+    scoreboard players operation @s R1.UserID = @e[type=armor_stand,tag=R1.This,sort=nearest,limit=1] R1.UserID
+
 # 拡散させるEntityを召喚する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 # ステータス設定
@@ -18,8 +21,8 @@
 
 # マーカーの方を向き、タグを変更
     execute facing entity @e[type=marker,tag=SpreadMarker,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~5
-    tag @s remove 87.ShotInit
-    tag @s add 87.Shot
+    tag @s remove R1.ShotInit
+    tag @s add R1.Shot
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]

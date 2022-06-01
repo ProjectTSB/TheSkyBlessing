@@ -8,7 +8,7 @@
     function asset:sacred_treasure/common/check_condition/auto
 
 # 既に召喚済みなら使えない
-        execute at @e[type=armor_stand,tag=87.Main] if score @s UserID = @e[type=armor_stand,tag=87.Main,sort=nearest,limit=1] 87.UserID run function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.cannot_use
+    execute at @e[type=armor_stand,tag=R1.Main] if score @s UserID = @e[type=armor_stand,tag=R1.Main,sort=nearest,limit=1] R1.UserID run function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.cannot_use
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.main
