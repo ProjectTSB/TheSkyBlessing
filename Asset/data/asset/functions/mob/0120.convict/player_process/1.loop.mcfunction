@@ -8,4 +8,4 @@
 #   asset:mob/0120.convict/rejoin_process
 
 # デバフの処理
-    execute if entity @a[scores={3C.BuffTime=1..}] as @a[scores={3C.BuffTime=1..}] at @s run function asset:mob/0120.convict/player_process/2.main
+    execute if entity @a[scores={3C.DebuffTime=1..}] as @a[scores={3C.DebuffTime=1..}] at @s run function asset:mob/0120.convict/player_process/2.main

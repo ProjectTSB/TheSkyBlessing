@@ -9,4 +9,4 @@
     function api:player_modifier/heal/remove
 
 # スコアリセット
-    scoreboard players reset @s 3C.BuffTime
+    scoreboard players reset @s 3C.DebuffTime
