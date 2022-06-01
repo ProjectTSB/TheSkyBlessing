@@ -5,6 +5,9 @@
 # @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
 
 
+# タグ付与
+    tag @s add 87.This
+
 # 属性弾を放つ 無属性弾は現状撃たない
     execute if entity @s[tag=87.Fire] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotFire"]}
     execute if entity @s[tag=87.Thunder] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotThunder"]}
@@ -23,3 +26,4 @@
 
 # リセット
     scoreboard players reset @s 87.Tick
+    tag @s remove 87.This
