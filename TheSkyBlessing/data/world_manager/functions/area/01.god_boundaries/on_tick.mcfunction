@@ -21,3 +21,5 @@
     execute if predicate world_manager:area/01-12.rumor_temple run function world_manager:area/01-12.rumor_temple
     execute if predicate world_manager:area/01-13.urban_temple run function world_manager:area/01-13.urban_temple
     execute if predicate world_manager:area/01-14.wi-ki_temple run function world_manager:area/01-14.wi-ki_temple
+# ゲート島
+    execute if predicate world_manager:area/01-30.gate_island-lower run function world_manager:area/01-30.gate_island-lower
