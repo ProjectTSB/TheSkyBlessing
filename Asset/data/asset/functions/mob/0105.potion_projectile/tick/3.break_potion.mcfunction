@@ -1,4 +1,4 @@
-#> asset:mob/0105.potion_projectile/tick/4.break_potion
+#> asset:mob/0105.potion_projectile/tick/3.break_potion
 #
 #
 # @within function asset:mob/0105.potion_projectile/tick/2.tick
