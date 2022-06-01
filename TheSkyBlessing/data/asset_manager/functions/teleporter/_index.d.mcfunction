@@ -3,14 +3,18 @@
 
 #> storage
 # @within *
-#   asset:teleporter/*/*
-#   asset_manager:teleporter/tick/**
+#   asset:teleporter/*/register/*
+#   asset:teleporter/common/register
+#   asset_manager:teleporter/**
     #declare storage asset:teleporter
+
+#> Teleporter
+# @within asset_manager:teleporter/**
+    #declare tag Teleporter
 
 #> TeleportPoint
 # @within asset_manager:teleporter/tick/**
     #declare tag FromTeleporter
-    #declare tag Teleporter
     #declare tag TeleporterInit
     #declare tag TPStar
     #declare tag TPStarGreen
