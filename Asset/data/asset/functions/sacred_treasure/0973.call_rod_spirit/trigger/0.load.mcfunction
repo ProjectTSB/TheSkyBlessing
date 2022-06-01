@@ -10,3 +10,6 @@
     scoreboard objectives add R1.Health dummy
     scoreboard objectives add R1.UserID dummy
     scoreboard objectives add R1.CTCount dummy
+    scoreboard objectives add R1.Speed dummy
+    scoreboard objectives add R1.Range dummy
+    scoreboard objectives add R1.Recursive dummy

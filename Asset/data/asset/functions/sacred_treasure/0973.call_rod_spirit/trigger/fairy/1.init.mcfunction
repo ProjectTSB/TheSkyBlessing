@@ -16,6 +16,9 @@
 # 使用者のユーザーIDをコピー
     scoreboard players operation @s R1.UserID = @p[tag=this] UserID
 
+# いきなり攻撃はしない
+    scoreboard players set @s R1.Tick -20
+
 # タグ整備
     tag @s remove R1.Init
     tag @s add R1.Main

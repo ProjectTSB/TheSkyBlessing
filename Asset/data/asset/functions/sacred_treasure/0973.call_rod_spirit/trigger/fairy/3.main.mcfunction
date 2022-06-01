@@ -31,14 +31,14 @@
 
 # パーティクル
     execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
-    execute rotated ~ 0 run particle minecraft:dust 0.435 0.537 0.69 1 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
+    execute rotated ~ 0 run particle minecraft:dust 0.592 0.722 0.918 1 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
     execute rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^ ^-0.2 0.1 0.1 0.1 0 1
 
 # 付近に敵がいるならスコア加算
     execute if entity @e[tag=Enemy,distance=..15] run scoreboard players add @s R1.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
+    execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.8 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
 
 # 撃ちまくったら休憩
     execute if entity @s[scores={R1.CTCount=3..}] run scoreboard players set @s R1.Tick -10

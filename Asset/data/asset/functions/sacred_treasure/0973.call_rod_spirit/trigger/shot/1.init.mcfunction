@@ -11,11 +11,18 @@
 # IDコピー
     scoreboard players operation @s R1.UserID = @e[type=armor_stand,tag=R1.This,sort=nearest,limit=1] R1.UserID
 
+# ステータス設定
+    # 速度と飛距離
+        scoreboard players set @s R1.Range 200
+        scoreboard players set @s R1.Speed 8
+
+    # 拡散値
+        data modify storage lib: Argument.Distance set value 15
+        data modify storage lib: Argument.Spread set value 3
+
 # 拡散させるEntityを召喚する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-# ステータス設定
-    data modify storage lib: Argument.Distance set value 15
-    data modify storage lib: Argument.Spread set value 3
+
 # 拡散
     execute facing entity @e[tag=Enemy,distance=..20,sort=nearest,limit=1] eyes as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 

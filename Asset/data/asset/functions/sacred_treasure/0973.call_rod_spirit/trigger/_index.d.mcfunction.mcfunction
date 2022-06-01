@@ -8,3 +8,4 @@
     #declare tag R1.Shot
     #declare tag R1.ShotInit
     #declare tag R1.This
+    #declare tag R1.Hit

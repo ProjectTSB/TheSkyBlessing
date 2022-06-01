@@ -2,7 +2,7 @@
 #
 # ショットヒット時
 #
-# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/4.main_2
+# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/4.move
 
 # ダメージ値設定
     #ダメージブレのための処理
@@ -15,12 +15,12 @@
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
 
+# なぜかタグ付けないとめっちゃ実行される
+    tag @s add R1.Hit
+
 # 魔法、無属性のダメージをぶちかます
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
-
-# 演出
-    particle minecraft:electric_spark ~ ~ ~ 0 0 0 0.5 5
 
 # マスターとして補正functionを実行
     execute at @a if score @s R1.UserID = @p UserID as @p run function lib:damage/modifier
@@ -31,6 +31,5 @@
 # リセット
     function lib:damage/reset
 
-# ショットを消す
-    kill @e[type=snowball,distance=..0.5,sort=nearest,limit=1]
-    kill @s
+# キル
+    function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/6.break
