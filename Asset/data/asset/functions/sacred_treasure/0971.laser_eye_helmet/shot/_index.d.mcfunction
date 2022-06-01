@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0971.laser_eye_helmet/trigger/_index.d
+#> asset:sacred_treasure/0971.laser_eye_helmet/shot/_index.d
 # @private
 
 #> tag
 # @within function
-#   asset:sacred_treasure/0971.laser_eye_helmet/trigger/**
+#   asset:sacred_treasure/0971.laser_eye_helmet/shot/**
     #declare tag Landing
     #declare tag LandingTarget
     #declare score_holder $Distance_Damping

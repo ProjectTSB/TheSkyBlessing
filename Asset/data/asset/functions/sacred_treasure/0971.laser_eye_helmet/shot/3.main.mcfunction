@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0971.laser_eye_helmet/trigger/3.main
+#> asset:sacred_treasure/0971.laser_eye_helmet/shot/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0971.laser_eye_helmet/trigger/2.check_condition
+# @within function asset:sacred_treasure/0971.laser_eye_helmet/shot/2.check_condition
 
 #> Private
 # @private
@@ -23,7 +23,7 @@
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 # 発砲
-    execute anchored eyes facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0971.laser_eye_helmet/trigger/bullet
+    execute anchored eyes facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0971.laser_eye_helmet/shot/bullet
     tag @s remove Landing
 
 # リセット

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0971.laser_eye_helmet/trigger/damage_attenuation
+#> asset:sacred_treasure/0971.laser_eye_helmet/shot/damage_attenuation
 #
 #
 #
-# @within function asset:sacred_treasure/0971.laser_eye_helmet/trigger/hit
+# @within function asset:sacred_treasure/0971.laser_eye_helmet/shot/hit
 
 # ダメージ減らす
     scoreboard players operation $Distance_Damping Temporary -= $Appropriate_Distance Temporary

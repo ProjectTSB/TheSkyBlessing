@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0971.laser_eye_helmet/trigger/hit
+#> asset:sacred_treasure/0971.laser_eye_helmet/shot/hit
 #
 #
 # @within function
-#    asset:sacred_treasure/0971.laser_eye_helmet/trigger/3.main
-#    asset:sacred_treasure/0971.laser_eye_helmet/trigger/bullet
+#    asset:sacred_treasure/0971.laser_eye_helmet/shot/3.main
+#    asset:sacred_treasure/0971.laser_eye_helmet/shot/bullet
 
 
 # ここから先は神器側の効果の処理を書く
@@ -20,7 +20,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Water"
     # もし、適正距離じゃなかった場合、距離-適正距離=減少ダメージにする
-        execute if score $Distance_Damping Temporary >= $Appropriate_Distance Temporary run function asset:sacred_treasure/0971.laser_eye_helmet/trigger/damage_attenuation
+        execute if score $Distance_Damping Temporary >= $Appropriate_Distance Temporary run function asset:sacred_treasure/0971.laser_eye_helmet/shot/damage_attenuation
     # ダメージ量確定
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $Damage Temporary
     # ダメージ
