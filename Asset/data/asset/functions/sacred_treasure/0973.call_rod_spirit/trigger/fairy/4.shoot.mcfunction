@@ -7,8 +7,8 @@
 # タグ付与
     tag @s add R1.This
 
-# 属性弾を放つ 無属性弾は現状撃たない
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit","R1.ShotNormal"]}
+# ショットを撃つ
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"]}
 
 # カウントを増やす
     scoreboard players add @s R1.CTCount 1
