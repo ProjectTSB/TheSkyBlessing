@@ -8,7 +8,7 @@
     tag @s add R1.This
 
 # ショットを撃つ
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20233,CustomPotionColor:16711680}}}]}
 
 # カウントを増やす
     scoreboard players add @s R1.CTCount 1
