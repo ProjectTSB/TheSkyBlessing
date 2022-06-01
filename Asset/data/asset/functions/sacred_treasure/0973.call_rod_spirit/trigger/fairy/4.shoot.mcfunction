@@ -4,17 +4,11 @@
 #
 # @within asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/3.main
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $3 Const
-
 # 属性弾を放つ 無属性弾は現状撃たない
-    execute if score $Random Temporary matches 0 run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotFire"]}
-    execute if score $Random Temporary matches 1 run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotWater"]}
-    execute if score $Random Temporary matches 2 run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotThunder"]}
-    #execute if score $Random Temporary matches 3 run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotNormal"]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotNormal"]}
+
+# カウントを増やす
+    scoreboard players add @s 87.CTCount 1
 
 # ショットのInit発動
     execute as @e[type=armor_stand,tag=87.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init

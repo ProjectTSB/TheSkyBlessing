@@ -25,7 +25,7 @@
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder]
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None]
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
 # 神器を発動できるスロット (string) Wikiを参照
@@ -37,7 +37,7 @@
 # 神器のクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure LocalCooldown set value 600
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value false
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

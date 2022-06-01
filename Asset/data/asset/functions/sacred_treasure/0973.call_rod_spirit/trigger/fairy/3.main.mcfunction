@@ -27,23 +27,29 @@
     execute facing entity @e[type=marker,tag=87.MarkerThis,distance=0.5..1,limit=1] eyes run tp @s ^ ^ ^0.1
 
 # 付近に敵がいたらそっちへの攻撃を優先
-    execute facing entity @e[tag=Enemy,distance=..10,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
+    execute facing entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
 
 # パーティクル
-    execute rotated ~ 0 run particle minecraft:dust 1 1 1 1 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
-    execute rotated ~ 0 run particle minecraft:dust 0.435 0.537 0.69 0.7 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
+    execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
+    execute rotated ~ 0 run particle minecraft:dust 0.435 0.537 0.69 1 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
+    execute rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^ ^-0.2 0.1 0.1 0.1 0 1
 
-# 付近に敵がいるならスコ12507390
-    execute if entity @e[tag=Enemy,distance=..10] run scoreboard players add @s 87.Tick 1
+# 付近に敵がいるならスコア加算
+    execute if entity @e[tag=Enemy,distance=..15] run scoreboard players add @s 87.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={87.Tick=10..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
+    execute if entity @s[scores={87.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
+
+# 撃ちまくったら休憩
+    execute if entity @s[scores={87.CTCount=3..}] run scoreboard players set @s 87.Tick -10
+    execute if entity @s[scores={87.CTCount=3..}] run scoreboard players reset @s 87.CTCount
 
 # 付近に敵がいないならスコアリセット
-    execute unless entity @e[tag=Enemy,distance=..10] run scoreboard players reset @s 87.Tick
+    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s 87.Tick
+    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s 87.CTCount
 
 # ヘルス
-    scoreboard players remove @s 87.Health 1
+    #scoreboard players remove @s 87.Health 1
     execute if score @s 87.Health matches 0 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/5.disapper
 
 # リセット

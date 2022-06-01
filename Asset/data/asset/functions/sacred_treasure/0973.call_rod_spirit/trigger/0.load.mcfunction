@@ -9,3 +9,4 @@
     scoreboard objectives add 87.Tick dummy
     scoreboard objectives add 87.Health dummy
     scoreboard objectives add 87.UserID dummy
+    scoreboard objectives add 87.CTCount dummy
