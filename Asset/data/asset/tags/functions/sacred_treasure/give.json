@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:sacred_treasure/0368.fire_spell/give/1.trigger",
+        "asset:sacred_treasure/0898.gale_pendant/give/1.trigger",
+        "asset:sacred_treasure/0971.laser_eye_helmet/give/1.trigger",
         "asset:sacred_treasure/0899.flame_ring/give/1.trigger",
         "asset:sacred_treasure/0949.ft_139_rifle_reload/give/1.trigger",
         "asset:sacred_treasure/0948.ft_139_rifle/give/1.trigger",
