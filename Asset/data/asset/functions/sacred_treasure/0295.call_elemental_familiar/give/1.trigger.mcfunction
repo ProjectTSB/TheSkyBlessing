@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/give/1.trigger
+#> asset:sacred_treasure/0295.call_elemental_familiar/give/1.trigger
 #
 # 神器の取得処理の呼び出し時に実行されるfunction
 #

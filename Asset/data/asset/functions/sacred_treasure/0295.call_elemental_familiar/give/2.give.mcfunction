@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/give/2.give
+#> asset:sacred_treasure/0295.call_elemental_familiar/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
