@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/tick/vfx/star/green
+#> asset_manager:teleporter/tick/vfx/star/aqua
 #
 #
 #

@@ -19,7 +19,7 @@
     #declare tag TeleporterInit
     #declare tag TPStar
     #declare tag TPStar.White
-    #declare tag TPStar.Green
+    #declare tag TPStar.Aqua
     #declare tag Teleported
     #declare tag TPCancel
 

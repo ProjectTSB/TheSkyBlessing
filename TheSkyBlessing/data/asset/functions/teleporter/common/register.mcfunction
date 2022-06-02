@@ -7,7 +7,7 @@
 #   GrpupID : string
 #   Pos : [double] @ 3
 #   ActivationKind : string("InvisibleDeactivate","VisibleDeactivate","Activate")
-#   Color? : string("white","yellow")(default: "white")
+#   Color? : string("white","aqua")(default: "white")
 # @within function asset:teleporter/*/register/register
 
 # パラメータチェック
