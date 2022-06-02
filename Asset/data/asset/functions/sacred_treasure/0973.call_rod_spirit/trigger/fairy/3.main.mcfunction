@@ -45,12 +45,12 @@
     execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.8 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
 
 # 撃ちまくったら休憩
-    execute if entity @s[scores={R1.ChargeCount=3..}] run scoreboard players set @s R1.Tick -10
-    execute if entity @s[scores={R1.ChargeCount=3..}] run scoreboard players reset @s R1.ChargeCount
+    execute if entity @s[scores={R1.ShotCount=3..}] run scoreboard players set @s R1.Tick -10
+    execute if entity @s[scores={R1.ShotCount=3..}] run scoreboard players reset @s R1.ShotCount
 
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.Tick
-    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.ChargeCount
+    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.ShotCount
 
 # ヘルス
     scoreboard players remove @s R1.LifeTime 1
