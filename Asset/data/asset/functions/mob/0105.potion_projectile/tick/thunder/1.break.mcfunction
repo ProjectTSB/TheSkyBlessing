@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0105.potion_projectile/tick/5.element_branch
+# @within function asset:mob/0105.potion_projectile/tick/4.element_branch
 
 # 演出
     particle dust 1 1 0 1.5 ~ ~1.2 ~ 1 0.4 1 0 60 normal @a
