@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condition/3.cannot_use
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/3.cannot_use
 #
 #
 #
@@ -11,5 +11,5 @@
 # メッセージ
     tellraw @s [{"text":"既に召喚しています。","color":"red"}]
 
-# 使用不可タグを付与
-    tag @s remove CanUsed
+# リセット
+    tag @s remove R1.CannotUse

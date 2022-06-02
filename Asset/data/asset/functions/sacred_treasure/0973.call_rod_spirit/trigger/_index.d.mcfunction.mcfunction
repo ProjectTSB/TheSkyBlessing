@@ -9,3 +9,4 @@
     #declare tag R1.ShotInit
     #declare tag R1.IDCopyBase
     #declare tag R1.Hit
+    #declare tag R1.CannotUse
