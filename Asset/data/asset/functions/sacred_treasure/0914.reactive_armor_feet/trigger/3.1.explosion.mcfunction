@@ -10,7 +10,7 @@
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,distance=..3] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # プレイヤーへのダメージ
     data modify storage lib: Argument.Damage set value 20f
@@ -19,7 +19,7 @@
     data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sはリアクティブアーマーの爆発に巻き込まれた。","with":[{"selector":"@s"}]}]']
     function lib:damage/modifier
     execute as @a[tag=!this,distance=..3] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # パーティクル
     particle explosion ~ ~ ~ 1 1 1 0 10
