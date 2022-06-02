@@ -9,7 +9,7 @@
 #declare tag SpreadMarker
 
 # IDコピー
-    scoreboard players operation @s R1.UserID = @e[type=armor_stand,tag=R1.This,sort=nearest,limit=1] R1.UserID
+    scoreboard players operation @s R1.UserID = @e[type=armor_stand,tag=R1.IDCopyBase,sort=nearest,limit=1] R1.UserID
 
 # ステータス設定
     # 速度と飛距離

@@ -3,9 +3,9 @@
 
 #> tags
 # @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/**
-    #declare tag R1.Main
-    #declare tag R1.Init
+    #declare tag R1.Sprit
+    #declare tag R1.SpritInit
     #declare tag R1.Shot
     #declare tag R1.ShotInit
-    #declare tag R1.This
+    #declare tag R1.IDCopyBase
     #declare tag R1.Hit

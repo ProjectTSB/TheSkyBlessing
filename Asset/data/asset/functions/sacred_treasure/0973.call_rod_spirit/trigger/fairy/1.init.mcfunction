@@ -8,7 +8,7 @@
     particle poof ~ ~0.5 ~ 0.1 0.1 0.1 0.05 10
 
 # 体力設定
-    scoreboard players set @s R1.Health 400
+    scoreboard players set @s R1.LifeTime 400
 
 # 頭防具
     item replace entity @s armor.head with stick{CustomModelData:20229}
@@ -20,5 +20,5 @@
     scoreboard players set @s R1.Tick -20
 
 # タグ整備
-    tag @s remove R1.Init
-    tag @s add R1.Main
+    tag @s remove R1.SpritInit
+    tag @s add R1.Sprit

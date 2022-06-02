@@ -5,13 +5,13 @@
 # @within asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/3.main
 
 # タグ付与
-    tag @s add R1.This
+    tag @s add R1.IDCopyBase
 
 # ショットを撃つ
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:10274303}}}]}
 
 # カウントを増やす
-    scoreboard players add @s R1.CTCount 1
+    scoreboard players add @s R1.ChargeCount 1
 
 # ショットのInit発動
     execute as @e[type=armor_stand,tag=R1.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
@@ -28,4 +28,4 @@
     scoreboard players reset $Random Temporary
     scoreboard players reset @s R1.Tick
 
-    tag @s remove R1.This
+    tag @s remove R1.IDCopyBase
