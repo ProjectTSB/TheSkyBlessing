@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
 
 # IDコピー
-    scoreboard players operation @s 87.UserID = @e[type=armor_stand,tag=87.This,sort=nearest,limit=1] 87.UserID
+    scoreboard players operation @s 87.UserID = @e[type=armor_stand,tag=87.IDCopyBase,sort=nearest,limit=1] 87.UserID
 
 # 敵の方を向き、タグを変更
     execute facing entity @e[tag=Enemy,tag=!Uninterferable,distance=..20,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~-2
