@@ -15,7 +15,7 @@
     execute at @a[distance=..30] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
 
 # マスターにMarkerを召喚する
-    execute at @p[distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
+    execute at @p[tag=R1.OwnerPlayer] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
 
 # MarkerにID付与
     scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,sort=nearest,limit=1] R1.UserID = @s R1.UserID
