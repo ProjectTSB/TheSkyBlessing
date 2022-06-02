@@ -13,3 +13,5 @@
     execute if data storage lib: Argument.DeathMessage run data modify storage api: Argument.DeathMessage set from storage lib: Argument.DeathMessage
 # 体力の減少を反映させる
     function lib:score_to_health_wrapper/fluctuation
+# onAttackのトリガー
+    function lib:damage/core/trigger_on_damage/

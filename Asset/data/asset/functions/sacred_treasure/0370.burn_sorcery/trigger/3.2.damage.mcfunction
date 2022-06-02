@@ -16,7 +16,7 @@
 
 # ダメージ設定
     # 与えるダメージ = 50
-        data modify storage lib: Argument.Damage set value 90.0f
+        data modify storage lib: Argument.Damage set value 360.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -25,7 +25,7 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @e[type=#lib:living,type=!player,tag=LandingTarget,tag=!Uninterferable,distance=..50,limit=1] remove LandingTarget
