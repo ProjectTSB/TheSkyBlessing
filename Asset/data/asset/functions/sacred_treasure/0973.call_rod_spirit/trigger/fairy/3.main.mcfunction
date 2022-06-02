@@ -4,27 +4,31 @@
 #
 # @within asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/2.tick
 
-#> ゴーストちゃんの移動先を決定するマーカーのタグ
+#> ゴーストちゃんの移動先を決定するマーカーのタグ、持ち主のプレイヤーのタグ
 # @private
 #declare tag R1.MoveMarker
-#declare tag R1.MarkerInit
-#declare tag R1.MarkerThis
+#declare tag R1.MoveMarkerInit
+#declare tag R1.OwnerMarker
+#declare tag R1.OwnerPlayer
+
+# 同IDのプレイヤーを特定
+    execute at @a[distance=..30] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
 
 # マスターにMarkerを召喚する
-    execute at @p[distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MarkerInit]}
+    execute at @p[distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
 
 # MarkerにID付与
-    scoreboard players operation @e[type=marker,tag=R1.MarkerInit,sort=nearest,limit=1] R1.UserID = @s R1.UserID
-    tag @e[type=marker,tag=R1.MarkerInit,sort=nearest,limit=1] remove R1.MarkerInit
+    scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,sort=nearest,limit=1] R1.UserID = @s R1.UserID
+    tag @e[type=marker,tag=R1.MoveMarkerInit,sort=nearest,limit=1] remove R1.MoveMarkerInit
 
 # 同IDのマーカーを特定
-    execute at @e[type=marker,tag=R1.MoveMarker] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] add R1.MarkerThis
+    execute at @e[type=marker,tag=R1.MoveMarker] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] add R1.OwnerMarker
 
 # マスターのマーカーに誘導移動
-    execute facing entity @e[type=marker,tag=R1.MarkerThis,distance=1..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
+    execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=1..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
 
 # マーカーが近づいたらゆっくりと向かう
-    execute facing entity @e[type=marker,tag=R1.MarkerThis,distance=0.5..1,limit=1] eyes run tp @s ^ ^ ^0.1
+    execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=0.5..1,limit=1] eyes run tp @s ^ ^ ^0.1
 
 # 付近に敵がいたらそっちへの攻撃を優先
     execute facing entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
@@ -54,3 +58,4 @@
 
 # リセット
     kill @e[type=marker,tag=R1.MoveMarker]
+    tag @a[tag=R1.OwnerPlayer] remove R1.OwnerPlayer
