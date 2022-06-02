@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condtion/3.cannot_use
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition/3.cannot_use
 #
 #
 #
