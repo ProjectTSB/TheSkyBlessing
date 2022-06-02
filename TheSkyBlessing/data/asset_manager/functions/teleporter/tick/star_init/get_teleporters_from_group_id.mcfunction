@@ -1,15 +1,11 @@
-#> asset_manager:teleporter/tick/data/pick
+#> asset_manager:teleporter/tick/star_init/get_teleporters_from_group_id
 #
 #
 #
 # @input storage asset:teleporter TargetGroupID
-# @output storage asset:teleporter
-#   TeleporterGroups
-#   TeleporterGroup
+# @output storage asset:teleporter FilteredTeleporters
 #
-# @within function
-#   asset_manager:teleporter/tick/star_init/
-#   asset_manager:teleporter/tick/dynamic_register/do
+# @within function asset_manager:teleporter/tick/star_init/
 
 # セッション開く
     function lib:array/session/open
@@ -19,16 +15,10 @@
     data modify storage lib: CompareTarget set from storage asset:teleporter TargetGroupID
     function lib:array/compare_single
 # CompareResultを元に同一のIDの要素を取り出す
-# TeleporterGroup = TeleporterGroups.filiter((v, i) => CompareResult[i])
+# FilteredTeleporters = TeleporterGroups.filiter((v, i) => CompareResult[i])
     data modify storage lib: Array set from storage asset:teleporter TeleporterGroups
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
-    data modify storage asset:teleporter TeleporterGroup set from storage lib: Array
-# 同様に同一ではない要素を取り出す
-# TeleporterGroups = TeleporterGroups.filiter((v, i) => !CompareResult[i])
-    data modify storage lib: Array set from storage asset:teleporter TeleporterGroups
-    data modify storage lib: Masks set from storage lib: CompareResult
-    function lib:array/mask
-    data modify storage asset:teleporter TeleporterGroups set from storage lib: Array
+    data modify storage asset:teleporter FilteredTeleporters set from storage lib: Array
 # セッション閉じる
     function lib:array/session/close

@@ -7,7 +7,7 @@ compound GroupData {
    /// 識別ID
    ID: int,
    /// 所属グループID
-   GroupID: string
+   GroupID: string,
    /// 座標
    Pos: [double] @ 3,
    /// メタデータ

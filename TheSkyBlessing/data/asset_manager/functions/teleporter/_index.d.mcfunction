@@ -11,13 +11,15 @@
 #> Teleporter
 # @within asset_manager:teleporter/**
     #declare tag Teleporter
+    #declare tag TeleporterActivation
 
 #> TeleportPoint
 # @within asset_manager:teleporter/tick/**
     #declare tag FromTeleporter
     #declare tag TeleporterInit
     #declare tag TPStar
-    #declare tag TPStarGreen
+    #declare tag TPStar.White
+    #declare tag TPStar.Green
     #declare tag Teleported
     #declare tag TPCancel
 
