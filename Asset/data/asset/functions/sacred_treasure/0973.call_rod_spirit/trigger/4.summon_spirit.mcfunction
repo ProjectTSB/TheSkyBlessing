@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.main
 
 # 本体を召喚
-    execute rotated ~ 0 run summon armor_stand ^-2 ^ ^-2 {DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["R1.SpritInit","Friend"]}
+    execute rotated ~ 0 run summon armor_stand ^-2 ^ ^-2 {DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["R1.SpiritInit","Friend"]}
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/

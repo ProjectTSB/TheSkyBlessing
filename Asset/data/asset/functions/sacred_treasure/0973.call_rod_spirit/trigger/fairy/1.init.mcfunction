@@ -20,5 +20,5 @@
     scoreboard players set @s R1.Tick -20
 
 # タグ整備
-    tag @s remove R1.SpritInit
-    tag @s add R1.Sprit
+    tag @s remove R1.SpiritInit
+    tag @s add R1.Spirit
