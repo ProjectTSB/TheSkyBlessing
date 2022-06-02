@@ -1,12 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/3.cannot_use
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condtion/3.cannot_use
 #
 #
 #
 # @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condition
-
-#> 使用不可タグ
-# @private
-#declare tag CanUsed
 
 # 効果音
     playsound minecraft:block.note_block.bass player @s ~ ~ ~ 5 1
@@ -15,5 +11,5 @@
 # メッセージ
     tellraw @s [{"text":"既に召喚しています。","color":"red"}]
 
-# 使用不可に
+# 使用不可タグを付与
     tag @s remove CanUsed
