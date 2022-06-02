@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/kye
+#> asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/key
 #
 #
 #
