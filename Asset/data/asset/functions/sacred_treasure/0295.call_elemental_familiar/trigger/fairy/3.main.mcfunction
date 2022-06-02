@@ -1,27 +1,31 @@
 #> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
 #
-# ゴーストちゃんの動作部分
+# ファミリアの動作部分
 #
 # @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick
 
-#> ゴーストちゃんの移動先を決定するマーカーのタグ
+#> 移動先を決定するマーカーのタグ
 # @private
 #declare tag 87.MoveMarker
-#declare tag 87.MarkerInit
-#declare tag 87.MarkerThis
+#declare tag 87.MoveMarkerInit
+#declare tag 87.OwnerMarker
+#declare tag 87.OwnerPlayer
+
+# 同IDのプレイヤーを特定
+    execute at @a[distance=..30] if score @s 87.UserID = @p UserID run tag @p add 87.OwnerPlayer
 
 # マスターにMarkerを召喚する
-    execute at @p[distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[87.MoveMarker,87.MarkerInit]}
+    execute at @p[tag=87.OwnerPlayer] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[87.MoveMarker,87.MoveMarkerInit]}
 
 # MarkerにID付与
-    scoreboard players operation @e[type=marker,tag=87.MarkerInit,sort=nearest,limit=1] 87.UserID = @s 87.UserID
-    tag @e[type=marker,tag=87.MarkerInit,sort=nearest,limit=1] remove 87.MarkerInit
+    scoreboard players operation @e[type=marker,tag=87.MoveMarkerInit,sort=nearest,limit=1] 87.UserID = @s 87.UserID
+    tag @e[type=marker,tag=87.MoveMarkerInit,sort=nearest,limit=1] remove 87.MoveMarkerInit
 
 # 同IDのマーカーを特定
-    execute at @e[type=marker,tag=87.MoveMarker] if score @s 87.UserID = @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] 87.UserID run tag @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] add 87.MarkerThis
+    execute at @e[type=marker,tag=87.MoveMarker] if score @s 87.UserID = @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] 87.UserID run tag @e[type=marker,tag=87.MoveMarker,sort=nearest,limit=1] add 87.OwnerMarker
 
 # マスターのマーカーに誘導移動
-    execute facing entity @e[type=marker,tag=87.MarkerThis,distance=..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+    execute facing entity @e[type=marker,tag=87.OwnerMarker,distance=..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
 
 # 頭の向き
     execute store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
@@ -57,8 +61,8 @@
     execute if score @s 87.LifeTime matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # 離れ過ぎると消える
-    execute unless entity @e[type=marker,tag=87.MarkerThis,distance=..30,limit=1] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
-
+    execute unless entity @e[type=marker,tag=87.OwnerMarker,distance=..30,limit=1] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # リセット
+    tag @a[tag=87.OwnerPlayer] remove 87.OwnerPlayer
     kill @e[type=marker,tag=87.MoveMarker]
