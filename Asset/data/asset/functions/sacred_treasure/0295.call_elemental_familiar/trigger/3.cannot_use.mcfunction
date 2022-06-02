@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition/3.cannot_use
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.cannot_use
 #
 #
 #
@@ -13,5 +13,4 @@
     tellraw @s [{"text":"既に召喚しています。","color":"red"}]
 
 # 使用不可に
-    tag @s remove CanUsed
     tag @s remove 87.CannotUse
