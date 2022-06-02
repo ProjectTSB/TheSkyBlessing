@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condtion/3.cannot_use
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/2.check_condition/3.cannot_use
 #
 #
 #

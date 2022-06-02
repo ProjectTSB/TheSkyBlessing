@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"コール: ロッドスピリット","color":"light_purple"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"コール: バラージュスピリット","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に魔法攻撃を行う精霊を呼び出す。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"white"}','{"text":"\\"私が手伝ってあげる！\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
