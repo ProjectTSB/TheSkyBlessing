@@ -1,12 +1,9 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.cannot_use
+#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condtion/3.cannot_use
 #
 #
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition
-
-#> 使用不可タグ
-# @private
-#declare tag CanUsed
+# @within function
+#   asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition
 
 # 効果音
     playsound minecraft:block.note_block.bass player @s ~ ~ ~ 5 1
@@ -17,4 +14,4 @@
 
 # 使用不可に
     tag @s remove CanUsed
-    tag @s remove 87.NoUse
+    tag @s remove 87.CannotUse

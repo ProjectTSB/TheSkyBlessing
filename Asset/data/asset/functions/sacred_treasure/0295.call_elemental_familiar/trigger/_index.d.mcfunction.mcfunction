@@ -13,5 +13,5 @@
     #declare tag 87.ShotFire
     #declare tag 87.ShotWater
     #declare tag 87.ShotThunder
-    #declare tag 87.This
+    #declare tag 87.IDCopyBase
     #declare tag 87.CannotUse
