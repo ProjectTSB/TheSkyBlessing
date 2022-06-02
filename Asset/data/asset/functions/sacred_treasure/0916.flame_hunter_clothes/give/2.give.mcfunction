@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"炎を追う狩人の狩猟服(上)","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"2部位装備:","color":"white"}]','[{"text":"火耐性+10% 火攻撃+10% ","color":"red"},{"text":"水耐性-10% ","color":"dark_red"},{"text":"移動速度+5%","color":"white"}]','[{"text":"4部位装備:","color":"white"}]','[{"text":"火耐性+15% 火攻撃+15% ","color":"red"},{"text":"水耐性-10% ","color":"dark_red"},{"text":"移動速度+10%","color":"white"}]','[{"text":"「ある時、その者は森が燃えているのを見た。","color":"white"}]','[{"text":"その炎を追い、狩人は獣を炎から守った。」","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"2部位装備:","color":"white"}]','[{"text":"火耐性+10% 火攻撃+10% ","color":"red"},{"text":"水耐性-10% ","color":"dark_red"},{"text":"移動速度+5%","color":"white"}]','[{"text":"4部位装備:","color":"white"}]','[{"text":"火耐性+15% 火攻撃+15% ","color":"red"},{"text":"水耐性-10% ","color":"dark_red"},{"text":"移動速度+10%","color":"white"}]','[{"text":"「ある時、その者は森が燃えているのを見た。","color":"white","italic":"true"}]','[{"text":"その炎を追い、狩人は獣を炎から守った。」","color":"white","italic":"true"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
