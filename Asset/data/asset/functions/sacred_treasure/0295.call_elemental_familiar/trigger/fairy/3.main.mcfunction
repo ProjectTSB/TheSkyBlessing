@@ -34,14 +34,14 @@
     execute positioned ~ ~1.5 ~ unless block ^ ^ ^0.5 #lib:no_collision at @s run tp @s ~ ~ ~ ~20 ~-20
 
 # パーティクル
-    execute if entity @s[tag=87.Fire] positioned ^ ^ ^-0.3 run particle dust 1 0 0 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
-    execute if entity @s[tag=87.Fire] positioned ^ ^ ^-0.3 run particle dust 1 0.5 0 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarFire] positioned ^ ^ ^-0.3 run particle dust 1 0 0 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarFire] positioned ^ ^ ^-0.3 run particle dust 1 0.5 0 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
-    execute if entity @s[tag=87.Thunder] positioned ^ ^ ^-0.3 run particle dust 1 1 0 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
-    execute if entity @s[tag=87.Thunder] positioned ^ ^ ^-0.3 run particle dust 1 1 0.7 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarThunder] positioned ^ ^ ^-0.3 run particle dust 1 1 0 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarThunder] positioned ^ ^ ^-0.3 run particle dust 1 1 0.7 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
-    execute if entity @s[tag=87.Water] positioned ^ ^ ^-0.3 run particle dust 0 0.267 1 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
-    execute if entity @s[tag=87.Water] positioned ^ ^ ^-0.3 run particle dust 0 0.667 1 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarWater] positioned ^ ^ ^-0.3 run particle dust 0 0.267 1 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
+    execute if entity @s[tag=87.FamiliarWater] positioned ^ ^ ^-0.3 run particle dust 0 0.667 1 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
 # 付近に敵がいるならスコ12507390
     execute if entity @e[tag=Enemy,distance=..10] run scoreboard players add @s 87.Tick 1
@@ -53,8 +53,8 @@
     execute unless entity @e[tag=Enemy,distance=..10] run scoreboard players reset @s 87.Tick
 
 # ヘルス
-    scoreboard players remove @s 87.Health 1
-    execute if score @s 87.Health matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
+    scoreboard players remove @s 87.LifeTime 1
+    execute if score @s 87.LifeTime matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # 離れ過ぎると消える
     execute unless entity @e[type=marker,tag=87.MarkerThis,distance=..30,limit=1] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
