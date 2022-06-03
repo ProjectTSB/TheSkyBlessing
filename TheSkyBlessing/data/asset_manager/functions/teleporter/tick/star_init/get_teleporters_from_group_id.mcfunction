@@ -22,3 +22,5 @@
     data modify storage asset:teleporter FilteredTeleporters set from storage lib: Array
 # セッション閉じる
     function lib:array/session/close
+# リセット
+    data remove storage asset:teleporter TargetGroupID
