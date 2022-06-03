@@ -7,7 +7,7 @@
 #   GroupID : string
 #   ActivationKind : string("InvisibleDeactivate","VisibleDeactivate","Activate")
 #   Color? : string("white","aqua")(default: "white")
-# @within function asset:teleporter/*/register/register
+# @within function asset:teleporter/*/register
 
 # パラメータチェック
     execute unless data storage asset:teleporter ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]

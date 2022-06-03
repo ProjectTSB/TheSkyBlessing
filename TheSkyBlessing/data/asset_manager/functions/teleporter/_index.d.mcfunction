@@ -3,7 +3,7 @@
 
 #> storage
 # @within *
-#   asset:teleporter/*/register/*
+#   asset:teleporter/*/*
 #   asset:teleporter/common/register
 #   asset_manager:teleporter/**
     #declare storage asset:teleporter
