@@ -17,6 +17,6 @@
     data modify storage asset:teleporter TeleporterGroups append value {}
     data modify storage asset:teleporter TeleporterGroups[-1].ID set from storage asset:teleporter ID
     data modify storage asset:teleporter TeleporterGroups[-1].GroupID set from storage asset:teleporter GroupID
-    data modify storage asset:teleporter TeleporterGroups[-1].Pos set from storage asset:teleporter Pos
     data modify storage asset:teleporter TeleporterGroups[-1].Data.ActivationKind set from storage asset:teleporter ActivationKind
     data modify storage asset:teleporter TeleporterGroups[-1].Data.Color set from storage asset:teleporter Color
+    data modify storage asset:teleporter TeleporterGroups[-1].Pos set from entity @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] Pos
