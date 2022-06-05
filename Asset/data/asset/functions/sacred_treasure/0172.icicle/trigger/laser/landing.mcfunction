@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0172.icicle/trigger/laser/damage
+#> asset:sacred_treasure/0172.icicle/trigger/laser/landing
 #
 #
 #
@@ -20,8 +20,12 @@
         execute as @e[type=#lib:living,tag=Enemy,distance=..4] run function lib:damage/
 # リセット
     function lib:damage/reset
+
 # 演出
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0
+    particle cloud ~ ~ ~ 0 0 0 0.1 30
+    particle firework ~ ~ ~ 0 0 0 1 30
+    particle explosion ~ ~ ~ 0 0 0 1 2
 
 # タグを消す
     tag @s remove 4S.This
