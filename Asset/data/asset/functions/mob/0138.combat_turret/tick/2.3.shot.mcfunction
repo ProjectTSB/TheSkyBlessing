@@ -15,6 +15,7 @@
 
 # 演出
     particle dust 0.09 0.09 0.09 1 ~ ~ ~ 0 0 0 0 6
+    execute if predicate lib:random_pass_per/10 run particle minecraft:firework ~ ~ ~ 0 0 0 0 1
 
 # 着弾
     execute if entity @s[tag=Landing] run function asset:mob/0138.combat_turret/tick/2.4.damage
