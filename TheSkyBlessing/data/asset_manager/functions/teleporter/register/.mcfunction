@@ -8,6 +8,7 @@
     summon marker ~ ~ ~ {Tags:["Teleporter","Object","Uninterferable"]}
 # タグ設定
     execute if data storage asset:teleporter {ActivationKind:"Activate"} run tag @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] add TeleporterActivation
+    execute if data storage asset:teleporter {ActivationKind:"VisibleDeactivate"} run tag @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] add TeleporterVisibleDeactivate
 # データ取得
     execute as @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] run function oh_my_dat:please
 # 直接入れるやつ
