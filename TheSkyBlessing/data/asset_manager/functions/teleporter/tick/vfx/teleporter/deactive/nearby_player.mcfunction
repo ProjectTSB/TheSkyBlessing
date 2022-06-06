@@ -1,8 +1,8 @@
-#> asset_manager:teleporter/tick/vfx/teleporter/deactive_nearby_player
+#> asset_manager:teleporter/tick/vfx/teleporter/deactive/nearby_player
 #
 #
 #
-# @within function asset_manager:teleporter/tick/vfx/teleporter/deactive
+# @within function asset_manager:teleporter/tick/vfx/teleporter/deactive/
 
 particle dust 0.4 0.4 0.4 0.6 ^0 ^ ^-1 0 0 0 0 1
 particle dust 0.4 0.4 0.4 0.6 ^0.86603 ^ ^-0.5 0 0 0 0 1

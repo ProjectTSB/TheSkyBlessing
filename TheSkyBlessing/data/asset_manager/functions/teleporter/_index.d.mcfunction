@@ -11,8 +11,6 @@
 #> Teleporter
 # @within asset_manager:teleporter/**
     #declare tag Teleporter
-    #declare tag TeleporterActivation
-    #declare tag TeleporterVisibleDeactivate
 
 #> TeleportPoint
 # @within asset_manager:teleporter/tick/**
