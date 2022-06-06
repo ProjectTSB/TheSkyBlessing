@@ -1,6 +1,8 @@
 compound AssetTeleporter {
    /// テレポーターの定義データ
    Teleporters: [GroupData]
+   /// テレポーターのIDとOyMyDatIDのMap
+   TeleporeterOMDMap: [IDPair]
 }
 
 compound GroupData {
@@ -30,6 +32,11 @@ enum(string) ActivationState {
 enum(string) StarColor {
    White = "white",
    Yellow = "yellow"
+}
+
+compound IDPair {
+    TeleporterID: int
+    OyMyDatID: int
 }
 
 AssetTeleporter describes minecraft:storage[asset:teleporter]
