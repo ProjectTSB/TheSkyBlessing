@@ -13,6 +13,6 @@
 # 状態を更新する
     data modify storage asset:teleporter TargetTeleporterData.ActicationKind set from storage api: Argument.ActivationState
 # 元に戻す
-    data modify storage asset:teleporter TeleporterGroups append from storage asset:teleporter TargetTeleporterData
+    data modify storage asset:teleporter Teleporters append from storage asset:teleporter TargetTeleporterData
 # リセット
     data remove storage asset:teleporter TargetTeleporterData

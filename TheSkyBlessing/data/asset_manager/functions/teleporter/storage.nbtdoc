@@ -1,6 +1,6 @@
 compound AssetTeleporter {
    /// テレポーターの定義データ
-   TeleporterGroups: [GroupData]
+   Teleporters: [GroupData]
 }
 
 compound GroupData {
