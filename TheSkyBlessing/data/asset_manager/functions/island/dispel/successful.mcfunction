@@ -15,8 +15,9 @@
     function player_manager:lost_item/give_all/
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
-# 交易島へのテレポーターを設置する
-    execute if predicate lib:dimension/is_overworld positioned ^ ^ ^2 run function asset_manager:island/dispel/register_tp
+# テレポーターを起動する
+    data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    function api:teleporter/set_activation_state
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
