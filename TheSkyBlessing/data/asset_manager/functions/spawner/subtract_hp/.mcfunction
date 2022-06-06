@@ -2,7 +2,7 @@
 #
 # asset:context idを召喚するスポナーの体力を減少させる
 #
-# @within function asset_manager:mob/triggers/death/*
+# @within function api:spawner/subtract_hp
 
 # TargetMobID取得
     execute store result score $TargetMobID Temporary run data get storage asset:context id
