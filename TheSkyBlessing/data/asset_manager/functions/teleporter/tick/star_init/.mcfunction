@@ -4,10 +4,6 @@
 #
 # @within function asset_manager:teleporter/tick/active
 
-# グループIDを取得する
-    execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
-# 存在しない場合はエラーを出す
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData run tellraw @p[tag=this] [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"テレポーターのデータ","color":"gold"},{"text":"が正常に取得できませんでした。","color":"white"}]
 # グループIDから対象TP先を取得する
     data modify storage asset:teleporter TargetGroupID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupID
     execute if data storage asset:teleporter TargetGroupID run function asset_manager:teleporter/tick/star_init/get_teleporters_from_group_id
