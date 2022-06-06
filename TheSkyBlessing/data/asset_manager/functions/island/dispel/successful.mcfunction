@@ -17,6 +17,7 @@
     tag @s add DispelledCursedTreasure
 # テレポーターを起動する
     data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    data modify storage api: Argument.ActivationState set value "Activate"
     function api:teleporter/set_activation_state
 # DispelPhaseを進める
     function oh_my_dat:please
