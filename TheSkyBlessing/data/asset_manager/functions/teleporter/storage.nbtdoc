@@ -16,12 +16,12 @@ compound GroupData {
 
 compound TeleporterMetaData {
    /// そのテレポーターが起動しているか
-   ActivationKind: ActivationKind,
+   ActivationState: ActivationState,
    /// テレポーターを星として見た時の色 default: White
    Color?: StarColor
 }
 
-enum(string) ActivationKind {
+enum(string) ActivationState {
    InvisibleDeactivate = "InvisibleDeactivate",
    VisibleDeactivate = "VisibleDeactivate",
    Activate = "Activate"

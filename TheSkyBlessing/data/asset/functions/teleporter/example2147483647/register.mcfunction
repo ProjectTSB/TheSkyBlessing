@@ -12,7 +12,7 @@
 # GroupID (string)
     data modify storage asset:teleporter GroupID set value "example"
 # デフォルトの起動状態 ("InvisibleDeactivate" | "VisibleDeactivate" | "Activate")
-    data modify storage asset:teleporter ActivationKind set value "Activate"
+    data modify storage asset:teleporter ActivationState set value "Activate"
 # 色 ("white" | "aqua")
     data modify storage asset:teleporter Color set value "aqua"
 
