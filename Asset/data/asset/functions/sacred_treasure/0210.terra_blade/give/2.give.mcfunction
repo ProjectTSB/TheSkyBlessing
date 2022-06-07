@@ -41,7 +41,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value 
+    data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:6,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:140.0,Operation:0,UUID:[I;-1060843307,550455007,-1279204449,-249445105],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-3.0,Operation:0,UUID:[I;-326377093,214385260,-1706767736,-1207015802],Slot:"mainhand"}]}
 
