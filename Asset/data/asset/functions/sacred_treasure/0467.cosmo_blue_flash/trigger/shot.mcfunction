@@ -12,11 +12,8 @@
     particle minecraft:dolphin ~ ~ ~ 0.1 0.1 0.1 1 30 force
 
 # 着弾検知
-    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5,limit=1] run tag @s add CZ.HitEntity
-    execute if entity @e[tag=CZ.HitEntity] run tag @s add CZ.HitFlag
-
-# 着弾処理
-    execute as @e[tag=CZ.HitEntity] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,dx=0,sort=nearest,limit=1] run tag @s add CZ.HitEntity
+    execute if entity @e[tag=CZ.HitEntity,distance=..40] run tag @s add CZ.HitFlag
 
 # 再帰
     execute positioned ^ ^ ^0.5 if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
