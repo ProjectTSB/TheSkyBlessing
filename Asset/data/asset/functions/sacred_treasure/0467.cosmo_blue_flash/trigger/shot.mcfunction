@@ -12,7 +12,7 @@
     particle minecraft:dolphin ~ ~ ~ 0.1 0.1 0.1 1 30 force
 
 # 着弾検知
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,dx=0,sort=nearest,limit=1] run tag @s add CZ.HitEntity
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,dx=0,sort=nearest,limit=1] run tag @e[tag=Enemy,dx=0,sort=nearest,limit=1] add CZ.HitEntity
     execute if entity @e[tag=CZ.HitEntity,distance=..40] run tag @s add CZ.HitFlag
 
 # 再帰
