@@ -1,4 +1,4 @@
-#> asset:mob/0105.potion_projectile/tick/5.element_branch
+#> asset:mob/0105.potion_projectile/tick/4.element_branch
 #
 #
 #

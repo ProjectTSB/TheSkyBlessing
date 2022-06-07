@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0216.gray_guardian/hurt/1.trigger",
+        "asset:mob/0292.trample_bot/hurt/1.trigger",
         "asset:mob/0046.clock_of_despair/hurt/1.trigger",
         "asset:mob/0210.aurora_eye/hurt/1.trigger",
         "asset:mob/0228.frost_eye/hurt/1.trigger",
