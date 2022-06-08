@@ -13,7 +13,10 @@
         execute store result score $01.CurrentHP Temporary run data get entity @s AbsorptionAmount
 
     # 表示する
-        tellraw @p[tag=this] [{"text":"\uE01A","font":"tsb"},{"score":{"objective":"Temporary","name":"$01.CurrentHP"},"color":"white","font":"default"},{"text":" / ","color":"white","font":"default"},{"score":{"objective":"Temporary","name":"$01.MaxHP"},"color":"white","font":"default"}]
+        execute if entity @s[tag=!Enemy.Boss] run tellraw @p[tag=this] [{"text":"\uE01A","font":"tsb"},{"text":" ","font":"default"},{"score":{"objective":"Temporary","name":"$01.CurrentHP"},"color":"white","font":"default"},{"text":" / ","color":"white","font":"default"},{"score":{"objective":"Temporary","name":"$01.MaxHP"},"color":"white","font":"default"}]
+
+    # 天使だったら今までのデータを気にせず秘匿
+        execute if entity @s[tag=Enemy.Boss] run tellraw @p[tag=this] [{"text":"\uE01A","font":"tsb"},{"text":" ??? / ???","font":"default"}]
 
 
 # 物理と魔法
@@ -53,6 +56,9 @@
 
     # 表示
         tellraw @p[tag=this] [{"text":"\uE01C","font":"tsb"},{"storage":"asset:temp","nbt":"01.FireDefence","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01D","font":"tsb"},{"storage":"asset:temp","nbt":"01.WaterDefence","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01E","font":"tsb"},{"storage":"asset:temp","nbt":"01.ThunderDefence","interpret":true}]
+
+# Loreテスト(デバッグ用)
+    tellraw @p[tag=this] {"text":"\n見通しの書で表示されているデータ。\n敵の説明は3行に収めたい。\nチャット欄のデフォ設定にきっちり収まるサイズだからだ。\n"}
 
 # リセット
     data remove storage asset:temp 01
