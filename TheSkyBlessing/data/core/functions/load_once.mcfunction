@@ -289,9 +289,8 @@ team modify NoCollision collisionRule never
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   world_manager:gimmick/teleporter/**
-        scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
-        scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
+    #   asset_manager:teleporter/tick/**
+        scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function
