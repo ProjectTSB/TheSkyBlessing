@@ -6,3 +6,4 @@
     #declare tag 01.Target
     #declare score_holder $01.MaxHP
     #declare score_holder $01.CurrentHP
+    #declare score_holder $01.PercentHP
