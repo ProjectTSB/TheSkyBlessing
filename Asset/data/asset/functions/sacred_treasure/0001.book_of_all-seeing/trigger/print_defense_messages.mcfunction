@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0001.book_of_all-seeing/trigger/3.main
 
+# VFX
+    execute at @s run particle minecraft:enchant ~ ~1 ~ 0.2 0.5 0.2 0 100
+    execute at @s run particle minecraft:instant_effect ~ ~1 ~ 0.2 0.5 0.2 0 5
+
 # 体力
     # 最大体力を取得
         execute store result score $01.MaxHP Temporary run function api:mob/get_max_health
@@ -17,7 +21,6 @@
 
     # 天使だったら今までのデータを気にせず秘匿
         execute if entity @s[tag=Enemy.Boss] run tellraw @p[tag=this] [{"text":"\uE01A","font":"tsb"},{"text":" ??? / ???","font":"default"}]
-
 
 # 物理と魔法
     # 物理耐性取得
