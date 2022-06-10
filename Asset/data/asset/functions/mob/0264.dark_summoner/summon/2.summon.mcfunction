@@ -25,7 +25,7 @@
     # 胴 (Compound(Item)) (オプション)
         #data modify storage asset:mob Armor.Chest set value {id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:4404559}}}
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
+    #data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 2500
 # 攻撃力 (double) (オプション)
