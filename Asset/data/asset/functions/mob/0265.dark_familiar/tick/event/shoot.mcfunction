@@ -12,6 +12,6 @@
     scoreboard players reset @s 7D.Move
 
 # サウンド
-    playsound minecraft:entity.shulker_bullet.hurt neutral @a ~ ~ ~ 1.5 2
-    playsound minecraft:block.amethyst_cluster.break neutral @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1.5 2
+    playsound minecraft:entity.shulker_bullet.hurt hostile @a ~ ~ ~ 1.5 2
+    playsound minecraft:block.amethyst_cluster.break hostile @a ~ ~ ~ 1.5 1.5
+    playsound minecraft:entity.vex.ambient hostile @a ~ ~ ~ 1.5 2
