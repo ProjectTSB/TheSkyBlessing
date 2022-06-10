@@ -7,7 +7,7 @@
 #   asset:mob/0266.small_dark_ball/tick/move
 
 # 前進
-    execute if entity @s[scores={7E.Recursive=1..,7E.Range=1..}] run tp @s ^ ^ ^0.1 ~ ~
+    tp @s ^ ^ ^0.1 ~ ~
 
 # スコア減算
     scoreboard players remove @s 7E.Recursive 1
