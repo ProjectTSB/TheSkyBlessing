@@ -9,7 +9,10 @@
     execute anchored eyes positioned ^ ^ ^-0.3 run particle dust 0.5 0.3 0.6 0.7 ~ ~ ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
 # 範囲内ならホーミングじみた移動
-    execute facing entity @e[type=zombie,scores={MobID=264},distance=..100] feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+    execute facing entity @e[type=zombie,scores={MobID=264},distance=..30] feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+
+# 近くにサモナーがいないのであれば、プレイヤーに突っ込んでくる
+    execute unless entity @e[type=zombie,scores={MobID=264},distance=..30] facing entity @p[distance=..30] feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
 
 # 接地で上を向く
     execute positioned ~ ~1.68 ~ unless block ~ ~-1 ~ #lib:no_collision at @s run tp @s ~ ~ ~ ~ ~-35
