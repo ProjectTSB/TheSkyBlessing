@@ -8,7 +8,7 @@
     tag @s add R1.IDCopyBase
 
 # ショットを撃つ
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:10274303}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R1.ShotInit"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Tags:["AssetMob","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:10274303}}}]}
 
 # カウントを増やす
     scoreboard players add @s R1.ShotCount 1

@@ -14,5 +14,4 @@
     particle minecraft:electric_spark ~ ~ ~ 0 0 0 0.5 5
 
 # キル
-    kill @e[type=snowball,sort=nearest,limit=1]
     kill @s
