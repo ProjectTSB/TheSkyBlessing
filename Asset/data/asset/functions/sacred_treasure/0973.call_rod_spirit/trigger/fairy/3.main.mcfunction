@@ -33,6 +33,13 @@
 # 付近に敵がいたらそっちへの攻撃を優先
     execute facing entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
 
+# ポーズ
+    # (待機)
+        execute unless entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] run item replace entity @s armor.head with stick{CustomModelData:20236}
+
+    # (射撃)
+        execute if entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] run item replace entity @s armor.head with stick{CustomModelData:20229}
+
 # パーティクル
     execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
     execute rotated ~ 0 run particle minecraft:dust 0.592 0.722 0.918 1 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
