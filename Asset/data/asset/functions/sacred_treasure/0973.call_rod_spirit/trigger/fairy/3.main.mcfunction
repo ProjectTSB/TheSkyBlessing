@@ -22,7 +22,7 @@
     tag @e[type=marker,tag=R1.MoveMarkerInit,sort=nearest,limit=1] remove R1.MoveMarkerInit
 
 # 同IDのマーカーを特定
-    execute at @e[type=marker,tag=R1.MoveMarker] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,sort=nearest,limit=1] add R1.OwnerMarker
+    execute at @e[type=marker,tag=R1.MoveMarker,distance=..100] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] add R1.OwnerMarker
 
 # マスターのマーカーに誘導移動
     execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=1..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
