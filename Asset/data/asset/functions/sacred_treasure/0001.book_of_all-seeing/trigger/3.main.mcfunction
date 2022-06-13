@@ -14,7 +14,7 @@
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 2 1
 
 # 表示処理
-    tellraw @s [{"text":"[ ","color":"white"},{"selector":"@e[type=#lib:living,type=!player,tag=01.Target,distance=..30,limit=1]"},{"text":" ]\n","color":"white"}]
+    tellraw @s [{"text":"\n[ ","color":"white"},{"selector":"@e[type=#lib:living,type=!player,tag=01.Target,distance=..30,limit=1]"},{"text":" ]\n","color":"white"}]
     execute as @e[type=#lib:living,type=!player,tag=01.Target,distance=..30,limit=1] run function asset:sacred_treasure/0001.book_of_all-seeing/trigger/print_defense_messages
 
 # リセット

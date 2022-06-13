@@ -68,12 +68,8 @@
     # 表示
         tellraw @p[tag=this] [{"text":"\uE01C","font":"tsb"},{"storage":"asset:temp","nbt":"01.FireDefence","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01D","font":"tsb"},{"storage":"asset:temp","nbt":"01.WaterDefence","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01E","font":"tsb"},{"storage":"asset:temp","nbt":"01.ThunderDefence","interpret":true}]
 
-# Loreテスト(デバッグ用)
-    tellraw @p[tag=this] {"text":"\n見通しの書で表示されているデータ。\n敵の説明は3行に収めたい。\nチャット欄のデフォ設定にきっちり収まるサイズだからだ。"}
-
-# 背景
-    tellraw @p[tag=this] {"text":"l","font":"tsb","color":"white"}
-
+# 空行
+    tellraw @p[tag=this] {"text":" "}
 
 # リセット
     data remove storage asset:temp 01
