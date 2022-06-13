@@ -15,9 +15,6 @@
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
 
-# なぜかタグ付けないとめっちゃ実行される
-    tag @s add R1.Hit
-
 # 魔法、無属性のダメージをぶちかます
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
