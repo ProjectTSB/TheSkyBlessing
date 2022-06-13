@@ -10,6 +10,7 @@
     execute positioned as @s run tp @p[tag=this] ~ ~ ~
     execute as @p[tag=this] run tp @s @s
 # VFX
+    function asset_manager:teleporter/tick/vfx/teleport/from
     execute positioned as @s run function asset_manager:teleporter/tick/vfx/teleport/to
 # 盲目を消す
     execute as @p[tag=this] run effect clear @s blindness
