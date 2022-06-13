@@ -13,7 +13,7 @@
     execute unless entity @s[scores={R1.MoveTimesPerTick=1..,R1.Range=1..}] run scoreboard players operation @s R1.MoveTimesPerTick = @s R1.Speed
 
 # 前進
-    execute if entity @s[scores={R1.MoveTimesPerTick=1..,R1.Range=1..}] run tp @s ^ ^ ^0.1 ~ ~
+    tp @s ^ ^ ^0.1 ~ ~
 
 # スコア減算
     scoreboard players remove @s R1.MoveTimesPerTick 1
