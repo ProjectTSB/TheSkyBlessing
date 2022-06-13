@@ -27,7 +27,7 @@
     execute facing entity @e[tag=Enemy,distance=..20,sort=nearest,limit=1] eyes as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # マーカーの方を向き、タグを変更
-    execute facing entity @e[type=marker,tag=SpreadMarker,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~5
+    execute facing entity @e[type=marker,tag=SpreadMarker,distance=..20,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~5
     tag @s remove R1.ShotInit
     tag @s add R1.Shot
 
