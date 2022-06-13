@@ -14,7 +14,7 @@
     scoreboard players add @s R1.ShotCount 1
 
 # ショットのInit発動
-    execute as @e[type=armor_stand,tag=R1.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
+    execute as @e[type=armor_stand,tag=R1.ShotInit,distance=..0.01] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
 
 # scheduleループ開始
     schedule function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/2.tick 1t
