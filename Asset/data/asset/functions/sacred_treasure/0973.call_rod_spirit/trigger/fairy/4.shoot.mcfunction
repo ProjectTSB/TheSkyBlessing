@@ -17,7 +17,7 @@
     execute as @e[type=armor_stand,tag=R1.ShotInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
 
 # scheduleループ開始
-    function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/2.tick
+    schedule function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/2.tick 1t
 
 # サウンド
     playsound minecraft:entity.shulker_bullet.hurt neutral @a ~ ~ ~ 1.5 2
