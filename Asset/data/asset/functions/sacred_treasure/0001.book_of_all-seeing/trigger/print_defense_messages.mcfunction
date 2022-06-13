@@ -26,7 +26,7 @@
         scoreboard players operation $01.PercentHP Temporary /= $01.MaxHP Temporary
 
 
-    # 体力を100/1
+    # 体力の倍率を元に戻す
         scoreboard players operation $01.MaxHP Temporary /= $100 Const
         scoreboard players operation $01.CurrentHP Temporary /= $10000 Const
 
