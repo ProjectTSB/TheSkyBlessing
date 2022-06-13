@@ -4,6 +4,12 @@
 #
 # @within function asset:sacred_treasure/0001.book_of_all-seeing/trigger/3.main
 
+#> Val
+# @private
+    #declare score_holder $01.MaxHP
+    #declare score_holder $01.CurrentHP
+    #declare score_holder $01.PercentHP
+
 # VFX
     execute at @s run particle minecraft:enchant ~ ~1 ~ 0.2 0.5 0.2 0 100
     execute at @s run particle minecraft:instant_effect ~ ~1 ~ 0.2 0.5 0.2 0 5
@@ -73,3 +79,6 @@
 
 # リセット
     data remove storage asset:temp 01
+    scoreboard players reset $01.CurrentHP Temporary
+    scoreboard players reset $01.MaxHP Temporary
+    scoreboard players reset $01.PercentHP Temporary

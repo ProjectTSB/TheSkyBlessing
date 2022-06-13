@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0001.book_of_all-seeing/trigger/print_defense_messages
 
+#> Val
+# @private
+#declare score_holder $Defense
+
 # 取得
     execute store result score $Defense Temporary run data get storage asset:temp 01.Def 100
     execute unless data storage asset:temp 01.Def run scoreboard players set $Defense Temporary 100
@@ -24,3 +28,5 @@
         execute if score $Defense Temporary matches 30..49 run data modify storage asset:temp 01.Def set value '{"text":"i","font":"tsb"}'
         execute if score $Defense Temporary matches 10..29 run data modify storage asset:temp 01.Def set value '{"text":"j","font":"tsb"}'
         execute if score $Defense Temporary matches ..9 run data modify storage asset:temp 01.Def set value '{"text":"k","font":"tsb"}'
+# リセット
+    scoreboard players reset $Defense Temporary
