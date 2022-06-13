@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:mob/0202.hunters_dream/tick/2.skill_arrow/1.skill_arrow
+
+#> private
+# @private
     #declare tag 5M.ArrowThis
 
 # 演出
