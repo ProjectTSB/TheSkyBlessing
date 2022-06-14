@@ -13,7 +13,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,distance=..3] at @s run function lib:damage/
+    execute as @e[type=#lib:living,tag=Friend,tag=!Uninterferable,tag=!PlayerShouldInvulnerable,distance=..3] at @s run function lib:damage/
 # リセット
     function lib:damage/reset
 
