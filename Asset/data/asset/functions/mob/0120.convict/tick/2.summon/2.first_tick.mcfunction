@@ -16,7 +16,7 @@
 # いっぱいいる場合は数を制御する
     # 数のカウント
         execute store result score $Count Temporary if entity @e[type=skeleton,scores={MobID=90},distance=..50]
-    # 6匹いたら3匹抹消
+    # 6匹いたら2匹抹消
         execute if score $Count Temporary matches 6.. run tp @e[type=skeleton,scores={MobID=90},distance=..50,limit=2] ~ -999 ~
     # リセット
         scoreboard players reset $Count
