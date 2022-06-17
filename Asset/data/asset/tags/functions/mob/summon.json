@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0206.skull_knight/summon/1.trigger",
         "asset:mob/0216.gray_guardian/summon/1.trigger",
         "asset:mob/0292.trample_bot/summon/1.trigger",
         "asset:mob/0286.456_dice_entity/summon/1.trigger",
