@@ -1,4 +1,4 @@
-#> core:tick/post-tick-proc_player
+#> core:tick/player/post
 #
 # tickの基本的な処理を終えた後に実行されるプレイヤーのtick処理
 #

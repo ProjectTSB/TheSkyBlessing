@@ -53,7 +53,7 @@
     execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick
 
 # tick処理後のプレイヤー処理部
-    execute as @a at @s run function core:tick/post-tick-proc_player
+    execute as @a at @s run function core:tick/player/post
 
 # 攻撃元/先の紐づけをリセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset

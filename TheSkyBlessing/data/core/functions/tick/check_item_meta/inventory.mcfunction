@@ -2,7 +2,7 @@
 #
 # インベントリ内のアイテムのItemMetaDataをチェックします
 #
-# @within function core:tick/post-tick-proc_player
+# @within function core:tick/player/post
 
 #> Temp
 # @private
