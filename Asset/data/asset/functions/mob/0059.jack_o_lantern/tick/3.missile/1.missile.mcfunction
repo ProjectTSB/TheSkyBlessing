@@ -25,6 +25,8 @@
 
 # 突進
     execute if score @s 1N.Tick matches 81 anchored eyes positioned ^ ^ ^ if entity @p[distance=..15] run function asset:mob/0059.jack_o_lantern/tick/3.missile/3.tackle
+# タグ消し
+    execute if score @s 1N.Tick matches ..81 run tag @s[tag=Landing] remove Landing
 # NoAIを戻す
     execute if score @s 1N.Tick matches 81 run data merge entity @s {NoAI:0b}
 

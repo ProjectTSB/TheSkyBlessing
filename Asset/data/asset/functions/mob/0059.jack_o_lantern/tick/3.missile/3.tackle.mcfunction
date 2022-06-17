@@ -24,6 +24,3 @@
 
 # 再起
     execute positioned ^ ^ ^1 if entity @s[tag=!Landing,distance=..15] run function asset:mob/0059.jack_o_lantern/tick/3.missile/3.tackle
-
-# タグ消し
-    tag @s[tag=Landing] remove Landing
