@@ -16,7 +16,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
-        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=4S.This,limit=1] 4S.UserID run function lib:damage/modifier
+        execute as @a if score @s UserID = @e[type=area_effect_cloud,tag=4S.This,distance=..100,limit=1] 4S.UserID run function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Enemy,distance=..4] run function lib:damage/
 # リセット
     function lib:damage/reset
@@ -34,6 +34,6 @@
 # 突進する
     data modify storage lib: Argument.VectorMagnitude set value 0.4
     data modify storage lib: Argument.KnockbackResist set value true
-    execute as @e[type=#lib:living,tag=Enemy,tag=!Enemy.Boss,distance=..2] at @s facing entity @e[type=area_effect_cloud,tag=4S.Laser,sort=nearest,limit=1] eyes rotated ~ 0 run function lib:motion/
+    execute as @e[type=#lib:living,tag=Enemy,tag=!Enemy.Boss,distance=..2] at @s facing entity @e[type=area_effect_cloud,tag=4S.Laser,distance=..100,sort=nearest,limit=1] eyes rotated ~ 0 run function lib:motion/
 # リセット
     data remove storage lib: Argument
