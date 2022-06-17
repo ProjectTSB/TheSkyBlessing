@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0059.jack_o_lantern/tick/1.skill_quiz/**
 
-# 最寄りのプレイヤーに対して発動（範囲内にいないなら不発）
+# 召喚
     data modify storage api: Argument.ID set value 224
     function api:mob/summon
 # 拡散値
