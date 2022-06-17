@@ -2,9 +2,10 @@
 #
 # コンボ待機
 #
-# @within
-#   function asset:sacred_treasure/0976.blue_heaven/trigger/3.main
-#   function asset:sacred_treasure/0976.blue_heaven/trigger/combo/1.tick
+# @within function
+#   asset:sacred_treasure/0976.blue_heaven/trigger/3.main
+#   asset:sacred_treasure/0976.blue_heaven/trigger/combo/1.tick
+#   asset:sacred_treasure/0976.blue_heaven/trigger/rejoin_process
 
 # エンティティに実行させる
     execute as @a[scores={R4.Wait=0..}] at @s run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/2.main

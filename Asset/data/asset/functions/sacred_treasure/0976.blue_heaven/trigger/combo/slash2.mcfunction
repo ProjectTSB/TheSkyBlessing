@@ -5,8 +5,8 @@
 # @within function asset:sacred_treasure/0976.blue_heaven/trigger/3.main
 
 # 演出
-    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 1
-    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.8
+    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 1.2
+    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 1
     playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1 2
 
 # 斬撃
