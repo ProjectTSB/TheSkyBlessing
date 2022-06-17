@@ -5,8 +5,15 @@
 # @within function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/2.main
 
 # 引数の設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 100.0f
+    #ダメージブレのための処理
+        # 疑似乱数取得
+            execute store result score $RandomDamage Temporary run function lib:random/
+        # 剰余算する。0~30の追加ダメージ
+            scoreboard players operation $RandomDamage Temporary %= $30 Const
+        # 最低ダメージ設定
+            scoreboard players add $RandomDamage Temporary 90
+    #ダメージセット
+        execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
