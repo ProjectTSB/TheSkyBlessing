@@ -7,3 +7,6 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0976.blue_heaven/trigger/**
     scoreboard objectives add R4.Tick dummy
+    scoreboard objectives add R4.Combo dummy
+    scoreboard objectives add R4.Wait dummy
+    scoreboard objectives add R4.UserID dummy
