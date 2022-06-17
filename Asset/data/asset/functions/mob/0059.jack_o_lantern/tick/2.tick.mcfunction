@@ -12,7 +12,7 @@
     effect give @s resistance 9 1 true
 
 # ハメ対策
-    execute unless block ~ ~ ~ #lib:no_collision at @p run function asset:mob/0059.jack_o_lantern/tick/spread_tp
+    execute unless block ~ ~0.5 ~ #lib:no_collision at @p run function asset:mob/0059.jack_o_lantern/tick/spread_tp
 
 # スコアを増やす
     scoreboard players add @s 1N.Tick 1
