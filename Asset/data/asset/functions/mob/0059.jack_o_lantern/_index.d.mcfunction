@@ -6,5 +6,4 @@
     #declare tag 1N.SkillQuiz
     #declare tag 1N.SkillMeteor
     #declare tag 1N.SkillMissile
-    #declare tag 1N.Glow
     #declare tag 1N.Hurt
