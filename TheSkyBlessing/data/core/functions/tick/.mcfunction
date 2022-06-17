@@ -23,7 +23,7 @@
     function asset_manager:sacred_treasure/tick/
 
 # プレイヤー処理部
-    execute as @a at @s run function core:tick/player
+    execute as @a at @s run function core:tick/player/
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context

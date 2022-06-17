@@ -2,7 +2,7 @@
 #
 # entityを殴った際に実行される
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # ダメージ表示
     function player_manager:vanilla_attack/show_log
