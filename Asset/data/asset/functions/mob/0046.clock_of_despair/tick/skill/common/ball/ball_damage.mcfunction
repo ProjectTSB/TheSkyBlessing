@@ -26,7 +26,7 @@
         execute as @e[type=zombie,scores={MobID=46},distance=..100,limit=1] run function lib:damage/modifier
         execute as @a[gamemode=!creative,distance=..2] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @s

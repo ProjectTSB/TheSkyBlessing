@@ -14,7 +14,7 @@
         execute as @e[type=zombie,scores={MobID=46},distance=..100,limit=1] run function lib:damage/modifier
         execute as @p[gamemode=!creative,tag=LandingTarget] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @p[tag=LandingTarget] remove LandingTarget
