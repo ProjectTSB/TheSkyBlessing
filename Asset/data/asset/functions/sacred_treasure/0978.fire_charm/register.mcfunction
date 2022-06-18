@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0978.fire_medal/register
+#> asset:sacred_treasure/0978.fire_charm/register
 #
 # 神器プールへの登録処理
 #
