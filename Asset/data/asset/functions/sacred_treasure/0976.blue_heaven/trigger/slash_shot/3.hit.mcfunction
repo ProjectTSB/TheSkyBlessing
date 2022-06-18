@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0976.blue_heaven/trigger/slash_shot/2.main
 
+# どうしてもダメージを受けてほしい
+    effect give @s[type=#lib:undead] instant_health
+    effect give @s[type=!#lib:undead] instant_damage
+
 # 引数の設定
     #ダメージブレのための処理
         # 疑似乱数取得
@@ -11,7 +15,7 @@
         # 剰余算する。0~30の追加ダメージ
             scoreboard players operation $RandomDamage Temporary %= $30 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 90
+            scoreboard players add $RandomDamage Temporary 60
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
     # 第一属性

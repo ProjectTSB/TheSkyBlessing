@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/2.main
 
+# どうしてもダメージを受けてほしい
+    effect give @s[type=#lib:undead] instant_health
+    effect give @s[type=!#lib:undead] instant_damage
+
 # 引数の設定
     #ダメージブレのための処理
         # 疑似乱数取得

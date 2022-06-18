@@ -20,6 +20,9 @@
     data modify entity @s[scores={R4.Tick=7}] Fire set value 9999s
     item replace entity @s[scores={R4.Tick=7}] armor.head with potion{CustomModelData:20241,CustomPotionColor:8908799}
 
+# 壁に消滅
+    execute unless block ~ ~1 ~ #lib:no_collision run kill @s
+
 # ヒット判定
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[tag=Enemy,tag=!Uninterferable,dx=0] at @s run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_shot/3.hit
 
