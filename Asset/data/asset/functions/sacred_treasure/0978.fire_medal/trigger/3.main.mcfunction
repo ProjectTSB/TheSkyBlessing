@@ -10,7 +10,8 @@
 # ここから先は神器側の効果の処理を書く
     playsound ogg:block.smithing_table.smithing_table2 player @a ~ ~ ~ 1 1.3
     playsound minecraft:item.armor.equip_iron player @a ~ ~ ~ 1 1
+    particle minecraft:dust 1 0.451 0 1 ~ ~1 ~ 0.2 0.2 0.2 0 20
     particle crit ~ ~1 ~ 0 0 0 0.5 10
-    
+
 # 補正を追加
     function asset:sacred_treasure/0978.fire_medal/trigger/add_modifier
