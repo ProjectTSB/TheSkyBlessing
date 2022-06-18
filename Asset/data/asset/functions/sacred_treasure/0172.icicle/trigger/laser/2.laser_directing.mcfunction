@@ -22,7 +22,7 @@
     execute as @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] run function lib:forward_spreader/circle
 
 # 発砲
-    execute facing entity @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] feet as @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] run function asset:sacred_treasure/0172.icicle/trigger/laser/particle_specal
+    execute facing entity @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] feet as @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] run function asset:sacred_treasure/0172.icicle/trigger/laser/particle_special
 
 # 前方拡散キル
     kill @e[type=marker,tag=SpreadMarker,distance=..50]
