@@ -28,7 +28,7 @@
     function lib:damage/
 
 # ノクバ耐性を考慮して吹っ飛ばし続ける
-    data modify storage lib: Argument.VectorMagnitude set value 0.7
+    data modify storage lib: Argument.VectorMagnitude set value 0.5
     data modify storage lib: Argument.KnockbackResist set value true
     execute as @s at @s facing entity @e[type=armor_stand,tag=R4.SlashShot,sort=nearest,limit=1] feet rotated ~ ~ run function lib:motion/
 

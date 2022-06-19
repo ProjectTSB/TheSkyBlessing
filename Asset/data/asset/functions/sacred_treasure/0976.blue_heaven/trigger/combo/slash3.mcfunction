@@ -8,7 +8,7 @@
     playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.8
     playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1.5 1.8
     playsound minecraft:item.trident.return player @a ~ ~ ~ 1.5 1.5
-    
+
 # 斬撃
     execute if entity @s[y_rotation=-22.5..22.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[-90F,0F],Tags:["R4.SlashSweep","R4.SlashFinish","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=22.5..67.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[-45F,0F],Tags:["R4.SlashSweep","R4.SlashFinish","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
@@ -18,6 +18,9 @@
     execute if entity @s[y_rotation=-157.5..-114.9] run summon armor_stand ~ ~-0.3 ~ {Rotation:[135F,0F],Tags:["R4.SlashSweep","R4.SlashFinish","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=-115..-67.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[180F,0F],Tags:["R4.SlashSweep","R4.SlashFinish","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=-67.5..-22.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[-135F,0F],Tags:["R4.SlashSweep","R4.SlashFinish","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
+
+# 攻撃
+    execute positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/damage
 
 # 射撃
     summon armor_stand ~ ~ ~ {Invisible:1b,Small:1b,Tags:["R4.SlashShot","R4.SlashShotInit"],Pose:{Head:[0.1f,0f,0.0f]},DisabledSlots:4144959}

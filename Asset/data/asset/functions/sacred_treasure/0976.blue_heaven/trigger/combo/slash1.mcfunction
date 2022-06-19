@@ -18,3 +18,6 @@
     execute if entity @s[y_rotation=-157.5..-114.9] run summon armor_stand ~ ~-0.3 ~ {Rotation:[135F,0F],Tags:["R4.SlashSweep","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=-115..-67.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[180F,0F],Tags:["R4.SlashSweep","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=-67.5..-22.4] run summon armor_stand ~ ~-0.3 ~ {Rotation:[-135F,0F],Tags:["R4.SlashSweep","R4.SlashInit"],Marker:0b,NoGravity:1b,Invisible:1b,ShowArms:1b,Small:0b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
+
+# 攻撃
+    execute positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/damage

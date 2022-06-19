@@ -8,13 +8,13 @@
     execute at @a[distance=..10] if score @s R4.UserID = @p UserID run tag @p add R4.OwnerPlayer
 
 # 向きを揃える
-    execute at @p[tag=R4.OwnerPlayer,distance=..10] run tp @s ~ ~-0.3 ~ ~ ~
+    execute at @p[tag=R4.OwnerPlayer,distance=..10] run tp @s ~ ~-0.3 ~ ~-90 ~
 
 # スコア加算
     scoreboard players add @s R4.Tick 1
 
-# 判定
-    execute if entity @s[scores={R4.Tick=..3}] positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5] run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/damage
+# 持続判定
+    #execute if entity @s[scores={R4.Tick=..3}] rotated ~90 ~ positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5] run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/damage
 
 # アニメ(通常)
     item replace entity @s[tag=!R4.SlashFinish,scores={R4.Tick=2}] weapon.mainhand with potion{CustomModelData:20237,CustomPotionColor:50175}
