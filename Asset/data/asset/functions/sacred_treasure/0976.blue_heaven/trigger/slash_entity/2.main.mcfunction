@@ -13,9 +13,6 @@
 # スコア加算
     scoreboard players add @s R4.Tick 1
 
-# 持続判定
-    #execute if entity @s[scores={R4.Tick=..3}] rotated ~90 ~ positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..1.5] run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/damage
-
 # アニメ(通常)
     item replace entity @s[tag=!R4.SlashFinish,scores={R4.Tick=2}] weapon.mainhand with potion{CustomModelData:20237,CustomPotionColor:50175}
     item replace entity @s[tag=!R4.SlashFinish,scores={R4.Tick=3}] weapon.mainhand with potion{CustomModelData:20238,CustomPotionColor:50175}
