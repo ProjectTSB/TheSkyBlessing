@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"水","color":"blue"},{"text":"のチャーム","color":"white"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"水","color":"aqua"},{"text":"のチャーム","color":"white"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水属性","color":"blue"},{"text":"の攻撃力が5%上昇する。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水属性","color":"aqua"},{"text":"の攻撃力が5%上昇する。","color":"white"}]']
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "hotbar"
 # 神器のトリガー (string) Wikiを参照
