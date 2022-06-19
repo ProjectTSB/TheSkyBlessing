@@ -4,8 +4,11 @@
 #
 # @within function asset:sacred_treasure/0978.fire_charm/trigger/**main
 
-# 火攻撃
+# UUID設定
     data modify storage api: Argument.UUID set value [I;1,1,978,7]
+
+# リセット
+    function api:player_modifier/attack/fire/remove
 
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:978}}}]
@@ -28,6 +31,9 @@
     execute if score $Count Temporary matches 8 run data modify storage api: Argument.Amount set value 0.4
 
     execute if score $Count Temporary matches 9 run data modify storage api: Argument.Amount set value 0.45
+
+# UUID設定
+    data modify storage api: Argument.UUID set value [I;1,1,978,7]
 
 # 適用
     data modify storage api: Argument.Operation set value "multiply_base"
