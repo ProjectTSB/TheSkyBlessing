@@ -31,7 +31,7 @@
 
 # 適用
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/fire/add
+    execute if score $Count Temporary matches 1.. run function api:player_modifier/attack/fire/add
 
 # リセット
     scoreboard players reset $Count Temporary

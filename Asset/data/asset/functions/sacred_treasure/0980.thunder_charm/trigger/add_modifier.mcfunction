@@ -4,6 +4,13 @@
 #
 # @within function asset:sacred_treasure/0980.thunder_charm/trigger/**main
 
+
+# 雷攻撃
+    data modify storage api: Argument.UUID set value [I;1,1,980,7]
+
+# リセット
+    function api:player_modifier/attack/thunder/remove
+
 # 雷攻撃
     data modify storage api: Argument.UUID set value [I;1,1,980,7]
 
@@ -31,7 +38,7 @@
 
 # 適用
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/thunder/add
+    execute if score $Count Temporary matches 1.. run function api:player_modifier/attack/thunder/add
 
 # リセット
     scoreboard players reset $Count Temporary
