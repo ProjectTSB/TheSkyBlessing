@@ -8,7 +8,12 @@
     scoreboard players operation @s R4.UserID = @p[tag=this] UserID
 
 # 向きを揃える
-    execute at @p[tag=this] run tp @s ~ ~0.3 ~ ~ ~
+    execute at @p[tag=this] run tp @s ~ ~0.3 ~
+
+# 向き
+    execute store result score @s Temporary run data get entity @p[tag=this] Rotation[1] 1
+    execute store result entity @s Pose.RightArm[2] float -1 run scoreboard players remove @s Temporary 90
 
 # タグ削除
     tag @s remove R4.SlashInit
+    scoreboard players reset @s Temporary
