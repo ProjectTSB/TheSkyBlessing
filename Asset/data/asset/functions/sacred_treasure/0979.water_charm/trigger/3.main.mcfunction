@@ -14,3 +14,4 @@
     particle crit ~ ~1 ~ 0 0 0 0.5 10
 
 # 補正を追加
+    function asset:sacred_treasure/0979.water_charm/trigger/add_modifier
