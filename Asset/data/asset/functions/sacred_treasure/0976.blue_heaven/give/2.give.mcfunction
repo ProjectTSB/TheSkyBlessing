@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ブレイブソード","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"強烈な斬撃で前方を薙ぎ払い、"}','{"text":"コンボフィニッシュで衝撃波を放つ。"}','{"text":"\\"この空を旅する者たちの剣\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"複数の敵を巻き込む、強力な斬撃を放つ。"}','{"text":"\\"勇気を刃に込めて！\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
