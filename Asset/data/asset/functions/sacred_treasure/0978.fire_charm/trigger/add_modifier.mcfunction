@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0978.fire_charm/trigger/3.main
 
 # 火攻撃
-    data modify storage api: Argument.UUID set value [I;1,1,979,7]
+    data modify storage api: Argument.UUID set value [I;1,1,978,7]
 
 # 個数を取得
-    execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:979}}}]
+    execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:978}}}]
 
 # 火威力が5%ずつ上がる
     execute if score $Count Temporary matches 1 run data modify storage api: Argument.Amount set value 0.05
@@ -31,7 +31,7 @@
 
 # 適用
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:player_modifier/attack/fire/add
 
 # リセット
     scoreboard players reset $Count Temporary
