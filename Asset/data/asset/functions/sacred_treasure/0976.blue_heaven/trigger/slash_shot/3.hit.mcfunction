@@ -24,7 +24,7 @@
         data modify storage lib: Argument.ElementType set value "None"
 # 補正functionを実行
     execute as @a[tag=R4.OwnerPlayer] run function lib:damage/modifier
-# 範囲5m以内のゾンビを対象に
+# ダメージ
     function lib:damage/
 
 # ノクバ耐性を考慮して吹っ飛ばし続ける

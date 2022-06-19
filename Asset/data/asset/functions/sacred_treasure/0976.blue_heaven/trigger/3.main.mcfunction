@@ -20,7 +20,6 @@
 # Init
     execute as @e[type=armor_stand,tag=R4.SlashInit,distance=..0.5,sort=nearest,limit=1] run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/init
 
-
 # コンボカウント
     scoreboard players set @s R4.Wait 13
     scoreboard players add @s R4.Combo 1
