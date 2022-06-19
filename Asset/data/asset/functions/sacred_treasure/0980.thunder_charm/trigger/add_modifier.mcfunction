@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0980.thunder_charm/trigger/3.main
+# @within function asset:sacred_treasure/0980.thunder_charm/trigger/**main
 
 # 雷攻撃
     data modify storage api: Argument.UUID set value [I;1,1,980,7]
