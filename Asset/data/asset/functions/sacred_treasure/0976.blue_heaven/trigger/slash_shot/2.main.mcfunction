@@ -15,9 +15,9 @@
     scoreboard players add @s R4.Tick 1
 
 # 後からモデル装着、着火
-    execute if entity @s[scores={R4.Tick=5..7}] run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 2
-    data modify entity @s[scores={R4.Tick=7}] Fire set value 9999s
-    item replace entity @s[scores={R4.Tick=7}] armor.head with potion{CustomModelData:20241,CustomPotionColor:8908799}
+    execute if entity @s[scores={R4.Tick=6..8}] run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 2
+    item replace entity @s[scores={R4.Tick=8}] armor.head with potion{CustomModelData:20241,CustomPotionColor:8908799}
+    data modify entity @s[scores={R4.Tick=8}] Fire set value 9999s
 
 # 壁に消滅
     execute unless block ~ ~1 ~ #lib:no_collision run kill @s

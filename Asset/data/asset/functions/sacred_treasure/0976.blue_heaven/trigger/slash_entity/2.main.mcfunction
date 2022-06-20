@@ -8,7 +8,7 @@
     execute at @a[distance=..10] if score @s R4.UserID = @p UserID run tag @p add R4.OwnerPlayer
 
 # 向きを揃える
-    execute at @p[tag=R4.OwnerPlayer,distance=..10] run tp @s ~ ~-0.3 ~ ~-90 ~
+    #execute at @p[tag=R4.OwnerPlayer,distance=..10] run tp @s ~ ~-0.3 ~ ~-90 ~
 
 # スコア加算
     scoreboard players add @s R4.Tick 1
