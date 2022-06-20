@@ -6,4 +6,8 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0981.soufire_shoot/trigger/**
-    #scoreboard objectives add
+    scoreboard objectives add R9.UserID dummy
+    scoreboard objectives add R9.Tick dummy
+    scoreboard objectives add R9.Speed dummy
+    scoreboard objectives add R9.Range dummy
+    scoreboard objectives add R9.MoveTimesPerTick dummy

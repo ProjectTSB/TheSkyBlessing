@@ -16,7 +16,10 @@
     playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1 0.5
 
 # デカい火の玉を放つ
-    summon armor_stand ~ ~ ~ {Marker:1b,Tags:["R9.BigFireball","R9.Init"]}
+    execute anchored eyes run summon armor_stand ^ ^ ^1 {Small:1b,Invisible:1b,Marker:1b,Tags:["R9.BigFireball","R9.Init","Friend","Projectile"]}
 
-# デカい火の玉を動かすShcheduleループ開始
-    
+# 火の玉にInit処理
+    execute as @e[type=armor_stand,tag=R9.Init,distance=..3] run function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/1.init
+
+# 火の玉を動かすShcheduleループ開始
+    schedule function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/2.tick 1t
