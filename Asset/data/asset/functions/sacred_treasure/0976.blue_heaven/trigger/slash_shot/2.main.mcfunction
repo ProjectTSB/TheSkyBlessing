@@ -14,9 +14,8 @@
 # スコア加算
     scoreboard players add @s R4.Tick 1
 
-# 後からモデル装着
+# 後からモデル装着、着火
     execute if entity @s[scores={R4.Tick=5..7}] run particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.1 2
-    data modify entity @s[scores={R4.Tick=7}] Marker set value 1b
     data modify entity @s[scores={R4.Tick=7}] Fire set value 9999s
     item replace entity @s[scores={R4.Tick=7}] armor.head with potion{CustomModelData:20241,CustomPotionColor:8908799}
 

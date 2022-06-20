@@ -8,7 +8,7 @@
     scoreboard players operation @s R4.UserID = @p[tag=this] UserID
 
 # 向きを揃える
-    execute at @p[tag=this] run tp @s ~ ~0.3 ~
+    data modify entity @s Rotation[] set from entity @p[tag=this] Rotation[]
 
 # 向き
     execute store result score @s Temporary run data get entity @p[tag=this] Rotation[1] 1
