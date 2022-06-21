@@ -15,41 +15,29 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ソウルファイアバースト","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"前方に巨大な火の玉を放つ。","color":"white"}]','[{"text":"火の玉はしばらくすると分裂し、高速で飛んでいく。","color":"white"}]','{"text":"\\"行けぇッ！\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"前方に爆発する火の玉を放つ。","color":"white"}]','[{"text":"火の玉はしばらくすると、5つの小さな火球に分裂する。","color":"white"}]','{"text":"\\"行けぇッ！\\"","color":"gray"}']
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
-# 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value ["300-400 / 100-200×5"]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]
-# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire]
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value
+    #data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value []
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 100
+    data modify storage asset:sacred_treasure MPCost set value 80
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
-# グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value
-# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
-# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableMPMessage set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 40
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
-# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    # data modify storage asset:sacred_treasure CustomNBT set value {}
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Nyaptov","Rumor"]
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

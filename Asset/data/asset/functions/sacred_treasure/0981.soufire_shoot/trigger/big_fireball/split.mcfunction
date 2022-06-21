@@ -8,10 +8,10 @@
     tag @s add R9.CopyBase
 
 # 演出
-    playsound minecraft:block.respawn_anchor.set_spawn player @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.respawn_anchor.set_spawn neutral @a ~ ~ ~ 2 1.5
     playsound minecraft:entity.blaze.shoot neutral @a ~ ~ ~ 2 0.8
-    playsound minecraft:block.soul_sand.step player @a ~ ~ ~ 2 1
-    playsound minecraft:block.soul_sand.step player @a ~ ~ ~ 2 1.2
+    playsound minecraft:block.soul_sand.step neutral @a ~ ~ ~ 2 1
+    playsound minecraft:block.soul_sand.step neutral @a ~ ~ ~ 2 1.2
 
 # 小さい火の玉をいっぱい召喚
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}

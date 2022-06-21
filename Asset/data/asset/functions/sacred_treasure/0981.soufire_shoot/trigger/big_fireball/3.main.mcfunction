@@ -10,3 +10,4 @@
 # パーティクル
     particle minecraft:smoke ~ ~ ~ 0.1 0.1 0.1 0 3
     particle minecraft:dust 0.373 0.584 0.631 1.5 ~ ~ ~ 0.2 0.2 0.2 0 3
+    particle minecraft:entity_effect ~ ~ ~ 0 0.5 1.5 1 0

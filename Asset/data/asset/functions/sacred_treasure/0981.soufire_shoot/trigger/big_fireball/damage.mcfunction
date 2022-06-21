@@ -8,6 +8,9 @@
     effect give @s instant_health
     effect give @s instant_damage
 
+# デバフ
+    effect give @s slowness 2 10
+
 # ダメージ値設定
     #ダメージブレのための処理
         # 疑似乱数取得

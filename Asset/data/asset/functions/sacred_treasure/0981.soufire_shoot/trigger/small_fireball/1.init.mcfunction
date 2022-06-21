@@ -23,7 +23,6 @@
         data modify storage lib: Argument.Distance set value 1
         data modify storage lib: Argument.Spread set value 2
 
-
 # 拡散させるEntityを召喚する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 

@@ -11,11 +11,11 @@
         # 剰余算する。0~50の追加ダメージ
           scoreboard players operation $RandomDamage Temporary %= $50 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 100
+            scoreboard players add $RandomDamage Temporary 200
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
 
-# 魔法、無属性のダメージをぶちかます
+# 魔法火属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"
 
