@@ -12,10 +12,7 @@
 
 # 弾速と飛距離セット
     scoreboard players set @s R9.Speed 10
-    scoreboard players set @s R9.Range 200
-
-#
-    item replace entity @s armor.head with stone
+    scoreboard players set @s R9.Range 70
 
 # タグ削除
     tag @s remove R9.Init

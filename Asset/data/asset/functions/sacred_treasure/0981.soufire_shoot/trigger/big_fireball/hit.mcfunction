@@ -1,42 +1,23 @@
 #> asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/hit
 #
-# 炸裂前に敵に当てた場合。ふっ飛ばし攻撃。
+# 着弾したとき。周囲に範囲攻撃。
 #
 # @within function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/4.move
 
-# どうしてもダメージを受けてほしい（HurtTimeで反応を起こすモブもいるので)
-    effect give @s[type=#lib:undead] instant_health
-    effect give @s[type=!#lib:undead] instant_damage
+# オーナーのプレイヤーを特定
+    execute at @a[distance=..60] if score @s R9.UserID = @p UserID run tag @p add R9.OwnerPlayer
 
-# ダメージ値設定
-    #ダメージブレのための処理
-        # 疑似乱数取得
-            execute store result score $RandomDamage Temporary run function lib:random/
-        # 剰余算する。0~100の追加ダメージ
-          scoreboard players operation $RandomDamage Temporary %= $100 Const
-        # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 300
-    #ダメージセット
-        execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
+# 範囲3にダメージ。着弾地点から範囲3以内のモブが実行者になる。
+    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..3] at @s run function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/damage
 
-# 魔法、無属性のダメージをぶちかます
-    data modify storage lib: Argument.AttackType set value "Magic"
-    data modify storage lib: Argument.ElementType set value "Fire"
+# 演出
+    playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1.5 1.5
+    playsound minecraft:entity.ender_dragon.flap neutral @a ~ ~ ~ 2 0.8
+    particle minecraft:explosion ~ ~ ~ 1 1 1 1 5
+    particle minecraft:lava ~ ~ ~ 0.5 0.5 0.5 0 10
 
-# マスターとして補正functionを実行
-    execute at @a[distance=..30] if score @s R9.UserID = @p UserID as @p run function lib:damage/modifier
+# オーナー情報削除
+    tag @a[tag=R9.OwnerPlayer] remove R9.OwnerPlayer
 
-
-# ダメージ実行
-    execute as @e[tag=Enemy,tag=!Uninterferable,sort=nearest,limit=1] run function lib:damage/
-
-# ノクバ耐性を考慮して吹っ飛ばす
-    data modify storage lib: Argument.VectorMagnitude set value -0.2
-    data modify storage lib: Argument.KnockbackResist set value true
-    execute as @s at @s facing entity @p[tag=this] feet rotated ~ ~25 run function lib:motion/
-
-# リセット
-    function lib:damage/reset
-
-# 弾をキル
-    function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/break
+# 弾を消す
+    kill @s
