@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # 対象テレポーターのタグ付与
     tag @e[type=marker,tag=Teleporter,distance=..1,limit=1] add FromTeleporter

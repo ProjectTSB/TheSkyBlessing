@@ -2,7 +2,7 @@
 #
 # 二度目以降のJoin時に実行される
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # versionのチェック
     function api:data_get/data_version
