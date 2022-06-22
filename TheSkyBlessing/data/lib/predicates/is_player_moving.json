@@ -1,0 +1,12 @@
+{
+    "condition": "inverted",
+    "term": {
+        "condition": "entity_scores",
+        "entity": "this",
+        "scores": {
+            "PlayerPosDiff.X": 0,
+            "PlayerPosDiff.Y": 0,
+            "PlayerPosDiff.Z": 0
+        }
+    }
+}
