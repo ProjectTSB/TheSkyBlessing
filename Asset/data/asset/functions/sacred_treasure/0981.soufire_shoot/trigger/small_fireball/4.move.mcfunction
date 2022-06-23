@@ -12,9 +12,6 @@
 # パーティクル
     particle minecraft:dust 0.576 0.922 1 0.8 ~ ~ ~ 0 0 0 0 1
 
-# 付近の敵に誘導移動
-    #execute facing entity @e[tag=Enemy,tag=!Uninterferable,distance=..20,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-4000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.1 ~ ~
-
 # 敵がいないなら直進
     tp @s ^ ^ ^0.1 ~ ~
 

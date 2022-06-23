@@ -8,6 +8,7 @@
     #declare tag R9.Init
     #declare tag R9.CopyBase
     #declare tag R9.OwnerPlayer
+    #declare tag R9.NotTarget
 
 #> どうしてもSummon以外でAssetMobを使う用事がある
 # @within function
