@@ -187,6 +187,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add PlayerPosDiff.X dummy
         scoreboard objectives add PlayerPosDiff.Y dummy
         scoreboard objectives add PlayerPosDiff.Z dummy
+        scoreboard objectives add PlayerStopTime dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**

@@ -27,6 +27,15 @@
     scoreboard players operation @s PlayerPosDiff.X -= $X Temporary
     scoreboard players operation @s PlayerPosDiff.Y -= $Y Temporary
     scoreboard players operation @s PlayerPosDiff.Z -= $Z Temporary
+# 止まってから20tick目に座標の補正がかかるのでそのtickに限っては無視する
+    execute if score @s PlayerStopTime matches 19 run scoreboard players set @s PlayerPosDiff.X 0
+    execute if score @s PlayerStopTime matches 19 run scoreboard players set @s PlayerPosDiff.Y 0
+    execute if score @s PlayerStopTime matches 19 run scoreboard players set @s PlayerPosDiff.Z 0
+# 止まってからの時間の管理
+    scoreboard players add @s PlayerStopTime 1
+    execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
+    execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
+    execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
 # リセット
     scoreboard players reset $X Temporary
     scoreboard players reset $Y Temporary
