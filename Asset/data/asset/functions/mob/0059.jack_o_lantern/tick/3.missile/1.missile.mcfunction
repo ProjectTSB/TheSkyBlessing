@@ -18,7 +18,7 @@
     scoreboard players reset $4tInterval
 
 # NoAI化
-    execute if score @s 1N.Tick matches 0 run data merge entity @s {NoAI:1b}
+    execute if score @s 1N.Tick matches 0 run data modify entity @s NoAI set value 1b
 
 # プレイヤーに警告パーティクル
     execute if score @s 1N.Tick matches ..80 anchored eyes positioned ^ ^ ^ run function asset:mob/0059.jack_o_lantern/tick/3.missile/2.check
@@ -30,7 +30,7 @@
 # タグ消し
     execute if score @s 1N.Tick matches ..81 run tag @s[tag=Landing] remove Landing
 # NoAIを戻す
-    execute if score @s 1N.Tick matches 81 run data merge entity @s {NoAI:0b}
+    execute if score @s 1N.Tick matches 81 run data modify entity @s NoAI set value 0b
 
 # リセット
     execute if score @s 1N.Tick matches 100 run function asset:mob/0059.jack_o_lantern/tick/reset
