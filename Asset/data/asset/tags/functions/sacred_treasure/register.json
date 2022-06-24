@@ -1,5 +1,14 @@
 {
     "values": [
+        "asset:sacred_treasure/0914.reactive_armor_feet/register",
+        "asset:sacred_treasure/0913.reactive_armor_legs/register",
+        "asset:sacred_treasure/0912.reactive_armor_chest/register",
+        "asset:sacred_treasure/0911.reactive_armor_head/register",
+        "asset:sacred_treasure/0796.log4shell/register",
+        "asset:sacred_treasure/0844.closed_eyes_of_love/register",
+        "asset:sacred_treasure/0368.fire_spell/register",
+        "asset:sacred_treasure/0898.gale_pendant/register",
+        "asset:sacred_treasure/0971.laser_eye_helmet/register",
         "asset:sacred_treasure/0899.flame_ring/register",
         "asset:sacred_treasure/0876.uni/register",
         "asset:sacred_treasure/0870.samurai_blade/register",
