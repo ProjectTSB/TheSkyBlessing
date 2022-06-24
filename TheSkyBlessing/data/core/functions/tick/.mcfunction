@@ -17,7 +17,7 @@
     scoreboard players add $LoadTime Global 1
 
 # プレイヤー事前処理
-    function core:tick/player/pre
+    execute as @a at @s run function core:tick/player/pre
 
 # 神器のグローバルtick処理
     function asset_manager:sacred_treasure/tick/
