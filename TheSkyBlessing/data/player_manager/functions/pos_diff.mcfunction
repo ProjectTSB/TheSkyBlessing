@@ -33,7 +33,7 @@
     execute if score @s PlayerStopTime matches 19 run scoreboard players set @s PlayerPosDiff.Z 0
 # 止まってからの時間の管理
     scoreboard players add @s PlayerStopTime 1
-    execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
+    execute unless score @s PlayerPosDiff.X matches 0 run scoreboard players set @s PlayerStopTime 0
     execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
     execute unless score @s PlayerStopTime matches 0 run scoreboard players set @s PlayerStopTime 0
 # リセット
