@@ -4,7 +4,9 @@
 #
 # @within function asset:mob/0059.jack_o_lantern/tick/4.skill_active
 
-
+#> Private
+# @private
+    #declare tag Landing
 
 # 4tickおきに実行するやつ
 # 実行時間を移す
