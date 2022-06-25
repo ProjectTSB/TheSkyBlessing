@@ -1,4 +1,4 @@
-#> core:tick/player
+#> core:tick/player/
 #
 # プレイヤーに対するtick処理
 #
@@ -6,7 +6,7 @@
 
 #> this
 # @within *
-#   core:tick/player
+#   core:tick/player/
 #   player_manager:vanilla_attack/show_log
 #   asset_manager:sacred_treasure/triggers/**
 #   asset:sacred_treasure/**

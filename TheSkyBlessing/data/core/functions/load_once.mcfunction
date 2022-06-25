@@ -160,7 +160,7 @@ team modify NoCollision collisionRule never
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
-    #   core:tick/*
+    #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
@@ -179,6 +179,15 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+
+    #> PlayerManager - Motionチェック用スコアボード
+    # @within
+    #   function player_manager:pos_diff
+    #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
+        scoreboard objectives add PlayerStopTime dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
