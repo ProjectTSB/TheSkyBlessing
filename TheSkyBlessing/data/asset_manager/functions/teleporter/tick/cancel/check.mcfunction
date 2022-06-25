@@ -9,5 +9,5 @@
 # 地面がなくなったら
     function api:data_get/on_ground
     execute if data storage api: {OnGround:false} run tag @s add TPCancel
-# テレポーターがなくなったら (いらなそう)
+# 動いたら
     execute if predicate lib:is_player_moving run tag @s add TPCancel
