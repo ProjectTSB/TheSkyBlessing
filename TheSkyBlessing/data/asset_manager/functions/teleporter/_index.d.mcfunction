@@ -19,7 +19,7 @@
     #declare tag TPStar
     #declare tag TPStar.White
     #declare tag TPStar.Aqua
-    #declare tag SuppressUntilDeactive
+    #declare tag SuppressTeleport
     #declare tag TPCancel
 
 #> for Init

@@ -11,9 +11,9 @@
     execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
 
 # テレポートのメイン処理
-    execute if entity @s[tag=!SuppressUntilDeactive,predicate=lib:is_sneaking] if entity @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} run function asset_manager:teleporter/tick/active
+    execute if entity @s[tag=!SuppressTeleport,predicate=lib:is_sneaking] if entity @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} run function asset_manager:teleporter/tick/active
 # テレポート後のタグ解除処理
-    execute if entity @s[tag=SuppressUntilDeactive,predicate=!lib:is_sneaking] run tag @s remove SuppressUntilDeactive
+    execute if entity @s[tag=SuppressTeleport,predicate=!lib:is_sneaking] run tag @s remove SuppressTeleport
 # キャンセル処理
     execute if entity @s[tag=TeleporterInit] run function asset_manager:teleporter/tick/cancel/check
     execute if entity @s[tag=TPCancel] run function asset_manager:teleporter/tick/cancel/
