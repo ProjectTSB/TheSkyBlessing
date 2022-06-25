@@ -15,6 +15,6 @@
 # 盲目を消す
     execute as @p[tag=this] run effect clear @s blindness
 # TP後タグ付与
-    execute as @p[tag=this] run tag @s add Teleported
+    execute as @p[tag=this] run tag @s add SuppressUntilDeactive
 # 汎用entityを戻す
     tp @s 0.0 0.0 0.0
