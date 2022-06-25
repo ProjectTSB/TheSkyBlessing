@@ -10,4 +10,4 @@
     function api:data_get/on_ground
     execute if data storage api: {OnGround:false} run tag @s add TPCancel
 # テレポーターがなくなったら (いらなそう)
-    execute unless entity @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run tag @s add TPCancel
+    execute if predicate lib:is_player_moving run tag @s add TPCancel
