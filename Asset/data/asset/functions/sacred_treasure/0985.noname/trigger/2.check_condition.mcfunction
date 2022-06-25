@@ -9,7 +9,7 @@
 # 他にアイテム等確認する場合はここに書く
 
 # コマンド実行中（Timeをもっている）なら実行できない
-    #execute if score @s RD.Time matches 1.. run tag @s remove CanUsed
+    execute if score @s RD.Time matches 1.. run tag @s remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0985.noname/trigger/3.main

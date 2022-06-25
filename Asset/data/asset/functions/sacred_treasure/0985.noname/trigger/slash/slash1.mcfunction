@@ -18,9 +18,11 @@
     data modify entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Rotation[] set from entity @s Rotation[]
 
 # 向き
-    execute store result score @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary run data get entity @p[tag=this] Rotation[1] 1
+    execute store result score @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary run data get entity @s Rotation[1] 1
     execute store result entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Pose.RightArm[2] float -1 run scoreboard players remove @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary 90
     scoreboard players reset @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary
+    tag @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] remove RD.SlashInit
+
 
 # アニメーション開始
     execute unless entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run function asset:sacred_treasure/0985.noname/trigger/slash/slash_schedule
