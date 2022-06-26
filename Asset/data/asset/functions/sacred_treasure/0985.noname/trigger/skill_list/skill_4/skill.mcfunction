@@ -8,9 +8,11 @@
     execute if score @s RD.Time matches 1.. run scoreboard players add @s RD.Time 1
 
 # 剣を振る
-    execute if score @s RD.Time matches 2 anchored eyes run function asset:sacred_treasure/0985.noname/trigger/particle/particle4
+    execute if score @s RD.Time matches 2 anchored eyes positioned ~ ~ ~ run function asset:sacred_treasure/0985.noname/trigger/slash/slash2
     execute if score @s RD.Time matches 2 run function asset:sacred_treasure/0985.noname/trigger/slash
-    execute if score @s RD.Time matches 4 anchored eyes run function asset:sacred_treasure/0985.noname/trigger/particle/particle6
-    execute if score @s RD.Time matches 4 run function asset:sacred_treasure/0985.noname/trigger/slash
+
+
+# 剣を振る
+    execute if score @s RD.Time matches 2 run function asset:sacred_treasure/0985.noname/trigger/sword/sword_summon
 # スコアを消す
     execute if score @s RD.Time matches 10 run function asset:sacred_treasure/0985.noname/trigger/reset
