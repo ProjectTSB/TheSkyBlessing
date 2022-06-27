@@ -10,7 +10,7 @@
     playsound minecraft:block.amethyst_cluster.break hostile @a ~ ~ ~ 4 1.5
 
 # 死亡アニメーションをするためのアマスタを召喚する
-    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["RW.DeathAnimation","RW.DeathInit","Object","Uninterferable"],Pose:{LeftArm:[-20f,0f,-10f],RightArm:[-90f,0f,30f],Head:[-25f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:'minecraft:stick',Count:1b,tag:{CustomModelData:20068}},{id:'minecraft:stick',Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:'minecraft:stick',Count:1b,tag:{CustomModelData:20076}}]}
+    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["RW.DeathAnimation","RW.DeathInit","Object","Uninterferable"],Pose:{LeftArm:[-20f,0f,-10f],RightArm:[-90f,0f,30f],Head:[-25f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20076}}]}
 
 # アマスタに位置をあわせる
     execute as @e[type=armor_stand,tag=RW.ArmorStand,distance=..3,sort=nearest,limit=1] at @s run tp @e[type=armor_stand,tag=RW.DeathInit,distance=..3] ~ ~ ~ ~ ~
