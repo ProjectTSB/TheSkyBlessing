@@ -20,7 +20,7 @@
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-135F,0F],Tags:["R4.SlashSweep","Friend","R4.SlashFinish","R4.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
 
 # 攻撃
-    execute positioned ^ ^ ^1.5 as @e[tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/damage
+    execute positioned ^ ^ ^1.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/damage
 
 # 斬撃を飛ばす
     execute anchored eyes run summon armor_stand ^ ^1.5 ^ {Marker:1b,Invisible:1b,Small:1b,Tags:["R4.SlashShot","R4.SlashShotInit"],Pose:{Head:[0.1f,0f,0.0f]},DisabledSlots:4144959}
