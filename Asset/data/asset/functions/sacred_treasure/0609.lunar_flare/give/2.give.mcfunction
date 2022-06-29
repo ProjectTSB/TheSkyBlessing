@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ルナフレア","color":"#e10643"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"狙った箇所に魔法弾の雨を降らす。","color":"white","color":"white","italic":false}','{"text":"\\"月の裁きを受けてみろ！\\"","color":"gray","italic":false}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"狙った箇所に魔法弾の雨を降らす。","color":"white","color":"white","italic":false}','{"text":"\\"月の裁き\\"","color":"gray","italic":false}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
