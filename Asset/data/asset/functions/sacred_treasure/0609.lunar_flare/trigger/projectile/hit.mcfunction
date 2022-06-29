@@ -6,13 +6,13 @@
 
 
 # 演出
-    particle minecraft:dust 0 0.8 0.8 1 ~ ~-0.5 ~ 1.0 1.0 1.0 0 25 force @a[distance=..30]
-    particle minecraft:dust 0 0.8 0.6 0.8 ~ ~-0.5 ~ 1.0 1.0 1.0 0 25 force @a[distance=..30]
+    particle minecraft:dust 0 0.8 0.8 1 ~ ~-0.5 ~ 1.0 1.0 1.0 0 15 force @a[distance=..30]
+    particle minecraft:dust 0 0.8 0.6 0.8 ~ ~-0.5 ~ 1.0 1.0 1.0 0 15 force @a[distance=..30]
     particle glow ~ ~-0.5 ~ 0.8 0.8 0.8 0 10 force @a[distance=..30]
-    particle explosion ~ ~-0.5 ~ 0 0 0 0 0 force @a[distance=..30]
-    playsound minecraft:entity.blaze.shoot neutral @a ~ ~ ~ 1 1.5
-    playsound minecraft:entity.glow_squid.ambient player @a ~ ~ ~ 1 2
-    playsound minecraft:entity.glow_squid.ambient player @a ~ ~ ~ 1 1.5
+    particle explosion ~ ~-0.5 ~ 0.5 0.2 0.5 0 1 force @a[distance=..30]
+    playsound minecraft:entity.blaze.shoot neutral @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.glow_squid.ambient player @a ~ ~ ~ 2 2
+    playsound minecraft:entity.glow_squid.ambient player @a ~ ~ ~ 2 1.5
 
 # タグ付与
     tag @s add GX.This
@@ -22,9 +22,9 @@
         # 疑似乱数取得
             execute store result score $RandomDamage Temporary run function lib:random/
         # 剰余算する。0~10の追加ダメージ
-          scoreboard players operation $RandomDamage Temporary %= $10 Const
+          scoreboard players operation $RandomDamage Temporary %= $20 Const
         # 最低ダメージ設定
-            scoreboard players add $RandomDamage Temporary 40
+            scoreboard players add $RandomDamage Temporary 60
 
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
