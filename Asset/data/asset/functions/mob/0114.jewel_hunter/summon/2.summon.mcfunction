@@ -16,16 +16,16 @@
     data modify storage asset:mob Name set value '[{"text":"ジ","color":"aqua"},{"text":"ュ","color":"green"},{"text":"エ","color":"yellow"},{"text":"ル","color":"light_purple"},{"text":"ハ","color":"aqua"},{"text":"ン","color":"green"},{"text":"タ","color":"yellow"},{"text":"ー","color":"light_purple"}]'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"gold_block",Count:1b}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20246}}
     # オフハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Offhand set value {id:"emerald_block",Count:1b}
+        data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20247}}
 # 武器ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"diamond_block",Count:1b}
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20248}}
     # 胴 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Chest set value
+        data modify storage asset:mob Armor.Chest set value {id:"minecraft:iron_chestplate",Count:1b}
     # 脚 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Legs set value
     # 足 (Compound(Item)) (オプション)
