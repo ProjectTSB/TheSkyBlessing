@@ -26,8 +26,8 @@
         scoreboard players operation $6H.CurrentHP Temporary /= $6H.MaxHP Temporary
 
 # 体力が30%以下か確認
-    execute if score $6H.CurrentHP Temporary matches 300.. run function asset:sacred_treasure/0233.reversal/trigger/error_message
-    execute if score $6H.CurrentHP Temporary matches 300.. run tag @s remove CanUsed
+    execute if score $6H.CurrentHP Temporary matches 301.. run function asset:sacred_treasure/0233.reversal/trigger/error_message
+    execute if score $6H.CurrentHP Temporary matches 301.. run tag @s remove CanUsed
     scoreboard players reset $6H.MaxHP Temporary
     scoreboard players reset $6H.CurrentHP Temporary
 
