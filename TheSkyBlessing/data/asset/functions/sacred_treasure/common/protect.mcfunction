@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/common/important
+#> asset:sacred_treasure/common/protect
 #
 #
 #
