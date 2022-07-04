@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0120.convict/hurt/1.trigger",
         "asset:mob/0224.pumpkin_ghost/hurt/1.trigger",
         "asset:mob/0216.gray_guardian/hurt/1.trigger",
         "asset:mob/0292.trample_bot/hurt/1.trigger",
