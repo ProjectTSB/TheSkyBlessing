@@ -11,6 +11,9 @@
 # 体力が10以下か確認
     function api:data_get/health
     execute store result score @s Temporary run data get storage api: Health 1
+    sco
+
+    execute if score @s Temporary matches 11.. run function asset:sacred_treasure/0233.reversal/trigger/error_message
     execute if score @s Temporary matches 11.. run tag @s remove CanUsed
     scoreboard players reset @s Temporary
 
