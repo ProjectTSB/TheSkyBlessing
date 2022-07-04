@@ -15,10 +15,7 @@
     #declare score_holder $6H.SetMP
 
 # MP反転
-    execute store result score $6H.MP Temporary run function lib:mp/get
-    execute store result score $6H.SetMP Temporary run function lib:mp/get_max
-    scoreboard players operation $6H.SetMP Temporary -= $6H.MP Temporary
-    function asset:sacred_treasure/0233.reversal/trigger/set_mp
+    execute as @a run function asset:sacred_treasure/0233.reversal/trigger/set_mp
 
 # 演出
     particle minecraft:dust 0.7 0.2 1 1 ~ ~1 ~ 0.2 0.5 0.2 0 50 force @a[distance=..30]
@@ -26,4 +23,5 @@
     playsound minecraft:block.enchantment_table.use player @s ~ ~ ~ 2 0 1
 
 # 後処理
-    scoreboard players reset @s Temporary
+    scoreboard players reset $6H.MP Temporary
+    scoreboard players reset $6H.SetMP Temporary
