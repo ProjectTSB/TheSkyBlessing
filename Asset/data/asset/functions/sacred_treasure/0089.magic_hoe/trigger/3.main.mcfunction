@@ -10,11 +10,11 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle item bone_block ~ ~ ~ 3 3 3 0 50 normal @a
-    particle composter ~ ~ ~ 3 3 3 0 100 normal @a
-    playsound block.pumpkin.carve player @a ~ ~ ~ 1.5 1
+    particle minecraft:item bone_block ~ ~ ~ 5 5 5 0 50 normal @a
+    particle minecraft:happy_villager ~ ~ ~ 5 5 5 0 100 normal @a
+    playsound minecraft:block.pumpkin.carve player @a ~ ~ ~ 1.5 1
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 1.5 1.5
-    
+
 # 処理
     fill ~-6 ~-6 ~-6 ~6 ~6 ~6 wheat[age=7] replace wheat
     fill ~-6 ~-6 ~-6 ~6 ~6 ~6 beetroots[age=3] replace beetroots
