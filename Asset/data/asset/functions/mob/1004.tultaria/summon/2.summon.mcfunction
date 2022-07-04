@@ -63,6 +63,7 @@
 
 # 位置をあわせる
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] @s
+
 # タグを消す
     tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
 

@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0172.icicle/trigger/1.trigger",
+        "asset:sacred_treasure/0796.log4shell/trigger/1.trigger",
+        "asset:sacred_treasure/0952.lunatic_rod/trigger/1.trigger",
+        "asset:sacred_treasure/0368.fire_spell/trigger/1.trigger",
         "asset:sacred_treasure/0877.hungry_uni/trigger/1.trigger",
         "asset:sacred_treasure/0793.queen_bee_rocket/trigger/1.trigger",
         "asset:sacred_treasure/0613.call_fulstuka/trigger/1.trigger",

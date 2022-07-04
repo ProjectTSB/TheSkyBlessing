@@ -13,4 +13,4 @@
     execute positioned ^ ^ ^5 unless entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] run function asset:sacred_treasure/0371.water_spell/trigger/3.1.attack
 
 # 前方に敵が居た場合
-    execute positioned ^ ^ ^5 if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5] as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/0371.water_spell/trigger/3.1.attack
+    execute positioned ^ ^ ^5 as @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/0371.water_spell/trigger/3.1.attack
