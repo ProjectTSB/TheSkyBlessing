@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0054.pumpkin_meteor/0.load",
         "asset:mob/0206.skull_knight/0.load",
         "asset:mob/0216.gray_guardian/0.load",
         "asset:mob/0292.trample_bot/0.load",
