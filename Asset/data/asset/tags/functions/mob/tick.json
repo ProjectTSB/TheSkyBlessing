@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0261.laser_eye_mk2/tick/1.trigger",
         "asset:mob/0120.convict/tick/1.trigger",
         "asset:mob/0054.pumpkin_meteor/tick/1.trigger",
         "asset:mob/0224.pumpkin_ghost/tick/1.trigger",
