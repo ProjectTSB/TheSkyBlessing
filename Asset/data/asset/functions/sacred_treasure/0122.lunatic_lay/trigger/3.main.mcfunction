@@ -17,9 +17,9 @@
         execute at @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run particle crit ~ ~3 ~ 0.025 3 0.025 0 100 normal @a
         playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
     # ダメージ
-        data merge storage lib: {Argument:{Damage:50.0f,AttackType:Magic,ElementType:Thunder}}
+        data merge storage lib: {Argument:{Damage:165.0f,AttackType:Magic,ElementType:Thunder}}
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Hit,distance=..5,limit=1] remove Hit

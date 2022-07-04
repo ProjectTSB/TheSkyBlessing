@@ -12,13 +12,13 @@
 
 # 演出
     execute at @p[tag=Victim] run particle block redstone_block ~ ~1 ~ 0.1 0 0.1 4.2 80
-    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 2 2
-    playsound minecraft:item.trident.thunder player @a ~ ~ ~ 2 2
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 2 2
+    playsound minecraft:item.trident.thunder hostile @a ~ ~ ~ 2 2
 
 
 # 与えるダメージ
-    execute unless entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 25f
-    execute if entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 36f
+    execute unless entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 30f
+    execute if entity @s[tag=4A.Madness] run data modify storage lib: Argument.Damage set value 66f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
@@ -27,4 +27,4 @@
 # 対象
     execute as @p[tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

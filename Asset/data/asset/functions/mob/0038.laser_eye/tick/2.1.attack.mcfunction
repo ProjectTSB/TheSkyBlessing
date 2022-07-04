@@ -14,8 +14,8 @@
     execute if entity @s[scores={C.LaserTime=15}] run tag @s add C.Charge
 
 # 演出
-    execute if entity @s[scores={C.LaserTime=15}] run playsound minecraft:block.beacon.ambient master @a ~ ~ ~ 2 2
-    execute if entity @s[scores={C.LaserTime=15}] run playsound minecraft:block.beacon.ambient master @a ~ ~ ~ 2 2
+    execute if entity @s[scores={C.LaserTime=15}] run playsound minecraft:block.beacon.ambient hostile @a ~ ~ ~ 2 2
+    execute if entity @s[scores={C.LaserTime=15}] run playsound minecraft:block.beacon.ambient hostile @a ~ ~ ~ 2 2
     execute if entity @s[scores={C.LaserTime=15..}] anchored eyes positioned ^ ^ ^1 rotated ~ ~90 run function asset:mob/0038.laser_eye/tick/particle.1
     execute if entity @s[scores={C.LaserTime=15..}] anchored eyes positioned ^ ^ ^1.4 rotated ~ ~90 run function asset:mob/0038.laser_eye/tick/particle.2
 

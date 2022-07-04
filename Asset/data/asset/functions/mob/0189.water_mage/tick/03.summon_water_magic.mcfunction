@@ -10,7 +10,7 @@
     execute if entity @p[gamemode=!spectator,distance=..4] at @p[gamemode=!spectator,distance=..4] run function api:mob/summon
 
 # プレイヤーが4m以上離れている場合、そっちの方向に召喚
-    execute if entity @p[gamemode=!spectator,distance=4..30] facing entity @p[gamemode=!spectator,distance=4..30] feet positioned ^ ^ ^7 run function api:mob/summon
+    execute if data storage api: Argument.ID if entity @p[gamemode=!spectator,distance=4..30] facing entity @p[gamemode=!spectator,distance=4..30] feet positioned ^ ^ ^7 run function api:mob/summon
 
 # 次に攻撃するタイミングをランダムにする
 # 疑似乱数取得

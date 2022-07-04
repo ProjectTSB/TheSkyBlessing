@@ -7,7 +7,7 @@
 # ダメージを与える
 # ダメージ設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 10.0f
+        data modify storage lib: Argument.Damage set value 45.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 雷属性
@@ -16,7 +16,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=2.5..8] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwCMpcAbPQOykC0pAzAKweuVcAjaqwCGAkV1bU4A2aSYoUTEfTAEAdiIC2CZIDDFAAQAmVigD2MKGrAwRGbQGck4c4XUQk1IwRRx3cDGcwADcRbEJdcAAPJAAGAitEWIBfZIJ7UjRCJ0QuAgcIOw8kgjhsbDQYB11qWPiwDDNCiF16tAcAUXLK6o6AR0Iw7CgAZVtfckQAMzDq1IBdIA_3
 # 落雷
@@ -33,6 +33,6 @@
     execute positioned ~-4.33013 ~ ~-2.5 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
     execute positioned ~-2.5 ~ ~-4.33013 run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/5.vfx
 
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.impact master @a ~ ~ ~ 1 0 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0 0

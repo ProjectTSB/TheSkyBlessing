@@ -11,7 +11,7 @@
     execute at @s anchored eyes as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function asset:mob/0021.demon_eye/tick/rotater_tick
 
 # 速さ
-    data modify storage lib: Argument.VectorMagnitude set value 15
+    data modify storage lib: Argument.VectorMagnitude set value 0.15
 
 # 飛ぶのに使う
     execute if data entity @s {HurtTime:0s} at @s anchored eyes rotated as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run function lib:motion/

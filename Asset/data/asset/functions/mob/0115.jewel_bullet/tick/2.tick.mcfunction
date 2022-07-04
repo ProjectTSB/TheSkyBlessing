@@ -9,10 +9,10 @@
 
 # 演出
     particle minecraft:dust 8 1 8 1.5 ~ ~1.2 ~ 0.4 0.4 0.4 1 3 normal @a
-    playsound minecraft:block.amethyst_cluster.step master @a ~ ~ ~ 0.4 1 0
+    playsound minecraft:block.amethyst_cluster.step hostile @a ~ ~ ~ 0.4 1 0
 
 # プレイヤーへのダメージ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,dx=1.5] run function asset:mob/0115.jewel_bullet/tick/3.damage
+    execute positioned ~-0.5 ~ ~-0.5 if entity @a[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0115.jewel_bullet/tick/3.damage
 
 # 移動
     tp @s ^ ^ ^1.5

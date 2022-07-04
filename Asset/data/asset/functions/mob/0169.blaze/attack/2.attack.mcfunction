@@ -6,7 +6,7 @@
 
 # 演出
     execute at @p[gamemode=!spectator,tag=Victim,distance=..32] run particle lava ~ ~0.5 ~ 0.4 0.1 0.4 0 20 normal @a
-    execute at @p[gamemode=!spectator,tag=Victim,distance=..32] run playsound entity.blaze.burn master @a ~ ~ ~ 0.7 1 0
+    execute at @p[gamemode=!spectator,tag=Victim,distance=..32] run playsound entity.blaze.burn hostile @a ~ ~ ~ 0.7 1 0
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 5f
@@ -18,4 +18,4 @@
 # 対象
     execute as @p[gamemode=!spectator,tag=Victim,distance=..32] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

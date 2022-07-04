@@ -19,8 +19,8 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run effect give @s minecraft:weakness 10 0
 
 # ダメージ設定
-    # 与えるダメージ = 8
-        data modify storage lib: Argument.Damage set value 28.0f
+    # 与えるダメージ = 80
+        data modify storage lib: Argument.Damage set value 80.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 
@@ -28,4 +28,4 @@
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

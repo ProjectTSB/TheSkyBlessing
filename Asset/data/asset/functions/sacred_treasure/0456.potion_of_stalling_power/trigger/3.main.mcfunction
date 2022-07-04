@@ -17,7 +17,7 @@
     # ダメージを与える
         execute as @s[scores={CO.Tick=1..}] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # 演出
     execute if entity @s[scores={CO.Tick=1..}] run particle minecraft:dragon_breath ~ ~1 ~ 0.1 0.1 0.1 0.03 100
