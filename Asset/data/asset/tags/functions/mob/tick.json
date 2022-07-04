@@ -1,6 +1,12 @@
 {
     "values": [
         "asset:mob/0120.convict/tick/1.trigger",
+        "asset:mob/0054.pumpkin_meteor/tick/1.trigger",
+        "asset:mob/0224.pumpkin_ghost/tick/1.trigger",
+        "asset:mob/0206.skull_knight/tick/1.trigger",
+        "asset:mob/0216.gray_guardian/tick/1.trigger",
+        "asset:mob/0292.trample_bot/tick/1.trigger",
+        "asset:mob/0286.456_dice_entity/tick/1.trigger",
         "asset:mob/0255.dependence_eye/tick/1.trigger",
         "asset:mob/0202.hunters_dream/tick/1.trigger",
         "asset:mob/0046.clock_of_despair/tick/1.trigger",
