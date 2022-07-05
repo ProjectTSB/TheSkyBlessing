@@ -7,4 +7,5 @@
 #> 定義類はここに
 # @within function asset:mob/1004.tultaria/**/**
     scoreboard objectives add RW.Tick dummy
+    scoreboard objectives add RW.DeathExplode dummy
     scoreboard objectives add RW.HealthMax dummy

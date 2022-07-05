@@ -16,14 +16,14 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
-# プレイヤーのタグ管理
-    execute as @a run function player_manager:manage_tag/
+# プレイヤー事前処理
+    execute as @a at @s run function core:tick/player/pre
 
 # 神器のグローバルtick処理
     function asset_manager:sacred_treasure/tick/
 
 # プレイヤー処理部
-    execute as @a at @s run function core:tick/player
+    execute as @a at @s run function core:tick/player/
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
@@ -33,6 +33,9 @@
 
 # スポナー処理部
     execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
+
+# テレポーター
+    function asset_manager:teleporter/tick/global
 
 # ワールドギミック
     function world_manager:gimmick/
@@ -53,7 +56,7 @@
     execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick
 
 # tick処理後のプレイヤー処理部
-    execute as @a at @s run function core:tick/post-tick-proc_player
+    execute as @a at @s run function core:tick/player/post
 
 # 攻撃元/先の紐づけをリセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
