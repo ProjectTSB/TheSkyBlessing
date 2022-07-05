@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/_index.d.mcfunction
+#> asset:sacred_treasure/0973.call_rod_spirit/trigger/_index.d
 # @private
 
 #> tags
