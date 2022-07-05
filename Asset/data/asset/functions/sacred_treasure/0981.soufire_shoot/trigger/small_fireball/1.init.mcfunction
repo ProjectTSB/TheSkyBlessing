@@ -9,10 +9,10 @@
 #declare tag SpreadMarker
 
 # IDコピー
-    scoreboard players operation @s R9.UserID = @e[type=armor_stand,tag=R9.BigFireball,tag=R9.CopyBase,sort=nearest,limit=1] R9.UserID
+    scoreboard players operation @s R9.UserID = @e[type=armor_stand,tag=R9.BigFireball,tag=R9.CopyBase,distance=..2,sort=nearest,limit=1] R9.UserID
 
 # 向き揃える
-    data modify entity @s Rotation set from entity @e[type=armor_stand,tag=R9.BigFireball,tag=R9.CopyBase,sort=nearest,limit=1] Rotation
+    data modify entity @s Rotation set from entity @e[type=armor_stand,tag=R9.BigFireball,tag=R9.CopyBase,distance=..2,sort=nearest,limit=1] Rotation
 
 # ステータス設定
     # 速度と飛距離
@@ -27,13 +27,13 @@
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 
 # 拡散
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker,distance=..20,limit=1] run function lib:forward_spreader/circle
 
 # マーカーの方を向く
     execute facing entity @e[type=marker,tag=SpreadMarker,distance=..20,sort=nearest,limit=1] eyes run tp @s ~ ~ ~ ~ ~5
 
 # リセット
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..20]
 
 # タグ削除
     tag @s remove R9.Init
