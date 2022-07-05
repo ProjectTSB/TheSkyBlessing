@@ -13,7 +13,7 @@
     function asset:sacred_treasure/0973.call_rod_spirit/trigger/4.summon_spirit
 
 # 精霊Init
-    execute as @e[type=armor_stand,tag=R1.SpiritInit] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/1.init
+    execute as @e[type=armor_stand,tag=R1.SpiritInit,distance=..0.5] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/1.init
 
 # 音とパーティクル
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 1.75
@@ -22,4 +22,4 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # 精霊さんを動かす
-    function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/2.tick
+    schedule function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/2.tick 1t
