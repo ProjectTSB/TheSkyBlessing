@@ -1,0 +1,42 @@
+compound AssetTeleporter {
+   /// テレポーターの定義データ
+   Teleporters: [GroupData]
+   /// テレポーターのIDとOyMyDatIDのMap
+   TeleporeterOMDMap: [IDPair]
+}
+
+compound GroupData {
+   /// 識別ID
+   ID: int,
+   /// 所属グループID
+   GroupID: string,
+   /// 座標
+   Pos: [double] @ 3,
+   /// メタデータ
+   Data: TeleporterMetaData
+}
+
+compound TeleporterMetaData {
+   /// そのテレポーターが起動しているか
+   ActivationState: ActivationState,
+   /// テレポーターを星として見た時の色 default: White
+   Color?: StarColor
+}
+
+enum(string) ActivationState {
+   InvisibleDeactivate = "InvisibleDeactivate",
+   VisibleDeactivate = "VisibleDeactivate",
+   Activate = "Activate"
+}
+
+enum(string) StarColor {
+   White = "white",
+   Yellow = "yellow"
+}
+
+compound IDPair {
+    TeleporterID: int
+    OyMyDatID: int
+}
+
+AssetTeleporter describes minecraft:storage[asset:teleporter]

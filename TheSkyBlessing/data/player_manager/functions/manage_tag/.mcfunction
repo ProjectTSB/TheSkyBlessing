@@ -2,7 +2,7 @@
 #
 # プレイヤーのタグ管理を行う
 #
-# @within function core:tick/
+# @within function core:tick/player/pre
 
 # PlayerShouldInvulnerable
     tag @s[tag=PlayerShouldInvulnerable] remove PlayerShouldInvulnerable
