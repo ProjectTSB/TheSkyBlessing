@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/boss/main_task
+#> asset_manager:island/dispel/boss/watcher
 #
 #
 #
