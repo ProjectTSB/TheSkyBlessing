@@ -25,7 +25,6 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1.5 2
 
 # リセット
-    scoreboard players reset $Random Temporary
     scoreboard players reset @s R1.Tick
 
     tag @s remove R1.IDCopyBase
