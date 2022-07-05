@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/watcher
+# @within function asset_manager:island/tick/
 
 #>
 # @private
