@@ -12,20 +12,20 @@
 #declare tag R1.OwnerPlayer
 
 # 同IDのプレイヤーを特定
-    execute at @a[distance=..30] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
+    execute at @a[distance=..60] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
 
 # マスターにMarkerを召喚する
-    execute at @p[tag=R1.OwnerPlayer,distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
+    execute at @p[tag=R1.OwnerPlayer,distance=..60] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
 
 # MarkerにID付与
-    scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,distance=..30,sort=nearest,limit=1] R1.UserID = @s R1.UserID
-    tag @e[type=marker,tag=R1.MoveMarkerInit,distance=..30,sort=nearest,limit=1] remove R1.MoveMarkerInit
+    scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,distance=..60,sort=nearest,limit=1] R1.UserID = @s R1.UserID
+    tag @e[type=marker,tag=R1.MoveMarkerInit,distance=..60,sort=nearest,limit=1] remove R1.MoveMarkerInit
 
 # 同IDのマーカーを特定
-    execute at @e[type=marker,tag=R1.MoveMarker,distance=..30] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] add R1.OwnerMarker
+    execute at @e[type=marker,tag=R1.MoveMarker,distance=..60] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] add R1.OwnerMarker
 
 # マスターのマーカーに誘導移動
-    execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=1..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
+    execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=1..60,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
 
 # マーカーが近づいたらゆっくりと向かう
     execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=0.5..1,limit=1] eyes run tp @s ^ ^ ^0.1
@@ -41,7 +41,7 @@
         execute if entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] run item replace entity @s armor.head with stick{CustomModelData:20229}
 
 # パーティクル
-    execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..30]
+    execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..60]
     execute rotated ~ 0 run particle minecraft:dust 0.592 0.722 0.918 1 ^ ^ ^-0.2 0.1 0.1 0.1 0 1
     execute if predicate lib:random_pass_per/30 rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^ ^-0.2 0.1 0.1 0.1 0 1
 
@@ -58,6 +58,9 @@
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.Tick
     execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.ShotCount
+
+# 離れ過ぎると消える
+    execute unless entity @e[type=marker,tag=R1.OwnerMarker,distance=..60,limit=1] run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/5.disapper
 
 # ヘルス
     scoreboard players remove @s R1.LifeTime 1
