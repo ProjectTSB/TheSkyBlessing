@@ -25,4 +25,4 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # 精霊さんを動かす
-    schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick 1t
+    schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick 1t replace
