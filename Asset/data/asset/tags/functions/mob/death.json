@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:mob/0261.laser_eye_mk2/death/1.trigger",
+        "asset:mob/0120.convict/death/1.trigger",
+        "asset:mob/0216.gray_guardian/death/1.trigger",
+        "asset:mob/0292.trample_bot/death/1.trigger",
         "asset:mob/0255.dependence_eye/death/1.trigger",
         "asset:mob/0254.headless/death/1.trigger",
         "asset:mob/0253.parasitic_soldiers/death/1.trigger",

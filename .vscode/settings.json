@@ -1960,5 +1960,8 @@
         "**/.settings": true,
         "desktop.ini": true
     },
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "githubIssues.ignoreUserCompletionTrigger": [
+        "mcfunction"
+    ]
 }

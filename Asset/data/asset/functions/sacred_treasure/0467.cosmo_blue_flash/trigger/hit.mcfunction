@@ -2,7 +2,7 @@
 #
 # 着弾処理
 #
-# @within function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+# @within function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/3.main
 
 # 演出
     particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.5 0.5 0.1 100 force
@@ -17,3 +17,4 @@
 
 # リセット
     function lib:damage/reset
+    tag @s remove CZ.HitEntity

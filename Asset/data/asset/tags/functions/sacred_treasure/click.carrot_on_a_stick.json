@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0233.reversal/trigger/1.trigger",
+        "asset:sacred_treasure/0172.icicle/trigger/1.trigger",
         "asset:sacred_treasure/0796.log4shell/trigger/1.trigger",
         "asset:sacred_treasure/0952.lunatic_rod/trigger/1.trigger",
         "asset:sacred_treasure/0368.fire_spell/trigger/1.trigger",

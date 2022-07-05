@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 #> Temp
 # @private

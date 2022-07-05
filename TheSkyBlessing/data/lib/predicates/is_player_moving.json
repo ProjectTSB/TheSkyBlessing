@@ -1,0 +1,9 @@
+{
+    "condition": "entity_scores",
+    "entity": "this",
+    "scores": {
+        "PlayerStopTime": {
+            "max": 2
+        }
+    }
+}
