@@ -32,4 +32,4 @@
     tag @s add R1.Shot
 
 # リセット
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..20]
