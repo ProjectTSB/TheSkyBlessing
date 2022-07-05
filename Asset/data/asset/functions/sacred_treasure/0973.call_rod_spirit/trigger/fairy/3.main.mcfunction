@@ -15,14 +15,14 @@
     execute at @a[distance=..30] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
 
 # マスターにMarkerを召喚する
-    execute at @p[tag=R1.OwnerPlayer,distance=..100] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
+    execute at @p[tag=R1.OwnerPlayer,distance=..30] rotated ~ 0 run summon marker ^-1 ^1 ^-1 {Tags:[R1.MoveMarker,R1.MoveMarkerInit]}
 
 # MarkerにID付与
-    scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,distance=..100,sort=nearest,limit=1] R1.UserID = @s R1.UserID
-    tag @e[type=marker,tag=R1.MoveMarkerInit,distance=..100,sort=nearest,limit=1] remove R1.MoveMarkerInit
+    scoreboard players operation @e[type=marker,tag=R1.MoveMarkerInit,distance=..30,sort=nearest,limit=1] R1.UserID = @s R1.UserID
+    tag @e[type=marker,tag=R1.MoveMarkerInit,distance=..30,sort=nearest,limit=1] remove R1.MoveMarkerInit
 
 # 同IDのマーカーを特定
-    execute at @e[type=marker,tag=R1.MoveMarker,distance=..100] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] add R1.OwnerMarker
+    execute at @e[type=marker,tag=R1.MoveMarker,distance=..30] if score @s R1.UserID = @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] R1.UserID run tag @e[type=marker,tag=R1.MoveMarker,distance=..0.01,sort=nearest,limit=1] add R1.OwnerMarker
 
 # マスターのマーカーに誘導移動
     execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=1..30,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.23 ~ ~
