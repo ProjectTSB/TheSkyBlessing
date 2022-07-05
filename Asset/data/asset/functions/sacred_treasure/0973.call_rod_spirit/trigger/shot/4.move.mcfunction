@@ -26,7 +26,7 @@
     execute if entity @s[scores={R1.Range=0}] run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/6.break
 
 # モブに接触
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/5.hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/5.hit
 
 # 再帰
     execute if entity @s[scores={R1.MoveTimesPerTick=1..,R1.Range=1..}] at @s run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/4.move
