@@ -57,7 +57,7 @@
 #> 汎用タグ類
 # @within function
 #   asset_manager:mob/common_tag/*
-#   asset:mob/*/*/**
+#   asset:**
     #declare tag AntiFallDamage
     #declare tag AntiVoid
     #declare tag AntiBurn
