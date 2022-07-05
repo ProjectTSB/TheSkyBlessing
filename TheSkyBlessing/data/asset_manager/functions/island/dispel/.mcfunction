@@ -18,7 +18,7 @@
     execute if score $Temp Temporary matches 0 at @p[predicate=lib:is_sneaking,distance=..2] facing entity @s feet run function asset_manager:island/dispel/vfx/dispelling
 
 # 座標が変わってる場合はリセット
-    execute unless predicate lib:is_player_moving run function asset_manager:island/dispel/cancelled
+    execute if predicate lib:is_player_moving run function asset_manager:island/dispel/cancelled
 
 # 過去にボスが召喚されている場合すぐに召喚する
     execute if score @s DispelTime matches 30 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData{HasBoss:true,DispelPhase:1b} at @p[predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/boss/
