@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0233.reversal/trigger/0.load",
+        "asset:sacred_treasure/0172.icicle/trigger/0.load",
         "asset:sacred_treasure/0952.lunatic_rod/trigger/0.load",
         "asset:sacred_treasure/0793.queen_bee_rocket/trigger/0.load",
         "asset:sacred_treasure/0870.samurai_blade/trigger/0.load",
