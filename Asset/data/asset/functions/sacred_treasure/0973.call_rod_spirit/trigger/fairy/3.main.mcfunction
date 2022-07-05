@@ -30,15 +30,18 @@
 # マーカーが近づいたらゆっくりと向かう
     execute facing entity @e[type=marker,tag=R1.OwnerMarker,distance=0.5..1,limit=1] eyes run tp @s ^ ^ ^0.1
 
+# 付近に敵がいたら攻撃モードへと移行
+    execute if entity @e[type=#lib:living,tag=Enemy,distance=..15] run tag @s add R1.AttackMode
+
 # 付近に敵がいたらそっちへの攻撃を優先
-    execute facing entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
+    execute facing entity @e[type=#lib:living,tag=Enemy,distance=..15,sort=nearest,limit=1] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.05 ~ ~
 
 # ポーズ
     # (待機)
-        execute unless entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] run item replace entity @s armor.head with stick{CustomModelData:20236}
+        item replace entity @s[tag=!R1.AttackMode] armor.head with stick{CustomModelData:20236}
 
     # (射撃)
-        execute if entity @e[tag=Enemy,distance=..15,sort=nearest,limit=1] run item replace entity @s armor.head with stick{CustomModelData:20229}
+        item replace entity @s[tag=R1.AttackMode] armor.head with stick{CustomModelData:20229}
 
 # パーティクル
     execute rotated ~ 0 run particle minecraft:dust 1 1 1 0.5 ^ ^ ^-0.2 0.07 0.07 0.07 0 1 force @a[distance=..60]
@@ -46,7 +49,7 @@
     execute if predicate lib:random_pass_per/30 rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^ ^-0.2 0.1 0.1 0.1 0 1
 
 # 付近に敵がいるならスコア加算
-    execute if entity @e[tag=Enemy,distance=..15] run scoreboard players add @s R1.Tick 1
+    scoreboard players add @s[tag=R1.AttackMode] R1.Tick 1
 
 # 魔法攻撃
     execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.8 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
@@ -56,8 +59,8 @@
     execute if entity @s[scores={R1.ShotCount=3..}] run scoreboard players reset @s R1.ShotCount
 
 # 付近に敵がいないならスコアリセット
-    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.Tick
-    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s R1.ShotCount
+    scoreboard players reset @s[tag=!R1.AttackMode] R1.Tick
+    scoreboard players reset @s[tag=!R1.AttackMode] R1.ShotCount
 
 # 離れ過ぎると消える
     execute unless entity @e[type=marker,tag=R1.OwnerMarker,distance=..60,limit=1] run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/5.disapper
@@ -69,3 +72,4 @@
 # リセット
     kill @e[type=marker,tag=R1.MoveMarker]
     tag @a[tag=R1.OwnerPlayer] remove R1.OwnerPlayer
+    tag @s[tag=R1.AttackMode] remove R1.AttackMode
