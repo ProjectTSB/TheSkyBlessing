@@ -22,6 +22,12 @@
 #   asset_manager:mob/**
     #declare tag AssetMob
 
+#> MobAsset以外のEntityにCommonTagを実行させるためのタグ
+# @within function
+#   core:tick/
+#   asset:**
+    #declare tag AllowProcessingCommonTag
+
 #> this
 # @within *
 #   asset_manager:mob/triggers/
