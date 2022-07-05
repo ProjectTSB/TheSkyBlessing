@@ -19,7 +19,7 @@
     execute at @a if score @s 87.UserID = @p UserID as @p run function lib:damage/modifier
 
 # ダメージ実行
-    execute as @e[tag=Enemy,tag=!Uninterferable,sort=nearest,limit=1] run function lib:damage/
+    execute as @e[tag=Enemy,tag=!Uninterferable,distance=..3,sort=nearest,limit=1] run function lib:damage/
 
 # リセット
     function lib:damage/reset

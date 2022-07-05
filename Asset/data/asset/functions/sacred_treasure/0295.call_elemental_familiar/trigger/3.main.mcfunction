@@ -15,7 +15,7 @@
     execute rotated ~ 0 run summon armor_stand ^-2 ^ ^ {Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["87.FamiliarInit","Friend"]}
 
 # 精霊Init
-    execute as @e[type=armor_stand,tag=87.FamiliarInit] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
+    execute as @e[type=armor_stand,tag=87.FamiliarInit,distance=..5] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
 
 # 音とパーティクル
     playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2
@@ -25,4 +25,4 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
 # 精霊さんを動かす
-    function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick
+    schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick 1t

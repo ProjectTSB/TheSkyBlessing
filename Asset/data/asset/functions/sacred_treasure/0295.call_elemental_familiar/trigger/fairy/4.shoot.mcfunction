@@ -14,7 +14,7 @@
     execute if entity @s[tag=87.FamiliarWater] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotWater"]}
 
 # ショットのInit発動
-    execute as @e[type=armor_stand,tag=87.ShotInit] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/1.init
+    execute as @e[type=armor_stand,tag=87.ShotInit,distance=..0.01] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/1.init
 
 # scheduleループ開始
     function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick
