@@ -8,8 +8,8 @@
     function asset:sacred_treasure/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
-    playsound minecraft:block.anvil.place player @a ~ ~ ~ 1 1.5
-    playsound minecraft:entity.player.attack.sweep player @a ~ ~ ~ 1 1.5
+    playsound ogg:block.smithing_table.smithing_table2 player @a ~ ~ ~ 1 1.6
+    playsound minecraft:item.armor.equip_iron player @a ~ ~ ~ 1 1
     particle crit ~ ~1 ~ 0 0 0 0.5 10
 
 # 補正を追加
