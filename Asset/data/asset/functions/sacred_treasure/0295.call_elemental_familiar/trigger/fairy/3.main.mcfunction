@@ -48,13 +48,13 @@
     execute if entity @s[tag=87.FamiliarWater] positioned ^ ^ ^-0.3 run particle dust 0 0.667 1 0.7 ~ ~0.8 ~ 0.1 0.1 0.1 0 1 force @a[distance=..40]
 
 # 付近に敵がいるならスコア増やす
-    execute if entity @e[tag=Enemy,distance=..10] run scoreboard players add @s 87.Tick 1
+    execute if entity @e[tag=Enemy,distance=..15] run scoreboard players add @s 87.Tick 1
 
 # 魔法攻撃
     execute if entity @s[scores={87.Tick=20..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
 
 # 付近に敵がいないならスコアリセット
-    execute unless entity @e[tag=Enemy,distance=..10] run scoreboard players reset @s 87.Tick
+    execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s 87.Tick
 
 # 存在時間
     scoreboard players remove @s 87.LifeTime 1
