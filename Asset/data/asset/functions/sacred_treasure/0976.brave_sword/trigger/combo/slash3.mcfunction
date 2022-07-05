@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.blue_heaven/trigger/combo/slash3
+#> asset:sacred_treasure/0976.brave_sword/trigger/combo/slash3
 #
 #
 #
-# @within function asset:sacred_treasure/0976.blue_heaven/trigger/3.main
+# @within function asset:sacred_treasure/0976.brave_sword/trigger/3.main
 
 # 演出
     playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.8
@@ -20,12 +20,12 @@
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-135F,0F],Tags:["R4.SlashSweep","Friend","R4.SlashFinish","R4.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,145.0f,0.1f]},DisabledSlots:4144959}
 
 # 攻撃
-    execute positioned ^ ^ ^1.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.blue_heaven/trigger/combo/damage
+    execute positioned ^ ^ ^1.5 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.brave_sword/trigger/combo/damage
 
 # 斬撃を飛ばす
     execute anchored eyes run summon armor_stand ^ ^1.5 ^ {Marker:1b,Invisible:1b,Small:1b,Tags:["R4.SlashShot","R4.SlashShotInit"],Pose:{Head:[0.1f,0f,0.0f]},DisabledSlots:4144959}
-    execute as @e[type=armor_stand,tag=R4.SlashShotInit] at @s run function asset:sacred_treasure/0976.blue_heaven/trigger/slash_shot/init
-    schedule function asset:sacred_treasure/0976.blue_heaven/trigger/slash_shot/1.tick 1t replace
+    execute as @e[type=armor_stand,tag=R4.SlashShotInit] at @s run function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/init
+    schedule function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/1.tick 1t replace
 
 # しばらく撃てなくなる
     tag @s add R4.FinishCoolTime

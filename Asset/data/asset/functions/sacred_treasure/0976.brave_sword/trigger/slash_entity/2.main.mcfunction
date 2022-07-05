@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/2.main
+#> asset:sacred_treasure/0976.brave_sword/trigger/slash_entity/2.main
 #
 #
 #
-# @within function asset:sacred_treasure/0976.blue_heaven/trigger/slash_entity/1.tick
+# @within function asset:sacred_treasure/0976.brave_sword/trigger/slash_entity/1.tick
 
 # 同IDのプレイヤーを特定
     execute at @a[distance=..10] if score @s R4.UserID = @p UserID run tag @p add R4.OwnerPlayer

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.blue_heaven/trigger/combo/3.reset_combo
+#> asset:sacred_treasure/0976.brave_sword/trigger/combo/3.reset_combo
 #
 #
 #
-# @within function asset:sacred_treasure/0976.blue_heaven/trigger/combo/2.main
+# @within function asset:sacred_treasure/0976.brave_sword/trigger/combo/2.main
 
 tag @s remove R4.FinishCoolTime
 playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1 2
