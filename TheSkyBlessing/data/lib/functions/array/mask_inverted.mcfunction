@@ -21,7 +21,7 @@
 
 # 移行する
     data modify storage lib: CopiedArray set from storage lib: Array
-    data remove storage lib: Array
+    data modify storage lib: Array set value []
 
 # 再帰的に動かす
     execute if data storage lib: CopiedArray[0] if data storage lib: Masks[0] run function lib:array/core/mask_inverted
