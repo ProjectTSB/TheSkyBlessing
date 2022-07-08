@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value 
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Rumor"]
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3.0,Operation:0,UUID:[I;1,1,913,3],Slot:"feet"},{AttributeName:"generic.armor",Name:"generic.armor",Amount:3.0,Operation:0,UUID:[I;1,1,914,3],Slot:"feet"}]}
 

@@ -23,7 +23,7 @@
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 0
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value "ALL"
+    data modify storage asset:sacred_treasure CanUsedGod set value []
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
