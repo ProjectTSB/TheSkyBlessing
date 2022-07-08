@@ -2,7 +2,7 @@
 #
 # MPの再生クールダウンを減少させ、クールダウンのチェックを行う
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # 回復してからの時間を加算
     scoreboard players add @s MPRegenCooldown 1

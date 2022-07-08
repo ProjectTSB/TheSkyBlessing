@@ -36,11 +36,11 @@
 
     # 体力回復量補正に水攻撃補正を掛ける
         data modify storage api: Argument.UUID set value [I;1,1,907,0]
-        data modify storage api: Argument.Operation set value "multiply_base"
+        data modify storage api: Argument.Operation set value "multiply"
         execute as @p[tag=P8.Owner] run function api:player_modifier/heal/add
 
     # 範囲内のプレイヤーを回復
-        data modify storage lib: Argument.Heal set value 20.0f
+        data modify storage lib: Argument.Heal set value 12.0f
         execute as @p[tag=P8.Owner] run function lib:heal/modifier
         execute as @a[tag=P8.TargetEntity,distance=..10] run function lib:heal/
 

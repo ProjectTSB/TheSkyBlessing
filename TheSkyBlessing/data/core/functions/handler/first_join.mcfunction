@@ -2,7 +2,7 @@
 #
 # 初回Join時に実行される
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 #> UserIDのIndex
 # @private

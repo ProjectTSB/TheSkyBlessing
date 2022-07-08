@@ -495,6 +495,8 @@
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
                         "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -654,6 +656,8 @@
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
                         "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -1956,5 +1960,8 @@
         "**/.settings": true,
         "desktop.ini": true
     },
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "githubIssues.ignoreUserCompletionTrigger": [
+        "mcfunction"
+    ]
 }

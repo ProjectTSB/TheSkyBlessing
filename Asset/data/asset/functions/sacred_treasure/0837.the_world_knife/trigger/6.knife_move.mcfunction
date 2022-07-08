@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:sacred_treasure/0837.the_world_knife/trigger/4.tick
+
+#> private
+# @private
     #declare tag Landing
 
 # スコアを増やし続ける
