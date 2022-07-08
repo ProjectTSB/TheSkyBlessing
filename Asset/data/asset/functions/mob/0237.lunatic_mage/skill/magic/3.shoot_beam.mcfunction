@@ -30,4 +30,4 @@
     function lib:damage/reset
 
 # Tag削除
-    tag @a[tag=Landing,distance=..60] remove LandingTarget
+    tag @a[tag=LandingTarget,distance=..60] remove LandingTarget
