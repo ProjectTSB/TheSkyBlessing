@@ -2,7 +2,7 @@
 #
 # スニークトリガー用スコアボードをすべてリセットします
 #
-# @within function core:tick/post-tick-proc_player
+# @within function core:tick/player/post
 
 scoreboard players reset @s Sneak.Mainhand
 scoreboard players reset @s Sneak.Offhand
