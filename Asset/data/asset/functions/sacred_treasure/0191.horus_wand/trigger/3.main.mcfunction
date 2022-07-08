@@ -14,7 +14,7 @@
     playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
 
 # 回復
-    data modify storage lib: Argument.Heal set value 12f
+    data modify storage lib: Argument.Heal set value 25f
     function lib:heal/modifier
     execute as @a[distance=..15] run function lib:heal/
 
