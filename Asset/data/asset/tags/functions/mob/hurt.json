@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0237.lunatic_mage/hurt/1.trigger",
         "asset:mob/0261.laser_eye_mk2/hurt/1.trigger",
         "asset:mob/0120.convict/hurt/1.trigger",
         "asset:mob/0224.pumpkin_ghost/hurt/1.trigger",

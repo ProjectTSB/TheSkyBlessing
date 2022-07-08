@@ -7,8 +7,8 @@
 #   asset:mob/0188.fireball/tick/move
 
 # パーティクル
-    particle flame ~ ~ ~ 0.25 0.25 0.25 0.005 1
-    particle dust 1 0.5 0 1 ~ ~ ~ 0 0 0 0 1
+    particle flame ~ ~ ~ 0.1 0.1 0.1 0.005 1
+    particle dust 1 0.5 0 1 ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]
 
 # 前進
     execute if entity @s[scores={58.Recursive=1..,58.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
