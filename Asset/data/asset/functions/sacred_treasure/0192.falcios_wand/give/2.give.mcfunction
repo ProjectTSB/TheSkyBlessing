@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 40
+    data modify storage asset:sacred_treasure MPCost set value 75
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
