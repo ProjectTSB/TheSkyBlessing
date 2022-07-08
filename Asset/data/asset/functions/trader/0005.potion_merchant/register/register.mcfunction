@@ -35,6 +35,26 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:6b}
     data modify storage asset:trader Trades[-1].Sell set value 138
 
+# 取引 ネクター
+    data modify storage asset:trader Trades append value {}
+        data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:1b}
+        data modify storage asset:trader Trades[-1].Sell set value 143
+
+# 取引 ハイネクター
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:3b}
+    data modify storage asset:trader Trades[-1].Sell set value 144
+
+# 取引 アウレネクター
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:6b}
+    data modify storage asset:trader Trades[-1].Sell set value 145
+
+# 取引 ミスティカネクター
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:15b}
+    data modify storage asset:trader Trades[-1].Sell set value 146
+
 # 取引 ソーマ
     data modify storage asset:trader Trades append value {}
         data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:1b}
