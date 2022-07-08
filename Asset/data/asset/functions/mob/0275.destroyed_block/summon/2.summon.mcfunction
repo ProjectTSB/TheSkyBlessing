@@ -7,7 +7,7 @@
 #   asset:mob/0273.hell_blade/break
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Tags:["7N.Init","MobInit"],Small:1b,NoGravity:1b,Marker:1b,Invisible:1b}
+    summon armor_stand ~ ~ ~ {Tags:["MobInit"],Small:1b,NoGravity:1b,Marker:1b,Invisible:1b}
 # ID (int)
     data modify storage asset:mob ID set value 275
 # Type (string) Wikiを参照
@@ -59,6 +59,9 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
+
+# MobInitタグ持ちを対象にして専用のinit処理
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/0275.destroyed_block/summon/init
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
