@@ -8,4 +8,4 @@
 # @within function asset:mob/0237.lunatic_mage/**
     scoreboard objectives add 6L.Tick dummy
     scoreboard objectives add 6L.Invisible dummy
-    scoreboard objectives add 6L.Count dummy
+    scoreboard objectives add 6L.TeleportCount dummy

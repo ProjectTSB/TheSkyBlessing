@@ -22,4 +22,4 @@
 
 # 色々リセット
     scoreboard players set @s 6L.Tick -10
-    scoreboard players reset @s 6L.Count
+    scoreboard players reset @s 6L.TeleportCount

@@ -19,7 +19,7 @@
     item replace entity @s armor.head with stick{CustomModelData:20198}
 
 # 本気ワープのスコア
-    execute if entity @s[tag=6L.HealthLess40Per] run scoreboard players add @s 6L.Count 1
+    execute if entity @s[tag=6L.HealthLess40Per] run scoreboard players add @s 6L.TeleportCount 1
 
 # ワープ
-    execute if entity @s[scores={6L.Count=2..}] run function asset:mob/0237.lunatic_mage/skill/teleport/main
+    execute if entity @s[scores={6L.TeleportCount=2..}] run function asset:mob/0237.lunatic_mage/skill/teleport/main
