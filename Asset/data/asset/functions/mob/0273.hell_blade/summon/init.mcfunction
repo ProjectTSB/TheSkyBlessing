@@ -1,8 +1,8 @@
-#> asset:mob/0273.hell_blade/init
+#> asset:mob/0273.hell_blade/summon/init
 #
+# 召喚時のinit処理
 #
-#
-# @within function asset:mob/0273.hell_blade/tick/2.tick
+# @within function asset:mob/0273.hell_blade/summon/2.summon
 
 # 向きを90°刻みのランダムに
     # 疑似乱数取得
@@ -17,9 +17,6 @@
 
 # 落下のタグを付ける
     tag @s add 7L.Fall
-
-# タグ消し
-    tag @s remove 7L.Init
 
 # スコアリセット
     scoreboard players set @s 7L.RotateTimer 0
