@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
+
+#> private
+# @private
     #declare tag N9.This
     #declare tag N9.Target
 

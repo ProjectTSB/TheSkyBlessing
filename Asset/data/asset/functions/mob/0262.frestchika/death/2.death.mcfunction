@@ -15,5 +15,15 @@
 # もともといるアマスタには死んでもらう(複数召喚されてる場合、もし巻き込まれても大丈夫)
     kill @e[type=armor_stand,tag=7A.ArmorStand]
 
+# ボスドロ
+    data modify storage api: Argument.ID set value 613
+    data modify storage api: Argument.Important set value true
+    function api:sacred_treasure/spawn/from_id
+
+# ボスドロ
+    data modify storage api: Argument.ID set value 948
+    data modify storage api: Argument.Important set value true
+    function api:sacred_treasure/spawn/from_id
+
 # スケジュールループを開始する
     schedule function asset:mob/0262.frestchika/death/schedule 1t
