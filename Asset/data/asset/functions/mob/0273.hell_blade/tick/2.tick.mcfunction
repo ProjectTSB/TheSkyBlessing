@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0273.hell_blade/tick/1.trigger
 
-# Init処理
-    execute at @s[tag=7L.Init] run function asset:mob/0273.hell_blade/init
-
 # 移動
     execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 0..3 run function asset:mob/0273.hell_blade/move/
 

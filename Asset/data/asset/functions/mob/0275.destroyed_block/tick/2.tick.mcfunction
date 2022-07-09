@@ -4,10 +4,6 @@
 #
 # @within function asset:mob/0275.destroyed_block/tick/1.trigger
 
-
-# Init処理
-    execute at @s[tag=7N.Init] run function asset:mob/0275.destroyed_block/init
-
 # 残り時間減算
     scoreboard players remove @s 7N.RemainingTime 1
 
