@@ -1963,5 +1963,9 @@
     "files.eol": "\n",
     "githubIssues.ignoreUserCompletionTrigger": [
         "mcfunction"
-    ]
+    ],
+    "git.branchProtection": [
+        "master"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch"
 }

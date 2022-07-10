@@ -16,3 +16,4 @@
 # リセット
     data remove storage asset:context Type
     data remove storage api: Argument.Rarity
+    data remove storage api: Argument.Important

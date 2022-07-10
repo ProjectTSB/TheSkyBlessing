@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:mob/0082.thunder_curtain/summon/1.trigger",
+        "asset:mob/0237.lunatic_mage/summon/1.trigger",
         "asset:mob/0261.laser_eye_mk2/summon/1.trigger",
         "asset:mob/0120.convict/summon/1.trigger",
         "asset:mob/0054.pumpkin_meteor/summon/1.trigger",

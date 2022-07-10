@@ -12,13 +12,12 @@
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 5.0
-    data modify storage lib: Argument.Spread set value 2.5
+    data modify storage lib: Argument.Spread set value 3
+
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker] run function lib:forward_spreader/circle
 
 # ビームを飛ばす
-    # 演出
-        playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 2
     # 判定用アマスタ召喚
         summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["GX.Laser","GX.First","Projectile"]}
     # ユーザーIDを適応

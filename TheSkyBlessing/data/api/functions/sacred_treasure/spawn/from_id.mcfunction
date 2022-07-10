@@ -22,3 +22,4 @@
 # リセット
     data remove storage asset:context Type
     data remove storage api: Argument.ID
+    data remove storage api: Argument.Important
