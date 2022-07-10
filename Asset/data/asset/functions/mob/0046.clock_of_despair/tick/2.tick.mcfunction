@@ -6,12 +6,12 @@
 #> private
 # @private
     #declare score_holder $Count
-    #declare score_holder $2tInterval
+    #declare score_holder $IntervalTime
 
 # スコアを増やす
     scoreboard players add @s 1A.LifeTime 1
 
-# その後発動するスキル
+
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す。
     execute if score @s 1A.LifeTime matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 1A.LifeTime -1
 
@@ -21,14 +21,17 @@
 # 時計の針の回転
     execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..0.1,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.15 ~
 
-# 2tickおきに実行するやつ
-# 実行時間を移す
-    scoreboard players operation $2tInterval Temporary = @s 1A.LifeTime
-# 2tickおきに実行
-    scoreboard players operation $2tInterval Temporary %= $2 Const
-    execute if score $2tInterval Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/interval
-# リセット
-    scoreboard players reset $2tInterval
+# 2tick毎のVFX
+    scoreboard players operation $IntervalTime Temporary = @s 1A.LifeTime
+    scoreboard players operation $IntervalTime Temporary %= $2 Const
+    execute if score $IntervalTime Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/interval
+    scoreboard players reset $IntervalTime Temporary
+# 200tick(10秒)毎のSE
+    scoreboard players operation $IntervalTime Temporary = @s 1A.LifeTime
+    scoreboard players operation $IntervalTime Temporary %= $200 Const
+    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0.5 1
+    scoreboard players reset $IntervalTime Temporary
+
 
 # もしアマスタがどっかいってしまったら
     execute at @s unless entity @e[type=armor_stand,tag=1A.ClockHand,distance=..0.01] run function asset:mob/0046.clock_of_despair/tick/armorstand_respawn
