@@ -11,7 +11,15 @@
     #declare tag 1A.SkillFireMaker
     #declare tag 1A.SkillBallAEC
     #declare tag 1A.SkillBeam
+    #declare tag 1A.GearSilver
+    #declare tag 1A.GearGold
+    #declare tag 1A.WallLazerClock
+    #declare tag 1A.WallLazer
     #declare tag 1A.This
     #
     #declare tag Landing
     #declare tag LandingTarget
+
+#> Val
+# @within function asset:mob/0046.clock_of_despair/tick/skill/common/gear_*/spread_summon/*
+#declare tag GearInit
