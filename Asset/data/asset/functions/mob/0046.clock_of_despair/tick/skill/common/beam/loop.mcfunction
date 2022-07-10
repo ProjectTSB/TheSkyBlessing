@@ -22,4 +22,4 @@
     execute if entity @s[tag=Landing] run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/damage
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/loop
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..20] run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/loop
