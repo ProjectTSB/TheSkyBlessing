@@ -14,7 +14,7 @@
 
 # 回復効果
     # 回復する量 = 8
-        data modify storage lib: Argument.Heal set value 8f
+        data modify storage lib: Argument.Heal set value 18f
 # 実行者対象
     function lib:heal/modifier
     function lib:heal/

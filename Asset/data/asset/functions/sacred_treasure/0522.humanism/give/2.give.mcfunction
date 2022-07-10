@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"人","color":"yellow"},{"text":"が","color":"white"},{"text":"人","color":"dark_red"},{"text":"であるために","color":"white"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全てのプレイヤーの","color":"white"},{"text":"HPを全回復","color":"light_purple"},{"text":"し、","color":"white"}]','[{"text":"自分以外の全てのプレイヤーの","color":"white"},{"text":"MPを150回復","color":"dark_purple"},{"text":"する。","color":"white"}]','{"text":"さらに、全てのプレイヤーの","color":"white"}','[{"text":"周囲の敵全てに","color":"white"},{"text":"ダメージ","color":"red"},{"text":"を与える。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"全てのプレイヤーについて","color":"white"},{"text":"失ったHPの75%を回復","color":"light_purple"},{"text":"し、","color":"white"}]','[{"text":"自分以外の全てのプレイヤーの","color":"white"},{"text":"MPを150回復","color":"dark_purple"},{"text":"する。","color":"white"}]','{"text":"さらに、全てのプレイヤーの","color":"white"}','[{"text":"周囲の敵全てに","color":"white"},{"text":"ダメージ","color":"red"},{"text":"を与える。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
