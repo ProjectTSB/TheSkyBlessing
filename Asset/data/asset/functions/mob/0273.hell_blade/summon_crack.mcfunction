@@ -4,5 +4,5 @@
 #
 # @within function asset:mob/0273.hell_blade/break
 
-data modify storage api: Argument.ID set value 265
+data modify storage api: Argument.ID set value 275
 function api:mob/summon
