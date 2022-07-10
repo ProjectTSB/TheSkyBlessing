@@ -14,13 +14,13 @@
     execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches ..-1 run function asset:mob/0273.hell_blade/chase/rotate/
 
 # 落ちるかどうかチェック
-    execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 run function asset:mob/0273.hell_blade/unstuck/
+    execute at @s[tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 run function asset:mob/0273.hell_blade/unstuck/
 
 # ブロック破壊
-    execute at @s[tag=7L.FaceFloor,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~-1 ~ run function asset:mob/0273.hell_blade/break
-    execute at @s[tag=7L.FaceWallUp,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ^ ^ ^1 run function asset:mob/0273.hell_blade/break
-    execute at @s[tag=7L.FaceWallDown,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ^ ^ ^-1 run function asset:mob/0273.hell_blade/break
-    execute at @s[tag=7L.FaceCeiling,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~1 ~ run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceFloor,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~-1 ~ run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceWallUp,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ^ ^ ^1 run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceWallDown,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ^ ^ ^-1 run function asset:mob/0273.hell_blade/break
+    execute at @s[tag=7L.FaceCeiling,tag=!7L.Fall] if score @s 7L.Timer matches 2 align xyz positioned ~0.5 ~0.5 ~0.5 positioned ~ ~1 ~ run function asset:mob/0273.hell_blade/break
 
 # 落下タグがついているなら
     execute at @s[tag=7L.Fall] run function asset:mob/0273.hell_blade/fall
