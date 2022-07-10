@@ -4,4 +4,5 @@
 #
 # @within function asset_manager:mob/tick/
 
-execute store result bossbar asset:bossbar value run data get entity @s AbsorptionAmount 100
+# maxが100倍で入ってるので100倍で現在値を設定する
+    execute store result bossbar asset:bossbar value run data get entity @s AbsorptionAmount 100

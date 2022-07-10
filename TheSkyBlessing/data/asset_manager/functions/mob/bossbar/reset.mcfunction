@@ -4,4 +4,5 @@
 #
 # @within function asset_manager:mob/tick/global
 
-bossbar set asset:bossbar players
+# 見えなくする
+    bossbar set asset:bossbar players
