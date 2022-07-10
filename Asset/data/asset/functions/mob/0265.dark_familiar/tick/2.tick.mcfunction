@@ -27,5 +27,5 @@
     execute if score @s 7D.LifeTime matches ..0 run function asset:mob/0265.dark_familiar/tick/event/suicide
 
 # 攻撃
-    scoreboard players add @s 7D.Move 1
-    execute if score @s 7D.Move matches 40.. run function asset:mob/0265.dark_familiar/tick/event/shoot
+    scoreboard players add @s 7D.ShotCool 1
+    execute if score @s 7D.ShotCool matches 40.. run function asset:mob/0265.dark_familiar/tick/event/shoot

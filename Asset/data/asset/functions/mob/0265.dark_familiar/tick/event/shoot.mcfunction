@@ -9,7 +9,7 @@
     execute anchored eyes positioned ^ ^ ^ run function api:mob/summon
 
 # スコアのリセット
-    scoreboard players reset @s 7D.Move
+    scoreboard players reset @s 7D.ShotCool
 
 # サウンド
     playsound minecraft:entity.shulker_bullet.hurt hostile @a ~ ~ ~ 1.5 2
