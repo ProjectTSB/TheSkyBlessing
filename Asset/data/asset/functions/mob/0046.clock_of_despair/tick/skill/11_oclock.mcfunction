@@ -55,4 +55,4 @@
     execute if score @s 1A.LifeTime matches 2380 run tp @e[type=zombie,scores={MobID=190},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
 
 # 自分を爆破し続ける
-    execute if score @s 1A.LifeTime matches 2300.. run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 2300.. run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/blast_vfx
