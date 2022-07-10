@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0082.thunder_curtain/summon/1.trigger",
         "asset:mob/0237.lunatic_mage/summon/1.trigger",
         "asset:mob/0261.laser_eye_mk2/summon/1.trigger",
         "asset:mob/0120.convict/summon/1.trigger",
@@ -88,7 +89,7 @@
         "asset:mob/0037.fire_spreader/summon/1.trigger",
         "asset:mob/0047.the_heretic/summon/1.trigger",
         "asset:mob/0078.messenger_of_thunder/summon/1.trigger",
-        "asset:mob/0079.thundercloud/summon/1.trigger",
+        "asset:mob/0079.return_thunder/summon/1.trigger",
         "asset:mob/0104.mad_scientist/summon/1.trigger",
         "asset:mob/0105.potion_projectile/summon/1.trigger",
         "asset:mob/0114.jewel_hunter/summon/1.trigger",
