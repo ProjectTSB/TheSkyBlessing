@@ -19,7 +19,7 @@
     execute if predicate lib:random_pass_per/5 run particle minecraft:end_rod ~ ~ ~ 0.15 0.15 0.15 0 1
     execute if predicate lib:random_pass_per/25 run particle minecraft:glow ~ ~ ~ 0.15 0.15 0.15 0 1
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/damage
+    execute if entity @s[tag=Landing] if score @s 1A.LifeTime matches 20.. run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/damage
 
 # 再起
     execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..20] run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/loop
