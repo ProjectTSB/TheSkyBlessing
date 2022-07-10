@@ -8,4 +8,4 @@
 # @within function asset:mob/0266.small_dark_ball/**
     scoreboard objectives add 7E.Range dummy
     scoreboard objectives add 7E.Speed dummy
-    scoreboard objectives add 7E.Recursive dummy
+    scoreboard objectives add 7E.MoveTimesPerTick dummy

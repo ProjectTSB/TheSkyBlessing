@@ -10,7 +10,7 @@
     tp @s ^ ^ ^0.1 ~ ~
 
 # スコア減算
-    scoreboard players remove @s 7E.Recursive 1
+    scoreboard players remove @s 7E.MoveTimesPerTick 1
     scoreboard players remove @s 7E.Range 1
 
 # プレイヤーの衝突判定
@@ -20,7 +20,7 @@
     execute unless block ~ ~ ~ #lib:no_collision run function asset:mob/0266.small_dark_ball/tick/event/hit
 
 # 再帰
-    execute if entity @s[scores={7E.Recursive=1..,7E.Range=1..}] at @s run function asset:mob/0266.small_dark_ball/tick/move
+    execute if entity @s[scores={7E.MoveTimesPerTick=1..,7E.Range=1..}] at @s run function asset:mob/0266.small_dark_ball/tick/move
 
 # キル
     execute if entity @s[scores={7E.Range=0}] run function asset:mob/0266.small_dark_ball/tick/event/kill
