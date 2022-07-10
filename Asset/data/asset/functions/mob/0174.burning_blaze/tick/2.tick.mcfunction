@@ -13,12 +13,9 @@
     particle falling_lava ~ ~0.8 ~ 0.5 0.5 0.5 0 10 force @a
     particle dust 1 0.149 0 1 ~ ~0.7 ~ 0.3 0.3 0.3 0 10 force @a
 
-# Constに無かったためセルフ宣言
-    scoreboard players set $Probability Temporary 900
-
 # 行動決定乱数生成
     execute store result score $Random Temporary run function lib:random/
-    scoreboard players operation $Random Temporary %= $Probability Temporary
+    scoreboard players operation $Random Temporary %= $900 Const
 
 # 各行動の処理
     execute if score @s 4U.NowAction matches 1 run function asset:mob/0174.burning_blaze/action/rush.tick
