@@ -20,6 +20,9 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Thunder"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの雷に撃たれ消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの稲妻に焼け落ちた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     # ダメージ
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
