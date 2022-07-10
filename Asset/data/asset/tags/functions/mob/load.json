@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0204_infernal_watcher/0.load",
         "asset:mob/0082.thunder_curtain/0.load",
         "asset:mob/0237.lunatic_mage/0.load",
         "asset:mob/0261.laser_eye_mk2/0.load",
