@@ -13,7 +13,7 @@
     execute positioned ~ ~3 ~ run tag @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,tag=!Uninterferable,distance=..3.5] add Target
     execute positioned ~ ~5 ~ run tag @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,tag=!Uninterferable,distance=..3.5] add Target
 # パラメータ設定
-    data modify storage lib: Argument.Damage set value 15
+    data modify storage lib: Argument.Damage set value 12
     data modify storage lib: Argument.AttackType set value "Magic"
 # 補正
     function lib:damage/modifier
