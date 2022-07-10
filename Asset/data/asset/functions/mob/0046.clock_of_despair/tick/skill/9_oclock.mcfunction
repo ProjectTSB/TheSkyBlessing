@@ -40,7 +40,4 @@
     execute if score @s 1A.LifeTime matches 1900 rotated ~342 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 1860 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
-
-# 追い打ちの時計
-    execute if score @s 1A.LifeTime matches 1970 positioned ~ ~10 ~ rotated 0 90 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    execute if score @s 1A.LifeTime matches 1960 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
