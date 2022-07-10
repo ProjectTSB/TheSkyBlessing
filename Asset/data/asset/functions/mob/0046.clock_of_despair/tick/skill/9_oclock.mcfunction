@@ -6,6 +6,10 @@
 
 # ビーム投射
     execute if score @s 1A.LifeTime matches 1801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
+    execute if score @s 1A.LifeTime matches 1801 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~5 ~
+    execute if score @s 1A.LifeTime matches 1801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
+    execute if score @s 1A.LifeTime matches 1801 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~5 ~
+    execute if score @s 1A.LifeTime matches 1801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
     execute if score @s 1A.LifeTime matches 1801 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~45 ~
 # ビーム回転
     execute if score @s 1A.LifeTime matches 1801..1820 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
