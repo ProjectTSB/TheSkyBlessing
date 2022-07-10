@@ -50,9 +50,9 @@
     execute if score @s 1A.LifeTime matches 2250 run tag @s remove 1A.LazerDirection4
 
 # メイジをさよならする (大爆発させてこんな時間まで倒せてないやつを消し炭にしようかと思ったけど、流石に自重。)
-    execute if score @s 1A.LifeTime matches 2380 run tp @e[type=zombie,scores={MobID=187},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
-    execute if score @s 1A.LifeTime matches 2380 run tp @e[type=zombie,scores={MobID=189},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
-    execute if score @s 1A.LifeTime matches 2380 run tp @e[type=zombie,scores={MobID=190},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
+    execute if score @s 1A.LifeTime matches 2380 positioned ~-10 ~ ~-10 run tp @e[type=zombie,scores={MobID=187},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
+    execute if score @s 1A.LifeTime matches 2380 positioned ~-10 ~ ~-10 run tp @e[type=zombie,scores={MobID=189},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
+    execute if score @s 1A.LifeTime matches 2380 positioned ~-10 ~ ~-10 run tp @e[type=zombie,scores={MobID=190},dx=19,dy=4,dz=19,sort=nearest,limit=1] ~ -100 ~
 
 # 自分を爆破し続ける
     execute if score @s 1A.LifeTime matches 2300.. run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/blast_vfx
