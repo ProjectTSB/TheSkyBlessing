@@ -18,6 +18,8 @@
 # スキル発動
     function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
+# 時計の針の回転
+    execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..0.1,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.15 ~
 
 # 2tickおきに実行するやつ
 # 実行時間を移す
