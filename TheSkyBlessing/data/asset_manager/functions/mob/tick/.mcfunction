@@ -1,4 +1,4 @@
-#> asset_manager:mob/tick
+#> asset_manager:mob/tick/
 #
 # AssetMobに毎tick実行する処理
 #
