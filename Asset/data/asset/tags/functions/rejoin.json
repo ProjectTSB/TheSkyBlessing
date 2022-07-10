@@ -1,6 +1,7 @@
 {
     "values": [
         "asset:sacred_treasure/0295.call_elemental_familiar/trigger/rejoin_process",
+        "asset:sacred_treasure/0973.call_rod_spirit/trigger/rejoin_process",
         "asset:mob/0120.convict/rejoin_process",
         "asset:sacred_treasure/0172.icicle/trigger/rejoin_process",
         "asset:sacred_treasure/0952.lunatic_rod/trigger/rejoin_process",

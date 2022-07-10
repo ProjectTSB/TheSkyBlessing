@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0094.netherite_armor_set/give/1.trigger",
+        "asset:sacred_treasure/0973.call_rod_spirit/give/1.trigger",
         "asset:sacred_treasure/0233.reversal/give/1.trigger",
         "asset:sacred_treasure/0980.thunder_charm/give/1.trigger",
         "asset:sacred_treasure/0979.water_charm/give/1.trigger",
@@ -156,15 +158,12 @@
         "asset:sacred_treasure/0250.phoenix/give/1.trigger",
         "asset:sacred_treasure/0252.void_transaction/give/1.trigger",
         "asset:sacred_treasure/0258.chen_dream_pillow/give/1.trigger",
-        "asset:sacred_treasure/0259.instant_priest_set_lv.1/give/1.trigger",
         "asset:sacred_treasure/0260.heal_lv.1/give/1.trigger",
         "asset:sacred_treasure/0261.holy_symbol_lv.1/give/1.trigger",
         "asset:sacred_treasure/0262.angel_ray_lv.1/give/1.trigger",
-        "asset:sacred_treasure/0263.instant_priest_set_lv.5/give/1.trigger",
         "asset:sacred_treasure/0264.heal_lv.5/give/1.trigger",
         "asset:sacred_treasure/0265.holy_symbol_lv.5/give/1.trigger",
         "asset:sacred_treasure/0266.angel_ray_lv.5/give/1.trigger",
-        "asset:sacred_treasure/0267.instant_priest_set_lv.10/give/1.trigger",
         "asset:sacred_treasure/0268.heal_lv.10/give/1.trigger",
         "asset:sacred_treasure/0269.holy_symbol_lv.10/give/1.trigger",
         "asset:sacred_treasure/0270.angel_ray_lv.10/give/1.trigger",

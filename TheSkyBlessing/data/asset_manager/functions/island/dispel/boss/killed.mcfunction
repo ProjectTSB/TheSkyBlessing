@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/main_task
+# @within function asset_manager:island/dispel/boss/watcher
 
 # タグ外す
     tag @s remove CantDispel
