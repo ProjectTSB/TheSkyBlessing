@@ -5,7 +5,7 @@
 # @within function asset:mob/0188.fireball/tick/1.trigger
 
 # パーティクル
-    particle lava ~ ~ ~ 0.25 0.25 0.25 0.005 1
+    particle smoke ~ ~ ~ 0.1 0.1 0.1 0.001 3
 
 # 再帰カウントが0なら弾速からセット
     scoreboard players operation @s 58.Recursive = @s 58.Speed

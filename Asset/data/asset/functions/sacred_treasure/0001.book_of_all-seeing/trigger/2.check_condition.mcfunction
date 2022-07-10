@@ -8,7 +8,7 @@
     function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
     execute if entity @s[tag=CanUsed] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0001.book_of_all-seeing/trigger/find_target_entity
-    execute if entity @s[tag=CanUsed] unless entity @e[type=#lib:living,type=!player,tag=01.Target,distance=..15] run tellraw @s {"text":"Mobを視界に捉えていません。","color":"red"}
-    execute unless entity @e[type=#lib:living,type=!player,tag=01.Target,distance=..15] run tag @s remove CanUsed
+    execute if entity @s[tag=CanUsed] unless entity @e[type=#lib:living,type=!player,tag=01.Target,distance=..30] run tellraw @s {"text":"対象を視界に捉えていません。","color":"red"}
+    execute unless entity @e[type=#lib:living,type=!player,tag=01.Target,distance=..30] run tag @s remove CanUsed
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0001.book_of_all-seeing/trigger/3.main

@@ -22,6 +22,12 @@
 #   asset_manager:mob/**
     #declare tag AssetMob
 
+#> MobAsset以外のEntityにCommonTagを実行させるためのタグ
+# @within function
+#   core:tick/
+#   asset:**
+    #declare tag AllowProcessingCommonTag
+
 #> this
 # @within *
 #   asset_manager:mob/triggers/
@@ -51,7 +57,7 @@
 #> 汎用タグ類
 # @within function
 #   asset_manager:mob/common_tag/*
-#   asset:mob/*/*/**
+#   asset:**
     #declare tag AntiFallDamage
     #declare tag AntiVoid
     #declare tag AntiBurn

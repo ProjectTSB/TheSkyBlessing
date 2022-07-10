@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0105.potion_projectile/tick/5.element_branch
+# @within function asset:mob/0105.potion_projectile/tick/4.element_branch
 
 # スコア
     scoreboard players add @s 2X.InBlockTime 1
