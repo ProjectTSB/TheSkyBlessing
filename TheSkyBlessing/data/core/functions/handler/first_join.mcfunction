@@ -8,6 +8,8 @@
 # @private
     #declare score_holder $UserIDIndex
 
+# バージョンチェック
+    function player_manager:version_check
 # 固有ユーザーID
     scoreboard players add $UserIDIndex Global 1
     scoreboard players operation @s UserID = $UserIDIndex Global
