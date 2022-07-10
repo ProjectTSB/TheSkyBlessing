@@ -4,8 +4,6 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# 開幕
-    execute if score @s 1A.LifeTime matches 900 run playsound minecraft:block.bell.use master @a
 # ビームを出す
     execute if score @s 1A.LifeTime matches 901 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
     execute if score @s 1A.LifeTime matches 901 run tp @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] ~ ~10 ~ 180 90

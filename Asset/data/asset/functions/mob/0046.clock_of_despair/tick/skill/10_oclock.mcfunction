@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# 開幕
-    execute if score @s 1A.LifeTime matches 1000 run playsound minecraft:block.bell.use master @a
-
 # ランダムでサンダー召喚
     execute if score @s 1A.LifeTime matches 1020 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/spread_summon
     execute if score @s 1A.LifeTime matches 1030 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/spread_summon

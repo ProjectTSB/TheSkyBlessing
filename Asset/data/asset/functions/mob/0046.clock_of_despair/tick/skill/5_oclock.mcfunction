@@ -4,8 +4,6 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# 開幕
-    execute if score @s 1A.LifeTime matches 500 run playsound minecraft:block.bell.use master @a
 # 超ランダムで雷
     execute if score @s 1A.LifeTime matches 510..535 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/spread_summon
 # 発破

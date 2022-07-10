@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# 開幕
-    execute if score @s 1A.LifeTime matches 700 run playsound minecraft:block.bell.use master @a
-
 # メイジを召喚
     execute if score @s 1A.LifeTime matches 710 run data modify storage api: Argument.ID set value 187
     execute if score @s 1A.LifeTime matches 710 positioned ^ ^ ^5 run function api:mob/summon

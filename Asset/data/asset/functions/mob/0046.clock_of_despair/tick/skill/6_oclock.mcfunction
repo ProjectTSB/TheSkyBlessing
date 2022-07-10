@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# 開幕
-    execute if score @s 1A.LifeTime matches 600 run playsound minecraft:block.bell.use master @a
-
 # 火召喚
     execute if score @s 1A.LifeTime matches 610 rotated ~20 ~ positioned ^ ^ ^8 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
     execute if score @s 1A.LifeTime matches 612 rotated ~40 ~ positioned ^ ^ ^7 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon

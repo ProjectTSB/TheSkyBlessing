@@ -6,7 +6,6 @@
 
 # 開幕
     execute if score @s 1A.LifeTime matches 0 run playsound minecraft:block.respawn_anchor.set_spawn master @a
-    execute if score @s 1A.LifeTime matches 0 run playsound minecraft:block.bell.use master @a
 
 # 視界を揺らす
     execute if score @s 1A.LifeTime matches 1 as @a[distance=..20] at @s run tp @s ~ ~ ~ ~ ~6
