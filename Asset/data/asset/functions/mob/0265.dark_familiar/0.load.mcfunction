@@ -8,4 +8,3 @@
 # @within function asset:mob/0265.dark_familiar/**
     scoreboard objectives add 7D.LifeTime dummy
     scoreboard objectives add 7D.Move dummy
-    scoreboard objectives add 7D.Rot dummy
