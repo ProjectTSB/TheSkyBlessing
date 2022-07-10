@@ -10,3 +10,4 @@
     scoreboard objectives add RD.WaitingTime dummy
     scoreboard objectives add RD.Turn dummy
     scoreboard objectives add RD.SwordTime dummy
+    scoreboard objectives add RD.SwordUserID dummy
