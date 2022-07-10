@@ -7,6 +7,7 @@
 #   asset:sacred_treasure/*/register
 #   asset:sacred_treasure/*/give/2.give
 #   asset:sacred_treasure/*/trigger/2.check_condition
+#   asset:sacred_treasure/*/trigger/3.main
 #   asset:sacred_treasure/common/**
     #declare storage asset:sacred_treasure
 
