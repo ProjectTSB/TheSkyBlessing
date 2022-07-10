@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/fire
 
-# TODO 半径-0.5m -> 半径14mのベクトルパーティクル end_rodでよさそう
+playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1.35
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwCspAhgBxyUBGAtKaQAwBMbALADM6fFtQDs1NnQCcXGTMqkAzMqUA2MAQB2dALYJkgMMUABJS1gYdDPoDOScCgD2hbRCTKeBFHDdwMDmAAbnTYhIbgAB5IXARQMQC+CQQ2pGiE9ohcAHTUBLYQ1u5ZBHDY2GgwtoaUXLFgGE6FEIb1aLYAouWV1R0AjoSh2FAAylY+5IjC2NVJALpAA_3
 # 円 1
