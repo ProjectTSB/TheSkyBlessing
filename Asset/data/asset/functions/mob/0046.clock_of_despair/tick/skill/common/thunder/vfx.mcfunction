@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/paticle_thunder
+#> asset:mob/0046.clock_of_despair/tick/skill/common/thunder/vfx
 #
 #
 #

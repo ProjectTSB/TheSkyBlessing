@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/interval
+#> asset:mob/0046.clock_of_despair/tick/2t_interval_vfx
 #
 #
 #

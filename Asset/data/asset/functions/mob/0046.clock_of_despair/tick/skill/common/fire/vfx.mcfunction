@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/particle_fire
+#> asset:mob/0046.clock_of_despair/tick/skill/common/fire/vfx
 #
 #
 #

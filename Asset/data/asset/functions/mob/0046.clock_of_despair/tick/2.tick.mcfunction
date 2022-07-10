@@ -24,7 +24,7 @@
 # 2tick毎のVFX
     scoreboard players operation $IntervalTime Temporary = @s 1A.LifeTime
     scoreboard players operation $IntervalTime Temporary %= $2 Const
-    execute if score $IntervalTime Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/interval
+    execute if score $IntervalTime Temporary matches 0 run function asset:mob/0046.clock_of_despair/tick/2t_interval_vfx
     scoreboard players reset $IntervalTime Temporary
 # 200tick(10秒)毎のSE
     scoreboard players operation $IntervalTime Temporary = @s 1A.LifeTime
