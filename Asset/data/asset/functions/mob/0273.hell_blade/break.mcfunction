@@ -17,5 +17,5 @@
     execute if block ~ ~ ~ stone_bricks run setblock ~ ~ ~ cracked_stone_bricks
 
 # 羊毛なら0275.destroyed_blockを召喚
-    execute if block ~ ~ ~ #wool unless entity @e[scores={MobID=275},distance=..0.01] run function asset:mob/0275.destroyed_block/summon/2.summon
+    execute if block ~ ~ ~ #wool unless entity @e[scores={MobID=275},distance=..0.01] run function asset:mob/0273.hell_blade/summon_crack
 
