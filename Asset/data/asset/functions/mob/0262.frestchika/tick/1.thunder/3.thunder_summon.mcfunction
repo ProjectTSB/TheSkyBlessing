@@ -26,7 +26,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 
 # 当たり判定的な演出

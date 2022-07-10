@@ -1,5 +1,18 @@
 {
     "values": [
+        "asset:sacred_treasure/0295.call_elemental_familiar/trigger/rejoin_process",
+        "asset:sacred_treasure/0973.call_rod_spirit/trigger/rejoin_process",
+        "asset:mob/0120.convict/rejoin_process",
+        "asset:sacred_treasure/0172.icicle/trigger/rejoin_process",
+        "asset:sacred_treasure/0952.lunatic_rod/trigger/rejoin_process",
+        "asset:sacred_treasure/0793.queen_bee_rocket/trigger/rejoin_process",
+        "asset:sacred_treasure/0870.samurai_blade/trigger/rejoin_process",
+        "asset:sacred_treasure/0920.dal_i_thalion/trigger/rejoin_process",
+        "asset:sacred_treasure/0837.the_world_knife/trigger/rejoin_process",
+        "asset:mob/0210.aurora_eye/rejoin_process",
+        "asset:sacred_treasure/0664.soul_fire_armor/trigger/rejoin_process",
+        "asset:sacred_treasure/0822.sound_of_a_star/trigger/rejoin_process",
+        "asset:sacred_treasure/0431.weather_lock_cane/trigger/rejoin_process",
         "asset:mob/0262.frestchika/rejoin_process",
         "asset:sacred_treasure/0905.book_of_metastasis/trigger/rejoin_process",
         "asset:sacred_treasure/0907.rod_of_rain/trigger/rejoin_process",

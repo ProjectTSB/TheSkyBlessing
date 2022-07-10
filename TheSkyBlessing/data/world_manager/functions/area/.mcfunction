@@ -2,7 +2,7 @@
 #
 # エリア管理
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # 次のエリア情報をリセット
     scoreboard players set $NextInArea Temporary -1
