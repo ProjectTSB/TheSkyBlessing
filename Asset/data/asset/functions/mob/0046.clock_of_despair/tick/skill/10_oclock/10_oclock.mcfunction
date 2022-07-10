@@ -6,8 +6,6 @@
 
 # 開幕
     execute if score @s 1A.LifeTime matches 1000 run playsound minecraft:block.bell.use master @a
-# プレイヤーを引き寄せる
-    execute as @a[distance=..30] at @s facing entity @e[type=zombie,tag=this,distance=..100,sort=nearest,limit=1] eyes run tp @s ^ ^ ^0.1
 
 # ランダムでサンダー召喚
     execute if score @s 1A.LifeTime matches 1020 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/thunder_spread_summon
