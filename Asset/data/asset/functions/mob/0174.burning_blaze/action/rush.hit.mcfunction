@@ -8,7 +8,7 @@
     data modify storage lib: Argument set value {Damage:25,AttackType:Physical,AttackElement:Fire}
     function lib:damage/modifier
     execute as @a[tag=Hit] run function lib:damage/
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # スコア設定
     scoreboard players set @s 4U.NowAction 0

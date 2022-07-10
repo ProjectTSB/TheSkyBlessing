@@ -16,7 +16,7 @@
     execute as @a[tag=Hit] run function lib:damage/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
     tag @a[tag=Hit] remove Hit
 
 # スコア戻す
