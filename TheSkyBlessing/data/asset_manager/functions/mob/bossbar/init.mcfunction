@@ -9,5 +9,5 @@ tag @s add BossbarTarget
 
 bossbar set asset:bossbar name {"selector":"@s"}
 
-execute store result bossbar asset:bossbar value store result bossbar asset:bossbar max run data get storage asset:mob Health 100
+execute store result bossbar asset:bossbar value store result bossbar asset:bossbar max run function api:mob/get_max_health
 bossbar set asset:bossbar players @a
