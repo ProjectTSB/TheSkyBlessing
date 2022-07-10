@@ -25,4 +25,4 @@
     execute as @e[type=area_effect_cloud,distance=..0.01,limit=1] facing entity @e[type=marker,tag=Spread,limit=1] feet anchored eyes positioned ^ ^ ^0.02 run tp @s ~ ~0.5 ~ ~ ~
 
 # 前進拡散マーカー消す
-    kill @e[type=marker,tag=Spread]
+    kill @e[type=marker,tag=Spread,distance=..30]
