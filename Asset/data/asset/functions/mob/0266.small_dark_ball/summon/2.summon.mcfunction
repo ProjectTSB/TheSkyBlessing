@@ -5,7 +5,7 @@
 # @within function asset:mob/0266.small_dark_ball/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit"],Passengers:[{id:"minecraft:snowball",Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20216}}}]}
+    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20216}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 266
 # Type (string) Wikiを参照

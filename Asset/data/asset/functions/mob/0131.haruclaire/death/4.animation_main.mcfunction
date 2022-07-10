@@ -26,5 +26,8 @@
 # 氷を消す
     execute if score @s 3N.Tick matches 100 run function asset:mob/0131.haruclaire/death/7.ice_kill
 
+# ボスドロ
+    execute if score @s 3N.Tick matches 100 run function asset:mob/0131.haruclaire/death/boss_drop
+
 # 終了
     execute if score @s 3N.Tick matches 100 run kill @s

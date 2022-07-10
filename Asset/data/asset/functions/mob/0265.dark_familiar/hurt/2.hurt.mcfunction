@@ -5,5 +5,5 @@
 # @within function asset:mob/0265.dark_familiar/hurt/1.trigger
 
 # サウンド
-    playsound minecraft:block.amethyst_cluster.step neutral @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.vex.hurt neutral @a ~ ~ ~ 1.5 1.2
+    playsound minecraft:block.amethyst_cluster.step hostile @a ~ ~ ~ 1.5 2
+    playsound minecraft:entity.vex.hurt hostile @a ~ ~ ~ 1.5 1.2

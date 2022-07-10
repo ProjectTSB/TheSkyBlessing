@@ -2,7 +2,7 @@
 # @private
 
 #> tag
-# @within function asset:mob/1004.tultaria/**/**
+# @within function asset:mob/1004.tultaria/**
     #declare tag RW.This
     #
     #declare tag RW.Boss
@@ -28,3 +28,6 @@
     #declare tag RW.CoordinateMarker
     #declare tag RW.OffCoordinateMarker
     #declare tag S2.Wait
+    #
+    #declare tag RW.DeathAnimation
+    #declare tag RW.DeathInit
