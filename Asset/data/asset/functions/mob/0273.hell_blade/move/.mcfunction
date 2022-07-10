@@ -26,7 +26,7 @@
 
 # 横にプレイヤーがいるかチェック
     execute if score @s 7L.Timer matches 1 if score @s 7L.RotateTimer matches 1.. run scoreboard players remove @s 7L.RotateTimer 1
-    execute at @s[tag=7L.FaceFloor] if score @s 7L.RotateTimer matches 0 align xyz positioned ~ ~-1 ~ run function asset:mob/0273.hell_blade/chase/check
+    execute at @s[tag=7L.FaceFloor] if score @s 7L.RotateTimer matches 0 align xyz positioned ~-0.5 ~-1.5 ~-0.5 run function asset:mob/0273.hell_blade/chase/check
 
 # SFX
     execute at @s run playsound entity.player.hurt_sweet_berry_bush hostile @a ~ ~ ~ .3 2
