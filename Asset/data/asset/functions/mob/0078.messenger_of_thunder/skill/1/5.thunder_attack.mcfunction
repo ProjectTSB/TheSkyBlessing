@@ -24,7 +24,7 @@
         function lib:damage/modifier
         execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # キル
     kill @e[type=area_effect_cloud,tag=26.SkillThunderMarker,distance=..0.01,sort=nearest,limit=1]
