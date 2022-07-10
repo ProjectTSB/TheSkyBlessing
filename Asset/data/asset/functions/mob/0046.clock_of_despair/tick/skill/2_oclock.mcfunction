@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/2_oclock/2_oclock
+#> asset:mob/0046.clock_of_despair/tick/skill/2_oclock
 #
 # プレイヤーを追尾する
 #

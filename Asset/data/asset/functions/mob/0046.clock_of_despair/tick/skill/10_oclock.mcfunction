@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/10_oclock/10_oclock
+#> asset:mob/0046.clock_of_despair/tick/skill/10_oclock
 #
 #
 #

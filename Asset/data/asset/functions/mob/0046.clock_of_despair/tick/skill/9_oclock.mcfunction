@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/9_oclock/9_oclock
+#> asset:mob/0046.clock_of_despair/tick/skill/9_oclock
 #
 # レーザー＋火
 #

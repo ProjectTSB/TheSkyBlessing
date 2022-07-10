@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/0_oclock/0_oclock
+#> asset:mob/0046.clock_of_despair/tick/skill/0_oclock
 #
 # ちょっとビビらせる
 #
