@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/thunder/thunder_damage
+#> asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
 #
 #
 #

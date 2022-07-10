@@ -7,7 +7,7 @@
 # 開幕
     execute if score @s 1A.LifeTime matches 200 run playsound minecraft:block.bell.use master @a
 # ビームを出す
-    execute if score @s 1A.LifeTime matches 201 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/beam_summon
+    execute if score @s 1A.LifeTime matches 201 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
     execute if score @s 1A.LifeTime matches 201 run tp @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] ~ ~10 ~ 180 90
 
 # ビームが追尾する

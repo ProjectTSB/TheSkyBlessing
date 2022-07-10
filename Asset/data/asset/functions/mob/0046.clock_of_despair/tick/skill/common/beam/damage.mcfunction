@@ -1,8 +1,8 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/beam/beam_damage
+#> asset:mob/0046.clock_of_despair/tick/skill/common/beam/damage
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/common/beam/beam_loop
+# @within function asset:mob/0046.clock_of_despair/tick/skill/common/beam/loop
 
 
 # ダメージ設定

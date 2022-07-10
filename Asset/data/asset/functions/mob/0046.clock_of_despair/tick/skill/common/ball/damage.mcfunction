@@ -1,8 +1,8 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/ball/ball_damage
+#> asset:mob/0046.clock_of_despair/tick/skill/common/ball/damage
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/common/ball/ball_tick
+# @within function asset:mob/0046.clock_of_despair/tick/skill/common/ball/tick
 
 
 # 演出
