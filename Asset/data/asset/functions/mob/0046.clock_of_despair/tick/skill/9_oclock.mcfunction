@@ -4,38 +4,42 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
-# ビームを出す
-    execute if score @s 1A.LifeTime matches 901 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
-    execute if score @s 1A.LifeTime matches 901 run tp @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] ~ ~10 ~ 180 90
-
-# ビームが追尾する
-    execute if score @s 1A.LifeTime matches 921..999 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run execute if entity @p[distance=..32] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
+# ビーム投射
+    execute if score @s 1A.LifeTime matches 1801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
+    execute if score @s 1A.LifeTime matches 1801 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~45 ~
+# ビーム回転
+    execute if score @s 1A.LifeTime matches 1801..1820 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~1 ~
+    execute if score @s 1A.LifeTime matches 1821..1840 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~2 ~
+    execute if score @s 1A.LifeTime matches 1841..1860 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
+    execute if score @s 1A.LifeTime matches 1861..1980 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~6 ~
+    execute if score @s 1A.LifeTime matches 1881..1900 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~8 ~
+    execute if score @s 1A.LifeTime matches 1901..1920 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
+    execute if score @s 1A.LifeTime matches 1921..1940 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
 
 # 火召喚
-    execute if score @s 1A.LifeTime matches 970 rotated ~45 ~ positioned ^ ^ ^1 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 970 rotated ~45 ~ positioned ^ ^ ^-1 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 970 rotated ~45 ~ positioned ^1 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 970 rotated ~45 ~ positioned ^-1 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-
-    execute if score @s 1A.LifeTime matches 972 rotated ~45 ~ positioned ^ ^ ^3 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 972 rotated ~45 ~ positioned ^ ^ ^-3 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 972 rotated ~45 ~ positioned ^3 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 972 rotated ~45 ~ positioned ^-3 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-
-    execute if score @s 1A.LifeTime matches 974 rotated ~45 ~ positioned ^ ^ ^5 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 974 rotated ~45 ~ positioned ^ ^ ^-5 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 974 rotated ~45 ~ positioned ^5 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 974 rotated ~45 ~ positioned ^-5 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-
-    execute if score @s 1A.LifeTime matches 976 rotated ~45 ~ positioned ^ ^ ^7 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 976 rotated ~45 ~ positioned ^ ^ ^-7 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 976 rotated ~45 ~ positioned ^7 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 976 rotated ~45 ~ positioned ^-7 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-
-    execute if score @s 1A.LifeTime matches 978 rotated ~45 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 978 rotated ~45 ~ positioned ^ ^ ^-9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 978 rotated ~45 ~ positioned ^9 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
-    execute if score @s 1A.LifeTime matches 978 rotated ~45 ~ positioned ^-9 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1805 rotated ~000 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1810 rotated ~018 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1815 rotated ~036 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1820 rotated ~054 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1825 rotated ~072 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1830 rotated ~090 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1835 rotated ~108 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1840 rotated ~126 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1845 rotated ~144 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1850 rotated ~162 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1855 rotated ~180 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1860 rotated ~198 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1865 rotated ~216 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1870 rotated ~234 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1875 rotated ~252 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1880 rotated ~270 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1885 rotated ~288 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1890 rotated ~306 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1895 rotated ~324 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
+    execute if score @s 1A.LifeTime matches 1900 rotated ~342 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 990 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 1860 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+
+# 追い打ちの時計
+    execute if score @s 1A.LifeTime matches 1970 positioned ~ ~10 ~ rotated 0 90 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
