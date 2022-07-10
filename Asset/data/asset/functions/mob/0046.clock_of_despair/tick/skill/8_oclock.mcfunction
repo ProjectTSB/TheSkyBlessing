@@ -37,7 +37,7 @@
     execute if score @s 1A.LifeTime matches 1624 rotated ~160 ~ positioned ^ ^ ^-1 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 1630 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 1630 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
 
 # 火召喚
     execute if score @s 1A.LifeTime matches 1640 positioned ^ ^ ^1 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
@@ -66,7 +66,7 @@
     execute if score @s 1A.LifeTime matches 1648 positioned ^-9 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 1660 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 1660 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
 
 
 # 火召喚
@@ -96,4 +96,4 @@
     execute if score @s 1A.LifeTime matches 1678 rotated ~45 ~ positioned ^-9 ^ ^ run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 1690 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 1690 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage

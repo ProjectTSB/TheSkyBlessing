@@ -26,4 +26,4 @@
     function lib:damage/reset
 
 # キル
-    kill @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..0.01,sort=nearest,limit=1]
+    kill @e[type=marker,tag=1A.SkillFireMaker,distance=..0.01,sort=nearest,limit=1]

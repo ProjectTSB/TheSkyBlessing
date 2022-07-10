@@ -31,7 +31,7 @@
 # サンダー召喚
     execute if score @s 1A.LifeTime matches 40 at @a[distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
-    execute if score @s 1A.LifeTime matches 60 at @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
+    execute if score @s 1A.LifeTime matches 60 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
 
 # サンダー召喚
     execute if score @s 1A.LifeTime matches 60 run tag @a[distance=..50,sort=random,limit=4] add 1A.Target
@@ -42,7 +42,7 @@
     execute if score @s 1A.LifeTime matches 80 at @a[tag=1A.Target,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
     execute if score @s 1A.LifeTime matches 85 at @a[tag=1A.Target,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
-    execute if score @s 1A.LifeTime matches 95 at @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
+    execute if score @s 1A.LifeTime matches 95 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
     execute if score @s 1A.LifeTime matches 95 run tag @a[tag=1A.Target,distance=..100] remove 1A.Target
 
 # サンダー召喚
@@ -53,7 +53,7 @@
     execute if score @s 1A.LifeTime matches 140 at @a[tag=1A.Target,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
     execute if score @s 1A.LifeTime matches 150 at @a[tag=1A.Target,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
-    execute if score @s 1A.LifeTime matches 160 at @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
+    execute if score @s 1A.LifeTime matches 160 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
     execute if score @s 1A.LifeTime matches 160 run tag @a[tag=1A.Target,distance=..100] remove 1A.Target
 
 # サンダー召喚
@@ -63,5 +63,5 @@
     execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~ ~ ~04 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
     execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~ ~ ~-4 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
-    execute if score @s 1A.LifeTime matches 190 at @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
+    execute if score @s 1A.LifeTime matches 190 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
     execute if score @s 1A.LifeTime matches 190 run tag @a[tag=1A.Target,distance=..100] remove 1A.Target

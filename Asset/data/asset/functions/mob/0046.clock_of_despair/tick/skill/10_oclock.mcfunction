@@ -13,4 +13,4 @@
 # サンダー召喚
     execute if score @s 1A.LifeTime matches 2280 at @a[distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
-    execute if score @s 1A.LifeTime matches 2320 at @e[type=area_effect_cloud,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
+    execute if score @s 1A.LifeTime matches 2320 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage

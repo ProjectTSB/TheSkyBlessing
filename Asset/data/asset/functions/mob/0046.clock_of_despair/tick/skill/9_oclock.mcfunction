@@ -6,15 +6,16 @@
 
 # ビーム投射
     execute if score @s 1A.LifeTime matches 1801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
-    execute if score @s 1A.LifeTime matches 1801 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~45 ~
+    execute if score @s 1A.LifeTime matches 1801 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~45 ~
 # ビーム回転
-    execute if score @s 1A.LifeTime matches 1801..1820 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~1 ~
-    execute if score @s 1A.LifeTime matches 1821..1840 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~2 ~
-    execute if score @s 1A.LifeTime matches 1841..1860 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
-    execute if score @s 1A.LifeTime matches 1861..1980 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~6 ~
-    execute if score @s 1A.LifeTime matches 1881..1900 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~8 ~
-    execute if score @s 1A.LifeTime matches 1901..1920 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
-    execute if score @s 1A.LifeTime matches 1921..1940 as @e[type=area_effect_cloud,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
+    execute if score @s 1A.LifeTime matches 1801..1820 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~1 ~
+    execute if score @s 1A.LifeTime matches 1821..1840 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~2 ~
+    execute if score @s 1A.LifeTime matches 1841..1860 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
+    execute if score @s 1A.LifeTime matches 1861..1980 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~6 ~
+    execute if score @s 1A.LifeTime matches 1881..1900 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~8 ~
+    execute if score @s 1A.LifeTime matches 1901..1920 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
+    execute if score @s 1A.LifeTime matches 1921..1940 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
+    execute if score @s 1A.LifeTime matches 1941 run kill @e[type=marker,tag=1A.SkillBeam,distance=..100]
 
 # 火召喚
     execute if score @s 1A.LifeTime matches 1805 rotated ~000 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
@@ -39,7 +40,7 @@
     execute if score @s 1A.LifeTime matches 1900 rotated ~342 ~ positioned ^ ^ ^9 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon
 
 # 火攻撃
-    execute if score @s 1A.LifeTime matches 1860 at @e[type=area_effect_cloud,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
+    execute if score @s 1A.LifeTime matches 1860 at @e[type=marker,tag=1A.SkillFireMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/damage
 
 # 追い打ちの時計
     execute if score @s 1A.LifeTime matches 1970 positioned ~ ~10 ~ rotated 0 90 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
