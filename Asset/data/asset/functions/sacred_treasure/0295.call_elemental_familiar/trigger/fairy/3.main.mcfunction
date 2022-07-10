@@ -6,10 +6,10 @@
 
 #> 移動先を決定するマーカーのタグ
 # @private
-#declare tag 87.MoveMarker
-#declare tag 87.MoveMarkerInit
-#declare tag 87.OwnerMarker
-#declare tag 87.OwnerPlayer
+    #declare tag 87.MoveMarker
+    #declare tag 87.MoveMarkerInit
+    #declare tag 87.OwnerMarker
+    #declare tag 87.OwnerPlayer
 
 # 同IDのプレイヤーを特定
     execute at @a[distance=..30] if score @s 87.UserID = @p UserID run tag @p add 87.OwnerPlayer
