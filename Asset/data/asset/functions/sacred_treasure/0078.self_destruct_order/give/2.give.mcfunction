@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure Condition set value '{"text":"ゴーレムが近くにいる時"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [25,50]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [125,250]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure SpecialCooldown set value 60
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki']
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

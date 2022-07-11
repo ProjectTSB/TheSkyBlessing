@@ -16,11 +16,14 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
+# プレイヤー事前処理
+    execute as @a at @s run function core:tick/player/pre
+
 # 神器のグローバルtick処理
     function asset_manager:sacred_treasure/tick/
 
 # プレイヤー処理部
-    execute as @a at @s run function core:tick/player
+    execute as @a at @s run function core:tick/player/
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
@@ -31,26 +34,32 @@
 # スポナー処理部
     execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
 
+# テレポーター
+    function asset_manager:teleporter/tick/global
+
 # ワールドギミック
     function world_manager:gimmick/
 
 # Mob処理部
+    # AssetMobのグローバル処理
+        function asset_manager:mob/tick/global
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理
-        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick
+        execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
+        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
 
 # ItemMetaDataチェック
-    execute as @e[type=item] run function core:tick/check_item_meta/entity
+    execute as @e[type=item,tag=!ItemMetaChecked] run function core:tick/check_item_meta/entity
 
 # ダメージログに対するtick処理
     execute as @e[type=armor_stand,tag=LogAEC] at @s run function lib:status_log/tick
 
 # tick処理後のプレイヤー処理部
-    execute as @a at @s run function core:tick/post-tick-proc_player
+    execute as @a at @s run function core:tick/player/post
 
 # 攻撃元/先の紐づけをリセット
     execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset

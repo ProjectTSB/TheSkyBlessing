@@ -11,7 +11,7 @@
         data modify storage lib: Argument.BypassResist set value true
         function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # MP回復
     # 回復する量 = 100

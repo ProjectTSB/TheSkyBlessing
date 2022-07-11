@@ -1,13 +1,13 @@
 {
     "datapack.env.cmdVersion": "1.18",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.18.1",
+    "datapack.env.dataVersion": "1.18.2",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.18",
+    "datapack.env.jsonVersion": "1.18.2",
     "datapack.env.permissionLevel": 2,
     "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
@@ -38,7 +38,8 @@
                     "/head/",
                     "/chest/",
                     "/legs/",
-                    "/feet/"
+                    "/feet/",
+                    "/hotbar/"
                 ]
             },
             {
@@ -494,6 +495,8 @@
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
                         "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -565,6 +568,163 @@
                     "question": "使用できるスロット",
                     "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
                     "patternErrorMessage": "スロットのみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート(hotbar)",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/sacred_treasure/give.json",
+                    "content": {
+                        "values": [
+                            "asset:sacred_treasure/%namespace%/give/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:sacred_treasure/%namespace%/give/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "#",
+                        "# 神器の取得処理の呼び出し時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/give",
+                        "",
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:sacred_treasure/%namespace%/give/2.give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/2.give.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/give/2.give",
+                        "#",
+                        "# 神器の作成部 ここでID等を定義する",
+                        "#",
+                        "# @user",
+                        "# @within function asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "",
+                        "# 神器の説明や消費MPなどをここで設定する。",
+                        "# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。",
+                        "",
+                        "# 神器のID (int) スプレッドシートの値を入れる",
+                        "    data modify storage asset:sacred_treasure ID set value %ItemID%",
+                        "# 神器のベースアイテム",
+                        "    data modify storage asset:sacred_treasure Item set value ",
+                        "# 神器の名前 (TextComponentString)",
+                        "    data modify storage asset:sacred_treasure Name set value ",
+                        "# 神器の説明文 (TextComponentString[])",
+                        "    data modify storage asset:sacred_treasure Lore set value []",
+                        "# MP以外の消費物 (TextComponentString) (オプション)",
+                        "    # data modify storage asset:sacred_treasure CostText set value ",
+                        "# 使用回数 (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure RemainingCount set value ",
+                        "# 神器を発動できるスロット (string) Wikiを参照",
+                        "    data modify storage asset:sacred_treasure Slot set value \"hotbar\"",
+                        "# 神器のトリガー (string) Wikiを参照",
+                        "    data modify storage asset:sacred_treasure Trigger set value ",
+                        "# 神器の発動条件 (TextComponentString) (オプション)",
+                        "    # data modify storage asset:sacred_treasure Condition set value ",
+                        "# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]",
+                        "# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]",
+                        "# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
+                        "# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value ",
+                        "# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value ",
+                        "# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value ",
+                        "# MP消費量 (int) ",
+                        "    data modify storage asset:sacred_treasure MPCost set value ",
+                        "# MP必要量 (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure MPRequire set value ",
+                        "# 神器のクールダウン (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
+                        "# グローバルクールダウン (int) (オプション)",
+                        "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
+                        "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
+                        "# 扱える神 (string[]) Wikiを参照",
+                        "    data modify storage asset:sacred_treasure CanUsedGod set value []",
+                        "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
+                        "    # data modify storage asset:sacred_treasure CustomNBT set value {}",
+                        "",
+                        "# 神器の入手用function",
+                        "    function asset:sacred_treasure/common/give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "#",
+                        "# 指定したイベントタイミングで実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:sacred_treasure/**",
+                        "",
+                        "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:context id{hotbar:[%ItemID%]} run function asset:sacred_treasure/%namespace%/trigger/2.check_condition"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/2.check_condition.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "#",
+                        "# 神器の発動条件をチェックします",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "",
+                        "# ID指定する",
+                        "    data modify storage asset:sacred_treasure TargetID set value %ItemID%",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:sacred_treasure/common/check_condition/hotbar",
+                        "# 他にアイテム等確認する場合はここに書く",
+                        "",
+                        "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
+                        "    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/%namespace%/trigger/3.main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/3.main.mcfunction",
+                    "content": [
+                        "#> asset:sacred_treasure/%namespace%/trigger/3.main",
+                        "#",
+                        "# 神器のメイン処理部",
+                        "#",
+                        "# @within function asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:sacred_treasure/common/use/hotbar",
+                        "",
+                        "# ここから先は神器側の効果の処理を書く",
+                        "    say test: %namespace%"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "神器のID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
                 }
             ]
         },
@@ -1795,11 +1955,17 @@
     "mcdutil.createDatapackTemplate.defaultVanillaData": false,
     "files.exclude": {
         ".idea": true,
-        ".vscode": true,
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "desktop.ini": true
     },
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "githubIssues.ignoreUserCompletionTrigger": [
+        "mcfunction"
+    ],
+    "git.branchProtection": [
+        "master"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch"
 }

@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ルナフレア","color":"dark_green","underlined":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ルナフレア","color":"#e10643"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"その月光はすべてを焼き尽くす。","color":"yellow"}','{"text":"敵を狙うことで発動できる","color":"yellow"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"狙った箇所に魔法弾の雨を降らす。","color":"white","color":"white","italic":false}','{"text":"\\"月の裁き\\"","color":"gray","italic":false}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [20]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value ["60-80×10"]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -35,19 +35,21 @@
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value every
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 30
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 20
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 5
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    #data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 20
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value 1b
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Nyaptov', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

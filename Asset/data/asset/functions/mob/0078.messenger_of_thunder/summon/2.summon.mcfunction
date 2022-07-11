@@ -16,11 +16,11 @@
     data modify storage asset:mob Name set value '{"text":"雷鳴之使","color":"#D9B111"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"power",lvl:5},{id:"punch",lvl:1}]}}
+        data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:bow",Count:1b,tag:{CustomModelData:20188,Enchantments:[{id:"punch",lvl:1s}]}}
     # オフハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Offhand set value
+        data modify storage asset:mob Weapon.Offhand set value {id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:376}}
 # 武器ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob WeaponDropChances set value [0.0f,0.0f]
+    # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019}}
@@ -33,30 +33,33 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 400
+    data modify storage asset:mob Health set value 25000
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 1
+    # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 8
+    data modify storage asset:mob Defense set value -5
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 10
+    # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.23
+    data modify storage asset:mob Speed set value 0.4
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 30
 # ノックバック耐性 (double) (オプション)
     data modify storage asset:mob KnockBackResist set value 0.5
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
     # 物理倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Physical set value 1.0
+        data modify storage asset:mob Resist.Physical set value 0.5
     # 魔法倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Magic set value 0.8
+        data modify storage asset:mob Resist.Magic set value 1
     # 火倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Fire set value 0.8
+        data modify storage asset:mob Resist.Fire set value 1
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 0.6
+        data modify storage asset:mob Resist.Water set value 0.8
     # 雷倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Thunder set value 0.25
+        data modify storage asset:mob Resist.Thunder set value 0
+
+# スコアを付与
+    scoreboard players set @e[type=skeleton,tag=MobInit,distance=..0.01] 26.Tick -80
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

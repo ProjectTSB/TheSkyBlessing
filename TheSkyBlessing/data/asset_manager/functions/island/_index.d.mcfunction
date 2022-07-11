@@ -30,7 +30,8 @@
 # @within function
 #   asset_manager:island/dispel/boss/*
 #   asset_manager:island/tick/
-#declare tag CantDispel
+    #declare tag CantDispel
+    #declare tag BossSummonMarker
 
 # MEMO
 # DispelPhase:

@@ -7,7 +7,7 @@
 # ワープ準備
     tag @s remove 55.WarpAttack
     tag @s add 55.MagicSquare
-    scoreboard players set @s 55.Tick 100
+    scoreboard players set @s 55.Tick 20
 
 # ワープ
     tp @s @a[gamemode=!spectator,distance=..32,sort=random,limit=1]

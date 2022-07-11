@@ -6,5 +6,6 @@
 
 #> Objective
 # @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/**
-    scoreboard objectives add 295Fa.Tick dummy
-    scoreboard objectives add 295Fa.Health dummy
+    scoreboard objectives add 87.Tick dummy
+    scoreboard objectives add 87.LifeTime dummy
+    scoreboard objectives add 87.UserID dummy

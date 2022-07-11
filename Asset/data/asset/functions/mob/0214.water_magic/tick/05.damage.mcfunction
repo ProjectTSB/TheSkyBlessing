@@ -4,15 +4,17 @@
 #
 # @within function asset:mob/0214.water_magic/tick/04.damage_and_vfx
 
-# ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 18f
-    # 魔法属性
-        data modify storage lib: Argument.AttackType set value "Magic"
-    # 雷属性
-        data modify storage lib: Argument.ElementType set value "Water"
-    # ダメージ
-        function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] at @s run function lib:damage/
+# ダメージ
+    data modify storage lib: Argument.Damage set value 24.5f
+# 属性
+    data modify storage lib: Argument.AttackType set value "Magic"
+     data modify storage lib: Argument.ElementType set value "Water"
+# デスログ
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sに飲み込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sにより水底に沈んだ","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
+# 補正
+    function lib:damage/modifier
+# ダメージ
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -24,6 +24,18 @@
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onAttackByProjectile"
+# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [40]
+# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical]
+# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None]
+# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
+# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value never
+# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
+    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # MP消費量 (int)
@@ -35,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure GlobalCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:4,Unbreakable:1b,Enchantments:[{id:"minecraft:power",lvl:6s}]}
 

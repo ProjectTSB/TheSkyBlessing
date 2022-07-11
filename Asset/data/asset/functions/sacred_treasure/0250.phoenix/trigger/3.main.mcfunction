@@ -31,13 +31,13 @@
         execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use master @a[distance=..100] ~ ~ ~ 10 1 1
     # だめーーじ
         data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Fire,BypassResist:0b}}
-        execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 50.0f
-        execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 55.0f
-        execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 60.0f
+        execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 120.0f
+        execute if score @s Temporary matches 2 run data modify storage lib: Argument.Damage set value 160.0f
+        execute if score @s Temporary matches 3 run data modify storage lib: Argument.Damage set value 180.0f
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run function lib:damage/
         data modify entity @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] Fire set value 200s
     # リセット
         scoreboard players reset @s Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset
         tag @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] remove Hit

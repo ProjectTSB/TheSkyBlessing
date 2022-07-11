@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [30]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [42]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:63,Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1,1,382,1],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;1,1,382,1],Slot:"mainhand"}]}
 

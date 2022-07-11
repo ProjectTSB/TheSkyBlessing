@@ -43,13 +43,13 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure LocalCooldown set value 60
+    # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value
+    data modify storage asset:sacred_treasure SpecialCooldown set value 100
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value
 

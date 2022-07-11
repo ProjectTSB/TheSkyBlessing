@@ -9,7 +9,7 @@
 #declare tag Target
 
 # それぞれでmodifierを実行するのは面倒なので先に処理してしまう
-    data modify storage lib: Argument.Damage set value 53.8d
+    data modify storage lib: Argument.Damage set value 439.2d
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     function lib:damage/modifier
@@ -27,4 +27,5 @@
 # リセット
     tag @e[type=#lib:living,tag=TargetCandidate] remove TargetCandidate
     tag @e[type=#lib:living,tag=Target] remove Target
+    function lib:damage/reset
     data remove storage lib: Argument

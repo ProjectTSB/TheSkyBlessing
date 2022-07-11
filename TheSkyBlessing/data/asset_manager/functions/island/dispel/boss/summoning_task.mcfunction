@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/summoning_task_repeater
+# @within function asset_manager:island/tick/
 
 # スコア加算
     scoreboard players add @s DispelTime 1

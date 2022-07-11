@@ -24,4 +24,4 @@
     # プレイヤー対象に
         execute as @p[tag=Victim] run function lib:damage/
     # リセット
-        data remove storage lib: Argument
+        function lib:damage/reset
