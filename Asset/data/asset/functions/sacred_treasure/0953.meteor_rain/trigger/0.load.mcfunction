@@ -9,3 +9,6 @@
     scoreboard objectives add QH.Tick dummy
     scoreboard objectives add QH.UserID dummy
     scoreboard objectives add QH.Count dummy
+    scoreboard objectives add QH.Range dummy
+    scoreboard objectives add QH.Speed dummy
+    scoreboard objectives add QH.MoveTimesPerTick dummy
