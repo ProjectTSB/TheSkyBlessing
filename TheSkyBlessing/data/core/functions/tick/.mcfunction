@@ -41,11 +41,13 @@
     function world_manager:gimmick/
 
 # Mob処理部
+    # AssetMobのグローバル処理
+        function asset_manager:mob/tick/global
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理
         execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
-        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick
+        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
