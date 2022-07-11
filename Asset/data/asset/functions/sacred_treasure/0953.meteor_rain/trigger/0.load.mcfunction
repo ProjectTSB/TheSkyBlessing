@@ -8,3 +8,4 @@
 # @within function asset:sacred_treasure/0953.meteor_rain/trigger/**
     scoreboard objectives add QH.Tick dummy
     scoreboard objectives add QH.UserID dummy
+    scoreboard objectives add QH.Count dummy

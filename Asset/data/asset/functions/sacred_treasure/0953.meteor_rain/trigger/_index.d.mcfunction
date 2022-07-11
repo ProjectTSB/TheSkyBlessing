@@ -3,4 +3,5 @@
 
 #> tag
 # @within function asset:sacred_treasure/0953.meteor_rain/trigger/**
-    #declare
+    #declare tag QH.Meteor
+    #declare tag QH.MeteorInit
