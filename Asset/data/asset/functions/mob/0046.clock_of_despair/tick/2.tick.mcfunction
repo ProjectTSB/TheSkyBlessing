@@ -47,7 +47,7 @@
     schedule function asset:mob/0046.clock_of_despair/tick/schedule 1t replace
 
 # プレイヤーを引き寄せる
-    execute as @a[distance=10..13] at @s facing entity @e[type=zombie,tag=this,distance=..12,sort=nearest,limit=1] eyes run tp @s ^ ^ ^0.4
+    execute as @a[distance=10..13] at @s facing entity @e[type=zombie,tag=this,distance=..13,sort=nearest,limit=1] eyes run tp @s ^ ^ ^0.4
     execute as @a[distance=13..20] at @s facing entity @e[type=zombie,tag=this,distance=..20,sort=nearest,limit=1] eyes run tp @s ^ ^ ^1.0
     execute as @a[distance=20..30] at @s facing entity @e[type=zombie,tag=this,distance=..30,sort=nearest,limit=1] eyes run tp @s ^ ^ ^1.5
     execute as @a[distance=30..100] at @s facing entity @e[type=zombie,tag=this,distance=..100,sort=nearest,limit=1] eyes positioned as @e[type=zombie,tag=this,distance=..100] rotated ~ 0 run tp @s ^ ^ ^2
