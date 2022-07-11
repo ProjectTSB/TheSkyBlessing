@@ -1,5 +1,10 @@
 {
     "values": [
+        "asset:sacred_treasure/0959.whirlwind_scabbard/register",
+        "asset:sacred_treasure/0233.reversal/register",
+        "asset:sacred_treasure/0776.jade_armor/register",
+        "asset:sacred_treasure/0777.jade_armor/register",
+        "asset:sacred_treasure/0973.call_rod_spirit/register",
         "asset:sacred_treasure/0967.enhanced_protection/register",
         "asset:sacred_treasure/0953.meteor_rain/register",
         "asset:sacred_treasure/0981.soufire_shoot/register",
@@ -36,7 +41,6 @@
         "asset:sacred_treasure/0954.inverted_parachute/register",
         "asset:sacred_treasure/0932.equal_speed_charlie_london/register",
         "asset:sacred_treasure/0930.z_flag/register",
-        "asset:sacred_treasure/0954.inverted_parachute/register",
         "asset:sacred_treasure/0931.d_u_t_y/register",
         "asset:sacred_treasure/0897.lightning_broach/register",
         "asset:sacred_treasure/0253.holy_barrier/register",
