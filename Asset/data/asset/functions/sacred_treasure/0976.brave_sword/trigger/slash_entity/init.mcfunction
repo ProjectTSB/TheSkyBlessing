@@ -6,11 +6,11 @@
 
 # 向きを揃える
     execute as @p[tag=this] run function api:data_get/rotation
-    execute store result entity @s Rotation[] float 1 run data get storage api: Rotation
+    data modify entity @s Rotation set from storage api: Rotation
 
 # 向き
-    execute store result score @s Temporary run data get entity @p[tag=this] Rotation[1] 1
-    execute store result entity @s Pose.RightArm[2] float -1 run scoreboard players remove @s Temporary 90
+    execute store result score @s Temporary run data get storage api: Rotation[1] 100
+    execute store result entity @s Pose.RightArm[2] float -0.01 run scoreboard players remove @s Temporary 9000
 
 # タグ削除
     tag @s remove R4.SlashInit
