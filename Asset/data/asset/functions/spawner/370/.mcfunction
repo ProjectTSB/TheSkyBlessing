@@ -1,7 +1,7 @@
 #> asset:spawner/370/
 #
-# スポナーの呪われた神器の位置を書く
+# スポナーのチェック
 #
 # @within tag/function asset:spawner/register
 
-execute unless data storage asset:spawner DPR[{D:overworld,X:221,Y:173,Z:125}] in overworld positioned 221 173 125 if entity @p[distance=..40] run function asset:spawner/370/register
+execute unless data storage asset:island DPR[{D:overworld,X:221,Y:173,Z:125}] in overworld positioned 221 173 125 if entity @p[distance=..40] run function asset:island/370/register/register

@@ -1,7 +1,7 @@
 #> asset:island/14/register/
 #
-# 島の呪われた神器の位置を書く
+# 島の呪われた神器のチェック
 #
 # @within tag/function asset:island/register
 
-execute unless data storage asset:island DPR[{D:Overworld,X:101,Y:21,Z:35}] in overworld positioned 101 21 35 if entity @p[distance=..40] run function asset:island/14/register/register
+execute unless data storage asset:spawner DPR[{D:Overworld,X:122,Y:39,Z:41}] in Overworld positioned 122 39 41 if entity @p[distance=..40] run function asset:spawner/14/register

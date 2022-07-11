@@ -1,0 +1,7 @@
+#> asset:spawner/715/
+#
+# スポナーのチェック
+#
+# @within tag/function asset:spawner/register
+
+execute unless data storage asset:island DPR[{D:overworld,X:-102,Y:207,Z:-46}] in overworld positioned -102 207 -46 if entity @p[distance=..40] run function asset:island/715/register/register
