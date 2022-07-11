@@ -13,14 +13,14 @@
     data modify storage lib: Argument.Distance set value 1.0
     data modify storage lib: Argument.Spread set value 1
 
-# 前方2散を実行する
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] rotated ~ 90 run function lib:forward_spreader/circle
+# 拡散する
+    execute as @e[type=marker,tag=SpreadMarker,distance=..50,limit=1] rotated ~ 90 run function lib:forward_spreader/circle
 
 # パーティクル
     particle explosion ~ ~ ~ 0 0 0 0 0 force
 
-# 向き
-    tp @s ~ ~ ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1]
+# マーカーの方を向く
+    tp @s ~ ~ ~ facing entity @e[type=marker,tag=SpreadMarker,distance=..50,limit=1]
 
 # タグ削除
     tag @s remove QH.MeteorInit

@@ -11,10 +11,10 @@
 # 拡散用marker召喚
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Bounds set value [[32d,32d],[10d,0d],[32d,32d]]
-    execute as @e[type=marker,tag=SpreadMarker] at @s run function lib:spread_entity/
+    execute as @e[type=marker,tag=SpreadMarker,distance=..50] at @s run function lib:spread_entity/
 
 # 拡散したマーカーの上空に召喚
-    execute at @e[type=marker,tag=SpreadMarker] positioned ~ ~ ~ run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["Friend","Projectile","QH.Meteor","QH.MeteorInit"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20197}}}]}
+    execute at @e[type=marker,tag=SpreadMarker,distance=..50] positioned ~ ~ ~ run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["Friend","Projectile","QH.Meteor","QH.MeteorInit"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20197}}}]}
 
 # 自身のIDを発射体にも付与
     scoreboard players operation @e[type=armor_stand,tag=QH.MeteorInit,distance=..50] QH.UserID = @s UserID
