@@ -15,3 +15,6 @@
 
 # 自害
     kill @s
+
+# お掃除
+    kill @e[type=marker,tag=1A.SkillMarker]
