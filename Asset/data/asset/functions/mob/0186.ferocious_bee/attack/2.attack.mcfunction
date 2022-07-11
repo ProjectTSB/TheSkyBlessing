@@ -10,7 +10,7 @@
 # ダメージを与える
 # 引数の設定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 14
+        data modify storage lib: Argument.Damage set value 14.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -20,4 +20,4 @@
 # 対象
     execute as @p[tag=Victim] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

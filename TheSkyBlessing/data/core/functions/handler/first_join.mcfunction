@@ -2,15 +2,19 @@
 #
 # 初回Join時に実行される
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 #> UserIDのIndex
 # @private
     #declare score_holder $UserIDIndex
 
+# バージョンチェック
+    function player_manager:version_check
 # 固有ユーザーID
     scoreboard players add $UserIDIndex Global 1
     scoreboard players operation @s UserID = $UserIDIndex Global
+# お友達(概念)
+    tag @s add Friend
 # 無信仰にする
     function player_manager:god/none/set_tag
 # ステータス初期化
@@ -20,5 +24,7 @@
     function player_manager:bonus/update_mp_bonus
     function player_manager:bonus/update_attack_bonus
     function player_manager:bonus/update_defense_bonus
+# 神器クールダウンの初期化
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set value [{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0}]
 # リスポーンイベントが初回に発火しないように
     scoreboard players set @s RespawnEvent 81

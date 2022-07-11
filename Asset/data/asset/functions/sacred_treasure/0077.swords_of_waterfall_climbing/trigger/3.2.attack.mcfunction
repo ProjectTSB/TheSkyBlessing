@@ -11,8 +11,8 @@
     tag @s add 25.Hit
 
 # 攻撃処理
-    # 与えるダメージ = 10
-        data modify storage lib: Argument.Damage set value 10f
+    # 与えるダメージ = 45
+        data modify storage lib: Argument.Damage set value 45f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
@@ -21,7 +21,7 @@
     execute as @a[tag=this] run function lib:damage/modifier
     function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 演出
     particle minecraft:rain ~ ~ ~ 0 2 0 1 100

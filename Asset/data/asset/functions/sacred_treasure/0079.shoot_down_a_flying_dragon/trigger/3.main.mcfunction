@@ -50,10 +50,10 @@
 
         # //ここ時点で$AttackStrengthは0..3をとる
         # AttackStrengthに従ってダメージを設定
-            execute if score $AttackStrength Temporary matches 0 run data modify storage lib: Argument.Damage set value 30.0f
-            execute if score $AttackStrength Temporary matches 1 run data modify storage lib: Argument.Damage set value 40.0f
-            execute if score $AttackStrength Temporary matches 2 run data modify storage lib: Argument.Damage set value 55.0f
-            execute if score $AttackStrength Temporary matches 3 run data modify storage lib: Argument.Damage set value 80.0f
+            execute if score $AttackStrength Temporary matches 0 run data modify storage lib: Argument.Damage set value 160.0f
+            execute if score $AttackStrength Temporary matches 1 run data modify storage lib: Argument.Damage set value 180.0f
+            execute if score $AttackStrength Temporary matches 2 run data modify storage lib: Argument.Damage set value 220.0f
+            execute if score $AttackStrength Temporary matches 3 run data modify storage lib: Argument.Damage set value 270.0f
         # 属性なのでModifierを実行
             function lib:damage/modifier
 
@@ -80,4 +80,4 @@
         scoreboard players reset $Weather Temporary
         scoreboard players reset $AroundWater Temporary
         scoreboard players reset $AttackStrength Temporary
-        data remove storage lib: Argument
+        function lib:damage/reset

@@ -8,11 +8,11 @@
     #declare tag SpreadMarker
 
 # ワープ
-    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 1
-    data modify storage lib: Argument.Spread set value 3.633d
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=Attacker] rotated ~ 90 run function lib:forward_spreader/circle
-    execute at @p[tag=Attacker] positioned ~ ~6 ~ facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ^ ^ ^6 run tp @s ~ ~ ~
+# マーカーをワープさせて、そこが安全地帯ならワープする
+    execute at @p[tag=Attacker,distance=..50] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
+    execute at @p[tag=Attacker,distance=..50] run data modify storage lib: Argument.Bounds set value [[5d,5d],[0d,0d],[5d,5d]]
+    execute as @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] at @s run function lib:spread_entity/
+    execute at @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] if block ~ ~ ~ #lib:no_collision_without_fluid unless block ~ ~-1 ~ #lib:no_collision_without_fluid run tp @s ~ ~ ~
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]
@@ -22,7 +22,7 @@
 
 # 突進する
     data modify storage lib: Argument.VectorMagnitude set value 2
-    execute at @s facing entity @p feet rotated ~ ~-10 run function lib:motion/
+    execute at @s facing entity @p[tag=Attacker] feet rotated ~ ~-10 run function lib:motion/
 
 # リセット
     data remove storage lib: Argument

@@ -35,7 +35,7 @@
     data modify storage asset:sacred_treasure Item.Count set value 1b
 
 # Version
-    data modify storage asset:sacred_treasure Item.tag.TSB.Version set value "1.0"
+    data modify storage asset:sacred_treasure Item.tag.TSB.Version set from storage global GameVersion
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
     execute store result storage asset:sacred_treasure Item.tag.TSB.UUID int 1 run scoreboard players get $SacredTreasureIndex Global
@@ -55,6 +55,7 @@
     data modify storage asset:sacred_treasure Item.tag.TSB.LocalCooldown set from storage asset:sacred_treasure LocalCooldown
     data modify storage asset:sacred_treasure Item.tag.TSB.SpecialCooldown set from storage asset:sacred_treasure SpecialCooldown
     data modify storage asset:sacred_treasure Item.tag.TSB.DisableCooldownMessage set from storage asset:sacred_treasure DisableCooldownMessage
+    data modify storage asset:sacred_treasure Item.tag.TSB.DisableMPMessage set from storage asset:sacred_treasure DisableMPMessage
 
 # 名前
     # 残り回数が存在する場合

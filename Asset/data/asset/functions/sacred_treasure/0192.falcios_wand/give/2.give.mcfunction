@@ -25,11 +25,11 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 40
+    data modify storage asset:sacred_treasure MPCost set value 75
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Wi-ki', 'Rumor']
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

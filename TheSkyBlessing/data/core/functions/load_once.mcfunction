@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.0.4"
+data modify storage global GameVersion set value "v0.1.0"
 
 #> forceload chunksの設定
 # Origin
@@ -116,14 +116,15 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Sneak.Chest custom:sneak_time {"text":"スニークタイム: 胸"}
         scoreboard objectives add Sneak.Legs custom:sneak_time {"text":"スニークタイム: 脚"}
         scoreboard objectives add Sneak.Feet custom:sneak_time {"text":"スニークタイム: 足"}
-        scoreboard objectives add UUID.Mainhand dummy {"text":"メインハンド装備のUUID"}
-        scoreboard objectives add UUID.Offhand dummy {"text":"オフハンド装備のUUID"}
-        scoreboard objectives add UUID.Head dummy {"text":"頭装備のUUID"}
-        scoreboard objectives add UUID.Chest dummy {"text":"胸装備のUUID"}
-        scoreboard objectives add UUID.Legs dummy {"text":"脚装備のUUID"}
-        scoreboard objectives add UUID.Feet dummy {"text":"足装備のUUID"}
-        scoreboard objectives add WeaponLogCD dummy {"text":"神器の使用ログのクールダウン"}
-        scoreboard objectives add WeaponLogCDMax dummy {"text":"神器の使用ログのクールダウン最大値"}
+        scoreboard objectives add Sneak.Hotbar0 custom:sneak_time {"text":"スニークタイム: ホットバー0"}
+        scoreboard objectives add Sneak.Hotbar1 custom:sneak_time {"text":"スニークタイム: ホットバー1"}
+        scoreboard objectives add Sneak.Hotbar2 custom:sneak_time {"text":"スニークタイム: ホットバー2"}
+        scoreboard objectives add Sneak.Hotbar3 custom:sneak_time {"text":"スニークタイム: ホットバー3"}
+        scoreboard objectives add Sneak.Hotbar4 custom:sneak_time {"text":"スニークタイム: ホットバー4"}
+        scoreboard objectives add Sneak.Hotbar5 custom:sneak_time {"text":"スニークタイム: ホットバー5"}
+        scoreboard objectives add Sneak.Hotbar6 custom:sneak_time {"text":"スニークタイム: ホットバー6"}
+        scoreboard objectives add Sneak.Hotbar7 custom:sneak_time {"text":"スニークタイム: ホットバー7"}
+        scoreboard objectives add Sneak.Hotbar8 custom:sneak_time {"text":"スニークタイム: ホットバー8"}
         scoreboard objectives add MPLogCD dummy {"text":"神器をMP枯渇で失敗した際のログのクールダウン"}
         scoreboard objectives add BelieveLogCD dummy {"text":"神器を信仰で失敗した際のログのクールダウン"}
         scoreboard objectives add LocalCDLogCD dummy {"text":"神器をローカルクールダウンで失敗した際のログのクールダウン"}
@@ -132,19 +133,18 @@ team modify NoCollision collisionRule never
     bossbar set asset:special_cooldown style notched_10
 
     #> AssetManager: Mob -Public
-    # @within function
-    #   lib:debug/objective_view
-    #   asset:mob/*/**
-    #   asset_manager:mob/**
-    #   asset_manager:spawner/**
-    #   asset_manager:island/dispel/boss/remove
+    # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
 
     #> AssetManager: Mob -Private
     # @within function
+    #   core:load_once
     #   asset_manager:mob/**
+        bossbar add asset:bossbar {"text":""}
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
+    bossbar set asset:bossbar color pink
+    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Spawner
     # @within function
@@ -164,7 +164,7 @@ team modify NoCollision collisionRule never
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
-    #   core:tick/*
+    #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
@@ -183,6 +183,15 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+
+    #> PlayerManager - Motionチェック用スコアボード
+    # @within
+    #   function player_manager:pos_diff
+    #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
+        scoreboard objectives add PlayerStopTime dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
@@ -293,21 +302,23 @@ team modify NoCollision collisionRule never
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   world_manager:gimmick/teleporter/**
-        scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
-        scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
+    #   asset_manager:teleporter/tick/**
+        scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/get_max_health
+    #   api:mob/get_max_health*
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
+    #   mob_manager:init/multiplay_multiplier/*
         scoreboard objectives add MobHealthMax dummy
+        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/damage
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
@@ -315,6 +326,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
+    #   asset_manager:sacred_treasure/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy

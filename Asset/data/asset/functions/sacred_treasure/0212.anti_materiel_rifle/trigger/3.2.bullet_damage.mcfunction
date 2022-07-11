@@ -18,15 +18,15 @@
     execute at @e[tag=LandingTarget,limit=1] run particle minecraft:block redstone_block ~ ~1.2 ~ 0.4 0.4 0.4 0 99
 
 # ダメージ設定
-    # 与えるダメージ = 100
-        data modify storage lib: Argument.Damage set value 200.0f
+    # 与えるダメージ = 1500
+        data modify storage lib: Argument.Damage set value 1500.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # ダメージ
         function lib:damage/modifier
         execute as @e[tag=LandingTarget] at @s run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset
 
 # 着弾タグを消す
     tag @e[tag=LandingTarget] remove LandingTarget
