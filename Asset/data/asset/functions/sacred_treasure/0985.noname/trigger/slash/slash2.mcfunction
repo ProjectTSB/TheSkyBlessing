@@ -19,7 +19,7 @@
 
 # 向き
     execute store result score @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary run data get entity @s Rotation[1] 1
-    execute store result entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Pose.RightArm[2] float 1 run scoreboard players remove @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary 90
+    execute store result entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Pose.RightArm[2] float 1 run scoreboard players remove @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary 95
     scoreboard players reset @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary
     tag @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] remove RD.SlashInit
 
