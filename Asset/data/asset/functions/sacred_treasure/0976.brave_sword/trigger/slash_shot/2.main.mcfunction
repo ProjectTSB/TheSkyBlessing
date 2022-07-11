@@ -4,6 +4,9 @@
 #
 # @within function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/1.tick
 
+# オーナー特定
+    execute at @a[distance=..100] if score @s R4.UserID = @p UserID run tag @p add R4.OwnerPlayer
+
 # 移動 いっぱい書いて正確な移動に
     execute at @s run tp @s ^ ^ ^0.5
     execute at @s run tp @s ^ ^ ^0.5
@@ -28,3 +31,6 @@
 # キル
     execute if entity @s[scores={R4.Tick=20..}] positioned ~ ~0.8 ~ run particle minecraft:electric_spark ^ ^ ^-2 0 0 0 0.7 10
     kill @s[scores={R4.Tick=20..}]
+
+# リセット
+    tag @p[tag=R4.OwnerPlayer] remove R4.OwnerPlayer
