@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0953.meteor_rain/trigger/0.load",
+        "asset:sacred_treasure/0981.soufire_shoot/trigger/0.load",
         "asset:sacred_treasure/0973.call_rod_spirit/trigger/0.load",
         "asset:sacred_treasure/0233.reversal/trigger/0.load",
         "asset:sacred_treasure/0172.icicle/trigger/0.load",
@@ -10,6 +12,8 @@
         "asset:sacred_treasure/0837.the_world_knife/trigger/0.load",
         "asset:sacred_treasure/0664.soul_fire_armor/trigger/0.load",
         "asset:sacred_treasure/0822.sound_of_a_star/trigger/0.load",
+        "asset:sacred_treasure/0966.protection/trigger/0.load",
+        "asset:sacred_treasure/0967.enhanced_protection/trigger/0.load",
         "asset:sacred_treasure/0005.musket_matchlock/trigger/0.load",
         "asset:sacred_treasure/0905.book_of_metastasis/trigger/0.load",
         "asset:sacred_treasure/0907.rod_of_rain/trigger/0.load",
