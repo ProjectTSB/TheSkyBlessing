@@ -6,6 +6,8 @@
 #       asset:mob/0046.clock_of_despair/tick/skill/common/beam/tick
 #       asset:mob/0046.clock_of_despair/tick/skill/common/beam/loop
 
+# 10m以内なら全て(全てじゃない)を破壊する
+    execute if entity @s[distance=..10] unless block ^ ^ ^1 #lib:air unless block ^ ^ ^1 #lib:unbreakable run setblock ^ ^ ^1 air destroy
 # 着弾検知
     execute if entity @p[distance=..1] run tag @s add Landing
     execute unless block ^ ^ ^1 #lib:no_collision run tag @s add Landing
