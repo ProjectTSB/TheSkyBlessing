@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ヒール レベル1"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"治癒の祈りを通じて"}','{"text":"発動者および味方を回復する。"}','""','{"text":"[詳細]","color":"#ffde6e"}','[{"text":"体力を","color":"white"},{"text":"6.6","color":"#6e99ff"},{"text":"回復する。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"治癒の祈りを通じて"}','{"text":"発動者および味方を回復する。"}','""','{"text":"[詳細]","color":"#ffde6e"}','[{"text":"体力を","color":"white"},{"text":"5.7","color":"#6e99ff"},{"text":"回復する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

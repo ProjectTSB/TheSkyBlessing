@@ -3,7 +3,7 @@
 # 汎用タグの処理
 #
 # @within function
-#   asset_manager:mob/tick
+#   asset_manager:mob/tick/
 #   core:tick/
 
 execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle run kill @s

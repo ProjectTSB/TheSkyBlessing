@@ -76,3 +76,10 @@
     #declare tag AntiVoidTarget
     #declare tag DefaultNoGravity
     #declare tag this
+
+
+#> Bossbar用のタグ
+# @within function
+#   asset_manager:mob/tick/*
+#   asset_manager:mob/bossbar/*
+#declare tag BossbarTarget
