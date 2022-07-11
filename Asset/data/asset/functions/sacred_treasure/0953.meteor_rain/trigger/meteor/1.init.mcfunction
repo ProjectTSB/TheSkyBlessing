@@ -30,4 +30,4 @@
     scoreboard players set @s QH.Speed 16
 
 # リセット
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..50]
