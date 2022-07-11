@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"浄刀『サムライ』","color":"green","bold":true,"underlined":true}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"Ark of the Sanctuary","color":"gold","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"神聖な鉱石から作られたと言われる刀"}','{"text":"侍の魂を感じる..."}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"慈しみを象徴する剣"}','{"text":"憐れみ深い神への賛歌を奏でる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -43,11 +43,11 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 8
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value true
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
