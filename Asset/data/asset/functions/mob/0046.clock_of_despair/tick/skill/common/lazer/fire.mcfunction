@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/tick
+# @within function
+#   asset:mob/0046.clock_of_despair/tick/skill/common/lazer/tick
+#   asset:mob/0046.clock_of_despair/tick/skill/common/lazer/fire
 
 scoreboard players add @s 1A.LifeTime 1
 function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/vfx
@@ -11,3 +13,4 @@ tp @s ^ ^ ^0.5
 
 execute at @s unless block ~ ~ ~ #lib:no_collision run kill @s
 execute if score @s 1A.LifeTime matches 80.. run kill @s
+execute at @s if block ~ ~ ~ #lib:no_collision if score @s 1A.LifeTime matches ..79 run function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/fire
