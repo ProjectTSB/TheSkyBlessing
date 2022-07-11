@@ -1,6 +1,6 @@
 #> asset:mob/0046.clock_of_despair/tick/skill/11_oclock
 #
-#
+# 時計レーザーx2 -> 時計レーザーx2
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 

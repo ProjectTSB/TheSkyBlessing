@@ -1,6 +1,6 @@
 #> asset:mob/0046.clock_of_despair/tick/skill/3_oclock
 #
-#
+# 空腹 + おやつ
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 

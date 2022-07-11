@@ -1,6 +1,6 @@
 #> asset:mob/0046.clock_of_despair/tick/skill/2_oclock
 #
-# プレイヤーを追尾する
+# ビーム + 時計レーザー
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 

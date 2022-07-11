@@ -1,6 +1,6 @@
 #> asset:mob/0046.clock_of_despair/tick/skill/0_oclock
 #
-# ちょっとビビらせる
+# 揺れ -> 自機狙い雷 -> 自機外し雷
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 

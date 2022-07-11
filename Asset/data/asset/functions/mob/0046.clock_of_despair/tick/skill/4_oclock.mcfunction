@@ -1,6 +1,6 @@
 #> asset:mob/0046.clock_of_despair/tick/skill/4_oclock
 #
-#
+# ビーム -> 自機狙い火
 #
 # @within function asset:mob/0046.clock_of_despair/tick/3.skill_active
 
