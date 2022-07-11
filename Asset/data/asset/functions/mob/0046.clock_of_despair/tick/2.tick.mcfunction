@@ -3,10 +3,10 @@
 # Mobのtick時の処理
 #
 # @within function asset:mob/0046.clock_of_despair/tick/1.trigger
+
 #> private
 # @private
-    #declare score_holder $Count
-    #declare score_holder $IntervalTime
+#declare score_holder $IntervalTime
 
 # スコアを増やす
     scoreboard players add @s 1A.LifeTime 1
