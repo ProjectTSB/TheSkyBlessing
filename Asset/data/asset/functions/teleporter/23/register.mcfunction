@@ -2,7 +2,7 @@
 #
 # スポナーの定義データ
 #
-# @within function asset:spawner/23/
+# @within function asset:teleporter/23/
 
 
 # 重複防止レジストリへの登録
