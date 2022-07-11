@@ -27,7 +27,7 @@
     execute if entity @s[scores={QH.Range=..0}] run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
 
 # モブに接触
-    #execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/5.hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
 
 # 再帰
     execute if entity @s[scores={QH.MoveTimesPerTick=1..,QH.Range=1..}] at @s run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move

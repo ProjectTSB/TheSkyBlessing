@@ -8,5 +8,5 @@
     particle flame ~ ~ ~ 0.2 0.2 0.2 0 2 force @a[distance=..30]
 
 # 追尾する
-    execute facing entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..20] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
-    execute unless entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..20] run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+    execute facing entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..10] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-1000 facing entity @s eyes positioned as @s run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+    execute unless entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..10] run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
