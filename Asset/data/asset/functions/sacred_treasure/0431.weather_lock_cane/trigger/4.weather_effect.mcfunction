@@ -9,7 +9,7 @@
 # 補正値
     data modify storage api: Argument.UUID set value [I;1,1,624,6]
     data modify storage api: Argument.Amount set value 0.4
-    data modify storage api: Argument.Operation set value "multiply_base"
+    data modify storage api: Argument.Operation set value "multiply"
 
 # 各天候により属性補正を分岐する
     execute if data storage asset:temp BZ{Weather:Sunny} run function api:player_modifier/attack/fire/add

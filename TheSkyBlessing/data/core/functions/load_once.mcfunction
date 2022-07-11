@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.0.4"
+data modify storage global GameVersion set value "v0.1.0"
 
 #> forceload chunksの設定
 # Origin
@@ -138,9 +138,13 @@ team modify NoCollision collisionRule never
 
     #> AssetManager: Mob -Private
     # @within function
+    #   core:load_once
     #   asset_manager:mob/**
+        bossbar add asset:bossbar {"text":""}
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
+    bossbar set asset:bossbar color pink
+    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Spawner
     # @within function
@@ -160,7 +164,7 @@ team modify NoCollision collisionRule never
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
-    #   core:tick/*
+    #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
@@ -179,6 +183,15 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+
+    #> PlayerManager - Motionチェック用スコアボード
+    # @within
+    #   function player_manager:pos_diff
+    #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
+        scoreboard objectives add PlayerStopTime dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
@@ -289,9 +302,8 @@ team modify NoCollision collisionRule never
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   world_manager:gimmick/teleporter/**
-        scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
-        scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
+    #   asset_manager:teleporter/tick/**
+        scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function

@@ -2,7 +2,7 @@
 #
 # そのtick内のHP処理をまとめて処理します。
 #
-# @within function core:tick/post-tick-proc_player
+# @within function core:tick/player/post
 
 # 値がなければ現在値を入れる
     execute unless score @s ScoreToHealth matches -2147483648..2147483647 run function api:data_get/health
