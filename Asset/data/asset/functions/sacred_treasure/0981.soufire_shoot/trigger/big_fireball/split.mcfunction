@@ -14,11 +14,11 @@
     playsound minecraft:block.soul_sand.step neutral @a ~ ~ ~ 2 1.2
 
 # 小さい火の玉をいっぱい召喚
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AssetMob","AutoKillWhenDieVehicle"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Friend","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
 
 # 火の玉にInit処理
     execute as @e[type=armor_stand,tag=R9.SmallFireball,tag=R9.Init,distance=..10,sort=nearest,limit=5] run function asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/1.init
