@@ -2,9 +2,7 @@
 #
 # Mobの召喚時の処理
 #
-# @within function
-#   asset:mob/0275.destroyed_block/summon/1.trigger
-#   asset:mob/0273.hell_blade/break
+# @within function asset:mob/0275.destroyed_block/summon/1.trigger
 
 # 元となるMobを召喚する
     summon armor_stand ~ ~ ~ {Tags:["MobInit"],Small:1b,NoGravity:1b,Marker:1b,Invisible:1b}
