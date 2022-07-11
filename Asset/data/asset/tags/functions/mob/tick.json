@@ -1,7 +1,5 @@
 {
     "values": [
-        "asset:mob/0285.meteor_rain_emitter/tick/1.trigger",
-        "asset:mob/0284.meteor_rain_entity/tick/1.trigger",
         "asset:mob/0287.burning_stomper/tick/1.trigger",
         "asset:mob/0228.frost_eye/tick/1.trigger",
         "asset:mob/0262.frestchika/tick/1.trigger",

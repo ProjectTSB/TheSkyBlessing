@@ -1,7 +1,5 @@
 {
     "values": [
-        "asset:mob/0285.meteor_rain_emitter/summon/1.trigger",
-        "asset:mob/0284.meteor_rain_entity/summon/1.trigger",
         "asset:mob/0287.burning_stomper/summon/1.trigger",
         "asset:mob/0228.frost_eye/summon/1.trigger",
         "asset:mob/0262.frestchika/summon/1.trigger",
