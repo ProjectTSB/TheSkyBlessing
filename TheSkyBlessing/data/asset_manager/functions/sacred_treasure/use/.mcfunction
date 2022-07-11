@@ -15,7 +15,7 @@
 # すべてのアイテムについて更新処理を行う
     execute unless data storage asset:sacred_treasure {IgnoreItemUpdate:true} run function asset_manager:sacred_treasure/use/item/
 # リセット
-    data remove storage asset:sacred_treasure IgnoreUpdate
+    data remove storage asset:sacred_treasure IgnoreItemUpdate
     data remove storage asset:sacred_treasure TargetSlot
     data remove storage asset:sacred_treasure TargetDefaultSlot
     data remove storage asset:sacred_treasure TargetItems

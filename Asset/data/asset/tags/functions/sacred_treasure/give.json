@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0953.meteor_rain/give/1.trigger",
+        "asset:sacred_treasure/0981.soufire_shoot/give/1.trigger",
         "asset:sacred_treasure/0094.netherite_armor_set/give/1.trigger",
         "asset:sacred_treasure/0973.call_rod_spirit/give/1.trigger",
         "asset:sacred_treasure/0233.reversal/give/1.trigger",
@@ -46,6 +48,8 @@
         "asset:sacred_treasure/0954.inverted_parachute/give/1.trigger",
         "asset:sacred_treasure/0822.sound_of_a_star/give/1.trigger",
         "asset:sacred_treasure/0932.equal_speed_charlie_london/give/1.trigger",
+        "asset:sacred_treasure/0966.protection/give/1.trigger",
+        "asset:sacred_treasure/0967.enhanced_protection/give/1.trigger",
         "asset:sacred_treasure/0961.light_charm/give/1.trigger",
         "asset:sacred_treasure/0960.heavy_charm/give/1.trigger",
         "asset:sacred_treasure/0959.whirlwind_scabbard/give/1.trigger",
