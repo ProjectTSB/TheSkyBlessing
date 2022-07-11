@@ -4,11 +4,9 @@
 #
 # @within function asset:sacred_treasure/0976.brave_sword/trigger/3.main
 
-# ID付与
-    scoreboard players operation @s R4.UserID = @p[tag=this] UserID
-
 # 向きを揃える
-    data modify entity @s Rotation[] set from entity @p[tag=this] Rotation[]
+    execute as @p[tag=this] run function api:data_get/rotation
+    execute store result entity @s Rotation[] float 1 run data get storage api: Rotation
 
 # 向き
     execute store result score @s Temporary run data get entity @p[tag=this] Rotation[1] 1
