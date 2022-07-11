@@ -12,3 +12,8 @@
 
 # 死亡時カボチャ設置
     execute if predicate world_manager:area/02.islands if block ~ ~ ~ #lib:air run summon falling_block ~ ~1.5 ~ {BlockState:{Name:"minecraft:carved_pumpkin"},Time:1,Motion:[0.0,0.7,0.0]}
+
+# ボスドロ
+    data modify storage api: Argument.ID set value 950
+    data modify storage api: Argument.Important set value true
+    function api:sacred_treasure/spawn/from_id

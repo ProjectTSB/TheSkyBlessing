@@ -4,9 +4,8 @@
 #
 # @within function core:tick/player/
 
-# versionのチェック
-    function api:data_get/data_version
-    execute unless data storage api: {DataVersion:2865} run tellraw @a [{"text":"[warning] ","color":"yellow"},{"text":"動作バージョン(","color":"white"},{"text":"1.18.1","color":"green"},{"text":")と異なるバージョンでのjoinを検出しました。\n重大な問題が発生する可能性があります。","color":"white"}]
+# バージョンチェック
+    function player_manager:version_check
 # ボーナスの更新
     function player_manager:bonus/update_health_bonus
     function player_manager:bonus/update_mp_bonus
