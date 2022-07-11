@@ -76,6 +76,8 @@
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
+# ボスバーの表示
+    execute if data storage asset:mob {Type:"Enemy.Boss"} run function asset_manager:mob/bossbar/init
 # データ初期化
     function mob_manager:init/
 # リセット

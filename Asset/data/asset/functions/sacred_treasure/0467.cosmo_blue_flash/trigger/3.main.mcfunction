@@ -10,9 +10,12 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound entity.squid.death master @a ~ ~ ~ 1.0 2.0
+    playsound entity.squid.death player @a ~ ~ ~ 1.0 2.0
 
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+
+# ヒット処理
+    execute as @e[tag=CZ.HitEntity,distance=..40] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/hit
 
 # リセット
     tag @e[tag=CZ.HitEntity] remove CZ.HitEntity

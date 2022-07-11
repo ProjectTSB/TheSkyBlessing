@@ -8,25 +8,14 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-# ハチを召喚 一瞬も見せたくないので空の上に
-# 4種類を確立で呼び出す
 
-#
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $4 Const
 # 精霊召喚
-    execute if score $Random Temporary matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_normal
-    execute if score $Random Temporary matches 1 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_fire
-    execute if score $Random Temporary matches 2 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_water
-    execute if score $Random Temporary matches 3 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.summon_thunder
+    execute rotated ~ 0 run summon armor_stand ^2 ^ ^ {Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["87.FamiliarInit","Friend"]}
+    execute rotated ~ 0 run summon armor_stand ^ ^ ^-2 {Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["87.FamiliarInit","Friend"]}
+    execute rotated ~ 0 run summon armor_stand ^-2 ^ ^ {Pose:{Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["87.FamiliarInit","Friend"]}
 
 # 精霊Init
-    execute as @e[type=bee,tag=295Fa.Init] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.2.fairy_init
-
-# リセット
-    scoreboard players reset $Random Temporary
+    execute as @e[type=armor_stand,tag=87.FamiliarInit,distance=..5] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
 
 # 音とパーティクル
     playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2
@@ -35,5 +24,5 @@
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 1.75
     playsound minecraft:entity.vex.ambient neutral @a ~ ~ ~ 1 2
 
-# ハチを動かすやつ
-    function asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.1.fairy_tick
+# 精霊さんを動かす
+    schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick 1t replace
