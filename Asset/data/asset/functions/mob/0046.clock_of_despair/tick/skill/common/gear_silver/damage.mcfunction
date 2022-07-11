@@ -15,6 +15,8 @@
 # パラメータ設定
     data modify storage lib: Argument.Damage set value 15
     data modify storage lib: Argument.AttackType set value "Magic"
+    # 死亡ログ
+        data modify storage lib: Argument.DeathMessage set value '[{"translate": "%1$sは%2$sの歯車により存在を消し飛ばされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 # 補正 (厳密な紐付けではない)
     execute as @e[type=zombie,scores={MobID=46},distance=..14,limit=1] run function lib:damage/modifier
 # 与
