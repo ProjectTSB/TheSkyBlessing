@@ -1,5 +1,15 @@
 {
     "values": [
+        "asset:mob/0174.burning_blaze/hurt/1.trigger",
+        "asset:mob/0204_infernal_watcher/hurt/1.trigger",
+        "asset:mob/0237.lunatic_mage/hurt/1.trigger",
+        "asset:mob/0261.laser_eye_mk2/hurt/1.trigger",
+        "asset:mob/0120.convict/hurt/1.trigger",
+        "asset:mob/0224.pumpkin_ghost/hurt/1.trigger",
+        "asset:mob/0216.gray_guardian/hurt/1.trigger",
+        "asset:mob/0292.trample_bot/hurt/1.trigger",
+        "asset:mob/0046.clock_of_despair/hurt/1.trigger",
+        "asset:mob/0210.aurora_eye/hurt/1.trigger",
         "asset:mob/0228.frost_eye/hurt/1.trigger",
         "asset:mob/0262.frestchika/hurt/1.trigger",
         "asset:mob/0083.thunder_trifler/hurt/1.trigger",

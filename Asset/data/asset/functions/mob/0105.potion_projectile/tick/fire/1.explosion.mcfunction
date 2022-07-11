@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0105.potion_projectile/tick/5.element_branch
+# @within function asset:mob/0105.potion_projectile/tick/4.element_branch
 
 # 爆発演出
     particle explosion ~ ~1.2 ~ 0.6 0.4 0.6 0 10 normal @a

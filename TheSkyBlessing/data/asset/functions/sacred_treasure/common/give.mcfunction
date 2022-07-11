@@ -18,6 +18,7 @@
 #   LocalCooldown? : int
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
+#   DisableMPMessage? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:sacred_treasure/*/give/2.give
@@ -40,10 +41,11 @@
 # 神器排出
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
     execute unless data storage asset:context {Type:"drop"} run function api:inventory/get_size
     execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
     execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
-    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run data merge entity @s {Glowing:1b,Age:-32768}
+    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
 # リセット
     scoreboard players reset $InvSize Lib
     data remove storage asset:sacred_treasure ID
@@ -63,3 +65,4 @@
     data remove storage asset:sacred_treasure LocalCooldown
     data remove storage asset:sacred_treasure SpecialCooldown
     data remove storage asset:sacred_treasure DisableCooldownMessage
+    data remove storage asset:sacred_treasure DisableMPMessage

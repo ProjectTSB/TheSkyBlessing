@@ -1,13 +1,13 @@
 {
     "datapack.env.cmdVersion": "1.18",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.18.1",
+    "datapack.env.dataVersion": "1.18.2",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.18",
+    "datapack.env.jsonVersion": "1.18.2",
     "datapack.env.permissionLevel": 2,
     "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
@@ -495,6 +495,8 @@
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
                         "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -654,6 +656,8 @@
                         "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
                         "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
                         "    data modify storage asset:sacred_treasure CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
@@ -1956,5 +1960,12 @@
         "**/.settings": true,
         "desktop.ini": true
     },
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "githubIssues.ignoreUserCompletionTrigger": [
+        "mcfunction"
+    ],
+    "git.branchProtection": [
+        "master"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch"
 }

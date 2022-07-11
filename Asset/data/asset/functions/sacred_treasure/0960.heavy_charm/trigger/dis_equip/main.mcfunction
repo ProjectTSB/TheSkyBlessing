@@ -4,6 +4,9 @@
 #
 # @within function asset:sacred_treasure/0960.heavy_charm/trigger/dis_equip/
 
+# 音
+    playsound minecraft:item.armor.equip_generic player @a ~ ~ ~ 1 0.8
+
 # 補正を削除
     attribute @s minecraft:generic.armor modifier remove 1-0-1-0-3c000000007
     attribute @s minecraft:generic.movement_speed modifier remove 1-0-1-0-3c000000007
