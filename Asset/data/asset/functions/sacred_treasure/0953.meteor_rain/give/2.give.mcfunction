@@ -35,7 +35,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 32
 # グローバルクールダウン (int) (オプション)
-    #data modify storage asset:sacred_treasure SpecialCooldown set value 3600
+    data modify storage asset:sacred_treasure SpecialCooldown set value 3600
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 200
 # 扱える神 (string[]) Wikiを参照
