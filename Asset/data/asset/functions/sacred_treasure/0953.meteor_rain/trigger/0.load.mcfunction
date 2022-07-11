@@ -4,7 +4,7 @@
 #
 # @within tag/function asset:sacred_treasure/load
 
-#> Objective
-# @within asset:sacred_treasure/0953.meteor_rain/trigger/trigger/**
+#> 定義類はここに
+# @within function asset:sacred_treasure/0953.meteor_rain/trigger/**
     scoreboard objectives add QH.Tick dummy
     scoreboard objectives add QH.UserID dummy
