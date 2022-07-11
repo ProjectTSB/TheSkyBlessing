@@ -21,4 +21,4 @@
     execute unless data storage lib: Argument.BypassResist run data modify storage lib: Argument.BypassResist set value 0b
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
-    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] run function lib:damage/core/attack
+    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function lib:damage/core/attack

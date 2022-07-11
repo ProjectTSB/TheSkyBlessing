@@ -19,15 +19,12 @@
 
 # HP回復処理
     # 全プレイヤー全回復
-            data modify storage lib: Argument.Heal set value 10000f
-            function lib:heal/modifier
-            execute as @a run function lib:heal/
-            data remove storage lib: Argument
+        execute as @a run function asset:sacred_treasure/0522.humanism/trigger/heal
 
 # MP回復処理
     # 自身以外のプレイヤー全回復
-            scoreboard players set $Fluctuation Lib 150
-            execute as @a[tag=!this] run function lib:mp/fluctuation
+        scoreboard players set $Fluctuation Lib 150
+        execute as @a[tag=!this] run function lib:mp/fluctuation
 
 # ダメージ処理
     # 全プレイヤーの周囲50Mの敵に魔法・水属性ダメージ
@@ -37,7 +34,7 @@
         function lib:damage/modifier
         execute at @a run tag @e[tag=Enemy,tag=!Uninterferable,distance=..50] add EI.Target
         execute as @e[tag=EI.Target] run function lib:damage/
-        data remove storage lib: Argument
+        function lib:damage/reset
 
 # タグリセット
     execute at @a run tag @e[tag=EI.Target,tag=!Uninterferable,distance=..50] remove EI.Target

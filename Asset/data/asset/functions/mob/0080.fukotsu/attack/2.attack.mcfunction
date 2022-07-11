@@ -19,4 +19,4 @@
 # 範囲5m以内の攻撃先を対象に
     execute as @a[tag=Victim,distance=..5] run function lib:damage/
 # リセット
-    data remove storage lib: Argument
+    function lib:damage/reset

@@ -37,5 +37,11 @@
     data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:diamond",Count:12d}
     data modify storage asset:trader Trades[-1].Sell set value 93
 
+# 取引 ネザライト防具
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:4b}
+    data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:netherite_ingot",Count:2d}
+    data modify storage asset:trader Trades[-1].Sell set value 94
+
 # 登録
     function asset:trader/common/register

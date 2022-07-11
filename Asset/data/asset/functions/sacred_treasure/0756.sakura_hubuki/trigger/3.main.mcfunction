@@ -29,7 +29,7 @@
     # ブレ
         execute store result score $RandomDamage Temporary run function lib:random/
         scoreboard players operation $RandomDamage Temporary %= $201 Temporary
-        scoreboard players add $RandomDamage Temporary 300
+        scoreboard players add $RandomDamage Temporary 700
 
     # スコアが6ならVictimにダメージを与える前に範囲攻撃を行う
         execute if score $Random Temporary matches 6 at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function asset:sacred_treasure/0756.sakura_hubuki/trigger/4.range_attack
@@ -48,4 +48,4 @@
     scoreboard players reset $Random Temporary
     scoreboard players reset $RandomDamage Temporary
     scoreboard players reset $201 Temporary
-    data remove storage lib: Argument
+    function lib:damage/reset

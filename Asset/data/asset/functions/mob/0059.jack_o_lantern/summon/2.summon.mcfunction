@@ -5,7 +5,7 @@
 # @within function asset:mob/0059.jack_o_lantern/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiVoid"],DeathLootTable:"asset:mob/death/0059.jack_o_lantern"}
+    summon husk ~ ~-100 ~ {DeathTime:19s,Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiVoid"],DeathLootTable:"asset:mob/death/0059.jack_o_lantern"}
 # ID (int)
     data modify storage asset:mob ID set value 59
 # Type (string) Wikiを参照
@@ -31,11 +31,11 @@
     # 足 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    data modify storage asset:mob ArmorDropChances set value [0.0f,0.0f,0.0f,0.0f]
+    # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 5000
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 12.0
+    data modify storage asset:mob AttackDamage set value 3.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     #data modify storage asset:mob Defense set value 0
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
@@ -58,5 +58,19 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.8
 
+# 演出
+    playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1.5 1
+    playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 1.5 1.5
+    particle minecraft:large_smoke ~ ~1 ~ 0.3 0.5 0.3 0 50
+
+# 上に持ってくる
+    execute positioned ~ ~-100 ~ run tp @e[type=husk,tag=MobInit,distance=..0.01] ~ ~100 ~
+
+# プレイヤーをみる
+    tp @e[type=husk,tag=MobInit,distance=..0.01] ~ ~ ~ facing entity @p
+
+# スコアをセットする
+    scoreboard players set @e[type=husk,tag=MobInit,distance=..0.01] 1N.Tick -30
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=husk,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 回復
-    data modify storage lib: Argument.Heal set value 10000f
+    data modify storage lib: Argument.Heal set value 30f
     function lib:heal/modifier
     function lib:heal/
     data remove storage lib: Argument
