@@ -10,6 +10,6 @@
 # Rotation (float)
     data modify storage asset:island Rotation set value 90f
 # BOSS ID (int) (Optional)
-    data modify storage asset:island BossID set value 
+    # data modify storage asset:island BossID set value 
 
 function asset:island/common/register

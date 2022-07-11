@@ -1,4 +1,4 @@
-#> asset:spawner/05/register
+#> asset:teleporter/05/register
 #
 # スポナーの定義データ
 #
