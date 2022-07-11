@@ -15,8 +15,8 @@
 # パラメータ設定
     data modify storage lib: Argument.Damage set value 12
     data modify storage lib: Argument.AttackType set value "Magic"
-# 補正
-    function lib:damage/modifier
+# 補正 (厳密な紐付けではない)
+    execute as @e[type=zombie,scores={MobID=46},distance=..14,limit=1] run function lib:damage/modifier
 # 与
     execute as @e[type=#lib:living,tag=Friend,tag=Target,distance=..10] run function lib:damage/
 # リセット

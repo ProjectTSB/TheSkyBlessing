@@ -7,8 +7,8 @@
 # パラメータ設定
     data modify storage lib: Argument.Damage set value 50
     data modify storage lib: Argument.AttackType set value "Magic"
-# 補正 //TODO 補正対象がおかしい、これだけじゃなくてcommon/*/damage.mcf全般
-    function lib:damage/modifier
+# 補正 (厳密な紐付けではない)
+    execute as @e[type=zombie,scores={MobID=46},distance=..14,limit=1] run function lib:damage/modifier
 # 与
     function lib:damage/
 # リセット
