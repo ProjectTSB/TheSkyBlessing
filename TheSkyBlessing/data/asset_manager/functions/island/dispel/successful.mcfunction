@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:island/dispel/
 
+# 邪魔なスコアをリセットする
+    scoreboard players reset @s DispelTime
 # VFX
     function asset_manager:island/dispel/vfx/dispel
 # メッセージ
