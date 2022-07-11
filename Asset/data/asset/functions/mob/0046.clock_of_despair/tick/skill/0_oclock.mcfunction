@@ -58,10 +58,14 @@
 
 # サンダー召喚
     execute if score @s 1A.LifeTime matches 170 run tag @a[distance=..50,sort=random,limit=4] add 1A.Target
-    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~04 ~ ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
-    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~-4 ~ ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
-    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~ ~ ~04 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
-    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] positioned ~ ~ ~-4 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 000 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 045 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 090 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 135 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 180 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 225 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 270 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
+    execute if score @s 1A.LifeTime matches 170 at @a[tag=1A.Target,distance=..100] rotated 315 0 positioned ^ ^ ^4.5 run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/summon
 # サンダー攻撃
     execute if score @s 1A.LifeTime matches 190 at @e[type=marker,tag=1A.SkillThunderMaker,distance=..100] run function asset:mob/0046.clock_of_despair/tick/skill/common/thunder/damage
     execute if score @s 1A.LifeTime matches 190 run tag @a[tag=1A.Target,distance=..100] remove 1A.Target
