@@ -1,6 +1,18 @@
 {
     "replace": false,
     "values": [
+        "#minecraft:banners",
+        "#minecraft:buttons",
+        "#minecraft:crops",
+        "#minecraft:fire",
+        "#minecraft:flowers",
+        "#minecraft:portals",
+        "#minecraft:pressure_plates",
+        "#minecraft:rails",
+        "#minecraft:saplings",
+        "#minecraft:standing_signs",
+        "#minecraft:wall_corals",
+        "#minecraft:wall_signs",
         "minecraft:air",
         "minecraft:attached_melon_stem",
         "minecraft:attached_pumpkin_stem",
@@ -46,6 +58,8 @@
         "minecraft:redstone_wall_torch",
         "minecraft:redstone_wire",
         "minecraft:scaffolding",
+        "minecraft:sculk_vein",
+        "minecraft:frogspawn"
         "minecraft:small_dripleaf",
         "minecraft:soul_torch",
         "minecraft:soul_wall_torch",
@@ -65,19 +79,6 @@
         "minecraft:warped_fungus",
         "minecraft:warped_roots",
         "minecraft:weeping_vines",
-        "minecraft:weeping_vines_plant",
-        "#minecraft:banners",
-        "#minecraft:buttons",
-        "#minecraft:crops",
-        "#minecraft:fire",
-        "#minecraft:flowers",
-        "#minecraft:portals",
-        "#minecraft:pressure_plates",
-        "#minecraft:rails",
-        "#minecraft:saplings",
-        "#minecraft:standing_signs",
-        "#minecraft:wall_corals",
-        "#minecraft:wall_signs",
-        "minecraft:sculk_vein"
+        "minecraft:weeping_vines_plant"
     ]
 }
