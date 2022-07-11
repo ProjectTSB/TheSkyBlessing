@@ -7,6 +7,7 @@
     #declare tag 1A.Clock
     #
     #declare tag 1A.SkillMarker
+    #declare tag 1A.SkillPenaltyThunderMaker
     #declare tag 1A.SkillThunderMaker
     #declare tag 1A.SkillFireMaker
     #declare tag 1A.SkillBallAEC

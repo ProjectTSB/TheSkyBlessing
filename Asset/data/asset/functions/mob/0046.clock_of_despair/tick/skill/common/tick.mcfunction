@@ -11,3 +11,4 @@ execute if entity @s[tag=1A.GearGold] run function asset:mob/0046.clock_of_despa
 execute if entity @s[tag=1A.GearSilver] run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/tick
 execute if entity @s[tag=1A.WallLazerClock] run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/tick
 execute if entity @s[tag=1A.WallLazer] run function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/tick
+execute if entity @s[tag=1A.SkillPenaltyThunderMaker] run function asset:mob/0046.clock_of_despair/tick/skill/common/penalty_thunder/tick
