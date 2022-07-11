@@ -17,7 +17,7 @@
     playsound minecraft:entity.ghast.shoot player @a ~ ~ ~ 3 0.5
 
 # スコアリセット
-    scoreboard players set @s QH.Count 0
+    scoreboard players set @s QH.MeteorCastedCount 0
 
 # 一定時間メテオを降らす
     schedule function asset:sacred_treasure/0953.meteor_rain/trigger/4.emitter_tick 1t replace

@@ -13,7 +13,7 @@
     execute positioned ~ ~40 ~ run function asset:sacred_treasure/0953.meteor_rain/trigger/7.cast_meteor
 
 # カウントが増える
-    scoreboard players add @s QH.Count 1
+    scoreboard players add @s QH.MeteorCastedCount 1
 
 # リセット
     scoreboard players reset @s QH.Tick
