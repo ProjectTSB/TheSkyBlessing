@@ -13,7 +13,7 @@
 
 # ダメージを与える
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 50f
+        data modify storage lib: Argument.Damage set value 110f
     # 属性
         data modify storage lib: Argument.AttackType set value "Magic"
         data modify storage lib: Argument.ElementType set value "None"
@@ -23,3 +23,4 @@
         execute as @e[type=#lib:living,tag=Enemy,distance=..4] run function lib:damage/
 # リセット
     function lib:damage/reset
+    tag @s remove RD.This
