@@ -1,8 +1,8 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/lazer/vfx
+#> asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/vfx
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/fire
+# @within function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/fire
 
 playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1.35
 

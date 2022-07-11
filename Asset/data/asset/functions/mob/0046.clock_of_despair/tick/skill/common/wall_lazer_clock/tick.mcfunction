@@ -26,5 +26,6 @@
 
 # 生存時間加算
     scoreboard players add @s 1A.LifeTime 1
-    execute if score @s 1A.LifeTime matches 120.. rotated ~90 ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/summon
+    execute if score @s 1A.LifeTime matches 120.. rotated ~90 ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/fire
+    execute if score @s 1A.LifeTime matches 120.. run scoreboard players reset $LazerDistance Temporary
     execute if score @s 1A.LifeTime matches 120.. run kill @s

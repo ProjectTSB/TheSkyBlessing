@@ -1,8 +1,8 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/lazer/damage
+#> asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/damage
 #
 #
 #
-# @within function asset:mob/0046.clock_of_despair/tick/skill/common/lazer/fire
+# @within function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/fire
 
 # パラメータ設定
     data modify storage lib: Argument.Damage set value 50
