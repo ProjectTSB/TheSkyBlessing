@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0647.thorn_armor/trigger/**
-    scoreboard objectives add HZ.Tick dummy
+    scoreboard objectives add HZ.CoolDown dummy

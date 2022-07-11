@@ -14,5 +14,5 @@
 # 補正の削除
     function api:player_modifier/defense/thunder/remove
 
-# フルセットタグを削除
-    execute if entity @s[tag=HZ.FullSet] run tag @s remove HZ.FullSet
+# フルセット解除
+    execute if entity @s[tag=HZ.FullSet] run function asset:sacred_treasure/0647.thorn_armor/trigger/5.fullset_dis_equip
