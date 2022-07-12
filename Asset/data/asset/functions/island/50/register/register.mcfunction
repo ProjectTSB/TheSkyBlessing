@@ -6,7 +6,7 @@
 
 
 # 重複防止レジストリへの登録
-    data modify storage asset:island DPR set value {D:overworld,X:-70,Y:156,Z:140}
+    data modify storage asset:island DPR append value {D:overworld,X:-70,Y:156,Z:140}
 
 # ID (int)
     data modify storage asset:island ID set value 50

@@ -6,7 +6,7 @@
 
 
 # 重複防止レジストリへの登録
-    data modify storage asset:island DPR set value {D:the_nether,X:3,Y:73,Z:128}
+    data modify storage asset:island DPR append value {D:the_nether,X:3,Y:73,Z:128}
 
 # ID (int)
     data modify storage asset:island ID set value 55
