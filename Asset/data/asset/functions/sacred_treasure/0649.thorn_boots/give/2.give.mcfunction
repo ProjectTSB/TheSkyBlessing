@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ソーンブーツ","color":"#1D5923"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水耐性+5% ","color":"aqua"},{"text":"雷耐性+5%","color":"yellow"}]','[{"text":"荊の鎧を全て纒いし時、血吸いの荊が目を覚ます","color":"#1D5923"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"荊の鎧を全て纒いし時、血吸いの荊が目を覚ます","color":"#1D5923"}]','[{"text":"水耐性+5% ","color":"aqua"},{"text":"雷耐性+5%","color":"yellow"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -49,9 +49,9 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:2454317},Unbreakable:1b,Enchantments:[{id:"thorns",lvl:5}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3.5,Operation:0,UUID:[I;1,1,649,3],Slot:"feet"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,649,3],Slot:"feet"}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:2454317},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3.5,Operation:0,UUID:[I;1,1,649,3],Slot:"feet"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,649,3],Slot:"feet"}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

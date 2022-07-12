@@ -35,7 +35,7 @@
     data modify storage asset:sacred_treasure Item.Count set value 1b
 
 # Version
-    data modify storage asset:sacred_treasure Item.tag.TSB.Version set value "1.0"
+    data modify storage asset:sacred_treasure Item.tag.TSB.Version set from storage global GameVersion
 # Unique Universal Identifier
     scoreboard players add $SacredTreasureIndex Global 1
     execute store result storage asset:sacred_treasure Item.tag.TSB.UUID int 1 run scoreboard players get $SacredTreasureIndex Global

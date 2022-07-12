@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.0.4"
+data modify storage global GameVersion set value "v0.1.0"
 
 #> forceload chunksの設定
 # Origin
@@ -138,9 +138,13 @@ team modify NoCollision collisionRule never
 
     #> AssetManager: Mob -Private
     # @within function
+    #   core:load_once
     #   asset_manager:mob/**
+        bossbar add asset:bossbar {"text":""}
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
+    bossbar set asset:bossbar color pink
+    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Spawner
     # @within function

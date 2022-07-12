@@ -12,3 +12,8 @@
 
 # 初期地点markerをキル
     kill @e[type=marker,tag=6L.SpawnPoint,distance=..100,limit=1]
+
+# ボスドロ
+    data modify storage api: Argument.ID set value 952
+    data modify storage api: Argument.Important set value true
+    function api:sacred_treasure/spawn/from_id

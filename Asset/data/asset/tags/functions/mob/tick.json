@@ -1,5 +1,14 @@
 {
     "values": [
+        "asset:mob/0266.small_dark_ball/tick/1.trigger",
+        "asset:mob/0265.dark_familiar/tick/1.trigger",
+        "asset:mob/0264.dark_summoner/tick/1.trigger",
+        "asset:mob/0275.destroyed_block/tick/1.trigger",
+        "asset:mob/0273.hell_blade/tick/1.trigger",
+        "asset:mob/0229.burning_blaze.shot/tick/1.trigger",
+        "asset:mob/0174.burning_blaze/tick/1.trigger",
+        "asset:mob/0204_infernal_watcher/tick/1.trigger",
+        "asset:mob/0082.thunder_curtain/tick/1.trigger",
         "asset:mob/0237.lunatic_mage/tick/1.trigger",
         "asset:mob/0261.laser_eye_mk2/tick/1.trigger",
         "asset:mob/0120.convict/tick/1.trigger",
@@ -73,7 +82,7 @@
         "asset:mob/0158.sin/tick/1.trigger",
         "asset:mob/0131.haruclaire/tick/1.trigger",
         "asset:mob/0078.messenger_of_thunder/tick/1.trigger",
-        "asset:mob/0079.thundercloud/tick/1.trigger",
+        "asset:mob/0079.return_thunder/tick/1.trigger",
         "asset:mob/0154.ruin/tick/1.trigger",
         "asset:mob/0138.combat_turret/tick/1.trigger",
         "asset:mob/0187.flame_mage/tick/1.trigger",

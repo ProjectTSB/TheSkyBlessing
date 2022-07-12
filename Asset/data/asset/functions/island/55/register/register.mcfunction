@@ -5,9 +5,6 @@
 # @within function asset:island/55/register/
 
 
-# 重複防止レジストリに登録
-    data modify storage asset:island DPR append value {D:Nether,X:3,Y:73,Z:128}
-
 # ID (int)
     data modify storage asset:island ID set value 55
 # Rotation (float)

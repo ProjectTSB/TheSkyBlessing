@@ -15,7 +15,7 @@
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value 0f
 
-# 取引 羊毛を通過に
+# 取引 羊毛を通貨に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"minecraft:white_wool",Count:32b}
     data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"currency/",Count:1b}

@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"見通しの書","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"敵を視界に捉えて使用することで、","color":"white"}','[{"text":"その敵の","color":"white"},{"text":"体力","color":"gold"},{"text":"と","color":"white"},{"text":"耐性情報","color":"gold"},{"text":"を表示する。","color":"white"}]','{"text":"\\"まずは敵を知るところから\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"敵を視界に捉えて使用することで、","color":"white"}','[{"text":"その敵の","color":"white"},{"text":"現在の体力","color":"gold"},{"text":"と","color":"white"},{"text":"ダメージの通りやすさ","color":"gold"},{"text":"を表示する。","color":"white"}]','{"text":"\\"まずは敵を知るところから\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
