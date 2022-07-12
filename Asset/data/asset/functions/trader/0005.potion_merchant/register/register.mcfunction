@@ -15,6 +15,11 @@
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value -45f
 
+# 取引 牛乳パック
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:2b}
+    data modify storage asset:trader Trades[-1].Sell set value 771
+
 # 取引 アムリタ
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:8b}
