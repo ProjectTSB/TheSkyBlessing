@@ -5,6 +5,9 @@
 # @within function asset:island/32/register/
 
 
+# 重複防止レジストリへの登録
+    data modify storage asset:island DPR set value {D:overworld,X:103,Y:117,Z:-104}
+
 # ID (int)
     data modify storage asset:island ID set value 32
 # Rotation (float)

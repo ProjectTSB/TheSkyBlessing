@@ -5,6 +5,9 @@
 # @within function asset:spawner/136/
 
 
+# 重複防止レジストリへの登録
+    data modify storage asset:spawner DPR set value {D:overworld,X:404,Y:116,Z:64}
+
 # ID (int)
     data modify storage asset:spawner ID set value 136
 # 体力 (int) このスポナーから召喚されたMobがN体殺されると破壊されるか
