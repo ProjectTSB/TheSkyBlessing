@@ -22,7 +22,17 @@
     # ネコの種類をランダムに
         execute store result score $Random Temporary run function lib:random/
         scoreboard players operation $Random Temporary %= $11 Const
-        execute store result entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] CatType int 1 run scoreboard players get $Random Temporary
+        execute if score $Random Temporary matches 0 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "all_black"
+        execute if score $Random Temporary matches 1 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "black"
+        execute if score $Random Temporary matches 2 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "british_shorthair"
+        execute if score $Random Temporary matches 3 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "calico"
+        execute if score $Random Temporary matches 4 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "jellie"
+        execute if score $Random Temporary matches 5 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "persian"
+        execute if score $Random Temporary matches 6 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "ragdoll"
+        execute if score $Random Temporary matches 7 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "red"
+        execute if score $Random Temporary matches 8 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "siamese"
+        execute if score $Random Temporary matches 9 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "tabby"
+        execute if score $Random Temporary matches 10 run data modify entity @e[type=cat,tag=AbstractCat,distance=..1,limit=1] variant set value "white"
 
     # 使用者に懐かせる
         function api:data_get/uuid
