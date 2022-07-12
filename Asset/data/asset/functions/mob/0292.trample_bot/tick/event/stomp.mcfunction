@@ -25,7 +25,7 @@
     execute if data storage api: {HurtTime:0s} as @a[gamemode=!spectator,gamemode=!creative,distance=..2] run function lib:damage/
 
 # 吹き飛ばし
-    execute at @a[gamemode=!spectator,distance=..2] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:5,ShowParticles:0b}]}
+    execute at @a[gamemode=!spectator,distance=..2] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25,Amplifier:20b,Duration:5,ShowParticles:0b}]}
 
 # リセット
     function lib:damage/reset
