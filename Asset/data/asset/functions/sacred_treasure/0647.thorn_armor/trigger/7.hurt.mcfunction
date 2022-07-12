@@ -8,6 +8,9 @@
 # @private
     #declare score_holder $Fluctuation
 
+# クールタイム処理
+    scoreboard players set @s HZ.CoolDown 20
+
 # 演出
     # 相手に赤いパーティクル
         execute at @e[type=#lib:living,tag=Attacker,distance=..50] run particle falling_dust redstone_block ~ ~1.2 ~ 0.5 0.5 0.5 0 20 normal @a
@@ -22,7 +25,7 @@
     data remove storage lib: Argument
 
 # 被ダメージ時攻撃者にダメージ
-    data modify storage lib: Argument.Damage set value 50.0f
+    data modify storage lib: Argument.Damage set value 75.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Attacker,distance=..50] run function lib:damage/
