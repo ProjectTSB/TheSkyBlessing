@@ -6,7 +6,7 @@
 
 
 # 重複防止レジストリへの登録
-    data modify storage asset:teleporter DPR set value {D:overworld,X:-109,Y:104,Z:55}
+    data modify storage asset:teleporter DPR append value {D:overworld,X:-109,Y:104,Z:55}
 
 # ID (int)
     data modify storage asset:teleporter ID set value 44

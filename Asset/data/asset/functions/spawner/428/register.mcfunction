@@ -6,7 +6,7 @@
 
 
 # 重複防止レジストリへの登録
-    data modify storage asset:spawner DPR set value {D:overworld,X:-9,Y:156,Z:337}
+    data modify storage asset:spawner DPR append value {D:overworld,X:-9,Y:156,Z:337}
 
 # ID (int)
     data modify storage asset:spawner ID set value 428
