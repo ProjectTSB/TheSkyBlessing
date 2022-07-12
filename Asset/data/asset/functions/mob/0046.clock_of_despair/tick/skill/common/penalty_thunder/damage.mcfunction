@@ -5,7 +5,7 @@
 # @within function asset:mob/0046.clock_of_despair/tick/skill/common/penalty_thunder/tick
 
 # 演出
-    playsound ogg:item.trident.thunder2 block @a ~ ~ ~ 1 1.5
+    playsound ogg:item.trident.thunder2 hostile @a ~ ~ ~ 1 1.5
     particle flash ~ ~ ~ 0 0 0 1 1 force @a[distance=..50]
 
 # 周りのブロックも蒸発させる
