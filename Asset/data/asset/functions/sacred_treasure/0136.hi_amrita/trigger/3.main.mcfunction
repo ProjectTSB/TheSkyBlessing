@@ -18,5 +18,5 @@
     playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 40
+    scoreboard players set $Fluctuation Lib 100
     function lib:mp/fluctuation
