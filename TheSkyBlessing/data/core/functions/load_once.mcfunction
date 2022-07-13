@@ -248,7 +248,7 @@ team modify NoCollision collisionRule never
     team modify None.LowHP prefix {"text":"  ","color":"white"}
     team modify None.MedHP prefix {"text":"  ","color":"white"}
     team modify None.HighHP prefix {"text":"  ","color":"white"}
-    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"}]
+    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
     team modify Flora.MedHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
     team modify Flora.HighHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
     team modify Urban.LowHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
