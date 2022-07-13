@@ -16,11 +16,11 @@
 
 # 周囲のプレイヤー数を取得する (e0)
     execute at @s store result score $NearbyPlayerCount Temporary if entity @a[distance=..75]
-# ベース倍率 0.3(e1)
-    scoreboard players set $MultiplayMultiplierBase Temporary 3
-# マルチ補正倍率 0.7(e1)
-    scoreboard players set $MultiplayMultiplier Temporary 7
-# マルチ補正倍率の計算 0.7(e1) * N(e0) + 0.3(e1)
+# ベース倍率 0.5(e1)
+    scoreboard players set $MultiplayMultiplierBase Temporary 5
+# マルチ補正倍率 0.5(e1)
+    scoreboard players set $MultiplayMultiplier Temporary 5
+# マルチ補正倍率の計算 0.5(e1) * N(e0) + 0.5(e1)
     scoreboard players operation $MultiplayMultiplier Temporary *= $NearbyPlayerCount Temporary
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # マルチ補正倍率の保存
