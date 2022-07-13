@@ -15,3 +15,6 @@
 
 # じゃがいもを1つ発動者に与える
     give @s potato
+
+# 骨粉消費
+    execute if predicate lib:random_pass_per/25 run clear @s bone_meal 1
