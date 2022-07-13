@@ -21,8 +21,8 @@
         },
         {
             "rolls": {
-                "min": 6,
-                "max": 14
+                "min": 2,
+                "max": 5
             },
             "entries": [
                 {
@@ -162,7 +162,7 @@
                     ]
                 },
                 {
-                    "weight": 5,
+                    "weight": 1,
                     "type": "item",
                     "name": "elytra",
                     "functions": [
@@ -176,7 +176,7 @@
                     ]
                 },
                 {
-                    "weight": 20,
+                    "weight": 10,
                     "type": "item",
                     "name": "ender_pearl",
                     "functions": [

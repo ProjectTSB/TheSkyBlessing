@@ -64,6 +64,9 @@
     execute if score @s 3L.Tick matches 150 run playsound minecraft:entity.strider.death hostile @a ~ ~ ~ 1 0.8
     execute if score @s 3L.Tick matches 150 positioned ^ ^ ^0.2 run particle block redstone_block ~ ~1.3 ~ 0 0 0 0 30
 
+# ボスドロ
+    execute if score @s 3L.Tick matches 220 run function asset:mob/0129.lexiel/death/boss_drop
+
 # 消失
     execute if score @s 3L.Tick matches 220 run particle minecraft:cloud ~ ~1.3 ~ 0 0 0 0.3 100
     execute if score @s 3L.Tick matches 220 run kill @e[type=armor_stand,tag=3L.ArmorStandDeathSword,distance=..3,sort=nearest,limit=1]

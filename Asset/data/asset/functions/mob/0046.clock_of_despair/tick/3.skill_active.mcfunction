@@ -5,28 +5,28 @@
 # @within function asset:mob/0046.clock_of_despair/tick/2.tick
 
 # 0時
-    execute if score @s 1A.LifeTime matches 0..99 run function asset:mob/0046.clock_of_despair/tick/skill/0_oclock/0_oclock
+    execute if score @s 1A.LifeTime matches 0..199 run function asset:mob/0046.clock_of_despair/tick/skill/0_oclock
 # 1時
-    execute if score @s 1A.LifeTime matches 100..199 run function asset:mob/0046.clock_of_despair/tick/skill/1_oclock/1_oclock
+    execute if score @s 1A.LifeTime matches 200..399 run function asset:mob/0046.clock_of_despair/tick/skill/1_oclock
 # 2時
-    execute if score @s 1A.LifeTime matches 200..299 run function asset:mob/0046.clock_of_despair/tick/skill/2_oclock/2_oclock
+    execute if score @s 1A.LifeTime matches 400..599 run function asset:mob/0046.clock_of_despair/tick/skill/2_oclock
 # 3時
-    execute if score @s 1A.LifeTime matches 300..399 run function asset:mob/0046.clock_of_despair/tick/skill/3_oclock/3_oclock
+    execute if score @s 1A.LifeTime matches 600..799 run function asset:mob/0046.clock_of_despair/tick/skill/3_oclock
 # 4時
-    execute if score @s 1A.LifeTime matches 400..499 run function asset:mob/0046.clock_of_despair/tick/skill/4_oclock/4_oclock
+    execute if score @s 1A.LifeTime matches 800..999 run function asset:mob/0046.clock_of_despair/tick/skill/4_oclock
 # 5時
-    execute if score @s 1A.LifeTime matches 500..599 run function asset:mob/0046.clock_of_despair/tick/skill/5_oclock/5_oclock
+    execute if score @s 1A.LifeTime matches 1000..1199 run function asset:mob/0046.clock_of_despair/tick/skill/5_oclock
 # 6時
-    execute if score @s 1A.LifeTime matches 600..699 run function asset:mob/0046.clock_of_despair/tick/skill/6_oclock/6_oclock
+    execute if score @s 1A.LifeTime matches 1200..1399 run function asset:mob/0046.clock_of_despair/tick/skill/6_oclock
 # 7時
-    execute if score @s 1A.LifeTime matches 700..799 run function asset:mob/0046.clock_of_despair/tick/skill/7_oclock/7_oclock
+    execute if score @s 1A.LifeTime matches 1400..1599 run function asset:mob/0046.clock_of_despair/tick/skill/7_oclock
 # 8時
-    execute if score @s 1A.LifeTime matches 800..899 run function asset:mob/0046.clock_of_despair/tick/skill/8_oclock/8_oclock
+    execute if score @s 1A.LifeTime matches 1600..1799 run function asset:mob/0046.clock_of_despair/tick/skill/8_oclock
 # 9時
-    execute if score @s 1A.LifeTime matches 900..1999 run function asset:mob/0046.clock_of_despair/tick/skill/9_oclock/9_oclock
+    execute if score @s 1A.LifeTime matches 1800..3999 run function asset:mob/0046.clock_of_despair/tick/skill/9_oclock
 # 10時
-    execute if score @s 1A.LifeTime matches 1000..1099 run function asset:mob/0046.clock_of_despair/tick/skill/10_oclock/10_oclock
+    execute if score @s 1A.LifeTime matches 2000..2199 run function asset:mob/0046.clock_of_despair/tick/skill/10_oclock
 # 11時
-    execute if score @s 1A.LifeTime matches 1100..1199 run function asset:mob/0046.clock_of_despair/tick/skill/11_oclock/11_oclock
+    execute if score @s 1A.LifeTime matches 2200..2399 run function asset:mob/0046.clock_of_despair/tick/skill/11_oclock
 # 12時
-    execute if score @s 1A.LifeTime matches 1200.. run function asset:mob/0046.clock_of_despair/tick/skill/12_oclock/12_oclock
+    execute if score @s 1A.LifeTime matches 2400.. run function asset:mob/0046.clock_of_despair/tick/skill/12_oclock

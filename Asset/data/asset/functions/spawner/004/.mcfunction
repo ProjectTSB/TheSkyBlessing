@@ -1,6 +1,6 @@
 #> asset:spawner/004/
 #
-# スポナーの呪われた神器の位置を書く
+# スポナーのチェック
 #
 # @within tag/function asset:spawner/register
 
