@@ -20,6 +20,6 @@
     # 次tick以降用にschedule予約
         schedule function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/recursive 1t
 # 効果処理
-    function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/effect/
+    execute positioned ~ ~1.4 ~ run function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/effect/
 # リセット
     execute positioned ~ ~1.4 ~ run tag @e[type=area_effect_cloud,tag=Init,distance=..0.01] remove Init
