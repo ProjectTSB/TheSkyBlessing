@@ -39,9 +39,9 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $3 Const
 # 向きを適当に変える
-    execute if score $Random Temporary matches 0 run tp @s ~ ~ ~ ~ ~-1
-    execute if score $Random Temporary matches 1 run tp @s ~ ~ ~ ~-1 ~-1
-    execute if score $Random Temporary matches 2 run tp @s ~ ~ ~ ~1 ~-1
+    execute if score $Random Temporary matches 0 run tp @s ~ ~ ~ ~ ~-0.5
+    execute if score $Random Temporary matches 1 run tp @s ~ ~ ~ ~-0.5 ~-0.5
+    execute if score $Random Temporary matches 2 run tp @s ~ ~ ~ ~0.5 ~-0.5
     scoreboard players reset $Random Temporary
 
 # リセット
