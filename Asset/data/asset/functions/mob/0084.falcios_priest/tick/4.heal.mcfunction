@@ -14,5 +14,5 @@
 # 回復
     data modify storage lib: Argument.Heal set value 500f
     function lib:heal/modifier
-    execute as @e[type=#lib:living,tag=Enemy,distance=..10] run function lib:heal/
+    execute as @e[type=#lib:living,tag=Enemy,distance=..10,sort=random,limit=5] run function lib:heal/
     data remove storage lib: Argument
