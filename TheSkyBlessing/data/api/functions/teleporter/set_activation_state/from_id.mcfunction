@@ -1,4 +1,4 @@
-#> api:teleporter/set_activation_state
+#> api:teleporter/set_activation_state/from_id
 #
 #
 #

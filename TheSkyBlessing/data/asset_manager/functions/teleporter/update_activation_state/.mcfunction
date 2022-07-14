@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:teleporter/set_activation_state
+# @within function api:teleporter/set_activation_state/from_id
 
 # IDから対象テレポーターのEntityStorageを取得する
     function asset_manager:teleporter/update_activation_state/get_storage_from_teleporter_id
