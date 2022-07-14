@@ -19,7 +19,7 @@
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    data modify storage asset:sacred_treasure RemainingCount set value 1
+    data modify storage asset:sacred_treasure RemainingCount set value 5
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
@@ -43,9 +43,9 @@
 # MP必要量 (int) (オプション)
     data modify storage asset:sacred_treasure MPRequire set value 0
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 1200
 # グローバルクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure SpecialCooldown set value
+    data modify storage asset:sacred_treasure SpecialCooldown set value 600
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
