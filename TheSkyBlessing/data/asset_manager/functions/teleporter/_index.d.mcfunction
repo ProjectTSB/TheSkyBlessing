@@ -9,7 +9,9 @@
     #declare storage asset:teleporter
 
 #> Teleporter
-# @within asset_manager:teleporter/**
+# @within
+#   asset_manager:teleporter/**
+#   api:teleporter/set_activation_state/from_nearest
     #declare tag Teleporter
 
 #> TeleportPoint
