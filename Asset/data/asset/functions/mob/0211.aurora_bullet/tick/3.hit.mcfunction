@@ -19,16 +19,6 @@
     function lib:damage/reset
 
 
-# MP回復量減少デバフを付与
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,2,210,0]
-    # 補正値
-        data modify storage api: Argument.Amount set value -0.75
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply"
-# 補正の追加
-    execute as @a[gamemode=!spectator,dx=0] run function api:player_modifier/mp_regen/add
-
 # スコアを付与
     scoreboard players set @a[gamemode=!spectator,dx=0] 5U.DebuffTime 80
 
