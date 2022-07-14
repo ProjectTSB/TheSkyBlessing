@@ -15,9 +15,10 @@
     execute positioned ~ ~4 ~ run function asset:sacred_treasure/0191.horus_wand/trigger/vfx/
 
 # 回復
-    data modify storage lib: Argument.Heal set value 25f
+    data modify storage lib: Argument.Heal set value 10
     function lib:heal/modifier
     execute as @a[distance=..15] run function lib:heal/
+    effect give @a[distance=..15] regeneration 8 1 true
 
 # リセット
     data remove storage lib: Argument
