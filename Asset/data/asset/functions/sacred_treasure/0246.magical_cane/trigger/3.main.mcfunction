@@ -20,9 +20,6 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
 
-# 天使に対してはダメージ半減
-    execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..10] store result storage lib: Argument.Damage float 0.5 run scoreboard players get $MagicalCane Temporary
-
 # 補正実行
     function lib:damage/modifier
 
