@@ -28,6 +28,10 @@
     data modify storage asset:sacred_treasure MPCost set value 50
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
+# 神器のクールダウン (int) (オプション)
+    data modify storage asset:sacred_treasure LocalCooldown set value 8
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Wi-ki', 'Rumor']
 
