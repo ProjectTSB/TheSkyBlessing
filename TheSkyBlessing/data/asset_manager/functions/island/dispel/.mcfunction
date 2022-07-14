@@ -27,7 +27,6 @@
     execute if score @s DispelTime matches 120 run function oh_my_dat:please
     execute if score @s DispelTime matches 120 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData{HasBoss:true,DispelPhase:0b} at @p[predicate=lib:is_sneaking,distance=..2] run function asset_manager:island/dispel/boss/
 # 解呪時間を満たした場合解呪する
-    execute if score @s DispelTime matches 160 run function oh_my_dat:please
     execute if score @s DispelTime matches 160 run function asset_manager:island/dispel/successful
 
 # リセット
