@@ -5,9 +5,9 @@
 # @within function asset:mob/0292.trample_bot/tick/2.tick
 
 # 演出
-    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 1 2
+    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 0.5 2
+    playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 0.5 2
     scoreboard players reset @s 84.MoveTime
 
 # モデル変更
