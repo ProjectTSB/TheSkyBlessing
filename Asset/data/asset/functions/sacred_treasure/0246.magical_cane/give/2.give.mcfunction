@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"マジカルステッキ","color":"green"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"MPを全て消費し、強力な攻撃をぶちかます。","color":"white"}']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"MPを全て消費","color":"red"},{"text":"し、","color":"white"},{"text":"超強力","color":"gold"},{"text":"な攻撃をぶちかます。","color":"white"}]','[{"text":"天使に対してはダメージが","color":"white"},{"text":"半減","color":"red"},{"text":"する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value "{消費MP×2}"
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value "{消費MP×10}"
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)

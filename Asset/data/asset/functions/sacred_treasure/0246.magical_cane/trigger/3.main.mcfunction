@@ -8,17 +8,22 @@
 
 # 使用時のMPの数値によって演出がかわるよ
     execute store result score $MagicalCane Temporary run function lib:mp/get
-    execute if score $MagicalCane Temporary matches 0..30 run function asset:sacred_treasure/0246.magical_cane/trigger/3.1.weak_hit
-    execute if score $MagicalCane Temporary matches 31..120 run function asset:sacred_treasure/0246.magical_cane/trigger/3.2.strong_hit
-    execute if score $MagicalCane Temporary matches 120.. run function asset:sacred_treasure/0246.magical_cane/trigger/3.3.hyper_hit
+    execute if score $MagicalCane Temporary matches 0..49 run function asset:sacred_treasure/0246.magical_cane/trigger/3.1.weak_hit
+    execute if score $MagicalCane Temporary matches 50..249 run function asset:sacred_treasure/0246.magical_cane/trigger/3.2.strong_hit
+    execute if score $MagicalCane Temporary matches 250.. run function asset:sacred_treasure/0246.magical_cane/trigger/3.3.hyper_hit
 
-# $MagicalCaneに現在のスコアx3の数値を持たせる
-    scoreboard players operation $MagicalCane Temporary *= $2 Const
+# $MagicalCaneに現在のスコアx10の数値を持たせる
+    scoreboard players operation $MagicalCane Temporary *= $10 Const
 
 # ぶん殴ったやつにさっきもたせた数値ぶんの魔法無属性のダメージをぶちかます
     execute store result storage lib: Argument.Damage float 1 run scoreboard players get $MagicalCane Temporary
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
+
+# 天使に対してはダメージ半減
+    execute if entity @e[type=#lib:living,tag=Victim,tag=Enemy.Boss,tag=!Uninterferable,distance=..10] store result storage lib: Argument.Damage float 0.5 run scoreboard players get $MagicalCane Temporary
+
+# 補正実行
     function lib:damage/modifier
 
 # ダメージを受けろ！
@@ -29,4 +34,4 @@
 
 # リセット
     function lib:damage/reset
-    scoreboard players reset $MagicalCane
+    scoreboard players reset $MagicalCane Temporary
