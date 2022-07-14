@@ -1,4 +1,4 @@
-#> world_manager:area/04-02.end_forgotten_star
+#> world_manager:area/04-02.end_forgotten_star_lower
 #
 #
 #
