@@ -14,7 +14,7 @@
     playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
 
 # HP回復
-    data modify storage lib: Argument.Heal set value 24f
+    data modify storage lib: Argument.Heal set value 20
     function lib:heal/modifier
     function lib:heal/
 

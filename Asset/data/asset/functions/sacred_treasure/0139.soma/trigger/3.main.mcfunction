@@ -19,11 +19,11 @@
     playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 20
+    scoreboard players set $Fluctuation Lib 30
     function lib:mp/fluctuation
 
 # HP回復
-    data modify storage lib: Argument.Heal set value 10f
+    data modify storage lib: Argument.Heal set value 6
     function lib:heal/modifier
     function lib:heal/
 
