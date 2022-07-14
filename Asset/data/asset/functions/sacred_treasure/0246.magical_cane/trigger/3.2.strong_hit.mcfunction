@@ -4,8 +4,9 @@
 #
 # @within function asset:sacred_treasure/0246.magical_cane/trigger/3.main
 
-    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 2 2
-    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 2 2
+    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
+    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 1.5 2
+    playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1.5 2
 
 # 付近のヒットさせた敵にパーティクルを出す
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle enchanted_hit ~ ~1 ~ 0 0 0 0.5 20
