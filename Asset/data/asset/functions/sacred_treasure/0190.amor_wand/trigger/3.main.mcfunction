@@ -15,7 +15,7 @@
     execute positioned ~ ~4 ~ run function asset:sacred_treasure/0190.amor_wand/trigger/vfx/
 
 # 回復
-    data modify storage lib: Argument.Heal set value 9.5f
+    data modify storage lib: Argument.Heal set value 7.6
     function lib:heal/modifier
     execute as @a[distance=..15] run function lib:heal/
 
