@@ -5,16 +5,16 @@
 # @within function asset:mob/0287.burning_stomper/tick/2.tick
 
 # 演出
-    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1.5 1
+    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 0.5 2
+    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1 1
     scoreboard players reset @s 7Z.MoveTime
 
 # モデル変更
     item replace entity @s armor.head with stick{CustomModelData:20209}
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 40f
+    data modify storage lib: Argument.Damage set value 45f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
 

@@ -45,7 +45,7 @@
 
 # 自身の最大体力の5%分のダメージを与える
     # ダメージ量
-        execute store result storage lib: Argument.Damage float 0.05 run attribute @s generic.max_health get 1.0
+        data modify storage lib: Argument.Damage set value 5.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か

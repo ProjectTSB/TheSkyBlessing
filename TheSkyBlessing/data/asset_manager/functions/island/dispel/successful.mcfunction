@@ -15,6 +15,8 @@
     execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:sacred_treasure/give/from_id
 # アイテム返す
     function player_manager:lost_item/give_all/
+# データ取得
+    function oh_my_dat:please
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
 # テレポーターを起動する

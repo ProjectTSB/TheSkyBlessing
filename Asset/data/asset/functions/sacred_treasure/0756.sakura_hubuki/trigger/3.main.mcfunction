@@ -23,13 +23,14 @@
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.4 0
     playsound entity.player.attack.sweep player @a ~ ~ ~ 0.8 1.2 0
 
+# 101を定義
+    scoreboard players set $101 Temporary 101
+
 # ダメージ
-    # 先に201を定義
-        scoreboard players set $201 Temporary 201
     # ブレ
         execute store result score $RandomDamage Temporary run function lib:random/
-        scoreboard players operation $RandomDamage Temporary %= $201 Temporary
-        scoreboard players add $RandomDamage Temporary 700
+        scoreboard players operation $RandomDamage Temporary %= $101 Temporary
+        scoreboard players add $RandomDamage Temporary 400
 
     # スコアが6ならVictimにダメージを与える前に範囲攻撃を行う
         execute if score $Random Temporary matches 6 at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function asset:sacred_treasure/0756.sakura_hubuki/trigger/4.range_attack
@@ -47,5 +48,5 @@
 # リセット
     scoreboard players reset $Random Temporary
     scoreboard players reset $RandomDamage Temporary
-    scoreboard players reset $201 Temporary
+    scoreboard players reset $101 Temporary
     function lib:damage/reset

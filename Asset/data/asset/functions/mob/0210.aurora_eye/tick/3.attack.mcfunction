@@ -23,13 +23,6 @@
 # リセット
     function lib:damage/reset
 
-# MPに関するデバフを付与(MP回復量-75%、2秒毎にMPが減少する) 状態異常名は極光侵蝕状態とでもしておきましょう
-    data modify storage api: Argument.UUID set value [I;1,2,210,0]
-    data modify storage api: Argument.Amount set value -0.75
-    data modify storage api: Argument.Operation set value "multiply"
-# 補正の追加
-    function api:player_modifier/mp_regen/add
-
 # スコアを付与
     scoreboard players set @s 5U.DebuffTime 120
 
