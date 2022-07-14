@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:item.armor.equip_leather hostile @a ~ ~ ~ 1 2.0 1
+    playsound minecraft:item.armor.equip_leather player @a ~ ~ ~ 1 2.0
     particle minecraft:squid_ink ~ ~1 ~ 0.4 0 0.4 0.01 10 force
 
 # じゃがいもを1つ発動者に与える
