@@ -17,7 +17,8 @@
 #> TeleportPoint
 # @within asset_manager:teleporter/tick/**
     #declare tag FromTeleporter
-    #declare tag TeleporterInit
+    #declare tag TeleporterInitialized
+    #declare tag TeleporterInitializing
     #declare tag TPStar
     #declare tag TPStar.White
     #declare tag TPStar.Aqua
