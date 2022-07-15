@@ -16,7 +16,7 @@
     execute if data storage asset:teleporter {IsTPStarExists: true} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Temp.Teleporters set from storage asset:teleporter FilteredTeleporters
     execute if data storage asset:teleporter {IsTPStarExists: true} run tag @s add TeleporterInitializing
 # なければ初期化済タグを付与し、メッセージを出す
-    execute if data storage asset:teleporter {IsTPStarExists:false} run tellraw @p[tag=this] {"text":"このテレポーターはどこにも繋がっていないようだ...","color":"light_purple"}
+    execute if data storage asset:teleporter {IsTPStarExists:false} run tellraw @s {"text":"このテレポーターはどこにも繋がっていないようだ...","color":"light_purple"}
     execute if data storage asset:teleporter {IsTPStarExists:false} run tag @s add TeleporterInitialized
 # リセット
     data remove storage asset:teleporter IsTPStarExists
