@@ -27,9 +27,9 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 40
+    data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value
+    data modify storage asset:sacred_treasure MPRequire set value 150
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
