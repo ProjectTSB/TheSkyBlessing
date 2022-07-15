@@ -11,7 +11,7 @@
     execute at @s run playsound entity.enderman.teleport block @a ~ ~ ~ 2 1
 
 # 帰還(交易島テレポーター行き)
-    tp @s -15 21.00 -1 145 0
+    execute in overworld run tp @s -15 21.00 -1 145 0
 
 # ワープ先でもサウンド
     execute at @s run playsound entity.enderman.teleport block @a ~ ~ ~ 2 1
