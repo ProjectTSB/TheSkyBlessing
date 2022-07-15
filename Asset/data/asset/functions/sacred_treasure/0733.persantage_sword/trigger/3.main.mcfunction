@@ -26,7 +26,7 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0040 run function api:mob/get_max_health
 
 # 天使の場合、1%にする
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0001 run function api:mob/get_max_health
+    execute as @e[type=#lib:living,type=!player,tag=Victim,tag=Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.0001 run function api:mob/get_max_health
 
 # ダメージ
     function lib:damage/modifier
