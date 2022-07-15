@@ -9,7 +9,7 @@
     playsound block.honey_block.hit hostile @a ~ ~ ~ 1 1 0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 42f
+    data modify storage lib: Argument.Damage set value 40f
 # 属性
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
