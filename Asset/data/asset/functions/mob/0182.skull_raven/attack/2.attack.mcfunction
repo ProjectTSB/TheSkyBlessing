@@ -8,9 +8,6 @@
    execute at @p[tag=Victim,distance=..60] run particle minecraft:lava ~ ~0.5 ~ 0.8 0.8 0.8 0.1 20 normal @p
    execute at @p[tag=Victim,distance=..60] run playsound minecraft:entity.blaze.shoot hostile @p ~ ~ ~ 0.8 0.8 0
 
-# エフェクト
-    effect give @p[tag=Victim,distance=..60] levitation 1 5 true
-
 # 引数の設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 16.0d
