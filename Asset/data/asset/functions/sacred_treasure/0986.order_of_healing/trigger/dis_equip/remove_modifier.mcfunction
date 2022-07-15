@@ -4,7 +4,7 @@
 #
 # @within function asset:sacred_treasure/0986.order_of_healing/trigger/dis_equip/main
 
-# MP回復
+# MP消費
     scoreboard players set $Fluctuation Lib -150
     function lib:mp/fluctuation
 
