@@ -5,6 +5,7 @@
 # @within function world_manager:area/04.end/
 
 # テレポーターの起動
+    data modify storage api: Argument.ActivationState set value "Activate"
     function api:teleporter/set_activation_state/from_nearest
 # 死ぬがよい
     execute if predicate world_manager:area/04-01.end_mansion_void run function world_manager:area/04-01.end_mansion_void
