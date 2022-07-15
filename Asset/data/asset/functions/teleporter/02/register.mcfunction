@@ -6,15 +6,15 @@
 
 
 # 重複防止レジストリへの登録
-    data modify storage asset:teleporter DPR append value {D:overworld,X:-16,Y:21,Z:-2}
+    data modify storage asset:teleporter DPR append value {D:overworld,X:96,Y:91,Z:1872}
 
 # ID (int)
-    data modify storage asset:teleporter ID set value 2
+    data modify storage asset:teleporter ID set value 302
 # GroupID (string)
-    data modify storage asset:teleporter GroupID set value islands
+    data modify storage asset:teleporter GroupID set value end
 # デフォルトの起動状態 ("InvisibleDeactivate" | "VisibleDeactivate" | "Activate")
-    data modify storage asset:teleporter ActivationState set value Activate
+    data modify storage asset:teleporter ActivationState set value VisibleDeactivate
 # 色 ("white" | "aqua")
-    data modify storage asset:teleporter Color set value aqua
+    data modify storage asset:teleporter Color set value white
 
 function asset:teleporter/common/register
