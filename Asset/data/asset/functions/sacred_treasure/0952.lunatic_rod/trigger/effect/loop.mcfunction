@@ -3,7 +3,7 @@
 # スケジュールループを実行
 #
 # @within function
-#   asset:sacred_treasure/0952.lunatic_rod/trigger/3.main
+#   asset:sacred_treasure/0952.lunatic_rod/trigger/5.buff
 #   asset:sacred_treasure/0952.lunatic_rod/trigger/effect/main
 #   asset:sacred_treasure/0952.lunatic_rod/trigger/rejoin_process
 
