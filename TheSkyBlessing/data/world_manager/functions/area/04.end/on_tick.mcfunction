@@ -4,6 +4,8 @@
 #
 # @within function world_manager:area/04.end/
 
+# テレポーターの起動
+    function api:teleporter/set_activation_state/from_nearest
 # 死ぬがよい
     execute if predicate world_manager:area/04-01.end_mansion_void run function world_manager:area/04-01.end_mansion_void
     execute if predicate world_manager:area/04-02.end_forgotten_star_lower run function world_manager:area/04-02.end_forgotten_star_lower
