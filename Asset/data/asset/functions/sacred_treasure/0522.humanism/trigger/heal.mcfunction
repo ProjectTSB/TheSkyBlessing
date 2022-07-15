@@ -23,5 +23,5 @@
     function lib:heal/
 # リセット
     function lib:heal/reset
-    scoreboard players reset $MaxHealth
-    scoreboard players reset $CurHealth
+    scoreboard players reset $MaxHealth Temporary
+    scoreboard players reset $CurHealth Temporary
