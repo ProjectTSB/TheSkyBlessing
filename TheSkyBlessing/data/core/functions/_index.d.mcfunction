@@ -9,3 +9,7 @@
 #> DeathTag
 # @public
     #declare tag Death
+
+#> DistributedIntervalGroup
+# @within function **6_distributed_interval
+#declare score_holder $DistributeGroup

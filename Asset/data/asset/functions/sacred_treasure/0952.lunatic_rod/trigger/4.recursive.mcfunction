@@ -17,6 +17,7 @@
 
 # ヒット
     tag @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,tag=!Object,distance=..2] add Hit
+    execute if entity @e[type=#lib:living,type=!player,tag=Enemy,tag=!Uninterferable,tag=!Object,distance=..2] run tag @s add Landing
 
 # 再帰
     execute if entity @s[distance=..32] positioned ^ ^ ^1 if block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0952.lunatic_rod/trigger/4.recursive

@@ -1,0 +1,20 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "dimension": "the_end",
+        "position": {
+            "x": {
+                "min": 3,
+                "max": 238
+            },
+            "y": {
+                "min": 0,
+                "max": 82
+            },
+            "z": {
+                "min": 1839,
+                "max": 2037
+            }
+        }
+    }
+}

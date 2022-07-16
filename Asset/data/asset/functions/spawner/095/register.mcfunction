@@ -27,6 +27,6 @@
 # 近くのエンティティの最大数 (int)
     data modify storage asset:spawner MaxNearbyEntities set value 6
 # この範囲にプレイヤーが存在するとき、Mobの召喚を開始する // distance <= 100
-    data modify storage asset:spawner RequiredPlayerRange set value 16
+    data modify storage asset:spawner RequiredPlayerRange set value 8
 
 function asset:spawner/common/register

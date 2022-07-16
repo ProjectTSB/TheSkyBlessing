@@ -348,3 +348,4 @@ team modify NoCollision collisionRule never
 
 #> Scheduleループの初期化(replace)
     schedule function core:tick/4_interval 4t
+    schedule function core:tick/6_distributed_interval 6t
