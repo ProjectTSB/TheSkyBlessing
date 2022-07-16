@@ -24,6 +24,6 @@
     tag @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] remove RD.SlashInit
 
 
-# アニメーション開始
+# アニメーション開始(もし斬撃アマスタがいないならすぐに実行したいからこうなってる。妥当な処理ではないかも？)
     execute unless entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule
     execute if entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run schedule function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule 1t
