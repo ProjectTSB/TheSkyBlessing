@@ -21,3 +21,5 @@
     function lib:damage/modifier
 # ダメージ
     function lib:damage/
+# リセット
+    function lib:damage/reset
