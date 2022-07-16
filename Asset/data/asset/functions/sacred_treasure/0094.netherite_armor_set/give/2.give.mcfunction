@@ -19,7 +19,7 @@
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value
+    data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
@@ -39,9 +39,9 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 80
+    data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value
+    data modify storage asset:sacred_treasure MPRequire set value 210
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)

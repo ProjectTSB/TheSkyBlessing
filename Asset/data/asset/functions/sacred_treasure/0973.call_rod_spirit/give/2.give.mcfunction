@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [50-60]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [100-150]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -33,7 +33,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 100
+    data modify storage asset:sacred_treasure MPCost set value 30
 # 神器のクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure LocalCooldown set value 600
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)

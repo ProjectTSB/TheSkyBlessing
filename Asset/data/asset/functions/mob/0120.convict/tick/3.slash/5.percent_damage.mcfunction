@@ -11,3 +11,5 @@
     data modify storage lib: Argument.FixedDamage set value 1b
     execute as @e[type=wither_skeleton,tag=this,distance=..0.01,limit=1] run function lib:damage/modifier
     function lib:damage/
+# リセット
+    function lib:damage/reset

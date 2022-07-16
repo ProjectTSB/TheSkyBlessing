@@ -15,7 +15,6 @@
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $100 Const
-    scoreboard players set $Random Temporary 99
 # いい効果
     execute if score $Random Temporary matches ..50 run function asset:sacred_treasure/0105.secret_meat/trigger/good_effect
 # 悪い効果

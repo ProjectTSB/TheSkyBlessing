@@ -19,4 +19,4 @@
 # PlayerならErrorを出力
     execute if entity @s[type=player] run tellraw @s [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"MotionLibの実行者はPlayer以外のEntityである必要があります"}]
 # Playerじゃなければ本処理に移行
-    execute unless entity @s[type=player,tag=!Uninterferable] run function lib:motion/core/apply
+    execute unless entity @s[type=player,tag=!Uninterferable] run function lib:motion/core/

@@ -248,21 +248,21 @@ team modify NoCollision collisionRule never
     team modify None.LowHP prefix {"text":"  ","color":"white"}
     team modify None.MedHP prefix {"text":"  ","color":"white"}
     team modify None.HighHP prefix {"text":"  ","color":"white"}
-    team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Urban.LowHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Urban.MedHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Urban.HighHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Nyaptov.LowHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Nyaptov.MedHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Nyaptov.HighHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Wi-ki.LowHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Wi-ki.MedHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Wi-ki.HighHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Rumor.LowHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
-    team modify Rumor.MedHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
-    team modify Rumor.HighHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
+    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Flora.MedHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Flora.HighHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.LowHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.MedHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.HighHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.LowHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.MedHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.HighHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.LowHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.MedHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.HighHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.LowHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.MedHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.HighHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
 
     #> PlayerManager用スコアボード
     # @within
@@ -348,3 +348,4 @@ team modify NoCollision collisionRule never
 
 #> Scheduleループの初期化(replace)
     schedule function core:tick/4_interval 4t
+    schedule function core:tick/6_distributed_interval 6t

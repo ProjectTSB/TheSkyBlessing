@@ -6,5 +6,5 @@
 execute store result score $6H.MP Temporary run function lib:mp/get
 execute store result score $6H.SetMP Temporary run function lib:mp/get_max
 scoreboard players operation $6H.SetMP Temporary -= $6H.MP Temporary
-execute store result score $Set Lib run scoreboard players get $6H.MP Temporary
+execute store result score $Set Lib run scoreboard players get $6H.SetMP Temporary
 function lib:mp/set

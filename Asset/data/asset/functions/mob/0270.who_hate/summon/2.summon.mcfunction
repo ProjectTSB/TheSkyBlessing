@@ -5,7 +5,7 @@
 # @within function asset:mob/0270.who_hate/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombified_piglin ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],ActiveEffects:[{Id:8b,Amplifier:3b,Duration:2147483647,ShowParticles:0b}],DeathLootTable:"asset:mob/death/0270.who_hate"}
+    summon zombified_piglin ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],ActiveEffects:[{Id:8,Amplifier:3b,Duration:2147483647,ShowParticles:0b}],DeathLootTable:"asset:mob/death/0270.who_hate"}
 # ID (int)
     data modify storage asset:mob ID set value 270
 # Type (string) Wikiを参照

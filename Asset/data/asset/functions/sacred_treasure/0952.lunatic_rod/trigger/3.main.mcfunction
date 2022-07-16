@@ -27,18 +27,10 @@
     execute as @e[type=#lib:living,tag=Hit,distance=..40] run function lib:damage/
     function lib:damage/reset
 
+# ヒットしたら魔法攻撃バフ
+    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0952.lunatic_rod/trigger/5.buff
+
 # 再帰処理のリセット
     tag @e[type=#lib:living,tag=Hit,distance=..40] remove Hit
+    tag @s remove Landing
     scoreboard players reset $Interval Temporary
-
-# 魔法攻撃バフ
-    data modify storage api: Argument.UUID set value [I;1,1,952,0]
-    data modify storage api: Argument.Amount set value 0.3
-    data modify storage api: Argument.Operation set value "multiply"
-    function api:player_modifier/attack/magic/add
-
-# 効果時間設定
-    scoreboard players set @s QG.EffectTime 300
-
-# スケジュールループ開始
-    schedule function asset:sacred_treasure/0952.lunatic_rod/trigger/effect/loop 1t replace

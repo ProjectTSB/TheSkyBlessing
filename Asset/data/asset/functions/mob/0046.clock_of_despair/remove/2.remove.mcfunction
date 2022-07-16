@@ -6,3 +6,4 @@
 
 # 削除
     kill @e[type=armor_stand,tag=1A.ClockHand]
+    kill @e[type=marker,tag=1A.SkillMarker]

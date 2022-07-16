@@ -1,6 +1,10 @@
 {
     "values": [
         "asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/0.load",
+        "asset:sacred_treasure/0192.falcios_wand/trigger/0.load",
+        "asset:sacred_treasure/0191.horus_wand/trigger/0.load",
+        "asset:sacred_treasure/0190.amor_wand/trigger/0.load",
+        "asset:sacred_treasure/0976.brave_sword/trigger/0.load",
         "asset:sacred_treasure/0953.meteor_rain/trigger/0.load",
         "asset:sacred_treasure/0981.soufire_shoot/trigger/0.load",
         "asset:sacred_treasure/0973.call_rod_spirit/trigger/0.load",

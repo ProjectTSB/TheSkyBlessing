@@ -1,5 +1,8 @@
 {
     "values": [
+        "asset:mob/0266.small_dark_ball/summon/1.trigger",
+        "asset:mob/0265.dark_familiar/summon/1.trigger",
+        "asset:mob/0264.dark_summoner/summon/1.trigger",
         "asset:mob/0275.destroyed_block/summon/1.trigger",
         "asset:mob/0273.hell_blade/summon/1.trigger",
         "asset:mob/0229.burning_blaze.shot/summon/1.trigger",
