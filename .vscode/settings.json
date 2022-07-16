@@ -1967,5 +1967,19 @@
     "git.branchProtection": [
         "master"
     ],
-    "git.branchProtectionPrompt": "alwaysCommitToNewBranch"
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "gitmoji.additionalEmojis": [
+        {
+            "code": ":balance_scale:",
+            "emoji": "⚖️",
+            "description": "Corrections regarding balance adjustment",
+            "description_zh_cn": ""
+        }
+    ],
+    "git-graph.customEmojiShortcodeMappings": [
+        {
+            "shortcode": ":balance_scale:",
+            "emoji": "⚖️"
+        }
+    ]
 }
