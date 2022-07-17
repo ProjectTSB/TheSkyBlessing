@@ -21,7 +21,7 @@
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
-    execute as @e[type=#lib:living,tag=Victim,distance=..5] run function lib:damage/
+    execute if data storage lib: Argument.Damage as @e[type=#lib:living,tag=Victim,distance=..5] run function lib:damage/
 
 # reset
     function lib:damage/reset
