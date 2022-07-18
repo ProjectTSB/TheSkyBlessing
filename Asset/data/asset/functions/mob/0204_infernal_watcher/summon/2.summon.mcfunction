@@ -9,7 +9,7 @@
 # ID (int)
     data modify storage asset:mob ID set value 204
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value "zombie"
+    data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
