@@ -16,4 +16,4 @@
         particle minecraft:poof ~ ~1 ~ 0.2 0.2 0.2 0.1 20
 
 # プレイヤーが置ける乗り物を破壊
-    kill @e[type=#lib:placeable_vehicles,sort=nearest,limit=1]
+    kill @e[type=#lib:placeable_vehicles,distance=..1,sort=nearest,limit=1]
