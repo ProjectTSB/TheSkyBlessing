@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/6.starfury_attack/1.starfury_attack
 
 # プレイヤーの向きを向かせる
-    tp @s ~ ~ ~ facing entity @p
+    tp @s ~ ~ ~ facing entity @p[distance=..100]
 # タグを消す
     tag @s remove S2.Wait
 # 演出

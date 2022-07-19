@@ -20,4 +20,4 @@
     execute positioned ^ ^ ^3 run function asset:mob/1004.tultaria/tick/move/tereport
 
 # プレイヤーを見る
-    execute at @s facing entity @p feet positioned ~ ~0.4 ~ run function asset:mob/1004.tultaria/tick/move/tereport
+    execute at @s facing entity @p[distance=..100] feet positioned ~ ~0.4 ~ run function asset:mob/1004.tultaria/tick/move/tereport
