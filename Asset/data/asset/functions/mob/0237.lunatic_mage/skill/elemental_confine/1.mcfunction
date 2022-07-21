@@ -22,8 +22,8 @@
     execute if entity @s[scores={6L.Tick=..40}] run particle dust 1 1 1 1.5 ~ ~1 ~ 0.4 0.5 0.4 0.3 3 force @a[distance=..20]
 
 # 召喚された地点にランダムなプレイヤー一人と、水の檻範囲内にいたプレイヤーと共にワープ
-    execute if entity @s[scores={6L.Tick=20}] positioned as @s run tp @r[distance=..30] ^ ^ ^2
-    execute if entity @s[scores={6L.Tick=20}] positioned as @s run tp @a[distance=..9] ^ ^ ^2
+    execute if entity @s[scores={6L.Tick=20}] positioned as @s rotated ~ 0 run tp @r[distance=..30] ^ ^-2 ^2
+    execute if entity @s[scores={6L.Tick=20}] positioned as @s rotated ~ 0 run tp @a[distance=..9] ^ ^-2 ^2
     execute if entity @s[scores={6L.Tick=20}] as @a[distance=..9] at @s run function asset:mob/0237.lunatic_mage/skill/elemental_confine/player_pull
 
 # アクティブ中に実行するコマンド
