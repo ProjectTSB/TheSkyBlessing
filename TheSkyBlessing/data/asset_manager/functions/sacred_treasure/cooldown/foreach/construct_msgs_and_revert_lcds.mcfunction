@@ -6,12 +6,6 @@
 #   asset_manager:sacred_treasure/cooldown/
 #   asset_manager:sacred_treasure/cooldown/foreach/construct_msgs_and_revert_lcds
 
-#> For Calc
-# @private
-    #declare score_holder $Value
-    #declare score_holder $NormalizedValue
-    #declare score_holder $Max
-
 # a 16/16
 # b 15/16
 # c 14/16
@@ -68,9 +62,5 @@
         execute unless score $Value Temporary matches -15 if score $NormalizedValue Temporary matches 16 run data modify storage asset:sacred_treasure LCDMessages append value '{"text":"q","color":"white"}'
 # 末尾削除
     data remove storage asset:sacred_treasure DecrementedLCDs[-1]
-# リセット
-    scoreboard players reset $Value Temporary
-    scoreboard players reset $NormalizedValue Temporary
-    scoreboard players reset $Max Temporary
 # 要素があれば再帰
     execute if data storage asset:sacred_treasure DecrementedLCDs[0] run function asset_manager:sacred_treasure/cooldown/foreach/construct_msgs_and_revert_lcds
