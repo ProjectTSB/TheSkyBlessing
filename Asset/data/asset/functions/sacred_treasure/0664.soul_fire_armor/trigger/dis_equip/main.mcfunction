@@ -22,7 +22,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     function api:player_modifier/attack/fire/remove
 
-# 魔法耐性
+# MP回復量
     data modify storage api: Argument.UUID set value [I;1,1,664,6]
     function api:player_modifier/mp_regen/remove
 
