@@ -8,20 +8,6 @@
     function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
     function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
     function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
-    function asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
+
+# 音ならす
+    playsound item.trident.throw player @a[distance=..20] ~ ~ ~ 1 1 1
