@@ -13,19 +13,19 @@
     playsound ogg:mob.vex.idle1 player @a ~ ~ ~ 1 0 0
 
 # 物理攻撃
-    data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    data modify storage api: Argument.UUID set value [I;1,1,665,5]
     function api:player_modifier/attack/physical/remove
 
 # 火耐性
-    data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    data modify storage api: Argument.UUID set value [I;1,1,665,5]
     function api:player_modifier/defense/fire/remove
 
 # 火攻撃
-    data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    data modify storage api: Argument.UUID set value [I;1,1,665,5]
     function api:player_modifier/attack/fire/remove
 
 # 魔法耐性
-    data modify storage api: Argument.UUID set value [I;1,1,664,6]
+    data modify storage api: Argument.UUID set value [I;1,1,665,5]
     function api:player_modifier/mp_regen/remove
 
 # 最大体力
