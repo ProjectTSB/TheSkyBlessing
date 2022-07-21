@@ -23,7 +23,7 @@
 # ユーザーID適応
     scoreboard players operation @e[type=armor_stand,tag=N9.First,distance=..10] N9.UserID = @s UserID
 # 特定条件ですぐ投げるように
-    execute unless entity @e[type=#lib:living,tag=N9.Target,distance=..30,limit=1] run scoreboard players add @e[type=armor_stand,tag=N9.First,distance=..10] N9.Time 30
+    execute unless entity @e[type=#lib:living,tag=N9.Target,distance=..30,limit=1] run scoreboard players add @e[type=armor_stand,tag=N9.First,distance=..10] N9.Time 15
 # 特定条件でナイフの固定
     execute if entity @e[type=#lib:living,tag=N9.Target,distance=..30,limit=1] run scoreboard players set @e[type=armor_stand,tag=N9.Knife,tag=!N9.Start,distance=..10] N9.Time 0
 # タグを消す
