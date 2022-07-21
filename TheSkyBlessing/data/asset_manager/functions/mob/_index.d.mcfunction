@@ -58,7 +58,7 @@
 # @within function
 #   asset_manager:mob/common_tag/*
 #   asset:**
-    #declare tag AllowRidePlaceableVehicle
+    #declare tag AllowRideBannedVehicle
     #declare tag AntiFallDamage
     #declare tag AntiVoid
     #declare tag AntiBurn
