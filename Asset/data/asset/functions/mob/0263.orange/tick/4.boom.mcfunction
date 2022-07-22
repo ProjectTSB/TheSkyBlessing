@@ -14,7 +14,6 @@
 
 # 効果を付与
     effect give @a[gamemode=!spectator,distance=..1.5] saturation 3 0 true
-    effect give @a[gamemode=!spectator,distance=..1.5] slowness 3 2 true
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 15f

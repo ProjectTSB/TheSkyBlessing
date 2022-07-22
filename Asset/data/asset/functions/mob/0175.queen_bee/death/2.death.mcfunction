@@ -11,3 +11,8 @@
     playsound minecraft:entity.wither.death hostile @a ~ ~ ~ 1 2
     particle cloud ~ ~ ~ 1 1 1 0.1 100
     particle explosion_emitter ~ ~ ~ 1 1 1 0.1 10
+
+# ボスドロ
+    data modify storage api: Argument.ID set value 793
+    data modify storage api: Argument.Important set value true
+    function api:sacred_treasure/spawn/from_id

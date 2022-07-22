@@ -16,7 +16,7 @@
     execute at @e[type=marker,tag=RW.This,distance=..100] run function api:mob/summon
 
 # 演出
-    execute at @a run playsound minecraft:entity.ender_eye.death hostile @p ~ ~ ~ 1 1
+    execute at @a[distance=..100] run playsound minecraft:entity.ender_eye.death hostile @p ~ ~ ~ 1 1
 
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.0.4"
+data modify storage global GameVersion set value "v0.1.0"
 
 #> forceload chunksの設定
 # Origin
@@ -138,9 +138,13 @@ team modify NoCollision collisionRule never
 
     #> AssetManager: Mob -Private
     # @within function
+    #   core:load_once
     #   asset_manager:mob/**
+        bossbar add asset:bossbar {"text":""}
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
+    bossbar set asset:bossbar color pink
+    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Spawner
     # @within function
@@ -160,7 +164,7 @@ team modify NoCollision collisionRule never
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
-    #   core:tick/*
+    #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
         scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
@@ -179,6 +183,15 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+
+    #> PlayerManager - Motionチェック用スコアボード
+    # @within
+    #   function player_manager:pos_diff
+    #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerPosDiff.X dummy
+        scoreboard objectives add PlayerPosDiff.Y dummy
+        scoreboard objectives add PlayerPosDiff.Z dummy
+        scoreboard objectives add PlayerStopTime dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
@@ -235,21 +248,21 @@ team modify NoCollision collisionRule never
     team modify None.LowHP prefix {"text":"  ","color":"white"}
     team modify None.MedHP prefix {"text":"  ","color":"white"}
     team modify None.HighHP prefix {"text":"  ","color":"white"}
-    team modify Flora.LowHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Flora.MedHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Flora.HighHP prefix {"text":"\uE010 ","color":"white","font":"tsb"}
-    team modify Urban.LowHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Urban.MedHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Urban.HighHP prefix {"text":"\uE011 ","color":"white","font":"tsb"}
-    team modify Nyaptov.LowHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Nyaptov.MedHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Nyaptov.HighHP prefix {"text":"\uE012 ","color":"white","font":"tsb"}
-    team modify Wi-ki.LowHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Wi-ki.MedHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Wi-ki.HighHP prefix {"text":"\uE013 ","color":"white","font":"tsb"}
-    team modify Rumor.LowHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
-    team modify Rumor.MedHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
-    team modify Rumor.HighHP prefix {"text":"\uE014 ","color":"white","font":"tsb"}
+    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Flora.MedHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Flora.HighHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.LowHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.MedHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Urban.HighHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.LowHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.MedHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Nyaptov.HighHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.LowHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.MedHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Wi-ki.HighHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.LowHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.MedHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    team modify Rumor.HighHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
 
     #> PlayerManager用スコアボード
     # @within
@@ -289,17 +302,17 @@ team modify NoCollision collisionRule never
 
     #> WorldManager用スコアボード - テレポーター
     # @within function
-    #   world_manager:gimmick/teleporter/**
-        scoreboard objectives add Teleporter dummy {"text":"テレポート待機時間"}
-        scoreboard objectives add PosYCache dummy {"text":"テレポート時のプレイヤーのY座標のキャッシュ"}
+    #   asset_manager:teleporter/tick/**
+        scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/get_max_health
+    #   api:mob/get_max_health*
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
         scoreboard objectives add MobHealthMax dummy
+        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
@@ -335,3 +348,4 @@ team modify NoCollision collisionRule never
 
 #> Scheduleループの初期化(replace)
     schedule function core:tick/4_interval 4t
+    schedule function core:tick/6_distributed_interval 6t

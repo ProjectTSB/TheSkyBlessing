@@ -9,7 +9,7 @@
 
 # 拡散する
     data modify storage lib: Argument.Bounds set value [[0d,10d],[0],[0d,10d]]
-    execute as @e[type=marker,tag=RW.This,distance=..100] at @p run function lib:spread_entity/
+    execute as @e[type=marker,tag=RW.This,distance=..100] at @p[distance=..100] run function lib:spread_entity/
 
 # マーカーを見る
     execute facing entity @e[type=marker,tag=RW.This,distance=..100,sort=nearest,limit=1] feet run function asset:mob/1004.tultaria/tick/move/tereport

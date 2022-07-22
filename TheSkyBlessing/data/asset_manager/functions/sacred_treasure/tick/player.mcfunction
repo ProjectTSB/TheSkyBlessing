@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function core:tick/player
+# @within function core:tick/player/
 
 # トリガー処理
     function asset_manager:sacred_treasure/triggers/

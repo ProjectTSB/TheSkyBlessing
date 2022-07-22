@@ -5,14 +5,14 @@
 # @within function asset:island/17/register/
 
 
-# 重複防止レジストリに登録
-    data modify storage asset:island DPR append value {D:Overworld,X:49,Y:31,Z:57}
+# 重複防止レジストリへの登録
+    data modify storage asset:island DPR append value {D:overworld,X:241,Y:59,Z:46}
 
 # ID (int)
     data modify storage asset:island ID set value 17
 # Rotation (float)
     data modify storage asset:island Rotation set value 180f
 # BOSS ID (int) (Optional)
-    # data modify storage asset:island BossID set value 
+    data modify storage asset:island BossID set value 174
 
 function asset:island/common/register

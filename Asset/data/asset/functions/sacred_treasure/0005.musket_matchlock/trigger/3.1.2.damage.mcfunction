@@ -52,3 +52,4 @@
     kill @e[type=area_effect_cloud,tag=5.BlockChecker,distance=..7]
     kill @e[type=area_effect_cloud,tag=5.HitPosition,distance=..1]
     scoreboard players reset $5.OwnerId Temporary
+    execute in overworld run tp 0-0-0-0-0 0.0 0.0 0.0

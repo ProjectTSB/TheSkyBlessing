@@ -2,7 +2,7 @@
 #
 # トリガー処理
 #
-# @within function asset_manager:mob/tick
+# @within function asset_manager:mob/tick/
 
 # thisタグ
     tag @s add this

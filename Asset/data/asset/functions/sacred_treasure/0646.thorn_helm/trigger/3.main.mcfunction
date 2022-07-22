@@ -23,7 +23,7 @@
 
 # 演出
     particle dust 0 0.2 0 1 ~ ~1.6 ~ 0.4 0.2 0.4 0 10 normal @a
-    playsound minecraft:block.sweet_berry_bush.place master @a ~ ~ ~ 1 1 0
+    playsound minecraft:block.sweet_berry_bush.place player @a ~ ~ ~ 1 1 0
 
 # フルセット
     execute if data storage asset:context id.all{head:646,chest:647,legs:648,feet:649} run function asset:sacred_treasure/0647.thorn_armor/trigger/4.fullset

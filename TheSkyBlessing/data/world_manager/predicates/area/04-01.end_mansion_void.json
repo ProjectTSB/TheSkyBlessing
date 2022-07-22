@@ -4,16 +4,16 @@
         "dimension": "the_end",
         "position": {
             "x": {
-                "min": 120,
-                "max": 238
+                "min": -32,
+                "max": 233
             },
             "y": {
                 "min": 2,
-                "max": 3
+                "max": 6
             },
             "z": {
-                "min": 682,
-                "max": 816
+                "min": 489,
+                "max": 755
             }
         }
     }

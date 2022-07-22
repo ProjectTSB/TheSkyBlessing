@@ -6,7 +6,3 @@
 
 # スコアリセット
     scoreboard players reset @s 5U.DebuffTime
-
-# MP消費量減少を削除
-    data modify storage api: Argument.UUID set value [I;1,2,210,0]
-    function api:player_modifier/mp_regen/remove
