@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0279.c-4/trigger/c4summon
+# @within function asset:sacred_treasure/0279.c-4/trigger/c4_summon
 
 #> Private
 # @private
