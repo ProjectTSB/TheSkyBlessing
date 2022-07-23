@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0279.c-4/trigger/detonate
+# @within function
+#       asset:sacred_treasure/0279.c-4/trigger/detonate
+#       asset:sacred_treasure/0279.c-4/trigger/explode
 
 # 自殺する
     kill @s
@@ -19,4 +21,4 @@
         function lib:damage/reset
 
 # クリーパー召喚
-    summon creeper ~ ~ ~ {DeathTime:19s,Invulnerable:1b,DeathLootTable:"minecraft:empty",ExplosionRadius:3b,Fuse:0,Tags:["Uninterferable"]}
+    summon creeper ~ ~ ~ {DeathTime:19s,Invulnerable:1b,DeathLootTable:"minecraft:empty",ExplosionRadius:3b,Fuse:0s,Tags:["Uninterferable"]}

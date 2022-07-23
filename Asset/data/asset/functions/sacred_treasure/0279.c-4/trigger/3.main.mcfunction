@@ -11,7 +11,6 @@
 
 # タグつける
     tag @s add 7R.This
-
 # 前方に壁があるまで再帰して設置
     execute anchored eyes positioned ~ ~1.8 ~ run function asset:sacred_treasure/0279.c-4/trigger/4.place
 # タグ削除
