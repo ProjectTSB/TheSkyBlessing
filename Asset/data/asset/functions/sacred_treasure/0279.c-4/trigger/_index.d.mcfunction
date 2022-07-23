@@ -14,3 +14,4 @@
     #declare tag 7R.IsEast
     #declare tag 7R.IsSouth
     #declare tag 7R.IsWest
+    #declare tag FailRecovery
