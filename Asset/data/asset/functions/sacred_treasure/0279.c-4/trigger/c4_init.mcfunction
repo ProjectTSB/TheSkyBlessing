@@ -9,7 +9,7 @@
     #declare tag 7R.Ceiling
     #declare tag 7R.Floor
 
-# とりあえず上空100に置いてあるので持ってくる
+# とりあえず上空1000に置いてあるので持ってくる
     tp @s ~ ~ ~
 
 # 天井の場合見た目変える

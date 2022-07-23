@@ -19,7 +19,7 @@
     tag @s[tag=!7R.Landing] remove CanUsed
     tag @s remove 7R.Landing
 # CanUsed消すやつ
-    tas @s[tag=FailRecovery] remove CanUsed
+    tag @s[tag=FailRecovery] remove CanUsed
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0279.c-4/trigger/3.main

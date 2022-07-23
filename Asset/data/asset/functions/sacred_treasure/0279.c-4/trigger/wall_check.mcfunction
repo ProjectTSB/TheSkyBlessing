@@ -5,7 +5,6 @@
 # @within function asset:sacred_treasure/0279.c-4/trigger/4.place
 
 # 着弾したら前方のブロックの中心で6方向にマーカー出す
-
     execute positioned ^ ^ ^0.1 align xyz positioned ~0.5 ~0.5 ~0.5 run summon marker ~ ~ ~1 {Tags:["7R.WallCheker","7R.IsNorth"]}
     execute positioned ^ ^ ^0.1 align xyz positioned ~0.5 ~0.5 ~0.5 run summon marker ~1 ~ ~ {Tags:["7R.WallCheker","7R.IsWest"]}
 
