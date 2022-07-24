@@ -17,4 +17,4 @@
 # TP後タグ付与
     tag @p[tag=this] add SuppressTeleport
 # 汎用entityを戻す
-    tp @s 0.0 0.0 0.0
+    execute in overworld run tp @s 0.0 0.0 0.0
