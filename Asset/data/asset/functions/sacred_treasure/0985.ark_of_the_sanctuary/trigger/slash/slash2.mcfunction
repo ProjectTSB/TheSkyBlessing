@@ -14,11 +14,14 @@
     execute if entity @s[y_rotation=-115..-67.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[0F,0F],Tags:["RD.SlashSweep","RD.SlashInit","Object"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[45F,0F],Tags:["RD.SlashSweep","RD.SlashInit","Object"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
 
+# ストレージに突っ込む
+    function api:data_get/rotation
+
 # 向きを揃える
-    data modify entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Rotation[] set from entity @s Rotation[]
+    data modify entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Rotation set from storage api: Rotation
 
 # 向き
-    execute store result score @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary run data get entity @s Rotation[1] 1
+    execute store result score @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary run data get storage api: Rotation[1] 1
     execute store result entity @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Pose.RightArm[2] float 1 run scoreboard players remove @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary 95
     scoreboard players reset @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] Temporary
     tag @e[type=armor_stand,tag=RD.SlashInit,distance=..10,sort=nearest,limit=1] remove RD.SlashInit
