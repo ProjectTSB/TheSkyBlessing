@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill_list/skill_4/skill
+#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill/skill4
 #
 #
 #
