@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill_list/skill_?/*
+# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill/skill?
 
 #> Private
 # @private
