@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill_list/skill_active
+# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill/skill_active
 
 # スコアを増やす
     execute if score @s RD.Time matches 1.. run scoreboard players add @s RD.Time 1
