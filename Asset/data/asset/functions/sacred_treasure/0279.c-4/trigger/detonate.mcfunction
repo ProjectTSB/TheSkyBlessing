@@ -4,6 +4,8 @@
 #
 # @within function asset:sacred_treasure/0279.c-4/trigger/2.check_condition
 
+# 演出
+    playsound minecraft:ui.button.click player @a ~ ~ ~ 1 1.3
 
 # 自分にタグ付与
     tag @s add 7R.This

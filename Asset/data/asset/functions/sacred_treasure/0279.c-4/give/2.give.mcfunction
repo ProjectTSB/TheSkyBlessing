@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"C-4"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"ﾁｮﾄﾞｰﾝ！"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"設置して遠隔で爆破できるプラスチック爆弾"}','{"text":"スニークしながら使うことで起爆する"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

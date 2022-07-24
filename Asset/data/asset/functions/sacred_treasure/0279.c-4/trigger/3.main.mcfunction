@@ -9,6 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    playsound minecraft:block.candle.place block @a
+
 # タグつける
     tag @s add 7R.This
 # 前方に壁があるまで再帰して設置
