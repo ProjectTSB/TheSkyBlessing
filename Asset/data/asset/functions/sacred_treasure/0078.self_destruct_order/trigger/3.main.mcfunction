@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 自爆対象付与
-    tag @e[type=minecraft:iron_golem,distance=..15] add 26.GolemBomb
-    tag @e[type=minecraft:snow_golem,distance=..15] add 26.GolemBomb
+    tag @e[type=minecraft:iron_golem,tag=!Enemy,tag=!Uninterferable,distance=..15] add 26.GolemBomb
+    tag @e[type=minecraft:snow_golem,tag=!Enemy,tag=!Uninterferable,distance=..15] add 26.GolemBomb
 
 #演出
     tellraw @a[distance=..20] [{"text":"爆発まで残り3秒","color":"red","bold":true}]
