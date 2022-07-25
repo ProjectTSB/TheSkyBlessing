@@ -8,4 +8,33 @@
     function asset:sacred_treasure/common/use/legs
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0713.deep_sea_coral_leggings
+
+# 水耐性+10%
+    data modify storage api: Argument.UUID set value [I;1,1,713,4]
+    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/water/add
+
+# 魔法耐性+5%
+    data modify storage api: Argument.UUID set value [I;1,1,713,4]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/magic/add
+
+# 水攻撃+5%
+    data modify storage api: Argument.UUID set value [I;1,1,713,4]
+    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/water/add
+
+# 体力回復量+10%
+    data modify storage api: Argument.UUID set value [I;1,1,713,4]
+    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/defense/physical/add
+
+# 雷耐性-10%
+    data modify storage api: Argument.UUID set value [I;1,1,713,4]
+    data modify storage api: Argument.Amount set value -0.1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:player_modifier/attack/physical/add
