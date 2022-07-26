@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/equip
 #
-#
+# フルセット時に行う処理
 #
 # @within function
 #   asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/3.main

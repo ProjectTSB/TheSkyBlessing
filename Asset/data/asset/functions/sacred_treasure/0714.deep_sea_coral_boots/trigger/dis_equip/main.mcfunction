@@ -19,3 +19,6 @@
 # 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,714,3]
     function api:player_modifier/attack/fire/remove
+
+# フルセット解除
+    execute if entity @s[tag=JR.Fullset] run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/dis_equip
