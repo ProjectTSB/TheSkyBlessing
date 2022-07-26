@@ -8,18 +8,14 @@
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
     function api:player_modifier/defense/water/remove
 
-# 魔法耐性
-    data modify storage api: Argument.UUID set value [I;1,1,713,4]
-    function api:player_modifier/defense/magic/remove
-
 # 水攻撃
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
     function api:player_modifier/attack/water/remove
 
 # 体力回復量
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
-    function api:player_modifier/defense/physical/remove
+    function api:player_modifier/heal/remove
 
-# 雷耐性
+# 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
-    function api:player_modifier/attack/physical/remove
+    function api:player_modifier/attack/fire/remove

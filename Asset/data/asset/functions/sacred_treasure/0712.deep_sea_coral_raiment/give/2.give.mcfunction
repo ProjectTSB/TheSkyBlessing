@@ -11,11 +11,11 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 712
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft5leather_chestplate"
+    data modify storage asset:sacred_treasure Item set value "minecraft:leather_chestplate"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の羽衣","color":"#c6ccff"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"かつて光無き深海の奥底の秘境にて自生し","color":"white","italic":"true"}]','{"text":"暗き底の水圧により耐えていたとされる","color":"white","italic":"true"}]','[{"text":"自然から賜った神秘の珊瑚の羽衣","color":"white","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"体力回復量+5% ","color":"light_purple"},{"text":"火攻撃-10%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

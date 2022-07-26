@@ -9,19 +9,13 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# メモ 各部位 水耐性+10％ 魔法耐性5% 水攻撃+5％ 体力回復量+7.5％ 雷耐性-10%
+# メモ 各部位 水耐性+10％ 水攻撃+5％ 体力回復量+5％ 火攻撃-10%
 
 # 水耐性+10%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/water/add
-
-# 魔法耐性+5%
-    data modify storage api: Argument.UUID set value [I;1,1,711,6]
-    data modify storage api: Argument.Amount set value 0.05
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
 
 # 水攻撃+5%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
@@ -33,10 +27,10 @@
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
+    function api:player_modifier/heal/add
 
-# 雷耐性-10%
+# 火攻撃-10%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/physical/add
+    function api:player_modifier/attack/fire/add
