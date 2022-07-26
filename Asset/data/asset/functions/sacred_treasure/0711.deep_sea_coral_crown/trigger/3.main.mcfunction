@@ -34,3 +34,6 @@
     data modify storage api: Argument.Amount set value -0.2
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/fire/add
+
+# フルセット
+    execute if data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/equip

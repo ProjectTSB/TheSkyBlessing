@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の羽衣","color":"#c6ccff"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"かつて光無き深海の奥底の秘境にて自生し","color":"white","italic":"true"}]','{"text":"暗き底の水圧により耐えていたとされる","color":"white","italic":"true"}]','[{"text":"自然から賜った神秘の珊瑚の羽衣","color":"white","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"体力回復量+5% ","color":"light_purple"},{"text":"火攻撃-20%","color":"dark_red"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"かつて光無き深海の奥底の秘境にて自生し","color":"white","italic":"true"}]','{"text":"暗き底の水圧により耐えていたとされる","color":"white","italic":"true"}]','[{"text":"自然から賜った神秘の珊瑚の羽衣","color":"white","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"体力回復量+5% ","color":"light_purple"},{"text":"火攻撃-20%","color":"dark_red"}]','[{"text":"全て装備した時、追加で","color":"white"},{"text":"水攻撃+5%","color":"aqua"},{"text":"を得て","color":"white"}]','[{"text":"水に触れていると水中呼吸と暗視を得る","color":"aqua"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/**
-    #declare
+    #declare tag JR.Fullset
