@@ -6,10 +6,10 @@
 
 #> ゴーストちゃんの移動先を決定するマーカーのタグ、持ち主のプレイヤーのタグ
 # @private
-#declare tag R1.MoveMarker
-#declare tag R1.MoveMarkerInit
-#declare tag R1.OwnerMarker
-#declare tag R1.OwnerPlayer
+    #declare tag R1.MoveMarker
+    #declare tag R1.MoveMarkerInit
+    #declare tag R1.OwnerMarker
+    #declare tag R1.OwnerPlayer
 
 # 同IDのプレイヤーを特定
     execute at @a[distance=..60] if score @s R1.UserID = @p UserID run tag @p add R1.OwnerPlayer
