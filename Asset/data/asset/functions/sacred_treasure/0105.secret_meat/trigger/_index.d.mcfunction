@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/0105.secret_meat/trigger/**
-    #declare tag 2X.effet
+    #declare tag 2X.Effect
