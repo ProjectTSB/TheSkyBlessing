@@ -4,8 +4,8 @@
 #
 # @within function
 #   asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/3.main
-#   asset:sacred_treasure/0712.deep_sea_coral_raiment/trigger/3.main
-#   asset:sacred_treasure/0713.deep_sea_coral_leggings/trigger/3.main
+#   asset:sacred_treasure/0712.deep_sea_coral_raiment/trigger/4.vfx
+#   asset:sacred_treasure/0713.deep_sea_coral_leggings/trigger/4.vfx
 #   asset:sacred_treasure/0714.deep_sea_coral_boots/trigger/3.main
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdmAGjAFdiBLAEyTADYBOOgMwA4AjAZjoFoBGAFh7c+AVgBMPLnQDswqZLqsGFPq1YAGAIaNCYXBoC2CZICxNQEuRgI30ABDx0wNAJwMBnJOADGqYrghJRwom5w3nD2rmAAbhroxEbgAB5IakRQiQC+qUSOFGTELohqAHQ0RE4QDj75RHDo6GQwTkY8aklg9qhlEEYtHva4IUjMRABWxPowSOxErHAAXmT9+QU8RGROAKI1dQ1rAI7EUZgAynaBVIiMUQ0rTgBCs-P2u-s1UMcap0gX6A3pALpAA_3

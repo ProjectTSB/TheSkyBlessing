@@ -10,10 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    particle dust 0.686 0.49 1 0.75 ~ ~0.4 ~ 0.4 0.15 0.4 0 60 normal
-    execute positioned ~ ~0.6 ~ rotated ~ 0 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/vfx
-    execute positioned ~ ~0.3 ~ rotated ~ 0 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/vfx
-    playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 1 2
+    execute unless data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run function asset:sacred_treasure/0713.deep_sea_coral_leggings/trigger/4.vfx
 
 # 水耐性+10%
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
