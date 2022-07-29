@@ -11,6 +11,11 @@
 
 # メモ 各部位 水耐性+10％ 水攻撃+5％ 体力回復量+5％ 火攻撃-10%
 
+# 演出
+    particle dust 0.439 0.737 1 0.75 ~ ~1.7 ~ 0.4 0.2 0.4 0 50 normal
+    execute positioned ~ ~1.7 ~ rotated ~ 0 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/vfx
+    playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 1 2
+
 # 水耐性+10%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.1

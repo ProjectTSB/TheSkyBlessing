@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:leather_leggings"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の袴","color":"#e1ceff"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"深海珊瑚の袴","color":"#dfccfe"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"暗き底の水圧により耐えていたとされる","color":"white","italic":"true"}]','[{"text":"自然から賜った神秘の珊瑚の袴","color":"white","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"体力回復量+5% ","color":"light_purple"},{"text":"火攻撃-20%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
