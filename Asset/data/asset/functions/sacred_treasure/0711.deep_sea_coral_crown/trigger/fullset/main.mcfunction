@@ -5,8 +5,9 @@
 # @within function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/loop
 
 # バフ
-    execute unless entity @s[predicate=!lib:weather/is_raining,predicate=!lib:weather/is_thundering,predicate=!lib:is_in_water/include_flowing] run effect give @s water_breathing 1 0 true
-    execute unless entity @s[predicate=!lib:weather/is_raining,predicate=!lib:weather/is_thundering,predicate=!lib:is_in_water/include_flowing] run effect give @s night_vision 10 0 true
+    execute unless entity @s[predicate=!lib:weather/is_raining,predicate=!lib:weather/is_thundering,predicate=!lib:is_in_water/include_flowing] run effect give @s conduit_power 1 0 true
+    execute unless entity @s[predicate=!lib:weather/is_raining,predicate=!lib:weather/is_thundering,predicate=!lib:is_in_water/include_flowing] run effect give @s dolphins_grace 1 0 true
+    execute unless entity @s[predicate=!lib:weather/is_raining,predicate=!lib:weather/is_thundering,predicate=!lib:is_in_water/include_flowing] run effect give @s speed 1 1 true
 
 # 演出
     particle dust 0.439 0.737 1 0.5 ~ ~1.7 ~ 0.75 0.2 0.75 0 1 normal
