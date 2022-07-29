@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0105.secret_meat/trigger/**
-    scoreboard objectives add 2X.PanicTime dummy
+    scoreboard objectives add 2X.effetTime dummy

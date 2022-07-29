@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:rejoin
 # スケジュール
-    execute if entity @a[tag=2X.Panic] run schedule function asset:sacred_treasure/0105.secret_meat/trigger/panic/schedule 1t
+    execute if entity @a[tag=2X.effet] run schedule function asset:sacred_treasure/0105.secret_meat/trigger/effet/schedule 1t

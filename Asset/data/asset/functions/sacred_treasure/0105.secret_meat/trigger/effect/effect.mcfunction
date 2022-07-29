@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0105.secret_meat/trigger/panic/panic
+#> asset:sacred_treasure/0105.secret_meat/trigger/effect/effet
 #
 #
 #
-# @within function asset:sacred_treasure/0105.secret_meat/trigger/panic/schedule
+# @within function asset:sacred_treasure/0105.secret_meat/trigger/effet/schedule
 #> Private
 # @private
     #declare score_holder $Random
@@ -11,7 +11,7 @@
     particle minecraft:electric_spark ~ ~1 ~ 0.4 0.4 0.4 0 2
 
 # スコアをへらす
-    scoreboard players remove @a 2X.PanicTime 1
+    scoreboard players remove @a 2X.effetTime 1
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
@@ -29,6 +29,6 @@
     scoreboard players reset $Random Temporary
 
 # タグを消す
-    execute if score @s 2X.PanicTime matches ..0 run tag @s remove 2X.Panic
-    execute if entity @s[tag=Death] run tag @s remove 2X.Panic
-    execute if entity @s[tag=Death] run scoreboard players reset @s 2X.PanicTime
+    execute if score @s 2X.effetTime matches ..0 run tag @s remove 2X.effet
+    execute if entity @s[tag=Death] run tag @s remove 2X.effet
+    execute if entity @s[tag=Death] run scoreboard players reset @s 2X.effetTime
