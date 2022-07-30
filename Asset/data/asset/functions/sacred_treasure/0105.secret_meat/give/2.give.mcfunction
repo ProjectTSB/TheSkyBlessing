@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"nazoniku","color":"dark_purple","obfuscated":true},{"text":" 謎肉 ","color":"light_purple","obfuscated":false},{"text":"ukinozan","color":"dark_purple","obfuscated":true}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"謎に包まれた肉。なんの動物かもわからない"}]','[{"text":"食べると一時的にはいい気分になるだろう"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"謎に包まれた肉。なんの動物かもわからない。"}]','[{"text":"食べると全回復し、MP回復量と攻撃力が増えるが"}]','[{"text":"回復を拒むようになる。"}]','[{"text":"また、効果が終わった時には反動を受ける。"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
