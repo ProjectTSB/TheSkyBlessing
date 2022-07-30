@@ -31,10 +31,10 @@
     data modify storage api: Argument.ID set value 21
     execute positioned ^ ^ ^2 run function api:mob/summon
 
-# 自身の現在体の65%分のダメージを与える
+# 自身の現在体の50%分のダメージを与える
     # ダメージ量(事故防止で1は入れておくだけ)
         data modify storage lib: Argument.Damage set value 1.0f
-        execute store result storage lib: Argument.Damage float 0.65 run attribute @s generic.max_health get 1
+        execute store result storage lib: Argument.Damage float 0.5 run attribute @s generic.max_health get 1
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か
