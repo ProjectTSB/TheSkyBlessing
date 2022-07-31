@@ -11,6 +11,9 @@
 # スコアを増やす
     scoreboard players add @s 8D.Tick 1
 
+# もし初回スコアなら最初のモーションが入る
+    execute if entity @s[tag=8D.FirstMotion] if score @s 8D.Tick matches -100..-1 run function asset:mob/0301.sinful_thoughts/tick/0.first_motion/1.motion
+
 
 # プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
     execute if score @s 8D.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 8D.Tick -5

@@ -5,7 +5,7 @@
 # @within function asset:mob/0301.sinful_thoughts/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","8D.Angel"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0301.sinful_thoughts"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","8D.Angel","8D.FirstMotion"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0301.sinful_thoughts"}
 # ID (int)
     data modify storage asset:mob ID set value 301
 # Type (string) Wikiを参照
@@ -59,13 +59,13 @@
         # data modify storage asset:mob Resist.Thunder set value
 
 # 見た目用のアマスタを召喚
-    summon armor_stand ~ ~ ~ {Marker:1b,NoBasePlate:1b,Invisible:1b,Tags:["8D.ArmorStand","8D.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,330f,0f],RightArm:[0f,34f,0f],LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,00f],Head:[0f,0f,0f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20252}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20254}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20256}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,NoBasePlate:1b,Invisible:1b,Tags:["8D.ArmorStand","8D.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,0f],RightArm:[0f,0f,0f],LeftLeg:[0f,0f,0f],RightLeg:[0f,0f,0f],Head:[0f,0f,0f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20254}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20252}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20256}}]}
 # 位置をあわせる
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=8D.ArmorStandThis,distance=..0.01] @s
 # タグを消す
     tag @e[type=armor_stand,tag=8D.ArmorStandThis,distance=..0.01] remove 8D.ArmorStandThis
 # スコアをセットする
-    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 8D.Tick -30
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 8D.Tick -100
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
