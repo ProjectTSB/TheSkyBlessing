@@ -33,8 +33,9 @@
 # 5％分を100倍で取得
     execute if score $Count Temporary matches 2.. store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
 
-# 個数分掛け算
-    execute if score $Count Temporary matches 2.. run scoreboard players operation $MaxHP5Per Temporary *= $Count Temporary
+# $Countを1減らし、その個数分掛け算
+    execute if score $Count Temporary matches 2.. run scoreboard players remove $Count Temporary 1
+    execute if score $Count Temporary matches 1.. run scoreboard players operation $MaxHP5Per Temporary *= $Count Temporary
 
 # 合算してArgument.Healに代入
     execute store result storage lib: Argument.Heal float 0.01 run scoreboard players operation $MaxHP10Per Temporary += $MaxHP5Per Temporary
