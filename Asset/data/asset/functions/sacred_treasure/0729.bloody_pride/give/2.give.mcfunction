@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"血塗られた矜持","color":"dark_red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"かつて誇り高き戦士がつけていた花。","color":"gray","italic":"true"}]','[{"text":"今はもう","color":"gray","italic":"true"},{"text":"鮮血","color":"dark_red","italic":"true"},{"text":"に染まり、無垢だった色の面影はない。","color":"gray","italic":"true"}]','[{"text":"発動時、体力を最大体力の値に応じて回復する。","color":"white"}]','[{"text":"重複するほど回復量が増加する。","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"かつて誇り高き戦士がつけていた花。","color":"gray","italic":"true"}]','[{"text":"今はもう","color":"gray","italic":"true"},{"text":"鮮血","color":"dark_red","italic":"true"},{"text":"に染まり、無垢だった色の面影はない。","color":"gray","italic":"true"}]','[{"text":"発動時、体力を最大体力の値に応じて回復する。","color":"white"}]','[{"text":"多く持つほど回復量が増加する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
