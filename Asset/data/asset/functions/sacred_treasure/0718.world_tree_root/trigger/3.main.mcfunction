@@ -9,6 +9,16 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    execute rotated ~ 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
+    execute rotated ~90 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
+    execute rotated ~180 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
+    execute rotated ~270 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
+
+    playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.6 0
+    playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.4 0
+    playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.2 0
+
 # 体力+5
     attribute @s generic.max_health modifier add 00000001-0000-0001-0000-02ce00000003 "0717.MaxHealth" 5 add
 

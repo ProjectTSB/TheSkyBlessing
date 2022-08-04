@@ -4,6 +4,11 @@
 #
 # @within function asset:sacred_treasure/0716.world_tree_branch/trigger/dis_equip/
 
+# 演出
+    particle falling_dust glow_lichen ~ ~1.2 ~ 0.4 0.3 0.4 0 20 normal @a
+    particle block oak_leaves ~ ~1.2 ~ 0.4 0.3 0.4 0 20 normal @a
+    playsound block.grass.break player @a ~ ~ ~ 1 1 0
+
 # 以下の補正を消す
 
 # 体力+5
