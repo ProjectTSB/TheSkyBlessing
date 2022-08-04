@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0718.world_tree_root/trigger/dis_equip/",
+        "asset:sacred_treasure/0717.world_tree_stem/trigger/dis_equip/",
+        "asset:sacred_treasure/0716.world_tree_branch/trigger/dis_equip/",
+        "asset:sacred_treasure/0715.world_tree_crown/trigger/dis_equip/",
         "asset:sacred_treasure/0986.order_of_healing/trigger/dis_equip/",
         "asset:sacred_treasure/0980.thunder_charm/trigger/dis_equip/",
         "asset:sacred_treasure/0979.water_charm/trigger/dis_equip/",

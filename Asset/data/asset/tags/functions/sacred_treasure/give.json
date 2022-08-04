@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0718.world_tree_root/give/1.trigger",
+        "asset:sacred_treasure/0717.world_tree_stem/give/1.trigger",
+        "asset:sacred_treasure/0716.world_tree_branch/give/1.trigger",
+        "asset:sacred_treasure/0715.world_tree_crown/give/1.trigger",
         "asset:sacred_treasure/0985.ark_of_the_sanctuary/give/1.trigger",
         "asset:sacred_treasure/0986.order_of_healing/give/1.trigger",
         "asset:sacred_treasure/0976.brave_sword/give/1.trigger",
