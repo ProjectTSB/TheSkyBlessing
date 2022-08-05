@@ -14,6 +14,7 @@
     execute rotated ~90 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
     execute rotated ~180 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
     execute rotated ~270 0 positioned ^ ^0.2 ^0.4 run function asset:sacred_treasure/0715.world_tree_crown/trigger/leaf_vfx
+    execute positioned ~ ~0.2 ~ run function asset:sacred_treasure/0715.world_tree_crown/trigger/circle_vfx
 
     playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.6 0
     playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.4 0
