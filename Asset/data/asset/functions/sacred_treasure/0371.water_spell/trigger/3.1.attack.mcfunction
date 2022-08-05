@@ -17,7 +17,7 @@
         data modify storage lib: Argument.Damage set value 13f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
-    # 雷属性
+    # 水属性
         data modify storage lib: Argument.ElementType set value "Water"
 # 補正functionを実行
     execute as @p[tag=this] run function lib:damage/modifier
