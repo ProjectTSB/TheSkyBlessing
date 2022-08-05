@@ -16,7 +16,7 @@
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正
-    execute as @a[tag=this,distance=..15] run function lib:damage/modifier
+    execute as @p[tag=this,distance=..15] run function lib:damage/modifier
 # 実行
     function lib:damage/
 # 開放
