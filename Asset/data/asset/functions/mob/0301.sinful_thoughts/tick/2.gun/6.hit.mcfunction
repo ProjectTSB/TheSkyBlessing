@@ -17,6 +17,5 @@
 # リセット
     function lib:damage/reset
 
-    execute as @p[tag=LandingTarget,distance=..20,limit=1] run say hitd
 # 着弾タグを消す
     tag @p[tag=LandingTarget,distance=..50,limit=1] remove LandingTarget
