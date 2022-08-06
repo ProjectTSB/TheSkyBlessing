@@ -23,14 +23,20 @@
 # 斬る(強力)
     execute if score @s 8D.Tick matches 17 facing entity @p[gamemode=!spectator,distance=..50] eyes rotated ~ 0 run function asset:mob/0301.sinful_thoughts/tick/move/teleport
     execute if score @s 8D.Tick matches 17 run data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [360f,210f,36f]
-    execute if score @s 8D.Tick matches 17 run data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [144f,205f,72f]
+    execute if score @s 8D.Tick matches 21 run data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [144f,205f,72f]
 # タグをつけて一度しか攻撃が当たらないようにする
     execute if score @s 8D.Tick matches 21 rotated ~ 0 positioned ^ ^ ^2 run tag @a[distance=..2] add 8D.AttackHit
     execute if score @s 8D.Tick matches 21 rotated ~ 0 positioned ^ ^ ^4 run tag @a[distance=..2] add 8D.AttackHit
     execute if score @s 8D.Tick matches 21 run function asset:mob/0301.sinful_thoughts/tick/1.slash/3.powerful_slash_damage
     execute if score @s 8D.Tick matches 21 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/move/teleport
 
+# ちょっとHPへってると特殊行動雷っぽいのおとす
+    execute if score @s 8D.Tick matches 22 positioned ^ ^ ^1 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 24 positioned ^ ^ ^2 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 26 positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+
+
 # 確率でそのままジャンプする(ただしブロックに埋まっていない場合)
-    execute if score @s 8D.Tick matches 25 if block ~ ~ ~ #lib:no_collision if predicate lib:random_pass_per/50 run function asset:mob/0301.sinful_thoughts/tick/1.slash/4.go_to_jump
+    execute if score @s 8D.Tick matches 26 if block ~ ~ ~ #lib:no_collision if predicate lib:random_pass_per/50 run function asset:mob/0301.sinful_thoughts/tick/1.slash/4.go_to_jump
 # リセット
     execute if score @s 8D.Tick matches 30 run function asset:mob/0301.sinful_thoughts/tick/reset

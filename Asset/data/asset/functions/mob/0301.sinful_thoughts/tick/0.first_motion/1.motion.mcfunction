@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0301.sinful_thoughts/tick/2.tick
 
+# これやってる間無敵
+    effect give @s resistance 1 99
+
 # まずプレイヤーを見る
     execute if score @s 8D.Tick matches -99 facing entity @p[gamemode=!spectator,distance=..100] eyes run function asset:mob/0301.sinful_thoughts/tick/move/teleport
 # ポーズ変えるの

@@ -66,6 +66,8 @@
     tag @e[type=armor_stand,tag=8D.ArmorStandThis,distance=..0.01] remove 8D.ArmorStandThis
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 8D.Tick -100
+# 最大HPをスコアに入れる
+    execute store result score @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 8D.HealthMax run data get storage asset:mob Health 1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

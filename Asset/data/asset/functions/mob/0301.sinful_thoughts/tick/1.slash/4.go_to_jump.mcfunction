@@ -10,7 +10,7 @@
     function asset:mob/0301.sinful_thoughts/tick/reset
 # タグつけて
     tag @s add 8D.SkillJump
-    tag @s add RejectTeleport
+    tag @s remove RejectTeleport
 # スコアをつける
     scoreboard players set @s 8D.Tick 0
 

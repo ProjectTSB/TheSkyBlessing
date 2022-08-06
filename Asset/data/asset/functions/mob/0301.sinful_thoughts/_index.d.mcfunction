@@ -10,6 +10,8 @@
     #declare tag 8D.ArmorStand
     #declare tag 8D.ArmorStandThis
     #
+    #declare tag 8D.HPless75per
+    #
     #declare tag 8D.FirstMotion
     #declare tag 8D.SkillSlash
     #declare tag 8D.SkillGun

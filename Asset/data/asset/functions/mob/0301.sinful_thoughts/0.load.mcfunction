@@ -8,3 +8,4 @@
 # @within function asset:mob/0301.sinful_thoughts/**
     scoreboard objectives add 8D.Tick dummy
     scoreboard objectives add 8D.DebuffTime dummy
+    scoreboard objectives add 8D.HealthMax dummy
