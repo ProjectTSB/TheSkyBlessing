@@ -27,4 +27,4 @@
     execute if score @s 8D.Tick matches -30 run playsound item.trident.return hostile @a
 
 # タグ消し
-    execute if score @s 8D.Tick matches -10 run function asset:mob/0301.sinful_thoughts/tick/reset
+    execute if score @s 8D.Tick matches -20 run function asset:mob/0301.sinful_thoughts/tick/reset

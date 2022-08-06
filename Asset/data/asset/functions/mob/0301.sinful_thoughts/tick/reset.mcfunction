@@ -17,7 +17,7 @@ say リセット
 # タグをリセットする
     function asset:mob/0301.sinful_thoughts/tick/skill_tag_remove
 # スコアを戻す
-    scoreboard players set @s 8D.Tick -40
+    scoreboard players set @s 8D.Tick -20
 
 # 条件でテレポートする
     function asset:mob/0301.sinful_thoughts/tick/move/conditional_teleport

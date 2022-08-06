@@ -7,7 +7,7 @@
 # めっちゃ斬る
     execute if entity @s[tag=8D.SkillSlash] run function asset:mob/0301.sinful_thoughts/tick/1.slash/1.slash
 # 発泡
-    execute if entity @s[tag=8D.SkillGun] run function asset:mob/0301.sinful_thoughts/tick/2.summon/1.summon
+    execute if entity @s[tag=8D.SkillGun] run function asset:mob/0301.sinful_thoughts/tick/2.gun/1.gun
 # 飛びかかり
     execute if entity @s[tag=8D.SkillJump] run function asset:mob/0301.sinful_thoughts/tick/3.slash/1.slash
 # 衝撃波
