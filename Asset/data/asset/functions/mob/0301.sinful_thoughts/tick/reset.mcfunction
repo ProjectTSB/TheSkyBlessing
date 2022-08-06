@@ -4,8 +4,6 @@
 #
 # @within function asset:mob/0301.sinful_thoughts/tick/**
 
-say リセット
-
 # 戻す
     data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [0f,330f,0f]
     data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [0f,34f,0f]
