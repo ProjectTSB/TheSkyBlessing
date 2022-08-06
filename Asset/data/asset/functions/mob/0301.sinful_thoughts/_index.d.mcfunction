@@ -4,6 +4,7 @@
 #> tag
 # @within function asset:mob/0301.sinful_thoughts/**
     #declare tag 8D.This
+    #declare tag 8D.AttackHit
     #declare tag 8D.FirstMotion
     #
     #declare tag 8D.Angel
