@@ -30,5 +30,7 @@
     execute if score @s 8D.Tick matches 35 run function asset:mob/0301.sinful_thoughts/tick/1.slash/3.powerful_slash_damage
     execute if score @s 8D.Tick matches 35 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/move/teleport
 
+# 確率でそのままジャンプする(ただしブロックに埋まっていない場合)
+    execute if score @s 8D.Tick matches 45 if block ~ ~ ~ #lib:no_collision if predicate lib:random_pass_per/50 run function asset:mob/0301.sinful_thoughts/tick/1.slash/4.go_to_jump
 # リセット
-    execute if score @s 8D.Tick matches 130 run function asset:mob/0301.sinful_thoughts/tick/reset
+    execute if score @s 8D.Tick matches 50 run function asset:mob/0301.sinful_thoughts/tick/reset

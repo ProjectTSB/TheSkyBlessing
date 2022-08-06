@@ -21,3 +21,4 @@
     #declare tag CanTeleport
     #declare tag Landing
     #declare tag LandingTarget
+    #declare tag RejectTeleport

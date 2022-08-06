@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0301.sinful_thoughts/tick/3.jump/1.jump
+# @within function
+#       asset:mob/0301.sinful_thoughts/tick/1.slash/4.go_to_jump
+#       asset:mob/0301.sinful_thoughts/tick/3.jump/1.jump
 
 # プレイヤーを見る
     execute at @s facing entity @p eyes run function asset:mob/0301.sinful_thoughts/tick/move/teleport

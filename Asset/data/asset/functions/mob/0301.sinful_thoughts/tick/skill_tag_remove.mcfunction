@@ -6,7 +6,7 @@
 
 # スキル消す
     tag @s remove 8D.SkillSlash
-    tag @s remove 8D.SkillAxe
-    tag @s remove 8D.SkillSummon
+    tag @s remove 8D.SkillGun
+    tag @s remove 8D.SkillJump
 
     tag @s remove 8D.FirstMotion

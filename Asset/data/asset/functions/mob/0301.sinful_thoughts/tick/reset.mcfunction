@@ -17,5 +17,5 @@
 # スコアを戻す
     scoreboard players set @s 8D.Tick -20
 
-# 条件でテレポートする
-    function asset:mob/0301.sinful_thoughts/tick/move/conditional_teleport
+# 条件でテレポートする(スラッシュからジャンプする時は使えない)
+    execute unless entity @s[tag=RejectTeleport] run function asset:mob/0301.sinful_thoughts/tick/move/conditional_teleport
