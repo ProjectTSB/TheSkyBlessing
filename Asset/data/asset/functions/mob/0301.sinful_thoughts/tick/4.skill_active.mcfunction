@@ -10,8 +10,8 @@
     execute if entity @s[tag=8D.SkillGun] run function asset:mob/0301.sinful_thoughts/tick/2.gun/1.gun
 # 飛びかかり
     execute if entity @s[tag=8D.SkillJump] run function asset:mob/0301.sinful_thoughts/tick/3.jump/1.jump
-# 衝撃波
-    #execute if entity @s[tag=8D.SkillImpact] run function asset:mob/0301.sinful_thoughts/tick/3.slash/1.slash
+# ステップ
+    execute if entity @s[tag=8D.SkillStep] run function asset:mob/0301.sinful_thoughts/tick/4.step/1.step
 
 
 # メモ程度

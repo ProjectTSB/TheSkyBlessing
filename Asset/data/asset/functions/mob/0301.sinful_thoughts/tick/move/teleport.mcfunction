@@ -12,3 +12,6 @@
     tp @e[type=armor_stand,tag=8D.ArmorStandThis] @s
 # タグを消す
     tag @e[type=armor_stand,tag=8D.ArmorStandThis,distance=..0.01] remove 8D.ArmorStandThis
+
+# 描画を治すためのコマンド
+    data modify entity @e[type=armor_stand,tag=8D.ArmorStandThis,distance=..0.01,limit=1] Air set value 1

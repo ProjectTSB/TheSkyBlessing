@@ -22,21 +22,21 @@
     execute if score @s 8D.Tick matches 20 at @s run function asset:mob/0301.sinful_thoughts/tick/3.jump/4.slash
 
 # ちょっとHPへってると特殊行動雷っぽいのおとす
-    execute if score @s 8D.Tick matches 22 rotated ~60 0 positioned ^ ^ ^1 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 24 rotated ~60 0 positioned ^ ^ ^2 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 26 rotated ~60 0 positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 28 rotated ~60 0 positioned ^ ^ ^4 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 30 rotated ~60 0 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 22 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^1 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 24 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 26 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 28 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^7 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 30 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^9 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
 
 # リセット
     execute if score @s 8D.Tick matches 40 run function asset:mob/0301.sinful_thoughts/tick/reset
 
 # ちょっとHPへってると特殊行動雷っぽいのおとす
-    execute if score @s 8D.Tick matches 1002 rotated ~60 0 positioned ^ ^ ^1 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 1004 rotated ~60 0 positioned ^ ^ ^2 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 1006 rotated ~-90 0 positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 1008 rotated ~-90 0 positioned ^ ^ ^4 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
-    execute if score @s 8D.Tick matches 1010 rotated ~-90 0 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 1002 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^1 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 1004 if entity @s[tag=8D.HPless75per] rotated ~60 0 positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 1006 if entity @s[tag=8D.HPless75per] rotated ~-90 0 positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 1008 if entity @s[tag=8D.HPless75per] rotated ~-90 0 positioned ^ ^ ^7 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
+    execute if score @s 8D.Tick matches 1010 if entity @s[tag=8D.HPless75per] rotated ~-90 0 positioned ^ ^ ^9 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
 # 発砲
 # プレイヤーを見る
     execute if score @s 8D.Tick matches 1005 facing entity @p[gamemode=!spectator,distance=..100] eyes rotated ~90 ~ run function asset:mob/0301.sinful_thoughts/tick/move/teleport

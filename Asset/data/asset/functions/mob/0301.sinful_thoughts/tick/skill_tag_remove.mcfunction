@@ -8,5 +8,6 @@
     tag @s remove 8D.SkillSlash
     tag @s remove 8D.SkillGun
     tag @s remove 8D.SkillJump
+    tag @s remove 8D.SkillStep
 
     tag @s remove 8D.FirstMotion

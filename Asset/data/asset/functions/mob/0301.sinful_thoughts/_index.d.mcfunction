@@ -16,7 +16,7 @@
     #declare tag 8D.SkillSlash
     #declare tag 8D.SkillGun
     #declare tag 8D.SkillJump
-    #declare tag 8D.SkillImpact
+    #declare tag 8D.SkillStep
     #
     #declare tag SpreadMarker
     #declare tag ExistsPassablePlayer
