@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"世界樹の根","color":"#80FF9D"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"最大体力+5 ","color":"light_purple"},{"text":"MP回復量+10%","color":"green"}]','[{"text":"移動速度+5% 攻撃-2.5%","color":"white"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"最大体力+5 ","color":"light_purple"},{"text":"MP回復量+10%","color":"green"}]','[{"text":"移動速度+5% ","color":"white"},{"text":"攻撃力-2.5%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
