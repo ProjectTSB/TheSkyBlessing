@@ -29,8 +29,11 @@
 # 回転斬り
     execute if score @s 8D.Tick matches 35 run item replace entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20256}
     execute if score @s 8D.Tick matches 35 run data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [360f,0f,90f]
+    execute if score @s 8D.Tick matches 35 run data modify entity @e[type=armor_stand,tag=8D.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [270f,270f,0f]
     execute if score @s 8D.Tick matches 35 run function asset:mob/0301.sinful_thoughts/tick/4.step/4.rotate_slash
     execute if score @s 8D.Tick matches 35..42 at @s rotated ~58.99 0 run function asset:mob/0301.sinful_thoughts/tick/move/teleport
+# 発砲(正直こんなの当たるわけはないはずなので当たったやつは運が悪い。ほぼお飾り)
+    execute if score @s 8D.Tick matches 35..42 at @s rotated ~-90 ~ run function asset:mob/0301.sinful_thoughts/tick/common/gun/1.ready
 # HPへってるとやばい
     execute if score @s 8D.Tick matches 35..42 if entity @s[tag=8D.HPless75per] at @s positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
 

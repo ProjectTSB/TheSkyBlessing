@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/0301.sinful_thoughts/hurt/1.trigger
 
-
 #> Private
 # @private
     #declare score_holder $Health
@@ -20,9 +19,16 @@
 # VFX
     playsound minecraft:entity.generic.hurt hostile @a ~ ~ ~ 1 0.7
 
-# タグ付与
+# タグを消す
+    tag @s remove 8D.HPless75per
+    tag @s remove 8D.HPless30per
+
+# タグ付与w
 # 75%以下
     execute if score $HealthPercent Temporary matches ..75 run tag @s add 8D.HPless75per
+# HP30%以下
+    execute if score $HealthPercent Temporary matches ..30 run tag @s add 8D.HPless30per
+
 # リセット
     scoreboard players reset $Health
     scoreboard players reset $HealthPercent

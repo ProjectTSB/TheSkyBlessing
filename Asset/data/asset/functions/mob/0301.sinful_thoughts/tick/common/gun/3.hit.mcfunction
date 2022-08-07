@@ -1,8 +1,8 @@
-#> asset:mob/0301.sinful_thoughts/tick/2.gun/6.hit
+#> asset:mob/0301.sinful_thoughts/tick/common/gun/3.hit
 #
 #
 #
-# @within function asset:mob/0301.sinful_thoughts/tick/2.gun/5.shot
+# @within function asset:mob/0301.sinful_thoughts/tick/common/gun/2.shot
 
 # ダメージ設定
     # 与えるダメージ

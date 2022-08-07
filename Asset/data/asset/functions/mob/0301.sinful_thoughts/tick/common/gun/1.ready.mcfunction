@@ -1,11 +1,11 @@
-#> asset:mob/0301.sinful_thoughts/tick/2.gun/4.ready
+#> asset:mob/0301.sinful_thoughts/tick/common/gun/1.ready
 #
 #
 #
-# @within function asset:mob/0301.sinful_thoughts/tick/2.gun/1.gun
+# @within function asset:mob/0301.sinful_thoughts/tick/**
 
 # 発砲
-    execute rotated ~-90 ~ positioned ^ ^ ^2 positioned ~ ~-0.4 ~ anchored eyes positioned ^ ^ ^ run function asset:mob/0301.sinful_thoughts/tick/2.gun/5.shot
+    execute positioned ^ ^ ^2 positioned ~ ~-0.4 ~ anchored eyes positioned ^ ^ ^ run function asset:mob/0301.sinful_thoughts/tick/common/gun/2.shot
 
 # 演出
     playsound minecraft:entity.zombie.attack_wooden_door hostile @a ~ ~ ~ 1 2
