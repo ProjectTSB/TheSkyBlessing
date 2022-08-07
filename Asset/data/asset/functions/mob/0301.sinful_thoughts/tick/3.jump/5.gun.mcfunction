@@ -15,7 +15,7 @@
     playsound ogg:item.trident.thunder2 hostile @a ~ ~ ~ 1 1.5
 # ダメージ判定
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 60f
+    data modify storage lib: Argument.Damage set value 25f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"

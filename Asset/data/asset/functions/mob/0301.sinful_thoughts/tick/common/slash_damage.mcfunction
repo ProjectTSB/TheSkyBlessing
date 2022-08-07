@@ -12,7 +12,7 @@
 
 # ダメージ判定
 # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 38f
+    data modify storage lib: Argument.Damage set value 25f
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
