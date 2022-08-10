@@ -8,6 +8,9 @@
 # @private
     #declare score_holder $Random
 
+# 喋る
+    playsound minecraft:entity.allay.hurt player @a ~ ~ ~ 0.4 1.6
+
 # ランダムでメッセージを垂れ流す
     # 疑似乱数取得
         execute store result score $Random Temporary run function lib:random/

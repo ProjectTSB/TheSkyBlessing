@@ -11,7 +11,8 @@
 # タグを消す
     tag @s remove FQ.Fullset
 
-# フルセット時喋る
+# 喋る
+    playsound minecraft:entity.allay.item_thrown ambient @a ~ ~ ~ 1 1.4
 
 # ランダムでメッセージを垂れ流す
     # 疑似乱数取得

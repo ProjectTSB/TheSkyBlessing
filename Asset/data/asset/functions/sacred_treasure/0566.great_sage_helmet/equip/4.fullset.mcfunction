@@ -12,6 +12,7 @@
     tag @s add FQ.Fullset
 
 # フルセット時喋る
+    playsound minecraft:entity.allay.item_given player @a ~ ~ ~ 2 1.45
 
 # ランダムでメッセージを垂れ流す
     # 疑似乱数取得
