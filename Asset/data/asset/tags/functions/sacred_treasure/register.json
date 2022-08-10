@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0569.great_sage_boots/register",
+        "asset:sacred_treasure/0568.great_sage_leggings/register",
+        "asset:sacred_treasure/0567.great_sage_chestplate/register",
+        "asset:sacred_treasure/0566.great_sage_helmet/register",
         "asset:sacred_treasure/0985.ark_of_the_sanctuary/register",
         "asset:sacred_treasure/0986.order_of_healing/register",
         "asset:sacred_treasure/0976.brave_sword/register",
