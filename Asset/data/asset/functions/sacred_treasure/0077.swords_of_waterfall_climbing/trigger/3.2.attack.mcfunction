@@ -18,7 +18,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "Water"
 #ダメージ
-    execute as @a[tag=this] run function lib:damage/modifier
+    execute as @p[tag=this] run function lib:damage/modifier
     function lib:damage/
 # リセット
     function lib:damage/reset
