@@ -9,6 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    particle dust 0.000 1.000 0.886 1 ~ ~1.7 ~ 0.4 0.2 0.4 0 50 normal @a
+
 # 魔法耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value 0.05
