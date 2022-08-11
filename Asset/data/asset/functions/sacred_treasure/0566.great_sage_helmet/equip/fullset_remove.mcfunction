@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:sacred_treasure/056?.great_sage_*/equip/dis_equip/main
+# @within function asset:sacred_treasure/056?.great_sage_*/*/dis_equip/main
 
 #> Private
 # @private
