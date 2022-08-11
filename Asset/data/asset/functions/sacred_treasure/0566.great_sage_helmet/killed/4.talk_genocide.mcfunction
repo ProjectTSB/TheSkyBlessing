@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0566.great_sage_helmet/killed/4.takl_genocide
+#> asset:sacred_treasure/0566.great_sage_helmet/killed/4.talk_genocide
 #
 #
 #
