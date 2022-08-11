@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:sacred_treasure/0790.aurora_boots/register",
+        "asset:sacred_treasure/0789.aurora_leggings/register",
+        "asset:sacred_treasure/0788.aurora_armor/register",
+        "asset:sacred_treasure/0787.aurora_helm/register",
         "asset:sacred_treasure/0985.ark_of_the_sanctuary/register",
         "asset:sacred_treasure/0986.order_of_healing/register",
         "asset:sacred_treasure/0976.brave_sword/register",
