@@ -32,3 +32,7 @@
         execute if score $Random Temporary matches 9 run tellraw @s[tag=!Death] {"text":"<Erysus> またね、いつか絶対使ってよね？"}
     # リセット
         scoreboard players reset $Random Temporary
+
+# 好感度とか時間とか消す
+    scoreboard players reset @s FQ.Favorability
+    scoreboard players reset @s FQ.TalkTime
