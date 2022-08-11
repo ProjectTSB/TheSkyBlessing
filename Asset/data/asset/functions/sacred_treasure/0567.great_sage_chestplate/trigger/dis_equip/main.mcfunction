@@ -16,7 +16,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,567,5]
     function api:player_modifier/mp_regen/remove
 
-# 物理耐性-7.5%
+# 物理耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,567,5]
     function api:player_modifier/defense/physical/remove
 

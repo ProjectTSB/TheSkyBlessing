@@ -27,9 +27,9 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
 
-# 物理耐性-7.5%
+# 物理耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,567,5]
-    data modify storage api: Argument.Amount set value -0.075
+    data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
 
