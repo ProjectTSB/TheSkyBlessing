@@ -9,6 +9,12 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 演出
+    execute rotated ~ 0 positioned ~ ~0.2 ~ run function asset:sacred_treasure/0790.aurora_boots/trigger/4.vfx
+    playsound entity.evoker.prepare_summon player @a ~ ~ ~ 0.5 2 0
+    playsound block.beacon.activate player @a ~ ~ ~ 0.5 2 0
+
+
 # 魔法耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,790,3]
     data modify storage api: Argument.Amount set value 0.05
