@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/summon
 
-execute if data storage asset:context {id:271} run function asset:mob/0217.medousa_eye/summon/2.summon
+execute if data storage asset:context {id:217} run function asset:mob/0217.medousa_eye/summon/2.summon

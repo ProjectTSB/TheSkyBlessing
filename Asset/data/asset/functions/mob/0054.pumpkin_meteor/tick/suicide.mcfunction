@@ -13,7 +13,7 @@
     execute store result storage lib: Argument.Damage float 0.0004 as @e[type=zombie,scores={MobID=59},distance=..3,sort=nearest,limit=1] run function api:mob/get_max_health
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
-    data modify storage lib: Argument.ByPassResist set value 1b
+    data modify storage lib: Argument.BypassResist set value 1b
     data modify storage lib: Argument.FixedDamage set value 1b
 # 補正
     function lib:damage/modifier
