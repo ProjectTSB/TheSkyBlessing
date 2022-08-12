@@ -12,8 +12,8 @@
 #> Private
 # @private
     #declare score_holder $Count
-    #declare score_holder $MaxHP10Per
     #declare score_holder $MaxHP5Per
+    #declare score_holder $MaxHP5Per2
 
 # 演出
     particle soul ~ ~1.2 ~ 0.5 0.3 0.5 0 15 normal @a
@@ -25,20 +25,18 @@
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:728}}}]
 
-# 最大HPの10％を100倍で取る
-    execute store result score $MaxHP10Per Temporary run attribute @s generic.max_health get 10
-
-# 2個以上所持していた場合、最大体力×5％×(N-1)だけ回復量が増加する処理
+# 最大HPの5％を100倍で取る
+    execute store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
 
 # 5％分を100倍で取得
-    execute if score $Count Temporary matches 2.. store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
+    execute store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
+    scoreboard players operation $MaxHP5Per2 Temporary = $MaxHP5Per Temporary
 
-# $Countを1減らし、その個数分掛け算
-    execute if score $Count Temporary matches 2.. run scoreboard players remove $Count Temporary 1
-    execute if score $Count Temporary matches 1.. run scoreboard players operation $MaxHP5Per Temporary *= $Count Temporary
+# MaxHP5Per2を個数と掛ける
+    scoreboard players operation $MaxHP5Per2 Temporary *= $Count Temporary
 
 # 合算してArgument.Healに代入
-    execute store result storage lib: Argument.Heal float 0.01 run scoreboard players operation $MaxHP10Per Temporary += $MaxHP5Per Temporary
+    execute store result storage lib: Argument.Heal float 0.01 run scoreboard players operation $MaxHP5Per Temporary += $MaxHP5Per2 Temporary
 
 # 回復処理
     function lib:heal/modifier
