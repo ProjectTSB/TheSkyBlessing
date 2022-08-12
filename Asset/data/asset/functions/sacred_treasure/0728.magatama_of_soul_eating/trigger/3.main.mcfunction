@@ -25,9 +25,6 @@
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:728}}}]
 
-# 最大HPの5％を100倍で取る
-    execute store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
-
 # 5％分を100倍で取得
     execute store result score $MaxHP5Per Temporary run attribute @s generic.max_health get 5
     scoreboard players operation $MaxHP5Per2 Temporary = $MaxHP5Per Temporary
