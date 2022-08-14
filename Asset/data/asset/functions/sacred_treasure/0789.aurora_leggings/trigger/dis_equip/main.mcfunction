@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0789.aurora_leggings/trigger/dis_equip/
 
+# 演出
+    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 1.4 0
+    particle dust_color_transition 0.000 0.675 0.965 1.5 0 0 0 ~ ~0.5 ~ 0.4 0.2 0.4 0 40 normal @a
+
 # 以下の補正を消す
 
 # 魔法耐性+5%
