@@ -8,6 +8,9 @@
 #   asset:sacred_treasure/0789.aurora_leggings/trigger/dis_equip/main
 #   asset:sacred_treasure/0790.aurora_boots/trigger/dis_equip/main
 
+# Tagを消す
+    tag @s remove LT.Fullset
+
 # フルセットの補正を解除
 
 # 雷攻撃
