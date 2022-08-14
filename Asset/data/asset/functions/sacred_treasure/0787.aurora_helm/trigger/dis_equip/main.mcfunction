@@ -25,3 +25,6 @@
 # 物理耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     function api:player_modifier/defense/physical/remove
+
+# フルセット解除
+    execute if entity @s[tag=LT.Fullset] run function asset:sacred_treasure/0787.aurora_helm/trigger/fullset/dis_equip
