@@ -8,7 +8,7 @@
     execute store result storage lib: Argument.Damage float 0.020 run attribute @p[tag=Attacker,distance=..50] generic.max_health get 10
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
-    data modify storage lib: Argument.ByPassResist set value 1b
+    data modify storage lib: Argument.BypassResist set value 1b
     data modify storage lib: Argument.FixedDamage set value 1b
 # 死亡メッセージ
     data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは呪われてしまった！","with":[{"selector":"@s"}]}]']

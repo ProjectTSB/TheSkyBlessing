@@ -17,6 +17,7 @@
     execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~-1 ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run particle poof ~ ~ ~ 0.3 0.3 0.3 0 10 normal
     execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~-1 ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run function api:mob/summon
 # リセット
+    data remove storage api: Argument.ID
     kill @e[type=marker,tag=SpawnMarker,distance=..100]
 # 召喚数を1減らす
     scoreboard players remove $SpawnCount Temporary 1
