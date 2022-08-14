@@ -10,9 +10,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute rotated ~ 0 positioned ~ ~0.2 ~ run function asset:sacred_treasure/0790.aurora_boots/trigger/4.vfx
-    playsound entity.evoker.prepare_summon player @a ~ ~ ~ 0.5 2 0
-    playsound block.beacon.activate player @a ~ ~ ~ 0.5 2 0
+    execute unless data storage asset:context id.all{head:787,chest:788,legs:789,feet:790} rotated ~ 0 positioned ~ ~0.2 ~ run function asset:sacred_treasure/0790.aurora_boots/trigger/4.vfx
+    execute unless data storage asset:context id.all{head:787,chest:788,legs:789,feet:790} run playsound entity.evoker.prepare_summon player @a ~ ~ ~ 0.5 2 0
+    execute unless data storage asset:context id.all{head:787,chest:788,legs:789,feet:790} run playsound block.beacon.activate player @a ~ ~ ~ 0.5 2 0
 
 
 # 魔法耐性+5%
@@ -44,3 +44,6 @@
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/defense/physical/add
+
+# フルセット検知
+    execute if data storage asset:context id.all{head:787,chest:788,legs:789,feet:790} run function asset:sacred_treasure/0787.aurora_helm/trigger/fullset/equip
