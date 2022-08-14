@@ -12,7 +12,7 @@
     data modify storage lib: Argument.Damage set value 1029f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
-    execute as @a[tag=this] run function lib:damage/modifier
+    execute as @p[tag=this] run function lib:damage/modifier
     function lib:damage/
 
 # リセット

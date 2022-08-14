@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/summon
 
-execute if data storage asset:context {id:289} run function asset:mob/0239.poltergeist_bow/summon/2.summon
+execute if data storage asset:context {id:239} run function asset:mob/0239.poltergeist_bow/summon/2.summon
