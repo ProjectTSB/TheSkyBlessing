@@ -7,5 +7,5 @@
 # 軽量にセレクターを利用する用のtag
     tag @s add AttackingEntity
 # 紐づけ用スコア
-    scoreboard players operation @s AttackingEntity = @a[tag=this,limit=1] UserID
-    scoreboard players operation @a[tag=this,limit=1] AttackingEntity = @a[tag=this,limit=1] UserID
+    scoreboard players operation @s AttackingEntity = @a[tag=TargetEntity,limit=1] UserID
+    scoreboard players operation @a[tag=TargetEntity,limit=1] AttackingEntity = @a[tag=TargetEntity,limit=1] UserID
