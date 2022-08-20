@@ -9,6 +9,8 @@
     #declare tag 8D.Angel
     #declare tag 8D.ArmorStand
     #declare tag 8D.ArmorStandThis
+    #declare tag 8D.ArmorStandDeath
+    #declare tag 8D.ArmorStandGun
     #
     #declare tag 8D.HPless75per
     #declare tag 8D.HPless30per
