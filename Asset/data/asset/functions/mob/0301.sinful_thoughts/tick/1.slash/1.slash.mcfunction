@@ -35,7 +35,6 @@
     execute if score @s 8D.Tick matches 24 if entity @s[tag=8D.HPless75per] positioned ^ ^ ^3 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
     execute if score @s 8D.Tick matches 26 if entity @s[tag=8D.HPless75per] positioned ^ ^ ^5 run function asset:mob/0301.sinful_thoughts/tick/common/thunder
 
-
 # 確率でそのままジャンプする(ただしブロックに埋まっていない場合)
     execute if score @s 8D.Tick matches 26 if block ~ ~ ~ #lib:no_collision if predicate lib:random_pass_per/50 run function asset:mob/0301.sinful_thoughts/tick/1.slash/4.go_to_jump
 # リセット
