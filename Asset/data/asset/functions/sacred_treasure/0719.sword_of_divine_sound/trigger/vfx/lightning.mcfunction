@@ -3,7 +3,7 @@
 # 雷っぽいパーティクルを出す処理
 #
 # @within function
-#   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/
+#   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
 #   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/random_rotation
 
 # パーティクル

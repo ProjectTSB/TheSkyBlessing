@@ -14,13 +14,8 @@
     scoreboard players reset $RecursiveLimit Temporary
 
 # 雷っぽいパーティクル
-    execute rotated ~ -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
-    scoreboard players reset $RecursiveLimit Temporary
-    execute rotated ~72 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
-    scoreboard players reset $RecursiveLimit Temporary
-    execute rotated ~144 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
-    scoreboard players reset $RecursiveLimit Temporary
-    execute rotated ~216 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
-    scoreboard players reset $RecursiveLimit Temporary
-    execute rotated ~288 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
-    scoreboard players reset $RecursiveLimit Temporary
+    execute rotated ~ -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
+    execute rotated ~72 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
+    execute rotated ~144 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
+    execute rotated ~216 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
+    execute rotated ~288 -80 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
