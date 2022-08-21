@@ -10,6 +10,7 @@
     data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Magic
 # 配列の初期化
     data modify storage api: NewModifiers set value []
+    data remove storage api: Removed
 # フィルタ
     function api:player_modifier/core/common/remove_modifier
 # 新しい配列を戻す
