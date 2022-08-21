@@ -14,5 +14,6 @@
     data modify storage lib: Elements set value []
     data modify storage lib: Package set value []
     data modify storage lib: CompareResult set value []
+    data modify storage lib: SumResult set value 0
 # セッションフラグを立てる
     data modify storage lib: ArrayLibSessionOpened set value true
