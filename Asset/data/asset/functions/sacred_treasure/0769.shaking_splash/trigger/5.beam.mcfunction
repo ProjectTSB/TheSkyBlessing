@@ -9,7 +9,9 @@
     playsound block.bubble_column.upwards_ambient player @a[distance=..20] ~ ~ ~ 1 1.3 0
     playsound block.bubble_column.upwards_ambient player @a[distance=..20] ~ ~ ~ 1 1.0 0
     playsound block.bubble_column.bubble_pop player @a[distance=..20] ~ ~ ~ 1 0 0
+    playsound entity.wither.shoot player @a ~ ~ ~ 0.1 1.8 0
     particle firework ~ ~0.6 ~ 0.3 0.3 0.3 0.25 20
+
 
 # 発射
     execute positioned ~ ~0.6 ~ positioned ^ ^ ^0.5 run function asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
