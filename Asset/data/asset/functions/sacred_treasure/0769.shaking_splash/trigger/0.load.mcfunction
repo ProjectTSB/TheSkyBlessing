@@ -8,4 +8,3 @@
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/**
     scoreboard objectives add LD.Tick dummy
     scoreboard objectives add LD.UserID dummy
-    scoreboard objectives add LD.LatestUseTick dummy
