@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"シェイキングスプラッシュ","color":"#00F7FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"泡立つ蒼い液体が詰まった水鉄砲。","color":"aqua"}','{"text":"臆病なネズミの足 叩かないで！","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"泡立つ蒼い液体が詰まった水鉄砲。","color":"aqua","italic":"true"}','{"text":"中の液体は飲んでみると存外美味である","color":"aqua","italic":"true"}','{"text":"使用時、炭酸弾を発射する。","color":"#00F7FF"}','{"text":"スニークしながら使うと炭酸激流を発射する。","color":"#00F7FF"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
