@@ -19,7 +19,7 @@
 # ダメージ
     data modify storage lib: Argument.Damage set value 400.0f
     data modify storage lib: Argument.AttackType set value "Magic"
-    data modify storage lib: Argument.ElementType set value "None"
+    data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
     execute as @e[type=#lib:living,tag=LandingTarget,distance=..15] run function lib:damage/
 # リセット
