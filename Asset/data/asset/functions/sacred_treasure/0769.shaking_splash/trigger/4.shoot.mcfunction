@@ -4,9 +4,6 @@
 #
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/3.main
 
-# 演出
-    
-
 # 弾用Markerを召喚
     summon marker ~ ~ ~ {Tags:["Projectile","LD.Bullet"]}
 

@@ -4,7 +4,6 @@
 #
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/2.check_condition
 
-
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/mainhand
 

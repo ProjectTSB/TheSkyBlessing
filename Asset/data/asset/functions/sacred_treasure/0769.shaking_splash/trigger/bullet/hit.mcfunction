@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0769.shaking_splash/trigger/bullet/hit
 #
-# 弾が当たったときの処理
+# 弾が敵に当たったときの処理
 #
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/main
 

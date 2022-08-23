@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0769.shaking_splash/trigger/bullet/landing
 #
-#
+# 弾が地面に当たったときの処理
 #
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/main
 

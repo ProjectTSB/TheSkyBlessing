@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
 #
-#
+# ビームの再帰部分の処理
 #
 # @within function
 #   asset:sacred_treasure/0769.shaking_splash/trigger/5.beam
