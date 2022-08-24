@@ -19,7 +19,7 @@
 # 該当エンチャントのデータを取得する
 # Array = Array.filter((_, i) => !Masks[i])
     data modify storage lib: Array set from storage lib: Enchantments
-    data modify storage lib: Masks set from storage lib: CompareTarget
+    data modify storage lib: Masks set from storage lib: CompareResult
   # data modify storage lib: MaskElement set value null
     function lib:array/mask_inverted
 # エンチャントレベルの総和を計算する
