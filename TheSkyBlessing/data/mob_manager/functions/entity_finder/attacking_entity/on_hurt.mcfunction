@@ -5,10 +5,11 @@
 # @within advancement mob_manager:entity_finder/check_attacking_entity
 
 # tag付け
-    tag @s add this
+    tag @s add TargetEntity
 # フィルタ
     execute unless entity @e[type=#lib:living,type=!player,tag=LibraryDamage,distance=..150,limit=1] as @e[type=#lib:living,type=!player,distance=..150] run function mob_manager:entity_finder/attacking_entity/filters/15
     execute as @e[type=#lib:living,type=!player,tag=LibraryDamage,distance=..150] run function mob_manager:entity_finder/attacking_entity/filters/15
 # リセット
+    tag @s remove TargetEntity
     tag @s remove LibraryDamage
     advancement revoke @s only mob_manager:entity_finder/check_attacking_entity
