@@ -11,4 +11,5 @@
     execute as @e[type=#lib:living,type=!player,tag=LibraryDamage,distance=..150] run function mob_manager:entity_finder/attacking_entity/filters/15
 # リセット
     tag @s remove TargetEntity
+    tag @s remove LibraryDamage
     advancement revoke @s only mob_manager:entity_finder/check_attacking_entity
