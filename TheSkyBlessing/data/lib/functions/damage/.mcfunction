@@ -10,6 +10,7 @@
 #       Argument.Damage : float
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
+#       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.BypassResist? : boolean
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
 # @api
