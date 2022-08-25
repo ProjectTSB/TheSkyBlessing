@@ -9,7 +9,14 @@
     execute if entity @s[type=player] run function lib:damage/core/get_epf/player
     execute if entity @s[type=!player] run function lib:damage/core/get_epf/non-player
 # protectionは常に計算される
-    execute store result score $EPF Temporary run data get storage lib: Enchantments[{id:"minecraft:protection"}].lvl
+    # セッション開く
+        function lib:array/session/open
+    # 総和を取る
+        data modify storage lib: Array append from storage lib: Enchantments[{id:"minecraft:protection"}].lvl
+        function lib:array/sum
+        execute store result score $EPF Temporary run data get storage lib: SumResult
+    # セッション閉じる
+        function lib:array/session/close
 # protection以外のなんらかのエンチャントで軽減できる場合の計算処理
     execute if data storage lib: Argument.ReduceEnchantment run function lib:damage/core/get_epf/get_non-protection_epf
 # リセット
