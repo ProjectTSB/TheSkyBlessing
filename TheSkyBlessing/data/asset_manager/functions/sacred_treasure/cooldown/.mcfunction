@@ -47,6 +47,9 @@
 # 元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage asset:sacred_treasure LCDs
 # リセット
+    scoreboard players reset $Value Temporary
+    scoreboard players reset $NormalizedValue Temporary
+    scoreboard players reset $Max Temporary
     data remove storage asset:sacred_treasure LCDs
     data remove storage asset:sacred_treasure DecrementedCLDs
     data remove storage asset:sacred_treasure MainBarMessage
