@@ -36,7 +36,7 @@
     execute at @s unless entity @s[tag=!7R.Ceiling,tag=!7R.Floor] if predicate lib:random_pass_per/20 run tp ^ ^ ^-0.1
 
 # 設置したC4に自身のスコアを入れる
-    scoreboard players operation @s 7R.UserID = @p[tag=7R.This] UserID
+    scoreboard players operation @s 7R.UserID = @p[tag=this] UserID
 
 # initタグの削除
     tag @s remove 7R.Init

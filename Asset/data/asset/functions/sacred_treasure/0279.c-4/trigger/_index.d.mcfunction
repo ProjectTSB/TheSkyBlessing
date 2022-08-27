@@ -6,7 +6,6 @@
     #declare tag 7R.Landing
     #declare tag 7R.C4
     #declare tag 7R.Init
-    #declare tag 7R.This
     #declare tag 7R.WallCheker
     #declare tag 7R.IsCeiling
     #declare tag 7R.IsFloor
