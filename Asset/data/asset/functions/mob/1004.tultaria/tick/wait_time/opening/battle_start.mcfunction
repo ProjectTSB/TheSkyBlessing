@@ -7,5 +7,5 @@
 tag @s remove RW.Opening
 tag @s add RW.Phase1
 data modify entity @s Invulnerable set value 0b
-function asset:mob/1004.tultaria/tick/move/teleport/place_marker
+function asset:mob/1004.tultaria/tick/reset
 scoreboard players reset @s RW.Tick

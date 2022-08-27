@@ -9,7 +9,7 @@
     data modify entity @s Pose.RightArm set value [-35f,35f,55f]
 
 # 腕を変える
-    item replace entity @s weapon.mainhand with stick{CustomModelData:20068}
+    item replace entity @s weapon.mainhand with stick{CustomModelData:20069}
 
 # 頭変える
     item replace entity @s armor.head with stick{CustomModelData:20078}

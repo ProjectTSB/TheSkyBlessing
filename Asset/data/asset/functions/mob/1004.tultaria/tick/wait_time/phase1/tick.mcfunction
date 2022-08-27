@@ -21,7 +21,7 @@
     execute as @e[type=armor_stand,tag=RW.ArmorStand,distance=..2] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
 
 # 移動タグ付きなら移動
-    execute if entity @s[tag=RW.Move] facing entity @e[type=marker,tag=RW.TeleportMarker] feet run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
+    execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
 # 嘘慣性を解決
     scoreboard players remove @s[scores={RW.FakeInertia=1..}] RW.FakeInertia 1
