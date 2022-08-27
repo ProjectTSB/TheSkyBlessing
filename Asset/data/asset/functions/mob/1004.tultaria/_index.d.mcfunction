@@ -9,6 +9,10 @@
     #declare tag RW.ArmorStand
     #declare tag RW.ArmorStandThis
     #declare tag RW.XYZ
+    #declare tag RW.Opening
+    #declare tag RW.Start
+    #
+    #declare tag RW.Phase1
     #
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per

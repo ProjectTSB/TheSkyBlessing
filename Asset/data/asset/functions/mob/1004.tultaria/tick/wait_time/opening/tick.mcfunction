@@ -1,0 +1,22 @@
+#> asset:mob/1004.tultaria/tick/wait_time/opening/tick
+#
+# 召喚時にポーズとる
+#
+# @within function asset:mob/1004.tultaria/tick/2.tick
+#> private
+# @private
+    #declare score_holder RW.TargetModel
+
+# スコア加算
+    scoreboard players add @s RW.Tick 1
+
+# ポーズ(構え)
+    execute if score @s RW.Tick matches -70 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
+
+# ポーズ(構え2)
+    execute if score @s RW.Tick matches -40 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_2
+
+# 無敵解除
+    tag @s[scores={RW.Tick=40}] remove RW.Opening
+    tag @s[scores={RW.Tick=40}] add RW.Phase1
+    data modify entity @s[scores={RW.Tick=40}] Invulnerable set value 0b
