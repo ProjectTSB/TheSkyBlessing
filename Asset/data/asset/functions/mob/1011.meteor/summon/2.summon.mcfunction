@@ -5,7 +5,7 @@
 # @within function asset:mob/1011.meteor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon area_effect_cloud ~ ~ ~ {Tags:["MobInit"],CustomNameVisible:0b,Particle:"block air",Duration:100}
+    summon armor_stand ~ ~ ~ {Marker:1b,Tags:["MobInit"],CustomNameVisible:0b,Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20197}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 1011
 # Type (string) Wikiを参照
@@ -13,6 +13,8 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"メテオ","color":"white"}'
+    data modify storage asset:mob Name set value '{"text":"メテオレイン","color":"white"}'
+# MobInitタグ持ちを対象にして独自Init
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/1011.meteor/summon/3.init
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

@@ -4,12 +4,15 @@
 #
 # @within function asset:mob/1004.tultaria/tick/2.tick
 
-# スコア加算
-    scoreboard players add @s[tag=!RW.InAction] RW.Tick 1
+# その後発動するスキル
+# プレイヤーが周囲にいたらスキル選択
+    execute if score @s[tag=!RW.InAction] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
 
-# ワープ
-    execute if score @s RW.Tick matches 60 at @r run function asset:mob/1004.tultaria/tick/move/teleport/place_marker
-    execute if score @s RW.Tick matches 60 run scoreboard players reset @s RW.Tick
+# プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
+    execute if score @s RW.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick 0
+
+# 選択したスキル発動
+    execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active
 
 # こっち向く
     execute unless entity @s[scores={RW.FakeInertia=0..}] facing entity @p eyes run tp @s ~ ~ ~ ~ ~
@@ -18,7 +21,7 @@
     execute as @e[type=armor_stand,tag=RW.ArmorStand,distance=..2] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
 
 # 移動タグ付きなら移動
-    execute if entity @s[tag=RW.InAction] facing entity @e[type=marker,tag=RW.TeleportMarker] feet run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
+    execute if entity @s[tag=RW.Move] facing entity @e[type=marker,tag=RW.TeleportMarker] feet run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
 # 嘘慣性を解決
     scoreboard players remove @s[scores={RW.FakeInertia=1..}] RW.FakeInertia 1

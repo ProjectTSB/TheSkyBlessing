@@ -13,6 +13,7 @@
     #declare tag RW.Start
     #declare tag RW.TeleportMarker
     #declare tag RW.MarkerInit
+    #declare tag RW.Move
     #declare tag RW.InAction
     #
     #declare tag RW.Phase1

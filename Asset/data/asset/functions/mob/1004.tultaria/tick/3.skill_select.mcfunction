@@ -2,10 +2,16 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/2.tick
+# @within function asset:mob/1004.tultaria/tick/**
 #> private
 # @private
     #declare score_holder $Random
+
+# 通常行動停止タグ付与
+    tag @s add RW.InAction
+
+# スコアを0に戻す
+    scoreboard players set @s RW.Tick 0
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
@@ -18,7 +24,7 @@
     execute unless entity @s[tag=RW.HPless50per,tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $3 Const
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 0
+    scoreboard players set $Random Temporary 1
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee

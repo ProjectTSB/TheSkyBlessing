@@ -8,6 +8,9 @@
     #declare score_holder $Count
     #declare score_holder $4tInterval
 
+# スコア加算
+    scoreboard players add @s[tag=!RW.Move] RW.Tick 1
+
 # 開幕
     execute if entity @s[tag=RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/opening/tick
 

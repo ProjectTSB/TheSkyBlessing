@@ -1,12 +1,12 @@
 #> asset:mob/1004.tultaria/tick/4.skill_active
 #
+# スキル使用中タグがついてる間実行し続ける
 #
-#
-# @within function asset:mob/1004.tultaria/tick/2.tick
+# @within function asset:mob/1004.tultaria/tick/**
 
 # 近接
     execute if entity @s[tag=RW.SkillMelee] run function asset:mob/1004.tultaria/tick/1.melee_attack/1.melee_attack
-# 範囲
+# メテオレイン
     execute if entity @s[tag=RW.SkillMeteor] run function asset:mob/1004.tultaria/tick/2.meteor_attack/1.meteor_attack
 # 座標
     execute if entity @s[tag=RW.SkillCoordinate] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.coordinate_attack

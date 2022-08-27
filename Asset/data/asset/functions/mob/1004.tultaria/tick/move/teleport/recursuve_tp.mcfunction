@@ -13,7 +13,7 @@
     execute at @s positioned ~ ~-0.2 ~ run particle soul_fire_flame ^ ^ ^-2 0 0 0 0 0 force @a[distance=..30]
 
 # スコア減算
-    scoreboard players remove @s RW.InActionTimesPerTick 1
+    scoreboard players remove @s RW.MoveTimesPerTick 1
 
 # 再帰
-    execute if entity @s[scores={RW.InActionTimesPerTick=1..}] at @s run function asset:mob/1004.tultaria/tick/move/teleport/recursuve_tp
+    execute if entity @s[scores={RW.MoveTimesPerTick=1..}] at @s run function asset:mob/1004.tultaria/tick/move/teleport/recursuve_tp

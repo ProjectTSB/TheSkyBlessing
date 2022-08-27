@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
 
 # 再帰カウントが0なら速度からセット
-    scoreboard players operation @s RW.InActionTimesPerTick = @s RW.Speed
+    scoreboard players operation @s RW.MoveTimesPerTick = @s RW.Speed
 
 # 移動
     function asset:mob/1004.tultaria/tick/move/teleport/recursuve_tp

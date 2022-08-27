@@ -7,9 +7,6 @@
 # @private
     #declare score_holder RW.TargetModel
 
-# スコア加算
-    scoreboard players add @s RW.Tick 1
-
 # ポーズ(構え)
     execute if score @s RW.Tick matches 30 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
 

@@ -4,7 +4,10 @@
 #
 # @within function asset:mob/1004.tultaria/tick/**
 
-summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+# 移動先を設置
+    summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+
+# 演出
 
 # 拡散値
     data modify storage lib: Argument.Bounds set value [[8d,12d],[0d,3d],[8d,12d]]
@@ -23,5 +26,5 @@ summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
 # 速度設定
     scoreboard players set @s RW.Speed 10
 
-# 移動開始
-    tag @s add RW.InAction
+# 行動中タグ付与
+    tag @s add RW.Move
