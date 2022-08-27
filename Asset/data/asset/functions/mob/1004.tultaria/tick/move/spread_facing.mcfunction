@@ -13,5 +13,6 @@
 
 # マーカーを見る
     execute facing entity @e[type=marker,tag=RW.This,distance=..100,sort=nearest,limit=1] feet run function asset:mob/1004.tultaria/tick/move/tereport
+
 # キル
     kill @e[type=marker,tag=RW.This,distance=..100]

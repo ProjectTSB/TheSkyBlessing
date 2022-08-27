@@ -11,12 +11,10 @@
     scoreboard players add @s RW.Tick 1
 
 # ポーズ(構え)
-    execute if score @s RW.Tick matches -70 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
+    execute if score @s RW.Tick matches 30 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
 
 # ポーズ(構え2)
-    execute if score @s RW.Tick matches -40 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_2
+    execute if score @s RW.Tick matches 50 as @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_2
 
-# 無敵解除
-    tag @s[scores={RW.Tick=40}] remove RW.Opening
-    tag @s[scores={RW.Tick=40}] add RW.Phase1
-    data modify entity @s[scores={RW.Tick=40}] Invulnerable set value 0b
+# 無敵解除、戦闘開始
+    execute if score @s RW.Tick matches 70 run function asset:mob/1004.tultaria/tick/wait_time/opening/battle_start

@@ -9,3 +9,6 @@
     scoreboard objectives add RW.Tick dummy
     scoreboard objectives add RW.DeathExplode dummy
     scoreboard objectives add RW.HealthMax dummy
+    scoreboard objectives add RW.InActionTimesPerTick dummy
+    scoreboard objectives add RW.Speed dummy
+    scoreboard objectives add RW.FakeInertia dummy

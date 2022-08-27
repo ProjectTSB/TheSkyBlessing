@@ -71,7 +71,7 @@
     summon marker ~ ~ ~ {Tags:["RW.XYZ"]}
 
 # スコアをセットする
-    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick -100
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick 0
 
 # 最大HPをスコアに入れる
     execute store result score @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.HealthMax run data get storage asset:mob Health 1

@@ -60,4 +60,5 @@
 #        scoreboard players reset $Count
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
-    execute at @s unless entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01] run function asset:mob/1004.tultaria/tick/armorstand_respawn
+    #execute at @s unless entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01] run function asset:mob/1004.tultaria/tick/armorstand_respawn
+    execute at @s as @e[type=armor_stand,tag=RW.ArmorStand,distance=..3] run tp @s ~ ~ ~
