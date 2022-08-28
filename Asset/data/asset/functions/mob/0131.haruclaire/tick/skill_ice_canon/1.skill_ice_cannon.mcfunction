@@ -20,8 +20,5 @@
     tag @s[scores={3N.Tick=33}] remove 3N.SkillIceCannonParticle
     tag @s[scores={3N.Tick=33}] remove 3N.SkillIceCannonHit
 
-
-# タグを消す
-    execute if score @s 3N.Tick matches 60 run tag @s remove 3N.SkillIceCannon
-# スコアを少し進めた状態に戻す
-    execute if score @s 3N.Tick matches 60 run scoreboard players set @s 3N.Tick -30
+# リセット
+    execute if score @s 3N.Tick matches 60 run function asset:mob/0131.haruclaire/tick/reset
