@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/damage
+#> asset:sacred_treasure/0981.soufire_burst/trigger/big_fireball/damage
 #
 #
 #
-# @within function asset:sacred_treasure/0981.soufire_shoot/trigger/big_fireball/hit
+# @within function asset:sacred_treasure/0981.soufire_burst/trigger/big_fireball/hit
 
 # どうしてもダメージを受けてほしい（HurtTimeで反応を起こすモブもいるので)
     effect give @s instant_health

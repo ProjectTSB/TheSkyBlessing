@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0981.soufire_shoot/give/2.give
+#> asset:sacred_treasure/0981.soufire_burst/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0981.soufire_shoot/give/1.trigger
+# @within function asset:sacred_treasure/0981.soufire_burst/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。

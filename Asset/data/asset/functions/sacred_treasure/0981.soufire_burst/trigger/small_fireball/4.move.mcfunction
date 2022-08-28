@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/4.move
+#> asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/4.move
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/3.main
-#   asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/4.move
+#   asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/3.main
+#   asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/4.move
 
 # 再帰カウントが0なら弾速からセット
     execute unless entity @s[scores={R9.MoveTimesPerTick=1..,R9.Range=1..}] run scoreboard players operation @s R9.MoveTimesPerTick = @s R9.Speed
@@ -26,7 +26,7 @@
     execute unless block ~ ~ ~ #lib:no_collision run kill @s
 
 # モブに接触
-    execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 at @e[tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/hit
 
 # 再帰
-    execute if entity @s[scores={R9.MoveTimesPerTick=1..,R9.Range=1..}] at @s run function asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/4.move
+    execute if entity @s[scores={R9.MoveTimesPerTick=1..,R9.Range=1..}] at @s run function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/4.move

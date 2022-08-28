@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soufire_shoot/trigger/1.trigger
+#> asset:sacred_treasure/0981.soufire_burst/trigger/1.trigger
 #
 # 指定したイベントタイミングで実行されるfunction
 #
 # @within tag/function asset:sacred_treasure/**
 
 # storage asset:idのautoに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{auto:981} run function asset:sacred_treasure/0981.soufire_shoot/trigger/2.check_condition
+    execute if data storage asset:context id{auto:981} run function asset:sacred_treasure/0981.soufire_burst/trigger/2.check_condition

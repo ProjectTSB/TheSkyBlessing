@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0981.soufire_shoot/register
+#> asset:sacred_treasure/0981.soufire_burst/register
 #
 # 神器プールへの登録処理
 #

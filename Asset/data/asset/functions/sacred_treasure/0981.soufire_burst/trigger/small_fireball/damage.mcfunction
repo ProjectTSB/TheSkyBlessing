@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/damage
+#> asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/damage
 #
 # ふっとばさない攻撃
 #
-# @within function asset:sacred_treasure/0981.soufire_shoot/trigger/small_fireball/hit
+# @within function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/hit
 
 # ダメージ値設定
     #ダメージブレのための処理
