@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0001.book_of_all-seeing/trigger/get_defence_info
+#> asset:sacred_treasure/0001.book_of_all-seeing/trigger/get_defense_info
 #
 #
 #
