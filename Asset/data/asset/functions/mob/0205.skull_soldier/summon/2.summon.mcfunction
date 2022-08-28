@@ -1,11 +1,11 @@
-#> asset:mob/0205.skull_warrior/summon/2.summon
+#> asset:mob/0205.skull_soldier/summon/2.summon
 #
 # Mobの召喚時の処理
 #
-# @within function asset:mob/0205.skull_warrior/summon/1.trigger
+# @within function asset:mob/0205.skull_soldier/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Tags:["MobInit","5P.Melee"],DeathLootTable:"asset:mob/death/0205.skull_warrior"}
+    summon skeleton ~ ~ ~ {Tags:["MobInit","5P.Melee"],DeathLootTable:"asset:mob/death/0205.skull_soldier"}
 # ID (int)
     data modify storage asset:mob ID set value 205
 # Type (string) Wikiを参照
