@@ -1,8 +1,8 @@
-#> asset:mob/0206.skull_knight/tick/event/step
+#> asset:mob/0206.skull_basher/tick/event/step
 #
 #
 #
-# @within function asset:mob/0206.skull_knight/tick/2.tick
+# @within function asset:mob/0206.skull_basher/tick/2.tick
 
 # VFX
     playsound minecraft:entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
