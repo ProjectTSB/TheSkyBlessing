@@ -19,7 +19,7 @@
         execute store result score $01.MaxHP Temporary run function api:mob/get_max_health
 
     # 現在体力を取得
-        execute store result score $01.CurrentHP Temporary run data get entity @s AbsorptionAmount 10000
+        execute store result score $01.CurrentHP Temporary run data get entity @s AbsorptionAmount 100
 
     # 割合
         scoreboard players operation $01.PercentHP Temporary = $01.CurrentHP Temporary
@@ -27,8 +27,7 @@
 
 
     # 体力の倍率を元に戻す
-        scoreboard players operation $01.MaxHP Temporary /= $100 Const
-        scoreboard players operation $01.CurrentHP Temporary /= $10000 Const
+        scoreboard players operation $01.CurrentHP Temporary /= $100 Const
 
     # 表示する
         execute if entity @s[tag=!Enemy.Boss] run tellraw @p[tag=this] [{"text":"\uE01A","font":"tsb"},{"text":" ","font":"default"},{"score":{"objective":"Temporary","name":"$01.CurrentHP"},"color":"white","font":"default"},{"text":" / ","color":"white","font":"default"},{"score":{"objective":"Temporary","name":"$01.MaxHP"},"color":"white","font":"default"},{"text":" (","font":"default"},{"score":{"objective":"Temporary","name":"$01.PercentHP"},"color":"white","font":"default"},{"text":"%)","font":"default"}]
