@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0733.persantage_sword/trigger/3.main
+#> asset:sacred_treasure/0733.percentage_sword/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0733.persantage_sword/trigger/2.check_condition
+# @within function asset:sacred_treasure/0733.percentage_sword/trigger/2.check_condition
 
 #> Private
 # @private
@@ -16,7 +16,7 @@
 # 演出
     execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
     execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.6 1.7
-    execute if entity @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.persantage_sword/trigger/4.sweeping_particle
+    execute if entity @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.percentage_sword/trigger/4.sweeping_particle
 
 # 4割の割合追加ダメージまでの処理
     data modify storage lib: Argument.AttackType set value "Magic"
