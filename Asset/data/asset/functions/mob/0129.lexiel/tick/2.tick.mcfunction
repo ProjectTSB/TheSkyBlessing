@@ -11,18 +11,18 @@
 # 4tick毎に発動するコマンド
     execute if score @s 3L.4tInterval matches 4.. run function asset:mob/0129.lexiel/tick/regularly
 
-# プレイヤーがいたら80tickでテレポート
-    execute if score @s 3L.Tick matches 80 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0129.lexiel/tick/2.1.teleport
+# プレイヤーがいたら-5tickでテレポート
+    execute if score @s 3L.Tick matches -5 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0129.lexiel/tick/2.1.teleport
 
 # その後発動するスキル
 # プレイヤーがいたら
-    execute if score @s 3L.Tick matches 85 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0129.lexiel/tick/2.2.skill_select
+    execute if score @s 3L.Tick matches 0 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0129.lexiel/tick/2.2.skill_select
 
 # プレイヤーがいないのに時間が着てしまった場合。スコアを戻す
-    execute if score @s 3L.Tick matches 85 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players reset @s 3L.Tick
+    execute if score @s 3L.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players reset @s 3L.Tick
 
 # 発動中
-    execute if score @s 3L.Tick matches 85.. run function asset:mob/0129.lexiel/tick/2.3.skill_active
+    execute if score @s 3L.Tick matches 0.. run function asset:mob/0129.lexiel/tick/2.3.skill_active
 
 # 以下エラー時の処理
 

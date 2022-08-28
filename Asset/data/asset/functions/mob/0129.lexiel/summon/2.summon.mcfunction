@@ -64,6 +64,8 @@
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=3L.ArmorStandThis,distance=..0.01] @s
 # タグを消す
     tag @e[type=armor_stand,tag=3L.ArmorStandThis,distance=..0.01] remove 3L.ArmorStandThis
+# スコアを付与
+    scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 3L.Tick -20
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
