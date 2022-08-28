@@ -9,3 +9,5 @@
 # 紐づけ用スコア
     scoreboard players operation @s AttackingEntity = @p[tag=TargetEntity] UserID
     scoreboard players operation @p[tag=TargetEntity] AttackingEntity = @p[tag=TargetEntity] UserID
+# リセット
+    tag @s remove LibraryDamage
