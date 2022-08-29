@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soufire_burst/trigger/big_fireball/1.init
+#> asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/1.init
 #
 #
 #
-# @within function asset:sacred_treasure/0981.soufire_burst/trigger/3.main
+# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/3.main
 
 # 向き揃える
     data modify entity @s Rotation set from entity @p[tag=this] Rotation

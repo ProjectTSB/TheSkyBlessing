@@ -1,16 +1,16 @@
-#> asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/3.main
+#> asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/3.main
 #
 # Tick実行部分
 #
-# @within function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/2.tick
+# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/2.tick
 
 # ターゲットにしない人にタグ付与
     execute positioned ^35 ^ ^ run tag @e[type=#lib:living,tag=Enemy,distance=..30] add R9.NotTarget
     execute positioned ^-35 ^ ^ run tag @e[type=#lib:living,tag=Enemy,distance=..30] add R9.NotTarget
 
 # 移動 カーブをfunction内で行うと曲がりすぎるのでここで書く
-    execute facing entity @e[tag=Enemy,tag=!Uninterferable,tag=!R9.NotTarget,distance=..20,sort=nearest,limit=1] eyes positioned ^ ^ ^-50 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/4.move
-    execute unless entity @e[tag=Enemy,tag=!Uninterferable,tag=!R9.NotTarget,distance=..20,sort=nearest,limit=1] run function asset:sacred_treasure/0981.soufire_burst/trigger/small_fireball/4.move
+    execute facing entity @e[tag=Enemy,tag=!Uninterferable,tag=!R9.NotTarget,distance=..20,sort=nearest,limit=1] eyes positioned ^ ^ ^-50 rotated as @s positioned ^ ^ ^-400 facing entity @s eyes positioned as @s run function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/4.move
+    execute unless entity @e[tag=Enemy,tag=!Uninterferable,tag=!R9.NotTarget,distance=..20,sort=nearest,limit=1] run function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/4.move
 
 # 加速
     scoreboard players add @s[scores={R9.Speed=..21}] R9.Speed 1
