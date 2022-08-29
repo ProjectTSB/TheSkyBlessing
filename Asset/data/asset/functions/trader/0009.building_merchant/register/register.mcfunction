@@ -34,11 +34,6 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:clay",Count:8b}
 
-# 取引 下位通貨を焼き石に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:stone",Count:8b}
-
 # 取引 下位通貨を花崗岩に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
