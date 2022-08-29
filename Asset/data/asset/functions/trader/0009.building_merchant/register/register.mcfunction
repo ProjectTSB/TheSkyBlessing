@@ -14,15 +14,20 @@
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value 0f
 
-# 取引 下位通貨をガラスに
+# 取引 下位通貨を砂に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:glass",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:sand",Count:32b}
 
-# 取引 下位通貨を遮光ガラスに
+# 取引 下位通貨を赤砂に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:tinted_glass",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:red_sand",Count:32b}
+
+# 取引 下位通貨を砂利に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:gravel",Count:32b}
 
 # 取引 下位通貨を粘土ブロックに
     data modify storage asset:trader Trades append value {}
@@ -49,11 +54,6 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:andesite",Count:8b}
 
-# 取引 下位通貨を砂岩に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:sandstone",Count:8b}
-
 # 取引 下位通貨を深層岩に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
@@ -64,15 +64,25 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:blackstone",Count:8b}
 
+# 取引 下位通貨をクォーツブロックに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:quartz_block",Count:8b}
+
 # 取引 下位通貨を玄武岩に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:basalt",Count:8b}
 
-# 取引 下位通貨をクォーツブロックに
+# 取引 下位通貨をエンドストーンに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:quartz_block",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:end_stone",Count:8b}
+
+# 取引 下位通貨をプルプァブロックに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:purpur_block",Count:8b}
 
 # 取引 下位通貨をネザーレンガに
     data modify storage asset:trader Trades append value {}
@@ -129,6 +139,16 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"mangrove_propagule",Count:1b}
 
+# 取引 オークの苗木を深紅のキノコに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"crimson_fungus",Count:1b}
+
+# 取引 オークの苗木を歪んだキノコに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"warped_fungus",Count:1b}
+
 # 取引 トウヒの苗木をオークの苗木に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"spruce_sapling",Count:1b}
@@ -158,6 +178,26 @@
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"mangrove_propagule",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
+
+# 取引 深紅のキノコをオークの苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"crimson_fungus",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+
+# 取引 歪んだキノコをオークの苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"warped_fungus",Count:1b}
+
+# 取引 下位通貨を深紅のナイリウムに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:crimson_nylium",Count:8b}
+
+# 取引 下位通貨を歪んだナイリウムに
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:warped_nylium",Count:8b}
 
 # 取引 下位通貨を白色の染料に
     data modify storage asset:trader Trades append value {}
