@@ -124,7 +124,7 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"dark_oak_sapling",Count:1b}
 
-# 取引 オークの苗木を下位通貨に
+# 取引 オークの苗木をマングローブの芽に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"mangrove_propagule",Count:1b}
@@ -154,9 +154,9 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"dark_oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
-# 取引 下位通貨をオークの苗木に
+# 取引 マングローブの芽をオークの苗木に
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"mangrove_propagule",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
 # 取引 下位通貨を白色の染料に
