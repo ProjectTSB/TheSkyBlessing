@@ -7,6 +7,7 @@
         "asset:trader/0005.potion_merchant/register/",
         "asset:trader/0006.armor_merchant/register/",
         "asset:trader/0007.currency_merchant/register/",
-        "asset:trader/0008.farm_merchant/register/"
+        "asset:trader/0008.farm_merchant/register/",
+        "asset:trader/0009.building_merchant/register/"
     ]
 }
