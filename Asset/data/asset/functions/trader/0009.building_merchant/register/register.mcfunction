@@ -17,17 +17,17 @@
 # 取引 下位通貨を砂に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:sand",Count:32b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:sand",Count:16b}
 
 # 取引 下位通貨を赤砂に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:red_sand",Count:32b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:red_sand",Count:16b}
 
 # 取引 下位通貨を砂利に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:gravel",Count:32b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:gravel",Count:16b}
 
 # 取引 下位通貨を粘土ブロックに
     data modify storage asset:trader Trades append value {}
@@ -82,12 +82,12 @@
 # 取引 下位通貨をネザーレンガに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:nether_brick",Count:32b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:nether_brick",Count:16b}
 
 # 取引 下位通貨をプリズマリンの欠片に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:prismarine_shard",Count:32b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:prismarine_shard",Count:16b}
 
 # 取引 下位通貨をグロウストーンに
     data modify storage asset:trader Trades append value {}
@@ -187,12 +187,12 @@
 # 取引 下位通貨を深紅のナイリウムに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:crimson_nylium",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:crimson_nylium",Count:4b}
 
 # 取引 下位通貨を歪んだナイリウムに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:warped_nylium",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:warped_nylium",Count:4b}
 
 # 取引 下位通貨を白色の染料に
     data modify storage asset:trader Trades append value {}
