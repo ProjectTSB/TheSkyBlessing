@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
+# @within function asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmABwqUBGcADAGaUC0llcTrALJQOwAmdqQBsbOJVEBGAIYNJ0sQGYwBAHayAtgmSAwxQAE0tWBiyM2gM5JwKAPaF1EJDwCsBFHCdwMNsADdZbEJdcAAPJAYCKEiAX1iCC1I0QmtEHgJLCHNnRCiwOGxsNBhLXWkGfIw7bIhdfLRLAFEikrKmgEdCIOwoAGUzT3JEJiCy+IBdIA_3
 # 円 1

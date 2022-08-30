@@ -15,10 +15,10 @@
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active
 
 # こっち向く
-    execute unless entity @s[scores={RW.FakeInertia=0..}] facing entity @p eyes run tp @s ~ ~ ~ ~ ~
+    execute if entity @s[tag=!RW.InAction] unless entity @s[scores={RW.FakeInertia=0..}] facing entity @p eyes run tp @s ~ ~ ~ ~ ~
 
 # モデルの向き
-    execute as @e[type=armor_stand,tag=RW.ArmorStand,distance=..2] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
+    execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ArmorStand,distance=..2] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
 
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker

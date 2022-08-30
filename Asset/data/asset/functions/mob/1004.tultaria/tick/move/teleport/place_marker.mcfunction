@@ -10,7 +10,8 @@
 # 演出
 
 # 拡散値
-    data modify storage lib: Argument.Bounds set value [[8d,12d],[0d,3d],[8d,12d]]
+    data modify storage lib: Argument.Bounds set value [[4d,6d],[0d,0d],[4d,6d]]
+    #data modify storage lib: Argument.Bounds set value [[8d,12d],[0d,3d],[8d,12d]]
     #data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
     execute as @e[type=marker,tag=RW.TeleportMarker,tag=RW.MarkerInit] at @s run function lib:spread_entity/
 

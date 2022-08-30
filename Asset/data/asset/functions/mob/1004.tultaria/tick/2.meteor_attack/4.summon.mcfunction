@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/2.meteor_attack/3.summon
+#> asset:mob/1004.tultaria/tick/2.meteor_attack/4.summon
 #
 #
 #
