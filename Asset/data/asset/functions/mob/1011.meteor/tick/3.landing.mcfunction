@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/1011.meteor/tick/2.tick
+# @within function
+#   asset:mob/1011.meteor/tick/2.tick
+#   asset:mob/1011.meteor/tick/3.move
 
 # 演出
     particle minecraft:explosion_emitter ~ ~ ~ 0 0 0 1 1
