@@ -10,5 +10,11 @@
 # 発動
     execute if score @s RW.Tick matches 20 run function asset:mob/1004.tultaria/tick/2.meteor_attack/3.activate
 
+# 発動
+    execute if score @s RW.Tick matches 40 run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.fall_meteor
+
+# 発動
+    execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/2.meteor_attack/4.fall_meteor
+
 # リセット
-    execute if score @s RW.Tick matches 50.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 60.. run function asset:mob/1004.tultaria/tick/reset

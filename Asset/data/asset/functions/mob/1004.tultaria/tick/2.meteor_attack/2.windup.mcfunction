@@ -24,7 +24,7 @@
     execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-45 ~
 
 # 演出
-    particle minecraft:flame ~ ~1 ~ 0.3 0.7 0.3 0.01 50
+    particle minecraft:flame ~ ~1.2 ~ 0.3 0.7 0.3 0.01 50
     playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 1.5
     playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 2
     playsound minecraft:entity.blaze.ambient player @a ~ ~ ~ 3 1.2

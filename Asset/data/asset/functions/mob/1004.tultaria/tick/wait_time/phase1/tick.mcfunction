@@ -38,3 +38,6 @@
     execute if entity @s[scores={RW.FakeInertia=0}] facing entity @p eyes run tp @s ~ ~ ~ ~ ~
     scoreboard players reset @s[scores={RW.FakeInertia=0}] RW.FakeInertia
 
+# マーカーまでたどり着いたら移動をやめる
+    execute if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision run scoreboard players reset @s RW.FakeInertia
+

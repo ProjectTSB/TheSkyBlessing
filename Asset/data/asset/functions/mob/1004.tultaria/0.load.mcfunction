@@ -12,3 +12,4 @@
     scoreboard objectives add RW.MoveTimesPerTick dummy
     scoreboard objectives add RW.Speed dummy
     scoreboard objectives add RW.FakeInertia dummy
+    scoreboard objectives add RW.AttackAmount dummy
