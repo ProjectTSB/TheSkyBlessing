@@ -12,7 +12,7 @@
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 3 1.0
 
 # 攻撃の量を指定
-    scoreboard players set $AttackAmount Temporary 3
+    scoreboard players set $AttackAmount Temporary 5
 
 # 召喚
     function asset:mob/1004.tultaria/tick/2.meteor_attack/5.summon

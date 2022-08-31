@@ -10,12 +10,11 @@
 # 演出
 
 # 拡散値
-    data modify storage lib: Argument.Bounds set value [[4d,6d],[0d,0d],[4d,6d]]
-    #data modify storage lib: Argument.Bounds set value [[8d,12d],[0d,3d],[8d,12d]]
-    #data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
+    execute if block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[3d,3d],[4d,6d]]
+    execute unless block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[0d,6d],[4d,6d]]
     execute as @e[type=marker,tag=RW.TeleportMarker,tag=RW.MarkerInit] at @s run function lib:spread_entity/
 
-# 右腕腕ポーズ
+# 右腕ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [10f,0f,20f]
 
 # 右腕アイテム
