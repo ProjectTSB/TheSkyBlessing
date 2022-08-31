@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0724.oblivious_snow/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add K4.AttackCD dummy
