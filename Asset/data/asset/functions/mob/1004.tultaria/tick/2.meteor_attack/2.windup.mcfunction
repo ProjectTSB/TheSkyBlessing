@@ -6,17 +6,22 @@
 
 
 # ポーズ
-    data modify entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]
-    data modify entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [-25f,0f,75f]
-
-# モデル全体の向き
-    execute at @s run tp @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] ~ ~ ~ ~-65 ~
+    data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]
+    data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-25f,0f,75f]
 
 # 腕を変える
-    item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
+    item replace entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
 
-# 頭変える
-    item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20079}
+# 体変える
+    item replace entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20077}
+
+# 体の向き
+    execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-65 ~
+
+# 頭のモデル、向き
+    data modify entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [15.1f,0.1f,0.1f]
+    item replace entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20088}
+    execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-45 ~
 
 # 演出
     particle minecraft:flame ~ ~1 ~ 0.3 0.7 0.3 0.01 50

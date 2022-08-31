@@ -17,6 +17,11 @@
 # 向きはちょっと斜め
     tp @s ~ ~ ~ ~-45 ~
 
+# 頭の向き
+    data modify entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [0.1f,0.1f,0.1f]
+    item replace entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
+    execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~15 ~
+
 # 演出
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 3 0.6
     playsound minecraft:entity.evoker.cast_spell hostile @a ~ ~ ~ 3 1.5

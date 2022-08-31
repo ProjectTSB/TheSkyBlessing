@@ -6,6 +6,8 @@
     #declare tag RW.This
     #
     #declare tag RW.Boss
+    #declare tag RW.ModelHead
+    #declare tag RW.ModelBody
     #declare tag RW.ArmorStand
     #declare tag RW.ArmorStandThis
     #declare tag RW.XYZ
