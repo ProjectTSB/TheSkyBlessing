@@ -9,7 +9,7 @@
 # メテオレイン
     execute if entity @s[tag=RW.SkillMeteor] run function asset:mob/1004.tultaria/tick/2.meteor_attack/1.tick
 # 座標
-    execute if entity @s[tag=RW.SkillCoordinate] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.coordinate_attack
+    execute if entity @s[tag=RW.SkillCoordinate] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.tick
 # 座標外し
     execute if entity @s[tag=RW.SkillOffCoordinate] run function asset:mob/1004.tultaria/tick/4.off_coordinate_attack/1.off_coordinate_attack
 # 弾攻撃
