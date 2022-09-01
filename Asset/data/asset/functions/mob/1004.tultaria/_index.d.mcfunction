@@ -35,6 +35,7 @@
     #declare tag RW.SkillBall
     #declare tag RW.SkillStarfury
     #declare tag RW.SkillSummon
+    #declare tag RW.SkillLaser
     #
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker
