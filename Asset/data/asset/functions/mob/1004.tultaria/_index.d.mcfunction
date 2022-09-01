@@ -20,6 +20,9 @@
     #
     #declare tag RW.Phase1
     #
+    #declare tag RW.SlashSweep
+    #declare tag RW.SlashInit
+    #
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per
     #declare tag RW.HPless40per

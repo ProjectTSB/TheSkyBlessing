@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/**
 
 # 近接
-    execute if entity @s[tag=RW.SkillMelee] run function asset:mob/1004.tultaria/tick/1.melee_attack/1.melee_attack
+    execute if entity @s[tag=RW.SkillMelee] run function asset:mob/1004.tultaria/tick/1.melee_attack/1.tick
 # メテオレイン
     execute if entity @s[tag=RW.SkillMeteor] run function asset:mob/1004.tultaria/tick/2.meteor_attack/1.tick
 # 座標
