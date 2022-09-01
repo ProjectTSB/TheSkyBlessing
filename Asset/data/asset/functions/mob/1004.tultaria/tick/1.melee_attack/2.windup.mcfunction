@@ -15,14 +15,14 @@
     item replace entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20078}
 
 # 体の向き
-    execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-75 ~
+    execute facing entity @p feet run tp @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-75 ~
 
 # 頭のモデル、向き
     data modify entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [15.1f,0.1f,0.1f]
     item replace entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20088}
-    execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-25 ~
+    execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] facing entity @p feet run tp @s ~ ~ ~ ~-25 ~
 
 # 演出
-    playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 1.5
-    playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 2
-    playsound minecraft:entity.blaze.ambient player @a ~ ~ ~ 3 1.2
+    playsound ogg:block.respawn_anchor.charge1 hostile @a ~ ~ ~ 2 2
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 2

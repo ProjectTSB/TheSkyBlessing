@@ -2,7 +2,9 @@
 #
 # 移動終了
 #
-# @within function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
+# @within function
+#   asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
+#   asset:mob/1004.tultaria/tick/1.melee_attack/**
 
 # タグを消す
     tag @s remove RW.Move

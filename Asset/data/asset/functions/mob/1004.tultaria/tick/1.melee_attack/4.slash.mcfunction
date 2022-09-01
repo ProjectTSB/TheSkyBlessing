@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/tick/1.melee_attack/1.tick
 
+# 移動やめる
+    function asset:mob/1004.tultaria/tick/move/teleport/end_move
+
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [30f,0f,-45f]
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [20f,0f,75f]
@@ -23,11 +26,23 @@
     item replace entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
     execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~5 ~
 
+# ダメージ判定
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 30f
+    # 属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.ElementType set value "None"
+    # 補正functionを実行
+        function lib:damage/modifier
+    # 対象
+        execute rotated ~ 0 positioned ^ ^ ^2 as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+    # リセット
+        function lib:damage/reset
+
 # 演出
-    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 1
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.8
-    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1.5
-    playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 2
+    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.8
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.7
+    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1.2
 
 # 斬撃
     execute if entity @s[y_rotation=-22.5..22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-90F,0F],Tags:["RW.SlashSweep","Friend","RW.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,15.0f,0.1f]},DisabledSlots:4144959}

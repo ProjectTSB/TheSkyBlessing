@@ -6,12 +6,12 @@
 
 # 残ってたらヤなのでマーカーを消す
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
-    
+
 # 移動先を設置、プレイヤーを狙う
     execute at @r run summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
 
 # 速度設定
-    scoreboard players set @s RW.Speed 10
+    #scoreboard players set @s RW.Speed 10
 
 # 行動中タグ付与
     tag @s add RW.Move

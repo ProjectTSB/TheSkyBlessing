@@ -32,5 +32,8 @@
     scoreboard players set @s RW.Tick 0
     scoreboard players reset @s RW.FakeInertia
 
-# 拡散値
+# 速度設定
+    scoreboard players set @s RW.Speed 10
+
+# ランダム移動
     execute at @r run function asset:mob/1004.tultaria/tick/move/teleport/place_marker

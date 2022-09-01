@@ -4,8 +4,11 @@
 #
 # @within function asset:mob/1004.tultaria/tick/1.melee_attack/1.tick
 
+# こっちを向く
+    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # こっち狙いで突進
+    scoreboard players set @s RW.Speed 15
     function asset:mob/1004.tultaria/tick/move/teleport/place_marker_target
 
 # ポーズ
