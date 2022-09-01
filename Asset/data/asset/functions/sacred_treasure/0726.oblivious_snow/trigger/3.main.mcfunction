@@ -21,9 +21,9 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/water/add
 
-# mp回復+5%
+# mp回復+8%
     data modify storage api: Argument.UUID set value [I;1,1,726,4]
-    data modify storage api: Argument.Amount set value 0.05
+    data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
 
