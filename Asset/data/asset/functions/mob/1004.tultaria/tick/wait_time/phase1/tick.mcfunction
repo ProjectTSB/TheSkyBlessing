@@ -28,16 +28,9 @@
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
-# 嘘慣性を解決
-    scoreboard players remove @s[scores={RW.FakeInertia=1..}] RW.FakeInertia 1
-    execute if entity @s[scores={RW.FakeInertia=0..}] positioned ~ ~-0.2 ~ run particle soul_fire_flame ^ ^ ^ 0 0 0 0 0 force @a[distance=..30]
-    execute if entity @s[scores={RW.FakeInertia=13..}] run tp @s ^ ^ ^0.8
-    execute if entity @s[scores={RW.FakeInertia=9..12}] run tp @s ^ ^ ^0.5
-    execute if entity @s[scores={RW.FakeInertia=5..8}] run tp @s ^ ^ ^0.3
-    execute if entity @s[scores={RW.FakeInertia=1..4}] run tp @s ^ ^ ^0.1
-    execute if entity @s[scores={RW.FakeInertia=0}] facing entity @p eyes run tp @s ~ ~ ~ ~ ~
-    scoreboard players reset @s[scores={RW.FakeInertia=0}] RW.FakeInertia
+# 嘘慣性
+    #
 
-# マーカーまでたどり着いたら移動をやめる
-    execute if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision run scoreboard players reset @s RW.FakeInertia
+# 地面が下にあったら水平に慣性を処理する
+    execute if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision run tp @s ~ ~ ~ ~ 0
 
