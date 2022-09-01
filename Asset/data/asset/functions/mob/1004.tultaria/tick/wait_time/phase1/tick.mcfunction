@@ -29,8 +29,7 @@
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
 # 嘘慣性
-    #
-
-# 地面が下にあったら水平に慣性を処理する
-    execute if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision run tp @s ~ ~ ~ ~ 0
-
+    # 下が空気なら通常実行
+        execute if entity @s[scores={RW.FakeInertia=0..}] if block ~ ~-1 ~ #lib:no_collision run function asset:mob/1004.tultaria/tick/wait_time/phase1/fake_inertia
+    # 下が空気じゃないなら縦軸を無視
+        execute if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision rotated ~ 0 run function asset:mob/1004.tultaria/tick/wait_time/phase1/fake_inertia

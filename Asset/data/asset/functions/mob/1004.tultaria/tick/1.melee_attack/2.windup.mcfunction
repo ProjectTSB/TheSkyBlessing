@@ -15,7 +15,7 @@
     item replace entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20078}
 
 # 体の向き
-    execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-45 ~
+    execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-75 ~
 
 # 頭のモデル、向き
     data modify entity @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [15.1f,0.1f,0.1f]
@@ -23,7 +23,6 @@
     execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~-25 ~
 
 # 演出
-    particle minecraft:soul_fire_flame ~ ~1.2 ~ 0.3 0.7 0.3 0.01 50
     playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 1.5
     playsound ogg:block.respawn_anchor.charge2 hostile @a ~ ~ ~ 2 2
     playsound minecraft:entity.blaze.ambient player @a ~ ~ ~ 3 1.2
