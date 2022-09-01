@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/n_way_bullet/3.2.targeting_lay
+#> asset:mob/1004.tultaria/tick/n_way_bullet/3.2.targeting_lay_narrow
 #
 #
 #
@@ -15,7 +15,7 @@
 
 # ステータス設定
     data modify storage lib: Argument.Distance set value 4
-    data modify storage lib: Argument.Spread set value 4
+    data modify storage lib: Argument.Spread set value 1
 
 # 拡散
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
