@@ -6,9 +6,6 @@
 # @output score MobHealthMax
 # @within function asset_manager:mob/summon/set_data
 
-# マルチ補正倍率の保存
-    scoreboard players operation @s MobHealthMax *= $PlayerCount Global
-
 #> Val
 # @private
     #declare score_holder $NearbyPlayerCount
