@@ -14,7 +14,6 @@
     execute store result storage lib: Argument.Damage float 0.08 run function api:mob/get_max_health
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
-    data modify storage lib: Argument.BypassResist set value 1b
     data modify storage lib: Argument.FixedDamage set value 1b
 # 補正
     function lib:damage/modifier

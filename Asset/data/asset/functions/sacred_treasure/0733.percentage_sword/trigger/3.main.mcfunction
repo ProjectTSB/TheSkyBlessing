@@ -22,7 +22,6 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
-    data modify storage lib: Argument.BypassResist set value 1b
     execute as @e[type=#lib:living,type=!player,tag=Victim,tag=!Enemy.Boss,distance=..6] store result storage lib: Argument.Damage float 0.40 run function api:mob/get_max_health
 
 # 天使の場合、1%にする

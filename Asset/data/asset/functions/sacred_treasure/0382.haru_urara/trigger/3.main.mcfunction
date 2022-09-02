@@ -21,7 +21,7 @@
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value false
+        data modify storage lib: Argument.FixedDamage set value false
 # 補正functionを実行
     function lib:damage/modifier
 # 攻撃した対象に実行

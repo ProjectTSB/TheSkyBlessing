@@ -2,7 +2,7 @@
 #
 # プロテクションのEPFを取得します
 #
-# @within function lib:damage/core/get_status/cons_resist
+# @within function lib:damage/core/get_status/
 
 # エンチャントを取得する
     data modify storage lib: Enchantments set value []
