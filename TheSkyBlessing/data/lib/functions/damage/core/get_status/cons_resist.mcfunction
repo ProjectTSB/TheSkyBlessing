@@ -25,7 +25,7 @@
     function lib:damage/core/modify_damage
     execute store result score $Damage Temporary run data get storage lib: ModifiedDamage 100
 # Protectionの値の取得
-    function lib:damage/core/get_protection/
+    function lib:damage/core/get_epf/
 # リセット
     data remove storage api: ActiveEffects
     data remove storage lib: ModifiedDamage

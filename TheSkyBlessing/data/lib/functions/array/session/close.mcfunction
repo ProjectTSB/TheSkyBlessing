@@ -14,5 +14,7 @@
     data remove storage lib: Elements
     data remove storage lib: Package
     data remove storage lib: CompareResult
+    data remove storage lib: SumResult
+    data remove storage lib: MergeResult
 # セッションフラグを消す
     data modify storage lib: ArrayLibSessionOpened set value false

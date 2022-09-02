@@ -7,7 +7,7 @@
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0239.poltergeist_bow"}
 # ID (int)
-    data modify storage asset:mob ID set value 289
+    data modify storage asset:mob ID set value 239
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
