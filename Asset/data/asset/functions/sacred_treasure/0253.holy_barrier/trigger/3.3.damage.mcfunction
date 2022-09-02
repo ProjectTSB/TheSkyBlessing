@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0253.holy_barrier/trigger/3.3.damage
 #
-# 
+#
 #
 # @within function
 #   asset:sacred_treasure/0253.holy_barrier/trigger/3.main
@@ -10,7 +10,7 @@
     data modify storage lib: Argument.Damage set value 9999f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.FixedDamage set value true
-    data modify storage lib: Argument.BypassResist set value true
+    data modify storage lib: Argument.FixedDamage set value true
     function lib:damage/modifier
     function lib:damage/
     function lib:damage/reset

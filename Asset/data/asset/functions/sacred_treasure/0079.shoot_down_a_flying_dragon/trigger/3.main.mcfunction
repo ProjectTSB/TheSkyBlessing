@@ -46,7 +46,7 @@
                 execute if score $AroundWater Temporary matches 1.. run scoreboard players add $AttackStrength Temporary 1
 
         # 引数初期化
-            data modify storage lib: Argument set value {AttackType:Magic,ElementType:Thunder,BypassArmor:0b,BypassResist:0b}
+            data modify storage lib: Argument set value {AttackType:Magic,ElementType:Thunder,BypassArmor:0b,FixedDamage:0b}
 
         # //ここ時点で$AttackStrengthは0..3をとる
         # AttackStrengthに従ってダメージを設定
