@@ -11,7 +11,7 @@
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1 2
     particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.7 100
 # 割合ダメージ
-    execute store result storage lib: Argument.Damage float 0.0008 run function api:mob/get_max_health
+    execute store result storage lib: Argument.Damage float 0.08 run function api:mob/get_max_health
 # 属性
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.FixedDamage set value 1b
