@@ -9,8 +9,8 @@
 #declare tag SpreadMarker
 
 # スコア
-    scoreboard players set @s S5.Range 400
-    scoreboard players set @s S5.Speed 25
+    scoreboard players set @s S5.Range 80
+    scoreboard players set @s S5.Speed 5
 
 # ステータス設定
     data modify storage lib: Argument.Distance set value 5

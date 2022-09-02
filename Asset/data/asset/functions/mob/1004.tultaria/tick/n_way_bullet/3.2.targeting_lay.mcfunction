@@ -13,8 +13,8 @@
 # 拡散させるEntityを召喚する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 
-# 実行座標を中心として-x方向に1、+x方向に1、-y方向に0.2、+y方向に0.8、-z方向に1、+z方向に1の立方体内のランダムな位置にmarkerを移動
-    data modify storage lib: Argument.Bounds set value [[10d,10d],[0.2d,0.8d],[10d,10d]]
+# 実行座標を中心として拡散
+    data modify storage lib: Argument.Bounds set value [[10d,10d],[2d,0d],[10d,10d]]
     execute as @e[type=marker,tag=SpreadMarker] at @r run function lib:spread_entity/
 
 # 拡散
