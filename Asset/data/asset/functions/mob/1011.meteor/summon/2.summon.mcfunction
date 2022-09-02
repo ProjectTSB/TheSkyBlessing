@@ -5,7 +5,7 @@
 # @within function asset:mob/1011.meteor/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit"],CustomNameVisible:0b,Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20265}}}]}
+    summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["MobInit"],CustomNameVisible:0b,Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20266}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 1011
 # Type (string) Wikiを参照
