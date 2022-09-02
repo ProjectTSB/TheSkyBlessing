@@ -10,7 +10,7 @@
     tp @s ^ ^ ^0.1 ~ ~
 
 # パーティクル
-    particle minecraft:dust 0.6 0.15 0.1 0.7 ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]
+    particle minecraft:dust 0.6 0.15 0.1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]
 
 # スコア減算
     scoreboard players remove @s S5.MoveTimesPerTick 1

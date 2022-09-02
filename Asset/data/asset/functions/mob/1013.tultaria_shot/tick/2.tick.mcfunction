@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1013.tultaria_shot/tick/1.trigger
 
+# パーティクル
+    particle minecraft:dust 0.6 0.15 0.1 1 ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]
+
 # 再帰カウントが0なら弾速からセット
     scoreboard players operation @s S5.MoveTimesPerTick = @s S5.Speed
 

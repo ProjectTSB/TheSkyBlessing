@@ -23,7 +23,6 @@
     execute as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.5,sort=nearest,limit=1] facing entity @p feet run tp @s ~ ~ ~ ~5 ~
 
 # 演出
-    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 2 1.7
     playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 2 2
-    playsound minecraft:entity.ender_eye.death hostile @a ~ ~ ~ 2 1.4
     playsound minecraft:entity.ender_eye.death hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 2 2
