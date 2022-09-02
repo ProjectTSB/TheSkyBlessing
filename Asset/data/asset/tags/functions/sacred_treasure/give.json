@@ -6,7 +6,7 @@
         "asset:sacred_treasure/0986.order_of_healing/give/1.trigger",
         "asset:sacred_treasure/0976.brave_sword/give/1.trigger",
         "asset:sacred_treasure/0953.meteor_rain/give/1.trigger",
-        "asset:sacred_treasure/0981.soufire_shoot/give/1.trigger",
+        "asset:sacred_treasure/0981.soulfire_burst/give/1.trigger",
         "asset:sacred_treasure/0094.netherite_armor_set/give/1.trigger",
         "asset:sacred_treasure/0973.call_rod_spirit/give/1.trigger",
         "asset:sacred_treasure/0233.reversal/give/1.trigger",
@@ -73,7 +73,7 @@
         "asset:sacred_treasure/0905.book_of_metastasis/give/1.trigger",
         "asset:sacred_treasure/0007.nitrogen_fixater/give/1.trigger",
         "asset:sacred_treasure/0756.sakura_hubuki/give/1.trigger",
-        "asset:sacred_treasure/0146.mystica_soma/give/1.trigger",
+        "asset:sacred_treasure/0146.mystica_nectar/give/1.trigger",
         "asset:sacred_treasure/0145.aure_nectar/give/1.trigger",
         "asset:sacred_treasure/0144.hi_nectar/give/1.trigger",
         "asset:sacred_treasure/0143.nectar/give/1.trigger",
@@ -289,7 +289,7 @@
         "asset:sacred_treasure/0722.heavy_steel_leggings/give/1.trigger",
         "asset:sacred_treasure/0723.heavy_steel_boots/give/1.trigger",
         "asset:sacred_treasure/0731.mouse_feet/give/1.trigger",
-        "asset:sacred_treasure/0733.persantage_sword/give/1.trigger",
+        "asset:sacred_treasure/0733.percentage_sword/give/1.trigger",
         "asset:sacred_treasure/0735.collision_plate/give/1.trigger",
         "asset:sacred_treasure/0745.blade_of_whirlwind/give/1.trigger"
     ]
