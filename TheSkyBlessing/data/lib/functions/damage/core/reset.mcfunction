@@ -10,9 +10,9 @@ data remove storage lib: Argument.ElementType
 data remove storage lib: Argument.DeathMessage
 data remove storage lib: Argument.FixedDamage
 data remove storage lib: Argument.BypassModifier
-data remove storage lib: Argument.BypassDefense
+data remove storage lib: Argument.BypassArmorDefense
 data remove storage lib: Argument.BypassToughness
-data remove storage lib: Argument.BypassEnchantment
+data remove storage lib: Argument.BypassEnchantments
 data remove storage lib: Argument.BypassResistance
 data remove storage lib: Argument.DisableParticle
 data remove storage lib: Argument.ReduceEnchantment
