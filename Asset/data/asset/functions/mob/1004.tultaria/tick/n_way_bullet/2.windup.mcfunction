@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/n_way_bullet/1.tick
 
 # 予告
-    execute positioned ~ ~1.5 ~ facing entity @r feet run function asset:mob/1004.tultaria/tick/n_way_bullet/3.1.targeting
+    execute positioned ~ ~1.7 ~ facing entity @r feet run function asset:mob/1004.tultaria/tick/n_way_bullet/3.1.targeting
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]
