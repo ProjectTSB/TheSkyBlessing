@@ -1,9 +1,9 @@
-#> asset:mob/1004.tultaria/tick/skill/n_way_bullet/3.2.targeting_lay_narrow
+#> asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.2.targeting_lay_narrow
 #
 #
 #
 # @within function
-#   asset:mob/1004.tultaria/tick/skill/n_way_bullet/3.1.targeting
+#   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.1.targeting
 
 #> SpreadLib
 # @private
@@ -20,7 +20,7 @@
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # ビーム
-    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes run function asset:mob/1004.tultaria/tick/skill/n_way_bullet/3.3.laser
+    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.3.laser
 
 # 召喚
     data modify storage api: Argument.ID set value 1013
