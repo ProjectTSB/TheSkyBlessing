@@ -18,9 +18,6 @@
 # フェーズ1
     execute if entity @s[tag=RW.Phase1] run function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
 
-# アマスタをくっつける
-    execute at @s as @e[type=area_effect_cloud,tag=RW.ArmorStand,distance=..3] run tp @s ~ ~ ~
-    execute as @e[type=area_effect_cloud,tag=RW.ArmorStand,distance=..3] run data modify entity @s Air set from entity @s Age
 
 ## スコアを増やす
 #    scoreboard players add @s RW.Tick 1
