@@ -8,6 +8,7 @@
 
 # タグを消す
     tag @s remove RW.Move
+    tag @s remove RW.TickLock
 
 # マーカーも消す
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]

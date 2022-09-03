@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/1014.deadlyshot/**
-    scoreboard objectives add 
+    scoreboard objectives add S6.Tick dummy
