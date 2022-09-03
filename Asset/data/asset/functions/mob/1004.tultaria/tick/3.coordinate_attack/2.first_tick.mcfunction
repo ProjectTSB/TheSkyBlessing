@@ -1,8 +1,8 @@
-#> asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/2.first_tick
+#> asset:mob/1004.tultaria/tick/3.coordinate_attack/2.first_tick
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/1.coordinate_attack
+# @within function asset:mob/1004.tultaria/tick/3.coordinate_attack/1.coordinate_attack
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.Model,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [30f,360f,28f]
@@ -15,4 +15,4 @@
     playsound minecraft:entity.zombie_villager.converted hostile @a[distance=..30] ~ ~ ~ 1 2 1
 
 # 召喚
-    execute at @a[distance=..100] run function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/3.summon
+    execute at @a[distance=..100] run function asset:mob/1004.tultaria/tick/3.coordinate_attack/3.summon

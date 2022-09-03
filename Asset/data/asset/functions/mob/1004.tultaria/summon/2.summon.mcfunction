@@ -59,17 +59,17 @@
         data modify storage asset:mob Resist.Thunder set value 1.0
 
 # 見た目用のアマスタを召喚
-       summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["RW.ArmorStand","RW.ArmorStandThis","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[25f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20087}}]},{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[-115f,0f,-75f],RightArm:[-90f,0f,75f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20077}}]}]}
+       summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["RW.ModelCore","RW.ModelCoreThis","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[25f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20087}}]},{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[-115f,0f,-75f],RightArm:[-90f,0f,75f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20077}}]}]}
     # 頭
-        #summon armor_stand ~ ~ ~ {Marker:0b,NoGravity:1b,Invisible:1b,DisabledSlots:4144959,Tags:["RW.ModelHead","RW.ArmorStand","RW.ArmorStandThis","Object","Uninterferable"],Pose:{Head:[0.1f,0.1f,0.1f]},ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20086}}]}
+        #summon armor_stand ~ ~ ~ {Marker:0b,NoGravity:1b,Invisible:1b,DisabledSlots:4144959,Tags:["RW.ModelHead","RW.Model","RW.ModelCoreThis","Object","Uninterferable"],Pose:{Head:[0.1f,0.1f,0.1f]},ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20086}}]}
     # 体
-        #summon armor_stand ~ ~ ~ {Marker:0b,NoGravity:1b,Invisible:1b,DisabledSlots:4144959,Tags:["RW.ModelBody","RW.ArmorStand","RW.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[-115f,0f,-75f],RightArm:[-90f,0f,75f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20077}}]}
+        #summon armor_stand ~ ~ ~ {Marker:0b,NoGravity:1b,Invisible:1b,DisabledSlots:4144959,Tags:["RW.ModelBody","RW.Model","RW.ModelCoreThis","Object","Uninterferable"],Pose:{LeftArm:[-115f,0f,-75f],RightArm:[-90f,0f,75f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20077}}]}
 
 # 位置をあわせる
-    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] @s
+    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] @s
 
 # タグを消す
-    tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
+    tag @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] remove RW.ModelCoreThis
 
 # 座標を記憶するあれ
     summon marker ~ ~ ~ {Tags:["RW.XYZ"]}

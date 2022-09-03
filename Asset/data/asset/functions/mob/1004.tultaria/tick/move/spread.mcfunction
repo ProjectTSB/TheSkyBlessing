@@ -6,10 +6,10 @@
 
 # 実行前に拡散値を設定！
 # タグをつける
-    tag @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] add RW.ArmorStandThis
+    tag @e[type=armor_stand,tag=RW.Model,distance=..0.01,sort=nearest,limit=1] add RW.ModelCoreThis
 # 拡散する
     execute at @a[gamemode=!spectator,distance=..100,sort=random,limit=1] run function lib:spread_entity/
 # アマスタを持ってくる
-    tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s
+    tp @e[type=armor_stand,tag=RW.ModelCoreThis] @s
 # タグを消す
-    tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
+    tag @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] remove RW.ModelCoreThis

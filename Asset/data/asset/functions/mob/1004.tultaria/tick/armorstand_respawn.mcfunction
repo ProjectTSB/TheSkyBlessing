@@ -5,13 +5,13 @@
 # @within function asset:mob/1004.tultaria/tick/2.tick
 
 # どっかいったアマスタを殺す
-    execute as @e[type=armor_stand,tag=RW.ArmorStand] at @s unless entity @e[type=wither_skeleton,tag=RW.Boss,distance=..0.01] run kill @s
+    execute as @e[type=armor_stand,tag=RW.Model] at @s unless entity @e[type=wither_skeleton,tag=RW.Boss,distance=..0.01] run kill @s
 # 見た目用のアマスタを召喚
-    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["RW.ArmorStand","RW.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20069}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20071}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20072}}]}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["RW.Model","RW.ModelCoreThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20069}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20071}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20072}}]}
 # 位置をあわせる
-    tp @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] @s
+    tp @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] @s
 # タグを消す
-    tag @e[type=armor_stand,tag=RW.ArmorStandThis,distance=..0.01] remove RW.ArmorStandThis
+    tag @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] remove RW.ModelCoreThis
 # スコアも一応戻す
     scoreboard players set @s RW.Tick -30
 

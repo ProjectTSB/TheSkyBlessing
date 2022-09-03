@@ -1,8 +1,8 @@
-#> asset:mob/1004.tultaria/tick/skill/7.star_summon/2.first_tick
+#> asset:mob/1004.tultaria/tick/7.star_summon/2.first_tick
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/skill/7.star_summon/1.star_summon
+# @within function asset:mob/1004.tultaria/tick/7.star_summon/1.star_summon
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.Model,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [30f,360f,28f]
