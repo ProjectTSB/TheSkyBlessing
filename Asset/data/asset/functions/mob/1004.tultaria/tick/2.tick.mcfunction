@@ -8,6 +8,10 @@
     #declare score_holder $Count
     #declare score_holder $4tInterval
 
+
+# アマスタにタグつける。ここでついたタグは最後に消す。実質的なthis
+    function asset:mob/1004.tultaria/tick/armor_stand_check
+
 # スコア加算
     #scoreboard players add @s[tag=!RW.Move] RW.Tick 1
     scoreboard players add @s RW.Tick 1
@@ -18,7 +22,8 @@
 # フェーズ1
     execute if entity @s[tag=RW.Phase1] run function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
 
-
+# 最初に付けたタグを消す
+    tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.3,limit=2] remove RW.ModelChangeTarget
 ## スコアを増やす
 #    scoreboard players add @s RW.Tick 1
 #

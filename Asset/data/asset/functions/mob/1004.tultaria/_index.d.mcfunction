@@ -6,10 +6,12 @@
     #declare tag RW.This
     #
     #declare tag RW.Boss
+    #declare tag RW.ModelCore
     #declare tag RW.ModelHead
     #declare tag RW.ModelBody
-    #declare tag RW.ArmorStand
-    #declare tag RW.ArmorStandThis
+    #declare tag RW.Model
+    #declare tag RW.ModelChangeTarget
+    #declare tag RW.ModelCoreThis
     #declare tag RW.XYZ
     #declare tag RW.Opening
     #declare tag RW.Start
