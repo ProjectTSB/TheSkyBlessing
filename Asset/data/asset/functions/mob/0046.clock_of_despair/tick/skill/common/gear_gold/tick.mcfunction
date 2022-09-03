@@ -7,11 +7,11 @@
 scoreboard players add @s 1A.LifeTime 1
 
 execute if score @s 1A.LifeTime matches 01..06 run tp @s ~ ~ ~ ~4.5 ~
-execute if score @s 1A.LifeTime matches 01..06 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/3
+execute if score @s 1A.LifeTime matches 01..06 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/4
 execute if score @s 1A.LifeTime matches 07..12 run tp @s ~ ~ ~ ~3.5 ~
-execute if score @s 1A.LifeTime matches 07..12 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/3
+execute if score @s 1A.LifeTime matches 07..12 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/4
 execute if score @s 1A.LifeTime matches 13..18 run tp @s ~ ~ ~ ~2.5 ~
-execute if score @s 1A.LifeTime matches 13..18 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/2
+execute if score @s 1A.LifeTime matches 13..18 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/3
 execute if score @s 1A.LifeTime matches 19..24 run tp @s ~ ~ ~ ~1.5 ~
 execute if score @s 1A.LifeTime matches 19..24 run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_gold/vfx/gear/2
 execute if score @s 1A.LifeTime matches 25..30 run tp @s ~ ~ ~ ~0.5 ~
