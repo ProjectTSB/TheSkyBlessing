@@ -1,8 +1,8 @@
-#> asset:mob/1004.tultaria/tick/skill/1.melee_attack/3.dash
+#> asset:mob/1004.tultaria/tick/1.melee_attack/3.dash
 #
 # こっちに接近する動き
 #
-# @within function asset:mob/1004.tultaria/tick/skill/1.melee_attack/1.tick
+# @within function asset:mob/1004.tultaria/tick/1.melee_attack/1.tick
 
 # こっちを向く
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~

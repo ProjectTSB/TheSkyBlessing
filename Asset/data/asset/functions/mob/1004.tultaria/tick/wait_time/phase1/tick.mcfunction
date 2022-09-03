@@ -19,11 +19,11 @@
 
 # モデルの向き
     # 頭
-        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,distance=..0.01] facing entity @p feet run tp @s ~ ~ ~ ~ ~
+        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p feet run tp @s ~ ~ ~ ~ ~
         execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,distance=..2] store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
 
     # 体
-        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelBody,distance=..0.01] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
+        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
 
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker

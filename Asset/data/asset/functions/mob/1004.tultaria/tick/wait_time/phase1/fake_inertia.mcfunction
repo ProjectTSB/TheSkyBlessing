@@ -17,7 +17,7 @@
     execute if entity @s[scores={RW.FakeInertia=1..4}] positioned ^ ^ ^0.1 run function asset:mob/1004.tultaria/tick/move/tereport
 
 # 頭のモデル
-    execute if entity @s[tag=!RW.InAction,scores={RW.FakeInertia=0}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,distance=..0.01,sort=nearest,limit=1] armor.head with stick{CustomModelData:20077}
+    execute if entity @s[tag=!RW.InAction,scores={RW.FakeInertia=0}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20077}
 
 # スコアリセット
     scoreboard players reset @s[scores={RW.FakeInertia=0}] RW.FakeInertia

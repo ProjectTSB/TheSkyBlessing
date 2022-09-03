@@ -23,7 +23,7 @@
     execute if entity @s[tag=RW.Phase1] run function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
 
 # 最初に付けたタグを消す
-    tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.3,limit=2] remove RW.ModelChangeTarget
+    tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.5,limit=2] remove RW.ModelChangeTarget
 ## スコアを増やす
 #    scoreboard players add @s RW.Tick 1
 #
