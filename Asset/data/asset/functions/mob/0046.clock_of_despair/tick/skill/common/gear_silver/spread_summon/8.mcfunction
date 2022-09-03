@@ -1,4 +1,4 @@
-#> asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/spread_summon/
+#> asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/spread_summon/8
 #
 #
 #
