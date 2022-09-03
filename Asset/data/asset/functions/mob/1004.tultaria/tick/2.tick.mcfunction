@@ -24,6 +24,7 @@
 
 # 最初に付けたタグを消す
     tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.5,limit=2] remove RW.ModelChangeTarget
+
 ## スコアを増やす
 #    scoreboard players add @s RW.Tick 1
 #

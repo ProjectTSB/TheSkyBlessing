@@ -39,6 +39,8 @@
     #declare tag RW.SkillSummon
     #declare tag RW.SkillLaser
     #
+    #declare tag RW.SkillDeadly1
+    #
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker
     #declare tag RW.CoordinateMarker

@@ -19,4 +19,7 @@
 # 召喚
     execute if entity @s[tag=RW.SkillSummon] run function asset:mob/1004.tultaria/tick/skill/7.star_summon/1.star_summon
 # ショット
-    execute if entity @s[tag=RW.SkillLaser] run function asset:mob/1004.tultaria/tick/skill/n_way_bullet/1.tick
+    execute if entity @s[tag=RW.SkillLaser] run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
+
+# 大技その1
+    execute if entity @s[tag=RW.SkillLaser] run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
