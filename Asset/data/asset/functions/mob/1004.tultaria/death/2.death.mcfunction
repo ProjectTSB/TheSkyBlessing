@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/death/1.trigger
 
+#> トゥル側から剣へと付与するタグ
+# @private
+#declare tag S7.Death
 
 # 演出
     playsound minecraft:block.glass.break hostile @a ~ ~ ~ 4 0.7
@@ -20,6 +23,9 @@
 
 # もともといるアマスタには死んでもらう(複数召喚されてる場合、もし巻き込まれても大丈夫)
     kill @e[type=armor_stand,tag=RW.Model]
+
+# 剣を消す
+    tag @e[type=armor_stand,scores={MobID=1015}] add S7.Death
 
 # マーカー消す
     kill @e[type=marker,tag=RW.XYZ,limit=1]
