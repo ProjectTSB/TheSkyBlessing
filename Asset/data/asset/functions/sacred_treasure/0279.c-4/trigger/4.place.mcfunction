@@ -15,4 +15,4 @@
     execute if entity @s[tag=7R.Landing] run function asset:sacred_treasure/0279.c-4/trigger/wall_check
 
 # 再起
-    execute positioned ^ ^ ^0.1 if entity @s[tag=!7R.Landing,distance=..5] run function asset:sacred_treasure/0279.c-4/trigger/4.place
+    execute positioned ^ ^ ^0.1 if entity @s[tag=!7R.Landing,distance=..7] run function asset:sacred_treasure/0279.c-4/trigger/4.place
