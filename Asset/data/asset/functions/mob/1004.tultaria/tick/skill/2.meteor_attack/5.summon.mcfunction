@@ -13,14 +13,14 @@
 # 拡散用marker召喚
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Bounds set value [[24d,24d],[0d,0d],[24d,24d]]
-    execute as @e[type=marker,tag=SpreadMarker,distance=..50] at @r run function lib:spread_entity/
+    execute as @e[type=marker,tag=SpreadMarker,distance=..100,limit=1] at @r run function lib:spread_entity/
 
 # マーカーに対してメテオを召喚
     data modify storage api: Argument.ID set value 1011
-    execute at @e[type=marker,tag=SpreadMarker,distance=..50] positioned ~ ~40 ~ run function api:mob/summon
+    execute at @e[type=marker,tag=SpreadMarker,distance=..100] positioned ~ ~40 ~ run function api:mob/summon
 
 # 拡散マーカーを消す
-   kill @e[type=marker,tag=SpreadMarker,distance=..50]
+   kill @e[type=marker,tag=SpreadMarker,distance=..100]
 
 # スコア減らす
     scoreboard players remove $AttackAmount Temporary 1
