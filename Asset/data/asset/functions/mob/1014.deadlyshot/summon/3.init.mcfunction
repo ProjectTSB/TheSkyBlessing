@@ -12,7 +12,7 @@
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 
 # 自信を中心に拡散先を召喚
-    data modify storage lib: Argument.Bounds set value [[10d,10d],[1d,0d],[10d,10d]]
+    data modify storage lib: Argument.Bounds set value [[10d,10d],[0.5d,0.5d],[10d,10d]]
     execute as @e[type=marker,tag=SpreadMarker] at @s run function lib:spread_entity/
 
 # マーカーの方向く

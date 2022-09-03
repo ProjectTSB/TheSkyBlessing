@@ -15,7 +15,7 @@
     execute if score @s RW.Tick matches 80 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/4.start_attack
 
 # 発動中
-    execute if score @s RW.Tick matches 80..200 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/5.shoot
+    execute if score @s RW.Tick matches 80..200 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/5.shoot_tick
 
 # 無敵解除
     execute if score @s RW.Tick matches 200 run data modify entity @s Invulnerable set value 0b
