@@ -10,4 +10,4 @@
     scoreboard players operation @s AttackedEntity = @p[tag=TargetEntity] UserID
     scoreboard players operation @p[tag=TargetEntity] AttackedEntity = @p[tag=TargetEntity] UserID
 # リセット
-    tag @s remove LibraryDamage
+    tag @s remove VictimFromLibrary

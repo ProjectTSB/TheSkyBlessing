@@ -11,7 +11,7 @@
 # プレイヤー特定
     execute as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add TargetAttacker
 # 特定用タグ
-    tag @s add LibraryDamage
+    tag @s add VictimFromLibrary
 # トリガー
     tag @a[tag=TargetAttacker] add TriggerFlag.Attack
     execute if entity @s[tag=FindFlag0.0] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacked_entity 0-0

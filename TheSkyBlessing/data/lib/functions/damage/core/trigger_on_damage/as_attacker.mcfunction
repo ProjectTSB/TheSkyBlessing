@@ -5,7 +5,7 @@
 # @within function lib:damage/core/trigger_on_damage/
 
 # 特定用タグ
-    tag @s add LibraryDamage
+    tag @s add AttckerFromLibrary
 # トリガー
     execute if entity @s[tag=FindFlag0.0] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 0-0
     execute if entity @s[tag=FindFlag0.1] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 0-1

@@ -19,4 +19,4 @@
 #   mob_manager:entity_finder/attacked_entity/on_attack
 #   mob_manager:entity_finder/attacked_entity/fetch_attacked_entity
 #   lib:damage/core/trigger_on_attack
-    #declare tag LibraryDamage
+    #declare tag VictimFromLibrary
