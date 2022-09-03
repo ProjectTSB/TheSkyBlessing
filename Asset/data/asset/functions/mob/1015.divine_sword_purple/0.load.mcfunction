@@ -6,4 +6,3 @@
 
 #> 定義類はここに
 # @within function asset:mob/1015.divine_sword_purple/**
-    scoreboard objectives add 

@@ -4,6 +4,34 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 
+# 剣を突き立てる
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~10 ~10 ~ run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~-10 ~10 ~ run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~ ~10 ~10 run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~ ~10 ~-10 run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~7 ~10 ~7 run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~-7 ~10 ~-7 run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~7 ~10 ~-7 run function api:mob/summon
+
+    data modify storage api: Argument.ID set value 1015
+    execute positioned ~-7 ~10 ~7 run function api:mob/summon
+
+# 胴体はこの辺
+    summon marker ~ ~1.5 ~ {Tags:["RW.BodyMarker"]}
+
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-75f,0f,75f]
