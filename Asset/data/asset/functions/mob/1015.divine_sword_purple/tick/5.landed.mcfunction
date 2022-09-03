@@ -7,6 +7,8 @@
 # タグ付与
     tag @s add S7.Landed
 
-# サウンド
-    playsound minecraft:item.trident.return neutral @a ~ ~ ~ 2 1.2
-    playsound minecraft:block.beacon.ambient neutral @a ~ ~ ~ 2 2
+# 演出
+    playsound minecraft:item.trident.return neutral @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.iron_golem.hurt neutral @a ~ ~ ~ 2 2
+    particle dust 1 0 1 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 50
+    particle end_rod ~ ~0.8 ~ 0.1 0.1 0.1 0.1 10

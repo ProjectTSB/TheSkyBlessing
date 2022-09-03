@@ -5,7 +5,7 @@
 # @within function asset:mob/1015.divine_sword_purple/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["Uninterferable","MobInit"],Pose:{Head:[90f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:leather_horse_armor",Count:1b,tag:{display:{color:13594879},CustomModelData:20267}}]}
+    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["Uninterferable","MobInit"],Pose:{Head:[90f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:leather_horse_armor",Count:1b,tag:{display:{color:13594879},CustomModelData:20267,Enchantments:[{}]}}]}
 # ID (int)
     data modify storage asset:mob ID set value 1015
 # Type (string) Wikiを参照

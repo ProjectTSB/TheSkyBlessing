@@ -10,6 +10,25 @@
 # 構える
     execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/2.windup
 
+# 剣を突き立てる
+    data modify storage api: Argument.ID set value 1015
+    execute if score @s RW.Tick matches 21 rotated 0 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 22 rotated 22.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 23 rotated 45 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 24 rotated 67.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 25 rotated 90 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 26 rotated 112.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 27 rotated 135 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 28 rotated 157.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 29 rotated 180 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 30 rotated 202.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 31 rotated 225 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 32 rotated 247.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 33 rotated 270 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 34 rotated 292.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 35 rotated 315 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 36 rotated 337.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+
 # チャージ後以降からは危険地帯になる
     execute if score @s RW.Tick matches 20..320 run scoreboard players operation $AreaInterval Temporary %= $3 Const
     execute if score @s RW.Tick matches 20..320 run execute if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field

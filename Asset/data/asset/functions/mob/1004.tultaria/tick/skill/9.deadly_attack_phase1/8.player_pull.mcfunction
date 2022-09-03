@@ -11,7 +11,7 @@
     tp @s ~ ~ ~
 
 # エフェクト
-    summon area_effect_cloud ~ ~ ~ {Particle:"crit",Radius:0.5f,Duration:6,Age:4,Effects:[{Id:2,Amplifier:9b,Duration:20},{Id:15,Amplifier:0b,Duration:30}]}
+    summon area_effect_cloud ~ ~ ~ {Particle:"crit",Radius:0.5f,Duration:6,Age:4,Effects:[{Id:2,Amplifier:9b,Duration:20},{Id:15,Amplifier:0b,Duration:20}]}
 
 # 演出
     playsound minecraft:entity.enderman.teleport hostile @s ~ ~ ~ 2 1.5

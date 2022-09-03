@@ -9,5 +9,5 @@
 
 # 演出
     particle explosion ~ ~1 ~ 0 0 0 0 1
-    playsound minecraft:item.trident.throw neutral @a ~ ~ ~ 1 0.5
-    playsound minecraft:entity.witch.throw neutral @a ~ ~ ~ 1 0.5
+    playsound minecraft:item.trident.throw neutral @a ~ ~ ~ 3 0.5
+    playsound minecraft:entity.witch.throw neutral @a ~ ~ ~ 3 0.5
