@@ -12,7 +12,7 @@
     scoreboard players add @s S6.Tick 1
 
 # 範囲内ならホーミングじみた移動
-    execute if score @s S6.Tick matches ..60 facing entity @p[distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-3000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.3 ~ ~
+    execute if score @s S6.Tick matches ..60 facing entity @p[distance=..30] eyes positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-2000 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.3 ~ ~
 
 # 時間が過ぎたら普通に戻っていく
     execute if score @s S6.Tick matches 60.. run tp @s ^ ^ ^0.3

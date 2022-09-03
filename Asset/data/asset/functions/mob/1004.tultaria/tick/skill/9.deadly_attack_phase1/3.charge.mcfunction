@@ -29,6 +29,10 @@
     data modify storage api: Argument.ID set value 1015
     execute positioned ~-7 ~10 ~7 run function api:mob/summon
 
+
+# プレイヤーを引っ張ってくる
+    execute at @s positioned ^ ^ ^3 rotated ~ 0 as @a[distance=..30,sort=random,limit=3] run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.player_pull
+
 # 胴体はこの辺
     summon marker ~ ~1.5 ~ {Tags:["RW.BodyMarker"]}
 
