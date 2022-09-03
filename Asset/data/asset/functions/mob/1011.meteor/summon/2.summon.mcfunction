@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"メテオレイン","color":"white"}'
+    data modify storage asset:mob Name set value '{"text":"ソウルメテオ","color":"white"}'
 # MobInitタグ持ちを対象にして独自Init
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/1011.meteor/summon/3.init
 # MobInitタグ持ちを対象にして召喚関数呼び出し

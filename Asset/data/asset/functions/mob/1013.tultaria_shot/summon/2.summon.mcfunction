@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"ディバインショット","color":"#a33033","italic":false}'
+    data modify storage asset:mob Name set value '{"text":"ディヴァインショット","color":"#a33033","italic":false}'
 
 # 召喚処理
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/1013.tultaria_shot/summon/3.init
