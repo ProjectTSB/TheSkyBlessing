@@ -5,7 +5,7 @@
 # @within function asset:mob/0211.aurora_bullet/tick/2.tick
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 33f
+    data modify storage lib: Argument.Damage set value 25f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
