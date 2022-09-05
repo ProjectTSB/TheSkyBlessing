@@ -2,6 +2,7 @@
     "values": [
         "air",
         "cave_air",
-        "void_air"
+        "void_air",
+        "light"
     ]
 }

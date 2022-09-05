@@ -11,10 +11,10 @@
 
 # 自爆
   # 爆破待機
-     execute if score @s 1O.ExplodeCnt matches 5.. run function asset:mob/0060.self_destructor/tick/3.waiting_explode
+     execute if entity @s[scores={1O.ExplodeCnt=5..}] run function asset:mob/0060.self_destructor/tick/3.waiting_explode
 
   # 演出
-     execute if score @s 1O.ExplodeFuse matches 1..39 run particle smoke ~ ~1.2 ~ 0.4 0.5 0.4 0 6 normal @a
+     execute if entity @s[scores={1O.ExplodeFuse=1..39}] run particle smoke ~ ~1.2 ~ 0.4 0.5 0.4 0 6 normal @a
 
    # 爆破
-     execute if score @s 1O.ExplodeFuse matches 40.. run function asset:mob/0060.self_destructor/tick/4.self-desruct
+     execute if entity @s[scores={1O.ExplodeFuse=40..}] run function asset:mob/0060.self_destructor/tick/4.self-desruct

@@ -12,7 +12,8 @@
     execute if score @s 1A.LifeTime matches 801 run function asset:mob/0046.clock_of_despair/tick/skill/common/beam/summon
     execute if score @s 1A.LifeTime matches 801 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~120 ~
 # ビーム回転
-    execute if score @s 1A.LifeTime matches 821..999 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~5 ~
+    # execute if score @s 1A.LifeTime matches 821..999 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~5 ~
+    execute if score @s 1A.LifeTime matches 821..999 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
     execute if score @s 1A.LifeTime matches 999 run kill @e[type=marker,tag=1A.SkillBeam,distance=..100]
 
 

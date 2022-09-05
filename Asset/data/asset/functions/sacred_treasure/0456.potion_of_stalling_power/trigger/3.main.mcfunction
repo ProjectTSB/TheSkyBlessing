@@ -13,7 +13,7 @@
     # ダメージセット
         data modify storage lib: Argument.Damage set value 10.0f
         data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
     # ダメージを与える
         execute as @s[scores={CO.Tick=1..}] run function lib:damage/
     # リセット

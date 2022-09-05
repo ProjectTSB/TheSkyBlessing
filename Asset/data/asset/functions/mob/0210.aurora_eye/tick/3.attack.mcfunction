@@ -10,7 +10,7 @@
     playsound entity.evoker.prepare_summon hostile @a ~ ~ ~ 0.5 2 0
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 40f
+    data modify storage lib: Argument.Damage set value 36f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
