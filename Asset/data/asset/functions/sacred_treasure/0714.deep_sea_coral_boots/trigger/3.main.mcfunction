@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute unless data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run particle dust 1 0.549 1 0.75 ~ ~1.1 ~ 0.4 0.2 0.4 0 50 normal
+    execute unless data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run particle dust 1 0.549 1 0.75 ~ ~0.2 ~ 0.4 0.2 0.4 0 50 normal
     execute unless data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} positioned ~ ~0.3 ~ rotated ~ 0 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/vfx
     execute unless data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 1 2
 
