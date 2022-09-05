@@ -4,7 +4,7 @@
 #
 # @within function
 #   lib:damage/core/modify/player
-#   lib:damage/core/get_status/cons_resist
+#   lib:damage/core/get_status/modify_and_get_damage
 
 #> Temp
 # @private
