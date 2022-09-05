@@ -18,7 +18,7 @@
     playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 0.5 1.75
     playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 0.5 1.25
     playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 0.5 1
-    playsound block.end_portal.spawn player @a ~ ~ ~ 0.4 1.5
+    playsound block.end_portal.spawn player @a ~ ~ ~ 0.2 1.5
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.35 2
 
 # 珊瑚の演出
