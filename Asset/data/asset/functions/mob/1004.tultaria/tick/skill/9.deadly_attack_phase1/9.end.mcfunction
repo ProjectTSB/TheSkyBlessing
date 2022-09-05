@@ -16,7 +16,3 @@
 
 # 不要になったマーカーを消す
     kill @e[type=marker,tag=RW.BodyMarker,sort=nearest,limit=1]
-
-# スコアリセット
-    scoreboard players reset $ShotInterval Temporary
-    scoreboard players reset $AreaInterval Temporary

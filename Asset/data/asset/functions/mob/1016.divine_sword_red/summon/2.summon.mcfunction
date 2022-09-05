@@ -6,7 +6,7 @@
 
 
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["Uninterferable","MobInit"],Pose:{Head:[90f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:leather_horse_armor",Count:1b,tag:{display:{color:13594879},CustomModelData:20267,Enchantments:[{}]}}]}
+    summon armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Tags:["Uninterferable","MobInit"],Pose:{Head:[90f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:leather_horse_armor",Count:1b,tag:{display:{color:16734296},CustomModelData:20267}}]}
 # ID (int)
     data modify storage asset:mob ID set value 1016
 # Type (string) Wikiを参照

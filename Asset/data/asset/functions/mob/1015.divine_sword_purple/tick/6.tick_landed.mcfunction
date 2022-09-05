@@ -6,3 +6,4 @@
 
 # 演出
     particle witch ~ ~0.8 ~ 0.1 0.1 0.1 0 1
+    particle dust 1 0 1 0.5 ~ ~0.8 ~ 0.1 0.1 0.1 0 2
