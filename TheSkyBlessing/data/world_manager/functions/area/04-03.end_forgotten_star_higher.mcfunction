@@ -23,8 +23,7 @@
 # おおよそ2秒で死ぬようにする
     data modify storage lib: Argument.Damage set value 3
     data modify storage lib: Argument.AttackType set value "Magic"
-    data modify storage lib: Argument.Fixed set value true
-    data modify storage lib: Argument.BypassResist set value true
+    data modify storage lib: Argument.FixedDamage set value true
 # デスログ
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは溶けた","with":[{"selector":"@s"}]}]'
