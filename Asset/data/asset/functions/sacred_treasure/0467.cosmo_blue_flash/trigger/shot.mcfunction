@@ -16,4 +16,4 @@
     execute if entity @e[tag=CZ.HitEntity,distance=..40] run tag @s add CZ.HitFlag
 
 # 再帰
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+    execute positioned ^ ^ ^0.5 if block ~ ~ ~ #lib:no_collision if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot

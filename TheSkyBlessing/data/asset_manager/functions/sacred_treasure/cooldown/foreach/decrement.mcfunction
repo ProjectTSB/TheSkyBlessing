@@ -6,10 +6,6 @@
 #   asset_manager:sacred_treasure/cooldown/
 #   asset_manager:sacred_treasure/cooldown/foreach/decrement
 
-#> For decrement
-# @private
-#declare score_holder $Value
-
 # デクリメント
     data modify storage asset:sacred_treasure DecrementedLCDs append from storage asset:sacred_treasure LCDs[-1]
     execute store result score $Value Temporary run data get storage asset:sacred_treasure LCDs[-1].Value

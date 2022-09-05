@@ -4,10 +4,6 @@
 #
 # @within function asset_manager:sacred_treasure/cooldown/
 
-#> For Calc
-# @private
-    #declare score_holder $Max
-
 # 該当スロットからCooldownの情報を取得する
     execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:sacred_treasure TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[5]
     execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:sacred_treasure TargetLCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[6]
@@ -39,7 +35,5 @@
 # else
     execute unless data storage asset:sacred_treasure MainBarMessage[0] run data modify storage asset:sacred_treasure MainBarMessage set value ['{"text":"#"}']
 # リセット
-    scoreboard players reset $Max Temporary
-    scoreboard players reset $Value Temporary
     scoreboard players reset $LeftBar Temporary
     data remove storage asset:sacred_treasure TargetLCD

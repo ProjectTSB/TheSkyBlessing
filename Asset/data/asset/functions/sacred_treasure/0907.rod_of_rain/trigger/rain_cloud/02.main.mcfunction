@@ -41,7 +41,6 @@
     execute if entity @s[scores={P8.Tick=..400}] run schedule function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/01.schedule_loop 1t replace
 
 # 消滅
-    execute unless block ~ ~ ~ #lib:no_collision_without_fluid run kill @s
     execute if entity @s[scores={P8.Tick=400..}] run kill @s
 
 # リセット

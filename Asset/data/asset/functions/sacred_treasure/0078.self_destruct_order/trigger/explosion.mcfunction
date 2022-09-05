@@ -13,7 +13,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
     # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
 # 対象指定
     execute at @e[type=iron_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
@@ -27,7 +27,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
     # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
 # 対象指定
     execute at @e[type=snow_golem,tag=26.GolemBomb] as @e[type=#lib:living,tag=!Uninterferable,tag=!26.GolemBomb,distance=..5] run function lib:damage/
 # リセット
