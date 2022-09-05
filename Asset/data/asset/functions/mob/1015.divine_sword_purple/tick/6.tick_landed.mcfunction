@@ -1,4 +1,4 @@
-#> asset:mob/1015.divine_sword_purple/tick/5.tick_landed
+#> asset:mob/1015.divine_sword_purple/tick/6.tick_landed
 #
 #
 #

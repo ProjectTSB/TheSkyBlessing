@@ -1,4 +1,4 @@
-#> asset:mob/1015.divine_sword_purple/tick/6.death
+#> asset:mob/1015.divine_sword_purple/tick/7.death
 #
 #
 #
