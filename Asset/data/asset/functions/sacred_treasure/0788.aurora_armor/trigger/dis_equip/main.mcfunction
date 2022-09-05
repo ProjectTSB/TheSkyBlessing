@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0788.aurora_armor/trigger/dis_equip/
 
 # 演出
-    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 1.4 0
+    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 0.5 1.4 0
     particle dust_color_transition 0.000 0.808 0.867 1.5 0 0 0 ~ ~1.2 ~ 0.4 0.4 0.4 0 40 normal @a
 
 # 以下の補正を消す
