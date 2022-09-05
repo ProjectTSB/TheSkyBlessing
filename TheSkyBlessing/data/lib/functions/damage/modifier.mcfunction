@@ -6,9 +6,10 @@
 #   as entity
 #   storage lib:
 #       Argument.Damage : float
-#       Argument.FixedDamage : boolean
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
+#       Argument.FixedDamage? : boolean
+#       └ Argument.BypassModifier? : boolean
 # @output storage lib: Argument.Damage : float
 # @api
 
@@ -16,7 +17,8 @@
     execute unless data storage lib: Argument.Damage run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Damage","color":"red"}]
     execute unless data storage lib: Argument.AttackType run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackType","color":"red"}]
     execute unless data storage lib: Argument.ElementType run data modify storage lib: Argument.ElementType set value "None"
-    execute unless data storage lib: Argument.FixedDamage run data modify storage lib: Argument.FixedDamage set value 0b
+    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassModifier set value true
+    execute unless data storage lib: Argument.BypassModifier run data modify storage lib: Argument.BypassModifier set value false
 # すでに補正されている場合のエラー
     execute if data storage lib: {DamageLibModified:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:damage/modifier","color":"gold"},{"text":"がresetされずに使用されています。","color":"white"}]
     execute if data storage global {IsProduction:0b} if data storage lib: {DamageLibModified:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"直近に使用された","color":"white"},{"text":"lib:damage/","color":"gold"},{"text":"が"}]
