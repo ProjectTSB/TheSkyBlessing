@@ -9,8 +9,9 @@
     particle crit ~ ~0.8 ~ 0.2 0.2 0.2 0 1
 
 # パーティクル
-    execute positioned ~ ~0.8 ~ run function asset:mob/1016.divine_sword_red/tick/8.particle
+    scoreboard players operation $ParticleInterval Temporary %= $9 Const
+    execute positioned ~ ~0.8 ~ if score $ParticleInterval Temporary matches 0 run function asset:mob/1016.divine_sword_red/tick/8.particle
 
 # 一定間隔でダメージ
-    scoreboard players operation $Interval Temporary %= $11 Const
-    execute positioned ~ ~0.8 ~ if score $Interval Temporary matches 0 rotated 0 0 if entity @a[tag=!PlayerShouldInvulnerable,distance=..4] run function asset:mob/1016.divine_sword_red/tick/9.damage
+    scoreboard players operation $DamageInterval Temporary %= $11 Const
+    execute positioned ~ ~0.8 ~ if score $DamageInterval Temporary matches 0 rotated 0 0 run function asset:mob/1016.divine_sword_red/tick/9.damage

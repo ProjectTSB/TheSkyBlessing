@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1016.divine_sword_red/tick/7.tick_landed
 
+#
+
+
 # 魔法ダメージ
     data modify storage lib: Argument.Damage set value 20f
     data modify storage lib: Argument.AttackType set value "Magic"
