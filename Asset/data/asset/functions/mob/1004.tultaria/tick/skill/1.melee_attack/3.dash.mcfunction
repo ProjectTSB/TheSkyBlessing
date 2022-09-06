@@ -8,7 +8,8 @@
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # こっち狙いで突進
-    scoreboard players set @s RW.Speed 15
+    scoreboard players set @s[tag=RW.Phase1] RW.Speed 15
+    scoreboard players set @s[tag=RW.Phase2] RW.Speed 20
     function asset:mob/1004.tultaria/tick/move/teleport/place_marker_target
 
 # ポーズ
@@ -24,4 +25,4 @@
 # 頭のモデル、向き
     data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [0.1f,0.1f,0.1f]
     item replace entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
-    execute as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run tp @s ~ ~ ~ ~ ~
+    execute at @s run tp @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~ ~

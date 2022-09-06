@@ -21,6 +21,7 @@
     #declare tag RW.TickLock
     #declare tag RW.InAction
     #declare tag RW.BodyMarker
+    #declare tag RW.SlashAgain
     #
     #declare tag RW.Phase1
     #declare tag RW.Phase2

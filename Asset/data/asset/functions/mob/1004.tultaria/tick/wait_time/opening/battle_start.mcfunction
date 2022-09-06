@@ -4,9 +4,18 @@
 #
 # @within function asset:mob/1004.tultaria/tick/wait_time/opening/tick
 
-tag @s remove RW.Opening
-tag @s add RW.Phase1
-data modify entity @s Invulnerable set value 0b
-scoreboard players set @s RW.Speed 10
-function asset:mob/1004.tultaria/tick/reset
-scoreboard players reset @s RW.Tick
+# タグ調整
+    tag @s remove RW.Opening
+    tag @s add RW.Phase2
+
+# 無敵解除
+    data modify entity @s Invulnerable set value 0b
+
+# スコアセット
+    scoreboard players reset @s RW.Tick
+    scoreboard players set @s RW.SlashAgain 0
+
+
+# 移動する
+    scoreboard players set @s RW.Speed 10
+    function asset:mob/1004.tultaria/tick/reset

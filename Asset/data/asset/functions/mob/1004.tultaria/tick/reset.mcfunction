@@ -36,6 +36,7 @@
 
 # スコアを戻す
     scoreboard players set @s RW.Tick 0
+    scoreboard players set @s RW.SlashAgain 0
     scoreboard players reset @s RW.FakeInertia
 
 # 速度設定

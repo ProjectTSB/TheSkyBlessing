@@ -9,7 +9,7 @@
 
 
 # パーティクル
-    execute positioned ~ ~-0.2 ~ run particle soul_fire_flame ^ ^ ^-2 0 0 0 0 0 force @a[distance=..30]
+    execute positioned ~ ~-0.2 ~ if predicate lib:random_pass_per/30 rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^ ^-0.2 0.02 0.02 0.02 0 1
 
 # スコア減算
     scoreboard players remove @s RW.MoveTimesPerTick 1
