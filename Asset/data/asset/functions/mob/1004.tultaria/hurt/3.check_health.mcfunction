@@ -4,6 +4,11 @@
 #
 # @within function asset:mob/1004.tultaria/hurt/2.hurt
 
+#> private
+# @private
+    #declare score_holder $Health
+    #declare score_holder $HealthPercent
+
 # 現在HPの100倍をスコアに
     execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
 # なんとなく代入する

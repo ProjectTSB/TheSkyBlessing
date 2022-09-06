@@ -17,6 +17,11 @@
     tag @s remove RW.SkillSummon
     tag @s remove RW.SkillLaser
 
+    tag @s remove RW.Move
+
+# マーカーも消す
+    kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
+
 # スコアリセット
     scoreboard players reset @s RW.FakeInertia
 
