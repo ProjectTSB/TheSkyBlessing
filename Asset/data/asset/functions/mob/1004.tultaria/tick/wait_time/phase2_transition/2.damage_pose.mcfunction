@@ -17,6 +17,9 @@
     tag @s remove RW.SkillSummon
     tag @s remove RW.SkillLaser
 
+# スコアリセット
+    scoreboard players reset @s RW.FakeInertia
+
 # 無敵になる
     data modify entity @s Invulnerable set value 1b
 

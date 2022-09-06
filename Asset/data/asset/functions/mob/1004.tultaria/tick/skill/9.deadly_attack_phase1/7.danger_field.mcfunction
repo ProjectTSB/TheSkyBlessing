@@ -12,7 +12,8 @@
         data modify storage lib: Argument.ElementType set value "None"
         function lib:damage/modifier
         execute as @a[tag=!PlayerShouldInvulnerable,distance=10..15] run function lib:damage/
-    # ワープで戻される
+
+# ワープで戻される
     execute as @a[tag=!PlayerShouldInvulnerable,distance=10..15] positioned ^ ^ ^5 rotated ~ 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.player_pull
 
 # リセット

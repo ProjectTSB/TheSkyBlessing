@@ -42,17 +42,20 @@
 # チャージ
     execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge
 
+# こっそり後ろに下がっておく
+    execute if score @s RW.Tick matches 80..100 positioned ^ ^ ^-0.1 run function asset:mob/1004.tultaria/tick/move/tereport
+
 # 発動開始
     execute if score @s RW.Tick matches 120 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/4.start_attack
 
-# 発動中
-    execute if score @s RW.Tick matches 120..240 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/5.shoot_tick
+# 弾を発射
+    execute if score @s RW.Tick matches 120..240 at @e[type=marker,tag=RW.BodyMarker,distance=..5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/5.shoot_tick
 
 # 終了時動作
     execute if score @s RW.Tick matches 340 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/9.end
 
 # デバッグ用、技をループする
-    #execute if score @s RW.Tick matches 370 run scoreboard players set @s RW.Tick -10
+    #execute if score @s RW.Tick matches 200.. run scoreboard players set @s RW.Tick -10
 
 # スコアリセット
     scoreboard players reset $ShotInterval Temporary

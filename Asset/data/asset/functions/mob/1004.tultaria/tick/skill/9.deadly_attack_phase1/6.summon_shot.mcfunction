@@ -6,7 +6,7 @@
 
 # 召喚
     data modify storage api: Argument.ID set value 1014
-    execute positioned ~ ~1.3 ~ run function api:mob/summon
+    execute positioned ~ ~ ~ run function api:mob/summon
 
 # 演出
     particle minecraft:reverse_portal ~ ~ ~ 10 10 10 0 10
