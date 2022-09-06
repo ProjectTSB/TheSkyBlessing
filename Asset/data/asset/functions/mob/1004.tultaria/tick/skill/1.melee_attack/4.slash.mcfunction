@@ -55,7 +55,7 @@
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-135F,0F],Tags:["RW.SlashSweep","RW.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,15.0f,0.1f]},DisabledSlots:4144959}
 
 # Init
-    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=RW.SlashInit,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/slash_entity/init
+    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=RW.SlashInit,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/slash_entity/init
 
 # スケジュール開始
     schedule function asset:mob/1004.tultaria/tick/skill/1.melee_attack/slash_entity/1.tick 1t replace
