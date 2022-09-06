@@ -14,7 +14,7 @@
 # リセット
     scoreboard players reset $Fluctuation Temporary
 # 被回復量補正を掛ける
-    execute unless data storage lib: Argument{FixedHeal:true} if score $Fluctuation Temporary matches 1.. run function lib:heal/core/receive_modifier
+    execute unless data storage lib: Argument{FixedHeal:true} run function lib:heal/core/receive_modifier
 # 代入
     data modify storage api: Argument.Fluctuation set from storage lib: Argument.Heal
 # Healthを持つEntityであれば実行
