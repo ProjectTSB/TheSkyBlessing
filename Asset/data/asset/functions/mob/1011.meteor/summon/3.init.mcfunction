@@ -8,9 +8,8 @@
 # @private
 #declare tag SpreadMarker
 
-# 拡散用marker召喚
-    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    spreadplayers ~ ~ 15 20 false @e[type=marker,tag=SpreadMarker,distance=..100]
+# markerをスプレッドで拡散
+    spreadplayers ~ ~ 15 20 under 200 false @e[type=marker,tag=SpreadMarker,distance=..100]
 
 # マーカーの方を向く
     tp @s ~ ~ ~ facing entity @e[type=marker,tag=SpreadMarker,distance=..100,limit=1]
@@ -24,6 +23,3 @@
 # 速度と飛距離
     scoreboard players set @s S3.Range 800
     scoreboard players set @s S3.Speed 16
-
-# 拡散マーカーを消す
-   kill @e[type=marker,tag=SpreadMarker,distance=..100]
