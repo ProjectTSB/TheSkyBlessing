@@ -23,6 +23,7 @@
     #declare tag RW.BodyMarker
     #
     #declare tag RW.Phase1
+    #declare tag RW.Phase2
     #
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit

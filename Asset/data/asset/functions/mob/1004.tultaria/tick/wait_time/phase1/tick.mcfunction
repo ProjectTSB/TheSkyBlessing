@@ -11,7 +11,7 @@
     execute if score @s RW.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick 0
 
 # フェイズ2以降、設置攻撃してくる
-    execute if score @s[tag=!RW.InAction] RW.Tick matches 20..25 run function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
+    execute if score @s[tag=RW.Phase2,tag=!RW.InAction] RW.Tick matches 10..15 run function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
 
 # 選択したスキル発動
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active

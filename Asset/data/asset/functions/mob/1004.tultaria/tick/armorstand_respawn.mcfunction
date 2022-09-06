@@ -25,5 +25,5 @@
     tag @s remove RW.SkillSummon
 
 # 強制的にテレポする
-    data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
-    function asset:mob/1004.tultaria/tick/move/spread
+    #data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
+    #function asset:mob/1004.tultaria/tick/move/spread

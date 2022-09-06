@@ -12,15 +12,17 @@
 # アマスタにタグつける。ここでついたタグは最後に消す。実質的なthis
     function asset:mob/1004.tultaria/tick/armor_stand_check
 
-# スコア加算
-    #scoreboard players add @s[tag=!RW.Move] RW.Tick 1
-    scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
-
 # 開幕
     execute if entity @s[tag=RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/opening/tick
 
 # フェーズ1
     execute if entity @s[tag=RW.Phase1] run function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
+
+# フェーズ2移行動作
+    execute if entity @s[tag=RW.HPless75per] run function asset:mob/1004.tultaria/tick/wait_time/phase2_transition/1.tick
+
+# スコア加算
+    scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
 
 # 最初に付けたタグを消す
     tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.5,limit=2] remove RW.ModelChangeTarget

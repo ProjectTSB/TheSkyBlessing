@@ -8,7 +8,7 @@
 #   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field
 
 # テレポートさせる
-    tp @s ~ ~ ~
+    execute facing entity @e[type=wither_skeleton,scores={MobID=1004},sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
 # エフェクト
     summon area_effect_cloud ~ ~ ~ {Particle:"crit",Radius:0.5f,Duration:6,Age:4,Effects:[{Id:2,Amplifier:9b,Duration:20},{Id:15,Amplifier:0b,Duration:20}]}
