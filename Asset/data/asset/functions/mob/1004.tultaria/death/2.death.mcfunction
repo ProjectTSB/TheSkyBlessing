@@ -7,6 +7,7 @@
 #> トゥル側から剣へと付与するタグ
 # @private
 #declare tag S7.Death
+#declare tag S8.Death
 
 # 演出
     playsound minecraft:block.glass.break hostile @a ~ ~ ~ 4 0.7
@@ -26,9 +27,11 @@
 
 # 剣を消す
     tag @e[type=armor_stand,scores={MobID=1015}] add S7.Death
+    tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death
 
 # マーカー消す
     kill @e[type=marker,tag=RW.XYZ,limit=1]
+    kill @e[type=marker,tag=RW.TeleportMarker,limit=1]
 
 # スケジュールループを開始する
     schedule function asset:mob/1004.tultaria/death/3.death_tick 1t
