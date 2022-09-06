@@ -9,7 +9,7 @@
 #declare tag S7.Death
 
 # テスト用メッセージ
-    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 諦めが悪いようね。","color":"white"}]
+    #tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 諦めが悪いようね。","color":"white"}]
 
 # 無敵解除
     data modify entity @s Invulnerable set value 0b

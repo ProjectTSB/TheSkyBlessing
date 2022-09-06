@@ -48,4 +48,4 @@
     playsound minecraft:block.amethyst_cluster.break hostile @a ~ ~ ~ 4 1.5
 
 # テスト用メッセージ
-    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> ぐっ…！","color":"white"}]
+    #tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> ぐっ…！","color":"white"}]
