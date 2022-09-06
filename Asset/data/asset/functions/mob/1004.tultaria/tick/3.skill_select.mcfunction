@@ -39,6 +39,5 @@
 # 大技
     execute if score $Random Temporary matches 8 run tag @s add RW.SkillDeadly1
 
-
 # リセット
     scoreboard players reset $Random Temporary

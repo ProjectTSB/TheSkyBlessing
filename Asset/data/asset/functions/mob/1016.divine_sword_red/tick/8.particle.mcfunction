@@ -1,6 +1,6 @@
 #> asset:mob/1016.divine_sword_red/tick/8.particle
 #
-# 突き刺さった後の剣
+# 突き刺さった後のパーティクル
 #
 # @within function asset:mob/1016.divine_sword_red/tick/7.tick_landed
 

@@ -4,12 +4,14 @@
 #
 # @within function asset:mob/1004.tultaria/tick/2.tick
 
-# その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択
     execute if score @s[tag=!RW.InAction] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
 
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
     execute if score @s RW.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick 0
+
+# フェイズ2以降、設置攻撃してくる
+    execute if score @s[tag=!RW.InAction] RW.Tick matches 20..25 run function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
 
 # 選択したスキル発動
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active

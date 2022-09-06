@@ -23,6 +23,3 @@
 
 # 大技その1
     execute if entity @s[tag=RW.SkillDeadly1] run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
-
-# 追撃、移動制限用の剣を召喚
-    function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
