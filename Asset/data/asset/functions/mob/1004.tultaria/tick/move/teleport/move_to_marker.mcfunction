@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
+# @within function asset:mob/1004.tultaria/tick/wait_time/base_move/tick
 
 # 再帰カウントが0なら速度からセット
     scoreboard players operation @s RW.MoveTimesPerTick = @s RW.Speed

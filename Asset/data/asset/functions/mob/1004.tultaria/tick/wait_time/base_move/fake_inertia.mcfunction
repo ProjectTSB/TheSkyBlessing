@@ -1,8 +1,8 @@
-#> asset:mob/1004.tultaria/tick/wait_time/phase1/fake_inertia
+#> asset:mob/1004.tultaria/tick/wait_time/base_move/fake_inertia
 #
 # 嘘慣性
 #
-# @within function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
+# @within function asset:mob/1004.tultaria/tick/wait_time/base_move/tick
 
 # スコア減らす
     scoreboard players remove @s RW.FakeInertia 1

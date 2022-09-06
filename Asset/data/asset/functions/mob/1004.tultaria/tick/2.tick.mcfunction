@@ -16,7 +16,7 @@
     execute if entity @s[tag=RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/opening/tick
 
 # フェーズ1
-    execute if entity @s[tag=RW.Phase1] run function asset:mob/1004.tultaria/tick/wait_time/phase1/tick
+    execute if entity @s[tag=!RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/base_move/tick
 
 # フェーズ2移行動作
     execute if entity @s[tag=RW.HPless75per] run function asset:mob/1004.tultaria/tick/wait_time/phase2_transition/1.tick
@@ -27,35 +27,6 @@
 # 最初に付けたタグを消す
     tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.5,limit=2] remove RW.ModelChangeTarget
 
-## スコアを増やす
-#    scoreboard players add @s RW.Tick 1
-#
-## テレポートさせる
-#    execute if entity @p[gamemode=!spectator,distance=..100] if score @s RW.Tick matches -15 run function asset:mob/1004.tultaria/tick/5.tereport
-#
-## プレイヤーを見る
-#    execute if score @s RW.Tick matches 0 at @s facing entity @p[distance=..100] eyes run function asset:mob/1004.tultaria/tick/move/tereport
-#
-## その後発動するスキル
-## プレイヤーが周囲にいたらスキル選択
-#    execute if score @s RW.Tick matches 0 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
-#
-## プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
-#    execute if score @s RW.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick -60
-#
-## 選択したスキル発動
-#    execute if score @s RW.Tick matches 0.. run function asset:mob/1004.tultaria/tick/4.skill_active
-#
-#
-## 4tickおきに実行するやつ
-## 実行時間を移す
-#    scoreboard players operation $4tInterval Temporary = @s RW.Tick
-## 4tickおきに実行
-#    scoreboard players operation $4tInterval Temporary %= $4 Const
-#    execute if score $4tInterval Temporary matches 0 run function asset:mob/1004.tultaria/tick/interval
-## リセット
-#    scoreboard players reset $4tInterval
-#
 ## HP減少時、パーティクルをまとう
 #    execute if entity @s[tag=RW.HPless75per] run particle smoke ~ ~0.7 ~ 0.3 0.5 0.3 0 3
 #    execute if entity @s[tag=RW.HPless50per] run particle end_rod ~ ~0.7 ~ 0.3 0.5 0.3 0 1

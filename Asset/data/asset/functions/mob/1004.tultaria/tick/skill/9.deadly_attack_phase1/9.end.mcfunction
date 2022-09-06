@@ -19,6 +19,7 @@
 
 # タグ調整、フェイズ2開始
     tag @s add RW.Phase2
+    tag @s remove RW.Phase1
     tag @s remove RW.HPless75per
 
 # 不要になったマーカーを消す
