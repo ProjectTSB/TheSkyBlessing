@@ -275,6 +275,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
+        scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離"}
     scoreboard objectives setdisplay belowName Health
 
     #> 最大値用スコアホルダー
