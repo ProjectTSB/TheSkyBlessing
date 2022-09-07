@@ -9,6 +9,7 @@
 # TODO 上記のGlobal VarsをPrivateにしてAPIに以降する
 #> Global Vars - Private
 # @within function
+#   core:load_once
 #   api:**
     #declare score_holder $Difficulty
 

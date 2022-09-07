@@ -90,6 +90,7 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
+    scoreboard players set $Difficulty Global 10
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
