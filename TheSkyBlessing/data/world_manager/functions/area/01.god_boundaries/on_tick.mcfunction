@@ -5,6 +5,7 @@
 # @within function world_manager:area/01.god_boundaries/
 
 # 初期リス
+    execute if predicate world_manager:area/01-98.world-spawn-higher run function world_manager:area/01-98-world-spawn-higher
     execute if predicate world_manager:area/01-99.world-spawn run function world_manager:area/01-99.world-spawn
 # チュートリアル
     execute if predicate world_manager:area/01-01.tutorial-goal run function world_manager:area/01-01.tutorial-goal
