@@ -1,6 +1,6 @@
 #> asset:mob/0175.queen_bee/tick/move/teleport
 #
-# 移動するときはコレを使う(これ現状使ってないけどハード化の時に多分使うかも)
+# 移動するときはコレを使う
 #
 # @within function asset:mob/0175.queen_bee/tick/**
 
