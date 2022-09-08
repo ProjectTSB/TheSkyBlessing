@@ -11,11 +11,10 @@
 # 落下ダメージを計算する
     function player_manager:fall_damage/deal_damage/calc
 # ダメージを与える
-    execute if score $MaxHealth Temporary matches 1.. run function player_manager:fall_damage/deal_damage/deal
+    execute if score $Damage Temporary matches 1.. run function player_manager:fall_damage/deal_damage/deal
 # リセット
     scoreboard players reset $MaxHealth Temporary
     scoreboard players reset $FallDistance Temporary
     scoreboard players reset $JumpBoost Temporary
     scoreboard players reset $DamageMultiplier Temporary
     scoreboard players reset $Damage Temporary
-    tag @s remove Falling
