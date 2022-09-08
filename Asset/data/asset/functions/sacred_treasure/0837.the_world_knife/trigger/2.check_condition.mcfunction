@@ -15,7 +15,7 @@
 # 数みる
     # 数のカウント
         execute store result score $Count Temporary if entity @e[type=armor_stand,tag=N9.Knife,distance=..100]
-    # もしいたらテレポ
+    # もしいたらtagけす
         execute if score $Count Temporary matches 30.. run tag @s remove CanUsed
     # リセット
         scoreboard players reset $Count Temporary
