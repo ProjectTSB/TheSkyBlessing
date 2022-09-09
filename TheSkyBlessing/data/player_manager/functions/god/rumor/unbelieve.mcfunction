@@ -22,4 +22,4 @@
     function api:player_modifier/defense/base/remove
 
 # PassiveBuffの補正を削除
-    
+    function player_manager:god/rumor/passive/remove
