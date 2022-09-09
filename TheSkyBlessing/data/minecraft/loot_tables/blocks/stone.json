@@ -60,6 +60,16 @@
                 },
                 {
                     "type": "loot_table",
+                    "name": "blocks/lapis_ore",
+                    "weight": 12
+                },
+                {
+                    "type": "loot_table",
+                    "name": "blocks/redstone_ore",
+                    "weight": 12
+                },
+                {
+                    "type": "loot_table",
                     "name": "blocks/diamond_ore",
                     "weight": 9
                 },
