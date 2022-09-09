@@ -6,7 +6,7 @@
     #declare score_holder $PlayerCount
     #declare score_holder $LoadTime
 
-# TODO 上記のGlobal VarsをPrivateにしてAPIに以降する
+# TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private
 # @within function
 #   core:load_once
