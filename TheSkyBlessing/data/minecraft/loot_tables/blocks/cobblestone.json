@@ -22,21 +22,21 @@
                 {
                     "type": "loot_table",
                     "name": "blocks/coal_ore",
-                    "weight": 24
+                    "weight": 12
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/iron_ore",
-                    "weight": 16
+                    "weight": 8
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/gold_ore",
-                    "weight": 12
+                    "weight": 6
                 },
                 {
                     "type": "empty",
-                    "weight": 948
+                    "weight": 974
                 }
             ]
         }

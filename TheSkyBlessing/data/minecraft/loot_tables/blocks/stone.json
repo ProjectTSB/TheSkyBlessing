@@ -46,31 +46,31 @@
                 {
                     "type": "loot_table",
                     "name": "blocks/coal_ore",
-                    "weight": 96
+                    "weight": 36
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/iron_ore",
-                    "weight": 64
-                },
-                {
-                    "type": "loot_table",
-                    "name": "blocks/gold_ore",
-                    "weight": 48
-                },
-                {
-                    "type": "loot_table",
-                    "name": "blocks/diamond_ore",
                     "weight": 24
                 },
                 {
                     "type": "loot_table",
+                    "name": "blocks/gold_ore",
+                    "weight": 18
+                },
+                {
+                    "type": "loot_table",
+                    "name": "blocks/diamond_ore",
+                    "weight": 9
+                },
+                {
+                    "type": "loot_table",
                     "name": "blocks/ancient_debris",
-                    "weight": 16
+                    "weight": 6
                 },
                 {
                     "type": "empty",
-                    "weight": 752
+                    "weight": 883
                 }
             ]
         }
