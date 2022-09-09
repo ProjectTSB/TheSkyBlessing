@@ -186,7 +186,9 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
-    #   function player_manager:pos_diff
+    #   function
+    #       player_manager:pos_diff
+    #       api:player_vector/get
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerPosDiff.X dummy
         scoreboard objectives add PlayerPosDiff.Y dummy

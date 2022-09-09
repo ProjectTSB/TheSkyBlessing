@@ -16,6 +16,9 @@
 # 読み込み時間を加算
     scoreboard players add $LoadTime Global 1
 
+# 難易度
+    function world_manager:force_difficulty
+
 # プレイヤー事前処理
     execute as @a at @s run function core:tick/player/pre
 
