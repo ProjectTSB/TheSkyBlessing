@@ -3,7 +3,7 @@
 #
 #
 # @output storage api: Return.Vector : [double] @ 3
-# @within function core:load_once
+# @api
 
 # 初期化
     data modify storage api: ReturnVector set value [0d,0d,0d]
