@@ -5,7 +5,8 @@
 # @within function asset:sacred_treasure/0724.oblivious_snow/trigger/fullset/loop
 
 # 演出
-    particle snowflake ~ ~4 ~ 1.5 0.25 1.5 0.0 9 normal @a
+    particle snowflake ~ ~4 ~ 1.8 0.25 1.8 0.0 9 normal @a
+    particle snowflake ~ ~0.3 ~ 1.5 0.1 1.5 0.1 2 normal @a
 
 # 周囲に鈍足を付与
     effect give @e[type=#lib:living,tag=Enemy,distance=..3.5] slowness 1 1 true

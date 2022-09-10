@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:leather_chestplate"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":寒空に震える心","color":"#ABF4FF"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"白霜に覆われた心","color":"#ABF4FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"「その者は凍りついた心を胸に抱えて彷徨っていた。","color":"gray","italic":"true"}]','[{"text":" しかし心を覆う白霜はその胸すら砕こうとしていた。」","color":"gray","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+10% ","color":"aqua"},{"text":"MP回復量+8%","color":"green"}]','[{"text":"体力回復量-5% 被回復量-10%","color":"dark_red"}]','[{"text":"白雪で身を覆った時","color":"#ABF4FF"}]','[{"text":"水攻撃+25% ","color":"aqua"},{"text":"MP回復量+8% ","color":"green"},{"text":"体力回復量-5% 被回復量-10%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -51,7 +51,7 @@
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:12910587},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;1,1,725,5],Slot:"chest"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2.5,Operation:0,UUID:[I;1,1,725,5],Slot:"chest"}]}
 
