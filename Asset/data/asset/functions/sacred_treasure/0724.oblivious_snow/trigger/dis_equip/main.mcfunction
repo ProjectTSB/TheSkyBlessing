@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/0724.oblivious_snow/trigger/dis_equip/
 
+# 演出
+    particle snowflake ~ ~1.7 ~ 0.4 0.1 0.4 0 50 normal @a
+    playsound minecraft:block.powder_snow.step player @a ~ ~ ~ 1 0.5 0
+
 # 水耐性
     data modify storage api: Argument.UUID set value [I;1,1,724,6]
     function api:player_modifier/defense/water/remove
