@@ -46,37 +46,93 @@
                 {
                     "type": "loot_table",
                     "name": "blocks/coal_ore",
-                    "weight": 36
+                    "weight": 36,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-1-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/iron_ore",
-                    "weight": 24
+                    "weight": 24,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-2-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/gold_ore",
-                    "weight": 18
+                    "weight": 18,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-3-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/lapis_ore",
-                    "weight": 12
+                    "weight": 12,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-2-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/redstone_ore",
-                    "weight": 12
+                    "weight": 12,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-3-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/diamond_ore",
-                    "weight": 9
+                    "weight": 9,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-3-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/ancient_debris",
-                    "weight": 6
+                    "weight": 6,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-4-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "empty",

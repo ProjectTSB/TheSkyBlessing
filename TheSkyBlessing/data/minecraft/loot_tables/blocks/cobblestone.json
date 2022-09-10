@@ -22,17 +22,41 @@
                 {
                     "type": "loot_table",
                     "name": "blocks/coal_ore",
-                    "weight": 12
+                    "weight": 12,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-1-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/iron_ore",
-                    "weight": 8
+                    "weight": 8,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-2-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "loot_table",
                     "name": "blocks/gold_ore",
-                    "weight": 6
+                    "weight": 6,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-3-mineable"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "empty",
