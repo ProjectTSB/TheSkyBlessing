@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.2"
+data modify storage global GameVersion set value "v0.1.3"
 
 #> forceload chunksの設定
 # Origin
@@ -186,7 +186,9 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
-    #   function player_manager:pos_diff
+    #   function
+    #       player_manager:pos_diff
+    #       api:player_vector/get
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerPosDiff.X dummy
         scoreboard objectives add PlayerPosDiff.Y dummy

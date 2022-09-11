@@ -20,3 +20,6 @@
 # 耐性-10%
     data modify storage api: Argument.UUID set value [2, 1, 1, 12]
     function api:player_modifier/defense/base/remove
+
+# PassiveBuffの補正を削除
+    function player_manager:god/rumor/passive/remove

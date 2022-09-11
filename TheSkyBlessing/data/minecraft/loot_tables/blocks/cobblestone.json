@@ -1,0 +1,68 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "bonus_rolls": 0.0,
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cobblestone"
+                }
+            ],
+            "rolls": 1.0
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "blocks/coal_ore",
+                    "weight": 12,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-1-mineable"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "blocks/iron_ore",
+                    "weight": 8,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-2-mineable"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "name": "blocks/gold_ore",
+                    "weight": 6,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:match_tool",
+                            "predicate": {
+                                "tag": "lib:pickaxes/level-3-mineable"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "empty",
+                    "weight": 974
+                }
+            ]
+        }
+    ]
+}
