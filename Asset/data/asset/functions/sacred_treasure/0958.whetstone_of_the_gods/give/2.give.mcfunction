@@ -19,7 +19,7 @@
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    data modify storage asset:sacred_treasure RemainingCount set value 8
+    data modify storage asset:sacred_treasure RemainingCount set value 4
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "offhand"
 # 神器のトリガー (string) Wikiを参照
