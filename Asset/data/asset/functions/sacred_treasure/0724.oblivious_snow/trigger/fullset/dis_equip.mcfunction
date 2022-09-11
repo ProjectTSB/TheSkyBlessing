@@ -11,6 +11,9 @@
 # Tag削除
     tag @s remove K4.Fullset
 
+# スコアリセット
+    scoreboard players reset @s K4.AttackCD
+
 # 水攻撃
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
     function api:player_modifier/attack/water/remove
@@ -18,3 +21,11 @@
 # mp回復
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
     function api:player_modifier/mp_regen/remove
+
+# 体力回復量
+    data modify storage api: Argument.UUID set value [I;1,1,724,0]
+    function api:player_modifier/heal/remove
+
+# 被回復量
+    data modify storage api: Argument.UUID set value [I;1,1,724,0]
+    #function api:player_modifier/attack/receive_heal/remove
