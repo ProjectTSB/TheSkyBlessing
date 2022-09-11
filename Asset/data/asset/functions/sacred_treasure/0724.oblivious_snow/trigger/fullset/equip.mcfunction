@@ -31,11 +31,6 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
 
-# 体力回復量-5%
-    data modify storage api: Argument.UUID set value [I;1,1,724,0]
-    data modify storage api: Argument.Amount set value -0.05
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/heal/add
 
 # 被回復量-10%
     data modify storage api: Argument.UUID set value [I;1,1,724,0]

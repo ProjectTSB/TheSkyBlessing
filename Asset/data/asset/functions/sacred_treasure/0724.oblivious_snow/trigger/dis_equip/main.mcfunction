@@ -20,9 +20,9 @@
     data modify storage api: Argument.UUID set value [I;1,1,724,6]
     function api:player_modifier/mp_regen/remove
 
-# 体力回復量
+# 被回復量
     data modify storage api: Argument.UUID set value [I;1,1,724,6]
-    function api:player_modifier/attack/physical/remove
+    #function api:player_modifier/receive_heal/remove
 
 # フルセット解除
     execute if entity @s[tag=K4.Fullset] run function asset:sacred_treasure/0724.oblivious_snow/trigger/fullset/dis_equip

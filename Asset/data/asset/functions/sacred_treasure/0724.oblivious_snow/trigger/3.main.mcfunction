@@ -9,7 +9,7 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# メモ 水耐性10% 水攻撃+10% mp回復+8% 体力回復量-5% 被回復量-10%
+# メモ 水耐性10% 水攻撃+10% mp回復+8% 被回復量-10%
 
 # 演出
     execute unless data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run particle snowflake ~ ~1.7 ~ 0.4 0.1 0.4 0.1 50 normal @a
@@ -33,12 +33,6 @@
     data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
-
-# 体力回復量-5%
-    data modify storage api: Argument.UUID set value [I;1,1,724,6]
-    data modify storage api: Argument.Amount set value -0.05
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/physical/add
 
 # 被回復量-10%
     data modify storage api: Argument.UUID set value [I;1,1,724,6]
