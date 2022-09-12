@@ -270,7 +270,7 @@ team modify NoCollision collisionRule never
     # @within
     #   function core:handler/first_join
     #   function core:load_once
-    #   * lib:**
+    #   * api:**
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
