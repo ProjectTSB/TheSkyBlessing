@@ -1,4 +1,4 @@
-#> lib:debug/tps/reset
+#> debug:tps/reset
 #
 # TickPerSecを元に戻します
 #

@@ -1,9 +1,9 @@
-#> lib:debug/tps/3
+#> debug:tps/3
 #
 # TickPerSecを大体3に設定します
 #
 # @user
 # @private
 
-function lib:debug/tps/init
+function debug:tps/init
 scoreboard players set $AwaitTime Global 333

@@ -1,4 +1,4 @@
-#> lib:debug/clear_lostitems
+#> debug:clear_lostitems
 #
 # 失ったアイテムを削除します
 #

@@ -1,8 +1,8 @@
-#> lib:debug/change_believe/none
+#> debug:change_believe/none
 #
 # 無信仰に変更します
 #
-# @within function lib:debug/change_believe/*
+# @within function debug:change_believe/*
 # @user
 
 # 共通
