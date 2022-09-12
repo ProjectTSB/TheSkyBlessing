@@ -1,4 +1,4 @@
-#> lib:debug/change_believe/rumor
+#> debug:change_believe/rumor
 #
 # 信仰をRumorに変更します
 #
@@ -6,7 +6,7 @@
 # @user
 
 # 信仰解除
-    function lib:debug/change_believe/none
+    function debug:change_believe/none
 # 信仰
     tag @s remove Believe.None
     function player_manager:god/rumor/believe

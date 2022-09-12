@@ -1,4 +1,4 @@
-#> lib:debug/debug_privilege/
+#> debug:debug_privilege/
 #
 # 開発特権を付与します
 #

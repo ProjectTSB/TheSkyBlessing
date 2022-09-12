@@ -1,4 +1,4 @@
-#> lib:debug/stopwatch.stop
+#> debug:stopwatch.stop
 #
 # 負荷計測用のストップウォッチをストップします
 #

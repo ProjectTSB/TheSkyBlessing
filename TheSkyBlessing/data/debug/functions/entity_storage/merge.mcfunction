@@ -1,4 +1,4 @@
-#> lib:debug/entity_storage/merge
+#> debug:entity_storage/merge
 # @user
 # @private
 

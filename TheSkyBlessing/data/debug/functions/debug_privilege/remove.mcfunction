@@ -1,4 +1,4 @@
-#> lib:debug/debug_privilege/remove
+#> debug:debug_privilege/remove
 #
 # 開発特権をはく奪します
 #

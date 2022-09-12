@@ -1,4 +1,4 @@
-#> lib:debug/entity_storage/show
+#> debug:entity_storage/show
 # @user
 # @private
 
