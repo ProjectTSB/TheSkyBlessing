@@ -2,7 +2,7 @@
 #
 # 手動で死亡トリガーを呼び出します
 #
-# @within function lib:damage/core/health_subtract/non-player
+# @within function api:damage/core/health_subtract/non-player
 
 # 既存にasset:context idが存在する場合に退避させる
     function asset_manager:common/context_id/stash
