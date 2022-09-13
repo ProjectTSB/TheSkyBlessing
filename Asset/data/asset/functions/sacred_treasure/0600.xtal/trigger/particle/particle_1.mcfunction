@@ -2,7 +2,7 @@
 #
 # 右上から薙ぎ払う
 #
-# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/3.main
+# @within function asset:sacred_treasure/0600.xtal/trigger/5.slash
 
 # 外4
 particle dust 1 1 1 1.3 ^1.96457 ^-1.96457 ^0.12107 0 0 0 0 1
