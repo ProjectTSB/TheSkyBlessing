@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"Xtal","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"攻撃的なクリスタル"}','{"text":"「えーっと...なんなのこれ...」","color":"dark_gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"片方の持ち手しか見つからず"}','{"text":"もう片方の行方は不明のままの双剣"}','{"text":"そして、最後まで揃うことはないだろう"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
