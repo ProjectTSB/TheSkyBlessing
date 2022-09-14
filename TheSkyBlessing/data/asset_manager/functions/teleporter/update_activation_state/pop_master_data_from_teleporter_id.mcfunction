@@ -15,13 +15,13 @@
     data modify storage lib: CompareTarget set from storage api: Argument.ID
     function lib:array/compare_single
 # CompareResultを元に同一のIDの要素を取り出す
-# TargetTeleporterData = Teleporters.filiter((v, i) => CompareResult[i]).head
+# TargetTeleporterData = Teleporters.filter((v, i) => CompareResult[i]).head
     data modify storage lib: Array set from storage asset:teleporter Teleporters
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
     data modify storage asset:teleporter TargetTeleporterData set from storage lib: Array[0]
 # TeleportersからTargetデータを消した状態にする
-# Teleporters = Teleporters.filiter((v, i) => !CompareResult[i])
+# Teleporters = Teleporters.filter((v, i) => !CompareResult[i])
     data modify storage lib: Array set from storage asset:teleporter Teleporters
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask

@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/update_activation_state/get_storage_from_teleporter_id
+#> asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
 #
 #
 #
@@ -17,6 +17,6 @@
     function lib:array/mask_inverted
     execute store result score $ OhMyDatID run data get storage lib: Array[0]
 # EntityStorage取得
-    function oh_its_dat:please
+    execute store success score $TeleporterExists Temporary if data storage lib: Array[0]
 # リセット
     function lib:array/session/close
