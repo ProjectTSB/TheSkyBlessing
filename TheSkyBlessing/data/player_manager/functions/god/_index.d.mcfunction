@@ -5,7 +5,7 @@
 # @within
 #   function player_manager:god/**
 #   function player_manager:set_team
-#   function lib:debug/change_believe/*
+#   function debug:change_believe/*
 #   predicate player_manager:is_believe/*
     #declare tag Believe.None
     #declare tag Believe.Flora
