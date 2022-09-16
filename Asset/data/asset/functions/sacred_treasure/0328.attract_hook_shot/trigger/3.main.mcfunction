@@ -14,4 +14,4 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] at @s run particle minecraft:witch ~ ~ ~ 0.5 0.5 0.5 2 50 force @a[distance=..150]
-    playsound minecraft:entity.enderman.teleport master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.enderman.teleport player @s ~ ~ ~ 1 1

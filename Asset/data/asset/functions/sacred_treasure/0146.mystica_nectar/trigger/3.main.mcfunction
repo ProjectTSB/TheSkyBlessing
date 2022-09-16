@@ -11,7 +11,7 @@
 
 # 演出
     particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # HP回復
     execute store result storage lib: Argument.Heal double 0.0050 run attribute @s generic.max_health get 100

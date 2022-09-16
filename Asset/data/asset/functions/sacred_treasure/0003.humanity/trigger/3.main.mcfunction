@@ -19,11 +19,11 @@
 
 # 演出 回復時
     execute if score @s Temporary matches 0 run title @a title {"text":"HUMANITY RESTORED","color":"dark_aqua"}
-    execute if score @s Temporary matches 0 run playsound block.enchantment_table.use master @s ~ ~ ~ 1 0 1
+    execute if score @s Temporary matches 0 run playsound block.enchantment_table.use player @s ~ ~ ~ 1 0 1
 
 # 演出 死亡時
     execute if score @s Temporary matches 1 run title @a title {"text":"YOU DIED","color":"red"}
-    execute if score @s Temporary matches 1 run playsound block.beacon.power_select master @s ~ ~ ~ 1 0 1
+    execute if score @s Temporary matches 1 run playsound block.beacon.power_select player @s ~ ~ ~ 1 0 1
 
 # 回復処理
     execute if score @s Temporary matches 0 run data modify storage lib: Argument.Heal set value 10000f

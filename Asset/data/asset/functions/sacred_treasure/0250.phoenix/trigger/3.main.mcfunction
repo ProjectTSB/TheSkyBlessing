@@ -27,8 +27,8 @@
         execute if score @s Temporary matches 0 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 1 0.533 0 1 ~ ~0.3 ~ 0.4 0.4 0.4 0 100 force @a
         execute if score @s Temporary matches 1 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 1 0 0 1 ~ ~-.3 ~ 0.4 0.4 0.4 0 100 force @a
         execute if score @s Temporary matches 2 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 0.969 0 1 1 ~ ~0.3 ~ 0.4 0.4 0.4 0 100 force @a
-        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use master @a[distance=..100] ~ ~ ~ 10 1 1
-        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use master @a[distance=..100] ~ ~ ~ 10 1 1
+        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use player @a[distance=..100] ~ ~ ~ 10 1 1
+        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound item.firecharge.use player @a[distance=..100] ~ ~ ~ 10 1 1
     # だめーーじ
         data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Fire,FixedDamage:0b}}
         execute if score @s Temporary matches 1 run data modify storage lib: Argument.Damage set value 120.0f

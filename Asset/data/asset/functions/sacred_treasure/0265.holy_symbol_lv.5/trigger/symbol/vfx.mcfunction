@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/symbol/
 
 # SE
-    playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 0.6 0.8
-    playsound minecraft:entity.evoker.cast_spell master @a ~ ~ ~ 0.8 1.8
-    playsound minecraft:entity.evoker.prepare_summon master @a ~ ~ ~ 0.6 1.5
-    playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 1.0 1.4
+    playsound minecraft:entity.evoker.cast_spell player @a ~ ~ ~ 0.6 0.8
+    playsound minecraft:entity.evoker.cast_spell player @a ~ ~ ~ 0.8 1.8
+    playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 0.6 1.5
+    playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 1.0 1.4
 # パーティクル
     particle soul_fire_flame ~-0.68 ~0 ~4.16 0 0 0 0 1
     particle soul_fire_flame ~-1.02 ~0 ~4.12 0 0 0 0 1

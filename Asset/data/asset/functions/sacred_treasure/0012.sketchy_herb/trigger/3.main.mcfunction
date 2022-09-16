@@ -18,5 +18,5 @@
 
 # 演出
     particle minecraft:smoke ~ ~ ~ 1 1 1 0.1 500 force @s
-    playsound minecraft:block.honey_block.fall master @s ~ ~ ~ 1 0.1
+    playsound minecraft:block.honey_block.fall player @s ~ ~ ~ 1 0.1
     tellraw @a[distance=..20] [{"text":"気分が不安定になってゆく……","color":"dark_green","italic":true}]

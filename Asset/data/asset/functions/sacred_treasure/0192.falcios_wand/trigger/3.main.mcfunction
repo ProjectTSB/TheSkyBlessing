@@ -11,7 +11,7 @@
 
 # 演出
     execute at @a[distance=..15] run particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @a[distance=..30]
-    playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 20 1
+    playsound minecraft:entity.arrow.hit_player player @a[distance=..15] ~ ~ ~ 20 1
     execute positioned ~ ~4 ~ run function asset:sacred_treasure/0192.falcios_wand/trigger/vfx/
 
 # 回復
