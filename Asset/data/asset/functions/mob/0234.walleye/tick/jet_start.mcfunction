@@ -5,7 +5,7 @@
 # @within function asset:mob/0234.walleye/tick/2.1.search
 
 # サウンド
-    playsound minecraft:block.note_block.bell player @a[distance=..32] ~ ~ ~ 3 1.334840 1
+    playsound minecraft:block.note_block.bell hostile @a[distance=..32] ~ ~ ~ 3 1.334840 1
     playsound minecraft:block.fire.extinguish hostile @a ~ ~ ~ 1 1
     playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 1 1.5
 
