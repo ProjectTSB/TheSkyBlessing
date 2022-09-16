@@ -26,9 +26,9 @@
 # 移動速度+5％
     attribute @s generic.movement_speed modifier add 00000001-0000-0001-0000-02ce00000003 "0717.Speed" 0.05 multiply_base
 
-# MP回復量+10％
+# MP回復量+7.5％
     data modify storage api: Argument.UUID set value [I;1,1,718,3]
-    data modify storage api: Argument.Amount set value 0.1
+    data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/mp_regen/add
 
