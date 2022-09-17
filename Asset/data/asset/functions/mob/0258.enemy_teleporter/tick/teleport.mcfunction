@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0258.enemy_teleporter/tick/2.tick
+# @within function asset:mob/0258.enemy_teleporter/tick/branch
 
 # なるべく離れてるモブを引き寄せ
     execute if entity @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..25,limit=1] as @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..25,sort=random,limit=3] run tp ~ ~ ~

@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0258.enemy_teleporter/tick/2.tick
+# @within function asset:mob/0258.enemy_teleporter/tick/branch
 
 # 近くにいるモブだけをテレポート
     execute as @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=..15,sort=random,limit=3] run tp ~ ~ ~
