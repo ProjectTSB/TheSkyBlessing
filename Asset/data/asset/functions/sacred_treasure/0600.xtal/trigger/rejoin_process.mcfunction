@@ -3,3 +3,6 @@
 # 使い方は必ずwikiを見ること
 #
 # @within tag/function asset:rejoin
+
+# リジョイン処理
+    execute if entity @a[scores={GO.Time=1..}] run schedule function asset:sacred_treasure/0600.xtal/trigger/schedule 1t replace
