@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"Xtal","color":"aqua"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"Xtal","color":"dark_gray","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"片方の持ち手しか見つからず"}','{"text":"もう片方の行方は不明のままの双剣"}','{"text":"そして、最後まで揃うことはないだろう"}']
 # MP以外の消費物 (TextComponentString) (オプション)
