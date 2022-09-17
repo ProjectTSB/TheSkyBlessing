@@ -5,10 +5,10 @@
 # @within function asset:mob/0258.enemy_teleporter/tick/2.tick
 
 # なるべく離れてるモブを引き寄せ
-    execute if entity @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..50,limit=1] as @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..50,sort=random,limit=3] run tp ~ ~ ~
+    execute if entity @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..25,limit=1] as @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..25,sort=random,limit=3] run tp ~ ~ ~
 
 # もしも周囲に敵がいないならどこの誰でもいいから引き寄せ
-    execute unless entity @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..50,limit=1] as @e[type=#lib:hostile,tag=!Uninterferable,distance=..50,sort=nearest,limit=3] run tp ~ ~ ~
+    execute unless entity @e[type=#lib:hostile,tag=Enemy,tag=!Uninterferable,distance=15..25,limit=1] as @e[type=#lib:hostile,tag=!Uninterferable,distance=..25,sort=nearest,limit=3] run tp ~ ~ ~
 
 # 演出
     playsound ogg:block.respawn_anchor.set_spawn1 hostile @a ~ ~ ~ 1 1.4
