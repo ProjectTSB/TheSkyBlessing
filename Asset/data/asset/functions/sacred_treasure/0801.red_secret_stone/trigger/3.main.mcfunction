@@ -16,7 +16,7 @@
     function lib:heal/modifier
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 演出
     particle minecraft:happy_villager ~ ~ ~ 1 1 1 1 100 normal @s

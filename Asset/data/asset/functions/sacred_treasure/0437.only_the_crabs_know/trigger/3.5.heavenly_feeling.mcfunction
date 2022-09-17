@@ -13,7 +13,7 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
     # MP回復
         scoreboard players set $Fluctuation Lib 10000
         function lib:mp/fluctuation

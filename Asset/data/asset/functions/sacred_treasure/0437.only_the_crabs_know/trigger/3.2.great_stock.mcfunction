@@ -9,7 +9,7 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
 
 # リジェネ
     effect give @s regeneration 600 3 true

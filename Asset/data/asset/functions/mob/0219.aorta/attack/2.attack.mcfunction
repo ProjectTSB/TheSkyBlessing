@@ -13,7 +13,7 @@
     function lib:heal/modifier
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 周囲に移動速度上昇を付与
     effect give @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..5] speed 3 1 true

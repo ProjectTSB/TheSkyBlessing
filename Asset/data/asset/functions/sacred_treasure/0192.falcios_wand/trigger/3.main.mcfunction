@@ -21,4 +21,4 @@
     effect give @a[distance=..15] regeneration 8 2 true
 
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
