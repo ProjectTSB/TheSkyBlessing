@@ -4,10 +4,6 @@
 #
 # @within function asset:mob/0258.enemy_teleporter/tick/1.trigger
 
-#> private
-# @private
-    #declare score_holder $Count
-
 # スコアを増やす
     scoreboard players add @s 76.Time 1
 
