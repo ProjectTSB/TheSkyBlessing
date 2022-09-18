@@ -5,10 +5,10 @@
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/main
 
 # 演出
-    playsound block.fire.extinguish player @a ~ ~ ~ 0.2 1.5 0
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 1.3 2 0
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 1.3 0.5 0
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 1.3 1 0
+    playsound block.fire.extinguish neutral @a ~ ~ ~ 0.2 1.5 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 1.3 2 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 1.3 0.5 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 1.3 1 0
     particle minecraft:dust_color_transition 0 1 1 1.4 1 1 1 ~ ~ ~ 1 1 1 0 300
     particle dolphin ~ ~ ~ 1 1 1 0 80
     particle firework ~ ~ ~ 0.3 0.3 0.3 0.25 80

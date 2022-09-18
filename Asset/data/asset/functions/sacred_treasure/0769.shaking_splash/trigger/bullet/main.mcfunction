@@ -8,8 +8,8 @@
     particle minecraft:dust_color_transition 0 1 1 1.4 1 1 1 ~ ~ ~ 0.2 0.2 0.2 0 8
     particle bubble ~ ~ ~ 0.3 0.3 0.3 0 8 normal @a
     particle dolphin ~ ~ ~ 0.3 0.3 0.3 0 8
-    playsound block.bubble_column.bubble_pop player @a ~ ~ ~ 1.3 0 0
-    playsound block.bubble_column.bubble_pop player @a ~ ~ ~ 1.3 0.5 0
+    playsound block.bubble_column.bubble_pop neutral @a ~ ~ ~ 1.3 0 0
+    playsound block.bubble_column.bubble_pop neutral @a ~ ~ ~ 1.3 0.5 0
 
 # スコア
     scoreboard players add @s LD.Tick 1
