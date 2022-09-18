@@ -4,9 +4,9 @@
 #
 # @within function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
 
-# 効果音
-    playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1.5 1.7
-    playsound minecraft:entity.blaze.shoot neutral @a ~ ~ ~ 2 0.7
+# 効果音 playerなのは意図的(どっちつかずなので今後のためにメモ)
+    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1.5 1.7
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 2 0.7
 
 # 爆発
     particle explosion_emitter ~ ~ ~ 0 0 0 0 1 force
