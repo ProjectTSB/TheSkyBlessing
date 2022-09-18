@@ -7,7 +7,7 @@
 # 演出
     particle minecraft:block ice ~ ~ ~ 0.2 0.2 0.2 1 100 force
     particle dust 0 0.733 1 1 ~ ~ ~ 0.3 0.3 0.3 0 50
-    playsound minecraft:block.glass.break player @a ~ ~ ~ 1 1.3
+    playsound minecraft:block.glass.break neutral @a ~ ~ ~ 1 1.3
 
 # ダメージ設定
     # 与えるダメージ = 10

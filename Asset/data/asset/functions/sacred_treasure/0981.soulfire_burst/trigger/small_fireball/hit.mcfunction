@@ -12,7 +12,7 @@
 
 # 演出
     particle minecraft:smoke ~ ~ ~ 0 0 0 0.05 2
-    playsound minecraft:block.soul_sand.step player @a ~ ~ ~ 0.5 1.5
+    playsound minecraft:block.soul_sand.step neutral @a ~ ~ ~ 0.5 1.5
 
 # オーナー情報削除
     tag @a[tag=R9.OwnerPlayer] remove R9.OwnerPlayer

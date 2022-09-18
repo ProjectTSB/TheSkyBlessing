@@ -11,8 +11,8 @@
     execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..3] at @s run function asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/damage
 
 # 演出
-    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.ender_dragon.flap player @a ~ ~ ~ 2 0.8
+    playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1.5 1.5
+    playsound minecraft:entity.ender_dragon.flap neutral @a ~ ~ ~ 2 0.8
     particle minecraft:explosion ~ ~ ~ 1 1 1 1 5
     particle minecraft:lava ~ ~ ~ 0.5 0.5 0.5 0 10
 
