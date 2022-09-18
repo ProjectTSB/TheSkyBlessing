@@ -20,7 +20,7 @@
     data modify storage lib: Argument.Heal set value 20f
     function lib:heal/modifier
     execute as @a[distance=..5] run function lib:heal/
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 800.0f

@@ -15,7 +15,7 @@
     function lib:heal/modifier
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 演出
     execute at @s run playsound entity.cat.ambient master @a[distance=..10] ~ ~ ~ 3 1

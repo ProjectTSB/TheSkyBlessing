@@ -21,4 +21,4 @@
     function lib:heal/modifier
     execute as @a[distance=..3,sort=nearest,limit=6] run function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset

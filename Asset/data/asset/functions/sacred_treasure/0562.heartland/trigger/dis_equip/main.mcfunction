@@ -12,3 +12,4 @@
     data modify storage lib: Argument.Heal set value 20f
     function lib:heal/modifier
     function lib:heal/
+    function lib:heal/reset
