@@ -34,5 +34,5 @@
     execute if score @s Temporary matches 1 run kill
 
 # リセット
-    execute if score @s Temporary matches 0 run data remove storage lib: Argument
+    execute if score @s Temporary matches 0 run function lib:heal/reset
     scoreboard players reset @s Temporary

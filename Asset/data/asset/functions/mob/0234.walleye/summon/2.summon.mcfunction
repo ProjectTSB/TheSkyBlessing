@@ -16,30 +16,30 @@
     data modify storage asset:mob Name set value '{"text":"ウォールアイ"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Mainhand set value 
+        # data modify storage asset:mob Weapon.Mainhand set value
     # オフハンド (Compound(Item)) (オプション)
-        # data modify storage asset:mob Weapon.Offhand set value 
+        # data modify storage asset:mob Weapon.Offhand set value
 # 武器ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob WeaponDropChances set value 
+    # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20176}}
     # 胴 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Chest set value 
+        # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Legs set value 
+        # data modify storage asset:mob Armor.Legs set value
     # 足 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Feet set value 
+        # data modify storage asset:mob Armor.Feet set value
 # 防具ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob ArmorDropChances set value 
+    # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 500
 # 攻撃力 (double) (オプション)
-    # data modify storage asset:mob AttackDamage set value 
+    # data modify storage asset:mob AttackDamage set value
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 20
+    # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    data modify storage asset:mob SpecialDefense set value 20
+    # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)
     data modify storage asset:mob Speed set value 0
 # 索敵範囲 (double) (オプション)

@@ -10,7 +10,7 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
 
 # MP回復
     # 回復する量 = 50

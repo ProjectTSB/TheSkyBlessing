@@ -39,7 +39,6 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
     data modify storage lib: Argument.FixedDamage set value 1b
-    data modify storage lib: Argument.BypassResist set value 1b
 # ダメージ
     function lib:damage/modifier
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10,limit=1] run function lib:damage/

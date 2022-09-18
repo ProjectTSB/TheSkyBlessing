@@ -7,5 +7,7 @@
 # 軽量にセレクターを利用する用のtag
     tag @s add AttackedEntity
 # 紐づけ用スコア
-    scoreboard players operation @s AttackedEntity = @a[tag=this,limit=1] UserID
-    scoreboard players operation @a[tag=this,limit=1] AttackedEntity = @a[tag=this,limit=1] UserID
+    scoreboard players operation @s AttackedEntity = @p[tag=TargetEntity] UserID
+    scoreboard players operation @p[tag=TargetEntity] AttackedEntity = @p[tag=TargetEntity] UserID
+# リセット
+    tag @s remove VictimFromLibrary

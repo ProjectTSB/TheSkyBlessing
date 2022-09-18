@@ -17,5 +17,6 @@
 #> lib:damage/からの攻撃検出用
 # @within function
 #   mob_manager:entity_finder/attacked_entity/on_attack
-#   lib:damage/core/trigger_on_attack
-    #declare tag LibraryDamage
+#   mob_manager:entity_finder/attacked_entity/fetch_attacked_entity
+#   api:damage/core/trigger_on_attack
+    #declare tag VictimFromLibrary
