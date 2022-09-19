@@ -14,9 +14,9 @@
 
     # 演出
         execute positioned ~ ~1 ~ run particle block stone ^ ^ ^0.8 0.1 0.1 0.1 1.0 20
-        playsound entity.wandering_trader.drink_potion master @p ~ ~ ~ 0.8 0.3
-        playsound block.soul_sand.place master @p ~ ~ ~ 1.0 0.8
-        playsound item.totem.use master @a ~ ~ ~ 0.1 2.0
+        playsound entity.wandering_trader.drink_potion player @p ~ ~ ~ 0.8 0.3
+        playsound block.soul_sand.place player @p ~ ~ ~ 1.0 0.8
+        playsound item.totem.use player @a ~ ~ ~ 0.1 2.0
 
     # クリティカルヒット判定
         execute anchored eyes positioned ^ ^ ^0.1 run function asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.1.check_critical

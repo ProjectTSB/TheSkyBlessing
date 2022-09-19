@@ -15,9 +15,9 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 2
-    playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 0
-    playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
+    playsound minecraft:entity.zombie.attack_wooden_door player @s ~ ~ ~ 1 2
+    playsound minecraft:entity.zombie.attack_wooden_door player @s ~ ~ ~ 1 0
+    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 0.8 2
 
 # 残り回数が1回の時発動した場合
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 608

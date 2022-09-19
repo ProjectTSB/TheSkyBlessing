@@ -41,7 +41,7 @@
         scoreboard players reset $Random Temporary
 
 # 演出
-    playsound minecraft:ui.toast.challenge_complete ambient @a ~ ~ ~ 1 1.1
+    playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 1.1
     playsound minecraft:block.glass.break player @a ~ ~ ~ 1 1
     particle minecraft:block blue_ice ~ ~3 ~ 4 4 4 10 1000
     particle minecraft:block ice ~ ~3 ~ 4 4 4 10 1000

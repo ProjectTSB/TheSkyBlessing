@@ -16,7 +16,7 @@
 
 # 演出
     particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context Items.hotbar[{tag:{TSB:{ID:928}}}]

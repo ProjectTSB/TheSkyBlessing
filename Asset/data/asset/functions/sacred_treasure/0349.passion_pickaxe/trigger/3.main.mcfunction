@@ -30,4 +30,4 @@
 
 # 演出
     particle minecraft:lava ~ ~ ~ 0.5 1 0.5 1 100 force @a[distance=..20]
-    playsound minecraft:entity.ghast.shoot master @s ~ ~ ~ 1 0.7
+    playsound minecraft:entity.ghast.shoot player @s ~ ~ ~ 1 0.7

@@ -65,9 +65,9 @@
             execute if score $AttackStrength Temporary matches 2 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 1 0.176 0.176 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
             execute if score $AttackStrength Temporary matches 3 at @e[type=#lib:living,tag=Hit,distance=..10] run particle dust 0.929 0.137 1 0.5 ~ ~2 ~ 0.02 5 0.02 0 150 force @a
         # Sound
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
-            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 10 2
+            execute at @e[type=#lib:living,tag=Hit,distance=..10] run playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 10 2
 
     # 効果
         # 通常Hit処理

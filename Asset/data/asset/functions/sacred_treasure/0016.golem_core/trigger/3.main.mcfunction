@@ -15,4 +15,4 @@
 
     # 演出
         particle minecraft:enchanted_hit ~ ~ ~ 0.5 1 0.5 0.5 100 force @s
-        playsound minecraft:block.anvil.destroy master @s ~ ~ ~ 1 0.9
+        playsound minecraft:block.anvil.destroy player @s ~ ~ ~ 1 0.9

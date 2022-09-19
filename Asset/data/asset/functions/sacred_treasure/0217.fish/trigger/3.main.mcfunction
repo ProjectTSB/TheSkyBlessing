@@ -18,5 +18,5 @@
     function lib:heal/reset
 
 # 演出
-    execute at @s run playsound entity.cat.ambient master @a[distance=..10] ~ ~ ~ 3 1
+    execute at @s run playsound entity.cat.ambient player @a[distance=..10] ~ ~ ~ 3 1
     execute at @s run tellraw @a[distance=..10] {"text":"ネコの気配を感じる……？","color":"white"}
