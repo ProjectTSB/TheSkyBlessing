@@ -25,6 +25,7 @@
     #
     #declare tag RW.Phase1
     #declare tag RW.Phase2
+    #declare tag RW.Phase3
     #
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit
@@ -44,6 +45,7 @@
     #declare tag RW.SkillLaser
     #
     #declare tag RW.SkillDeadly1
+    #declare tag RW.SkillDeadly2
     #
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker

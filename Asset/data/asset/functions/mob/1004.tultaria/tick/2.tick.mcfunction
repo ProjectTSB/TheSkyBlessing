@@ -21,6 +21,9 @@
 # フェーズ2移行動作
     execute if entity @s[tag=RW.HPless75per] run function asset:mob/1004.tultaria/tick/wait_time/phase2_transition/1.tick
 
+# フェーズ2移行動作
+    execute if entity @s[tag=RW.HPless50per] run function asset:mob/1004.tultaria/tick/wait_time/phase3_transition/1.tick
+
 # スコア加算
     scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
 

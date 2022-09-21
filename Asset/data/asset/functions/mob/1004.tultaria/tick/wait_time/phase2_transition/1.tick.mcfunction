@@ -14,9 +14,3 @@
 
 # 発動準備
     execute if score @s RW.Tick matches 30.. run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
-
-# 発動
-    #execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/skill/2.meteor_attack/4.fall_meteor
-
-# リセット
-    #execute if score @s RW.Tick matches 60.. run function asset:mob/1004.tultaria/tick/reset

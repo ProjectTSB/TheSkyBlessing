@@ -36,8 +36,11 @@
     execute if score $Random Temporary matches 6 run tag @s add RW.SkillSummon
     execute if score $Random Temporary matches 7 run tag @s add RW.SkillLaser
 
-# 大技
+# 大技その1
     execute if score $Random Temporary matches 8 run tag @s add RW.SkillDeadly1
+
+# 大技その2
+    execute if score $Random Temporary matches 9 run tag @s add RW.SkillDeadly2
 
 # リセット
     scoreboard players reset $Random Temporary
