@@ -6,7 +6,7 @@
 
 # タグ調整
     tag @s remove RW.Opening
-    tag @s add RW.Phase2
+    tag @s add RW.Phase1
 
 # 無敵解除
     data modify entity @s Invulnerable set value 0b
