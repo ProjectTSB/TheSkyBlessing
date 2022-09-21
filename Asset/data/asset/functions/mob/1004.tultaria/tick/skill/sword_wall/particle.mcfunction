@@ -1,23 +1,8 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field
+#> asset:mob/1004.tultaria/tick/skill/sword_wall/particle
 #
-# ここより外に出ると痛いし戻される。コマンド数がすごい。
 #
-# @within asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
-
-
-# ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 20f
-        data modify storage lib: Argument.AttackType set value "Magic"
-        data modify storage lib: Argument.ElementType set value "None"
-        function lib:damage/modifier
-        execute as @a[tag=!PlayerShouldInvulnerable,distance=10..15] run function lib:damage/
-
-# ワープで戻される
-    execute as @a[tag=!PlayerShouldInvulnerable,distance=10..15] positioned ^ ^ ^5 rotated ~ 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.player_pull
-
-# リセット
-    function lib:damage/reset
+#
+# @within function asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 #   円その1
     particle electric_spark ^0 ^ ^-10 0 0 0 0 1

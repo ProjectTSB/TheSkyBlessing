@@ -37,7 +37,7 @@
 
 # チャージ後以降からは危険地帯になる
     execute if score @s RW.Tick matches 60..340 run scoreboard players operation $AreaInterval Temporary %= $3 Const
-    execute if score @s RW.Tick matches 60..340 if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field
+    execute if score @s RW.Tick matches 60..340 if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 # チャージ
     execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge

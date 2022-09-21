@@ -1,11 +1,11 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.player_pull
+#> asset:mob/1004.tultaria/tick/skill/sword_wall/player_pull
 #
 # 変なことしたらこれで戻される。開幕にも使う。
 #
 # @within function
 #   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
-#   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge
-#   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field
+#   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
+#   asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 # テレポートさせる
     execute facing entity @e[type=wither_skeleton,scores={MobID=1004},sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~

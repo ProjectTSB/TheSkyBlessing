@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
 
 # プレイヤーを引っ張ってくる
-    execute at @s positioned ^ ^ ^3 rotated ~ 0 as @a[distance=..30,sort=random,limit=3] run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.player_pull
+    execute at @s positioned ^ ^ ^3 rotated ~ 0 as @a[distance=..30,sort=random,limit=3] run function asset:mob/1004.tultaria/tick/skill/sword_wall/player_pull
 
 # 胴体はこの辺
     #summon marker ~ ~1.5 ~ {Tags:["RW.BodyMarker"]}

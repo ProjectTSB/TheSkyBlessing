@@ -41,7 +41,7 @@
 # チャージ後以降からは暗闇がやってきて、しかも安全地帯が狭い
     execute if score @s RW.Tick matches 100.. run effect give @a[distance=..50] darkness 1 0 true
     execute if score @s RW.Tick matches 100..360 run scoreboard players operation $AreaInterval Temporary %= $3 Const
-    execute if score @s RW.Tick matches 100..360 if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.danger_field
+    execute if score @s RW.Tick matches 100..360 if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 # チャージ
     execute if score @s RW.Tick matches 100 run function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/4.charge
