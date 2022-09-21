@@ -48,4 +48,4 @@
     #execute if score @s RW.Tick matches 340 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/9.end
 
 # デバッグ用、技をループする
-    execute if score @s RW.Tick matches 400.. run scoreboard players set @s RW.Tick -10
+    execute if score @s RW.Tick matches 400.. run scoreboard players set @s RW.Tick 70
