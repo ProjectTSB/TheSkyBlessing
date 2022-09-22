@@ -1,6 +1,13 @@
 #> asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
 #
-#
+#   @input
+#     as @e[type=armor_stand,tag=CursedTreasure,tag=!DispelledCursedTreasure]
+#     at @e[type=armor_stand,tag=CursedTreasure,tag=!DispelledCursedTreasure]
+#     storage api: Argument.ID : int
+#   @output
+#     score $ OhMyDatID
+#     score $TeleporterExists Temporary : テレポーターが存在 -> 1、無い -> 0
+# Argument.IDのテレポーターのOhMyDatIDを見つける。
 #
 # @within function asset_manager:teleporter/update_activation_state/
 
