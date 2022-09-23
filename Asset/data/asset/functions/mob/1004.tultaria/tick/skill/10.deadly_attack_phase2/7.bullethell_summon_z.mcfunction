@@ -2,7 +2,9 @@
 #
 # めったに見ないような弾幕攻撃が北と東から飛んでくる
 #
-# @within function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/6.bullethell_tick
+# @within function
+#   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/6.bullethell_tick
+#   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/6.bullethell_tick_enrage
 
 #> SpreadLib
 # @private

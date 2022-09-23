@@ -9,7 +9,7 @@
 #declare tag SpreadMarker
 
 # プレイヤーのほう向く
-    execute facing entity @e[type=marker,tag=SpreadMarker,distance=..30] eyes run tp @s ~ ~ ~ ~ 0
+    execute facing entity @e[type=marker,tag=SpreadMarker,distance=..30] eyes run tp @s ~ ~ ~ ~ ~
 
 # レーザー出す
     execute at @s run function asset:mob/1017.phase2_bullethell_shot/summon/4.laser
