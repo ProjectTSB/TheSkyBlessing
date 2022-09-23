@@ -20,4 +20,4 @@
 
 # 演出
     tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は正気度が減った"}]
-    playsound entity.squid.death master @a ~ ~ ~ 1.0 1.5
+    playsound entity.squid.death player @a ~ ~ ~ 1.0 1.5

@@ -42,4 +42,4 @@
 # 演出
     particle witch ~ ~1.3 ~ 0.3 0.25 0.3 1 10 normal @a
     particle enchant ~ ~1.3 ~ 0.4 0.25 0.4 0 30 normal @a
-    playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 0.8 0 0
+    playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 0.8 0 0

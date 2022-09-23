@@ -17,7 +17,7 @@
     # ネコ召喚
         summon cat ~ ~ ~ {DeathLootTable:"minecraft:empty",PersistenceRequired:1b,CanPickUpLoot:0b,variant:"tabby",Tags:["AbstractCat","48.CalledCat","Friend"]}
         particle minecraft:heart ~ ~ ~ 0.5 0.25 0.5 1 10
-        playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 1 1.25
+        playsound minecraft:entity.cat.ambient neutral @a ~ ~ ~ 1 1.25
 
     # ネコの種類をランダムに
         execute store result score $Random Temporary run function lib:random/

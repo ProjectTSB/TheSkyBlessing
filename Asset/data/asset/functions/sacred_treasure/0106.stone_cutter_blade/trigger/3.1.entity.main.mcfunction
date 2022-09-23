@@ -6,8 +6,8 @@
 
 # 演出など
     particle block redstone_block ~ ~1 ~ 0.1 0 0.1 4.2 80
-    playsound minecraft:item.totem.use master @a ~ ~ ~ 1 2
-    playsound minecraft:entity.blaze.hurt master @a ~ ~ ~ 0.2 0.1
+    playsound minecraft:item.totem.use player @a ~ ~ ~ 1 2
+    playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 0.2 0.1
 
 # ダメージ処理
     # 引数の設定

@@ -2,9 +2,7 @@
 #
 #
 #
-# @within function
-#   core:handler/first_join
-#   core:handler/rejoin
+# @within function core:handler/join
 
 # versionのチェック
     function api:data_get/data_version
