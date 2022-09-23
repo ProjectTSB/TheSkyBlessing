@@ -1,15 +1,16 @@
 #> asset_manager:teleporter/update_activation_state/pop_master_data_from_teleporter_id
 #
+# IDの一致するテレポーターのデータをマスタより取り出す
 #
-#
+# @input storage api: Argument.ID : int
 # @output storage asset:teleporter
-#   TargetTeleporterData
-#   FilteredTeleporters
+#   TargetTeleporterData : compound GroupData
+#   Teleporters : Teleporters - Teleporters[id=Argument.ID]
 # @within function asset_manager:teleporter/update_activation_state/
 
 # セッション開く
     function lib:array/session/open
-# 対象テレポーターのGrpupIDと、同一のIDを持つ配列の要素のIndex のみがtrueになる配列(CompareResult)を作る
+# 対象テレポーターのGroupIDと、同一のIDを持つ配列の要素のIndex のみがtrueになる配列(CompareResult)を作る
 # CompareResult = Teleporters.map(v => v.ID ==Argument.ID)
     data modify storage lib: Array append from storage asset:teleporter Teleporters[].ID
     data modify storage lib: CompareTarget set from storage api: Argument.ID
