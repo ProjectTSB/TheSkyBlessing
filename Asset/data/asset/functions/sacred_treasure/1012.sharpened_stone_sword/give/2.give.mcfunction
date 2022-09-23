@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     # data modify storage asset:sacred_treasure Lore set value
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value
+    data modify storage asset:sacred_treasure CostText set value 80
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
