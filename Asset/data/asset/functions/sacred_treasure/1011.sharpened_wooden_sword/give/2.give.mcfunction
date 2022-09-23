@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 1011
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "stick"
+    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"研がれた木の剣","color":"white"}'
 # 神器の説明文 (TextComponentString[])
