@@ -19,7 +19,7 @@
         data modify storage lib: Argument.Damage set value 24f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
-    # 雷属性
+    # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
