@@ -1969,9 +1969,9 @@
                     "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/remove/2.remove.mcfunction",
                     "content": [
-                        "#> asset:mob/%namespace%/tick/2.remove",
+                        "#> asset:mob/%namespace%/remove/2.remove",
                         "#",
-                        "# Mobのtick時の処理",
+                        "# Mobのremove時の処理",
                         "#",
                         "# @within function asset:mob/%namespace%/remove/1.trigger"
                     ]
