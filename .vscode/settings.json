@@ -1948,6 +1948,57 @@
                     }
                 }
             ]
+        },
+        {
+            "label": "MOB/特殊トリガー: remove",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/remove/1.trigger",
+                        "#",
+                        "# 天使が居なくなる際に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/tick",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/remove/2.remove"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/2.remove.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/tick/2.remove",
+                        "#",
+                        "# Mobのtick時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/remove/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/remove.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/remove/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/remove/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
         }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
