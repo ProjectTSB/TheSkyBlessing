@@ -13,11 +13,11 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
     # MP回復
         scoreboard players set $Fluctuation Lib 10000
         function lib:mp/fluctuation
 
 # 演出
     tellraw @a [{"selector":"@s","bold":true},{"text":"は天国に上るような錯覚がした"}]
-    playsound ui.toast.challenge_complete master @a 23 3 24 1.0 1.2
+    playsound ui.toast.challenge_complete player @a 23 3 24 1.0 1.2

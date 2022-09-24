@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   core:handler/**join
+#   core:handler/join
 #   asset:sacred_treasure/0002.blessing/trigger/**
 
 #> Diff

@@ -6,7 +6,7 @@
 
 # 演出
     execute at @p[tag=Victim] run particle minecraft:block white_concrete ~ ~1.2 ~ 1.0 0.5 1.0 0 40 normal @a
-    execute at @p[tag=Victim] run playsound minecraft:block.stone.break master @a ~ ~ ~ 1 1.2 0
+    execute at @p[tag=Victim] run playsound minecraft:block.stone.break hostile @a ~ ~ ~ 1 1.2 0
 
 # 引数の設定
     # 与えるダメージ

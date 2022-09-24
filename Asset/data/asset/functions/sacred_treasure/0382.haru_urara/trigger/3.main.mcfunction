@@ -11,7 +11,7 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle dust 0.965 0.745 0.973 1 ~ ~0.3 ~ 0.4 8 0.4 0 400 force @a[distance=..30]
-    playsound minecraft:entity.ender_dragon.flap master @a[distance=..15] ~ ~ ~ 1 1
+    playsound minecraft:entity.ender_dragon.flap player @a[distance=..15] ~ ~ ~ 1 1
 
 # ダメージ
     # 与えるダメージ = 42

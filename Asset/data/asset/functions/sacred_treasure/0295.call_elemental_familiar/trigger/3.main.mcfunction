@@ -17,7 +17,7 @@
 # 精霊Init
     execute as @e[type=armor_stand,tag=87.FamiliarInit,distance=..5] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/1.init
 
-# 音とパーティクル
+# 音とパーティクル　neutralになってるのは妖精側の音だから
     playsound minecraft:item.bottle.fill_dragonbreath player @a ~ ~ ~ 2 2
     playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 2 1.75
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 2 2
