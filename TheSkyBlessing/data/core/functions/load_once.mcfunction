@@ -18,7 +18,19 @@ data modify storage global GameVersion set value "v0.1.4"
     execute in the_end run forceload add 10000 10000
 # Item Return Point
     execute in overworld run forceload add 2927 -1273
-
+# テレポート先
+    # 神殿出口
+        execute in overworld run forceload add 62 -12
+    # 神殿入り口
+        execute in overworld run forceload add 3040 -544 3103 -481
+    # Item Return Point
+        execute in overworld run forceload add 2922 -1333 2934 -1313
+    # 神殿
+        execute in overworld run forceload add 2976 -144 3007 -129
+        execute in overworld run forceload add 3448 -472
+        execute in overworld run forceload add 2915 -862
+        execute in overworld run forceload add 3056 -896 3087 -881
+        execute in overworld run forceload add 3411 -630
 
 #> gameruleの設定
 function core:define_gamerule
