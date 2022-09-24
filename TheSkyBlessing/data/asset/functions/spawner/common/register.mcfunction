@@ -16,7 +16,7 @@
     execute unless data storage asset:spawner MaxNearbyEntities run data modify storage asset:spawner MaxNearbyEntities set value 6
     execute unless data storage asset:spawner RequiredPlayerRange run data modify storage asset:spawner RequiredPlayerRange set value 16
 # 登録
-    function asset_manager:spawner/register/
+    execute if entity @p[predicate=api:is_completed_player_chunk_load_waiting_time,distance=..80] run function asset_manager:spawner/register/
 # リセット
     data remove storage asset:spawner SpawnPotentials
     data remove storage asset:spawner HP

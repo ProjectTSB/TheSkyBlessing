@@ -13,3 +13,5 @@
     function player_manager:bonus/update_mp_bonus
     function player_manager:bonus/update_attack_bonus
     function player_manager:bonus/update_defense_bonus
+# ロード待ち時間を更新する
+    function world_manager:chunk_io_protect/update_load_waiting_time
