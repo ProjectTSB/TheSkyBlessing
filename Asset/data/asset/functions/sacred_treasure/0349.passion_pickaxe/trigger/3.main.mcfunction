@@ -17,7 +17,7 @@
     # 炎属性
         data modify storage lib: Argument.ElementType set value "Fire"
     # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value false
+        data modify storage lib: Argument.FixedDamage set value false
 # 補正functionを実行
     function lib:damage/modifier
 # 攻撃した対象に実行
@@ -30,4 +30,4 @@
 
 # 演出
     particle minecraft:lava ~ ~ ~ 0.5 1 0.5 1 100 force @a[distance=..20]
-    playsound minecraft:entity.ghast.shoot master @s ~ ~ ~ 1 0.7
+    playsound minecraft:entity.ghast.shoot player @s ~ ~ ~ 1 0.7

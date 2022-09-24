@@ -11,7 +11,7 @@
 
 # 演出
     execute positioned ~ ~0.5 ~ rotated ~ 0 run function asset:sacred_treasure/0610.call_fish/trigger/particle.1
-    playsound minecraft:entity.puffer_fish.blow_up master @a ~ ~ ~ 1 1.3
+    playsound minecraft:entity.puffer_fish.blow_up neutral @a ~ ~ ~ 1 1.3
 
 # 魚召喚
     summon cod ~ ~ ~ {Invulnerable:1b,Tags:["GY.Fish","GY.First","Friend"]}

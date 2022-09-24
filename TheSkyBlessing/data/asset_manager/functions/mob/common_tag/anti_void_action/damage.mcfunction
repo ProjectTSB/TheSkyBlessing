@@ -13,8 +13,7 @@
 # 引数設定 - その他
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
-    data modify storage lib: Argument.Fixed set value 1b
-    data modify storage lib: Argument.BypassResist set value 1b
+    data modify storage lib: Argument.FixedDamage set value 1b
 # 補正
     execute as @e[tag=AntiVoidTarget,distance=..0.01,limit=1] run function lib:damage/modifier
 # ダメージ

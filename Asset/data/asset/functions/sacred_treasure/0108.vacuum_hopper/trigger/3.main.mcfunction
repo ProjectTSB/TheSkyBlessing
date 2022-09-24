@@ -13,7 +13,7 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    playsound entity.enderman.teleport master @s ~ ~ ~ 1 2
+    playsound entity.enderman.teleport player @s ~ ~ ~ 1 2
     particle portal ~ ~ ~ 0.5 1 0.5 0 300 force @a
     execute positioned ^ ^ ^10 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
     execute positioned ^ ^ ^15 run tag @e[type=item,tag=!Uninterferable,distance=..10] add Vacuum
