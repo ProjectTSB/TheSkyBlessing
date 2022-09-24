@@ -13,6 +13,10 @@
 data modify storage asset:teleporter Teleporters[].ID append value 0
 data remove storage asset:teleporter Teleporters[{ID:[]}]
 
+#> from: e80055bf9f185e8154489e1c7d7ea0cbf8293998
+# @private
+scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
+
 #> from: b4073d1466557d33877ed430b3566a97add6651e
 data modify storage global GodIcon.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
 data modify storage global GodIcon.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
