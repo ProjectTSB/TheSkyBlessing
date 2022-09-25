@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/1019.bigshot/0.load",
+        "asset:mob/1018.hellflame_skull/0.load",
         "asset:mob/1017.phase2_bullethell_shot/0.load",
         "asset:mob/1016.divine_sword_red/0.load",
         "asset:mob/1015.divine_sword_purple/0.load",

@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/1019.bigshot/tick/1.trigger",
+        "asset:mob/1018.hellflame_skull/tick/1.trigger",
         "asset:mob/1017.phase2_bullethell_shot/tick/1.trigger",
         "asset:mob/1016.divine_sword_red/tick/1.trigger",
         "asset:mob/1015.divine_sword_purple/tick/1.trigger",
