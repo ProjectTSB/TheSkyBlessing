@@ -6,14 +6,14 @@
 
 # タグ調整
     tag @s remove RW.Opening
-    tag @s add RW.Phase1
+    tag @s add RW.Phase3
 
 # 無敵解除
     data modify entity @s Invulnerable set value 0b
 
 # スコアセット
     scoreboard players reset @s RW.Tick
-    scoreboard players set @s RW.SlashAgain 0
+    scoreboard players set @s RW.LoopCount 0
 
 
 # 移動する
