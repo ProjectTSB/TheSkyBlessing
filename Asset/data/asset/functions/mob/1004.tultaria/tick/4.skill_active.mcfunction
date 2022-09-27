@@ -21,5 +21,8 @@
 # ショット
     execute if entity @s[tag=RW.SkillLaser] run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
 
-# 大技その1
-    execute if entity @s[tag=RW.SkillDeadly1] run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
+# 行動選択前スキル: 追従射撃
+    execute if entity @s[tag=RW.MiniSkillChase] run function asset:mob/1004.tultaria/tick/skill/phase3/1.chase_and_shot/1.tick
+
+# 行動選択前スキル: 弾幕
+    execute if entity @s[tag=RW.MiniSkillBulletHell] run function asset:mob/1004.tultaria/tick/skill/phase3/4.mini_bullet_hell/1.tick
