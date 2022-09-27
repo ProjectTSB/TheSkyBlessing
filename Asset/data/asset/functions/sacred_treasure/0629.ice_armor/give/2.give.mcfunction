@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"アイスアーマー","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水耐性+3% 水攻撃+3%","color":"aqua"}]','[{"text":"一式全て揃えた場合、追加で","color":"white"}]','[{"text":"水耐性+3% 水攻撃+3%","color":"aqua"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"水耐性+3% 水攻撃+3%","color":"aqua"}]','[{"text":"一式揃えた場合、追加で","color":"white"}]','[{"text":"水耐性+3% 水攻撃+3%","color":"aqua"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
