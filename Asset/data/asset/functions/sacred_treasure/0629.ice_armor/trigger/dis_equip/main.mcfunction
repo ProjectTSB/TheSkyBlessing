@@ -4,10 +4,13 @@
 #
 # @within function asset:sacred_treasure/0629.ice_armor/trigger/dis_equip/
 
-# UUID
+# 水耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,629,5]
-# 補正の削除
     function api:player_modifier/defense/water/remove
+
+# 水攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,629,5]
+    function api:player_modifier/attack/water/remove
 
  # 演出
     playsound block.glass.break player @a ~ ~ ~ 0.4 0.8 0
