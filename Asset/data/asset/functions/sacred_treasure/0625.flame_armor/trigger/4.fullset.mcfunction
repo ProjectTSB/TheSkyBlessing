@@ -8,6 +8,9 @@
 #   asset:sacred_treasure/0626.flame_leggings/trigger/3.main
 #   asset:sacred_treasure/0627.flame_boots/trigger/3.main
 
+# Tag付与
+    tag @s add HD.Fullset
+
 # 火耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,625,0]
     data modify storage api: Argument.Amount set value 0.03
