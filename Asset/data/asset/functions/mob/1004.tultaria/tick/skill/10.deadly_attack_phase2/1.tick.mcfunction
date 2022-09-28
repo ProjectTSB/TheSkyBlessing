@@ -66,10 +66,7 @@
 
 
 # 終了時動作
-    #execute if score @s RW.Tick matches 340 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/9.end
-
-# 剣を消す
-    execute if score @s RW.Tick matches 600.. run tag @e[type=armor_stand,scores={MobID=1015}] add S7.Death
+    execute if score @s RW.Tick matches 600 run function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/end
 
 # デバッグ用、技をループする
-    execute if score @s RW.Tick matches 600.. run scoreboard players set @s RW.Tick 70
+    #execute if score @s RW.Tick matches 600.. run scoreboard players set @s RW.Tick 70

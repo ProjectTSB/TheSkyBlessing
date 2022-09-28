@@ -25,27 +25,27 @@
     execute if score @s RW.Tick matches 25 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
     execute if score @s RW.Tick matches 25 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
 
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ^ ^ ^10 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ^ ^ ^10 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
 
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ^ ^ ^10 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ^ ^ ^10 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
 
-    #execute if score @s[tag=RW.Phase2] RW.Tick matches 31
-    #execute if score @s[tag=RW.Phase2] RW.Tick matches 31
+    #execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 31
+    #execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 31
     #execute if score @s[tag=RW.Phase3] RW.Tick matches 33
     #execute if score @s[tag=RW.Phase3] RW.Tick matches 33
 
 # サウンド
     execute if score @s RW.Tick matches 25 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 30 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 30 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 35 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
 
 # デバッグ用、この行動をループする
     #execute if score @s RW.Tick matches 60 run scoreboard players set @s RW.Tick -10

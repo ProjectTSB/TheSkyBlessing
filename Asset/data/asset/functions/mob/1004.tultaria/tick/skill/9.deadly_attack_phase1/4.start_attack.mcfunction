@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 
 # テスト用メッセージ
-    #tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 乗るな！","color":"white"}]
+    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 乗らないで。","color":"white"}]
 
 # 演出
     playsound ogg:block.respawn_anchor.deplete1 hostile @a ~ ~ ~ 3 1.5

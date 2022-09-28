@@ -21,9 +21,9 @@
     execute if score @s RW.Tick matches 29 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/6.slash3
 
 # フェイズ2なら何度か斬る
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 40 run scoreboard players add @s[scores={RW.SlashAgain=..2}] RW.SlashAgain 1
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 40 run scoreboard players set @s[scores={RW.SlashAgain=..2}] RW.Tick -3
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 40 run scoreboard players add @s[scores={RW.LoopCount=..2}] RW.LoopCount 1
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 40 run scoreboard players set @s[scores={RW.LoopCount=..2}] RW.Tick -3
 
 # リセット
-    execute if score @s[tag=RW.Phase1] RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/reset
-    execute if score @s[tag=RW.Phase2] RW.Tick matches 70 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=1}] RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 70 run function asset:mob/1004.tultaria/tick/reset

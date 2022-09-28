@@ -8,8 +8,8 @@
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # こっち狙いで突進
-    scoreboard players set @s[tag=RW.Phase1] RW.Speed 15
-    scoreboard players set @s[tag=RW.Phase2] RW.Speed 20
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 15
+    scoreboard players set @s[scores={RW.Phase=2..}] RW.Speed 20
     function asset:mob/1004.tultaria/tick/move/teleport/place_marker_target
 
 # ポーズ

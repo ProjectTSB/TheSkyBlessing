@@ -21,11 +21,13 @@
     #declare tag RW.TickLock
     #declare tag RW.InAction
     #declare tag RW.BodyMarker
-    #declare tag RW.SlashAgain
-    #
-    #declare tag RW.Phase1
-    #declare tag RW.Phase2
-    #declare tag RW.Phase3
+    #declare tag RW.LoopCount
+    #declare tag RW.ChaseShot
+    #declare tag RW.ChaseMarker
+    #declare tag RW.ChaseMarker1
+    #declare tag RW.ChaseMarker2
+    #declare tag RW.ChaseMarker3
+    #declare tag RW.ChaseMarker4
     #
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit
@@ -46,6 +48,11 @@
     #
     #declare tag RW.SkillDeadly1
     #declare tag RW.SkillDeadly2
+    #
+    #declare tag RW.MiniSkillChase
+    #declare tag RW.MiniSkillSummon
+    #declare tag RW.MiniSkillBulletHell
+    #declare tag RW.MiniSkillUsed
     #
     #declare tag RW.MeteorMaker
     #declare tag RW.BigMeteorMaker

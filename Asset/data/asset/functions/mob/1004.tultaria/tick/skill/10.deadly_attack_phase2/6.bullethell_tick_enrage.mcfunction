@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
 
+#> private
+# @private
+    #declare score_holder $Random
+
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 

@@ -17,11 +17,11 @@
     scoreboard players operation $HealthPercent Temporary /= @s RW.HealthMax
 
 # 75%以下
-    execute if score $HealthPercent Temporary matches ..75 run scoreboard players set @s[tag=!RW.Phase2] RW.Tick 0
-    execute if score $HealthPercent Temporary matches ..75 run tag @s[tag=!RW.Phase2] add RW.HPless75per
+    execute if score $HealthPercent Temporary matches ..75 run scoreboard players set @s[scores={RW.Phase=1}] RW.Tick 0
+    execute if score $HealthPercent Temporary matches ..75 run tag @s[scores={RW.Phase=1}] add RW.HPless75per
 # HP50%以下
-    execute if score $HealthPercent Temporary matches ..50 run scoreboard players set @s[tag=!RW.Phase3] RW.Tick 0
-    execute if score $HealthPercent Temporary matches ..50 run tag @s[tag=!RW.Phase3] add RW.HPless50per
+    execute if score $HealthPercent Temporary matches ..50 run scoreboard players set @s[scores={RW.Phase=2}] RW.Tick 0
+    execute if score $HealthPercent Temporary matches ..50 run tag @s[scores={RW.Phase=2}] add RW.HPless50per
 # HP40%以下
     execute if score $HealthPercent Temporary matches ..40 run tag @s add RW.HPless40per
 # HP30%以下

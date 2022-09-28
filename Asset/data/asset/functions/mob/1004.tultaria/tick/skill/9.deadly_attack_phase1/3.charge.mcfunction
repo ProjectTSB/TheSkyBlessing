@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 
 # テスト用メッセージ
-    #tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 調子に…","color":"white"}]
+    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 調子に…","color":"white"}]
 
 # プレイヤーを引っ張ってくる
     execute at @s positioned ^ ^ ^3 rotated ~ 0 as @a[distance=..30,sort=random,limit=3] run function asset:mob/1004.tultaria/tick/skill/sword_wall/player_pull
