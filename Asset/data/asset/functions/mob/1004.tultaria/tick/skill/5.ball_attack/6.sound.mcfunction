@@ -7,3 +7,7 @@
 # 演出
     playsound item.trident.riptide_3 hostile @a ~ ~ ~ 2 1.5
     playsound item.trident.riptide_2 hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:entity.glow_squid.ambient hostile @a ~ ~ ~ 2 1
+    playsound minecraft:entity.glow_squid.ambient hostile @a ~ ~ ~ 2 1.2
+    particle minecraft:explosion ~ ~ ~ 0 0 0 0 0
+    particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 50

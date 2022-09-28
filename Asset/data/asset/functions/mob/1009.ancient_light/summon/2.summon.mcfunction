@@ -4,8 +4,12 @@
 #
 # @within function asset:mob/1009.ancient_light/summon/1.trigger
 
+#> private
+# @private
+    #declare tag FacingMarker
+
 # 元となるMobを召喚する
-    summon area_effect_cloud ~ ~ ~ {Tags:["MobInit"],CustomNameVisible:0b,Particle:"block air",Duration:50}
+    summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["Uninterferable","MobInit"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20268,CustomPotionColor:10352382}}}]}
 # ID (int)
     data modify storage asset:mob ID set value 1009
 # Type (string) Wikiを参照
@@ -13,10 +17,10 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"古代の光","color":"aqua"}'
+    data modify storage asset:mob Name set value '{"text":"エンシェントライト","color":"aqua"}'
 
-# 召喚者の反対方向を見る
-    execute facing entity @s eyes run tp @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] ~ ~ ~ ~180 -10
+# マーカーのほう向かせる
+    execute facing entity @e[type=marker,tag=FacingMarker,sort=nearest,limit=1] eyes run tp @e[type=armor_stand,tag=MobInit,distance=..0.01] ~ ~ ~ ~ ~
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=area_effect_cloud,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

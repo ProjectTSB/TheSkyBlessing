@@ -6,7 +6,7 @@
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [10f,0f,-75f]
-    data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-125f,0f,-15f]
+    data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-90f,-20f,110f]
 
 # 腕を変える
     item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
@@ -17,10 +17,11 @@
     execute if entity @s[tag=RW.Phase3] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20080}
 
 # 頭のモデル、向き
-    data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [20f,0f,0f]
+    data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [10f,0f,0f]
     item replace entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
 
 # 演出
+    particle dust 0.8 100000000 100000000 1.5 ~ ~1.2 ~ 0.3 0.7 0.3 1 50
     playsound ogg:block.respawn_anchor.charge1 hostile @a ~ ~ ~ 2 1.5
     playsound ogg:block.respawn_anchor.charge1 hostile @a ~ ~ ~ 2 2
     playsound minecraft:item.trident.riptide_1 hostile @a ~ ~ ~ 2 1
