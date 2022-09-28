@@ -48,7 +48,7 @@
     execute if score @s[tag=RW.Phase2] RW.Tick matches 35 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound
 
 # デバッグ用、この行動をループする
-    execute if score @s RW.Tick matches 60 run scoreboard players set @s RW.Tick -10
+    #execute if score @s RW.Tick matches 60 run scoreboard players set @s RW.Tick -10
 
 # リセット
-    #execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/reset
