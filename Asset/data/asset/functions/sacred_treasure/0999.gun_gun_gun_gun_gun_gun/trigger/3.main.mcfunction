@@ -9,16 +9,10 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 演出
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 1
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 0.5
-
-    execute anchored eyes positioned ^1 ^ ^ run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-    execute anchored eyes positioned ^2 ^ ^1 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-    execute anchored eyes positioned ^3 ^ ^2 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-    execute anchored eyes positioned ^-1 ^ ^ run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-    execute anchored eyes positioned ^-2 ^ ^1 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-    execute anchored eyes positioned ^-3 ^ ^2 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/bee_summon
-
-# Scheduleループ
-    schedule function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/schedule_loop 1t replace
+# 召喚
+    execute rotated ~ 20 anchored eyes positioned ^0 ^ ^-5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+    execute rotated ~ 20 anchored eyes positioned ^4.33013 ^ ^-2.5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+    execute rotated ~ 20 anchored eyes positioned ^4.33013 ^ ^2.5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+    execute rotated ~ 20 anchored eyes positioned ^0 ^ ^5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+    execute rotated ~ 20 anchored eyes positioned ^-4.33013 ^ ^2.5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+    execute rotated ~ 20 anchored eyes positioned ^-4.33013 ^ ^-2.5 run function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
