@@ -22,8 +22,7 @@
 
 # 演出
     playsound entity.wither.shoot player @a ~ ~ ~ 0.3 1.6 0
-    playsound minecraft:block.respawn_anchor.deplete neutral @a ~ ~ ~ 1 2
-    playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 0.8 2
+    playsound tsb_sounds:masket_shot neutral @a ~ ~ ~ 0.2 1
     particle minecraft:wax_on ^ ^ ^3 0 0 0 50 2 normal
 # リセット
     kill @e[type=marker,tag=SpreadMarker,limit=1]
