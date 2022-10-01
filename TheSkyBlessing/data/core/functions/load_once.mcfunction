@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.1"
+data modify storage global GameVersion set value "v0.1.4"
 
 #> forceload chunksの設定
 # Origin
@@ -18,7 +18,19 @@ data modify storage global GameVersion set value "v0.1.1"
     execute in the_end run forceload add 10000 10000
 # Item Return Point
     execute in overworld run forceload add 2927 -1273
-
+# テレポート先
+    # 神殿出口
+        execute in overworld run forceload add 62 -12
+    # 神殿入り口
+        execute in overworld run forceload add 3040 -544 3103 -481
+    # Item Return Point
+        execute in overworld run forceload add 2922 -1333 2934 -1313
+    # 神殿
+        execute in overworld run forceload add 2976 -144 3007 -129
+        execute in overworld run forceload add 3448 -472
+        execute in overworld run forceload add 2915 -862
+        execute in overworld run forceload add 3056 -896 3087 -881
+        execute in overworld run forceload add 3411 -630
 
 #> gameruleの設定
 function core:define_gamerule
@@ -48,6 +60,12 @@ data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"
 data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
+
+data modify storage global GodIcon.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Nyaptov set value '{"text":"\\uE012","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
 
 
 #> リセット必須オブジェクト等の削除
@@ -186,7 +204,9 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
-    #   function player_manager:pos_diff
+    #   function
+    #       player_manager:pos_diff
+    #       api:player_vector/get
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerPosDiff.X dummy
         scoreboard objectives add PlayerPosDiff.Y dummy
@@ -291,6 +311,14 @@ team modify NoCollision collisionRule never
     scoreboard players set $MaxMP Global 100
     scoreboard players set $AttackBonus Global 0
     scoreboard players set $DefenseBonus Global 0
+
+    #> WorldManager用スコアボード - ChunkLoadProtect
+    # @within
+    #   function
+    #       core:tick/player/pre
+    #       world_manager:chunk_io_protect/*
+    #   predicate api:is_completed_player_chunk_load_waiting_time
+        scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
 
     #> WorldManager用スコアボード - Area
     # @within function

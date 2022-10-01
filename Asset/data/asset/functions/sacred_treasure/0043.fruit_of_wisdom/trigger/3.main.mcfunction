@@ -16,7 +16,7 @@
         function api:data_get/health
 
     # 体力減
-        data modify storage lib: Argument set value {AttackType:Physical,BypassResist:1b}
+        data modify storage lib: Argument set value {AttackType:Physical,FixedDamage:1b}
         execute store result storage lib: Argument.Damage float 0.01 run data get storage api: Health 75
         function lib:damage/
         function lib:damage/reset

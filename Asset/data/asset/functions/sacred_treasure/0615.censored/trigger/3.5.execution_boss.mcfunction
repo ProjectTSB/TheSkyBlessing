@@ -14,9 +14,9 @@
     function asset:sacred_treasure/0615.censored/trigger/3.2.censored_object2
     particle block redstone_block ~ ~1.5 ~ 0.5 0.5 0.5 1 30
     particle block bedrock ~ ~1.5 ~ 0.5 0.5 0.5 1 30
-    playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
-    playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
-    playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
+    playsound minecraft:entity.illusioner.mirror_move player @a ~ ~ ~ 1 0
+    playsound minecraft:entity.illusioner.mirror_move player @a ~ ~ ~ 1 0
+    playsound minecraft:entity.illusioner.mirror_move player @a ~ ~ ~ 1 0
 
 # ダメージを与える
     # 与えるダメージ
@@ -24,7 +24,7 @@
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
 # 補正function
-    execute as @a[tag=this] run function lib:damage/modifier
+    execute as @p[tag=this] run function lib:damage/modifier
 # 対象に
     function lib:damage/
 # リセット

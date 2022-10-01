@@ -20,7 +20,7 @@
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
     # 補正はする
         # data modify storage lib: Argument.FixedDamage set value false
     # 死亡メッセージ

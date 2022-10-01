@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 1
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 0.5
+    playsound entity.blaze.shoot player @a ~ ~ ~ 1 1
+    playsound entity.blaze.shoot player @a ~ ~ ~ 1 0.5
 
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee_summon
     execute anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee_summon

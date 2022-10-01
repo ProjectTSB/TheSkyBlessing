@@ -11,9 +11,9 @@
     particle end_rod ~ ~ ~ 0 0 0 0.4 200
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 10
 
-    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
-    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
-    playsound item.trident.riptide_3 master @a ~ ~ ~ 1 2
+    playsound item.trident.riptide_3 player @a ~ ~ ~ 1 2
+    playsound item.trident.riptide_3 player @a ~ ~ ~ 1 2
+    playsound item.trident.riptide_3 player @a ~ ~ ~ 1 2
 
 # ダメージ設定
     # 与えるダメージ = 580

@@ -25,23 +25,23 @@
 # 時計レーザー
 # + + -> - -
     execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection1] positioned ~007 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection1] positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection1] positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection1] positioned ~-07 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection1] positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection1] positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
 # + - -> - +
-    execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection2] positioned ~007 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection2] positioned ~007 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection2] positioned ~016 ~6 ~-07 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection2] positioned ~-07 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection2] positioned ~-07 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection2] positioned ~-16 ~6 ~007 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
 # - + -> + -
     execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection3] positioned ~-07 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection3] positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection3] positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection3] positioned ~007 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection3] positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection3] positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
 # - - -> + +
-    execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection4] positioned ~-07 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection4] positioned ~-07 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2205 if entity @s[tag=1A.LazerDirection4] positioned ~016 ~6 ~-07 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection4] positioned ~007 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+    # execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection4] positioned ~007 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
     execute if score @s 1A.LifeTime matches 2230 if entity @s[tag=1A.LazerDirection4] positioned ~-16 ~6 ~007 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
 
 # タグ削除

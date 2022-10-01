@@ -22,7 +22,7 @@
 #> Trigger検知用
 # @within function
 #   asset_manager:sacred_treasure/triggers/**
-#   lib:damage/core/trigger_on_**
+#   api:damage/core/trigger_on_**
 #   core:handler/**
     #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
@@ -62,5 +62,8 @@
     #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
 
 #> クールダウン表示用
-# @within function asset_manager:sacred_treasure/cooldown/main_bar/*
+# @within function asset_manager:sacred_treasure/cooldown/**
     #declare score_holder $Cooldown
+    #declare score_holder $Value
+    #declare score_holder $NormalizedValue
+    #declare score_holder $Max

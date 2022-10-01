@@ -17,4 +17,4 @@
 
 # 演出
     particle end_rod ~ ~1 ~ 0 1 0 0.2 10
-    playsound minecraft:block.note_block.chime master @s ~ ~ ~ 1 1.6
+    playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1.6

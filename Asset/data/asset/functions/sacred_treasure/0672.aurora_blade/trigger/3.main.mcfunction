@@ -16,8 +16,8 @@
 
 # 演出
     execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/trigger/4.sweeping_particle
-    playsound entity.player.attack.sweep master @a ~ ~ ~ 0.4 1 0
-    playsound entity.evoker.prepare_summon master @a ~ ~ ~ 0.8 2 0
+    playsound entity.player.attack.sweep player @a ~ ~ ~ 0.4 1 0
+    playsound entity.evoker.prepare_summon player @a ~ ~ ~ 0.8 2 0
 
 # ダメージ
     #ダメージブレのための処理

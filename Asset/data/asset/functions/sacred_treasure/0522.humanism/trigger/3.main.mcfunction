@@ -14,7 +14,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound block.enchantment_table.use master @a ~ ~ ~ 1 0 1
+    playsound block.enchantment_table.use player @a ~ ~ ~ 1 0 1
     particle flash ~ ~ ~ 1 1 1 1 100
 
 # HP回復処理

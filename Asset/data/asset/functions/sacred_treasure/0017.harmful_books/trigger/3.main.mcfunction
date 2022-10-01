@@ -11,4 +11,4 @@
 
 execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run function asset:sacred_treasure/0017.harmful_books/trigger/3.1.add_effect
 
-playsound minecraft:entity.witch.ambient master @a[distance=..10] ~ ~ ~ 1 1.2
+playsound minecraft:entity.witch.ambient player @a[distance=..10] ~ ~ ~ 1 1.2

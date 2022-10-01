@@ -11,7 +11,7 @@
     tag @s add AE.Check
 # 演出
     particle dust 1 1 0 1 ~ ~ ~ 0.1 0 0.1 0 5
-    playsound minecraft:entity.arrow.hit_player master @a ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @a ~ ~ ~ 1 1
 
 # ダメージ
     # 与えるダメージ = 7
