@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/gun_summon
+#> asset:sacred_treasure/0999.sextaple_ultima/trigger/gun_summon
 #
 #
 #
-# @within function asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/trigger/3.main
+# @within function asset:sacred_treasure/0999.sextaple_ultima/trigger/3.main
 
 # 召喚
     data modify storage api: Argument.ID set value 302

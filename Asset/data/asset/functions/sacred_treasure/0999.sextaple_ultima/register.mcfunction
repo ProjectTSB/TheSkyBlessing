@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0999.gun_gun_gun_gun_gun_gun/register
+#> asset:sacred_treasure/0999.sextaple_ultima/register
 #
 # 神器プールへの登録処理
 #
