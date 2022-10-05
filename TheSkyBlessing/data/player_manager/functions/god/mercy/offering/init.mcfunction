@@ -21,7 +21,7 @@
     data modify storage player_manager:god OfferingData.Rumor.Items set value []
     data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:oak_log"},Amount:[30,60],Name:'{"translate":"block.minecraft.oak_log"}'}
     data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:bread"},Amount:[15,25],Name:'{"translate":"item.minecraft.bread"}'}
-    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:string"},Amount:[10,20],Name:'{"translate":"block.minecraft.string"}'}
+    data modify storage player_manager:god OfferingData.Rumor.Items append value {Item:{id:"minecraft:string"},Amount:[10,20],Name:'{"translate":"item.minecraft.string"}'}
 # ウルバン
     data modify storage player_manager:god OfferingData.Urban.GodName set value "ウルバン"
     data modify storage player_manager:god OfferingData.Urban.Items set value []
