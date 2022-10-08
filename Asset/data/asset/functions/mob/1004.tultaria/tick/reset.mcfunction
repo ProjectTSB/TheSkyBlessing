@@ -26,21 +26,29 @@
     tag @s remove RW.SkillMelee
     tag @s remove RW.SkillMeteor
     tag @s remove RW.SkillCoordinate
-    tag @s remove RW.SkillOffCoordinate
     tag @s remove RW.SkillBall
     tag @s remove RW.SkillStarfury
     tag @s remove RW.SkillSummon
     tag @s remove RW.SkillLaser
+    tag @s remove RW.MiniSkillChase
+    tag @s remove RW.MiniSkillBulletHell
+    tag @s remove RW.MiniSkillShot
 
     tag @s remove RW.InAction
 
+# チェイス停止
+    kill @e[tag=RW.ChaseMarker]
+    tag @s remove RW.ChaseShot
+
 # スコアを戻す
     scoreboard players set @s RW.Tick 0
-    scoreboard players set @s RW.SlashAgain 0
+    scoreboard players set @s RW.LoopCount 0
     scoreboard players reset @s RW.FakeInertia
 
 # 速度設定
-    scoreboard players set @s RW.Speed 10
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 8
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 12
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 14
 
 # 剣を消す
     tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death

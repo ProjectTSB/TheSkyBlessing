@@ -15,7 +15,7 @@
 # 弾攻撃
     execute if entity @s[tag=RW.SkillBall] run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/1.tick
 # 流星
-    execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.starfury_attack
+    execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.tick
 # 召喚
     execute if entity @s[tag=RW.SkillSummon] run function asset:mob/1004.tultaria/tick/skill/7.star_summon/1.star_summon
 # ショット
@@ -26,3 +26,6 @@
 
 # 行動選択前スキル: 弾幕
     execute if entity @s[tag=RW.MiniSkillBulletHell] run function asset:mob/1004.tultaria/tick/skill/phase3/4.mini_bullet_hell/1.tick
+
+# 行動選択前スキル: 拡散ショット
+    execute if entity @s[tag=RW.MiniSkillShot] run function asset:mob/1004.tultaria/tick/skill/phase3/5.n-way_shot/1.tick
