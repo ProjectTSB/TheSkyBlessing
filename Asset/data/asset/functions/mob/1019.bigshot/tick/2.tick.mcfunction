@@ -11,7 +11,7 @@
     function asset:mob/1019.bigshot/tick/3.move
 
 # プレイヤーの衝突判定
-    #execute positioned ~-0.5 ~0.0 ~-0.5 if entity @p[dx=0] run function asset:mob/1017.phase2_bullethell_shot/tick/5.hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @a[dx=0] run function asset:mob/1019.bigshot/tick/5.hit
 
 # 時間で消える
     execute if score @s SB.Tick matches 40.. run kill @s
