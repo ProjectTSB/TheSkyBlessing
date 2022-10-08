@@ -4,17 +4,9 @@
 #
 # @within function asset:mob/1013.tultaria_shot/summon/2.summon
 
-#> SpreadLib
+#> ショットの行き先指定用マーカー
 # @private
-#declare tag SpreadMarker
-
-# スコア
-    scoreboard players set @s S5.Range 80
-    scoreboard players set @s S5.Speed 5
-
-# ステータス設定
-    data modify storage lib: Argument.Distance set value 5
-    data modify storage lib: Argument.Spread set value 1
+#declare tag FacingMarker
 
 # マーカーの方向く
-    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes run tp @s ~ ~ ~ ~ ~
+    execute facing entity @e[type=marker,tag=FacingMarker,limit=1] eyes run tp @s ~ ~ ~ ~ ~

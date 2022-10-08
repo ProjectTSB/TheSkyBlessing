@@ -1,8 +1,9 @@
-#> asset:mob/1013.tultaria_shot/tick/event/hit
+#> asset:mob/1013.tultaria_shot/tick/5.hit
 #
 #
 #
-# @within function asset:mob/1013.tultaria_shot/tick/3.move
+# @within function asset:mob/1013.tultaria_shot/tick/2.tick
+
 
 # 引数の設定
     # 与えるダメージ
