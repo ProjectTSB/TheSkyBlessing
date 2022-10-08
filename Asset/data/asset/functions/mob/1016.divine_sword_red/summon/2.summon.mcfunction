@@ -14,7 +14,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"ディヴァインソード","color":"#a33033","italic":false}'
+    data modify storage asset:mob Name set value '{"text":"ディバインソード","color":"#a33033","italic":false}'
 
 # MobInitタグ持ちを対象にして独自Init
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/1016.divine_sword_red/summon/3.init
