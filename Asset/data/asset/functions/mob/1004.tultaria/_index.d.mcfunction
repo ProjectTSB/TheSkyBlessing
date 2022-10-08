@@ -31,6 +31,8 @@
     #
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit
+    #declare tag RW.TargetMarker
+    #declare tag RW.TargetMarkerInit
     #
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per
@@ -50,8 +52,9 @@
     #declare tag RW.SkillDeadly2
     #
     #declare tag RW.MiniSkillChase
-    #declare tag RW.MiniSkillSummon
+    #declare tag RW.MiniSkillShot
     #declare tag RW.MiniSkillBulletHell
+    #declare tag RW.MiniSkillDash
     #declare tag RW.MiniSkillUsed
     #
     #declare tag RW.MeteorMaker
