@@ -9,6 +9,7 @@
 #> SpreadLib
 # @private
 #declare tag SpreadMarker
+#declare score_holder $AttackAmount
 
 # 拡散用marker召喚
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}

@@ -12,7 +12,8 @@
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 3 1.0
 
 # 攻撃の量を指定
-    scoreboard players set $AttackAmount Temporary 5
+    execute if entity @s[scores={RW.Phase=1}] run scoreboard players set $AttackAmount Temporary 4
+    execute if entity @s[scores={RW.Phase=2..}] run scoreboard players set $AttackAmount Temporary 5
 
 # 召喚
     function asset:mob/1004.tultaria/tick/skill/2.meteor_attack/5.summon

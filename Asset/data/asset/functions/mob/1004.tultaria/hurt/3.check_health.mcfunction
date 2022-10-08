@@ -21,6 +21,7 @@
     execute if score $HealthPercent Temporary matches ..75 run tag @s[scores={RW.Phase=1}] add RW.HPless75per
 # HP50%以下
     execute if score $HealthPercent Temporary matches ..50 run scoreboard players set @s[scores={RW.Phase=2}] RW.Tick 0
+    execute if score $HealthPercent Temporary matches ..50 run tag @s remove RW.HPless50per
     execute if score $HealthPercent Temporary matches ..50 run tag @s[scores={RW.Phase=2}] add RW.HPless50per
 # HP40%以下
     execute if score $HealthPercent Temporary matches ..40 run tag @s add RW.HPless40per
