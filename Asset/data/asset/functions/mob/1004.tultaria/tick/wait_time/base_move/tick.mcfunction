@@ -7,8 +7,8 @@
 # こっち向く
     execute if entity @s[tag=!RW.InAction] unless entity @s[scores={RW.FakeInertia=0..}] facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
-# プレイヤーが周囲にいたらスキル選択(フェイズ2)
-    execute if score @s[tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
+# プレイヤーが周囲にいたらスキル選択
+    execute if score @s[tag=!RW.InAction,scores={RW.Phase=1..2}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
 
 # ミニスキル使った後に技発動(フェイズ3)
     execute if score @s[tag=RW.MiniSkillUsed,tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/3.skill_select
@@ -20,7 +20,7 @@
     execute if score @s[tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 10..15 run function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
 
 # フェイズ3以降、行動選択前にランダムな行動してくる
-    execute if score @s[tag=!RW.MiniSkillUsed,tag=!RW.InAction,scores={RW.Phase=3..}] RW.Tick matches 20 run function asset:mob/1004.tultaria/tick/skill/phase3/1.select
+    execute if score @s[tag=!RW.MiniSkillUsed,tag=!RW.InAction,scores={RW.Phase=3..}] RW.Tick matches 20.. run function asset:mob/1004.tultaria/tick/skill/phase3/1.select
 
 # 選択したスキル発動
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active
