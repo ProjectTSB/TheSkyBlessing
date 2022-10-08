@@ -14,10 +14,10 @@
     execute if score @s RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/3.dash
 
 # フェイズ3、ダッシュ直後に氷属性誘導弾
-    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 11 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/shottest
-    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 12 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/shottest
-    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 13 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/shottest
-    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 14 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/shottest
+    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 11 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/ice_shot
+    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 12 positioned ^-2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/ice_shot
+    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 13 positioned ^2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/ice_shot
+    execute if score @s[scores={RW.Phase=3,RW.LoopCount=0}] RW.Tick matches 14 positioned ^-2 ^ ^ run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/ice_shot
 
 # フェイズ3、振り抜き後に雷
     execute if score @s[scores={RW.Phase=3,RW.LoopCount=1}] RW.Tick matches 25 rotated ~ 0 positioned ^2 ^ ^2 run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/thunder
