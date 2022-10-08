@@ -15,7 +15,6 @@
 # 元のポーズに戻って少し待つ
     execute if score @s RW.Tick matches 35 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/2.wait_pose
 
-
 # 剣を突き立てる
     data modify storage api: Argument.ID set value 1015
     execute if score @s RW.Tick matches 61 rotated 0 0 positioned ^ ^5 ^10 run function api:mob/summon
