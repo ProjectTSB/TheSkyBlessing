@@ -17,7 +17,7 @@
     particle dust 0.8 1000000000 1000000000 1 ~ ~ ~ 0.3 0.3 0.3 1 5 normal @a
 
 # ダメージ
-    execute if entity @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/1009.ancient_light/tick/3.break
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @a[dx=0] run function asset:mob/1009.ancient_light/tick/3.break
 
 # 炸裂
     execute if score @s S1.Tick matches 60.. run function asset:mob/1009.ancient_light/tick/3.break

@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/1009.ancient_light/tick/2.tick
 
-
 # 演出
     playsound minecraft:block.glass.break neutral @a ~ ~ ~ 1.5 0.9
     playsound item.trident.riptide_3 neutral @a ~ ~ ~ 1.5 2
@@ -20,7 +19,7 @@
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+        execute as @a[tag=!PlayerShouldInvulnerable,dx=0] run function lib:damage/
 # リセット
     function lib:damage/reset
 
