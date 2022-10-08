@@ -2,7 +2,7 @@
 #
 # スターフューリーのタグを消すことで動作させる（付与でもいいだろ）
 #
-# @within function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.starfury_attack
+# @within function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.tick
 
 # プレイヤーの向きを向かせる
     tp @s ~ ~ ~ facing entity @p[distance=..100]

@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.starfury_attack
+# @within function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.tick
 
 # マーカー召喚
     summon marker ~ ~ ~ {Tags:["Object","RW.This"]}
