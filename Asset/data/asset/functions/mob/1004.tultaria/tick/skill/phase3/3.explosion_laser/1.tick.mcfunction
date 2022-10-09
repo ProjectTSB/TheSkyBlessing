@@ -27,10 +27,10 @@
     execute if score @s RW.Tick matches 30..70 run function asset:mob/1004.tultaria/tick/skill/phase3/3.explosion_laser/4.shoot
 
 # デバッグ用、技ループ
-    execute if score @s RW.Tick matches 100.. run scoreboard players set @s RW.Tick -10
+    #execute if score @s RW.Tick matches 100.. run scoreboard players set @s RW.Tick -10
 
 # 小技出しましたのタグを付与
-    #execute if score @s RW.Tick matches 100 run tag @s add RW.MiniSkillUsed
+    execute if score @s RW.Tick matches 100 run tag @s add RW.MiniSkillUsed
 
 # リセット
-    #execute if score @s RW.Tick matches 100 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 100 run function asset:mob/1004.tultaria/tick/reset
