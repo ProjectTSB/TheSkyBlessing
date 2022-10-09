@@ -41,3 +41,4 @@
     execute if entity @s[tag=FindFlag15.1] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 15-1
 # リセット
     tag @s remove TargetAttacker
+    tag @s remove AttckerFromLibrary
