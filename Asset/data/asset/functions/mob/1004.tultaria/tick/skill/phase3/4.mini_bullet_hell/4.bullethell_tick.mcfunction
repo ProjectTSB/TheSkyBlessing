@@ -8,6 +8,7 @@
 # @private
 #declare tag SpreadMarker
 #declare score_holder $Random
+#declare score_holder $ShotInterval
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
@@ -38,3 +39,4 @@
 
 # リセット
     scoreboard players reset $Random Temporary
+    scoreboard players reset $ShotInterval Temporary
