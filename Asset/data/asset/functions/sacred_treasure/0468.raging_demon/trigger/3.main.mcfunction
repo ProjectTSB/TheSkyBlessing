@@ -13,7 +13,6 @@
     data modify storage lib: Argument.Damage set value 30f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.FixedDamage set value true
-    data modify storage lib: Argument.FixedDamage set value true
     function lib:damage/modifier
     execute as @e[tag=D0.Target] run function lib:damage/
 
