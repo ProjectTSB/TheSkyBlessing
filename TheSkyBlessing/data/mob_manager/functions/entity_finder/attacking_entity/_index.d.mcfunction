@@ -18,4 +18,4 @@
 # @within function
 #   mob_manager:entity_finder/attacking_entity/on_hurt
 #   api:damage/core/trigger_on_damage/as_attacker
-    #declare tag AttckerFromLibrary
+    #declare tag AttackerFromLibrary

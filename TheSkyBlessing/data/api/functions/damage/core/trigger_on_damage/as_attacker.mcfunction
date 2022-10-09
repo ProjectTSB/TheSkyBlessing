@@ -5,7 +5,7 @@
 # @within function api:damage/core/trigger_on_damage/
 
 # 特定用タグ
-    tag @s add AttckerFromLibrary
+    tag @s add AttackerFromLibrary
 # トリガー
     execute if entity @s[tag=FindFlag0.0] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 0-0
     execute if entity @s[tag=FindFlag0.1] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 0-1
@@ -41,4 +41,4 @@
     execute if entity @s[tag=FindFlag15.1] run advancement grant @a[tag=TargetAttacker] only mob_manager:entity_finder/check_attacking_entity 15-1
 # リセット
     tag @s remove TargetAttacker
-    tag @s remove AttckerFromLibrary
+    tag @s remove AttackerFromLibrary
