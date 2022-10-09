@@ -29,3 +29,6 @@
 
 # 行動選択前スキル: 拡散ショット
     execute if entity @s[tag=RW.MiniSkillShot] run function asset:mob/1004.tultaria/tick/skill/phase3/5.n-way_shot/1.tick
+
+# 行動選択前スキル: 拡散ショット
+    execute if entity @s[tag=RW.MiniSkillLaser] run function asset:mob/1004.tultaria/tick/skill/phase3/3.explosion_laser/1.tick

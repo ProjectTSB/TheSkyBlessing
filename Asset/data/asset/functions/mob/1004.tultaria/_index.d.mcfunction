@@ -54,7 +54,7 @@
     #declare tag RW.MiniSkillChase
     #declare tag RW.MiniSkillShot
     #declare tag RW.MiniSkillBulletHell
-    #declare tag RW.MiniSkillDash
+    #declare tag RW.MiniSkillLaser
     #declare tag RW.MiniSkillUsed
     #
     #declare tag RW.MeteorMaker
@@ -65,3 +65,6 @@
     #
     #declare tag RW.DeathAnimation
     #declare tag RW.DeathInit
+    #
+    #declare tag Landing
+    #declare tag LandingTarget
