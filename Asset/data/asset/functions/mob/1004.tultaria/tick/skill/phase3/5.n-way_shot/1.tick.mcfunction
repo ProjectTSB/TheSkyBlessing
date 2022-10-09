@@ -25,5 +25,8 @@
 # デバッグ用、技をループする
     #execute if score @s RW.Tick matches 70 run scoreboard players set @s RW.Tick -10
 
+# 小技出しましたのタグを付与
+    execute if score @s RW.Tick matches 60 run tag @s add RW.MiniSkillUsed
+    
 # リセット
     execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/reset
