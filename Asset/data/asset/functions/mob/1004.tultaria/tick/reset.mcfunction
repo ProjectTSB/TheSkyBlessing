@@ -33,6 +33,8 @@
     tag @s remove RW.MiniSkillChase
     tag @s remove RW.MiniSkillBulletHell
     tag @s remove RW.MiniSkillShot
+    tag @s remove RW.MiniSkillLaser
+
 
     tag @s remove RW.InAction
 
