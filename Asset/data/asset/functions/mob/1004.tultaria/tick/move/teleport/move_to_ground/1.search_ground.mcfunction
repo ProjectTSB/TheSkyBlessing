@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/1004.tultaria/tick/**
 
-# パーティクル
-    particle minecraft:end_rod ~ ~ ~ 0 0 0 0 0
-
 # 下にずらして再帰
     execute if entity @s[distance=..16] if block ~ ~ ~ #lib:no_collision positioned ~ ~-1 ~ run function asset:mob/1004.tultaria/tick/move/teleport/move_to_ground/1.search_ground
 
