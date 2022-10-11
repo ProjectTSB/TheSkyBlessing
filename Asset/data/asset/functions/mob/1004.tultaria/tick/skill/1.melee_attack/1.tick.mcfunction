@@ -53,5 +53,5 @@
     execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 50 run scoreboard players set @s[scores={RW.LoopCount=..2}] RW.Tick -3
 
 # リセット
-    execute if score @s[scores={RW.Phase=1}] RW.Tick matches 50.. run function asset:mob/1004.tultaria/tick/reset
-    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 60.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=1}] RW.Tick matches 60.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 80.. run function asset:mob/1004.tultaria/tick/reset
