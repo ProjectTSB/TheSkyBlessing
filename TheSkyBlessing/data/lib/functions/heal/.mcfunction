@@ -6,7 +6,7 @@
 #
 # @deprecated change to `api:heal/`
 # @input
-#   as player
+#   as living entity
 #   storage lib: Argument.Heal : float
 #   storage lib: Argument.FixedHeal? : boolean(default: false)
 # @api

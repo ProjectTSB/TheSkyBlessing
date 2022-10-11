@@ -5,7 +5,7 @@
 # 実行者はHealthを持つEntityである必要があります。
 #
 # @input
-#   as player
+#   as living entity
 #   storage api: Argument.Heal : float
 #   storage api: Argument.FixedHeal? : boolean(default: false)
 # @api
