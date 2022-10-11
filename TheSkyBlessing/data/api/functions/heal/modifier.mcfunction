@@ -4,8 +4,8 @@
 #
 # @input
 #   as entity
-#   storage lib: Argument.Heal : float
-# @output storage lib: Argument.Heal : float
+#   storage api: Argument.Heal : float
+# @output storage api: Argument.Heal : float
 # @api
 
 # 補正

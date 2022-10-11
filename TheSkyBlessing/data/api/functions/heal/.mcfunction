@@ -6,12 +6,12 @@
 #
 # @input
 #   as player
-#   storage lib: Argument.Heal : float
-#   storage lib: Argument.FixedHeal? : boolean(default: false)
+#   storage api: Argument.Heal : float
+#   storage api: Argument.FixedHeal? : boolean(default: false)
 # @api
 
 # 引数チェック
-    execute unless data storage lib: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red"}]
+    execute unless data storage api: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red"}]
 # プレイヤー
     execute if entity @s[type=player] run function api:heal/core/player
 # non-プレイヤー

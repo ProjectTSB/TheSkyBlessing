@@ -4,5 +4,5 @@
 #
 # @api
 
-data remove storage lib: Argument.Heal
-data remove storage lib: Argument.FixedHeal
+data remove storage api: Argument.Heal
+data remove storage api: Argument.FixedHeal
