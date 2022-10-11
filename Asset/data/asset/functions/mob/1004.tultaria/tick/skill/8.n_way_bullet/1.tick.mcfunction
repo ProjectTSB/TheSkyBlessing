@@ -4,25 +4,41 @@
 #
 # @within function asset:mob/1004.tultaria/tick/4.skill_active
 
+# 移動する
+    execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.move_to_ground
+
 # 構える
-    execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.windup
+    execute if score @s RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.windup
+    # 角度変えつつショット召喚
+        execute if score @s RW.Tick matches 21 positioned ~ ~1.5 ~ rotated ~40 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 22 positioned ~ ~1.5 ~ rotated ~30 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 23 positioned ~ ~1.5 ~ rotated ~20 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 24 positioned ~ ~1.5 ~ rotated ~10 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 25 positioned ~ ~1.5 ~ rotated ~0 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 26 positioned ~ ~1.5 ~ rotated ~-10 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 27 positioned ~ ~1.5 ~ rotated ~-20 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 28 positioned ~ ~1.5 ~ rotated ~-30 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s RW.Tick matches 29 positioned ~ ~1.5 ~ rotated ~-40 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        # 放つ
+            execute if score @s RW.Tick matches 30 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/4.shoot
 
-# 角度変えつつショット召喚
-    execute if score @s RW.Tick matches 1 positioned ~ ~1.5 ~ rotated ~40 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 2 positioned ~ ~1.5 ~ rotated ~30 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 3 positioned ~ ~1.5 ~ rotated ~20 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 4 positioned ~ ~1.5 ~ rotated ~10 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 5 positioned ~ ~1.5 ~ rotated ~0 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 6 positioned ~ ~1.5 ~ rotated ~-10 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 7 positioned ~ ~1.5 ~ rotated ~-20 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 8 positioned ~ ~1.5 ~ rotated ~-30 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-    execute if score @s RW.Tick matches 9 positioned ~ ~1.5 ~ rotated ~-40 ~ run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
-
-# 放つ
-    execute if score @s RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/4.shoot
+# 構える
+    execute if score @s RW.Tick matches 40 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.windup
+    # 角度変えつつショット召喚(フェイズ2)
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 51 positioned ~ ~1.5 ~ rotated ~-35 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 52 positioned ~ ~1.5 ~ rotated ~-25 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 53 positioned ~ ~1.5 ~ rotated ~-15 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 54 positioned ~ ~1.5 ~ rotated ~-5 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 55 positioned ~ ~1.5 ~ rotated ~5 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 56 positioned ~ ~1.5 ~ rotated ~15 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 57 positioned ~ ~1.5 ~ rotated ~25 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        execute if score @s[scores={RW.Phase=1..}] RW.Tick matches 58 positioned ~ ~1.5 ~ rotated ~35 5 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/3.summon_shot
+        # 放つ
+            execute if score @s RW.Tick matches 59 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/4.shoot
 
 # デバッグ用、技をループする
     #execute if score @s RW.Tick matches 50 run scoreboard players set @s RW.Tick -10
 
 # リセット
-    execute if score @s RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=1}] RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=2}] RW.Tick matches 70 run function asset:mob/1004.tultaria/tick/reset

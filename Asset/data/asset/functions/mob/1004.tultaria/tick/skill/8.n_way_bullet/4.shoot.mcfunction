@@ -2,7 +2,9 @@
 #
 # 拡散弾を撃つ
 #
-# @within function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
+# @within function
+#   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
+#   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick_phase3
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]

@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
+# @within function
+#   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
+#   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick_phase3
 
 #> ショットの行き先指定用マーカー
 # @private
