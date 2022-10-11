@@ -6,7 +6,7 @@
 #
 # @input
 #   as entity
-#   storage lib:
+#   storage api:
 #       Argument.Damage : float
 #       Argument.AttackType : Enum
 #       Argument.ElementType? : Enum
@@ -21,19 +21,19 @@
 # @api
 
 # 引数チェック
-    execute unless data storage lib: Argument.Damage run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Damage","color":"red"}]
-    execute unless data storage lib: Argument.AttackType run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackType","color":"red"}]
-    execute unless data storage lib: Argument.ElementType run data modify storage lib: Argument.ElementType set value "None"
-    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassModifier set value true
-    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassArmorDefense set value true
-    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassToughness set value true
-    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassEnchantments set value true
-    execute if data storage lib: Argument{FixedDamage:true} run data modify storage lib: Argument.BypassResistance set value true
-    execute unless data storage lib: Argument.BypassModifier run data modify storage lib: Argument.BypassModifier set value false
-    execute unless data storage lib: Argument.BypassArmorDefense run data modify storage lib: Argument.BypassArmorDefense set value false
-    execute unless data storage lib: Argument.BypassToughness run data modify storage lib: Argument.BypassToughness set value false
-    execute unless data storage lib: Argument.BypassEnchantments run data modify storage lib: Argument.BypassEnchantments set value false
-    execute unless data storage lib: Argument.BypassResistance run data modify storage lib: Argument.BypassResistance set value false
+    execute unless data storage api: Argument.Damage run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Damage","color":"red"}]
+    execute unless data storage api: Argument.AttackType run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackType","color":"red"}]
+    execute unless data storage api: Argument.ElementType run data modify storage api: Argument.ElementType set value "None"
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassModifier set value true
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassArmorDefense set value true
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassToughness set value true
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassEnchantments set value true
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassResistance set value true
+    execute unless data storage api: Argument.BypassModifier run data modify storage api: Argument.BypassModifier set value false
+    execute unless data storage api: Argument.BypassArmorDefense run data modify storage api: Argument.BypassArmorDefense set value false
+    execute unless data storage api: Argument.BypassToughness run data modify storage api: Argument.BypassToughness set value false
+    execute unless data storage api: Argument.BypassEnchantments run data modify storage api: Argument.BypassEnchantments set value false
+    execute unless data storage api: Argument.BypassResistance run data modify storage api: Argument.BypassResistance set value false
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
     execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
