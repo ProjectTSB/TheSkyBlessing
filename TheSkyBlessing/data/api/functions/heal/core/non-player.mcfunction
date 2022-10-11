@@ -1,8 +1,8 @@
-#> lib:heal/core/non-player
+#> api:heal/core/non-player
 #
 # プレイヤー以外に対する処理
 #
-# @within function lib:heal/
+# @within function api:heal/
 
 #> Private
 # @private

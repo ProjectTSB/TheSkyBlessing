@@ -1,8 +1,8 @@
-#> lib:heal/core/modifier
+#> api:heal/core/modifier
 #
 # 回復量に補正をかける
 #
-# @within function lib:heal/modifier
+# @within function api:heal/modifier
 
 #> Temp
 # @private
