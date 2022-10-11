@@ -26,12 +26,16 @@
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active
 
 # モデルの向き
-    # 頭
+    # 頭がプレイヤーの方を向く
         execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    # リミット
+        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p feet if entity @s[x_rotation=34..90] run tp @s ~ ~ ~ ~ 35
+        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p feet if entity @s[x_rotation=-90..-24] run tp @s ~ ~ ~ ~ -25
+    # 頭のモデルのデータに移す
         execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,distance=..2] store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
 
     # 体
-        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~-45 ~
+        execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~-35 ~
 
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
