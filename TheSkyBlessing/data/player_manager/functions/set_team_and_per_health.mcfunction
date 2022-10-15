@@ -1,4 +1,4 @@
-#> player_manager:set_team
+#> player_manager:set_team_and_per_health
 #
 #
 #
@@ -35,6 +35,12 @@
     execute if score $Health Temporary matches 00..34 if entity @s[tag=Believe.Rumor] run team join Rumor.LowHP
     execute if score $Health Temporary matches 35..79 if entity @s[tag=Believe.Rumor] run team join Rumor.MedHP
     execute if score $Health Temporary matches 80.. if entity @s[tag=Believe.Rumor] run team join Rumor.HighHP
+
+# 割合を20分率にする
+    scoreboard players operation $Health Temporary /= $20 Const
+# 割合を割合体力表示用スコアに代入
+    scoreboard players operation @s PerHealth = $Health Temporary
+
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary

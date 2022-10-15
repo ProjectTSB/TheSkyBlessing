@@ -228,7 +228,7 @@ team modify NoCollision collisionRule never
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
-    #   player_manager:set_team
+    #   player_manager:set_team_and_per_health
         team add None.LowHP
         team add None.MedHP
         team add None.HighHP
@@ -291,11 +291,14 @@ team modify NoCollision collisionRule never
     #   * api:**
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
+        scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+    scoreboard objectives modify PerHealth rendertype hearts
+    scoreboard objectives setdisplay list PerHealth
 
     #> 最大値用スコアホルダー
     # @within function
