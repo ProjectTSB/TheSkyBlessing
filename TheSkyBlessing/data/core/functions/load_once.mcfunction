@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.2"
+data modify storage global GameVersion set value "v0.1.5"
 
 #> forceload chunksの設定
 # Origin
@@ -18,7 +18,19 @@ data modify storage global GameVersion set value "v0.1.2"
     execute in the_end run forceload add 10000 10000
 # Item Return Point
     execute in overworld run forceload add 2927 -1273
-
+# テレポート先
+    # 神殿出口
+        execute in overworld run forceload add 62 -12
+    # 神殿入り口
+        execute in overworld run forceload add 3040 -544 3103 -481
+    # Item Return Point
+        execute in overworld run forceload add 2922 -1333 2934 -1313
+    # 神殿
+        execute in overworld run forceload add 2976 -144 3007 -129
+        execute in overworld run forceload add 3448 -472
+        execute in overworld run forceload add 2915 -862
+        execute in overworld run forceload add 3056 -896 3087 -881
+        execute in overworld run forceload add 3411 -630
 
 #> gameruleの設定
 function core:define_gamerule
@@ -48,6 +60,12 @@ data modify storage global Prefix.SUCCESS set value "§aSUCCESS >> §r"
 data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
+
+data modify storage global GodIcon.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Nyaptov set value '{"text":"\\uE012","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
+data modify storage global GodIcon.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
 
 
 #> リセット必須オブジェクト等の削除
@@ -186,7 +204,9 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
-    #   function player_manager:pos_diff
+    #   function
+    #       player_manager:pos_diff
+    #       api:player_vector/get
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerPosDiff.X dummy
         scoreboard objectives add PlayerPosDiff.Y dummy
@@ -208,7 +228,7 @@ team modify NoCollision collisionRule never
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
-    #   player_manager:set_team
+    #   player_manager:set_team_and_per_health
         team add None.LowHP
         team add None.MedHP
         team add None.HighHP
@@ -268,14 +288,17 @@ team modify NoCollision collisionRule never
     # @within
     #   function core:handler/first_join
     #   function core:load_once
-    #   * lib:**
+    #   * api:**
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
+        scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+    scoreboard objectives modify PerHealth rendertype hearts
+    scoreboard objectives setdisplay list PerHealth
 
     #> 最大値用スコアホルダー
     # @within function
@@ -291,6 +314,14 @@ team modify NoCollision collisionRule never
     scoreboard players set $MaxMP Global 100
     scoreboard players set $AttackBonus Global 0
     scoreboard players set $DefenseBonus Global 0
+
+    #> WorldManager用スコアボード - ChunkLoadProtect
+    # @within
+    #   function
+    #       core:tick/player/pre
+    #       world_manager:chunk_io_protect/*
+    #   predicate api:is_completed_player_chunk_load_waiting_time
+        scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
 
     #> WorldManager用スコアボード - Area
     # @within function
@@ -344,8 +375,3 @@ team modify NoCollision collisionRule never
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
-
-
-#> Scheduleループの初期化(replace)
-    schedule function core:tick/4_interval 4t
-    schedule function core:tick/6_distributed_interval 6t

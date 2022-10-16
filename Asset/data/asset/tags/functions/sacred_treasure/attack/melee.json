@@ -1,5 +1,11 @@
 {
     "values": [
+        "asset:sacred_treasure/1016.sharpened_netherite_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1015.sharpened_diamond_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1014.sharpened_golden_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1013.sharpened_iron_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1012.sharpened_stone_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1011.sharpened_wooden_sword/trigger/1.trigger",
         "asset:sacred_treasure/0729.bloody_pride/trigger/1.trigger",
         "asset:sacred_treasure/0959.whirlwind_scabbard/trigger/1.trigger",
         "asset:sacred_treasure/0927.lexiel_s_oath/trigger/1.trigger",
@@ -39,7 +45,7 @@
         "asset:sacred_treasure/0605.ambition/trigger/1.trigger",
         "asset:sacred_treasure/0735.collision_plate/trigger/1.trigger",
         "asset:sacred_treasure/0643.raimei_chestplate/trigger/1.1.attacktrigger",
-        "asset:sacred_treasure/0733.persantage_sword/trigger/1.trigger",
+        "asset:sacred_treasure/0733.percentage_sword/trigger/1.trigger",
         "asset:sacred_treasure/0672.aurora_blade/trigger/1.trigger",
         "asset:sacred_treasure/0745.blade_of_whirlwind/trigger/1.trigger",
         "asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/melee_trigger"

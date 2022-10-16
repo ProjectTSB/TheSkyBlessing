@@ -14,7 +14,7 @@
     function api:player_modifier/defense/thunder/remove
 
 # 演出
-    playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 0.4 1.1 0
+    playsound minecraft:entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 1.1 0
 
 # Tag削除
     tag @s remove HL.Fullset

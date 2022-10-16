@@ -6,7 +6,7 @@
 
 # 演出
     particle minecraft:enchanted_hit ~ ~1 ~ 0.5 0.5 0.5 0.1 100 force
-    playsound block.bubble_column.upwards_inside master @a ~ ~ ~ 1.0 1.0
+    playsound block.bubble_column.upwards_inside player @a ~ ~ ~ 1.0 1.0
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 1029f

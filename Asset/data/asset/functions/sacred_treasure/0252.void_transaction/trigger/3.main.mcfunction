@@ -14,7 +14,7 @@
 
 # 使用中であれば追加演出
     execute if entity @s[scores={70.Timer=1..2400}] run tellraw @s [{"text":"［","color":"dark_purple","bold":true},{"text":"奈"},{"text":"落","obfuscated":true},{"text":"の主"},{"text":"］ "},{"text":"二","color":"dark_red","obfuscated":true},{"text":"重取引","color":"dark_red"},{"text":"とは何事だ","color":"dark_red"}]
-    execute if entity @s[scores={70.Timer=1..2400}] run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1.5
+    execute if entity @s[scores={70.Timer=1..2400}] run playsound minecraft:entity.lightning_bolt.thunder player @s ~ ~ ~ 1 1.5
 
 # 使用中でなければ初期設定
     execute unless entity @s[scores={70.Timer=1..2400}] run function asset:sacred_treasure/0252.void_transaction/trigger/3.1.initiation

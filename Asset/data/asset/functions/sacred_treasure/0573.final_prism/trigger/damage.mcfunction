@@ -8,7 +8,7 @@
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 防御貫通
-        #data modify storage lib: Argument.BypassResist set value true
+        #data modify storage lib: Argument.FixedDamage set value true
     # 属性が変わる
         execute if score $Random Temporary matches 0 run data modify storage lib: Argument.ElementType set value "None"
         execute if score $Random Temporary matches 1 run data modify storage lib: Argument.ElementType set value "Fire"

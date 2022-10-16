@@ -22,4 +22,4 @@
     effect give @s slow_falling 120 3 true
 
 # 追加演出
-    playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~
+    playsound minecraft:entity.elder_guardian.curse player @a ~ ~ ~

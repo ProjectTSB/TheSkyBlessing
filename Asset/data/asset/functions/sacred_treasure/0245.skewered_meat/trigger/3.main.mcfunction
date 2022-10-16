@@ -13,7 +13,7 @@
     data modify storage lib: Argument.Heal set value 30f
     function lib:heal/modifier
     function lib:heal/
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 演出
     tellraw @s {"text":"─── んまいっ！","bold":true}
