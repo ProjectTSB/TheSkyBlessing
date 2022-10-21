@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0022.red_knight/summon/1.trigger
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","M.Angel"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","M.Opening"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
 # ID (int)
     data modify storage asset:mob ID set value 22
 # Type (string) Wikiを参照
@@ -12,7 +12,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"赤い騎士","color":"dark_red"}'
+    data modify storage asset:mob Name set value '{"text":"真紅の騎士","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -22,7 +22,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019}}
+        #data modify storage asset:mob Armor.Head set value {id:"minecraft:stone",Count:1b,tag:{CustomModelData:20019}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -56,13 +56,12 @@
         data modify storage asset:mob Resist.Water set value 1
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 1
-
 # 見た目用のアマスタを召喚
-    summon armor_stand ~ ~ ~ {ShowArms:1b,Marker:1b,Invisible:1b,Tags:["M.ArmorStand","M.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,14f,0f],RightArm:[0f,346f,0f],LeftLeg:[10f,314f,0f],RightLeg:[22f,0f,342f],Head:[32f,0f,0f]},HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:364}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6356992}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6356992}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:6356992}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:{Id:[I;-104173839,-119059828,-1176408581,-1181112487],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJiNzIwZDFkODUzNjRhZThhNDZlZGFhNzQ5YTE1NGUyN2VhZWQ3YjE4N2U0MmMwZmU1ZGIwNmI3MGVlY2U5YiJ9fX0="}]}}}}]}
+    summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["M.ModelCore","M.ModelCoreTarget","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[35f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20270}}]},{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[0f,0f,-5f],RightArm:[-15f,0f,5f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20271}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20275}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20277}}]}]}
 # 位置をあわせる
-    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=M.ArmorStandThis,distance=..0.01] @s
+    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=M.ModelCoreTarget,distance=..0.01] @s
 # タグを消す
-    tag @e[type=armor_stand,tag=M.ArmorStandThis,distance=..0.01] remove M.ArmorStandThis
+    tag @e[type=armor_stand,tag=M.ModelCoreTarget,distance=..0.01] remove M.ModelCoreTarget
 # スコアを設定する
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] M.Tick -15
 
