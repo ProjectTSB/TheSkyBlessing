@@ -12,15 +12,20 @@
     #declare tag M.ArmorStandDeath
     #declare tag M.ArmorStandDeathSword
     #declare tag M.Angel
+    #
+    #declare tag M.SkillDash
     #declare tag M.SkillSword
     #declare tag M.SkillSlash
     #declare tag M.SkillBeam
     #declare tag M.SkillTpSlash
+    #
     #declare score_holder $Count
     #declare score_holder $Random
     #
     #declare tag M.Opening
     #
+    #declare tag M.FacingLock
+    #declare tag M.InAction
     #declare tag M.TeleportMarker
     #declare tag M.MarkerInit
     #declare tag M.Move
@@ -32,4 +37,6 @@
     #declare tag M.ModelBody
     #declare tag M.ModelChangeTarget
     #declare tag M.TickLock
+    #
+    #declare tag M.DeathAnimation
 
