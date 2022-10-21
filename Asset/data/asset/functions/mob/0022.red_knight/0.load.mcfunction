@@ -7,3 +7,6 @@
 #> 定義類はここに
 # @within function asset:mob/0022.red_knight/**
     scoreboard objectives add M.Tick dummy
+    scoreboard objectives add M.Phase dummy
+    scoreboard objectives add M.Speed dummy
+    scoreboard objectives add M.MoveTimesPerTick dummy
