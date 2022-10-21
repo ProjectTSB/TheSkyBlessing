@@ -10,8 +10,9 @@
 # フェイズ加算
     scoreboard players add @s M.Phase 1
 
-# 無敵解除
+# 無敵とNoAI解除
     data modify entity @s Invulnerable set value 0b
+    data modify entity @s NoAI set value 0b
 
 # スコアセット
     scoreboard players reset @s M.Tick

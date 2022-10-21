@@ -18,7 +18,7 @@
     execute if score @s M.Tick matches 55 as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/0022.red_knight/tick/wait_time/opening/change_pose_2
 
 # デバッグ用、この行動をループ
-    execute if score @s M.Tick matches 70.. run scoreboard players set @s M.Tick -40
+    #execute if score @s M.Tick matches 70.. run scoreboard players set @s M.Tick -40
 
 # 無敵解除、戦闘開始
-    #execute if score @s M.Tick matches 75 run function asset:mob/1004.tultaria/tick/wait_time/opening/battle_start
+    execute if score @s M.Tick matches 75 run function asset:mob/0022.red_knight/tick/wait_time/opening/battle_start
