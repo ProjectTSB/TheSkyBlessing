@@ -2,7 +2,10 @@
 #
 # スキル発動すれ
 #
-# @within function asset:mob/0022.red_knight/tick/2.tick
+# @within function asset:mob/0022.red_knight/tick/wait_time/base_move/tick
+
+# ダッシュ
+    execute if entity @s[tag=M.SkillDash] run function asset:mob/0022.red_knight/tick/skills/0.dash/1.tick
 
 # 剣スキル
     execute if entity @s[tag=M.SkillSword] run function asset:mob/0022.red_knight/tick/skill_sword/1.skill_sword
