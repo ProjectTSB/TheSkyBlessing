@@ -16,5 +16,5 @@
 
 # 演出
     playsound minecraft:block.grindstone.use hostile @a ~ ~ ~ 1 1.5
-    playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1 2
+    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 2
     particle minecraft:crit ~ ~1 ~ 0 0 0 0.1 20 normal

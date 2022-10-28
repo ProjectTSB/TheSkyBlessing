@@ -14,10 +14,6 @@
     data modify entity @s Invulnerable set value 0b
     data modify entity @s NoAI set value 0b
 
-# スコアセット
-    scoreboard players reset @s M.Tick
-    #scoreboard players set @s M.LoopCount 0
-
 # 移動する
-    #scoreboard players set @s M.Speed 10
     function asset:mob/0022.red_knight/tick/reset
+    function asset:mob/0022.red_knight/tick/wait_time/base_move/ready_dash
