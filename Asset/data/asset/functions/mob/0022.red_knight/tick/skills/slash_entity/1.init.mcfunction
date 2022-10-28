@@ -1,4 +1,4 @@
-#> asset:mob/0022.red_knight/tick/skills/1.dash_slash/slash_entity/1.init
+#> asset:mob/0022.red_knight/tick/skills/slash_entity/1.init
 #
 #
 #

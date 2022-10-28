@@ -1,8 +1,8 @@
-#> asset:mob/0022.red_knight/tick/skills/1.dash_slash/slash_entity/3.main
+#> asset:mob/0022.red_knight/tick/skills/slash_entity/3.main
 #
 #
 #
-# @within function asset:mob/0022.red_knight/tick/skills/1.dash_slash/slash_entity/2.tick
+# @within function asset:mob/0022.red_knight/tick/skills/slash_entity/2.tick
 
 # スコア加算
     scoreboard players add @s M.Tick 1
