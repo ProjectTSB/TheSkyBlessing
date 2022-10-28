@@ -23,8 +23,7 @@
     # 向き
         execute as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] run tp @s ~ ~ ~ ~-25 0
 
-# 向き固定と慣性ON
-    tag @s add M.FacingLock
+# 慣性ON
     tag @s add M.ActiveInertia
 
 # 速度設定 流石に残像ムーブみたいな速度ではない

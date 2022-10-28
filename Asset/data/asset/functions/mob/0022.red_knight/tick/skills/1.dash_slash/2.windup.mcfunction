@@ -15,7 +15,6 @@
     # 向き
         execute as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5] run tp @s ~ ~ ~ ~25 ~
 
-
 # 演出
     playsound minecraft:block.grindstone.use hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 2 2

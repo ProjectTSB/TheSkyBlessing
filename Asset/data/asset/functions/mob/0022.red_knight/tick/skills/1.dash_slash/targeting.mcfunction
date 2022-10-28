@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0022.red_knight/tick/skills/1.dash_slash/1.tick
 
+# 向き固定
+    tag @s add M.FacingLock
+
 # プレイヤーの周囲に大雑把にマーカー設置
     # 残ってたらヤなのでマーカーを消す
         kill @e[type=marker,tag=M.TeleportMarker,sort=nearest,limit=1]
