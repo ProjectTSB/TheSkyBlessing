@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.4"
+data modify storage global GameVersion set value "v0.1.5"
 
 #> forceload chunksの設定
 # Origin
@@ -228,7 +228,7 @@ team modify NoCollision collisionRule never
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
-    #   player_manager:set_team
+    #   player_manager:set_team_and_per_health
         team add None.LowHP
         team add None.MedHP
         team add None.HighHP
@@ -288,14 +288,17 @@ team modify NoCollision collisionRule never
     # @within
     #   function core:handler/first_join
     #   function core:load_once
-    #   * lib:**
+    #   * api:**
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
+        scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
     scoreboard objectives setdisplay belowName Health
+    scoreboard objectives modify PerHealth rendertype hearts
+    scoreboard objectives setdisplay list PerHealth
 
     #> 最大値用スコアホルダー
     # @within function
@@ -372,8 +375,3 @@ team modify NoCollision collisionRule never
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
-
-
-#> Scheduleループの初期化(replace)
-    schedule function core:tick/4_interval 4t
-    schedule function core:tick/6_distributed_interval 6t

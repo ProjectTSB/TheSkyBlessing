@@ -17,5 +17,4 @@
     function lib:damage/reset
 
 # MP減少
-    scoreboard players set $Fluctuation Lib -20
-    execute as @a[distance=..3] run function lib:mp/fluctuation
+    execute as @a[distance=..3] run function asset:mob/0105.potion_projectile/tick/thunder/mp_reduce

@@ -45,7 +45,7 @@
 # テレポーター処理
     function asset_manager:teleporter/tick/player
 # チーム処理
-    function player_manager:set_team
+    function player_manager:set_team_and_per_health
 
 # リセット
     tag @s remove this
