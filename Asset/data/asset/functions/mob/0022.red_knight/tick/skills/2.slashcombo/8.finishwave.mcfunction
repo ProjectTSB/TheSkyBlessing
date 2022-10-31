@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
 #
-#
+# 最終段の衝撃波
 #
 # @within function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
 
@@ -17,6 +17,6 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+        execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset

@@ -4,6 +4,24 @@
 #
 # @within function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
 
+# 演出
+    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.6
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.6
+    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1
+
+# ダメージ判定
+    # 与えるダメージ
+        data modify storage lib: Argument.Damage set value 30.0f
+    # 魔法属性
+        data modify storage lib: Argument.AttackType set value "Physical"
+    # 無属性
+        data modify storage lib: Argument.ElementType set value "None"
+    # ダメージ
+        function lib:damage/modifier
+        execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+# リセット
+    function lib:damage/reset
+
 # 体
     # ポーズ
         data modify entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.RightArm set value [-20f,5f,115f]
@@ -27,8 +45,3 @@
 
 # スケジュール開始
     schedule function asset:mob/0022.red_knight/tick/skills/slash_entity/2.tick 1t replace
-
-# 演出
-    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1
