@@ -1,29 +1,29 @@
-#> asset:sacred_treasure/0777.jade_armor/give/2.give
+#> asset:sacred_treasure/0741.abyss_insurance_card/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0777.jade_armor/give/1.trigger
+# @within function asset:sacred_treasure/0741.abyss_insurance_card/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
 
 # 神器のID (int) スプレッドシートの値を入れる
-    data modify storage asset:sacred_treasure ID set value 777
+    data modify storage asset:sacred_treasure ID set value 741
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "minecraft:leather_leggings"
+    data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"翡翠の鎧","color":"#38b48b"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"奈落保険証","color":"gray"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"美しい渓流で取れた翡翠で作られた鎧","color":"#38B48B"}]','[{"text":"装着者は水の加護を得る","color":"#38B48B"}]','[{"text":"水耐性+5% 水攻撃+5% ","color":"aqua"},{"text":"MP回復量+4% ","color":"green"}]','[{"text":"雷耐性-5%","color":"dark_red"}]']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"奈落に落ちた時、貴方に救いの手を差し伸べる"}','{"text":"\\"こんな状態からでも入れる保険ってあるんですか！？\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value
+    data modify storage asset:sacred_treasure RemainingCount set value 20
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "legs"
+    data modify storage asset:sacred_treasure Slot set value "hotbar"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value "equipping"
+    data modify storage asset:sacred_treasure Trigger set value "passive"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
@@ -48,10 +48,12 @@
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Nyaptov', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:68,display:{color:3716235},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1,1,777,4],Slot:"legs"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,777,4],Slot:"legs"}]}
+    # data modify storage asset:sacred_treasure CustomNBT set value {}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give
