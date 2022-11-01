@@ -9,4 +9,8 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 再起で前進する
+# タグを与える
+    tag @s add S9.Activation
+
+# スケジュールを開始する
+    schedule function asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/schedule 1t replace
