@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"終わり無き静かのカトラス","color":"gold","bold":true,"underlined":true}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"とっしんする"}','{"text":"びゅーん"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"二回斬撃を放つ"}','{"text":"地面を叩きつけ、地上にいる敵を打ち上げる"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [80,250]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [80,400]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -39,11 +39,11 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 4
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value
+    data modify storage asset:sacred_treasure MPCost set value 30
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 40
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
