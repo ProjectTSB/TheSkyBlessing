@@ -22,6 +22,5 @@
     data remove storage api: Modifiers[-1]
 # リセット
     data remove storage api: Op
-    scoreboard players reset $Temp Temporary
 # 要素がまだあったら再帰する
     execute if data storage api: Modifiers[0] run function api:player_modifier/core/common/update_modifier/separate_modifiers
