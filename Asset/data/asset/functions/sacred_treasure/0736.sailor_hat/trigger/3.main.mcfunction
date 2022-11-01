@@ -14,13 +14,13 @@
     playsound entity.player.splash.high_speed player @a ~ ~ ~ 0.4 2 0
 
 # 物理攻撃+7.5%
-    data modify storage api: Argument.UUID set value [I;1,1,736,5]
+    data modify storage api: Argument.UUID set value [I;1,1,736,6]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/physical/add
 
 # 水攻撃+7.5%
-    data modify storage api: Argument.UUID set value [I;1,1,736,5]
+    data modify storage api: Argument.UUID set value [I;1,1,736,6]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:player_modifier/attack/water/add
