@@ -8,15 +8,8 @@
     execute if entity @s[tag=!M.InAction,nbt={OnGround:1b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20276}
     execute if entity @s[tag=!M.InAction,nbt={OnGround:0b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20277}
 
-# モデルを持ってくる
-    #execute if entity @s[tag=!M.FacingLock] run function asset:mob/0022.red_knight/tick/move/call_model
-
-# こっち向く
-    #execute if entity @s[tag=!M.FacingLock] facing entity @p feet run tp @s ~ ~ ~ ~ ~
-
-# スキル発動前にダッシュ
-    execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 25 run function asset:mob/0022.red_knight/tick/wait_time/base_move/jump
-    execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/wait_time/base_move/ready_dash
+# ダッシュ選択
+    execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 20 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/2.1.dash_select
 
 # スキル選択
     execute if score @s[tag=M.SkillReady,tag=!M.InAction] M.Tick matches 1 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/2.2.skill_select

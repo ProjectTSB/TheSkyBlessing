@@ -4,17 +4,16 @@
 #
 # @within function asset:mob/0022.red_knight/tick/wait_time/base_move/tick
 
-# ダッシュ
-    execute if entity @s[tag=M.SkillDash] run function asset:mob/0022.red_knight/tick/skills/0.dash/1.tick
+# 攻撃技
+    # 突進
+        execute if entity @s[tag=M.SkillSlash] run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/1.tick
+    # ブレイブコンボ
+        execute if entity @s[tag=M.SkillCombo] run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
+    # パリィ
+        execute if entity @s[tag=M.SkillParry] run function asset:mob/0022.red_knight/tick/skills/parry/1.tick
 
-# 剣スキル
-    execute if entity @s[tag=M.SkillSword] run function asset:mob/0022.red_knight/tick/skill_sword/1.skill_sword
-
-# 乱切りスキル
-    execute if entity @s[tag=M.SkillSlash] run function asset:mob/0022.red_knight/tick/skill_slash/1.skill_slash
-
-# 剣ビームスキル
-    execute if entity @s[tag=M.SkillBeam] run function asset:mob/0022.red_knight/tick/skill_beam/1.skill_beam
-
-# teleportしてきて目の前でぶっ殺してくるスキル
-    execute if entity @s[tag=M.SkillTpSlash] run function asset:mob/0022.red_knight/tick/skill_tp_slash/1.skill_tp_slash
+# ダッシュ関連
+    # トリプルダッシュ
+        execute if entity @s[tag=M.DashTriple] run function asset:mob/0022.red_knight/tick/skills/0.dash/1.tick
+    # ストレートダッシュ
+        execute if entity @s[tag=M.DashStraight] run function asset:mob/0022.red_knight/tick/skills/straight_dash/1.tick
