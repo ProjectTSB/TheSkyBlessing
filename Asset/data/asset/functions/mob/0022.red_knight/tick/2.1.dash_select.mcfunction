@@ -11,7 +11,7 @@
     execute store result score $Random Temporary run function lib:random/
 
 # ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $2 Const
+    scoreboard players operation $Random Temporary %= $3 Const
 
 # スコアを0に戻す
     scoreboard players set @s M.Tick 0
@@ -21,7 +21,7 @@
     tag @s add M.SkillReady
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 1
+    scoreboard players set $Random Temporary 2
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add M.DashTriple
