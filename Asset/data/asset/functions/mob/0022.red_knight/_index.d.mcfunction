@@ -13,22 +13,36 @@
     #declare tag M.ArmorStandDeathSword
     #declare tag M.Angel
     #
-    #declare tag M.SkillDash
-    #declare tag M.SkillSword
+    #declare tag M.SkillCombo
     #declare tag M.SkillSlash
-    #declare tag M.SkillBeam
+    #declare tag M.SkillParry
     #declare tag M.SkillTpSlash
+    #
+    #declare tag M.DashTriple
+    #declare tag M.DashStraight
+    #declare tag M.DashStab
     #
     #declare score_holder $Count
     #declare score_holder $Random
     #
     #declare tag M.Opening
     #
-    #declare tag M.FacingLock
     #declare tag M.InAction
+    #declare tag M.InSkill
+    #declare tag M.InDash
+    #
+    #declare tag M.FacingLock
     #declare tag M.TeleportMarker
     #declare tag M.MarkerInit
     #declare tag M.Move
+    #declare tag M.SkillReady
+    #declare tag M.ActiveInertia
+    #
+    #declare tag M.BodyFacing45
+    #declare tag M.BodyFacing0
+    #
+    #declare tag M.SlashEntity
+    #declare tag M.SlashInit
     #
     #declare tag M.Model
     #declare tag M.ModelCore
