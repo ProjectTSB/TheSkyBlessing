@@ -14,6 +14,10 @@
     data modify entity @s Invulnerable set value 0b
     data modify entity @s NoAI set value 0b
 
-# 移動する
+# リセット
     function asset:mob/0022.red_knight/tick/reset
-    function asset:mob/0022.red_knight/tick/wait_time/base_move/ready_dash
+
+# 初手行動はトリプルダッシュ
+    tag @s add M.SkillReady
+    tag @s add M.InAction
+    tag @s add M.DashTriple
