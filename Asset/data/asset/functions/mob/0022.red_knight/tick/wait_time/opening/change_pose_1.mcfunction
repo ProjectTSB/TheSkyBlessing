@@ -4,9 +4,13 @@
 #
 # @within asset:mob/0022.red_knight/tick/wait_time/opening/tick
 
+
 # ポーズ変更
     data modify entity @s Pose.LeftArm set value [0f,0f,-5f]
     data modify entity @s Pose.RightArm set value [-15f,55f,15f]
+
+# 手持ちアイテム
+    item replace entity @s weapon.mainhand with stick{CustomModelData:20271}
 
 # 向きはちょっと斜め
     tp @s ~ ~ ~ ~15 ~
