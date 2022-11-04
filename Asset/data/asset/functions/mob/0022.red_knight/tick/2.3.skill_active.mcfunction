@@ -17,3 +17,6 @@
         execute if entity @s[tag=M.DashTriple] run function asset:mob/0022.red_knight/tick/skills/0.dash/1.tick
     # ストレートダッシュ
         execute if entity @s[tag=M.DashStraight] run function asset:mob/0022.red_knight/tick/skills/straight_dash/1.tick
+    # 獄門
+        execute if entity @s[tag=M.DashStab] run function asset:mob/0022.red_knight/tick/skills/stab/1.tick
+
