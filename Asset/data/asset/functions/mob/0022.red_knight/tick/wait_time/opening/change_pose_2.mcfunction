@@ -16,7 +16,7 @@
     tp @s ~ ~ ~ ~45 ~
 
 # 頭変える
-    item replace entity @s armor.head with stick{CustomModelData:20276}
+    item replace entity @s armor.head with stick{CustomModelData:20278}
 
 # 頭の向き
     data modify entity @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [0.1f,0.1f,0.1f]

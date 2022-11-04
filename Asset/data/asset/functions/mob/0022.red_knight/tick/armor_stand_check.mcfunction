@@ -6,7 +6,7 @@
 #   asset:mob/0022.red_knight/tick/2.tick
 #   asset:mob/0022.red_knight/death/2.death
 
-# 雪玉があるかみるなかったらリセットする
+# モデルがなかったら無理やり読んでくる
     execute unless entity @e[type=snowball,tag=M.ModelCore,distance=..1] run say リセットしてください
 # 雪玉の上のアマスタにタグ付与
-    execute positioned ~ ~0.29 ~ run tag @e[type=armor_stand,tag=M.Model,distance=..0.01,limit=2] add M.ModelChangeTarget
+    execute positioned ~ ~0.29 ~ run tag @e[type=armor_stand,tag=M.Model,distance=..1,limit=2] add M.ModelChangeTarget

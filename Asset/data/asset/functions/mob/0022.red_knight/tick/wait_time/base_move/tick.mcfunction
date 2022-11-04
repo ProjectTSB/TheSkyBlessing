@@ -5,8 +5,8 @@
 # @within function asset:mob/0022.red_knight/tick/2.tick
 
 # 滞空中と接地中でモデル変える
-    execute if entity @s[tag=!M.InAction,nbt={OnGround:1b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20276}
-    execute if entity @s[tag=!M.InAction,nbt={OnGround:0b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20277}
+    execute if entity @s[tag=!M.InAction,nbt={OnGround:1b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20278}
+    execute if entity @s[tag=!M.InAction,nbt={OnGround:0b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20279}
 
 # ダッシュ選択
     execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 20 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/2.1.dash_select

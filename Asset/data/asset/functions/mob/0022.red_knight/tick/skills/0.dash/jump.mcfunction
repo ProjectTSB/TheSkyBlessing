@@ -8,7 +8,7 @@
     tag @s add M.FacingLock
 
 # 体モデル変更
-    item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20278}
+    item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20280}
 
 # 体の向き
     execute as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~ ~

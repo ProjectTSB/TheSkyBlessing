@@ -16,7 +16,7 @@
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # モデル変更
-    item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20278}
+    item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20280}
 
 # この行動をループしないように1だけ増やす
     scoreboard players add @s M.Tick 1
