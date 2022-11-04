@@ -37,10 +37,10 @@
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^1 {Rotation:[-135F,0F],Tags:["M.SlashEntity","M.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,15.0f,0.1f]},DisabledSlots:4144959}
 
 # Init
-    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=M.SlashInit,distance=..1.5,sort=nearest,limit=1] run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/slash_entity/1.init
+    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=M.SlashInit,distance=..1.5,sort=nearest,limit=1] run function asset:mob/0022.red_knight/tick/skills/slash_entity/1.init
 
 # スケジュール開始
-    schedule function asset:mob/0022.red_knight/tick/skills/1.dash_slash/slash_entity/2.tick 1t replace
+    schedule function asset:mob/0022.red_knight/tick/skills/slash_entity/2.tick 1t replace
 
 # 演出
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.6
