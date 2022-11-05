@@ -7,3 +7,6 @@
 # 演出
     playsound minecraft:entity.item.break hostile @a ~ ~ ~ 1 1.5
     playsound minecraft:block.soul_sand.break hostile @a ~ ~ ~ 1.5 0.75
+
+# ヘルスチェック
+    function asset:mob/0022.red_knight/hurt/3.check_health
