@@ -13,7 +13,7 @@
 
 # 画面エフェクト
     title @a[distance=..30] times 5 15 20
-    title @a[distance=..30] title {"text":"","font":"screen_effect"}
+    title @a[distance=..30] title {"text":"\uE010","font":"screen_effect"}
 
 # ボスドロ
     data modify storage api: Argument.ID set value 364
