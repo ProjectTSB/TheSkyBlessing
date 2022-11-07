@@ -15,7 +15,7 @@
     execute if score @s M.Tick matches 16..100 positioned ~ ~0.05 ~ run function asset:mob/0022.red_knight/tick/move/tp
 
 # でっかい攻撃範囲を地面に投影する
-    execute if score @s M.Tick matches 20..100 rotated ~ 0 positioned ~ ~ ~ run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/3.search_ground
+    execute if score @s M.Tick matches 20..100 rotated ~ 0 run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/3.search_ground
 
 # 範囲内のヤツに警告する
     execute if score @s M.Tick matches 20..100 run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/4.alert

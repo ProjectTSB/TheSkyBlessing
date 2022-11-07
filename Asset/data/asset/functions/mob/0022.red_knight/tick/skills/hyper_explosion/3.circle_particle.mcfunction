@@ -6,144 +6,144 @@
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAOwBmpAbAMwCMATAIYC0bcdcHALEwCcQjkNIsWHeijYAjJvwAMlIUoZgCAOzYBbBMkBhigAImmsDDYY9AZyTgUAe0JaISJkqUEUcV3Az2YABubNiEBuAAHkheYFAxAL4JBNakaIR2iEx0BDYQVm6IsXDY2GgwNgYesRiO+RAGsWg2AKKl5ZUtAI6EodhQAMqWPuSI1KGVSXjg0PAU6Fi45sRkFCwAHGz8lOsArFL7LAwCcOv8HHLUdOscuwxbEnS7pKS7QuY6+hQmLOaW1rpMg5nK4kMpvL4GgFEOAQmEImBokUCPEilMwKl0pl1rl8hhCsV2hUqp4UnU2A0YgRmm0ysTur1SoNhnBRuNsJMEgBdIA_3
 # 円 2
-particle end_rod ^0 ^ ^-8 0 0 0 0 1
-particle end_rod ^1.25148 ^ ^-7.90151 0 0 0 0 1
-particle end_rod ^2.47214 ^ ^-7.60845 0 0 0 0 1
-particle end_rod ^3.63192 ^ ^-7.12805 0 0 0 0 1
-particle end_rod ^4.70228 ^ ^-6.47214 0 0 0 0 1
-particle end_rod ^5.65685 ^ ^-5.65685 0 0 0 0 1
-particle end_rod ^6.47214 ^ ^-4.70228 0 0 0 0 1
-particle end_rod ^7.12805 ^ ^-3.63192 0 0 0 0 1
-particle end_rod ^7.60845 ^ ^-2.47214 0 0 0 0 1
-particle end_rod ^7.90151 ^ ^-1.25148 0 0 0 0 1
-particle end_rod ^8 ^ ^0 0 0 0 0 1
-particle end_rod ^7.90151 ^ ^1.25148 0 0 0 0 1
-particle end_rod ^7.60845 ^ ^2.47214 0 0 0 0 1
-particle end_rod ^7.12805 ^ ^3.63192 0 0 0 0 1
-particle end_rod ^6.47214 ^ ^4.70228 0 0 0 0 1
-particle end_rod ^5.65685 ^ ^5.65685 0 0 0 0 1
-particle end_rod ^4.70228 ^ ^6.47214 0 0 0 0 1
-particle end_rod ^3.63192 ^ ^7.12805 0 0 0 0 1
-particle end_rod ^2.47214 ^ ^7.60845 0 0 0 0 1
-particle end_rod ^1.25148 ^ ^7.90151 0 0 0 0 1
-particle end_rod ^0 ^ ^8 0 0 0 0 1
-particle end_rod ^-1.25148 ^ ^7.90151 0 0 0 0 1
-particle end_rod ^-2.47214 ^ ^7.60845 0 0 0 0 1
-particle end_rod ^-3.63192 ^ ^7.12805 0 0 0 0 1
-particle end_rod ^-4.70228 ^ ^6.47214 0 0 0 0 1
-particle end_rod ^-5.65685 ^ ^5.65685 0 0 0 0 1
-particle end_rod ^-6.47214 ^ ^4.70228 0 0 0 0 1
-particle end_rod ^-7.12805 ^ ^3.63192 0 0 0 0 1
-particle end_rod ^-7.60845 ^ ^2.47214 0 0 0 0 1
-particle end_rod ^-7.90151 ^ ^1.25148 0 0 0 0 1
-particle end_rod ^-8 ^ ^0 0 0 0 0 1
-particle end_rod ^-7.90151 ^ ^-1.25148 0 0 0 0 1
-particle end_rod ^-7.60845 ^ ^-2.47214 0 0 0 0 1
-particle end_rod ^-7.12805 ^ ^-3.63192 0 0 0 0 1
-particle end_rod ^-6.47214 ^ ^-4.70228 0 0 0 0 1
-particle end_rod ^-5.65685 ^ ^-5.65685 0 0 0 0 1
-particle end_rod ^-4.70228 ^ ^-6.47214 0 0 0 0 1
-particle end_rod ^-3.63192 ^ ^-7.12805 0 0 0 0 1
-particle end_rod ^-2.47214 ^ ^-7.60845 0 0 0 0 1
-particle end_rod ^-1.25148 ^ ^-7.90151 0 0 0 0 1
+particle flame ^0 ^ ^-8 0 1 0 0 0 force @a[distance=..30]
+particle flame ^1.25148 ^ ^-7.90151 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.47214 ^ ^-7.60845 0 1 0 0 0 force @a[distance=..30]
+particle flame ^3.63192 ^ ^-7.12805 0 1 0 0 0 force @a[distance=..30]
+particle flame ^4.70228 ^ ^-6.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^5.65685 ^ ^-5.65685 0 1 0 0 0 force @a[distance=..30]
+particle flame ^6.47214 ^ ^-4.70228 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.12805 ^ ^-3.63192 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.60845 ^ ^-2.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.90151 ^ ^-1.25148 0 1 0 0 0 force @a[distance=..30]
+particle flame ^8 ^ ^0 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.90151 ^ ^1.25148 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.60845 ^ ^2.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.12805 ^ ^3.63192 0 1 0 0 0 force @a[distance=..30]
+particle flame ^6.47214 ^ ^4.70228 0 1 0 0 0 force @a[distance=..30]
+particle flame ^5.65685 ^ ^5.65685 0 1 0 0 0 force @a[distance=..30]
+particle flame ^4.70228 ^ ^6.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^3.63192 ^ ^7.12805 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.47214 ^ ^7.60845 0 1 0 0 0 force @a[distance=..30]
+particle flame ^1.25148 ^ ^7.90151 0 1 0 0 0 force @a[distance=..30]
+particle flame ^0 ^ ^8 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-1.25148 ^ ^7.90151 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.47214 ^ ^7.60845 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-3.63192 ^ ^7.12805 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-4.70228 ^ ^6.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-5.65685 ^ ^5.65685 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-6.47214 ^ ^4.70228 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.12805 ^ ^3.63192 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.60845 ^ ^2.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.90151 ^ ^1.25148 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-8 ^ ^0 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.90151 ^ ^-1.25148 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.60845 ^ ^-2.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.12805 ^ ^-3.63192 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-6.47214 ^ ^-4.70228 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-5.65685 ^ ^-5.65685 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-4.70228 ^ ^-6.47214 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-3.63192 ^ ^-7.12805 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.47214 ^ ^-7.60845 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-1.25148 ^ ^-7.90151 0 1 0 0 0 force @a[distance=..30]
 # 円 1
-particle end_rod ^0 ^ ^-16 0 0 0 0 1
-particle end_rod ^1.00465 ^ ^-15.96843 0 0 0 0 1
-particle end_rod ^2.00533 ^ ^-15.87384 0 0 0 0 1
-particle end_rod ^2.9981 ^ ^-15.7166 0 0 0 0 1
-particle end_rod ^3.97904 ^ ^-15.49733 0 0 0 0 1
-particle end_rod ^4.94427 ^ ^-15.2169 0 0 0 0 1
-particle end_rod ^5.88999 ^ ^-14.87642 0 0 0 0 1
-particle end_rod ^6.81247 ^ ^-14.47723 0 0 0 0 1
-particle end_rod ^7.70806 ^ ^-14.02091 0 0 0 0 1
-particle end_rod ^8.57323 ^ ^-13.50925 0 0 0 0 1
-particle end_rod ^9.40456 ^ ^-12.94427 0 0 0 0 1
-particle end_rod ^10.19878 ^ ^-12.32821 0 0 0 0 1
-particle end_rod ^10.95275 ^ ^-11.6635 0 0 0 0 1
-particle end_rod ^11.6635 ^ ^-10.95275 0 0 0 0 1
-particle end_rod ^12.32821 ^ ^-10.19878 0 0 0 0 1
-particle end_rod ^12.94427 ^ ^-9.40456 0 0 0 0 1
-particle end_rod ^13.50925 ^ ^-8.57323 0 0 0 0 1
-particle end_rod ^14.02091 ^ ^-7.70806 0 0 0 0 1
-particle end_rod ^14.47723 ^ ^-6.81247 0 0 0 0 1
-particle end_rod ^14.87642 ^ ^-5.88999 0 0 0 0 1
-particle end_rod ^15.2169 ^ ^-4.94427 0 0 0 0 1
-particle end_rod ^15.49733 ^ ^-3.97904 0 0 0 0 1
-particle end_rod ^15.7166 ^ ^-2.9981 0 0 0 0 1
-particle end_rod ^15.87384 ^ ^-2.00533 0 0 0 0 1
-particle end_rod ^15.96843 ^ ^-1.00465 0 0 0 0 1
-particle end_rod ^16 ^ ^0 0 0 0 0 1
-particle end_rod ^15.96843 ^ ^1.00465 0 0 0 0 1
-particle end_rod ^15.87384 ^ ^2.00533 0 0 0 0 1
-particle end_rod ^15.7166 ^ ^2.9981 0 0 0 0 1
-particle end_rod ^15.49733 ^ ^3.97904 0 0 0 0 1
-particle end_rod ^15.2169 ^ ^4.94427 0 0 0 0 1
-particle end_rod ^14.87642 ^ ^5.88999 0 0 0 0 1
-particle end_rod ^14.47723 ^ ^6.81247 0 0 0 0 1
-particle end_rod ^14.02091 ^ ^7.70806 0 0 0 0 1
-particle end_rod ^13.50925 ^ ^8.57323 0 0 0 0 1
-particle end_rod ^12.94427 ^ ^9.40456 0 0 0 0 1
-particle end_rod ^12.32821 ^ ^10.19878 0 0 0 0 1
-particle end_rod ^11.6635 ^ ^10.95275 0 0 0 0 1
-particle end_rod ^10.95275 ^ ^11.6635 0 0 0 0 1
-particle end_rod ^10.19878 ^ ^12.32821 0 0 0 0 1
-particle end_rod ^9.40456 ^ ^12.94427 0 0 0 0 1
-particle end_rod ^8.57323 ^ ^13.50925 0 0 0 0 1
-particle end_rod ^7.70806 ^ ^14.02091 0 0 0 0 1
-particle end_rod ^6.81247 ^ ^14.47723 0 0 0 0 1
-particle end_rod ^5.88999 ^ ^14.87642 0 0 0 0 1
-particle end_rod ^4.94427 ^ ^15.2169 0 0 0 0 1
-particle end_rod ^3.97904 ^ ^15.49733 0 0 0 0 1
-particle end_rod ^2.9981 ^ ^15.7166 0 0 0 0 1
-particle end_rod ^2.00533 ^ ^15.87384 0 0 0 0 1
-particle end_rod ^1.00465 ^ ^15.96843 0 0 0 0 1
-particle end_rod ^0 ^ ^16 0 0 0 0 1
-particle end_rod ^-1.00465 ^ ^15.96843 0 0 0 0 1
-particle end_rod ^-2.00533 ^ ^15.87384 0 0 0 0 1
-particle end_rod ^-2.9981 ^ ^15.7166 0 0 0 0 1
-particle end_rod ^-3.97904 ^ ^15.49733 0 0 0 0 1
-particle end_rod ^-4.94427 ^ ^15.2169 0 0 0 0 1
-particle end_rod ^-5.88999 ^ ^14.87642 0 0 0 0 1
-particle end_rod ^-6.81247 ^ ^14.47723 0 0 0 0 1
-particle end_rod ^-7.70806 ^ ^14.02091 0 0 0 0 1
-particle end_rod ^-8.57323 ^ ^13.50925 0 0 0 0 1
-particle end_rod ^-9.40456 ^ ^12.94427 0 0 0 0 1
-particle end_rod ^-10.19878 ^ ^12.32821 0 0 0 0 1
-particle end_rod ^-10.95275 ^ ^11.6635 0 0 0 0 1
-particle end_rod ^-11.6635 ^ ^10.95275 0 0 0 0 1
-particle end_rod ^-12.32821 ^ ^10.19878 0 0 0 0 1
-particle end_rod ^-12.94427 ^ ^9.40456 0 0 0 0 1
-particle end_rod ^-13.50925 ^ ^8.57323 0 0 0 0 1
-particle end_rod ^-14.02091 ^ ^7.70806 0 0 0 0 1
-particle end_rod ^-14.47723 ^ ^6.81247 0 0 0 0 1
-particle end_rod ^-14.87642 ^ ^5.88999 0 0 0 0 1
-particle end_rod ^-15.2169 ^ ^4.94427 0 0 0 0 1
-particle end_rod ^-15.49733 ^ ^3.97904 0 0 0 0 1
-particle end_rod ^-15.7166 ^ ^2.9981 0 0 0 0 1
-particle end_rod ^-15.87384 ^ ^2.00533 0 0 0 0 1
-particle end_rod ^-15.96843 ^ ^1.00465 0 0 0 0 1
-particle end_rod ^-16 ^ ^0 0 0 0 0 1
-particle end_rod ^-15.96843 ^ ^-1.00465 0 0 0 0 1
-particle end_rod ^-15.87384 ^ ^-2.00533 0 0 0 0 1
-particle end_rod ^-15.7166 ^ ^-2.9981 0 0 0 0 1
-particle end_rod ^-15.49733 ^ ^-3.97904 0 0 0 0 1
-particle end_rod ^-15.2169 ^ ^-4.94427 0 0 0 0 1
-particle end_rod ^-14.87642 ^ ^-5.88999 0 0 0 0 1
-particle end_rod ^-14.47723 ^ ^-6.81247 0 0 0 0 1
-particle end_rod ^-14.02091 ^ ^-7.70806 0 0 0 0 1
-particle end_rod ^-13.50925 ^ ^-8.57323 0 0 0 0 1
-particle end_rod ^-12.94427 ^ ^-9.40456 0 0 0 0 1
-particle end_rod ^-12.32821 ^ ^-10.19878 0 0 0 0 1
-particle end_rod ^-11.6635 ^ ^-10.95275 0 0 0 0 1
-particle end_rod ^-10.95275 ^ ^-11.6635 0 0 0 0 1
-particle end_rod ^-10.19878 ^ ^-12.32821 0 0 0 0 1
-particle end_rod ^-9.40456 ^ ^-12.94427 0 0 0 0 1
-particle end_rod ^-8.57323 ^ ^-13.50925 0 0 0 0 1
-particle end_rod ^-7.70806 ^ ^-14.02091 0 0 0 0 1
-particle end_rod ^-6.81247 ^ ^-14.47723 0 0 0 0 1
-particle end_rod ^-5.88999 ^ ^-14.87642 0 0 0 0 1
-particle end_rod ^-4.94427 ^ ^-15.2169 0 0 0 0 1
-particle end_rod ^-3.97904 ^ ^-15.49733 0 0 0 0 1
-particle end_rod ^-2.9981 ^ ^-15.7166 0 0 0 0 1
-particle end_rod ^-2.00533 ^ ^-15.87384 0 0 0 0 1
-particle end_rod ^-1.00465 ^ ^-15.96843 0 0 0 0 1
+particle flame ^0 ^ ^-16 0 1 0 0 0 force @a[distance=..30]
+particle flame ^1.00465 ^ ^-15.96843 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.00533 ^ ^-15.87384 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.9981 ^ ^-15.7166 0 1 0 0 0 force @a[distance=..30]
+particle flame ^3.97904 ^ ^-15.49733 0 1 0 0 0 force @a[distance=..30]
+particle flame ^4.94427 ^ ^-15.2169 0 1 0 0 0 force @a[distance=..30]
+particle flame ^5.88999 ^ ^-14.87642 0 1 0 0 0 force @a[distance=..30]
+particle flame ^6.81247 ^ ^-14.47723 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.70806 ^ ^-14.02091 0 1 0 0 0 force @a[distance=..30]
+particle flame ^8.57323 ^ ^-13.50925 0 1 0 0 0 force @a[distance=..30]
+particle flame ^9.40456 ^ ^-12.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^10.19878 ^ ^-12.32821 0 1 0 0 0 force @a[distance=..30]
+particle flame ^10.95275 ^ ^-11.6635 0 1 0 0 0 force @a[distance=..30]
+particle flame ^11.6635 ^ ^-10.95275 0 1 0 0 0 force @a[distance=..30]
+particle flame ^12.32821 ^ ^-10.19878 0 1 0 0 0 force @a[distance=..30]
+particle flame ^12.94427 ^ ^-9.40456 0 1 0 0 0 force @a[distance=..30]
+particle flame ^13.50925 ^ ^-8.57323 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.02091 ^ ^-7.70806 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.47723 ^ ^-6.81247 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.87642 ^ ^-5.88999 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.2169 ^ ^-4.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.49733 ^ ^-3.97904 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.7166 ^ ^-2.9981 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.87384 ^ ^-2.00533 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.96843 ^ ^-1.00465 0 1 0 0 0 force @a[distance=..30]
+particle flame ^16 ^ ^0 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.96843 ^ ^1.00465 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.87384 ^ ^2.00533 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.7166 ^ ^2.9981 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.49733 ^ ^3.97904 0 1 0 0 0 force @a[distance=..30]
+particle flame ^15.2169 ^ ^4.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.87642 ^ ^5.88999 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.47723 ^ ^6.81247 0 1 0 0 0 force @a[distance=..30]
+particle flame ^14.02091 ^ ^7.70806 0 1 0 0 0 force @a[distance=..30]
+particle flame ^13.50925 ^ ^8.57323 0 1 0 0 0 force @a[distance=..30]
+particle flame ^12.94427 ^ ^9.40456 0 1 0 0 0 force @a[distance=..30]
+particle flame ^12.32821 ^ ^10.19878 0 1 0 0 0 force @a[distance=..30]
+particle flame ^11.6635 ^ ^10.95275 0 1 0 0 0 force @a[distance=..30]
+particle flame ^10.95275 ^ ^11.6635 0 1 0 0 0 force @a[distance=..30]
+particle flame ^10.19878 ^ ^12.32821 0 1 0 0 0 force @a[distance=..30]
+particle flame ^9.40456 ^ ^12.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^8.57323 ^ ^13.50925 0 1 0 0 0 force @a[distance=..30]
+particle flame ^7.70806 ^ ^14.02091 0 1 0 0 0 force @a[distance=..30]
+particle flame ^6.81247 ^ ^14.47723 0 1 0 0 0 force @a[distance=..30]
+particle flame ^5.88999 ^ ^14.87642 0 1 0 0 0 force @a[distance=..30]
+particle flame ^4.94427 ^ ^15.2169 0 1 0 0 0 force @a[distance=..30]
+particle flame ^3.97904 ^ ^15.49733 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.9981 ^ ^15.7166 0 1 0 0 0 force @a[distance=..30]
+particle flame ^2.00533 ^ ^15.87384 0 1 0 0 0 force @a[distance=..30]
+particle flame ^1.00465 ^ ^15.96843 0 1 0 0 0 force @a[distance=..30]
+particle flame ^0 ^ ^16 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-1.00465 ^ ^15.96843 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.00533 ^ ^15.87384 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.9981 ^ ^15.7166 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-3.97904 ^ ^15.49733 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-4.94427 ^ ^15.2169 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-5.88999 ^ ^14.87642 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-6.81247 ^ ^14.47723 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.70806 ^ ^14.02091 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-8.57323 ^ ^13.50925 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-9.40456 ^ ^12.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-10.19878 ^ ^12.32821 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-10.95275 ^ ^11.6635 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-11.6635 ^ ^10.95275 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-12.32821 ^ ^10.19878 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-12.94427 ^ ^9.40456 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-13.50925 ^ ^8.57323 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.02091 ^ ^7.70806 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.47723 ^ ^6.81247 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.87642 ^ ^5.88999 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.2169 ^ ^4.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.49733 ^ ^3.97904 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.7166 ^ ^2.9981 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.87384 ^ ^2.00533 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.96843 ^ ^1.00465 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-16 ^ ^0 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.96843 ^ ^-1.00465 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.87384 ^ ^-2.00533 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.7166 ^ ^-2.9981 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.49733 ^ ^-3.97904 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-15.2169 ^ ^-4.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.87642 ^ ^-5.88999 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.47723 ^ ^-6.81247 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-14.02091 ^ ^-7.70806 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-13.50925 ^ ^-8.57323 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-12.94427 ^ ^-9.40456 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-12.32821 ^ ^-10.19878 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-11.6635 ^ ^-10.95275 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-10.95275 ^ ^-11.6635 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-10.19878 ^ ^-12.32821 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-9.40456 ^ ^-12.94427 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-8.57323 ^ ^-13.50925 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-7.70806 ^ ^-14.02091 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-6.81247 ^ ^-14.47723 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-5.88999 ^ ^-14.87642 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-4.94427 ^ ^-15.2169 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-3.97904 ^ ^-15.49733 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.9981 ^ ^-15.7166 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-2.00533 ^ ^-15.87384 0 1 0 0 0 force @a[distance=..30]
+particle flame ^-1.00465 ^ ^-15.96843 0 1 0 0 0 force @a[distance=..30]

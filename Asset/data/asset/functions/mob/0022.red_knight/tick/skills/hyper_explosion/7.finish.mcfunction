@@ -25,8 +25,8 @@
     execute at @a[distance=..40] run playsound minecraft:entity.generic.explode hostile @p ~ ~ ~ 1 1.2
     execute at @a[distance=..40] run playsound minecraft:item.trident.thunder hostile @p ~ ~ ~ 1 1.5
     particle explosion_emitter ~ ~0.5 ~ 10 0 10 0 20 force @a[distance=..30]
-    particle dust 0.5 0 0 2 ~ ~5 ~ 10 10 10 0 100
-    particle dust 0.8 0 0 2 ~ ~5 ~ 10 10 10 0 100
+    particle dust 0.5 0 0 2 ~ ~5 ~ 10 10 10 0 200
+    particle dust 0.8 0 0 2 ~ ~5 ~ 10 10 10 0 200
 
 # 判定
     # 与えるダメージ
