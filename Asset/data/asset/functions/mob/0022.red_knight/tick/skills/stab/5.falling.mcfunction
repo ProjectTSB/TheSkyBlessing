@@ -10,7 +10,7 @@
     execute at @s positioned ~ ~-0.5 ~ if block ~ ~ ~ #lib:no_collision run function asset:mob/0022.red_knight/tick/move/tp
 
 # 下にブロックあったらフィニッシュに移行
-    execute unless block ~ ~-0.5 ~ #lib:no_collision run scoreboard players set @s M.Tick 80
+    execute unless block ~ ~-0.5 ~ #lib:no_collision run scoreboard players set @s M.Tick 55
 
 # 演出
     execute rotated ~ 0 run particle flame ^ ^ ^1.2 0 0 0 0.01 2
