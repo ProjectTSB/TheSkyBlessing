@@ -12,7 +12,7 @@
     #declare tag M.SkillSlash
     #declare tag M.SkillParry
     #declare tag M.SkillWave
-    #declare tag M.SkillSummon
+    #declare tag M.SkillUltimate
     #
     #declare tag M.WaveMiddle
     #declare tag M.WaveLeftToRight

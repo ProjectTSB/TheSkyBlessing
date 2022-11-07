@@ -1,8 +1,8 @@
-#> asset:mob/0022.red_knight/tick/skills/flame_pillar/3.fall_start
+#> asset:mob/0022.red_knight/tick/skills/hyper_explosion/5.fall_start
 #
+# 落下開始
 #
-#
-# @within function asset:mob/0022.red_knight/tick/skills/flame_pillar/1.tick
+# @within function asset:mob/0022.red_knight/tick/skills/hyper_explosion/1.tick
 
 # 体
     # ポーズ

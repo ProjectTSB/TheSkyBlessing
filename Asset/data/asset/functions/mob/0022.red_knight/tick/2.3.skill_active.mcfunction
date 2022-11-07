@@ -11,8 +11,10 @@
         execute if entity @s[tag=M.SkillCombo] run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
     # パリィ
         execute if entity @s[tag=M.SkillParry] run function asset:mob/0022.red_knight/tick/skills/parry/1.tick
-    # パリィ
+    # ヘヴィスラッシュウェーブ
         execute if entity @s[tag=M.SkillWave] run function asset:mob/0022.red_knight/tick/skills/heavy_slashwave/1.tick
+    # フレイムピラー
+        execute if entity @s[tag=M.SkillUltimate] run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/1.tick
 
 # ダッシュ関連
     # トリプルダッシュ

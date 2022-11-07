@@ -20,6 +20,7 @@
         tag @s remove M.SkillCombo
         tag @s remove M.SkillParry
         tag @s remove M.SkillWave
+        tag @s remove M.SkillUltimate
     # ダッシュ関連
         tag @s remove M.DashTriple
         tag @s remove M.DashStraight

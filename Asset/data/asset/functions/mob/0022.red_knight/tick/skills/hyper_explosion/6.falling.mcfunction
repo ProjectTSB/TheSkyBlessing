@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/hyper_explosion/6.falling
 #
-#
+# 落下中の処理
 #
 # @within function asset:mob/0022.red_knight/tick/skills/hyper_explosion/1.tick
 

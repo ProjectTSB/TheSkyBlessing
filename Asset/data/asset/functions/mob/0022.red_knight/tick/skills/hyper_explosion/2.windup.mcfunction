@@ -1,8 +1,8 @@
-#> asset:mob/0022.red_knight/tick/skills/flame_pillar/2.windup
+#> asset:mob/0022.red_knight/tick/skills/hyper_explosion/2.windup
 #
 # 構える
 #
-# @within function asset:mob/0022.red_knight/tick/skills/flame_pillar/1.tick
+# @within function asset:mob/0022.red_knight/tick/skills/hyper_explosion/1.tick
 
 # 向き固定ON
     tag @s add M.FacingLock
