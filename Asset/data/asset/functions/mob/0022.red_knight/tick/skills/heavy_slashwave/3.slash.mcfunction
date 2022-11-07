@@ -33,23 +33,6 @@
         item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] armor.head with stick{CustomModelData:20280}
         item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20275}
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-
-# ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $3 Const
-
-# デバッグ用
-    #scoreboard players set $Random Temporary 2
-
-# どのタイプを撃つか決定
-    execute if score $Random Temporary matches 0 run tag @s add M.WaveMiddle
-    execute if score $Random Temporary matches 1 run tag @s add M.WaveLeftToRight
-    execute if score $Random Temporary matches 2 run tag @s add M.WaveRightToLeft
-
-# リセット
-    scoreboard players reset $Random Temporary
-
 # 斬撃
     execute if entity @s[y_rotation=-22.5..22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^1 {Rotation:[-90F,0F],Tags:["M.SlashEntity","M.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,90.0f,0.1f]},DisabledSlots:4144959}
     execute if entity @s[y_rotation=22.5..67.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^1 {Rotation:[-45F,0F],Tags:["M.SlashEntity","M.SlashInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,90.0f,0.1f]},DisabledSlots:4144959}

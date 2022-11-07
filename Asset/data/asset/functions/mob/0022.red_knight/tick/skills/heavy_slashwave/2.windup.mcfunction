@@ -10,6 +10,23 @@
 # 浮く
     data modify entity @s NoAI set value 1b
 
+# 疑似乱数取得
+    execute store result score $Random Temporary run function lib:random/
+
+# ほしい範囲に剰余算
+    scoreboard players operation $Random Temporary %= $3 Const
+
+# デバッグ用
+    #scoreboard players set $Random Temporary 2
+
+# どのタイプを撃つか決定
+    execute if score $Random Temporary matches 0 run tag @s add M.WaveMiddle
+    execute if score $Random Temporary matches 1 run tag @s add M.WaveLeftToRight
+    execute if score $Random Temporary matches 2 run tag @s add M.WaveRightToLeft
+
+# リセット
+    scoreboard players reset $Random Temporary
+
 # 体
     # ポーズ
         data modify entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.LeftArm set value [-45f,0f,-75f]
