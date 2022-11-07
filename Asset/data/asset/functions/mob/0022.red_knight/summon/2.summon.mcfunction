@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0022.red_knight/summon/1.trigger
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage","AntiVoid","M.Opening"],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage","AntiVoid","M.Opening","Uninterferable"],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
 # ID (int)
     data modify storage asset:mob ID set value 22
 # Type (string) Wikiを参照
