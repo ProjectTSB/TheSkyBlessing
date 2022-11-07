@@ -1,0 +1,18 @@
+#> asset:mob/0022.red_knight/tick/skills/flame_pillar/4.falling
+#
+#
+#
+# @within function asset:mob/0022.red_knight/tick/skills/flame_pillar/1.tick
+
+# 複数回実行で高速落下させる
+    execute at @s positioned ~ ~-0.5 ~ if block ~ ~ ~ #lib:no_collision run function asset:mob/0022.red_knight/tick/move/tp
+    execute at @s positioned ~ ~-0.5 ~ if block ~ ~ ~ #lib:no_collision run function asset:mob/0022.red_knight/tick/move/tp
+    execute at @s positioned ~ ~-0.5 ~ if block ~ ~ ~ #lib:no_collision run function asset:mob/0022.red_knight/tick/move/tp
+
+# 下にブロックあったらフィニッシュに移行
+    execute unless block ~ ~-0.5 ~ #lib:no_collision run scoreboard players set @s M.Tick 70
+
+# 演出
+    execute at @s rotated ~ 0 run particle flame ^ ^ ^1.2 0 0 0 0.01 2
+    execute at @s rotated ~ 0 run particle flame ^ ^0.5 ^1.2 0 0 0 0.01 2
+    execute at @s rotated ~ 0 run particle flame ^ ^1 ^1.2 0 0 0 0.01 2
