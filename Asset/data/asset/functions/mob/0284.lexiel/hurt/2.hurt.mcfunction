@@ -5,4 +5,4 @@
 # @within function asset:mob/0284.lexiel/hurt/1.trigger
 
 # 演出
-    playsound minecraft:entity.skeleton.converted_to_stray hostile @a ~ ~ ~ 1 0
+    playsound minecraft:entity.generic.hurt hostile @a ~ ~ ~ 1 0.7

@@ -5,5 +5,11 @@
 # @within tag/function asset:mob/load
 
 #> 定義類はここに
-# @within function asset:mob/0284.lexiel/**
+# @within function asset:mob/0284.lexiel/**/**
     scoreboard objectives add 7W.Tick dummy
+    scoreboard objectives add 7W.DeathExplode dummy
+    scoreboard objectives add 7W.HealthMax dummy
+    scoreboard objectives add 7W.MoveTimesPerTick dummy
+    scoreboard objectives add 7W.Speed dummy
+    scoreboard objectives add 7W.LoopCount dummy
+    scoreboard objectives add 7W.FakeInertia dummy

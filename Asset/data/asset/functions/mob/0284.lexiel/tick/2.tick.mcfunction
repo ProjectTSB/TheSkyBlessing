@@ -6,38 +6,25 @@
 #> private
 # @private
     #declare score_holder $Count
-
-# スコアを増やす
-    scoreboard players add @s 7W.Tick 1
-
-# 壁に埋まっていたらテレポートさせる
-    execute if entity @p[gamemode=!spectator,distance=..100] if score @s 7W.Tick matches -15 unless block ~ ~ ~ #lib:no_collision run function asset:mob/0284.lexiel/tick/move/spread
-
-# プレイヤーが周囲にいないのに時間が着てしまった場合。スコアを戻す
-    execute if score @s 7W.Tick matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 7W.Tick -60
-
-# プレイヤーを見る
-    execute if score @s 7W.Tick matches 0 at @s facing entity @p eyes run function asset:mob/0284.lexiel/tick/move/teleport
-
-# その後発動するスキル
-# プレイヤーが周囲にいたらスキル選択
-    execute if score @s 7W.Tick matches 0 run function asset:mob/0284.lexiel/tick/3.skill_select
-
-# 選択したスキル発動
-    execute if score @s 7W.Tick matches 0.. run function asset:mob/0284.lexiel/tick/4.skill_active
+    #declare score_holder $4tInterval
 
 
-# 以下エラー時の処理
-# もし同一座標に2体存在した場合瞬時にteleportする
-    # 数のカウント
-        execute store result score $Count Temporary run execute if entity @e[type=armor_stand,tag=7W.ArmorStand,distance=..0.1]
-    # もしいたらテレポ
-        execute if score $Count Temporary matches 2.. run function asset:mob/0284.lexiel/tick/move/spread
-    # スコアも一応戻す
-        execute if score $Count Temporary matches 2.. run scoreboard players reset @s 7W.Tick
-    # リセット
-        scoreboard players reset $Count
+# アマスタにタグつける。ここでついたタグは最後に消す。実質的なthis
+    function asset:mob/0284.lexiel/tick/armor_stand_check
+
+# 開幕
+    execute if entity @s[tag=7W.Opening] run function asset:mob/0284.lexiel/tick/wait_time/opening/tick
+
+# フェーズ1
+    execute if entity @s[tag=!7W.Opening] run function asset:mob/0284.lexiel/tick/wait_time/base_move/tick
+
+# スコア加算
+    scoreboard players add @s[tag=!7W.TickLock] 7W.Tick 1
+
 
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
-    execute at @s unless entity @e[type=armor_stand,tag=7W.ArmorStand,distance=..0.01] run function asset:mob/0284.lexiel/tick/armorstand_respawn
+    execute at @s unless entity @e[type=snowball,tag=7W.ModelCore,distance=..0.01] run function asset:mob/0284.lexiel/tick/armorstand_respawn
 
+
+# 最初に付けたタグを消す
+    tag @e[type=armor_stand,tag=7W.ModelChangeTarget,distance=..0.5,limit=2] remove 7W.ModelChangeTarget
