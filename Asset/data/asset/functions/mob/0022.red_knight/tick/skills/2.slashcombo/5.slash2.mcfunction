@@ -5,9 +5,9 @@
 # @within function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
 
 # 演出
-    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1
+    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 2 0.6
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 0.6
+    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1.5 1
 
 # ダメージ判定
     # 与えるダメージ

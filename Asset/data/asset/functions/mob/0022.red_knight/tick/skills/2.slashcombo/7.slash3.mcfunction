@@ -5,9 +5,9 @@
 # @within function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
 
 # 演出
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.8
-    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1.5 1.8
-    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1.5 1.5
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 0.8
+    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 2 1.8
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
 
 # ダメージ判定
     # 与えるダメージ

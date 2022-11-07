@@ -27,16 +27,49 @@
 # 斬撃
     execute if score @s M.Tick matches 21 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/7.slash3
     # パーティクル
-        execute if score @s M.Tick matches 21 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 22 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^4 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 23 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^6 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 24 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^8 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 25 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^10 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 26 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^12 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 27 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^14 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 28 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^16 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 29 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^18 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
-        execute if score @s M.Tick matches 30 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^20 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 21 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 22 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^4 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 23 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^6 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 24 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^8 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 25 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^10 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 26 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^12 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 27 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^14 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 28 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^16 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 29 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^18 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+        execute if score @s[scores={M.Phase=1}] M.Tick matches 30 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^20 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/8.finishwave
+    # パーティクル(フェイズ2)
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 21 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 22 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^4 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 23 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^6 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 24 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^8 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 25 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^10 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 26 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^12 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 27 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^14 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 28 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^16 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 29 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^18 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 30 rotated ~ 0 positioned ~ ~1 ~ positioned ^ ^ ^20 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+    # パーティクル(フェイズ2)
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 21 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 22 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^4 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 23 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^6 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 24 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^8 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 25 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^10 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 26 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^12 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 27 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^14 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 28 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^16 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 29 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^18 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 30 rotated ~45 0 positioned ~ ~1 ~ positioned ^ ^ ^20 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+    # パーティクル(フェイズ2)
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 21 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 22 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^4 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 23 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^6 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 24 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^8 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 25 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^10 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 26 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^12 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 27 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^14 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 28 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^16 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 29 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^18 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
+        execute if score @s[scores={M.Phase=2..}] M.Tick matches 30 rotated ~-45 0 positioned ~ ~1 ~ positioned ^ ^ ^20 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
 
 # デバッグ用: この処理をループする
     #execute if score @s M.Tick matches 60.. run scoreboard players set @s M.Tick -20
