@@ -19,20 +19,22 @@
         tag @s remove M.SkillSlash
         tag @s remove M.SkillCombo
         tag @s remove M.SkillParry
+        tag @s remove M.SkillWave
     # ダッシュ関連
         tag @s remove M.DashTriple
         tag @s remove M.DashStraight
         tag @s remove M.DashStab
     # 行動関連
         tag @s remove M.InAction
-        tag @s remove M.InSkill
-        tag @s remove M.InDash
         tag @s remove M.Move
         tag @s remove M.ActiveInertia
+        tag @s remove M.HPless50per
     #モデル関連
         tag @s add M.BodyFacing45
         tag @s remove M.BodyFacing0
         tag @s remove M.FacingLock
+    # 状態関連
+        tag @s remove Uninterferable
 
 # スコアのリセット
     scoreboard players set @s M.Tick 0
@@ -40,3 +42,4 @@
 
 # データリセット
     data modify entity @s NoAI set value 0b
+    data modify entity @s Invulnerable set value 0b

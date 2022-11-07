@@ -6,6 +6,7 @@
 
 # タグ調整
     tag @s remove M.Opening
+    tag @s remove Uninterferable
 
 # フェイズ加算
     scoreboard players add @s M.Phase 1
