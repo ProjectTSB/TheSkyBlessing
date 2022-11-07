@@ -13,7 +13,7 @@
 
 # 画面エフェクト
     title @a[distance=..50] times 5 8 10
-    title @a[distance=..50] title {"text":"","font":"screen_effect","color":"#E8E8E8"}
+    title @a[distance=..50] title {"text":"\uE010","font":"screen_effect","color":"#E8E8E8"}
 
 # でっかいでっかいパーティクル
     execute positioned ~-16 ~-8 ~-16 run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/7.finish_particle
