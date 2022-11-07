@@ -5,18 +5,18 @@
 # @within function
 #   asset:mob/0022.red_knight/**
     #declare tag SpreadMarker
-    #declare tag Landing
-    #declare tag LandingTarget
-    #declare tag M.ArmorStand
-    #declare tag M.ArmorStandThis
-    #declare tag M.ArmorStandDeath
-    #declare tag M.ArmorStandDeathSword
-    #declare tag M.Angel
+    #declare tag M.TargetMarker
+    #declare tag M.TargetMarkerInit
     #
     #declare tag M.SkillCombo
     #declare tag M.SkillSlash
     #declare tag M.SkillParry
-    #declare tag M.SkillTpSlash
+    #declare tag M.SkillWave
+    #declare tag M.SkillSummon
+    #
+    #declare tag M.WaveMiddle
+    #declare tag M.WaveLeftToRight
+    #declare tag M.WaveRightToLeft
     #
     #declare tag M.DashTriple
     #declare tag M.DashStraight
@@ -26,10 +26,9 @@
     #declare score_holder $Random
     #
     #declare tag M.Opening
+    #declare tag M.HPless50per
     #
     #declare tag M.InAction
-    #declare tag M.InSkill
-    #declare tag M.InDash
     #
     #declare tag M.FacingLock
     #declare tag M.TeleportMarker
