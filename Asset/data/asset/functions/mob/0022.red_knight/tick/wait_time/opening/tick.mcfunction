@@ -5,7 +5,7 @@
 # @within function asset:mob/0022.red_knight/tick/2.tick
 
 # ポーズ(構え)
-    execute if score @s M.Tick matches 30 as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/0022.red_knight/tick/wait_time/opening/change_pose_1
+    execute if score @s M.Tick matches 10 as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/0022.red_knight/tick/wait_time/opening/change_pose_1
 
 # 画面エフェクト
     execute if score @s M.Tick matches 20 run title @a[distance=..50] times 5 30 2

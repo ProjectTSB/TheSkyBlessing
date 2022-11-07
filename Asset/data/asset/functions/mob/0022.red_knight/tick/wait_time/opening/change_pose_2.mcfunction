@@ -7,7 +7,7 @@
 # 画面エフェクト
     title @a[distance=..50] times 0 5 2
     title @a[distance=..50] title {"text":"\uE010","font":"screen_effect","color":"#FFFFFF"}
-
+    title @a[distance=..50] subtitle {"text":""}
 # ポーズ変更
     data modify entity @s Pose.LeftArm set value [-25f,5f,-75f]
 
