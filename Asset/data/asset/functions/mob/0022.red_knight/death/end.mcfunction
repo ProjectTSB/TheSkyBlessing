@@ -8,7 +8,7 @@
     particle minecraft:explosion ~ ~1.5 ~ 0 0 0 0 0 force @a[distance=..20]
     particle reverse_portal ~ ~1.5 ~ 0 0 0 2 200
     particle effect ~ ~ ~ 0 5 0 0.1 200
-    playsound minecraft:entity.illusioner.prepare_blindness player @s ~ ~ ~ 2 0.8
+    playsound minecraft:entity.illusioner.prepare_blindness hostile @a ~ ~ ~ 2 0.8
     playsound ogg:mob.endermen.portal hostile @a ~ ~ ~ 2 0.8
     playsound ogg:mob.endermen.portal hostile @a ~ ~ ~ 2 1
 
