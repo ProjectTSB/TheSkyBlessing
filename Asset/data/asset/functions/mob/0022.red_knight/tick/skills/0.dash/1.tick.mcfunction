@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/0.dash/1.tick
 #
-# マジシャンじみた移動
+# トリプルダッシュ
 #
 # @within function asset:mob/0022.red_knight/tick/2.3.skill_active
 

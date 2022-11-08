@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/straight_dash/1.tick
 #
-#
+# 唐突に目の前まで接近してくるダッシュ
 #
 # @within function asset:mob/0022.red_knight/tick/2.3.skill_active
 

@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/slash_entity/1.init
 #
-#
+# 斬撃エンティティが向きを揃えたりする際の処理
 #
 # @within  asset:mob/0022.red_knight/tick/skills/**
 
@@ -9,7 +9,6 @@
     data modify entity @s Rotation set from storage api: Rotation
 
 # 向き
-    #execute store result score @s Temporary run data get storage api: Rotation[1] 100
     execute store result entity @s Pose.RightArm[2] float -0.01 run scoreboard players remove @s Temporary 9000
 
 # タグ削除

@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/straight_dash/2.targeting
 #
-#
+# 最寄りのやつを狙う
 #
 # @within function asset:mob/0022.red_knight/tick/skills/straight_dash/1.tick
 

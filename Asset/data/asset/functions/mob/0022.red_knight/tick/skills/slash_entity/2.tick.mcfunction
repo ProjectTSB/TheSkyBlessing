@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/slash_entity/2.tick
 #
-#
+# 斬撃エンティティのTick処理部分
 #
 # @within function
 #   asset:mob/0022.red_knight/tick/skills/**

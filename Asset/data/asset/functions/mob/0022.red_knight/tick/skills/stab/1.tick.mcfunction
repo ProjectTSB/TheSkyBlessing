@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/stab/1.tick
 #
-# 獄門
+# ダッシュ代わりに使ってくる自機狙いの下突き
 #
 # @within function asset:mob/0022.red_knight/tick/2.3.skill_active
 
