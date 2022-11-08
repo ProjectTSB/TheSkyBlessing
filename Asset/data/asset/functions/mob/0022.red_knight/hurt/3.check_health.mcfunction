@@ -15,11 +15,9 @@
     scoreboard players operation $Health Temporary /= $MaxHealth Temporary
 
 # HP50%以下
-    execute if score $Health Temporary matches ..5000 run scoreboard players set @s[scores={M.Phase=1}] M.Tick 0
-    execute if score $Health Temporary matches ..5000 run tag @s[scores={M.Phase=1}] add M.HPless50per
+    execute if score $Health Temporary matches ..5000 if entity @s[scores={M.Phase=1}] run function asset:mob/0022.red_knight/hurt/health_less50
 
 tellraw @a [{"text":"score: "},{"score":{"objective":"Temporary","name":"$Health"}}]
-
 # リセット
     scoreboard players reset $Health
     scoreboard players reset $MaxHealth
