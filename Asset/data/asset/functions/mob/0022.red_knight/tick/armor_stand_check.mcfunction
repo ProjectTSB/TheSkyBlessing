@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:mob/0022.red_knight/tick/2.tick
-#   asset:mob/0022.red_knight/death/2.death
+#   asset:mob/0022.red_knight/death/**
 
 # モデルがなかったら無理やり読んでくる
     execute unless entity @e[type=snowball,tag=M.ModelCore,distance=..1] run say リセットしてください
