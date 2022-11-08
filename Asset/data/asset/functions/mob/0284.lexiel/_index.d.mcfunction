@@ -15,6 +15,7 @@
     #declare tag 7W.ArmorStandDeath
     #declare tag 7W.ArmorStandThis
     #declare tag 7W.ArmorStand
+    #declare tag 7W.ArmorStandDeathSword
     #declare tag 7W.XYZ
     #declare tag 7W.Opening
     #declare tag 7W.Start
@@ -37,6 +38,9 @@
     #declare tag 7W.HPless30per
     #
     #declare tag 7W.SkillMelee
+    #declare tag 7W.SkillThunder
+    #
+    #declare tag 7W.SkillSwordDamageThis
     #
     #declare tag 7W.DeathAnimation
     #declare tag 7W.DeathInit

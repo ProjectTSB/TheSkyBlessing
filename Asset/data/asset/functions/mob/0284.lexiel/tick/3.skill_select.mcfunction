@@ -21,10 +21,11 @@
     scoreboard players operation $Random Temporary %= $5 Const
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 4
+    scoreboard players set $Random Temporary 0
 
 # スキル選択
-    #execute if score $Random Temporary matches 0 run tag @s add 7W.SkillMelee
+    execute if score $Random Temporary matches 0 run tag @s add 7W.SkillMelee
+    execute if score $Random Temporary matches 1 run tag @s add 7W.SkillThunder
 
 # リセット
     scoreboard players reset $Random Temporary

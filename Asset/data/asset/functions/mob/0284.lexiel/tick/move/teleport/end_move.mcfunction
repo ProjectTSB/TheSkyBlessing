@@ -6,10 +6,6 @@
 #   asset:mob/0284.lexiel/tick/move/teleport/move_to_marker
 #   asset:mob/0284.lexiel/tick/skill/1.melee_attack/**
 
-# タグを消す
-    tag @s remove 7W.Move
-    tag @s remove 7W.TickLock
-
 # マーカーも消す
     kill @e[type=marker,tag=7W.TeleportMarker,sort=nearest,limit=1]
 

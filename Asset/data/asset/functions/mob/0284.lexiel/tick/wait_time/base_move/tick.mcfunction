@@ -8,12 +8,12 @@
     execute if entity @s[tag=!7W.InAction] unless entity @s[scores={7W.FakeInertia=0..}] facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # プレイヤーが周囲にいたらスキル選択
-    execute if score @s[tag=!7W.InAction] 7W.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0284.lexiel/tick/3.skill_select
+    execute if score @s[tag=!7W.InAction,tag=!7W.Move] 7W.Tick matches 25.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0284.lexiel/tick/3.skill_select
 
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
-    execute if score @s 7W.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 7W.Tick 0
+    execute if score @s[tag=!7W.InAction,tag=!7W.Move] 7W.Tick matches 25.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 7W.Tick 0
 
-    execute if score @s 7W.Tick matches 40.. run scoreboard players set @s 7W.Tick 0
+    #execute if score @s 7W.Tick matches 25.. run scoreboard players set @s 7W.Tick 0
 
 # 選択したスキル発動
     execute if entity @s[tag=7W.InAction] run function asset:mob/0284.lexiel/tick/4.skill_active
@@ -32,7 +32,7 @@
         execute if entity @s[tag=!7W.InAction] as @e[type=armor_stand,tag=7W.ModelBody,tag=7W.ModelChangeTarget,distance=..0.5] run item replace entity @s armor.head with stick{CustomModelData:20292}
 
 # 移動タグ付きなら移動
-    execute if entity @s[tag=7W.Move] run function asset:mob/0284.lexiel/tick/move/teleport/move_to_marker
+    execute if entity @s[tag=7W.Move,tag=!7W.InAction] run function asset:mob/0284.lexiel/tick/move/teleport/move_to_marker
 
 # 嘘慣性
     # 下が空気なら通常実行

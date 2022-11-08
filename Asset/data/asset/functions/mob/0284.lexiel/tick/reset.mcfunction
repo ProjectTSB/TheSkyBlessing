@@ -22,10 +22,9 @@
     item replace entity @e[type=armor_stand,tag=7W.ModelBody,tag=7W.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] weapon.offhand with stick{CustomModelData:20289}
 
 # タグをリセットする
-    #tag @s remove 7W.Skill
+    tag @s remove 7W.SkillMelee
 
     tag @s remove 7W.InAction
-say aa
 
 # スコアを戻す
     scoreboard players set @s 7W.Tick 0
