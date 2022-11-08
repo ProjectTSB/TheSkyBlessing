@@ -1,11 +1,15 @@
-#> asset:mob/0022.red_knight/tick/skills/parry/3.slash
+#> asset:mob/0022.red_knight/tick/skills/parry/4.slash
 #
 #
 #
 # @within function asset:mob/0022.red_knight/tick/skills/parry/1.tick
 
 # パーティクル
-    execute rotated ~ 0 rotated ~90 ~-15 positioned ~ ~1.5 ~ run function asset:mob/0022.red_knight/tick/skills/parry/4.particle
+    execute rotated ~ 0 rotated ~90 ~-15 positioned ~ ~1.5 ~ run function asset:mob/0022.red_knight/tick/skills/parry/5.particle
+    execute rotated ~ 0 rotated ~90 ~15 positioned ~ ~1.5 ~ run function asset:mob/0022.red_knight/tick/skills/parry/5.particle
+
+# 自身の耐性を解除
+    effect clear @s resistance
 
 # 体
     # ポーズ
@@ -34,4 +38,5 @@
         function lib:damage/modifier
         execute as @a[tag=!PlayerShouldInvulnerable,distance=..6] run function lib:damage/
 # リセット
+
     function lib:damage/reset
