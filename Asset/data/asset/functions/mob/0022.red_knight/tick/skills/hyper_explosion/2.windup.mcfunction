@@ -13,6 +13,9 @@
 # こっち向く
     execute facing entity @p feet run tp @s ~ ~ ~ ~ 0
 
+# 必殺カウントをリセット
+    scoreboard players reset @s M.UltimateCount
+
 # 体
     # ポーズ
         data modify entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.LeftArm set value [-150f,0f,-15f]
