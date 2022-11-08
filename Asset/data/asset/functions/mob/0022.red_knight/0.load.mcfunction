@@ -10,6 +10,9 @@
     scoreboard objectives add M.Phase dummy
     scoreboard objectives add M.Speed dummy
     scoreboard objectives add M.Phase dummy
+    scoreboard objectives add M.WaveCount dummy
+    scoreboard objectives add M.UltimateCount dummy
+    scoreboard objectives add M.AdditionCount dummy
     scoreboard objectives add M.MoveTimesPerTick dummy
     scoreboard objectives add M.DeathExplosion dummy
     scoreboard objectives add M.LoopCount dummy

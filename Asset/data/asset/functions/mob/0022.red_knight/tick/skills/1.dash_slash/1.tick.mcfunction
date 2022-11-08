@@ -34,7 +34,7 @@
         execute if score @s M.Tick matches 54 positioned ~ ~1 ~ positioned ^ ^ ^-3 rotated ~360 ~230 run function asset:mob/0022.red_knight/tick/particle_4
         execute if score @s M.Tick matches 55 positioned ~ ~1 ~ positioned ^ ^ ^-3 rotated ~190 ~290 run function asset:mob/0022.red_knight/tick/particle_1
     # 2個目
-        execute if score @s M.Tick matches 50..550 positioned ~ ~1 ~ positioned ^ ^ ^-7 run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/back_slash_swoosh
+        execute if score @s M.Tick matches 50..55 positioned ~ ~1 ~ positioned ^ ^ ^-7 run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/back_slash_swoosh
         execute if score @s M.Tick matches 51 positioned ~ ~1 ~ positioned ^ ^ ^-7 rotated ~190 ~290 run function asset:mob/0022.red_knight/tick/particle_1
         execute if score @s M.Tick matches 52 positioned ~ ~1 ~ positioned ^ ^ ^-7 rotated ~200 ~20 run function asset:mob/0022.red_knight/tick/particle_2
         execute if score @s M.Tick matches 53 positioned ~ ~1 ~ positioned ^ ^ ^-7 rotated ~100 ~180 run function asset:mob/0022.red_knight/tick/particle_3
@@ -48,5 +48,9 @@
         execute if score @s M.Tick matches 54 positioned ~ ~1 ~ positioned ^ ^ ^-11 rotated ~360 ~230 run function asset:mob/0022.red_knight/tick/particle_4
         execute if score @s M.Tick matches 55 positioned ~ ~1 ~ positioned ^ ^ ^-11 rotated ~190 ~290 run function asset:mob/0022.red_knight/tick/particle_1
 
+
+# フェイズ2、追撃カウントが溜まってたらリセット代わりにパリィ
+    execute if score @s[scores={M.Phase=2..,M.AdditionCount=3..}] M.Tick matches 55 run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/addition_attack
+
 # リセット
-    execute if score @s M.Tick matches 60.. run function asset:mob/0022.red_knight/tick/reset
+    execute if score @s M.Tick matches 70.. run function asset:mob/0022.red_knight/tick/reset

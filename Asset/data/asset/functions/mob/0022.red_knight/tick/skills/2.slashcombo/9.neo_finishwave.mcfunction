@@ -1,6 +1,6 @@
 #> asset:mob/0022.red_knight/tick/skills/2.slashcombo/9.neo_finishwave
 #
-# 避けてみな！
+# フェイズで放つ追加の斬撃弾
 #
 # @within function asset:mob/0022.red_knight/tick/skills/2.slashcombo/1.tick
 
