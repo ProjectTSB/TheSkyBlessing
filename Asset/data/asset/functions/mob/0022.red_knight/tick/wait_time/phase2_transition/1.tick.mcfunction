@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0022.red_knight/tick/2.tick
 
+# Tickロックかかってるなら強制的に解除
+    tag @s[tag=M.TickLock] remove M.TickLock
+
+
 # 怯み動作
     execute if score @s M.Tick matches 0 run function asset:mob/0022.red_knight/tick/wait_time/phase2_transition/2.change_pose
 
@@ -16,4 +20,4 @@
     execute if score @s M.Tick matches 40 run function asset:mob/0022.red_knight/tick/wait_time/phase2_transition/3.phase_change
 
 # リセット
-    execute if score @s M.Tick matches 60 run function asset:mob/0022.red_knight/tick/reset
+    execute if score @s M.Tick matches 60 run function asset:mob/0022.red_knight/tick/wait_time/phase2_transition/4.restart
