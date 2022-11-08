@@ -10,6 +10,9 @@
 # 浮く
     data modify entity @s NoAI set value 1b
 
+# 必殺カウントをリセット
+    scoreboard players reset @s M.WaveCount
+
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 

@@ -19,7 +19,7 @@
     execute if entity @s[tag=M.WaveRightToLeft] run function asset:mob/0022.red_knight/tick/skills/heavy_slashwave/4.wave_type3
 
 # デバッグ用: この処理をループする
-    execute if score @s M.Tick matches 100.. run scoreboard players set @s M.Tick -20
+    #execute if score @s M.Tick matches 100.. run scoreboard players set @s M.Tick -20
 
 # リセット
     execute if score @s M.Tick matches 100.. run function asset:mob/0022.red_knight/tick/reset
