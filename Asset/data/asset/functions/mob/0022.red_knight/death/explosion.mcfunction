@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0022.red_knight/death/4.death_animation
+# @within function asset:mob/0022.red_knight/death/death_animation
 
 # パーティクル
     particle minecraft:explosion ~ ~1 ~ 1 1 1 0.5 1 force @a[distance=..30]

@@ -51,5 +51,7 @@
     #declare tag M.ModelChangeTarget
     #declare tag M.TickLock
     #
+    #declare tag M.RetreatItem
+    #
     #declare tag M.DeathAnimation
 
