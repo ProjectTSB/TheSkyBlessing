@@ -19,8 +19,8 @@
 # ボスドロ
     data modify storage api: Argument.ID set value 364
     data modify storage api: Argument.Important set value true
-    function api:sacred_treasure/spawn/from_id
+    execute positioned ~ ~1 ~ run function api:sacred_treasure/spawn/from_id
 
 # 消滅
-    kill @e[type=item,tag=M.RetreatItem,sort=nearest,limit=1]
+    kill @e[type=item,tag=M.RetreatItem,distance=..10,sort=nearest,limit=1]
     kill @s
