@@ -25,6 +25,6 @@
 # もしアマスタがどっかいってしまったら(tpの関係でatが無いと死ぬ)
     execute at @s unless entity @e[type=snowball,tag=7W.ModelCore,distance=..0.01] run function asset:mob/0284.lexiel/tick/armorstand_respawn
 
-
+    execute as @e[type=area_effect_cloud,tag=7W.SkillThunderMaker] at @s run function asset:mob/0284.lexiel/tick/particle/particle1
 # 最初に付けたタグを消す
     tag @e[type=armor_stand,tag=7W.ModelChangeTarget,distance=..0.5,limit=2] remove 7W.ModelChangeTarget

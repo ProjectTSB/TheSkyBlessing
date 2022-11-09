@@ -17,8 +17,7 @@
     execute if entity @s[scores={7W.FakeInertia=5..8}] positioned ^ ^ ^0.3 run function asset:mob/0284.lexiel/tick/move/tereport_no_facing
     execute if entity @s[scores={7W.FakeInertia=1..4}] positioned ^ ^ ^0.1 run function asset:mob/0284.lexiel/tick/move/tereport_no_facing
 
-    execute if entity @s[scores={7W.FakeInertia=0}] run tag @s remove 7W.Move
-    execute if entity @s[scores={7W.FakeInertia=0}] run tag @s remove 7W.TickLock
+
 
 # 終わったときプレイヤーを向く
     execute if entity @s[scores={7W.FakeInertia=0}] facing entity @p feet run tp @s ~ ~ ~ ~ ~

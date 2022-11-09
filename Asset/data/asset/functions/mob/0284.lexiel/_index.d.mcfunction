@@ -39,8 +39,11 @@
     #
     #declare tag 7W.SkillMelee
     #declare tag 7W.SkillThunder
+    #declare tag 7W.SkillFireball
     #
     #declare tag 7W.SkillSwordDamageThis
+    #declare tag 7W.SkillThunderMaker
+    #declare tag 7W.SkillThunderMakerThis
     #
     #declare tag 7W.DeathAnimation
     #declare tag 7W.DeathInit

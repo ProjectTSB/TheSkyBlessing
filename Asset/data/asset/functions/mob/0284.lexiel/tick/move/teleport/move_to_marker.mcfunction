@@ -12,3 +12,6 @@
 
 # マーカーまでたどり着いたら移動をやめる
     execute at @s if entity @e[type=marker,tag=7W.TeleportMarker,distance=..3] run function asset:mob/0284.lexiel/tick/move/teleport/end_move
+
+# マーカーがしんでたら移動をどうにかする
+    execute at @s unless entity @e[type=marker,tag=7W.TeleportMarker,distance=..100] run function asset:mob/0284.lexiel/tick/move/teleport/end_move

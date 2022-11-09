@@ -23,6 +23,7 @@
 
 # タグをリセットする
     tag @s remove 7W.SkillMelee
+    tag @s remove 7W.SkillThunder
 
     tag @s remove 7W.InAction
 
