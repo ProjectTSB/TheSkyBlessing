@@ -7,6 +7,7 @@
     #declare tag SpreadMarker
     #declare tag M.TargetMarker
     #declare tag M.TargetMarkerInit
+    #declare tag M.TargetPlayer
     #
     #declare tag M.SkillCombo
     #declare tag M.SkillSlash
@@ -36,9 +37,6 @@
     #declare tag M.Move
     #declare tag M.SkillReady
     #declare tag M.ActiveInertia
-    #
-    #declare tag M.BodyFacing45
-    #declare tag M.BodyFacing0
     #
     #declare tag M.SlashEntity
     #declare tag M.SlashInit

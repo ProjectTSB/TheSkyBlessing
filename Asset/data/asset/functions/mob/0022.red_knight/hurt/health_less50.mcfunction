@@ -19,9 +19,7 @@
     # 行動関連
         tag @s remove M.Move
         tag @s remove M.ActiveInertia
-    #モデル関連
-        tag @s add M.BodyFacing45
-        tag @s remove M.BodyFacing0
+
 
 # タグ付与、全基本動作停止
     tag @s add M.InAction

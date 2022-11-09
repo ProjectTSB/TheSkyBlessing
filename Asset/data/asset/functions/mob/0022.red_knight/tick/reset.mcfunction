@@ -31,8 +31,6 @@
         tag @s remove M.ActiveInertia
         tag @s remove M.HPless50per
     #モデル関連
-        tag @s add M.BodyFacing45
-        tag @s remove M.BodyFacing0
         tag @s remove M.FacingLock
     # 状態関連
         tag @s remove Uninterferable
