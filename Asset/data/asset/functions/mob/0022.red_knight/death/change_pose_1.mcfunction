@@ -16,13 +16,13 @@
         item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] armor.head with stick{CustomModelData:20279}
         item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] weapon.offhand with stick{CustomModelData:20276}
     # 向き
-        execute as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] at @s facing entity @p eyes run tp @s ~ ~ ~ ~45 ~
+        execute as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] at @s facing entity @p[distance=..80] eyes run tp @s ~ ~ ~ ~45 ~
 
 # 頭モデル
     # ポーズ
         data modify entity @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.Head set value [15f, 0f, 0f]
     # 向き
-        execute as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] at @s facing entity @p eyes run tp @s ~ ~ ~ ~15 ~
+        execute as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..1,sort=nearest,limit=1] at @s facing entity @p[distance=..80] eyes run tp @s ~ ~ ~ ~15 ~
 
 # モデルのアマスタからタグを外す
     tag @e[type=armor_stand,tag=M.ModelChangeTarget,distance=..1,limit=2] remove M.ModelChangeTarget

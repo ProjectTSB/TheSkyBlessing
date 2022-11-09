@@ -9,25 +9,24 @@
     execute if entity @s[tag=!M.InAction,nbt={OnGround:0b}] run item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20279}
 
 # ダッシュ選択
-    execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 20 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/2.1.dash_select
+    execute if score @s[tag=!M.SkillReady,tag=!M.InAction] M.Tick matches 20 if entity @p[gamemode=!spectator,distance=..80] run function asset:mob/0022.red_knight/tick/2.1.dash_select
 
 # スキル選択
-    execute if score @s[tag=M.SkillReady,tag=!M.InAction] M.Tick matches 1 if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/0022.red_knight/tick/2.2.skill_select
+    execute if score @s[tag=M.SkillReady,tag=!M.InAction] M.Tick matches 1 if entity @p[gamemode=!spectator,distance=..80] run function asset:mob/0022.red_knight/tick/2.2.skill_select
 
 # 選択したスキル発動
     execute if entity @s[tag=M.InAction] run function asset:mob/0022.red_knight/tick/2.3.skill_active
 
 # モデルの向き
     # 頭がプレイヤーの方を向く
-        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p feet run tp @s ~ ~ ~ ~ ~
+        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p[distance=..80] feet run tp @s ~ ~ ~ ~ ~
     # リミット
-        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p feet if entity @s[x_rotation=44..90] run tp @s ~ ~ ~ ~ 45
-        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p feet if entity @s[x_rotation=-90..-44] run tp @s ~ ~ ~ ~ -45
+        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p[distance=..80] feet if entity @s[x_rotation=44..90] run tp @s ~ ~ ~ ~ 45
+        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p[distance=..80] feet if entity @s[x_rotation=-90..-44] run tp @s ~ ~ ~ ~ -45
     # 頭のモデルのデータに移す
         execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelHead,distance=..2] store result entity @s Pose.Head[0] float 1 run data get entity @s Rotation[1]
     # 体
-        execute if entity @s[tag=M.BodyFacing45,tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~45 ~
-        execute if entity @s[tag=M.BodyFacing0,tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p eyes run tp @s ~ ~ ~ ~0 ~
+        execute if entity @s[tag=!M.FacingLock] as @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5] facing entity @p[distance=..80] eyes run tp @s ~ ~ ~ ~45 ~
 
 # 嘘慣性
     # 下が空気なら通常実行

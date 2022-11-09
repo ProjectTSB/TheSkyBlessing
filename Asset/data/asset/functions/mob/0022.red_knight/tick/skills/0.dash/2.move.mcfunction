@@ -25,6 +25,5 @@
 # 三回目なら水平に並んでくる
     execute if score @s M.LoopCount matches 2.. run data modify storage lib: Argument.Bounds set value [[5d,5d],[0d,0d],[5d,5d]]
 
-
 # テレポート
-    execute if entity @p[distance=..100] at @r run function asset:mob/0022.red_knight/tick/move/teleport/place_marker
+    execute if entity @p[distance=..100] at @r[distance=..80] run function asset:mob/0022.red_knight/tick/move/teleport/place_marker

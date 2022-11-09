@@ -13,7 +13,7 @@
     data modify entity @s NoAI set value 1b
 
 # こっち向く
-    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute facing entity @p[distance=..80] feet run tp @s ~ ~ ~ ~ ~
 
 # モデル変更
     item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20280}
@@ -28,7 +28,7 @@
     kill @e[type=marker,tag=M.TeleportMarker,sort=nearest,limit=1]
 
 # 移動先を設置
-    execute at @p run summon marker ~ ~ ~ {Tags:[M.TeleportMarker,M.MarkerInit]}
+    execute at @p[distance=..80] run summon marker ~ ~ ~ {Tags:[M.TeleportMarker,M.MarkerInit]}
 
 # リセット
     tag @e[type=marker,tag=M.TeleportMarker,tag=M.MarkerInit] remove M.MarkerInit

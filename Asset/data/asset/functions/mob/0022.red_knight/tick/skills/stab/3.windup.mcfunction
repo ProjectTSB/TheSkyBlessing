@@ -8,7 +8,7 @@
     tag @s add M.FacingLock
 
 # こっち向く
-    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute facing entity @p[distance=..80] feet run tp @s ~ ~ ~ ~ ~
 
 # 体
     # ポーズ

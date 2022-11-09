@@ -12,8 +12,11 @@
 # 浮遊
     data modify entity @s NoAI set value 1b
 
+# 周囲のランダムなプレイヤーを対象に
+    tag @r[distance=..80,limit=1] add M.TargetPlayer
+
 # こっち向く
-    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute facing entity @p[tag=M.TargetPlayer] feet run tp @s ~ ~ ~ ~ ~
 
 # モデル変更
     item replace entity @e[type=armor_stand,tag=M.ModelBody,tag=M.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20280}
@@ -28,10 +31,13 @@
     kill @e[type=marker,tag=M.TeleportMarker,sort=nearest,limit=1]
 
 # 移動先を設置
-    execute at @p run summon marker ~ ~5 ~ {Tags:[M.TeleportMarker,M.MarkerInit]}
+    execute at @p[tag=M.TargetPlayer] run summon marker ~ ~5 ~ {Tags:[M.TeleportMarker,M.MarkerInit]}
 
 # リセット
     tag @e[type=marker,tag=M.TeleportMarker,tag=M.MarkerInit] remove M.MarkerInit
+
+# プレイヤーのタグを外す
+    tag @a[tag=M.TargetPlayer] remove M.TargetPlayer
 
 # 行動中タグ付与
     tag @s add M.Move
