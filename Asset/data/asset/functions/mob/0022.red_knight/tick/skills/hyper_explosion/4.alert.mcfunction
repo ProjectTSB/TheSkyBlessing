@@ -15,7 +15,8 @@
 
 # 数Tickおきにパーティクルを出す
     scoreboard players operation $ParticleInterval Temporary %= $6 Const
-    execute if score $ParticleInterval Temporary matches 0 run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/alert_particle
+    execute if score $ParticleInterval Temporary matches 0 positioned ~ ~0.5 ~ run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/alert_particle
+    execute if score $ParticleInterval Temporary matches 0 positioned ~ ~2.5 ~ run function asset:mob/0022.red_knight/tick/skills/hyper_explosion/alert_particle
 
 
 
