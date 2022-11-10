@@ -64,7 +64,7 @@
     #execute if score @s M.Tick matches 60.. run scoreboard players set @s M.Tick -20
 
 # フェイズ2、追撃カウントが溜まってたらリセット代わりにダッシュ攻撃
-    execute if score @s[scores={M.Phase=2..,M.AdditionCount=3..}] M.Tick matches 30 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/10.addtion_attack
+    execute if score @s[scores={M.Phase=2..,M.AdditionCount=2..}] M.Tick matches 30 run function asset:mob/0022.red_knight/tick/skills/2.slashcombo/10.addtion_attack
 
 # リセット
     execute if score @s M.Tick matches 50.. run function asset:mob/0022.red_knight/tick/reset

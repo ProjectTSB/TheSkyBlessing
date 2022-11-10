@@ -11,14 +11,14 @@
 
 # ダメージ判定
     # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 30.0f
+        data modify storage lib: Argument.Damage set value 20.0f
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+        execute positioned ^ ^ ^1 as @a[tag=!PlayerShouldInvulnerable,distance=..2.5] run function lib:damage/
 # リセット
     function lib:damage/reset
 
