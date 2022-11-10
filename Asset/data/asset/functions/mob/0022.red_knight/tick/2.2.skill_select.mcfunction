@@ -21,11 +21,11 @@
     tag @s remove M.SkillReady
 
 # 必殺カウンターが溜まってたらソレに確定させる
-    execute if score @s M.WaveCount matches 4.. run scoreboard players set $Random Temporary 3
-    execute if score @s M.UltimateCount matches 9.. run scoreboard players set $Random Temporary 4
+    execute if score @s M.WaveCount matches 3.. run scoreboard players set $Random Temporary 3
+    execute if score @s M.UltimateCount matches 10.. run scoreboard players set $Random Temporary 4
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 0
+    #scoreboard players set $Random Temporary 1
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add M.SkillSlash
