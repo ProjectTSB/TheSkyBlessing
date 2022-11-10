@@ -13,8 +13,10 @@
 # こっち向く
     execute facing entity @p[distance=..80] feet run tp @s ~ ~ ~ ~ 0
 
-# 必殺カウントをリセット
+# これを出したら仕切り直し。各種カウンターをリセットする
     scoreboard players reset @s M.UltimateCount
+    scoreboard players reset @s M.WaveCount
+    scoreboard players reset @s M.AdditionCount
 
 # 体
     # ポーズ
