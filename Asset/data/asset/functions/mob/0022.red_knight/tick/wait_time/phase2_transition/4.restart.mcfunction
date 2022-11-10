@@ -7,9 +7,8 @@
 # リセット
     function asset:mob/0022.red_knight/tick/reset
 
-# 初手行動はトリプルダッシュからの必殺技で確定。衝撃波攻撃のカウントをあらかじめ下に下げておく
+# 初手行動はトリプルダッシュからの必殺技で確定
     tag @s add M.SkillReady
     tag @s add M.InAction
     tag @s add M.DashTriple
-    scoreboard players set @s M.UltimateCount 9
-    scoreboard players set @s M.WaveCount -1
+    scoreboard players set @s M.UltimateCount 10
