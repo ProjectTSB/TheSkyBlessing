@@ -5,7 +5,7 @@
 # @within function asset:mob/0022.red_knight/tick/skills/parry/1.tick
 
 # スコアセット
-    scoreboard players set @s M.Tick 20
+    scoreboard players set @s M.Tick 30
 
 # 演出
     playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1.5 1.2
