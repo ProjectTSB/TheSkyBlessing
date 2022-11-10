@@ -40,6 +40,7 @@
     #declare tag 7W.SkillMelee
     #declare tag 7W.SkillThunder
     #declare tag 7W.SkillFireball
+    #declare tag 7W.SkillSpin
     #
     #declare tag 7W.SkillSwordDamageThis
     #declare tag 7W.SkillThunderMaker
