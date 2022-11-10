@@ -50,7 +50,7 @@
 
 
 # フェイズ2、追撃カウントが溜まってたらリセット代わりにパリィ
-    execute if score @s[scores={M.Phase=2..,M.AdditionCount=3..}] M.Tick matches 55 run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/addition_attack
+    execute if score @s[scores={M.Phase=2..,M.AdditionCount=2..}] M.Tick matches 55 run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/addition_attack
 
 # リセット
     execute if score @s M.Tick matches 70.. run function asset:mob/0022.red_knight/tick/reset
