@@ -15,7 +15,6 @@
 
 # 計算結果を api: Return.HealthPer
     execute store result storage api: Return.HealthPer int 1 run scoreboard players operation $Health Temporary /= $MaxHealth Temporary
-    tellraw @a [{"text":"storage: "},{"storage":"api:","nbt":"Return.HealthPer"}]
 
 # リセット
     scoreboard players reset $Health Temporary
