@@ -27,7 +27,7 @@
     scoreboard players set @s[gamemode=adventure] 89.GameMode 2
 
 # 演出
-    playsound entity.wither.ambient master @s ~ ~ ~ 1 2
+    playsound entity.wither.ambient player @s ~ ~ ~ 1 2
 
 # ゲームモードをスペクテイターモードに変更
     gamemode spectator @s

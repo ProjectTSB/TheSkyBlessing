@@ -8,14 +8,14 @@
 # @private
 #declare score_holder $LazerDirection
 
-# 時計レーザーの恐怖
-    execute if score @s 1A.LifeTime matches 1610 store result score $LazerDirection Temporary run function lib:random/
-    execute if score @s 1A.LifeTime matches 1610 run scoreboard players operation $LazerDirection Temporary %= $4 Const
-    execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 0 positioned ~007 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 1 positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 2 positioned ~-07 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 3 positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
-    execute if score @s 1A.LifeTime matches 1610 run scoreboard players reset $LazerDirection Temporary
+# # 時計レーザーの恐怖
+#     execute if score @s 1A.LifeTime matches 1610 store result score $LazerDirection Temporary run function lib:random/
+#     execute if score @s 1A.LifeTime matches 1610 run scoreboard players operation $LazerDirection Temporary %= $4 Const
+#     execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 0 positioned ~007 ~6 ~-16 rotated 000 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+#     execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 1 positioned ~016 ~6 ~007 rotated 090 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+#     execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 2 positioned ~-07 ~6 ~016 rotated 180 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+#     execute if score @s 1A.LifeTime matches 1610 if score $LazerDirection Temporary matches 3 positioned ~-16 ~6 ~-07 rotated 270 0 run function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/summon
+#     execute if score @s 1A.LifeTime matches 1610 run scoreboard players reset $LazerDirection Temporary
 
 # 火召喚
     execute if score @s 1A.LifeTime matches 1610 rotated ~20 ~ positioned ^ ^ ^8 run function asset:mob/0046.clock_of_despair/tick/skill/common/fire/summon

@@ -29,4 +29,4 @@
     particle minecraft:explosion ~ ~ ~ 0.2 0.2 0.2 1 10
     playsound minecraft:block.bubble_column.upwards_inside player @a ~ ~ ~ 1 2 0
     playsound minecraft:block.bubble_column.upwards_inside player @a ~ ~ ~ 1 2 0
-    playsound minecraft:entity.generic.explode master @a ~ ~ ~ 1 0
+    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 0

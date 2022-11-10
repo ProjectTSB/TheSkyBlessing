@@ -11,7 +11,7 @@
 # サウンドとパーティクル
     execute at @a[distance=..15] run particle minecraft:end_rod ~ ~1 ~ 0.3 0.5 0.3 0 3 force @a[distance=..30]
     execute at @a[distance=..15] run particle minecraft:firework ~ ~1 ~ 0.3 0.5 0.3 0 3 force @a[distance=..30]
-    playsound minecraft:entity.arrow.hit_player master @a[distance=..15] ~ ~ ~ 2 1
+    playsound minecraft:entity.arrow.hit_player player @a[distance=..15] ~ ~ ~ 2 1
     playsound minecraft:entity.ender_eye.death player @a ~ ~ ~ 2 1.5
     playsound minecraft:block.end_portal_frame.fill player @a ~ ~ ~ 2 2
 

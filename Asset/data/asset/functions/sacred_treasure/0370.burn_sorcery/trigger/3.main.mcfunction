@@ -13,7 +13,7 @@
     execute anchored eyes positioned ^ ^ ^1.5 run function asset:sacred_treasure/0370.burn_sorcery/trigger/3.1.shoot
 
 # 演出
-    playsound minecraft:entity.blaze.death neutral @a ~ ~ ~ 1 2
+    playsound minecraft:entity.blaze.death player @a ~ ~ ~ 1 2
     #playsound minecraft:entity.puffer_fish.death player @a ~ ~ ~ 1 0.6
     playsound minecraft:entity.iron_golem.death player @a ~ ~ ~ 1 0
 

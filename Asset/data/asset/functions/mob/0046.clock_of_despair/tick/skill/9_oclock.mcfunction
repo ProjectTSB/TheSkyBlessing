@@ -15,10 +15,11 @@
     execute if score @s 1A.LifeTime matches 1801..1820 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~4 ~
     execute if score @s 1A.LifeTime matches 1821..1840 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~6 ~
     execute if score @s 1A.LifeTime matches 1841..1860 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~8 ~
-    execute if score @s 1A.LifeTime matches 1861..1980 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
-    execute if score @s 1A.LifeTime matches 1881..1900 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
-    execute if score @s 1A.LifeTime matches 1901..1920 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~14 ~
-    execute if score @s 1A.LifeTime matches 1921..1940 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~16 ~
+    execute if score @s 1A.LifeTime matches 1861..1940 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
+    # execute if score @s 1A.LifeTime matches 1861..1880 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~10 ~
+    # execute if score @s 1A.LifeTime matches 1881..1900 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~12 ~
+    # execute if score @s 1A.LifeTime matches 1901..1920 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~14 ~
+    # execute if score @s 1A.LifeTime matches 1921..1940 as @e[type=marker,tag=1A.SkillBeam,distance=..100] at @s run tp @s ~ ~ ~ ~16 ~
     execute if score @s 1A.LifeTime matches 1941 run kill @e[type=marker,tag=1A.SkillBeam,distance=..100]
 
 # 火召喚

@@ -14,9 +14,9 @@
     particle lava ~ ~1 ~ 0 1 0 0 20 force
     particle flame ~ ~ ~ 0 0 0 0.3 20 force
     particle explosion ~ ~ ~ 0 0 0 0 1 force
-    playsound entity.generic.explode master @a ~ ~ ~ 1 1
-    playsound entity.generic.explode master @a ~ ~ ~ 1 0
-    playsound entity.blaze.burn master @a ~ ~ ~ 1 1
+    playsound entity.generic.explode neutral @a ~ ~ ~ 1 1
+    playsound entity.generic.explode neutral @a ~ ~ ~ 1 0
+    playsound entity.blaze.burn neutral @a ~ ~ ~ 1 1
 
 # 攻撃を与える
     # 与えるダメージ = 100

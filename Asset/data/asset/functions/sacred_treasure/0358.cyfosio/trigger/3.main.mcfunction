@@ -18,4 +18,4 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:heal/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
