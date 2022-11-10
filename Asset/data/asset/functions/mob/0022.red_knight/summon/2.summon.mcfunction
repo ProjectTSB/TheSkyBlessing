@@ -5,7 +5,7 @@
 # @within function asset:mob/0022.red_knight/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~-100 ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage","AntiVoid","M.Opening","Uninterferable"],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
+    summon wither_skeleton ~ ~-100 ~ {Tags:["MobInit","AlwaysInvisible","AntiFallDamage","AntiVoid","M.Opening","Uninterferable"],Rotation:[180.0f,0.0f],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/0022.red_knight"}
 # ID (int)
     data modify storage asset:mob ID set value 22
 # Type (string) Wikiを参照
@@ -18,7 +18,7 @@
     #data modify storage asset:mob Health set value 65700
 
 # デバッグ用体力、めちゃくちゃ低い
-    data modify storage asset:mob Health set value 4000
+    data modify storage asset:mob Health set value 35000
 
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 0
@@ -46,7 +46,7 @@
     execute positioned ~ ~-100 ~ run tp @e[type=wither_skeleton,tag=MobInit,distance=..0.01] ~ ~100 ~
 
 # 見た目用のアマスタを召喚
-    summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["M.ModelCore","M.ModelCoreTarget","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[35f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20270}}]},{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[0f,0f,-5f],RightArm:[-15f,0f,5f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20273}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20277}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20279}}]}]}
+    summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["M.ModelCore","M.ModelCoreTarget","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",Rotation:[180.0f,0.0f],NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[35f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20270}}]},{id:"minecraft:armor_stand",Rotation:[180.0f,0.0f],NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["M.Model","M.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[0f,0f,-5f],RightArm:[-15f,0f,5f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20273}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20277}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20279}}]}]}
 # 位置をあわせる
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=M.ModelCoreTarget,distance=..0.01] @s
 # タグを消す
