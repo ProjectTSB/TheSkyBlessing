@@ -4,5 +4,5 @@
 #
 # @within function asset:mob/0022.red_knight/remove/1.trigger
 
-# アマスタ削除
-    kill @e[type=armor_stand,tag=M.ArmorStand]
+# アマスタのコアを削除、残る部分は勝手に消える
+    kill @e[type=snowball,tag=M.ModelCore,sort=nearest,limit=1]
