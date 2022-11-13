@@ -24,7 +24,7 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $201 Temporary
 # 最低値を加算
-    scoreboard players add $Random Temporary 400
+    scoreboard players add $Random Temporary 650
 
 # 設定
     execute store result storage lib: Argument.Damage float 1.0 run scoreboard players get $Random Temporary
