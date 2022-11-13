@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
 #
-# 雷っぽいパーティクルを出す処理
+# 雷のパーティクルを出す処理
 #
 # @within function
 #   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning

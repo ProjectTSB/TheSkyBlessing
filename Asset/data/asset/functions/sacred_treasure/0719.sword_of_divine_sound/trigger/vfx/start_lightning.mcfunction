@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
 #
-#
+# 雷の演出の開始処理
 #
 # @within function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/
 

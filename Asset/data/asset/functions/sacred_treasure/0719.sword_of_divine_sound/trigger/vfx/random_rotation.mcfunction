@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/random_rotation
 #
-#
+# 雷の曲がる部分の処理
 #
 # @within function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
 
