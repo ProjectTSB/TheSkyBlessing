@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"光明のランプ","color":"gold"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"光照のランプ","color":"gold"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"周囲を明るく照らすランプ。","color":"white"}','{"text":"周囲のプレイヤーに対して","color":"white"}','{"text":"暗視を付与し、盲目と暗闇を解除する。","color":"white"}']
 # MP以外の消費物 (TextComponentString) (オプション)
