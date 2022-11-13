@@ -16,4 +16,4 @@
 
 # 被回復量
     data modify storage api: Argument.UUID set value [I;1,1,690,5]
-    #function api:player_modifier/receive_heal/remove
+    function api:player_modifier/receive_heal/remove
