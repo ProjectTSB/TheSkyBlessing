@@ -15,7 +15,7 @@
 
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 100 force @s
-    playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 1 1
+    playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 1
     title @a times 20 60 20
     title @a title {"text":"あぁ～ためになる～","color":"aqua","bold":true}
     title @a subtitle {"text":"ちぇん氏のTwitterをフォローしよう！"}

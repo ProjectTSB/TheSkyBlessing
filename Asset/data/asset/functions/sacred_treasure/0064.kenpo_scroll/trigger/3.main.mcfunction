@@ -11,7 +11,7 @@
 
 # 演出
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:crit ~ ~ ~ 0.5 0.5 0.5 1 50 force @a[distance=..10]
-    playsound minecraft:entity.firework_rocket.blast master @s ~ ~ ~ 1 2
+    playsound minecraft:entity.firework_rocket.blast player @s ~ ~ ~ 1 2
 
 # 10の軽減貫通ダメージを与える
     # 与えるダメージ = 28

@@ -16,7 +16,7 @@
     scoreboard players set @s 7L.RotateTimer 3
 
 # SFX
-    playsound block.piston.extend player @a ~ ~ ~ 1 2
+    playsound block.piston.extend hostile @a ~ ~ ~ 1 2
 
 # モデル適応
     data modify entity @s ArmorItems[3].tag.CustomModelData set value 20160

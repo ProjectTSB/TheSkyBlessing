@@ -16,4 +16,4 @@
     particle item minecraft:dark_oak_sign ~ ~1.5 ~ 0 0.2 0 0.2 20 force @s
 
 # SE
-    playsound minecraft:entity.player.burp master @s ~ ~ ~ 1 1.3
+    playsound minecraft:entity.player.burp player @s ~ ~ ~ 1 1.3

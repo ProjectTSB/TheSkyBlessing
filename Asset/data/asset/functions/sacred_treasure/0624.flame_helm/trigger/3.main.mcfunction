@@ -21,7 +21,7 @@
 
 #ちょっとした演出
     particle flame ~ ~1.6 ~ 0.4 0.2 0.4 0 10 normal @a
-    playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 0.4 1
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.4 1
 
 # 一式検知
     execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:sacred_treasure/0625.flame_armor/trigger/4.fullset
