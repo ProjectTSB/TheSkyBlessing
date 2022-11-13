@@ -1,6 +1,12 @@
 {
     "values": [
         "asset:sacred_treasure/0719.sword_of_divine_sound/trigger/1.trigger",
+        "asset:sacred_treasure/1016.sharpened_netherite_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1015.sharpened_diamond_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1014.sharpened_golden_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1013.sharpened_iron_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1012.sharpened_stone_sword/trigger/1.trigger",
+        "asset:sacred_treasure/1011.sharpened_wooden_sword/trigger/1.trigger",
         "asset:sacred_treasure/0729.bloody_pride/trigger/1.trigger",
         "asset:sacred_treasure/0959.whirlwind_scabbard/trigger/1.trigger",
         "asset:sacred_treasure/0927.lexiel_s_oath/trigger/1.trigger",
