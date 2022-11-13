@@ -5,7 +5,7 @@
 # @within function asset:spawner/004/
 
 
-# 重複防止レジストリに登録
+# 重複防止レジストリへの登録
     data modify storage asset:spawner DPR append value {D:overworld,X:16,Y:21,Z:-65}
 
 # ID (int)

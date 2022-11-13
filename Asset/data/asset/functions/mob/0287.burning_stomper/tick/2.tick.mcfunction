@@ -8,7 +8,7 @@
     execute if entity @a[gamemode=!spectator,distance=..30] run scoreboard players add @s 7Z.MoveTime 1
 
 # 付近に対象がいないならスコアリセット
-    execute if entity @a[gamemode=!spectator,distance=30..40] run scoreboard players reset @s 7Z.MoveTime
+    execute unless entity @a[gamemode=!spectator,distance=..30] run scoreboard players reset @s 7Z.MoveTime
 
 # 飛び上がる
     execute if entity @s[scores={7Z.MoveTime=30},nbt={OnGround:1b}] run function asset:mob/0287.burning_stomper/tick/event/jump

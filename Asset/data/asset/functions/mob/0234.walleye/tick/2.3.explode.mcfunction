@@ -5,8 +5,9 @@
 
 # 音とパーティクル
     playsound entity.generic.explode hostile @a[distance=..32] ~ ~ ~ 2 1 1
-    particle large_smoke ~ ~ ~ 2 2 2 0 1000 normal
-    particle flame ~ ~ ~ 2 2 2 0 1000 normal
+    particle large_smoke ~ ~ ~ 2 2 2 0 300 normal
+    particle flame ~ ~ ~ 2 2 2 0 200 normal
+    particle lava ~ ~ ~ 2 2 2 0 100 normal
 
 # ダメージ: 半径1ブロック以内は60ダメージ、1ブロック離れるごとに10減少
 # 攻撃データ設定

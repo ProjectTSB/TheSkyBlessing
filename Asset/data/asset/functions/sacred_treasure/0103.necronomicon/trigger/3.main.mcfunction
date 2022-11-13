@@ -12,7 +12,7 @@
 # 演出
     particle minecraft:dragon_breath ~ ~0.8 ~ 2 0.5 2 0.01 100
     particle minecraft:enchant ~ ~1 ~ 0.8 0.3 0.8 0.1 100
-    playsound minecraft:entity.elder_guardian.death master @a ~ ~ ~ 1 2
+    playsound minecraft:entity.elder_guardian.death player @a ~ ~ ~ 1 2
 
     # 盲目
         effect give @a[distance=..10] minecraft:blindness 3 1

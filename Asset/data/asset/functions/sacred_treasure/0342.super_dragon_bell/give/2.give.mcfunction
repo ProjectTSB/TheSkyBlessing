@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"スーパードラゴンの呼び鈴","color":"gold","bold":"true"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"どっかで見た白いドラゴンを呼び出す呼び鈴。"}]',"[{}]",'[{"text":"「着地時に乗り捨ては申し訳ないがNG」","color":"dark_purple","italic":"true"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"どっかで見た白いドラゴンを呼び出す呼び鈴。"}]','""','[{"text":"「着地時に乗り捨ては申し訳ないがNG」","color":"dark_purple","italic":"true"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -35,7 +35,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

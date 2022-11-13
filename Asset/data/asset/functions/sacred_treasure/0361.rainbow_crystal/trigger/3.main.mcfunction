@@ -20,42 +20,42 @@
         execute at @e[type=#lib:living,type=!player,tag=Target,distance=..30] run particle dust 255 255 255 0.5 ~ ~0.25 ~ 0.025 5 0.025 0 100 force @a
         particle dust 255 255 255 1 ~ ~ ~ 15 0.25 15 0 1000 force @a
         stopsound @s * block.beacon.activate
-        playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1
-        playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1
-        playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1
+        playsound minecraft:block.beacon.activate player @a ~ ~ ~ 1 1
+        playsound minecraft:block.beacon.activate player @a ~ ~ ~ 1 1
+        playsound minecraft:block.beacon.activate player @a ~ ~ ~ 1 1
 
     # Damage
         # PhysicalDamage
-            data merge storage lib: {Argument:{Damage:187.5f,AttackType:Physical,ElementType:None}}
+            data merge storage lib: {Argument:{Damage:210f,AttackType:Physical,ElementType:None}}
             function lib:damage/modifier
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Fire}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Fire}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Water}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Water}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Thunder}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Thunder}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
         # MagicDamage
-            data merge storage lib: {Argument:{Damage:187.5f,AttackType:Magic,ElementType:None}}
+            data merge storage lib: {Argument:{Damage:210f,AttackType:Magic,ElementType:None}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Fire}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Fire}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Water}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Water}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 
-            data merge storage lib: {Argument:{Damage:187.5f,ElementType:Thunder}}
+            data merge storage lib: {Argument:{Damage:210f,ElementType:Thunder}}
             function lib:damage/modifier_continuation
             execute as @e[type=#lib:living,type=!player,tag=Target,distance=..30] run function lib:damage/
 

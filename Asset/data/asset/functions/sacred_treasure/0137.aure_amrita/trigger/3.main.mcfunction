@@ -15,8 +15,12 @@
 
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 80
+    execute store result storage asset:temp 3T.Temp double 0.45 run function lib:mp/get_max
+    execute store result score $Fluctuation Lib run data get storage asset:temp 3T.Temp
     function lib:mp/fluctuation
+
+# リセット
+    data remove storage asset:temp 3T.Temp

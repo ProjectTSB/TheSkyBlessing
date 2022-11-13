@@ -13,7 +13,7 @@
 
 # 拡散
     function asset:mob/1004.tultaria/tick/move/spread
-    execute at @s facing entity @p eyes positioned ~ ~0.5 ~ run function asset:mob/1004.tultaria/tick/move/tereport
+    execute at @s facing entity @p[distance=..100] eyes positioned ~ ~0.5 ~ run function asset:mob/1004.tultaria/tick/move/tereport
 
 # テレポート演出
     execute at @s run function asset:mob/1004.tultaria/tick/move/vfx

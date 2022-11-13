@@ -15,7 +15,7 @@
     # 演出
         particle item bone_block ~ ~ ~ 3 3 3 0 50 normal @a
         particle composter ~ ~ ~ 3 3 3 0 100 normal @a
-        playsound block.pumpkin.carve master @a ~ ~ ~ 1 1
+        playsound block.pumpkin.carve player @a ~ ~ ~ 1 1
 
     # 処理
         clear @s bone_meal 8

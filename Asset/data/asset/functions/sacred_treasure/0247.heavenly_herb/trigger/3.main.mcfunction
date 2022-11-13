@@ -14,13 +14,13 @@
 
 # 回復効果
     # 回復する量 = 8
-        data modify storage lib: Argument.Heal set value 8f
+        data modify storage lib: Argument.Heal set value 18f
 # 実行者対象
     function lib:heal/modifier
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 演出
     particle minecraft:happy_villager ~ ~ ~ 1 1 1 1 100 normal @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 0.1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 0.1

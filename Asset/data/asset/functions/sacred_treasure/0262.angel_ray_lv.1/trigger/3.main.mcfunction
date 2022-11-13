@@ -12,7 +12,7 @@
     summon minecraft:area_effect_cloud ~ ~1.4 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["7A.AngelRay","Init","Object","Uninterferable"]}
     execute positioned ~ ~1.4 ~ run tp @e[type=area_effect_cloud,tag=Init,distance=..0.01] ~ ~ ~ ~ ~
 # 初回演出
-    summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2b,Amplifier:5b,Duration:13,ShowParticles:0b}]}
+    summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:5b,Duration:13,ShowParticles:0b}]}
     playsound entity.blaze.shoot player @a ~ ~ ~ 1 0.7
 # レイ処理
     # 処理
@@ -20,6 +20,6 @@
     # 次tick以降用にschedule予約
         schedule function asset:sacred_treasure/0262.angel_ray_lv.1/trigger/recursive 1t
 # 効果処理
-    function asset:sacred_treasure/0262.angel_ray_lv.1/trigger/effect/
+    execute positioned ~ ~1.4 ~ run function asset:sacred_treasure/0262.angel_ray_lv.1/trigger/effect/
 # リセット
     execute positioned ~ ~1.4 ~ run tag @e[type=area_effect_cloud,tag=Init,distance=..0.01] remove Init

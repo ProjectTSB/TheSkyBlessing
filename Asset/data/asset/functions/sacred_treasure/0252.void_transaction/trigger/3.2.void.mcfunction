@@ -12,16 +12,16 @@
 
 # カウントダウン
     execute as @a if entity @s[scores={70.Timer=60}] run title @s title {"text":"3","color":"dark_red","bold":true}
-    execute as @a if entity @s[scores={70.Timer=60}] at @s run playsound block.ender_chest.open master @s ~ ~ ~ 1.0 0.5
+    execute as @a if entity @s[scores={70.Timer=60}] at @s run playsound block.ender_chest.open player @s ~ ~ ~ 1.0 0.5
     execute as @a if entity @s[scores={70.Timer=40}] run title @s title {"text":"2","color":"dark_red","bold":true}
-    execute as @a if entity @s[scores={70.Timer=40}] at @s run playsound block.ender_chest.open master @s ~ ~ ~ 1.0 0.5
+    execute as @a if entity @s[scores={70.Timer=40}] at @s run playsound block.ender_chest.open player @s ~ ~ ~ 1.0 0.5
     execute as @a if entity @s[scores={70.Timer=20}] run title @s title {"text":"1","color":"dark_red","bold":true}
-    execute as @a if entity @s[scores={70.Timer=20}] at @s run playsound block.ender_chest.open master @s ~ ~ ~ 1.0 0.5
+    execute as @a if entity @s[scores={70.Timer=20}] at @s run playsound block.ender_chest.open player @s ~ ~ ~ 1.0 0.5
 
 # スコアが0になればtp
     execute as @a if entity @s[scores={70.Timer=0}] at @s run particle minecraft:dragon_breath ~ ~0.8 ~ 0.5 0.5 0.5 0.05 50
     execute as @a if entity @s[scores={70.Timer=0}] at @s run tp @s ~ -200 ~
-    execute as @a if entity @s[scores={70.Timer=0}] at @s run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~
+    execute as @a if entity @s[scores={70.Timer=0}] at @s run playsound minecraft:block.end_portal.spawn player @s ~ ~ ~
 
 # スコアが0になった時にリセットする
     scoreboard players reset @a[scores={70.Timer=0}] 70.Timer

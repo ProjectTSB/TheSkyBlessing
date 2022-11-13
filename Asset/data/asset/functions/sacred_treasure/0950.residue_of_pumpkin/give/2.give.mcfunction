@@ -39,7 +39,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 40
+    data modify storage asset:sacred_treasure MPCost set value 10
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

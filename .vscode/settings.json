@@ -1,13 +1,13 @@
 {
-    "datapack.env.cmdVersion": "1.18",
+    "datapack.env.cmdVersion": "1.19",
     "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.18.1",
+    "datapack.env.dataVersion": "1.19",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.18",
+    "datapack.env.jsonVersion": "1.19",
     "datapack.env.permissionLevel": 2,
     "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
@@ -1948,6 +1948,57 @@
                     }
                 }
             ]
+        },
+        {
+            "label": "MOB/特殊トリガー: remove",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/remove/1.trigger",
+                        "#",
+                        "# 天使が居なくなる際に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/remove",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/remove/2.remove"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/2.remove.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/remove/2.remove",
+                        "#",
+                        "# Mobのremove時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/remove/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/remove.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/remove/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/remove/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
         }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
@@ -1960,5 +2011,26 @@
         "**/.settings": true,
         "desktop.ini": true
     },
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "githubIssues.ignoreUserCompletionTrigger": [
+        "mcfunction"
+    ],
+    "git.branchProtection": [
+        "master"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "gitmoji.additionalEmojis": [
+        {
+            "code": ":balance_scale:",
+            "emoji": "⚖️",
+            "description": "Corrections regarding balance adjustment",
+            "description_zh_cn": ""
+        }
+    ],
+    "git-graph.customEmojiShortcodeMappings": [
+        {
+            "shortcode": ":balance_scale:",
+            "emoji": "⚖️"
+        }
+    ]
 }

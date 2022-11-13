@@ -15,9 +15,9 @@
     particle flame ~ ~ ~ 0 0 0 0.3 20 force
     particle campfire_signal_smoke ~ ~ ~ 0 0 0 0.05 30 force
     particle explosion ~ ~ ~ 0 0 0 0 1 force
-    playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 1 0.3
-    playsound entity.generic.explode master @a[distance=..50] ~ ~ ~ 1 0 0.3
-    playsound entity.blaze.burn master @a[distance=..50] ~ ~ ~ 1 1 0.3
+    playsound entity.generic.explode player @a[distance=..50] ~ ~ ~ 1 1 0.3
+    playsound entity.generic.explode player @a[distance=..50] ~ ~ ~ 1 0 0.3
+    playsound entity.blaze.burn player @a[distance=..50] ~ ~ ~ 1 1 0.3
     summon firework_rocket ~ ~ ~ {Silent:1b,FireworksItem:{id:"firework_rocket",Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Colors:[I;16774912],FadeColors:[I;0,5526612]}]}}}}
 
 # 攻撃を与える
@@ -28,7 +28,7 @@
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Fire"
 # 補正functionを実行
-    execute as @a if score @s UserID = @e[type=armor_stand,tag=M1.This,limit=1] M1.UserID run function lib:damage/modifier
+    execute as @a if score @s UserID = @e[type=vex,tag=M1.This,limit=1] M1.UserID run function lib:damage/modifier
 # 攻撃した対象に実行
     execute as @e[tag=M1.Target] run function lib:damage/
 # リセット

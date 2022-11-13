@@ -5,8 +5,8 @@
 # @within function asset:island/51/register/
 
 
-# 重複防止レジストリに登録
-    data modify storage asset:island DPR append value {D:Overworld,X:-71,Y:45,Z:-31}
+# 重複防止レジストリへの登録
+    data modify storage asset:island DPR append value {D:overworld,X:-71,Y:45,Z:-31}
 
 # ID (int)
     data modify storage asset:island ID set value 51
