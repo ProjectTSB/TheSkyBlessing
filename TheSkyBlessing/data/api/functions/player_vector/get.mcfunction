@@ -6,7 +6,7 @@
 # @api
 
 # 初期化
-    data modify storage api: ReturnVector set value [0d,0d,0d]
+    data modify storage api: Return.Vector set value [0d,0d,0d]
 # 代入
     execute store result storage api: Return.Vector[0] double 0.01 run scoreboard players get @s PlayerPosDiff.X
     execute store result storage api: Return.Vector[1] double 0.01 run scoreboard players get @s PlayerPosDiff.Y
