@@ -21,5 +21,5 @@
     function lib:damage/reset
 
 # 演出
-    playsound minecraft:item.trident.return player @a ~ ~ ~ 1 2
+    playsound minecraft:item.trident.return neutral @a ~ ~ ~ 1 2
     execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] at @s run particle dust 1 0 0.749 2 ~ ~1 ~ 0.6 0.6 0.6 0 50 normal @a

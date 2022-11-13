@@ -16,4 +16,4 @@
 
 # 演出
     particle minecraft:spit ~ ~ ~ 2 0.5 2 0.05 100
-    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.8 1
+    playsound minecraft:block.glass.break player @a ~ ~ ~ 0.8 1

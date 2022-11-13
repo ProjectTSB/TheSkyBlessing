@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.anvil.place master @a ~ ~ ~ 1 1.5 0
-    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.anvil.place master @a ~ ~ ~ 1 1 0
+    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.anvil.place player @a ~ ~ ~ 1 1.5 0
+    execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run playsound minecraft:block.anvil.place player @a ~ ~ ~ 1 1 0
     execute at @e[type=#lib:living,tag=Victim,tag=!Uninterferable,distance=..6] run particle minecraft:item iron_ingot ~ ~ ~ 1 1 1 0.1 40
 
 # まず防具と防具強度をスコアに代入

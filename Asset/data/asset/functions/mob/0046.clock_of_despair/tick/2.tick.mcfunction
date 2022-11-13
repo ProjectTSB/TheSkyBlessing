@@ -34,9 +34,9 @@
 # 200tick(10秒)毎のSE
     scoreboard players operation $IntervalTime Temporary = @s 1A.LifeTime
     scoreboard players operation $IntervalTime Temporary %= $200 Const
-    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use master @a ~ ~ ~ 2 0.5 1
-    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use master @a ~ ~ ~ 2 0.5 1
-    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use master @a ~ ~ ~ 2 0.5 1
+    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use hostile @a ~ ~ ~ 2 0.5 1
+    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use hostile @a ~ ~ ~ 2 0.5 1
+    execute if score $IntervalTime Temporary matches 0 run playsound minecraft:block.bell.use hostile @a ~ ~ ~ 2 0.5 1
     scoreboard players reset $IntervalTime Temporary
 
 

@@ -9,7 +9,7 @@
     execute positioned ~ ~1.5 ~ rotated 45 90 run function asset:sacred_treasure/0615.censored/trigger/particle.1
     execute positioned ~ ~1.5 ~ rotated 90 90 run function asset:sacred_treasure/0615.censored/trigger/particle.1
     execute positioned ~ ~1.5 ~ rotated 135 90 run function asset:sacred_treasure/0615.censored/trigger/particle.1
-    playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 0
+    playsound minecraft:entity.illusioner.mirror_move player @a ~ ~ ~ 1 0
 
 # ダメージを与える
     # 与えるダメージ

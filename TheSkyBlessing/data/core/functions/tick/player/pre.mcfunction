@@ -7,3 +7,5 @@
 function player_manager:manage_tag/
 
 function player_manager:pos_diff
+
+function world_manager:chunk_io_protect/

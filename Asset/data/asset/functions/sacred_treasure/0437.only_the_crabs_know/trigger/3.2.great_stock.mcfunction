@@ -9,11 +9,11 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
 
 # リジェネ
     effect give @s regeneration 600 3 true
 
 # 演出
     tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は出汁が良く出ていると絶賛した"}]
-    playsound entity.experience_orb.pickup master @a ~ ~ ~ 1.0 1.3
+    playsound entity.experience_orb.pickup player @a ~ ~ ~ 1.0 1.3
