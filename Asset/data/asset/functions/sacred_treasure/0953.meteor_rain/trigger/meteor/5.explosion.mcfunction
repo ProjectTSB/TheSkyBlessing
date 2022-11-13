@@ -15,7 +15,7 @@
 # ダメージ
     # ダメージ設定
         # 与えるダメージ
-            data modify storage lib: Argument.Damage set value 1000.0f
+            data modify storage lib: Argument.Damage set value 2000.0f
         # 属性
             data modify storage lib: Argument.AttackType set value "Magic"
             data modify storage lib: Argument.ElementType set value "Fire"

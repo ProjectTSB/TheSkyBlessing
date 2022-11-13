@@ -18,7 +18,7 @@
     # 実行（既に4回回復した場合は実行しない）
         execute if entity @s[scores={48.CatTime=21..24}] run function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
 
 # 回復回数を+1
     scoreboard players add @s 48.CatTime 1

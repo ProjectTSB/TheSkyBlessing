@@ -5,7 +5,7 @@
 # @within function asset:mob/0273.hell_blade/tick/2.tick
 
 # SFX
-    playsound minecraft:block.wart_block.break player @a ~ ~ ~ 2 1
+    playsound minecraft:block.wart_block.break hostile @a ~ ~ ~ 2 1
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 35f

@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:entity.guardian.death master @a ~ ~ ~ 1 1
-    playsound minecraft:entity.guardian.death master @a ~ ~ ~ 1 1
+    playsound minecraft:entity.guardian.death player @a ~ ~ ~ 1 1
+    playsound minecraft:entity.guardian.death player @a ~ ~ ~ 1 1
 
 # スコアを付与する。スコア分の時間ビームする
     scoreboard players add @s AD.BeamTime 5
