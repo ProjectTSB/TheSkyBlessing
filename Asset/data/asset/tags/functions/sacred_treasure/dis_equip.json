@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:sacred_treasure/0778.jade_armor/trigger/dis_equip/",
+        "asset:sacred_treasure/0775.jade_armor/trigger/dis_equip/",
         "asset:sacred_treasure/0736.sailor_hat/trigger/dis_equip/",
         "asset:sacred_treasure/0986.order_of_healing/trigger/dis_equip/",
         "asset:sacred_treasure/0980.thunder_charm/trigger/dis_equip/",
