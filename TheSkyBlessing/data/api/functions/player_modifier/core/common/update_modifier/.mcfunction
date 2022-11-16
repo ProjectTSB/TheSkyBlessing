@@ -25,3 +25,4 @@
     scoreboard players reset $Add Temporary
     scoreboard players reset $Modifier Temporary
     scoreboard players reset $MultiplyBase Temporary
+    scoreboard players reset $Temp Temporary
