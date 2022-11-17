@@ -2,7 +2,7 @@
 #
 # 実行Mobの現在体力を0～100の割合で取得します
 #
-# @api function api:mob/get_max_health
+# @api
 
 #> 計算用スコアホルダー
 # @private
