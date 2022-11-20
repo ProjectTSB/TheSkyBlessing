@@ -8,7 +8,10 @@
 
 # ランダムに色を指定する
     execute store result score $Random Temporary run function lib:random/
-    scoreboard players operation $Random Temporary %= $10 Const
+    scoreboard players operation $Random Temporary %= $11 Const
+
+# 再帰の回数を計測するスコア
+    scoreboard players add $RecursiveCount Temporary 1
 
 # 白
     execute if score $Random Temporary matches 0 run data modify storage asset:temp Firework.Colors append value 16383998
@@ -33,5 +36,5 @@
 # 桃
     execute if score $Random Temporary matches 10 run data modify storage asset:temp Firework.Colors append value 15961002
 
-# データが3つ入るまでは再帰
-    execute unless data storage asset:temp Firework.Colors[2] run function asset:sacred_treasure/0737.firework_display/trigger/firework_process/append_color
+# $RecursiveCount = $ColorCountになるまで再帰
+    execute unless score $RecursiveCount Temporary = $ColorCount Temporary run function asset:sacred_treasure/0737.firework_display/trigger/firework_process/append_color
