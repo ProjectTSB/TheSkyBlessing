@@ -8,4 +8,7 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 1018.crimson_blood_greatsword
+    # メイン効果
+        execute unless predicate lib:is_sneaking run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/active_main
+    # サブ効果
+        execute if predicate lib:is_sneaking run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/active_sub
