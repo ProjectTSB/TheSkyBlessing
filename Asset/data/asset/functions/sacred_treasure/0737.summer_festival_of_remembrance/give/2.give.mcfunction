@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0737.firework_display/give/2.give
+#> asset:sacred_treasure/0737.summer_festival_of_remembrance/give/2.give
 #
 # 神器の作成部 ここでID等を定義する
 #
 # @user
-# @within function asset:sacred_treasure/0737.firework_display/give/1.trigger
+# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/give/1.trigger
 
 # 神器の説明や消費MPなどをここで設定する。
 # 最後にasset:sacred_treasure/common/giveを実行することで入手可能。
@@ -13,15 +13,15 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"花火大会神器(仮)","color":"red"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"追憶の夏祭り","color":"red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"あの日の夏祭りの思い出の詰まったお守り","color":"#FF962E","italic":"true"}]','[{"text":"手に握れば、かつての情景を再現できる。","color":"#FF962E","italic":"true"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value "auto"
+    data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onClick"
 # 神器の発動条件 (TextComponentString) (オプション)

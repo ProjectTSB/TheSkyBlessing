@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0737.firework_display/register
+#> asset:sacred_treasure/0737.summer_festival_of_remembrance/register
 #
 # 神器プールへの登録処理
 #
