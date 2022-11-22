@@ -8,7 +8,7 @@
     tp @s ~ ~ ~ ~2 ~
 
 # vfx
-    execute if entity @p[distance=..10] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/vfx
+    execute if entity @p[distance=..5] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/vfx
 
 # 一定間隔で花火召喚のためのランダムな位置にマーカーを配置する
     scoreboard players operation $Temp Temporary = @s KH.Tick
