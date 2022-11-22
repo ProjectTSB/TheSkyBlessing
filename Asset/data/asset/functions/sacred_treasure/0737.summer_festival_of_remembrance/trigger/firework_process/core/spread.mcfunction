@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/spread
 #
-#
+# 花火の召喚位置を決める
 #
 # @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/main
 

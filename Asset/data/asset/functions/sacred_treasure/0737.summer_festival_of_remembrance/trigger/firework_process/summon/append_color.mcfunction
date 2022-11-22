@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
 #
-#
+# .$ColorCountの値だけ再帰で花火に色を追加する
 #
 # @within function
 #   asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/

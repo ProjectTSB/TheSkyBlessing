@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/set_data
 #
-#
+# storageに入れたデータを適用する
 #
 # @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
 
