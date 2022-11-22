@@ -6,8 +6,8 @@
 
 #> 計算用スコアホルダー
 # @private
-#declare score_holder $Health
-#declare score_holder $MaxHealth
+    #declare score_holder $Health
+    #declare score_holder $MaxHealth
 
 # 現在体力を割合で出す
     execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
