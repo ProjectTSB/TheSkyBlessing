@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"紅血の大剣","color":"dark_red"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"赤い騎士の剣","color":"dark_red"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"複数の敵を巻き込む、強力な斬撃を放つ。"}','{"text":"スニークしながら使用することで、自らの血を与え、"}','{"text":"しばらくの間、この武器での攻撃が強化される。"}','{"text":"\\"渇きは 血への欲望は 収まる事を知らない\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"複数の敵を巻き込む、強力な斬撃を放つ。"}','{"text":"スニーク中に使用することで、自らの血を与え、"}','{"text":"この武器での攻撃がしばらくの間強化される。"}','{"text":"\\"血への渇望は、収まる事を知らない\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
