@@ -10,3 +10,4 @@
     scoreboard objectives add SA.Combo dummy
     scoreboard objectives add SA.Wait dummy
     scoreboard objectives add SA.UserID dummy
+    scoreboard objectives add SA.BloodCharge dummy
