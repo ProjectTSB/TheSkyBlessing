@@ -2,6 +2,7 @@
 #
 # 実行Mobの現在体力を0～100の割合で取得します
 #
+# @output storage api: Return.HealthPer : double
 # @api
 
 #> 計算用スコアホルダー
