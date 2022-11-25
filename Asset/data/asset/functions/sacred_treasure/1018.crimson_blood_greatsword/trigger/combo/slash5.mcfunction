@@ -26,12 +26,19 @@
     scoreboard players set @s SA.ShotCount 5
 
 # 斬撃を飛ばす
-    execute anchored eyes run summon marker ^ ^1.5 ^ {Tags:["SA.SlashShot","SA.SlashShotInit"]}
-    execute as @e[type=marker,tag=SA.SlashShotInit,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot/init
-    schedule function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot/1.tick 1t replace
+    #execute anchored eyes run summon marker ^ ^1.5 ^ {Tags:["SA.SlashShot","SA.SlashShotInit"]}
+    #execute as @e[type=marker,tag=SA.SlashShotInit,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot/init
+    #schedule function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot/1.tick 1t replace
+
+# 斬撃エミッターを召喚
+    execute anchored eyes run summon marker ^ ^ ^ {Tags:["SA.ShotEmitter","SA.ShotEmitterInit"]}
+    execute as @e[type=marker,tag=SA.ShotEmitterInit,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/init
+    schedule function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/1.tick 1t replace
 
 # 攻撃
     execute positioned ^ ^ ^1.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/damage
 
-# しばらく撃てなくなる
+# かなりの隙を晒し、撃てなくなる
+    effect give @s slowness 1 2
+    scoreboard players set @s SA.Wait 30
     tag @s add SA.FinishCoolTime
