@@ -4,10 +4,6 @@
 #
 # @within function asset:mob/1004.tultaria/summon/1.trigger
 
-#> Private
-# @private
-   #declare tag RW.This
-
 # 元となるMobを召喚する
     summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","RW.Boss","RW.This"],PersistenceRequired:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
 # ID (int)
@@ -79,9 +75,6 @@
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
-
-# 最大HPをスコアに入れる
-    execute store result score @e[type=wither_skeleton,tag=RW.This,distance=..0.01] RW.HealthMax run function api:mob/get_max_health
 
 # Tag消し
     tag @e[type=wither_skeleton,tag=RW.This,distance=..0.01] remove RW.This
