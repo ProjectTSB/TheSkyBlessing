@@ -5,9 +5,9 @@
 # @within function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/active_main
 
 # 演出
-    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1.2 1
+    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 0.6
+    playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.6
+    playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1.2 1
 
 # 斬撃
     execute if entity @s[y_rotation=-22.5..22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-90F,0F],Tags:["SA.SlashEntity","SA.SlashEntityInit"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,0.0f,0.1f]},DisabledSlots:4144959}

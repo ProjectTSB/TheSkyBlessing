@@ -1,6 +1,6 @@
 #> asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/2.main
 #
-# コンボカウントを減らしたり、持続判定出してる
+# コンボカウントを減らしたり、持続判定出したり、いっぱいショット撃ったりする
 #
 # @within function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/1.tick
 
