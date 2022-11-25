@@ -3,7 +3,7 @@
 # スラッシュショット
 #
 # @within function
-#   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/slash5
+#   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
 #   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot/1.tick
 #   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/rejoin_process
 
