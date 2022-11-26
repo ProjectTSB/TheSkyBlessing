@@ -7,3 +7,4 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/**
     scoreboard objectives add KA.Tick dummy
+    scoreboard objectives add KA.UserID dummy

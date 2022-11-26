@@ -10,7 +10,10 @@
 # ここから先は神器側の効果の処理を書く
 
 # 湖を召喚
-    summon marker ~ ~0.2 ~ {Tags:["Object","Uninterferable","KA.Lake","KA.RejoinTarget"]}
+    summon marker ~ ~0.1 ~ {Tags:["Object","KA.Lake","KA.RejoinTarget"]}
+
+# UserIDをコピー
+    scoreboard players operation @e[type=marker,tag=KA.Lake,distance=..0.1,limit=1] KA.UserID = @s UserID
 
 # 湖のループ
     schedule function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/loop 1t replace
