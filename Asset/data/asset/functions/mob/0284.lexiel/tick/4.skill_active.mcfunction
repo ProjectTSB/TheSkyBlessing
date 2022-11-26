@@ -10,6 +10,8 @@
 # 雷
     execute if entity @s[tag=7W.SkillThunder] run function asset:mob/0284.lexiel/tick/skill/thunder/1.thunder
 
+# 雷
+    execute if entity @s[tag=7W.SkillFireball] run function asset:mob/0284.lexiel/tick/skill/fireball/1.fireball
 
 # 回転
     execute if entity @s[tag=7W.SkillSpin] run function asset:mob/0284.lexiel/tick/skill/spin/1.spin

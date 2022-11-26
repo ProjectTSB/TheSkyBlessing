@@ -5,7 +5,7 @@
 # @within function asset:mob/0284.lexiel/tick/skill/thunder/1.thunder
 
 # 召喚
-    summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:60,Tags:["Object","7W.SkillThunderMaker","7W.SkillThunderMakerThis"]}
+    summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:80,Tags:["Object","7W.SkillThunderMaker","7W.SkillThunderMakerThis"]}
 
 # ランダムテレポート
     data modify storage lib: Argument.Bounds set value [[14d,14d],[0d,0d],[14d,14d]]

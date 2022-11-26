@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0285.lexiel_fireball/tick/1.trigger",
         "asset:mob/0284.lexiel/tick/1.trigger",
         "asset:mob/0266.small_dark_ball/tick/1.trigger",
         "asset:mob/0265.dark_familiar/tick/1.trigger",

@@ -18,10 +18,10 @@
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい数だけ出す
-    scoreboard players operation $Random Temporary %= $2 Const
+    scoreboard players operation $Random Temporary %= $4 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 3
+    scoreboard players set $Random Temporary 2
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 7W.SkillMelee
