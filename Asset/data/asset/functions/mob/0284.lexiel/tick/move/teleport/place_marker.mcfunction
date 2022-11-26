@@ -11,8 +11,8 @@
     summon marker ~ ~ ~ {Tags:[7W.TeleportMarker,7W.MarkerInit]}
 
 # 拡散値
-    execute if block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[3d,3d],[4d,6d]]
-    execute unless block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[0d,6d],[4d,6d]]
+    execute if block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[1d,1d],[4d,6d]]
+    execute unless block ~ ~-1 ~ #lib:no_collision run data modify storage lib: Argument.Bounds set value [[4d,6d],[0d,2d],[4d,6d]]
     execute as @e[type=marker,tag=7W.TeleportMarker,tag=7W.MarkerInit] at @s run function lib:spread_entity/
 
 # 右腕ポーズ

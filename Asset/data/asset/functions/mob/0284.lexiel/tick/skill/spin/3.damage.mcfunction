@@ -17,6 +17,3 @@
     execute as @a[tag=!PlayerShouldInvulnerable,distance=..5] run function lib:damage/
 # リセット
     function lib:damage/reset
-
-# 前方にテレポート
-say @a[distance=..5]
