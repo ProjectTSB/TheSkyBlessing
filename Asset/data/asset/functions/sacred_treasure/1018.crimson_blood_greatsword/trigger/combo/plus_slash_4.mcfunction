@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/plus_slash_1
+#> asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/plus_slash_4
 #
 # 水平
 #
 # @within function
-#   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/slash1
+#   asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/slash4
 
 # 外4
 particle dust 0.894 0.196 0.196 1.0 ^1.96457 ^0 ^0.12107 0 0 0 0 1
@@ -131,3 +131,34 @@ particle dust 0.675 0.133 0.133 1.0 ^-1.68866 ^0 ^0.79162 0 0 0 0 1
 particle dust 0.675 0.133 0.133 1.0 ^-1.80965 ^0 ^0.60234 0 0 0 0 1
 particle dust 0.675 0.133 0.133 1.0 ^-1.90211 ^0 ^0.40151 0 0 0 0 1
 particle dust 0.675 0.133 0.133 1.0 ^-1.96457 ^0 ^0.1923 0 0 0 0 1
+
+# 火炎部分
+particle flame ^2.4863 ^ ^0.26132 0 0 0 0 1
+particle flame ^2.44537 ^ ^0.51978 0 0 0 0 1
+particle flame ^2.37764 ^ ^0.77254 0 0 0 0 1
+particle flame ^2.28386 ^ ^1.01684 0 0 0 0 1
+particle flame ^2.16506 ^ ^1.25 0 0 0 0 1
+particle flame ^2.02254 ^ ^1.46946 0 0 0 0 1
+particle flame ^1.85786 ^ ^1.67283 0 0 0 0 1
+particle flame ^1.67283 ^ ^1.85786 0 0 0 0 1
+particle flame ^1.46946 ^ ^2.02254 0 0 0 0 1
+particle flame ^1.25 ^ ^2.16506 0 0 0 0 1
+particle flame ^1.01684 ^ ^2.28386 0 0 0 0 1
+particle flame ^0.77254 ^ ^2.37764 0 0 0 0 1
+particle flame ^0.51978 ^ ^2.44537 0 0 0 0 1
+particle flame ^0.26132 ^ ^2.4863 0 0 0 0 1
+particle flame ^0 ^ ^2.5 0 0 0 0 1
+particle flame ^-0.26132 ^ ^2.4863 0 0 0 0 1
+particle flame ^-0.51978 ^ ^2.44537 0 0 0 0 1
+particle flame ^-0.77254 ^ ^2.37764 0 0 0 0 1
+particle flame ^-1.01684 ^ ^2.28386 0 0 0 0 1
+particle flame ^-1.25 ^ ^2.16506 0 0 0 0 1
+particle flame ^-1.46946 ^ ^2.02254 0 0 0 0 1
+particle flame ^-1.67283 ^ ^1.85786 0 0 0 0 1
+particle flame ^-1.85786 ^ ^1.67283 0 0 0 0 1
+particle flame ^-2.02254 ^ ^1.46946 0 0 0 0 1
+particle flame ^-2.16506 ^ ^1.25 0 0 0 0 1
+particle flame ^-2.28386 ^ ^1.01684 0 0 0 0 1
+particle flame ^-2.37764 ^ ^0.77254 0 0 0 0 1
+particle flame ^-2.44537 ^ ^0.51978 0 0 0 0 1
+particle flame ^-2.4863 ^ ^0.26132 0 0 0 0 1
