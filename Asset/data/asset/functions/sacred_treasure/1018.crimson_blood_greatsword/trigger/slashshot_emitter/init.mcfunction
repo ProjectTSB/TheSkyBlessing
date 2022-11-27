@@ -8,7 +8,7 @@
     scoreboard players operation @s SA.UserID = @p[tag=this] UserID
 
 # 向きを揃える
-    execute at @p[tag=this] run tp @s ~ ~ ~ ~ ~
+    execute at @p[tag=this] run tp @s ~ ~1 ~ ~ ~
 
 # スコアセット
     scoreboard players set @s SA.Tick 0
