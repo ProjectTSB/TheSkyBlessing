@@ -5,11 +5,7 @@
 # @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
 
 # ドーナツ状の当たり判定にentityがいた場合Tagを付与
-    tag @e[type=#lib:living,distance=1.01..1.5] add Target
-
-# 上下の判定を切り取る
-    #execute positioned ~-1.5 ~1.5 ~-1.5 run tag @e[type=#lib:living,dx=3,dy=1,dz=3] remove Target
-    execute positioned ~-1.5 ~-1.5 ~-1.5 run tag @e[type=#lib:living,dx=2,dy=0,dz=2] remove Target
+    execute as @e[type=#lib:living,distance=1.01..1.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=4,dz=14] positioned ~7.5 ~1 ~7.5 run tag @s add Target
 
 # 円 4
 particle dust 0.2 0.2 0.35 4 ^0 ^ ^-1.5 0 0 0 0 1

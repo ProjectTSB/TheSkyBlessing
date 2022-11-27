@@ -4,8 +4,11 @@
 #
 # @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
 
+# 演出
+    playsound entity.dolphin.jump neutral @a ~ ~ ~ 0.05 0.6 0
+
 # ダメージ
-    data modify storage lib: Argument.Damage set value 500f
+    data modify storage lib: Argument.Damage set value 400f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
 # 補正

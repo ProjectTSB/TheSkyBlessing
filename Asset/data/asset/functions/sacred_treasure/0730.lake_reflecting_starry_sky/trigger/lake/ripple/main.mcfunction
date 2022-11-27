@@ -9,7 +9,7 @@
 
 # 一定の値になるまで演出と落下
     execute if entity @s[scores={KA.Tick=1..12}] run particle electric_spark ~ ~ ~ 0 0 0 0 1
-    execute if entity @s[scores={KA.Tick=1..8}] run playsound minecraft:entity.ender_eye.death neutral @a ~ ~ ~ 0.2 1 0
+    execute if entity @s[scores={KA.Tick=1..8}] run playsound minecraft:entity.ender_eye.death neutral @a ~ ~ ~ 0.1 1 0
     execute if entity @s[scores={KA.Tick=1..12}] run tp @s ~ ~-0.25 ~
 
 # ダメージと演出

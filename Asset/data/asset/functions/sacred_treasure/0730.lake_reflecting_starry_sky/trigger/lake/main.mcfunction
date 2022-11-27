@@ -45,7 +45,7 @@
     scoreboard players add @s KA.Tick 1
 
 # キル
-    execute if entity @s[scores={KA.Tick=180..}] run kill @s
+    execute if entity @s[scores={KA.Tick=200..}] run kill @s
 
 # ループ
     schedule function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/loop 1t replace

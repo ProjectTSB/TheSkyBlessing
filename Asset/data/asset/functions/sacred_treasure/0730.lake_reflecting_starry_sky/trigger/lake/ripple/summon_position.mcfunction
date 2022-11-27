@@ -5,11 +5,8 @@
 # @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
 
 # エリア内の平面上にに敵がいた場合、その位置で召喚するという処理
-    execute if entity @e[type=#lib:living,tag=Enemy,distance=..7.5] run tag @e[type=#lib:living,tag=Enemy,distance=..7.5] add RippleTarget
+    execute as @e[type=#lib:living,tag=Enemy,distance=..7.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=4,dz=14] positioned ~7.5 ~1 ~7.5 run tag @s add RippleTarget
 
-# 上下の判定を切り取る
-    execute if entity @e[type=#lib:living,tag=RippleTarget,distance=..7.5] positioned ~-7.5 ~4 ~-7.5 run tag @e[type=#lib:living,dx=14,dy=6.5,dz=14] remove RippleTarget
-    execute if entity @e[type=#lib:living,tag=RippleTarget,distance=..7.5] positioned ~-7.5 ~-7.5 ~-7.5 run tag @e[type=#lib:living,dx=14,dy=5.5,dz=14] remove RippleTarget
 
 # 切り取ってもRippleTargetがいた場合、その敵の位置に召喚する
     execute at @e[type=#lib:living,tag=RippleTarget,distance=..7.5,sort=random,limit=1] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
@@ -19,7 +16,7 @@
 # RippleTargetがいなかった場合、中央に召喚する
     execute unless entity @e[type=#lib:living,tag=RippleTarget,distance=..7.5] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 # RippleTargetがいないエリア全体に拡散する値を設定する
-    execute unless entity @e[type=#lib:living,tag=RippleTarget,distance=..7.5] run data modify storage lib: Argument.Bounds set value [[7d,7d],[0d,0d],[7d,7d]]
+    execute unless entity @e[type=#lib:living,tag=RippleTarget,distance=..7.5] run data modify storage lib: Argument.Bounds set value [[5.3d,5.3d],[0d,0d],[5.3d,5.3d]]
 
 # 拡散する
     execute as @e[type=marker,tag=SpreadMarker,distance=..7.5,limit=1] at @s run function lib:spread_entity/
@@ -36,4 +33,4 @@
 # リセット
     data remove storage lib: Argument
     tag @e[type=#lib:living,tag=RippleTarget,distance=..10] remove RippleTarget
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..10]
