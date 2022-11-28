@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/effects
+#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/damage
 #
 # ダメージ処理
 #
@@ -18,17 +18,5 @@
 # リセット
     function lib:damage/reset
 
-# プレイヤーに補正を掛ける
-    data modify storage api: Argument.UUID set value [I;1,1,730,0]
-    data modify storage api: Argument.Amount set value 0.3
-    data modify storage api: Argument.Operation set value "multiply"
-    execute as @a[tag=Target,distance=..7.5] run function api:player_modifier/attack/water/add
-
-# 補正用のTagをつける
-    tag @a[tag=Target,distance=..7.5] add KA.Buff
-
 # Targetを消す
     tag @e[type=#lib:living,tag=Target,distance=..7.5] remove Target
-
-# 補正用Tagがついたプレイヤーがいればループ開始
-    execute if entity @a[tag=KA.Buff,distance=..7.5]

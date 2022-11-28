@@ -4,6 +4,9 @@
 #
 # @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/loop
 
+# 星っぽい演出
+    particle end_rod ~ ~2 ~ 3.2 1.4 3.2 0 2 normal @a
+
 # 実行時間を移す
     scoreboard players operation $Interval Temporary = @s KA.Tick
 # 一定間隔での処理
@@ -27,8 +30,11 @@
     execute if score $Interval Temporary matches 14 run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/wave/15
     execute if score $Interval Temporary matches 15 run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/wave/16
 
-# $Intervalが0~15の時に敵にはダメージ、プレイヤーには補正を掛ける
-    execute if score $Interval Temporary matches 0..15 run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/effects
+# $Intervalが0の時に、エリア全体にいるプレイヤーにバフを掛ける
+    execute if score $Interval Temporary matches 0 as @a[distance=..7.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=1,dz=14] positioned ~7.5 ~1 ~7.5 run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/buff/start
+
+# $Intervalが0~15の時に敵にダメージ
+    execute if score $Interval Temporary matches 0..15 run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/damage
 
 # 実行時間を移す
     scoreboard players operation $Interval Temporary = @s KA.Tick
