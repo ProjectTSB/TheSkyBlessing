@@ -4,18 +4,18 @@
 #
 # @within function api:damage/reset
 
-data remove storage lib: Argument.Damage
-data remove storage lib: Argument.AttackType
-data remove storage lib: Argument.ElementType
-data remove storage lib: Argument.DeathMessage
-data remove storage lib: Argument.FixedDamage
-data remove storage lib: Argument.BypassModifier
-data remove storage lib: Argument.BypassArmorDefense
-data remove storage lib: Argument.BypassToughness
-data remove storage lib: Argument.BypassEnchantments
-data remove storage lib: Argument.BypassResistance
-data remove storage lib: Argument.DisableParticle
-data remove storage lib: Argument.ReduceEnchantment
+data remove storage api: Argument.Damage
+data remove storage api: Argument.AttackType
+data remove storage api: Argument.ElementType
+data remove storage api: Argument.DeathMessage
+data remove storage api: Argument.FixedDamage
+data remove storage api: Argument.BypassModifier
+data remove storage api: Argument.BypassArmorDefense
+data remove storage api: Argument.BypassToughness
+data remove storage api: Argument.BypassEnchantments
+data remove storage api: Argument.BypassResistance
+data remove storage api: Argument.DisableParticle
+data remove storage api: Argument.ReduceEnchantment
 
 scoreboard players reset $LatestModifiedUser UserID
 scoreboard players reset $LatestModifiedEntity MobUUID

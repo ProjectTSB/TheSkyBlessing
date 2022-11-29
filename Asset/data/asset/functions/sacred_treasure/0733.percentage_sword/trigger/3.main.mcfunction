@@ -4,10 +4,6 @@
 #
 # @within function asset:sacred_treasure/0733.percentage_sword/trigger/2.check_condition
 
-#> Private
-# @private
-    #declare score_holder $KD.DamageValue
-
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/mainhand
 
@@ -33,4 +29,3 @@
 
 # 色々リセット
     function lib:damage/reset
-    scoreboard players reset $KD.DamageValue Temporary

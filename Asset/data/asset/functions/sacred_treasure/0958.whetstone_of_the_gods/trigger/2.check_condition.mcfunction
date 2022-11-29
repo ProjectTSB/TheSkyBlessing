@@ -25,16 +25,16 @@
     execute if entity @s[tag=CanUsed] unless data storage asset:context Items.mainhand.tag{Damage:0} run tag @s remove CanUsed
 # 剣に応じたMP最大値を持っているかを判定する
     execute if entity @s[tag=CanUsed] store result score $MPMax Temporary run function lib:mp/get_max
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:    "minecraft:stone_sword"} unless score $MPMax Temporary matches 130.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"140","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:    "minecraft:stone_sword"} unless score $MPMax Temporary matches 130.. run tag @s remove CanUsed
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:     "minecraft:iron_sword"} unless score $MPMax Temporary matches 160.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"170","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:     "minecraft:iron_sword"} unless score $MPMax Temporary matches 160.. run tag @s remove CanUsed
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:    "minecraft:stone_sword"} unless score $MPMax Temporary matches 140.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"140","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:    "minecraft:stone_sword"} unless score $MPMax Temporary matches 140.. run tag @s remove CanUsed
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:     "minecraft:iron_sword"} unless score $MPMax Temporary matches 170.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"170","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:     "minecraft:iron_sword"} unless score $MPMax Temporary matches 170.. run tag @s remove CanUsed
     execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:   "minecraft:golden_sword"} unless score $MPMax Temporary matches 200.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"200","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
     execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:   "minecraft:golden_sword"} unless score $MPMax Temporary matches 200.. run tag @s remove CanUsed
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:  "minecraft:diamond_sword"} unless score $MPMax Temporary matches 240.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"230","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:  "minecraft:diamond_sword"} unless score $MPMax Temporary matches 240.. run tag @s remove CanUsed
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:"minecraft:netherite_sword"} unless score $MPMax Temporary matches 280.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"260","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
-    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:"minecraft:netherite_sword"} unless score $MPMax Temporary matches 280.. run tag @s remove CanUsed
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:  "minecraft:diamond_sword"} unless score $MPMax Temporary matches 230.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"230","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:  "minecraft:diamond_sword"} unless score $MPMax Temporary matches 230.. run tag @s remove CanUsed
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:"minecraft:netherite_sword"} unless score $MPMax Temporary matches 260.. run tellraw @s [{"text":"この材質の剣を砥ぐにはMP最大値が","color":"white"},{"text":"260","color":"aqua"},{"text":"必要なようだ...","color":"white"}]
+    execute if entity @s[tag=CanUsed] if data storage asset:context Items.mainhand{id:"minecraft:netherite_sword"} unless score $MPMax Temporary matches 260.. run tag @s remove CanUsed
 # リセット
     scoreboard players reset $MPMax Temporary
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
