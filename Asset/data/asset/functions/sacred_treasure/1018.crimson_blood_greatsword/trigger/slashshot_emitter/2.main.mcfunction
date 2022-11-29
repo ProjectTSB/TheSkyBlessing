@@ -9,8 +9,8 @@
 
 # ショット召喚
     execute if score @s SA.Tick matches 0 run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
-    execute if score @s SA.Tick matches 5 positioned ^1.5 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
-    execute if score @s SA.Tick matches 10 positioned ^-1.5 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
+    execute if score @s SA.Tick matches 5 positioned ^1 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
+    execute if score @s SA.Tick matches 10 positioned ^-1 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
     #execute if score @s SA.Tick matches 10 positioned ^4 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
     #execute if score @s SA.Tick matches 10 positioned ^-4 ^ ^ run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slashshot_emitter/summon_shot
 
