@@ -8,6 +8,10 @@
 # @private
     #declare tag Hit
 
+# どうしてもダメージを受けてほしい（HurtTimeで反応を起こすモブもいるので)
+    effect give @s[type=#lib:undead] instant_health
+    effect give @s[type=!#lib:undead] instant_damage
+
 # 判定
     # ダメージ設定
     # 与えるダメージ
@@ -16,11 +20,19 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
-    # ダメージ判定
-        function lib:damage/modifier
+    # 補正
+        execute as @p[tag=SA.OwnerPlayer] run function lib:damage/modifier
 
     # ヒットしたやつに対して実行
         function lib:damage/
+
+# ふっとばし力
+    data modify storage lib: Argument.VectorMagnitude set value -0.5
+    data modify storage lib: Argument.KnockbackResist set value true
+
+# 吹っ飛ばす
+    execute facing entity @p[tag=SA.OwnerPlayer] feet rotated ~ ~5 run function lib:motion/
+
 
 # リセット
     function lib:damage/reset
