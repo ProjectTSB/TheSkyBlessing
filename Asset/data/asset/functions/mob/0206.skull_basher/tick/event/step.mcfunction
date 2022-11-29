@@ -5,7 +5,7 @@
 # @within function asset:mob/0206.skull_basher/tick/2.tick
 
 # VFX
-    playsound minecraft:entity.goat.long_jump player @a ~ ~ ~ 1.5 1.2
+    playsound minecraft:entity.goat.long_jump hostile @a ~ ~ ~ 1.5 1.2
     playsound minecraft:entity.skeleton.step hostile @a ~ ~ ~ 1.5 1.2
     execute if entity @s[tag=5Q.Melee] run playsound minecraft:entity.player.attack.sweep hostile @a ~ ~ ~ 1.5 1
 

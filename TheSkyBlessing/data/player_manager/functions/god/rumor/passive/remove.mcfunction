@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function player_manager:god/rumor/passive/
+# @within function
+#   player_manager:god/rumor/passive/
+#   player_manager:god/rumor/unbelieve
 
 # タグ削除
     tag @s remove PassiveBuff
