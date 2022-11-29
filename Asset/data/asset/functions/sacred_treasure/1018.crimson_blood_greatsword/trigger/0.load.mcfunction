@@ -7,6 +7,7 @@
 #> 定義類はここに
 # @within function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/**
     scoreboard objectives add SA.Tick dummy
+    scoreboard objectives add SA.ShotCount dummy
     scoreboard objectives add SA.Combo dummy
     scoreboard objectives add SA.Wait dummy
     scoreboard objectives add SA.UserID dummy

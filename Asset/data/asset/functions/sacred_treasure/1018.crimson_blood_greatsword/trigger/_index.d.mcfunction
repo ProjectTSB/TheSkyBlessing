@@ -6,8 +6,14 @@
     #declare tag SA.SlashEntity
     #declare tag SA.SlashEntityInit
     #declare tag SA.SlashEntityFinish
+
+    #declare tag SA.SlashShot
+    #declare tag SA.SlashShotInit
+
+    #declare tag SA.ShotEmitter
+    #declare tag SA.ShotEmitterInit
+
+    #declare tag SA.IDCopyTarget
+
     #declare tag SA.OwnerPlayer
     #declare tag SA.FinishCoolTime
-    #declare tag SA.Combo1
-    #declare tag SA.Combo2
-    #declare tag SA.Combo3
