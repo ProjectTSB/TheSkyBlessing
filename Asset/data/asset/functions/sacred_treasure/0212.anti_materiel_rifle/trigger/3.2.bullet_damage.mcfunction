@@ -7,7 +7,7 @@
 
 # 着弾の演出
     particle minecraft:explosion ~ ~ ~ 0.1 0.1 0.1 0 10
-    playsound minecraft:entity.generic.explode block @a
+    playsound minecraft:entity.generic.explode player @a
 
 # ブロック破壊
     execute unless block ^ ^ ^0.5 #lib:no_collision unless block ^ ^ ^0.5 #lib:unbreakable if entity @s[gamemode=!adventure] run setblock ^ ^ ^0.5 air destroy

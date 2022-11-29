@@ -9,4 +9,4 @@
     data modify entity @s OnGround set value 0b
 
 # SFX
-    playsound block.note_block.bit player @a ~ ~ ~ 1 2
+    playsound block.note_block.bit hostile @a ~ ~ ~ 1 2

@@ -5,7 +5,7 @@
 # @within function asset:mob/0204_infernal_watcher/tick/2.tick
 
 # VFX
-    playsound minecraft:block.fire.ambient player @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:entity.phantom.bite hostile @a ~ ~ ~ 1 1
     playsound minecraft:entity.blaze.hurt hostile @a ~ ~ ~ 1 1.5
 

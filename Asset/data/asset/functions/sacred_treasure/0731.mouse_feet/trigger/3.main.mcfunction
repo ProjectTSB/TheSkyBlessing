@@ -13,4 +13,4 @@
     effect give @s speed 3 1 true
 
 # 演出
-    playsound entity.bat.ambient master @a ~ ~ ~ 0.8 2 0
+    playsound entity.bat.ambient player @a ~ ~ ~ 0.8 2 0

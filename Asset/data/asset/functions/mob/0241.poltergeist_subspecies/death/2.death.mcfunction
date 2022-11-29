@@ -6,4 +6,4 @@
 
 # 演出
 
-    playsound minecraft:entity.vex.death hostile @p ~ ~ ~ 1 0.5
+    playsound minecraft:entity.vex.death hostile @a ~ ~ ~ 1 0.5

@@ -19,7 +19,7 @@
 # 回復
     function lib:heal/modifier
     function lib:heal/
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 演出
     tellraw @s {"text":"なんだかいい予感がする！","bold":true}

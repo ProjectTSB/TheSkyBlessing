@@ -17,12 +17,12 @@
 
     #ネコが出た場合
         execute as @s[tag=CatSpawn] run summon cat ~ ~ ~
-        playsound entity.cat.ambient master @s[tag=CatSpawn] ~ ~ ~ 3 1
+        playsound entity.cat.ambient neutral @s[tag=CatSpawn] ~ ~ ~ 3 1
         particle heart ~ ~ ~ 1 1 1 1 100 normal @s[tag=CatSpawn]
 
     #ネコが出なかった場合
         execute as @s[tag=!CatSpawn] run summon cod ~ ~ ~
-        playsound entity.cod.flop master @s[tag=!CatSpawn] ~ ~ ~ 3 1
+        playsound entity.cod.flop player @s[tag=!CatSpawn] ~ ~ ~ 3 1
         particle falling_water ~ ~ ~ 1 1 1 1 300 normal @s[tag=!CatSpawn]
 
     #タグ消し
