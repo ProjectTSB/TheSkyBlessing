@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"湖鏡映天","color":"gold"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"月無き湖畔の星空を取り込んだとされる鏡。","color":"blue","italic":"true"}]','[{"text":"星降る夜に響く波の音は夜の静寂を引き立てる。","color":"blue","italic":"true"}]','[{"text":"使用時、","color":"white"},{"text":"星湖","color":"#3643FF"},{"text":"を設置する。","color":"white"}]','[{"text":"星湖","color":"#3643FF"},{"text":"は内部の敵に継続的にダメージを与え、","color":"white"}]','[{"text":"定期的に","color":"white"},{"text":"星波","color":"#3643FF"},{"text":"を発生させダメージを与える。","color":"white"}]','[{"text":"また、内部のプレイヤーに","color":"white"},{"text":"水攻撃+30%","color":"aqua"},{"text":"を付与する。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -27,7 +27,7 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure Condition set value '{"text":"夜でのみ","color":"white"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [400,500]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [300,500]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
@@ -45,7 +45,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-   #         data modify storage asset:sacred_treasure SpecialCooldown set value 3600
+    data modify storage asset:sacred_treasure SpecialCooldown set value 3000
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
