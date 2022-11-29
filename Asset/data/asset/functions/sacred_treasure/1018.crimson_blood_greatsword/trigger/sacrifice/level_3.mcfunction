@@ -14,16 +14,18 @@
     playsound minecraft:entity.wither.ambient player @a ~ ~ ~ 1 1.5
 
 
-# 自身の現在体力の25%分のダメージを与える
-    # ダメージ量
-        function api:data_get/health
-        execute store result storage lib: Argument.Damage float 0.25 run data get storage api: Health
+# ダメージを与える
+    # 割合で減らす
+        #function api:data_get/health
+        #execute store result storage lib: Argument.Damage float 0.25 run data get storage api: Health
+    # 固定値
+        data modify storage lib: Argument.Damage set value 20.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 補正をしない
         data modify storage lib: Argument.FixedDamage set value true
     # 死亡メッセージ
-        data modify storage lib: Argument.DeathMessage set value ['[{"translate": "%1$sは赤い騎士の剣に呑まれた。","with":[{"selector":"@s"}]}]']
+        data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sにより殺された","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     # ダメージ
         function lib:damage/modifier
         function lib:damage/

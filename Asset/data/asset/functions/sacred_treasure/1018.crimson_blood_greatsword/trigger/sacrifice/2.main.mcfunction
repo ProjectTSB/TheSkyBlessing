@@ -4,12 +4,19 @@
 #
 # @within function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/sacrifice/1.tick
 
+#> 死亡時スコア
+# @private
+    #declare scoreboard DeathEvent
+
 # ブラッドチャージを減らす
     scoreboard players remove @s SA.BloodCharge 1
 
 # ブラッドチャージリセット
     execute if entity @s[scores={SA.BloodCharge=0}] run playsound minecraft:block.glass.break player @s ~ ~ ~ 1 1
     scoreboard players reset @s[scores={SA.BloodCharge=0}] SA.BloodCharge
+
+# 死んだらリセットされる
+    scoreboard players reset @s[scores={DeathEvent=1..}] SA.BloodCharge
 
 # パーティクル
     # レベル1
