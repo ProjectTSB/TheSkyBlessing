@@ -7,7 +7,7 @@
 
 # 演出
     particle minecraft:flame ~ ~0.5 ~ 0 0.5 0 0.1 100
-    playsound minecraft:entity.blaze.shoot ambient @a ~ ~ ~ 1 0.6
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.6
 
 # ダメージ設定
     # 与えるダメージ = 30

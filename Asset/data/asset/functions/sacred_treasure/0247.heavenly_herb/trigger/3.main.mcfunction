@@ -23,4 +23,4 @@
 
 # 演出
     particle minecraft:happy_villager ~ ~ ~ 1 1 1 1 100 normal @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 0.1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 0.1

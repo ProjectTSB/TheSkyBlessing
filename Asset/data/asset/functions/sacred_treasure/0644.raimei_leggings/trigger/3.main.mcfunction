@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:block.respawn_anchor.charge master @s ~ ~ ~ 1 2
+    playsound minecraft:block.respawn_anchor.charge player @s ~ ~ ~ 1 2
 
 # 引数の設定
     # UUID

@@ -20,5 +20,4 @@
     function lib:damage/reset
 
 # マナ減少
-    scoreboard players set $Fluctuation Lib -24
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:mp/fluctuation
+    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0185.tutankhamen/tick/thunder/08.mp_reduce

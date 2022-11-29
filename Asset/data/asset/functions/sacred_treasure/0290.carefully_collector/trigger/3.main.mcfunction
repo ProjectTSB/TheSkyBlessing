@@ -30,7 +30,7 @@
 
     # 演出
         execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle dust 0.408 0.894 0.29 0.5 ~ ~ ~ 0.4 0.4 0.4 0 250 normal @a
-        playsound entity.arrow.hit_player master @a ~ ~ ~ 1 1.5 1
+        playsound entity.arrow.hit_player player @a ~ ~ ~ 1 1.5 1
 
     # リセット
         setblock ~ ~ ~ air

@@ -20,4 +20,4 @@
 
 # 演出
     tellraw @a [{"selector":"@s","bold":true},{"text":"は天国に上るような錯覚がした"}]
-    playsound ui.toast.challenge_complete master @a 23 3 24 1.0 1.2
+    playsound ui.toast.challenge_complete player @a 23 3 24 1.0 1.2

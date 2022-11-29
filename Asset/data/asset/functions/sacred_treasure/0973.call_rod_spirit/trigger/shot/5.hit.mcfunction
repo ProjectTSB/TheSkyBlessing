@@ -27,6 +27,7 @@
 
 # リセット
     function lib:damage/reset
+    scoreboard players reset $RandomDamage Temporary
 
 # キル
     function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/6.break

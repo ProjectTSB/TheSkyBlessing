@@ -13,7 +13,7 @@
 
 # 発動
     execute as @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0}] at @s positioned ~ ~1.5 ~ positioned ^ ^ ^2 run function asset:sacred_treasure/0379.miracle_rod/trigger/3.3.shoot
-    execute as @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0}] at @s run playsound minecraft:entity.wither.shoot ambient @a ~ ~ ~ 1 0.6
+    execute as @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0}] at @s run playsound minecraft:entity.wither.shoot player @a ~ ~ ~ 1 0.6
     kill @e[type=area_effect_cloud,tag=AJ.Magic,scores={AJ.CoolTime=0}]
 
 # スコア減らす
