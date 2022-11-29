@@ -7,6 +7,9 @@
 # スコア持ってないなら0に
     execute unless entity @s[scores={SA.Combo=0..}] run scoreboard players set @s SA.Combo 0
 
+# コンボの隙を設定
+    scoreboard players set @s SA.Wait 13
+
 # 攻撃
     execute if entity @s[scores={SA.Combo=0}] run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/slash1
     execute if entity @s[scores={SA.Combo=1}] run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/combo/slash2
@@ -18,7 +21,6 @@
     execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=SA.SlashEntityInit,distance=..0.5,sort=nearest,limit=1] run function asset:sacred_treasure/1018.crimson_blood_greatsword/trigger/slash_entity/init
 
 # コンボカウント
-    scoreboard players set @s SA.Wait 13
     scoreboard players add @s SA.Combo 1
     execute unless entity @s[scores={SA.BloodCharge=201..}] run scoreboard players set @s[scores={SA.Combo=3..}] SA.Combo 0
     execute unless entity @s[scores={SA.BloodCharge=401..}] run scoreboard players set @s[scores={SA.Combo=5..}] SA.Combo 0
