@@ -7,7 +7,8 @@
 # 演出
     playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 0.6
     playsound minecraft:item.trident.throw player @a ~ ~ ~ 1.5 0.6
-    playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1.2 1
+    execute unless score @s SA.BloodCharge matches 0.. run playsound minecraft:item.axe.scrape player @a ~ ~ ~ 1.2 1
+    execute if score @s SA.BloodCharge matches 0.. run playsound minecraft:item.trident.return player @a ~ ~ ~ 1.5 1.5
 
 #ダメージブレのための処理
     # 疑似乱数取得
@@ -16,7 +17,7 @@
         scoreboard players operation $RandomDamage Temporary %= $51 Const
     # 最低ダメージ設定、解放状況でダメージ変わる
         execute unless score @s SA.BloodCharge matches 0.. run scoreboard players add $RandomDamage Temporary 300
-        execute if score @s SA.BloodCharge matches 1.. run scoreboard players add $RandomDamage Temporary 400
+        execute if score @s SA.BloodCharge matches 1.. run scoreboard players add $RandomDamage Temporary 350
 # 引数の設定
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
