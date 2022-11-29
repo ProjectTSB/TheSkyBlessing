@@ -4,18 +4,14 @@
 #
 # @within function asset:sacred_treasure/0733.percentage_sword/trigger/2.check_condition
 
-#> Private
-# @private
-    #declare score_holder $KD.DamageValue
-
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
     function asset:sacred_treasure/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound entity.player.attack.sweep master @a ~ ~ ~ 0.8 1 0
-    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 0.6 1.7
+    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound entity.player.attack.sweep player @a ~ ~ ~ 0.8 1 0
+    execute if entity @e[type=#lib:living,tag=Victim,distance=..6] run playsound minecraft:block.beacon.activate player @a ~ ~ ~ 0.6 1.7
     execute if entity @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ^ ^1.2 ^0.5 rotated ~ ~-4 run function asset:sacred_treasure/0733.percentage_sword/trigger/4.sweeping_particle
 
 # 4割の割合追加ダメージまでの処理
@@ -33,4 +29,3 @@
 
 # 色々リセット
     function lib:damage/reset
-    scoreboard players reset $KD.DamageValue Temporary

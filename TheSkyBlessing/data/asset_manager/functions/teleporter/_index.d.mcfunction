@@ -32,3 +32,7 @@
 #> OpenDeclares
 # @within asset_manager:island/dispel/register_tp
     #declare tag Teleporter
+
+#> TeleporterExists
+# @within asset_manager:teleporter/update_activation_state/*
+    #declare score_holder $TeleporterExists

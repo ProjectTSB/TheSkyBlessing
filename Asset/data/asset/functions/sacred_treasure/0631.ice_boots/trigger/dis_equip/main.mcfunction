@@ -9,7 +9,7 @@
 # 補正の削除
     function api:player_modifier/defense/water/remove
 
-    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 0.8 0
+    playsound minecraft:block.glass.break player @a ~ ~ ~ 0.4 0.8 0
 
 # フルセット効果削除
     execute if entity @s[tag=HH.Fullset] run function asset:sacred_treasure/0629.ice_armor/trigger/5.fullset_dis_equip

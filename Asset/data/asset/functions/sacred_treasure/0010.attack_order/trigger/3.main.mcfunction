@@ -11,7 +11,7 @@
 
 # 演出
     particle minecraft:end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..30]
-    playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 20 0.3
+    playsound minecraft:entity.wither.hurt player @s ~ ~ ~ 20 0.3
 
 # 召喚
     summon minecraft:iron_golem ~ ~ ~ {Tags:["Friend"]}

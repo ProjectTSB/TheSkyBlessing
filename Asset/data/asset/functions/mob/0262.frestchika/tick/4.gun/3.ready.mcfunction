@@ -16,7 +16,7 @@
     execute rotated ~ 0 positioned ^-0.4 ^ ^1.4 facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ~ ~-0.425 ~ anchored eyes positioned ^ ^ ^ run function asset:mob/0262.frestchika/tick/4.gun/4.shot
 
 # 演出
-    playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 1 1.6
+    playsound minecraft:entity.shulker.shoot hostile @a ~ ~ ~ 1 1.6
     playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 2
 
 # リセット

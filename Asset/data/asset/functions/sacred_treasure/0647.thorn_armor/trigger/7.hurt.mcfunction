@@ -22,7 +22,7 @@
     data modify storage lib: Argument.Heal set value 5.0f
     function lib:heal/modifier
     function lib:heal/
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # 被ダメージ時攻撃者にダメージ
     data modify storage lib: Argument.Damage set value 75.0f

@@ -5,8 +5,8 @@
 # @within function asset:mob/0120.convict/tick/3.slash/1.slash
 
 # 演出
-    playsound item.trident.throw player @a ~ ~ ~ 1 0.6
-    playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1 2
+    playsound item.trident.throw hostile @a ~ ~ ~ 1 0.6
+    playsound minecraft:entity.glow_squid.squirt hostile @a ~ ~ ~ 1 2
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 20.0f

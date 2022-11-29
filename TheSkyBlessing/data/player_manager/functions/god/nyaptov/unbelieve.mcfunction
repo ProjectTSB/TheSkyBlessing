@@ -4,7 +4,7 @@
 #
 # @within
 #   function player_manager:god/change_believe/unbelieve2
-#   function lib:debug/change_believe/none
+#   function debug:change_believe/none
 
 # 信仰タグ削除
     tag @s remove Believe.Nyaptov

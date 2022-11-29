@@ -23,7 +23,7 @@
     execute if entity @a[scores={2f.TickCount=..40}] run schedule function asset:sacred_treasure/0087.sheep_blessing/trigger/count_down 1t
 
 # 演出
-    execute at @a[scores={2f.TickCount=41}] run playsound entity.illusioner.prepare_mirror master @a[scores={2f.TickCount=41}] ~ ~ ~ 1.0 1.0
+    execute at @a[scores={2f.TickCount=41}] run playsound entity.illusioner.prepare_mirror player @a[scores={2f.TickCount=41}] ~ ~ ~ 1.0 1.0
 
 # 初期化処理
     tag @a[scores={2f.TickCount=41}] remove 2f.CanNotUse
