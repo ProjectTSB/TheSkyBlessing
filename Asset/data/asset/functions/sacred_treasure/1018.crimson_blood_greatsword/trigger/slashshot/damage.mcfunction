@@ -12,11 +12,18 @@
     effect give @s[type=#lib:undead] instant_health
     effect give @s[type=!#lib:undead] instant_damage
 
-# 判定
-    # ダメージ設定
-    # 与えるダメージ
-        data modify storage lib: Argument.Damage set value 100.0f
-    # 魔法属性
+# ダメージのブレ
+    # 疑似乱数取得
+        execute store result score $RandomDamage Temporary run function lib:random/
+    # 剰余算する。追加ダメージ。
+        scoreboard players operation $RandomDamage Temporary %= $51 Const
+    # 最低ダメージ設定、解放状況でダメージ変わる
+       scoreboard players add $RandomDamage Temporary 100
+
+# ダメージ設定
+    #ダメージセット
+        execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
+    # 物理属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 無属性
         data modify storage lib: Argument.ElementType set value "None"
