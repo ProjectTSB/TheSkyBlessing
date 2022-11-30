@@ -1,0 +1,74 @@
+compound AssetEffect {
+    /// ID
+    ID: int,
+    /// 名前(TextComponent)
+    Name: string,
+    /// 説明文(TextComponent)
+    Description: [string] @ 1..,
+
+    /// 残り時間
+    Duration: int @ 1..,
+    /// スタック
+    Stack: int @ 1..,
+    /// 残り時間の操作方法
+    DurationOperation: EffectOperation,
+    /// スタックの操作方法
+    StackOperation: EffectOperation,
+
+    /// 最大残り時間
+    MaxDuration?: int,
+    /// 最大スタック (default: 1)
+    MaxStack?: int @ 1..,
+    /// APIで消す際に必要なLv (default: 1)
+    RequireClearLvWithApi?: ClearLv,
+    /// 牛乳で消せるか (default: true)
+    AllowClearWithMilk?: boolean
+}
+
+enum(string) EffectOperation {
+    /// 常に上書きする
+    ForceReplce = "forceReplace",
+    /// 現在値より大きければ上書きする
+    Replace = "replace",
+    /// 現在値に加算する
+    Add = "add"
+}
+
+enum(string) ClearLv {
+    /// 消せない
+    Impossible = "impossible",
+    /// エフェクト削除[弱]
+    Weak = "weak",
+    /// エフェクト削除[強]
+    Powerful = "powerful"
+}
+
+AssetEffect describes minecraft:storage[asset:effect]
+
+inject compound ::ohmydat::Mob {
+    /// 現在付与されているエフェクトのデータ
+    Effects: [EffectData],
+    /// イベントの発火を待つエフェクトのリスト
+    EventWaitingEffects: EventWaitingEffects
+}
+
+compound EffectData {
+    /// ID
+    ID: int,
+    /// 残り時間
+    Duration: int @ 0..,
+    /// スタック
+    Stack: int @ 1..,
+
+    /// APIで消す際に必要なLv (default: 1)
+    RequireClearLvWithApi?: ClearLv,
+    /// 牛乳で消せるか (default: true)
+    AllowClearWithMilk?: boolean
+}
+
+compound EventWaitingEffects {
+    /// 次tickにasset:effect/givenを発火するべきIDのリスト
+    Given: [int],
+    /// 次tickにasset:effect/re-givenを発火するべきIDのリスト
+    ReGiven: [int]
+}
