@@ -8,15 +8,8 @@
     effect give @s[type=#lib:undead] instant_health
     effect give @s[type=!#lib:undead] instant_damage
 
-# 補正functionを実行
-    execute as @p[tag=this] run function lib:damage/modifier
 # ダメージ実行
     function lib:damage/
 
 # 吹っ飛ばす
     execute as @s at @s facing entity @p[tag=this] feet rotated ~ ~25 run function lib:motion/
-
-# リセット
-    function lib:damage/reset
-    scoreboard players reset $RandomDamage Temporary
-    data remove storage lib: Argument

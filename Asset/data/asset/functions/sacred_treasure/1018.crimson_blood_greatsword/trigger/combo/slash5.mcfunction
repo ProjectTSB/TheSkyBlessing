@@ -25,7 +25,7 @@
     # 剰余算する。追加ダメージ。
         scoreboard players operation $RandomDamage Temporary %= $51 Const
     # 最低ダメージ設定
-        scoreboard players add $RandomDamage Temporary 400
+        scoreboard players add $RandomDamage Temporary 600
 # 引数の設定
     #ダメージセット
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $RandomDamage Temporary
@@ -33,6 +33,8 @@
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
+    # 補正
+        function lib:damage/modifier
 
 # 斬撃エミッターを召喚
     summon marker ~ ~ ~ {Tags:["SA.ShotEmitter","SA.ShotEmitterInit"]}
