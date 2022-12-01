@@ -9,9 +9,8 @@
     particle dust 1 1 0 1 ~ ~5 ~ 0.1 5 0.1 0 300
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
 
-    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 2 0
-    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.5 2 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.5 0 0
 
 # ダメージ設定
     # 与えるダメージ

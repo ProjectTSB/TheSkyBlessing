@@ -20,7 +20,7 @@
 
 # 攻撃判定
 # リセット
-    execute if score @s 7W.Tick matches 45 run function asset:mob/0284.lexiel/tick/reset
+    execute if score @s 7W.Tick matches 60 run function asset:mob/0284.lexiel/tick/reset
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdmAGjAFdiBLAEyTAA4aBOOegY3oAYBaAZgDMB2HhwAsbAIz0OAIz5waHCkN4AmHtIBsSuM0JhcAQwC2CZICxNQEuRgI30ABEp0w9AJ0MBnJOGapiuCElFFmcN5wDm5gAG566MTG4AAeSGxEUAkAvilEThRkxK6IbAB0fmDOEI4+eURw6OhkMM7GomyJYA6opRDGzR4OuMFIXEQAVsQGML5EknAAXmR9FWBkzgCi1bX1SwCOxJGYAMr2AVSIPJH1RIsAQtOzDpvb1VD7eodIJ+j1aQC6QA_3
 # 多角形 2
