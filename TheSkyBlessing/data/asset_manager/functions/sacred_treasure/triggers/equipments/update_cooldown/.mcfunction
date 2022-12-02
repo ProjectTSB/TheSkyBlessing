@@ -32,3 +32,5 @@
 # リセット
     function lib:array/session/close
     data remove storage asset:sacred_treasure ItemData
+    scoreboard players reset $Tick Temporary
+    scoreboard players reset $LatestUsedTick Temporary

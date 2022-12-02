@@ -67,3 +67,8 @@
     #declare score_holder $Value
     #declare score_holder $NormalizedValue
     #declare score_holder $Max
+
+#> リセット用
+# @within function asset_manager:sacred_treasure/triggers/equipments/update_cooldown/
+    #declare score_holder $Tick
+    #declare score_holder $LatestUsedTick
