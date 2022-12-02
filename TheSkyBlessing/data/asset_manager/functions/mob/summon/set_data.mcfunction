@@ -4,6 +4,7 @@
 #
 # @input storage asset:mob
 #   ID : int
+#   ExtendsID? : Int
 #   Name? : TextComponentString
 #   Health? : float
 #   AttackDamage? : double
@@ -18,6 +19,7 @@
 #   Resist.Fire : float
 #   Resist.Water : float
 #   Resist.Thunder : float
+#   Field? : Any
 # @within function asset:mob/common/summon
 
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
@@ -69,13 +71,17 @@
 # Enemyのチーム設定
     execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy
+# EntityStorage呼び出し
+    function oh_my_dat:please
 # 属性耐性
-    # EntityStorage呼び出し
-        function oh_my_dat:please
     # Baseを追加
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
+# 継承データ
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ExtendsID set from storage asset:mob ExtendsID
+# フィールド
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:mob Field
 # ボスバーの表示
     execute if data storage asset:mob {Type:"Enemy.Boss"} run function asset_manager:mob/bossbar/init
 # データ初期化

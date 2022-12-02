@@ -4,6 +4,7 @@
 #
 # @input storage asset:mob
 #   ID : int
+#   ExtendsID? : int
 #   Type : string
 #   Interferable : boolean
 #   Name? : TextComponentString
@@ -25,11 +26,15 @@
 #   Resist.Fire? : float
 #   Resist.Water? : float
 #   Resist.Thunder? : float
-# @within function asset:mob/*/summon/2.summon
+#   Field? : Any
+# @within function
+#   api:mob/core/summon
+#   asset:mob/*/summon/2.summon
 
 # validate
     execute unless entity @s run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"データを適用するEntityが存在しません\nasを利用して対象のEntityを実行者にしてください"}]
     execute unless data storage asset:mob ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
+    # execute unless data storage asset:mob ExtendsID run
     execute unless data storage asset:mob Type run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Type","color":"red"}]
     execute unless data storage asset:mob Interferable run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Interferable","color":"red"}]
     # execute unless data storage asset:mob Name run
@@ -53,11 +58,13 @@
     execute unless data storage asset:mob Resist.Fire run data modify storage asset:mob Resist.Fire set value 1f
     execute unless data storage asset:mob Resist.Water run data modify storage asset:mob Resist.Water set value 1f
     execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 1f
+    # execute unless data storage asset:mob Field run
 # データ適用
     execute if entity @s run function asset_manager:mob/summon/set_data
 # リセット
     tag @s remove MobInit
     data remove storage asset:mob ID
+    data remove storage asset:mob ExtendsID
     data remove storage asset:mob Type
     data remove storage asset:mob Interferable
     data remove storage asset:mob Name
@@ -73,3 +80,7 @@
     data remove storage asset:mob FollowRange
     data remove storage asset:mob KnockBackResist
     data remove storage asset:mob Resist
+    data remove storage asset:mob Field
+
+# 初期化イベント
+    execute if entity @s run function #asset:mob/initialize
