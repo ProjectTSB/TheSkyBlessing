@@ -40,6 +40,9 @@
     data modify storage asset:effect EffectData.ProcessOnDied set from storage asset:effect ProcessOnDied
     data modify storage asset:effect EffectData.RequireClearLvWithApi set from storage asset:effect RequireClearLvWithApi
     data modify storage asset:effect EffectData.AllowClearWithMilk set from storage asset:effect AllowClearWithMilk
+# イベント設定
+    execute unless data storage asset:effect OriginEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
+    execute if data storage asset:effect OriginEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット
     scoreboard players reset $OriginDuration Temporary
     scoreboard players reset $OriginStack Temporary
