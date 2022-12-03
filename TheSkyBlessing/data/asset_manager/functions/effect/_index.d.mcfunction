@@ -4,7 +4,7 @@
 #> Storage
 # @within function
 #   api:entity/mob/effect/**
-#   asset:effect/register/register
+#   asset:effect/*/register
 #   asset_manager:effect/**
 #declare storage asset:effect
 
@@ -12,4 +12,5 @@
 # @within function
 #   core:tick/
 #   asset_manager:effect/give/give
-    #declare tag HasAssetEffect
+#   asset_manager:effect/tick
+#declare tag HasAssetEffect
