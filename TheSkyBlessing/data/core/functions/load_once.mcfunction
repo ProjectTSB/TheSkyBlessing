@@ -372,6 +372,7 @@ team modify NoCollision collisionRule never
 #> 各Asset側のロード処理
     function #asset:sacred_treasure/load
     function #asset:mob/load
+    function #asset:effect/load
 
 
 #> 神の慈悲アイテムを定義する
