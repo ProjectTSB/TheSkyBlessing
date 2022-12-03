@@ -20,6 +20,7 @@
 # register側Opt値のprefill
     data modify storage asset:effect DurationMax set value 2147483647
     data modify storage asset:effect StackMax set value 2147483647
+    data modify storage asset:effect ProcessOnDied set value "remove"
     data modify storage asset:effect RequireClearLvWithApi set value 1
     data modify storage asset:effect AllowClearWithMilk set value true
 # データを取得

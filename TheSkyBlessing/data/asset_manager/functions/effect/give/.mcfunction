@@ -17,5 +17,7 @@
     data remove storage asset:effect StackOperation
     data remove storage asset:effect MaxDuration
     data remove storage asset:effect MaxStack
+    data remove storage asset:effect IsBadEffect
+    data remove storage asset:effect ProcessOnDied
     data remove storage asset:effect RequireClearLvWithApi
     data remove storage asset:effect AllowClearWithMilk

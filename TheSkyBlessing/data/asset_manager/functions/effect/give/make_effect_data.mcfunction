@@ -36,6 +36,8 @@
     data modify storage asset:effect EffectData.ID set from storage asset:effect ID
     execute store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
     execute store result storage asset:effect EffectData.Stack int 1 run scoreboard players get $Stack Temporary
+    data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect
+    data modify storage asset:effect EffectData.ProcessOnDied set from storage asset:effect ProcessOnDied
     data modify storage asset:effect EffectData.RequireClearLvWithApi set from storage asset:effect RequireClearLvWithApi
     data modify storage asset:effect EffectData.AllowClearWithMilk set from storage asset:effect AllowClearWithMilk
 # リセット
