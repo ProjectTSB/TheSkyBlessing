@@ -28,8 +28,8 @@
     execute if data storage asset:effect {StackOperation:"replace"} run scoreboard players operation $Stack Temporary > $OriginStack Temporary
     execute if data storage asset:effect {StackOperation:"add"} run scoreboard players operation $Stack Temporary += $OriginStack Temporary
 # 最大値を超えてたら最大値にする
-    scoreboard players operation $Duration Temporary < $MaxDuration Temporary
-    scoreboard players operation $Stack Temporary < $MaxStack Temporary
+    scoreboard players operation $Duration Temporary > $MaxDuration Temporary
+    scoreboard players operation $Stack Temporary > $MaxStack Temporary
 # データを作る
     data modify storage asset:effect EffectData set value {}
 
