@@ -19,4 +19,5 @@
 # タグ付与
     tag @s add HasAssetEffect
 # リセット
+    data remove storage asset:effect EffectData
     data remove storage asset:effect OriginEffectData
