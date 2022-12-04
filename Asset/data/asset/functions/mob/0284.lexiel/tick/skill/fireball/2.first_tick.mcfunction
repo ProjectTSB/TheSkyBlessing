@@ -1,4 +1,4 @@
-#> asset:mob/0284.lexiel/tick/skill/fireball/2.fist_tick
+#> asset:mob/0284.lexiel/tick/skill/fireball/2.first_tick
 #
 #
 #

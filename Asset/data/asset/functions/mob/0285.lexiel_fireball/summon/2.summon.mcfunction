@@ -5,7 +5,7 @@
 # @within function asset:mob/0285.lexiel_fireball/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon endermite ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],NoAI:1b,Silent:1b,DeathTime:19s,Lifetime:2350,Attributes:[{Name:generic.max_health,Base:1}],Passengers:[{id:"minecraft:snowball",Tags:["AutoKillWhenDieVehicle","AssetMob"],Item:{id:"minecraft:fire_charge",Count:1b}}]}
+    summon endermite ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],NoAI:1b,Silent:1b,DeathTime:19s,Passengers:[{id:"minecraft:snowball",Tags:["AutoKillWhenDieVehicle","AssetMob"],Item:{id:"minecraft:fire_charge",Count:1b}}]}
 # ID (int)
     data modify storage asset:mob ID set value 285
 # Type (string) Wikiを参照
@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value False
 # 名前 (TextComponentString) (オプション)
-    # data modify storage asset:mob Name set value
+    data modify storage asset:mob Name set from entity @s CustomName
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
