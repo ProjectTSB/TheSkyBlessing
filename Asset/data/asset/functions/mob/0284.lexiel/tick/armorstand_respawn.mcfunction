@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0284.lexiel/tick/2.tick
+# @within function
+#   asset:mob/0284.lexiel/tick/2.tick
+#   asset:mob/0284.lexiel/tick/armor_stand_check
 
 # どっかいったアマスタを殺す
     execute as @e[type=armor_stand,tag=7W.Model] at @s positioned ~ ~-0.29 ~ unless entity @e[type=wither_skeleton,tag=7W.Boss,distance=..0.01] run kill @s
