@@ -14,11 +14,11 @@
     scoreboard players operation $Temp Temporary = @s 5Y.Tick
     execute if entity @s[scores={5Y.Tick=..30}] run scoreboard players operation $Temp Temporary %= $2 Const
 
-# 発動前にパーティクル
-    execute if entity @s[scores={5Y.Tick=..30}] if score $Temp Temporary matches 0 run function asset:mob/0214.water_magic/tick/3.ready_vfx
-
 # 最初の数tickだけ当たり判定の円を表示
     execute if entity @s[scores={5Y.Tick=..5}] run function asset:mob/0214.water_magic/tick/vfx
+
+# 発動前にパーティクル
+    execute if entity @s[scores={5Y.Tick=..30}] if score $Temp Temporary matches 0 run function asset:mob/0214.water_magic/tick/3.ready_vfx
 
 # 一定間隔毎に魔方陣表示とダメージ
     execute if entity @s[scores={5Y.Tick=30..}] run scoreboard players operation $Temp Temporary %= $5 Const
