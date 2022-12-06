@@ -6,7 +6,7 @@
 
 # MPを5%減らす
     execute store result storage asset:temp MP5Per double -0.05 run function lib:mp/get_max
-    execute store result score $Fluctuation Lib run data get storage asset:temp MP8Per 1.0
+    execute store result score $Fluctuation Lib run data get storage asset:temp MP5Per 1.0
     function lib:mp/fluctuation
     playsound block.beacon.power_select player @a ~ ~ ~ 0.2 2 0
 
