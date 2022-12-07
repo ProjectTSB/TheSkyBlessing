@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/*/register/
+# @within function asset:mob/*/register
 
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context_id/stash

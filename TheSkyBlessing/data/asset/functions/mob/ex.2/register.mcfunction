@@ -1,4 +1,4 @@
-#> asset:mob/ex.2/register/
+#> asset:mob/ex.2/register
 #
 #
 #
