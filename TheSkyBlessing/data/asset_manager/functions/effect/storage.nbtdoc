@@ -6,18 +6,18 @@ compound AssetEffect {
     /// 説明文(TextComponent)
     Description: [string] @ 1..,
 
-    /// 残り時間
-    Duration: int @ 1..,
-    /// スタック
-    Stack: int @ 1..,
-    /// 残り時間の操作方法
-    DurationOperation: EffectOperation,
-    /// スタックの操作方法
-    StackOperation: EffectOperation,
+    /// 残り時間 (default: API || error)
+    Duration?: int @ 1..,
+    /// スタック (default: API || 1)
+    Stack?: int @ 1..,
+    /// 残り時間の操作方法 (default: API || Replace)
+    DurationOperation?: EffectOperation,
+    /// スタックの操作方法 (default: API || Replace)
+    StackOperation?: EffectOperation,
 
-    /// 最大残り時間
+    /// 最大残り時間 (default: 2147483647)
     MaxDuration?: int,
-    /// 最大スタック (default: 1)
+    /// 最大スタック (default: 2147483647)
     MaxStack?: int @ 1..,
     /// 悪い効果か否か
     IsBadEffect: boolean,
@@ -64,12 +64,12 @@ compound EffectData {
 
     /// 悪い効果か否か
     IsBadEffect: boolean,
-    /// 死亡時のエフェクトの処遇 (default: Remove)
-    ProcessOnDied?: DiedProccess,
-    /// APIで消す際に必要なLv (default: 1)
-    RequireClearLvWithApi?: ClearLv,
-    /// 牛乳で消せるか (default: true)
-    AllowClearWithMilk?: boolean,
+    /// 死亡時のエフェクトの処遇
+    ProcessOnDied: DiedProccess,
+    /// APIで消す際に必要なLv
+    RequireClearLvWithApi: ClearLv,
+    /// 牛乳で消せるか
+    AllowClearWithMilk: boolean,
 
     /// 発火待ちのイベント
     NextEvent?: Event

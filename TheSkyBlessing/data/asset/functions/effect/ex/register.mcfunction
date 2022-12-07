@@ -11,17 +11,17 @@ say register
     data modify storage asset:effect Name set value '{"text":"再生"}'
 # 説明文
     data modify storage asset:effect Description set value '{"text":"強力な再生能力"}'
-# 残り時間
+# 残り時間 (default = API || error)
     # data modify storage asset:effect Duration set value
-# スタック (default = 1)
-    data modify storage asset:effect Stack set value 1
+# スタック (default = API || 1)
+    # data modify storage asset:effect Stack set value
 # 残り時間の操作方法 (default = API || "replace")
     data modify storage asset:effect DurationOperation set value "replace"
 # スタックの操作方法 (default = API || "replace")
     data modify storage asset:effect StackOperation set value "replace"
-# 最大残り時間 (default = Integer.MAX)
+# 最大残り時間 (default = 2147483647)
     # data modify storage asset:effect MaxDuration set value
-# 最大スタック (default = Integer.MAX)
+# 最大スタック (default = 2147483647)
     # data modify storage asset:effect MaxStack set value
 # 悪い効果か否か
     data modify storage asset:effect IsBadEffect set value false
