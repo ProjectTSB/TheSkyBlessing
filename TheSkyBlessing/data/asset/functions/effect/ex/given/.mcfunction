@@ -1,4 +1,4 @@
-#> asset:effect/ex/given
+#> asset:effect/ex/given/
 #
 #
 #

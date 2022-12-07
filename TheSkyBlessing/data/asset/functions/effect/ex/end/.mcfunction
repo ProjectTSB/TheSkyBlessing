@@ -1,4 +1,4 @@
-#> asset:effect/ex/end
+#> asset:effect/ex/end/
 #
 #
 #

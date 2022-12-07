@@ -1,4 +1,4 @@
-#> asset:effect/ex/re-given
+#> asset:effect/ex/re-given/
 #
 #
 #

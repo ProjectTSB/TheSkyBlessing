@@ -1,4 +1,4 @@
-#> asset:effect/ex/remove
+#> asset:effect/ex/remove/
 #
 #
 #
