@@ -23,7 +23,7 @@
     execute positioned ^ ^ ^1.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.brave_sword/trigger/combo/damage
 
 # 斬撃を飛ばす
-    execute anchored eyes run summon armor_stand ^ ^1.5 ^ {Marker:1b,Invisible:1b,Small:1b,Tags:["R4.SlashShot","R4.SlashShotInit"],Pose:{Head:[0.1f,0f,0.0f]},DisabledSlots:4144959}
+    execute anchored eyes run summon armor_stand ^ ^1.5 ^ {Marker:1b,Invisible:1b,Small:1b,Tags:["Projectile","R4.SlashShot","R4.SlashShotInit"],Pose:{Head:[0.1f,0f,0.0f]},DisabledSlots:4144959}
     execute as @e[type=armor_stand,tag=R4.SlashShotInit,distance=..5,sort=nearest,limit=1] at @s run function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/init
     schedule function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/1.tick 1t replace
 
