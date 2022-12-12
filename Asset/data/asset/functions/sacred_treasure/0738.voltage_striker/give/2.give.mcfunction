@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ボルテージストライカー","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value []
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"前方に数発の高電圧弾を放つ。","color":"white"}]','[{"text":"高電圧弾は直進後、近くの敵を狙い撃つ。","color":"white"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -35,9 +35,9 @@
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value "every"
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 1
 # MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 30
 # MP必要量 (int) (オプション)

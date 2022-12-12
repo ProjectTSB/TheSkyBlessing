@@ -16,7 +16,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
     function lib:damage/modifier
-    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,dx=0,sort=nearest] run function lib:damage/
+    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,dx=0] run function lib:damage/
 # リセット
     function lib:damage/reset
 
