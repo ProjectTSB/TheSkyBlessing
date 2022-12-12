@@ -5,6 +5,7 @@
 # @within function
 #   asset:sacred_treasure/0738.voltage_striker/trigger/3.main
 #   asset:sacred_treasure/0738.voltage_striker/trigger/bullet/main
+#   asset:sacred_treasure/0738.voltage_striker/trigger/rejoin_process
 
 # メイン処理
     execute as @e[type=marker,tag=KI.Bullet] at @s run function asset:sacred_treasure/0738.voltage_striker/trigger/bullet/main
