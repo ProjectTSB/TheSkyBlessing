@@ -30,7 +30,7 @@
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 2.0
     data modify storage lib: Argument.Spread set value 2.8
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
+    execute as @e[type=marker,tag=SpreadMarker,distance=..0.01,limit=1] run function lib:forward_spreader/circle
 
 # 向きをSpreadMarkerに合わせる
     tp @e[type=marker,tag=KI.Bullet,tag=Init,distance=..0.01,limit=1] ~ ~ ~ facing entity @e[type=marker,tag=SpreadMarker,distance=..10,limit=1] eyes
@@ -39,5 +39,5 @@
     tag @e[type=marker,tag=KI.Bullet,tag=Init,distance=..0.01,limit=1] remove Init
 
 # リセット
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..10]
     scoreboard players reset $Random Temporary
