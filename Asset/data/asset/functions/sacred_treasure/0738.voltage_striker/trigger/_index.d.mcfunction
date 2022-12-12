@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/0738.voltage_striker/trigger/**
-    #declare
+    #declare tag KI.Bullet

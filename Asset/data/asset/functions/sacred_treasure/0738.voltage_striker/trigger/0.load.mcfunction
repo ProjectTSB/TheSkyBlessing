@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/0738.voltage_striker/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add KI.Tick dummy
+    scoreboard objectives add KI.UserID dummy

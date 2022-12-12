@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"水兵の帽子","color":"#3DFFF2"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ボルテージストライカー","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value []
 # MP以外の消費物 (TextComponentString) (オプション)
@@ -27,11 +27,11 @@
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.Damage set value [400]
+    data modify storage asset:sacred_treasure AttackInfo.Damage set value [350]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
-    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Thunder]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
@@ -43,11 +43,11 @@
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 22
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
