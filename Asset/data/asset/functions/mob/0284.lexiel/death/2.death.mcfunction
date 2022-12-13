@@ -8,7 +8,7 @@
 # 死亡アニメーションをするためのアマスタを召喚する
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["7W.ArmorStandDeath","7W.ArmorStandThis","Object","Uninterferable"],Pose:{LeftArm:[0f,0f,340f],RightArm:[0f,0f,20f]},HandItems:[{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20035}},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20038}}],ArmorItems:[{},{},{},{id:"minecraft:stone",Count:1b,tag:{CustomModelData:20043}}]}
 # アマスタに位置をあわせる
-    execute as @e[type=armor_stand,tag=7W.ArmorStand,distance=..3,sort=nearest,limit=1] at @s run tp @e[type=snowball,tag=7W.ModelCore,distance=..3] @s
+    execute as @e[type=armor_stand,tag=7W.ArmorStandDeath,distance=..3,sort=nearest,limit=1] at @s run tp @s @e[type=armor_stand,tag=7W.Model,distance=..3,sort=nearest,limit=1]
 # タグを消す
     tag @e[type=armor_stand,tag=7W.ArmorStandThis] remove 7W.ArmorStandThis
 

@@ -7,9 +7,6 @@
 # ポーズ
     execute if score @s 7W.Tick matches 0 as @e[type=armor_stand,tag=7W.ModelChangeTarget,tag=7W.ModelBody,distance=..0.5,sort=nearest,limit=1] run function asset:mob/0284.lexiel/tick/skill/melee/2.first_tick
 
-# 演出
-    execute if score @s 7W.Tick matches 0 run playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1.6
-
 # 攻撃判定
     execute if score @s 7W.Tick matches 15 run function asset:mob/0284.lexiel/tick/skill/melee/3.slash
 

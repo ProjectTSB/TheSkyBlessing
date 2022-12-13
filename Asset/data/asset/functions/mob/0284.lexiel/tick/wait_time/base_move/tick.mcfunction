@@ -13,8 +13,6 @@
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
     execute if score @s[tag=!7W.InAction,tag=!7W.Move] 7W.Tick matches 25.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 7W.Tick 0
 
-    #execute if score @s 7W.Tick matches 25.. run scoreboard players set @s 7W.Tick 0
-
 # 選択したスキル発動
     execute if entity @s[tag=7W.InAction] run function asset:mob/0284.lexiel/tick/4.skill_active
 

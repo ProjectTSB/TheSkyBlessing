@@ -17,6 +17,6 @@
 
 # 演出
     particle minecraft:explosion ~ ~1 ~ 0 0 0 0 0
-
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0
 # キル
     kill @e[type=marker,tag=7W.This,distance=..100]

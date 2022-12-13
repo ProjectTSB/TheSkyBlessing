@@ -19,7 +19,5 @@
     scoreboard players set @s 7W.Tick -30
     tag @s remove 7W.TickLock
 
+# リセット
     execute at @s run function asset:mob/0284.lexiel/tick/reset
-# 強制的にテレポする
-    #data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
-    #function asset:mob/0284.lexiel/tick/move/spread

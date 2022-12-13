@@ -67,9 +67,6 @@
 # タグを消す
     tag @e[type=armor_stand,tag=7W.ModelCoreThis,distance=..0.01] remove 7W.ModelCoreThis
 
-# 座標を記憶するあれ
-    summon marker ~ ~ ~ {Tags:["7W.XYZ"]}
-
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] 7W.Tick 0
 
