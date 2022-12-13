@@ -4,10 +4,6 @@
 #
 # @within function asset:mob/0284.lexiel/tick/**
 
-#> トゥル側から剣へと付与するタグ
-# @private
-#declare tag S8.Death
-
 # ポーズを戻す
     data modify entity @e[type=armor_stand,tag=7W.ModelBody,tag=7W.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [0f,0f,-25f]
     data modify entity @e[type=armor_stand,tag=7W.ModelBody,tag=7W.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [10f,0f,20f]
@@ -36,9 +32,6 @@
 
 # 速度設定
     scoreboard players set @s 7W.Speed 8
-
-# 剣を消す
-    tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death
 
 # ランダム移動
     execute at @r run function asset:mob/0284.lexiel/tick/move/teleport/place_marker
