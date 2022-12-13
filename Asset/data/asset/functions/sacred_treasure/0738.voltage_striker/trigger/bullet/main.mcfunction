@@ -17,12 +17,6 @@
     particle dust 5 20000000 3 1 ^ ^ ^0.5 0 0 0 0 1
     particle dust 5 20000000 3 1 ^ ^ ^0.75 0 0 0 0 1
 
-# 定期的に追加で演出
-    #scoreboard players operation $Temp Temporary = @s KI.Tick
-   # scoreboard players operation $Temp Temporary %= $5 Const
-   # execute unless entity @s[scores={KI.Tick=6..13}] if score $Temp Temporary matches 0 run function asset:sacred_treasure/0738.voltage_striker/trigger/bullet/vfx
-   # scoreboard players reset $Temp Temporary
-
 # tpする 6..13の間は停止する
     execute unless entity @s[scores={KI.Tick=6..13}] if block ^ ^ ^1 #lib:no_collision run tp @s ^ ^ ^1
 
