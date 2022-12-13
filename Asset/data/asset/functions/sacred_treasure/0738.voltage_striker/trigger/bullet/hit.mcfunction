@@ -7,8 +7,8 @@
 # 演出
     particle firework ~ ~ ~ 0 0 0 0.2 30 normal @a
     particle dust 5 20000000 3 1.5 ~ ~ ~ 0.5 0.5 0.5 0 60 normal @a
-    playsound entity.firework_rocket.twinkle neutral @a ~ ~ ~ 0.6 2 0
-    playsound entity.firework_rocket.twinkle neutral @a ~ ~ ~ 0.6 1.5 0
+    playsound entity.firework_rocket.twinkle neutral @a ~ ~ ~ 0.3 2 0
+    playsound entity.firework_rocket.twinkle neutral @a ~ ~ ~ 0.3 1.5 0
     playsound item.trident.return neutral @a ~ ~ ~ 0.5 2 0
 
 # ダメージ
