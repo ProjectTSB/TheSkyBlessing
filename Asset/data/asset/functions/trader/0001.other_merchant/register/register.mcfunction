@@ -22,13 +22,18 @@
 
 # 取引 はしご
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:2b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:ladder",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:ladder",Count:4b}
 
 # 取引 足場
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:4b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:scaffolding",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:scaffolding",Count:2b}
+
+# 取引 階段
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:smooth_quartz_stairs",Count:4b}
 
 # 取引 骨粉
     data modify storage asset:trader Trades append value {}

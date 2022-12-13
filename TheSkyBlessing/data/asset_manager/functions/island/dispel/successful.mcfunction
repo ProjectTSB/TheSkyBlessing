@@ -4,6 +4,8 @@
 #
 # @within function asset_manager:island/dispel/
 
+# 邪魔なスコアをリセットする
+    scoreboard players reset @s DispelTime
 # VFX
     function asset_manager:island/dispel/vfx/dispel
 # メッセージ
@@ -13,12 +15,14 @@
     execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:sacred_treasure/give/from_id
 # アイテム返す
     function player_manager:lost_item/give_all/
+# データ取得
+    function oh_my_dat:please
 # 二度と祈れないようにする
     tag @s add DispelledCursedTreasure
-# 交易島へのテレポーターを設置する
-    execute if predicate lib:dimension/is_overworld run summon marker ^ ^ ^2 {Tags:["Teleporter","Object","Uninterferable"]}
-    execute if predicate lib:dimension/is_overworld positioned ^ ^ ^2 as @e[type=marker,tag=Teleporter,distance=..0.01,limit=1] run function oh_my_dat:please
-    execute if predicate lib:dimension/is_overworld run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TargetPos set value [-15.5, 21.0, -1.5]
+# テレポーターを起動する
+    data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    data modify storage api: Argument.ActivationState set value "Activate"
+    function api:teleporter/set_activation_state/from_id
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b

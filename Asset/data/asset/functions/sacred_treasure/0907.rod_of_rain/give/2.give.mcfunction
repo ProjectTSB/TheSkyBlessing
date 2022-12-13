@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"彩雨の杖","color":"blue"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"鮮やかに彩られた雨乞いに使われた杖。","color":"aqua"}','{"text":"ひとたび振るえば辺りに祝福の雨を降らすという。","color":"aqua"}','{"text":"雨は癒やしをもたらし、時には罪を洗い流す。","color":"aqua"}','{"text":"使用時、雨の降るエリアを設置する。","color":"blue"}','{"text":"エリア内の存在に対して","color":"blue"}','{"text":"敵Mobにはダメージを与え","color":"blue"}','{"text":"プレイヤーなら体力を12.0回復する。","color":"blue"}','{"text":"この回復には水攻撃補正が追加で乗る。","color":"blue"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"鮮やかに彩られた雨乞いに使われた杖。","color":"aqua","italic":"true"}','{"text":"ひとたび振るえば辺りに祝福の雨を降らすという。","color":"aqua","italic":"true"}','{"text":"雨は癒やしをもたらし、時には罪を洗い流す。","color":"aqua","italic":"true"}','{"text":"使用時、雨の降るエリアを設置する。","color":"blue"}','{"text":"エリアは定期的に敵Mobにはダメージを与え","color":"blue"}','{"text":"プレイヤーなら体力を12.0回復する。","color":"blue"}','{"text":"この回復には水攻撃補正が追加で乗る。","color":"blue"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -39,7 +39,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 9
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 250
+    data modify storage asset:sacred_treasure MPCost set value 180
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora","Nyaptov","Rumor"]
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Wi-ki', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

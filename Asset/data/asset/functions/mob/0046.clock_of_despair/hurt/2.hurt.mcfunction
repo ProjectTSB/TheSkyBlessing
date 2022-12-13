@@ -6,6 +6,7 @@
 
 # 効果を発動する
     data modify storage lib: Argument.Heal set value 9999f
+    data modify storage lib: Argument.FixedHeal set value true
     function lib:heal/
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset

@@ -15,8 +15,8 @@
 
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 40
+    scoreboard players set $Fluctuation Lib 100
     function lib:mp/fluctuation

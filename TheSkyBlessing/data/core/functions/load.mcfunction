@@ -20,6 +20,5 @@
     function asset_manager:sacred_treasure/load
 
 # 初期化処理
-    scoreboard players set $LoadTime Global 0
     execute if data storage global {IsProduction:0b} run function #asset:mob/load
     execute if data storage global {IsProduction:0b} run function #asset:sacred_treasure/load

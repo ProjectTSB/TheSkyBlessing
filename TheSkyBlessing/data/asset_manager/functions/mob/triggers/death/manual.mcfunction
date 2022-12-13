@@ -2,10 +2,11 @@
 #
 # 手動で死亡トリガーを呼び出します
 #
-# @within function lib:damage/core/health_subtract/non-player
+# @within function api:damage/core/health_subtract/non-player
 
-# 既存にasset:context idが存在する場合に退避させる
+# 既存のデータを退避させる
     function asset_manager:common/context_id/stash
+    function api:common/arguments/stash
 # すでにCommandSourceStackとしてこのentityを掴んでいて同tick内にlib:damage/を実行する可能性に備えてタグを付与する
     tag @s add Death
 # 引数の設定
@@ -21,8 +22,9 @@
     kill @s
 # トリガーの呼び出し
     function #asset:mob/death
-# 退避させたasset:context idを戻す
+# 退避させたデータを戻す
     function asset_manager:common/context_id/pop
+    function api:common/arguments/pop
 # リセット
     data remove storage asset:context uuid
     tag @a[tag=Killer] remove Killer

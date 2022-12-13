@@ -28,4 +28,4 @@
     tag @e[type=#lib:living,tag=TargetCandidate] remove TargetCandidate
     tag @e[type=#lib:living,tag=Target] remove Target
     function lib:damage/reset
-    data remove storage lib: Argument
+    function lib:heal/reset

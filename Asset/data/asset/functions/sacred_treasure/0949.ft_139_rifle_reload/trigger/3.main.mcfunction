@@ -11,8 +11,8 @@
 
 # ここから先は神器側の効果の処理を書く
     stopsound @a * entity.item.break
-    playsound block.iron_trapdoor.close ambient @a ~ ~ ~ 1 0.5
-    playsound entity.horse.armor master @p ~ ~ ~ 0.6 0.6
+    playsound block.iron_trapdoor.close player @a ~ ~ ~ 1 0.5
+    playsound entity.horse.armor player @p ~ ~ ~ 0.6 0.6
 
     data modify storage api: Argument.ID set value 948
     function api:sacred_treasure/give/from_id

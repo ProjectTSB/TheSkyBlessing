@@ -21,7 +21,7 @@
     particle minecraft:large_smoke ~ ~ ~ 0.3 0 0.3 0.4 50
     function asset:sacred_treasure/0613.call_fulstuka/trigger/particle
 
-    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.7 2
-    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.7 2
-    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.7 0
+    playsound entity.lightning_bolt.thunder neutral @a ~ ~ ~ 0.7 2
+    playsound entity.lightning_bolt.thunder neutral @a ~ ~ ~ 0.7 2
+    playsound entity.lightning_bolt.impact neutral @a ~ ~ ~ 0.7 0
 

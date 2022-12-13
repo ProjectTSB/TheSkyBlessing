@@ -1,5 +1,6 @@
 #> asset:sacred_treasure/0647.thorn_armor/trigger/4.fullset
 #
+# フルセット時発動の処理
 #
 # @within function
 #   asset:sacred_treasure/0646.thorn_helm/trigger/3.main
@@ -14,5 +15,9 @@
 # タグを付与
     tag @s add HZ.FullSet
 
-# 周囲のmobにダメージ
-    execute positioned ~-3.5 ~ ~-3.5 if entity @e[type=#lib:living,type=!player,dx=7,dy=1,dz=7] as @e[type=#lib:living,type=!player,dx=7,dy=1,dz=7] at @s run function asset:sacred_treasure/0647.thorn_armor/trigger/5.fullset_performance
+# 演出
+    particle dust 0 0.2 0 1 ~ ~1.2 ~ 0.4 0.5 0.6 0 80 normal @a
+    playsound block.sweet_berry_bush.place player @a ~ ~ ~ 1 0 0
+
+# ループスタート
+    schedule function asset:sacred_treasure/0647.thorn_armor/trigger/9.loop 1t replace

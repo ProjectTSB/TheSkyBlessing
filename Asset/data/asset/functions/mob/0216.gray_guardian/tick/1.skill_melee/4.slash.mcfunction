@@ -3,6 +3,9 @@
 #
 #
 # @within function asset:mob/0216.gray_guardian/tick/1.skill_melee/1.skill_melee
+
+#> private
+# @private
     #declare tag Hit
 
 # 演出

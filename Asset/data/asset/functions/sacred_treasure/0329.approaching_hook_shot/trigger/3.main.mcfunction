@@ -14,4 +14,4 @@
 
     execute at @s run particle minecraft:portal ~ ~ ~ 0.3 0.3 0.3 1 200
 
-    execute at @s run playsound minecraft:entity.shulker.teleport master @a ~ ~ ~ 2 1.5
+    execute at @s run playsound minecraft:entity.shulker.teleport player @a ~ ~ ~ 2 1.5

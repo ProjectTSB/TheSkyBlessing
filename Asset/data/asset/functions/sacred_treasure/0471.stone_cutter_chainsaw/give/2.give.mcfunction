@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '[{"text":"イシキリチェンソー","color":"dark_red","bold":"true"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"前方の敵全体を切り刻む"},{"text":"石切台","strikethrough":"true","italic":"true"},{"text":"チェンソー"}]','[{}]','[{"text":"魔力を注ぎ込みエンジンをふかせ","color":"dark_purple","italic":"true"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"前方の敵全体を切り刻む"},{"text":"石切台","strikethrough":"true","italic":"true"},{"text":"チェンソー"}]','""','[{"text":"魔力を注ぎ込みエンジンをふかせ","color":"dark_purple","italic":"true"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Rumor']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {AttributeModifiers:[{AttributeName:"generic.attack_damage",Amount:7,Operation:0,UUID:[I;1,1,471,1],Slot:mainhand,Name:"generic.attack_damage"},{AttributeName:"generic.movement_speed",Amount:-0.02,Operation:0,UUID:[I;1,1,471,1],Slot:mainhand,Name:"generic.movement_speed"},{AttributeName:"generic.attack_speed",Amount:-3,Operation:0,UUID:[I;1,1,471,1],Slot:mainhand,Name:"generic.attack_speed"}]}
 

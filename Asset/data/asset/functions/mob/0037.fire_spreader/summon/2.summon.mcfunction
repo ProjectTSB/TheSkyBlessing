@@ -5,7 +5,7 @@
 # @within function asset:mob/0037.fire_spreader/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon skeleton ~ ~ ~ {Silent:1b,ActiveEffects:[{Id:12b,Amplifier:0b,Duration:200000,ShowParticles:0b}],Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0037.fire_spreader",}
+    summon skeleton ~ ~ ~ {Silent:1b,ActiveEffects:[{Id:12,Amplifier:0b,Duration:200000,ShowParticles:0b}],Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0037.fire_spreader",}
 # ID (int)
     data modify storage asset:mob ID set value 37
 # Type (string) Wikiを参照
