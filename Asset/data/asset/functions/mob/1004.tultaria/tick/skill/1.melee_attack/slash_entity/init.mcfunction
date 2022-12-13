@@ -2,7 +2,9 @@
 #
 # Init処理
 #
-# @within function asset:mob/1004.tultaria/tick/skill/1.melee_attack/**
+# @within function
+#   asset:mob/1004.tultaria/tick/skill/1.melee_attack/**
+#   asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
 
 # 向きを揃える
     execute as @e[type=wither_skeleton,scores={MobID=1004}] run function api:data_get/rotation

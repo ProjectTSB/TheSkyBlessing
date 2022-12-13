@@ -29,6 +29,7 @@
     tag @s remove RW.SkillCoordinate
     tag @s remove RW.SkillBall
     tag @s remove RW.SkillStarfury
+    tag @s remove RW.SkillDashSlash
     tag @s remove RW.SkillSummon
     tag @s remove RW.SkillLaser
     tag @s remove RW.MiniSkillChase

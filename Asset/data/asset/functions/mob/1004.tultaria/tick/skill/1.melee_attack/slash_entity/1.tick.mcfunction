@@ -4,6 +4,7 @@
 #
 # @within function
 #   asset:mob/1004.tultaria/tick/skill/1.melee_attack/**
+#   asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
 #   asset:mob/1004.tultaria/rejoin_process
 
 # エンティティに実行させる

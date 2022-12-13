@@ -31,6 +31,7 @@
     #
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit
+    #declare tag RW.IceSweep
     #declare tag RW.TargetMarker
     #declare tag RW.TargetMarkerInit
     #
@@ -45,6 +46,7 @@
     #declare tag RW.SkillOffCoordinate
     #declare tag RW.SkillBall
     #declare tag RW.SkillStarfury
+    #declare tag RW.SkillDashSlash
     #declare tag RW.SkillSummon
     #declare tag RW.SkillLaser
     #

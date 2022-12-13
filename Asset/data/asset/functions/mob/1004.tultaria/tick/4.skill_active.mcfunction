@@ -16,6 +16,8 @@
     execute if entity @s[tag=RW.SkillBall] run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/1.tick
 # 流星
     execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.tick
+# 流星
+    execute if entity @s[tag=RW.SkillDashSlash] run function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 # 召喚
     execute if entity @s[tag=RW.SkillSummon] run function asset:mob/1004.tultaria/tick/skill/7.star_summon/1.star_summon
 # ショット

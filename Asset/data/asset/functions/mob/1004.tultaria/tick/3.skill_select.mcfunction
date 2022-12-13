@@ -26,10 +26,10 @@
 # フェイズ1～2
     execute if entity @s[scores={RW.Phase=1..2}] run scoreboard players operation $Random Temporary %= $5 Const
 # フェイズ3
-    execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $6 Const
+    execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $7 Const
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 4
+    scoreboard players set $Random Temporary 6
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee
@@ -38,7 +38,8 @@
     execute if score $Random Temporary matches 3 run tag @s add RW.SkillBall
     execute if score $Random Temporary matches 4 run tag @s add RW.SkillLaser
     execute if score $Random Temporary matches 5 run tag @s add RW.SkillStarfury
-    execute if score $Random Temporary matches 6 run tag @s add RW.SkillSummon
+    execute if score $Random Temporary matches 6 run tag @s add RW.SkillDashSlash
+    execute if score $Random Temporary matches 7 run tag @s add RW.SkillSummon
 
 # 大技その1
     execute if score $Random Temporary matches 8 run tag @s add RW.SkillDeadly1

@@ -5,6 +5,7 @@
 # @within function
 #   asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 #   asset:mob/1004.tultaria/tick/skill/1.melee_attack/**
+#   asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
 
 # タグを消す
     tag @s remove RW.Move
