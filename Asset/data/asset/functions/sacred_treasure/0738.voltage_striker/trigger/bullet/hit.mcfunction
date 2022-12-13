@@ -15,7 +15,9 @@
     data modify storage lib: Argument.Damage set value 350.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
-    function lib:damage/modifier
+# 補正
+    execute at @a[distance=..160] if score @s KI.UserID = @p UserID run function lib:damage/modifier
+# 実行
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,dx=0] run function lib:damage/
 # リセット
     function lib:damage/reset
