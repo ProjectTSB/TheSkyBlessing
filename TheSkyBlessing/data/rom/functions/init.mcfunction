@@ -1,11 +1,10 @@
 #> rom:init
 #
+# このデータパックに必要なものを初期化する
 #
 #
-# @private
-
-### Copyright © 2020 赤石愛
-### This software is released under the MIT License, see LICENSE.
+# @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
+# @within function core:load_once
 
 # ストレージシフトに使うデータ
     data modify storage rom: TwoEmptyLists set value [[],[]]

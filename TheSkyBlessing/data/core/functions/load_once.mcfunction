@@ -376,3 +376,6 @@ team modify NoCollision collisionRule never
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
+
+#> ROMを初期化する
+    function rom:init

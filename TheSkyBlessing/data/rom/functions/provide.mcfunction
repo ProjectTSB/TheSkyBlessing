@@ -1,8 +1,9 @@
-#> rom:access/provide
+#> rom:provide
 #
 #
 #
-# @within function rom:access/
+# @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
+# @within function api:rom/please
 
 #> Val
 # @private
@@ -10,9 +11,6 @@
 
 # IDを取得する
     execute store result score $Address Temporary run data get storage api: Argument.Address
-
-### Copyright © 2020 赤石愛
-### This software is released under the MIT License, see OhMyDat/LICENSE.
 
 # リセット
     data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
