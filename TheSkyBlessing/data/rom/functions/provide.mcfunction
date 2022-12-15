@@ -111,9 +111,9 @@
 # シフト8
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
-    execute if score $Address Temporary matches 1073741824.. run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append value {}
-    execute if score $Address Temporary matches ..-1073741825 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: two_empty_maps[]
-    execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: three_empty_maps[]
+    execute if score $Address Temporary matches 1073741824.. run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: OneEmptyMaps[]
+    execute if score $Address Temporary matches ..-1073741825 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: TwoEmptyMaps[]
+    execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: ThreeEmptyMaps[]
 
 # リセット
     scoreboard players reset $Address Temporary

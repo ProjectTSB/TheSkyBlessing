@@ -10,6 +10,9 @@
     data modify storage rom: OneEmptyLists set value [[]]
     data modify storage rom: TwoEmptyLists set value [[],[]]
     data modify storage rom: ThreeEmptyLists set value [[],[],[]]
+    data modify storage rom: OneEmptyMaps set value [{}]
+    data modify storage rom: TwoEmptyMaps set value [{},{}]
+    data modify storage rom: ThreeEmptyMaps set value [{},{},{}]
     data modify storage rom: Initial set value [[[[[[[[{},{},{},{}],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]]
 # メインになるストレージ
     data modify storage rom: _ set from storage rom: Initial
