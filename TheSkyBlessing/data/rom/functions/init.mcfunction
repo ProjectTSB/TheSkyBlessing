@@ -7,6 +7,7 @@
 # @within function core:load_once
 
 # ストレージシフトに使うデータ
+    data modify storage rom: OneEmptyLists set value [[]]
     data modify storage rom: TwoEmptyLists set value [[],[]]
     data modify storage rom: ThreeEmptyLists set value [[],[],[]]
     data modify storage rom: Initial set value [[[[[[[[{},{},{},{}],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]]
