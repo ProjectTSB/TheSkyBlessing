@@ -3,7 +3,7 @@
 [![stars](https://img.shields.io/github/stars/ProjectTSB/TheSkyBlessing?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/stargazers)
 [![downloads](https://img.shields.io/github/downloads/ProjectTSB/TheSkyBlessing/total?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/releases/latest)
 [![activity](https://img.shields.io/github/commit-activity/m/ProjectTSB/TheSkyBlessing?label=commit&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/commits/master)
-[![workflow](https://img.shields.io/github/workflow/status/ProjectTSB/TheSkyBlessing/lint-datapack/master?label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
+[![workflow](https://img.shields.io/github/actions/workflow/status/ProjectTSB/TheSkyBlessing/datapack-linter.yml?branch=master&label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.carloscuesta.me/)
 
 ## 開発環境
