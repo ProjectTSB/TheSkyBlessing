@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.5"
+data modify storage global GameVersion set value "v0.1.6"
 
 #> forceload chunksの設定
 # Origin
