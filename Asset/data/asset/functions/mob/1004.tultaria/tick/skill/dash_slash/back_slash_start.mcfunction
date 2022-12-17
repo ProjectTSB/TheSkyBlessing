@@ -8,6 +8,8 @@
     execute positioned ~ ~1 ~ positioned ^ ^ ^-3 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 20 force @a[distance=..20]
     execute positioned ~ ~1 ~ positioned ^ ^ ^-7 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 20 force @a[distance=..20]
     execute positioned ~ ~1 ~ positioned ^ ^ ^-11 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 20 force @a[distance=..20]
+    execute positioned ~ ~1 ~ positioned ^ ^ ^-14 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 20 force @a[distance=..20]
+    execute positioned ~ ~1 ~ positioned ^ ^ ^-17 run particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 20 force @a[distance=..20]
 
 # サウンド
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1
