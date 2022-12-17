@@ -10,7 +10,7 @@
 
 # ダメージ設定
     # 与えるダメージ
-    data modify storage lib: Argument.Damage set value 10.0f
+    data modify storage lib: Argument.Damage set value 20.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ

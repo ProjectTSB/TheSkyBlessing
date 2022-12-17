@@ -4,9 +4,6 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 
-# 移動やめる
-    function asset:mob/1004.tultaria/tick/move/teleport/end_move
-
 # 体
     # ポーズ
         data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.RightArm set value [-75f,0f,75f]
@@ -27,11 +24,12 @@
         data modify storage lib: Argument.Damage set value 55f
     # 属性
         data modify storage lib: Argument.AttackType set value "Physical"
-        data modify storage lib: Argument.ElementType set value "None"
+        data modify storage lib: Argument.ElementType set value "Water"
     # 補正functionを実行
         function lib:damage/modifier
     # 対象
         execute rotated ~ 0 positioned ^ ^ ^2 as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
+
     # リセット
         function lib:damage/reset
 

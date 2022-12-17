@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 
+# 地面へ移動する
+    function asset:mob/1004.tultaria/tick/move/teleport/move_to_ground/1.search_ground
+
 # 浮く
     data modify entity @s NoAI set value 1b
 

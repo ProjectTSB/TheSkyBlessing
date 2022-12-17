@@ -8,30 +8,33 @@
     execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/dash_slash/2.windup
 
 # ターゲッティング
-    execute if score @s RW.Tick matches 17 run function asset:mob/1004.tultaria/tick/skill/dash_slash/targeting
+    execute if score @s RW.Tick matches 8 run function asset:mob/1004.tultaria/tick/skill/dash_slash/targeting
 
 # ダッシュで突っ込んでくる
-    execute if score @s RW.Tick matches 25 run function asset:mob/1004.tultaria/tick/skill/dash_slash/3.dash
+    execute if score @s RW.Tick matches 18 run function asset:mob/1004.tultaria/tick/skill/dash_slash/3.dash
 
 # 前方にプレイヤーがいたら振り抜く
-    execute if score @s RW.Tick matches 25..35 positioned ^ ^ ^1 if entity @p[distance=..3] run scoreboard players set @s RW.Tick 35
+    execute if score @s RW.Tick matches 18..28 positioned ^ ^ ^1 if entity @p[distance=..3] run scoreboard players set @s RW.Tick 28
 
 # マーカーまでたどり着いたら移動をやめる
-    execute if score @s RW.Tick matches 25..35 if entity @e[type=marker,tag=RW.TeleportMarker,distance=..3] at @s run scoreboard players set @s RW.Tick 35
+    execute if score @s RW.Tick matches 18..28 if entity @e[type=marker,tag=RW.TeleportMarker,distance=..3] at @s run scoreboard players set @s RW.Tick 35
+
+# 埋まりそうになったら移動をやめる
+    execute at @s if score @s RW.Tick matches 18..28 unless block ^ ^ ^2 #lib:no_collision run scoreboard players set @s RW.Tick 33
 
 # 振り抜く
-    execute if score @s RW.Tick matches 35 run function asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
+    execute if score @s RW.Tick matches 28 run function asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
 
 # 斬撃が発生するぞ！
-    execute if score @s RW.Tick matches 40 run function asset:mob/1004.tultaria/tick/skill/dash_slash/back_slash_start
+    execute if score @s RW.Tick matches 33 run function asset:mob/1004.tultaria/tick/skill/dash_slash/back_slash_start
 
 # 遅れて斬撃が発生
     # 1個目
-        execute if score @s RW.Tick matches 50..55 positioned ~ ~1 ~ positioned ^ ^ ^-3 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
+        execute if score @s RW.Tick matches 43..48 positioned ~ ~1 ~ positioned ^ ^ ^-3 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
     # 2個目
-        execute if score @s RW.Tick matches 50..55 positioned ~ ~1 ~ positioned ^ ^ ^-7 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
+        execute if score @s RW.Tick matches 43..48 positioned ~ ~1 ~ positioned ^ ^ ^-7 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
     # 3個目
-        execute if score @s RW.Tick matches 50..55 positioned ~ ~1 ~ positioned ^ ^ ^-11 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
+        execute if score @s RW.Tick matches 43..48 positioned ~ ~1 ~ positioned ^ ^ ^-11 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
 
 # リセット
-    execute if score @s RW.Tick matches 70.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 55.. run function asset:mob/1004.tultaria/tick/reset
