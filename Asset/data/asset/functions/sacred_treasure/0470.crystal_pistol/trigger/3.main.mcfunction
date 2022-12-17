@@ -8,4 +8,11 @@
     function asset:sacred_treasure/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
-    say test: 0470.crystal_pistol
+
+# 演出
+    playsound minecraft:block.amethyst_block.step player @a
+    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 0.8 2
+
+# 召喚
+    data modify storage api: Argument.ID set value 304
+    execute anchored eyes positioned ^ ^ ^ positioned ~ ~9999.5 ~ run function api:mob/summon

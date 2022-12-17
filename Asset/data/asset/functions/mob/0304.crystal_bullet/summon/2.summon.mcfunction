@@ -4,8 +4,12 @@
 #
 # @within function asset:mob/0304.crystal_bullet/summon/1.trigger
 
+#> SpreadLib
+    # @private
+    #declare tag SpreadMarker
+
 # 元となるMobを召喚する
-    summon armor_stand ~ ~ ~ {Tags:["MobInit"]}
+    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Invulnerable:1b,NoAI:1b}
 # ID (int)
     data modify storage asset:mob ID set value 304
 # Type (string) Wikiを参照
@@ -23,7 +27,7 @@
     # data modify storage asset:mob WeaponDropChances set value
 # 防具
     # 頭 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Head set value
+        data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20285}}
     # 胴 (Compound(Item)) (オプション)
         # data modify storage asset:mob Armor.Chest set value
     # 脚 (Compound(Item)) (オプション)
@@ -59,9 +63,19 @@
         # data modify storage asset:mob Resist.Thunder set value
 
 # ユーザーID適応
-    scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..0.01] 8G.UserID = @s UserID
+    scoreboard players operation @e[type=vex,tag=MobInit,distance=..0.01] 8G.UserID = @s UserID
+
+# 前方拡散設定
+    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
+    data modify storage lib: Argument.Distance set value 1
+    data modify storage lib: Argument.Spread set value 0.6
+# 前方拡散を実行する
+    execute as @e[type=marker,tag=SpreadMarker,distance=..10,limit=1] run function lib:forward_spreader/circle
 # 向き
-    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run tp @s ~ ~ ~ ~ ~
+    execute as @e[type=vex,tag=MobInit,distance=..0.01] run tp @s ~ ~ ~ facing entity @e[type=marker,tag=SpreadMarker,distance=..30,sort=nearest,limit=1] feet
+    execute as @e[type=vex,tag=MobInit,distance=..0.01] run tp ~ ~-10000 ~
+# 前方拡散殺す
+    kill @e[type=marker,tag=SpreadMarker,distance=..30]
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute positioned ~ ~-10000 ~ as @e[type=vex,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
