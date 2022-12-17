@@ -67,6 +67,8 @@
     ## ボスの死亡時に使うタグ
     #declare tag RW.DeathAnimation
     #declare tag RW.DeathInit
-    ## ボスが地上に降りるのに使うタグ
+    #declare tag Hit
+
+    #
     #declare tag Landing
     #declare tag LandingTarget

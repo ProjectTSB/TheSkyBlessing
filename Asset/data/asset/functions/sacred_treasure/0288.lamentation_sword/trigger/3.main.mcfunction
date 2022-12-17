@@ -13,8 +13,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:entity.ghast.hurt ambient @a ~ ~ ~ 0.3 1.6
-    playsound minecraft:entity.enderman.death ambient @a ~ ~ ~ 0.4 2
+    playsound minecraft:entity.ghast.hurt player @a ~ ~ ~ 0.3 1.6
+    playsound minecraft:entity.enderman.death player @a ~ ~ ~ 0.4 2
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] at @s run particle minecraft:soul ~ ~1 ~ 0.1 0.1 0.1 0.02 10
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run effect give @s minecraft:weakness 10 0
 

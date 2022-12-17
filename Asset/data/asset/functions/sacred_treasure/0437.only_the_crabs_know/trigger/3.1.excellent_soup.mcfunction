@@ -10,7 +10,7 @@
         function lib:heal/modifier
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset
 
 # MP回復
     # 回復する量 = 50
@@ -19,4 +19,4 @@
 
 # 演出
     tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"はうまいっ！ と賞賛した"}]
-    playsound entity.experience_orb.pickup master @a ~ ~ ~ 1.0 2.0
+    playsound entity.experience_orb.pickup player @a ~ ~ ~ 1.0 2.0

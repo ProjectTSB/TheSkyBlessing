@@ -18,11 +18,11 @@
     # 残ってたらヤなのでマーカーを消す
         kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
     # 移動先を設置
-        execute at @p[tag=TargetPlayer] run summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+        execute facing entity @p[tag=TargetPlayer] eyes rotated ~ 0 positioned as @p[tag=TargetPlayer] run summon marker ^ ^ ^11 {Tags:[RW.TeleportMarker,RW.MarkerInit]}
     # 拡散設定
-        data modify storage lib: Argument.Bounds set value [[2d,2d],[0d,0d],[2d,2d]]
+        #data modify storage lib: Argument.Bounds set value [[2d,2d],[0d,0d],[2d,2d]]
     # 最寄りのやつの場所で拡散させる
-        execute as @e[type=marker,tag=RW.TeleportMarker,tag=RW.MarkerInit] at @p[tag=TargetPlayer] run function lib:spread_entity/
+        #execute as @e[type=marker,tag=RW.TeleportMarker,tag=RW.MarkerInit] at @p[tag=TargetPlayer] run function lib:spread_entity/
 
 # プレイヤーのタグを外す
     tag @a[tag=TargetPlayer] remove TargetPlayer

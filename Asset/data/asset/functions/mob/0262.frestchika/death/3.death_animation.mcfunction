@@ -24,7 +24,7 @@
     execute if score @s 7A.Tick matches 10 run item replace entity @s armor.head with stick{CustomModelData:20154}
 
 # ぶっ倒れる
-    execute if score @s 7A.Tick matches 40 run playsound minecraft:block.grass.break ambient @a ~ ~ ~ 1 0
+    execute if score @s 7A.Tick matches 40 run playsound minecraft:block.grass.break hostile @a ~ ~ ~ 1 0
     execute if score @s 7A.Tick matches 40 run item replace entity @s weapon.mainhand with air
     execute if score @s 7A.Tick matches 40 run item replace entity @s weapon.offhand with air
     execute if score @s 7A.Tick matches 40 run item replace entity @s armor.head with stick{CustomModelData:20155}

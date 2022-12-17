@@ -35,7 +35,7 @@
 
 
 # ダメージ設定
-    # 与えるダメージ = 800
+    # 与えるダメージ = 900
         data modify storage lib: Argument.Damage set value 900f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
@@ -43,13 +43,11 @@
         function lib:damage/modifier
         execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run function lib:damage/
 
-# 自身の最大体力の5%分のダメージを与える
+# 自身に5の防御貫通ダメージを与える
     # ダメージ量
         data modify storage lib: Argument.Damage set value 5.0f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value true
     # 補正をしない
         data modify storage lib: Argument.FixedDamage set value true
     # 死亡メッセージ

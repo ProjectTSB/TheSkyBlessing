@@ -8,7 +8,7 @@
     # 防御無視・補正なし・魔法・無属性の15のダメージを与える
         data modify storage lib: Argument.Damage set value 15f
         data modify storage lib: Argument.AttackType set value "Magic"
-        data modify storage lib: Argument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
         function lib:damage/
     # リセット
         function lib:damage/reset
@@ -20,4 +20,4 @@
 
 # 演出
     tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は正気度が減った"}]
-    playsound entity.squid.death master @a ~ ~ ~ 1.0 1.5
+    playsound entity.squid.death player @a ~ ~ ~ 1.0 1.5

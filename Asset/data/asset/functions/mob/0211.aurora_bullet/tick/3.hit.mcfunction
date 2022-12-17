@@ -5,7 +5,7 @@
 # @within function asset:mob/0211.aurora_bullet/tick/2.tick
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 33f
+    data modify storage lib: Argument.Damage set value 25f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
@@ -17,7 +17,6 @@
     execute as @a[tag=!PlayerShouldInvulnerable,dx=0] run function lib:damage/
 # リセット
     function lib:damage/reset
-
 
 # スコアを付与
     scoreboard players set @a[gamemode=!spectator,dx=0] 5U.DebuffTime 80

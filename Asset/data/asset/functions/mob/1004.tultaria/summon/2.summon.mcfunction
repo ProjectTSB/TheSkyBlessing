@@ -73,8 +73,5 @@
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick 0
 
-# 最大HPをスコアに入れる
-    execute store result score @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.HealthMax run data get storage asset:mob Health 1
-
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

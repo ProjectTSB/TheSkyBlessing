@@ -14,7 +14,7 @@
 # 第一属性
     data modify storage lib: Argument.AttackType set value "Physical"
 # 耐性を無視する
-    data modify storage lib: Argument.BypassResist set value true
+    data modify storage lib: Argument.FixedDamage set value true
 # 自爆する
     function lib:damage/
 # リセット

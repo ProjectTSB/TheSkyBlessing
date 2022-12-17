@@ -16,7 +16,7 @@
 # 演出
     particle dust 0.784 0.435 1 1 ~ ~ ~ 0.2 0.2 0.2 0 6
     playsound item.trident.return hostile @a ~ ~ ~ 1 0
-    playsound item.chorus_fruit.teleport hostile @p ~ ~ ~ 0.6 2.0
+    playsound item.chorus_fruit.teleport hostile @a ~ ~ ~ 0.6 2.0
     playsound entity.blaze.shoot hostile @a ~ ~ ~ 0.4 2
 
 # 着弾

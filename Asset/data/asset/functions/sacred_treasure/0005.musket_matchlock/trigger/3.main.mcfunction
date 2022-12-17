@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/0005.musket_matchlock/trigger/2.check_condition
 
 #> private
-# @private 
+# @private
     #declare tag 5.MatchlockInit
     #declare tag 5.SpreadMarker
 
@@ -21,7 +21,7 @@
 
 # Ownerセット
     scoreboard players operation @e[type=marker,tag=5.MatchlockInit,distance=..3,limit=1] 5.OwnerId = @s UserID
-    
+
 # 5.SpreadMarkerを視点50m先の0.86m以内のランダムな位置に移動させる
     summon marker ^ ^ ^1 {Tags:["5.SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 20f
@@ -45,7 +45,7 @@
     scoreboard players set @e[type=marker,tag=5.MatchlockInit,distance=..3,limit=1] 5.FlyingDuration 10
 
 # 音/particle
-    playsound minecraft:entity.zombie.break_wooden_door master @a ~ ~ ~ 1
+    playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 1
     execute anchored eyes run particle cloud ^ ^ ^1 0.2 0.2 0.2 0.2 15 normal
 
 # reset

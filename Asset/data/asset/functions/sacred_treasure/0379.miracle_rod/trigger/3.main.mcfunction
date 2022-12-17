@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound minecraft:entity.puffer_fish.death ambient @a ~ ~ ~ 1 0
+    playsound minecraft:entity.puffer_fish.death player @a ~ ~ ~ 1 0
 
 # 魔法陣展開
     summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Tags:["AJ.Magic","AJ.MagicSet","Uninterferable"]}

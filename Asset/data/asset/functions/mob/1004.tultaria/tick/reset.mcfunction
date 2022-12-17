@@ -50,9 +50,9 @@
     scoreboard players reset @s RW.FakeInertia
 
 # 速度設定
-    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 8
-    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 12
-    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 14
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 4
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 6
+    scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 7
 
 # 剣を消す
     tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death

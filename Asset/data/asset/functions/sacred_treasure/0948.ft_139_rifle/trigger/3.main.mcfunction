@@ -16,7 +16,7 @@
 
 # 演出
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 1 1.6
-    playsound minecraft:block.respawn_anchor.deplete hostile @a ~ ~ ~ 1 2
+    playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1 2
 
 # 残り回数が1回の時発動した場合
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 949
