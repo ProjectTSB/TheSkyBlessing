@@ -15,7 +15,7 @@
 
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # MP回復
     execute store result storage asset:temp 3U.Temp double 0.75 run function lib:mp/get_max

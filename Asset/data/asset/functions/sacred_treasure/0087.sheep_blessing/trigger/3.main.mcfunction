@@ -13,7 +13,7 @@
     clear @s white_wool 16
 
 # 演出
-    playsound entity.illusioner.prepare_mirror master @s ~ ~ ~ 1.0 1.0
+    playsound entity.illusioner.prepare_mirror player @s ~ ~ ~ 1.0 1.0
 
 # カウントダウンスコアを付与
     scoreboard players set @s 2f.TickCount 0

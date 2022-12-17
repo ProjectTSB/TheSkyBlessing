@@ -5,177 +5,177 @@
 # @within function asset_manager:teleporter/tick/vfx/star/
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdgWgENcBjAC1QCcwAaMAV3oEsATJMElkgBgDZuAzAEZ8QgOwtu+ACyEAHADN8ATiHSARvl5iFAVj2F10lrwBMtMLkIBbBMkBYmoCXIwEb6gIoZAzwyBqhkA-DAAIhFjCElDYAzkjgJKj0uBBIQnQkcLFw1IjgAG6E6PR24AAeSNx0UEUAvmV0ISxM9OGI3AB03HJ0oRDBcQ10cOjoTDChdkLcxWCUqB0QdmNRlLipSLx0AFb01jDxdOpwAF5Mi92QwVhwXeAdlKddYIRCcLpChHAkWiQkyjK8JCJ3LLr4FimOBwFhwUymQjSVQWE7sCCoMCVMBMUIAUT6AyGaIAjvRspgAMpBJJsRAKbJDOiogBCewOlFx+L6UGJhFJSAp6CGFRoF1gdhQGGweCIpAo1DojFY7AECgUclMcqUYh0Smk3DEhCI3FM0hk6ghcjgCl4d1VFistnYTjcXj8IiiMFKdCCIWs9Ui0ViWw4yWmaUy2VyETAhSOpQavPGhBqdSKzVaYHanSKPUxg2Goyqk0I0zTHCoCzSyzAaw2vp2+0OY0u11DdbO7CEunUsaEJAEWn06t03Dg+B2LDE+AEffZnZI0jNulhV3hiORqIx-UzTIJrJJoM5lLg1NCdOrjLxG7ZHPJu95-Pg7H6Cws0rJt3uj2er2+Hy+PyIQn+gOBoLgpC0IBHQVqCoAW77+IEwRhKGUQxF0Ix0AoEzWKG1jEAM9DoHmdgQJQuQoWh7AmBoQgCCCKhwPwMiELoXZyHIraDtwLCEFCyh9qabB0FkOR2KAKJPmR6gUVRyg0VIsgMfgTEseobEcdC3G8CwcnsdOhojqYQjKNq0imMoXacVIxmEN8fDKPwXEWOGTTcEIci8AI0JiEIepiAIchqMoJRIPgDm8Fx068LoyjQqYPlGUIlTgDKyCieJA6SbRMmMcxmiKexnGqepFLcOy0hiJohjqLwXwCJoyjMSISpAXATFRco5h0PZzTBbooXhZF0WqP5iCBc0TkuW5HnFd5vlxcJpG8ORlEpVJdGyfJWVKbl3A8VoSklYQpiBfI6oCGFRDfJ8JBedIlHqGINU3XZCbcH2qhCLwTXSF1wiGQNDnPUIr3vZ9agttNCVgElC3UWl9EZQp60qZtan4KanDGsagWqgZcjcFlJBKoFciKcIra8N8YgPYNDkja5yjuZ5k1uT9HUhaTPUtX1sV8jNiVzWJkOpdJMNyZlrE5QjW1VU9CqbcLkIyAqI7qOVWW6Fq4ibRxF0U0NVldazEXsx5-VgJGVPOTTdMTT50hyNIoMibzyVQ4LK0i9lylcYj6kmGaAimMOo4412NtwFIbaSHJSksHp7F+3I2u-dwL1vYqH1XWoAgDTrf0A6nQPSLFAC6dAYGSBQFqb0YIhhWEwDheFIARRFgKhqDocgnA8PwwiiBIguKCoaiaNoegGEYJitWA-EhogQlg53fCCCI4gR7IA+qBoWg6PouiGMYZj4CasYKKYCjqXwCjSWIOODnABf4O5t2NYaphtpP9lZw5cj2+wC-d8vfc6LryHlvUeu9x4HzUgoOAAhYwAnCrbeWHYiDY2qmIXQLAFBXRIKaRqFMgrs1MIIJUup0HPU-s0DUoxqE0JoZzeKT4-5L17qvQ6g9N4jx3nvCe+BWxwCEHoXQ+0FDqCSDIFgqgVC031A8XgCgPgUl0Iqd+j1gpRSIX7AQpDdDkJNo9AQyhDFGOMcY7+XN55cEXj3Fe-clAb2HtvMe+99rDh0UnTsg4450U-OoAQYgByGCwaIiRSs2IU2UI0W6j8rrGXEE1XgA4nJMxaD-Dulj-4sNsewhxYDuEH2UEpIheMtBnyvuoT41k75yX0KoeiLQKTkzagFAh6jiFaNMGQloySqG0N6YIXgqSODpOYTYoBdiQGcKcTw8pkI5FwBHOxLqBpQ4qGMF2J4nspzsheCQBOzNWmaO0boyMOsel9LoWUYuYBS6hnDAkPRiBYrIlQPKIYXQxhVgZAWWk9JUjrhZGebcF5uRwCvJAAU7A0CYBwAQYg5AqAPmYA7eaEklrpWFnDMWnseKWhsIKW0HgfC+AEDBd0npCyIV9EkFIgYp7BjyGGCu5RkTVFqPUByYhTBtEuEhXQ6ZVxDHiNmcYuZ8xHDmMWJYqx1ibEedsX5aRawnCbOkY4VwVXPgeE8F4bxPzTm-H8AEQIQRgghJxUCtx5zIFbuhJc6IMzYhPACrcZIuRUhRAeBV-yiQup3CCsF0AbzIChSKWF4oEVSiReweZ0h5RPH2qfcEMgPJmX0F2f2fAWwdOcrG3F1oHAuEJX4LsToXQoFgh6eC3okKJH9IcIMAlblMqjCy2MbLHqcu5amQaLZ+VYizGMCYUwZiJCLIcUs5ZZX3M+TWOgjZzhqvrMgFs4cOxdjCvKGQfYBxDhHGOQq7wBBThnHOLA7AbVIn3Cuft3rNzbNdbufch4GS3sBQ+-101A2CjvAgSNYMV3tg8Ru3s-Zb4B33ROI9056J5sgr4Sebo4KqoQj6R5YwL2qswrgbCuExVNz3C3EiyAY1xr2vgRN+0C5EJUGm8jkheBZrEDmhQFhp6CQYdGsQsaFDxvI9AyjKaaMKHTfRxjzHTrQNfOfUm6ljAkABHcKEgVo7KEwRg0mts9mOXNmNem1s-IPJ1p1bqBsopG3odzMAJGeNkYo8m6jXFhN0czUIpjc0lAgheOoOQVVxFGBkD8fachJAiB2Cm+4ul5m-sZQ0ZoOcU56nzr2wzidk6A3ToZQZ1neN2ao6mpzGaGOufEwYjsLANCfBPnIT4xgb6KRuvgD4wJqugkMbvfBzM9ZhVMxzZJ1NdNWxBuYp82XbP8fs-lkTLns3ucaxoLjqoRzKDPiIaQNt9qSRGEQBiWizAgkeNwDr2nRq03Gl5HyjxknGf1r1I2WWuOkYTeNvLQmptFZm7G5GEJVRqca-I2TXUzLea7AIVyJ8kioy41p+L6WvrJdNnFpO-0Etpy+gIe73GcvPcE45t7YnZuuTlMZJRo4nhHTYqxS+clDTsWE+8G6jSYtGZZt127RlM4peGjp07em1ADKuTc1VH8HncCroiTDtd654cIgRjDYBlSKmVA-NUMhNTakILqfUGgjQmjNOIRnbGkBzyfArpUm7VSbo1FqHUeoDQ69NOaRWhAxBzT9okjBAJiqfmcoTOSHEiswKEGF-BFCUnDdlPKRX5uVdW-V5ru3UVdeO+Rj56BDPtpqBkKYEgcgfy6QftwEgDHpDyaMKYXgR21GKjaUcpOoeznnNGBZsGpulcW-VGrm3WuX7Ggd-rxrkImN6QBCQZ4ufY2qkHt8RrN1Y1cXViwdQlfCE146W4gzCPBAmO30YsxHHkCt+j5bzvGvbfa8T33yfekXc032mpHgMgC6fAslFQcug74fV-Og7g0hwmRNO1xgYsIExoqAkqIEmJvnvpZofiqDHifvHufr3nrpPp5ErNCAOMJgoCONCC1CgoQCWnICVAoMZMxHcIdk0pTPstXocmvn2BAY9A3o3sdIMjAcrsftbqft3vbsgSONoMIHoMYKIKPKrkeoONCJoLoGYAXMFq-B5EvhQczgciQrQXXpzj-o3rQkXCXOgGXDFvcpGE8iXK8iqh8gqt8p6keK+r6sCjyJ+hCsGsKDCoimDOxOVhSJ9vKBdMmqMIOMoP5jwKoHHK-ECCxmBHijaC4MSqSkhl6JSogAZtSgGKGIbkLs2qLq2nGOypQl2pQO8n2pmEKoOqKiOoWPMOOtKhWHKmADOoqleg6nAFYfen6u6j8pYU6j6k0TYaCpckAA_3
-particle dust 0 1 1 0.05 ^0 ^-0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00385 ^-0.03778 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0077 ^-0.03556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01155 ^-0.03333 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0154 ^-0.03111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01925 ^-0.02889 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.02309 ^-0.02667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.02694 ^-0.02444 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03079 ^-0.02222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^-0.02 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^-0.01556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^-0.01111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^-0.00667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^-0.00222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^0.00222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^0.00667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^0.01111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^0.01556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03464 ^0.02 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.03079 ^0.02222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.02694 ^0.02444 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.02309 ^0.02667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01925 ^0.02889 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0154 ^0.03111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01155 ^0.03333 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0077 ^0.03556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00385 ^0.03778 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0 ^0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00385 ^0.03778 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0077 ^0.03556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01155 ^0.03333 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0154 ^0.03111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01925 ^0.02889 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.02309 ^0.02667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.02694 ^0.02444 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03079 ^0.02222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^0.02 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^0.01556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^0.01111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^0.00667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^0.00222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^-0.00222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^-0.00667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^-0.01111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^-0.01556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03464 ^-0.02 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.03079 ^-0.02222 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.02694 ^-0.02444 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.02309 ^-0.02667 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01925 ^-0.02889 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0154 ^-0.03111 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01155 ^-0.03333 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0077 ^-0.03556 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00385 ^-0.03778 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01863 ^-0.06955 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01656 ^-0.07071 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01449 ^-0.07187 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01242 ^-0.07303 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01035 ^-0.07419 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00828 ^-0.07535 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00621 ^-0.07652 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00414 ^-0.07768 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00207 ^-0.07884 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0 ^-0.08 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06955 ^-0.01863 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06952 ^-0.02101 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06949 ^-0.02338 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06946 ^-0.02576 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06943 ^-0.02813 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0694 ^-0.0305 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06937 ^-0.03288 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06934 ^-0.03525 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06931 ^-0.03763 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06928 ^-0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05091 ^0.05091 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05295 ^0.0497 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05499 ^0.04849 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05704 ^0.04727 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05908 ^0.04606 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06112 ^0.04485 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06316 ^0.04364 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0652 ^0.04242 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06724 ^0.04121 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06928 ^0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01863 ^0.06955 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01656 ^0.07071 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01449 ^0.07187 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01242 ^0.07303 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01035 ^0.07419 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00828 ^0.07535 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00621 ^0.07652 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00414 ^0.07768 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00207 ^0.07884 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0 ^0.08 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06955 ^0.01863 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06952 ^0.02101 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06949 ^0.02338 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06946 ^0.02576 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06943 ^0.02813 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0694 ^0.0305 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06937 ^0.03288 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06934 ^0.03525 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06931 ^0.03763 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06928 ^0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05091 ^-0.05091 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05295 ^-0.0497 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05499 ^-0.04849 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05704 ^-0.04727 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05908 ^-0.04606 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06112 ^-0.04485 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06316 ^-0.04364 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0652 ^-0.04242 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06724 ^-0.04121 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06928 ^-0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01863 ^-0.06955 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01656 ^-0.07071 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01449 ^-0.07187 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01242 ^-0.07303 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.01035 ^-0.07419 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00828 ^-0.07535 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00621 ^-0.07652 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00414 ^-0.07768 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.00207 ^-0.07884 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0 ^-0.08 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05091 ^-0.05091 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05295 ^-0.0497 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05499 ^-0.04849 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05704 ^-0.04727 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.05908 ^-0.04606 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06112 ^-0.04485 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06316 ^-0.04364 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0652 ^-0.04242 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06724 ^-0.04121 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06928 ^-0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06955 ^0.01863 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06952 ^0.02101 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06949 ^0.02338 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06946 ^0.02576 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06943 ^0.02813 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.0694 ^0.0305 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06937 ^0.03288 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06934 ^0.03525 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06931 ^0.03763 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.06928 ^0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01863 ^0.06955 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01656 ^0.07071 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01449 ^0.07187 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01242 ^0.07303 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.01035 ^0.07419 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00828 ^0.07535 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00621 ^0.07652 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00414 ^0.07768 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0.00207 ^0.07884 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^0 ^0.08 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05091 ^0.05091 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05295 ^0.0497 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05499 ^0.04849 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05704 ^0.04727 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.05908 ^0.04606 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06112 ^0.04485 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06316 ^0.04364 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0652 ^0.04242 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06724 ^0.04121 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06928 ^0.04 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06955 ^-0.01863 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06952 ^-0.02101 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06949 ^-0.02338 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06946 ^-0.02576 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06943 ^-0.02813 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.0694 ^-0.0305 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06937 ^-0.03288 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06934 ^-0.03525 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06931 ^-0.03763 ^ 0 0 0 0 1
-particle dust 0 1 1 0.05 ^-0.06928 ^-0.04 ^ 0 0 0 0 1
+particle dust 0 1 1 0.05 ^0 ^-0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00385 ^-0.03778 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0077 ^-0.03556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01155 ^-0.03333 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0154 ^-0.03111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01925 ^-0.02889 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.02309 ^-0.02667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.02694 ^-0.02444 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03079 ^-0.02222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^-0.02 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^-0.01556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^-0.01111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^-0.00667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^-0.00222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^0.00222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^0.00667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^0.01111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^0.01556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03464 ^0.02 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.03079 ^0.02222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.02694 ^0.02444 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.02309 ^0.02667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01925 ^0.02889 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0154 ^0.03111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01155 ^0.03333 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0077 ^0.03556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00385 ^0.03778 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0 ^0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00385 ^0.03778 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0077 ^0.03556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01155 ^0.03333 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0154 ^0.03111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01925 ^0.02889 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.02309 ^0.02667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.02694 ^0.02444 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03079 ^0.02222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^0.02 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^0.01556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^0.01111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^0.00667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^0.00222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^-0.00222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^-0.00667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^-0.01111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^-0.01556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03464 ^-0.02 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.03079 ^-0.02222 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.02694 ^-0.02444 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.02309 ^-0.02667 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01925 ^-0.02889 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0154 ^-0.03111 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01155 ^-0.03333 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0077 ^-0.03556 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00385 ^-0.03778 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01863 ^-0.06955 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01656 ^-0.07071 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01449 ^-0.07187 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01242 ^-0.07303 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01035 ^-0.07419 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00828 ^-0.07535 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00621 ^-0.07652 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00414 ^-0.07768 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00207 ^-0.07884 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0 ^-0.08 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06955 ^-0.01863 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06952 ^-0.02101 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06949 ^-0.02338 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06946 ^-0.02576 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06943 ^-0.02813 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0694 ^-0.0305 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06937 ^-0.03288 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06934 ^-0.03525 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06931 ^-0.03763 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06928 ^-0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05091 ^0.05091 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05295 ^0.0497 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05499 ^0.04849 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05704 ^0.04727 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05908 ^0.04606 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06112 ^0.04485 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06316 ^0.04364 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0652 ^0.04242 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06724 ^0.04121 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06928 ^0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01863 ^0.06955 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01656 ^0.07071 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01449 ^0.07187 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01242 ^0.07303 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01035 ^0.07419 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00828 ^0.07535 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00621 ^0.07652 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00414 ^0.07768 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00207 ^0.07884 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0 ^0.08 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06955 ^0.01863 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06952 ^0.02101 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06949 ^0.02338 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06946 ^0.02576 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06943 ^0.02813 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0694 ^0.0305 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06937 ^0.03288 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06934 ^0.03525 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06931 ^0.03763 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06928 ^0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05091 ^-0.05091 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05295 ^-0.0497 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05499 ^-0.04849 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05704 ^-0.04727 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05908 ^-0.04606 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06112 ^-0.04485 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06316 ^-0.04364 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0652 ^-0.04242 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06724 ^-0.04121 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06928 ^-0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01863 ^-0.06955 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01656 ^-0.07071 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01449 ^-0.07187 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01242 ^-0.07303 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.01035 ^-0.07419 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00828 ^-0.07535 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00621 ^-0.07652 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00414 ^-0.07768 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.00207 ^-0.07884 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0 ^-0.08 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05091 ^-0.05091 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05295 ^-0.0497 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05499 ^-0.04849 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05704 ^-0.04727 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.05908 ^-0.04606 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06112 ^-0.04485 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06316 ^-0.04364 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0652 ^-0.04242 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06724 ^-0.04121 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06928 ^-0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06955 ^0.01863 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06952 ^0.02101 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06949 ^0.02338 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06946 ^0.02576 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06943 ^0.02813 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.0694 ^0.0305 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06937 ^0.03288 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06934 ^0.03525 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06931 ^0.03763 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.06928 ^0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01863 ^0.06955 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01656 ^0.07071 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01449 ^0.07187 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01242 ^0.07303 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.01035 ^0.07419 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00828 ^0.07535 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00621 ^0.07652 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00414 ^0.07768 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0.00207 ^0.07884 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^0 ^0.08 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05091 ^0.05091 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05295 ^0.0497 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05499 ^0.04849 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05704 ^0.04727 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.05908 ^0.04606 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06112 ^0.04485 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06316 ^0.04364 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0652 ^0.04242 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06724 ^0.04121 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06928 ^0.04 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06955 ^-0.01863 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06952 ^-0.02101 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06949 ^-0.02338 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06946 ^-0.02576 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06943 ^-0.02813 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.0694 ^-0.0305 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06937 ^-0.03288 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06934 ^-0.03525 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06931 ^-0.03763 ^ 0 0 0 0 1 normal @s
+particle dust 0 1 1 0.05 ^-0.06928 ^-0.04 ^ 0 0 0 0 1 normal @s

@@ -10,7 +10,7 @@
 # マガジンマーク召喚
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] at @s positioned ~ ~1 ~ run summon area_effect_cloud ^0.5 ^ ^ {CustomNameVisible:1b,Radius:0f,Duration:20,CustomName:'{"text":"！？","bold":true}'}
 # 効果音
-    playsound minecraft:item.trident.return master @a ~ ~ ~ 1 0
+    playsound minecraft:item.trident.return player @a ~ ~ ~ 1 0
 
 # ランダムでメッセージを垂れ流す
     # 疑似乱数取得
