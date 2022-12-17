@@ -18,7 +18,7 @@
     # 残ってたらヤなのでマーカーを消す
         kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
     # 移動先を設置
-        execute facing entity @p[tag=TargetPlayer] eyes positioned as @p[tag=TargetPlayer] run summon marker ^ ^ ^5.5 {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+        execute facing entity @p[tag=TargetPlayer] eyes positioned as @p[tag=TargetPlayer] run summon marker ^ ^ ^7 {Tags:[RW.TeleportMarker,RW.MarkerInit]}
     # 拡散設定
         #data modify storage lib: Argument.Bounds set value [[2d,2d],[0d,0d],[2d,2d]]
     # 最寄りのやつの場所で拡散させる
