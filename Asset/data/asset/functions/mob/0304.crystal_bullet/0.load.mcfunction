@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:mob/0304.crystal_bullet/**
-    scoreboard objectives add 
+    scoreboard objectives add 8G.UserID dummy
+    scoreboard objectives add 8G.LifeTime dummy

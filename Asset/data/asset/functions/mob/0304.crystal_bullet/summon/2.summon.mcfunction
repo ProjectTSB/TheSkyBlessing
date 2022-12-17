@@ -9,9 +9,9 @@
 # ID (int)
     data modify storage asset:mob ID set value 304
 # Type (string) Wikiを参照
-    data modify storage asset:mob Type set value ""
+    data modify storage asset:mob Type set value "Projectile"
 # 干渉可能か否か (boolean)
-    data modify storage asset:mob Interferable set value
+    data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
     # data modify storage asset:mob Name set value
 # 武器
@@ -57,6 +57,11 @@
         # data modify storage asset:mob Resist.Water set value
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
+
+# ユーザーID適応
+    scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..0.01] 8G.UserID = @s UserID
+# 向き
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run tp @s ~ ~ ~ ~ ~
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

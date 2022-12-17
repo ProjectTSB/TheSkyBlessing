@@ -3,4 +3,5 @@
 
 #> tag
 # @within function asset:mob/0304.crystal_bullet/**
-    #declare
+    #declare tag 8G.This
+    #declare tag 8G.Target
