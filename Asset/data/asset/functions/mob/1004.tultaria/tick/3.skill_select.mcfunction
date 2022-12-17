@@ -29,7 +29,7 @@
     execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $7 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 6
+    scoreboard players set $Random Temporary 3
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee

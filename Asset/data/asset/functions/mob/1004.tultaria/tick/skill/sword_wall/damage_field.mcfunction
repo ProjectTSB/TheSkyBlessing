@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/1.tick
+#   asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/main
 #   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 #   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
 

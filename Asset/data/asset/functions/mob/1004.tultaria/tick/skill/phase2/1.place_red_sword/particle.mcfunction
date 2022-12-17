@@ -1,9 +1,9 @@
-#> asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/4.particle
+#> asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/particle
 #
 # 円パーティクル
 #
 # @within function
-#    asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/2.place
+#    asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/summon_sword
 #    asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/3.targeted_place
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmABwDstAjNQMx0C0ARgGaMosAsjAVkYsAhpTocWATgBMbFCgBsbRiKmNeYAgDsRAWwTJAYYoACOlrAwRGfQGck4FAHtC2iEl4AGAijhu4GA5gAG4i2ISG4AAeSN5gULEAvokENqRohPaIvAS2ENbuiHFw2NhoMLaGdJ5xGE75EIZxaLYAoqXlla0AjoRh2FAAyla+5IgcYZXJALpAA_3
