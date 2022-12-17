@@ -2,7 +2,7 @@
 #
 # 演出とダメージ判定を同時にやる
 #
-# @within function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
+# @within function asset:mob/1004.tultaria/tick/skill/dash_slash/6.delay_slash
 
 # 演出
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.8
@@ -11,5 +11,5 @@
     playsound block.glass.break hostile @a ~ ~ ~ 1 2 0
     playsound block.glass.break hostile @a ~ ~ ~ 1 1.8 0
 
-# ダメージ判定
-    execute as @a[distance=..3] run function asset:mob/1004.tultaria/tick/skill/dash_slash/damage_back_slash
+# プレイヤーにHitタグをつける
+    tag @a[tag=!PlayerShouldInvulnerable,distance=..3] add Hit

@@ -68,5 +68,6 @@
     #declare tag RW.DeathAnimation
     #declare tag RW.DeathInit
     #
+    #declare tag Hit
     #declare tag Landing
     #declare tag LandingTarget

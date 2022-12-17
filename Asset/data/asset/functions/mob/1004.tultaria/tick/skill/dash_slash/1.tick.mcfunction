@@ -30,11 +30,7 @@
 
 # 遅れて斬撃が発生
     # 1個目
-        execute if score @s RW.Tick matches 47..52 positioned ~ ~1 ~ positioned ^ ^ ^-3 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
-    # 2個目
-        execute if score @s RW.Tick matches 47..52 positioned ~ ~1 ~ positioned ^ ^ ^-7 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
-    # 3個目
-        execute if score @s RW.Tick matches 47..52 positioned ~ ~1 ~ positioned ^ ^ ^-11 run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_slash
+        execute if score @s RW.Tick matches 47..52 positioned ~ ~1 ~ run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_position
 
 # リセット
     execute if score @s RW.Tick matches 55.. run function asset:mob/1004.tultaria/tick/reset
