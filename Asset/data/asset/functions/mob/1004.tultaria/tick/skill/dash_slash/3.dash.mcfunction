@@ -27,7 +27,7 @@
     # tag @s add RW.ActiveInertia
 
 # 速度設定 流石に残像ムーブみたいな速度ではない
-    scoreboard players set @s RW.Speed 20
+    scoreboard players set @s RW.Speed 10
 
 # 移動開始
     tag @s add RW.Move

@@ -8,7 +8,7 @@
 
 
 # 中心に移動
-    scoreboard players set @s RW.Speed 6
+    scoreboard players set @s RW.Speed 3
     function asset:mob/1004.tultaria/tick/move/teleport/move_to_ground/1.search_ground
 
 # ポーズ

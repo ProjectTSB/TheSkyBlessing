@@ -18,5 +18,5 @@
     scoreboard players set @s RW.LoopCount 0
 
 # 移動する
-    scoreboard players set @s RW.Speed 10
+    scoreboard players set @s RW.Speed 5
     function asset:mob/1004.tultaria/tick/reset

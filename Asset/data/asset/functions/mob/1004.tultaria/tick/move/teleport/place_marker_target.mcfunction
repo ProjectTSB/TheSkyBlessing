@@ -11,7 +11,7 @@
     execute at @r run summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
 
 # 速度設定
-    #scoreboard players set @s RW.Speed 10
+    #scoreboard players set @s RW.Speed 5
 
 # 行動中タグ付与
     tag @s add RW.Move
