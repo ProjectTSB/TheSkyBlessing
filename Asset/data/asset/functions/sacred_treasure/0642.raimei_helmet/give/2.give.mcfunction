@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"雷鳴","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"雷耐性+4%","color":"yellow"}','{"text":"セット効果で特殊な能力を得る"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"雷耐性+4% 雷攻撃+4%","color":"yellow"}','{"text":"セット効果で特殊な能力を得る"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
