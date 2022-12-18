@@ -10,4 +10,4 @@
     playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1.2
 
 # ダメージ判定
-    execute as @a[distance=..3] run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/damage_back_slash
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function asset:mob/0022.red_knight/tick/skills/1.dash_slash/damage_back_slash

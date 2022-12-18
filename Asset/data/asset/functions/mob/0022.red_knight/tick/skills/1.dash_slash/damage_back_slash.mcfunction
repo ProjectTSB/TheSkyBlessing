@@ -17,6 +17,6 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[tag=!PlayerShouldInvulnerable] run function lib:damage/
+        function lib:damage/
 # リセット
     function lib:damage/reset
