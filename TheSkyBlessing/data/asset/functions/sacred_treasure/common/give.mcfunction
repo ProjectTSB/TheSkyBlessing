@@ -42,11 +42,12 @@
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
-    execute unless data storage asset:context {Type:"drop"} if data storage asset:context Slot run function asset:sacred_treasure/common/replace_slot
-    execute unless data storage asset:context {Type:"drop"} run function api:inventory/get_size
-    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
-    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
-    execute unless data storage asset:context {Type:"drop"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
+    execute if data storage asset:context {Type:"give"} if data storage asset:context Slot run function asset:sacred_treasure/common/replace_slot
+    execute if data storage asset:context {Type:"give"} run function api:inventory/get_size
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
+
 # リセット
     scoreboard players reset $InvSize Lib
     data remove storage asset:sacred_treasure ID
