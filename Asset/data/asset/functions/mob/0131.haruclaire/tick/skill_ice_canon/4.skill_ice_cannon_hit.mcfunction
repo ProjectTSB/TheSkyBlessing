@@ -13,7 +13,7 @@
     playsound item.trident.riptide_2 hostile @a ~ ~ ~ 1 2
 
 # 移動速度低下付与
-    effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2] slowness 10 2
+    effect give @a[tag=!PlayerShouldInvulnerable,distance=..2] slowness 10 2
 
 # ダメージ
     # 与えるダメージ = 25
@@ -25,7 +25,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象に
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
 # リセット
     function lib:damage/reset
 # 攻撃があたったらタグを付与
