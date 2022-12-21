@@ -10,4 +10,4 @@
     particle electric_spark ~ ~0.55 ~ 0 0 0 0 0
     execute if predicate lib:random_pass_per/5 run particle witch ~ ~0.55 ~ 0 0 0 0.6 1
 # 進ませる
-    execute at @s run tp @s ^ ^ ^0.25 ~ ~
+    execute at @s run tp @s ^ ^ ^0.5 ~ ~

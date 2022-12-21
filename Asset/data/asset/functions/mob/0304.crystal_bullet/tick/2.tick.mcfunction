@@ -12,9 +12,6 @@
     function asset:mob/0304.crystal_bullet/tick/move
     execute at @s run function asset:mob/0304.crystal_bullet/tick/move
     execute at @s run function asset:mob/0304.crystal_bullet/tick/move
-    execute at @s run function asset:mob/0304.crystal_bullet/tick/move
-    execute at @s run function asset:mob/0304.crystal_bullet/tick/move
-
 # ダメージ
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] add 8G.Target
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run function asset:mob/0304.crystal_bullet/tick/damage
