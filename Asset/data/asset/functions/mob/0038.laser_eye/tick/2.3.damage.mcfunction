@@ -15,7 +15,7 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute as @p[tag=!PlayerShouldInvulnerable,tag=LandingTarget,distance=..20,limit=1] run function lib:damage/
+        execute as @p[tag=LandingTarget,tag=!PlayerShouldInvulnerable,distance=..20,limit=1] run function lib:damage/
 # リセット
     function lib:damage/reset
 
