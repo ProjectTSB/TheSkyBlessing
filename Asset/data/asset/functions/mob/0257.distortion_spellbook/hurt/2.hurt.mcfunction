@@ -5,4 +5,4 @@
 # @within function asset:mob/0257.distortion_spellbook/hurt/1.trigger
 
 # ランダムテレポート
-    execute if predicate lib:random_pass_per/20 run function asset:mob/0257.distortion_spellbook/hurt/3.teleport
+    execute if predicate lib:random_pass_per/15 run function asset:mob/0257.distortion_spellbook/hurt/3.teleport
