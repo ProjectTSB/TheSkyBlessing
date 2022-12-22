@@ -28,7 +28,6 @@
 #declare score_holder $InvSize
 
 # storage検証
-    execute unless data storage asset:context Type run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Type","color":"red"}]
     execute unless data storage asset:sacred_treasure ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
     execute unless data storage asset:sacred_treasure Item run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Item","color":"red"}]
     execute unless data storage asset:sacred_treasure Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
@@ -40,6 +39,7 @@
 # 各データ設定
     function asset_manager:sacred_treasure/create/set_data
 # 神器排出
+    execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
@@ -49,6 +49,7 @@
     execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
 # リセット
     scoreboard players reset $InvSize Lib
+    data remove storage asset:context Type
     data remove storage asset:sacred_treasure ID
     data remove storage asset:sacred_treasure Item
     data remove storage asset:sacred_treasure Name
