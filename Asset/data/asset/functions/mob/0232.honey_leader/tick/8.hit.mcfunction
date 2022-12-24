@@ -19,7 +19,7 @@
 # 補正
     execute as @e[type=skeleton,tag=this,distance=..32] run function lib:damage/modifier
 # 実行
-    execute if entity @s run function lib:damage/
+    function lib:damage/
 # リセット
     function lib:damage/reset
 # デバフ
