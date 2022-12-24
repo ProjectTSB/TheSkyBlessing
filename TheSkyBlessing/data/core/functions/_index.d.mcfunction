@@ -8,9 +8,9 @@
 
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private
-# @within function
+# @within *
 #   core:load_once
-#   api:**
+#   api:global_vars/difficulty/*
     #declare score_holder $Difficulty
 
 #> DeathTag
