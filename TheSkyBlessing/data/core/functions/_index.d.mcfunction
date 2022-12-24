@@ -10,7 +10,7 @@
 #> Global Vars - Private
 # @within *
 #   core:load_once
-#   api:global_vars/difficulty/*
+#   api:global_vars/difficulty/**
     #declare score_holder $Difficulty
 
 #> DeathTag
