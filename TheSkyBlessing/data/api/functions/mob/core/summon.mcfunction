@@ -24,8 +24,8 @@
 
 # FlagIndexの記録
     scoreboard players operation $BeforeMobIndex Temporary = $FlagIndex Global
-# v1の呼び出し
-    function #asset:mob/summon
+# v2に存在しなければv1を呼び出す
+    execute unless data storage asset:mob ID run function #asset:mob/summon
 # FlagIndexの記録
     scoreboard players operation $AfterMobIndex Temporary = $FlagIndex Global
 # FlagIndexが同じならv1でも召喚できてない
