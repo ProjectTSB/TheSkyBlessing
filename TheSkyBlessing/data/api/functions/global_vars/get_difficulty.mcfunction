@@ -7,7 +7,7 @@
 # 3:ハード
 # 4..6:それ以上
 #
-# @output result score 1..6
+# @output storage api: Return.Difficulty : int @ 1..6
 # @api
 
-scoreboard players get $Difficulty Global
+execute store result storage api: Return.Difficulty int 1 run scoreboard players get $Difficulty Global
