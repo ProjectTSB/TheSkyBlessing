@@ -11,7 +11,7 @@
     particle explosion ~ ~1.6 ~ 1 1 1 0 10 normal @a
 
 # 鈍化を付与
-    effect give @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] slowness 1 1 true
+    effect give @a[tag=!PlayerShouldInvulnerable,distance=..2.5] slowness 1 1 true
 
 # 水属性ダメージ
     data modify storage lib: Argument.Damage set value 8.0
@@ -23,7 +23,7 @@
 # 補正
     function lib:damage/modifier
 # 実行
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.5] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2.5] run function lib:damage/
 # リセット
     function lib:damage/reset
 
