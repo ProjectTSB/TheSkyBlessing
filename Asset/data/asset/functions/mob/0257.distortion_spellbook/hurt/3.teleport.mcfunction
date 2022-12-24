@@ -17,7 +17,7 @@
     execute as @e[type=marker,tag=SpreadMarker,distance=..0.01,limit=1] at @s run function lib:spread_entity/
 
 # マーカーの位置にブロックがなかったらテレポートする
-    execute at @e[type=marker,tag=SpreadMarker,distance=..15,limit=1] if block ~ ~ ~ #lib:no_collision run tp @s ~ ~ ~
+    execute at @e[type=marker,tag=SpreadMarker,distance=..13,limit=1] if block ~ ~ ~ #lib:no_collision run tp @s ~ ~ ~
 
 # リセット
-    kill @e[type=marker,tag=SpreadMarker,distance=..15,limit=1]
+    kill @e[type=marker,tag=SpreadMarker,distance=..13,limit=1]
