@@ -6,8 +6,7 @@
         "type": "minecraft:fixed",
         "name": "$Difficulty"
       },
-      "score": "Global",
-      "scale": 1
+      "score": "Global"
     },
     "range": 2
   }
