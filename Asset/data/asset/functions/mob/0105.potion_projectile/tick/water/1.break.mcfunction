@@ -12,7 +12,7 @@
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 10
 
 # ダメージとデバフ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0105.potion_projectile/tick/water/2.water_damage
+    execute if entity @a[tag=!PlayerShouldInvulnerable,distance=..3] run function asset:mob/0105.potion_projectile/tick/water/2.water_damage
 
 # 自身をkill
     kill @s

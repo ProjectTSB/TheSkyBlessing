@@ -10,7 +10,7 @@
     playsound entity.generic.explode hostile @a ~ ~ ~ 0.7 1 0
     execute rotated 0 0 run function asset:mob/0105.potion_projectile/tick/fire/particle.1
 # ダメージ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..4] run function asset:mob/0105.potion_projectile/tick/fire/2.fire_damage
+    execute if entity @a[tag=!PlayerShouldInvulnerable,distance=..4] run function asset:mob/0105.potion_projectile/tick/fire/2.fire_damage
 
 # キル
     kill @s
