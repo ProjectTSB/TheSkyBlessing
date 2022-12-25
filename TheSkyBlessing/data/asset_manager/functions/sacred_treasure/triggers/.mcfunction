@@ -19,7 +19,7 @@
     execute if entity @s[tag=TriggerFlag.Killed] run function asset_manager:sacred_treasure/triggers/killed
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:sacred_treasure/triggers/use_item/
     execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:sacred_treasure/triggers/sneak/
-    execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:sacred_treasure/triggers/using_item
+    execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:sacred_treasure/triggers/using_item/
     execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/dis_equip
     execute if data storage asset:sacred_treasure {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:sacred_treasure/triggers/equip
     execute if entity @s[tag=TriggerFlag.Attack] run function asset_manager:sacred_treasure/triggers/attack
