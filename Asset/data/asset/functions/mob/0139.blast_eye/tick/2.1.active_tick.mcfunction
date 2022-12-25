@@ -8,7 +8,7 @@
     scoreboard players add @s 3v.Time 1
 
 # 一定確率で爆発後のクールダウン短縮
-    execute if score @s 3v.Time matches 120..159 if predicate lib:random_pass_per/2 run scoreboard players set @s 3v.Time 200
+    execute if score @s 3v.Time matches 120..159 if predicate lib:random_pass_per/2 run scoreboard players set @s 3v.Time 160
 
 # 爆破予告
     execute if score @s 3v.Time matches 160..200 anchored eyes run function asset:mob/0139.blast_eye/tick/2.1.1.prepare

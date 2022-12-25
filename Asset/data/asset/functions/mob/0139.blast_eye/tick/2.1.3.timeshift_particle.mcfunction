@@ -6,7 +6,7 @@
 
 # 演出
     particle minecraft:explosion ~ ~ ~ 1 1 1 0 3
-    execute if score @s 3v.Time matches 205.. run particle minecraft:poof ~ ~ ~ 0.8 0.8 0.8 0 6
+    execute if score @s 3v.Time matches 165.. run particle minecraft:poof ~ ~ ~ 0.8 0.8 0.8 0 6
 
 # mob固定
     tp @s @s
