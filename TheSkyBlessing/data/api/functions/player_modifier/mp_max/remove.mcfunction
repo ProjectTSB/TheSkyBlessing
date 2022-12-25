@@ -18,7 +18,7 @@
     # execute store result score $DiffMP Temporary run scoreboard players get @s MP
     # execute store result score $PrevMaxMP Temporary run scoreboard players get @s MPMax
 # MPMaxに代入
-    execute store result score @s MPMax run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPMax 100
+    function api:mp/update_max
 # MPを調整
     # execute store result score $NewMaxMP Temporary run scoreboard players get @s MPMax
     # scoreboard players operation $DiffMP Temporary *= $NewMaxMP Temporary
