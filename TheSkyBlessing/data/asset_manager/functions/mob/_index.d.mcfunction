@@ -3,7 +3,7 @@
 
 #> storage
 # @within *
-#   api:mob/core/summon
+#   api:mob/core/**
 #   asset:mob/*/register
 #   asset:mob/extends
 #   asset:mob/super.*

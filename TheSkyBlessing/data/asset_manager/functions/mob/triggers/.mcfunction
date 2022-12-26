@@ -10,7 +10,6 @@
     function oh_my_dat:please
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
-    execute store result storage asset:context ExtendsID int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ExtendsID
     data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
 # Victim / Attackerのタグ設定
     execute if entity @s[tag=AttackingEntity] as @a[scores={AttackingEntity=0..}] if score @s AttackingEntity = @e[tag=this,limit=1] AttackingEntity run tag @s add Victim

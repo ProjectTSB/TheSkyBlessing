@@ -4,7 +4,6 @@
 #
 # @input storage asset:mob
 #   ID : int
-#   ExtendsID? : Int
 #   Name? : TextComponentString
 #   Health? : float
 #   AttackDamage? : double
@@ -78,8 +77,6 @@
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
-# 継承データ
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ExtendsID set from storage asset:mob ExtendsID
 # フィールド
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:mob Field
 # ボスバーの表示

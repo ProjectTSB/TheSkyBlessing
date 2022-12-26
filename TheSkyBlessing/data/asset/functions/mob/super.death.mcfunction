@@ -4,14 +4,19 @@
 #
 # @within function asset:mob/*/death/
 
-# validate
-    execute unless data storage asset:context ExtendsID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のMobは継承を行っていないため、継承元を呼び出すことは出来ません:"},{"storage":"asset:context","nbt":"id"}]
+# IDをアドレスとしてROMを呼び出す
+    data modify storage api: Argument.Address set from storage asset:context id
+    function api:rom/please
 
-# 既存にasset:context idが存在する場合に備えて退避させる
+# validate
+    execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のMobは継承を行っていないため、継承元を呼び出すことは出来ません:"},{"storage":"asset:context","nbt":"id"}]
+
+# 既存のasset:context idを退避させる
     function asset_manager:common/context_id/stash
 
-# ID
-    data modify storage asset:context id set from storage asset:context ExtendsID
+# ROMから継承元の情報を持ってくる
+    data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
+
 # super.tick呼び出し
     execute if data storage asset:context id run function #asset:mob/death
 
