@@ -20,7 +20,6 @@
     execute if entity @s[tag=AttackedEntity] run function #asset:mob/hurt
 # リセット
     data remove storage asset:context id
-    data remove storage asset:context ExtendsID
     data remove storage asset:context this
     tag @a[tag=Victim] remove Victim
     tag @a[tag=Attacker] remove Attacker
