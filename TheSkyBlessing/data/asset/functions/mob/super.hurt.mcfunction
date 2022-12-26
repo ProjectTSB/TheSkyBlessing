@@ -17,7 +17,7 @@
 # ROMから継承元の情報を持ってくる
     data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
-# super.tick呼び出し
+# super.hurt呼び出し
     execute if data storage asset:context id run function #asset:mob/hurt
 
 # 退避させたasset:context idを戻す
