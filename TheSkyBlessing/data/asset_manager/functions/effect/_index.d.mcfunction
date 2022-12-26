@@ -4,6 +4,8 @@
 #> Storage
 # @within function
 #   api:entity/mob/effect/**
+#   asset:effect/extends
+#   asset:effect/super.*
 #   asset:effect/*/register
 #   asset_manager:effect/**
 #declare storage asset:effect

@@ -27,6 +27,8 @@
     function #asset:effect/register
 # データチェック
     execute unless data storage asset:effect ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのエフェクトは存在しません: "},{"storage":"api:","nbt":"Argument.ID"}]
+# 継承が行われている場合そのデータを追加する
+    execute if data storage asset:effect ID if data storage asset:effect Extends[0] run function api:entity/mob/effect/core/put_id_to_map
 # データが正しくあれば呼び出す
     execute if data storage asset:effect ID run function asset_manager:effect/give/
 # 退避させたasset:context idを戻す

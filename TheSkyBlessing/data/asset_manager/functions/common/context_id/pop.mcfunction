@@ -4,6 +4,8 @@
 #
 # @within function
 #   api:mob/summon
+#   asset:*/extends
+#   asset:*/super.*
 #   api:sacred_treasure/*/from_id
 #   api:entity/mob/effect/core/give
 #   asset_manager:mob/triggers/death/manual
