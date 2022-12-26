@@ -7,7 +7,7 @@
 # ExtendsSafe (boolean) (オプション)
     data modify storage asset:mob ExtendsSafe set value true
 # ID (int)
-    data modify storage asset:mob ID set value 2147483646
+    data modify storage asset:mob ID set value 65534
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy.Boss"
 # 干渉可能か否か (boolean)

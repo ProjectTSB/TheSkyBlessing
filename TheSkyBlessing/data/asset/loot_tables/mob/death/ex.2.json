@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ID:2147483645}}"
+                            "tag": "{TSB:{ID:65533}}"
                         }
                     ]
                 }

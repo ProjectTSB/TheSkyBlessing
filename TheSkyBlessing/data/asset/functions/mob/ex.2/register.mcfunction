@@ -5,11 +5,13 @@
 # @within function asset:mob/ex.2/_/register
 
 # extends
-    data modify storage asset:mob ExtendsID set value 2147483646
+    data modify storage asset:mob Extends append value 65534
     function asset:mob/extends
 
+# ExtendsSafe (boolean) (オプション)
+    data modify storage asset:mob ExtendsSafe set value true
 # ID (int)
-    data modify storage asset:mob ID set value 2147483645
+    data modify storage asset:mob ID set value 65533
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:golden_helmet",Count:1b}
