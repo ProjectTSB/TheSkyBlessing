@@ -6,6 +6,7 @@
 
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context_id/stash
+
 # ID
     data modify storage asset:context id set from storage api: Argument.ID
 # prefill
@@ -23,6 +24,7 @@
     data modify storage asset:effect ProcessOnDied set value "remove"
     data modify storage asset:effect RequireClearLvWithApi set value 1
     data modify storage asset:effect AllowClearWithMilk set value true
+
 # データを取得
     function #asset:effect/register
 # データチェック
@@ -31,5 +33,22 @@
     execute if data storage asset:effect ID if data storage asset:effect Extends[0] run function api:entity/mob/effect/core/put_id_to_map
 # データが正しくあれば呼び出す
     execute if data storage asset:effect ID run function asset_manager:effect/give/
+
+# リセット
+    data remove storage asset:effect ID
+    data remove storage asset:effect Extends
+    data remove storage asset:effect Duration
+    data remove storage asset:effect Stack
+    data remove storage asset:effect DurationOperation
+    data remove storage asset:effect StackOperation
+    data remove storage asset:effect MaxDuration
+    data remove storage asset:effect MaxStack
+    data remove storage asset:effect IsBadEffect
+    data remove storage asset:effect ProcessOnDied
+    data remove storage asset:effect RequireClearLvWithApi
+    data remove storage asset:effect AllowClearWithMilk
+
+    data remove storage asset:effect NonExistsInRom
+
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
