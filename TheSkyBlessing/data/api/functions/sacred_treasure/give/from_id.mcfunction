@@ -11,9 +11,11 @@
     function asset_manager:common/context_id/stash
 # 代入
     data modify storage asset:context id set from storage api: Argument.ID
+    data modify storage asset:context Type set value "give"
 # 呼び出し
     execute if data storage api: Argument.ID run function #asset:sacred_treasure/give
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
 # リセット
+    data remove storage asset:context Type
     data remove storage api: Argument.ID

@@ -1,6 +1,6 @@
 #> world_manager:gimmick/shard_processor/process/
 #
-# ガチャの処理
+# 加工処理
 #
 # @within function world_manager:gimmick/shard_processor/check_item/
 

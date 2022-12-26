@@ -5,15 +5,12 @@
 # @within function asset:mob/1004.tultaria/hurt/1.trigger
 #> private
 # @private
-    #declare score_holder $Health
     #declare score_holder $HealthPercent
 
-# 現在HPの100倍をスコアに
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
-# なんとなく代入する
-    scoreboard players operation $HealthPercent Temporary = $Health Temporary
-# 現在HPの％を求める。
-    scoreboard players operation $HealthPercent Temporary /= @s RW.HealthMax
+# HP割合を取得
+    function api:mob/get_health_percent
+# 代入する
+    execute store result score $HealthPercent Temporary run data get storage api: Return.HealthPer 100
 
 # VFX
     playsound minecraft:entity.generic.hurt hostile @a ~ ~ ~ 1 0.7
@@ -33,5 +30,4 @@
     execute if score $HealthPercent Temporary matches ..30 run tag @s add RW.HPless30per
 
 # リセット
-    scoreboard players reset $Health
     scoreboard players reset $HealthPercent
