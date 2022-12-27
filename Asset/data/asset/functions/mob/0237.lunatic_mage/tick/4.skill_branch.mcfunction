@@ -6,7 +6,7 @@
 
 # 火
     execute if entity @s[tag=6L.Fire] run function asset:mob/0237.lunatic_mage/skill/fire/1
-    
+
 # 火2
     execute if entity @s[tag=6L.Fire2] run function asset:mob/0237.lunatic_mage/skill/fire2/1
 
@@ -18,6 +18,9 @@
 
 # 無
     execute if entity @s[tag=6L.Magic] run function asset:mob/0237.lunatic_mage/skill/magic/1
+
+# 召喚
+    execute if entity @s[tag=6L.Summon] run function asset:mob/0237.lunatic_mage/skill/summon/1
 
 # エレメントコンファイン
     execute if entity @s[tag=6L.ElementalConfine] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/1

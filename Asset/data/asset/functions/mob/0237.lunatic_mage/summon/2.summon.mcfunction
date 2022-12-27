@@ -56,7 +56,7 @@
     function asset:mob/0237.lunatic_mage/skill/teleport/vfx
 
 # 召喚地点用Markerを召喚
-    execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["Object","Uninterferable","6L.SpawnPoint"]}
+    execute align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["Object","Uninterferable","6L.SpawnPoint","6L.Marker"]}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=husk,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
