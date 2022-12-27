@@ -25,4 +25,4 @@
     execute if predicate api:global_vars/difficulty/max/normal if entity @s[scores={6L.TeleportCount=2..}] run function asset:mob/0237.lunatic_mage/skill/teleport/main
 
 # ハード以上なら確率ワープ
-    execute if predicate api:global_vars/difficulty/min/hard if predicate lib:random_pass_per/35 run function asset:mob/0237.lunatic_mage/skill/teleport/main
+    execute if predicate api:global_vars/difficulty/min/hard if predicate lib:random_pass_per/50 run function asset:mob/0237.lunatic_mage/skill/teleport/main
