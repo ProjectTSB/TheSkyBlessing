@@ -18,8 +18,9 @@
 # @within function lib:array/**compare*
 #declare score_holder $Temp
 
-#> Sum処理用
+#> 算術処理用
 # @within function
-#   lib:array**/sum
+#   lib:array/**math/*
     #declare score_holder $Sum
+    #declare score_holder $Mul
     #declare score_holder $Temp
