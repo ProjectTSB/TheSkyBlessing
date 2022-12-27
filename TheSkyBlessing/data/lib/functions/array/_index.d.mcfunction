@@ -20,7 +20,6 @@
 
 #> Sum処理用
 # @within function
-#   lib:array/sum
-#   lib:array/core/sum
+#   lib:array**/sum
     #declare score_holder $Sum
     #declare score_holder $Temp

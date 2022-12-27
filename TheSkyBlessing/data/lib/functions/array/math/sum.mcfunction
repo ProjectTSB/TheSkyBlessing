@@ -1,9 +1,8 @@
-#> lib:array/sum
+#> lib:array/math/sum
 #
 # 配列の要素の総和を計算します。
 #
 # @input
-#   storage lib: Array: any[]
 #   配列データ
 # @output
 #   storage lib: SumResult: int
@@ -16,7 +15,7 @@
 # 初期化
     scoreboard players set $Sum Temporary 0
 # 総和を計算する
-    function lib:array/core/sum
+    function lib:array/math/core/sum
 # 総和をSumResultに突っ込む
     execute store result storage lib: SumResult int 1 run scoreboard players get $Sum Temporary
 # リセット
