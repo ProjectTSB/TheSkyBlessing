@@ -15,3 +15,6 @@
 
 # 幕雷
     execute if entity @s[scores={26.SkillSelect=3}] run function asset:mob/0078.messenger_of_thunder/skill/4/1
+
+# 十雷
+    execute if entity @s[scores={26.SkillSelect=4}] run function asset:mob/0078.messenger_of_thunder/skill/5/1
