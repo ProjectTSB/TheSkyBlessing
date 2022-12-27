@@ -3,6 +3,7 @@
 # 配列の要素の総和を計算します。
 #
 # @input
+#   storage lib: Array: [any]
 #   配列データ
 # @output
 #   storage lib: SumResult: int
