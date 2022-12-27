@@ -15,7 +15,7 @@
     scoreboard players add @s LD.Tick 1
 
 # ヒット
-    execute at @s positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,dx=0,limit=1] at @s run function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,dx=0,limit=1] at @s run function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/hit
 
 # 消滅
     execute if entity @s[scores={LD.Tick=80..}] run kill @s
