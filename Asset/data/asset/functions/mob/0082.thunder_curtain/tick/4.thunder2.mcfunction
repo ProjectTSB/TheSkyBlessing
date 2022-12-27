@@ -11,7 +11,7 @@
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.3 0 0
 
 # 範囲内のプレイヤーにTagを付与する
-    tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
+    tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
     execute positioned ~ ~1.2 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
     execute positioned ~ ~2.4 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
     execute positioned ~ ~3.6 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
