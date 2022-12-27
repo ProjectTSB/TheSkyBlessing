@@ -37,6 +37,12 @@
 #   asset:mob/0237.lunatic_mage/summon/2.summon
     #declare tag 6L.SpawnPoint
 
+#> 雷で2回目を使用するためのTag
+# @within function
+#   asset:mob/0237.lunatic_mage/skill/thunder/*
+#   asset:mob/0237.lunatic_mage/tick/5.reset
+    #declare tag 6L.SkillSecond
+
 #> score_holder
 # @within function asset:mob/0237.lunatic_mage/**
     #declare score_holder $Random

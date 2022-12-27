@@ -36,5 +36,8 @@
 # 3回目
     execute if entity @s[scores={6L.Tick=31}] at @e[type=area_effect_cloud,tag=6L.ThunderSummonPoint,distance=..50,limit=2] positioned ~ ~0.5 ~ positioned ^ ^ ^10 run function asset:mob/0237.lunatic_mage/skill/thunder/2.thunder
 
+# ハード以上の場合、確定で2回目を行うように
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag=!6L.SkillSecond,scores={6L.Tick=32}] run function asset:mob/0237.lunatic_mage/skill/thunder/3.second
+
 # リセット
     execute if entity @s[scores={6L.Tick=41..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
