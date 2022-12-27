@@ -10,8 +10,8 @@
     playsound item.trident.thunder hostile @a ~ ~ ~ 1 1.3 0.5
     particle end_rod ~ ~1.2 ~ 0.2 0.2 0.2 0.3 100 normal @a
 
-# 初期地点markerをキル
-    kill @e[type=marker,tag=6L.SpawnPoint,distance=..100,limit=1]
+# Markerをキル
+    kill @e[type=marker,tag=6L.Marker,distance=..100]
 
 # ボスドロ
     data modify storage api: Argument.ID set value 952
