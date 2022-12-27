@@ -6,7 +6,7 @@
 
 # AECを召喚
     summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:30,Tags:["Object","26.SkillThunderMarker"]}
-    data modify storage lib: Argument.Bounds set value [[3d,3d],[0d,0d],[3d,3d]]
+    data modify storage lib: Argument.Bounds set value [[10d,10d],[0d,0d],[10d,10d]]
     execute as @e[type=area_effect_cloud,tag=26.SkillThunderMarker,distance=..0.01,limit=1] run function lib:spread_entity/
 
 # 演出
