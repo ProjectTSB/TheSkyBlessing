@@ -14,11 +14,15 @@
     scoreboard players operation $Random Temporary %= $8 Const
 
 # デバッグ用
-   #scoreboard players set $Random Temporary 7
+   scoreboard players set $Random Temporary 0
 
 # 体力が40%以下になった時、一度だけ確定で必殺技を使う
     execute if entity @s[tag=6L.HealthLess40Per,tag=!6L.AlreadyElement] run scoreboard players set $Random Temporary 8
     execute if entity @s[tag=6L.HealthLess40Per,tag=!6L.AlreadyElement] run tag @s add 6L.AlreadyElement
+
+# ハード以上なら一番最初に大技を使う
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag=!6L.AlreadyElement] run scoreboard players set $Random Temporary 8
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag=!6L.AlreadyElement] run tag @s add 6L.AlreadyElement
 
 # 技用Tagを付与
     execute if score $Random Temporary matches 0 run tag @s add 6L.Fire
