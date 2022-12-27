@@ -8,7 +8,7 @@
     function asset:mob/0237.lunatic_mage/skill/teleport/main
 
 # 自身のスコアを減らす
-    scoreboard players set @s 6L.Tick 3
+    scoreboard players set @s 6L.Tick -3
 
 # 2回目のTagをつける
     tag @s add 6L.SkillSecond
