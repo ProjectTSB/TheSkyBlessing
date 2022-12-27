@@ -16,7 +16,7 @@
 # 初期化
     scoreboard players set $Sum Temporary 0
 # 総和を計算する
-    function lib:array/math/core/sum
+    function lib:array/core/math/sum
 # 総和をSumResultに突っ込む
     execute store result storage lib: SumResult int 1 run scoreboard players get $Sum Temporary
 # リセット
