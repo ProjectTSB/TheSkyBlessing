@@ -14,3 +14,7 @@
     execute positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
     execute rotated ~20 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
     execute rotated ~-20 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
+
+# ハードだと二つ増える
+    execute if predicate api:global_vars/difficulty/min/hard rotated ~40 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
+    execute if predicate api:global_vars/difficulty/min/hard rotated ~-40 ~ positioned ^-0.25 ^-0.25 ^ run function asset:mob/0237.lunatic_mage/magic_summon/fire
