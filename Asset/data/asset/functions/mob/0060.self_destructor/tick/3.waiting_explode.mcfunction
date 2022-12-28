@@ -8,5 +8,5 @@
     scoreboard players add @s 1O.ExplodeFuse 1
 
 # 爆破待機のバフ
-    effect give @s resistance 10 5 true
+    effect give @s resistance 10 10 true
     effect give @s slowness 10 5 true
