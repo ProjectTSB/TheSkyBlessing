@@ -17,7 +17,7 @@
     execute positioned ~ ~0.6 ~ positioned ^ ^ ^0.5 run function asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 400.0f
+    data modify storage lib: Argument.Damage set value 450.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Water"
     function lib:damage/modifier
