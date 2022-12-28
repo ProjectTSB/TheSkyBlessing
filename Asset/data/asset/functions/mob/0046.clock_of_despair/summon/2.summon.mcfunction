@@ -62,12 +62,29 @@
     summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["1A.ClockHand","Object","Uninterferable"]}
     execute as @e[type=armor_stand,tag=1A.ClockHand,distance=..1,sort=nearest,limit=1] run tp @e[type=zombie,tag=MobInit,distance=..0.01]
 
-summon glow_item_frame ~ ~ ~-8 {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
-summon glow_item_frame ~4 ~ ~-8 {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20218}}}
-summon glow_item_frame ~8 ~ ~-8 {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20219}}}
-summon glow_item_frame ~4 ~ ~-4 {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
-summon glow_item_frame ~8 ~ ~-4 {Facing:1b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
+summon glow_item_frame ~ ~ ~-8 {Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
+summon glow_item_frame ~4 ~ ~-8 {Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20218}}}
+summon glow_item_frame ~8 ~ ~-8 {Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20219}}}
+summon glow_item_frame ~4 ~ ~-4 {Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
+summon glow_item_frame ~8 ~ ~-4 {Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
 
+summon glow_item_frame ~8 ~ ~ {Facing:1b,ItemRotation:2b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
+summon glow_item_frame ~8 ~ ~4 {Facing:1b,ItemRotation:2b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20218}}}
+summon glow_item_frame ~8 ~ ~8 {Facing:1b,ItemRotation:2b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20219}}}
+summon glow_item_frame ~4 ~ ~4 {Facing:1b,ItemRotation:2b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
+summon glow_item_frame ~4 ~ ~8 {Facing:1b,ItemRotation:2b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
+
+summon glow_item_frame ~ ~ ~8 {Facing:1b,ItemRotation:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
+summon glow_item_frame ~-4 ~ ~8 {Facing:1b,ItemRotation:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20218}}}
+summon glow_item_frame ~-8 ~ ~8 {Facing:1b,ItemRotation:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20219}}}
+summon glow_item_frame ~-4 ~ ~4 {Facing:1b,ItemRotation:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
+summon glow_item_frame ~-8 ~ ~4 {Facing:1b,ItemRotation:4b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
+
+summon glow_item_frame ~-8 ~ ~ {Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20217}}}
+summon glow_item_frame ~-8 ~ ~-4 {Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20218}}}
+summon glow_item_frame ~-8 ~ ~-8 {Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20219}}}
+summon glow_item_frame ~-4 ~ ~-4 {Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
+summon glow_item_frame ~-4 ~ ~-8 {Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
 
 # スコアを設定
     scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 1A.LifeTime -1
