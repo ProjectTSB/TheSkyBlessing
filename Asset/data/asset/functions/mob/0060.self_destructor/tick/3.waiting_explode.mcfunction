@@ -7,6 +7,6 @@
 # 爆破カウントスコア
     scoreboard players add @s 1O.ExplodeFuse 1
 
-# 爆破待機のバフ
+# 爆破待機のバフ 鈍足はノーマル以下だけ
     effect give @s resistance 10 10 true
-    effect give @s slowness 10 5 true
+    execute if predicate api:global_vars/difficulty/max/normal run effect give @s slowness 10 5 true
