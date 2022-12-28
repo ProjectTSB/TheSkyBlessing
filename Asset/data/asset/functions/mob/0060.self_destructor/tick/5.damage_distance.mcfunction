@@ -23,6 +23,9 @@
     execute if entity @s[distance=..2] run data modify storage lib: Argument.Damage set value 28f
     execute if entity @s[distance=..1] run data modify storage lib: Argument.Damage set value 32f
 
+# ハード以上の場合ダメージが2倍
+    execute if predicate api:global_vars/difficulty/min/hard store result storage lib: Argument.Damage int 2 run data get storage lib: Argument.Damage
+
 # modifier
     execute as @e[type=zombie,tag=this,distance=..7,limit=1] run function lib:damage/modifier
 
