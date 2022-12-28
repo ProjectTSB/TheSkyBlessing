@@ -18,3 +18,6 @@
 # リセット
     execute if entity @s[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:sacred_treasure/triggers/sneak/reset
     scoreboard players reset @s[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
+    execute if entity @s[scores={UsingItem=1..},advancements={core:handler/using_item=false}] run function asset_manager:sacred_treasure/triggers/using_item/reset
+    scoreboard players reset @s[scores={UsingItem=1..},advancements={core:handler/using_item=false}] UsingItem
+    advancement revoke @s[advancements={core:handler/using_item=true}] only core:handler/using_item

@@ -42,6 +42,10 @@
 # @within function asset_manager:sacred_treasure/triggers/sneak/*
     #declare score_holder $SneakThreshold
 
+#> アイテム使用中の閾値用スコアホルダー
+# @within function asset_manager:sacred_treasure/triggers/using_item/*
+    #declare score_holder $UsingItemThreshold
+
 #> use_itemの誤検知対策タグ
 # @within function
 #   core:handler/drop
