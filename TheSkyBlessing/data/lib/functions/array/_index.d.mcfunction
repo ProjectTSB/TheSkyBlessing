@@ -24,3 +24,4 @@
     #declare score_holder $Sum
     #declare score_holder $Mul
     #declare score_holder $Temp
+    #declare score_holder $Temp2
