@@ -7,7 +7,7 @@
 # 初期化
     data modify storage asset:context id set from storage asset:context New.id
 # 処理
-    execute unless score @s Sneak.Mainhand = $UsingItemThreshold Temporary run data modify storage asset:context id.mainhand set value -1
-    execute unless score @s Sneak.Offhand = $UsingItemThreshold Temporary run data modify storage asset:context id.offhand set value -1
+    execute unless score @s UsingItem.Mainhand = $UsingItemThreshold Temporary run data modify storage asset:context id.mainhand set value -1
+    execute unless score @s UsingItem.Offhand = $UsingItemThreshold Temporary run data modify storage asset:context id.offhand set value -1
 # リセット
     scoreboard players reset $UsingItemThreshold

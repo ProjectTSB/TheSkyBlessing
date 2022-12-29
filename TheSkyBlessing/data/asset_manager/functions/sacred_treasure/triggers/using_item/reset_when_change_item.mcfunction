@@ -7,5 +7,5 @@
 # @within function asset_manager:sacred_treasure/triggers/using_item/
 
 # 変更のあったスロットのデータをリセットする
-    execute if data storage asset:sacred_treasure EquipmentChanges[00]._{_:false} run scoreboard players set @s Sneak.Mainhand 1
-    execute if data storage asset:sacred_treasure EquipmentChanges[01]._{_:false} run scoreboard players set @s Sneak.Offhand 1
+    execute if data storage asset:sacred_treasure EquipmentChanges[00]._{_:false} run scoreboard players set @s UsingItem.Mainhand 1
+    execute if data storage asset:sacred_treasure EquipmentChanges[01]._{_:false} run scoreboard players set @s UsingItem.Offhand 1
