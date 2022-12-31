@@ -1,4 +1,4 @@
-#> lib:array/math/multiply
+#> lib:array/math/mul_single
 #
 # 配列の各要素を、Mulで乗算した結果を返します。
 #
@@ -23,7 +23,7 @@
     data remove storage lib: Array
 
 # 再帰的に動かす
-    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/multiply
+    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/mul_single
 
 # 結果を反転
     function lib:array/reverse

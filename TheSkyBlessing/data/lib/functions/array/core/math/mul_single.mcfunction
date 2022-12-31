@@ -1,7 +1,7 @@
-#> lib:array/core/math/multiply
+#> lib:array/core/math/mul_single
 # @within function
-#   lib:array/math/multiply
-#   lib:array/core/math/multiply
+#   lib:array/math/mul_single
+#   lib:array/core/math/mul_single
 
 # 計算/結果代入
     data modify storage lib: Array append value -1d
@@ -12,4 +12,4 @@
 # 末尾削除
     data remove storage lib: CopiedArray[-1]
 # 要素がまだあるなら再帰
-    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/multiply
+    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/mul_single
