@@ -7,9 +7,9 @@
 # @input
 #   T extends any
 #   storage lib: ArrayA: [Numeric] @ N
-#   比較配列A
+#   加算元配列
 #   storage lib: ArrayB: [Numeric] @ N
-#   比較配列B
+#   加算元配列
 # @output
 #   storage lib: AddResult: [double] @ N
 # @api
