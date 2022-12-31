@@ -17,6 +17,9 @@
     data remove storage lib: SumResult
     data remove storage lib: MergeResult
     data remove storage lib: Mul
+    data remove storage lib: AddResult
     data remove storage lib: MulResult
+    data remove storage lib: SubResult
+    data remove storage lib: SqrResult
 # セッションフラグを消す
     data modify storage lib: ArrayLibSessionOpened set value false

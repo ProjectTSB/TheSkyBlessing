@@ -17,6 +17,9 @@
     data modify storage lib: SumResult set value 0
     data modify storage lib: MergeResult set value []
     data modify storage lib: Mul set value 1
+    data modify storage lib: AddResult set value []
     data modify storage lib: MulResult set value []
+    data modify storage lib: SubResult set value []
+    data modify storage lib: SqrResult set value []
 # セッションフラグを立てる
     data modify storage lib: ArrayLibSessionOpened set value true
