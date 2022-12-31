@@ -9,7 +9,6 @@
 #   係数
 # @output
 #   storage lib: MulResult: [double] @ N
-#   総和
 # @api
 
 # セッションチェック
