@@ -21,7 +21,7 @@
 # さよなら～
     kill @s
 # トリガーの呼び出し
-    function #asset:mob/death
+    function asset_manager:mob/triggers/death/call
 # 退避させたデータを戻す
     function asset_manager:common/context_id/pop
     function api:common/arguments/pop

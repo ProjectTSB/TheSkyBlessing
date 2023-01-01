@@ -15,9 +15,9 @@
     execute if entity @s[tag=AttackingEntity] as @a[scores={AttackingEntity=0..}] if score @s AttackingEntity = @e[tag=this,limit=1] AttackingEntity run tag @s add Victim
     execute if entity @s[tag=AttackedEntity] as @a[scores={AttackedEntity=0..}] if score @s AttackedEntity = @e[tag=this,limit=1] AttackedEntity run tag @s add Attacker
 # トリガーの呼び出し
-    function #asset:mob/tick
-    execute if entity @s[tag=AttackingEntity] run function #asset:mob/attack
-    execute if entity @s[tag=AttackedEntity] run function #asset:mob/hurt
+    function asset_manager:mob/triggers/tick/
+    execute if entity @s[tag=AttackingEntity] run function asset_manager:mob/triggers/attack/
+    execute if entity @s[tag=AttackedEntity] run function asset_manager:mob/triggers/hurt/
 # リセット
     data remove storage asset:context id
     data remove storage asset:context this

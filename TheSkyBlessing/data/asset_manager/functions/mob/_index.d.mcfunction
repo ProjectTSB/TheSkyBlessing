@@ -5,6 +5,7 @@
 # @within *
 #   api:mob/core/**
 #   asset:mob/*/register
+#   asset:mob/*/*/
 #   asset:mob/extends
 #   asset:mob/super.*
 #   asset_manager:mob/**

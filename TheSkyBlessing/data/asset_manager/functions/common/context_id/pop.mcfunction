@@ -8,6 +8,7 @@
 #   asset:mob/super.*
 #   api:sacred_treasure/*/from_id
 #   asset_manager:mob/triggers/death/manual
+#   asset_manager:mob/triggers/*/call_super_method
 #   api:spawner/subtract_hp
 
 # idを掃除
