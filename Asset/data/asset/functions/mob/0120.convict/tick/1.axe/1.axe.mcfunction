@@ -19,4 +19,6 @@
     execute if score @s 3C.Tick matches 23 rotated ~ 0 positioned ^ ^ ^9 run function asset:mob/0120.convict/tick/1.axe/3.impact
     execute if score @s 3C.Tick matches 25 rotated ~ 0 positioned ^ ^ ^11 run function asset:mob/0120.convict/tick/1.axe/3.impact
 
+# リセット
     execute if score @s 3C.Tick matches 45 run function asset:mob/0120.convict/tick/reset
+    execute if predicate api:global_vars/difficulty/min/hard if score @s 3C.Tick matches 35 run function asset:mob/0120.convict/tick/reset
