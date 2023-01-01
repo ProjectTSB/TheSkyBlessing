@@ -22,7 +22,7 @@
         execute store result score $Count Temporary if entity @e[type=skeleton,scores={MobID=90},distance=..50]
     # ノーマル以下なら6匹いたら2匹抹消
         execute if predicate api:global_vars/difficulty/max/normal if score $Count Temporary matches 6.. run tp @e[type=skeleton,scores={MobID=90},distance=..50,limit=2] ~ -999 ~
-    # ハード以上なら6匹いたらそのまま斬撃へ移行
-        execute if predicate api:global_vars/difficulty/min/hard if score $Count Temporary matches 6.. run function asset:mob/0120.convict/tick/2.summon/4.to_slash
+    # ハード以上なら4匹いたらそのまま斬撃へ移行
+        execute if predicate api:global_vars/difficulty/min/hard if score $Count Temporary matches 4.. run function asset:mob/0120.convict/tick/2.summon/4.to_slash
     # リセット
         scoreboard players reset $Count
