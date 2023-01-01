@@ -36,7 +36,7 @@
 
 # リセット
     execute if score @s 3C.Tick matches 130 run function asset:mob/0120.convict/tick/reset
-
+    execute if predicate api:global_vars/difficulty/min/hard if score @s 3C.Tick matches 80 run function asset:mob/0120.convict/tick/reset
 
 # 上の攻撃で一度でもヒットしてる場合ここへ飛ぶ
 # プレイヤーを捕まえる
