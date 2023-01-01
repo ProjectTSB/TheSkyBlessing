@@ -25,3 +25,4 @@
 
 # リセット
     execute if score @s 3C.Tick matches 55 run function asset:mob/0120.convict/tick/reset
+    execute if predicate api:global_vars/difficulty/min/hard if score @s 3C.Tick matches 35 run function asset:mob/0120.convict/tick/reset
