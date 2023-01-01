@@ -11,7 +11,7 @@
     tag @s add 3C.SkillSlash
 
 # スコアを変える
-    scoreboard players set @s 3C.Tick 16
+    scoreboard players set @s 3C.Tick 23
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.LeftArm set value [177f,322f,88f]
