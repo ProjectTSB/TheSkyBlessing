@@ -17,9 +17,9 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"神々の砥石で研がれたその剣は","color":"gray"}','{"text":"邪悪な敵に立ち向かうのに、十分なほどの鋭さを持つ。","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    data modify storage asset:sacred_treasure CostText set value 80
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
-    # data modify storage asset:sacred_treasure RemainingCount set value
+    data modify storage asset:sacred_treasure RemainingCount set value 80
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
