@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0120.convict/tick/2.summon/1.summon
 
+#> Private
+# @private
+    #declare score_holder $Count
+
 # プレイヤーを見る
     execute at @s facing entity @p eyes run function asset:mob/0120.convict/tick/move/teleport
 
@@ -16,7 +20,9 @@
 # いっぱいいる場合は数を制御する
     # 数のカウント
         execute store result score $Count Temporary if entity @e[type=skeleton,scores={MobID=90},distance=..50]
-    # 6匹いたら2匹抹消
-        execute if score $Count Temporary matches 6.. run tp @e[type=skeleton,scores={MobID=90},distance=..50,limit=2] ~ -999 ~
+    # ノーマル以下なら6匹いたら2匹抹消
+        execute if predicate api:global_vars/difficulty/max/normal if score $Count Temporary matches 6.. run tp @e[type=skeleton,scores={MobID=90},distance=..50,limit=2] ~ -999 ~
+    # ハード以上なら6匹いたらそのまま斬撃へ移行
+        execute if predicate api:global_vars/difficulty/min/hard if score $Count Temporary matches 6.. run function asset:mob/0120.convict/tick/2.summon/4.to_slash
     # リセット
         scoreboard players reset $Count
