@@ -13,10 +13,10 @@
     data modify storage api: Argument.UUID set value [I;1,2,120,0]
     data modify storage api: Argument.Amount set value -0.5
     data modify storage api: Argument.Operation set value "multiply"
-    execute as @a[distance=..2] run function api:player_modifier/receive_heal/add
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function api:player_modifier/receive_heal/add
 
 # スコアを与える
-    scoreboard players set @a[distance=..2] 3C.DebuffTime 160
+    scoreboard players set @a[tag=!PlayerShouldInvulnerable,distance=..2] 3C.DebuffTime 160
 # Schedulelooopするやつ
     schedule function asset:mob/0120.convict/player_process/1.loop 1t replace
 
