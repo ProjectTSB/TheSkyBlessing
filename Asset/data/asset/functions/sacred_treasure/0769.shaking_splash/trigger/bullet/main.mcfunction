@@ -21,7 +21,7 @@
     execute if entity @s[scores={LD.Tick=80..}] run kill @s
 
 # ブロックに当たった場合破裂
-    execute unless block ^ ^ ^0.9 #lib:no_collision run function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/hit
+    execute rotated ~ ~3 unless block ^ ^ ^0.9 #lib:no_collision run function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/hit
 
 # 移動
     tp @s ^ ^ ^0.9 ~ ~3
