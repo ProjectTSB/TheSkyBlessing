@@ -1,7 +1,7 @@
-#> lib:array/core/math/mul_single
+#> lib:array/core/math/scalar_multiply
 # @within function
-#   lib:array/math/mul_single
-#   lib:array/core/math/mul_single
+#   lib:array/math/scalar_multiply
+#   lib:array/core/math/scalar_multiply
 
 # 計算/結果代入
     data modify storage lib: Array append value -1d
@@ -12,4 +12,4 @@
 # 末尾削除
     data remove storage lib: CopiedArray[-1]
 # 要素がまだあるなら再帰
-    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/mul_single
+    execute if data storage lib: CopiedArray[0] run function lib:array/core/math/scalar_multiply
