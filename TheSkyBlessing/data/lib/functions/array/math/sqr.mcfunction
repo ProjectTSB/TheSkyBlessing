@@ -1,6 +1,6 @@
 #> lib:array/math/sqr
 #
-# 配列の各要素を、Mulで乗算した結果を返します。
+# 配列の各要素を、2乗した結果を返します。
 #
 # @input
 #   storage lib: Array: [any] @ N
