@@ -18,7 +18,7 @@
 # プレイヤーの上に移動しすぎたら降下(下30ブロック以内にプレイヤーがいて、下6ブロック以内にプレイヤーがいない場合降下)
     execute positioned ~-1 ~-30 ~-1 if entity @a[gamemode=!spectator,dx=2,dy=30,dz=2] at @s positioned ~-1 ~-6 ~-1 unless entity @a[gamemode=!spectator,dx=2,dy=6,dz=2] at @s if block ~ ~-1 ~ #lib:no_collision run tp @s ~ ~-1 ~
 # 近くのプレイヤーに水魔法ダメージ
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0081.snow_cloud/tick/4.near_damage
+    execute if entity @a[tag=!PlayerShouldInvulnerable,distance=..3] run function asset:mob/0081.snow_cloud/tick/4.near_damage
 
 # 一定周期の特殊能力(分岐functionに記載)
     execute if score @s 29.SnowTick matches 60.. run function asset:mob/0081.snow_cloud/tick/5.snowing

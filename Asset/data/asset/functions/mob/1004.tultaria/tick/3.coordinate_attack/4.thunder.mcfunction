@@ -24,7 +24,7 @@
         data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute at @e[type=marker,tag=RW.This,distance=..100] as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
+        execute at @e[type=marker,tag=RW.This,distance=..100] as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
 
