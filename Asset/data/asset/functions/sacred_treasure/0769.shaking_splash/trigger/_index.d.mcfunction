@@ -8,9 +8,9 @@
 #   asset:sacred_treasure/0769.shaking_splash/trigger/bullet/loop
     #declare tag LD.Bullet
 
-#> 弾が誤検知されないように使うTag
+#> Init Tag
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/4.shoot
-    #declare tag LD.Already
+    #declare tag LD.Init
 
 #> ビームで使うTag
 # @within function

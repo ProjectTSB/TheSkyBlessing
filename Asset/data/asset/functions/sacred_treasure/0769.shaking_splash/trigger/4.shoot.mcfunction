@@ -5,14 +5,16 @@
 # @within function asset:sacred_treasure/0769.shaking_splash/trigger/3.main
 
 # 弾用Markerを召喚
-    summon marker ~ ~ ~ {Tags:["Projectile","LD.Bullet"]}
+    execute anchored eyes positioned ^-0.35 ^-0.35 ^0.5 run summon marker ~ ~ ~ {Tags:["Projectile","LD.Bullet","LD.Init"]}
 
 # UserIDをコピー
-    scoreboard players operation @e[type=marker,tag=LD.Bullet,tag=!LD.Already,distance=..0.01,limit=1] LD.UserID = @s UserID
-    tp @e[type=marker,tag=LD.Bullet,tag=!LD.Already,distance=..0.01,limit=1] ^ ^1.3 ^ ~ ~
+    scoreboard players operation @e[type=marker,tag=LD.Bullet,tag=LD.Init,distance=..3,limit=1] LD.UserID = @s UserID
 
-# 念のために発射済みTagをつけておく
-    tag @e[type=marker,tag=LD.Bullet,tag=!LD.Already,distance=..2,limit=1] add LD.Already
+# 向き合わせ
+    execute as @e[type=marker,tag=LD.Bullet,tag=LD.Init,distance=..3,limit=1] at @s rotated as @p[tag=this] run tp @s ~ ~ ~ ~ ~
+
+# Init削除
+    tag @e[type=marker,tag=LD.Bullet,tag=LD.Init,distance=..3,limit=1] remove LD.Init
 
 # 弾用ループ開始
     schedule function asset:sacred_treasure/0769.shaking_splash/trigger/bullet/loop 1t replace

@@ -14,7 +14,7 @@
 
 
 # 発射
-    execute positioned ~ ~0.6 ~ positioned ^ ^ ^0.5 run function asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
+    execute anchored eyes positioned ^-0.35 ^-0.25 ^0.5 run function asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 450.0f
