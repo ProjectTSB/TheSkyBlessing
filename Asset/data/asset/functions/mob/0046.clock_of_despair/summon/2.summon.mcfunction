@@ -87,6 +87,8 @@
     summon glow_item_frame ~-4 ~ ~-4 {Tags:["1A.ClockItemFrame"],Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20220}}}
     summon glow_item_frame ~-4 ~ ~-8 {Tags:["1A.ClockItemFrame"],Facing:1b,ItemRotation:6b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20221}}}
 
+    summon glow_item_frame ~ ~ ~-8 {Tags:["1A.ClockItemFrame"],Facing:1b,ItemRotation:0b,Invulnerable:1b,Invisible:1b,Fixed:1b,Item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20224}}}
+
 # スコアを設定
     scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 1A.LifeTime -1
 
