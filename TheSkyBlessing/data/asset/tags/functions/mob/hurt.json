@@ -1,7 +1,5 @@
 {
     "values": [
-        "asset:mob/ex.1/_/hurt",
-        "asset:mob/ex.2/_/hurt",
-        "asset:mob/ex.3/_/hurt"
+        "asset:mob/ex.1/_/hurt"
     ]
 }
