@@ -12,7 +12,6 @@
     playsound entity.wither.shoot player @a ~ ~ ~ 0.1 1.8 0
     particle firework ~ ~0.6 ~ 0.3 0.3 0.3 0.25 20
 
-
 # 発射
     execute anchored eyes positioned ^-0.35 ^-0.25 ^0.5 run function asset:sacred_treasure/0769.shaking_splash/trigger/beam_recursive
 
