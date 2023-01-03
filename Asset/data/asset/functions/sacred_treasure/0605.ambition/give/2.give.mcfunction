@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 605
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value 'minecraft:iron_axe'
+    data modify storage asset:sacred_treasure Item set value "minecraft:iron_axe"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"下克上", "color":"dark_red"}'
 # 神器の説明文 (TextComponentString[])
@@ -46,8 +46,12 @@
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Urban', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Urban", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
