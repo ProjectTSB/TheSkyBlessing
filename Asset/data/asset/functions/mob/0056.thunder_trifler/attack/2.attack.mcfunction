@@ -29,7 +29,7 @@
 
 # マナ減少
     execute if predicate api:global_vars/difficulty/min/hard run scoreboard players set $Fluctuation Lib -8
-    execute as @p[tag=Victim,distance=..32] run function lib:mp/fluctuation
+    execute if predicate api:global_vars/difficulty/min/hard as @p[tag=Victim,distance=..32] run function lib:mp/fluctuation
 
 # 弓から剣に切り替えた場合speedを得る
     execute if entity @s[tag=!1K.Sword] run effect give @s speed 500 0 true
