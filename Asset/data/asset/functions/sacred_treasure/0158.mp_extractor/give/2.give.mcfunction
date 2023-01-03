@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "minecraft:carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '[{"text":"MP抽出機","color":"light_purple"}]'
+    data modify storage asset:sacred_treasure Name set value '[{"text":"MP抽出装置","color":"light_purple"}]'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"MPを瓶に詰めて抽出できる"}]','[{"text":"1部は天使の取り分として蒸発することがある"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"MPを瓶に詰めて抽出できる"}]','[{"text":"一部は天使の取り分となることがある"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"item.minecraft.glass_bottle"},{"text":" x1"}]'
 # 使用回数 (int) (オプション)

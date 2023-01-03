@@ -8,6 +8,8 @@
     function asset:sacred_treasure/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
+
+
 # 移動前の地点にパーティクルと音を残す
     function asset:sacred_treasure/0273.tonbo_gaeri/trigger/3.1.warp_effect
 
@@ -19,6 +21,9 @@
     execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] run function lib:damage/
 # リセット
     function lib:damage/reset
+
+# 低速落下を付与する
+    effect give @s slow_falling 1 1
 
 # 初期島に行くぞ！
     execute in minecraft:overworld run tp @s 23 3 24
