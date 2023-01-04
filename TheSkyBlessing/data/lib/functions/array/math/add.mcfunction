@@ -1,17 +1,17 @@
-#> lib:array/compare
+#> lib:array/math/add
 #
-# 配列と比較対象配列の各要素について同一であるかを比較し、その結果の配列を返します。
+# 2つの配列の各要素について、値を加算した結果を返します。
 #
 # ArrayA, ArrayBの要素の数は同一である必要があります。
 #
 # @input
 #   T extends any
-#   storage lib: ArrayA: [T] @ N
-#   比較配列A
-#   storage lib: ArrayB: [T] @ N
-#   比較配列B
+#   storage lib: ArrayA: [Numeric] @ N
+#   加算元配列
+#   storage lib: ArrayB: [Numeric] @ N
+#   加算元配列
 # @output
-#   storage lib: CompareResult: [{ _: { _: boolean } }] @ N
+#   storage lib: AddResult: [double] @ N
 # @api
 
 # セッションチェック
@@ -21,12 +21,13 @@
     data remove storage lib: Array
 
 # 再帰的に動かす
-    execute if data storage lib: ArrayA[0] if data storage lib: ArrayB[0] run function lib:array/core/compare
+    execute if data storage lib: ArrayA[0] if data storage lib: ArrayB[0] run function lib:array/core/math/add
 
 # 結果を反転
     function lib:array/reverse
-    data modify storage lib: CompareResult set from storage lib: Array
+    data modify storage lib: AddResult set from storage lib: Array
 
 # リセット
     data remove storage lib: Array
     scoreboard players reset $Temp Temporary
+    scoreboard players reset $Temp2 Temporary
