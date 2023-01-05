@@ -58,7 +58,7 @@
     execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 store result storage api: Pos[2] double 0.01 run scoreboard players get $Cur.Pos.Z Temporary
     execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Pos.Data set from storage api: Pos
 # CurSquaredMagnitudeも前tickものを採用する
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Pos.Data set from storage api: Pos
+    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.SquaredMagnitude Temporary = $Prv.SquaredMagnitude Temporary
 # 計算途中で算出されたDiffを次のDiffとして扱う
     scoreboard players operation @s PlayerPosDiff.X = $Cur.Diff.X Temporary
     scoreboard players operation @s PlayerPosDiff.Y = $Cur.Diff.Y Temporary
