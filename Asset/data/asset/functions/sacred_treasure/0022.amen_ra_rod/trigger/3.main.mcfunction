@@ -16,4 +16,4 @@
     execute at @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..30] run particle end_rod ~ ~ ~ 1 1 1 0.1 100 force @a[distance=..30]
 
 # SE
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 20 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 20 1

@@ -6,7 +6,7 @@
 
 
 # 演出
-    playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 1 1
+    playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1 1
 
     execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..10] run particle dust 0.867 0.667 0.161 1 ~ ~1 ~ 0 1 0 0 100
 

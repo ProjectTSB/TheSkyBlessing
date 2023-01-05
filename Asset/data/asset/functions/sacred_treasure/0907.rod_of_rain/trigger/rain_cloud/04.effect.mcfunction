@@ -52,5 +52,5 @@
     tag @e[type=#lib:living,tag=P8.TargetEntity,distance=..10] remove P8.TargetEntity
     tag @s remove P8.This
     tag @p[tag=P8.Owner] remove P8.Owner
-    data remove storage lib: Argument
+    function lib:heal/reset
     scoreboard players reset $AttackWater Temporary

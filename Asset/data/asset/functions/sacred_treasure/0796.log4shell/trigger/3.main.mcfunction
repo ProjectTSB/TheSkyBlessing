@@ -16,9 +16,9 @@
     clear @s #minecraft:logs 1
 
 # 演出
-    playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 2
-    playsound minecraft:entity.zombie.attack_wooden_door master @s ~ ~ ~ 1 0
-    playsound minecraft:entity.generic.explode master @a ~ ~ ~ 0.8 2
+    playsound minecraft:entity.zombie.attack_wooden_door player @s ~ ~ ~ 1 2
+    playsound minecraft:entity.zombie.attack_wooden_door player @s ~ ~ ~ 1 0
+    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 0.8 2
 
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["M4.SpreadMarker"]}

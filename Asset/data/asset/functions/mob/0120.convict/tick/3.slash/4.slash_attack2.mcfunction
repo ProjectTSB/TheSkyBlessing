@@ -7,7 +7,7 @@
 # 範囲内のプレイヤーに割合ダメージ
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
 
 # 体力回復量-50%を付与
     data modify storage api: Argument.UUID set value [I;1,2,120,0]

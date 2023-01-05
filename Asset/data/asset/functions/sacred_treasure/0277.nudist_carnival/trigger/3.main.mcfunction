@@ -17,4 +17,4 @@
     # プレイヤーを回復
         function lib:heal/
     # リセット
-        data remove storage lib: Argument
+        function lib:heal/reset

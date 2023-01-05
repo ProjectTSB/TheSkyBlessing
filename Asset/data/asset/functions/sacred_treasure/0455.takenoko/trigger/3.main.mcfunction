@@ -16,3 +16,4 @@
         execute store result storage lib: Argument.Heal double 0.01 run data get storage api: Health 50
         function lib:heal/modifier
         function lib:heal/
+        function lib:heal/reset

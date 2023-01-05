@@ -18,7 +18,7 @@
 
 # 演出
     particle minecraft:campfire_cosy_smoke ~ ~ ~ 0 5 0 0.1 100 force @a[distance=..30]
-    playsound minecraft:entity.creeper.death master @s ~ ~ ~ 20 0.2
+    playsound minecraft:entity.creeper.death player @s ~ ~ ~ 20 0.2
 
 # 天気を切り替える
     execute if score @s Temporary matches 0 run weather rain

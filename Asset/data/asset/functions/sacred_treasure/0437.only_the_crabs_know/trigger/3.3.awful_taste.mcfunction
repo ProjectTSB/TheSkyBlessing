@@ -14,4 +14,4 @@
 
 # 演出
     tellraw @a[distance=..10] [{"selector":"@s","bold":true},{"text":"は酷い味だと酷評した"}]
-    playsound entity.llama.ambient master @a ~ ~ ~ 1.0 1.0
+    playsound entity.llama.ambient player @a ~ ~ ~ 1.0 1.0
