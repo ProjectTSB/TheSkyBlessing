@@ -12,7 +12,7 @@
     tag @s remove FQ.Fullset
 
 # 喋る
-    playsound minecraft:entity.allay.item_thrown ambient @a ~ ~ ~ 1 1.4
+    playsound minecraft:entity.allay.item_thrown player @a ~ ~ ~ 1 1.4
 
 # ランダムでメッセージを垂れ流す
     # 疑似乱数取得

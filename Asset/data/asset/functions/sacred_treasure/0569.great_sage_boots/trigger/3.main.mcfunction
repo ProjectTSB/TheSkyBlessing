@@ -41,7 +41,7 @@
 
 # 演出
     particle end_rod ~ ~ ~ 0.3 0.1 0.3 0.1 10 normal @a
-    playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 0.8 1
+    playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 0.8 1
 
 #セット効果用のファンクション実行（実行は頭のほうで）
     execute if data storage asset:context id.all{head:566,chest:567,legs:568,feet:569} run function asset:sacred_treasure/0566.great_sage_helmet/equip/4.fullset
