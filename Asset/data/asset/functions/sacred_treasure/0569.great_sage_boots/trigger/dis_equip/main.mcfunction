@@ -5,23 +5,23 @@
 # @within function asset:sacred_treasure/0569.great_sage_boots/trigger/dis_equip/
 
 # 魔法耐性+7.5%
-    data modify storage api: Argument.UUID set value [I;1,1,596,3]
+    data modify storage api: Argument.UUID set value [I;1,1,569,3]
     function api:player_modifier/defense/magic/remove
 
 # 魔法攻撃+7.5%
-    data modify storage api: Argument.UUID set value [I;1,1,596,3]
+    data modify storage api: Argument.UUID set value [I;1,1,569,3]
     function api:player_modifier/attack/magic/remove
 
 # MP回復量+10%
-    data modify storage api: Argument.UUID set value [I;1,1,596,3]
+    data modify storage api: Argument.UUID set value [I;1,1,569,3]
     function api:player_modifier/mp_regen/remove
 
 # 物理耐性-10%
-    data modify storage api: Argument.UUID set value [I;1,1,596,3]
+    data modify storage api: Argument.UUID set value [I;1,1,569,3]
     function api:player_modifier/defense/physical/remove
 
 # 物理攻撃-17.5%
-    data modify storage api: Argument.UUID set value [I;1,1,596,3]
+    data modify storage api: Argument.UUID set value [I;1,1,569,3]
     function api:player_modifier/attack/physical/remove
 
 # フルセット外す
