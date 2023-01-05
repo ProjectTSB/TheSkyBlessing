@@ -13,9 +13,9 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute as @p[gamemode=!creative,gamemode=!spectator,distance=..2] run function lib:damage/
+    execute as @p[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
 # リセット
     function lib:damage/reset
 
 # プレイヤーにダメージを与えたらタグを付与
-    execute if entity @p[gamemode=!creative,gamemode=!spectator,distance=..2] run tag @s add 4V.SkillTackleDamageHit
+    execute if entity @p[tag=!PlayerShouldInvulnerable,distance=..2] run tag @s add 4V.SkillTackleDamageHit
