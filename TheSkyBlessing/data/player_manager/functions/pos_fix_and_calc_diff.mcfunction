@@ -17,6 +17,7 @@
     #declare score_holder $Cur.Diff.X
     #declare score_holder $Cur.Diff.Y
     #declare score_holder $Cur.Diff.Z
+    #declare score_holder $Temp
 
 # PlayerStorage呼び出し
     function oh_my_dat:please
@@ -35,30 +36,35 @@
     scoreboard players operation $Cur.Diff.Y Temporary -= $Prv.Pos.Y Temporary
     scoreboard players operation $Cur.Diff.Z Temporary -= $Prv.Pos.Z Temporary
 # 現tickのベクトルの大きさの二乗を計算する
-    scoreboard players operation $Cur.Diff.X Temporary *= $Cur.Diff.X Temporary
-    scoreboard players operation $Cur.Diff.Y Temporary *= $Cur.Diff.Y Temporary
-    scoreboard players operation $Cur.Diff.Z Temporary *= $Cur.Diff.Z Temporary
-
     scoreboard players operation $Cur.SquaredMagnitude Temporary = $Cur.Diff.X Temporary
-    scoreboard players operation $Cur.SquaredMagnitude Temporary += $Cur.Diff.Y Temporary
-    scoreboard players operation $Cur.SquaredMagnitude Temporary += $Cur.Diff.Z Temporary
+    scoreboard players operation $Cur.SquaredMagnitude Temporary *= $Cur.Diff.X Temporary
 
-    scoreboard players operation $Cur.SquaredMagnitude Temporary /= $100 Const
-# 前tickの差分が十分な状態(0.05m/tick,1m/sec)でDiffが急に0になったらおそらくPosのパケロスが発生してるので、PosとDiffに前tickものを採用する
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Pos.X Temporary += @s PlayerPosDiff.X
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Pos.Y Temporary += @s PlayerPosDiff.Y
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Pos.Z Temporary += @s PlayerPosDiff.Z
+    scoreboard players operation $Temp Temporary = $Cur.Diff.Y Temporary
+    scoreboard players operation $Temp Temporary *= $Cur.Diff.Y Temporary
+    scoreboard players operation $Cur.SquaredMagnitude Temporary += $Temp Temporary
 
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Diff.X Temporary = @s PlayerPosDiff.X
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Diff.Y Temporary = @s PlayerPosDiff.Y
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.Diff.Z Temporary = @s PlayerPosDiff.Z
+    scoreboard players operation $Temp Temporary = $Cur.Diff.Z Temporary
+    scoreboard players operation $Temp Temporary *= $Cur.Diff.Z Temporary
+    scoreboard players operation $Cur.SquaredMagnitude Temporary += $Temp Temporary
+# 前tickの差分が十分な状態でDiffが急に0になったらおそらくPosのパケロスが発生してるので、PosとDiffに前tickものを採用する
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players set @s PosPacketLossDetectAfterTick 0
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Pos.X Temporary += @s PlayerPosDiff.X
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Pos.Y Temporary += @s PlayerPosDiff.Y
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Pos.Z Temporary += @s PlayerPosDiff.Z
+
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Diff.X Temporary = @s PlayerPosDiff.X
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Diff.Y Temporary = @s PlayerPosDiff.Y
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.Diff.Z Temporary = @s PlayerPosDiff.Z
 # Posの修正を行う
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 store result storage api: Pos[0] double 0.01 run scoreboard players get $Cur.Pos.X Temporary
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 store result storage api: Pos[1] double 0.01 run scoreboard players get $Cur.Pos.Y Temporary
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 store result storage api: Pos[2] double 0.01 run scoreboard players get $Cur.Pos.Z Temporary
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Pos.Data set from storage api: Pos
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 store result storage api: Pos[0] double 0.01 run scoreboard players get $Cur.Pos.X Temporary
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 store result storage api: Pos[1] double 0.01 run scoreboard players get $Cur.Pos.Y Temporary
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 store result storage api: Pos[2] double 0.01 run scoreboard players get $Cur.Pos.Z Temporary
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Pos.Data set from storage api: Pos
 # CurSquaredMagnitudeも前tickものを採用する
-    execute if score $Prv.SquaredMagnitude Temporary matches 25.. if score $Cur.SquaredMagnitude Temporary matches 0 run scoreboard players operation $Cur.SquaredMagnitude Temporary = $Prv.SquaredMagnitude Temporary
+    execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.SquaredMagnitude Temporary = $Prv.SquaredMagnitude Temporary
+# タグ付け替え
+    scoreboard players reset @s[scores={PosPacketLossDetectAfterTick=2}] PosPacketLossDetectAfterTick
+    scoreboard players add @s[scores={PosPacketLossDetectAfterTick=0..}] PosPacketLossDetectAfterTick 1
 # 計算途中で算出されたDiffを次のDiffとして扱う
     scoreboard players operation @s PlayerPosDiff.X = $Cur.Diff.X Temporary
     scoreboard players operation @s PlayerPosDiff.Y = $Cur.Diff.Y Temporary
@@ -87,3 +93,4 @@
     scoreboard players reset $Cur.Diff.X Temporary
     scoreboard players reset $Cur.Diff.Y Temporary
     scoreboard players reset $Cur.Diff.Z Temporary
+    scoreboard players reset $Temp Temporary
