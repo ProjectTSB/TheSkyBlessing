@@ -7,9 +7,9 @@
 # ダメージ設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 85f
-    # 魔法属性
+    # 物理属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # 雷属性
+    # 無属性
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         execute as @a if score @s UserID = @e[type=zombie,tag=8E.Gun,limit=1] 8E.UserID run function lib:damage/modifier
