@@ -8,7 +8,7 @@
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
 
 # 移動先を設置
-    summon marker ~ ~-0.5 ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+    summon marker ~ ~-1.5 ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
 
 # 行動中タグ付与
     tag @s add RW.Move
