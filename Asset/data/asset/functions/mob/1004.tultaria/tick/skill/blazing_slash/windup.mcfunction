@@ -4,6 +4,16 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/blazing_slash/tick
 
+# 右か左をランダムで選択
+    # 疑似乱数取得
+        execute store result score $Random Temporary run function lib:random/
+        scoreboard players operation $Random Temporary %= $1 Const
+    # 結果によって方向を選ぶ
+        execute if score $Random Temporary matches 0 facing entity @p feet run tp @s ~ ~ ~ ~90 ~
+        execute if score $Random Temporary matches 1 facing entity @p feet run tp @s ~ ~ ~ ~-90 ~
+    # リセット
+        scoreboard players reset $Random Temporary
+
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [-45f,0f,-75f]
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [0f,15f,25f]

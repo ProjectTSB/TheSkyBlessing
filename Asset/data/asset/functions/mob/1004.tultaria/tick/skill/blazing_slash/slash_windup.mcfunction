@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/blazing_slash/tick
 
+# こっちを向く
+    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
+
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [-45f,0f,-75f]
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-150f,45f,0f]
