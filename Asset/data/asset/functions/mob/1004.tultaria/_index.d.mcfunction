@@ -29,6 +29,7 @@
     #declare tag RW.ChaseMarker2
     #declare tag RW.ChaseMarker3
     #declare tag RW.ChaseMarker4
+    #declare tag RW.DisableInertia
     ## ボスのHPのタグ
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per
@@ -44,6 +45,7 @@
     #declare tag RW.SkillDashSlash
     #declare tag RW.SkillSummon
     #declare tag RW.SkillLaser
+    #declare tag RW.SkillBlazingSlash
     ## ボスの使う大技のタグ
     #declare tag RW.SkillDeadly1
     #declare tag RW.SkillDeadly2
@@ -61,6 +63,7 @@
     #declare tag RW.SlashSweep
     #declare tag RW.SlashInit
     #declare tag RW.IceSweep
+    #declare tag RW.FireSweep
     #declare tag RW.TargetMarker
     #declare tag RW.TargetMarkerInit
     #declare tag S2.Wait

@@ -15,4 +15,4 @@
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
 
 # 嘘慣性を設定
-    scoreboard players set @s RW.FakeInertia 13
+    scoreboard players set @s[tag=!RW.DisableInertia] RW.FakeInertia 13
