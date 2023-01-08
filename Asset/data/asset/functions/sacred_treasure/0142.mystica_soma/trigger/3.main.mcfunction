@@ -12,16 +12,18 @@
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
     particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # MP回復
-    scoreboard players set $Fluctuation Lib 10000
+    execute store result storage asset:temp 3Y.Temp double 0.55 run function lib:mp/get_max
+    execute store result score $Fluctuation Lib run data get storage asset:temp 3Y.Temp
     function lib:mp/fluctuation
 
 # HP回復
-    data modify storage lib: Argument.Heal set value 10000f
+    execute store result storage lib: Argument.Heal double 0.0040 run attribute @s generic.max_health get 100
     function lib:heal/modifier
     function lib:heal/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
+    data remove storage asset:temp 3Y.Temp

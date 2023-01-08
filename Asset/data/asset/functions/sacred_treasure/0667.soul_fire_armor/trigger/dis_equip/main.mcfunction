@@ -12,15 +12,19 @@
 
 # 物理攻撃
     data modify storage api: Argument.UUID set value [I;1,1,667,3]
-    function api:player_modifier/attack/physical/remove
+    function api:modifier/attack/physical/remove
 
 # 火耐性
     data modify storage api: Argument.UUID set value [I;1,1,667,3]
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove
 
 # 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,667,3]
-    function api:player_modifier/attack/fire/remove
+    function api:modifier/attack/fire/remove
+
+# MP回復
+    data modify storage api: Argument.UUID set value [I;1,1,667,3]
+    function api:modifier/mp_regen/remove
 
 # 最大体力
     attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-029b00000003

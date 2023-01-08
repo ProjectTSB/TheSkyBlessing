@@ -20,6 +20,11 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:4b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"minecraft:iron_sword",Count:1b}
 
+# 取引 プロテクション
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:2b}
+    data modify storage asset:trader Trades[-1].Sell set value 966
+
 # 取引 望遠鏡
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:8b}
@@ -42,7 +47,7 @@
 
 # 取引 見通しの書
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:5b}
     data modify storage asset:trader Trades[-1].Sell set value 1
 
 # 登録

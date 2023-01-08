@@ -28,7 +28,7 @@
     function lib:damage/reset
 
 # マナ減少
-    scoreboard players set $Fluctuation Lib -30
+    scoreboard players set $Fluctuation Lib -15
     execute as @p[tag=Victim,distance=..50] run function lib:mp/fluctuation
 
 # 弓から剣に切り替えた場合speedを得る

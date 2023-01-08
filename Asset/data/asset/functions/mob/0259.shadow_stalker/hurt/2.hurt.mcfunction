@@ -11,5 +11,5 @@
     execute if entity @s[tag=77.Dark] at @a[gamemode=!spectator,distance=..30,sort=random,limit=1] run function lib:spread_entity/
 
 # 演出
-    playsound minecraft:entity.vex.charge hostile @p ~ ~ ~ 1 2
-    playsound minecraft:entity.spider.hurt hostile @p ~ ~ ~ 1 1.5
+    playsound minecraft:entity.vex.charge hostile @a ~ ~ ~ 1 2
+    playsound minecraft:entity.spider.hurt hostile @a ~ ~ ~ 1 1.5

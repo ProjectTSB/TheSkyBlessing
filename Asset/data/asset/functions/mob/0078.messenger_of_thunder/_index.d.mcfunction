@@ -1,7 +1,7 @@
 #> asset:mob/0078.messenger_of_thunder/_index.d
 # @private
-#
-# > Tag
+
+#> Tag
 # @within function asset:mob/0078.messenger_of_thunder/**
     #declare tag 26.HPLess50Per
 

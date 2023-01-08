@@ -1,8 +1,11 @@
 {
     "values": [
         "asset:sacred_treasure/0651.red_flame_chestplate/trigger/rejoin_process",
+        "asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/rejoin_process",
+        "asset:sacred_treasure/0647.thorn_armor/trigger/rejoin_process",
+        "asset:sacred_treasure/0976.brave_sword/trigger/rejoin_process",
         "asset:sacred_treasure/0953.meteor_rain/trigger/rejoin_process",
-        "asset:sacred_treasure/0981.soufire_shoot/trigger/rejoin_process",
+        "asset:sacred_treasure/0981.soulfire_burst/trigger/rejoin_process",
         "asset:sacred_treasure/0295.call_elemental_familiar/trigger/rejoin_process",
         "asset:sacred_treasure/0973.call_rod_spirit/trigger/rejoin_process",
         "asset:mob/0120.convict/rejoin_process",

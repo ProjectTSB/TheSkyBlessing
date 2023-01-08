@@ -16,18 +16,12 @@
     tag @e[type=#lib:living,tag=!Enemy.Boss,tag=!Uninterferable,predicate=asset:sacred_treasure/0253.holy_barrier/is_angry] add 71.Target
 
 #音
-    playsound minecraft:block.respawn_anchor.deplete master @a[distance=..16] ~ ~ ~ 1 1 1
-    playsound entity.experience_orb.pickup master @a[distance=..16] ~ ~ ~ 1 1.2 1
+    playsound minecraft:block.respawn_anchor.deplete player @a[distance=..16] ~ ~ ~ 1 1 1
+    playsound entity.experience_orb.pickup player @a[distance=..16] ~ ~ ~ 1 1.2 1
 
 # particle
     execute anchored eyes rotated ~ 0 positioned ^ ^ ^0.2 run function asset:sacred_treasure/0253.holy_barrier/trigger/3.1.particle_barrier
     execute at @e[type=#lib:living,tag=71.Target] run function asset:sacred_treasure/0253.holy_barrier/trigger/3.2.particle_reflect
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 9999f
-    data modify storage lib: Argument.AttackType set value "Magic"
-    data modify storage lib: Argument.FixedDamage set value true
-    data modify storage lib: Argument.BypassResist set value true
-    function lib:damage/modifier
-    execute as @e[type=#lib:living,tag=71.Target] run function lib:damage/
-    function lib:damage/reset
+    execute as @e[type=#lib:living,tag=71.Target] run function asset:sacred_treasure/0253.holy_barrier/trigger/3.3.damage

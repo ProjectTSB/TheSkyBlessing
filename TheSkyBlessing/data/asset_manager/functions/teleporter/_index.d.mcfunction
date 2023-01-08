@@ -9,13 +9,16 @@
     #declare storage asset:teleporter
 
 #> Teleporter
-# @within asset_manager:teleporter/**
+# @within
+#   asset_manager:teleporter/**
+#   api:teleporter/set_activation_state/from_nearest
     #declare tag Teleporter
 
 #> TeleportPoint
 # @within asset_manager:teleporter/tick/**
     #declare tag FromTeleporter
-    #declare tag TeleporterInit
+    #declare tag TeleporterInitialized
+    #declare tag TeleporterInitializing
     #declare tag TPStar
     #declare tag TPStar.White
     #declare tag TPStar.Aqua
@@ -29,3 +32,7 @@
 #> OpenDeclares
 # @within asset_manager:island/dispel/register_tp
     #declare tag Teleporter
+
+#> TeleporterExists
+# @within asset_manager:teleporter/update_activation_state/*
+    #declare score_holder $TeleporterExists

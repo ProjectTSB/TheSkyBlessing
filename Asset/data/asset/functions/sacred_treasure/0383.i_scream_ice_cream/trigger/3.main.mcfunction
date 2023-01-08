@@ -16,7 +16,7 @@
     # 疑似乱数取得
         execute store result score $Random Temporary run function lib:random/
     # ほしい範囲に剰余算
-        scoreboard players operation $Random Temporary %= $18 Const
+        scoreboard players operation $Random Temporary %= $20 Const
     # メッセージ出力
         execute if score $Random Temporary matches 0 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" アイスで冷やす？ああ、いいっすね！","color":"aqua","bold":true}]
         execute if score $Random Temporary matches 1 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" アイススケートする？ああ、いいっすけど！","color":"aqua","bold":true}]
@@ -36,12 +36,14 @@
         execute if score $Random Temporary matches 15 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" 愛する人とアイス食う！","color":"aqua","bold":true}]
         execute if score $Random Temporary matches 16 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" もう冬かい？なんて不愉快！","color":"aqua","bold":true}]
         execute if score $Random Temporary matches 17 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" 冷めているサメ！","color":"aqua","bold":true}]
+        execute if score $Random Temporary matches 18 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" 紅茶が凍っちゃった！","color":"aqua","bold":true}]
+        execute if score $Random Temporary matches 19 run tellraw @a [{"text":"<","color":"aqua","bold":true},{"selector":"@s","bold":true},{"text":">","bold":true},{"text":" サム言い寄る、寒い夜！","color":"aqua","bold":true}]
 
     # リセット
         scoreboard players reset $Random Temporary
 
 # 演出
-    playsound minecraft:ui.toast.challenge_complete ambient @a ~ ~ ~ 1 1.1
+    playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 1 1.1
     playsound minecraft:block.glass.break player @a ~ ~ ~ 1 1
     particle minecraft:block blue_ice ~ ~3 ~ 4 4 4 10 1000
     particle minecraft:block ice ~ ~3 ~ 4 4 4 10 1000

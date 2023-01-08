@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"無限にじゃがいもが出てくる袋","color":"dark_aqua","bold":true,"italic":false}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value
+    data modify storage asset:sacred_treasure CostText set value '[{"translate":"item.minecraft.bone_meal"},{"text":" x1 (25%)"}]'
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照

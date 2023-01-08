@@ -10,8 +10,8 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 1
-    playsound entity.blaze.shoot master @a ~ ~ ~ 1 0.5
+    playsound entity.blaze.shoot player @a ~ ~ ~ 1 1
+    playsound entity.blaze.shoot player @a ~ ~ ~ 1 0.5
 
 # 弾を召喚
     summon area_effect_cloud ~ ~ ~ {Particle:"block air",Duration:20,Tags:["A9.First","A9.Fire","Projectile"]}

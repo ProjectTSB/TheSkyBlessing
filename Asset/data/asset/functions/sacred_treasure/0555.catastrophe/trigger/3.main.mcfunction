@@ -12,7 +12,7 @@
         execute at @e[type=#lib:living,tag=Attacker,limit=1] run particle soul_fire_flame ~ ~0.5 ~ 0.4 0.6 0.4 0 100 force @a
 
     # ダメージ
-        data modify storage lib: Argument set value {Damage:20,AttackType:Magic,ElementType:None,BypassResist:false}
+        data modify storage lib: Argument set value {Damage:600,AttackType:Magic,ElementType:None,FixedDamage:false}
         function lib:damage/modifier
         execute as @e[type=#lib:living,tag=Attacker,limit=1] run function lib:damage/
 

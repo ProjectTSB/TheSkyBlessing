@@ -7,7 +7,7 @@
 # 元となるMobを召喚する
     summon skeleton ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiBurn"],DeathLootTable:"asset:mob/death/0239.poltergeist_bow"}
 # ID (int)
-    data modify storage asset:mob ID set value 289
+    data modify storage asset:mob ID set value 239
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy"
 # 干渉可能か否か (boolean)
@@ -37,7 +37,7 @@
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 1
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    data modify storage asset:mob Defense set value 13
+    # data modify storage asset:mob Defense set value
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     # data modify storage asset:mob SpecialDefense set value
 # 移動速度 (double) (オプション)

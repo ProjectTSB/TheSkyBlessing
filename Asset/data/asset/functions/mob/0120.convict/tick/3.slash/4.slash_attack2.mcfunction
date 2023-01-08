@@ -7,16 +7,13 @@
 # 範囲内のプレイヤーに割合ダメージ
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
-
-# リセット
-    function lib:damage/reset
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/0120.convict/tick/3.slash/5.percent_damage
 
 # 体力回復量-50%を付与
     data modify storage api: Argument.UUID set value [I;1,2,120,0]
     data modify storage api: Argument.Amount set value -0.5
     data modify storage api: Argument.Operation set value "multiply"
-    execute as @a[distance=..2] run function api:player_modifier/heal/add
+    execute as @a[distance=..2] run function api:modifier/heal/add
 
 # スコアを与える
     scoreboard players set @a[distance=..2] 3C.DebuffTime 160

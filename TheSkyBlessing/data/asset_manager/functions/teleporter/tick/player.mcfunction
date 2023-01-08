@@ -15,7 +15,7 @@
 # テレポート後のタグ解除処理
     execute if entity @s[tag=SuppressTeleport,predicate=!lib:is_sneaking] run tag @s remove SuppressTeleport
 # キャンセル処理
-    execute if entity @s[tag=TeleporterInit] run function asset_manager:teleporter/tick/cancel/check
+    execute unless entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/cancel/check
     execute if entity @s[tag=TPCancel] run function asset_manager:teleporter/tick/cancel/
 
 # リセット

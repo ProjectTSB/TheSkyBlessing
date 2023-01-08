@@ -11,8 +11,6 @@
         execute store result storage lib: Argument.Damage float 0.4 run attribute @s minecraft:generic.max_health get 1
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
-    # 耐性エフェクトを無視するか否か
-        data modify storage lib: Argument.BypassResist set value true
     # 補正をしない
         data modify storage lib: Argument.FixedDamage set value true
     # 死亡メッセージ

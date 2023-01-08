@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    playsound block.anvil.use master @a ~ ~ ~ 0.5 0.5 0
+    playsound block.anvil.use player @a ~ ~ ~ 0.5 0.5 0
     particle enchanted_hit ~ ~1 ~ 0.2 0.2 0.2 1 30
 
 # プレイヤーにタグを付与

@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"星の音","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"「やがて星となって再会しよう。」","color":"gray"}]','[{}]','[{"text":"前方に星を発射する","color":"gray"}]','[{"text":"使用時のMPの割合により","color":"gray"}]','[{"text":"発射する星の数が変化する","color":"gray"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"「やがて星となって再会しよう。」","color":"gray"}]','""','[{"text":"前方に星を発射する","color":"gray"}]','[{"text":"使用時のMPの割合により","color":"gray"}]','[{"text":"発射する星の数が変化する","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -39,7 +39,7 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 30
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 100
+    data modify storage asset:sacred_treasure MPCost set value 60
 # MP必要量 (int) (オプション)
     # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)

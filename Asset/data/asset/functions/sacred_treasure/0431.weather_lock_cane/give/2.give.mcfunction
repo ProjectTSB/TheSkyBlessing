@@ -35,7 +35,7 @@
 # 神器のクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
-    data modify storage asset:sacred_treasure SpecialCooldown set value 18000
+    data modify storage asset:sacred_treasure SpecialCooldown set value 6000
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki']
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

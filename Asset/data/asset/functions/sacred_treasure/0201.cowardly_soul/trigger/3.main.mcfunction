@@ -8,5 +8,12 @@
     function asset:sacred_treasure/common/use/offhand
 
 # ここから先は神器側の効果の処理を書く
+
+# 落下速度低下付与
+    effect give @s minecraft:slow_falling 1 1
+
+# vfx
     particle minecraft:nautilus ~ ~1.25 ~ 0.0 0.5 0.0 0.5 75
+
+# ワープする
     execute in overworld run tp @s 23.5 3.0 24.5

@@ -17,12 +17,12 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
-    function api:player_modifier/defense/water/add
+    function api:modifier/defense/water/add
 
 # 演出
     particle falling_dust diamond_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @a
     particle falling_dust snow_block ~ ~1.7 ~ 0.4 0.2 0.4 0 6 normal @a
-    playsound minecraft:block.glass.break master @a ~ ~ ~ 0.4 1.2 0
+    playsound minecraft:block.glass.break player @a ~ ~ ~ 0.4 1.2 0
 
 # フルセット
 execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/trigger/4.fullset
