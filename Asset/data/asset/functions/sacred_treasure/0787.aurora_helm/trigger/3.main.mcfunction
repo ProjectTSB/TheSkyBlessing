@@ -18,31 +18,31 @@
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
+    function api:modifier/defense/magic/add
 
 # 雷耐性+10%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/thunder/add
+    function api:modifier/defense/thunder/add
 
 # 雷攻撃+5%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/thunder/add
+    function api:modifier/attack/thunder/add
 
 # MP回復+5%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/mp_regen/add
+    function api:modifier/mp_regen/add
 
 # 物理耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,787,6]
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
+    function api:modifier/defense/physical/add
 
 # フルセット検知
     execute if data storage asset:context id.all{head:787,chest:788,legs:789,feet:790} run function asset:sacred_treasure/0787.aurora_helm/trigger/fullset/equip
