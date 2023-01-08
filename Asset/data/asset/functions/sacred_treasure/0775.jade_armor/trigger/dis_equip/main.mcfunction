@@ -8,16 +8,16 @@
 
 # 水耐性+5%
     data modify storage api: Argument.UUID set value [I;1,1,775,6]
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # 水攻撃+5%
     data modify storage api: Argument.UUID set value [I;1,1,775,6]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
 
 # 雷耐性-5%
     data modify storage api: Argument.UUID set value [I;1,1,775,6]
-    function api:player_modifier/defense/thunder/remove
+    function api:modifier/defense/thunder/remove
 
 # MP回復量+4%
     data modify storage api: Argument.UUID set value [I;1,1,775,6]
-    function api:player_modifier/mp_regen/remove
+    function api:modifier/mp_regen/remove
