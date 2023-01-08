@@ -6,7 +6,7 @@
 
 # リセット
     data modify storage api: Argument.UUID set value [I;1,1,730,0]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
     tag @s remove KA.Buff
     tag @s remove KA.RejoinTarget
     scoreboard players reset @s KA.Tick
