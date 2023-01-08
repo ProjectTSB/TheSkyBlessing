@@ -13,31 +13,31 @@
     data modify storage api: Argument.UUID set value [I;1,1,569,3]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/magic/add
+    function api:modifier/defense/magic/add
 
 # 魔法攻撃+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,569,3]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/magic/add
+    function api:modifier/attack/magic/add
 
 # MP回復量+10%
     data modify storage api: Argument.UUID set value [I;1,1,569,3]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/mp_regen/add
+    function api:modifier/mp_regen/add
 
 # 物理耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,569,3]
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/physical/add
+    function api:modifier/defense/physical/add
 
 # 物理攻撃-17.5%
     data modify storage api: Argument.UUID set value [I;1,1,569,3]
     data modify storage api: Argument.Amount set value -0.175
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/physical/add
+    function api:modifier/attack/physical/add
 
 # 演出
     particle end_rod ~ ~ ~ 0.3 0.1 0.3 0.1 10 normal @a
