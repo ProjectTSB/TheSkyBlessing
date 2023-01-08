@@ -36,10 +36,10 @@
     execute anchored eyes rotated ~ ~10 positioned ^ ^-0.5 ^1 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/particle
 
 # Init
-    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=RW.SlashInit,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/1.melee_attack/slash_entity/init
+    execute rotated ~ 0 anchored eyes positioned ^ ^-1.8 ^ as @e[type=armor_stand,tag=RW.SlashInit,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/common/slash_entity/init
 
 # スケジュール開始
-    schedule function asset:mob/1004.tultaria/tick/skill/1.melee_attack/slash_entity/1.tick 1t replace
+    schedule function asset:mob/1004.tultaria/tick/skill/common/slash_entity/tick 1t replace
 
 # 演出
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.6

@@ -33,4 +33,4 @@
         execute if score @s RW.Tick matches 47..52 positioned ~ ~1 ~ run function asset:mob/1004.tultaria/tick/skill/dash_slash/5.delay_position
 
 # リセット
-    execute if score @s RW.Tick matches 55.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 100.. run function asset:mob/1004.tultaria/tick/reset

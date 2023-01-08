@@ -5,29 +5,36 @@
 # @within function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 
 
+# 慣性ON
+    tag @s remove RW.DisableInertia
+
 # マーカーの方を向く
     execute facing entity @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
-# 体
-    # ポーズ
-        data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.RightArm set value [25f,0f,75f]
-        data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.LeftArm set value [-45f,0f,-90f]
-    # 向き
-        execute as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5] run tp @s ~ ~ ~ ~25 ~
-    # モデル
-        item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..1,sort=nearest,limit=1] armor.head with stick{CustomModelData:20079}
+# こっち狙いで突進
+    # 速度設定
+        scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 8
+        scoreboard players set @s[scores={RW.Phase=2..}] RW.Speed 10
 
-# 頭
-    # ポーズ
-        data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..1,sort=nearest,limit=1] Pose.Head set value [5f,0f,0f]
-    # 向き
-        execute as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] run tp @s ~ ~ ~ ~-25 0
+    # 移動タグ付与
+        tag @s add RW.Move
 
-# 慣性ON
-    # tag @s add RW.ActiveInertia
+# ポーズ
+    data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [20f,0f,-75f]
+    data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.RightArm set value [-35f,0f,75f]
 
-# 速度設定 流石に残像ムーブみたいな速度ではない
-    scoreboard players set @s RW.Speed 10
+# 体変える
+    execute if entity @s[scores={RW.Phase=..2}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20079}
+    execute if entity @s[scores={RW.Phase=3..}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20082}
+
+# 体の向き
+    execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-45 ~
+
+# 頭のモデル、向き
+    data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [0.1f,0.1f,0.1f]
+    item replace entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
+    execute at @s run tp @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~ ~
+
 
 # 移動開始
     tag @s add RW.Move
