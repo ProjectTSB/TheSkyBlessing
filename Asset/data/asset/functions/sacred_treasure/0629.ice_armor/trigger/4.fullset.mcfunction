@@ -15,13 +15,13 @@
     data modify storage api: Argument.UUID set value [I;1,1,629,0]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
+    function api:modifier/defense/water/add
 
 # 水攻撃+3%
     data modify storage api: Argument.UUID set value [I;1,1,629,0]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:modifier/attack/water/add
 
 # 演出
     particle falling_dust diamond_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a

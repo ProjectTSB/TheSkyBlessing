@@ -8,13 +8,13 @@
     data modify storage api: Argument.UUID set value [I;1,1,634,4]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/thunder/add
+    function api:modifier/defense/thunder/add
 
 # 雷耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,634,4]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/thunder/add
+    function api:modifier/attack/thunder/add
 
 # 演出
     playsound minecraft:entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 1.1 0

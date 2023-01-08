@@ -13,8 +13,8 @@
 
 # 火耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,625,0]
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove
 
 # 火耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,625,0]
-    function api:player_modifier/attack/fire/remove
+    function api:modifier/attack/fire/remove

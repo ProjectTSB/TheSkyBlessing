@@ -13,13 +13,13 @@
     data modify storage api: Argument.UUID set value [I;1,1,626,4]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/fire/add
+    function api:modifier/defense/fire/add
 
 # 火攻撃+3%
     data modify storage api: Argument.UUID set value [I;1,1,626,4]
     data modify storage api: Argument.Amount set value 0.03
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/fire/add
+    function api:modifier/attack/fire/add
 
 # 演出
     particle flame ~ ~0.4 ~ 0.4 0.3 0.4 0 10 normal @a
