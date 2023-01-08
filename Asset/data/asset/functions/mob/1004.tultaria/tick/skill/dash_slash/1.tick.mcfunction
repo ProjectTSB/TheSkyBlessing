@@ -20,10 +20,15 @@
     execute if score @s RW.Tick matches 22..32 if entity @e[type=marker,tag=RW.TeleportMarker,distance=..3] at @s run scoreboard players set @s RW.Tick 35
 
 # 埋まりそうになったら移動をやめる
-    execute at @s if score @s RW.Tick matches 22..32 unless block ^ ^ ^2 #lib:no_collision run scoreboard players set @s RW.Tick 37
+    execute at @s if score @s RW.Tick matches 22..32 unless block ^ ^ ^2 #lib:no_collision run scoreboard players set @s RW.Tick 32
 
 # 振り抜く
-    execute if score @s RW.Tick matches 32 run function asset:mob/1004.tultaria/tick/skill/dash_slash/4.slash
+    execute if score @s RW.Tick matches 32 run function asset:mob/1004.tultaria/tick/skill/dash_slash/4.active
+    execute if score @s RW.Tick matches 32 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash1
+    execute if score @s RW.Tick matches 33 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash2
+    execute if score @s RW.Tick matches 34 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash3
+    execute if score @s RW.Tick matches 35 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash1
+    execute if score @s RW.Tick matches 36 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash2
 
 # 斬撃が発生するぞ！
     execute if score @s RW.Tick matches 37 run function asset:mob/1004.tultaria/tick/skill/dash_slash/back_slash_start
