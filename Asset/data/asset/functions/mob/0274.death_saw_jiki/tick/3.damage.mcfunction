@@ -23,7 +23,7 @@
         function lib:damage/modifier
     # 対象に
         tag @e[type=#lib:living,type=!player,tag=Friend,distance=..1] add DamageTarget
-        tag @a[gamemode=!creative,gamemode=!spectator,distance=..1] add DamageTarget
+        tag @a[tag=!PlayerShouldInvulnerable,distance=..1] add DamageTarget
         execute as @e[type=#lib:living,tag=DamageTarget,distance=..1] run function lib:damage/
     # リセット
         function lib:damage/reset

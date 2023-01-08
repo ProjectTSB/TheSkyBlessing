@@ -25,7 +25,7 @@
 # エンチャントレベルの総和を計算する
 # SumResult = Array.map(v => v.lvl).reduce((a, b) => a + b)
     data modify storage lib: Array set from storage lib: Array[].lvl
-    function lib:array/sum
+    function lib:array/math/sum
 # 計算結果を取得する
     execute store result score $Temp Temporary run data get storage lib: SumResult
 # セッションを閉じる
