@@ -3,10 +3,11 @@
 # 配列を反転します。
 #
 # @input
-#   storage lib: Array: any[]
+#   T extends any
+#   storage lib: Array: [T] @ N
 #   反転させる配列データ
 # @output
-#   storage lib: Array: any[]
+#   storage lib: Array: [T] @ N
 #   反転後の配列データ
 # @api
 

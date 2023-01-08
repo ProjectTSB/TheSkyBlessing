@@ -20,7 +20,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sのスイカの金色の電撃により消滅した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sのスイカの電撃により死亡した","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3.5] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3.5] run function lib:damage/
     function lib:damage/reset
 
 # 消滅
