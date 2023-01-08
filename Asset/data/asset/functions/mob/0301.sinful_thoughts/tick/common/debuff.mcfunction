@@ -7,7 +7,7 @@
     data modify storage api: Argument.UUID set value [I;1,2,301,0]
     data modify storage api: Argument.Amount set value -1
     data modify storage api: Argument.Operation set value "multiply"
-    function api:player_modifier/heal/add
+    function api:modifier/heal/add
 
 # スケジュールループ
     scoreboard players set @s 8D.DebuffTime 160

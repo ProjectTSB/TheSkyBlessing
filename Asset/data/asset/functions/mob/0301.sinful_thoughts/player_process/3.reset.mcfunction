@@ -6,7 +6,7 @@
 
 # 補正削除
     data modify storage api: Argument.UUID set value [I;1,2,301,0]
-    function api:player_modifier/heal/remove
+    function api:modifier/heal/remove
 
 # スコアリセット
     scoreboard players reset @s 8D.DebuffTime
