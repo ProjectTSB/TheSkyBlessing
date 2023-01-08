@@ -29,7 +29,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
-    execute as @a[tag=Victim,distance=..30] run function api:player_modifier/mp_regen/add
+    execute as @a[tag=Victim,distance=..30] run function api:modifier/mp_regen/add
 
 # スコアを与える
     scoreboard players add @a[tag=Victim,distance=..30] RX.Time 40

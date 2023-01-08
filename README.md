@@ -3,7 +3,7 @@
 [![stars](https://img.shields.io/github/stars/ProjectTSB/TheSkyBlessing?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/stargazers)
 [![downloads](https://img.shields.io/github/downloads/ProjectTSB/TheSkyBlessing/total?logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/releases/latest)
 [![activity](https://img.shields.io/github/commit-activity/m/ProjectTSB/TheSkyBlessing?label=commit&logo=github)](https://github.com/ProjectTSB/TheSkyBlessing/commits/master)
-[![workflow](https://img.shields.io/github/workflow/status/ProjectTSB/TheSkyBlessing/lint-datapack/master?label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
+[![workflow](https://img.shields.io/github/actions/workflow/status/ProjectTSB/TheSkyBlessing/datapack-linter.yml?branch=master&label=linter)](https://github.com/ProjectTSB/TheSkyBlessing/actions?query=workflow%3Alint-datapack)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.carloscuesta.me/)
 
 ## 開発環境
@@ -21,6 +21,7 @@
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 * [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
+* [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions/)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 
 ## 謝辞
 このリポジトリでは以下のライブラリを使用させていただいてます。
