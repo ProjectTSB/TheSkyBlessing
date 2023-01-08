@@ -11,7 +11,7 @@
 # 補正を削除
     attribute @s generic.attack_damage modifier remove 1-0-1-0-38300000007
     data modify storage api: Argument.UUID set value [I;1,1,899,7]
-    function api:player_modifier/attack/base/remove
+    function api:modifier/attack/base/remove
 # 個数を取得
     execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:899}}}]
 # 攻撃力増加を付与する
@@ -28,7 +28,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,899,7]
     execute store result storage api: Argument.Amount double 0.03 run scoreboard players get $Count Temporary
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/base/add
+    function api:modifier/attack/base/add
 
 # リセット
     scoreboard players reset $Count Temporary

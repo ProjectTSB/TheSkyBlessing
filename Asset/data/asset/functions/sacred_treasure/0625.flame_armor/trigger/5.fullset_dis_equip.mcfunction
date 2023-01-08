@@ -11,4 +11,4 @@
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,625,0]
 # 補正の削除
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove

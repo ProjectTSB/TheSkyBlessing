@@ -20,7 +20,7 @@
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 0
 
 # ダメージとMP減少
-    execute if entity @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function asset:mob/0105.potion_projectile/tick/thunder/2.thunder_damage
+    execute if entity @a[tag=!PlayerShouldInvulnerable,distance=..3] run function asset:mob/0105.potion_projectile/tick/thunder/2.thunder_damage
 
 # キル
     kill @s
