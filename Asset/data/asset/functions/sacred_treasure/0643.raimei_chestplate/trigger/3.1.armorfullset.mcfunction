@@ -30,7 +30,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
-    function api:player_modifier/defense/thunder/add
+    function api:modifier/defense/thunder/add
 
 # Scheduleループ
     schedule function asset:sacred_treasure/0643.raimei_chestplate/trigger/3.4.loop 1t replace
