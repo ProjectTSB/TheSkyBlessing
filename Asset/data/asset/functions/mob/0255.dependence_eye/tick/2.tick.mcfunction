@@ -20,7 +20,7 @@
     scoreboard players remove @s[scores={73.AttackCT=1..}] 73.AttackCT 1
 
 # クールタイム中じゃないなら接触時に攻撃
-    execute unless score @s 73.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0255.dependence_eye/tick/3.attack
+    execute unless score @s 73.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0255.dependence_eye/tick/3.attack
 
 # カベにぶつかった際の処理
     execute unless block ^ ^ ^0.5 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
