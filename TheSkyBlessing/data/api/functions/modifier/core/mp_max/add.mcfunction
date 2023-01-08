@@ -1,8 +1,8 @@
-#> api:player_modifier/core/mp_max/add
+#> api:modifier/core/mp_max/add
 #
 #
 #
-# @within function api:player_modifier/mp_max/add
+# @within function api:modifier/mp_max/add
 
 # UserStorage呼び出し
     function oh_my_dat:please
@@ -15,7 +15,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.MPMax[-1].Operation set from storage api: Argument.Operation
 # データの更新
     data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.MPMax
-    function api:player_modifier/core/common/update_modifier/
+    function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MPMax set from storage api: Modifier
 # リセット
     data remove storage api: Modifiers

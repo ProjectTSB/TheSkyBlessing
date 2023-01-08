@@ -1,4 +1,4 @@
-#> api:player_modifier/mp_max/remove
+#> api:modifier/mp_max/add
 #
 #
 #
@@ -11,9 +11,11 @@
     #declare score_holder $PrevMaxMP
 
 # データ検証
-    execute unless data storage api: Argument.UUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" UUID","color":"red"}]
-# データが正しいなら消す
-    execute if data storage api: Argument.UUID run function api:player_modifier/core/mp_max/remove
+    function api:modifier/core/common/validate
+# データ補正
+    execute if data storage api: Argument{Operation:"add"} store result storage api: Argument.Amount double 0.01 run data get storage api: Argument.Amount 1
+# データが正しいなら入れる
+    execute if data storage api: Argument.UUID if data storage api: Argument.Amount if data storage api: Argument.Operation run function api:modifier/core/mp_max/add
 # 現在MP・MPMaxを取得
     # execute store result score $DiffMP Temporary run scoreboard players get @s MP
     # execute store result score $PrevMaxMP Temporary run scoreboard players get @s MPMax
@@ -27,6 +29,8 @@
     # function api:mp/set
 # リセット
     data remove storage api: Argument.UUID
+    data remove storage api: Argument.Amount
+    data remove storage api: Argument.Operation
     # scoreboard players reset $DiffMP Temporary
     # scoreboard players reset $NewMaxMP Temporary
     # scoreboard players reset $PrevMaxMP Temporary

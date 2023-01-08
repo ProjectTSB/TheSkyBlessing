@@ -1,4 +1,4 @@
-#> api:player_modifier/mp_max/get
+#> api:modifier/mp_max/get
 #
 #
 #
