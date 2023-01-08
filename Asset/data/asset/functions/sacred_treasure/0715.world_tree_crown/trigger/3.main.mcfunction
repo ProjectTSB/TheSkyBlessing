@@ -30,10 +30,10 @@
     data modify storage api: Argument.UUID set value [I;1,1,715,6]
     data modify storage api: Argument.Amount set value 0.075
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/mp_regen/add
+    function api:modifier/mp_regen/add
 
 # 攻撃力-5%
     data modify storage api: Argument.UUID set value [I;1,1,715,6]
     data modify storage api: Argument.Amount set value -0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/base/add
+    function api:modifier/attack/base/add
