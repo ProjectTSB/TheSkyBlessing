@@ -27,7 +27,7 @@
     scoreboard players remove @s[scores={L.AttackCT=1..}] L.AttackCT 1
 
 # クールタイム中じゃないなら接触時に攻撃
-    execute unless score @s L.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[gamemode=!creative,gamemode=!spectator,dx=0] run function asset:mob/0021.demon_eye/tick/event/attack
+    execute unless score @s L.AttackCT matches 1.. positioned ~-0.5 ~-0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0021.demon_eye/tick/event/attack
 
 # カベにぶつかった際の処理
     execute unless block ^ ^ ^0.5 #lib:no_collision as @e[type=area_effect_cloud,tag=21.Rotater,sort=nearest,limit=1] run tp @s ~ ~ ~ ~45 ~-45
