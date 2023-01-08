@@ -6,4 +6,4 @@
 
 # 全耐性+5%削除
     data modify storage api: Argument.UUID set value [I;1,1,935,5]
-    function api:player_modifier/defense/base/remove
+    function api:modifier/defense/base/remove
