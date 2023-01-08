@@ -11,7 +11,7 @@
 #   storage lib: Argument.FixedHeal? : boolean(default: false)
 # @api
 
-data modify storage api: Argument.Heal set from storage lib: Argument.Heal
-data modify storage api: Argument.FixedHeal set from storage lib: Argument.FixedHeal
+execute unless data storage api: Argument.Heal run data modify storage api: Argument.Heal set from storage lib: Argument.Heal
+execute unless data storage api: Argument.FixedHeal run data modify storage api: Argument.FixedHeal set from storage lib: Argument.FixedHeal
 
 function api:heal/

@@ -17,7 +17,7 @@
         execute if entity @s[tag=S2.Thunder] run data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
-        execute at @s as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
+        execute at @s as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
 
