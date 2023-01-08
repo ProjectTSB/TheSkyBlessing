@@ -12,7 +12,8 @@
 # デバフ
     effect give @a[tag=Victim,distance=..32] slowness 3 1 true
     effect give @a[tag=Victim,distance=..32] mining_fatigue 3 1 true
-    effect give @a[tag=Victim,distance=..32] poison 3 1 true
+    execute if predicate api:global_vars/difficulty/max/normal run effect give @a[tag=Victim,distance=..32] poison 3 1 true
+    execute if predicate api:global_vars/difficulty/min/hard run effect give @a[tag=Victim,distance=..32] wither 3 1 true
 
 # 与えるダメージ
     data modify storage lib: Argument.Damage set value 25f
