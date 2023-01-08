@@ -15,7 +15,7 @@
 
 # 古いのをremove
     data modify storage api: Argument.UUID set value [I;2,2,1,1]
-    function api:player_modifier/mp_max/remove
+    function api:modifier/mp_max/remove
 # BonusMPを取得
     execute store result score $BonusMP Temporary run scoreboard players get $MaxMP Global
     scoreboard players remove $BonusMP Temporary 100
@@ -36,5 +36,5 @@
 # 補正適用
     data modify storage api: Argument set value {Amount:-1,UUID:[I;2,2,1,1],Operation:"multiply"}
     execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $BonusMP Temporary
-    function api:player_modifier/mp_max/add
+    function api:modifier/mp_max/add
     scoreboard players reset $BonusMP Temporary
