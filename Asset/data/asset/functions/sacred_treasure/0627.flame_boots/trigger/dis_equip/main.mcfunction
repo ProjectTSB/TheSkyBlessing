@@ -7,7 +7,7 @@
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,627,3]
 # 補正の削除
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove
 
 # 演出
     playsound entity.generic.burn player @a ~ ~ ~ 0.2 1 0
