@@ -10,19 +10,19 @@
 
 # 水耐性
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # 水攻撃
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
 
 # mp回復
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
-    function api:player_modifier/mp_regen/remove
+    function api:modifier/mp_regen/remove
 
 # 被回復量
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
-    function api:player_modifier/receive_heal/remove
+    function api:modifier/receive_heal/remove
 
 # フルセット解除
     execute if entity @s[tag=K4.Fullset] run function asset:sacred_treasure/0724.oblivious_snow/trigger/fullset/dis_equip

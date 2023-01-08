@@ -18,25 +18,25 @@
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
+    function api:modifier/defense/water/add
 
 # 水攻撃+10%
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:modifier/attack/water/add
 
 # mp回復+8%
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
     data modify storage api: Argument.Amount set value 0.08
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/mp_regen/add
+    function api:modifier/mp_regen/add
 
 # 被回復量-10%
     data modify storage api: Argument.UUID set value [I;1,1,725,5]
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/receive_heal/add
+    function api:modifier/receive_heal/add
 
 # フルセット
     execute if data storage asset:context id.all{head:724,chest:725,legs:726,feet:727} run function asset:sacred_treasure/0724.oblivious_snow/trigger/fullset/equip

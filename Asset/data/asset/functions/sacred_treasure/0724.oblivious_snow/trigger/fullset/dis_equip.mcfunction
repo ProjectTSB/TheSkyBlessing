@@ -16,16 +16,16 @@
 
 # 水攻撃
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
 
 # mp回復
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
-    function api:player_modifier/mp_regen/remove
+    function api:modifier/mp_regen/remove
 
 # 体力回復量
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
-    function api:player_modifier/heal/remove
+    function api:modifier/heal/remove
 
 # 被回復量
     data modify storage api: Argument.UUID set value [I;1,1,724,0]
-    function api:player_modifier/receive_heal/remove
+    function api:modifier/receive_heal/remove
