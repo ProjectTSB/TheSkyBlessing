@@ -5,8 +5,9 @@
 # @input
 #   as entity
 #   storage api: Argument.Heal : float
+#   storage api: Argument.FIxedHeal : boolean
 # @output storage api: Argument.Heal : float
 # @api
 
 # 補正
-    execute if entity @s[type=player] run function api:heal/core/modifier
+    execute if entity @s[type=player] unless data storage api: Argument{FixedHeal:true} run function api:heal/core/modifier

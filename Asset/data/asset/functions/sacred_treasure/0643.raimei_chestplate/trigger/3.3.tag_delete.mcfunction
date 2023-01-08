@@ -10,4 +10,4 @@
 # フルセット耐性を消す
     data modify storage api: Argument.UUID set value [I;1,1,643,0]
 # 補正の追加
-    function api:player_modifier/defense/thunder/remove
+    function api:modifier/defense/thunder/remove
