@@ -14,7 +14,7 @@
     playsound minecraft:entity.iron_golem.death hostile @a ~ ~ ~ 0.04 0
 
 # 着弾Tagを付与を付与
-    execute positioned ~-0.5 ~ ~-0.5 if entity @a[gamemode=!creative,gamemode=!spectator,dx=0] run tag @a[gamemode=!creative,gamemode=!spectator,dx=0] add LandingTarget
+    execute positioned ~-0.5 ~ ~-0.5 if entity @a[tag=!PlayerShouldInvulnerable,dx=0] run tag @a[tag=!PlayerShouldInvulnerable,dx=0] add LandingTarget
 
 # 再帰
     execute if entity @s[distance=..30] positioned ^ ^ ^1 if block ^ ^ ^ #lib:no_collision run function asset:mob/0185.tutankhamen/tick/burn_laser/05.shoot_recursive

@@ -3,16 +3,16 @@
 # 配列をキャッシュへ移動します。
 #
 # @input
-#   storage lib: Array: any[]
+#   T extends any
+#   storage lib: Array: [T] @ N
 #   操作する配列データ
 #   score $Argument.Index Lib
 #   目的の要素のindex
-# @output
-#   storage lib:
-#       Array: any[]
-#           Array[-1]に目的の要素が存在する配列
-#       Cache: any[]
-#           移動されたデータ
+# @output storage lib:
+#   Array: [T] @ (N - Index)
+#   最後の要素が目的の要素になった配列
+#   Cache: [T] @ Index
+#   移動されたデータ
 # @api
 
 # セッションチェック
