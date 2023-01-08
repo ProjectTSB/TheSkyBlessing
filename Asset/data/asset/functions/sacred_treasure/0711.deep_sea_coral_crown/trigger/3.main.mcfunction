@@ -20,25 +20,25 @@
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
+    function api:modifier/defense/water/add
 
 # 水攻撃+5%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:modifier/attack/water/add
 
 # 体力回復量+5%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/heal/add
+    function api:modifier/heal/add
 
 # 火攻撃-20%
     data modify storage api: Argument.UUID set value [I;1,1,711,6]
     data modify storage api: Argument.Amount set value -0.2
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/fire/add
+    function api:modifier/attack/fire/add
 
 # フルセット
     execute if data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/equip

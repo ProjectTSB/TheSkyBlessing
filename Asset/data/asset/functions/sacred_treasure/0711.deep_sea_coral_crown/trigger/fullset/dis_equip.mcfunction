@@ -13,4 +13,4 @@
 
 # 補正を削除
     data modify storage api: Argument.UUID set value [I;1,1,711,0]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove

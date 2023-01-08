@@ -10,19 +10,19 @@
 
 # 水耐性
     data modify storage api: Argument.UUID set value [I;1,1,712,5]
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # 水攻撃
     data modify storage api: Argument.UUID set value [I;1,1,712,5]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
 
 # 体力回復量
     data modify storage api: Argument.UUID set value [I;1,1,712,5]
-    function api:player_modifier/heal/remove
+    function api:modifier/heal/remove
 
 # 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,712,5]
-    function api:player_modifier/attack/fire/remove
+    function api:modifier/attack/fire/remove
 
 # フルセット解除
     execute if entity @s[tag=JR.Fullset] run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/dis_equip

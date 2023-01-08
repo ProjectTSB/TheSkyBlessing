@@ -34,7 +34,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,711,0]
     data modify storage api: Argument.Amount set value 0.05
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:modifier/attack/water/add
 
 # スケジュールループ開始
     schedule function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/loop 1t replace
