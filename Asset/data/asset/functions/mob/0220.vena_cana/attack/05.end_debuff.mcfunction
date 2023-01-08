@@ -8,7 +8,7 @@
     data modify storage api: Argument.UUID set value [I;1,2,220,0]
 
 # 補正の削除
-    function api:player_modifier/attack/base/remove
+    function api:modifier/attack/base/remove
 
 # タグ削除
     tag @s remove 64.ElementReduct

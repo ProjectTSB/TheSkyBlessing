@@ -9,7 +9,7 @@
 
 # 水威力をリセット
     data modify storage api: Argument.UUID set value [I;1,1,979,7]
-    function api:player_modifier/attack/water/remove
+    function api:modifier/attack/water/remove
 
 # 手持ちのチャームを数え直して補正追加
     execute unless entity @s[tag=!DevPrivilege,predicate=player_manager:is_believe/null] run function asset:sacred_treasure/0979.water_charm/trigger/add_modifier

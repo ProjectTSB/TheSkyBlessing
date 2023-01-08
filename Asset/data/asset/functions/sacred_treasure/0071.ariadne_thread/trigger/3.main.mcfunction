@@ -9,6 +9,9 @@
 
 # ここから先は神器側の効果の処理を書く
 
+# 落下速度低下付与
+    effect give @s minecraft:slow_falling 1 1
+
 # テレポート
     execute in minecraft:overworld run tp @s 23 3 24
 

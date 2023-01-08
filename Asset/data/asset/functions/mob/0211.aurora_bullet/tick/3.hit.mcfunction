@@ -18,7 +18,6 @@
 # リセット
     function lib:damage/reset
 
-
 # スコアを付与
     scoreboard players set @a[gamemode=!spectator,dx=0] 5U.DebuffTime 80
 
