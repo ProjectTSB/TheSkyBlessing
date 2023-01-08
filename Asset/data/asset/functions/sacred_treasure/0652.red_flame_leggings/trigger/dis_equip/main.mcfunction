@@ -8,13 +8,13 @@
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,652,4]
 # 補正の追加
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove
 
 # 引数の設定
     # UUID
         data modify storage api: Argument.UUID set value [I;1,1,652,4]
 # 補正の追加
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # 防御力
     attribute @s generic.armor modifier remove 00000001-0000-0001-0000-028c00000004
