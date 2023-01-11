@@ -9,7 +9,7 @@
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"
     function lib:damage/modifier
-    execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,dx=0] run function lib:damage/
     function lib:damage/reset
 
 # 消滅

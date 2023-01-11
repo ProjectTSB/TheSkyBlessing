@@ -34,7 +34,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
-    function api:player_modifier/attack/base/add
+    function api:modifier/attack/base/add
 
 # タグを付与
     tag @s[tag=!64.ElementReduct] add 64.ElementReduct

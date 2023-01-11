@@ -13,7 +13,7 @@
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 雷属性
-        data modify storage lib: Argument.ElementType set value "None"
+        data modify storage lib: Argument.ElementType set value "Thunder"
     # ダメージ
         function lib:damage/modifier
         execute as @p[gamemode=!creative,tag=LandingTarget,distance=..30] at @s run function lib:damage/
