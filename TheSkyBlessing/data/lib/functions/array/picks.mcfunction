@@ -3,14 +3,15 @@
 # 指定された配列の要素を抜き出します。
 #
 # @input storage lib:
-#   Array: any[]
+#   T extends any
+#   Array: [T] @ N
 #   配列データ
-#   Picks: int[]
+#   Picks: [int] @ M
 #   抜き取る要素の添字の配列
 # @output storage lib:
-#   Array: any[]
+#   Array: [T] @ (N - M)..
 #   要素が抜き取られた配列
-#   Elements: any[]
+#   Elements: [T] @ ..M
 #   抜き取られた要素
 # @api
 

@@ -13,9 +13,9 @@
         data modify storage api: Argument.UUID set value [I;1,1,261,0]
         data modify storage api: Argument.Amount set value 0.01
         data modify storage api: Argument.Operation set value "multiply"
-        function api:player_modifier/attack/physical/add
+        function api:modifier/attack/physical/add
     # 魔法ダメージ
         data modify storage api: Argument.UUID set value [I;1,1,261,0]
         data modify storage api: Argument.Amount set value 0.01
         data modify storage api: Argument.Operation set value "multiply"
-        function api:player_modifier/attack/magic/add
+        function api:modifier/attack/magic/add
