@@ -7,7 +7,6 @@
 # @private
     #declare score_holder $Random
 
-
 # 通常行動停止タグ付与
     tag @s add RW.InAction
 
@@ -21,33 +20,34 @@
 # チェイス停止
     kill @e[tag=RW.ChaseMarker]
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-# フェイズ1～2
-    execute if entity @s[scores={RW.Phase=1..2}] run scoreboard players operation $Random Temporary %= $5 Const
-# フェイズ3
-    execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $7 Const
+# 行動をランダムに選択
+    # 疑似乱数取得
+        execute store result score $Random Temporary run function lib:random/
+    # フェイズ1
+        execute if entity @s[scores={RW.Phase=1}] run scoreboard players operation $Random Temporary %= $6 Const
+    # フェイズ2(拡散ショットを解禁)
+        execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $7 Const
+    # フェイズ3(スターフューリーを解禁)
+        execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $8 Const
 
-# デバッグのコマンド
-    scoreboard players set $Random Temporary 9
+# デバッグ用、実行する技を確定させる
+    scoreboard players set $Random Temporary 2
 
 # スキル選択
-    execute if score $Random Temporary matches 0 run tag @s add RW.SkillMelee
-    execute if score $Random Temporary matches 1 run tag @s add RW.SkillMeteor
-    execute if score $Random Temporary matches 2 run tag @s add RW.SkillCoordinate
-    execute if score $Random Temporary matches 3 run tag @s add RW.SkillBall
-    execute if score $Random Temporary matches 4 run tag @s add RW.SkillLaser
-    execute if score $Random Temporary matches 5 run tag @s add RW.SkillStarfury
-    execute if score $Random Temporary matches 6 run tag @s add RW.SkillDashSlash
-    execute if score $Random Temporary matches 7 run tag @s add RW.SkillSummon
-    execute if score $Random Temporary matches 8 run tag @s add RW.SkillBlazingSlash
-    execute if score $Random Temporary matches 9 run tag @s add RW.SkillLightningStab
+    execute if score $Random Temporary matches 0 run tag @s add RW.Skill.Meteor
+    execute if score $Random Temporary matches 1 run tag @s add RW.Skill.Thunder
+    execute if score $Random Temporary matches 2 run tag @s add RW.Skill.AncientLight
+    execute if score $Random Temporary matches 3 run tag @s add RW.Skill.FreezingShred
+    execute if score $Random Temporary matches 4 run tag @s add RW.Skill.BlazingSlash
+    execute if score $Random Temporary matches 5 run tag @s add RW.Skill.LightningStab
+    execute if score $Random Temporary matches 6 run tag @s add RW.Skill.SpreadShot
+    execute if score $Random Temporary matches 7 run tag @s add RW.Skill.Starfury
 
 # 大技その1
-    execute if score $Random Temporary matches 108 run tag @s add RW.SkillDeadly1
+    execute if score $Random Temporary matches 108 run tag @s add RW.Skill.Deadly1
 
 # 大技その2
-    execute if score $Random Temporary matches 109 run tag @s add RW.SkillDeadly2
+    execute if score $Random Temporary matches 109 run tag @s add RW.Skill.Deadly2
 
 # リセット
     scoreboard players reset $Random Temporary
