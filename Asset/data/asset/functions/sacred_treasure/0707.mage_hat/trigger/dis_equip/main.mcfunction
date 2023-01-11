@@ -9,24 +9,24 @@
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,707,6]
 # 補正の削除
-    function api:player_modifier/defense/magic/remove
+    function api:modifier/defense/magic/remove
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,707,6]
 # 補正の削除
-    function api:player_modifier/attack/magic/remove
+    function api:modifier/attack/magic/remove
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,707,6]
 # 補正の削除
-    function api:player_modifier/mp_regen/remove
+    function api:modifier/mp_regen/remove
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,707,6]
 # 補正の削除
-    function api:player_modifier/defense/physical/remove
+    function api:modifier/defense/physical/remove
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,707,6]
 # 補正の削除
-    function api:player_modifier/attack/physical/remove
+    function api:modifier/attack/physical/remove

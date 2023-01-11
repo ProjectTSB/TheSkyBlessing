@@ -12,9 +12,9 @@
     data modify storage api: Argument.Operation set value "multiply"
 
 # 各天候により属性補正を分岐する
-    execute if data storage asset:temp BZ{Weather:Sunny} run function api:player_modifier/attack/fire/add
-    execute if data storage asset:temp BZ{Weather:Rain} run function api:player_modifier/attack/water/add
-    execute if data storage asset:temp BZ{Weather:Thunder} run function api:player_modifier/attack/thunder/add
+    execute if data storage asset:temp BZ{Weather:Sunny} run function api:modifier/attack/fire/add
+    execute if data storage asset:temp BZ{Weather:Rain} run function api:modifier/attack/water/add
+    execute if data storage asset:temp BZ{Weather:Thunder} run function api:modifier/attack/thunder/add
 
     execute if data storage asset:temp BZ{Weather:Sunny} run tellraw @s [{"text": "火属性攻撃","color": "red"},{"text": "が40%上がった！","color": "white"}]
     execute if data storage asset:temp BZ{Weather:Rain} run tellraw @s [{"text": "水属性攻撃","color": "aqua"},{"text": "が40%上がった！","color": "white"}]

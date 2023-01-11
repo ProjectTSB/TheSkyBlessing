@@ -11,5 +11,4 @@
     data modify storage asset:context Type set value "give"
     execute if data storage api: Argument.Rarity run function asset_manager:sacred_treasure/give
 # リセット
-    data remove storage asset:context Type
     data remove storage api: Argument.Rarity

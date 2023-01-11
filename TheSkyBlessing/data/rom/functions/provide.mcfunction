@@ -53,7 +53,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _ append from storage rom: ThreeEmptyLists[]
 
 # チェック2
-    execute unless data storage rom: _[-4][0] run data modify storage rom: _[-4] set from storage rom: initial[0]
+    execute unless data storage rom: _[-4][0] run data modify storage rom: _[-4] set from storage rom: Initial[0]
 # シフト2
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -62,7 +62,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック3
-    execute unless data storage rom: _[-4][-4][0] run data modify storage rom: _[-4][-4] set from storage rom: initial[0][0]
+    execute unless data storage rom: _[-4][-4][0] run data modify storage rom: _[-4][-4] set from storage rom: Initial[0][0]
 # シフト3
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -71,7 +71,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック4
-    execute unless data storage rom: _[-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4] set from storage rom: initial[0][0][0]
+    execute unless data storage rom: _[-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4] set from storage rom: Initial[0][0][0]
 # シフト4
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -80,7 +80,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック5
-    execute unless data storage rom: _[-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4] set from storage rom: initial[0][0][0][0]
+    execute unless data storage rom: _[-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4] set from storage rom: Initial[0][0][0][0]
 # シフト5
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -89,7 +89,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック6
-    execute unless data storage rom: _[-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4] set from storage rom: initial[0][0][0][0][0]
+    execute unless data storage rom: _[-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4] set from storage rom: Initial[0][0][0][0][0]
 # シフト6
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -98,7 +98,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4][-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック7
-    execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4][-4] set from storage rom: initial[0][0][0][0][0][0]
+    execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4][-4] set from storage rom: Initial[0][0][0][0][0][0]
 # シフト7
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
@@ -107,7 +107,7 @@
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4] append from storage rom: ThreeEmptyLists[]
 
 # チェック8
-    execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] set from storage rom: initial[0][0][0][0][0][0][0]
+    execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][-4][0] run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] set from storage rom: Initial[0][0][0][0][0][0][0]
 # シフト8
     scoreboard players operation $Address Temporary *= $4 Const
 # 上位2bitを元にオフセット要素を末尾追加する
