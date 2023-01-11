@@ -176,13 +176,13 @@
 
 # 取引 深紅のキノコをオークの苗木に
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"crimson_fungus",Count:1b}
-    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"crimson_fungus",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
 # 取引 歪んだキノコをオークの苗木に
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"warped_fungus",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"warped_fungus",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
 # 取引 下位通貨を深紅のナイリウムに
     data modify storage asset:trader Trades append value {}

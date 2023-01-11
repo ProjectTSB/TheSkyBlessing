@@ -21,11 +21,11 @@
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
 # @api
 
-data modify storage api: Argument.Damage set from storage lib: Argument.Damage
-data modify storage api: Argument.AttackType set from storage lib: Argument.AttackType
-data modify storage api: Argument.ElementType set from storage lib: Argument.ElementType
-data modify storage api: Argument.FixedDamage set from storage lib: Argument.FixedDamage
-data modify storage api: Argument.BypassModifier set from storage lib: Argument.BypassModifier
+execute unless data storage api: Argument.Damage run data modify storage api: Argument.Damage set from storage lib: Argument.Damage
+execute unless data storage api: Argument.AttackType run data modify storage api: Argument.AttackType set from storage lib: Argument.AttackType
+execute unless data storage api: Argument.ElementType run data modify storage api: Argument.ElementType set from storage lib: Argument.ElementType
+execute unless data storage api: Argument.FixedDamage run data modify storage api: Argument.FixedDamage set from storage lib: Argument.FixedDamage
+execute unless data storage api: Argument.BypassModifier run data modify storage api: Argument.BypassModifier set from storage lib: Argument.BypassModifier
 data modify storage api: Argument.BypassArmorDefense set from storage lib: Argument.BypassArmorDefense
 data modify storage api: Argument.BypassToughness set from storage lib: Argument.BypassToughness
 data modify storage api: Argument.BypassEnchantments set from storage lib: Argument.BypassEnchantments
