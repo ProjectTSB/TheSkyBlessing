@@ -3,12 +3,13 @@
 # 配列をキャッシュを元に復元します。
 #
 # @input
-#   storage lib: Array: any[]
+#   T extends any
+#   storage lib: Array: [T] @ N
 #   move後の配列
-#   storage lib: Cache: any[]
+#   storage lib: Cache: [T] @ M
 #   move時に生成される配列
 # @output
-#   storage lib: Array: any[]
+#   storage lib: Array: [T] @ N + M
 #   move前の配列構造
 # @api
 
