@@ -22,15 +22,15 @@
     # 突き部分のダメージ
         execute if score @s RW.Tick matches 21 positioned ^ ^ ^1 as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/1004.tultaria/tick/skill/lightning_stab/damage
 
-# フェイズ2なら何度か斬る
-    execute if score @s RW.Tick matches 22 run scoreboard players add @s[scores={RW.LoopCount=..2}] RW.LoopCount 1
-    execute if score @s RW.Tick matches 22 run scoreboard players set @s[scores={RW.LoopCount=..2}] RW.Tick 7
+# 何度か斬る
+    execute if score @s[scores={RW.Phase=1}] RW.Tick matches 22 run scoreboard players set @s[scores={RW.LoopCount=..2}] RW.Tick 7
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 22 run scoreboard players set @s[scores={RW.LoopCount=..4}] RW.Tick 7
 
 # 埋まりそうになったら移動をやめる
     execute at @s[scores={RW.Tick=21}] positioned ~ ~0.5 ~ unless block ^ ^ ^2 #lib:no_collision run function asset:mob/1004.tultaria/tick/skill/lightning_stab/stop
 
 # 最後の一個を設置
-    execute if score @s RW.Tick matches 25 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning4"]}
+    execute if score @s RW.Tick matches 25 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning.Last"]}
 
 # 雷撃
     # 1

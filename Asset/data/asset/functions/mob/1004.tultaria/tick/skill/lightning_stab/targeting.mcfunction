@@ -1,6 +1,6 @@
 #> asset:mob/1004.tultaria/tick/skill/lightning_stab/targeting
 #
-#
+# 構えポーズを取りつつターゲッティング
 #
 # @within function asset:mob/1004.tultaria/tick/skill/lightning_stab/tick
 
@@ -24,9 +24,9 @@
     execute facing entity @p feet run tp @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~-25 ~
 
 # 演出
-    playsound ogg:block.respawn_anchor.charge1 hostile @a ~ ~ ~ 2 2
-    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.grindstone.use hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 2
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
 
 # 周囲のランダムなプレイヤーを対象に
     tag @r[distance=..80,limit=1] add TargetPlayer
@@ -45,6 +45,8 @@
     execute if score @s RW.LoopCount matches 0 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning1"]}
     execute if score @s RW.LoopCount matches 1 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning2"]}
     execute if score @s RW.LoopCount matches 2 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning3"]}
+    execute if score @s RW.LoopCount matches 3 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning4"]}
+    execute if score @s RW.LoopCount matches 4 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning5"]}
 
 # プレイヤーのタグを外す
     tag @a[tag=TargetPlayer] remove TargetPlayer

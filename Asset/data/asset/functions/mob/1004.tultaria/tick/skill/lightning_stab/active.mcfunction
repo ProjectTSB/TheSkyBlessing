@@ -34,10 +34,13 @@
 # こっち狙いで突進
     # 速度設定
         scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 10
-        scoreboard players set @s[scores={RW.Phase=2..}] RW.Speed 15
+        scoreboard players set @s[scores={RW.Phase=2..}] RW.Speed 12
 
     # 移動タグ付与
         tag @s add RW.Move
+
+# ループカウント加算
+    scoreboard players add @s RW.LoopCount 1
 
 # 演出
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 1
