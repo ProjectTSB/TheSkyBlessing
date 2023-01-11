@@ -16,6 +16,7 @@
 # スコアセット
     scoreboard players reset @s RW.Tick
     scoreboard players set @s RW.LoopCount 0
+    scoreboard players set @s RW.SwordCount 0
 
 # 移動する
     scoreboard players set @s RW.Speed 5
