@@ -16,7 +16,7 @@
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
     execute if score @s RW.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick 0
 
-# フェイズ2以降、設置攻撃してくる
+# フェイズ2以降の設置攻撃
     execute if score @s[tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/phase2/1.place_red_sword/main
 
 # フェイズ3以降、行動選択前にランダムな行動してくる
@@ -25,7 +25,7 @@
 # 選択したスキル発動
     execute if entity @s[tag=RW.InAction] run function asset:mob/1004.tultaria/tick/4.skill_active
 
-# モデルの向き
+## モデルの向き
     # 頭がプレイヤーの方を向く
         execute if entity @s[tag=!RW.InAction] as @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5] facing entity @p feet run tp @s ~ ~ ~ ~ ~
     # リミット
@@ -40,7 +40,7 @@
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
-# 嘘慣性
+## 嘘慣性
     # 下が空気なら通常実行
         execute if entity @s[tag=!RW.DisableInertia,scores={RW.FakeInertia=0..}] if block ~ ~-1 ~ #lib:no_collision run function asset:mob/1004.tultaria/tick/wait_time/base_move/fake_inertia
     # 下が空気じゃないなら縦軸を無視

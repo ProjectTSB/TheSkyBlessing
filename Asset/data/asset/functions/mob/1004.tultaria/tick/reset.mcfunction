@@ -24,16 +24,16 @@
     execute if entity @s[scores={RW.Phase=3..}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20081}
 
 # タグをリセットする
-    tag @s remove RW.SkillMelee
-    tag @s remove RW.SkillMeteor
-    tag @s remove RW.SkillCoordinate
-    tag @s remove RW.SkillBall
-    tag @s remove RW.SkillStarfury
-    tag @s remove RW.SkillDashSlash
-    tag @s remove RW.SkillSummon
-    tag @s remove RW.SkillLaser
-    tag @s remove RW.SkillBlazingSlash
-    tag @s remove RW.SkillLightningStab
+    tag @s remove RW.Skill.Melee
+    tag @s remove RW.Skill.Meteor
+    tag @s remove RW.Skill.Thunder
+    tag @s remove RW.Skill.AncientLight
+    tag @s remove RW.Skill.Starfury
+    tag @s remove RW.Skill.FreezingShred
+    tag @s remove RW.Skill.Summon
+    tag @s remove RW.Skill.SpreadShot
+    tag @s remove RW.Skill.BlazingSlash
+    tag @s remove RW.Skill.LightningStab
     tag @s remove RW.MiniSkillChase
     tag @s remove RW.MiniSkillBulletHell
     tag @s remove RW.MiniSkillShot
@@ -56,6 +56,9 @@
     scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 4
     scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 6
     scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 7
+
+# ソード設置カウントをリセット
+    scoreboard players set @s[scores={RW.SwordCount=2..}] RW.SwordCount 0
 
 # 剣を消す
     tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death
