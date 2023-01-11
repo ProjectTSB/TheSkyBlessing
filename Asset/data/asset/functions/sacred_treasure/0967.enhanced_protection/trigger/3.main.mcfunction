@@ -16,19 +16,19 @@ execute if predicate lib:random_pass_per/30 run function asset:sacred_treasure/0
     data modify storage api: Argument.UUID set value [I;1,1,967,2]
     data modify storage api: Argument.Amount set value 0.55
     data modify storage api: Argument.Operation set value "multiply"
-    execute unless entity @s[scores={QV.Protected=0..}] run function api:player_modifier/defense/base/add
+    execute unless entity @s[scores={QV.Protected=0..}] run function api:modifier/defense/base/add
 
 # 攻撃力-75%
     data modify storage api: Argument.UUID set value [I;1,1,967,2]
     data modify storage api: Argument.Amount set value -0.75
     data modify storage api: Argument.Operation set value "multiply"
-    execute unless entity @s[scores={QV.Protected=0..}] run function api:player_modifier/attack/base/add
+    execute unless entity @s[scores={QV.Protected=0..}] run function api:modifier/attack/base/add
 
 # MP回復-100%
     data modify storage api: Argument.UUID set value [I;1,1,967,2]
     data modify storage api: Argument.Amount set value -1
     data modify storage api: Argument.Operation set value "multiply"
-    execute unless entity @s[scores={QV.Protected=0..}] run function api:player_modifier/mp_regen/add
+    execute unless entity @s[scores={QV.Protected=0..}] run function api:modifier/mp_regen/add
 
 # 移動速度-50%
     attribute @s generic.movement_speed modifier add 1-0-1-0-3c700000002 "protection" -0.5 multiply
