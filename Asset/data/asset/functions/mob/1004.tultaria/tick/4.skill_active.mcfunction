@@ -16,13 +16,17 @@
     execute if entity @s[tag=RW.SkillBall] run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/1.tick
 # 流星
     execute if entity @s[tag=RW.SkillStarfury] run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/1.tick
-# 流星
+# 氷結斬り
     execute if entity @s[tag=RW.SkillDashSlash] run function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 # 召喚
     execute if entity @s[tag=RW.SkillSummon] run function asset:mob/1004.tultaria/tick/skill/7.star_summon/1.star_summon
+# ブレイジングスラッシュ
+    execute if entity @s[tag=RW.SkillBlazingSlash] run function asset:mob/1004.tultaria/tick/skill/blazing_slash/tick
 # ショット
     execute if entity @s[tag=RW.SkillLaser,scores={RW.Phase=1..2}] run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
     execute if entity @s[tag=RW.SkillLaser,scores={RW.Phase=3..}] run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick_phase3
+# ライトニングスタブ
+    execute if entity @s[tag=RW.SkillLightningStab] run function asset:mob/1004.tultaria/tick/skill/lightning_stab/tick
 
 # 行動選択前スキル: 追従射撃
     execute if entity @s[tag=RW.MiniSkillChase] run function asset:mob/1004.tultaria/tick/skill/phase3/1.chase_and_shot/1.tick

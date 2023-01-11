@@ -32,13 +32,16 @@
     tag @s remove RW.SkillDashSlash
     tag @s remove RW.SkillSummon
     tag @s remove RW.SkillLaser
+    tag @s remove RW.SkillBlazingSlash
+    tag @s remove RW.SkillLightningStab
     tag @s remove RW.MiniSkillChase
     tag @s remove RW.MiniSkillBulletHell
     tag @s remove RW.MiniSkillShot
     tag @s remove RW.MiniSkillLaser
-
-
     tag @s remove RW.InAction
+
+# 慣性ONに
+    tag @s remove RW.DisableInertia
 
 # チェイス停止
     kill @e[tag=RW.ChaseMarker]

@@ -46,6 +46,7 @@
     #declare tag RW.SkillSummon
     #declare tag RW.SkillLaser
     #declare tag RW.SkillBlazingSlash
+    #declare tag RW.SkillLightningStab
     ## ボスの使う大技のタグ
     #declare tag RW.SkillDeadly1
     #declare tag RW.SkillDeadly2
@@ -66,6 +67,11 @@
     #declare tag RW.FireSweep
     #declare tag RW.TargetMarker
     #declare tag RW.TargetMarkerInit
+    #declare tag RW.ChainLightning.Common
+    #declare tag RW.ChainLightning1
+    #declare tag RW.ChainLightning2
+    #declare tag RW.ChainLightning3
+    #declare tag RW.ChainLightning4
     #declare tag S2.Wait
     ## ボスの死亡時に使うタグ
     #declare tag RW.DeathAnimation

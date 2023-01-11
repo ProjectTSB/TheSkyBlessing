@@ -1,0 +1,47 @@
+#> asset:mob/1004.tultaria/tick/skill/lightning_stab/tick
+#
+#
+#
+# @within function asset:mob/1004.tultaria/tick/4.skill_active
+
+
+# 雷撃マーカーへのコマンド
+    execute at @e[type=marker,tag=RW.ChainLightning.Common] run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/marker
+
+# 最初の構え
+    execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/lightning_stab/windup
+
+# 構えずターゲッティング(最初に実行)
+    execute if score @s[scores={RW.LoopCount=0}] RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/lightning_stab/targeting_first
+
+# 構えてターゲッティング(ループ以降から実行)
+    execute if score @s[scores={RW.LoopCount=1..}] RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/lightning_stab/targeting
+
+# 突き
+    execute if score @s RW.Tick matches 20 run function asset:mob/1004.tultaria/tick/skill/lightning_stab/active
+    # 突き部分のダメージ
+        execute if score @s RW.Tick matches 21 positioned ^ ^ ^1 as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/1004.tultaria/tick/skill/lightning_stab/damage
+
+# フェイズ2なら何度か斬る
+    execute if score @s RW.Tick matches 22 run scoreboard players add @s[scores={RW.LoopCount=..2}] RW.LoopCount 1
+    execute if score @s RW.Tick matches 22 run scoreboard players set @s[scores={RW.LoopCount=..2}] RW.Tick 7
+
+# 埋まりそうになったら移動をやめる
+    execute at @s[scores={RW.Tick=21}] positioned ~ ~0.5 ~ unless block ^ ^ ^2 #lib:no_collision run function asset:mob/1004.tultaria/tick/skill/lightning_stab/stop
+
+# 最後の一個を設置
+    execute if score @s RW.Tick matches 25 run summon marker ~ ~1 ~ {Tags:["RW.ChainLightning.Common","RW.ChainLightning4"]}
+
+# 雷撃
+    # 1
+        execute if score @s RW.Tick matches 30 as @e[type=marker,tag=RW.ChainLightning.Common] at @s run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/active
+    # 2
+        execute if score @s RW.Tick matches 32 as @e[type=marker,tag=RW.ChainLightning.Common] at @s run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/active
+    # 3
+        execute if score @s RW.Tick matches 34 as @e[type=marker,tag=RW.ChainLightning.Common] at @s run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/active
+
+# 雷撃を片付ける
+    execute if score @s RW.Tick matches 36 run kill @e[type=marker,tag=RW.ChainLightning.Common,distance=..300]
+
+# リセット
+    execute if score @s RW.Tick matches 60.. run function asset:mob/1004.tultaria/tick/reset
