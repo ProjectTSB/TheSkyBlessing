@@ -14,16 +14,10 @@
 # タグ付与、全基本動作停止
     tag @s add RW.InAction
 
-# タグをリセットする
-    tag @s remove RW.SkillMelee
-    tag @s remove RW.SkillMeteor
-    tag @s remove RW.SkillCoordinate
-    tag @s remove RW.SkillOffCoordinate
-    tag @s remove RW.SkillBall
-    tag @s remove RW.SkillStarfury
-    tag @s remove RW.SkillSummon
-    tag @s remove RW.SkillLaser
+# スキルのタグをリセットする
+    function asset:mob/1004.tultaria/tick/reset/skill_tag
 
+# 移動も中断
     tag @s remove RW.Move
 
 # マーカーも消す
@@ -34,6 +28,7 @@
 
 # 無敵になる
     data modify entity @s Invulnerable set value 1b
+    tag @s add Uninterferable
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [10f,0f,-25f]

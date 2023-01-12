@@ -23,21 +23,10 @@
     execute if entity @s[scores={RW.Phase=..2}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20078}
     execute if entity @s[scores={RW.Phase=3..}] run item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20081}
 
-# タグをリセットする
-    tag @s remove RW.Skill.Melee
-    tag @s remove RW.Skill.Meteor
-    tag @s remove RW.Skill.Thunder
-    tag @s remove RW.Skill.AncientLight
-    tag @s remove RW.Skill.Starfury
-    tag @s remove RW.Skill.FreezingShred
-    tag @s remove RW.Skill.Summon
-    tag @s remove RW.Skill.SpreadShot
-    tag @s remove RW.Skill.BlazingSlash
-    tag @s remove RW.Skill.LightningStab
-    tag @s remove RW.MiniSkillChase
-    tag @s remove RW.MiniSkillBulletHell
-    tag @s remove RW.MiniSkillShot
-    tag @s remove RW.MiniSkillLaser
+# スキルのタグをリセットする
+    function asset:mob/1004.tultaria/tick/reset/skill_tag
+
+# 行動中タグを解除
     tag @s remove RW.InAction
 
 # 慣性ONに
@@ -46,6 +35,10 @@
 # チェイス停止
     kill @e[tag=RW.ChaseMarker]
     tag @s remove RW.ChaseShot
+
+# 無敵解除
+    data modify entity @s Invulnerable set value 0b
+    tag @s remove Uninterferable
 
 # スコアを戻す
     scoreboard players set @s RW.Tick 0
@@ -58,10 +51,14 @@
     scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 7
 
 # ソード設置カウントをリセット
-    scoreboard players set @s[scores={RW.SwordCount=2..}] RW.SwordCount 0
+    scoreboard players set @s[scores={RW.Phase=2,RW.SwordCount=2..}] RW.SwordCount 0
+    scoreboard players set @s[scores={RW.Phase=3,RW.SwordCount=1..}] RW.SwordCount 0
 
 # 剣を消す
     tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death
+
+# 速度設定
+    scoreboard players set @s RW.Speed 5
 
 # ランダム移動
     execute at @r run function asset:mob/1004.tultaria/tick/move/teleport/place_marker
