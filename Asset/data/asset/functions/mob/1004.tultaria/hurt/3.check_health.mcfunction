@@ -7,25 +7,18 @@
 #> private
 # @private
     #declare score_holder $Health
-    #declare score_holder $MaxHealth
 
 # 現在体力を割合で出す
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 10000
-    execute store result score $MaxHealth Temporary run function api:mob/get_max_health
-    scoreboard players operation $Health Temporary /= $MaxHealth Temporary
+    function api:mob/get_health_percent
+
+# ストレージをスコアに
+    execute store result score $Health Temporary run data get storage api: Return.HealthPer 100
+    #tellraw @a [{"text":"score: "},{"score":{"objective":"Temporary","name":"$Health"}}]
 
 # 75%以下
-    execute if score $Health Temporary matches ..75 run scoreboard players set @s[scores={RW.Phase=1}] RW.Tick 0
-    execute if score $Health Temporary matches ..75 run tag @s[scores={RW.Phase=1}] add RW.HPless75per
+    execute if entity @s[tag=!RW.HPless75per] if score $Health Temporary matches ..75 run function asset:mob/1004.tultaria/hurt/health_under_75
 # HP50%以下
-    execute if score $Health Temporary matches ..50 run scoreboard players set @s[scores={RW.Phase=2}] RW.Tick 0
-    execute if score $Health Temporary matches ..50 run tag @s remove RW.HPless50per
-    execute if score $Health Temporary matches ..50 run tag @s[scores={RW.Phase=2}] add RW.HPless50per
-# HP40%以下
-    #execute if score $Health Temporary matches ..40 run tag @s add RW.HPless40per
-# HP30%以下
-    #execute if score $Health Temporary matches ..30 run tag @s add RW.HPless30per
+    execute if entity @s[tag=!RW.HPless50per] if score $Health Temporary matches ..50 run function asset:mob/1004.tultaria/hurt/health_under_50
 
 # リセット
     scoreboard players reset $Health
-    scoreboard players reset $MaxHealth
