@@ -19,7 +19,7 @@
 
 # タグ調整、フェイズ2開始
     scoreboard players add @s RW.Phase 1
-    tag @s remove RW.HPless75per
+    tag @s remove RW.SkillDeadly1
     tag @s remove RW.InAction
 
 # 不要になったマーカーを消す

@@ -19,7 +19,7 @@
 
 # タグ調整、フェイズ3開始
     scoreboard players add @s RW.Phase 1
-    tag @s remove RW.HPless50per
+    tag @s remove RW.SkillDeadly2
     tag @s remove RW.InAction
 
 # リセット、行動再開
