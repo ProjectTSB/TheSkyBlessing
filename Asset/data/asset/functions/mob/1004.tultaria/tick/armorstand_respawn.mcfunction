@@ -16,13 +16,13 @@
     scoreboard players set @s RW.Tick -30
 
 # スキル発動中に移動した場合困るので消す
-    tag @s remove RW.SkillMelee
-    tag @s remove RW.SkillMeteor
-    tag @s remove RW.SkillCoordinate
-    tag @s remove RW.SkillOffCoordinate
-    tag @s remove RW.SkillBall
-    tag @s remove RW.SkillStarfury
-    tag @s remove RW.SkillSummon
+    tag @s remove RW.Skill.Melee
+    tag @s remove RW.Skill.Meteor
+    tag @s remove RW.Skill.Thunder
+    tag @s remove RW.Skill.OffCoordinate
+    tag @s remove RW.Skill.AncientLight
+    tag @s remove RW.Skill.Starfury
+    tag @s remove RW.Skill.Summon
 
 # 強制的にテレポする
     #data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]

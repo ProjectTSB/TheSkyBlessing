@@ -26,12 +26,12 @@
     # フェイズ1
         execute if entity @s[scores={RW.Phase=1}] run scoreboard players operation $Random Temporary %= $6 Const
     # フェイズ2(拡散ショットを解禁)
-        execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $7 Const
+        execute if entity @s[scores={RW.Phase=2}] run scoreboard players operation $Random Temporary %= $7 Const
     # フェイズ3(スターフューリーを解禁)
         execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $8 Const
 
 # デバッグ用、実行する技を確定させる
-    scoreboard players set $Random Temporary 2
+    #scoreboard players set $Random Temporary 6
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.Skill.Meteor
@@ -42,12 +42,6 @@
     execute if score $Random Temporary matches 5 run tag @s add RW.Skill.LightningStab
     execute if score $Random Temporary matches 6 run tag @s add RW.Skill.SpreadShot
     execute if score $Random Temporary matches 7 run tag @s add RW.Skill.Starfury
-
-# 大技その1
-    execute if score $Random Temporary matches 108 run tag @s add RW.Skill.Deadly1
-
-# 大技その2
-    execute if score $Random Temporary matches 109 run tag @s add RW.Skill.Deadly2
 
 # リセット
     scoreboard players reset $Random Temporary

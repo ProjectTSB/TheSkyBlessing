@@ -14,3 +14,4 @@
     scoreboard objectives add RW.LoopCount dummy
     scoreboard objectives add RW.FakeInertia dummy
     scoreboard objectives add RW.Phase dummy
+    scoreboard objectives add RW.SwordCount dummy

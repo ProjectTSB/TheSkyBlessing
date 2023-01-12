@@ -33,23 +33,21 @@
     ## ボスのHPのタグ
     #declare tag RW.HPless75per
     #declare tag RW.HPless50per
-    #declare tag RW.HPless40per
-    #declare tag RW.HPless30per
     ## ボスの使う技のタグ
-    #declare tag RW.SkillMelee
-    #declare tag RW.SkillMeteor
-    #declare tag RW.SkillCoordinate
-    #declare tag RW.SkillOffCoordinate
-    #declare tag RW.SkillBall
-    #declare tag RW.SkillStarfury
-    #declare tag RW.SkillDashSlash
-    #declare tag RW.SkillSummon
-    #declare tag RW.SkillLaser
-    #declare tag RW.SkillBlazingSlash
-    #declare tag RW.SkillLightningStab
+    #declare tag RW.Skill.Melee
+    #declare tag RW.Skill.Meteor
+    #declare tag RW.Skill.Thunder
+    #declare tag RW.Skill.OffCoordinate
+    #declare tag RW.Skill.AncientLight
+    #declare tag RW.Skill.Starfury
+    #declare tag RW.Skill.FreezingShred
+    #declare tag RW.Skill.Summon
+    #declare tag RW.Skill.SpreadShot
+    #declare tag RW.Skill.BlazingSlash
+    #declare tag RW.Skill.LightningStab
     ## ボスの使う大技のタグ
-    #declare tag RW.SkillDeadly1
-    #declare tag RW.SkillDeadly2
+    #declare tag RW.Skill.Deadly1
+    #declare tag RW.Skill.Deadly2
     ## ボスの使う違う技のタグ
     #declare tag RW.MiniSkillChase
     #declare tag RW.MiniSkillShot
@@ -72,6 +70,8 @@
     #declare tag RW.ChainLightning2
     #declare tag RW.ChainLightning3
     #declare tag RW.ChainLightning4
+    #declare tag RW.ChainLightning5
+    #declare tag RW.ChainLightning.Last
     #declare tag S2.Wait
     ## ボスの死亡時に使うタグ
     #declare tag RW.DeathAnimation
