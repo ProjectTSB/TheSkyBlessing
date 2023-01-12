@@ -17,7 +17,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
-    function api:player_modifier/defense/fire/add
+    function api:modifier/defense/fire/add
 
 #ちょっとした演出
     particle flame ~ ~0.3 ~ 0.4 0.2 0.4 0 10 normal @a

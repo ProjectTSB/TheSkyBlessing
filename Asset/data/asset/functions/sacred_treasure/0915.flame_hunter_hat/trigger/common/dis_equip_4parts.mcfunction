@@ -6,15 +6,15 @@
 
 # 火耐性
     data modify storage api: Argument.UUID set value [I;1,2,915,6]
-    function api:player_modifier/defense/fire/remove
+    function api:modifier/defense/fire/remove
 
 # 火攻撃
     data modify storage api: Argument.UUID set value [I;1,2,915,6]
-    function api:player_modifier/attack/fire/remove
+    function api:modifier/attack/fire/remove
 
 # 水耐性
     data modify storage api: Argument.UUID set value [I;1,2,915,6]
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # 移動速度
     attribute @s generic.movement_speed modifier remove 00000001-0000-0002-0000-039300000001

@@ -2019,7 +2019,7 @@
         "master"
     ],
     "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
-    "gitmoji.additionalEmojis": [
+    "gitmoji.addCustomEmoji": [
         {
             "code": ":balance_scale:",
             "emoji": "⚖️",
@@ -2028,6 +2028,10 @@
         }
     ],
     "git-graph.customEmojiShortcodeMappings": [
+        {
+            "shortcode": ":technologist:",
+            "emoji": "🧑‍💻"
+        },
         {
             "shortcode": ":balance_scale:",
             "emoji": "⚖️"

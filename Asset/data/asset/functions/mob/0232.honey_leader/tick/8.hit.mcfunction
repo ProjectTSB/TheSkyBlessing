@@ -19,12 +19,13 @@
 # 補正
     execute as @e[type=skeleton,tag=this,distance=..32] run function lib:damage/modifier
 # 実行
-    execute if entity @s[gamemode=!creative] run function lib:damage/
+    function lib:damage/
 # リセット
     function lib:damage/reset
 # デバフ
-    effect give @s[gamemode=!creative] poison 3 1 true
-    effect give @s[gamemode=!creative] mining_fatigue 3 1 true
+    effect give @s mining_fatigue 3 1 true
+    execute if predicate api:global_vars/difficulty/max/normal run effect give @s poison 3 1 true
+    execute if predicate api:global_vars/difficulty/min/hard run effect give @s wither 3 1 true
 
 # リセット処理
     tag @s remove LandingTarget
