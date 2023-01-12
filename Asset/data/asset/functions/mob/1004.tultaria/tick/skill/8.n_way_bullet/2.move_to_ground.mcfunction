@@ -6,7 +6,6 @@
 #   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick
 #   asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/1.tick_phase3
 
-
 # 中心に移動
     scoreboard players set @s RW.Speed 3
     function asset:mob/1004.tultaria/tick/move/teleport/move_to_ground/1.search_ground
@@ -18,6 +17,7 @@
 
 # 体変える
     item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20077}
+    item replace entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20080}
 
 # 体の向き
     execute at @s run tp @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~ ~

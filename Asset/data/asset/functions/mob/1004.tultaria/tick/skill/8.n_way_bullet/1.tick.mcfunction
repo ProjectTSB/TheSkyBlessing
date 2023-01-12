@@ -4,8 +4,11 @@
 #
 # @within function asset:mob/1004.tultaria/tick/4.skill_active
 
+# 慣性切る
+    execute if score @s RW.Tick matches 0 run tag @s add RW.DisableInertia
+
 # 移動する
-    execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.move_to_ground
+    execute if score @s RW.Tick matches 0 at @s run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.move_to_ground
 
 # 構える
     execute if score @s RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/2.windup
