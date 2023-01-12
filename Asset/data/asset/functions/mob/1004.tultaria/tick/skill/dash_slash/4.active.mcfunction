@@ -19,3 +19,8 @@
     data modify entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.Head set value [0.1f,0.1f,0.1f]
     item replace entity @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] armor.head with stick{CustomModelData:20086}
     execute at @s run tp @e[type=armor_stand,tag=RW.ModelHead,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] ~ ~ ~ ~5 ~
+
+# 演出
+    playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 1.5 0.8
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1.5 0.7
+    playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1.2
