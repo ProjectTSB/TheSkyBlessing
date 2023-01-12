@@ -20,7 +20,7 @@
         data modify storage lib: Argument.ElementType set value "Water"
     # ダメージ
         function lib:damage/modifier
-        execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
+        execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
 
