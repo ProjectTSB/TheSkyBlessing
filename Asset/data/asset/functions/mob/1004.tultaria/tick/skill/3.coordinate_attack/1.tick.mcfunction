@@ -16,7 +16,7 @@
 
 # マーカーを散らす
     execute if score @s[scores={RW.Phase=1}] RW.Tick matches 21..25 run function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/4.call_thunder
-    execute if score @s[scores={RW.Phase=2}] RW.Tick matches 21..27 run function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/4.call_thunder
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 21..27 run function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/4.call_thunder
 
 # マーカーに対して雷を召喚
     execute if score @s RW.Tick matches 35 at @a run function asset:mob/1004.tultaria/tick/skill/3.coordinate_attack/6.vfx
