@@ -8,15 +8,17 @@
     #declare score_holder RW.TargetModel
 
 # ポーズ(構え)
-    execute if score @s RW.Tick matches 10 as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
+    execute if score @s RW.Tick matches 15 as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_1
 
 # 画面エフェクト
     execute if score @s RW.Tick matches 20 run title @a[distance=..50] times 5 30 2
-    execute if score @s RW.Tick matches 20 run title @a[distance=..50] title {"text":"","font":"screen_effect","color":"black"}
+    execute if score @s RW.Tick matches 20 run title @a[distance=..50] title {"text":""}
+    execute if score @s RW.Tick matches 20 run title @a[distance=..50] subtitle {"text":"\uE010","font":"screen_effect","color":"black"}
 
 # 文字表示
-    execute if score @s RW.Tick matches 25 run title @a[distance=..50] subtitle {"text":"","font":"screen_effect","color":"white"}
-    execute if score @s RW.Tick matches 40 run title @a[distance=..50] subtitle {"text":"","font":"screen_effect","color":"white"}
+    execute if score @s RW.Tick matches 25 run title @a[distance=..50] times 0 30 0
+    execute if score @s RW.Tick matches 25 run title @a[distance=..50] title {"text":"\uE011","font":"screen_effect","color":"white"}
+    execute if score @s RW.Tick matches 40 run title @a[distance=..50] title {"text":"\uE012","font":"screen_effect","color":"white"}
     execute if score @s RW.Tick matches 40 at @a[distance=..50] run playsound minecraft:entity.blaze.shoot neutral @p ~ ~ ~ 1 1
     execute if score @s RW.Tick matches 55 as @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/wait_time/opening/change_pose_2
 
