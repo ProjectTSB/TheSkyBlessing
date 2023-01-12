@@ -7,7 +7,7 @@
 # 右か左をランダムで選択
     # 疑似乱数取得
         execute store result score $Random Temporary run function lib:random/
-        scoreboard players operation $Random Temporary %= $1 Const
+        scoreboard players operation $Random Temporary %= $2 Const
     # 結果によって方向を選ぶ
         execute if score $Random Temporary matches 0 facing entity @p feet run tp @s ~ ~ ~ ~90 ~
         execute if score $Random Temporary matches 1 facing entity @p feet run tp @s ~ ~ ~ ~-90 ~

@@ -48,7 +48,6 @@
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1.5 0.6
     playsound minecraft:entity.glow_squid.squirt player @a ~ ~ ~ 1.5 2
 
-# ダメージを与える
 # ダメージ設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 30.0f
