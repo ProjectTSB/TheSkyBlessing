@@ -6,4 +6,4 @@
 
 # ハード以上なら移動速度上昇と耐性を得る
     effect give @s speed 1 2 true
-    effect give @s resistance 1 4 true
+    effect give @s resistance 1 7 true
