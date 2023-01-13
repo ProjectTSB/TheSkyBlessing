@@ -5,7 +5,7 @@
 # @within function asset:mob/0228.frost_eye/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon stray ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0228.frost_eye"}
+    summon stray ~ ~ ~ {NoAI:1b,Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall"],DeathLootTable:"asset:mob/death/0228.frost_eye"}
 # ID (int)
     data modify storage asset:mob ID set value 228
 # Type (string) Wikiを参照
