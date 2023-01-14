@@ -4,6 +4,4 @@
 #
 # @within function asset:mob/1004.tultaria/tick/**
 
-scoreboard players set @e[type=wither_skeleton,scores={MobID=1004}] RW.Tick 0
-scoreboard players set @e[type=wither_skeleton,scores={MobID=1004}] RW.Phase 2
-tag @e[type=wither_skeleton,scores={MobID=1004}] add RW.HPless50per
+execute as @e[type=wither_skeleton,scores={MobID=1004}] at @s run function asset:mob/1004.tultaria/hurt/health_under_50
