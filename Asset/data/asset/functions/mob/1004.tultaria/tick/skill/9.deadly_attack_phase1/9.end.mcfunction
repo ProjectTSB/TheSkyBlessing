@@ -4,18 +4,12 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 
-#> トゥル側から剣へと付与するタグ
-# @private
-#declare tag S7.Death
 
 # テスト用メッセージ
-    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 諦めが悪いようね。","color":"white"}]
+    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 少しだけ、本気で相手してあげる。","color":"white"}]
 
 # 無敵解除
     data modify entity @s Invulnerable set value 0b
-
-# 剣を消す
-    tag @e[type=armor_stand,scores={MobID=1015}] add S7.Death
 
 # タグ調整、フェイズ2開始
     scoreboard players add @s RW.Phase 1
