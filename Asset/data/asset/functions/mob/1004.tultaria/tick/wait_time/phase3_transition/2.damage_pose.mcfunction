@@ -17,8 +17,9 @@
 # スキルのタグをリセットする
     function asset:mob/1004.tultaria/tick/reset/skill_tag
 
-# 移動も中断
+# その他タグリセット
     tag @s remove RW.Move
+    tag @s remove RW.DisableInertia
 
 # マーカーも消す
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
@@ -55,4 +56,4 @@
     playsound minecraft:block.amethyst_cluster.break hostile @a ~ ~ ~ 4 1.0
 
 # テスト用メッセージ
-    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> …そう。","color":"white"}]
+    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> ウウッ…","color":"white"}]

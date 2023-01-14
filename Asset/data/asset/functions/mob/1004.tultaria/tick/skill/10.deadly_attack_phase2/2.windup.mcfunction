@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
 
+# 速度設定
+    scoreboard players set @s RW.Speed 7
+
 # 中心に移動
     function asset:mob/1004.tultaria/tick/move/teleport/move_to_center
 
