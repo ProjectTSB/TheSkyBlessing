@@ -30,6 +30,14 @@
     execute if score @s RW.Tick matches 35 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash1
     execute if score @s RW.Tick matches 36 run function asset:mob/1004.tultaria/tick/skill/dash_slash/slash2
 
+# 形態によっては、氷弾を追加で放つ
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 32 positioned ^3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 32 positioned ^-3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 34 positioned ^3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 34 positioned ^-3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 36 positioned ^3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 36 positioned ^-3 ^ ^ run function asset:mob/1004.tultaria/tick/skill/dash_slash/shoot_ice_bullet
+
 # 斬撃が発生するぞ！
     execute if score @s RW.Tick matches 37 run function asset:mob/1004.tultaria/tick/skill/dash_slash/back_slash_start
 
