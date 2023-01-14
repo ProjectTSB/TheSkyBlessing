@@ -6,7 +6,7 @@
 
 # 画面エフェクト
     title @a[distance=..50] times 0 5 2
-    title @a[distance=..50] title {"text":"","font":"screen_effect","color":"#FFFFFF"}
+    title @a[distance=..50] title {"text":"\uE010","font":"screen_effect","color":"#FFFFFF"}
     title @a[distance=..50] subtitle {"text":""}
 
 # ポーズ変更
