@@ -19,28 +19,28 @@
 # 元のポーズに戻って少し待つ
     execute if score @s RW.Tick matches 75 run function asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/3.wait_pose
 
-# 剣を突き立てる
+# 召喚位置を中心として、剣を突き立てる
     data modify storage api: Argument.ID set value 1015
-    execute if score @s RW.Tick matches 101 rotated 0 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 102 rotated 22.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 103 rotated 45 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 104 rotated 67.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 105 rotated 90 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 106 rotated 112.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 107 rotated 135 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 108 rotated 157.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 109 rotated 180 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 110 rotated 202.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 111 rotated 225 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 112 rotated 247.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 113 rotated 270 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 114 rotated 292.5 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 115 rotated 315 0 positioned ^ ^5 ^10 run function api:mob/summon
-    execute if score @s RW.Tick matches 116 rotated 337.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 101 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 0 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 102 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 22.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 103 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 45 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 104 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 67.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 105 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 90 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 106 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 112.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 107 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 135 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 108 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 157.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 109 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 180 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 110 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 202.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 111 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 225 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 112 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 247.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 113 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 270 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 114 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 292.5 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 115 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 315 0 positioned ^ ^5 ^10 run function api:mob/summon
+    execute if score @s RW.Tick matches 116 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 337.5 0 positioned ^ ^5 ^10 run function api:mob/summon
 
 # 剣が落ちてきた瞬間から、範囲外には出れなくなる
-    execute if score @s RW.Tick matches 100..440 run scoreboard players operation $AreaInterval Temporary %= $3 Const
-    execute if score @s RW.Tick matches 100..440 if score $AreaInterval Temporary matches 0 rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
+    execute if score @s RW.Tick matches 100.. run scoreboard players operation $AreaInterval Temporary %= $3 Const
+    execute if score @s RW.Tick matches 100.. if score $AreaInterval Temporary matches 0 at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] rotated 0 0 run function asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 # 一旦やめて、その後再開
     execute if score @s RW.Tick matches 300 run tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> あの神々に言われるがままの、あなたには…","color":"white"}]
