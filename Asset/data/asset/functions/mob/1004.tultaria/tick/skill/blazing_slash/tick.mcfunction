@@ -16,14 +16,14 @@
 # 振る
     execute if score @s RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/active
 
-# 爆裂斬
-    execute if score @s RW.Tick matches 50 anchored eyes positioned ^ ^-0.5 ^4 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 55 anchored eyes positioned ^ ^-0.5 ^6 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 60 anchored eyes positioned ^ ^-0.5 ^8 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 65 anchored eyes positioned ^ ^-0.5 ^10 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 70 anchored eyes positioned ^ ^-0.5 ^12 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 75 anchored eyes positioned ^ ^-0.5 ^14 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
-    execute if score @s RW.Tick matches 80 anchored eyes positioned ^ ^-0.5 ^16 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+# 形態によっては、爆炎が追加で飛ぶ
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 50 anchored eyes positioned ^ ^-0.5 ^4 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 55 anchored eyes positioned ^ ^-0.5 ^6 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 60 anchored eyes positioned ^ ^-0.5 ^8 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 65 anchored eyes positioned ^ ^-0.5 ^10 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 70 anchored eyes positioned ^ ^-0.5 ^12 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 75 anchored eyes positioned ^ ^-0.5 ^14 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
+    execute if score @s[scores={RW.Phase=2..}] RW.Tick matches 80 anchored eyes positioned ^ ^-0.5 ^16 run function asset:mob/1004.tultaria/tick/skill/blazing_slash/explosion
 
 # リセット
     execute if score @s RW.Tick matches 100.. run function asset:mob/1004.tultaria/tick/reset
