@@ -33,4 +33,4 @@
     execute rotated ~ 0 run particle minecraft:smoke ^-0.8 ^1.5 ^-0.5 0.2 0.2 0.2 0.01 10
 
 # テスト用メッセージ
-    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 本気で相手してあげる。","color":"white"}]
+    tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> …本気で、相手してあげる。","color":"white"}]
