@@ -20,8 +20,9 @@
     execute if score @s 3C.Tick matches 14 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.Head set value [0f,0f,350f]
     execute if score @s 3C.Tick matches 15 run data modify entity @e[type=armor_stand,tag=3C.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.Head set value [0f,0f,0f]
 # 召喚
-    execute if score @s 3C.Tick matches 15 rotated ~ 0 positioned ^1.73205 ^ ^1 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
-    execute if score @s 3C.Tick matches 20 rotated ~ 0 positioned ^-1.73205 ^ ^1 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
+    execute if score @s 3C.Tick matches 15 rotated ~60 0 positioned ^ ^ ^1.8 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
+    execute if score @s 3C.Tick matches 20 rotated ~180 0 positioned ^ ^ ^1.8 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
+    execute if predicate api:global_vars/difficulty/min/hard if score @s 3C.Tick matches 25 rotated ~300 0 positioned ^ ^ ^1.8 run function asset:mob/0120.convict/tick/2.summon/3.enemy_summon
 
 # リセット
     execute if score @s 3C.Tick matches 55 run function asset:mob/0120.convict/tick/reset
