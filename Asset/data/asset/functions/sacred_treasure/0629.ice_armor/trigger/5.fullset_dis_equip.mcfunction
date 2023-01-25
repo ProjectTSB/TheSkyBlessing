@@ -10,7 +10,7 @@
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,629,0]
 # 補正の削除
-    function api:player_modifier/defense/water/remove
+    function api:modifier/defense/water/remove
 
 # Tag削除
     tag @s remove HH.Fullset

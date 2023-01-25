@@ -11,7 +11,7 @@
         attribute @s generic.attack_speed modifier remove 1-0-1-0-10d00000000
     # 物理ダメージ
         data modify storage api: Argument.UUID set value [I;1,1,269,0]
-        function api:player_modifier/attack/physical/remove
+        function api:modifier/attack/physical/remove
     # 魔法ダメージ
         data modify storage api: Argument.UUID set value [I;1,1,269,0]
-        function api:player_modifier/attack/magic/remove
+        function api:modifier/attack/magic/remove
