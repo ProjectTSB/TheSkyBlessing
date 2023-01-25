@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0638.spirt_garment/register
+#> asset:sacred_treasure/0638.spirit_garment/register
 #
 # 神器プールへの登録処理
 #
