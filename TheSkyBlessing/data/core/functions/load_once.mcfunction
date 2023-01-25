@@ -209,9 +209,6 @@ team modify NoCollision collisionRule never
     #       player_manager:pos_fix_and_calc_diff
     #       api:player_vector/get
     #   predicate lib:is_player_moving
-        scoreboard objectives add PlayerPosDiff.X dummy
-        scoreboard objectives add PlayerPosDiff.Y dummy
-        scoreboard objectives add PlayerPosDiff.Z dummy
         scoreboard objectives add PlayerStopTime dummy
         scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
