@@ -36,8 +36,7 @@
     data modify storage lib: Array set from storage lib: SqrResult
     function lib:array/math/sum
 
-    execute store result score $Cur.SquaredMagnitude Temporary run data get storage lib: SumResult
-
+    execute store result score $Cur.SquaredMagnitude Temporary run data get storage lib: SumResult 100
 # スコア推移
     scoreboard players reset @s[scores={PosPacketLossDetectAfterTick=2}] PosPacketLossDetectAfterTick
     scoreboard players add @s[scores={PosPacketLossDetectAfterTick=0..}] PosPacketLossDetectAfterTick 1
