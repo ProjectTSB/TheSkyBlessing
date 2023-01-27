@@ -32,13 +32,13 @@
 # EntityStorageに戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects set from storage asset:effect Effects
 # イベントを発火する
-    execute if data storage asset:effect EventWaitingEffects.Given[0] run function asset_manager:effect/events/given
-    execute if data storage asset:effect EventWaitingEffects.ReGiven[0] run function asset_manager:effect/events/re-given
-    execute if data storage asset:effect EventWaitingEffects.Tick[0] run function asset_manager:effect/events/tick
-    execute if data storage asset:effect EventWaitingEffects.Remove[0] run function asset_manager:effect/events/remove
-    execute if data storage asset:effect EventWaitingEffects.End[0] run function asset_manager:effect/events/end
+    execute if data storage asset:effect EventWaitingEffects.Given[0] run function asset_manager:effect/events/given/
+    execute if data storage asset:effect EventWaitingEffects.ReGiven[0] run function asset_manager:effect/events/re-given/
+    execute if data storage asset:effect EventWaitingEffects.Tick[0] run function asset_manager:effect/events/tick/
+    execute if data storage asset:effect EventWaitingEffects.Remove[0] run function asset_manager:effect/events/remove/
+    execute if data storage asset:effect EventWaitingEffects.End[0] run function asset_manager:effect/events/end/
 
-# 付与されているエフェクトが0であればタグを消す
+# 付与されているエフェクトが何もなければタグを消す
     execute unless data storage asset:effect Effects[0] run tag @s remove HasAssetEffect
 
 # リセット
