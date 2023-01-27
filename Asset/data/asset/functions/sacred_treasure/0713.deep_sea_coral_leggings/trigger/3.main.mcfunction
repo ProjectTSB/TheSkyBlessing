@@ -30,11 +30,11 @@
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/heal/add
 
-# 火攻撃-20%
+# 火耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,713,4]
-    data modify storage api: Argument.Amount set value -0.2
+    data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:modifier/attack/fire/add
+    function api:modifier/defense/fire/add
 
 # フルセット
     execute if data storage asset:context id.all{head:711,chest:712,legs:713,feet:714} run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/equip
