@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset_manager:mob/triggers/death/call
+# @within function
+#   asset_manager:mob/triggers/death/
+#   asset:mob/super.death
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
