@@ -1,8 +1,8 @@
-#> asset:mob/0204.hells_watcher/tick/2.tick
+#> asset:mob/0204_infernal_watcher/tick/2.tick
 #
 # Mobのtick時の処理
 #
-# @within function asset:mob/0204.hells_watcher/tick/1.trigger
+# @within function asset:mob/0204_infernal_watcher/tick/1.trigger
 
 # デーモンアイからコピーされたのをさらにコピー。幾何学って素敵！
 
@@ -16,8 +16,8 @@
     execute if entity @s[scores={5O.MoveTime=40..}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.5 ~ ~
 
 # サウンド
-    execute if entity @s[scores={5O.MoveTime=40}] run function asset:mob/0204.hells_watcher/tick/event/start_frenzy
-    execute if entity @s[scores={5O.MoveTime=100}] run function asset:mob/0204.hells_watcher/tick/event/end_frenzy
+    execute if entity @s[scores={5O.MoveTime=40}] run function asset:mob/0204_infernal_watcher/tick/event/start_frenzy
+    execute if entity @s[scores={5O.MoveTime=100}] run function asset:mob/0204_infernal_watcher/tick/event/end_frenzy
 
 # スコアリセット
     scoreboard players reset @s[scores={5O.MoveTime=100..}] 5O.MoveTime
@@ -38,8 +38,8 @@
     scoreboard players remove @s[scores={5O.AttackCT=1..}] 5O.AttackCT 1
 
 # クールタイム中じゃないなら接触時に攻撃
-    execute if entity @s[scores={5O.MoveTime=..59}] unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0204.hells_watcher/tick/event/attack
-    execute if entity @s[scores={5O.MoveTime=60..}] unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0204.hells_watcher/tick/event/attack_strong
+    execute if entity @s[scores={5O.MoveTime=..59}] unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0204_infernal_watcher/tick/event/attack
+    execute if entity @s[scores={5O.MoveTime=60..}] unless score @s 5O.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0204_infernal_watcher/tick/event/attack_strong
 
 # カベにぶつかった際の処理
     execute positioned ~ ~1.68 ~ unless block ^ ^ ^0.5 #lib:no_collision at @s run tp @s ~ ~ ~ ~45 ~-45
@@ -47,4 +47,4 @@
 
 # 世界に存在しすぎた場合、消滅する
     scoreboard players remove @s 5O.LifeTime 1
-    execute if score @s 5O.LifeTime matches ..0 run function asset:mob/0204.hells_watcher/tick/event/suicide
+    execute if score @s 5O.LifeTime matches ..0 run function asset:mob/0204_infernal_watcher/tick/event/suicide
