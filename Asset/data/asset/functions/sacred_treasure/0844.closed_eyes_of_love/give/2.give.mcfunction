@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "passive"
 # 神器の発動条件 (TextComponentString) (オプション)
-    data modify storage asset:sacred_treasure Condition set value '{"text":頭上に敵Mobが来たとき。"}'
+    data modify storage asset:sacred_treasure Condition set value '{"text":"頭上に敵Mobが来たとき。"}'
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     data modify storage asset:sacred_treasure AttackInfo.Damage set value 600
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
