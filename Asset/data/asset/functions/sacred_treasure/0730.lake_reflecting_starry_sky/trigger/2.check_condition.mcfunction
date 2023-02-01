@@ -8,9 +8,9 @@
     function asset:sacred_treasure/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
 
-# 夜にしか発動できない
+# 夜かどうかをチェックする
     execute if predicate lib:is_day run tag @s remove CanUsed
-    execute if predicate lib:is_day run tellraw @s [{"text":"夜にしか発動できません。","color":"red"}]
+    execute if predicate lib:is_day run tellraw @s {"text":"発動条件を満たしていません。","color":"red"}
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/3.main
