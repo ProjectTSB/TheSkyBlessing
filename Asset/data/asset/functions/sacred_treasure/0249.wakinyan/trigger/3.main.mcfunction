@@ -30,8 +30,8 @@
         execute if score @s Temporary matches 1 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 1 0.6 0 1 ~ ~4 ~ 0.01 4.5 0.01 0 100 force @a
         execute if score @s Temporary matches 2 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 1 0 0 1 ~ ~4 ~ 0.01 4.5 0.01 0 100 force @a
         execute if score @s Temporary matches 3 at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run particle dust 1 0 1 1 ~ ~4 ~ 0.01 4.5 0.01 0 100 force @a
-        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound entity.lightning_bolt.thunder player @a[distance=..100] ~ ~ ~ 10000000000 2 0
-        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound entity.lightning_bolt.thunder player @a[distance=..100] ~ ~ ~ 10000000000 2 0
+        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound entity.lightning_bolt.thunder player @a[distance=..100] ~ ~ ~ 3 2 0
+        execute at @e[type=#lib:living,type=!player,tag=Victim,tag=Hit,distance=..100,limit=1] run playsound entity.lightning_bolt.thunder player @a[distance=..100] ~ ~ ~ 3 2 0
         # execute at @e[type=#lib:living,tag=Hit,distance=..100,limit=1] run summon lightning_bolt ~ ~ ~ {damage:0.001d,CustomName:'[{"text": "雷鳥の囃子","color":"yellow"}]'}
     # だめーーじ
         data merge storage lib: {Argument:{Damage:60.0f,AttackType:Magic,ElementType:Thunder,FixedDamage:0b}}
