@@ -13,13 +13,13 @@
     data modify storage lib: Argument.DisableLog set value 1b
     function lib:mp/fluctuation
 
-# 体力回復量
+# 魔法攻撃
     data modify storage api: Argument.UUID set value [I;1,1,740,7]
-    function api:modifier/heal/remove
+    function api:modifier/attack/magic/remove
 
-# MP回復量
+# 被回復量
     data modify storage api: Argument.UUID set value [I;1,1,740,7]
-    function api:modifier/mp_regen/remove
+    function api:modifier/receive_heal/remove
 
 # Tag削除
     tag @s remove KK.Modifier
