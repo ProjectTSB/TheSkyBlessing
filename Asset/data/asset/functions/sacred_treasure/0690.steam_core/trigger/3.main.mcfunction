@@ -10,26 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.00000002 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.000000025 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.00000003 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.000000035 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.00000004 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.000000045 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.00000005 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.000000055 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^10000000 ^10000000 ^ 0.00000006 0 normal @a
-
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.00000002 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.000000025 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.00000003 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.000000035 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.00000004 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.000000045 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.00000005 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.000000055 0 normal @a
-    execute rotated ~ 0 run particle minecraft:cloud ~ ~1.3 ~ ^-10000000 ^10000000 ^ 0.00000006 0 normal @a
-
+    execute rotated ~ 0 positioned ~ ~1.3 ~ run function asset:sacred_treasure/0690.steam_core/trigger/vfx
     playsound block.fire.extinguish player @a ~ ~ ~ 0.5 0.8 0
     playsound block.fire.extinguish player @a ~ ~ ~ 0.5 0.9 0
     playsound block.fire.extinguish player @a ~ ~ ~ 0.5 1.0 0
