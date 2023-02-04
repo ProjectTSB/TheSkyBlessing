@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:effect/tick
 
-execute if data storage asset:context {id:2147483647} run function asset:effect/ex/tick/
+execute if data storage asset:context {id:65535} run function asset:effect/ex/tick/

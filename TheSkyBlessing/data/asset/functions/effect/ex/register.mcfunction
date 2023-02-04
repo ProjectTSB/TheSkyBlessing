@@ -3,14 +3,15 @@
 #
 #
 # @within function asset:effect/ex/_/register
-say register
 
+# ExtendsSafe (boolean) (オプション)
+    data modify storage asset:effect ExtendsSafe set value true
 # ID
-    data modify storage asset:effect ID set value 2147483647
+    data modify storage asset:effect ID set value 65535
 # 名前
-    data modify storage asset:effect Name set value '{"text":"再生"}'
+    data modify storage asset:effect Name set value '{"text":"微再生"}'
 # 説明文
-    data modify storage asset:effect Description set value '{"text":"強力な再生能力"}'
+    data modify storage asset:effect Description set value '{"text":"再生能力"}'
 # 残り時間 (default = API || error)
     # data modify storage asset:effect Duration set value
 # スタック (default = API || 1)
@@ -31,3 +32,6 @@ say register
     # data modify storage asset:effect RequireClearLvWithApi set value
 # 牛乳で消せるか (default = true)
     # data modify storage asset:effect AllowClearWithMilk set value
+# フィールド (本当はこういうのはスタックでやったほうがいい)
+    data modify storage asset:effect Field.Tick set value 0
+    data modify storage asset:effect Field.HealAmount set value 1
