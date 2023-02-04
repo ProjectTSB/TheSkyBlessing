@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"神鳴りの御剣","color":"white"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"とある英雄が神から授かったとされる剣","color":"gray"}','{"text":"ひとたび振るえば悪しき者に裁きの雷を下す。","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"とある英雄が振るっていた、白き雷を纏う大太刀。","color":"gray","italic":"true"}','{"text":"振るえば悪しき者に裁きの雷を下す。","color":"gray","italic":"true"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
