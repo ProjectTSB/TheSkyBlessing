@@ -14,11 +14,11 @@
     #declare score_holder $MaxStack
 
 # 計算用にスコアとして取得する
-    execute store result score $OriginDuration Temporary run data get storage asset:effect OriginEffectData.Duration
+    execute store result score $OriginDuration Temporary run data get storage asset:effect TargetEffectData.Duration
     execute store result score $Duration Temporary run data get storage asset:effect Duration
     execute store result score $MaxDuration Temporary run data get storage asset:effect MaxDuration
 
-    execute store result score $OriginStack Temporary run data get storage asset:effect OriginEffectData.Stack
+    execute store result score $OriginStack Temporary run data get storage asset:effect TargetEffectData.Stack
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
 # Operationに合わせてDurationとStackを計算する // forceReplaceはそのまま新しい値が使われるので何もしなくて良い
@@ -42,8 +42,8 @@
     data modify storage asset:effect EffectData.AllowClearWithMilk set from storage asset:effect AllowClearWithMilk
     data modify storage asset:effect EffectData.Field set from storage asset:effect Field
 # イベント設定
-    execute unless data storage asset:effect OriginEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
-    execute if data storage asset:effect OriginEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
+    execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
+    execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット
     scoreboard players reset $OriginDuration Temporary
     scoreboard players reset $OriginStack Temporary

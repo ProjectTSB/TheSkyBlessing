@@ -1,9 +1,13 @@
-#> asset_manager:effect/give/try_pop_effect_data
+#> asset_manager:effect/common/try_pop_effect_data
 #
+# プレイヤーのエフェクトデータから該当IDのデータの引き抜きを試みる
 #
-# @output storage asset:effect OriginEffectData : EffectData | null
+# @input storage asset:effect ID
+# @output storage asset:effect TargetEffectData : EffectData | null
 # @within function asset_manager:effect/give/give
 
+# storage呼び出し
+    function oh_my_dat:please
 # セッション開く
     function lib:array/session/open
 # エフェクトをすでに持っているかを取得する
@@ -14,7 +18,7 @@
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
-    data modify storage asset:effect OriginEffectData set from storage lib: Array[0]
+    data modify storage asset:effect TargetEffectData set from storage lib: Array[0]
 # Effectsから該当IDのデータを消す
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
     data modify storage lib: Masks set from storage lib: CompareResult
