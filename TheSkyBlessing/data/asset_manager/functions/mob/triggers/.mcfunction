@@ -18,6 +18,10 @@
     function asset_manager:mob/triggers/tick/
     execute if entity @s[tag=AttackingEntity] run function asset_manager:mob/triggers/attack/
     execute if entity @s[tag=AttackedEntity] run function asset_manager:mob/triggers/hurt/
+# EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
+    function oh_my_dat:please
+# フィールドを元に戻す
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
 # リセット
     data remove storage asset:context id
     data remove storage asset:context this
