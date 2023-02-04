@@ -13,6 +13,7 @@
 
 #> Tags
 # @within function
+#   api:entity/mob/effect/**
 #   core:tick/
 #   asset_manager:effect/give/give
 #   asset_manager:effect/tick

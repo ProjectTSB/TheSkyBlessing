@@ -4,7 +4,9 @@
 #
 # @input storage asset:effect ID
 # @output storage asset:effect TargetEffectData : EffectData | null
-# @within function asset_manager:effect/give/give
+# @within function
+#   api:entity/mob/effect/core/remove/from_id
+#   asset_manager:effect/give/give
 
 # storage呼び出し
     function oh_my_dat:please
