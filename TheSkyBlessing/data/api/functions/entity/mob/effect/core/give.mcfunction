@@ -47,6 +47,7 @@
     data remove storage asset:effect ProcessOnDied
     data remove storage asset:effect RequireClearLvWithApi
     data remove storage asset:effect AllowClearWithMilk
+    data remove storage asset:effect Field
 
     data remove storage asset:effect NonExistsInRom
 

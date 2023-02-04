@@ -14,6 +14,7 @@
 # context作成
     data modify storage asset:context id set from storage asset:effect TargetEffect.ID
     data modify storage asset:context Stack set from storage asset:effect TargetEffect.Stack
+    data modify storage asset:context this set from storage asset:effect TargetEffect.Field
 # tellraw @a [{"text":"{}: "},{"storage":"asset:context","nbt":"{}"}]
 # 各種イベントを呼び出す
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
@@ -23,6 +24,7 @@
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
+    data modify storage asset:effect TargetEffect.Field set from storage asset:context this
     data modify storage asset:effect TargetEffect.Stack set from storage asset:context Stack
 # ゴミを消す
     data remove storage asset:effect TargetEffect.NextEvent
@@ -32,6 +34,7 @@
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect NextTickEffects[-1]
     execute if entity @s[tag=Death] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect NextTickEffects[-1]
 # リセット
+    data remove storage asset:context this
     data remove storage asset:context id
     data remove storage asset:effect TargetEffect
 # まだ処理してないエフェクトがあれば再帰
