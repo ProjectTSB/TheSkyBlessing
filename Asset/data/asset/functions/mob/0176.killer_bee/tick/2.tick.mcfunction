@@ -29,3 +29,6 @@
     execute if entity @s[scores={4W.MoveTime=50..}] unless score @s 4W.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0176.killer_bee/tick/3.damage
 
 # カベにぶつかった際の処理はない。壁は貫通するもの
+
+# デスポーン処理
+    execute unless entity @p[distance=..40] run function asset:mob/0176.killer_bee/tick/remove

@@ -29,3 +29,6 @@
     execute if entity @s[scores={56.MoveTime=180..}] unless score @s 56.AttackCT matches 1.. positioned ~-0.5 ~0.5 ~-0.5 if entity @p[tag=!PlayerShouldInvulnerable,dx=0] run function asset:mob/0186.ferocious_bee/tick/3.damage
 
 # カベにぶつかった際の処理はない。壁は貫通するもの
+
+# デスポーン処理
+    execute unless entity @p[distance=..40] run function asset:mob/0186.ferocious_bee/tick/remove
