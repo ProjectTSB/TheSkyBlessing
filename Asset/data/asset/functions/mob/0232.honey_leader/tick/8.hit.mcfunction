@@ -23,8 +23,9 @@
 # リセット
     function lib:damage/reset
 # デバフ
-    effect give @s poison 3 1 true
     effect give @s mining_fatigue 3 1 true
+    execute if predicate api:global_vars/difficulty/max/normal run effect give @s poison 3 1 true
+    execute if predicate api:global_vars/difficulty/min/hard run effect give @s wither 3 1 true
 
 # リセット処理
     tag @s remove LandingTarget
