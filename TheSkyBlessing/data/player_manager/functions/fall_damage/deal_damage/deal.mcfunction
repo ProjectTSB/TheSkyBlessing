@@ -21,7 +21,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "death.fell.accident.generic","with":[{"selector":"@s"}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$s は紐なしバンジージャンプで人生を終えた","with":[{"selector":"@s"}]}]'
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$s は足元の確認を怠った","with":[{"selector":"@s"}]}]'
-    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$s は始めた頃の初心を思い出した","with":[{"selector":"@s"}]}]'
+    data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$s は初心を思い出した","with":[{"selector":"@s"}]}]'
 # 与える
     function lib:damage/
 # リセット
