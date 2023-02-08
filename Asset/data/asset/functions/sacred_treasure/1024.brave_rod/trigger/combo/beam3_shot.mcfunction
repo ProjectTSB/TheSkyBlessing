@@ -4,10 +4,8 @@
 #
 # @within function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam3_burst
 
-# 演出
-    playsound ogg:block.respawn_anchor.deplete1 player @a ~ ~ ~ 1 2
+# 輪っかを召喚
+    execute rotated ~ ~90 run function asset:sacred_treasure/1024.brave_rod/trigger/combo/particle_ring
 
-
-#
-    scoreboard players remove @s SD.Burst 1
-
+# ビームを撃つ
+    function asset:sacred_treasure/1024.brave_rod/trigger/combo/laser_finish

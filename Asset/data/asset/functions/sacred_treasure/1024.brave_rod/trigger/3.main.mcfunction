@@ -14,11 +14,11 @@
 
 # 攻撃
     execute if entity @s[scores={SD.Combo=0}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam1
-    execute if entity @s[scores={SD.Combo=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam2
-    execute if entity @s[scores={SD.Combo=2}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam3
+    execute if entity @s[scores={SD.Combo=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam1
+    execute if entity @s[scores={SD.Combo=2}] run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam3
 
 # コンボカウント
-    scoreboard players set @s SD.Wait 15
+    scoreboard players set @s SD.Wait 16
     scoreboard players add @s SD.Combo 1
     scoreboard players set @s[scores={SD.Combo=3..}] SD.Combo 0
 
