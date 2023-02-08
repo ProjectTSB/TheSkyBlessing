@@ -22,10 +22,10 @@
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.35 2
 
 # 珊瑚の演出
-    execute rotated ~ 0 positioned ^1.5 ^0.4 ^1.5 rotated ~315 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/1
-    execute rotated ~ 0 positioned ^1.5 ^0.4 ^-1.5 rotated ~225 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/2
-    execute rotated ~ 0 positioned ^-1.5 ^0.4 ^-1.5 rotated ~135 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/3
-    execute rotated ~ 0 positioned ^-1.5 ^0.4 ^1.5 rotated ~45 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/4
+    execute rotated ~ 0 positioned ^-1.5 ^0.4 ^1.5 rotated ~45 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/1
+    execute rotated ~ 0 positioned ^1.5 ^0.4 ^1.5 rotated ~135 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/2
+    execute rotated ~ 0 positioned ^1.5 ^0.4 ^-1.5 rotated ~225 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/3
+    execute rotated ~ 0 positioned ^-1.5 ^0.4 ^-1.5 rotated ~315 -60 run function asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/4
 
 # フルセットを検知する用Tag
     tag @s add JR.Fullset
