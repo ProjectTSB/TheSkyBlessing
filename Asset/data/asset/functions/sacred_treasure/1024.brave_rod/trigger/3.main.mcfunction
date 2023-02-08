@@ -18,7 +18,8 @@
     execute if entity @s[scores={SD.Combo=2}] run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam3
 
 # コンボカウント
-    scoreboard players set @s SD.Wait 16
+    scoreboard players set @s[scores={SD.Combo=0..1}] SD.Wait 15
+    scoreboard players set @s[scores={SD.Combo=2}] SD.Wait 20
     scoreboard players add @s SD.Combo 1
     scoreboard players set @s[scores={SD.Combo=3..}] SD.Combo 0
 
