@@ -18,4 +18,3 @@
     function asset_manager:common/context_id/pop
 # リセット
     data remove storage api: Argument.ID
-    data remove storage api: Argument.Slot
