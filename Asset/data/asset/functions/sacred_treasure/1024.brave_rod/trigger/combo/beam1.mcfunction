@@ -17,7 +17,7 @@
     # 拡散させるEntityを召喚する
         summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     # ステータス設定
-        data modify storage lib: Argument.Distance set value 1.5
+        data modify storage lib: Argument.Distance set value 1
         data modify storage lib: Argument.Spread set value 1.2
     # 拡散
         execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
