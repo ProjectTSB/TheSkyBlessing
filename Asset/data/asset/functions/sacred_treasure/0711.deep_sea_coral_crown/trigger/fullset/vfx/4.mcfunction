@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx4
+#> asset:sacred_treasure/0711.deep_sea_coral_crown/trigger/fullset/vfx/4
 #
 #
 #
