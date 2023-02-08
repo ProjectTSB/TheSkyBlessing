@@ -24,7 +24,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
 # 補正functionを実行
-    execute as @p[tag=this] run function lib:damage/modifier
+    execute as @p[tag=SD.Used] run function lib:damage/modifier
 # ダメージ実行
     function lib:damage/
 
