@@ -6,6 +6,6 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/1024.brave_rod/trigger/**
-    scoreboard objectives add SD.Combo dummy
-    scoreboard objectives add SD.Wait dummy
-    scoreboard objectives add SD.Burst dummy
+    scoreboard objectives add SG.Combo dummy
+    scoreboard objectives add SG.Wait dummy
+    scoreboard objectives add SG.Burst dummy

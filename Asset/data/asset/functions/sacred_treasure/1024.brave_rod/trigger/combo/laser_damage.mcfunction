@@ -7,7 +7,7 @@
 #   asset:sacred_treasure/1024.brave_rod/trigger/combo/laser_finish
 
 # 使用者にヒットタグ付与
-    tag @p[tag=SD.Used] add SD.Hit
+    tag @p[tag=SG.Used] add SG.Hit
 
 # 引数の設定
     #ダメージブレのための処理
@@ -24,7 +24,7 @@
     # 第二属性
         data modify storage lib: Argument.ElementType set value "None"
 # 補正functionを実行
-    execute as @p[tag=SD.Used] run function lib:damage/modifier
+    execute as @p[tag=SG.Used] run function lib:damage/modifier
 # ダメージ実行
     function lib:damage/
 

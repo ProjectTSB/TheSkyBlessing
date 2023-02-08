@@ -9,4 +9,4 @@
 # 他にアイテム等確認する場合はここに書く
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed,tag=!SD.FinishCoolTime] run function asset:sacred_treasure/1024.brave_rod/trigger/3.main
+    execute if entity @s[tag=CanUsed,tag=!SG.FinishCoolTime] run function asset:sacred_treasure/1024.brave_rod/trigger/3.main

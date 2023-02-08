@@ -4,8 +4,8 @@
 #
 # @within function asset:sacred_treasure/1024.brave_rod/trigger/combo/main
 
-tag @s remove SD.FinishCoolTime
+tag @s remove SG.FinishCoolTime
 playsound minecraft:block.amethyst_block.place player @a ~ ~ ~ 1 2
-scoreboard players reset @s[scores={SD.Wait=0}] SD.Combo
-scoreboard players reset @s[scores={SD.Wait=0}] SD.Wait
-scoreboard players reset @s[scores={SD.Wait=0}] SD.Burst
+scoreboard players reset @s[scores={SG.Wait=0}] SG.Combo
+scoreboard players reset @s[scores={SG.Wait=0}] SG.Wait
+scoreboard players reset @s[scores={SG.Wait=0}] SG.Burst
