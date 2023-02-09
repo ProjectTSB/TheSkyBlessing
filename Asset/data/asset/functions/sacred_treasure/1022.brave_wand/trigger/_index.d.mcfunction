@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/1022.brave_wand/trigger/**
-    #declare
+    #declare tag SE.FinishCoolTime
