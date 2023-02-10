@@ -6,6 +6,6 @@
 
 tag @s remove SE.FinishCoolTime
 playsound minecraft:block.amethyst_block.place player @a ~ ~ ~ 1 2
-scoreboard players reset @s[scores={SE.Wait=0}] SE.Combo
-scoreboard players reset @s[scores={SE.Wait=0}] SE.Wait
-scoreboard players reset @s[scores={SE.Wait=0}] SE.Burst
+scoreboard players reset @s SE.Combo
+scoreboard players reset @s SE.Wait
+scoreboard players reset @s SE.Burst
