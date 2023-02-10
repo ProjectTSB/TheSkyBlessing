@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ブレイヴワンド","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"自身の体力を回復すると同時に、"}','{"text":"前方の仲間を回復する波動を放つ。"}','{"text":"\\"勇ましい癒しの力\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"前方に複数の魔力の爆発を発生させる。"}','{"text":"コンボフィニッシュの爆発は、敵に鈍足を与える。"}','{"text":"\\"敵を打ち払う、勇気の魔法\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -29,25 +29,25 @@
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]
+    data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Magic]
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]
+    data modify storage asset:sacred_treasure AttackInfo.ElementType set value [None]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value
+    data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value Always
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
-    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
+    data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 5
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 0
+    data modify storage asset:sacred_treasure MPCost set value 20
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value
+    data modify storage asset:sacred_treasure MPRequire set value 250
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 4
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
