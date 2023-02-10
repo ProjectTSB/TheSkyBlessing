@@ -13,12 +13,12 @@
 # 攻撃
     # コンボ1 射程2
         scoreboard players set @s[scores={SE.Combo=0}] SE.Range 2
-        execute if entity @s[scores={SE.Combo=0}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack1_search
+        execute if entity @s[scores={SE.Combo=0}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack/search
     # コンボ2 射程3
         scoreboard players set @s[scores={SE.Combo=0}] SE.Range 3
-        execute if entity @s[scores={SE.Combo=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack1_search
+        execute if entity @s[scores={SE.Combo=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack/search
     # コンボ3 射程4,5,6
-        execute if entity @s[scores={SE.Combo=2}] run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack3_set_burst_count
+        execute if entity @s[scores={SE.Combo=2}] run function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack_finish/set_burst_count
 
 # コンボカウント
     scoreboard players set @s[scores={SE.Combo=0..1}] SE.Wait 8

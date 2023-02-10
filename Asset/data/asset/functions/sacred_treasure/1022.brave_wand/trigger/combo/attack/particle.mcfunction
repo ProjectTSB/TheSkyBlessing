@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/1022.brave_wand/trigger/combo/particle_area
+#> asset:sacred_treasure/1022.brave_wand/trigger/combo/attack/particle
 #
 #
 #
-# @within function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack1_effect
+# @within function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack/effect
 
 ## ball.obj
 

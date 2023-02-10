@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/1022.brave_wand/trigger/combo/attack3_set_burst_count
+#> asset:sacred_treasure/1022.brave_wand/trigger/combo/attack_finish/set_burst_count
 #
 # 波動オーブフィニッシュ: 連発数の設定
 #
