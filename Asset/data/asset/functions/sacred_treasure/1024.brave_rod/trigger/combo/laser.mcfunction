@@ -21,5 +21,5 @@
     execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] run function asset:sacred_treasure/1024.brave_rod/trigger/combo/laser_damage
 
 # 再帰で前に飛ばす。ヒットしてたら移動停止
-    execute if entity @s[tag=!SG.Hit,distance=..20] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^1 run function asset:sacred_treasure/1024.brave_rod/trigger/combo/laser
+    execute if entity @s[tag=!SG.Hit,distance=..18] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^1 run function asset:sacred_treasure/1024.brave_rod/trigger/combo/laser
     tag @s[tag=SG.Hit] remove SG.Hit
