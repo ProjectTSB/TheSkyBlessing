@@ -2,7 +2,7 @@
 #
 # 波動オーブ1: ダメージ判定
 #
-# @within function asset:sacred_treasure/1022.brave_wand/trigger/combo/main
+# @within function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack/effect
 
 # 引数の設定
     #ダメージブレのための処理
