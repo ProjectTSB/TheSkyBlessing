@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ブレイヴロッド","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔法の光線を前方に連続で放つ。","color":"white"}]','[{"text":"コンボフィニッシュの光線は射程が少し伸びる。","color":"white"}]','[{"text":"\\"この知識あっての勇気\\"","color":"gray"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔法の光線を前方に連続で放つ。","color":"white"}]','[{"text":"コンボフィニッシュの光線は、射程が少し伸びる。","color":"white"}]','[{"text":"\\"この知識あっての勇気\\"","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
