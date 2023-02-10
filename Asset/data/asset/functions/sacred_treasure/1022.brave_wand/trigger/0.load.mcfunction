@@ -6,5 +6,7 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/1022.brave_wand/trigger/**
+    scoreboard objectives add SE.Range dummy
+    scoreboard objectives add SE.Burst dummy
     scoreboard objectives add SE.Combo dummy
     scoreboard objectives add SE.Wait dummy
