@@ -4,6 +4,10 @@
 #
 # @within function asset:sacred_treasure/1022.brave_wand/trigger/combo/attack_finish/effect
 
+# どうしてもダメージを受けてほしい（HurtTimeで反応を起こすモブもいるので)
+    effect give @s[type=#lib:undead] instant_health
+    effect give @s[type=!#lib:undead] instant_damage
+
 # 引数の設定
     #ダメージブレのための処理
         # 疑似乱数取得
@@ -23,8 +27,10 @@
 # ダメージ実行
     function lib:damage/
 
-# 持ち主にヒール
-    effect give @p[tag=SE.Used] minecraft:regeneration 1 2
+# ノクバ耐性を考慮して吹っ飛ばす
+    data modify storage lib: Argument.VectorMagnitude set value -0.2
+    data modify storage lib: Argument.KnockbackResist set value true
+    execute as @s at @s facing entity @p[tag=SE.Used] feet rotated ~ ~45 run function lib:motion/
 
 # 減速付与
     effect give @s slowness 1 1
