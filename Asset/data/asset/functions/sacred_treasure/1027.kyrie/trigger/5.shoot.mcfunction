@@ -15,7 +15,7 @@
     execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2,limit=1] add LandingTarget
 
 # 演出
-    particle dust 1 0.169 0.169 1 ~ ~ ~ 0.2 0.2 0.2 0 5
+    particle dust 100000000 2 0 2 ~ ~ ~ 0.2 0.2 0.2 0 5
     particle lava ~ ~ ~ 0.2 0.2 0.2 0 1
 
 # 着弾
