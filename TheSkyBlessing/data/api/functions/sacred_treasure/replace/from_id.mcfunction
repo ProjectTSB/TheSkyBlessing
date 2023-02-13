@@ -3,8 +3,8 @@
 # 神器Assetの入手処理を叩く処理
 #
 # @input storage api:
-# Argument.ID
-# Argument.Slot
+#   Argument.ID
+#   Argument.Slot
 # @api
 
 # validate
