@@ -8,7 +8,7 @@
     playsound minecraft:entity.witch.throw player @a ~ ~ ~ 0.5 1
 
 # 向きロック
-    tag @s add 0307.FacingLock
+    tag @s add 8J.FacingLock
 
 # 体の向き
     tp @s ~ ~ ~ ~-75 ~

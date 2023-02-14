@@ -8,4 +8,4 @@
     #data modify entity @s Pose.LeftArm set value [0f,0f,-15f]
 
 # 向き解除
-    tag @s remove 0307.FacingLock
+    tag @s remove 8J.FacingLock
