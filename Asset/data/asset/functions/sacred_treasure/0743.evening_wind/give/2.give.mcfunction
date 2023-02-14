@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"夕焼けの風","color":"#FF8000"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"黄昏の輝きを秘めた羽。","color":"gray","italic":"true"}]','[{"text":"淡い茜色の光を放っている。","color":"gray","italic":"true"}]','[{"text":"火攻撃+15% ","color":"red"},{"text":"移動速度+15%","color":"white"}]','[{"text":"水耐性-25%","color":"dark_red"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"黄昏の輝きを秘めた羽。","color":"gray","italic":"true"}]','[{"text":"淡い茜色の光を放っている。","color":"gray","italic":"true"}]','[{"text":"火攻撃+15% ","color":"red"},{"text":"移動速度+15%","color":"white"}]','[{"text":"水耐性-20%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)

@@ -31,9 +31,9 @@
 # 移動速度+15%
     attribute @s generic.movement_speed modifier add 00000001-0000-0001-0000-02e700000007 "Speed" 0.15 multiply_base
 
-# 水耐性-25%
+# 水耐性-20%
     data modify storage api: Argument.UUID set value [I;1,1,743,7]
-    data modify storage api: Argument.Amount set value -0.25
+    data modify storage api: Argument.Amount set value -0.20
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/attack/water/add
 
