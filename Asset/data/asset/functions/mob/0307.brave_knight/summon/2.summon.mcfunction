@@ -25,8 +25,8 @@
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20298}}
 
-# 召喚者のIDを自身のオーナーIDとする
-    scoreboard players operation @e[type=armor_stand,tag=MobInit,distance=..0.01] 0307.OwnerID = @p[tag=this,distance=..10] UserID
+# Init処理
+    execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/0307.brave_knight/summon/init
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=armor_stand,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
