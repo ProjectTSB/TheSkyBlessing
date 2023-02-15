@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"コール: ブレイブナイト","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に近接攻撃を行う騎士を召喚する。","color":"white"}','{"text":"騎士の攻撃には鈍足を付与する効果がある。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"red"}','{"text":"\\"小さな体に、凄まじい勇気を秘めている\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"付近の敵に近接攻撃を行う騎士を召喚する。","color":"white"}','{"text":"既に召喚した状態では使用できない。","color":"red"}','{"text":"\\"小さな体に、凄まじい勇気を秘めている\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
