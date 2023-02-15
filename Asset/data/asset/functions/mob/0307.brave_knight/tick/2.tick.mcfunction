@@ -32,7 +32,7 @@
     execute if entity @s[tag=!8J.AttackMode] facing entity @e[type=marker,tag=8J.OwnerMarker,distance=0.5..1,sort=nearest,limit=1] eyes run tp @s ^ ^ ^0.1
 
 # 攻撃停止モード時、マーカーが近づいたらタグ解除
-    execute if entity @e[type=marker,tag=8J.OwnerMarker,distance=..1,limit=1] run tag @s[tag=8J.StopAttack] remove 8J.StopAttack
+    execute if entity @e[type=marker,tag=8J.OwnerMarker,distance=..5,limit=1] run tag @s[tag=8J.StopAttack] remove 8J.StopAttack
 
 # 付近に敵がいたら攻撃モードへと移行
     execute if entity @s[tag=!8J.AttackMode,tag=!8J.StopAttack] if entity @e[type=#lib:living,tag=Enemy,tag=0307.TargetedEnemy,distance=..8] run function asset:mob/0307.brave_knight/tick/event/dash
