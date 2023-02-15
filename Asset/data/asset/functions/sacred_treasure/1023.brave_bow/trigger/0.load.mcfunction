@@ -6,4 +6,5 @@
 
 #> 定義類はここに
 # @within function asset:sacred_treasure/1023.brave_bow/trigger/**
-    scoreboard objectives add 
+    scoreboard objectives add SF.Combo dummy
+    scoreboard objectives add SF.Wait dummy

@@ -3,4 +3,4 @@
 
 #> tag
 # @within function asset:sacred_treasure/1023.brave_bow/trigger/**
-    #declare
+    #declare tag SF.FinishCoolTime
