@@ -13,7 +13,7 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ブレイヴワンド","color":"light_purple"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ブレイブワンド","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"前方に複数の魔力の爆発を発生させる。"}','{"text":"コンボフィニッシュの爆発は、敵に鈍足を与える。"}','{"text":"\\"敵を打ち払う、勇気の魔法\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
