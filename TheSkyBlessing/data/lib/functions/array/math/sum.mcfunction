@@ -2,6 +2,9 @@
 #
 # 配列の要素の総和を計算します。
 #
+# 配列の値の型がNumeric型ではない場合は、`data get`で取得されるint値を値として扱います。
+# 例えば、`List[String]`をArrayに渡した場合、各文字列の長さの総和を返します。
+#
 # @input
 #   T extends any
 #   storage lib: Array: [T]
