@@ -5,7 +5,7 @@
 # @within function asset:sacred_treasure/1023.brave_bow/trigger/3.main
 
 # 召喚
-    data modify storage api: Argument.ID set value 308
+    data modify storage api: Argument.ID set value 309
     execute anchored eyes positioned ^-0.25 ^ ^ run function api:mob/summon
 
 # 演出
