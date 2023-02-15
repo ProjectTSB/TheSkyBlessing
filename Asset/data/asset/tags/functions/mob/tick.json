@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/309.brave_arrow_finish/tick/1.trigger",
         "asset:mob/308.brave_arrow/tick/1.trigger",
         "asset:mob/0266.small_dark_ball/tick/1.trigger",
         "asset:mob/0265.dark_familiar/tick/1.trigger",
