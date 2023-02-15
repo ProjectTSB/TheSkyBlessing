@@ -9,3 +9,4 @@
     scoreboard objectives add 8L.Tick dummy
     scoreboard objectives add 8L.LifeTime dummy
     scoreboard objectives add 8L.OwnerID dummy
+    scoreboard objectives add 8L.Pierce dummy

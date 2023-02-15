@@ -9,3 +9,4 @@
     scoreboard objectives add 8K.Tick dummy
     scoreboard objectives add 8K.LifeTime dummy
     scoreboard objectives add 8K.OwnerID dummy
+    scoreboard objectives add 8K.Pierce dummy
