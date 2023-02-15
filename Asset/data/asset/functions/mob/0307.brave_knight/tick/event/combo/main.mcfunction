@@ -10,7 +10,7 @@
 # コンボ
     execute if score @s 8J.Combo matches 3 run function asset:mob/0307.brave_knight/tick/event/combo/1
     execute if score @s 8J.Combo matches 6 run function asset:mob/0307.brave_knight/tick/event/combo/2
-    execute if score @s 8J.Combo matches 9 run function asset:mob/0307.brave_knight/tick/event/combo/reset
+    execute if score @s 8J.Combo matches 12 run function asset:mob/0307.brave_knight/tick/event/combo/reset
 
 # リセット
-    scoreboard players reset @s[scores={8J.Combo=9..}] 8J.Combo
+    scoreboard players reset @s[scores={8J.Combo=12..}] 8J.Combo
