@@ -10,3 +10,7 @@
 
 # ヒットしたやつを対象としてダメージ
     execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0] run function asset:mob/309.brave_arrow_finish/tick/event/damage
+
+# 貫通数減らす、0になった時点で消える
+    scoreboard players remove @s 8L.Pierce 1
+    execute if score @s 8L.Pierce matches ..0 run function asset:mob/309.brave_arrow_finish/tick/event/destory

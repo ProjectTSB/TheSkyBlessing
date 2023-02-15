@@ -11,5 +11,8 @@
 # 残存時間の設定
     scoreboard players set @s 8K.LifeTime 20
 
+# 貫通数設定
+    scoreboard players set @s 8K.Pierce 3
+
 # 持ち主のIDを自身のIDとする
     scoreboard players operation @s 8K.OwnerID = @p[tag=this] UserID
