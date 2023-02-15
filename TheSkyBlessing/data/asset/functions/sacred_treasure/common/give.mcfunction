@@ -47,6 +47,8 @@
     execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:sacred_treasure/common/protect
+    execute if data storage asset:context {Type:"replace"} run function asset:sacred_treasure/common/replace
+
 # リセット
     scoreboard players reset $InvSize Lib
     data remove storage asset:context Type
