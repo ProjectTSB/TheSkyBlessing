@@ -7,7 +7,7 @@
 
 
 # 付近に敵がいたらそっちへ移動
-    execute facing entity @e[type=#lib:living,tag=Enemy,tag=0307.TargetedEnemy,distance=1.5..15,sort=nearest,limit=1] feet run tp @s ^ ^ ^0.5 ~ ~
+    execute facing entity @e[type=#lib:living,tag=Enemy,tag=0307.TargetedEnemy,distance=1.5..15,sort=nearest,limit=1] feet run tp @s ^ ^ ^0.3 ~ ~
 
 # 近くの敵の方を向く
     execute unless entity @s[tag=8J.FacingLock] facing entity @e[type=#lib:living,tag=Enemy,tag=0307.TargetedEnemy,distance=..1.5,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
