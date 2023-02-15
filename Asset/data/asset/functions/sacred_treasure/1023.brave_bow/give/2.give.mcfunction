@@ -13,9 +13,9 @@
 # 神器のベースアイテム
     data modify storage asset:sacred_treasure Item set value "carrot_on_a_stick"
 # 神器の名前 (TextComponentString)
-    data modify storage asset:sacred_treasure Name set value '{"text":"ブレイヴボウ","color":"light_purple"}'
+    data modify storage asset:sacred_treasure Name set value '{"text":"ブレイブボウ","color":"light_purple"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"敵を誘導し、貫通する矢を放つ。"}','{"text":"コンボフィニッシュで更に強力な矢を放つ。"}','{"text":"\\"勇気の矢で敵を射抜け\\"","color":"gray"}']
+    data modify storage asset:sacred_treasure Lore set value ['{"text":"敵を誘導し、貫通する矢を放つ。"}','{"text":"コンボフィニッシュで更に強力な矢を放つ。"}','{"text":"\\"勇気の矢で敵を射抜く\\"","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -39,15 +39,15 @@
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value
 # MP消費量 (int)
-    data modify storage asset:sacred_treasure MPCost set value 0
+    data modify storage asset:sacred_treasure MPCost set value 15
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value
+    data modify storage asset:sacred_treasure MPRequire set value 250
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value
+    data modify storage asset:sacred_treasure LocalCooldown set value 7
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
+    data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
