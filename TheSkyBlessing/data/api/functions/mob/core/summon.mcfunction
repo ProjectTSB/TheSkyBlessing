@@ -20,13 +20,13 @@
     # execute unless data storage asset:mob ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのMobは存在しません: "},{"storage":"api:","nbt":"Argument.ID"}]
 # 継承が行われている場合そのデータを追加する
     execute if data storage asset:mob ID if data storage asset:mob Extends[0] run function api:mob/core/put_id_to_map
-# データが正しくあれば呼び出す
+# データが正しくあればmobを召喚する
     execute if data storage asset:mob ID run function #asset:mob/summon
     execute if data storage asset:mob ID as @e[tag=MobInit,distance=..0.01] run function asset:mob/common/summon
 
 # FlagIndexの記録
     scoreboard players operation $BeforeMobIndex Temporary = $FlagIndex Global
-# v2に存在しなければv1を呼び出す
+# 互換性維持用：mobAPI v2に存在しなければmobAPI v1を呼び出す
     execute unless data storage asset:mob ID run function #asset:mob/summon
 # FlagIndexの記録
     scoreboard players operation $AfterMobIndex Temporary = $FlagIndex Global
