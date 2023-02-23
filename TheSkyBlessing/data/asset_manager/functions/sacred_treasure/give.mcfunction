@@ -24,7 +24,7 @@
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
 # 取得してそのまま引数に代入
-    data modify storage api: Argument.ID set from storage lib: Array[-1]
+    data modify storage asset:context id set from storage lib: Array[-1]
 # 呼び出し
     function #asset:sacred_treasure/give
 # リセット
