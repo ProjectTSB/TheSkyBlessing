@@ -13,10 +13,10 @@
     data modify storage api: Argument.UUID set value [I;1,1,743,7]
     function api:modifier/attack/fire/remove
 
-# 移動速度+15%
+# 移動速度
     attribute @s generic.movement_speed modifier remove 00000001-0000-0001-0000-02e700000007
 
-# 水耐性-20%
+# 水耐性
     data modify storage api: Argument.UUID set value [I;1,1,743,7]
     function api:modifier/attack/water/remove
 
