@@ -26,10 +26,7 @@
 # 取得してそのまま引数に代入
     data modify storage api: Argument.ID set from storage lib: Array[-1]
 # 呼び出し
-    execute if data storage asset:context {Type:"box"} run function api:sacred_treasure/box/from_id
-    execute if data storage asset:context {Type:"give"} run function api:sacred_treasure/give/from_id
-    execute if data storage asset:context {Type:"replace"} run function api:sacred_treasure/replace/from_id
-    execute if data storage asset:context {Type:"drop"} run function api:sacred_treasure/spawn/from_id
+    function #asset:sacred_treasure/give
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
