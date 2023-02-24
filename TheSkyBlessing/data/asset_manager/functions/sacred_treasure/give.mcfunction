@@ -23,10 +23,10 @@
     scoreboard players operation $Argument.Index Lib %= $CandidateLength Temporary
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
+# asset:context idがある場合は退避
+    function asset_manager:common/context_id/stash
 # 取得してそのまま引数に代入
     data modify storage asset:context id set from storage lib: Array[-1]
-# asset:context idを退避
-    function asset_manager:common/context_id/stash
 # 呼び出し
     function #asset:sacred_treasure/give
 # asset:context idを戻す
