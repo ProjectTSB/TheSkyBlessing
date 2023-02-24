@@ -25,8 +25,12 @@
     function lib:array/move
 # 取得してそのまま引数に代入
     data modify storage asset:context id set from storage lib: Array[-1]
+# asset:context idを退避
+    function asset_manager:common/context_id/stash
 # 呼び出し
     function #asset:sacred_treasure/give
+# asset:context idを戻す
+    function asset_manager:common/context_id/pop
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
