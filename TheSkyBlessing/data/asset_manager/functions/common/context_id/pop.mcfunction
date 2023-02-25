@@ -6,6 +6,7 @@
 #   api:mob/summon
 #   api:sacred_treasure/*/from_id
 #   asset_manager:mob/triggers/death/manual
+#   asset_manager:sacred_treasure/give
 #   api:spawner/subtract_hp
 
 # idを掃除
