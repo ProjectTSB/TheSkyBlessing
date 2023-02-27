@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"魔導士のローブ(下)","color":"#360F57"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔導士が普段身に着けているローブ。","color":"gray","italic":"true"}]','[{"text":"魔法耐性+5% 魔法攻撃+5%","color":"dark_purple"}]','[{"text":"MP回復量+5%","color":"green"}]','[{"text":"物理耐性-5% 物理攻撃-5%","color":"dark_red"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"魔導士が普段身に着けているローブ。","color":"gray"}]','[{"text":"魔法耐性+5% 魔法攻撃+5%","color":"dark_purple"}]','[{"text":"MP回復量+5%","color":"green"}]','[{"text":"物理耐性-5% 物理攻撃-5%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
