@@ -1,4 +1,4 @@
-#> asset_manager:trader/resolve_sacred_treasure/
+#> asset_manager:trader/resolve_artifact/
 #
 # インベントリに存在するすべてのTraderから購入した神器について、そのIDを取得し同IDの神器をプレイヤーに与えなおす
 #
@@ -7,8 +7,9 @@
 # @within function core:tick/check_item_meta/inventory
 
 # Traderから購入した神器のIDを取得する
-    data modify storage asset:trader BoughtIDs append from storage api: Inventory[{tag:{TSB:{ItemMetaData:["SacredTreasureBoughtFromTrader"]}}}].tag.TSB.ID
+    data modify storage asset:trader BoughtArtifacts append from storage api: Inventory[{tag:{TSB:{ItemMetaData:["ArtifactBoughtFromTrader"]}}}]
 # 再帰的に全部giveする
-    function asset_manager:trader/resolve_sacred_treasure/give_foreach
+    function asset_manager:trader/resolve_artifact/foreach_artifact
 # リセット
-    data remove storage asset:trader BoughtIDs
+    scoreboard players reset $N Temporary
+    data remove storage asset:trader BoughtArtifacts

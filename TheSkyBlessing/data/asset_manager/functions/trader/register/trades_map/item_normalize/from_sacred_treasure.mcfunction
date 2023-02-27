@@ -11,7 +11,7 @@
     function api:sacred_treasure/box/from_id
 # 設定
     data modify storage asset:trader Item set from block 10000 0 10000 Items[{Slot:0b}]
-    data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "SacredTreasureBoughtFromTrader"
+    data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "ArtifactBoughtFromTrader"
     data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "BanPossession"
     data remove storage asset:trader Item.Slot
 # ところで存在しない場合もありますよね
