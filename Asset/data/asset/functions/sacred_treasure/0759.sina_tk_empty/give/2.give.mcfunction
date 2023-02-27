@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"Sina-TK<Empty>","color":"#7CC71A"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['[{"text":"竹製の竹を発射する竹々しい銃。","color":"#9FFF21","italic":"true"}]','[{"text":"竹をありったけ装填することで再使用できる。","color":"#9FFF21","italic":"true"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"竹製の竹を発射する竹々しい銃。","color":"#9FFF21"}]','[{"text":"竹をありったけ装填することで再使用できる。","color":"#9FFF21"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     data modify storage asset:sacred_treasure CostText set value '[{"translate":"block.minecraft.bamboo"},{"text":" x16"}]'
 # 使用回数 (int) (オプション)
