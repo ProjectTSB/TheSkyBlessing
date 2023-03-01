@@ -18,7 +18,7 @@
     execute store result storage asset:context uuid int 1 run scoreboard players get @s MobUUID
 # 実際の死亡時にもう一度Deathが実行されないためにDeathLootTableを消し飛ばす
     data modify entity @s DeathLootTable set value "empty"
-# さよなら～
+# さいなら～
     kill @s
 # トリガーの呼び出し
     function asset_manager:mob/triggers/death/call
