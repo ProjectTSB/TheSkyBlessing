@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure GlobalCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:4,Unbreakable:1b,Enchantments:[{id:"minecraft:power",lvl:6s}]}
 

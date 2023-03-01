@@ -51,7 +51,7 @@
 # MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Nyaptov", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {SkullOwner:{Id:[I;946128277,759517147,-1752401778,423880275],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjI3ODZhMGI3MWJiNGE3MDEwOGE3NDQzNWU1Y2VlNTg4ZmRmMzU5YjllYWVmYjc0YjY4Mzc3N2I1MTgwNjI5OCJ9fX0="}]}},AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;1,1,971,6],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,971,6],Slot:"head"}]}
 # 神器の入手用function

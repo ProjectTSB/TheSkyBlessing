@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure SpecialCooldown set value 600
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Nyaptov", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {HideFlags:6,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:0,Operation:0,UUID:[I;1325912063,-1346287147,-1646160005,-2144481414],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:100,Operation:0,UUID:[I;108815412,1284391254,-1801712452,1121514494]}]}
 

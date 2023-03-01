@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure SpecialCooldown set value 60
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Wi-ki"]
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

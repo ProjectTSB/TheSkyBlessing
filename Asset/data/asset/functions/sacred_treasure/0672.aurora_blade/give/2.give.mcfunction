@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:sacred_treasure Trigger set value onAttackByMelee
+    data modify storage asset:sacred_treasure Trigger set value "onAttackByMelee"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

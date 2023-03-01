@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value legs
+    data modify storage asset:sacred_treasure Slot set value "legs"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onDamageFromEntity"
 # 神器の発動条件 (TextComponentString) (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Wi-ki"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:sacred_treasure CustomNBT set value {Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;1,1,556,4],Slot:"legs"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2.5,Operation:0,UUID:[I;1,1,556,4],Slot:"legs"}]}
 

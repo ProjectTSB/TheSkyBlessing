@@ -21,7 +21,7 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:sacred_treasure RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:sacred_treasure Slot set value mainhand
+    data modify storage asset:sacred_treasure Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "keepSneak"
 # 神器の発動条件 (TextComponentString) (オプション)
@@ -47,7 +47,7 @@
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:sacred_treasure SpecialCooldown set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Wi-ki']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Wi-ki"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

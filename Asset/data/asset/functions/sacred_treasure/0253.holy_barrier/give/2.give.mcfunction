@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:sacred_treasure Lore set value ['{"text":"罠カード","color":"light_purple"}','{"text":"(1)相手モンスターの攻撃時に発動する。"}','{"text":"発動プレイヤーを攻撃対象に"}','{"text":"しているモンスターを全て破壊する。"}']
 # MP以外の消費物 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure CostText set value 
+    # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
     data modify storage asset:sacred_treasure RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
@@ -25,7 +25,7 @@
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:sacred_treasure Trigger set value "onDamageFromEntity"
 # 神器の発動条件 (TextComponentString) (オプション)
-    # data modify storage asset:sacred_treasure Condition set value 
+    # data modify storage asset:sacred_treasure Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
@@ -38,18 +38,18 @@
     data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value "every"
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
     # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value 30
-# MP消費量 (int) 
+# MP消費量 (int)
     data modify storage asset:sacred_treasure MPCost set value 0
 # MP必要量 (int) (オプション)
-    # data modify storage asset:sacred_treasure MPRequire set value 
+    # data modify storage asset:sacred_treasure MPRequire set value
 # 神器のクールダウン (int) (オプション)
-    # data modify storage asset:sacred_treasure LocalCooldown set value 
+    # data modify storage asset:sacred_treasure LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure SpecialCooldown set value 16000
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
-    # data modify storage asset:sacred_treasure DisableCooldownMessage set value 
+    # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Nyaptov", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 
