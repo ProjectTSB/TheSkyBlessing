@@ -11,7 +11,7 @@
     playsound entity.generic.explode hostile @a[distance=..20] ~ ~ ~ 2 0.6 0
 
 # ダメージ
-    execute as @a[gamemode=!spectator,gamemode=!creative,distance=..7.5] run function asset:mob/0060.self_destructor/tick/5.damage_distance
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..7.5] run function asset:mob/0060.self_destructor/tick/5.damage_distance
 
 # 連鎖爆発
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplodeFuse 36
