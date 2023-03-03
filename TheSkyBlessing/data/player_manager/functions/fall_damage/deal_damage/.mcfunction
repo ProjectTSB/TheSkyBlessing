@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:fall_damage/check_invulnerable
+# @within function player_manager:fall_damage/deal_for_vulnerable
 
 # 各種値の取得
     function player_manager:fall_damage/deal_damage/get_vars

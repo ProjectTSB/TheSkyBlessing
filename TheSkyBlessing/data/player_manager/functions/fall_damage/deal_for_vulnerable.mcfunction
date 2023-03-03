@@ -1,4 +1,4 @@
-#> player_manager:fall_damage/check_invulnerable
+#> player_manager:fall_damage/deal_for_vulnerable
 #
 #
 #
