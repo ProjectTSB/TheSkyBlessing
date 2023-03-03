@@ -49,9 +49,9 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:sacred_treasure DisableCooldownMessage set value
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Nyaptov', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Nyaptov", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:64,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,563,5],AttributeName:"generic.armor",Name:"armor",Slot:chest,Operation:0,Amount:3},{UUID:[I;1,1,563,5],AttributeName:"generic.max_health",Name:"max_health",Slot:chest,Operation:0,Amount:4}]}
+    data modify storage asset:sacred_treasure CustomNBT set value {display:{color:26112},HideFlags:64,Unbreakable:1b,Enchantments:[{id:unbreaking,lvl:3},{id:protection,lvl:5},{id:mending,lvl:1}],AttributeModifiers:[{UUID:[I;1,1,563,5],AttributeName:"generic.armor",Name:"armor",Slot:chest,Operation:0,Amount:3},{UUID:[I;1,1,563,5],AttributeName:"generic.max_health",Name:"max_health",Slot:chest,Operation:0,Amount:4}]}
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

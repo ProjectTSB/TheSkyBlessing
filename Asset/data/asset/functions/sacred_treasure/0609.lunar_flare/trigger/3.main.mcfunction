@@ -14,7 +14,7 @@
 
 # VFX
     playsound minecraft:block.fire.ambient player @a ~ ~ ~ 1 2
-    playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 1.7
+    playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 1.7
     playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 2
     playsound minecraft:block.amethyst_cluster.break player @a ~ ~ ~ 1 1.5
 

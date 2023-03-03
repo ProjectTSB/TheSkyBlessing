@@ -16,7 +16,7 @@
 # 演出
     particle minecraft:composter ~ ~1 ~ 0.5 0.5 0.5 1 20 force @s
     particle minecraft:heart ~ ~0.5 ~ 0.3 0.5 0.3 1 5 force @s
-    playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
+    playsound minecraft:entity.arrow.hit_player player @s ~ ~ ~ 1 1
 
 # MP回復
     execute store result storage asset:temp 3X.Temp double 0.32 run function lib:mp/get_max
@@ -29,5 +29,5 @@
     function lib:heal/
 
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
     data remove storage asset:temp 3X.Temp

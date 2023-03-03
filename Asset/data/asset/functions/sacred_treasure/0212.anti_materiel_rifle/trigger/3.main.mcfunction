@@ -17,4 +17,4 @@
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 1.5
     playsound minecraft:entity.generic.explode player @a ~ ~ ~ 1 2
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.75
-    playsound minecraft:entity.wither.hurt neutral @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.wither.hurt player @a ~ ~ ~ 1 1.5

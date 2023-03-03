@@ -21,9 +21,9 @@
 
 #演出
     execute at @e[tag=AC.Target] run particle minecraft:block water ~ ~1 ~ 0.1 1.3 0.1 10 30
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 2
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 1
-    playsound entity.dolphin.splash master @a ~ ~ ~ 1 0
+    playsound entity.dolphin.splash player @a ~ ~ ~ 1 2
+    playsound entity.dolphin.splash player @a ~ ~ ~ 1 1
+    playsound entity.dolphin.splash player @a ~ ~ ~ 1 0
 
 # リセット
     function lib:damage/reset

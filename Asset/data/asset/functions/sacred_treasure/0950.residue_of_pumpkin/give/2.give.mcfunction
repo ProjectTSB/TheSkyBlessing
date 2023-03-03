@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"カボチャの怨念の残滓","color":"#FFAA00"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:sacred_treasure Lore set value ['{"text":"僅かに残ったジャック・オ・ランタンの魂","color":"#D900FF"}]','[{"text":"魂を吸収することで僅かに力を取り戻し幽かに輝く","color":"#D900FF"}]','[{"text":"効果発動時","color":"#D900FF"}]','[{"text":"満腹度を回復し、移動速度上昇と暗視を30秒得る。","color":"#D900FF"}]']
+    data modify storage asset:sacred_treasure Lore set value ['[{"text":"僅かに残ったジャック・オ・ランタンの魂","color":"#D900FF"}]','[{"text":"魂を吸収することで僅かに力を取り戻し幽かに輝く","color":"#D900FF"}]','[{"text":"効果発動時","color":"#D900FF"}]','[{"text":"満腹度を回復し、移動速度上昇と暗視を30秒得る。","color":"#D900FF"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:sacred_treasure CostText set value
 # 使用回数 (int) (オプション)
@@ -49,7 +49,7 @@
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     data modify storage asset:sacred_treasure DisableCooldownMessage set value true
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ['Flora', 'Urban', 'Nyaptov', 'Wi-ki', 'Rumor']
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Flora", "Urban", "Nyaptov", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     # data modify storage asset:sacred_treasure CustomNBT set value {}
 

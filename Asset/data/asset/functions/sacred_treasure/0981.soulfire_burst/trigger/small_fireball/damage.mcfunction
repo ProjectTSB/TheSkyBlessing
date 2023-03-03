@@ -27,3 +27,4 @@
 
 # リセット
     function lib:damage/reset
+    scoreboard players reset $RandomDamage Temporary

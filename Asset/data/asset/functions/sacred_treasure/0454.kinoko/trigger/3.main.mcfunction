@@ -15,3 +15,4 @@
         execute store result storage lib: Argument.Heal double 0.01 run attribute @s generic.max_health get 50
         function lib:heal/modifier
         function lib:heal/
+        function lib:heal/reset

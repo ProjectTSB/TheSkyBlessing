@@ -37,7 +37,7 @@
 # 神器のクールダウン (int) (オプション)
     data modify storage asset:sacred_treasure LocalCooldown set value 40
 # 扱える神 (string[]) Wikiを参照
-    data modify storage asset:sacred_treasure CanUsedGod set value ["Urban","Nyaptov"]
+    data modify storage asset:sacred_treasure CanUsedGod set value ["Urban", "Nyaptov"]
 
 # 神器の入手用function
     function asset:sacred_treasure/common/give

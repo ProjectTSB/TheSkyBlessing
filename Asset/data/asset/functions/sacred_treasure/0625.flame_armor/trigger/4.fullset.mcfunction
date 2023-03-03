@@ -16,8 +16,8 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply_base"
 # 補正の追加
-    function api:player_modifier/defense/fire/add
+    function api:modifier/defense/fire/add
 
 # 演出
      particle flame ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a
-     playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 0.2 0
+     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 1 0.2 0

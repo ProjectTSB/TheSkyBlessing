@@ -8,7 +8,7 @@
     scoreboard players add @s 2X.InBlockTime 1
 
 # 毒
-    effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] poison 5 6 false
+    effect give @a[tag=!PlayerShouldInvulnerable,distance=..3] poison 5 6 false
 
 # 演出
     particle dust 0 0.4 0 1 ~ ~1.2 ~ 1 0.4 1 0 4 normal @a

@@ -5,7 +5,7 @@
 # @within function asset:mob/0105.potion_projectile/tick/water/1.break
 
 # デバフ
-    effect give @a[gamemode=!creative,gamemode=!spectator,distance=..3] slowness 5 2 true
+    effect give @a[tag=!PlayerShouldInvulnerable,distance=..3] slowness 5 2 true
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 25.0
@@ -16,6 +16,6 @@
 # 補正
     function lib:damage/modifier
 # 実行
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..3] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
