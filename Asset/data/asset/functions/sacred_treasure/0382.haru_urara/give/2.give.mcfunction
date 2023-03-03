@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 382
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "golden_axe"
+    data modify storage asset:sacred_treasure Item set value "minecraft:golden_axe"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"ハルウララ","color":"light_purple","italic":true,"bold":true}'
 # 神器の説明文 (TextComponentString[])

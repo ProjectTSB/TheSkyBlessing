@@ -11,7 +11,7 @@
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:sacred_treasure ID set value 914
 # 神器のベースアイテム
-    data modify storage asset:sacred_treasure Item set value "netherite_boots"
+    data modify storage asset:sacred_treasure Item set value "minecraft:netherite_boots"
 # 神器の名前 (TextComponentString)
     data modify storage asset:sacred_treasure Name set value '{"text":"リアクティブアーマー(靴)","color":"red","bold":true}'
 # 神器の説明文 (TextComponentString[])
