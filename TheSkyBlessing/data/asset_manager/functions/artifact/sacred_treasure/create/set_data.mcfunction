@@ -25,7 +25,7 @@
 
 #> Private
 # @private
-    #declare score_holder $SacredTreasureIndex
+    #declare score_holder $ArtifactIndex
 
 # 移行
     data modify storage asset:artifact BaseItem set from storage asset:artifact Item
@@ -37,8 +37,8 @@
 # Version
     data modify storage asset:artifact Item.tag.TSB.Version set from storage global GameVersion
 # Unique Universal Identifier
-    scoreboard players add $SacredTreasureIndex Global 1
-    execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $SacredTreasureIndex Global
+    scoreboard players add $ArtifactIndex Global 1
+    execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
 # 扱える神のエイリアスを修正する
     execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
 # そのまま入れれるやつ

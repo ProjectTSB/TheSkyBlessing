@@ -17,7 +17,7 @@
 #   asset_manager:artifact/use/
 #   asset_manager:artifact/tick/
 #   core:tick/
-    #declare score_holder $SacredTreasureSpecialCooldown
+    #declare score_holder $ArtifactSpecialCooldown
 
 #> Trigger検知用
 # @within function
