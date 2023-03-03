@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/projectile/summon_laser
+#> asset:artifact/0609.lunar_flare/trigger/projectile/summon_laser
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0609.lunar_flare/trigger/projectile/laser_pos_main
+#    asset:artifact/0609.lunar_flare/trigger/projectile/laser_pos_main
 
 #> SpreadLib
 # @private
@@ -31,4 +31,4 @@
     kill @e[type=marker,tag=SpreadMarker]
 
 # Scheduleで実行。重複しないようにしてる。
-    schedule function asset:sacred_treasure/0609.lunar_flare/trigger/projectile/beamloop 1t replace
+    schedule function asset:artifact/0609.lunar_flare/trigger/projectile/beamloop 1t replace

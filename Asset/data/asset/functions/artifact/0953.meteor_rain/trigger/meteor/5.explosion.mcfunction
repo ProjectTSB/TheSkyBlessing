@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
+#> asset:artifact/0953.meteor_rain/trigger/meteor/5.explosion
 #
 #
 #
-# @within function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+# @within function asset:artifact/0953.meteor_rain/trigger/meteor/4.move
 
 # 効果音
     playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1.5 1.7

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0920.dal_i_thalion/trigger/5.effect_clear
+#> asset:artifact/0920.dal_i_thalion/trigger/5.effect_clear
 #
 #
 #
-# @within function asset:sacred_treasure/0920.dal_i_thalion/trigger/4.schedule
+# @within function asset:artifact/0920.dal_i_thalion/trigger/4.schedule
 
 # 効果
     effect clear @s blindness

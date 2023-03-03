@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0376.ray_sorcery/trigger/3.2.damage
+#> asset:artifact/0376.ray_sorcery/trigger/3.2.damage
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0376.ray_sorcery/trigger/3.1.shoot
+#   asset:artifact/0376.ray_sorcery/trigger/3.1.shoot
 
 # ここから先は神器側の効果の処理を書く
 

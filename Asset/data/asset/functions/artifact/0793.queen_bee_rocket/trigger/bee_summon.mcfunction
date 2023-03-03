@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee_summon
+#> asset:artifact/0793.queen_bee_rocket/trigger/bee_summon
 #
 #
 #
-# @within function asset:sacred_treasure/0793.queen_bee_rocket/trigger/3.main
+# @within function asset:artifact/0793.queen_bee_rocket/trigger/3.main
 
 #> Private
 # @private

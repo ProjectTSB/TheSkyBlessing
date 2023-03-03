@@ -1,16 +1,16 @@
-#> asset:sacred_treasure/0840.honey_bee_stick/trigger/3.main
+#> asset:artifact/0840.honey_bee_stick/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0840.honey_bee_stick/trigger/2.check_condition
+# @within function asset:artifact/0840.honey_bee_stick/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute positioned ~ ~0.2 ~ rotated ~ 0 run function asset:sacred_treasure/0840.honey_bee_stick/trigger/4.vfx
+    execute positioned ~ ~0.2 ~ rotated ~ 0 run function asset:artifact/0840.honey_bee_stick/trigger/4.vfx
     particle minecraft:block honey_block ~ ~1.2 ~ 3 0.4 3 0 50
     particle dust 1.000 0.741 0.141 1.3 ~ ~1.2 ~ 2 0.4 2 0 240 normal
     particle minecraft:wax_on ~ ~ ~ 2 2 2 0 100

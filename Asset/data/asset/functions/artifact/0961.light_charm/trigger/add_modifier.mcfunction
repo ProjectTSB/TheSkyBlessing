@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0961.light_charm/trigger/add_modifier
+#> asset:artifact/0961.light_charm/trigger/add_modifier
 #
 #
 #
-# @within function asset:sacred_treasure/0961.light_charm/trigger/**main
+# @within function asset:artifact/0961.light_charm/trigger/**main
 
 # 補正を削除
     attribute @s minecraft:generic.armor modifier remove 1-0-1-0-03c100000007

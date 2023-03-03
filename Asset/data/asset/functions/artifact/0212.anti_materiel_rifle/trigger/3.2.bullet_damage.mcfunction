@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.2.bullet_damage
+#> asset:artifact/0212.anti_materiel_rifle/trigger/3.2.bullet_damage
 #
 # 神器のメイン処理部
 #
 # @within
-#   function asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.1.bullet
+#   function asset:artifact/0212.anti_materiel_rifle/trigger/3.1.bullet
 
 # 着弾の演出
     particle minecraft:explosion ~ ~ ~ 0.1 0.1 0.1 0 10

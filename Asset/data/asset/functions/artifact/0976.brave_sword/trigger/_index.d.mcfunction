@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/_index.d
+#> asset:artifact/0976.brave_sword/trigger/_index.d
 # @private
 
 #> tag
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/**
+# @within function asset:artifact/0976.brave_sword/trigger/**
     #declare tag R4.SlashInit
     #declare tag R4.SlashSweep
     #declare tag R4.SlashFinish

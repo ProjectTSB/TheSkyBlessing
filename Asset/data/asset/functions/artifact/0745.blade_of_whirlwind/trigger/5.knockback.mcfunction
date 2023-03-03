@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0745.blade_of_whirlwind/trigger/5.knockback
+#> asset:artifact/0745.blade_of_whirlwind/trigger/5.knockback
 #
 #
 #
-# @within function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/3.main
+# @within function asset:artifact/0745.blade_of_whirlwind/trigger/3.main
 
 # こっちも補正無しの分の値を引く
     scoreboard players operation $VectorMagnitude Temporary -= $100 Const

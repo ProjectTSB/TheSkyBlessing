@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0379.miracle_rod/trigger/3.3.shoot
+#> asset:artifact/0379.miracle_rod/trigger/3.3.shoot
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0379.miracle_rod/trigger/3.2.magic_circle
-#   asset:sacred_treasure/0379.miracle_rod/trigger/3.3.shoot
+#   asset:artifact/0379.miracle_rod/trigger/3.2.magic_circle
+#   asset:artifact/0379.miracle_rod/trigger/3.3.shoot
 
 # ここから先は神器側の効果の処理を書く
 # 着弾検知
@@ -19,7 +19,7 @@
     particle enchant ~ ~ ~ 0.4 0.4 0.4 0 20
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0379.miracle_rod/trigger/3.4.damage
+    execute if entity @s[tag=Landing] run function asset:artifact/0379.miracle_rod/trigger/3.4.damage
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:sacred_treasure/0379.miracle_rod/trigger/3.3.shoot
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:artifact/0379.miracle_rod/trigger/3.3.shoot

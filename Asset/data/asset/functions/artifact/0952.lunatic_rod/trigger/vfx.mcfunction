@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0952.lunatic_rod/trigger/vfx
+#> asset:artifact/0952.lunatic_rod/trigger/vfx
 #
 #
 #
-# @within function asset:sacred_treasure/0952.lunatic_rod/trigger/4.recursive
+# @within function asset:artifact/0952.lunatic_rod/trigger/4.recursive
 
 # 円 2
     particle dust 1 1 1 1 ^0 ^-0.5 ^ 0 0 0 0 1

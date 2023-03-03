@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0204.spelunker_shoes/trigger/2.check_condition
+#> asset:artifact/0204.spelunker_shoes/trigger/2.check_condition
 #
 # 神器の発動条件をチェックします
 #
-# @within function asset:sacred_treasure/0204.spelunker_shoes/trigger/1.trigger
+# @within function asset:artifact/0204.spelunker_shoes/trigger/1.trigger
 
 #>
 # @private
     #declare score_holder $FallDistance
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/check_condition/feet
+    function asset:artifact/common/check_condition/feet
 # 他にアイテム等確認する場合はここに書く
 
 # 落下距離が2マス未満の場合は処理しない
@@ -19,4 +19,4 @@
     scoreboard players reset $FallDistance
 
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0204.spelunker_shoes/trigger/3.main
+    execute if entity @s[tag=CanUsed] run function asset:artifact/0204.spelunker_shoes/trigger/3.main

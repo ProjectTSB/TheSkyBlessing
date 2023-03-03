@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/0.load
+#> asset:artifact/0210.terra_blade/trigger/0.load
 #
 # スコアボード作成
 #
-# @within tag/function asset:sacred_treasure/load
+# @within tag/function asset:artifact/load
 
 #> Objective
-# @within asset:sacred_treasure/0210.terra_blade/trigger/**
+# @within asset:artifact/0210.terra_blade/trigger/**
     scoreboard objectives add 5U.Tick dummy
     scoreboard objectives add 5U.ID dummy
     scoreboard objectives add 5U.Range dummy

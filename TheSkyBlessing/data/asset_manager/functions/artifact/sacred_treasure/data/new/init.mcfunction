@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/data/new/init
+#> asset_manager:artifact/data/new/init
 #
 # プレイヤーデータから新しいcontextを生成してNewに突っ込む
 #
-# @within asset_manager:sacred_treasure/triggers/
+# @within asset_manager:artifact/triggers/
 
 # 初期化
     data remove storage asset:context New

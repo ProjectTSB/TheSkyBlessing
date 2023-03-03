@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/sword_summon
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/sword_summon
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/skill/skill?
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/skill/skill?
 
 #> Private
 # @private
@@ -25,4 +25,4 @@
     tag @e[type=armor_stand,tag=RD.SwordInit,distance=..10,sort=nearest,limit=1] remove RD.SwordInit
 
 # スケジュール開始
-    schedule function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/schedule 1t
+    schedule function asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/schedule 1t

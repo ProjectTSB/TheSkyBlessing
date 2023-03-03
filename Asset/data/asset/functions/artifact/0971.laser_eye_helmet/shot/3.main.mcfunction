@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0971.laser_eye_helmet/shot/3.main
+#> asset:artifact/0971.laser_eye_helmet/shot/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0971.laser_eye_helmet/shot/2.check_condition
+# @within function asset:artifact/0971.laser_eye_helmet/shot/2.check_condition
 
 #> Private
 # @private
     #declare tag SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/head
+    function asset:artifact/common/use/head
 
 # ここから先は神器側の効果の処理を書く
 
@@ -23,7 +23,7 @@
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 # 発砲
-    execute anchored eyes facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:sacred_treasure/0971.laser_eye_helmet/shot/bullet
+    execute anchored eyes facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run function asset:artifact/0971.laser_eye_helmet/shot/bullet
     tag @s remove Landing
 
 # リセット

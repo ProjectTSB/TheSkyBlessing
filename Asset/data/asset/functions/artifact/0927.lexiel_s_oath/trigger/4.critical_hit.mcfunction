@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0927.lexiel_s_oath/trigger/4.critical_hit
+#> asset:artifact/0927.lexiel_s_oath/trigger/4.critical_hit
 #
 #
 #
-# @within function asset:sacred_treasure/0927.lexiel_s_oath/trigger/3.main
+# @within function asset:artifact/0927.lexiel_s_oath/trigger/3.main
 
 # 9999の貫通ダメージを与える
     # 与えるダメージ = 9999 ボスは999

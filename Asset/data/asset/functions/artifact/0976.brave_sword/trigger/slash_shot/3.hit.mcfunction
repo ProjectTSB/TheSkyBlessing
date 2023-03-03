@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/3.hit
+#> asset:artifact/0976.brave_sword/trigger/slash_shot/3.hit
 #
 # ヒット時
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/2.main
+# @within function asset:artifact/0976.brave_sword/trigger/slash_shot/2.main
 
 # どうしてもダメージを受けてほしい
     effect give @s[type=#lib:undead] instant_health

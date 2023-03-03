@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/damage
+#> asset:artifact/0981.soulfire_burst/trigger/small_fireball/damage
 #
 # ふっとばさない攻撃
 #
-# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/hit
+# @within function asset:artifact/0981.soulfire_burst/trigger/small_fireball/hit
 
 # ダメージ値設定
     #ダメージブレのための処理

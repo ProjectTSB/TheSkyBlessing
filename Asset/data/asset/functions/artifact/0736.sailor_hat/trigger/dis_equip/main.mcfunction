@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0736.sailor_hat/trigger/dis_equip/main
+#> asset:artifact/0736.sailor_hat/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0736.sailor_hat/trigger/dis_equip/
+# @within function asset:artifact/0736.sailor_hat/trigger/dis_equip/
 
 # 物理攻撃+7.5%
     data modify storage api: Argument.UUID set value [I;1,1,736,6]

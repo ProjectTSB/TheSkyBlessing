@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0372.water_magic/trigger/particle.1
+#> asset:artifact/0372.water_magic/trigger/particle.1
 #
 #
 #
-# @within function asset:sacred_treasure/0372.water_magic/trigger/3.1.loop
+# @within function asset:artifact/0372.water_magic/trigger/3.1.loop
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgB2AhgLYLKBhigAQCsYBMxGZAzkuCgPYCuhESAGwAGAijj84GDmAAeSUWCgKAvgRYATND3aJaBVhGYDEiuNmxoYrCgEZhijFyMQKwlWvDR4SVJhz4RGQUYDSCDGBMLKS6nLz8SLSK4pLSiODypgTKpmpgmtq6ACwGRhgmZhZWNkj2js7ErqqekLAh6Fi4ESTkvjQA7BFRbDLcfCZFyRKuaRkK2arqxFo6SADMpcbzYOaW1nYO6g1NuS3e7f5dBD0hNAAcQ8wj6ajxJmv6qNNSMpmKOe4litdAAmTblba7aoHeouNwePBeNq+DoBbrBPrUACcj2isVe4yQIKmqV+2wBeQKq0QtnBFQIUP2tUO+WO8JUAF0gA
 # 円 5

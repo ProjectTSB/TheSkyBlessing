@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/data/old/init
+#> asset_manager:artifact/data/old/init
 #
 # EntityStorageに退避された1tick前のデータをOldに突っ込む
 #
-# @within function asset_manager:sacred_treasure/triggers/
+# @within function asset_manager:artifact/triggers/
 
 # 初期化
     data remove storage asset:context Old

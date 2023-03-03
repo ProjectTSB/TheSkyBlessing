@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/effect/end
+#> asset:artifact/0265.holy_symbol_lv.5/trigger/effect/end
 #
 #
 #
-# @within function asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/effect/
+# @within function asset:artifact/0265.holy_symbol_lv.5/trigger/effect/
 
 # 効果時間削除
     scoreboard players reset @s 7D.HolySymbol

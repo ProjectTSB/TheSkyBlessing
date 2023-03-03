@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee
+#> asset:artifact/0793.queen_bee_rocket/trigger/bee
 #
 # 火の玉が実行
 #
-# @within function asset:sacred_treasure/0793.queen_bee_rocket/trigger/schedule_loop
+# @within function asset:artifact/0793.queen_bee_rocket/trigger/schedule_loop
 
 #> Private
 # @private
@@ -19,7 +19,7 @@
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add M1.Landing
 
 # 着弾処理
-    execute if entity @s[tag=M1.Landing] run function asset:sacred_treasure/0793.queen_bee_rocket/trigger/attack
+    execute if entity @s[tag=M1.Landing] run function asset:artifact/0793.queen_bee_rocket/trigger/attack
 
 # 演出
     particle minecraft:campfire_cosy_smoke ~ ~0.3 ~ 0.1 0.1 0.1 0 1 force

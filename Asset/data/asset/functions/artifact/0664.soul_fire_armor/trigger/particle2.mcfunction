@@ -1,13 +1,13 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/particle2
+#> asset:artifact/0664.soul_fire_armor/trigger/particle2
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/0664.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0665.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0666.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0667.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
+#   asset:artifact/0664.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0665.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0666.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0667.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
 
 # 拡散するパーティクル
     execute rotated ~00 0 run particle soul ~ ~ ~ ^ ^ ^100000000 0.0000000005 0

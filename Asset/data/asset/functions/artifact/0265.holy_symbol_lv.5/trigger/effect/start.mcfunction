@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/effect/start
+#> asset:artifact/0265.holy_symbol_lv.5/trigger/effect/start
 #
 #
 #
-# @within function asset:sacred_treasure/0265.holy_symbol_lv.5/trigger/symbol/
+# @within function asset:artifact/0265.holy_symbol_lv.5/trigger/symbol/
 
 # 処理化
     scoreboard players set @s 7D.HolySymbol 0

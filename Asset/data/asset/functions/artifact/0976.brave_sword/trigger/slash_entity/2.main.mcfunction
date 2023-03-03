@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/slash_entity/2.main
+#> asset:artifact/0976.brave_sword/trigger/slash_entity/2.main
 #
 #
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/slash_entity/1.tick
+# @within function asset:artifact/0976.brave_sword/trigger/slash_entity/1.tick
 
 # スコア加算
     scoreboard players add @s R4.Tick 1

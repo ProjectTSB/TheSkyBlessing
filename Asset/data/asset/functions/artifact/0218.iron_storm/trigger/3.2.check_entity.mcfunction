@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0218.iron_storm/trigger/3.2.check_entity
+#> asset:artifact/0218.iron_storm/trigger/3.2.check_entity
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0218.iron_storm/trigger/3.1.entity_manager
+# @within function asset:artifact/0218.iron_storm/trigger/3.1.entity_manager
 
 #> private
 #
@@ -19,4 +19,4 @@
     execute if score $IsOnGround Temporary matches 0 run data modify entity @s Motion set value [0d,-5d,0d]
 
 # 着地していたら爆風function実行
-    execute if score $IsOnGround Temporary matches 1 at @s if entity @s[y=256,dy=-256] run function asset:sacred_treasure/0218.iron_storm/trigger/3.3.blast
+    execute if score $IsOnGround Temporary matches 1 at @s if entity @s[y=256,dy=-256] run function asset:artifact/0218.iron_storm/trigger/3.3.blast

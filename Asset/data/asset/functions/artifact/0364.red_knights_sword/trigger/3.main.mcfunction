@@ -1,21 +1,21 @@
-#> asset:sacred_treasure/0364.red_knights_sword/trigger/3.main
+#> asset:artifact/0364.red_knights_sword/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/2.check_condition
+# @within function asset:artifact/0364.red_knights_sword/trigger/2.check_condition
 
 #> Private
 # @private
     #declare score_holder $UseCount
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
 # 残り回数が1回の時発動した場合
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 365
-    execute unless data storage asset:context Items.mainhand.id run function api:sacred_treasure/give/from_id
+    execute unless data storage asset:context Items.mainhand.id run function api:artifact/give/from_id
     execute unless data storage asset:context Items.mainhand.id run tellraw @s {"text":"赤い騎士の剣は血を欲している","color":"dark_red","bold":true}
 
 # 演出
@@ -27,9 +27,9 @@
 # 疑似乱数取得
     scoreboard players operation $Random Temporary %= $3 Const
 # メッセージ出力
-    execute if score $Random Temporary matches 0 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_1
-    execute if score $Random Temporary matches 1 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_2
-    execute if score $Random Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_3
+    execute if score $Random Temporary matches 0 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0364.red_knights_sword/trigger/particle/particle_1
+    execute if score $Random Temporary matches 1 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0364.red_knights_sword/trigger/particle/particle_2
+    execute if score $Random Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0364.red_knights_sword/trigger/particle/particle_3
 # リセット
     scoreboard players reset $Random Temporary
 

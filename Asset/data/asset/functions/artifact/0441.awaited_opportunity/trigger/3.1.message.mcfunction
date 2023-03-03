@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0441.awaited_opportunity/trigger/3.1.message
+#> asset:artifact/0441.awaited_opportunity/trigger/3.1.message
 #
 # メッセージを流す
 #
-# @within function asset:sacred_treasure/0441.awaited_opportunity/trigger/3.main
+# @within function asset:artifact/0441.awaited_opportunity/trigger/3.main
 #> Private
 # @private
     #declare score_holder $Random
@@ -39,7 +39,7 @@
         execute if score $Random Temporary matches 95..99 run tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"めんどくせーから全部殺すか？あ？"}]
 
     # プレイヤーが"不運"と"踊"っちまった時
-        execute if score $Random Temporary matches 55..59 run function asset:sacred_treasure/0441.awaited_opportunity/trigger/3.2.hardluck
+        execute if score $Random Temporary matches 55..59 run function asset:artifact/0441.awaited_opportunity/trigger/3.2.hardluck
 
     # スピードの向こう側
         execute if score $Random Temporary matches 65..69 run effect give @s speed 30 10 true

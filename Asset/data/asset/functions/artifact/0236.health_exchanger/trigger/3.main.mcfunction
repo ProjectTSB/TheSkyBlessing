@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0236.health_exchanger/trigger/3.main
+#> asset:artifact/0236.health_exchanger/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0236.health_exchanger/trigger/2.check_condition
+# @within function asset:artifact/0236.health_exchanger/trigger/2.check_condition
 
 #> private
 # @private
@@ -15,7 +15,7 @@
     #declare score_holder $SCUserHealth
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -33,7 +33,7 @@
             scoreboard players operation $Set Lib = $MaxHealth Temporary
             function lib:score_to_health_wrapper/set
         # @a[tag=HasMaxHealth] の体力を変更
-            execute as @a[tag=HasMaxHealth] at @s run function asset:sacred_treasure/0236.health_exchanger/trigger/changed_my_health
+            execute as @a[tag=HasMaxHealth] at @s run function asset:artifact/0236.health_exchanger/trigger/changed_my_health
 
     # 演出
         # 演算

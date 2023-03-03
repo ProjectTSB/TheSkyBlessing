@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/_index.d
+#> asset:artifact/0973.call_rod_spirit/trigger/_index.d
 # @private
 
 #> tags
-# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/**
+# @within function asset:artifact/0973.call_rod_spirit/trigger/**
     #declare tag R1.Spirit
     #declare tag R1.SpiritInit
     #declare tag R1.Shot

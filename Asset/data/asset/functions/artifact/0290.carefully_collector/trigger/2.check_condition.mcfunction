@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0290.carefully_collector/trigger/2.check_condition
+#> asset:artifact/0290.carefully_collector/trigger/2.check_condition
 #
 # 神器の発動条件をチェックします
 #
-# @within function asset:sacred_treasure/0290.carefully_collector/trigger/1.trigger
+# @within function asset:artifact/0290.carefully_collector/trigger/1.trigger
 
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/check_condition/auto
+    function asset:artifact/common/check_condition/auto
 # 他にアイテム等確認する場合はここに書く
     tellraw @s[gamemode=!survival,gamemode=!creative] [{"text": "サバイバルエリアでのみ使用可能です"}]
     tag @s[gamemode=!survival,gamemode=!creative] remove CanUsed
@@ -16,4 +16,4 @@
     execute unless score @s Temporary matches 1 run tag @s remove CanUsed
     scoreboard players reset @s Temporary
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
-    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/0290.carefully_collector/trigger/3.main
+    execute if entity @s[tag=CanUsed] run function asset:artifact/0290.carefully_collector/trigger/3.main

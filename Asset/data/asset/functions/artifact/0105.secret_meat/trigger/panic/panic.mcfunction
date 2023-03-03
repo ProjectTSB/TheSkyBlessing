@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0105.secret_meat/trigger/panic/panic
+#> asset:artifact/0105.secret_meat/trigger/panic/panic
 #
 #
 #
-# @within function asset:sacred_treasure/0105.secret_meat/trigger/panic/schedule
+# @within function asset:artifact/0105.secret_meat/trigger/panic/schedule
 #> Private
 # @private
     #declare score_holder $Random

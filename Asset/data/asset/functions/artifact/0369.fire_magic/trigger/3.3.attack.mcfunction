@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0369.fire_magic/trigger/3.3.attack
+#> asset:artifact/0369.fire_magic/trigger/3.3.attack
 #
 # 弾が着弾した時
 #
-# @within function asset:sacred_treasure/0369.fire_magic/trigger/3.2.fireball
+# @within function asset:artifact/0369.fire_magic/trigger/3.2.fireball
 
 # 自身にタグ付与
     tag @s add A9.This

@@ -22,12 +22,12 @@
                                         "text": "攻撃情報: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line1[0]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line1[1]",
                                         "interpret": true
                                     },
@@ -38,12 +38,12 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line1[2]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line1[3]",
                                         "interpret": true
                                     }
@@ -55,12 +55,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[0]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[1]",
                                         "interpret": true
                                     },
@@ -68,22 +68,22 @@
                                         "text": "| "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[2]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[3]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[4]",
                                         "interpret": true
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Line2[5]",
                                         "interpret": true
                                     }

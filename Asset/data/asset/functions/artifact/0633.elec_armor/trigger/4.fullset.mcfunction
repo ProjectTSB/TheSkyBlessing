@@ -1,12 +1,12 @@
-#> asset:sacred_treasure/0633.elec_armor/trigger/4.fullset
+#> asset:artifact/0633.elec_armor/trigger/4.fullset
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/0632.elec_helm/trigger/3.main
-#   asset:sacred_treasure/0633.elec_armor/trigger/3.main
-#   asset:sacred_treasure/0634.elec_leggings/trigger/3.main
-#   asset:sacred_treasure/0635.elec_boots/trigger/3.main
+#   asset:artifact/0632.elec_helm/trigger/3.main
+#   asset:artifact/0633.elec_armor/trigger/3.main
+#   asset:artifact/0634.elec_leggings/trigger/3.main
+#   asset:artifact/0635.elec_boots/trigger/3.main
 
 # 引数の設定
     # UUID

@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0876.uni/trigger/hit
+#> asset:artifact/0876.uni/trigger/hit
 #
 #
 # @within function
-#    asset:sacred_treasure/0876.uni/trigger/3.main
-#    asset:sacred_treasure/0876.uni/trigger/bullet
+#    asset:artifact/0876.uni/trigger/3.main
+#    asset:artifact/0876.uni/trigger/bullet
 
 
 # ここから先は神器側の効果の処理を書く
@@ -23,7 +23,7 @@
         data modify storage lib: Argument.AttackType set value "Physical"
         data modify storage lib: Argument.ElementType set value "Water"
     # もし、適正距離じゃなかった場合、距離-適正距離=減少ダメージにする
-        execute if score $Distance_Damping Temporary >= $Appropriate_Distance Temporary run function asset:sacred_treasure/0876.uni/trigger/damage_attenuation
+        execute if score $Distance_Damping Temporary >= $Appropriate_Distance Temporary run function asset:artifact/0876.uni/trigger/damage_attenuation
     # ダメージ量確定
         execute store result storage lib: Argument.Damage float 1 run scoreboard players get $Damage Temporary
     # ダメージ

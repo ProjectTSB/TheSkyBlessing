@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0033.magic_shield/trigger/3.2.damage
+#> asset:artifact/0033.magic_shield/trigger/3.2.damage
 #
 #
 #
-# @within function asset:sacred_treasure/0033.magic_shield/trigger/1.1.damage_trigger
+# @within function asset:artifact/0033.magic_shield/trigger/1.1.damage_trigger
 
 # 演出
     particle block iron_block ~ ~1 ~ 0.5 0.5 0.5 0.2 60

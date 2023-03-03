@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/3.main
+#> asset:artifact/0295.call_elemental_familiar/trigger/shot/3.main
 #
 # ショットが飛んでいく！
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick
+# @within function asset:artifact/0295.call_elemental_familiar/trigger/shot/2.tick
 
 # 移動とパーティクル
     tp @s ^ ^ ^0.8
@@ -21,4 +21,4 @@
     execute unless block ^ ^ ^0.8 #lib:no_collision run kill @s
 
 # モブに接触
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:artifact/0295.call_elemental_familiar/trigger/shot/4.hit

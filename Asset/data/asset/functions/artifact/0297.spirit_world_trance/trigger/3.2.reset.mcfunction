@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0297.spirit_world_trance/trigger/3.2.reset
+#> asset:artifact/0297.spirit_world_trance/trigger/3.2.reset
 #
 # 数秒遅れての処理
 #
 # @within
-#   function asset:sacred_treasure/0297.spirit_world_trance/trigger/3.1.trance
-#   function asset:sacred_treasure/0297.spirit_world_trance/trigger/rejoin_process
+#   function asset:artifact/0297.spirit_world_trance/trigger/3.1.trance
+#   function asset:artifact/0297.spirit_world_trance/trigger/rejoin_process
 
 # 帰還
     tag @s add 89.End

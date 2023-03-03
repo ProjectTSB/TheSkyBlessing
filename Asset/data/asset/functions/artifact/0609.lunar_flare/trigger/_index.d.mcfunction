@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/_index.d
+#> asset:artifact/0609.lunar_flare/trigger/_index.d
 # @private
 
 #> Private
-# @within asset:sacred_treasure/0609.lunar_flare/trigger/**
+# @within asset:artifact/0609.lunar_flare/trigger/**
     #declare tag GX.First
     #declare tag GX.This
     #declare tag GX.RecursiveEnd

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/4.hit
+#> asset:artifact/0295.call_elemental_familiar/trigger/shot/4.hit
 #
 #
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/3.main
+# @within function asset:artifact/0295.call_elemental_familiar/trigger/shot/3.main
 
 # 魔法、火属性のダメージをぶちかます
     data modify storage lib: Argument.Damage set value 40.0f

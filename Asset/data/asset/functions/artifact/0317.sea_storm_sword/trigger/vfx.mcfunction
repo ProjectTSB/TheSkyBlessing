@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0317.sea_storm_sword/trigger/vfx
+#> asset:artifact/0317.sea_storm_sword/trigger/vfx
 #
 # 演出の処理を実行
 #
-# @within function asset:sacred_treasure/0317.sea_storm_sword/trigger/3.main
+# @within function asset:artifact/0317.sea_storm_sword/trigger/3.main
 
 # 演出
     particle dolphin ~ ~1 ~ 0.4 0.5 0.4 0 200 normal @a

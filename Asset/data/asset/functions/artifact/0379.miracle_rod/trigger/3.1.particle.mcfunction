@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0379.miracle_rod/trigger/3.1.particle
+#> asset:artifact/0379.miracle_rod/trigger/3.1.particle
 #
 # 神器のメイン処理部
 #
 # @within function
-#       asset:sacred_treasure/0379.miracle_rod/trigger/3.main
-#       asset:sacred_treasure/0379.miracle_rod/trigger/3.2.magic_circle
+#       asset:artifact/0379.miracle_rod/trigger/3.main
+#       asset:artifact/0379.miracle_rod/trigger/3.2.magic_circle
 
 # 全部パーティクル！
 particle minecraft:soul_fire_flame ^-0.5999667763710023 ^0.0 ^-0.7107503652572629 0 0 0 0 1

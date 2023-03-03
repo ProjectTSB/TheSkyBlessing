@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0911.reactive_armor_head/trigger/3.1.explosion
+#> asset:artifact/0911.reactive_armor_head/trigger/3.1.explosion
 #
 # 爆発で周囲にダメージを与える
 #
-# @within function asset:sacred_treasure/0911.reactive_armor_head/trigger/3.main
+# @within function asset:artifact/0911.reactive_armor_head/trigger/3.main
 
 # mob敵へのダメージ
     data modify storage lib: Argument.Damage set value 500f

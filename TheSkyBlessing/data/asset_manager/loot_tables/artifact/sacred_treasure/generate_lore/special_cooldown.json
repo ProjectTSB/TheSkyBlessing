@@ -22,14 +22,14 @@
                                         "text": "特殊クールダウン: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "SpecialCooldownSecond"
                                     },
                                     {
                                         "text": "."
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "SpecialCooldownDecimal"
                                     },
                                     {
@@ -67,21 +67,21 @@
                                         "text": "特殊クールダウン: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "SpecialCooldownMinutes"
                                     },
                                     {
                                         "text": "分"
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "SpecialCooldownSecond"
                                     },
                                     {
                                         "text": "."
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "SpecialCooldownDecimal"
                                     },
                                     {

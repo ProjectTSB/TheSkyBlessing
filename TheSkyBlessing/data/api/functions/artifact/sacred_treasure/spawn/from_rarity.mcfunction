@@ -1,4 +1,4 @@
-#> api:sacred_treasure/spawn/from_rarity
+#> api:artifact/spawn/from_rarity
 #
 # 神器Assetの入手処理を叩く処理
 #
@@ -12,7 +12,7 @@
 # 呼び出し
     data modify storage asset:context Type set value "drop"
     data modify storage asset:context Important set from storage api: Argument.Important
-    execute if data storage api: Argument.Rarity run function asset_manager:sacred_treasure/give
+    execute if data storage api: Argument.Rarity run function asset_manager:artifact/give
 # リセット
     data remove storage asset:context Important
     data remove storage api: Argument.Rarity

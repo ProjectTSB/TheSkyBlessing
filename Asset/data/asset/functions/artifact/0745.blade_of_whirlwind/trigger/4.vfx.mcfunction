@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0745.blade_of_whirlwind/trigger/4.vfx
+#> asset:artifact/0745.blade_of_whirlwind/trigger/4.vfx
 #
 #
 #
-# @within function asset:sacred_treasure/0745.blade_of_whirlwind/trigger/3.main
+# @within function asset:artifact/0745.blade_of_whirlwind/trigger/3.main
 
 # 演出
     particle cloud ~ ~1.2 ~ 0.6 0.4 0.6 0.3 50 normal @a

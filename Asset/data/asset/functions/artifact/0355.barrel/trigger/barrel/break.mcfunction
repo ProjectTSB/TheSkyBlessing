@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0355.barrel/trigger/barrel/break
+#> asset:artifact/0355.barrel/trigger/barrel/break
 #
 # 樽が壊れたときに実行される
 #
-# @within function asset:sacred_treasure/0355.barrel/trigger/barrel/*
+# @within function asset:artifact/0355.barrel/trigger/barrel/*
 
 # 壊す
     kill @s

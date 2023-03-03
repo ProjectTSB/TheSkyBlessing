@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/give
+#> asset_manager:artifact/give
 #
 #
 #
-# @within function api:sacred_treasure/*/from_rarity
+# @within function api:artifact/*/from_rarity
 
 #> For calc
 # @private
@@ -12,10 +12,10 @@
 # セッション開ける
     function lib:array/session/open
 # 該当レアリティのデータを取得
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[1]
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[2]
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[3]
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage asset:sacred_treasure RarityRegistry[4]
+    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[1]
+    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[2]
+    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[3]
+    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[4]
 # データサイズを取得
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
 # 対象Indexを決定
@@ -28,7 +28,7 @@
 # 取得してそのまま引数に代入
     data modify storage asset:context id set from storage lib: Array[-1]
 # 呼び出し
-    function #asset:sacred_treasure/give
+    function #asset:artifact/give
 # asset:context idを戻す
     function asset_manager:common/context_id/pop
 # リセット

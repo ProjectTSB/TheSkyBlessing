@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/triggers/sneak/reset_value_not-equal
+#> asset_manager:artifact/triggers/sneak/reset_value_not-equal
 #
 # 各slotについて$SneakThresholdと同値ではない場合、その値を-1に設定します
 #
-# @within function asset_manager:sacred_treasure/triggers/sneak/
+# @within function asset_manager:artifact/triggers/sneak/
 
 # 初期化
     data modify storage asset:context id set from storage asset:context New.id

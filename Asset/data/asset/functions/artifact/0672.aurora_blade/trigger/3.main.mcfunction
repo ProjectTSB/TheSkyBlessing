@@ -1,21 +1,21 @@
-#> asset:sacred_treasure/0672.aurora_blade/trigger/3.main
+#> asset:artifact/0672.aurora_blade/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0672.aurora_blade/trigger/2.check_condition
+# @within function asset:artifact/0672.aurora_blade/trigger/2.check_condition
 
 #> Private
-# @private function asset:sacred_treasure/0672.aurora_blade/trigger/**
+# @private function asset:artifact/0672.aurora_blade/trigger/**
     #declare score_holder $RandomDamage
     #declare score_holder $CalcRandom
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:sacred_treasure/0672.aurora_blade/trigger/4.sweeping_particle
+    execute positioned ^ ^1.2 ^0.6 rotated ~ ~-4 run function asset:artifact/0672.aurora_blade/trigger/4.sweeping_particle
     playsound entity.player.attack.sweep player @a ~ ~ ~ 0.4 1 0
     playsound entity.evoker.prepare_summon player @a ~ ~ ~ 0.8 2 0
 

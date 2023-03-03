@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/3.5.terra_shot_hit
+#> asset:artifact/0210.terra_blade/trigger/3.5.terra_shot_hit
 #
 # モブにヒットした際の処理だよ ノックバックは…どうしよう。
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/3.3.terra_shot_main
+# @within function asset:artifact/0210.terra_blade/trigger/3.3.terra_shot_main
 
 
 
@@ -21,4 +21,4 @@
     particle minecraft:sweep_attack ~ ~ ~ 0 0 0 0 1
 
 #ショット削除
-    function asset:sacred_treasure/0210.terra_blade/trigger/terra_shot_break
+    function asset:artifact/0210.terra_blade/trigger/terra_shot_break

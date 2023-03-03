@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0910.ignite/trigger/3.main
+#> asset:artifact/0910.ignite/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0910.ignite/trigger/2.check_condition
+# @within function asset:artifact/0910.ignite/trigger/2.check_condition
 #> Private
 # @private
     #declare tag PA.MeleeHit
     #declare tag PA.SlashHit
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
@@ -36,8 +36,8 @@
     execute as @e[type=#lib:living,type=!player,tag=PA.MeleeHit,distance=..10] run function lib:damage/
 
 # 衝撃波演出
-    execute positioned ~ ~1 ~ positioned ^ ^ ^0.5 run function asset:sacred_treasure/0910.ignite/trigger/particle
-    execute positioned ~ ~1 ~ positioned ^ ^ ^2.5 run function asset:sacred_treasure/0910.ignite/trigger/particle
+    execute positioned ~ ~1 ~ positioned ^ ^ ^0.5 run function asset:artifact/0910.ignite/trigger/particle
+    execute positioned ~ ~1 ~ positioned ^ ^ ^2.5 run function asset:artifact/0910.ignite/trigger/particle
 
 
 # 近接で殴った相手以外に600ダメ

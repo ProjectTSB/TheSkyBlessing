@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/3.main
+#> asset:artifact/0973.call_rod_spirit/trigger/fairy/3.main
 #
 # ゴーストちゃんの動作部分
 #
-# @within asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/2.tick
+# @within asset:artifact/0973.call_rod_spirit/trigger/fairy/2.tick
 
 #> ゴーストちゃんの移動先を決定するマーカーのタグ、持ち主のプレイヤーのタグ
 # @private
@@ -52,7 +52,7 @@
     scoreboard players add @s[tag=R1.AttackMode] R1.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.8 ^0.5 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
+    execute if entity @s[scores={R1.Tick=2..}] rotated ~ 0 positioned ^0.1 ^0.8 ^0.5 run function asset:artifact/0973.call_rod_spirit/trigger/fairy/4.shoot
 
 # 撃ちまくったら休憩
     execute if entity @s[scores={R1.ShotCount=3..}] run scoreboard players set @s R1.Tick -10
@@ -63,11 +63,11 @@
     scoreboard players reset @s[tag=!R1.AttackMode] R1.ShotCount
 
 # 離れ過ぎると消える
-    execute unless entity @e[type=marker,tag=R1.OwnerMarker,distance=..60,limit=1] run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/5.disapper
+    execute unless entity @e[type=marker,tag=R1.OwnerMarker,distance=..60,limit=1] run function asset:artifact/0973.call_rod_spirit/trigger/fairy/5.disapper
 
 # ヘルス
     scoreboard players remove @s R1.LifeTime 1
-    execute if score @s R1.LifeTime matches 0 run function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/5.disapper
+    execute if score @s R1.LifeTime matches 0 run function asset:artifact/0973.call_rod_spirit/trigger/fairy/5.disapper
 
 # リセット
     kill @e[type=marker,tag=R1.MoveMarker]

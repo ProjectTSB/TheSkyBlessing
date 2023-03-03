@@ -1,16 +1,16 @@
-#> asset:sacred_treasure/0966.protection/trigger/3.main
+#> asset:artifact/0966.protection/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0966.protection/trigger/2.check_condition
+# @within function asset:artifact/0966.protection/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    data modify storage asset:sacred_treasure IgnoreItemUpdate set value true
-    function asset:sacred_treasure/common/use/offhand
+    data modify storage asset:artifact IgnoreItemUpdate set value true
+    function asset:artifact/common/use/offhand
 
 # ここから先は神器側の効果の処理を書く
 
-execute if predicate lib:random_pass_per/30 run function asset:sacred_treasure/0966.protection/trigger/add_mp
+execute if predicate lib:random_pass_per/30 run function asset:artifact/0966.protection/trigger/add_mp
 
 # 防御+35%
     data modify storage api: Argument.UUID set value [I;1,1,966,2]
@@ -37,4 +37,4 @@ execute if predicate lib:random_pass_per/30 run function asset:sacred_treasure/0
     scoreboard players set @s QU.Protected 2
 
 # タグ
-    schedule function asset:sacred_treasure/0966.protection/trigger/schedule_task 1t
+    schedule function asset:artifact/0966.protection/trigger/schedule_task 1t

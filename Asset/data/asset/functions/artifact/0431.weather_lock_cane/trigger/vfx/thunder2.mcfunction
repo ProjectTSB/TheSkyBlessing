@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/thunder2
+#> asset:artifact/0431.weather_lock_cane/trigger/vfx/thunder2
 #
 #
 #
-# @within function asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/thunder
+# @within function asset:artifact/0431.weather_lock_cane/trigger/vfx/thunder
 
 
 # 演出

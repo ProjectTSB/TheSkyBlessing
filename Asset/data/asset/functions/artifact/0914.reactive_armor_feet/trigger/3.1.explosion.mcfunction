@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0914.reactive_armor_feet/trigger/3.1.explosion
+#> asset:artifact/0914.reactive_armor_feet/trigger/3.1.explosion
 #
 # 爆発で周囲にダメージを与える
 #
-# @within function  asset:sacred_treasure/0914.reactive_armor_feet/trigger/3.main
+# @within function  asset:artifact/0914.reactive_armor_feet/trigger/3.main
 
 # mob敵へのダメージ
     data modify storage lib: Argument.Damage set value 500f

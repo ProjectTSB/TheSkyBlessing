@@ -1,17 +1,17 @@
-#> asset_manager:sacred_treasure/check/check_local_cooldown/
+#> asset_manager:artifact/check/check_local_cooldown/
 #
 # ローカルクールダウンをチェックします
 #
-# @within function asset_manager:sacred_treasure/check/
+# @within function asset_manager:artifact/check/
 
 #> TickScore
-# @within function asset_manager:sacred_treasure/check/check_local_cooldown/*
+# @within function asset_manager:artifact/check/check_local_cooldown/*
 #declare score_holder $Tick
 
 # データをコピー
-    data modify storage asset:sacred_treasure CopiedItem set from storage asset:sacred_treasure TargetItems
+    data modify storage asset:artifact CopiedItem set from storage asset:artifact TargetItems
 # すべての要素についてチェックする
-    function asset_manager:sacred_treasure/check/check_local_cooldown/foreach
+    function asset_manager:artifact/check/check_local_cooldown/foreach
 # リセット
-    data remove storage asset:sacred_treasure CopiedItem
+    data remove storage asset:artifact CopiedItem
     scoreboard players reset $Tick Temporary

@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0456.potion_of_stalling_power/trigger/3.2.effect_player
+#> asset:artifact/0456.potion_of_stalling_power/trigger/3.2.effect_player
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0456.potion_of_stalling_power/trigger/3.1.effect
+#   asset:artifact/0456.potion_of_stalling_power/trigger/3.1.effect
 
 # ここから先は神器側の効果の処理を書く
 

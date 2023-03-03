@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0252.void_transaction/trigger/3.2.void
+#> asset:artifact/0252.void_transaction/trigger/3.2.void
 #
 # タイマーが0になれば奈落にtp
 #
 # @within
-#   function asset:sacred_treasure/0252.void_transaction/trigger/3.main
-#   function asset:sacred_treasure/0252.void_transaction/trigger/3.2.void
-#   function asset:sacred_treasure/0252.void_transaction/trigger/rejoin_process
+#   function asset:artifact/0252.void_transaction/trigger/3.main
+#   function asset:artifact/0252.void_transaction/trigger/3.2.void
+#   function asset:artifact/0252.void_transaction/trigger/rejoin_process
 
 # スコア減算
     scoreboard players remove @a[scores={70.Timer=1..2400}] 70.Timer 1
@@ -27,4 +27,4 @@
     scoreboard players reset @a[scores={70.Timer=0}] 70.Timer
 
 # 次tickにschedule予約
-    execute if entity @a[scores={70.Timer=1..2400},limit=1] run schedule function asset:sacred_treasure/0252.void_transaction/trigger/3.2.void 1t replace
+    execute if entity @a[scores={70.Timer=1..2400},limit=1] run schedule function asset:artifact/0252.void_transaction/trigger/3.2.void 1t replace

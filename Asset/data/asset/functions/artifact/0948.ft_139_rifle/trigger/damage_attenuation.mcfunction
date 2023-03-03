@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0948.ft_139_rifle/trigger/damage_attenuation
+#> asset:artifact/0948.ft_139_rifle/trigger/damage_attenuation
 #
 #
 #
-# @within function asset:sacred_treasure/0948.ft_139_rifle/trigger/hit
+# @within function asset:artifact/0948.ft_139_rifle/trigger/hit
 
 # ダメージ減らす
     scoreboard players operation $Distance_Damping Temporary -= $Appropriate_Distance Temporary

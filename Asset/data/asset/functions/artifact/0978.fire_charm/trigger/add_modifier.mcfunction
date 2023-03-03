@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0978.fire_charm/trigger/add_modifier
+#> asset:artifact/0978.fire_charm/trigger/add_modifier
 #
 #
 #
-# @within function asset:sacred_treasure/0978.fire_charm/trigger/**main
+# @within function asset:artifact/0978.fire_charm/trigger/**main
 
 # UUID設定
     data modify storage api: Argument.UUID set value [I;1,1,978,7]

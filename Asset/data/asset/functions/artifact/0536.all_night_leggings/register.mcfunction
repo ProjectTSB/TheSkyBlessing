@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0536.all_night_leggings/register
+#> asset:artifact/0536.all_night_leggings/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[1] append value 536
+data modify storage asset:artifact RarityRegistry[1] append value 536

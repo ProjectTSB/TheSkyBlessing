@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/sword/summon_sword
+#> asset:artifact/0210.terra_blade/trigger/sword/summon_sword
 #
 #
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/3.main
+# @within function asset:artifact/0210.terra_blade/trigger/3.main
 
 #> Private
 # @private
@@ -18,4 +18,4 @@
     scoreboard players set @e[type=armor_stand,tag=5U.Init,distance=..5] 5U.Life 20
 
 # スケジュールループを開始
-    schedule function asset:sacred_treasure/0210.terra_blade/trigger/sword/sword_schedule 1t replace
+    schedule function asset:artifact/0210.terra_blade/trigger/sword/sword_schedule 1t replace

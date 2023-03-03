@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0190.amor_wand/trigger/vfx/particle
+#> asset:artifact/0190.amor_wand/trigger/vfx/particle
 #
 #
 #
-# @within function asset:sacred_treasure/0190.amor_wand/trigger/vfx/main
+# @within function asset:artifact/0190.amor_wand/trigger/vfx/main
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmKQCwCMADAGykCGVAtFQEamcel0BWNpwBMKAJwdxAZhENZAdgBmVOCjAEAdswC2CZIDDFAAQ0NYGMwy6AzknAoA9oU0QkNEXQIo4LuBjtgAG7M2IT64AAeSJ5gUNEAvvEEVqRohLaINAB0AgTWEJauiDFw2NhoMNb69DEYDgUQ+jFo1gCiZRVVrQCOhCHYUADKFt7kiEohVYkAukA_3
 # 円 1

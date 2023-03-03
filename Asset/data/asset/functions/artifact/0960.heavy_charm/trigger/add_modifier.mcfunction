@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0960.heavy_charm/trigger/add_modifier
+#> asset:artifact/0960.heavy_charm/trigger/add_modifier
 #
 # 補正追加
 #
-# @within function asset:sacred_treasure/0960.heavy_charm/trigger/**main
+# @within function asset:artifact/0960.heavy_charm/trigger/**main
 
 #> 個数
 # @private

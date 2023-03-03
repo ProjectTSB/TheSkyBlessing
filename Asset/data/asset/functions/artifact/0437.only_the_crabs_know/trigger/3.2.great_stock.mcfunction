@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.2.great_stock
+#> asset:artifact/0437.only_the_crabs_know/trigger/3.2.great_stock
 # 回復,リジェネ + 出汁美味
 #
-# @within function asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.main
+# @within function asset:artifact/0437.only_the_crabs_know/trigger/3.main
 
 # HP回復
     # 回復する量 = 10

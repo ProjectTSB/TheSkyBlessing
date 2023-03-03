@@ -1,4 +1,4 @@
-#> lib:message/sacred_treasure/can_not_use_here
+#> lib:message/artifact/can_not_use_here
 #
 # 「ここでは使用できません。」
 #

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0172.icicle/trigger/particle
+#> asset:artifact/0172.icicle/trigger/particle
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/5.laser_summon
+# @within function asset:artifact/0172.icicle/trigger/5.laser_summon
 
 # [ImportKey]: NobwRALgngDgpmAXGGB7ANlA5qgdmAGjAFdiBLAEyTAE4BGAYwGY4AjAFhoFoAmOi9l3YUAZjy40AHADYA7FwCGABhE0eSgKySKdJa0JhcCgLYJkgLE1AS5GAjfQAEdAzAUAnEwGck4BqmK4ISdSIGOD84Z08wADcFdGIzcAAPJCUiKGSAX3SiVwoyYg9EdgA6WSI3CBd-RBSwOHR0Mhg3M10a51QKiDMa72dcMKRpIgArYmMYJDoiVjgALzIB6qIyNwBResbm1YBHYhjMAGUnYKpEERjm5bcAITmF5x29+qgjhROkc-RmzIJwaHhqGhMDh8ERSJRqBQNBQeCwNEouEwRBQFEI4DoJEwKBRFLJ2LI8RplJJ2OwDEZTNQrHY6FxvDA0kQnK5jAUvD4-AEeiEuuFEOBorF4mAkkswGlqj8wDk8gUmGUKs4qjU6g0mi0lG0Ogouskgqg+oshmBRuNJtM7osait1mqtrt9i9juiPhc4FdbvMwo9Ha93mc3ZkALpAA_3
 # 多角形 1-copy

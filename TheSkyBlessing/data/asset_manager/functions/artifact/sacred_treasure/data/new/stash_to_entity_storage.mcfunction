@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/data/new/stash_to_entity_storage
+#> asset_manager:artifact/data/new/stash_to_entity_storage
 #
 # NewをEntityStorageに退避させる
 #
-# @within function asset_manager:sacred_treasure/triggers/
+# @within function asset_manager:artifact/triggers/
 
 # EntityStorage呼び出し
     function oh_my_dat:please

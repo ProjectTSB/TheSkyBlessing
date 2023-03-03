@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0005.musket_matchlock/trigger/3.1.2.damage
+#> asset:artifact/0005.musket_matchlock/trigger/3.1.2.damage
 #
 # 着弾地点にいるmarkerを起点として、ダメージ処理を行う
 #
-# @within function asset:sacred_treasure/0005.musket_matchlock/trigger/3.1.entity_manager
+# @within function asset:artifact/0005.musket_matchlock/trigger/3.1.entity_manager
 
 #> private
 # @private

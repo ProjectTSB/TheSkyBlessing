@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0953.meteor_rain/trigger/meteor/1.init
+#> asset:artifact/0953.meteor_rain/trigger/meteor/1.init
 #
 #
 #
-# @within function asset:sacred_treasure/0953.meteor_rain/trigger/7.cast_meteor
+# @within function asset:artifact/0953.meteor_rain/trigger/7.cast_meteor
 
 #> SpreadLib
 # @private

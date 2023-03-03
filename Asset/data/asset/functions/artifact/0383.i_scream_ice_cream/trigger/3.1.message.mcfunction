@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0383.i_scream_ice_cream/trigger/3.1.message
+#> asset:artifact/0383.i_scream_ice_cream/trigger/3.1.message
 #
 # 数秒遅れての処理
 #
-# @within function asset:sacred_treasure/0383.i_scream_ice_cream/trigger/3.main
+# @within function asset:artifact/0383.i_scream_ice_cream/trigger/3.main
 
 # メッセージ
     tellraw @a {"text":"場が凍りついた...","color":"dark_purple"}

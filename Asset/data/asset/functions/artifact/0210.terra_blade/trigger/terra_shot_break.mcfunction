@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/terra_shot_break
+#> asset:artifact/0210.terra_blade/trigger/terra_shot_break
 #
 #
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/*
+# @within function asset:artifact/0210.terra_blade/trigger/*
 
 scoreboard players reset @s 5U.Range
 particle minecraft:happy_villager ^ ^ ^-1 0 0 0 1 1 force

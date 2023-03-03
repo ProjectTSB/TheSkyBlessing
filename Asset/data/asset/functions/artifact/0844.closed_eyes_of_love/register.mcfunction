@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0844.closed_eyes_of_love/register
+#> asset:artifact/0844.closed_eyes_of_love/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[3] append value 844
+data modify storage asset:artifact RarityRegistry[3] append value 844

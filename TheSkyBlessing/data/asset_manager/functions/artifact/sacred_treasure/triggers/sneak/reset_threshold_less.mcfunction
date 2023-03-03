@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/triggers/sneak/reset_threshold_less
+#> asset_manager:artifact/triggers/sneak/reset_threshold_less
 #
 # 各slotについて$SneakThreshold未満の値の場合、その値を-1に設定します
 #
-# @within function asset_manager:sacred_treasure/triggers/sneak/
+# @within function asset_manager:artifact/triggers/sneak/
 
 # 処理
     execute unless score @s Sneak.Mainhand >= $SneakThreshold Temporary run data modify storage asset:context id.mainhand set value -1

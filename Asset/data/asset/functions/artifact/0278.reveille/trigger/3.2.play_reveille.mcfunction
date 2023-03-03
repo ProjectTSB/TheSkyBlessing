@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0278.reveille/trigger/3.2.play_reveille
+#> asset:artifact/0278.reveille/trigger/3.2.play_reveille
 #
 # 演奏処理を行う
 #
-# @within function asset:sacred_treasure/0278.reveille/trigger/3.1.play_manager
+# @within function asset:artifact/0278.reveille/trigger/3.1.play_manager
 
 execute if score $Timeline 7Q.Timeline matches 8 run playsound minecraft:block.note_block.pling player @a ~ ~ ~ 1 0.707107 1
 execute if score $Timeline 7Q.Timeline matches 16 run playsound minecraft:block.note_block.pling player @a ~ ~ ~ 1 0.707107 1

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0522.humanism/trigger/heal
+#> asset:artifact/0522.humanism/trigger/heal
 #
 #
 #
-# @within function asset:sacred_treasure/0522.humanism/trigger/3.main
+# @within function asset:artifact/0522.humanism/trigger/3.main
 
 #> Val
 # @private

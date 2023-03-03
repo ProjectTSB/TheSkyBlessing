@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0002.blessing/trigger/show_trigger_chat
+#> asset:artifact/0002.blessing/trigger/show_trigger_chat
 #
 #
 #
-# @within function asset:sacred_treasure/0002.blessing/trigger/*
+# @within function asset:artifact/0002.blessing/trigger/*
 
 #> For tellraw
 # @private

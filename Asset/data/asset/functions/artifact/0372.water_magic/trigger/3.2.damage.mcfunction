@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0372.water_magic/trigger/3.2.damage
+#> asset:artifact/0372.water_magic/trigger/3.2.damage
 #
 #
 #
-# @within function asset:sacred_treasure/0372.water_magic/trigger/3.1.loop
+# @within function asset:artifact/0372.water_magic/trigger/3.1.loop
 
 # 自分にタグ付与
     tag @s add AC.This

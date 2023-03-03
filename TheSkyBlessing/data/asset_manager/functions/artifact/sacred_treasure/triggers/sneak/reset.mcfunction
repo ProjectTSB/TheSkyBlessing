@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/triggers/sneak/reset
+#> asset_manager:artifact/triggers/sneak/reset
 #
 # スニークトリガー用スコアボードをすべてリセットします
 #

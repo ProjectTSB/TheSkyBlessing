@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0075.whirlpool_wand/register
+#> asset:artifact/0075.whirlpool_wand/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[1] append value 75
+data modify storage asset:artifact RarityRegistry[1] append value 75

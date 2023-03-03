@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/damage
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/damage
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/sword
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/sword
 
 #> private
 # @private

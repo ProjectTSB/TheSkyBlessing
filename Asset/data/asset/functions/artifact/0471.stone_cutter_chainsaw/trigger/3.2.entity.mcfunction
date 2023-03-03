@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.2.entity
+#> asset:artifact/0471.stone_cutter_chainsaw/trigger/3.2.entity
 #
 # 攻撃先のエンティティに対する処理
 #
-# @within function asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.main
+# @within function asset:artifact/0471.stone_cutter_chainsaw/trigger/3.main
 
 # 演出など
     particle block red_wool ~ ~1 ~ 0.1 0 0.1 1 30

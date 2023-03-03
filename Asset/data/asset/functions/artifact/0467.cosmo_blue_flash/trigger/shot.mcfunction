@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+#> asset:artifact/0467.cosmo_blue_flash/trigger/shot
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0467.cosmo_blue_flash/trigger/3.main
-#   asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+#   asset:artifact/0467.cosmo_blue_flash/trigger/3.main
+#   asset:artifact/0467.cosmo_blue_flash/trigger/shot
 
 # ここから先は神器側の効果の処理を書く
 
@@ -16,4 +16,4 @@
     execute if entity @e[tag=CZ.HitEntity,distance=..40] run tag @s add CZ.HitFlag
 
 # 再帰
-    execute positioned ^ ^ ^0.5 if block ~ ~ ~ #lib:no_collision if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:sacred_treasure/0467.cosmo_blue_flash/trigger/shot
+    execute positioned ^ ^ ^0.5 if block ~ ~ ~ #lib:no_collision if entity @s[tag=!CZ.HitFlag,distance=..30] run function asset:artifact/0467.cosmo_blue_flash/trigger/shot

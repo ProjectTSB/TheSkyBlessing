@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0373.ice_sorcery/trigger/3.3.beam
+#> asset:artifact/0373.ice_sorcery/trigger/3.3.beam
 #
 # ビーム部
 #
-# @within function asset:sacred_treasure/0373.ice_sorcery/trigger/**
+# @within function asset:artifact/0373.ice_sorcery/trigger/**
 
 
 # ここから先は神器側の効果の処理を書く
@@ -20,7 +20,7 @@
     execute if predicate lib:random_pass_per/10 run particle minecraft:firework ~ ~ ~ 0 0 0 0 1
 
 # 着弾
-    execute if entity @s[tag=AD.Hit] run function asset:sacred_treasure/0373.ice_sorcery/trigger/3.4.hit
+    execute if entity @s[tag=AD.Hit] run function asset:artifact/0373.ice_sorcery/trigger/3.4.hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!AD.Hit,distance=..30] run function asset:sacred_treasure/0373.ice_sorcery/trigger/3.3.beam
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!AD.Hit,distance=..30] run function asset:artifact/0373.ice_sorcery/trigger/3.3.beam

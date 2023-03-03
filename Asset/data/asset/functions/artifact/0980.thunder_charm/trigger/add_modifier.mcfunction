@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0980.thunder_charm/trigger/add_modifier
+#> asset:artifact/0980.thunder_charm/trigger/add_modifier
 #
 #
 #
-# @within function asset:sacred_treasure/0980.thunder_charm/trigger/**main
+# @within function asset:artifact/0980.thunder_charm/trigger/**main
 
 # UUID設定
     data modify storage api: Argument.UUID set value [I;1,1,980,7]

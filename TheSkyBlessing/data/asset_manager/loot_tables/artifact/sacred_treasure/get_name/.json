@@ -18,7 +18,7 @@
                                 },
                                 {
                                     "nbt": "Name",
-                                    "storage": "asset:sacred_treasure",
+                                    "storage": "asset:artifact",
                                     "interpret": true
                                 }
                             ]

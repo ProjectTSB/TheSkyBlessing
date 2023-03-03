@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/04.effect
+#> asset:artifact/0907.rod_of_rain/trigger/rain_cloud/04.effect
 #
 # 雨のダメージ処理と回復処理
 #
-# @within function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/02.main
+# @within function asset:artifact/0907.rod_of_rain/trigger/rain_cloud/02.main
 
 #> Private
 # @private
@@ -12,8 +12,8 @@
     playsound entity.dolphin.swim player @a ~ ~ ~ 0.7 1.5 0
     playsound entity.dolphin.swim player @a ~ ~ ~ 0.7 1.8 0
     playsound ogg:ambient.underwater.additions.bubbles6 player @a ~ ~ ~ 0.5 1.5 0
-    execute positioned ~ ~0.25 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
-    execute positioned ~ ~0.8 ~ run function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
+    execute positioned ~ ~0.25 ~ run function asset:artifact/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
+    execute positioned ~ ~0.8 ~ run function asset:artifact/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
 
 # 自身を判別するTagを自身に付与
     tag @s add P8.This

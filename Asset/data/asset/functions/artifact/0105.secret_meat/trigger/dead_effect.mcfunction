@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0105.secret_meat/trigger/dead_effect
+#> asset:artifact/0105.secret_meat/trigger/dead_effect
 #
 #
 #
-# @within function asset:sacred_treasure/0105.secret_meat/trigger/3.main
+# @within function asset:artifact/0105.secret_meat/trigger/3.main
 #> private
 # @private
     #declare score_holder $Random
@@ -43,7 +43,7 @@
 # プレイヤーをパニック状態にする
     execute if score $Random Temporary matches 1 run tag @s add 2X.Panic
     execute if score $Random Temporary matches 1 run scoreboard players set @s 2X.PanicTime 50
-    execute if score $Random Temporary matches 1 run schedule function asset:sacred_treasure/0105.secret_meat/trigger/panic/schedule 1t
+    execute if score $Random Temporary matches 1 run schedule function asset:artifact/0105.secret_meat/trigger/panic/schedule 1t
 # 内蔵が飛び出す（ダメージ二倍）
     execute if score $Random Temporary matches 2 run function lib:damage/
     execute if score $Random Temporary matches 2 run tellraw @s {"text":"な、内蔵が飛び出た...！","bold":true}

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0905.book_of_metastasis/trigger/teleport
+#> asset:artifact/0905.book_of_metastasis/trigger/teleport
 #
 #
 #
-# @within function asset:sacred_treasure/0905.book_of_metastasis/trigger/2.check_condition
+# @within function asset:artifact/0905.book_of_metastasis/trigger/2.check_condition
 
 # テレポートする
     tp @p[tag=this] ~ ~ ~

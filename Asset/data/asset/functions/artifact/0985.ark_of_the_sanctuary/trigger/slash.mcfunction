@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/slash
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/**
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/**
 
 # 演出
     playsound item.trident.throw player @a ~ ~ ~ 1 0.6

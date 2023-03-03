@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/equip_2parts
+#> asset:artifact/0915.flame_hunter_hat/trigger/common/equip_2parts
 #
 # 2部位補正
 #
-# @within function asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/equip
+# @within function asset:artifact/0915.flame_hunter_hat/trigger/common/equip
 
 # 火耐性
     data modify storage api: Argument.UUID set value [I;1,1,915,6]

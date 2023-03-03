@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0368.fire_spell/trigger/4.attack
+#> asset:artifact/0368.fire_spell/trigger/4.attack
 #
 # 魔法攻撃を行う
 #
-# @within function asset:sacred_treasure/0368.fire_spell/trigger/3.main
+# @within function asset:artifact/0368.fire_spell/trigger/3.main
 
 # 演出
     particle flame ~ ~1.2 ~ 0.3 0.3 0.3 0.05 30 normal @a

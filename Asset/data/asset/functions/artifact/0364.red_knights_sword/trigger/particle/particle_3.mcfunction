@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0364.red_knights_sword/trigger/particle/particle_3
+#> asset:artifact/0364.red_knights_sword/trigger/particle/particle_3
 #
 # 横に薙ぎ払う
 #
-# @within function asset:sacred_treasure/0364.red_knights_sword/trigger/3.main
+# @within function asset:artifact/0364.red_knights_sword/trigger/3.main
 
 # 外4
 particle dust 0.894 0.196 0.196 1.3 ^1.96457 ^0 ^0.12107 0 0 0 0 1

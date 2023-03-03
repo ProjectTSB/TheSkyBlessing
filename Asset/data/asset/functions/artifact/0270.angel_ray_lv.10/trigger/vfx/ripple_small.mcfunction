@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0270.angel_ray_lv.10/trigger/vfx/ripple_small
+#> asset:artifact/0270.angel_ray_lv.10/trigger/vfx/ripple_small
 #
 #
 #
-# @within function asset:sacred_treasure/0270.angel_ray_lv.10/trigger/vfx/
+# @within function asset:artifact/0270.angel_ray_lv.10/trigger/vfx/
 
 particle electric_spark ^0 ^-0.2 ^ ^0 ^-250 ^ 0.02 0
 particle electric_spark ^0.021 ^-0.199 ^ ^26.132 ^-248.63 ^ 0.02 0

@@ -22,7 +22,7 @@
                                         "text": "消費MP: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "MPCost"
                                     }
                                 ]

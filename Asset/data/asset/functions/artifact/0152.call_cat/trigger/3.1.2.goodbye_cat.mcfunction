@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0152.call_cat/trigger/3.1.2.goodbye_cat
+#> asset:artifact/0152.call_cat/trigger/3.1.2.goodbye_cat
 #
 # 役目を終えたネコにさようならをするfunction
 #
-# @within function asset:sacred_treasure/0152.call_cat/trigger/3.1.entity_manager
+# @within function asset:artifact/0152.call_cat/trigger/3.1.entity_manager
 
 
 # さようなら //killだとログがプレイヤーに出る、死亡音が聞こえるためdataで消す

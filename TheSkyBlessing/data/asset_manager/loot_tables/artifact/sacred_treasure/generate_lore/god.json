@@ -19,7 +19,7 @@
                                         "color": "dark_gray"
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[0]",
                                         "interpret": true
                                     },
@@ -27,7 +27,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[1]",
                                         "interpret": true
                                     },
@@ -35,7 +35,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[2]",
                                         "interpret": true
                                     },
@@ -43,7 +43,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[3]",
                                         "interpret": true
                                     },
@@ -51,7 +51,7 @@
                                         "text": " "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[4]",
                                         "interpret": true
                                     }

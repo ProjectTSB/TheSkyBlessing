@@ -1,12 +1,12 @@
-#> asset:sacred_treasure/0002.blessing/trigger/on_trigger
+#> asset:artifact/0002.blessing/trigger/on_trigger
 #
 #
 #
-# @within function asset:sacred_treasure/0002.blessing/trigger/listener
+# @within function asset:artifact/0002.blessing/trigger/listener
 
 # エラー値
     execute unless score @s 02.Trigger matches 1..4 run function lib:message/invalid_operation
-    execute unless score @s 02.Trigger matches 1..4 run function asset:sacred_treasure/0002.blessing/trigger/show_trigger_chat
+    execute unless score @s 02.Trigger matches 1..4 run function asset:artifact/0002.blessing/trigger/show_trigger_chat
 # 体力
     execute if score @s 02.Trigger matches 1 run scoreboard players add $MaxHealth Global 10000
     execute if score @s 02.Trigger matches 1 as @a run function player_manager:bonus/update_health_bonus

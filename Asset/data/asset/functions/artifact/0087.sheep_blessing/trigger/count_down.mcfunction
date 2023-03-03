@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0087.sheep_blessing/trigger/count_down
+#> asset:artifact/0087.sheep_blessing/trigger/count_down
 #
 # カウントダウン処理
 #
 # @within function
-#   asset:sacred_treasure/0087.sheep_blessing/trigger/3.main
-#   asset:sacred_treasure/0087.sheep_blessing/trigger/count_down
-#   asset:sacred_treasure/0087.sheep_blessing/trigger/rejoin_process
+#   asset:artifact/0087.sheep_blessing/trigger/3.main
+#   asset:artifact/0087.sheep_blessing/trigger/count_down
+#   asset:artifact/0087.sheep_blessing/trigger/rejoin_process
 #> private
 # @private
     #declare tag 2f.CanNotUse
@@ -20,7 +20,7 @@
     execute at @a[tag=!2f.CanNotUse,scores={2f.TickCount=..40}] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_wool keep
 
 # 再起処理
-    execute if entity @a[scores={2f.TickCount=..40}] run schedule function asset:sacred_treasure/0087.sheep_blessing/trigger/count_down 1t
+    execute if entity @a[scores={2f.TickCount=..40}] run schedule function asset:artifact/0087.sheep_blessing/trigger/count_down 1t
 
 # 演出
     execute at @a[scores={2f.TickCount=41}] run playsound entity.illusioner.prepare_mirror player @a[scores={2f.TickCount=41}] ~ ~ ~ 1.0 1.0

@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0379.miracle_rod/trigger/3.4.damage
+#> asset:artifact/0379.miracle_rod/trigger/3.4.damage
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0379.miracle_rod/trigger/3.3.shoot
+#   asset:artifact/0379.miracle_rod/trigger/3.3.shoot
 
 # ここから先は神器側の効果の処理を書く
 

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0898.gale_pendant/trigger/add_modifier
+#> asset:artifact/0898.gale_pendant/trigger/add_modifier
 #
 #
 #
-# @within function asset:sacred_treasure/0898.gale_pendant/trigger/**main
+# @within function asset:artifact/0898.gale_pendant/trigger/**main
 
 #> 個数
 # @private

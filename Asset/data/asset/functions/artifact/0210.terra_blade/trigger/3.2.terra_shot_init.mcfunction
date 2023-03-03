@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/3.2.terra_shot_init
+#> asset:artifact/0210.terra_blade/trigger/3.2.terra_shot_init
 #
 # テラショット発射直後の動作。向きを発射者に揃えて、発射者の目線の高さに移動
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+# @within function asset:artifact/0210.terra_blade/trigger/event/summon_shot
 
 #> SpreadLib
 # @private

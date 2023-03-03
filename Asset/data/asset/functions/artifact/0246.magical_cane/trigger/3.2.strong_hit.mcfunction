@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0246.magical_cane/trigger/3.2.strong_hit
+#> asset:artifact/0246.magical_cane/trigger/3.2.strong_hit
 #
 # 40~120くらいの消費
 #
-# @within function asset:sacred_treasure/0246.magical_cane/trigger/3.main
+# @within function asset:artifact/0246.magical_cane/trigger/3.main
 
     playsound minecraft:entity.evoker.prepare_summon player @a ~ ~ ~ 1 2
     playsound minecraft:entity.zombie.break_wooden_door player @a ~ ~ ~ 1.5 2

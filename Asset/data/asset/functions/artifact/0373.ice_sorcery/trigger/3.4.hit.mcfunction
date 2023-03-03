@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0373.ice_sorcery/trigger/3.4.hit
+#> asset:artifact/0373.ice_sorcery/trigger/3.4.hit
 #
 # ビーム部
 #
-# @within function asset:sacred_treasure/0373.ice_sorcery/trigger/**
+# @within function asset:artifact/0373.ice_sorcery/trigger/**
 
 # 演出
     particle minecraft:block ice ~ ~ ~ 0.2 0.2 0.2 1 100 force

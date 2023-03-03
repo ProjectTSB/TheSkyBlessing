@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0959.whirlwind_scabbard/trigger/vfx
+#> asset:artifact/0959.whirlwind_scabbard/trigger/vfx
 #
 # 攻撃時の演出
 #
-# @within function asset:sacred_treasure/0959.whirlwind_scabbard/trigger/3.main
+# @within function asset:artifact/0959.whirlwind_scabbard/trigger/3.main
 
 # 演出
     particle cloud ~ ~1.2 ~ 0.4 0.4 0.4 0.3 15 normal @a

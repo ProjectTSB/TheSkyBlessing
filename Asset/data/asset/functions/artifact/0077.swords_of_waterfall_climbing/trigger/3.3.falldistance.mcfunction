@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.3.falldistance
+#> asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.3.falldistance
 #
 # 落下量を検知
 #
 # @within function
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.main
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.1.effectclear
+#   asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.main
+#   asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.1.effectclear
 
 # 落下量を検知
     function api:data_get/fall_distance

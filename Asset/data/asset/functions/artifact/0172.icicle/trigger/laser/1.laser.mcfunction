@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0172.icicle/trigger/laser/1.laser
+#> asset:artifact/0172.icicle/trigger/laser/1.laser
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/laser/schedule
+# @within function asset:artifact/0172.icicle/trigger/laser/schedule
 
 #> private
 # @private
@@ -20,10 +20,10 @@
     execute if score @s 4S.Time matches 50 run playsound entity.puffer_fish.death player @a ~ ~ ~ 1 0
 
 # ばちばちする
-    execute if score @s 4S.Time matches 60 positioned ~ ~17 ~ rotated ~ 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/2.laser_directing
-    execute if score @s 4S.Time matches 73 positioned ~ ~17 ~ rotated ~ 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/2.laser_directing
-    execute if score @s 4S.Time matches 85 positioned ~ ~17 ~ rotated ~ 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/2.laser_directing
-    execute if score @s 4S.Time matches 87..110 positioned ~ ~17 ~ rotated ~ 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/2.laser_directing
+    execute if score @s 4S.Time matches 60 positioned ~ ~17 ~ rotated ~ 90 run function asset:artifact/0172.icicle/trigger/laser/2.laser_directing
+    execute if score @s 4S.Time matches 73 positioned ~ ~17 ~ rotated ~ 90 run function asset:artifact/0172.icicle/trigger/laser/2.laser_directing
+    execute if score @s 4S.Time matches 85 positioned ~ ~17 ~ rotated ~ 90 run function asset:artifact/0172.icicle/trigger/laser/2.laser_directing
+    execute if score @s 4S.Time matches 87..110 positioned ~ ~17 ~ rotated ~ 90 run function asset:artifact/0172.icicle/trigger/laser/2.laser_directing
 
 # 放射
     execute if score @s 4S.Time matches 110 run particle firework ~ ~15 ~ 0 0 0 1 100
@@ -34,7 +34,7 @@
     scoreboard players operation $2tInterval Temporary = @s 4S.Time
 # 2tickおきに実行
     scoreboard players operation $2tInterval Temporary %= $2 Const
-    execute if score $2tInterval Temporary matches 0 run function asset:sacred_treasure/0172.icicle/trigger/laser/2t_interval
+    execute if score $2tInterval Temporary matches 0 run function asset:artifact/0172.icicle/trigger/laser/2t_interval
 # リセット
     scoreboard players reset $2tInterval
 
@@ -44,7 +44,7 @@
 # 4tickおきに実行
     scoreboard players operation $4tInterval Temporary %= $4 Const
 # スコアが110以上で動かす
-    execute if score $4tInterval Temporary matches 0 if score @s 4S.Time matches 110.. positioned ~ ~15 ~ rotated 0 90 run function asset:sacred_treasure/0172.icicle/trigger/laser/5.damage_laser
+    execute if score $4tInterval Temporary matches 0 if score @s 4S.Time matches 110.. positioned ~ ~15 ~ rotated 0 90 run function asset:artifact/0172.icicle/trigger/laser/5.damage_laser
     execute if score $4tInterval Temporary matches 0 if score @s 4S.Time matches 110.. run tag @s remove Landing
 # リセット
     scoreboard players reset $4tInterval

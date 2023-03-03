@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0607.u_and_w_06/trigger/3.1.bullet
+#> asset:artifact/0607.u_and_w_06/trigger/3.1.bullet
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0607.u_and_w_06/trigger/3.main
-#    asset:sacred_treasure/0607.u_and_w_06/trigger/3.1.bullet
+#    asset:artifact/0607.u_and_w_06/trigger/3.main
+#    asset:artifact/0607.u_and_w_06/trigger/3.1.bullet
 
 
 # ここから先は神器側の効果の処理を書く
@@ -20,7 +20,7 @@
     particle dust 0.161 0.161 0.161 1 ~ ~ ~ 0 0 0 0 0
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0607.u_and_w_06/trigger/3.2.hit
+    execute if entity @s[tag=Landing] run function asset:artifact/0607.u_and_w_06/trigger/3.2.hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:sacred_treasure/0607.u_and_w_06/trigger/3.1.bullet
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:artifact/0607.u_and_w_06/trigger/3.1.bullet

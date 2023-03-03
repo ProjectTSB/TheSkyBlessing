@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/weather_effect_clear
+#> asset:artifact/0431.weather_lock_cane/trigger/weather_effect_clear
 #
 #
 #
 # @within function
-#      asset:sacred_treasure/0431.weather_lock_cane/trigger/end
-#      asset:sacred_treasure/0431.weather_lock_cane/trigger/rejoin_process
+#      asset:artifact/0431.weather_lock_cane/trigger/end
+#      asset:artifact/0431.weather_lock_cane/trigger/rejoin_process
 
 # 補正値
     data modify storage api: Argument.UUID set value [I;1,1,624,6]

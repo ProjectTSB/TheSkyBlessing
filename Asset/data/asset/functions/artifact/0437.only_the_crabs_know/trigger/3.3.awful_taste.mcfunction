@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.3.awful_taste
+#> asset:artifact/0437.only_the_crabs_know/trigger/3.3.awful_taste
 #
 # MP減少,毒 + 酷い味だ
 #
-# @within function asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.main
+# @within function asset:artifact/0437.only_the_crabs_know/trigger/3.main
 
 # MP減少
     # 減少する量 = 50

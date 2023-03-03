@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0573.final_prism/trigger/vfx/circle
+#> asset:artifact/0573.final_prism/trigger/vfx/circle
 #
 # どえらい量のパーティクル
 #
-# @within function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_start
+# @within function asset:artifact/0573.final_prism/trigger/vfx/final_start
 
 particle end_rod ^0.99452 ^ ^0.10453 0 0 0 0 1
 particle end_rod ^0.99452 ^ ^-0.10453 0 0 0 0 1

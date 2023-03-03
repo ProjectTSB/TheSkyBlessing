@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0756.sakura_hubuki/trigger/vfx/slash2
+#> asset:artifact/0756.sakura_hubuki/trigger/vfx/slash2
 #
 #
 #
-# @within function asset:sacred_treasure/0756.sakura_hubuki/trigger/3.main
+# @within function asset:artifact/0756.sakura_hubuki/trigger/3.main
 
 # 外4
 particle dust 1 1000000000 1000000000 1.3 ^1.96457 ^1.96457 ^0.12107 0 0 0 0 1

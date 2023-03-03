@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0370.burn_sorcery/trigger/particle.2
+#> asset:artifact/0370.burn_sorcery/trigger/particle.2
 #
 #
 #
-# @within function asset:sacred_treasure/0370.burn_sorcery/trigger/3.2.damage
+# @within function asset:artifact/0370.burn_sorcery/trigger/3.2.damage
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgB2AhgLYLKBhigAQBMYBMxGZAzkuCgPYCuhESACwAGAijj84GDmAAeSUWCgKAvgRYATND3aIAzAVYRmAxIrjZsaGKwoBGYYoxdjECsJVrw0eElSYcfCIyCjAaQQYwJhZSXU5efiQ9AFYxCTdpRHB5MwJlMzUwTW1dWkNjDFNzS2tbJAcnF2I3VS9IWFCYLmwoAHMuQkiScj9ALE1AJcjAI31qPUjothluPlNaRXFJTOyFPNV1Yi0dIXKTbbALKxt7R3UmltzULgxCKSSCACseUhgkMrAANzgAC80C9EMlPABdIA
 # 円 2

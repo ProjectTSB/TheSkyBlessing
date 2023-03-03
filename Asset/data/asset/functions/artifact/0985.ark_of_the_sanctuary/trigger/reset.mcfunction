@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/reset
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/reset
 #
 # リセットする。
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/**
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/**
 
 # スコアを戻す
     scoreboard players reset @s RD.Time

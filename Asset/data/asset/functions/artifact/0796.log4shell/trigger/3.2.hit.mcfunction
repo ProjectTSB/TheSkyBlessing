@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0796.log4shell/trigger/3.2.hit
+#> asset:artifact/0796.log4shell/trigger/3.2.hit
 #
 #
 # @within function
-#    asset:sacred_treasure/0796.log4shell/trigger/3.main
-#    asset:sacred_treasure/0796.log4shell/trigger/3.1.shell
+#    asset:artifact/0796.log4shell/trigger/3.main
+#    asset:artifact/0796.log4shell/trigger/3.1.shell
 
 
 # ここから先は神器側の効果の処理を書く

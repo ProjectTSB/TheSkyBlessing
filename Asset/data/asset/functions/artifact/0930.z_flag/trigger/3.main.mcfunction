@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0930.z_flag/trigger/3.main
+#> asset:artifact/0930.z_flag/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0930.z_flag/trigger/2.check_condition
+# @within function asset:artifact/0930.z_flag/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/hotbar
+    function asset:artifact/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
 # 補正の追加(物理ダメージが25%上昇する)

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.1.excellent_soup
+#> asset:artifact/0437.only_the_crabs_know/trigger/3.1.excellent_soup
 #
 # HP,MP回復 + うまいっ！
 #
-# @within function asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.main
+# @within function asset:artifact/0437.only_the_crabs_know/trigger/3.main
 
 # HP回復
     # 回復する量 = 20

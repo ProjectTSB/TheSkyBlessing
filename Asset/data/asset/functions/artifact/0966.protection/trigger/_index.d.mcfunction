@@ -1,6 +1,6 @@
-#> asset:sacred_treasure/0966.protection/trigger/_index.d
+#> asset:artifact/0966.protection/trigger/_index.d
 # @private
 
 #> tag
-# @within function asset:sacred_treasure/0966.protection/trigger/**
+# @within function asset:artifact/0966.protection/trigger/**
     #declare tag QU.Protected

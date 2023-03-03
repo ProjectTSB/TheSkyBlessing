@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0573.final_prism/trigger/damage
+#> asset:artifact/0573.final_prism/trigger/damage
 #
 # ヒット!
 #
-# @within function asset:sacred_treasure/0573.final_prism/trigger/3.main
+# @within function asset:artifact/0573.final_prism/trigger/3.main
 
 # ダメージ
     # 魔法属性

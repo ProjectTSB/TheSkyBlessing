@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/1.init
+#> asset:artifact/0981.soulfire_burst/trigger/small_fireball/1.init
 #
 #
 #
-# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/split
+# @within function asset:artifact/0981.soulfire_burst/trigger/big_fireball/split
 
 #> SpreadLib
 # @private

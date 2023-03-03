@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
+#> asset:artifact/0837.the_world_knife/trigger/6.knife_move
 #
 #
 #
-# @within function asset:sacred_treasure/0837.the_world_knife/trigger/4.tick
+# @within function asset:artifact/0837.the_world_knife/trigger/4.tick
 
 #> private
 # @private
@@ -19,7 +19,7 @@
     particle crit ~ ~ ~ 0 0 0 0 0
 
 # 着弾処理
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0837.the_world_knife/trigger/7.knife_damage
+    execute if entity @s[tag=Landing] run function asset:artifact/0837.the_world_knife/trigger/7.knife_damage
 
 # 進ませる
     tp @s ^ ^ ^1 ~ ~

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0643.raimei_chestplate/trigger/3.2.fullset_attack
+#> asset:artifact/0643.raimei_chestplate/trigger/3.2.fullset_attack
 #
 # フルセット時で攻撃を与えた時
 #
-# @within function asset:sacred_treasure/0643.raimei_chestplate/trigger/1.1.attacktrigger
+# @within function asset:artifact/0643.raimei_chestplate/trigger/1.1.attacktrigger
 
 
 # 演出

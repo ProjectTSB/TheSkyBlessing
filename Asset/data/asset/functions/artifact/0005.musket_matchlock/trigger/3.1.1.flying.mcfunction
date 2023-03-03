@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0005.musket_matchlock/trigger/3.1.1.flying
+#> asset:artifact/0005.musket_matchlock/trigger/3.1.1.flying
 # 
 # 銃弾の速度を維持する
 #
-# @within function asset:sacred_treasure/0005.musket_matchlock/trigger/3.1.entity_manager
+# @within function asset:artifact/0005.musket_matchlock/trigger/3.1.entity_manager
 
 # motionセット
     data modify storage lib: Argument.VectorMagnitude set value 5.0

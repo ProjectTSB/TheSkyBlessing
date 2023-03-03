@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0370.burn_sorcery/trigger/particle.1
+#> asset:artifact/0370.burn_sorcery/trigger/particle.1
 #
 #
 #
-# @within function asset:sacred_treasure/0370.burn_sorcery/trigger/3.main
+# @within function asset:artifact/0370.burn_sorcery/trigger/3.main
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgB2AhgLYLKBhigAQBMYBMxGZAzkuCgPYCuhESWgAYCKOPzgYOYAB5IRYKPIC+BFgBM0PdoiEA6AGwFWEZgN0E42bGhisKARiEKMXUxApDlq8NHhIwGC5sKABzLkIGIjIKMEAsTUAlyMAjfWoHKKYWUh1OXn4kAHZRcQ8pRHA5C0UVNWJNbSQHPQAOY1MMcwUrGztHZzU3Yg95US4MQkkkIzAAKx5SGEECADc4AC80Cd1vAF0gA
 # 多角形 1
 particle flame ^0 ^ ^-1.8 0 0 0 0 1

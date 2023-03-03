@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/
+#> asset:artifact/0664.soul_fire_armor/trigger/fullset/
 #
 # 全て装備したときの効果
 #
 # @within function
-#   asset:sacred_treasure/0664.soul_fire_armor/trigger/3.main
-#   asset:sacred_treasure/0665.soul_fire_armor/trigger/3.main
-#   asset:sacred_treasure/0666.soul_fire_armor/trigger/3.main
-#   asset:sacred_treasure/0667.soul_fire_armor/trigger/3.main
+#   asset:artifact/0664.soul_fire_armor/trigger/3.main
+#   asset:artifact/0665.soul_fire_armor/trigger/3.main
+#   asset:artifact/0666.soul_fire_armor/trigger/3.main
+#   asset:artifact/0667.soul_fire_armor/trigger/3.main
 
 # 演出
-    function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle
+    function asset:artifact/0664.soul_fire_armor/trigger/fullset/particle
     playsound block.fire.ambient player @a ~ ~ ~ 2 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.6 0.4 0
@@ -38,4 +38,4 @@
     tag @s add IG.Fullset
 
 # スケジュールループ開始
-    schedule function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/loop 1t replace
+    schedule function asset:artifact/0664.soul_fire_armor/trigger/fullset/loop 1t replace

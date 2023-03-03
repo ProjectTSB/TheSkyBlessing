@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0152.call_cat/trigger/3.1.1.heal
+#> asset:artifact/0152.call_cat/trigger/3.1.1.heal
 #
 # 周囲の仲間を回復させる
 #
-# @within function asset:sacred_treasure/0152.call_cat/trigger/3.1.entity_manager
+# @within function asset:artifact/0152.call_cat/trigger/3.1.entity_manager
 
 # ネコの場所に演出
     particle minecraft:heart ~ ~0.75 ~ 0.1 0.1 0.1 1 1

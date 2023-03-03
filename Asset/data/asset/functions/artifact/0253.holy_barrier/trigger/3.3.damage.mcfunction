@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0253.holy_barrier/trigger/3.3.damage
+#> asset:artifact/0253.holy_barrier/trigger/3.3.damage
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/0253.holy_barrier/trigger/3.main
-#   asset:sacred_treasure/0253.holy_barrier/trigger/3.3.damage
+#   asset:artifact/0253.holy_barrier/trigger/3.main
+#   asset:artifact/0253.holy_barrier/trigger/3.3.damage
 
 # ダメージを与える
     data modify storage lib: Argument.Damage set value 9999f
@@ -15,4 +15,4 @@
     function lib:damage/reset
 
 # まだ息があるようならもう一度ダメージを与える
-    execute if entity @s[tag=!Death] run function asset:sacred_treasure/0253.holy_barrier/trigger/3.3.damage
+    execute if entity @s[tag=!Death] run function asset:artifact/0253.holy_barrier/trigger/3.3.damage

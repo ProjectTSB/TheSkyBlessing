@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0106.stone_cutter_blade/trigger/3.1.entity.main
+#> asset:artifact/0106.stone_cutter_blade/trigger/3.1.entity.main
 #
 # 攻撃先のエンティティに対する処理
 #
-# @within function asset:sacred_treasure/0106.stone_cutter_blade/trigger/3.main
+# @within function asset:artifact/0106.stone_cutter_blade/trigger/3.main
 
 # 演出など
     particle block redstone_block ~ ~1 ~ 0.1 0 0.1 4.2 80

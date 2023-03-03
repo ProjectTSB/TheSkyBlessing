@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/summon_laser_pos
+#> asset:artifact/0609.lunar_flare/trigger/summon_laser_pos
 #
 #
 #
-# @within function asset:sacred_treasure/0609.lunar_flare/trigger/find_target_entity
+# @within function asset:artifact/0609.lunar_flare/trigger/find_target_entity
 
 # レーザー照射位置
     summon marker ~ ~ ~ {Tags:["GX.LaserPos","GX.LaserPosFirst","Projectile"]}

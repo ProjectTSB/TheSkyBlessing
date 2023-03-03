@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0522.humanism/trigger/mp_heal
+#> asset:artifact/0522.humanism/trigger/mp_heal
 #
 #
 #
-# @within function asset:sacred_treasure/0522.humanism/trigger/3.main
+# @within function asset:artifact/0522.humanism/trigger/3.main
 
     # 自身以外のプレイヤー全回復
         scoreboard players set $Fluctuation Lib 150

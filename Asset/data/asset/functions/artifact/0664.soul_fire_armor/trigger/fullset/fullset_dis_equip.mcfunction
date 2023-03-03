@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
+#> asset:artifact/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
 #
 # フルセット効果を消すよ
 #
 # @within function
-#   asset:sacred_treasure/0664.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0665.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0666.soul_fire_armor/trigger/dis_equip/main
-#   asset:sacred_treasure/0667.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0664.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0665.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0666.soul_fire_armor/trigger/dis_equip/main
+#   asset:artifact/0667.soul_fire_armor/trigger/dis_equip/main
 
 # 演出
-    function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle2
+    function asset:artifact/0664.soul_fire_armor/trigger/fullset/particle2
 
 # 火攻撃
     data modify storage api: Argument.UUID set value [I;1,1,664,0]

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0105.secret_meat/trigger/good_effect
+#> asset:artifact/0105.secret_meat/trigger/good_effect
 #
 #
 #
-# @within function asset:sacred_treasure/0105.secret_meat/trigger/3.main
+# @within function asset:artifact/0105.secret_meat/trigger/3.main
 #> private
 # @private
     #declare score_holder $Random

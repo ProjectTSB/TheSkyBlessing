@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0899.flame_ring/trigger/add_modifier
+#> asset:artifact/0899.flame_ring/trigger/add_modifier
 #
 #
 #
-# @within function asset:sacred_treasure/0899.flame_ring/trigger/**main
+# @within function asset:artifact/0899.flame_ring/trigger/**main
 
 #> 個数
 # @private

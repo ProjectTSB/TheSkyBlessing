@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
+#> asset:artifact/0295.call_elemental_familiar/trigger/fairy/4.shoot
 #
 # ショット発射！
 #
-# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
+# @within asset:artifact/0295.call_elemental_familiar/trigger/fairy/3.main
 
 
 # タグ付与
@@ -14,10 +14,10 @@
     execute if entity @s[tag=87.FamiliarWater] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["87.ShotInit","87.ShotWater"]}
 
 # ショットのInit発動
-    execute as @e[type=armor_stand,tag=87.ShotInit,distance=..0.01] at @s run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/1.init
+    execute as @e[type=armor_stand,tag=87.ShotInit,distance=..0.01] at @s run function asset:artifact/0295.call_elemental_familiar/trigger/shot/1.init
 
 # scheduleループ開始
-    schedule function asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/2.tick 1t replace
+    schedule function asset:artifact/0295.call_elemental_familiar/trigger/shot/2.tick 1t replace
 
 # サウンド
     playsound minecraft:entity.shulker_bullet.hurt neutral @a ~ ~ ~ 1.5 2

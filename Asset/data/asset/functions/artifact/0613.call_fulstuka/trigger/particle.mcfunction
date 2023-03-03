@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0613.call_fulstuka/trigger/particle
+#> asset:artifact/0613.call_fulstuka/trigger/particle
 #
 #
 #
-# @within function asset:sacred_treasure/0613.call_fulstuka/trigger/3.main
+# @within function asset:artifact/0613.call_fulstuka/trigger/3.main
 
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGwCcA7AGYr0AcAzALTUAsD7XrrLuwCG9YXHb1WAJgAMs6QCMUtAKwBGVmAIA7YQFsEyQGGKAAnXawMYRgMBnJOBQB7QjohJVsgijju4GI5gAG7C2IRG4AAeSN5gULEAvokEtqRohA6IrAR2EDYeiHFw2NhoMHZG6vKpzvkQRnFodgCipeWVLQCOhGHYUADK1r7kiGLYlckAukA_3

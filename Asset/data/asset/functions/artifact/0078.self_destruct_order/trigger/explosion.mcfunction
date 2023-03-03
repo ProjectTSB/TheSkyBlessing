@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0078.self_destruct_order/trigger/explosion
+#> asset:artifact/0078.self_destruct_order/trigger/explosion
 #
 #
 #
 # @within function
-#    asset:sacred_treasure/0078.self_destruct_order/trigger/count_down
+#    asset:artifact/0078.self_destruct_order/trigger/count_down
 
 # ダメージ処理(アイアンゴーレム)
     # 与えるダメージ = 250

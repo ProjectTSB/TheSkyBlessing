@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0870.samurai_blade/trigger/3.main
+#> asset:artifact/0870.samurai_blade/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0870.samurai_blade/trigger/2.check_condition
+# @within function asset:artifact/0870.samurai_blade/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -22,4 +22,4 @@
     scoreboard players set @s O6.WaitingTime 25
 
 # スケジュールで実行させる
-    schedule function asset:sacred_treasure/0870.samurai_blade/trigger/schedule_loop 1t replace
+    schedule function asset:artifact/0870.samurai_blade/trigger/schedule_loop 1t replace

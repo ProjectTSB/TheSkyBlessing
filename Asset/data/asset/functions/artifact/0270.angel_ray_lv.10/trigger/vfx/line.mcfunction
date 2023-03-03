@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0270.angel_ray_lv.10/trigger/vfx/line
+#> asset:artifact/0270.angel_ray_lv.10/trigger/vfx/line
 #
 #
 #
-# @within function asset:sacred_treasure/0270.angel_ray_lv.10/trigger/vfx/
+# @within function asset:artifact/0270.angel_ray_lv.10/trigger/vfx/
 particle dust 1 0.9 0.6 0.7 ^ ^ ^00.2 0.1 0.1 0.1 0 1
 particle dust 1 0.9 0.6 0.7 ^ ^ ^00.4 0.1 0.1 0.1 0 1
 particle dust 1 0.9 0.6 0.7 ^ ^ ^00.6 0.1 0.1 0.1 0 1

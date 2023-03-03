@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/end
+#> asset:artifact/0431.weather_lock_cane/trigger/end
 #
 # lockを解除します
 #
-# @within function asset:sacred_treasure/0431.weather_lock_cane/trigger/3.main
+# @within function asset:artifact/0431.weather_lock_cane/trigger/3.main
 
 # 戻す
     gamerule doWeatherCycle true
@@ -17,7 +17,7 @@
         execute at @a run particle dripping_water ~ ~ ~ 5 5 5 0 100 force @p
 
 # タグを消す
-    execute as @a run function asset:sacred_treasure/0431.weather_lock_cane/trigger/weather_effect_clear
+    execute as @a run function asset:artifact/0431.weather_lock_cane/trigger/weather_effect_clear
 
 # ストレージを消す
     data remove storage asset:temp BZ

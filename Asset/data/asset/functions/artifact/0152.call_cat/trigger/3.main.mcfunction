@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0152.call_cat/trigger/3.main
+#> asset:artifact/0152.call_cat/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0152.call_cat/trigger/2.check_condition
+# @within function asset:artifact/0152.call_cat/trigger/2.check_condition
 
 #> Private
 # @private
@@ -10,7 +10,7 @@
 
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -42,7 +42,7 @@
         execute as @a unless score @s 48.CatTime matches -10.. run scoreboard players set @s 48.CatTime -10
 
     # ネコがいる間tickさせるfunctionをschedule
-        schedule function asset:sacred_treasure/0152.call_cat/trigger/3.1.entity_manager 1t replace
+        schedule function asset:artifact/0152.call_cat/trigger/3.1.entity_manager 1t replace
 
     # リセット
         scoreboard players reset $Random Temporary

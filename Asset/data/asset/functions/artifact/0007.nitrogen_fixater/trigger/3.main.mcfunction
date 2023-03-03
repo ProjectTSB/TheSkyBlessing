@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0007.nitrogen_fixater/trigger/3.main
+#> asset:artifact/0007.nitrogen_fixater/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0007.nitrogen_fixater/trigger/2.check_condition
+# @within function asset:artifact/0007.nitrogen_fixater/trigger/2.check_condition
 
 #> prv
 # @private
     #declare score_holder $7.IsPeace # 0: 火薬を入手 1: 骨粉を入手
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 

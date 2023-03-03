@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0349.passion_pickaxe/register
+#> asset:artifact/0349.passion_pickaxe/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[3] append value 349
+data modify storage asset:artifact RarityRegistry[3] append value 349

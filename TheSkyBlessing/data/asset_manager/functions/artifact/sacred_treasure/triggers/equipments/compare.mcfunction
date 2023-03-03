@@ -1,15 +1,15 @@
-#> asset_manager:sacred_treasure/triggers/equipments/compare
+#> asset_manager:artifact/triggers/equipments/compare
 #
 # 各slotについて前のアイテムデータと一致していない場合、タグを付与します。
 #
-# @within function asset_manager:sacred_treasure/triggers/
+# @within function asset_manager:artifact/triggers/
 
 #> private use
 # @private
     #declare score_holder $Temp
 
 # イベント発火前に実行するやつ
-    function asset_manager:sacred_treasure/data/new/set_to_current
+    function asset_manager:artifact/data/new/set_to_current
 # セッション開く
     function lib:array/session/open
 # データ設定
@@ -31,7 +31,7 @@
 # 比較
     function lib:array/compare
 # 比較結果を保存する
-    data modify storage asset:sacred_treasure EquipmentChanges set from storage lib: CompareResult
+    data modify storage asset:artifact EquipmentChanges set from storage lib: CompareResult
 # リセット
     function lib:array/session/close
     scoreboard players reset $Temp Temporary

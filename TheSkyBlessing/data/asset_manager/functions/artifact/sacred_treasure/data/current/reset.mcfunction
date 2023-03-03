@@ -1,10 +1,10 @@
-#> asset_manager:sacred_treasure/data/current/reset
+#> asset_manager:artifact/data/current/reset
 #
 # currentデータをリセットします
 #
 # @within function
-#   asset_manager:sacred_treasure/data/*/*_current
-#   asset_manager:sacred_treasure/triggers/
+#   asset_manager:artifact/data/*/*_current
+#   asset_manager:artifact/triggers/
 
 # リセット
     data remove storage asset:context Inventory

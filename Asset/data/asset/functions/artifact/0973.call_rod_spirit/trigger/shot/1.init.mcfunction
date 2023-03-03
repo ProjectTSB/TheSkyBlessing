@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/1.init
+#> asset:artifact/0973.call_rod_spirit/trigger/shot/1.init
 #
 # 付近の敵へと向きを変える
 #
-# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/fairy/4.shoot
+# @within function asset:artifact/0973.call_rod_spirit/trigger/fairy/4.shoot
 
 #> SpreadLib
 # @private

@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+#> asset:artifact/0953.meteor_rain/trigger/meteor/4.move
 #
 # 移動処理
 #
 # @within function
-#   asset:sacred_treasure/0953.meteor_rain/trigger/meteor/3.main
-#   asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+#   asset:artifact/0953.meteor_rain/trigger/meteor/3.main
+#   asset:artifact/0953.meteor_rain/trigger/meteor/4.move
 
 # パーティクル
     particle dust 1 0 0 1 ~ ~ ~ 0.2 0.2 0.2 0 1
@@ -21,13 +21,13 @@
     scoreboard players remove @s QH.Range 1
 
 # 壁の衝突判定
-    execute unless block ~ ~ ~ #lib:no_collision run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
+    execute unless block ~ ~ ~ #lib:no_collision run function asset:artifact/0953.meteor_rain/trigger/meteor/5.explosion
 
 # キル
-    execute if entity @s[scores={QH.Range=..0}] run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
+    execute if entity @s[scores={QH.Range=..0}] run function asset:artifact/0953.meteor_rain/trigger/meteor/5.explosion
 
 # モブに接触
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/5.explosion
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,dx=0,sort=nearest,limit=1] positioned ~0.5 ~0.5 ~0.5 run function asset:artifact/0953.meteor_rain/trigger/meteor/5.explosion
 
 # 再帰
-    execute if entity @s[scores={QH.MoveTimesPerTick=1..,QH.Range=1..}] at @s run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/4.move
+    execute if entity @s[scores={QH.MoveTimesPerTick=1..,QH.Range=1..}] at @s run function asset:artifact/0953.meteor_rain/trigger/meteor/4.move

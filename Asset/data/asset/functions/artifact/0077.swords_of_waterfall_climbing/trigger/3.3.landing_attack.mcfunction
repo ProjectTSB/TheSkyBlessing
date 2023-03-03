@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.3.landing_attack
+#> asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.3.landing_attack
 #
 # エフェクトを消す処理
 #
 # @within function
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.1.effectclear
+#   asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.1.effectclear
 
 # ここから先は神器側の効果の処理を書く
 

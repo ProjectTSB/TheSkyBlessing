@@ -22,7 +22,7 @@
                                         "text": "消費アイテム: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "CostText",
                                         "interpret": true
                                     }

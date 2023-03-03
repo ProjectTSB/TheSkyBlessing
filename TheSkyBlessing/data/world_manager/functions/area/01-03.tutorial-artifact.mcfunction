@@ -1,4 +1,4 @@
-#> world_manager:area/01-03.tutorial-sacred_treasure
+#> world_manager:area/01-03.tutorial-artifact
 #
 #
 #
@@ -11,6 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 03
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag3] run function lib:message/tutorial/sacred_treasure
+    execute unless entity @s[tag=TutorialFlag3] run function lib:message/tutorial/artifact
 # 二度と表示されなくする
     tag @s add TutorialFlag3

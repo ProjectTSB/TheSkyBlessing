@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/_index.d
+#> asset:artifact/0077.swords_of_waterfall_climbing/trigger/_index.d
 # @private
 
 #> tag
 # @within function
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/**
+#   asset:artifact/0077.swords_of_waterfall_climbing/trigger/**
     #declare tag 25.EffectClear
     #declare tag 25.Hit
     #declare tag 25.Landing

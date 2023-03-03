@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0631.ice_boots/trigger/3.main
+#> asset:artifact/0631.ice_boots/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0631.ice_boots/trigger/2.check_condition
+# @within function asset:artifact/0631.ice_boots/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/feet
+    function asset:artifact/common/use/feet
 
 # ここから先は神器側の効果の処理を書く
 
@@ -25,4 +25,4 @@
     playsound minecraft:block.glass.break player @a ~ ~ ~ 0.4 1.2 0
 
 # フルセット
-execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/trigger/4.fullset
+execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:artifact/0629.ice_armor/trigger/4.fullset

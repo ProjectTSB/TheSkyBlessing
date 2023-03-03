@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0826.infinite_potatoes/register
+#> asset:artifact/0826.infinite_potatoes/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[1] append value 826
+data modify storage asset:artifact RarityRegistry[1] append value 826

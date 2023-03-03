@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/sword
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/sword
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/schedule
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/schedule
 
 #> private
 # @private
@@ -19,7 +19,7 @@
     scoreboard players operation $2tInterval Temporary = @s RD.SwordTime
 # 2tickおきに実行
     scoreboard players operation $2tInterval Temporary %= $2 Const
-    execute if score $2tInterval Temporary matches 0 run function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/sword/damage
+    execute if score $2tInterval Temporary matches 0 run function asset:artifact/0985.ark_of_the_sanctuary/trigger/sword/damage
 # リセット
     scoreboard players reset $2tInterval Temporary
 

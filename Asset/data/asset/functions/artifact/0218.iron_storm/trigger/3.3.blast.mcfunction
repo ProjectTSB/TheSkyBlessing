@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0218.iron_storm/trigger/3.3.blast
+#> asset:artifact/0218.iron_storm/trigger/3.3.blast
 #
 # ダメージ、音、パーティクルを出したあと処理対象タグを剥がす
 #
-# @within function asset:sacred_treasure/0218.iron_storm/trigger/3.2.check_entity
+# @within function asset:artifact/0218.iron_storm/trigger/3.2.check_entity
 
 #> private
 #

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/03.shapes
+#> asset:artifact/0907.rod_of_rain/trigger/rain_cloud/03.shapes
 #
 # 当たり判定の表示だよ
 #
-# @within function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/02.main
+# @within function asset:artifact/0907.rod_of_rain/trigger/rain_cloud/02.main
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmHAKwBmNA7KQEYDMAtHAEymlsAsATgCMNNgEMAbKTgcBYoaRYsaLMUxRgCAOzEBbBMkBhigAIhmsDDEY9AZyTgUAe0JaISFgAYCKOK7gZ7MAA3MWxCA3AADyQvMCgYgF8EgmtSNEI7RD4AOioCGwgrN0RYuGxsNBgbAyEPWIxHQogDWLQbAFFyyur2gEdCUOwoAGVLH3JEGlDqpIBdIA_3
 # 円 1

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0609.lunar_flare/trigger/projectile/hit
+#> asset:artifact/0609.lunar_flare/trigger/projectile/hit
 #
 # ビーム部
 #
-# @within function asset:sacred_treasure/0609.lunar_flare/trigger/**
+# @within function asset:artifact/0609.lunar_flare/trigger/**
 
 
 # 演出

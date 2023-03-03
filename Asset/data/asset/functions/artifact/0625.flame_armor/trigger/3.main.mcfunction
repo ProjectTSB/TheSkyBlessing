@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0625.flame_armor/trigger/3.main
+#> asset:artifact/0625.flame_armor/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0625.flame_armor/trigger/2.check_condition
+# @within function asset:artifact/0625.flame_armor/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/chest
+    function asset:artifact/common/use/chest
 
 # ここから先は神器側の効果の処理を書く
 
@@ -24,4 +24,4 @@
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.4 1
 
 # 一式検知
-    execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:sacred_treasure/0625.flame_armor/trigger/4.fullset
+    execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:artifact/0625.flame_armor/trigger/4.fullset

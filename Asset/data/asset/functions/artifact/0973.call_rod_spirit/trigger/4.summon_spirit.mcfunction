@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/4.summon_spirit
+#> asset:artifact/0973.call_rod_spirit/trigger/4.summon_spirit
 #
 # かわいいかわいいオバケを召喚
 #
-# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/3.main
+# @within function asset:artifact/0973.call_rod_spirit/trigger/3.main
 
 # 本体を召喚
     execute rotated ~ 0 run summon armor_stand ^-2 ^ ^-2 {DisabledSlots:4144959,Invisible:1b,NoGravity:1b,Small:1b,Tags:["R1.SpiritInit","Friend"]}

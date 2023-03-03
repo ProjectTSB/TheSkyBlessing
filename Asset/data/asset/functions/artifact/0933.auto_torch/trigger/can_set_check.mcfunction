@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0933.auto_torch/trigger/can_set_check
+#> asset:artifact/0933.auto_torch/trigger/can_set_check
 #
 #
 #
-# @within function asset:sacred_treasure/0933.auto_torch/trigger/2.check_condition
+# @within function asset:artifact/0933.auto_torch/trigger/2.check_condition
 
 #> Private
 # @private
@@ -12,7 +12,7 @@
     execute store result score $Count Temporary run clear @s torch 0
     execute if score $Count Temporary matches ..0 run tag @s add ExtraCheckFailed
 # これtickだとうるさそうだからとりあえずコメントアウト
-    # execute if score $Count Temporary matches ..0 run function lib:message/sacred_treasure/dont_have_require_items
+    # execute if score $Count Temporary matches ..0 run function lib:message/artifact/dont_have_require_items
     scoreboard players reset $Count Temporary
 
 # プレイヤーがサバイバルかどうかを確認

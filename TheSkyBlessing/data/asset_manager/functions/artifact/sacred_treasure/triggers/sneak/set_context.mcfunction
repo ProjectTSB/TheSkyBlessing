@@ -1,8 +1,8 @@
-#> asset_manager:sacred_treasure/triggers/sneak/set_context
+#> asset_manager:artifact/triggers/sneak/set_context
 #
 # asset:contextにスニークした時間のデータを設定します
 #
-# @within function asset_manager:sacred_treasure/triggers/sneak/
+# @within function asset_manager:artifact/triggers/sneak/
 
 execute store result storage asset:context SneakTime.mainhand int 1 run scoreboard players get @s Sneak.Mainhand
 execute store result storage asset:context SneakTime.offhand int 1 run scoreboard players get @s Sneak.Offhand

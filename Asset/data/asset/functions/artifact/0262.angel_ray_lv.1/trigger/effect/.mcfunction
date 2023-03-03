@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0262.angel_ray_lv.1/trigger/effect/
+#> asset:artifact/0262.angel_ray_lv.1/trigger/effect/
 #
 #
 #
-# @within function asset:sacred_treasure/0262.angel_ray_lv.1/trigger/3.main
+# @within function asset:artifact/0262.angel_ray_lv.1/trigger/3.main
 
 #> Target
 # @private
@@ -16,7 +16,7 @@
     data modify storage lib: Argument.Heal set value 15.0d
     function lib:heal/modifier
 # 対象探索
-    function asset:sacred_treasure/0262.angel_ray_lv.1/trigger/effect/find_target
+    function asset:artifact/0262.angel_ray_lv.1/trigger/effect/find_target
 # 自身を対象から外す
     tag @s remove TargetCandidate
 # 対象を8体に絞る

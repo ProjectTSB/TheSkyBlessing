@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/3.main
+#> asset:artifact/0295.call_elemental_familiar/trigger/fairy/3.main
 #
 # ファミリアの動作部分
 #
-# @within asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/2.tick
+# @within asset:artifact/0295.call_elemental_familiar/trigger/fairy/2.tick
 
 #> 移動先を決定するマーカーのタグ
 # @private
@@ -51,17 +51,17 @@
     execute if entity @e[tag=Enemy,distance=..15] run scoreboard players add @s 87.Tick 1
 
 # 魔法攻撃
-    execute if entity @s[scores={87.Tick=20..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
+    execute if entity @s[scores={87.Tick=20..}] rotated ~ 0 positioned ^0.1 ^0.4 ^0.5 run function asset:artifact/0295.call_elemental_familiar/trigger/fairy/4.shoot
 
 # 付近に敵がいないならスコアリセット
     execute unless entity @e[tag=Enemy,distance=..15] run scoreboard players reset @s 87.Tick
 
 # 存在時間
     scoreboard players remove @s 87.LifeTime 1
-    execute if score @s 87.LifeTime matches 0 run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
+    execute if score @s 87.LifeTime matches 0 run function asset:artifact/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # 離れ過ぎると消える
-    execute unless entity @e[type=marker,tag=87.OwnerMarker,distance=..30,limit=1] run function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/5.disapper
+    execute unless entity @e[type=marker,tag=87.OwnerMarker,distance=..30,limit=1] run function asset:artifact/0295.call_elemental_familiar/trigger/fairy/5.disapper
 
 # リセット
     tag @a[tag=87.OwnerPlayer] remove 87.OwnerPlayer

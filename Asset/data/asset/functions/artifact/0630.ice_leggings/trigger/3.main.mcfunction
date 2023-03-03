@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0630.ice_leggings/trigger/3.main
+#> asset:artifact/0630.ice_leggings/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0630.ice_leggings/trigger/2.check_condition
+# @within function asset:artifact/0630.ice_leggings/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/legs
+    function asset:artifact/common/use/legs
 
 # ここから先は神器側の効果の処理を書く
 
@@ -26,4 +26,4 @@
 
 
 # フルセット
-execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:sacred_treasure/0629.ice_armor/trigger/4.fullset
+execute if data storage asset:context id.all{head:628,chest:629,legs:630,feet:631} run function asset:artifact/0629.ice_armor/trigger/4.fullset

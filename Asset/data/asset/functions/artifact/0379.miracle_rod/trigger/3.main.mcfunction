@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0379.miracle_rod/trigger/3.main
+#> asset:artifact/0379.miracle_rod/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0379.miracle_rod/trigger/2.check_condition
+# @within function asset:artifact/0379.miracle_rod/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -20,4 +20,4 @@
     tag @e[type=area_effect_cloud,tag=AJ.MagicSet,sort=nearest,limit=1] remove AJ.MagicSet
 
 # 魔法陣実行
-    function asset:sacred_treasure/0379.miracle_rod/trigger/3.2.magic_circle
+    function asset:artifact/0379.miracle_rod/trigger/3.2.magic_circle

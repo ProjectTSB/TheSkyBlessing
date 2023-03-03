@@ -12,7 +12,7 @@
     function lib:message/common/dispel_island
 # 祝福を与える
     data modify storage api: Argument.ID set value 2
-    execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:sacred_treasure/give/from_id
+    execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:artifact/give/from_id
 # アイテム返す
     function player_manager:lost_item/give_all/
 # データ取得

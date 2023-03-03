@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0057.elemental_sword/trigger/3.1.fireattack
+#> asset:artifact/0057.elemental_sword/trigger/3.1.fireattack
 #
 # 火属性
 #
-# @within function asset:sacred_treasure/0057.elemental_sword/trigger/3.main
+# @within function asset:artifact/0057.elemental_sword/trigger/3.main
 
 
 # 演出

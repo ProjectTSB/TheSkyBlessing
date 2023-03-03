@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0515.time_medicine/trigger/day
+#> asset:artifact/0515.time_medicine/trigger/day
 #
 #
 #
-# @within function asset:sacred_treasure/0515.time_medicine/trigger/3.main
+# @within function asset:artifact/0515.time_medicine/trigger/3.main
 
 # エフェクト
     effect give @s fire_resistance 120 0

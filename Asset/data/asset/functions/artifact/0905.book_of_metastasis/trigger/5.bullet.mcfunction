@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0905.book_of_metastasis/trigger/5.bullet
+#> asset:artifact/0905.book_of_metastasis/trigger/5.bullet
 #
 #
 #
-# @within function asset:sacred_treasure/0905.book_of_metastasis/trigger/4.schedule
+# @within function asset:artifact/0905.book_of_metastasis/trigger/4.schedule
 #> Private
 # @private
     #declare score_holder $isBanTPArea

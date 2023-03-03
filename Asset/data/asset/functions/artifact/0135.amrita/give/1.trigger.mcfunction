@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0135.amrita/give/1.trigger
+#> asset:artifact/0135.amrita/give/1.trigger
 #
 # 神器の取得処理の呼び出し時に実行されるfunction
 #
-# @within tag/function asset:sacred_treasure/give
+# @within tag/function asset:artifact/give
 
-execute if data storage asset:context {id:135} run function asset:sacred_treasure/0135.amrita/give/2.give
+execute if data storage asset:context {id:135} run function asset:artifact/0135.amrita/give/2.give

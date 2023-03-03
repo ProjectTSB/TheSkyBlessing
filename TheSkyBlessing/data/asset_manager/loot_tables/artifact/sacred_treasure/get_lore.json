@@ -20,7 +20,7 @@
                                     },
                                     {
                                         "nbt": "Lore[0]",
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "interpret": true
                                     }
                                 ]

@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0266.angel_ray_lv.5/trigger/3.main
+#> asset:artifact/0266.angel_ray_lv.5/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/2.check_condition
+# @within function asset:artifact/0266.angel_ray_lv.5/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 # レイ用Entityの初期化
@@ -16,10 +16,10 @@
     playsound entity.blaze.shoot player @a ~ ~ ~ 1 0.7
 # レイ処理
     # 処理
-        execute positioned ~ ~1.4 ~ as @e[type=area_effect_cloud,tag=Init,distance=..0.01] run function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/ray
+        execute positioned ~ ~1.4 ~ as @e[type=area_effect_cloud,tag=Init,distance=..0.01] run function asset:artifact/0266.angel_ray_lv.5/trigger/ray
     # 次tick以降用にschedule予約
-        schedule function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/recursive 1t
+        schedule function asset:artifact/0266.angel_ray_lv.5/trigger/recursive 1t
 # 効果処理
-    execute positioned ~ ~1.4 ~ run function asset:sacred_treasure/0266.angel_ray_lv.5/trigger/effect/
+    execute positioned ~ ~1.4 ~ run function asset:artifact/0266.angel_ray_lv.5/trigger/effect/
 # リセット
     execute positioned ~ ~1.4 ~ run tag @e[type=area_effect_cloud,tag=Init,distance=..0.01] remove Init

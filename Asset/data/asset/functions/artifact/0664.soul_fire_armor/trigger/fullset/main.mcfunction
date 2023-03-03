@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/main
+#> asset:artifact/0664.soul_fire_armor/trigger/fullset/main
 #
 # フルセット時のメイン処理
 #
-# @within function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/loop
+# @within function asset:artifact/0664.soul_fire_armor/trigger/fullset/loop
 
 # 演出
     particle soul ~ ~1.2 ~ 2 0.5 2 0.03 1 normal @a
@@ -13,4 +13,4 @@
     execute if entity @s[scores={IG.AttackCT=..0}] run scoreboard players reset @s IG.AttackCT
 
 # スケジュールループ
-    execute if entity @s[tag=IG.Fullset] run schedule function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/loop 1t replace
+    execute if entity @s[tag=IG.Fullset] run schedule function asset:artifact/0664.soul_fire_armor/trigger/fullset/loop 1t replace

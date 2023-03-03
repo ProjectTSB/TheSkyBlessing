@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0876.uni/trigger/bullet
+#> asset:artifact/0876.uni/trigger/bullet
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0876.uni/trigger/3.main
-#    asset:sacred_treasure/0876.uni/trigger/bullet
+#    asset:artifact/0876.uni/trigger/3.main
+#    asset:artifact/0876.uni/trigger/bullet
 
 # ここから先は神器側の効果の処理を書く
 
@@ -22,7 +22,7 @@
     scoreboard players add $Distance_Damping Temporary 1
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0876.uni/trigger/hit
+    execute if entity @s[tag=Landing] run function asset:artifact/0876.uni/trigger/hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..10] run function asset:sacred_treasure/0876.uni/trigger/bullet
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..10] run function asset:artifact/0876.uni/trigger/bullet

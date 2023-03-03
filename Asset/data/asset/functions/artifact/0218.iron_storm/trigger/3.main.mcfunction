@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0218.iron_storm/trigger/3.main
+#> asset:artifact/0218.iron_storm/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0218.iron_storm/trigger/2.check_condition
+# @within function asset:artifact/0218.iron_storm/trigger/2.check_condition
 
 #> private
 #
@@ -20,7 +20,7 @@
 
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -59,4 +59,4 @@
     playsound minecraft:entity.iron_golem.death player @s ~ ~ ~ 1 0.75 1
 
 # エンティティ管理スケジュール実行
-    schedule function asset:sacred_treasure/0218.iron_storm/trigger/3.1.entity_manager 1t replace
+    schedule function asset:artifact/0218.iron_storm/trigger/3.1.entity_manager 1t replace

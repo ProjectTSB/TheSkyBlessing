@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0376.ray_sorcery/trigger/3.1.shoot
+#> asset:artifact/0376.ray_sorcery/trigger/3.1.shoot
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0376.ray_sorcery/trigger/3.main
-#   asset:sacred_treasure/0376.ray_sorcery/trigger/3.1.shoot
+#   asset:artifact/0376.ray_sorcery/trigger/3.main
+#   asset:artifact/0376.ray_sorcery/trigger/3.1.shoot
 
 # ここから先は神器側の効果の処理を書く
 # 着弾検知
@@ -18,7 +18,7 @@
     particle dust 1 1 0 1 ~ ~ ~ 0.5 0.5 0.5 0 5
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0376.ray_sorcery/trigger/3.2.damage
+    execute if entity @s[tag=Landing] run function asset:artifact/0376.ray_sorcery/trigger/3.2.damage
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:sacred_treasure/0376.ray_sorcery/trigger/3.1.shoot
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..30] run function asset:artifact/0376.ray_sorcery/trigger/3.1.shoot

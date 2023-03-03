@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.5.heavenly_feeling
+#> asset:artifact/0437.only_the_crabs_know/trigger/3.5.heavenly_feeling
 #
 # 初期ワープ,HPMP全快 + 天国にのぼるような
 #
-# @within function asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.main
+# @within function asset:artifact/0437.only_the_crabs_know/trigger/3.main
 
 # 初期地点ワープ
     execute in minecraft:overworld run tp @s 23 3 24

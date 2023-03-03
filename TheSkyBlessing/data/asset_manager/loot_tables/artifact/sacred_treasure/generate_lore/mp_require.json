@@ -22,7 +22,7 @@
                                         "text": "必要MP: "
                                     },
                                     {
-                                        "storage": "asset:sacred_treasure",
+                                        "storage": "asset:artifact",
                                         "nbt": "MPRequire"
                                     }
                                 ]

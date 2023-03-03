@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_anime
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/slash/slash_anime
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule
 
 # スコア加算
     scoreboard players add @s RD.SwordTime 1

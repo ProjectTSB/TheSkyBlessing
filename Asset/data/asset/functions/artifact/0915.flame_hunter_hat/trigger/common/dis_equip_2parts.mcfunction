@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/dis_equip_2parts
+#> asset:artifact/0915.flame_hunter_hat/trigger/common/dis_equip_2parts
 #
 # 2部位の補正を削除
 #
-# @within function asset:sacred_treasure/0915.flame_hunter_hat/trigger/common/dis_equip
+# @within function asset:artifact/0915.flame_hunter_hat/trigger/common/dis_equip
 
 # 火耐性
     data modify storage api: Argument.UUID set value [I;1,1,915,6]

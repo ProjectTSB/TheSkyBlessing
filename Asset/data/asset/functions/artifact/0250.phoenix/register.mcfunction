@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0250.phoenix/register
+#> asset:artifact/0250.phoenix/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[2] append value 250
+data modify storage asset:artifact RarityRegistry[2] append value 250

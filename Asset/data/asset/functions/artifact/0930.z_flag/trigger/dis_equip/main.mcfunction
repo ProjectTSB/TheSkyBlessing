@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0930.z_flag/trigger/dis_equip/main
+#> asset:artifact/0930.z_flag/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0930.z_flag/trigger/dis_equip/
+# @within function asset:artifact/0930.z_flag/trigger/dis_equip/
 
 #> prv
 # @private

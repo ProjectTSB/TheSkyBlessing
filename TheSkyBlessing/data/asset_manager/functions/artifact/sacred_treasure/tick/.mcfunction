@@ -1,4 +1,4 @@
-#> asset_manager:sacred_treasure/tick/
+#> asset_manager:artifact/tick/
 #
 #
 #

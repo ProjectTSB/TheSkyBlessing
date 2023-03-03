@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0796.log4shell/trigger/3.1.shell
+#> asset:artifact/0796.log4shell/trigger/3.1.shell
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0796.log4shell/trigger/3.main
-#    asset:sacred_treasure/0796.log4shell/trigger/3.1.shell
+#    asset:artifact/0796.log4shell/trigger/3.main
+#    asset:artifact/0796.log4shell/trigger/3.1.shell
 
 
 # ここから先は神器側の効果の処理を書く
@@ -20,7 +20,7 @@
     particle dust 0.478 0.329 0.188 1 ~ ~ ~ 0 0 0 0 0
 
 # 着弾
-    execute if entity @s[tag=M4.Landing] run function asset:sacred_treasure/0796.log4shell/trigger/3.2.hit
+    execute if entity @s[tag=M4.Landing] run function asset:artifact/0796.log4shell/trigger/3.2.hit
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!M4.Landing,distance=..30] run function asset:sacred_treasure/0796.log4shell/trigger/3.1.shell
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!M4.Landing,distance=..30] run function asset:artifact/0796.log4shell/trigger/3.1.shell

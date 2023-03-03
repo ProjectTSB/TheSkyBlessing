@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.1.bullet
+#> asset:artifact/0212.anti_materiel_rifle/trigger/3.1.bullet
 #
 # 再起する弾
 #
 # @within function
-#   asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.main
-#   asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.1.bullet
+#   asset:artifact/0212.anti_materiel_rifle/trigger/3.main
+#   asset:artifact/0212.anti_materiel_rifle/trigger/3.1.bullet
 
 # 着弾検知
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @s add Landing
@@ -19,10 +19,10 @@
     particle flame ~ ~ ~ 0.05 0.05 0.05 0 1
 
 # 着弾
-    execute if entity @s[tag=Landing] run function asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.2.bullet_damage
+    execute if entity @s[tag=Landing] run function asset:artifact/0212.anti_materiel_rifle/trigger/3.2.bullet_damage
 
 # 再起
-    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..80] run function asset:sacred_treasure/0212.anti_materiel_rifle/trigger/3.1.bullet
+    execute positioned ^ ^ ^0.5 if entity @s[tag=!Landing,distance=..80] run function asset:artifact/0212.anti_materiel_rifle/trigger/3.1.bullet
 
 # タグを消す
     tag @s remove Landing

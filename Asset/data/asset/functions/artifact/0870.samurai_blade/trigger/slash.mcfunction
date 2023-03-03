@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0870.samurai_blade/trigger/slash
+#> asset:artifact/0870.samurai_blade/trigger/slash
 #
 #
 #
-# @within function asset:sacred_treasure/0870.samurai_blade/trigger/**
+# @within function asset:artifact/0870.samurai_blade/trigger/**
 
 # 演出
     playsound item.trident.throw player @a ~ ~ ~ 1 0.6

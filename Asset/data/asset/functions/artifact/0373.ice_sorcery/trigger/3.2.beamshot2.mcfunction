@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0373.ice_sorcery/trigger/3.2.beamshot2
+#> asset:artifact/0373.ice_sorcery/trigger/3.2.beamshot2
 #
 # ビーム部
 #
 # @within function
-#    asset:sacred_treasure/0373.ice_sorcery/trigger/3.main
-#    asset:sacred_treasure/0373.ice_sorcery/trigger/3.1.beamshot
+#    asset:artifact/0373.ice_sorcery/trigger/3.main
+#    asset:artifact/0373.ice_sorcery/trigger/3.1.beamshot
 
 #> SpreadLib
 # @private
@@ -19,7 +19,7 @@
 
 # ビームを飛ばす
     playsound minecraft:block.glass.break player @a ~ ~ ~ 1 1.3
-    execute as @s facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0373.ice_sorcery/trigger/3.3.beam
+    execute as @s facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:artifact/0373.ice_sorcery/trigger/3.3.beam
     tag @s remove AD.Hit
 
 # リセット

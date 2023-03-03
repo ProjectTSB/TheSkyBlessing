@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/5.hit
+#> asset:artifact/0973.call_rod_spirit/trigger/shot/5.hit
 #
 # ショットヒット時
 #
-# @within function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/4.move
+# @within function asset:artifact/0973.call_rod_spirit/trigger/shot/4.move
 
 # ダメージ値設定
     #ダメージブレのための処理
@@ -30,4 +30,4 @@
     scoreboard players reset $RandomDamage Temporary
 
 # キル
-    function asset:sacred_treasure/0973.call_rod_spirit/trigger/shot/6.break
+    function asset:artifact/0973.call_rod_spirit/trigger/shot/6.break

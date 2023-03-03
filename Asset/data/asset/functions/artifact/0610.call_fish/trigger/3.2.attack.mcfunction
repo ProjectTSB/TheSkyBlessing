@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0610.call_fish/trigger/3.2.attack
+#> asset:artifact/0610.call_fish/trigger/3.2.attack
 #
 #
 #
-# @within function asset:sacred_treasure/0610.call_fish/trigger/3.1.tick
+# @within function asset:artifact/0610.call_fish/trigger/3.1.tick
 
 # 自分にタグ付与
     tag @s add GY.This

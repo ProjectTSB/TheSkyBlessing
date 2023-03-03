@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0075.whirlpool_wand/trigger/3.1.insidewater
+#> asset:artifact/0075.whirlpool_wand/trigger/3.1.insidewater
 #
 # 水の中に敵がいる場合ダメージを基本値100の倍200に
 #
-# @within function asset:sacred_treasure/0075.whirlpool_wand/trigger/3.main
+# @within function asset:artifact/0075.whirlpool_wand/trigger/3.main
 
 # ダメージ
     # 与えるダメージ = 200

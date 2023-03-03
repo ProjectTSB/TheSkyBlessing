@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.4.sanity_decrease
+#> asset:artifact/0437.only_the_crabs_know/trigger/3.4.sanity_decrease
 #
 # HP減少MP回復 + 正気度減少
 #
-# @within function asset:sacred_treasure/0437.only_the_crabs_know/trigger/3.main
+# @within function asset:artifact/0437.only_the_crabs_know/trigger/3.main
 
 # HP減少
     # 防御無視・補正なし・魔法・無属性の15のダメージを与える

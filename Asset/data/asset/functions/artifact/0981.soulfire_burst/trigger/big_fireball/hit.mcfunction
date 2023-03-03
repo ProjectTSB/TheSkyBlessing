@@ -1,14 +1,14 @@
-#> asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/hit
+#> asset:artifact/0981.soulfire_burst/trigger/big_fireball/hit
 #
 # 着弾したとき。周囲に範囲攻撃。
 #
-# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/4.move
+# @within function asset:artifact/0981.soulfire_burst/trigger/big_fireball/4.move
 
 # オーナーのプレイヤーを特定
     execute at @a[distance=..100] if score @s R9.UserID = @p UserID run tag @p add R9.OwnerPlayer
 
 # 範囲3にダメージ。着弾地点から範囲3以内のモブが実行者になる。
-    execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..3] at @s run function asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/damage
+    execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..3] at @s run function asset:artifact/0981.soulfire_burst/trigger/big_fireball/damage
 
 # 演出
     playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 1.5 1.5

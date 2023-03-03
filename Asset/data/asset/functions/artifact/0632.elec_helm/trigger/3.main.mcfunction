@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0632.elec_helm/trigger/3.main
+#> asset:artifact/0632.elec_helm/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0632.elec_helm/trigger/2.check_condition
+# @within function asset:artifact/0632.elec_helm/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/head
+    function asset:artifact/common/use/head
 
 # ここから先は神器側の効果の処理を書く
 
@@ -25,4 +25,4 @@
     playsound minecraft:entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 1.5 0
 
 # 一式効果
-    execute if data storage asset:context id.all{head:632,chest:633,legs:634,feet:635} run function asset:sacred_treasure/0633.elec_armor/trigger/4.fullset
+    execute if data storage asset:context id.all{head:632,chest:633,legs:634,feet:635} run function asset:artifact/0633.elec_armor/trigger/4.fullset

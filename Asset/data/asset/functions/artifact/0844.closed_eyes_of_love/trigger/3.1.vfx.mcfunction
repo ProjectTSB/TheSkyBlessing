@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.1.vfx
+#> asset:artifact/0844.closed_eyes_of_love/trigger/3.1.vfx
 #
 # vfx
 #
-# @within function asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.main
+# @within function asset:artifact/0844.closed_eyes_of_love/trigger/3.main
 
 # 音
     playsound minecraft:item.trident.return player @a[distance=..16] ~ ~ ~ 1 2 1

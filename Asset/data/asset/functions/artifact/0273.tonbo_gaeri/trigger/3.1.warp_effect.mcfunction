@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0273.tonbo_gaeri/trigger/3.1.warp_effect
+#> asset:artifact/0273.tonbo_gaeri/trigger/3.1.warp_effect
 #
 # ワープ時のパーティクルと音 ワープ前の位置とワープ後の位置で実行される
 #
-# @within function asset:sacred_treasure/0273.tonbo_gaeri/trigger/3.main
+# @within function asset:artifact/0273.tonbo_gaeri/trigger/3.main
 
 # ワープのエフェクト
     particle explosion ~ ~1 ~ 0 0 0 0 0

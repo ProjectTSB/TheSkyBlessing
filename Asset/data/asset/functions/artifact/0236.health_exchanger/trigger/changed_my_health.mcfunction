@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0236.health_exchanger/trigger/changed_my_health
+#> asset:artifact/0236.health_exchanger/trigger/changed_my_health
 #
 # 体力を@s
 #
 # Scoreのリセットの実装上分離
 #
-# @within function asset:sacred_treasure/0236.health_exchanger/trigger/3.main
+# @within function asset:artifact/0236.health_exchanger/trigger/3.main
 
 #> private
 # @private

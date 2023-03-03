@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0515.time_medicine/trigger/night
+#> asset:artifact/0515.time_medicine/trigger/night
 #
 #
 #
-# @within function asset:sacred_treasure/0515.time_medicine/trigger/3.main
+# @within function asset:artifact/0515.time_medicine/trigger/3.main
 
 # エフェクト
     effect give @s night_vision 120 0

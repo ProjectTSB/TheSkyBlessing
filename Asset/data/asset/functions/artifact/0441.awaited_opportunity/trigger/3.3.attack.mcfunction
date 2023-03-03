@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0441.awaited_opportunity/trigger/3.3.attack
+#> asset:artifact/0441.awaited_opportunity/trigger/3.3.attack
 #
 # 破壊っわす
 #
-# @within function asset:sacred_treasure/0441.awaited_opportunity/trigger/3.main
+# @within function asset:artifact/0441.awaited_opportunity/trigger/3.main
 
 # 演出
     particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.1 0.1 1 10

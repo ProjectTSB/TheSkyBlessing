@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0369.fire_magic/trigger/_index.d
+#> asset:artifact/0369.fire_magic/trigger/_index.d
 # @private
 
 #> tag
 # @within function
-#   asset:sacred_treasure/0369.fire_magic/trigger/**
+#   asset:artifact/0369.fire_magic/trigger/**
     #declare tag A9.First
     #declare tag A9.This
     #declare tag A9.Fire

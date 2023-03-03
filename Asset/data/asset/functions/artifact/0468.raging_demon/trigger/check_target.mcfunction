@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0468.raging_demon/trigger/check_target
+#> asset:artifact/0468.raging_demon/trigger/check_target
 #
 # 周囲10M以内の体力が20以下の敵1体に7k.Targetタグを付与
 # 対象の敵がいないときはCanUsedを削除
 #
-# @within function asset:sacred_treasure/0468.raging_demon/trigger/2.check_condition
+# @within function asset:artifact/0468.raging_demon/trigger/2.check_condition
 #> Private
 # @private
     #declare tag CanUsed

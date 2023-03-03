@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0374.thunder_spell/trigger/3.2.damage
+#> asset:artifact/0374.thunder_spell/trigger/3.2.damage
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/0374.thunder_spell/trigger/3.1.line
+#   asset:artifact/0374.thunder_spell/trigger/3.1.line
 
 # ここから先は神器側の効果の処理を書く
 

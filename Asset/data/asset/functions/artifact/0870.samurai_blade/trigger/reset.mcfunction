@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0870.samurai_blade/trigger/reset
+#> asset:artifact/0870.samurai_blade/trigger/reset
 #
 # リセットする。
 #
-# @within function asset:sacred_treasure/0870.samurai_blade/trigger/**
+# @within function asset:artifact/0870.samurai_blade/trigger/**
 
 # スコアを戻す
     scoreboard players reset @s O6.Time

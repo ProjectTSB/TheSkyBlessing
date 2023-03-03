@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0756.sakura_hubuki/trigger/4.range_attack
+#> asset:artifact/0756.sakura_hubuki/trigger/4.range_attack
 #
 # 範囲ダメ
 #
-# @within function asset:sacred_treasure/0756.sakura_hubuki/trigger/3.main
+# @within function asset:artifact/0756.sakura_hubuki/trigger/3.main
 
 # 演出
     particle snowflake ~ ~0.3 ~ 1 0 1 0.45 250 normal @a
@@ -13,7 +13,7 @@
     playsound block.glass.break player @a ~ ~ ~ 0.8 1.4
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 2
     playsound ogg:ambient.nether.crimson_forest.shine3 player @a ~ ~ ~ 0.7 1.8
-    execute positioned ~ ~0.3 ~ rotated as @s rotated ~180 0 run function asset:sacred_treasure/0756.sakura_hubuki/trigger/vfx/ice_cherry_blossom
+    execute positioned ~ ~0.3 ~ rotated as @s rotated ~180 0 run function asset:artifact/0756.sakura_hubuki/trigger/vfx/ice_cherry_blossom
 
 # 鈍足を付与
     effect give @e[type=#lib:living,type=!player,tag=!Friend,tag=!Uninterferable,tag=!Object,distance=..3] slowness 1 3 true

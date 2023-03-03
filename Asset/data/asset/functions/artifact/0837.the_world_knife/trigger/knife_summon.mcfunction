@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0837.the_world_knife/trigger/knife_summon
+#> asset:artifact/0837.the_world_knife/trigger/knife_summon
 #
 #
 #
-# @within function asset:sacred_treasure/0837.the_world_knife/trigger/**
+# @within function asset:artifact/0837.the_world_knife/trigger/**
 
 #> Private
 # @private

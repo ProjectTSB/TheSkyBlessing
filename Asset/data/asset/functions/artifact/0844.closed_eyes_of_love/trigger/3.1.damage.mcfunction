@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.1.damage
+#> asset:artifact/0844.closed_eyes_of_love/trigger/3.1.damage
 #
 #
 #
-# @within function asset:sacred_treasure/0844.closed_eyes_of_love/trigger/3.main
+# @within function asset:artifact/0844.closed_eyes_of_love/trigger/3.main
 
 # ダメージ
     # 与えるダメージ

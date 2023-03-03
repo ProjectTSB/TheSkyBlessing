@@ -33,7 +33,7 @@
     function core:tick/6_distributed_interval
 
 # 神器のグローバルtick処理
-    function asset_manager:sacred_treasure/tick/
+    function asset_manager:artifact/tick/
 
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player/

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/sword/sword
+#> asset:artifact/0210.terra_blade/trigger/sword/sword
 #
 #
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/sword/sword_schedule
+# @within function asset:artifact/0210.terra_blade/trigger/sword/sword_schedule
 
 #> Private
 # @private
@@ -30,7 +30,7 @@
 # 射撃攻撃
     scoreboard players add @s 5U.Burst 1
     scoreboard players reset @s[scores={5U.Burst=2,5U.Life=10..}] 5U.Burst
-    execute if entity @s[scores={5U.Burst=1}] anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+    execute if entity @s[scores={5U.Burst=1}] anchored eyes positioned ^ ^ ^ run function asset:artifact/0210.terra_blade/trigger/event/summon_shot
 
 # タグ削除
     tag @p[tag=5U.This] remove 5U.This

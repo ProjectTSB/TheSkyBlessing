@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/slash_entity/init
+#> asset:artifact/0976.brave_sword/trigger/slash_entity/init
 #
 # Init処理
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/3.main
+# @within function asset:artifact/0976.brave_sword/trigger/3.main
 
 # 向きを揃える
     execute as @p[tag=this] run function api:data_get/rotation

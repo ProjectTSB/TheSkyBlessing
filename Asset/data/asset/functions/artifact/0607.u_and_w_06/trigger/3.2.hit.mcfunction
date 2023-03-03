@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0607.u_and_w_06/trigger/3.2.hit
+#> asset:artifact/0607.u_and_w_06/trigger/3.2.hit
 #
 #
 # @within function
-#    asset:sacred_treasure/0607.u_and_w_06/trigger/3.main
-#    asset:sacred_treasure/0607.u_and_w_06/trigger/3.1.bullet
+#    asset:artifact/0607.u_and_w_06/trigger/3.main
+#    asset:artifact/0607.u_and_w_06/trigger/3.1.bullet
 
 
 # ここから先は神器側の効果の処理を書く

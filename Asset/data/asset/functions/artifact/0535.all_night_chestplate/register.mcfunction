@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0535.all_night_chestplate/register
+#> asset:artifact/0535.all_night_chestplate/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[1] append value 535
+data modify storage asset:artifact RarityRegistry[1] append value 535

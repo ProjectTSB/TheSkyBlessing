@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0646.thorn_helm/trigger/dis_equip/main
+#> asset:artifact/0646.thorn_helm/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0646.thorn_helm/trigger/dis_equip/
+# @within function asset:artifact/0646.thorn_helm/trigger/dis_equip/
 
 #> Private
 # @private
@@ -19,4 +19,4 @@
     function api:modifier/defense/thunder/remove
 
 # フルセット解除
-    execute if entity @s[tag=HZ.FullSet] run function asset:sacred_treasure/0647.thorn_armor/trigger/5.fullset_dis_equip
+    execute if entity @s[tag=HZ.FullSet] run function asset:artifact/0647.thorn_armor/trigger/5.fullset_dis_equip

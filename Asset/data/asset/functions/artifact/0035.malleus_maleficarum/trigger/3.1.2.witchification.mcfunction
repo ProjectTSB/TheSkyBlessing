@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0035.malleus_maleficarum/trigger/3.1.2.witchification
+#> asset:artifact/0035.malleus_maleficarum/trigger/3.1.2.witchification
 #
 # エンダーパール着弾地点にいるアーマースタンドを起点として、魔女化処理を行う
 #
-# @within function asset:sacred_treasure/0035.malleus_maleficarum/trigger/3.1.entity_manager
+# @within function asset:artifact/0035.malleus_maleficarum/trigger/3.1.entity_manager
 
 #> private
 # @private

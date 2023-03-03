@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0796.log4shell/trigger/3.main
+#> asset:artifact/0796.log4shell/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0796.log4shell/trigger/2.check_condition
+# @within function asset:artifact/0796.log4shell/trigger/2.check_condition
 
 #> prv
 # @private
     #declare tag M4.SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 # 原木を消費
@@ -29,7 +29,7 @@
     execute as @e[type=marker,tag=M4.SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # 発射
-    execute facing entity @e[type=marker,tag=M4.SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:sacred_treasure/0796.log4shell/trigger/3.1.shell
+    execute facing entity @e[type=marker,tag=M4.SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^ run function asset:artifact/0796.log4shell/trigger/3.1.shell
     tag @s remove M4.Landing
 
 # 向きを変える

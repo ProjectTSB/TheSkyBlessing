@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0967.enhanced_protection/trigger/protect_end
+#> asset:artifact/0967.enhanced_protection/trigger/protect_end
 #
 #
 #
-# @within function asset:sacred_treasure/0967.enhanced_protection/trigger/schedule_task
+# @within function asset:artifact/0967.enhanced_protection/trigger/schedule_task
 
 # 防御
     data modify storage api: Argument.UUID set value [I;1,1,967,2]

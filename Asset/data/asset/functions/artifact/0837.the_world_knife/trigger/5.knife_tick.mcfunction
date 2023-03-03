@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0837.the_world_knife/trigger/5.knife_tick
+#> asset:artifact/0837.the_world_knife/trigger/5.knife_tick
 #
 #
 #
-# @within function asset:sacred_treasure/0837.the_world_knife/trigger/4.tick
+# @within function asset:artifact/0837.the_world_knife/trigger/4.tick
 
 # スコアを増やし続ける
     scoreboard players add @s N9.Time 1

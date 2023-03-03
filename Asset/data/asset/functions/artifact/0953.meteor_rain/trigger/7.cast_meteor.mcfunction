@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0953.meteor_rain/trigger/7.cast_meteor
+#> asset:artifact/0953.meteor_rain/trigger/7.cast_meteor
 #
 # メテオを召喚して拡散させる
 #
-# @within function asset:sacred_treasure/0953.meteor_rain/trigger/6.summon_meteor
+# @within function asset:artifact/0953.meteor_rain/trigger/6.summon_meteor
 
 #> SpreadLib
 # @private
@@ -20,10 +20,10 @@
     scoreboard players operation @e[type=armor_stand,tag=QH.MeteorInit,distance=..50] QH.UserID = @s UserID
 
 # init処理実行
-    execute as @e[type=armor_stand,tag=QH.MeteorInit,distance=..50,sort=nearest,limit=1] at @s run function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/1.init
+    execute as @e[type=armor_stand,tag=QH.MeteorInit,distance=..50,sort=nearest,limit=1] at @s run function asset:artifact/0953.meteor_rain/trigger/meteor/1.init
 
 # メテオのループ処理開始
-    schedule function asset:sacred_treasure/0953.meteor_rain/trigger/meteor/2.tick 1t replace
+    schedule function asset:artifact/0953.meteor_rain/trigger/meteor/2.tick 1t replace
 
 # 拡散マーカーを消す
    kill @e[type=marker,tag=SpreadMarker,distance=..50]

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0075.whirlpool_wand/trigger/3.2.outsidewater
+#> asset:artifact/0075.whirlpool_wand/trigger/3.2.outsidewater
 #
 # 水の中に敵がいない場合ダメージは基本値100
 #
-# @within function asset:sacred_treasure/0075.whirlpool_wand/trigger/3.main
+# @within function asset:artifact/0075.whirlpool_wand/trigger/3.main
 
 # ダメージ
     # 与えるダメージ = 100

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0822.sound_of_a_star/trigger/5.summon_3rd
+#> asset:artifact/0822.sound_of_a_star/trigger/5.summon_3rd
 #
 # 3個目の星を召喚する
 #
-# @within function asset:sacred_treasure/0822.sound_of_a_star/trigger/3.main
+# @within function asset:artifact/0822.sound_of_a_star/trigger/3.main
 
 # 3個目の星を召喚
     summon marker ~ ~ ~ {Tags:["MU.Star","MU.3","Projectile"]}

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0793.queen_bee_rocket/trigger/attack
+#> asset:artifact/0793.queen_bee_rocket/trigger/attack
 #
 # 弾が着弾した時
 #
-# @within function asset:sacred_treasure/0793.queen_bee_rocket/trigger/bee
+# @within function asset:artifact/0793.queen_bee_rocket/trigger/bee
 
 # 自身にタグ付与
     tag @s add M1.This

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0897.lightning_broach/trigger/3.main
+#> asset:artifact/0897.lightning_broach/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0897.lightning_broach/trigger/2.check_condition
+# @within function asset:artifact/0897.lightning_broach/trigger/2.check_condition
 
 #> health
 # @private
@@ -12,7 +12,7 @@
     #declare score_holder $Base
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/hotbar
+    function asset:artifact/common/use/hotbar
 
 # ここから先は神器側の効果の処理を書く
 

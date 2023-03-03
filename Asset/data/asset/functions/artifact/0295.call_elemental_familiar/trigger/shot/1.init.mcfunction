@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/shot/1.init
+#> asset:artifact/0295.call_elemental_familiar/trigger/shot/1.init
 #
 # 付近の敵へと向きを変える
 #
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/fairy/4.shoot
+# @within function asset:artifact/0295.call_elemental_familiar/trigger/fairy/4.shoot
 
 # IDコピー
     scoreboard players operation @s 87.UserID = @e[type=armor_stand,tag=87.IDCopyBase,sort=nearest,limit=1] 87.UserID

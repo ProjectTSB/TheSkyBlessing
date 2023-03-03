@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0707.mage_hat/trigger/dis_equip/main
+#> asset:artifact/0707.mage_hat/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0707.mage_hat/trigger/dis_equip/
+# @within function asset:artifact/0707.mage_hat/trigger/dis_equip/
 
 # 魔法耐性、魔法攻撃、MP回復量、物理耐性、物理攻撃の削除
 

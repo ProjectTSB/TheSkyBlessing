@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/3.cannot_use
+#> asset:artifact/0295.call_elemental_familiar/trigger/3.cannot_use
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/0295.call_elemental_familiar/trigger/2.check_condition
+#   asset:artifact/0295.call_elemental_familiar/trigger/2.check_condition
 
 # 効果音
     playsound minecraft:block.note_block.bass player @s ~ ~ ~ 5 1

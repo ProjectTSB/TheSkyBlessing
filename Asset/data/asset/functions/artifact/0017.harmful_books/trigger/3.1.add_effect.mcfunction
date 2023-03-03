@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0017.harmful_books/trigger/3.1.add_effect
+#> asset:artifact/0017.harmful_books/trigger/3.1.add_effect
 #
 # 効果の付与とParticle
 #
-# @within function asset:sacred_treasure/0017.harmful_books/trigger/3.main
+# @within function asset:artifact/0017.harmful_books/trigger/3.main
 
 execute if predicate lib:random_pass_per/40 run effect give @s slowness 30 5 true
 execute if predicate lib:random_pass_per/40 run effect give @s weakness 300 10 true

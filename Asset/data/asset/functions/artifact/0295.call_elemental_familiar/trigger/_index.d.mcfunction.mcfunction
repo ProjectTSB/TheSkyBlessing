@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0295.call_elemental_familiar/trigger/_index.d.mcfunction
+#> asset:artifact/0295.call_elemental_familiar/trigger/_index.d.mcfunction
 # @private
 
 #> tags
-# @within function asset:sacred_treasure/0295.call_elemental_familiar/trigger/**
+# @within function asset:artifact/0295.call_elemental_familiar/trigger/**
     #declare tag 87.Familiar
     #declare tag 87.FamiliarInit
     #declare tag 87.FamiliarFire

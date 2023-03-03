@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0431.weather_lock_cane/trigger/vfx/rain
+#> asset:artifact/0431.weather_lock_cane/trigger/vfx/rain
 #
 #
 #
-# @within function asset:sacred_treasure/0431.weather_lock_cane/trigger/3.main
+# @within function asset:artifact/0431.weather_lock_cane/trigger/3.main
 
 # 演出
     particle dolphin ~ ~1.2 ~ 1.2 0.5 1.2 0 500 normal @s

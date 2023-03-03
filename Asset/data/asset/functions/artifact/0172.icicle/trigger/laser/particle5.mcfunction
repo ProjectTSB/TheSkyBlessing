@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0172.icicle/trigger/laser/particle5
+#> asset:artifact/0172.icicle/trigger/laser/particle5
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/laser/4.laser_line
+# @within function asset:artifact/0172.icicle/trigger/laser/4.laser_line
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmABwCcAzAEyNwCMAtCyvawCwoCsABlbVuANj49S1PrWbMAhvQDsA-GAB28gLYJkgMMUABNzAEY8jNoDOScCgD2hdRCTcBBFHCdwMNsADd5bEJdcAAPJDcwKAiAXxiCC1I0QmtEZgA6PgJLCHNnREi4bGw0GEtdZgFIjDtciF1ItEsAUWLS8uaAR0JA7CgAZTMPckQAM0DyuIBdIA_3
 # 円 4

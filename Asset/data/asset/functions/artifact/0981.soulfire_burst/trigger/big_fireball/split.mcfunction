@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/split
+#> asset:artifact/0981.soulfire_burst/trigger/big_fireball/split
 #
 # 飛距離の限界で炸裂する
 #
-# @within function asset:sacred_treasure/0981.soulfire_burst/trigger/big_fireball/4.move
+# @within function asset:artifact/0981.soulfire_burst/trigger/big_fireball/4.move
 
 # コピー時の対象を自身にだけ限定するタグ
     tag @s add R9.CopyBase
@@ -21,10 +21,10 @@
     summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["R9.SmallFireball","R9.Init","Projectile"],Passengers:[{id:"minecraft:snowball",Tags:["AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Item:{id:"minecraft:potion",Count:1b,tag:{CustomModelData:20234,CustomPotionColor:8639743}}}]}
 
 # 火の玉にInit処理
-    execute as @e[type=armor_stand,tag=R9.SmallFireball,tag=R9.Init,distance=..10,sort=nearest,limit=5] run function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/1.init
+    execute as @e[type=armor_stand,tag=R9.SmallFireball,tag=R9.Init,distance=..10,sort=nearest,limit=5] run function asset:artifact/0981.soulfire_burst/trigger/small_fireball/1.init
 
 # スケジュールループ開始
-    schedule function asset:sacred_treasure/0981.soulfire_burst/trigger/small_fireball/2.tick 1t
+    schedule function asset:artifact/0981.soulfire_burst/trigger/small_fireball/2.tick 1t
 
 # キル
     kill @s

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0172.icicle/trigger/laser/landing
+#> asset:artifact/0172.icicle/trigger/laser/landing
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/laser/5.damage_laser
+# @within function asset:artifact/0172.icicle/trigger/laser/5.damage_laser
 
 
 # タグ付与する

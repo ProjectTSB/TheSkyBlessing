@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/particle2
+#> asset:artifact/0664.soul_fire_armor/trigger/fullset/particle2
 #
 # 装備外したときのパーティクル
 #
-# @within function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
+# @within function asset:artifact/0664.soul_fire_armor/trigger/fullset/fullset_dis_equip
 
 # 1つ目の円
     execute rotated ~0 0 positioned ^ ^0.3 ^ rotated ~ ~5 run particle soul ~ ~ ~ ^ ^ ^300000000 0.0000000001 0 normal @a

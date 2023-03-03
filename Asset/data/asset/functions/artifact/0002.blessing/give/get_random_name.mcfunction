@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0002.blessing/give/get_random_name
+#> asset:artifact/0002.blessing/give/get_random_name
 #
 #
 #
-# @within function asset:sacred_treasure/0002.blessing/give/2.give
+# @within function asset:artifact/0002.blessing/give/2.give
 
 #> Length
 # @private

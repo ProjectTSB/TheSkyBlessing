@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0573.final_prism/trigger/final_laser
+#> asset:artifact/0573.final_prism/trigger/final_laser
 #
 # 超必殺究極ビーム
 #
-# @within function asset:sacred_treasure/0573.final_prism/trigger/*
+# @within function asset:artifact/0573.final_prism/trigger/*
 
 # お前をここで倒す！
     execute unless entity @s[distance=..2] run particle minecraft:dust 1 1 1 1 ~ ~ ~ 0.1 0.1 0.1 0 1 force
@@ -14,7 +14,7 @@
     execute if entity @s[distance=..45] positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[tag=Enemy,dx=0] add PrismDamage
 
 # 前進
-    execute if entity @s[distance=..45] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:sacred_treasure/0573.final_prism/trigger/final_laser
+    execute if entity @s[distance=..45] if block ~ ~ ~ #lib:no_collision positioned ^ ^ ^0.5 run function asset:artifact/0573.final_prism/trigger/final_laser
 
 # 減速
     effect give @s slowness 1 1 true

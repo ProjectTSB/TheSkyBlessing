@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0057.elemental_sword/trigger/3.2.waterattack
+#> asset:artifact/0057.elemental_sword/trigger/3.2.waterattack
 #
 # 水属性
 #
-# @within function asset:sacred_treasure/0057.elemental_sword/trigger/3.main
+# @within function asset:artifact/0057.elemental_sword/trigger/3.main
 
 
 # 演出

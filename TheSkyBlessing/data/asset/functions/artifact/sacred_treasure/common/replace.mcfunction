@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/common/replace
+#> asset:artifact/common/replace
 #
 # 直接特定Slotに神器を配置します
 #
-# @within function asset:sacred_treasure/common/give
+# @within function asset:artifact/common/give
 
 # storageチェック
     execute unless data storage asset:context Slot run data modify storage asset:context Slot set value "mainhand"

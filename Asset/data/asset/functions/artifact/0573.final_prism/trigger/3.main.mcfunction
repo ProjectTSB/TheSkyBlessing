@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0573.final_prism/trigger/3.main
+#> asset:artifact/0573.final_prism/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0573.final_prism/trigger/2.check_condition
+# @within function asset:artifact/0573.final_prism/trigger/2.check_condition
 
 #> SpreadLib
 # @private
 #declare tag SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
@@ -33,23 +33,23 @@
     execute as @e[type=marker,tag=SpreadMarker,limit=1] at @p[tag=this] anchored eyes positioned ^ ^ ^ run function lib:forward_spreader/circle
 
 # 非収束ビーム
-    execute if score $Spread Temporary matches 2.. facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/laser
+    execute if score $Spread Temporary matches 2.. facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:artifact/0573.final_prism/trigger/laser
     # ダメージ設定
         execute if score $Spread Temporary matches 2.. run data modify storage lib: Argument.Damage set value 45f
 
 # 完全収束ビーム
-    execute if score $Spread Temporary matches ..1 facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:sacred_treasure/0573.final_prism/trigger/final_laser
-    execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_start
+    execute if score $Spread Temporary matches ..1 facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^-0.25 ^ run function asset:artifact/0573.final_prism/trigger/final_laser
+    execute if score $Spread Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0573.final_prism/trigger/vfx/final_start
     # ダメージ設定
         execute if score $Spread Temporary matches ..1 run data modify storage lib: Argument.Damage set value 65f
 
 # サウンド
-    execute if score $Spread Temporary matches 2.. run function asset:sacred_treasure/0573.final_prism/trigger/vfx/normal_laser
-    execute if score $Spread Temporary matches ..1 run function asset:sacred_treasure/0573.final_prism/trigger/vfx/final_laser
+    execute if score $Spread Temporary matches 2.. run function asset:artifact/0573.final_prism/trigger/vfx/normal_laser
+    execute if score $Spread Temporary matches ..1 run function asset:artifact/0573.final_prism/trigger/vfx/final_laser
 
 
 # ダメージはここで実行
-    function asset:sacred_treasure/0573.final_prism/trigger/damage
+    function asset:artifact/0573.final_prism/trigger/damage
 
 # リセット
     scoreboard players reset $Random Temporary

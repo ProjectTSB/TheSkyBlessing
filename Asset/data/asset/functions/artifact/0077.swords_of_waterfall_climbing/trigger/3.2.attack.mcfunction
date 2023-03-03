@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.2.attack
+#> asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.2.attack
 #
 # エフェクトを消す処理
 #
 # @within function
-#   asset:sacred_treasure/0077.swords_of_waterfall_climbing/trigger/3.main
+#   asset:artifact/0077.swords_of_waterfall_climbing/trigger/3.main
 
 # ここから先は神器側の効果の処理を書く
 

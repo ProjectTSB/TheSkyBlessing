@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0870.samurai_blade/trigger/particle/particle5
+#> asset:artifact/0870.samurai_blade/trigger/particle/particle5
 #
 #
 #
-# @within function asset:sacred_treasure/0870.samurai_blade/trigger/**
+# @within function asset:artifact/0870.samurai_blade/trigger/**
 
 particle dust 0.467 0.137 1 1 ^-0.576630711555481 ^-1.0293426275253297 ^1.6018846035003662
 particle dust 0.467 0.137 1 1 ^-0.6342937827110291 ^-1.1342768907546998 ^1.762073063850403

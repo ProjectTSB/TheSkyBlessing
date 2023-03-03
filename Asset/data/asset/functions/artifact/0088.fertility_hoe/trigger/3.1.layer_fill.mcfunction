@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0088.fertility_hoe/trigger/3.1.layer_fill
+#> asset:artifact/0088.fertility_hoe/trigger/3.1.layer_fill
 #
 #
 #
-# @within function asset:sacred_treasure/0088.fertility_hoe/trigger/3.main
+# @within function asset:artifact/0088.fertility_hoe/trigger/3.main
 
     fill ~-4 ~ ~-4 ~4 ~ ~4 wheat[age=7] replace wheat
     fill ~-4 ~ ~-4 ~4 ~ ~4 beetroots[age=3] replace beetroots

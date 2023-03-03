@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/slash_shot/init
+#> asset:artifact/0976.brave_sword/trigger/slash_shot/init
 #
 #
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/combo/slash3
+# @within function asset:artifact/0976.brave_sword/trigger/combo/slash3
 
 # ID付与
     scoreboard players operation @s R4.UserID = @p[tag=this] UserID

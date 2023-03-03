@@ -1,10 +1,10 @@
-#> asset_manager:sacred_treasure/cooldown/foreach/construct_msgs_and_revert_lcds
+#> asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
 #
 #
 #
 # @within function
-#   asset_manager:sacred_treasure/cooldown/
-#   asset_manager:sacred_treasure/cooldown/foreach/construct_msgs_and_revert_lcds
+#   asset_manager:artifact/cooldown/
+#   asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
 
 # a 16/16
 # b 15/16
@@ -26,11 +26,11 @@
 # ε  null
 
 # LCDにそのまま戻す
-    data modify storage asset:sacred_treasure LCDs append from storage asset:sacred_treasure DecrementedLCDs[-1]
+    data modify storage asset:artifact LCDs append from storage asset:artifact DecrementedLCDs[-1]
 # 表示する値を算出する
     # 取得
-        execute store result score $Value Temporary run data get storage asset:sacred_treasure LCDs[-1].Value
-        execute store result score $Max Temporary run data get storage asset:sacred_treasure LCDs[-1].Max
+        execute store result score $Value Temporary run data get storage asset:artifact LCDs[-1].Value
+        execute store result score $Max Temporary run data get storage asset:artifact LCDs[-1].Max
     # 0除算回避の為に0なら1にする
         execute if score $Max Temporary matches 0 run scoreboard players set $Max Temporary 1
     # $Valueを移す
@@ -42,9 +42,9 @@
         scoreboard players operation $NormalizedValue Temporary /= $Max Temporary
         scoreboard players operation $NormalizedValue Temporary *= $-1 Const
     # LCDMessagesに追加
-        execute if score $Value Temporary matches -15 run data modify storage asset:sacred_treasure LCDMessages append value '{"text":"ε","color":"white"}'
-        execute unless score $Value Temporary matches -15 run function asset_manager:sacred_treasure/cooldown/foreach/store_lcd_bar
+        execute if score $Value Temporary matches -15 run data modify storage asset:artifact LCDMessages append value '{"text":"ε","color":"white"}'
+        execute unless score $Value Temporary matches -15 run function asset_manager:artifact/cooldown/foreach/store_lcd_bar
 # 末尾削除
-    data remove storage asset:sacred_treasure DecrementedLCDs[-1]
+    data remove storage asset:artifact DecrementedLCDs[-1]
 # 要素があれば再帰
-    execute if data storage asset:sacred_treasure DecrementedLCDs[0] run function asset_manager:sacred_treasure/cooldown/foreach/construct_msgs_and_revert_lcds
+    execute if data storage asset:artifact DecrementedLCDs[0] run function asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds

@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.main
+#> asset:artifact/0471.stone_cutter_chainsaw/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/2.check_condition
+# @within function asset:artifact/0471.stone_cutter_chainsaw/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -19,10 +19,10 @@
         playsound item.totem.use player @a ~ ~ ~ 0.1 2.0
 
     # クリティカルヒット判定
-        execute anchored eyes positioned ^ ^ ^0.1 run function asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.1.check_critical
+        execute anchored eyes positioned ^ ^ ^0.1 run function asset:artifact/0471.stone_cutter_chainsaw/trigger/3.1.check_critical
 
     # ヒット
-        execute positioned ^ ^ ^2 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] at @s if entity @p[tag=this, distance=..4] run function asset:sacred_treasure/0471.stone_cutter_chainsaw/trigger/3.2.entity
+        execute positioned ^ ^ ^2 as @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] at @s if entity @p[tag=this, distance=..4] run function asset:artifact/0471.stone_cutter_chainsaw/trigger/3.2.entity
 
     # 開放
         scoreboard players reset $7n.Count Temporary

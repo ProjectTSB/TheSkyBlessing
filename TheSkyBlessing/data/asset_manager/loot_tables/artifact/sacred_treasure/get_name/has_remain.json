@@ -18,7 +18,7 @@
                                 },
                                 {
                                     "nbt": "Name",
-                                    "storage": "asset:sacred_treasure",
+                                    "storage": "asset:artifact",
                                     "interpret": true
                                 },
                                 {
@@ -26,7 +26,7 @@
                                 },
                                 {
                                     "nbt": "Item.tag.TSB.RemainingCount",
-                                    "storage": "asset:sacred_treasure",
+                                    "storage": "asset:artifact",
                                     "color": "green"
                                 },
                                 {
@@ -35,7 +35,7 @@
                                 },
                                 {
                                     "nbt": "Item.tag.TSB.RemainingCountMAX",
-                                    "storage": "asset:sacred_treasure",
+                                    "storage": "asset:artifact",
                                     "color": "green"
                                 }
                             ]

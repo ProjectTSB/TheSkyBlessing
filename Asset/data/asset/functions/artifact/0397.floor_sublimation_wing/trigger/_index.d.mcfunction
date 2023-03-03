@@ -1,4 +1,4 @@
-#> asset:sacred_treasure/0397.floor_sublimation_wing/trigger/_index.d
+#> asset:artifact/0397.floor_sublimation_wing/trigger/_index.d
 #
 #
 # @private
@@ -12,8 +12,8 @@
 # 397.Marker: TPに使用
 #
 # @within function
-#   asset:sacred_treasure/0397.floor_sublimation_wing/trigger/2.*
-#   asset:sacred_treasure/0397.floor_sublimation_wing/trigger/3.main
+#   asset:artifact/0397.floor_sublimation_wing/trigger/2.*
+#   asset:artifact/0397.floor_sublimation_wing/trigger/3.main
 #
     #declare score_holder $397_Count
     #declare score_holder $397_Stat

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0152.call_cat/trigger/_index.d
+#> asset:artifact/0152.call_cat/trigger/_index.d
 # @private
 
 #> tag
-# @within function asset:sacred_treasure/0152.call_cat/trigger/*
+# @within function asset:artifact/0152.call_cat/trigger/*
     #declare tag 48.CalledCat
 
 # スコアをどう使ってるかのメモ

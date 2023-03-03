@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/combo/slash2
+#> asset:artifact/0976.brave_sword/trigger/combo/slash2
 #
 #
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/3.main
+# @within function asset:artifact/0976.brave_sword/trigger/3.main
 
 # 演出
     playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1.5 1.2
@@ -20,4 +20,4 @@
     execute if entity @s[y_rotation=-67.5..-22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-135F,0F],Tags:["R4.SlashSweep","R4.SlashInit","Object"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,-25.0f,0.1f]},DisabledSlots:4144959}
 
 # 攻撃
-    execute positioned ^ ^ ^1.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:sacred_treasure/0976.brave_sword/trigger/combo/damage
+    execute positioned ^ ^ ^1.5 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..2] run function asset:artifact/0976.brave_sword/trigger/combo/damage

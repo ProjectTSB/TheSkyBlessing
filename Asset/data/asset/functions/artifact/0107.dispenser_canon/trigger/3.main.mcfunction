@@ -1,14 +1,14 @@
-#> asset:sacred_treasure/0107.dispenser_canon/trigger/3.main
+#> asset:artifact/0107.dispenser_canon/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0107.dispenser_canon/trigger/2.check_condition
+# @within function asset:artifact/0107.dispenser_canon/trigger/2.check_condition
 #> private
 # @private
     #declare tag TNTStick
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -23,4 +23,4 @@
     execute as @e[type=endermite,tag=TNTStick,distance=..2] facing ^ ^ ^10 run function lib:motion/
     data remove storage lib: Argument
 # スケジュール
-    schedule function asset:sacred_treasure/0107.dispenser_canon/trigger/3.1.sticky 1t
+    schedule function asset:artifact/0107.dispenser_canon/trigger/3.1.sticky 1t

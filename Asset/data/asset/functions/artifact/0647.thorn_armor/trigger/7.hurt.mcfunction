@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0647.thorn_armor/trigger/7.hurt
+#> asset:artifact/0647.thorn_armor/trigger/7.hurt
 #
 # 被ダメ時の特殊効果
 #
-# @within function asset:sacred_treasure/0647.thorn_armor/trigger/6.hurt_trigger
+# @within function asset:artifact/0647.thorn_armor/trigger/6.hurt_trigger
 
 #> Private
 # @private
@@ -16,7 +16,7 @@
         execute at @e[type=#lib:living,tag=Attacker,distance=..50] run particle falling_dust redstone_block ~ ~1.2 ~ 0.5 0.5 0.5 0 20 normal @a
 
     # 再帰使用：相手に棘を伸ばす演出
-        execute positioned ~ ~1.5 ~ facing entity @e[type=#lib:living,tag=Attacker,distance=..50] eyes run function asset:sacred_treasure/0647.thorn_armor/trigger/8.exetend_thorn
+        execute positioned ~ ~1.5 ~ facing entity @e[type=#lib:living,tag=Attacker,distance=..50] eyes run function asset:artifact/0647.thorn_armor/trigger/8.exetend_thorn
 
 # 被ダメージ時体力回復
     data modify storage lib: Argument.Heal set value 5.0f

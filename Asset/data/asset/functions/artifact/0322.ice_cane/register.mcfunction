@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0322.ice_cane/register
+#> asset:artifact/0322.ice_cane/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[1] append value 322
+data modify storage asset:artifact RarityRegistry[1] append value 322

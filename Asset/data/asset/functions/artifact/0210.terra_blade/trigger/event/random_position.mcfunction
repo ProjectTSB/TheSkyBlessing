@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/event/random_position
+#> asset:artifact/0210.terra_blade/trigger/event/random_position
 #
 #
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/event/summon_shot
+# @within function asset:artifact/0210.terra_blade/trigger/event/summon_shot
 
 #> SpreadLib
 # @private

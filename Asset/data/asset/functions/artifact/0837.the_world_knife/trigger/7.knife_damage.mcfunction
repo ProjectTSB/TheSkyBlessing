@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0837.the_world_knife/trigger/7.knife_damage
+#> asset:artifact/0837.the_world_knife/trigger/7.knife_damage
 #
 #
 #
-# @within function asset:sacred_treasure/0837.the_world_knife/trigger/6.knife_move
+# @within function asset:artifact/0837.the_world_knife/trigger/6.knife_move
 
 #> private
 # @private

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0252.void_transaction/trigger/3.1.initiation
+#> asset:artifact/0252.void_transaction/trigger/3.1.initiation
 #
 # タイマーの初期設定とeffect
 #
-# @within function asset:sacred_treasure/0252.void_transaction/trigger/3.main
+# @within function asset:artifact/0252.void_transaction/trigger/3.main
 
 # 初期タイマーの設定
     scoreboard players set @s 70.Timer 2400

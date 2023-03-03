@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0776.jade_armor/trigger/dis_equip/main
+#> asset:artifact/0776.jade_armor/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0776.jade_armor/trigger/dis_equip/
+# @within function asset:artifact/0776.jade_armor/trigger/dis_equip/
 
 # 補正削除
 

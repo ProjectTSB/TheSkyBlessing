@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0005.musket_matchlock/trigger/3.main
+#> asset:artifact/0005.musket_matchlock/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0005.musket_matchlock/trigger/2.check_condition
+# @within function asset:artifact/0005.musket_matchlock/trigger/2.check_condition
 
 #> private
 # @private
@@ -10,7 +10,7 @@
     #declare tag 5.SpreadMarker
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 # 火薬消費
@@ -36,7 +36,7 @@
     execute as @e[type=snowball,tag=5.MatchlockInit,distance=..3] at @s facing entity @e[type=marker,tag=5.SpreadMarker,limit=1] feet run function lib:motion/
 
 # 命中したことを管理するscheduleをセット
-    schedule function asset:sacred_treasure/0005.musket_matchlock/trigger/3.1.entity_manager 1t replace
+    schedule function asset:artifact/0005.musket_matchlock/trigger/3.1.entity_manager 1t replace
 
 # 反動
     tp @s ~ ~ ~ ~ ~-10

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0172.icicle/trigger/5.laser_summon
+#> asset:artifact/0172.icicle/trigger/5.laser_summon
 #
 #
 #
-# @within function asset:sacred_treasure/0172.icicle/trigger/4.block_check
+# @within function asset:artifact/0172.icicle/trigger/4.block_check
 
 #> tag
 # @private
@@ -16,4 +16,4 @@
     tag @e[tag=4S.First] remove 4S.First
 
 #演出
-    function asset:sacred_treasure/0172.icicle/trigger/particle
+    function asset:artifact/0172.icicle/trigger/particle

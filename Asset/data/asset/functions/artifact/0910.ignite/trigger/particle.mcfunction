@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0910.ignite/trigger/particle
+#> asset:artifact/0910.ignite/trigger/particle
 #
 #
 #
-# @within function asset:sacred_treasure/0910.ignite/trigger/3.main
+# @within function asset:artifact/0910.ignite/trigger/3.main
 
 # 外4
 particle flame ^1.96457 ^-1.96457 ^0.12107 0 0 0 0 1

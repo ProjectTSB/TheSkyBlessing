@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0976.brave_sword/trigger/combo/damage
+#> asset:artifact/0976.brave_sword/trigger/combo/damage
 #
 # 攻撃判定に入った敵にダメージを与える
 #
-# @within function asset:sacred_treasure/0976.brave_sword/trigger/combo/**
+# @within function asset:artifact/0976.brave_sword/trigger/combo/**
 
 # どうしてもダメージを受けてほしい（HurtTimeで反応を起こすモブもいるので)
     effect give @s[type=#lib:undead] instant_health

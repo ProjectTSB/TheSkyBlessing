@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0822.sound_of_a_star/trigger/3.main
+#> asset:artifact/0822.sound_of_a_star/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0822.sound_of_a_star/trigger/2.check_condition
+# @within function asset:artifact/0822.sound_of_a_star/trigger/2.check_condition
 
 # 最初にMP割合を求める
 # 最大MPを取得する
@@ -17,7 +17,7 @@
     scoreboard players operation $MPValue Temporary /= $MPMaxValue Temporary
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -39,13 +39,13 @@
     execute positioned ~ ~1.8 ~ positioned ^ ^ ^0.5 run tag @e[type=marker,tag=MU.Star,distance=..0.01,sort=nearest,limit=1] add MU.Already
 
 # MP割合が34%以上なら2個目
-    execute if score $MPValue Temporary matches 34.. positioned ~ ~1.3 ~ run function asset:sacred_treasure/0822.sound_of_a_star/trigger/4.summon_2nd
+    execute if score $MPValue Temporary matches 34.. positioned ~ ~1.3 ~ run function asset:artifact/0822.sound_of_a_star/trigger/4.summon_2nd
 
 # MP割合が67%以上なら3個目
-    execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run function asset:sacred_treasure/0822.sound_of_a_star/trigger/5.summon_3rd
+    execute if score $MPValue Temporary matches 67.. positioned ~ ~1.3 ~ run function asset:artifact/0822.sound_of_a_star/trigger/5.summon_3rd
 
 # 星の処理開始
-    schedule function asset:sacred_treasure/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
+    schedule function asset:artifact/0822.sound_of_a_star/trigger/star/01.schedule 1t replace
 
 # リセット
     scoreboard players reset $MPMaxValue Temporary

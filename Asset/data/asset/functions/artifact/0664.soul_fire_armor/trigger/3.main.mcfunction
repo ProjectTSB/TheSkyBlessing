@@ -1,16 +1,16 @@
-#> asset:sacred_treasure/0664.soul_fire_armor/trigger/3.main
+#> asset:artifact/0664.soul_fire_armor/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0664.soul_fire_armor/trigger/2.check_condition
+# @within function asset:artifact/0664.soul_fire_armor/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/head
+    function asset:artifact/common/use/head
 
 # ここから先は神器側の効果の処理を書く
 
 # 演出
-    execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~1.7 ~ facing entity @s eyes rotated ~ 0 run function asset:sacred_treasure/0664.soul_fire_armor/trigger/particle
+    execute unless data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} positioned ~ ~1.7 ~ facing entity @s eyes rotated ~ 0 run function asset:artifact/0664.soul_fire_armor/trigger/particle
     playsound block.fire.ambient player @a ~ ~ ~ 1.5 0.8 0
     playsound particle.soul_escape player @a ~ ~ ~ 2 0 0
     playsound minecraft:block.sculk_sensor.clicking player @a ~ ~ ~ 0.8 0
@@ -47,4 +47,4 @@
     effect give @s instant_health 1 0
 
 # フルセット検知
-    execute if data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} run function asset:sacred_treasure/0664.soul_fire_armor/trigger/fullset/
+    execute if data storage asset:context id.all{head:664,chest:665,legs:666,feet:667} run function asset:artifact/0664.soul_fire_armor/trigger/fullset/

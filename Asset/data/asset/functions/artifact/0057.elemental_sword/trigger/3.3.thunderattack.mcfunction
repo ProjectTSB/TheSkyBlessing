@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0057.elemental_sword/trigger/3.3.thunderattack
+#> asset:artifact/0057.elemental_sword/trigger/3.3.thunderattack
 #
 # 雷属性
 #
-# @within function asset:sacred_treasure/0057.elemental_sword/trigger/3.main
+# @within function asset:artifact/0057.elemental_sword/trigger/3.main
 
 
     # 演出

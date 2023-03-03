@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash1
+#> asset:artifact/0985.ark_of_the_sanctuary/trigger/slash/slash1
 #
 #
 #
-# @within function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/**
+# @within function asset:artifact/0985.ark_of_the_sanctuary/trigger/**
 
 # 斬撃
     execute if entity @s[y_rotation=-22.5..22.4] rotated ~ 0 anchored eyes run summon armor_stand ^ ^-1.8 ^ {Rotation:[-90F,0F],Tags:["RD.SlashSweep","RD.SlashInit","Object"],NoGravity:1b,Invisible:1b,Pose:{RightArm:[0.1f,180.0f,0.1f]},DisabledSlots:4144959}
@@ -28,5 +28,5 @@
 
 
 # アニメーション開始(もし斬撃アマスタがいないならすぐに実行したいからこうなってる。妥当な処理ではないかも？)
-    execute unless entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule
-    execute if entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run schedule function asset:sacred_treasure/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule 1t
+    execute unless entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run function asset:artifact/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule
+    execute if entity @e[type=armor_stand,tag=RD.SlashSweep,distance=..100,limit=1] run schedule function asset:artifact/0985.ark_of_the_sanctuary/trigger/slash/slash_schedule 1t

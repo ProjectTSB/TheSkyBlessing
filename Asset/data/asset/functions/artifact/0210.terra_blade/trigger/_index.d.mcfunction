@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0210.terra_blade/trigger/_index.d
+#> asset:artifact/0210.terra_blade/trigger/_index.d
 #
 # インデックス
 #
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/2.check_condition
+# @within function asset:artifact/0210.terra_blade/trigger/2.check_condition
 
 #> tags
-# @within function asset:sacred_treasure/0210.terra_blade/trigger/**
+# @within function asset:artifact/0210.terra_blade/trigger/**
     #declare tag 5U.ShotInit
     #declare tag 5U.Shot
     #declare tag 5U.Spread

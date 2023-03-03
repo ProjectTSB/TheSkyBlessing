@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0355.barrel/trigger/barrel/hit
+#> asset:artifact/0355.barrel/trigger/barrel/hit
 #
 # 樽がエンティティに当たった時に実行される
 #
-# @within asset:sacred_treasure/0355.barrel/trigger/barrel/tick
+# @within asset:artifact/0355.barrel/trigger/barrel/tick
 
 # ダメージ処理
     # 引数の設定
@@ -15,4 +15,4 @@
     # 開放
         function lib:damage/reset
 # 壊れる
-    function asset:sacred_treasure/0355.barrel/trigger/barrel/break
+    function asset:artifact/0355.barrel/trigger/barrel/break

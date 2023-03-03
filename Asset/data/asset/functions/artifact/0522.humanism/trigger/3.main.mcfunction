@@ -1,15 +1,15 @@
-#> asset:sacred_treasure/0522.humanism/trigger/3.main
+#> asset:artifact/0522.humanism/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0522.humanism/trigger/2.check_condition
+# @within function asset:artifact/0522.humanism/trigger/2.check_condition
 
 #>
 # @private
 #declare tag EI.Target
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う auto/feet/legs/chest/head/mainhand/offhandを記載してね
-    function asset:sacred_treasure/common/use/auto
+    function asset:artifact/common/use/auto
 
 # ここから先は神器側の効果の処理を書く
 
@@ -19,10 +19,10 @@
 
 # HP回復処理
     # 全プレイヤー全回復
-        execute as @a run function asset:sacred_treasure/0522.humanism/trigger/heal
+        execute as @a run function asset:artifact/0522.humanism/trigger/heal
 
 # MP回復処理
-    execute as @a[tag=!this] run function asset:sacred_treasure/0522.humanism/trigger/mp_heal
+    execute as @a[tag=!this] run function asset:artifact/0522.humanism/trigger/mp_heal
 # ダメージ処理
     # 全プレイヤーの周囲50Mの敵に魔法・水属性ダメージ
         data modify storage lib: Argument.Damage set value 1700f

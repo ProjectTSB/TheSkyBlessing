@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0441.awaited_opportunity/trigger/3.2.hardluck
+#> asset:artifact/0441.awaited_opportunity/trigger/3.2.hardluck
 #
 # ダンスる
 #
-# @within function asset:sacred_treasure/0441.awaited_opportunity/trigger/3.1.message
+# @within function asset:artifact/0441.awaited_opportunity/trigger/3.1.message
 
 # プレイヤーが"不運"と"踊"っちまった時
     tellraw @a[distance=..30] [{"text":"<","color":"white"},{"selector":"@s"},{"text":"> "},{"text":"があああああッ･･！！"}]

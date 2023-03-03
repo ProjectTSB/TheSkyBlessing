@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
+#> asset:artifact/0907.rod_of_rain/trigger/rain_cloud/05.effect_vfx
 #
 # 効果発動時の演出
 #
-# @within function asset:sacred_treasure/0907.rod_of_rain/trigger/rain_cloud/04.effect
+# @within function asset:artifact/0907.rod_of_rain/trigger/rain_cloud/04.effect
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwDsARrQEwCGtKAtAMyUCsADG5RQBGdrTgdubAJwAzXqV6061JtyFgCAOyYBbBMkBhigAJ1BGEwy6AzknAoA9oU0QkQ3rwIo4zuBltgANyZsQn1wAA8kDzAoKIBfOIJLUjRCG0RKADpuAisICxdEaLhsbDQYK303aIx7fIh9aLQrAFFS8sqWgEdCYOwoAGVzL3JEGWDKhIBdIA_3
 # 円 1
