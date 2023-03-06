@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/vfx2
+#> asset:artifact/1017.cutlass_of_endless_silence/trigger/vfx2
 #
 #
 #
-# @within function asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/**
+# @within function asset:artifact/1017.cutlass_of_endless_silence/trigger/**
 
 # 演出
     particle explosion ~ ~ ~ 0 0 0 3 0

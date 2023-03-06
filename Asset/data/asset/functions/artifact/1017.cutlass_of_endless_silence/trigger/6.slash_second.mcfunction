@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/6.slash_second
+#> asset:artifact/1017.cutlass_of_endless_silence/trigger/6.slash_second
 #
 #
 #
-# @within function asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/4.slash
+# @within function asset:artifact/1017.cutlass_of_endless_silence/trigger/4.slash
 
 # パーティクル
-    execute positioned ^ ^ ^1 run function asset:sacred_treasure/1017.cutlass_of_endless_silence/trigger/vfx2
+    execute positioned ^ ^ ^1 run function asset:artifact/1017.cutlass_of_endless_silence/trigger/vfx2
 
 # 演出
     playsound minecraft:item.trident.return player @a ~ ~ ~ 1 2
