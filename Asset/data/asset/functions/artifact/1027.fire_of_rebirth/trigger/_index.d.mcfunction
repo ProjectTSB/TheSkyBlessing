@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/1027.kyrie/trigger/_index.d
+#> asset:artifact/1027.fire_of_rebirth/trigger/_index.d
 # @private
 
 #> tag
 # @within function
-#   asset:sacred_treasure/1027.kyrie/trigger/**
+#   asset:artifact/1027.fire_of_rebirth/trigger/**
     #declare tag SH.Magic
     #declare tag SH.MagicSet
     #declare tag Landing

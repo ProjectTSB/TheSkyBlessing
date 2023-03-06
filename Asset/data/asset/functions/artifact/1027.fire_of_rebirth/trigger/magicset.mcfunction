@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/1027.kyrie/trigger/magicset
+#> asset:artifact/1027.fire_of_rebirth/trigger/magicset
 #
 #
 #
-# @within function asset:sacred_treasure/1027.kyrie/trigger/3.main
+# @within function asset:artifact/1027.fire_of_rebirth/trigger/3.main
 #> private
 # @private
     #declare score_holder $Random

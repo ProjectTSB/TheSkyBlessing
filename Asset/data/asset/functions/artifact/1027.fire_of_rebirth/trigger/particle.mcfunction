@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/1027.kyrie/trigger/particle
+#> asset:artifact/1027.fire_of_rebirth/trigger/particle
 #
 # 神器のメイン処理部
 #
 # @within function
-#       asset:sacred_treasure/1027.kyrie/trigger/3.main
-#       asset:sacred_treasure/1027.kyrie/trigger/4.magic_circle
+#       asset:artifact/1027.fire_of_rebirth/trigger/3.main
+#       asset:artifact/1027.fire_of_rebirth/trigger/4.magic_circle
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmKQEwBmVAhgAxVwC0ARgMykDsrALP07tW9KqTZweADk4BGHk3YBORuzAEAdvQC2CZIDDFAARyNYGPQy6AzknAoA9oU0QkVAKwEUcF3Ax2wADd6bEJ9cAAPJEYCKGiAX3iCK1I0QltERgA6aQJrCEtXTII4bGw0GGt9OUYYsAwHAoh9OrRrAFEyiqr2gEdCEOwoAGULb3JEGhCqxLxwaHgKGAchgHMHTTNiMgoeRk4eKRROVhRSADY2fgY2aWuT5WUaIX5z9leUaTNtPQpALE1AEuRgCN9ExmCxWHQZexOFxIOScLw+Zr+RDgYKhcJgKLFMBxTKzer0VLpNxZBFgfKFaIlLqVaq1ZKNejNamoBwYTR+JA8AgAK0IOhgbgI7DgAC80FycW1OuU6X0BmURmM4BMptgqgQ2gAhcWSjAKwbK+jjJDqmbxAC6QA_3
 # 多角形 1
 particle flame ^0 ^ ^-2.3 0 0 0 0 1

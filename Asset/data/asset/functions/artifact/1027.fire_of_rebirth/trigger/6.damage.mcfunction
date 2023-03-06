@@ -1,9 +1,9 @@
-#> asset:sacred_treasure/1027.kyrie/trigger/6.damage
+#> asset:artifact/1027.fire_of_rebirth/trigger/6.damage
 #
 # 神器のメイン処理部
 #
 # @within function
-#   asset:sacred_treasure/1027.kyrie/trigger/5.shoot
+#   asset:artifact/1027.fire_of_rebirth/trigger/5.shoot
 
 # ここから先は神器側の効果の処理を書く
 
