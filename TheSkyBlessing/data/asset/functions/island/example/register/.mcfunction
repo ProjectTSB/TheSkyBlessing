@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:island/register
 
-execute positioned 8 4 8 unless entity @e[type=armor_stand,tag=CursedTreasure,distance=..0.001] run function asset:island/example/register/register
+execute positioned 8 4 8 unless entity @e[type=armor_stand,tag=CursedArtifact,distance=..0.001] run function asset:island/example/register/register
