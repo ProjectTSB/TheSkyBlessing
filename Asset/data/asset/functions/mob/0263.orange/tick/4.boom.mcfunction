@@ -25,7 +25,7 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..1.5] run function lib:damage/
 # リセット
     function lib:damage/reset
 
