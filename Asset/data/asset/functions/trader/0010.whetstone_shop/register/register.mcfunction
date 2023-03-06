@@ -14,7 +14,7 @@
 # 方向 (float) (オプション)
     data modify storage asset:trader Rotation set value -70f
 
-# 取引 下位通貨を砂に
+# 取引 下位通貨を砥石に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value 958
