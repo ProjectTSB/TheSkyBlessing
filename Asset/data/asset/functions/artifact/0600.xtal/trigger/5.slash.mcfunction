@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0600.xtal/trigger/5.slash
+#> asset:artifact/0600.xtal/trigger/5.slash
 #
 #
 #
-# @within function asset:sacred_treasure/0600.xtal/trigger/4.wait_time
+# @within function asset:artifact/0600.xtal/trigger/4.wait_time
 
 
 # 演出
@@ -14,9 +14,9 @@
 # 疑似乱数取得
     scoreboard players operation $Random Temporary %= $3 Const
 # パーティクル
-    execute if score $Random Temporary matches 0 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0600.xtal/trigger/particle/particle_1
-    execute if score $Random Temporary matches 1 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0600.xtal/trigger/particle/particle_2
-    execute if score $Random Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:sacred_treasure/0600.xtal/trigger/particle/particle_3
+    execute if score $Random Temporary matches 0 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0600.xtal/trigger/particle/particle_1
+    execute if score $Random Temporary matches 1 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0600.xtal/trigger/particle/particle_2
+    execute if score $Random Temporary matches 2 anchored eyes positioned ^ ^ ^1 run function asset:artifact/0600.xtal/trigger/particle/particle_3
 # リセット
     scoreboard players reset $Random Temporary
 

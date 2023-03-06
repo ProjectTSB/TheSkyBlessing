@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0600.xtal/trigger/particle/particle_2
+#> asset:artifact/0600.xtal/trigger/particle/particle_2
 #
 # 左上から薙ぎ払う
 #
-# @within function asset:sacred_treasure/0600.xtal/trigger/5.slash
+# @within function asset:artifact/0600.xtal/trigger/5.slash
 
 
 ## 外4
