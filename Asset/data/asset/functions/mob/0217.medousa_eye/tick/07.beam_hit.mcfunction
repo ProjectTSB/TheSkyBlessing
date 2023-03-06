@@ -28,7 +28,7 @@
 # 補正
     execute as @e[type=zombie,tag=this,distance=..20,limit=1] run function lib:damage/modifier
 # 実行
-    execute if entity @s[gamemode=!creative,gamemode=!spectator] run function lib:damage/
+    execute if entity @s[tag=!PlayerShouldInvulnerable] run function lib:damage/
 # リセット
     function lib:damage/reset
 

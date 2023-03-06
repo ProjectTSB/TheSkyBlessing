@@ -20,6 +20,9 @@
 # エンパをkill
     execute if entity @e[type=ender_pearl,tag=!Projectile,distance=5.5..9] run kill @e[type=ender_pearl,tag=!Projectile,distance=5.5..9]
 
+# 水の檻の範囲内のプレイヤーを中心へと吸い込む
+    execute as @a[distance=5.5..9] at @s facing entity @e[type=marker,tag=6L.SpawnPoint,distance=..9,limit=1] feet rotated ~ 0 run tp @s ^ ^ ^0.5
+
 # 技の範囲外にいる最大5人を対象とし、ペナルティとして雷撃をくらわせる
     scoreboard players operation $Interval Temporary = @s 6L.Tick
     scoreboard players operation $Interval Temporary %= $10 Const
