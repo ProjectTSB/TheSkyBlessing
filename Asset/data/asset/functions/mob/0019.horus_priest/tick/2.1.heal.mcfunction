@@ -12,5 +12,5 @@
     execute as @e[tag=Enemy,distance=..10] at @s run particle heart ~ ~1 ~ 0.3 0.3 0.3 0 10
     playsound minecraft:entity.arrow.hit_player hostile @a ~ ~ ~ 1 1
 # リセット
-    data remove storage lib: Argument
+    function lib:heal/reset
     scoreboard players set @s J.HealCool 0

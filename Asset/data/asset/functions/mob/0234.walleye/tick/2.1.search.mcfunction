@@ -27,7 +27,7 @@
     execute if score @s 6i.LockOnTime matches -2147483648..2147483647 run scoreboard players operation $6i.SoundTime Temporary = @s 6i.LockOnTime
     execute if score @s 6i.LockOnTime matches -2147483648..2147483647 run scoreboard players operation $6i.SoundTime Temporary -= $6i.GameTime Temporary
     execute if score @s 6i.LockOnTime matches -2147483648..2147483647 run scoreboard players operation $6i.SoundTime Temporary %= $10 Const
-    execute if score @s 6i.LockOnTime matches -2147483648..2147483647 if score $6i.SoundTime Temporary matches 9 run playsound minecraft:block.note_block.bit player @a[distance=..32] ~ ~ ~ 3 1.334840 1
+    execute if score @s 6i.LockOnTime matches -2147483648..2147483647 if score $6i.SoundTime Temporary matches 9 run playsound minecraft:block.note_block.bit hostile @a[distance=..32] ~ ~ ~ 3 1.334840 1
 
 # ロックオン終了予定時間に達した場合Phaseを1にして移動状態へ移行する
     execute if score $6i.GameTime Temporary >= @s 6i.LockOnTime run scoreboard players set @s 6i.Phase 1

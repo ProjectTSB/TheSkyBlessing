@@ -27,22 +27,22 @@
     execute if entity @s[scores={6L.Tick=20}] as @a[distance=..9] at @s run function asset:mob/0237.lunatic_mage/skill/elemental_confine/player_pull
 
 # アクティブ中に実行するコマンド
-    execute if entity @s[scores={6L.Tick=41..450}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
+    execute if entity @s[scores={6L.Tick=10..450}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/2.in_activation
 
 # 火の予告
-    execute if entity @s[scores={6L.Tick=70..84}] positioned ~ ~-1.5 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
+    execute if entity @s[scores={6L.Tick=80..94}] positioned ~ ~-1.5 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 
 # 火を使い始める
-    execute if entity @s[scores={6L.Tick=85..181}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire
+    execute if entity @s[scores={6L.Tick=95..191}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/5.fire
 
 # 雷を落とす
-    execute if entity @s[scores={6L.Tick=195..470}] positioned ~ ~-2 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/10.thunder
+    execute if entity @s[scores={6L.Tick=205..480}] positioned ~ ~-2 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/10.thunder
 
 # 再度火の予告
-    execute if entity @s[scores={6L.Tick=250..265}] positioned ~ ~-1.5 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
+    execute if entity @s[scores={6L.Tick=260..275}] positioned ~ ~-1.5 ~ run function asset:mob/0237.lunatic_mage/skill/elemental_confine/4.fire_line
 
 # 再度火を使い始める
-    execute if entity @s[scores={6L.Tick=265..470}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/6.fire2
+    execute if entity @s[scores={6L.Tick=275..480}] run function asset:mob/0237.lunatic_mage/skill/elemental_confine/6.fire2
 
 # リセット
-    execute if entity @s[scores={6L.Tick=540..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
+    execute if entity @s[scores={6L.Tick=550..}] run function asset:mob/0237.lunatic_mage/tick/5.reset

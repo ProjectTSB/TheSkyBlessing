@@ -5,7 +5,7 @@
 # @within function asset:mob/0115.jewel_bullet/tick/2.tick
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 10.0f
+    data modify storage lib: Argument.Damage set value 3.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "None"
     data modify storage lib: Argument.FixedDamage set value 1b
@@ -15,7 +15,7 @@
 # 補正
     function lib:damage/modifier
 # 実行
-    execute as @a[gamemode=!creative,gamemode=!spectator,dx=0] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,dx=0] run function lib:damage/
 # リセット
     function lib:damage/reset
 

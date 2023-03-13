@@ -4,7 +4,7 @@
 #
 # @within function asset:mob/0046.clock_of_despair/tick/skill/common/wall_lazer_clock/fire
 
-playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1.35
+playsound minecraft:block.enchantment_table.use hostile @s ~ ~ ~ 1 1.35
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwCspAhgBxyUBGAtKaQAwBMbALADM6fFtQDs1NnQCcXGTMqkAzMqUA2MAQB2dALYJkgMMUABJS1gYdDPoDOScCgD2hbRCTKeBFHDdwMDmAAbnTYhIbgAB5IXARQMQC+CQQ2pGiE9ohcAHTUBLYQ1u5ZBHDY2GgwtoaUXLFgGE6FEIb1aLYAouWV1R0AjoSh2FAAylY+5IjC2NVJALpAA_3
 # 円 1

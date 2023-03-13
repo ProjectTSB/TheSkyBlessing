@@ -5,7 +5,7 @@
 # @within function asset:mob/0255.dependence_eye/tick/2.tick
 
 # VFX
-    playsound minecraft:block.wart_block.break player @a ~ ~ ~ 2 1
+    playsound minecraft:block.wart_block.break hostile @a ~ ~ ~ 2 1
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 16f
