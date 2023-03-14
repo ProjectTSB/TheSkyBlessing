@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/3.main
+#> asset:artifact/0719.sword_of_divine_sound/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/2.check_condition
+# @within function asset:artifact/0719.sword_of_divine_sound/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
@@ -14,7 +14,7 @@
     #declare score_holder $201
 
 # 演出
-    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ~ ~0.3 ~ run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/
+    execute at @e[type=#lib:living,type=!player,tag=Victim,distance=..6] positioned ~ ~0.3 ~ run function asset:artifact/0719.sword_of_divine_sound/trigger/vfx/
 
 # 201を定義
     scoreboard players set $201 Temporary 201

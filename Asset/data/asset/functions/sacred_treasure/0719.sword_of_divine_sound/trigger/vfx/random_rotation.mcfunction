@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/random_rotation
+#> asset:artifact/0719.sword_of_divine_sound/trigger/vfx/random_rotation
 #
 # 雷の曲がる部分の処理
 #
-# @within function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
+# @within function asset:artifact/0719.sword_of_divine_sound/trigger/vfx/lightning
 
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
@@ -21,7 +21,7 @@
     execute at @s unless entity @s[x_rotation=-90..-45] run tp @s ~ ~ ~ ~ ~-30
 
 # 再帰
-    execute at @s if entity @s[x_rotation=-90..-45] run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
+    execute at @s if entity @s[x_rotation=-90..-45] run function asset:artifact/0719.sword_of_divine_sound/trigger/vfx/lightning
 
 # リセット
     scoreboard players reset $Random Temporary

@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/lightning
+#> asset:artifact/0719.sword_of_divine_sound/trigger/vfx/lightning
 #
 # 雷のパーティクルを出す処理
 #
 # @within function
-#   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/start_lightning
-#   asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/random_rotation
+#   asset:artifact/0719.sword_of_divine_sound/trigger/vfx/start_lightning
+#   asset:artifact/0719.sword_of_divine_sound/trigger/vfx/random_rotation
 
 # パーティクル
     particle end_rod ^ ^ ^0.15 0 0 0 0 1 normal @a
@@ -25,4 +25,4 @@
     scoreboard players add $RecursiveLimit Temporary 1
 
 # 向きを変える
-    execute if score $RecursiveLimit Temporary matches ..6 positioned ^ ^ ^1.95 run function asset:sacred_treasure/0719.sword_of_divine_sound/trigger/vfx/random_rotation
+    execute if score $RecursiveLimit Temporary matches ..6 positioned ^ ^ ^1.95 run function asset:artifact/0719.sword_of_divine_sound/trigger/vfx/random_rotation
