@@ -10,11 +10,11 @@
     data modify entity @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] Pose.RightArm set value [326f,0f,324f]
 
 # 前方にいるプレイヤーにタグをつける
-    execute positioned ^ ^ ^1.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^3 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^4.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^6 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
-    execute positioned ^ ^ ^7.5 run tag @a[gamemode=!spectator,gamemode=!creative,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^1.5 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^3 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^4.5 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^6 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.5] add 3L.SkillSwordDamageThis
+    execute positioned ^ ^ ^7.5 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.5] add 3L.SkillSwordDamageThis
 
 # 演出
     execute positioned ~ ~1 ~ run particle sweep_attack ^ ^ ^1 0 0 0 1 2 normal

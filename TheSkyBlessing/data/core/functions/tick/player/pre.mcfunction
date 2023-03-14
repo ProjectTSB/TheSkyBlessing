@@ -6,6 +6,6 @@
 
 function player_manager:manage_tag/
 
-function player_manager:pos_diff
+function player_manager:pos_fix_and_calc_diff
 
 function world_manager:chunk_io_protect/
