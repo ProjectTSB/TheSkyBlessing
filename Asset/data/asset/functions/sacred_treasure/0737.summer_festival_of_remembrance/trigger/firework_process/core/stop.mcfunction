@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/stop
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/stop
 #
 # 停止処理
 #
-# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/main
+# @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/main
 
 # スニーク時間計測
     scoreboard players add @s KH.SneakTime 1

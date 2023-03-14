@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/vfx
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/vfx
 #
 # vfx
 #
-# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/main
+# @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/main
 
 # vfx
     particle firework ~ ~ ~ ^ ^ ^100000000 0.0000000015 0 normal @a[distance=..5]

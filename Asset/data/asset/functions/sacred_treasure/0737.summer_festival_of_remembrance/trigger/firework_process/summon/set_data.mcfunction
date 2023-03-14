@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/set_data
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/set_data
 #
 # storageに入れたデータを適用する
 #
-# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
+# @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
 
 # データ適用
     data modify entity @s LifeTime set from storage asset:temp Firework.LifeTime

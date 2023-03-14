@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/register
+#> asset:artifact/0737.summer_festival_of_remembrance/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[2] append value 737
+data modify storage asset:artifact RarityRegistry[2] append value 737

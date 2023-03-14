@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
 #
 # 花火を召喚する
 #
-# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/core/spread
+# @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/spread
 
 # 花火を召喚
     summon firework_rocket ~ ~ ~ {Tags:["FireworkInit"],Life:0,LifeTime:20,ShotAtAngle:0b,FireworksItem:{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Explosions:[{Colors:[I;16777215]}]}}}}
@@ -33,10 +33,10 @@
     data modify storage asset:temp Firework.Colors set value [I;]
 
 # storageに色のデータを突っ込む
-    function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
+    function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
 
 # データ適用
-    execute as @e[type=firework_rocket,tag=FireworkInit,distance=..1,limit=1] run function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/set_data
+    execute as @e[type=firework_rocket,tag=FireworkInit,distance=..1,limit=1] run function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/set_data
 
 # リセット
     scoreboard players reset $Random Temporary

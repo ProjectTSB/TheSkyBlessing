@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
 #
 # .$ColorCountの値だけ再帰で花火に色を追加する
 #
 # @within function
-#   asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
-#   asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
+#   asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/
+#   asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
 
 # ランダムに色を指定する
     execute store result score $Random Temporary run function lib:random/
@@ -37,4 +37,4 @@
     execute if score $Random Temporary matches 10 run data modify storage asset:temp Firework.Colors append value 15961002
 
 # $ColorCountが1以上でかつ $RecursiveCount = $ColorCountになるまで再帰
-    execute if score $ColorCount Temporary matches 1.. unless score $RecursiveCount Temporary = $ColorCount Temporary run function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color
+    execute if score $ColorCount Temporary matches 1.. unless score $RecursiveCount Temporary = $ColorCount Temporary run function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/summon/append_color

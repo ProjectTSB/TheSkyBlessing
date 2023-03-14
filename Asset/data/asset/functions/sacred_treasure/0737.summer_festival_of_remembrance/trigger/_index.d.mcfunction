@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/_index.d
+#> asset:artifact/0737.summer_festival_of_remembrance/trigger/_index.d
 # @private
 
 #> tag
-# @within function asset:sacred_treasure/0737.summer_festival_of_remembrance/trigger/**
+# @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/**
     #declare score_holder $Random
     #declare score_holder $RandomShape
     #declare score_holder $ColorCount
