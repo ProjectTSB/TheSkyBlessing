@@ -8,7 +8,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,633,5]
     function api:modifier/defense/thunder/remove
 
-# 雷耐性+3%
+# 雷攻撃+3%
     data modify storage api: Argument.UUID set value [I;1,1,633,5]
     function api:modifier/attack/thunder/remove
 
