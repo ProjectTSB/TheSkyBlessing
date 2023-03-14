@@ -13,18 +13,18 @@
 #   asset:island/*/register/
 #   asset_manager:island/**
 #   core:tick/
-#declare tag CursedTreasure
+#declare tag CursedArtifact
 
 #> Tag
 # @within *
 #   asset_manager:island/**
 #   core:tick/
-#declare tag DispelledCursedTreasure
+#declare tag DispelledCursedArtifact
 
 #> Tag
 # @within function
 #   asset_manager:island/register/*
-#declare tag CursedTreasureInit
+#declare tag CursedArtifactInit
 
 #> Tag
 # @within function

@@ -16,4 +16,4 @@
     execute if data storage asset:island BossID run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.HasBoss set value true
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 0b
 # リセット
-    tag @s remove CursedTreasureInit
+    tag @s remove CursedArtifactInit

@@ -33,7 +33,7 @@
     function core:tick/6_distributed_interval
 
 # 神器のグローバルtick処理
-    function asset_manager:sacred_treasure/tick/
+    function asset_manager:artifact/tick/
 
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player/
@@ -42,7 +42,7 @@
     function asset_manager:common/reset_all_context
 
 # 解呪処理
-    execute as @e[type=armor_stand,tag=CursedTreasure,tag=!DispelledCursedTreasure] at @s run function asset_manager:island/tick/
+    execute as @e[type=armor_stand,tag=CursedArtifact,tag=!DispelledCursedArtifact] at @s run function asset_manager:island/tick/
 
 # スポナー処理部
     execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/

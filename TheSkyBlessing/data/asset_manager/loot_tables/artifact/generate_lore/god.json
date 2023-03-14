@@ -1,0 +1,66 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "debug_stick",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "",
+                                        "italic": false,
+                                        "color": "dark_gray"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Temp.CanUsedGod[0]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Temp.CanUsedGod[1]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Temp.CanUsedGod[2]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Temp.CanUsedGod[3]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Temp.CanUsedGod[4]",
+                                        "interpret": true
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
