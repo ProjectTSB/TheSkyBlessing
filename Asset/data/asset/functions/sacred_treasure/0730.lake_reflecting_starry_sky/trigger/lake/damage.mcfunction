@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/damage
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/damage
 #
 # ダメージ処理
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/main
 
 # 演出
     playsound entity.dolphin.jump neutral @a ~ ~ ~ 0.05 0.6 0

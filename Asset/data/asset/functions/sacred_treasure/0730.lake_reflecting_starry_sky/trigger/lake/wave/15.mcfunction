@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/wave/15
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/wave/15
 #
 # 波の演出と処理15
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/main
 
 # ドーナツ状の当たり判定にentityがいた場合Tagを付与
     execute as @e[type=#lib:living,tag=Enemy,distance=6.51..7] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=1,dz=14] positioned ~7.5 ~1 ~7.5 run tag @s add Target

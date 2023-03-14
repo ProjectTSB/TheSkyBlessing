@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/vfx
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/vfx
 #
 #
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
 
 # 演出
     execute rotated ~00 0 run particle end_rod ~ ~ ~ ^ ^ ^100000000 0.0000000015 0

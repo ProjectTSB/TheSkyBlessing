@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/main
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/main
 #
 # 波紋のメイン処理
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/loop
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/loop
 
 # スコア
     scoreboard players add @s KA.Tick 1
@@ -13,7 +13,7 @@
     execute if entity @s[scores={KA.Tick=1..12}] run tp @s ~ ~-0.25 ~
 
 # ダメージと演出
-    execute if entity @s[scores={KA.Tick=12..}] run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
+    execute if entity @s[scores={KA.Tick=12..}] run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
 
 # ループ
-    schedule function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/loop 1t replace
+    schedule function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/loop 1t replace

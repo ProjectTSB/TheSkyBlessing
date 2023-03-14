@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/damage
 #
 # ダメージと演出
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/main
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/main
 
 # 演出
-    execute positioned ~ ~0.4 ~ run function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/ripple/vfx
+    execute positioned ~ ~0.4 ~ run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/vfx
     playsound block.amethyst_cluster.step neutral @a ~ ~ ~ 1.2 0.7 0
 
 # ダメージ

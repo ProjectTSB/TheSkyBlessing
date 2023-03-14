@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/buff/start
+#> asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/buff/start
 #
 # バフの付与などの開始処理
 #
-# @within function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/main
+# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/main
 
 # 既に補正がかかっていた場合、効果時間をリセットする
     execute if entity @s[tag=KA.Buff] run scoreboard players reset @s KA.Tick
@@ -18,4 +18,4 @@
     tag @s add KA.RejoinTarget
 
 # ループ開始
-    schedule function asset:sacred_treasure/0730.lake_reflecting_starry_sky/trigger/lake/buff/loop 1t replace
+    schedule function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/buff/loop 1t replace
