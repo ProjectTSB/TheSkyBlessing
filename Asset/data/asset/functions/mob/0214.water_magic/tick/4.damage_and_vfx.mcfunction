@@ -18,6 +18,6 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..2.25] positioned ~-2.25 ~-1.5 ~-2.25 if entity @s[dx=3.5,dy=2,dz=3.5] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2.25] positioned ~-2.25 ~-1.5 ~-2.25 if entity @s[dx=3.5,dy=2,dz=3.5] run function lib:damage/
 # リセット
     function lib:damage/reset

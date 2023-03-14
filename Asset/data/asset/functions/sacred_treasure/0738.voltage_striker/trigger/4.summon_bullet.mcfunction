@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0738.voltage_striker/trigger/4.summon_bullet
+#> asset:artifact/0738.voltage_striker/trigger/4.summon_bullet
 #
 # 散弾を召喚する
 #
-# @within function asset:sacred_treasure/0738.voltage_striker/trigger/3.main
+# @within function asset:artifact/0738.voltage_striker/trigger/3.main
 
 #> Private
 # @private

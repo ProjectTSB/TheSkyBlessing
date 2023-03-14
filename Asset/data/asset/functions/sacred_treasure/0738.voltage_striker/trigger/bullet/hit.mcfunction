@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0738.voltage_striker/trigger/bullet/hit
+#> asset:artifact/0738.voltage_striker/trigger/bullet/hit
 #
 # ヒット処理
 #
-# @within function asset:sacred_treasure/0738.voltage_striker/trigger/bullet/main
+# @within function asset:artifact/0738.voltage_striker/trigger/bullet/main
 
 # 演出
     particle firework ~ ~ ~ 0 0 0 0.2 30 normal @a
