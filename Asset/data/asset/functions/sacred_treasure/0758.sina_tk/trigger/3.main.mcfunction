@@ -1,17 +1,17 @@
-#> asset:sacred_treasure/0758.sina_tk/trigger/3.main
+#> asset:artifact/0758.sina_tk/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0758.sina_tk/trigger/2.check_condition
+# @within function asset:artifact/0758.sina_tk/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/mainhand
+    function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
 
 # 残り回数が1回の時発動した場合
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 759
-    execute unless data storage asset:context Items.mainhand.id run function api:sacred_treasure/give/from_id
+    execute unless data storage asset:context Items.mainhand.id run function api:artifact/give/from_id
 
 # 演出
     playsound block.bamboo.place player @a ~ ~ ~ 0.4 0.7 0
@@ -33,7 +33,7 @@
     scoreboard players operation @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3] L2.UserID = @s UserID
 
 # ループスタート
-    schedule function asset:sacred_treasure/0758.sina_tk/trigger/bullet/loop 1t replace
+    schedule function asset:artifact/0758.sina_tk/trigger/bullet/loop 1t replace
 
     kill @e[type=marker,tag=SpreadMarker]
     tag @e[type=marker,tag=L2.Bullet,tag=Init,distance=..3] remove Init

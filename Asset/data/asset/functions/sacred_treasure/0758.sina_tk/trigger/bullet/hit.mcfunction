@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0758.sina_tk/trigger/bullet/hit
+#> asset:artifact/0758.sina_tk/trigger/bullet/hit
 #
 #
 #
-# @within function asset:sacred_treasure/0758.sina_tk/trigger/bullet/main
+# @within function asset:artifact/0758.sina_tk/trigger/bullet/main
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 60f
