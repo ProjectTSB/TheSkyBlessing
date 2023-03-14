@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0638.spirit_garment/trigger/dis_equip/main
+#> asset:artifact/0638.spirit_garment/trigger/dis_equip/main
 #
 # 装備を外した時のメイン処理
 #
-# @within function asset:sacred_treasure/0638.spirit_garment/trigger/dis_equip/
+# @within function asset:artifact/0638.spirit_garment/trigger/dis_equip/
 
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,638,6]
