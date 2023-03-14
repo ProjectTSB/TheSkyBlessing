@@ -10,7 +10,7 @@
 
 # 神器を吐き出す
     execute store result storage api: Argument.Rarity int 1 run data get storage world_manager:gimmick FrameData.Item.tag.TSB.ShardRarity
-    execute positioned -33.8 21.6 -13.8 run function api:sacred_treasure/spawn/from_rarity
+    execute positioned -33.8 21.6 -13.8 run function api:artifact/spawn/from_rarity
 
 # アマスタのモデルをリセットしてFixedを消す
     execute positioned ^ ^ ^-0.5 run item replace entity @e[type=armor_stand,sort=nearest,limit=1] armor.head with stick{CustomModelData:20113}

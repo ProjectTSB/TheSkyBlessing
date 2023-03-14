@@ -22,7 +22,7 @@
     function lib:damage/modifier
 
 # ダメージを与える
-    execute as @a[gamemode=!spectator,gamemode=!creative,distance=..3] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 
 # 吹き飛ばし
     execute at @a[gamemode=!spectator,distance=..3] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25,Amplifier:20b,Duration:7,ShowParticles:0b}]}
