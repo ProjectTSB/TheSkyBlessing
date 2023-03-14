@@ -25,7 +25,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象
-    execute at @p[tag=Victim,distance=..32] as @a[gamemode=!spectator,gamemode=!creative,distance=..2.5] run function lib:damage/
+    execute at @p[tag=Victim,distance=..32] as @a[tag=!PlayerShouldInvulnerable,distance=..2.5] run function lib:damage/
 
 # 粉雪を設置
     execute at @p[gamemode=survival,tag=Victim,distance=..32] run fill ~ ~ ~ ~ ~ ~ powder_snow replace #lib:air
