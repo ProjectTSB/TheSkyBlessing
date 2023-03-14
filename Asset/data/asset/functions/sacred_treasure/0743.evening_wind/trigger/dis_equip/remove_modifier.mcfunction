@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0743.evening_wind/trigger/dis_equip/remove_modifier
+#> asset:artifact/0743.evening_wind/trigger/dis_equip/remove_modifier
 #
 # 補正を削除
 #
-# @within function asset:sacred_treasure/0743.evening_wind/trigger/dis_equip/main
+# @within function asset:artifact/0743.evening_wind/trigger/dis_equip/main
 
 # MP消費
     scoreboard players set $Fluctuation Lib -150

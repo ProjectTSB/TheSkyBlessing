@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0743.evening_wind/register
+#> asset:artifact/0743.evening_wind/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[4] append value 743
+data modify storage asset:artifact RarityRegistry[4] append value 743
