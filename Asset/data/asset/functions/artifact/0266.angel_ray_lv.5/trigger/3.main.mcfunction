@@ -12,7 +12,7 @@
     summon minecraft:area_effect_cloud ~ ~1.4 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["7E.HolySymbol","Init","Object","Uninterferable"]}
     execute positioned ~ ~1.4 ~ run tp @e[type=area_effect_cloud,tag=Init,distance=..0.01] ~ ~ ~ ~ ~
 # 初回演出
-    summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2,Amplifier:5b,Duration:13,ShowParticles:0b}]}
+    summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:2b,Amplifier:5b,Duration:13,ShowParticles:0b}]}
     playsound entity.blaze.shoot player @a ~ ~ ~ 1 0.7
 # レイ処理
     # 処理

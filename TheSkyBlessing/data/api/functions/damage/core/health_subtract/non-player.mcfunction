@@ -24,7 +24,7 @@
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score $Health Temporary matches ..0 run function asset_manager:mob/triggers/death/manual
 # 演出
-    execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:6,Amplifier:0b,Duration:1,ShowParticles:0b}]}
-    execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:6,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11b,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 # onAttackのトリガー
     execute if score $Health Temporary matches 1.. run function api:damage/core/trigger_on_attack

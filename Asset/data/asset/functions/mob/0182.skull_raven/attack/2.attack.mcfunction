@@ -9,7 +9,7 @@
    execute at @p[tag=Victim,distance=..60] run playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 0.8 0.8 0
 
 # ハードなら打ち上げ
-    execute if predicate api:global_vars/difficulty/min/hard at @p[tag=Victim,distance=..60] run summon area_effect_cloud ~ ~ ~ {Particle:"cloud",Radius:0.5f,Duration:6,Age:4,Effects:[{Id:25,Amplifier:20b,Duration:5,ShowParticles:1b}]}
+    execute if predicate api:global_vars/difficulty/min/hard at @p[tag=Victim,distance=..60] run summon area_effect_cloud ~ ~ ~ {Particle:"cloud",Radius:0.5f,Duration:6,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:5,ShowParticles:1b}]}
 
 # 引数の設定
     # 与えるダメージ
