@@ -5,7 +5,7 @@
 # @within function asset:mob/0254.headless/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0254.headless",ActiveEffects:[{Id:8,Amplifier:3b,Duration:2147483647,ShowParticles:0b}]}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0254.headless",ActiveEffects:[{Id:8b,Amplifier:3b,Duration:2147483647,ShowParticles:0b}]}
 # ID (int)
     data modify storage asset:mob ID set value 254
 # Type (string) Wikiを参照

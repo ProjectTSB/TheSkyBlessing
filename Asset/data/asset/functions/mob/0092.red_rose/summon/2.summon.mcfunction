@@ -5,7 +5,7 @@
 # @within function asset:mob/0092.red_rose/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysBurn"],Silent:1b,ActiveEffects:[{Id:12,Amplifier:0b,Duration:2147483647}],DeathLootTable:"asset:mob/death/0092.red_rose"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","AlwaysBurn"],Silent:1b,ActiveEffects:[{Id:12b,Amplifier:0b,Duration:2147483647}],DeathLootTable:"asset:mob/death/0092.red_rose"}
 # ID (int)
     data modify storage asset:mob ID set value 92
 # Type (string) Wikiを参照

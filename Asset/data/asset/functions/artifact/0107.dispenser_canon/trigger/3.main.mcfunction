@@ -16,7 +16,7 @@
     playsound minecraft:entity.tnt.primed player @a
 
 # TNT召喚
-    summon endermite ~ ~1.5 ~ {Silent:1b,Team:"NoCollision",FallDistance:99f,DeathTime:15s,Tags:["TNTStick"],Passengers:[{id:"minecraft:tnt",Fuse:40s}],ActiveEffects:[{Id:14,Amplifier:1b,Duration:2147483647}]}
+    summon endermite ~ ~1.5 ~ {Silent:1b,Team:"NoCollision",FallDistance:99f,DeathTime:15s,Tags:["TNTStick"],Passengers:[{id:"minecraft:tnt",Fuse:40s}],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:2147483647}]}
 
 # TNTを飛ばす
     data modify storage lib: Argument.VectorMagnitude set value 2

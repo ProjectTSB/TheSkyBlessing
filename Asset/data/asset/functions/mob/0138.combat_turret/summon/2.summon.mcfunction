@@ -5,7 +5,7 @@
 # @within function asset:mob/0138.combat_turret/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,ActiveEffects:[{Id:28,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],DeathLootTable:"asset:mob/death/0138.combat_turret"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,ActiveEffects:[{Id:28b,Amplifier:0b,Duration:2147483647,ShowParticles:0b}],DeathLootTable:"asset:mob/death/0138.combat_turret"}
 # ID (int)
     data modify storage asset:mob ID set value 138
 # Type (string) Wikiを参照
