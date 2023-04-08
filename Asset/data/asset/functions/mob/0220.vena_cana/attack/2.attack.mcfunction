@@ -15,6 +15,16 @@
     effect give @s slowness 5 1 true
     effect give @s mining_fatigue 5 1 true
 
+# ダメージ
+    data modify storage lib: Argument.Damage set value 37f
+    data modify storage lib: Argument.AttackType set value "Physical"
+# 補正functionを実行
+    execute as @e[type=zombie,tag=this,distance=..6,sort=nearest,limit=1] run function lib:damage/modifier
+# 対象
+    function lib:damage/
+# リセット
+    function lib:damage/reset
+
 # 最後に属性攻撃力半減
     # 引数の設定
     # UUID
@@ -24,7 +34,7 @@
     # 補正方法
         data modify storage api: Argument.Operation set value "multiply"
 # 補正の追加
-    function api:player_modifier/attack/base/add
+    function api:modifier/attack/base/add
 
 # タグを付与
     tag @s[tag=!64.ElementReduct] add 64.ElementReduct
