@@ -339,7 +339,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   api:mob/get_max_health*
     #   asset_manager:mob/summon/set_data
-    #   mob_manager:init/modify_data
+    #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
         scoreboard objectives add MobHealthMax dummy
         scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
