@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset:artifact/1026.brinicle_cocytus/trigger/brinicle/main
+#   asset:artifact/1026.brinicle_cocytus/trigger/brinicle/on_ground
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwBm1ALAIYAcddAtAGxwCcHbdHAOwBWNk1IAGAMxs4AJgbVhDOA1JyUHMAQB2DALYJkgMMUABJW1gYDDAYDOScCgD2hHRCSVucgijju4DEcwADcGbEIjcAAPJAkCKDiAXySCW1I0QgdECQA6CWECOwgbDxyCOGxsNBg7I0oJeLAMZxKIIya0OwBRKpq67oBHQnDsKABlaz9yRGpwupSAXSA_3
 # 円 1

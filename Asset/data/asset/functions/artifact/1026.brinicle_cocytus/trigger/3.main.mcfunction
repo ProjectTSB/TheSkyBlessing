@@ -9,8 +9,11 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 視点先にブライニクルを召喚
-    execute anchored eyes positioned ^ ^ ^3 run summon marker ~ ~ ~ {Tags:["Uninterferable","SI.Brinicle"]}
+# ブライニクルを召喚
+    summon marker ~ ~ ~ {Tags:["Uninterferable","SI.Brinicle"]}
+
+# 向き合わせ
+    tp @e[type=marker,tag=SI.Brinicle,distance=..0.01] ^ ^1.5 ^0.3 ~ ~
 
 # ループ開始
     schedule function asset:artifact/1026.brinicle_cocytus/trigger/brinicle/loop 1t replace

@@ -4,6 +4,7 @@
 #> tag
 # @within function asset:artifact/1026.brinicle_cocytus/trigger/**
     #declare tag SI.Brinicle
+    #declare tag SI.OnGround
     #declare tag 146tmp.512
     #declare tag 146tmp.256
     #declare tag 146tmp.128
