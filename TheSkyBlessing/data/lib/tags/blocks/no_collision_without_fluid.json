@@ -79,6 +79,14 @@
         "minecraft:warped_fungus",
         "minecraft:warped_roots",
         "minecraft:weeping_vines",
-        "minecraft:weeping_vines_plant"
+        "minecraft:weeping_vines_plant",
+        "minecraft:pitcher_plant",
+        "minecraft:torchflower",
+        "minecraft:torchflower_crop",
+        "#minecraft:all_hanging_signs",
+        "minecraft:ladder",
+        "#minecraft:wool_carpets",
+        "minecraft:moss_carpet",
+        "minecraft:mangrove_propagule"
     ]
 }

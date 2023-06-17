@@ -6,6 +6,7 @@
         "minecraft:command_block",
         "minecraft:jigsaw",
         "minecraft:repeating_command_block",
-        "minecraft:structure_block"
+        "minecraft:structure_block",
+        "minecraft:reinforced_deepslate"
     ]
 }
