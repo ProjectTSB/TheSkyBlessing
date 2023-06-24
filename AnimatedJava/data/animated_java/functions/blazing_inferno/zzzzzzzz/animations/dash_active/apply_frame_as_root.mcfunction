@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..5 run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_active/tree/branch_0_5

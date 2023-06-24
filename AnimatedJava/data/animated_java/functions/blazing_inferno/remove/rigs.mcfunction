@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:item_display,tag=aj.blazing_inferno.root] run function animated_java:blazing_inferno/zzzzzzzz/remove/as_root

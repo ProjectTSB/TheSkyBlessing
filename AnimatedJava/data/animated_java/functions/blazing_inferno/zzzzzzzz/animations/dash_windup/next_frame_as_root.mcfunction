@@ -1,0 +1,1 @@
+function animated_java:blazing_inferno/zzzzzzzz/animations/dash_windup/tick_animation

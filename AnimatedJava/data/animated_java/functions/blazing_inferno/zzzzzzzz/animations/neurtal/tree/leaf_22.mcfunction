@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:blazing_inferno/zzzzzzzz/animations/neurtal/tree/leaf_22_as_bone

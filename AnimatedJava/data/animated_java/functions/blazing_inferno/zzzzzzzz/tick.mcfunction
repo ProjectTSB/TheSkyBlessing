@@ -1,0 +1,1 @@
+execute if entity @s[tag=aj.blazing_inferno.root] run function animated_java:blazing_inferno/zzzzzzzz/tick_as_root

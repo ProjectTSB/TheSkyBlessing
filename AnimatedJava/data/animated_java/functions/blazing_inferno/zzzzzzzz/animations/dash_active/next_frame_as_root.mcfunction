@@ -1,0 +1,1 @@
+function animated_java:blazing_inferno/zzzzzzzz/animations/dash_active/tick_animation
