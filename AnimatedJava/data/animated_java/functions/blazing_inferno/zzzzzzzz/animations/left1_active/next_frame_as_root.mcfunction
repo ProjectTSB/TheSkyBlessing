@@ -1,0 +1,1 @@
+function animated_java:blazing_inferno/zzzzzzzz/animations/left1_active/tick_animation

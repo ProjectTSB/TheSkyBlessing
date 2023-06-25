@@ -1,1 +1,0 @@
-execute on passengers run function animated_java:blazing_inferno/zzzzzzzz/animations/attack1_active/tree/leaf_2_as_bone

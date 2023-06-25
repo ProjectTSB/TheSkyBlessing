@@ -1,1 +1,0 @@
-function animated_java:blazing_inferno/zzzzzzzz/animations/heavy_windup/tick_animation

@@ -1,1 +1,0 @@
-tag @s remove aj.blazing_inferno.animation.attack1_windup

@@ -1,1 +1,0 @@
-function animated_java:blazing_inferno/zzzzzzzz/animations/attack1_active/tick_animation

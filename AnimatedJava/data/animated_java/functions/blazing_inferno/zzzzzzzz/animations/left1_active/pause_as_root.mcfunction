@@ -1,0 +1,1 @@
+tag @s remove aj.blazing_inferno.animation.left1_active
