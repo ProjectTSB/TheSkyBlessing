@@ -2,9 +2,11 @@
 #
 # プレイヤーのMPの最大値を取得します。
 #
+# @deprecated change to `api:mp/get_max`
 # @input as player
 # @output result score MPMax
 # @api
 
 # 取得
-    scoreboard players get @s MPMax
+    function api:mp/get_max
+    data get storage api: Return.MaxMP

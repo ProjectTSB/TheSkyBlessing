@@ -19,8 +19,7 @@
     # 雷属性
         data modify storage lib: Argument.ElementType set value "Thunder"
     # 全てを...消し飛ばす
-        data modify storage lib: Argbument.FixedDamage set value true
-        data modify storage lib: Argbument.BypassResist set value true
+        data modify storage lib: Argument.FixedDamage set value true
     # 死亡ログ
         data modify storage lib: Argument.DeathMessage set value '[{"translate": "%1$sは%2$sの絶望の光球によって消し飛ばされた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
     # ダメージ(厳密な紐づけじゃないけど許して)

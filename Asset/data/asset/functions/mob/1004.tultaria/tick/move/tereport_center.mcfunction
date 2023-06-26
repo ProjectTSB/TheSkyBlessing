@@ -9,7 +9,7 @@
 # テレポする
     tp @s @e[type=marker,tag=RW.XYZ,sort=nearest,limit=1]
 # 向き合わせる
-    execute at @s run tp @s ~ ~ ~ facing entity @p
+    execute at @s run tp @s ~ ~ ~ facing entity @p[distance=..100]
 
 # 位置をあわせる
     tp @e[type=armor_stand,tag=RW.ArmorStandThis] @s

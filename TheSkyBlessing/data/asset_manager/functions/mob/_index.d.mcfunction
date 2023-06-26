@@ -38,7 +38,7 @@
 #> Killer
 # @within *
 #   asset_manager:mob/triggers/death/*
-#   lib:damage/core/health_subtract/non-player
+#   api:damage/core/health_subtract/non-player
 #   asset:mob/*/death/**
     #declare tag Killer
 
@@ -58,6 +58,7 @@
 # @within function
 #   asset_manager:mob/common_tag/*
 #   asset:**
+    #declare tag AllowRideBannedVehicle
     #declare tag AntiFallDamage
     #declare tag AntiVoid
     #declare tag AntiBurn

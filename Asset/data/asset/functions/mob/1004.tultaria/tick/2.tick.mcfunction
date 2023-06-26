@@ -15,7 +15,7 @@
     execute if entity @p[gamemode=!spectator,distance=..100] if score @s RW.Tick matches -15 run function asset:mob/1004.tultaria/tick/5.tereport
 
 # プレイヤーを見る
-    execute if score @s RW.Tick matches 0 at @s facing entity @p eyes run function asset:mob/1004.tultaria/tick/move/tereport
+    execute if score @s RW.Tick matches 0 at @s facing entity @p[distance=..100] eyes run function asset:mob/1004.tultaria/tick/move/tereport
 
 # その後発動するスキル
 # プレイヤーが周囲にいたらスキル選択

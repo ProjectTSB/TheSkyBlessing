@@ -6,6 +6,13 @@
     #declare score_holder $PlayerCount
     #declare score_holder $LoadTime
 
+# TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
+#> Global Vars - Private
+# @within *
+#   core:load_once
+#   api:global_vars/difficulty/**
+    #declare score_holder $Difficulty
+
 #> DeathTag
 # @public
     #declare tag Death
