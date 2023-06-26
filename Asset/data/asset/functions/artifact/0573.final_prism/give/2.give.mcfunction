@@ -33,7 +33,7 @@
 # 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)
     data modify storage asset:artifact AttackInfo.ElementType set value [Fire,Water,Thunder,None]
 # 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)
-    #data modify storage asset:artifact AttackInfo.BypassResist set value 1b
+    # data modify storage asset:artifact AttackInfo.BypassResist set value 1b
 # 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)
     data modify storage asset:artifact AttackInfo.IsRangeAttack set value "every"
 # 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)
@@ -46,6 +46,10 @@
     # data modify storage asset:artifact LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:artifact SpecialCooldown set value
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value ["Flora", "Wi-ki"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
