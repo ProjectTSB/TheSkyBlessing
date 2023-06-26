@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..13 run function animated_java:blazing_inferno/zzzzzzzz/animations/intro/tree/branch_0_13
