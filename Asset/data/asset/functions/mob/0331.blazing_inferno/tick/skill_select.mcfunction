@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0331.blazing_inferno/tick/2.tick
+# @within function asset:mob/0331.blazing_inferno/tick/base_move/
 
 # タグ付与
     tag @s add 8N.InAction
@@ -16,10 +16,11 @@
     scoreboard players operation $Random Temporary %= $5 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 0
+    scoreboard players set $Random Temporary 1
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 8N.Skill.TripleFireball
+    execute if score $Random Temporary matches 1 run tag @s add 8N.Skill.DashPunch
 
 # 大技その1
     #execute if score $Random Temporary matches 8 run tag @s add 8N.SkillDeadly1
