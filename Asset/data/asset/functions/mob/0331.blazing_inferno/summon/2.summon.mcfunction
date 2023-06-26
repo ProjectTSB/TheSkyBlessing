@@ -58,5 +58,12 @@
     # 雷倍率 (float) (オプション)
         # data modify storage asset:mob Resist.Thunder set value
 
+# AJモデル召喚
+    execute rotated ~ 0 run function animated_java:blazing_inferno/summon
+    execute as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/neurtal/play
+
+# 起点を召喚
+    summon marker ~ ~ ~ {Tags:["8N.SpawnPoint"]}
+
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
