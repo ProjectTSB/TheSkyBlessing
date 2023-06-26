@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:artifact/0569.great_sage_boots/give/1.trigger",
+        "asset:artifact/0568.great_sage_leggings/give/1.trigger",
+        "asset:artifact/0567.great_sage_chestplate/give/1.trigger",
+        "asset:artifact/0566.great_sage_helmet/give/1.trigger",
         "asset:artifact/0736.sailor_hat/give/1.trigger",
         "asset:artifact/0741.abyss_insurance_card/give/1.trigger",
         "asset:artifact/1016.sharpened_netherite_sword/give/1.trigger",
