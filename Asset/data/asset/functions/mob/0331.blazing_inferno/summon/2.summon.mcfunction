@@ -5,7 +5,7 @@
 # @within function asset:mob/0331.blazing_inferno/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {NoAI:1b,Silent:1b,Tags:["MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0331.blazing_inferno"}
+    summon wither_skeleton ~ ~ ~ {NoAI:1b,Silent:1b,Tags:["8N.PlayerFacing","8N.RailMove","MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0331.blazing_inferno"}
 # ID (int)
     data modify storage asset:mob ID set value 331
 # Type (string) Wikiを参照
@@ -63,7 +63,7 @@
     execute as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/neurtal/play
 
 # 起点を召喚
-    summon marker ~ ~ ~ {Tags:["8N.SpawnPoint"]}
+    summon marker ~ ~2 ~ {Tags:["8N.SpawnPoint"],Rotation:[180.0f,0.0f]}
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
