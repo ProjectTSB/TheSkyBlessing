@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0331.blazing_inferno/**
-    scoreboard objectives add 
+    scoreboard objectives add 8N.Tick dummy
