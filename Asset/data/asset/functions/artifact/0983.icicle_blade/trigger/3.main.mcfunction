@@ -39,7 +39,7 @@
 # 半円状に判定を出す
     tag @e[type=#lib:living,tag=Enemy,distance=..5] add RB.Hit
     execute positioned ^ ^ ^-100 run tag @e[type=#lib:living,tag=Enemy,tag=RB.Hit,distance=..100] remove RB.Hit
-    execute as @e[type=#lib:living,tag=Enemy,tag=RB.Hit,distance=..100] at @s run function asset:artifact/0983.icicle_blade/trigger/4.damage
+    execute as @e[type=#lib:living,tag=Enemy,distance=..6] as @s[tag=RB.Hit,distance=..100] at @s run function asset:artifact/0983.icicle_blade/trigger/4.damage
 
 
     # リセット
