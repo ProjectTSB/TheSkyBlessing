@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0566.great_sage_helmet/equip/4.fullset
+#> asset:artifact/0566.great_sage_helmet/equip/4.fullset
 #
 #
 #
-# @within function asset:sacred_treasure/056?.great_sage_*/*/3.main
+# @within function asset:artifact/056?.great_sage_*/*/3.main
 
 #> Private
 # @private

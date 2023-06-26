@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0566.great_sage_helmet/damage/2.health_check
+#> asset:artifact/0566.great_sage_helmet/damage/2.health_check
 #
 #
 #
-# @within function asset:sacred_treasure/0566.great_sage_helmet/damage/1.fullset_check
+# @within function asset:artifact/0566.great_sage_helmet/damage/1.fullset_check
 
 #> Val
 # @private
@@ -22,7 +22,7 @@
         scoreboard players operation $FQ.CurrentHP Temporary /= $FQ.MaxHP Temporary
 
 # 体力が20%以下かつ10%の確率で喋る
-    execute if score $FQ.CurrentHP Temporary matches ..201 if predicate lib:random_pass_per/10 run function asset:sacred_treasure/0566.great_sage_helmet/damage/3.talk
+    execute if score $FQ.CurrentHP Temporary matches ..201 if predicate lib:random_pass_per/10 run function asset:artifact/0566.great_sage_helmet/damage/3.talk
 # リセット
     scoreboard players reset $FQ.MaxHP Temporary
     scoreboard players reset $FQ.CurrentHP Temporary

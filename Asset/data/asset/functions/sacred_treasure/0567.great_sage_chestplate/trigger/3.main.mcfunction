@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/0567.great_sage_chestplate/trigger/3.main
+#> asset:artifact/0567.great_sage_chestplate/trigger/3.main
 #
 # 神器のメイン処理部
 #
-# @within function asset:sacred_treasure/0567.great_sage_chestplate/trigger/2.check_condition
+# @within function asset:artifact/0567.great_sage_chestplate/trigger/2.check_condition
 
 # 基本的な使用時の処理(MP消費や使用回数の処理など)を行う
-    function asset:sacred_treasure/common/use/chest
+    function asset:artifact/common/use/chest
 
 # ここから先は神器側の効果の処理を書く
 
@@ -44,4 +44,4 @@
     playsound minecraft:block.enchantment_table.use player @a ~ ~ ~ 0.8 1
 
 #セット効果用のファンクション実行（実行は頭のほうで）
-    execute if data storage asset:context id.all{head:566,chest:567,legs:568,feet:569} run function asset:sacred_treasure/0566.great_sage_helmet/equip/4.fullset
+    execute if data storage asset:context id.all{head:566,chest:567,legs:568,feet:569} run function asset:artifact/0566.great_sage_helmet/equip/4.fullset

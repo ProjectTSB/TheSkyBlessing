@@ -1,7 +1,7 @@
-#> asset:sacred_treasure/0566.great_sage_helmet/register
+#> asset:artifact/0566.great_sage_helmet/register
 #
 # 神器プールへの登録処理
 #
-# @within tag/function asset:sacred_treasure/register
+# @within tag/function asset:artifact/register
 
-data modify storage asset:sacred_treasure RarityRegistry[4] append value 566
+data modify storage asset:artifact RarityRegistry[4] append value 566

@@ -1,5 +1,9 @@
 {
     "values": [
+        "asset:artifact/0569.great_sage_boots/trigger/dis_equip/",
+        "asset:artifact/0568.great_sage_leggings/trigger/dis_equip/",
+        "asset:artifact/0567.great_sage_chestplate/trigger/dis_equip/",
+        "asset:artifact/0566.great_sage_helmet/equip/dis_equip/",
         "asset:artifact/0736.sailor_hat/trigger/dis_equip/",
         "asset:artifact/0986.order_of_healing/trigger/dis_equip/",
         "asset:artifact/0980.thunder_charm/trigger/dis_equip/",

@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/0566.great_sage_helmet/killed/3.talk
+#> asset:artifact/0566.great_sage_helmet/killed/3.talk
 #
 #
 #
-# @within function asset:sacred_treasure/0566.great_sage_helmet/killed/2.check
+# @within function asset:artifact/0566.great_sage_helmet/killed/2.check
 
 #> Private
 # @private
