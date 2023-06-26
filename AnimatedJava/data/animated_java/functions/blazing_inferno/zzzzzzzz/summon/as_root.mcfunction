@@ -11,6 +11,8 @@ execute if score #variant aj.i = $aj.blazing_inferno.variant.default aj.id run f
 execute if score #animation aj.i matches 0.. run scoreboard players operation @s aj.anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.neurtal aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/neurtal/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.neurtal aj.id run scoreboard players operation @s aj.blazing_inferno.animation.neurtal.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.blazing_inferno.animation.intro aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/intro/apply_frame_as_root
+execute if score #animation aj.i = $aj.blazing_inferno.animation.intro aj.id run scoreboard players operation @s aj.blazing_inferno.animation.intro.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.right1_active aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/right1_active/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.right1_active aj.id run scoreboard players operation @s aj.blazing_inferno.animation.right1_active.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.left1_active aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/left1_active/apply_frame_as_root
@@ -23,6 +25,8 @@ execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_active aj.
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_active aj.id run scoreboard players operation @s aj.blazing_inferno.animation.dash_active.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_end aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_end/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_end aj.id run scoreboard players operation @s aj.blazing_inferno.animation.dash_end.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.blazing_inferno.animation.damage aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/damage/apply_frame_as_root
+execute if score #animation aj.i = $aj.blazing_inferno.animation.damage aj.id run scoreboard players operation @s aj.blazing_inferno.animation.damage.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:blazing_inferno/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i
