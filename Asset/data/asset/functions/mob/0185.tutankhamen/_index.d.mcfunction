@@ -11,3 +11,4 @@
     #declare tag SpreadMarker
     #declare tag 55.SkillThunderMaker
     #declare tag 55.Target
+    #declare tag LandingTarget

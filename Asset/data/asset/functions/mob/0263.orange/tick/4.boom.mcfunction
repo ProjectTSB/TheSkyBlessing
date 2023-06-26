@@ -14,7 +14,6 @@
 
 # 効果を付与
     effect give @a[gamemode=!spectator,distance=..1.5] saturation 3 0 true
-    effect give @a[gamemode=!spectator,distance=..1.5] slowness 3 2 true
 
 # ダメージ
     data modify storage lib: Argument.Damage set value 15f
@@ -26,7 +25,7 @@
 # 補正
     function lib:damage/modifier
 # ダメージ
-    execute as @a[gamemode=!creative,gamemode=!spectator,distance=..1.5] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..1.5] run function lib:damage/
 # リセット
     function lib:damage/reset
 

@@ -6,8 +6,8 @@
 
 # 演出
     particle minecraft:poof ~ ~0.2 ~ 0.25 0 0.25 0 20
-    playsound minecraft:entity.iron_golem.attack hostile @a ~ ~ ~ 1.5 1
-    playsound minecraft:entity.goat.long_jump hostile @a ~ ~ ~ 1.5 1
+    playsound minecraft:entity.iron_golem.attack hostile @a ~ ~ ~ 0.7 1
+    playsound minecraft:entity.goat.long_jump hostile @a ~ ~ ~ 0.7 1
 
 # こっちを向く
     execute facing entity @p eyes run tp @s ~ ~ ~ ~ ~

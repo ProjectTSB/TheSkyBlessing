@@ -5,7 +5,7 @@
 # @within function asset:mob/0186.ferocious_bee/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,LifeTicks:1,DeathLootTable:"asset:mob/death/0186.ferocious_bee"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],NoGravity:1b,NoAI:1b,Silent:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0186.ferocious_bee"}
 # ID (int)
     data modify storage asset:mob ID set value 186
 # Type (string) Wikiを参照
@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"凶暴なハチ",,"color":"yellow"}'
+    data modify storage asset:mob Name set value '{"text":"凶暴なハチ","color":"yellow"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         # data modify storage asset:mob Weapon.Mainhand set value
@@ -59,4 +59,4 @@
         data modify storage asset:mob Resist.Thunder set value 1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=vex,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

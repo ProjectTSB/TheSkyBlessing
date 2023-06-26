@@ -19,13 +19,14 @@
     tag @e[type=skeleton,scores={MobID=233},distance=..15] add 6G.HoneyMob
 
 # バフ
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] resistance 2 1 true
-    effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] speed 2 1 true
+    #effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] resistance 2 1 true
+    #effect give @e[type=skeleton,tag=6G.HoneyMob,distance=..15] speed 2 1 true
+
 # 回復
     data modify storage lib: Argument.Heal set value 750f
     function lib:heal/modifier
     execute as @e[type=skeleton,tag=6G.HoneyMob,distance=..15] run function lib:heal/
-    data remove storage lib: Argument
+    function lib:heal/reset
 
 # タグを消しておく
     tag @e[type=skeleton,tag=6G.HoneyMob,distance=..15] remove 6G.HoneyMob

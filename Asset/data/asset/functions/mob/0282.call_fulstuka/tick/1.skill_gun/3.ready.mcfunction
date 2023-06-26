@@ -20,9 +20,9 @@
     execute positioned ^-0.4 ^ ^1.4 facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet positioned ~ ~-0.425 ~ anchored eyes positioned ^ ^ ^ run function asset:mob/0282.call_fulstuka/tick/1.skill_gun/4.shot
 
 # 演出
-    playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 1 1.6
-    playsound minecraft:block.respawn_anchor.deplete player @a ~ ~ ~ 1 2
-    playsound minecraft:entity.generic.explode player @a ~ ~ ~ 0.8 2
+    playsound minecraft:entity.shulker.shoot neutral @a ~ ~ ~ 1 1.6
+    playsound minecraft:block.respawn_anchor.deplete neutral @a ~ ~ ~ 1 2
+    playsound minecraft:entity.generic.explode neutral @a ~ ~ ~ 0.8 2
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker,limit=1]

@@ -2,6 +2,7 @@
 #
 # プレイヤーのMPをその値に設定します。
 #
+# @deprecated change to `api:mp/set`
 # @input
 #   as player
 #   score $Set Argument
@@ -11,7 +12,6 @@
 # @private
     #declare score_holder $Set
 
-# セット
-    scoreboard players operation @s MP = $Set Lib
-# リセット
-    scoreboard players reset $Set Lib
+execute store result storage api: Argument.MP int 1 run scoreboard players get $Set Lib
+function api:mp/set
+scoreboard players reset $Set Lib

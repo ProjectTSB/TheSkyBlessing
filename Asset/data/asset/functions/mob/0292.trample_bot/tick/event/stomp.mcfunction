@@ -5,9 +5,9 @@
 # @within function asset:mob/0292.trample_bot/tick/2.tick
 
 # 演出
-    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1.5 1.5
-    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 1.5 2
-    playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 1 2
+    playsound minecraft:entity.iron_golem.hurt hostile @a ~ ~ ~ 1 1.5
+    playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 0.5 2
+    playsound minecraft:entity.zombie_villager.cure hostile @a ~ ~ ~ 0.5 2
     scoreboard players reset @s 84.MoveTime
 
 # モデル変更
@@ -22,10 +22,10 @@
     function lib:damage/modifier
 
 # ダメージを与える
-    execute if data storage api: {HurtTime:0s} as @a[gamemode=!spectator,gamemode=!creative,distance=..2] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function lib:damage/
 
 # 吹き飛ばし
-    execute at @a[gamemode=!spectator,distance=..2] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:5,ShowParticles:0b}]}
+    execute at @a[gamemode=!spectator,distance=..2] run summon area_effect_cloud ~ ~ ~ {Radius:0.1f,Duration:6,Age:4,Effects:[{Id:25,Amplifier:20b,Duration:5,ShowParticles:0b}]}
 
 # リセット
     function lib:damage/reset

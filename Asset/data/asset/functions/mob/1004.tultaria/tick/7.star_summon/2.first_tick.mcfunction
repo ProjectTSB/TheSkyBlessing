@@ -12,4 +12,4 @@
     item replace entity @e[type=armor_stand,tag=RW.ArmorStand,distance=..0.01,sort=nearest,limit=1] weapon.mainhand with stick{CustomModelData:20070}
 
 # 演出
-    execute at @a run playsound minecraft:entity.evoker.prepare_summon hostile @p ~ ~ ~ 1 0.7
+    execute at @a[distance=..100] run playsound minecraft:entity.evoker.prepare_summon hostile @a ~ ~ ~ 1 0.7
