@@ -1,1 +1,1 @@
-execute if score @s aj.anim_time matches 0..25 run function animated_java:blazing_inferno/zzzzzzzz/animations/intro/tree/branch_0_25
+execute if score @s aj.anim_time matches 0..40 run function animated_java:blazing_inferno/zzzzzzzz/animations/intro/tree/branch_0_40
