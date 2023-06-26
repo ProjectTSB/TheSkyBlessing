@@ -18,7 +18,6 @@
 # @within function
 #   core:tick/
 #   mob_manager:init/
-#   asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob

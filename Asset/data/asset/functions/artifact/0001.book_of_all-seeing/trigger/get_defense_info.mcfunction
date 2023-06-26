@@ -11,7 +11,6 @@
 # 取得
     execute store result score $Defense Temporary run data get storage asset:temp 01.Def 100
     execute unless data storage asset:temp 01.Def run scoreboard players set $Defense Temporary 100
-    execute if entity @e[tag=01.Target,tag=!AssetMob] run scoreboard players set $Defense Temporary 100
 # 耐性値に応じてメッセージを変更
     # 高い
         execute if score $Defense Temporary matches 190.. run data modify storage asset:temp 01.Def set value '{"text":"a","font":"tsb"}'
