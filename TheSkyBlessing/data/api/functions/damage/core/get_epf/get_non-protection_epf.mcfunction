@@ -31,7 +31,7 @@ execute unless data storage lib: Argument.ReduceEnchantment.id run data modify s
     data modify storage lib: Temp append from storage lib: Array[].lvl
     data modify storage lib: Array set from storage lib: Temp
     data remove storage lib: Temp
-    function lib:array/sum
+    function lib:array/math/sum
 # 計算結果を取得する
     execute store result score $Temp Temporary run data get storage lib: SumResult
 # セッションを閉じる
