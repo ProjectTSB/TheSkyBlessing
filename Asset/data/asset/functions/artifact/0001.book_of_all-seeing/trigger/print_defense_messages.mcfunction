@@ -38,17 +38,17 @@
 # 物理と魔法
     # 物理耐性取得
         function api:modifier/defense/physical/get
-        data remove storage asset:temp 01.Def
         data modify storage asset:temp 01.Def set from storage api: Return.Defense.Physical
         function asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
         data modify storage asset:temp 01.PhysicalDefense set from storage asset:temp 01.Def
+        data remove storage asset:temp 01.Def
 
     # 魔法耐性取得
         function api:modifier/defense/magic/get
-        data remove storage asset:temp 01.Def
         data modify storage asset:temp 01.Def set from storage api: Return.Defense.Magic
         function asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
         data modify storage asset:temp 01.MagicDefense set from storage asset:temp 01.Def
+        data remove storage asset:temp 01.Def
 
     # 表示
         tellraw @p[tag=this] [{"text":"\uE018","font":"tsb"},{"storage":"asset:temp","nbt":"01.PhysicalDefense","interpret":true},{"text":" | ","font":"default"},{"text":"\uE019","font":"tsb"},{"storage":"asset:temp","nbt":"01.MagicDefense","interpret":true}]
@@ -56,24 +56,24 @@
 # 炎、水、雷
     # 炎耐性取得
         function api:modifier/defense/fire/get
-        data remove storage asset:temp 01.Def
         data modify storage asset:temp 01.Def set from storage api: Return.Defense.Fire
         function asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
         data modify storage asset:temp 01.FireDefense set from storage asset:temp 01.Def
+        data remove storage asset:temp 01.Def
 
     # 水耐性取得
         function api:modifier/defense/water/get
-        data remove storage asset:temp 01.Def
         data modify storage asset:temp 01.Def set from storage api: Return.Defense.Water
         function asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
         data modify storage asset:temp 01.WaterDefense set from storage asset:temp 01.Def
+        data remove storage asset:temp 01.Def
 
     # 雷耐性取得
         function api:modifier/defense/thunder/get
-        data remove storage asset:temp 01.Def
         data modify storage asset:temp 01.Def set from storage api: Return.Defense.Thunder
         function asset:artifact/0001.book_of_all-seeing/trigger/get_defense_info
         data modify storage asset:temp 01.ThunderDefense set from storage asset:temp 01.Def
+        data remove storage asset:temp 01.Def
 
     # 表示
         tellraw @p[tag=this] [{"text":"\uE01C","font":"tsb"},{"storage":"asset:temp","nbt":"01.FireDefense","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01D","font":"tsb"},{"storage":"asset:temp","nbt":"01.WaterDefense","interpret":true},{"text":" | ","font":"default"},{"text":"\uE01E","font":"tsb"},{"storage":"asset:temp","nbt":"01.ThunderDefense","interpret":true}]
