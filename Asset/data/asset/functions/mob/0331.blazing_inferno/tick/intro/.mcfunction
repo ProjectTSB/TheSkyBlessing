@@ -11,4 +11,4 @@
     execute if score @s 8N.Tick matches 31 run function asset:mob/0331.blazing_inferno/tick/intro/title
 
 # 戦闘開始
-    execute if score @s 8N.Tick matches 70 run function asset:mob/0331.blazing_inferno/tick/intro/battle_start
+    execute if score @s 8N.Tick matches 80 run function asset:mob/0331.blazing_inferno/tick/intro/battle_start

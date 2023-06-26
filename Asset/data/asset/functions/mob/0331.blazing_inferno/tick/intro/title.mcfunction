@@ -7,7 +7,7 @@
 # タイトル
     title @a[distance=..60] title {"text":""}
     title @a[distance=..60] subtitle {"text":"\uE015","font":"screen_effect"}
-    title @a[distance=..64] times 5 20 5
+    title @a[distance=..64] times 5 30 5
 
 # サウンド
     execute at @a[distance=..60] run playsound minecraft:item.trident.return hostile @p ~ ~ ~ 3 0.6
