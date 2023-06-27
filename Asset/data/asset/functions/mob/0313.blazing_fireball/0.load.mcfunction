@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0313.blazing_fireball/**
-    scoreboard objectives add 
+    scoreboard objectives add 8P.Tick dummy
