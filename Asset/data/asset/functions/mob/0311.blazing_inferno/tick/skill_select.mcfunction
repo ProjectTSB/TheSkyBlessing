@@ -16,7 +16,7 @@
     scoreboard players operation $Random Temporary %= $5 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 1
+    scoreboard players set $Random Temporary 0
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 8N.Skill.TripleFireball
