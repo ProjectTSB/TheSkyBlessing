@@ -17,7 +17,7 @@
     scoreboard players add @s 8P.Tick 1
 
 # 時間切れ
-    execute if score @s 8P.Tick matches 100 run function asset:mob/0313.blazing_fireball/tick/explosion
+    execute if score @s 8P.Tick matches 60 run function asset:mob/0313.blazing_fireball/tick/explosion
 
 # プレイヤーの衝突判定
     execute at @s positioned ~-0.5 ~0.0 ~-0.5 if entity @p[dx=0] run function asset:mob/0313.blazing_fireball/tick/explosion
