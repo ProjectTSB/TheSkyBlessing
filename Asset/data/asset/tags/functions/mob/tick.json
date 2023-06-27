@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0313.blazing_fireball/tick/1.trigger",
         "asset:mob/0311.blazing_inferno/tick/1.trigger",
         "asset:mob/0176.killer_bee/tick/1.trigger",
         "asset:mob/0186.ferocious_bee/tick/1.trigger",

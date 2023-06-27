@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0313.blazing_fireball/summon/1.trigger",
         "asset:mob/0311.blazing_inferno/summon/1.trigger",
         "asset:mob/0266.small_dark_ball/summon/1.trigger",
         "asset:mob/0265.dark_familiar/summon/1.trigger",
