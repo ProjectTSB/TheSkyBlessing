@@ -21,7 +21,6 @@
 # ダメージを与える。直撃したヤツと、そこからdistanceで
     tag @a[dx=0] add Hit
     tag @a[distance=..1.5] add Hit
-    execute as @a[gamemode=!creative,gamemode=!spectator,tag=Hit] run say yo
     execute as @a[gamemode=!creative,gamemode=!spectator,tag=Hit] run function lib:damage/
 
 # リセット
