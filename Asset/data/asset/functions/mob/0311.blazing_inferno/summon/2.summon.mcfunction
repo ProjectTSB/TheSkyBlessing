@@ -7,7 +7,7 @@
 # 元となるMobを召喚する
     summon wither_skeleton ~ ~ ~ {NoAI:1b,Silent:1b,Tags:["8N.PlayerFacing","8N.RailMove","MobInit","AlwaysInvisible"],DeathLootTable:"asset:mob/death/0311.blazing_inferno"}
 # ID (int)
-    data modify storage asset:mob ID set value 331
+    data modify storage asset:mob ID set value 311
 # Type (string) Wikiを参照
     data modify storage asset:mob Type set value "Enemy.Boss"
 # 干渉可能か否か (boolean)
