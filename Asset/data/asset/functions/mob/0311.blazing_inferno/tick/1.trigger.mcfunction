@@ -4,4 +4,4 @@
 #
 # @within tag/function asset:mob/tick
 
-execute if data storage asset:context {id:331} run function asset:mob/0311.blazing_inferno/tick/2.tick
+execute if data storage asset:context {id:311} run function asset:mob/0311.blazing_inferno/tick/2.tick

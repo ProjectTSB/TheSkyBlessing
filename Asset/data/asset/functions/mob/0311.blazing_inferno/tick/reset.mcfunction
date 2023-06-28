@@ -8,6 +8,7 @@
     tag @s remove 8N.InAction
     tag @s remove 8N.Skill.TripleFireball
     tag @s remove 8N.Skill.DashPunch
+    tag @s remove 8N.Skill.Firebomb
 
 # 円移動タグとこっち向くタグを付与
     tag @s add 8N.RailMove
