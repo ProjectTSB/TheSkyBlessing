@@ -8,7 +8,6 @@
 				"data\\minecraft\\tags\\functions\\tick.json",
 				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\load.mcfunction",
 				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\on_load.mcfunction",
-				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\mark_outdated_rig.mcfunction",
 				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\tick.mcfunction",
 				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\tick_as_root.mcfunction",
 				"data\\animated_java\\functions\\blazing_inferno\\zzzzzzzz\\summon\\as_root.mcfunction",

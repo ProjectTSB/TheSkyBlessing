@@ -1,2 +1,1 @@
 scoreboard players set @s aj.blazing_inferno.rig_loaded 1
-execute unless score @s aj.blazing_inferno.export_version = aj.blazing_inferno.export_version aj.i at @s run function animated_java:blazing_inferno/zzzzzzzz/mark_outdated_rig
