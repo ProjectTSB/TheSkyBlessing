@@ -6,5 +6,12 @@
 
 # トリプルファイアボール
     execute if entity @e[tag=8N.Skill.TripleFireball] run function asset:mob/0311.blazing_inferno/tick/skill/triple_fireball/tick
+
+# ダッシュパンチ
     execute if entity @e[tag=8N.Skill.DashPunch] run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/tick
+
+# ファイアボム
     execute if entity @e[tag=8N.Skill.Firebomb] run function asset:mob/0311.blazing_inferno/tick/skill/firebomb/tick
+
+# 召喚&方向転換
+    execute if entity @e[tag=8N.Skill.Summon] run function asset:mob/0311.blazing_inferno/tick/skill/summon/tick
