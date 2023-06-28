@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0314.blazing_bomb/0.load",
         "asset:mob/0313.blazing_fireball/0.load",
         "asset:mob/0311.blazing_inferno/0.load",
         "asset:mob/0176.killer_bee/0.load",

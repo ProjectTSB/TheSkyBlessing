@@ -6,9 +6,7 @@
 
 
 # パーティクル
-    #particle explosion_emitter ~ ~ ~ 0 0 0 0 0 force @a[distance=..60]
-    particle minecraft:explosion ~ ~ ~ 3 3 3 0 35 force @a[distance=..60]
-    particle flame ~ ~ ~ 0.5 5 0.5 0.01 100
+    particle minecraft:explosion ~ ~ ~ 3 1 3 0 35 force @a[distance=..60]
 
 # サウンド
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1.5 1

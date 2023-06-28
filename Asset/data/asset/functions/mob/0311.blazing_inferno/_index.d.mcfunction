@@ -11,3 +11,4 @@
     #declare tag 8N.Skill.DashPunch
     #declare tag 8N.PlayerFacing
     #declare tag 8N.IntroFinish
+    #declare tag 8N.Skill.Firebomb
