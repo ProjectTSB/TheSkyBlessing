@@ -5,9 +5,9 @@
 # @within function asset:mob/0311.blazing_inferno/tick/skill/firebomb/tick
 
 # サウンド
-    playsound entity.blaze.shoot hostile @a ~ ~ ~ 2 1
+    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 2 1
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 1
-    playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 0.5
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 2 0.5
 
 # ファイアボール召喚
