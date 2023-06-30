@@ -2,7 +2,7 @@
 #
 # ダッシュパンチ
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill_active
+# @within function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
 
 # パンチのかまえ
@@ -27,4 +27,4 @@
     execute if score @s 8N.Tick matches 140 at @s run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/return
 
 # リセット
-    execute if score @s 8N.Tick matches 140 run function asset:mob/0311.blazing_inferno/tick/reset
+    execute if score @s 8N.Tick matches 140 run function asset:mob/0311.blazing_inferno/tick/base_move/reset

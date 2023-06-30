@@ -19,7 +19,7 @@
     playsound minecraft:entity.wither.break_block hostile @a ~ ~ ~ 2 1.5
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 35f
+    data modify storage lib: Argument.Damage set value 50f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
 

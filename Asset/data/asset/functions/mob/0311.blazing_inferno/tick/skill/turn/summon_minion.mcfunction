@@ -9,4 +9,4 @@
     function api:mob/summon
 
 # テレポート演出を流用
-    execute positioned ~ ~1 ~ run function asset:mob/0311.blazing_inferno/tick/teleport_vfx
+    execute positioned ~ ~1 ~ run function asset:mob/0311.blazing_inferno/tick/base_move/teleport_vfx

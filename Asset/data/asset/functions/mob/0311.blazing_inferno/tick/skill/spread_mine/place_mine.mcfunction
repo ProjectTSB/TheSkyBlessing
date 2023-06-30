@@ -13,6 +13,9 @@
     data modify storage lib: Argument.Bounds set value [[15d,15d],[0d,0d],[15d,15d]]
     execute as @e[type=marker,tag=SpreadMarker,distance=..50] run function lib:spread_entity/
 
+# マーカーを地面まで落とす
+    execute as @e[type=marker,tag=SpreadMarker,distance=..50] at @s run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/search_ground
+
 # マーカーに対して召喚
     data modify storage api: Argument.ID set value 316
     execute at @e[type=marker,tag=SpreadMarker,distance=..50] run function api:mob/summon

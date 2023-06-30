@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill_active
+# @within function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
 # 攻撃
     # 予備動作
@@ -20,4 +20,4 @@
     execute if score @s 8N.Tick matches 51 run function asset:mob/0311.blazing_inferno/tick/skill/turn/turn_switch
 
 # リセット
-    execute if score @s 8N.Tick matches 100 run function asset:mob/0311.blazing_inferno/tick/reset
+    execute if score @s 8N.Tick matches 100 run function asset:mob/0311.blazing_inferno/tick/base_move/reset

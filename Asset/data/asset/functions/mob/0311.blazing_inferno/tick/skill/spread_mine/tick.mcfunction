@@ -2,7 +2,7 @@
 #
 # すでに置いた地雷の起爆&地雷の設置
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill_active
+# @within function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
 #> 地雷の起爆チェック用タグ
 # @private
@@ -17,4 +17,4 @@
         execute if score @s 8N.Tick matches 20 at @e[type=marker,tag=8N.SpawnPoint,distance=..60,sort=nearest,limit=1] positioned ~ ~3 ~ run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_stacked
 
 # リセット
-    execute if score @s 8N.Tick matches 60 run function asset:mob/0311.blazing_inferno/tick/reset
+    execute if score @s 8N.Tick matches 40 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
