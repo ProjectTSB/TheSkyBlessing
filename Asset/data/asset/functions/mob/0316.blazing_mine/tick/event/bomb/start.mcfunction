@@ -7,6 +7,7 @@
 #   asset:mob/0313.blazing_fireball/tick/explosion
 #   asset:mob/0314.blazing_bomb/tick/event/fireball/explosion
 #   asset:mob/0311.blazing_inferno/tick/skill/dash_punch/explosion
+#   asset:mob/0311.blazing_inferno/tick/skill/spread_mine/tick
 
 # タグ付与
     tag @s add 8S.Ready
