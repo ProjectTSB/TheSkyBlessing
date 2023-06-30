@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0316.blazing_mine/tick/1.trigger",
         "asset:mob/0314.blazing_bomb/tick/1.trigger",
         "asset:mob/0313.blazing_fireball/tick/1.trigger",
         "asset:mob/0311.blazing_inferno/tick/1.trigger",
