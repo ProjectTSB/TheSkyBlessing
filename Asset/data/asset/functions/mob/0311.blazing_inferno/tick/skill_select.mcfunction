@@ -16,7 +16,7 @@
     scoreboard players operation $Random Temporary %= $3 Const
 
 # デバッグのコマンド
-    #scoreboard players set $Random Temporary 1
+    scoreboard players set $Random Temporary 0
     #scoreboard players set @s 8N.MoveCount 5
 
 # 数回に一回の行動は固定

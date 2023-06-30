@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0314.blazing_bomb/tick/event/fireball/
 
+#> 地雷の起爆チェック用タグ
+# @private
+#declare tag 8S.Ready
 
 # パーティクル
     particle minecraft:explosion ~ ~ ~ 3 1 3 0 35 force @a[distance=..60]
@@ -26,6 +29,9 @@
 
 # リセット
     function lib:damage/reset
+
+# 付近の地雷を起爆
+    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..6] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # Tickをリセットし、残存モードに移行
     tag @s add 8Q.AOE

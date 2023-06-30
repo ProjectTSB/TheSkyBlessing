@@ -6,6 +6,10 @@
 #   asset:mob/0313.blazing_fireball/tick/2.tick
 #   asset:mob/0313.blazing_fireball/tick/move
 
+#> 地雷の起爆チェック用タグ
+# @private
+#declare tag 8S.Ready
+
 # パーティクル
     execute at @s run function asset:mob/0313.blazing_fireball/tick/explosion_sfx
 
@@ -22,6 +26,9 @@
     tag @a[dx=0] add Hit
     tag @a[distance=..1.5] add Hit
     execute as @a[tag=Hit,tag=!PlayerShouldInvulnerable] run function lib:damage/
+
+# 付近の地雷を起爆
+    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..2] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # リセット
     function lib:damage/reset

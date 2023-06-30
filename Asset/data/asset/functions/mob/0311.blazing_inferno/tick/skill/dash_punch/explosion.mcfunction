@@ -4,6 +4,10 @@
 #
 # @within function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/end
 
+#> 地雷の起爆チェック用タグ
+# @private
+#declare tag 8S.Ready
+
 # パーティクル
     particle minecraft:explosion_emitter ^ ^ ^3 0 0 0 0 1 force @a[distance=..60]
     particle minecraft:explosion ~ ~ ~ 0 0 0 0 1 force @a[distance=..60]
@@ -26,7 +30,10 @@
     function lib:damage/modifier
 
 # ダメージを与える
-    execute positioned ^ ^ ^3 as @a[distance=..3] run function lib:damage/
+    execute positioned ^ ^ ^2 as @a[distance=..4] run function lib:damage/
+
+# 付近の地雷を起爆
+    execute positioned ^ ^ ^2 as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..4] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # リセット
     function lib:damage/reset
