@@ -1,8 +1,8 @@
-#> asset:mob/0311.blazing_inferno/tick/skill/summon/turn_switch
+#> asset:mob/0311.blazing_inferno/tick/skill/turn/turn_switch
 #
 # 方向転換
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill/summon/tick
+# @within function asset:mob/0311.blazing_inferno/tick/skill/turn/tick
 
 # サウンド
     playsound minecraft:block.stone_button.click_on hostile @a ~ ~ ~ 2 1
