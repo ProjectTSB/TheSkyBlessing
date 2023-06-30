@@ -5,13 +5,16 @@
 # @within function asset:mob/0311.blazing_inferno/tick/2.tick
 
 # プレイヤーが周囲にいたらスキル選択
-    execute if score @s[tag=!8N.InAction] 8N.Tick matches 40.. if entity @p[distance=..100] run function asset:mob/0311.blazing_inferno/tick/skill_select
+    execute if score @s[tag=!8N.InAction] 8N.Tick matches 40.. if entity @p[distance=..100] run function asset:mob/0311.blazing_inferno/tick/base_move/skill_select
 
 # 選択したスキル発動
-    execute if entity @s[tag=8N.InAction] run function asset:mob/0311.blazing_inferno/tick/skill_active
+    execute if entity @s[tag=8N.InAction] run function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
 # マーカーの視線先に自分を置く。"8N.RailMove"タグがあるときのみ実行。
     execute if entity @s[tag=8N.RailMove] at @e[type=marker,tag=8N.SpawnPoint,sort=nearest,limit=1] run tp @s ^ ^ ^15
+
+# HP50%以下のとき、パーティクルをまとう
+    execute if entity @s[tag=8N.Health.50Per] run function asset:mob/0311.blazing_inferno/tick/base_move/rage_particle
 
 # マーカーを回す。タグによって方向が変わる。
     execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise] as @e[type=marker,tag=8N.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.5 ~

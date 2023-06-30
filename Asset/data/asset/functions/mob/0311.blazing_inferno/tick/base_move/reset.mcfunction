@@ -1,8 +1,10 @@
-#> asset:mob/0311.blazing_inferno/tick/reset
+#> asset:mob/0311.blazing_inferno/tick/base_move/reset
 #
 #
 #
-# @within function asset:mob/0311.blazing_inferno/tick/**
+# @within function
+#   asset:mob/0311.blazing_inferno/tick/**
+#   asset:mob/0311.blazing_inferno/hurt/2.hurt
 
 # スコアリセット
     scoreboard players reset @s 8N.Tick
@@ -14,6 +16,7 @@
     tag @s remove 8N.Skill.DashPunch
     tag @s remove 8N.Skill.Firebomb
     tag @s remove 8N.Skill.Summon
+    tag @s remove 8N.Skill.SpreadMine
 
 # 円移動タグとこっち向くタグを付与
     tag @s add 8N.RailMove

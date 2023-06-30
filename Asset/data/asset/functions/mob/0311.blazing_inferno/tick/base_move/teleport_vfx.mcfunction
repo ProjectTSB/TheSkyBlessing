@@ -1,4 +1,4 @@
-#> asset:mob/0311.blazing_inferno/tick/teleport_vfx
+#> asset:mob/0311.blazing_inferno/tick/base_move/teleport_vfx
 #
 # ワープ時に使う演出
 #

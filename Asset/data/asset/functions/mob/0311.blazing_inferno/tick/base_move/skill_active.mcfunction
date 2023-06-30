@@ -1,4 +1,4 @@
-#> asset:mob/0311.blazing_inferno/tick/skill_active
+#> asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 #
 # 選択したスキルを出す
 #
