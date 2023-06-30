@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:mob/0311.blazing_inferno/tick/**
-#   asset:mob/0311.blazing_inferno/hurt/2.hurt
+#   asset:mob/0311.blazing_inferno/hurt/active_50per
 
 # スコアリセット
     scoreboard players reset @s 8N.Tick
