@@ -14,5 +14,5 @@
     execute if entity @s[tag=8N.RailMove] at @e[type=marker,tag=8N.SpawnPoint,sort=nearest,limit=1] run tp @s ^ ^ ^15
 
 # マーカーを回す。タグによって方向が変わる。
-    execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise] as @e[type=marker,tag=8N.SpawnPoint,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.5 ~
-    execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise] as @e[type=marker,tag=8N.SpawnPoint,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.5 ~
+    execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise] as @e[type=marker,tag=8N.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.5 ~
+    execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise] as @e[type=marker,tag=8N.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.5 ~
