@@ -20,9 +20,7 @@
     data modify storage lib: Argument.ElementType set value "Fire"
 
 # ブロック破壊
-    execute positioned ^ ^1 ^1 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/break_block
-    execute positioned ^ ^1 ^2 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/break_block
-    execute positioned ^ ^1 ^3 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/break_block
+    execute positioned ^ ^ ^2 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/break_block
 
 # 補正実行
     function lib:damage/modifier
