@@ -25,7 +25,10 @@
 #   Resist.Fire? : float
 #   Resist.Water? : float
 #   Resist.Thunder? : float
-# @within function asset:mob/*/summon/2.summon
+#   Field? : Any
+# @within function
+#   api:mob/core/summon
+#   asset:mob/*/summon/2.summon
 
 # validate
     execute unless entity @s run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"データを適用するEntityが存在しません\nasを利用して対象のEntityを実行者にしてください"}]
@@ -53,23 +56,11 @@
     execute unless data storage asset:mob Resist.Fire run data modify storage asset:mob Resist.Fire set value 1f
     execute unless data storage asset:mob Resist.Water run data modify storage asset:mob Resist.Water set value 1f
     execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 1f
+    # execute unless data storage asset:mob Field run
 # データ適用
     execute if entity @s run function asset_manager:mob/summon/set_data
 # リセット
     tag @s remove MobInit
-    data remove storage asset:mob ID
-    data remove storage asset:mob Type
-    data remove storage asset:mob Interferable
-    data remove storage asset:mob Name
-    data remove storage asset:mob Weapon
-    data remove storage asset:mob Armor
-    data remove storage asset:mob WeaponDropChances
-    data remove storage asset:mob ArmorDropChances
-    data remove storage asset:mob Health
-    data remove storage asset:mob AttackDamage
-    data remove storage asset:mob Defense
-    data remove storage asset:mob SpecialDefense
-    data remove storage asset:mob Speed
-    data remove storage asset:mob FollowRange
-    data remove storage asset:mob KnockBackResist
-    data remove storage asset:mob Resist
+
+# 初期化イベント
+    execute if entity @s run function #asset:mob/initialize

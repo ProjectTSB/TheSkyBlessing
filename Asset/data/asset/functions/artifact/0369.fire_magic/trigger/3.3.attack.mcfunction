@@ -7,8 +7,8 @@
 # 自身にタグ付与
     tag @s add A9.This
 
-# 周囲2mから最寄りの敵にタグを付与
-    tag @e[type=#lib:living,type=!player,tag=!A9.Fire,distance=..2,sort=nearest,limit=1] add A9.Target
+# 最寄りの敵にタグを付与
+    execute positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=#lib:living,type=!player,tag=!A9.Fire,dx=0,sort=nearest,limit=1] add A9.Target
 
 # 演出
     particle lava ~ ~1 ~ 0 1 0 0 20 force

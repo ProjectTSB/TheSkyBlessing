@@ -10,6 +10,7 @@
 
 # 神器のID (int) スプレッドシートの値を入れる
     data modify storage asset:artifact ID set value 721
+# 神器のベースアイテム
     data modify storage asset:artifact Item set value "minecraft:iron_chestplate"
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"重鋼の鎧","color":"gray"}'
@@ -47,6 +48,8 @@
     # data modify storage asset:artifact SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:artifact DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

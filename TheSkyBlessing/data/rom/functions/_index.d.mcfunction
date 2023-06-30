@@ -3,6 +3,8 @@
 
 #> Storage
 # @within function
+#   api:**
+#   asset:*/super.*
 #   asset_manager:**
 #   mob_manager:**
 #   rom:**
