@@ -15,7 +15,7 @@
     execute at @s run function asset:mob/0311.blazing_inferno/tick/base_move/teleport_vfx
 
 # テレポート
-    execute at @e[type=marker,tag=8N.SpawnPoint,sort=nearest,limit=1] run tp @s ^ ^ ^15
+    execute at @e[type=marker,tag=8N.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ^ ^ ^15
 
 # テレポート演出
     execute at @s run function asset:mob/0311.blazing_inferno/tick/base_move/teleport_vfx

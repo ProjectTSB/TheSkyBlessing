@@ -60,10 +60,12 @@
 
 # AJモデル召喚
     execute rotated ~ 0 run function animated_java:blazing_inferno/summon
+
+# 自身のモデルに待機モーションを再生させる
     execute as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/neurtal/play
 
 # 起点を召喚
-    summon marker ~ ~2 ~ {Tags:["8N.SpawnPoint"],Rotation:[180.0f,0.0f]}
+    summon marker ~ ~2 ~ {Tags:["8N.Marker.SpawnPoint"],Rotation:[180.0f,0.0f]}
 
 # Init処理して出てくる
     execute positioned ~ ~-100 ~ as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/0311.blazing_inferno/summon/init

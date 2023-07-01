@@ -19,7 +19,7 @@
         # 本気時
             scoreboard players set @s[tag=8N.Health.50Per] 8N.AttackAmount 6
     # 地雷の設置、自身のスポーン地点から発動
-        execute if score @s 8N.Tick matches 20 at @e[type=marker,tag=8N.SpawnPoint,distance=..60,sort=nearest,limit=1] positioned ~ ~3 ~ run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
+        execute if score @s 8N.Tick matches 20 at @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] positioned ~ ~3 ~ run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
     # 演出
         execute if score @s 8N.Tick matches 20 anchored eyes positioned ^0.4 ^-0.3 ^0.5 run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/vfx
 
