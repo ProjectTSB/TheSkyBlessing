@@ -24,4 +24,4 @@
         execute if score @s 8N.Tick matches 20 anchored eyes positioned ^0.4 ^-0.3 ^0.5 run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/vfx
 
 # リセット
-    execute if score @s 8N.Tick matches 40 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
+    execute if score @s 8N.Tick matches 50 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
