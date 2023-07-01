@@ -21,4 +21,4 @@
         execute if score @s 8N.Tick matches 60 run function asset:mob/0311.blazing_inferno/tick/skill/triple_fireball/throw
 
 # リセット
-    execute if score @s 8N.Tick matches 100 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
+    execute if score @s 8N.Tick matches 110 run function asset:mob/0311.blazing_inferno/tick/base_move/reset

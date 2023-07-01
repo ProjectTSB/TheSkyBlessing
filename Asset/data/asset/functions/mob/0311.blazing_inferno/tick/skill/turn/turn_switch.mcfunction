@@ -5,8 +5,8 @@
 # @within function asset:mob/0311.blazing_inferno/tick/skill/turn/tick
 
 # サウンド
-    playsound minecraft:block.stone_button.click_on hostile @a ~ ~ ~ 2 1
-    playsound minecraft:block.iron_trapdoor.open hostile @a ~ ~ ~ 2 0.8
+    playsound minecraft:block.stone_button.click_on hostile @a ~ ~ ~ 5 1
+    playsound minecraft:block.iron_trapdoor.open hostile @a ~ ~ ~ 5 0.8
 
 # タグ調整
     # 時計回り→反時計回り

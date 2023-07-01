@@ -11,7 +11,6 @@
     execute at @s run function asset:mob/0313.blazing_fireball/tick/move
     execute at @s run function asset:mob/0313.blazing_fireball/tick/move
     execute at @s run function asset:mob/0313.blazing_fireball/tick/move
-    execute at @s run function asset:mob/0313.blazing_fireball/tick/move
 
 # Tick加算
     scoreboard players add @s 8P.Tick 1
