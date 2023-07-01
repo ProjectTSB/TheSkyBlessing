@@ -19,11 +19,47 @@
         {
             "rolls": 1,
             "entries": [
-                {
-                    "type": "loot_table",
-                    "name": "entities/wither_skeleton"
-                }
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:blaze_rod",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 32
+                  }
+                ]
+              }
             ]
-        }
-    ]
-}
+          },
+          {
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:blaze_powder",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 32
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "rolls": 1,
+            "entries": [
+              {
+                "type": "minecraft:item",
+                "name": "minecraft:nether_brick",
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": 32
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
