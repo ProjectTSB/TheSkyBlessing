@@ -16,12 +16,10 @@
 # contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
     execute store result storage asset:context uuid int 1 run scoreboard players get @s MobUUID
-# 実際の死亡時にもう一度Deathが実行されないためにDeathLootTableを消し飛ばす
-    data modify entity @s DeathLootTable set value "empty"
+# Killerタグの攻撃としてダメージを与えることで、トドメをKiller扱いにする
+    damage @s 9999 minecraft:generic by @p[tag=Killer]
 # さいなら～
     kill @s
-# トリガーの呼び出し
-    function asset_manager:mob/triggers/death/call
 # 退避させたデータを戻す
     function asset_manager:common/context_id/pop
     function api:common/arguments/pop
