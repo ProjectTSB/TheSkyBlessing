@@ -13,3 +13,4 @@
 # サウンド
     playsound minecraft:entity.blaze.ambient hostile @a ~ ~ ~ 2 1.2
     playsound minecraft:block.respawn_anchor.ambient hostile @a ~ ~ ~ 2 2
+

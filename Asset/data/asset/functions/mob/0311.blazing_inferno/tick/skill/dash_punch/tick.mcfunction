@@ -15,16 +15,17 @@
     execute if score @s 8N.Tick matches 60 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/active
 
 # ダッシュパンチ移動
-    execute if score @s 8N.Tick matches 60..70 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/move_stacked
+    execute if score @s 8N.Tick matches 60..80 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/move_stacked
 
 # ブロックに触れたら強制停止
-    execute if score @s 8N.Tick matches 60..70 unless block ^ ^ ^4 #lib:no_collision run scoreboard players set @s 8N.Tick 70
+    execute if score @s 8N.Tick matches 60..80 at @s unless block ^ ^ ^1 #lib:no_collision run scoreboard players set @s 8N.Tick 80
+    execute if score @s 8N.Tick matches 60..80 at @s unless block ^ ^ ^2 #lib:no_collision run scoreboard players set @s 8N.Tick 80
 
 # ダッシュ終了
-    execute if score @s 8N.Tick matches 70 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/end
+    execute if score @s 8N.Tick matches 80 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/end
 
 # 元の地点に戻る
-    execute if score @s 8N.Tick matches 140 at @s run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/return
+    execute if score @s 8N.Tick matches 150 at @s run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/return
 
 # リセット
-    execute if score @s 8N.Tick matches 140 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
+    execute if score @s 8N.Tick matches 150 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
