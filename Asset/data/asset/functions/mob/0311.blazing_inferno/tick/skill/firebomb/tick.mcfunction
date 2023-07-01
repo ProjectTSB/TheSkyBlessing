@@ -17,4 +17,4 @@
         execute if score @s[tag=8N.Health.50Per] 8N.Tick matches 40 run function asset:mob/0311.blazing_inferno/tick/skill/firebomb/throw
 
 # リセット
-    execute if score @s 8N.Tick matches 60 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
+    execute if score @s 8N.Tick matches 80 run function asset:mob/0311.blazing_inferno/tick/base_move/reset
