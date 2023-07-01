@@ -22,7 +22,8 @@
     execute if score $Health Temporary matches 1.. store result entity @s AbsorptionAmount float 0.001 run scoreboard players get $Health Temporary
     execute if score $Health Temporary matches ..0 as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add Killer
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
-    execute if score $Health Temporary matches ..0 run function asset_manager:mob/triggers/death/manual
+    execute if score $Health Temporary matches ..0 run damage @s 9999 minecraft:generic by @p[tag=Killer]
+    execute if score $Health Temporary matches ..0 run kill @s
 # 演出
     execute if score $Health Temporary matches 1.. if entity @s[type=#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:6,Amplifier:0b,Duration:1,ShowParticles:0b}]}
     execute if score $Health Temporary matches 1.. if entity @s[type=!#lib:undead] run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
