@@ -1,12 +1,13 @@
 #> asset:mob/0311.blazing_inferno/tick/skill/spread_mine/vfx
 #
-# 設置時のエフェクト
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
+#
+# @within function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/tick
 
 # パーティクル
-    particle minecraft:flame ~ ~ ~ 0 0 0 0.1 10
+    particle minecraft:explosion ~ ~ ~ 0 0 0 0 0
+    particle minecraft:lava ~ ~ ~ 0 0 0 0 10
 
 # サウンド
-    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 0.5 2
-    playsound minecraft:entity.chicken.egg hostile @a ~ ~ ~ 0.5 0.7
+    playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 2 0.5
+    playsound ogg:block.smithing_table.smithing_table2 hostile @a ~ ~ ~ 2 0.8

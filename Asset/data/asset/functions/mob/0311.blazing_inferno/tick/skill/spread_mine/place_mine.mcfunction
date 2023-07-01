@@ -1,27 +1,16 @@
 #> asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
 #
-# ランダム拡散で地雷を設置
+# 設置処理。カウントに応じた数ループ。
 #
-# @within function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_stacked
+# @within function
+#   asset:mob/0311.blazing_inferno/tick/skill/spread_mine/tick
+#   asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
 
-#> SpreadLib
-# @private
-#declare tag SpreadMarker
+# 召喚
+    function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/summon_mine
 
-# 拡散用marker召喚
-    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Bounds set value [[15d,15d],[0d,0d],[15d,15d]]
-    execute as @e[type=marker,tag=SpreadMarker,distance=..50] run function lib:spread_entity/
+# カウント減算
+    scoreboard players remove @s 8N.AttackAmount 1
 
-# マーカーを地面まで落とす
-    execute as @e[type=marker,tag=SpreadMarker,distance=..50] at @s run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/search_ground
-
-# マーカーに対して召喚
-    data modify storage api: Argument.ID set value 316
-    execute at @e[type=marker,tag=SpreadMarker,distance=..50] run function api:mob/summon
-
-# パーティクルも出しておこう
-    execute at @e[type=marker,tag=SpreadMarker,distance=..50] run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/vfx
-
-# 拡散マーカーを消す
-   kill @e[type=marker,tag=SpreadMarker,distance=..50]
+# カウント残ってれば再帰
+    execute if score @s 8N.AttackAmount matches 1.. run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/place_mine
