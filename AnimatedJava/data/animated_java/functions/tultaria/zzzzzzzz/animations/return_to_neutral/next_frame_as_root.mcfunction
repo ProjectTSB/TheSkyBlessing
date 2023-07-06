@@ -1,0 +1,1 @@
+function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/tick_animation

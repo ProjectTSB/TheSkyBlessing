@@ -1,0 +1,1 @@
+function animated_java:tultaria/zzzzzzzz/animations/wing_off/tick_animation

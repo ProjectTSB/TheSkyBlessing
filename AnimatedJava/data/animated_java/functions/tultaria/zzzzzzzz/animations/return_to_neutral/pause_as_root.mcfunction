@@ -1,0 +1,1 @@
+tag @s remove aj.tultaria.animation.return_to_neutral

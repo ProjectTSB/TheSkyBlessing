@@ -1,0 +1,3 @@
+execute if score @s aj.tultaria.animation.return_to_neutral.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/end_loop
+execute if score @s aj.tultaria.animation.return_to_neutral.loop_mode = $aj.loop_mode.once aj.i run function animated_java:tultaria/animations/return_to_neutral/stop
+execute if score @s aj.tultaria.animation.return_to_neutral.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:tultaria/animations/return_to_neutral/pause
