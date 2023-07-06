@@ -7,8 +7,15 @@
 # @private
     #declare score_holder $Random
 
-# 通常行動停止タグ付与
-    tag @s add RW.InAction
+# 疑似乱数取得
+    execute store result score $Random Temporary run function lib:random/
+# ほしい範囲に剰余算するやーつ
+# HP50%以下
+    execute if entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $7 Const
+# HP50%より上75%未満
+    execute unless entity @s[tag=RW.HPless50per] if entity @s[tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $6 Const
+# HP75%以上
+    execute unless entity @s[tag=RW.HPless50per] unless entity @s[tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $3 Const
 
 # 小技出しましたタグを消す
     tag @s remove RW.MiniSkillUsed
