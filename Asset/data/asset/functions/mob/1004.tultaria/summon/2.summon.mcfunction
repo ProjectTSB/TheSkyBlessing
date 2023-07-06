@@ -53,7 +53,7 @@
     summon marker ~ ~ ~ {Tags:["RW.XYZ"]}
 
 # 壁召喚（テスト処理）
-    execute at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] positioned ~-23 ~ ~-23 run place template asset:1004.wall
+    #execute at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] positioned ~-23 ~ ~-23 run place template asset:1004.wall
 
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick 0
