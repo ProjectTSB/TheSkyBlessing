@@ -1,0 +1,16 @@
+execute if entity @s[tag=aj.tultaria.bone.head] run data modify entity @s item.tag.CustomModelData set value 25
+execute if entity @s[tag=aj.tultaria.bone.bust] run data modify entity @s item.tag.CustomModelData set value 26
+execute if entity @s[tag=aj.tultaria.bone.left_wing] run data modify entity @s item.tag.CustomModelData set value 27
+execute if entity @s[tag=aj.tultaria.bone.right_wing] run data modify entity @s item.tag.CustomModelData set value 28
+execute if entity @s[tag=aj.tultaria.bone.body] run data modify entity @s item.tag.CustomModelData set value 29
+execute if entity @s[tag=aj.tultaria.bone.left_hand] run data modify entity @s item.tag.CustomModelData set value 30
+execute if entity @s[tag=aj.tultaria.bone.left_arm] run data modify entity @s item.tag.CustomModelData set value 31
+execute if entity @s[tag=aj.tultaria.bone.rod] run data modify entity @s item.tag.CustomModelData set value 32
+execute if entity @s[tag=aj.tultaria.bone.right_hand] run data modify entity @s item.tag.CustomModelData set value 33
+execute if entity @s[tag=aj.tultaria.bone.right_arm] run data modify entity @s item.tag.CustomModelData set value 34
+execute if entity @s[tag=aj.tultaria.bone.skirt] run data modify entity @s item.tag.CustomModelData set value 35
+execute if entity @s[tag=aj.tultaria.bone.left_foot] run data modify entity @s item.tag.CustomModelData set value 36
+execute if entity @s[tag=aj.tultaria.bone.left_leg] run data modify entity @s item.tag.CustomModelData set value 37
+execute if entity @s[tag=aj.tultaria.bone.right_foot] run data modify entity @s item.tag.CustomModelData set value 38
+execute if entity @s[tag=aj.tultaria.bone.right_leg] run data modify entity @s item.tag.CustomModelData set value 39
+execute if entity @s[tag=aj.tultaria.bone.lower] run data modify entity @s item.tag.CustomModelData set value 40

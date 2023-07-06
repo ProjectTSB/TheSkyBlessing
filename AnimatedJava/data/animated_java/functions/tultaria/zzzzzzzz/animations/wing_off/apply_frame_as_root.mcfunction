@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0 run function animated_java:tultaria/zzzzzzzz/animations/wing_off/tree/leaf_0

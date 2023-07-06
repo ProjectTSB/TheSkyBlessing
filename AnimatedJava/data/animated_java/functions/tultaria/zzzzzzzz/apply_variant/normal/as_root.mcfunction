@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:tultaria/zzzzzzzz/apply_variant/normal/as_bone
