@@ -44,7 +44,8 @@
     execute rotated ~ 0 run function animated_java:tultaria/summon
 
 # 自身のモデルに待機モーションを再生させる
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
+    #execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/apply_variant/no_wing
+    #execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
 # 出現座標を記憶する
     summon marker ~ ~ ~ {Tags:["RW.Marker.SpawnPoint"]}
