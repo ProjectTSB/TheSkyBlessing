@@ -25,6 +25,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.tultaria.export_version aj.i -674616306
+scoreboard players set aj.tultaria.export_version aj.i 228657173
 scoreboard players reset * aj.tultaria.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.tultaria.root] run function animated_java:tultaria/zzzzzzzz/on_load
