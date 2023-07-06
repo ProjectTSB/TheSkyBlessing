@@ -18,6 +18,8 @@ execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_2 aj.id ru
 execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_2 aj.id run scoreboard players operation @s aj.tultaria.animation.staff_swing_2.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.return_to_neutral aj.id run function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.return_to_neutral aj.id run scoreboard players operation @s aj.tultaria.animation.return_to_neutral.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.tultaria.animation.new aj.id run function animated_java:tultaria/zzzzzzzz/animations/new/apply_frame_as_root
+execute if score #animation aj.i = $aj.tultaria.animation.new aj.id run scoreboard players operation @s aj.tultaria.animation.new.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:tultaria/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i
