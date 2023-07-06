@@ -11,4 +11,4 @@
     execute if score @s RW.Tick matches 22 at @a at @e[tag=RW.OffCoordinateMarker,distance=..100,sort=nearest,limit=1] run function asset:mob/1004.tultaria/tick/skill/4.off_coordinate_attack/4.attack
 
 # リセット
-    execute if score @s RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 50 run function asset:mob/1004.tultaria/tick/base_move/reset

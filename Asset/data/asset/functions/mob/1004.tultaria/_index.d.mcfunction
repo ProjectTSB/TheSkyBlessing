@@ -7,15 +7,11 @@
     #
     ## ボスの体と移動に関連するタグ
     #declare tag RW.Boss
-    #declare tag RW.ModelCore
-    #declare tag RW.ModelHead
-    #declare tag RW.ModelBody
-    #declare tag RW.Model
-    #declare tag RW.ModelChangeTarget
-    #declare tag RW.ModelCoreThis
-    #declare tag RW.XYZ
+    #declare tag RW.ModelRoot
+    #declare tag RW.Marker.SpawnPoint
     #declare tag RW.Opening
     #declare tag RW.Start
+    #declare tag RW.PlayerFacing
     #declare tag RW.TeleportMarker
     #declare tag RW.MarkerInit
     #declare tag RW.Move

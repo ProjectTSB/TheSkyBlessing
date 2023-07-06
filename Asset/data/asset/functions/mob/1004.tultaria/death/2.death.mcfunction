@@ -30,7 +30,7 @@
     tag @e[type=armor_stand,scores={MobID=1016}] add S8.Death
 
 # マーカー消す
-    kill @e[type=marker,tag=RW.XYZ,limit=1]
+    kill @e[type=marker,tag=RW.Marker.SpawnPoint,limit=1]
     kill @e[type=marker,tag=RW.TeleportMarker,limit=1]
 
 # スケジュールループを開始する

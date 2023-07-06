@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/wait_time/base_move/fake_inertia
+#> asset:mob/1004.tultaria/tick/base_move/fake_inertia
 #
 # 嘘慣性
 #

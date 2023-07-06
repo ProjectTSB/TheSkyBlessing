@@ -11,7 +11,7 @@
     function asset:mob/1004.tultaria/tick/move/teleport/move_to_center
 
 # 中心を向く
-    execute facing entity @e[type=marker,tag=RW.XYZ,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
+    execute facing entity @e[type=marker,tag=RW.Marker.SpawnPoint,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
 # ポーズ
     data modify entity @e[type=armor_stand,tag=RW.ModelBody,tag=RW.ModelChangeTarget,distance=..0.5,sort=nearest,limit=1] Pose.LeftArm set value [30f,0f,-15f]

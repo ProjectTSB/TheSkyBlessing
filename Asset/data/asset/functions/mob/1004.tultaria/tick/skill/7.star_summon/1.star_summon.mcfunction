@@ -11,4 +11,4 @@
     execute if score @s RW.Tick matches 10 run function asset:mob/1004.tultaria/tick/skill/7.star_summon/3.summon
 
 # リセット
-    execute if score @s RW.Tick matches 77 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 77 run function asset:mob/1004.tultaria/tick/base_move/reset

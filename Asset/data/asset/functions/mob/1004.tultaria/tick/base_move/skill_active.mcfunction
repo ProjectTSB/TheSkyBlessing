@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/4.skill_active
+#> asset:mob/1004.tultaria/tick/base_move/skill_active
 #
 # スキル使用中タグがついてる間実行し続ける
 #

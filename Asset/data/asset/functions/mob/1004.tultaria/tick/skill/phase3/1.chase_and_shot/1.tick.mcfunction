@@ -31,12 +31,12 @@
 
 # 嘘慣性
     # 下が空気なら通常実行
-        execute facing entity @e[type=marker,tag=RW.ChaseMarker,sort=nearest,limit=1] feet if entity @s[scores={RW.FakeInertia=0..}] if block ~ ~-1 ~ #lib:no_collision run function asset:mob/1004.tultaria/tick/wait_time/base_move/fake_inertia
+        execute facing entity @e[type=marker,tag=RW.ChaseMarker,sort=nearest,limit=1] feet if entity @s[scores={RW.FakeInertia=0..}] if block ~ ~-1 ~ #lib:no_collision run function asset:mob/1004.tultaria/tick/base_move/fake_inertia
     # 下が空気じゃないなら縦軸を無視
-        execute facing entity @e[type=marker,tag=RW.ChaseMarker,sort=nearest,limit=1] feet if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision rotated ~ 0 run function asset:mob/1004.tultaria/tick/wait_time/base_move/fake_inertia
+        execute facing entity @e[type=marker,tag=RW.ChaseMarker,sort=nearest,limit=1] feet if entity @s[scores={RW.FakeInertia=0..}] unless block ~ ~-1 ~ #lib:no_collision rotated ~ 0 run function asset:mob/1004.tultaria/tick/base_move/fake_inertia
 
 # 小技出しましたのタグを付与
     execute if score @s RW.Tick matches 60 run tag @s add RW.MiniSkillUsed
 
 # リセット
-    execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/base_move/reset

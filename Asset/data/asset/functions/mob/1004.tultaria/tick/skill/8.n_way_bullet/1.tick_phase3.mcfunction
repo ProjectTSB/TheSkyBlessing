@@ -51,4 +51,4 @@
             execute if score @s RW.Tick matches 57 run function asset:mob/1004.tultaria/tick/skill/8.n_way_bullet/4.shoot
 
 # リセット
-    execute if score @s RW.Tick matches 100 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 100 run function asset:mob/1004.tultaria/tick/base_move/reset

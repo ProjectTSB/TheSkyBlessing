@@ -18,4 +18,4 @@
     execute if score @s RW.Tick matches 50..70 as @e[type=area_effect_cloud,tag=S2.Wait,sort=random,limit=2] at @s run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/5.tag_remove
 
 # リセット
-    execute if score @s RW.Tick matches 90.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 90.. run function asset:mob/1004.tultaria/tick/base_move/reset

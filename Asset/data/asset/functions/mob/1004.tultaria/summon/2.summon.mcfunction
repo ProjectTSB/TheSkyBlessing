@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","RW.Boss","RW.Opening"],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
+    summon wither_skeleton ~ ~ ~ {Tags:["MobInit","AlwaysInvisible","RW.Boss","RW.Opening","RW.PlayerFacing"],PersistenceRequired:1b,Invulnerable:1b,Silent:1b,NoAI:1b,DeathLootTable:"asset:mob/death/1004.tultaria"}
 
 # ID (int)
     data modify storage asset:mob ID set value 1004
@@ -40,20 +40,17 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 1.0
 
-# 見た目用のアマスタを召喚
-    summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:debug_stick",Count:1b,tag:{CustomModelData:4040}},Tags:["RW.ModelCore","RW.ModelCoreThis","Object","Uninterferable"],Passengers:[{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.Model","RW.ModelHead","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{Head:[25f,0.1f,0.1f]},DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20087}}]},{id:"minecraft:armor_stand",NoGravity:1b,Silent:1b,Marker:0b,Invisible:1b,Tags:["RW.Model","RW.ModelBody","Object","AllowProcessingCommonTag","AutoKillWhenDieVehicle","Uninterferable"],Pose:{LeftArm:[-115f,0f,-75f],RightArm:[-90f,0f,75f],Head:[0.1f,0.1f,0.1f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20068}}],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20077}}]}]}
+# AJモデル召喚
+    execute rotated ~ 0 run function animated_java:tultaria/summon
 
-# 位置をあわせる
-    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] at @s run tp @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] @s
+# 自身のモデルに待機モーションを再生させる
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
-# タグを消す
-    tag @e[type=armor_stand,tag=RW.ModelCoreThis,distance=..0.01] remove RW.ModelCoreThis
-
-# 座標を記憶するあれ
-    summon marker ~ ~ ~ {Tags:["RW.XYZ"]}
+# 出現座標を記憶する
+    summon marker ~ ~ ~ {Tags:["RW.Marker.SpawnPoint"]}
 
 # 壁召喚（テスト処理）
-    #execute at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] positioned ~-23 ~ ~-23 run place template asset:1004.wall
+    #execute at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] positioned ~-23 ~ ~-23 run place template asset:1004.wall
 
 # スコアをセットする
     scoreboard players set @e[type=wither_skeleton,tag=MobInit,distance=..0.01] RW.Tick 0

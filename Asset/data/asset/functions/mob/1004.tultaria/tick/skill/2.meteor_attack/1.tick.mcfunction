@@ -16,5 +16,5 @@
     execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 80 run function asset:mob/1004.tultaria/tick/skill/2.meteor_attack/4.fall_meteor
 
 # リセット
-    execute if score @s[scores={RW.Phase=..2}] RW.Tick matches 120.. run function asset:mob/1004.tultaria/tick/reset
-    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 140.. run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s[scores={RW.Phase=..2}] RW.Tick matches 120.. run function asset:mob/1004.tultaria/tick/base_move/reset
+    execute if score @s[scores={RW.Phase=3..}] RW.Tick matches 140.. run function asset:mob/1004.tultaria/tick/base_move/reset

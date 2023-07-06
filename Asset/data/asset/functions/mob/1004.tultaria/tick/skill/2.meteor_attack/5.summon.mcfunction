@@ -14,7 +14,7 @@
 # 拡散用marker召喚
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Bounds set value [[16d,16d],[0d,0d],[16d,16d]]
-    execute as @e[type=marker,tag=SpreadMarker,distance=..100,limit=1] at @e[type=marker,tag=RW.XYZ,distance=..100,sort=nearest,limit=1] run function lib:spread_entity/
+    execute as @e[type=marker,tag=SpreadMarker,distance=..100,limit=1] at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run function lib:spread_entity/
 
 # マーカーに対してメテオを召喚
     data modify storage api: Argument.ID set value 1011

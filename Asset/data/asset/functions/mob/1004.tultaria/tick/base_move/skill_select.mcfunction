@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/3.skill_select
+#> asset:mob/1004.tultaria/tick/base_move/skill_select
 #
 #
 #
@@ -7,15 +7,8 @@
 # @private
     #declare score_holder $Random
 
-# 疑似乱数取得
-    execute store result score $Random Temporary run function lib:random/
-# ほしい範囲に剰余算するやーつ
-# HP50%以下
-    execute if entity @s[tag=RW.HPless50per] run scoreboard players operation $Random Temporary %= $7 Const
-# HP50%より上75%未満
-    execute unless entity @s[tag=RW.HPless50per] if entity @s[tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $6 Const
-# HP75%以上
-    execute unless entity @s[tag=RW.HPless50per] unless entity @s[tag=RW.HPless75per] run scoreboard players operation $Random Temporary %= $3 Const
+# 通常行動停止タグ付与
+    tag @s add RW.InAction
 
 # 小技出しましたタグを消す
     tag @s remove RW.MiniSkillUsed
@@ -38,7 +31,7 @@
         execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $8 Const
 
 # デバッグ用、実行する技を確定させる
-    #scoreboard players set $Random Temporary 6
+    scoreboard players set $Random Temporary 1
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.Skill.Meteor

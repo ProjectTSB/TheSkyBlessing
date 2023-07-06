@@ -8,7 +8,7 @@
     kill @e[type=marker,tag=RW.TeleportMarker,sort=nearest,limit=1]
 
 # 移動先をセンターに設置
-    execute at @e[type=marker,tag=RW.XYZ,sort=nearest,limit=1] run summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
+    execute at @e[type=marker,tag=RW.Marker.SpawnPoint,sort=nearest,limit=1] run summon marker ~ ~ ~ {Tags:[RW.TeleportMarker,RW.MarkerInit]}
 
 # 行動中タグ付与
     tag @s add RW.Move

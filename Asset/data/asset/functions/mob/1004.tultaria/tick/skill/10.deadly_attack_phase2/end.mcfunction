@@ -23,4 +23,4 @@
     tag @s remove RW.InAction
 
 # リセット、行動再開
-    function asset:mob/1004.tultaria/tick/reset
+    function asset:mob/1004.tultaria/tick/base_move/reset

@@ -29,4 +29,4 @@
     execute if score @s RW.Tick matches 80 run tag @s add RW.MiniSkillUsed
 
 # リセット
-    execute if score @s RW.Tick matches 80 run function asset:mob/1004.tultaria/tick/reset
+    execute if score @s RW.Tick matches 80 run function asset:mob/1004.tultaria/tick/base_move/reset

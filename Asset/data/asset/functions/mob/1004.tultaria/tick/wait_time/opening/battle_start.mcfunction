@@ -20,4 +20,4 @@
 
 # 移動する
     scoreboard players set @s RW.Speed 5
-    function asset:mob/1004.tultaria/tick/reset
+    function asset:mob/1004.tultaria/tick/base_move/reset

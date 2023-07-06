@@ -8,15 +8,17 @@
     #declare score_holder $Count
     #declare score_holder $4tInterval
 
+# 最寄りのモデルのRootを自身の座標にもってくる
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run tp @s ~ ~ ~
 
-# アマスタにタグつける。ここでついたタグは最後に消す。実質的なthis
-    function asset:mob/1004.tultaria/tick/armor_stand_check
+# モデルをプレイヤーに向ける
+    execute if entity @s[tag=!RW.InAction] as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] facing entity @p eyes run tp @s ~ ~ ~ ~ 0
 
 # 開幕
     execute if entity @s[tag=RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/opening/tick
 
-# フェーズ1
-    execute if entity @s[tag=!RW.Opening] run function asset:mob/1004.tultaria/tick/wait_time/base_move/tick
+# ベース動作
+    execute if entity @s[tag=!RW.Opening] run function asset:mob/1004.tultaria/tick/base_move/
 
 # フェーズ2移行動作
     execute if entity @s[tag=RW.SkillDeadly1] run function asset:mob/1004.tultaria/tick/wait_time/phase2_transition/1.tick
@@ -26,9 +28,6 @@
 
 # スコア加算
     scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
-
-# 最初に付けたタグを消す
-    tag @e[type=armor_stand,tag=RW.ModelChangeTarget,distance=..0.5,limit=2] remove RW.ModelChangeTarget
 
 ## HP減少時、パーティクルをまとう
 #    execute if entity @s[tag=RW.HPless75per] run particle smoke ~ ~0.7 ~ 0.3 0.5 0.3 0 3
