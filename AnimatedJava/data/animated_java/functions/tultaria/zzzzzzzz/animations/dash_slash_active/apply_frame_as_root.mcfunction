@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..63 run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/tree/branch_0_63

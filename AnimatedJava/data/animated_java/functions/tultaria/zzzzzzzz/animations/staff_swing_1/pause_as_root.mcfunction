@@ -1,1 +1,0 @@
-tag @s remove aj.tultaria.animation.staff_swing_1
