@@ -10,6 +10,7 @@
 
 
 # 自身のモデルにモーションを再生させる
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/return_to_neutral/play
 
 # スキルのタグをリセットする
