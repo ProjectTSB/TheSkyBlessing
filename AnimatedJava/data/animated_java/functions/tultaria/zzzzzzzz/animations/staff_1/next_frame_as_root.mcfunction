@@ -1,1 +1,0 @@
-function animated_java:tultaria/zzzzzzzz/animations/staff_1/tick_animation

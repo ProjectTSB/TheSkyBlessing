@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..20 run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/tree/branch_0_20

@@ -1,5 +1,11 @@
 function animated_java:tultaria/zzzzzzzz/animations/neutral/pause_as_root
-function animated_java:tultaria/zzzzzzzz/animations/staff_1/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/staff_swing_1/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_slash_windup/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/dash_stab_active/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/deadly_loop/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/deadly_rod_spin/pause_as_root

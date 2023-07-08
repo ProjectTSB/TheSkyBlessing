@@ -1,5 +1,11 @@
 execute if entity @s[tag=aj.tultaria.animation.neutral] run function animated_java:tultaria/zzzzzzzz/animations/neutral/tick
-execute if entity @s[tag=aj.tultaria.animation.staff_1] run function animated_java:tultaria/zzzzzzzz/animations/staff_1/tick
+execute if entity @s[tag=aj.tultaria.animation.staff_swing_1] run function animated_java:tultaria/zzzzzzzz/animations/staff_swing_1/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_slash_windup] run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_windup/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_slash_active] run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/tick
+execute if entity @s[tag=aj.tultaria.animation.dash_stab_windup] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/tick
+execute if entity @s[tag=aj.tultaria.animation.dash_stab_active] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_active/tick
+execute if entity @s[tag=aj.tultaria.animation.dash_stab_end] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/tick
 execute if entity @s[tag=aj.tultaria.animation.return_to_neutral] run function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/tick
+execute if entity @s[tag=aj.tultaria.animation.deadly_windup] run function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/tick
+execute if entity @s[tag=aj.tultaria.animation.deadly_loop] run function animated_java:tultaria/zzzzzzzz/animations/deadly_loop/tick
+execute if entity @s[tag=aj.tultaria.animation.deadly_rod_spin] run function animated_java:tultaria/zzzzzzzz/animations/deadly_rod_spin/tick

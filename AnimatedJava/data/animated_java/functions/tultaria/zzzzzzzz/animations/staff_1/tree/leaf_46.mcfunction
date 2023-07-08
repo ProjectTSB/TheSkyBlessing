@@ -1,1 +1,0 @@
-execute on passengers run function animated_java:tultaria/zzzzzzzz/animations/staff_1/tree/leaf_46_as_bone

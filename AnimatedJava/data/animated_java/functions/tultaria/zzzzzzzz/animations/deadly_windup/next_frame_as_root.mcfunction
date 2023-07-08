@@ -1,0 +1,1 @@
+function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/tick_animation

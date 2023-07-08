@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..10 run function animated_java:tultaria/zzzzzzzz/animations/deadly_rod_spin/tree/branch_0_10
