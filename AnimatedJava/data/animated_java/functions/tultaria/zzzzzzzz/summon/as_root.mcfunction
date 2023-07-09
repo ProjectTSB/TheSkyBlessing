@@ -14,6 +14,8 @@ execute if score #animation aj.i = $aj.tultaria.animation.neutral aj.id run func
 execute if score #animation aj.i = $aj.tultaria.animation.neutral aj.id run scoreboard players operation @s aj.tultaria.animation.neutral.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_1 aj.id run function animated_java:tultaria/zzzzzzzz/animations/staff_swing_1/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_1 aj.id run scoreboard players operation @s aj.tultaria.animation.staff_swing_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_2 aj.id run function animated_java:tultaria/zzzzzzzz/animations/staff_swing_2/apply_frame_as_root
+execute if score #animation aj.i = $aj.tultaria.animation.staff_swing_2 aj.id run scoreboard players operation @s aj.tultaria.animation.staff_swing_2.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_slash_windup aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_windup/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.dash_slash_windup aj.id run scoreboard players operation @s aj.tultaria.animation.dash_slash_windup.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_slash_active aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/apply_frame_as_root
