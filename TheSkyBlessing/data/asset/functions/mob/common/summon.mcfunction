@@ -26,6 +26,7 @@
 #   Resist.Water? : float
 #   Resist.Thunder? : float
 #   Field? : Any
+# @output storage asset:mob Return.Summoned : boolean
 # @within function
 #   api:mob/core/summon
 #   asset:mob/*/summon/2.summon
@@ -64,6 +65,9 @@
 
 # 初期化イベント
     execute if entity @s run function #asset:mob/initialize
+
+# 返り値
+    data modify storage asset:mob Return.Summoned set value true
 
 # リセット
     data remove storage asset:mob ID
