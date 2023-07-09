@@ -21,7 +21,7 @@
 # 互換性維持用：mobAPI v2に存在しなければmobAPI v1を呼び出す
     execute unless data storage asset:mob Return{Summoned:true} run function #asset:mob/summon
 
-# FlagIndexが同じならv1でも召喚できてない
+# v1 でも召喚できなければエラーを表示する
     execute unless data storage asset:mob Return{Summoned:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのMobは存在しません: "},{"storage":"api:","nbt":"Argument.ID"}]
 
 # リセット
