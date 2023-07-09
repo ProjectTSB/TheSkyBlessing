@@ -3,6 +3,7 @@ execute if entity @s[tag=aj.tultaria.animation.staff_swing_1] run function anima
 execute if entity @s[tag=aj.tultaria.animation.dash_slash_windup] run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_windup/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_slash_active] run function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_stab_windup] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/tick
+execute if entity @s[tag=aj.tultaria.animation.dash_stab_windup_fast] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup_fast/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_stab_active] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_active/tick
 execute if entity @s[tag=aj.tultaria.animation.dash_stab_end] run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/tick
 execute if entity @s[tag=aj.tultaria.animation.return_to_neutral] run function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/tick

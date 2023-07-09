@@ -20,6 +20,8 @@ execute if score #animation aj.i = $aj.tultaria.animation.dash_slash_active aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_slash_active aj.id run scoreboard players operation @s aj.tultaria.animation.dash_slash_active.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_windup aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_windup aj.id run scoreboard players operation @s aj.tultaria.animation.dash_stab_windup.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_windup_fast aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup_fast/apply_frame_as_root
+execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_windup_fast aj.id run scoreboard players operation @s aj.tultaria.animation.dash_stab_windup_fast.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_active aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_active/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_active aj.id run scoreboard players operation @s aj.tultaria.animation.dash_stab_active.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.dash_stab_end aj.id run function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/apply_frame_as_root

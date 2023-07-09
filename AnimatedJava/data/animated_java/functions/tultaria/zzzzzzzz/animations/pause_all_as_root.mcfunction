@@ -3,6 +3,7 @@ function animated_java:tultaria/zzzzzzzz/animations/staff_swing_1/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_slash_windup/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_slash_active/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/dash_stab_windup_fast/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_stab_active/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/pause_as_root
