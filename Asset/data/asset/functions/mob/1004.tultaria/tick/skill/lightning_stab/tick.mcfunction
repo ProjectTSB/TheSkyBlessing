@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/4.skill_active
+# @within function asset:mob/1004.tultaria/tick/base_move/skill_active
 
 
 # 雷撃マーカーへのコマンド
@@ -39,6 +39,12 @@
         execute if score @s RW.Tick matches 32 as @e[type=marker,tag=RW.ChainLightning.Common] at @s run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/active
     # 3
         execute if score @s RW.Tick matches 34 as @e[type=marker,tag=RW.ChainLightning.Common] at @s run function asset:mob/1004.tultaria/tick/skill/lightning_stab/chain_lightning/active
+
+# 最後に構えを解除
+    execute if score @s RW.Tick matches 30 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/dash_stab_end/play
+
+# 待機モーション再生
+    execute if score @s RW.Tick matches 50 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
 # 雷撃を片付ける
     execute if score @s RW.Tick matches 36 run kill @e[type=marker,tag=RW.ChainLightning.Common,distance=..300]
