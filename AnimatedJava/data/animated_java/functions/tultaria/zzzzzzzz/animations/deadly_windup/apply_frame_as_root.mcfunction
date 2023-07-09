@@ -1,1 +1,1 @@
-execute if score @s aj.anim_time matches 0..60 run function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/tree/branch_0_60
+execute if score @s aj.anim_time matches 0..45 run function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/tree/branch_0_45
