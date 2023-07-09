@@ -26,6 +26,5 @@
 # パーティクル
     particle explosion ~ ~ ~ 0 0 0 0 0 force @a[distance=..100]
 
-# 速度と飛距離
-    scoreboard players set @s S3.Range 800
-    scoreboard players set @s S3.Speed 16
+# 存在時間を設定
+    scoreboard players set @s S3.LifeTime 100
