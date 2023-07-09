@@ -3,7 +3,7 @@
 # 必殺その1
 #
 # @within function
-#   asset:mob/1004.tultaria/tick/4.skill_active
+#   asset:mob/1004.tultaria/tick/base_move/skill_active
 #   asset:mob/1004.tultaria/tick/wait_time/phase2_transition/1.tick
 
 # 実行時間を移す

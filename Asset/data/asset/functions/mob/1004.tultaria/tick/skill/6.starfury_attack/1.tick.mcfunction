@@ -2,7 +2,7 @@
 #
 # 星よ！
 #
-# @within function asset:mob/1004.tultaria/tick/4.skill_active
+# @within function asset:mob/1004.tultaria/tick/base_move/skill_active
 
 # 最初に実行するの
     execute if score @s RW.Tick matches 0 run function asset:mob/1004.tultaria/tick/skill/6.starfury_attack/2.windup

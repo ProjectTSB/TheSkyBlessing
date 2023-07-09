@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:mob/1004.tultaria/tick/4.skill_active
+# @within function asset:mob/1004.tultaria/tick/base_move/skill_active
 
 # こっち向く
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~

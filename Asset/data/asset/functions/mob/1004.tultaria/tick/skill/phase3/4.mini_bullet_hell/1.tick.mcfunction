@@ -2,7 +2,7 @@
 #
 # ミニ弾幕地獄
 #
-# @within function asset:mob/1004.tultaria/tick/4.skill_active
+# @within function asset:mob/1004.tultaria/tick/base_move/skill_active
 
 #> private
 # @private
