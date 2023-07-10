@@ -31,7 +31,6 @@
     execute if score $Random Temporary matches 2..3 run tag @s add 6L.Water
     execute if score $Random Temporary matches 4..5 run tag @s add 6L.Thunder
     execute if score $Random Temporary matches 6..7 run tag @s add 6L.Magic
-    execute if score $Random Temporary matches 8 run tag @s add 6L.Summon
     execute if score $Random Temporary matches 100 run tag @s add 6L.ElementalConfine
 
 # リセット

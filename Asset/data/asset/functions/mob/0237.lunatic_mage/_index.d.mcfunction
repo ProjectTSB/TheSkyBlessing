@@ -8,7 +8,6 @@
     #declare tag 6L.Water
     #declare tag 6L.Thunder
     #declare tag 6L.Magic
-    #declare tag 6L.Summon
     #declare tag 6L.ElementalConfine
 
 #> 再帰のヒットの処理用Tag
