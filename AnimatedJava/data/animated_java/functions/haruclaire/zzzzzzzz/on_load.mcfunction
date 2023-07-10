@@ -1,0 +1,2 @@
+scoreboard players set @s aj.haruclaire.rig_loaded 1
+execute unless score @s aj.haruclaire.export_version = aj.haruclaire.export_version aj.i at @s run function animated_java:haruclaire/zzzzzzzz/mark_outdated_rig

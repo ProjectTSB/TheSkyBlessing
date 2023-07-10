@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/02_01_rod_attack_move/tick_animation

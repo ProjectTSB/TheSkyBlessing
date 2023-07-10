@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.04_02_rod_laser_shot

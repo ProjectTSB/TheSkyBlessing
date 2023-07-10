@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.01_02_rod_idle_rare

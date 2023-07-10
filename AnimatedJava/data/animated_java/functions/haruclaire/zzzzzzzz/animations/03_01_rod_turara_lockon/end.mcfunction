@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.03_01_rod_turara_lockon.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/03_01_rod_turara_lockon/end_loop
+execute if score @s aj.haruclaire.animation.03_01_rod_turara_lockon.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/03_01_rod_turara_lockon/stop
+execute if score @s aj.haruclaire.animation.03_01_rod_turara_lockon.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/03_01_rod_turara_lockon/pause

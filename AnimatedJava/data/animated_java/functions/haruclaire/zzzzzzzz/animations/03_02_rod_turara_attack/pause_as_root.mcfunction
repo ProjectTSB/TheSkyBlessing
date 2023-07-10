@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.03_02_rod_turara_attack
