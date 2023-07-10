@@ -6,6 +6,7 @@
 
 #> 定義類はここに
 # @within function asset:mob/0317.haruclaire/**
-    # 行動回数
+    # 処理用タイマー
     scoreboard objectives add 8T.AnimationTimer dummy
+    # 行動回数
     scoreboard objectives add 8T.ActionCount dummy
