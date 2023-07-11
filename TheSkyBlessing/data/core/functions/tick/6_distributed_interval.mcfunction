@@ -9,5 +9,5 @@
 
 
 # 次のtickのグループを決める
-    scoreboard players add $DistributeGroup Temporary 1
-    scoreboard players operation $DistributeGroup Temporary %= $6 Const
+    scoreboard players add $DistributeGroup Global 1
+    scoreboard players operation $DistributeGroup Global %= $6 Const
