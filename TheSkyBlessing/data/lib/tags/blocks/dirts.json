@@ -1,12 +1,12 @@
 {
     "values": [
-        "dirt",
         "coarse_dirt",
-        "podzol",
-        "mycelium",
-        "warped_nylium",
         "crimson_nylium",
+        "dirt",
+        "mycelium",
+        "podzol",
+        "rooted_dirt",
         "soul_soil",
-        "rooted_dirt"
+        "warped_nylium"
     ]
 }
