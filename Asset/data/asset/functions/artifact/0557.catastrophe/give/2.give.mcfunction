@@ -46,11 +46,14 @@
     # data modify storage asset:artifact LocalCooldown set value
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:artifact SpecialCooldown set value
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value ["Flora", "Urban", "Wi-ki"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
     data modify storage asset:artifact CustomNBT set value {Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:5,Operation:0,UUID:[I;1,1,557,3],Slot:"feet"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2.5,Operation:0,UUID:[I;1,1,557,3],Slot:"feet"}]}
-
 
 # 神器の入手用function
     function asset:artifact/common/give

@@ -18,7 +18,7 @@
     data modify storage asset:context id set from storage asset:mob DeathLog.TSB.ID
     function asset_manager:mob/triggers/death/resolve_uuid/
 # トリガーの呼び出し
-    function #asset:mob/death
+    function asset_manager:mob/triggers/death/call
 # リセット
     data remove storage asset:context id
     data remove storage asset:context uuid
