@@ -11,10 +11,12 @@
     tag @s remove 6L.Water
     tag @s remove 6L.Thunder
     tag @s remove 6L.Magic
+    tag @s remove 6L.Magic2
     tag @s remove 6L.Fire2
     tag @s remove 6L.ElementalConfine
     tag @s remove 6L.LeftRotation
     tag @s remove 6L.SkillSecond
+
 
 # ポーズもリセット
     item replace entity @s armor.head with stick{CustomModelData:20198}

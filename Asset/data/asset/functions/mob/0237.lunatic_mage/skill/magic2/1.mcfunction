@@ -14,9 +14,9 @@
 
 # 6tick間隔で魔法のProjectileを召喚する
     scoreboard players operation $Interval Temporary = @s 6L.Tick
-    execute if entity @s[scores={6L.Tick=20..}] run scoreboard players operation $Interval Temporary %= $6 Const
-    execute if score $Interval Temporary matches 0 at @a[gamemode=!creative,distance=..50,limit=3] run function asset:mob/0237.lunatic_mage/skill/magic2/2.spread
-    execute if score $Interval Temporary matches 0 if predicate lib:random_pass_per/40 at @a[gamemode=!creative,distance=..50,limit=2] run function asset:mob/0237.lunatic_mage/skill/magic2/2.spread
+    scoreboard players operation $Interval Temporary %= $6 Const
+    execute if entity @s[scores={6L.Tick=20..}] if score $Interval Temporary matches 0 at @e[type=marker,tag=6L.SpawnPoint,distance=..100,limit=1] run function asset:mob/0237.lunatic_mage/skill/magic2/2.spread
+    execute if entity @s[scores={6L.Tick=20..}] if score $Interval Temporary matches 0 if predicate lib:random_pass_per/70 at @a[gamemode=!creative,distance=..50,limit=3] run function asset:mob/0237.lunatic_mage/skill/magic2/2.spread
 
 # リセット
     execute if entity @s[scores={6L.Tick=60..}] run function asset:mob/0237.lunatic_mage/tick/5.reset
