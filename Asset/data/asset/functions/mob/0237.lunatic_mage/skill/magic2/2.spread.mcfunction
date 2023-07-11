@@ -10,7 +10,7 @@
 
 # マーカーを召喚して拡散する
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Bounds set value [[10d,10d],[0d,0d],[10d,10d]]
+    data modify storage lib: Argument.Bounds set value [[12d,12d],[0d,0d],[12d,12d]]
     execute as @e[type=marker,tag=SpreadMarker,distance=..60,limit=1] run function lib:spread_entity/
 
 # 拡散したマーカーの位置で召喚する

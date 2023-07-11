@@ -14,4 +14,4 @@
     execute if entity @s[scores={6O.Tick=60}] run function asset:mob/0240.lunatic_laser/tick/3.shoot
 
 # 消滅
-    execute if entity @s[scores={6O.Tick=80..}] run kill @s
+    execute if entity @s[scores={6O.Tick=100..}] run kill @s
