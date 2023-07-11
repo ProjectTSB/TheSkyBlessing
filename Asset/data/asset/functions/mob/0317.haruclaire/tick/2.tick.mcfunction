@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/0317.haruclaire/tick/1.trigger
 
+# animated javaモデルを自分の位置に移動
+    execute at @s rotated ~ 0 run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~ ~ ~ ~
+
 # タイマー増加
     scoreboard players add @s 8T.AnimationTimer 1
 
