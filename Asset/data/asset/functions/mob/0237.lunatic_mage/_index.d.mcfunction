@@ -41,10 +41,6 @@
 #   asset:mob/0237.lunatic_mage/tick/5.reset
     #declare tag 6L.SkillSecond
 
-#> メイジ召喚位置用Tag
-# @within function asset:mob/0237.lunatic_mage/skill/summon/*
-    #declare tag 6L.SummonPoint
-
 #> Markerを確実に削除する用Tag
 # @within function
 #   asset:mob/0237.lunatic_mage/death/2.death
