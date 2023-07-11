@@ -22,8 +22,8 @@
 # 1回目のみ最も最寄りのプレイヤーをターゲットとして予告線を出す
     execute if entity @s[scores={6L.Tick=20..45}] positioned ~ ~1.21 ~ positioned ^-0.5 ^ ^1.3 facing entity @p[gamemode=!spectator,distance=..50] eyes run function asset:mob/0237.lunatic_mage/skill/magic/2.warning_line
 
-# ハードの場合、確率で1発目を即座に発射するように
-    execute if predicate api:global_vars/difficulty/min/hard if entity @s[scores={6L.Tick=25..40}] if predicate lib:random_pass_per/8 run scoreboard players set @s 6L.Tick 45
+# ハード以上の場合、確率で1発目を即座に発射するように
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[scores={6L.Tick=25}] if predicate lib:random_pass_per/40 run scoreboard players set @s 6L.Tick 45
 
 # ターゲットとなったプレイヤーの方向を保存するためにAECを召喚して、せめてxのrotationだけでも対象の方向を見る
     execute if entity @s[scores={6L.Tick=45}] run item replace entity @s armor.head with stick{CustomModelData:20200}
