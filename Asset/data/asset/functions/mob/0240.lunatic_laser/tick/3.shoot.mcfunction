@@ -9,7 +9,7 @@
     execute positioned ~ ~1.75 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/circle
     execute positioned ~ ~3.5 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/circle
     execute positioned ~ ~5.25 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/circle
-    execute positioned ~ ~7 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/circle
+    execute positioned ~ ~7 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/magic_circle
 
     playsound item.trident.return hostile @a ~ ~ ~ 0.6 0.8
     playsound item.trident.return hostile @a ~ ~ ~ 0.6 2

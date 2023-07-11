@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0240.lunatic_laser/tick/2.tick
+# @within function
+#   asset:mob/0240.lunatic_laser/tick/2.tick
+#   asset:mob/0240.lunatic_laser/tick/3.shoot
 
 # 音
     playsound minecraft:entity.zombie_villager.converted hostile @a ~ ~ ~ 0.7 2
