@@ -134,6 +134,11 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"mangrove_propagule",Count:1b}
 
+# 取引 オークの苗木を桜の苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"cherry_sapling",Count:1b}
+
 # 取引 オークの苗木を深紅のキノコに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
@@ -172,6 +177,11 @@
 # 取引 マングローブの芽をオークの苗木に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"mangrove_propagule",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
+
+# 取引 桜の苗木をオークの苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"cherry_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
 # 取引 深紅のキノコをオークの苗木に
