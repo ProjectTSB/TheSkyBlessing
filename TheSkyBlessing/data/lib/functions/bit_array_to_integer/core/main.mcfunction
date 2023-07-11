@@ -15,3 +15,4 @@
     function lib:bit_array_to_integer/core/recursive
 # リセット
     function lib:array/session/close
+    scoreboard players reset $bit Temporary

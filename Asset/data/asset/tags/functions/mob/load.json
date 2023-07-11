@@ -1,5 +1,7 @@
 {
     "values": [
+        "asset:mob/0176.killer_bee/0.load",
+        "asset:mob/0186.ferocious_bee/0.load",
         "asset:mob/0266.small_dark_ball/0.load",
         "asset:mob/0265.dark_familiar/0.load",
         "asset:mob/0264.dark_summoner/0.load",

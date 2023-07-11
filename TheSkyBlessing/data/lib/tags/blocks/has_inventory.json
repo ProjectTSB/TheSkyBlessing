@@ -1,14 +1,14 @@
 {
     "values": [
-        "#lib:containers",
-        "#lib:command_blocks",
         "#anvil",
-        "enchanting_table",
-        "loom",
-        "stonecutter",
-        "crafting_table",
+        "#lib:command_blocks",
+        "#lib:containers",
         "beacon",
         "cartography_table",
-        "smithing_table"
+        "crafting_table",
+        "enchanting_table",
+        "loom",
+        "smithing_table",
+        "stonecutter"
     ]
 }
