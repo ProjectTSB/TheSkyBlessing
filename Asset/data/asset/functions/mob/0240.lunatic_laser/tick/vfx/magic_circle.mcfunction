@@ -1,4 +1,4 @@
-#> asset:mob/0240.lunatic_laser/tick/vfx/first
+#> asset:mob/0240.lunatic_laser/tick/vfx/magic_circle
 #
 #
 #

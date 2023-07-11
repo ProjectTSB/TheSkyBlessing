@@ -8,7 +8,7 @@
     scoreboard players add @s 6O.Tick 1
 
 # 最初のvfx
-    execute if entity @s[scores={6O.Tick=1}] positioned ~ ~7 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/first
+    execute if entity @s[scores={6O.Tick=1}] positioned ~ ~7 ~ run function asset:mob/0240.lunatic_laser/tick/vfx/magic_circle
 
 # 発射
     execute if entity @s[scores={6O.Tick=60}] run function asset:mob/0240.lunatic_laser/tick/3.shoot
