@@ -5,7 +5,7 @@
 # @within function asset:artifact/0369.fire_magic/trigger/3.1.tick
 
 # 着弾検知
-    execute if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..2] run tag @s add A9.Landing
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,dx=0] run tag @s add A9.Landing
     execute unless block ^ ^ ^0.5 #lib:no_collision run tag @s add A9.Landing
 
 # 着弾処理
