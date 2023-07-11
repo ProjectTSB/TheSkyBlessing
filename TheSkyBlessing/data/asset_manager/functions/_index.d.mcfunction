@@ -5,5 +5,7 @@
 # @within function
 #   asset_manager:**
 #   asset:*/*/**
+#   asset:*/extends
+#   asset:*/super.*
 #   api:**
     #declare storage asset:context
