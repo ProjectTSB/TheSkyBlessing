@@ -13,6 +13,7 @@
     #declare tag 8T.Temp.GeneralTarget 汎用処理に使う一時的なタグ，対象に付与
     #declare tag 8T.Temp.TargetModel  animated_javaモデルにつける対応付け用の一時的なタグ
     #declare tag 8T.Temp.PlayRareAnimation レアアニメーション再生用の一時的なタグ
+    #declare tag 8T.Temp.AttackTarget 攻撃対象の決定に使う一時的なタグ
 
     ## スキル処理用
     #declare tag 8T.SkillSp.Rod.IcePillar.AttackPos つらら攻撃位置

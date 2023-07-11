@@ -14,6 +14,9 @@
 ## 待機
     execute if entity @s[tag=8T.Skill.Rod.Idle] run function asset:mob/0317.haruclaire/tick/app.skill_events/01_rod_idle/1.main
 
+## 杖殴り
+    execute if entity @s[tag=8T.Skill.Rod.Attack] run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/1.main
+
 ## つらら
     execute if entity @s[tag=8T.Skill.Rod.IcePillar] run function asset:mob/0317.haruclaire/tick/app.skill_events/03_rod_icepillar/1.main
 

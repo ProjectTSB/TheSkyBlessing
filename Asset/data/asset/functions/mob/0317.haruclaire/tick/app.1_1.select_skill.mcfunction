@@ -5,7 +5,10 @@
 # @within function asset:mob/0317.haruclaire/tick/2.tick
 
 # デバッグ用強制再生
-    tag @s add 8T.Skill.Rod.IcePillar
+    tag @s add 8T.Skill.Rod.Attack
+
+# デバッグ用初期位置移動
+    tp @s -190 104.5 116
 
 # TODO：
     # 杖モード：アニメーションを確率で再生する

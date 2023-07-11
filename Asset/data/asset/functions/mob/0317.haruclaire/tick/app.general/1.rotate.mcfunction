@@ -2,7 +2,7 @@
 #
 # 汎用処理 なめらかに対象の方を向く
 #
-# @within function asset:mob/0317.haruclaire/tick/**
+# @within asset:mob/0317.haruclaire/tick/**
 
 # タグ付与
     tag @s add 8T.Temp.GeneralTarget
