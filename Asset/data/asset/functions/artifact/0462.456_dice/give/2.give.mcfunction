@@ -16,10 +16,16 @@
     data modify storage asset:artifact Name set value '{"text":"4・5・6ダイス","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:artifact Lore set value ['{"text":"4・5・6しか出ない変なサイコロ。"}','[{"text":"サイコロは近くの敵1体に"},{"text":"火 ","color":"red"},{"text":"水 ","color":"aqua"},{"text":"雷","color":"yellow"},{"text":"属性の攻撃を行う。","color":"white"}]','{"text":"攻撃回数は出目によって変わる。"}','{"text":"\\"バレバレのイカサマ\\"","color":"gray"}']
+# MP以外の消費物 (TextComponentString) (オプション)
+    # data modify storage asset:artifact CostText set value
+# 使用回数 (int) (オプション)
+    # data modify storage asset:artifact RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:artifact Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:artifact Trigger set value "onClick"
+# 神器の発動条件 (TextComponentString) (オプション)
+    # data modify storage asset:artifact Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
     data modify storage asset:artifact AttackInfo.Damage set value ["50×4~6"]
 # 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)
@@ -34,13 +40,20 @@
     data modify storage asset:artifact AttackInfo.AttackRange set value 20
 # MP消費量 (int)
     data modify storage asset:artifact MPCost set value 12
+# MP必要量 (int) (オプション)
+    # data modify storage asset:artifact MPRequire set value
 # 神器のクールダウン (int) (オプション)
     data modify storage asset:artifact LocalCooldown set value 14
+# グローバルクールダウン (int) (オプション)
+    # data modify storage asset:artifact SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     data modify storage asset:artifact DisableCooldownMessage set value false
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value ["Flora", "Wi-ki", "Rumor"]
-
+# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
+    # data modify storage asset:artifact CustomNBT set value {}
 
 # 神器の入手用function
     function asset:artifact/common/give

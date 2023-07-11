@@ -15,7 +15,7 @@
     # 魔法属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 属性
-        data modify storage lib: Argument.ElementType set value "Water"
+        data modify storage lib: Argument.ElementType set value "Fire"
     # ダメージ
         function lib:damage/modifier
         execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/

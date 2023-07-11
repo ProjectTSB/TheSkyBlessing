@@ -13,3 +13,6 @@
         scoreboard players add @s Temporary 4
     # 保持
         scoreboard players operation @s CU.RandomCount = @s Temporary
+
+# リセット
+    scoreboard players reset @s Temporary

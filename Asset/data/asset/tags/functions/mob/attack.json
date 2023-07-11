@@ -46,7 +46,6 @@
         "asset:mob/0065.night_shadow/attack/1.trigger",
         "asset:mob/0089.decapitation/attack/1.trigger",
         "asset:mob/0107.dark_ender/attack/1.trigger",
-        "asset:mob/0176.killer_bee/attack/1.trigger",
         "asset:mob/0124.skull_harpy/attack/1.trigger",
         "asset:mob/0053.executioners/attack/1.trigger",
         "asset:mob/0092.red_rose/attack/1.trigger",
@@ -76,7 +75,6 @@
         "asset:mob/0156.infringement/attack/1.trigger",
         "asset:mob/0154.ruin/attack/1.trigger",
         "asset:mob/0080.fukotsu/attack/1.trigger",
-        "asset:mob/0186.ferocious_bee/attack/1.trigger",
         "asset:mob/0150.contamination/attack/1.trigger"
     ]
 }

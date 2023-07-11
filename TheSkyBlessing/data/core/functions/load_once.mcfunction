@@ -82,8 +82,10 @@ kill 0-0-0-0-0
 #   lib:**
 #   mob_manager:**
 #   player_manager:**
-    #alias entity commonEntity 0-0-0-0-0
+    #alias entity commonMarker 0-0-0-0-0
+    #alias entity commonArmorStand 0-0-0-0-1
 summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
+summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
 
 #> 当たり判定を消す汎用Teamの作成

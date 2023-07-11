@@ -14,7 +14,7 @@
     data modify storage asset:artifact Item set value "minecraft:shield"
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"エンハンスド・プロテクション","color":"blue"}'
-# 神器の説明文 (TextComponentString[]){
+# 神器の説明文 (TextComponentString[])
     data modify storage asset:artifact Lore set value ['{"text":"未知の金属が使用された盾"}','{"text":"...を更に強化したものと思われる"}','{"text":"構えている間攻撃を55%軽減するが"}','{"text":"攻撃力及び移動速度が低下する"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
@@ -48,6 +48,8 @@
     # data modify storage asset:artifact SpecialCooldown set value
 # クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
     # data modify storage asset:artifact DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value "ALL"
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)

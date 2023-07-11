@@ -21,5 +21,5 @@
 # 移動速度上昇を付与
     effect give @e[type=#lib:living,tag=Enemy,tag=!this,tag=!Uninterferable,distance=..5] speed 3 2 true
 
-# 死ぬ
-    kill @s
+# 奈落行き
+    tp @s ~ -999 ~
