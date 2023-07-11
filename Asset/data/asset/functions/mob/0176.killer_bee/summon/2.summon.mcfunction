@@ -5,7 +5,7 @@
 # @within function asset:mob/0176.killer_bee/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon vex ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],Silent:1b,LifeTicks:1,DeathLootTable:"asset:mob/death/0176.killer_bee"}
+    summon zombie ~ ~ ~ {Tags:["MobInit","AlwaysInvisible"],NoGravity:1b,NoAI:1b,Silent:1b,IsBaby:1b,DeathLootTable:"asset:mob/death/0176.killer_bee"}
 # ID (int)
     data modify storage asset:mob ID set value 176
 # Type (string) Wikiを参照
@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 12
+    data modify storage asset:mob Health set value 200
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 1
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -59,4 +59,4 @@
         data modify storage asset:mob Resist.Thunder set value 1
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
-    execute as @e[type=vex,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
+    execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
