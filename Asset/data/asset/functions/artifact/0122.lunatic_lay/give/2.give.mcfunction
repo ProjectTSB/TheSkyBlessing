@@ -40,10 +40,16 @@
     data modify storage asset:artifact AttackInfo.AttackRange set value 5
 # MP消費量 (int)
     data modify storage asset:artifact MPCost set value 20
+# MP必要量 (int) (オプション)
+    # data modify storage asset:artifact MPRequire set value
 # 神器のクールダウン (int) (オプション)
     data modify storage asset:artifact LocalCooldown set value 50
 # グローバルクールダウン (int) (オプション)
     # data modify storage asset:artifact SpecialCooldown set value
+# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableCooldownMessage set value
+# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)
+    # data modify storage asset:artifact DisableMPMessage set value
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value ["Flora", "Nyaptov", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
