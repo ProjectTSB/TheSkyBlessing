@@ -14,6 +14,7 @@
     execute if score @s 8T.AnimationTimer matches 1..9 as @p run function asset:mob/0317.haruclaire/tick/app.general/1.rotate
     execute if score @s 8T.AnimationTimer matches 10..51 facing entity @p feet run tp @s ~ ~ ~ ~ ~
 # 移動
+    execute if score @s 8T.AnimationTimer matches 8 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
     execute if score @s 8T.AnimationTimer matches 10..51 at @s run tp @s ^ ^ ^0.6
 # ある程度プレイヤーに近づいた場合，殴りモーションに移行
     execute if score @s 8T.AnimationTimer matches 10..51 positioned ^ ^ ^1 if entity @a[distance=..2] run scoreboard players set @s 8T.AnimationTimer 52
@@ -45,6 +46,7 @@
     # プレイヤーの方を向く
         execute if score @s 8T.AnimationTimer matches 102 facing entity @p feet run tp @s ~ ~ ~ ~ ~
     # 宙返り移動
+        execute if score @s 8T.AnimationTimer matches 105 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
         execute if score @s 8T.AnimationTimer matches 105..108 at @s rotated ~ 0 run tp @s ^ ^0.3 ^-0.4
         execute if score @s 8T.AnimationTimer matches 109..114 at @s rotated ~ 0 run tp @s ^ ^-0.1 ^-0.3
         execute if score @s 8T.AnimationTimer matches 115..117 at @s rotated ~ 0 run tp @s ^ ^-0.2 ^0.5
@@ -53,6 +55,8 @@
     # 攻撃
         execute if score @s 8T.AnimationTimer matches 122 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/4.3.attack_throw
         execute if score @s 8T.AnimationTimer matches 126 run playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.2
-    
+    # 帽子キャッチ
+        execute if score @s 8T.AnimationTimer matches 139 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 1.2
+        execute if score @s 8T.AnimationTimer matches 184 run playsound block.grass.step hostile @a ~ ~ ~ 1 1.2
 # 終了
     execute if score @s 8T.AnimationTimer matches 203.. run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/2.end

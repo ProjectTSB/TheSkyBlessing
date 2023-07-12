@@ -20,8 +20,8 @@
 ## つらら
     execute if entity @s[tag=8T.Skill.Rod.IcePillar] run function asset:mob/0317.haruclaire/tick/app.skill_events/03_rod_icepillar/1.main
 
-## ほげ
-
+## レーザー
+    execute if entity @s[tag=8T.Skill.Rod.Laser] run function asset:mob/0317.haruclaire/tick/app.skill_events/04_rod_laser/1.main
 
 ###########################################################################
 ## 剣モード

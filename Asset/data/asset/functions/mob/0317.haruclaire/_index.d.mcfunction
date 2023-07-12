@@ -22,4 +22,5 @@
     #declare tag 8T.Skill.Rod.Idle 待機
     #declare tag 8T.Skill.Rod.Attack 杖殴り
     #declare tag 8T.Skill.Rod.IcePillar つらら
+    #declare tag 8T.Skill.Rod.Laser レーザー
     ## スキル：剣モード
