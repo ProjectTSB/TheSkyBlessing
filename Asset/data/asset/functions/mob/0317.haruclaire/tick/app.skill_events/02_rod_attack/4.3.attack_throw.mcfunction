@@ -9,4 +9,7 @@
     playsound minecraft:entity.player.attack.sweep hostile @a ~ ~ ~ 1 1.2
     playsound minecraft:entity.player.attack.sweep hostile @a ~ ~ ~ 1 1
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1
-    
+
+# 杖召喚
+    data modify storage api: Argument.ID set value 318
+    execute positioned ~ ~1 ~ positioned ^ ^ ^1.5 run function api:mob/summon
