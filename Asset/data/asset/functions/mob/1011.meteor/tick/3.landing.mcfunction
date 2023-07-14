@@ -28,7 +28,5 @@
 # リセット
     function lib:damage/reset
 
-say yo
-
 # 終了
     kill @s

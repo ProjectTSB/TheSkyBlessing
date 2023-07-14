@@ -41,8 +41,8 @@
 # チャージ
     execute if score @s RW.Tick matches 60 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge
 
-# こっそり後ろに下がっておく
-    execute if score @s RW.Tick matches 80..100 positioned ^ ^ ^-0.1 run function asset:mob/1004.tultaria/tick/move/tereport
+# 自身のモデルにモーションを再生させる
+    execute if score @s RW.Tick matches 100 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_windup/play
 
 # 発動開始
     execute if score @s RW.Tick matches 120 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/4.start_attack
@@ -56,9 +56,9 @@
 # 画面白くする
     execute if score @s RW.Tick matches 320 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.quote
     # その裏でこっそり壁を破壊。一度に壊すには多すぎるので分ける
-        execute if score @s RW.Tick matches 325 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~ ~23 ~-23 ~10 ~-23 air
-        execute if score @s RW.Tick matches 326 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~10 ~23 ~-23 ~20 ~-23 air
-        execute if score @s RW.Tick matches 327 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~20 ~23 ~-23 ~31 ~-23 air
+        #execute if score @s RW.Tick matches 325 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~ ~23 ~-23 ~10 ~-23 air
+        #execute if score @s RW.Tick matches 326 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~10 ~23 ~-23 ~20 ~-23 air
+        #execute if score @s RW.Tick matches 327 at @e[type=marker,tag=RW.Marker.SpawnPoint,distance=..100,sort=nearest,limit=1] run fill ~23 ~20 ~23 ~-23 ~31 ~-23 air
 
 # 終了時動作
     execute if score @s RW.Tick matches 380 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/9.end
