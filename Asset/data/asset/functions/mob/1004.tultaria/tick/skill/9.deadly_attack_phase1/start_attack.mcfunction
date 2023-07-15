@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/4.start_attack
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/start_attack
 #
 # 攻撃開始
 #
@@ -15,10 +15,5 @@
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 3 0.7
     execute at @e[type=marker,tag=RW.BodyMarker,distance=..5,sort=nearest,limit=1] run particle minecraft:reverse_portal ~ ~1.3 ~ 0 0 0 1 200
 
-# モーションを停止
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/stop
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_windup/stop
-
-# 必殺技のループモーションを再生
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_loop/play
+# 杖回転モーション再生
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_rod_spin/play

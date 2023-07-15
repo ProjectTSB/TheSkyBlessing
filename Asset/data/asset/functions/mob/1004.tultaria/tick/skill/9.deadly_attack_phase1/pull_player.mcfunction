@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/pull_player
 #
 #
 #
@@ -11,7 +11,7 @@
     execute at @s rotated ~ 0 positioned ^ ^1 ^3 as @a[distance=..30,sort=random,limit=3] run function asset:mob/1004.tultaria/tick/skill/sword_wall/player_pull
 
 # 胴体はこの辺
-    summon marker ~ ~1 ~ {Tags:["RW.BodyMarker"]}
+    summon marker ~ ~0.5 ~ {Tags:["RW.BodyMarker"]}
 
 # 演出
     playsound ogg:block.respawn_anchor.charge3 hostile @a ~ ~ ~ 2 0.8

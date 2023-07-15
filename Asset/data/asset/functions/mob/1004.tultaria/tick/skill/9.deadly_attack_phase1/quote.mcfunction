@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/8.quote
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/quote
 #
 # もう一度構えつつ画面を白くする
 #

@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/7.quote
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/end_attack
 #
 # なんか喋りつつ構えを戻す
 #
@@ -34,9 +34,12 @@
 # テスト用メッセージ
     tellraw @a[distance=..50] [{"text":"<","color":"white"},{"text":"Tultaria","color":"#a33033"},{"text":"> 諦めが悪いようね。","color":"white"}]
 
-# 待機モーションを再生
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
-
 # 必殺技のループモーションを停止
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_loop/stop
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_rod_spin/stop
+
+# 待機モーションを再生
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
+
+# 必殺技終了モーション再生
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/deadly_end/play

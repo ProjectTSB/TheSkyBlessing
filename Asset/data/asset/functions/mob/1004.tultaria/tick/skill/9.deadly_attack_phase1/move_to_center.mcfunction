@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/2.windup
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/move_to_center
 #
 #
 #

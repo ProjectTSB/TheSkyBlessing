@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/5.shoot_tick
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/shoot_tick
 #
 #
 #
@@ -11,5 +11,5 @@
     particle dust 0.816 0 1 1 ~ ~ ~ 0.3 0.3 0.3 0 10
 
 # 3tickごとに放つ
-    scoreboard players operation $ShotInterval Temporary %= $3 Const
-    execute if score $ShotInterval Temporary matches 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/6.summon_shot
+    #scoreboard players operation $ShotInterval Temporary %= $3 Const
+    #execute if score $ShotInterval Temporary matches 0 run function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/6.summon_shot

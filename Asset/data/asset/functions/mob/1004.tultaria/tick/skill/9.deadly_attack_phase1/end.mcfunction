@@ -1,4 +1,4 @@
-#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/9.end
+#> asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/end
 #
 # 終了時に実行
 #
