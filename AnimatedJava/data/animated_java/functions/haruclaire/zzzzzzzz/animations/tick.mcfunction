@@ -12,4 +12,3 @@ execute if entity @s[tag=aj.haruclaire.animation.07_01_rod_shot_move_right] run 
 execute if entity @s[tag=aj.haruclaire.animation.07_02_rod_shot_move_left] run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tick
 execute if entity @s[tag=aj.haruclaire.animation.10_01_sword_idle] run function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle/tick
 execute if entity @s[tag=aj.haruclaire.animation.10_01_sword_idle_bak] run function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle_bak/tick
-execute if entity @s[tag=aj.haruclaire.animation.11_01_sword_shot_move_right] run function animated_java:haruclaire/zzzzzzzz/animations/11_01_sword_shot_move_right/tick

@@ -12,4 +12,3 @@ function animated_java:haruclaire/zzzzzzzz/animations/07_01_rod_shot_move_right/
 function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle_bak/pause_as_root
-function animated_java:haruclaire/zzzzzzzz/animations/11_01_sword_shot_move_right/pause_as_root

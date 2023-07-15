@@ -1,1 +1,0 @@
-function animated_java:haruclaire/zzzzzzzz/animations/11_01_sword_shot_move_right/tick_animation

@@ -5,3 +5,4 @@ execute if score @s aj.anim_time matches 24..31 run function animated_java:haruc
 execute if score @s aj.anim_time matches 32..39 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/branch_32_39
 execute if score @s aj.anim_time matches 40..47 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/branch_40_47
 execute if score @s aj.anim_time matches 48..55 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/branch_48_55
+execute if score @s aj.anim_time matches 56..63 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/branch_56_63

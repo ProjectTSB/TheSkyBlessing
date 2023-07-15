@@ -4,3 +4,5 @@ execute if score @s aj.anim_time matches 50 run function animated_java:haruclair
 execute if score @s aj.anim_time matches 51 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/leaf_51
 execute if score @s aj.anim_time matches 52 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/leaf_52
 execute if score @s aj.anim_time matches 53 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/leaf_53
+execute if score @s aj.anim_time matches 54 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/leaf_54
+execute if score @s aj.anim_time matches 55 run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/tree/leaf_55

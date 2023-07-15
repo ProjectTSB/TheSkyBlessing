@@ -1,1 +1,0 @@
-tag @s remove aj.haruclaire.animation.11_01_sword_shot_move_right
