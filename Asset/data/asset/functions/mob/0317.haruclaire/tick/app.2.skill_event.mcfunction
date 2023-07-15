@@ -26,6 +26,8 @@
 ## 氷弾
     execute if entity @s[tag=8T.Skill.Rod.IceBullet] run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/1.main
 
+## 射撃
+
 ###########################################################################
 ## 剣モード
 
