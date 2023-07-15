@@ -27,6 +27,7 @@
     execute if entity @s[tag=8T.Skill.Rod.IceBullet] run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/1.main
 
 ## 射撃
+    execute if entity @s[tag=8T.Skill.Rod.Shot] run function asset:mob/0317.haruclaire/tick/app.skill_events/06_rod_shot/1.main
 
 ###########################################################################
 ## 剣モード

@@ -7,7 +7,7 @@
 # @within function asset:mob/0317.haruclaire/tick/app.2.skill_event
 
 ## ロックオン
-# animated javaアニメーション再生 (ロックオン 長さ：36tick)
+# animated javaアニメーション再生 (長さ：106tick)
     execute if score @s 8T.AnimationTimer matches 1 run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/3.play_animation
 # プレイヤーの方を向く
     execute if score @s 8T.AnimationTimer matches 1..4 at @s positioned ^ ^ ^-0.1 facing entity @p feet run tp @s ~ ~0.3 ~ ~ ~
@@ -27,4 +27,4 @@
     execute if score @s 8T.AnimationTimer matches 35 positioned ^2 ^4 ^-4 run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/4.attack
     execute if score @s 8T.AnimationTimer matches 40 positioned ^4 ^1 ^-1 run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/4.attack
 # 終了
-    execute if score @s 8T.AnimationTimer matches 128.. run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/2.end
+    execute if score @s 8T.AnimationTimer matches 106.. run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/2.end

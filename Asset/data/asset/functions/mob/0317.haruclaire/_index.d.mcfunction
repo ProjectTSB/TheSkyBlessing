@@ -24,4 +24,6 @@
     #declare tag 8T.Skill.Rod.IcePillar つらら
     #declare tag 8T.Skill.Rod.Laser レーザー
     #declare tag 8T.Skill.Rod.IceBullet 氷弾
+    #declare tag 8T.Skill.Rod.Shot 射撃
+
     ## スキル：剣モード
