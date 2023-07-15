@@ -1,0 +1,3 @@
+execute if score @s aj.tultaria.animation.deadly_end.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:tultaria/zzzzzzzz/animations/deadly_end/end_loop
+execute if score @s aj.tultaria.animation.deadly_end.loop_mode = $aj.loop_mode.once aj.i run function animated_java:tultaria/animations/deadly_end/stop
+execute if score @s aj.tultaria.animation.deadly_end.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:tultaria/animations/deadly_end/pause

@@ -17,6 +17,7 @@ scoreboard objectives add aj.tultaria.animation.dash_stab_end.local_anim_time du
 scoreboard objectives add aj.tultaria.animation.return_to_neutral.local_anim_time dummy
 scoreboard objectives add aj.tultaria.animation.deadly_windup.local_anim_time dummy
 scoreboard objectives add aj.tultaria.animation.deadly_loop.local_anim_time dummy
+scoreboard objectives add aj.tultaria.animation.deadly_end.local_anim_time dummy
 scoreboard objectives add aj.tultaria.animation.deadly_rod_spin.local_anim_time dummy
 scoreboard objectives add aj.tultaria.animation.neutral.loop_mode dummy
 scoreboard objectives add aj.tultaria.animation.staff_swing_1.loop_mode dummy
@@ -30,6 +31,7 @@ scoreboard objectives add aj.tultaria.animation.dash_stab_end.loop_mode dummy
 scoreboard objectives add aj.tultaria.animation.return_to_neutral.loop_mode dummy
 scoreboard objectives add aj.tultaria.animation.deadly_windup.loop_mode dummy
 scoreboard objectives add aj.tultaria.animation.deadly_loop.loop_mode dummy
+scoreboard objectives add aj.tultaria.animation.deadly_end.loop_mode dummy
 scoreboard objectives add aj.tultaria.animation.deadly_rod_spin.loop_mode dummy
 scoreboard players set $aj.tultaria.animation.neutral aj.id 0
 scoreboard players set $aj.tultaria.animation.staff_swing_1 aj.id 1
@@ -43,13 +45,14 @@ scoreboard players set $aj.tultaria.animation.dash_stab_end aj.id 8
 scoreboard players set $aj.tultaria.animation.return_to_neutral aj.id 9
 scoreboard players set $aj.tultaria.animation.deadly_windup aj.id 10
 scoreboard players set $aj.tultaria.animation.deadly_loop aj.id 11
-scoreboard players set $aj.tultaria.animation.deadly_rod_spin aj.id 12
+scoreboard players set $aj.tultaria.animation.deadly_end aj.id 12
+scoreboard players set $aj.tultaria.animation.deadly_rod_spin aj.id 13
 scoreboard players set $aj.tultaria.variant.normal aj.id 0
 scoreboard players set $aj.tultaria.variant.no_wing aj.id 1
 scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.tultaria.export_version aj.i 1042052783
+scoreboard players set aj.tultaria.export_version aj.i 749548435
 scoreboard players reset * aj.tultaria.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.tultaria.root] run function animated_java:tultaria/zzzzzzzz/on_load

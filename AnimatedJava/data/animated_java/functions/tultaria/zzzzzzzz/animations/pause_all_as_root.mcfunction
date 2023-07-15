@@ -10,4 +10,5 @@ function animated_java:tultaria/zzzzzzzz/animations/dash_stab_end/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/return_to_neutral/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/deadly_windup/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/deadly_loop/pause_as_root
+function animated_java:tultaria/zzzzzzzz/animations/deadly_end/pause_as_root
 function animated_java:tultaria/zzzzzzzz/animations/deadly_rod_spin/pause_as_root

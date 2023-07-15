@@ -34,6 +34,8 @@ execute if score #animation aj.i = $aj.tultaria.animation.deadly_windup aj.id ru
 execute if score #animation aj.i = $aj.tultaria.animation.deadly_windup aj.id run scoreboard players operation @s aj.tultaria.animation.deadly_windup.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.deadly_loop aj.id run function animated_java:tultaria/zzzzzzzz/animations/deadly_loop/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.deadly_loop aj.id run scoreboard players operation @s aj.tultaria.animation.deadly_loop.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.tultaria.animation.deadly_end aj.id run function animated_java:tultaria/zzzzzzzz/animations/deadly_end/apply_frame_as_root
+execute if score #animation aj.i = $aj.tultaria.animation.deadly_end aj.id run scoreboard players operation @s aj.tultaria.animation.deadly_end.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.tultaria.animation.deadly_rod_spin aj.id run function animated_java:tultaria/zzzzzzzz/animations/deadly_rod_spin/apply_frame_as_root
 execute if score #animation aj.i = $aj.tultaria.animation.deadly_rod_spin aj.id run scoreboard players operation @s aj.tultaria.animation.deadly_rod_spin.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:tultaria/on_summon/as_root
