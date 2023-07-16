@@ -30,9 +30,9 @@
     execute if score @s 8T.AnimationTimer matches 89 run playsound item.armor.equip_iron hostile @a ~ ~ ~ 1 2
 
 # 攻撃
-    execute if score @s 8T.AnimationTimer matches 17 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/4.1.attack
-    execute if score @s 8T.AnimationTimer matches 20 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/4.1.attack
-    execute if score @s 8T.AnimationTimer matches 23 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/4.1.attack
+    execute if score @s 8T.AnimationTimer matches 17 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
+    execute if score @s 8T.AnimationTimer matches 20 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
+    execute if score @s 8T.AnimationTimer matches 23 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
     execute if score @s 8T.AnimationTimer matches 41 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
     execute if score @s 8T.AnimationTimer matches 44 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
     execute if score @s 8T.AnimationTimer matches 47 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/4.1.attack
