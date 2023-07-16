@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.08_01_rod_teleport.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/08_01_rod_teleport/end_loop
+execute if score @s aj.haruclaire.animation.08_01_rod_teleport.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/08_01_rod_teleport/stop
+execute if score @s aj.haruclaire.animation.08_01_rod_teleport.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/08_01_rod_teleport/pause

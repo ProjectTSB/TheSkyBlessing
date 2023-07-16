@@ -29,6 +29,9 @@
     execute if entity @s[tag=8T.Skill.Rod.MoveShot.Right] run function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/1.main
     execute if entity @s[tag=8T.Skill.Rod.MoveShot.Left] run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/1.main
 
+## テレポート
+    execute if entity @s[tag=8T.Skill.Rod.Teleport] run function asset:mob/0317.haruclaire/tick/app.skill_events/08_rod_teleport/1.main
+
 ###########################################################################
 ## 剣モード
 

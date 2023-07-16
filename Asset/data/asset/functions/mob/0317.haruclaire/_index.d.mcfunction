@@ -27,5 +27,6 @@
     #declare tag 8T.Skill.Rod.Shot 射撃
     #declare tag 8T.Skill.Rod.MoveShot.Right 移動射撃
     #declare tag 8T.Skill.Rod.MoveShot.Left 移動射撃
+    #declare tag 8T.Skill.Rod.Teleport テレポート
 
     ## スキル：剣モード

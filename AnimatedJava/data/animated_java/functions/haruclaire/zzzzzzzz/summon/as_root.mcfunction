@@ -35,6 +35,8 @@ execute if score #animation aj.i = $aj.haruclaire.animation.07_01_rod_shot_move_
 execute if score #animation aj.i = $aj.haruclaire.animation.07_01_rod_shot_move_right aj.id run scoreboard players operation @s aj.haruclaire.animation.07_01_rod_shot_move_right.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.07_02_rod_shot_move_left aj.id run function animated_java:haruclaire/zzzzzzzz/animations/07_02_rod_shot_move_left/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.07_02_rod_shot_move_left aj.id run scoreboard players operation @s aj.haruclaire.animation.07_02_rod_shot_move_left.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.08_01_rod_teleport aj.id run function animated_java:haruclaire/zzzzzzzz/animations/08_01_rod_teleport/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.08_01_rod_teleport aj.id run scoreboard players operation @s aj.haruclaire.animation.08_01_rod_teleport.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.10_01_sword_idle aj.id run function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.10_01_sword_idle aj.id run scoreboard players operation @s aj.haruclaire.animation.10_01_sword_idle.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.10_01_sword_idle_bak aj.id run function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle_bak/apply_frame_as_root

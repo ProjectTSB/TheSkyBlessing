@@ -1,6 +1,6 @@
 #> asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/2.end
 #
-# アニメーションのイベントハンドラ 杖モード・氷弾 終了
+# アニメーションのイベントハンドラ 杖モード・移動射撃 終了
 #
 # @within function asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/1.main
 
