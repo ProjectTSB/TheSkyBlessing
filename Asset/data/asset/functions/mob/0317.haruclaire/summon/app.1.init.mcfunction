@@ -9,3 +9,4 @@
 
 # スコア初期化
     scoreboard players set @s 8T.AnimationTimer -1
+    scoreboard players set @s 8T.ActionCount 0
