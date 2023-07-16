@@ -1,7 +1,7 @@
 #> asset:mob/0317.haruclaire/tick/app.skill_events/07_01_rod_moveshot_right/1.main
 #
 # アニメーションのイベントハンドラ 杖モード・移動射撃・右
-# その場で射撃を行う．
+# 右方向に飛びながら射撃を行う．
 #
 # @within function asset:mob/0317.haruclaire/tick/app.2.skill_event
 
