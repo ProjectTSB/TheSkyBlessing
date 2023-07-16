@@ -15,7 +15,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # ダメージを与える
-    execute as @a[distance=..3.5] unless entity @s[tag=PlayerShouldInvulnerable] at @s run function lib:damage/
+    execute as @a[distance=..5.5] unless entity @s[tag=PlayerShouldInvulnerable] at @s run function lib:damage/
 # リセット
     function lib:damage/reset
 

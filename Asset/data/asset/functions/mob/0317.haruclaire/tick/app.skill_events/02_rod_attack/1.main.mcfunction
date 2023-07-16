@@ -15,7 +15,7 @@
     execute if score @s 8T.AnimationTimer matches 10..51 facing entity @p feet run tp @s ~ ~ ~ ~ ~
 # 移動
     execute if score @s 8T.AnimationTimer matches 8 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
-    execute if score @s 8T.AnimationTimer matches 10..51 at @s run tp @s ^ ^ ^0.6
+    execute if score @s 8T.AnimationTimer matches 10..51 at @s positioned ^ ^ ^0.6 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # ある程度プレイヤーに近づいた場合，殴りモーションに移行
     execute if score @s 8T.AnimationTimer matches 10..51 positioned ^ ^ ^1 if entity @a[distance=..2] run scoreboard players set @s 8T.AnimationTimer 52
 
@@ -23,18 +23,19 @@
 # animated javaアニメーション再生 (長さ：151tick)
     execute if score @s 8T.AnimationTimer matches 52 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/3.2.play_attack_animation
 # 移動
-    execute if score @s 8T.AnimationTimer matches 52..57 at @s run tp @s ~ ~0.1 ~ ~ 0
+    execute if score @s 8T.AnimationTimer matches 52..57 at @s positioned ~ ~0.1 ~ run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # なぎ払い
     # 攻撃
         execute if score @s 8T.AnimationTimer matches 68 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/4.1.attack_swing
+    # 移動
+        execute if score @s 8T.AnimationTimer matches 65..68 at @s positioned ^ ^ ^0.2 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 突き
     # プレイヤーの方を向く
-        execute if score @s 8T.AnimationTimer matches 79..85 run tag @s add 8T.Temp.Me
-        execute if score @s 8T.AnimationTimer matches 79..85 as @p run function asset:mob/0317.haruclaire/tick/app.general/1.rotate
+        execute if score @s 8T.AnimationTimer matches 79..82 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
     # 移動
-        execute if score @s 8T.AnimationTimer matches 79..85 at @s run tp @s ^ ^ ^-0.1
-        execute if score @s 8T.AnimationTimer matches 89..93 at @s run tp @s ^ ^ ^0.8
-        execute if score @s 8T.AnimationTimer matches 94..98 at @s run tp @s ^ ^0.05 ^0.1
+        execute if score @s 8T.AnimationTimer matches 79..85 positioned ^ ^ ^-0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 89..93 positioned ^ ^ ^0.8 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 94..98 positioned ^ ^0.05 ^0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
     # 攻撃
         execute if score @s 8T.AnimationTimer matches 89 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/4.2.attack_spear
     # 効果音・演出
@@ -47,11 +48,11 @@
         execute if score @s 8T.AnimationTimer matches 102 facing entity @p feet run tp @s ~ ~ ~ ~ ~
     # 宙返り移動
         execute if score @s 8T.AnimationTimer matches 105 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
-        execute if score @s 8T.AnimationTimer matches 105..108 at @s rotated ~ 0 run tp @s ^ ^0.3 ^-0.4
-        execute if score @s 8T.AnimationTimer matches 109..114 at @s rotated ~ 0 run tp @s ^ ^-0.1 ^-0.3
-        execute if score @s 8T.AnimationTimer matches 115..117 at @s rotated ~ 0 run tp @s ^ ^-0.2 ^0.5
-        execute if score @s 8T.AnimationTimer matches 118..123 at @s rotated ~ 0 run tp @s ^ ^0.1 ^0.4
-        execute if score @s 8T.AnimationTimer matches 124..135 at @s rotated ~ 0 run tp @s ^ ^0.01 ^0.05
+        execute if score @s 8T.AnimationTimer matches 105..108 at @s rotated ~ 0 positioned ^ ^0.3 ^-0.4 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 109..114 at @s rotated ~ 0 positioned ^ ^-0.1 ^-0.3 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 115..117 at @s rotated ~ 0 positioned ^ ^-0.2 ^0.5 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 118..123 at @s rotated ~ 0 positioned ^ ^0.1 ^0.4 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 124..135 at @s rotated ~ 0 positioned ^ ^0.01 ^0.05 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
     # 攻撃
         execute if score @s 8T.AnimationTimer matches 122 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/4.3.attack_throw
         execute if score @s 8T.AnimationTimer matches 126 run playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.2

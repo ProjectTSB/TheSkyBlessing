@@ -8,10 +8,20 @@
 
 # animated javaアニメーション再生 (長さ：106tick)
     execute if score @s 8T.AnimationTimer matches 1 run function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/3.play_animation
+
+# 移動モード決定
+    execute if score @s 8T.AnimationTimer matches 1 if predicate lib:random_pass_per/50 run tag @s add 8T.SkillEv.Rod.Idle.MoveToSide
+# 適当に移動
+    execute at @s if entity @s[tag=8T.SkillEv.Rod.Idle.MoveToSide] positioned ^0.05 ^ ^ run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+# プレイヤーから離れるように移動
+    execute at @s if entity @s[tag=!8T.SkillEv.Rod.Idle.MoveToHome,tag=!8T.SkillEv.Rod.Idle.MoveToSide] facing entity @p feet rotated ~ 0 positioned ^ ^ ^-0.05 rotated as @s run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+
 # プレイヤーの方を向く
-    execute if score @s 8T.AnimationTimer matches 1..4 at @s positioned ^ ^ ^-0.1 facing entity @p feet run tp @s ~ ~0.3 ~ ~ ~
-    execute if score @s 8T.AnimationTimer matches 5..12 at @s positioned ^ ^ ^-0.1 facing entity @p feet run tp @s ~ ~0.1 ~ ~ ~
+    execute if score @s 8T.AnimationTimer matches 1..4 at @s positioned ^ ^ ^-0.1 facing entity @p feet positioned ~ ~0.1 ~ run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+    execute if score @s 8T.AnimationTimer matches 5..12 at @s positioned ^ ^ ^-0.1 facing entity @p feet positioned ~ ~0.1 ~ run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
     execute if score @s 8T.AnimationTimer matches 13..60 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute if score @s 8T.AnimationTimer matches 88..94 at @s positioned ^ ^-0.1 ^-0.1 rotated ~ 0 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+    execute if score @s 8T.AnimationTimer matches 95..99 at @s positioned ^ ^-0.05 ^-0.1 rotated ~ 0 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 予兆演出
     execute if score @s 8T.AnimationTimer matches 1 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
     execute if score @s 8T.AnimationTimer matches 15 run playsound item.armor.equip_iron hostile @a ~ ~ ~ 1 1.2

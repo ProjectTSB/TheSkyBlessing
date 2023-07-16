@@ -12,7 +12,7 @@
 # プレイヤーの方を向く
     execute if score @s 8T.AnimationTimer matches 1..4 at @s facing entity @p feet run tp @s ~ ~0.3 ~ ~ ~
     execute if score @s 8T.AnimationTimer matches 5..12 at @s facing entity @p feet run tp @s ~ ~0.1 ~ ~ ~
-    execute if score @s 8T.AnimationTimer matches 13..18 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute if score @s 8T.AnimationTimer matches 13..25 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
 # 予兆演出
     execute if score @s 8T.AnimationTimer matches 1 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
     execute if score @s 8T.AnimationTimer matches 12..36 rotated ~ 0 positioned ^ ^1 ^1.7 rotated as @s run function asset:mob/0317.haruclaire/tick/app.skill_events/04_rod_laser/4.particle_aim
@@ -35,6 +35,6 @@
     execute if score @s 8T.AnimationTimer matches 94 run playsound block.large_amethyst_bud.break hostile @a ~ ~ ~ 1.5 1.8
     execute if score @s 8T.AnimationTimer matches 94..95 at @s run tp @s ^ ^0.3 ^-0.2 ~ 0
     execute if score @s 8T.AnimationTimer matches 96..98 at @s run tp @s ^ ^0.08 ^-0.2 ~ 0
-    execute if score @s 8T.AnimationTimer matches 99..115 at @s run tp @s ^ ^-0.05 ^-0.05 ~ 0
+    execute if score @s 8T.AnimationTimer matches 99..115 at @s run tp @s ^ ^-0.2 ^-0.05 ~ 0
 # 終了
     execute if score @s 8T.AnimationTimer matches 128.. run function asset:mob/0317.haruclaire/tick/app.skill_events/04_rod_laser/2.end

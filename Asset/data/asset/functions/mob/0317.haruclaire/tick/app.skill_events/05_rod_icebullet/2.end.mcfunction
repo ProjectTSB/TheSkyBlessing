@@ -6,6 +6,7 @@
 
 # スキル判別用タグ消去
     tag @s remove 8T.Skill.Rod.IceBullet
+    tag @s remove 8T.SkillEv.Rod.Idle.MoveToSide
 
 # タイマーリセット
     scoreboard players set @s 8T.AnimationTimer -1
