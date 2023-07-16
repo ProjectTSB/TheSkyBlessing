@@ -31,6 +31,6 @@
     function lib:damage/reset
 
 # プレイヤーに攻撃が当たった場合，削除
-    execute if entity @a[gamemode=!spectator,distance=..2] run kill @e[type=area_effect_cloud,tag=8T.SkillSp.Rod.IcePillar.AttackPos,distance=0..1,sort=nearest,limit=1]
+    execute if entity @a[gamemode=!spectator,distance=..2] run kill @e[type=area_effect_cloud,tag=8T.SkillEv.Rod.IcePillar.AttackPos,distance=0..1,sort=nearest,limit=1]
 # 有効期限切れの場合，削除
-    execute if score @s 8T.AnimationTimer matches 90 run kill @e[type=area_effect_cloud,tag=8T.SkillSp.Rod.IcePillar.AttackPos,distance=0..1,sort=nearest,limit=1]
+    execute if score @s 8T.AnimationTimer matches 90 run kill @e[type=area_effect_cloud,tag=8T.SkillEv.Rod.IcePillar.AttackPos,distance=0..1,sort=nearest,limit=1]

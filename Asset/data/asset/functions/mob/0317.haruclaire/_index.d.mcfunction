@@ -16,7 +16,7 @@
     #declare tag 8T.Temp.AttackTarget 攻撃対象の決定に使う一時的なタグ
 
     ## スキル処理用
-    #declare tag 8T.SkillSp.Rod.IcePillar.AttackPos つらら攻撃位置
+    #declare tag 8T.SkillEv.Rod.IcePillar.AttackPos つらら攻撃位置
 
     ## スキル：杖モード
     #declare tag 8T.Skill.Rod.Idle 待機
@@ -25,5 +25,7 @@
     #declare tag 8T.Skill.Rod.Laser レーザー
     #declare tag 8T.Skill.Rod.IceBullet 氷弾
     #declare tag 8T.Skill.Rod.Shot 射撃
+    #declare tag 8T.Skill.Rod.MoveShot.Right 移動射撃
+    #declare tag 8T.Skill.Rod.MoveShot.Left 移動射撃
 
     ## スキル：剣モード

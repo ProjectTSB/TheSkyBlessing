@@ -42,6 +42,6 @@
     execute if score @s 8T.AnimationTimer matches 77..85 at @s run tp @s ^ ^0.06 ^
     execute if score @s 8T.AnimationTimer matches 97..112 at @s run tp @s ^ ^-0.05 ^
 # 攻撃
-    execute if score @s 8T.AnimationTimer matches 85..90 at @e[type=area_effect_cloud,tag=8T.SkillSp.Rod.IcePillar.AttackPos,distance=..30,sort=random,limit=7] run function asset:mob/0317.haruclaire/tick/app.skill_events/03_rod_icepillar/5.attack
+    execute if score @s 8T.AnimationTimer matches 85..90 at @e[type=area_effect_cloud,tag=8T.SkillEv.Rod.IcePillar.AttackPos,distance=..30,sort=random,limit=7] run function asset:mob/0317.haruclaire/tick/app.skill_events/03_rod_icepillar/5.attack
 # 終了
     execute if score @s 8T.AnimationTimer matches 113.. run function asset:mob/0317.haruclaire/tick/app.skill_events/03_rod_icepillar/2.end

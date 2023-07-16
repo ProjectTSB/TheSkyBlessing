@@ -5,7 +5,6 @@
 #
 # @within function asset:mob/0317.haruclaire/tick/app.2.skill_event
 
-## ロックオン
 # animated javaアニメーション再生 (長さ：81tick)
     execute if score @s 8T.AnimationTimer matches 1 run function asset:mob/0317.haruclaire/tick/app.skill_events/06_rod_shot/3.play_animation
 # 移動

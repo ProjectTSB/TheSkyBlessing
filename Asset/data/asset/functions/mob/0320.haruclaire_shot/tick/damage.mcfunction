@@ -19,9 +19,6 @@
 # リセット
     function lib:damage/reset
 
-# 移動速度低下付与
-    effect give @a[tag=!PlayerShouldInvulnerable,distance=..1] slowness 3 1 true
-
 # 消失
     scoreboard players set @s 8W.Range 0
     kill @s
