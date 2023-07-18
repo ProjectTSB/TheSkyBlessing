@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..41 run function animated_java:haruclaire/zzzzzzzz/animations/10_02_sword_idle_rare/tree/branch_0_41

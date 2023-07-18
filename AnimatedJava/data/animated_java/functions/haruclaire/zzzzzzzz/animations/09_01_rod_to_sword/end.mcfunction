@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.09_01_rod_to_sword.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/09_01_rod_to_sword/end_loop
+execute if score @s aj.haruclaire.animation.09_01_rod_to_sword.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/09_01_rod_to_sword/stop
+execute if score @s aj.haruclaire.animation.09_01_rod_to_sword.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/09_01_rod_to_sword/pause

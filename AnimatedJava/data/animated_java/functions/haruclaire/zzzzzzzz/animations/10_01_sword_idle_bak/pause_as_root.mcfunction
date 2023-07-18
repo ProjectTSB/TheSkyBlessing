@@ -1,1 +1,0 @@
-tag @s remove aj.haruclaire.animation.10_01_sword_idle_bak

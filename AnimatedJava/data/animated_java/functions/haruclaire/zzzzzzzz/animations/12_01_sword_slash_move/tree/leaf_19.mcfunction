@@ -1,0 +1,2 @@
+execute on passengers run function animated_java:haruclaire/zzzzzzzz/animations/12_01_sword_slash_move/tree/leaf_19_as_bone
+function animated_java:haruclaire/zzzzzzzz/apply_variant/default/as_root

@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.12_02_sword_slash_move_to_slash.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/12_02_sword_slash_move_to_slash/end_loop
+execute if score @s aj.haruclaire.animation.12_02_sword_slash_move_to_slash.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/12_02_sword_slash_move_to_slash/stop
+execute if score @s aj.haruclaire.animation.12_02_sword_slash_move_to_slash.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/12_02_sword_slash_move_to_slash/pause
