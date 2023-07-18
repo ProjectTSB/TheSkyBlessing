@@ -35,3 +35,4 @@
     #declare tag 8T.Skill.Rod.Teleport テレポート
 
     ## スキル：剣モード
+    #declare tag 8T.Skill.Sword.Idle 待機
