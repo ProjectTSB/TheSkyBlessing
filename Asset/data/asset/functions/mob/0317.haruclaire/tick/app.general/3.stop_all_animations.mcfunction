@@ -2,7 +2,7 @@
 #
 # 汎用処理 全てのアニメーション再生停止
 #
-# @within function asset:mob/0317.haruclaire/tick/*
+# @within function asset:mob/0317.haruclaire/tick/app.general/*
 
 # タイマーリセット
     scoreboard players set @s 8T.AnimationTimer -1
