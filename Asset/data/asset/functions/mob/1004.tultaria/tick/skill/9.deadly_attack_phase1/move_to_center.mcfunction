@@ -4,6 +4,9 @@
 #
 # @within function asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 
+# アニメ再生
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/return_to_neutral/play
+
 # 速度設定
     scoreboard players set @s RW.Speed 7
 

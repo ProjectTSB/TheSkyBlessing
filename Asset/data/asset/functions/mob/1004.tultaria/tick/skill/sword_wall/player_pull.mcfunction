@@ -6,7 +6,7 @@
 #   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/1.tick
 #   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/3.charge
 #   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/1.tick
-#   asset:mob/1004.tultaria/tick/skill/10.deadly_attack_phase2/4.charge
+#   asset:mob/1004.tultaria/tick/skill/9.deadly_attack_phase1/pull_player
 #   asset:mob/1004.tultaria/tick/skill/sword_wall/damage_field
 
 # テレポートさせる
