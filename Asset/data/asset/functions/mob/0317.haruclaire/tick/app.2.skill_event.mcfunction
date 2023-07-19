@@ -37,3 +37,6 @@
 
 ## 待機
     execute if entity @s[tag=8T.Skill.Sword.Idle] run function asset:mob/0317.haruclaire/tick/app.skill_events/10_sword_idle/1.main
+
+## 斬撃コンボ
+    execute if entity @s[tag=8T.Skill.Sword.Slash] run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/1.main
