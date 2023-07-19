@@ -31,11 +31,11 @@
         execute if score @s 8T.AnimationTimer matches 65..68 at @s positioned ^ ^ ^0.2 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 突き
     # プレイヤーの方を向く
-        execute if score @s 8T.AnimationTimer matches 79..82 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
+        execute if score @s 8T.AnimationTimer matches 79..80 at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
     # 移動
-        execute if score @s 8T.AnimationTimer matches 79..85 positioned ^ ^ ^-0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
-        execute if score @s 8T.AnimationTimer matches 89..93 positioned ^ ^ ^0.8 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
-        execute if score @s 8T.AnimationTimer matches 94..98 positioned ^ ^0.05 ^0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 79..85 at @s positioned ^ ^ ^-0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 89..93 at @s positioned ^ ^ ^0.8 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+        execute if score @s 8T.AnimationTimer matches 94..98 at @s positioned ^ ^0.05 ^0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
     # 攻撃
         execute if score @s 8T.AnimationTimer matches 89 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/4.2.attack_spear
     # 効果音・演出
