@@ -15,3 +15,7 @@
 
 # スキルのイベントハンドラ
     execute if score @s 8T.AnimationTimer matches 1.. run function asset:mob/0317.haruclaire/tick/app.2.skill_event
+
+# 怯み処理
+    # 怯み中の場合，タイマーを増加する
+        execute if entity @s[tag=8T.Temp.Damage] run scoreboard players add @s 8T.DamageTimer 1

@@ -14,6 +14,9 @@
     ## 処理用(一時)
     #declare tag 8T.Temp.Me 汎用処理に使う一時的なタグ，自身に付与
     #declare tag 8T.Temp.GeneralTarget 汎用処理に使う一時的なタグ，対象に付与
+    #declare tag 8T.Temp.NotArmor 非スーパーアーマー状態，この間に攻撃されると怯む
+    #declare tag 8T.Temp.Damage 怯み中判別用処理
+
     #declare tag 8T.Temp.TargetModel  animated_javaモデルにつける対応付け用の一時的なタグ
     #declare tag 8T.Temp.PlayRareAnimation レアアニメーション再生用の一時的なタグ
     #declare tag 8T.Temp.AttackTarget 攻撃対象の決定に使う一時的なタグ
@@ -36,4 +39,5 @@
 
     ## スキル：剣モード
     #declare tag 8T.Skill.Sword.Idle 待機
+    #declare tag 8T.Skill.Sword.Damage 怯み
     #declare tag 8T.Skill.Sword.Slash 斬撃コンボ
