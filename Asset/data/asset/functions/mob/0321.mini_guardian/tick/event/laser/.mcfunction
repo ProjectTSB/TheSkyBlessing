@@ -1,4 +1,4 @@
-#> asset:mob/0321.mini_guardian/tick/event/shoot_laser
+#> asset:mob/0321.mini_guardian/tick/event/laser/
 #
 # レーザー照射
 #
@@ -15,3 +15,6 @@
 
 # 攻撃の緑レーザー
     execute if score @s 8X.Tick matches 100..160 run function asset:mob/0321.mini_guardian/tick/event/laser/green
+
+# レーザーの音
+    execute if score @s 8X.Tick matches 100..160 run function asset:mob/0321.mini_guardian/tick/event/laser/sound
