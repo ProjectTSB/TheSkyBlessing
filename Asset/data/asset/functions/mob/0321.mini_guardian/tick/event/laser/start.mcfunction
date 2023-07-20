@@ -1,4 +1,4 @@
-#> asset:mob/0321.mini_guardian/tick/event/start_laser
+#> asset:mob/0321.mini_guardian/tick/event/laser/start
 #
 # レーザースタート
 #
