@@ -3,7 +3,7 @@
 # まだ判定がない黄色レーザー
 #
 # @within function
-#   asset:mob/0321.mini_guardian/tick/event/shoot_laser
+#   asset:mob/0321.mini_guardian/tick/event/laser/
 #   asset:mob/0321.mini_guardian/tick/event/laser/yellow
 
 # パーティクル
