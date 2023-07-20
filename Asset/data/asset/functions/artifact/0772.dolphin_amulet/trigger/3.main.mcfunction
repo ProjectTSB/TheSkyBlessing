@@ -16,5 +16,5 @@
     execute if predicate lib:random_pass_per/15 run playsound entity.dolphin.ambient_water neutral @s ~ ~ ~ 0.4 1 0
 
 # エフェクト
-    effect give @s dolphins_grace 10 0 true
-    effect give @s water_breathing 10 0 true
+    effect give @s dolphins_grace 11 0 true
+    effect give @s water_breathing 11 0 true
