@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/13_02_sword_warp_slash_normal/tick_animation

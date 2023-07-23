@@ -11,9 +11,9 @@
 
 # ターゲット取得
 # 横に広い判定
-    execute positioned ^ ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add 8T.Temp.AttackTarget
-    execute positioned ^1.5 ^ ^ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add 8T.Temp.AttackTarget
-    execute positioned ^-1.5 ^ ^ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add 8T.Temp.AttackTarget
+    execute positioned ^ ^ ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..1.8] add 8T.Temp.AttackTarget
+    execute positioned ^1.5 ^ ^0.5 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add 8T.Temp.AttackTarget
+    execute positioned ^-1.5 ^ ^0.5 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add 8T.Temp.AttackTarget
 
 # TODO：与えるダメージの調整
 # ダメージ

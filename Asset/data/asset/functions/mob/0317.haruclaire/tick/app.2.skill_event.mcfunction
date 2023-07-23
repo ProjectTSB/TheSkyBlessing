@@ -43,3 +43,6 @@
 
 ## 斬撃コンボ
     execute if entity @s[tag=8T.Skill.Sword.Slash] run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/1.main
+
+## ワープ斬りコンボ
+    execute if entity @s[tag=8T.Skill.Sword.Warp] run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/1.main

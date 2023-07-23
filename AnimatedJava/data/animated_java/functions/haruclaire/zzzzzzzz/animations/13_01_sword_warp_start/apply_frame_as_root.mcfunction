@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..30 run function animated_java:haruclaire/zzzzzzzz/animations/13_01_sword_warp_start/tree/branch_0_30

@@ -12,3 +12,5 @@
     scoreboard objectives add 8T.ActionCount dummy
     # 怯み時間
     scoreboard objectives add 8T.DamageTimer dummy
+    # 処理用カウンター
+    scoreboard objectives add 8T.TempCount dummy

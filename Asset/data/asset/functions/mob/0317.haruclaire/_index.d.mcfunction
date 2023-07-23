@@ -41,3 +41,4 @@
     #declare tag 8T.Skill.Sword.Idle 待機
     #declare tag 8T.Skill.Sword.Damage 怯み
     #declare tag 8T.Skill.Sword.Slash 斬撃コンボ
+    #declare tag 8T.Skill.Sword.Warp ワープ斬りコンボ

@@ -29,6 +29,11 @@ scoreboard objectives remove aj.haruclaire.animation.12_02_sword_slash_move_to_s
 scoreboard objectives remove aj.haruclaire.animation.12_03_sword_slash_upper.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.12_04_sword_slash_lower.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.12_05_sword_slash_spin.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.13_01_sword_warp_start.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.13_02_sword_warp_slash_normal.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.13_03_sword_warp_slash_upper.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.13_04_sword_warp_slash_finish.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.14_01_sword_throw_sword.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.99_99_sword_slash_upper_end.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.01_01_rod_idle.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.01_02_rod_idle_rare.loop_mode
@@ -54,5 +59,10 @@ scoreboard objectives remove aj.haruclaire.animation.12_02_sword_slash_move_to_s
 scoreboard objectives remove aj.haruclaire.animation.12_03_sword_slash_upper.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.12_04_sword_slash_lower.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.12_05_sword_slash_spin.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.13_01_sword_warp_start.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.13_02_sword_warp_slash_normal.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.13_03_sword_warp_slash_upper.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.13_04_sword_warp_slash_finish.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.14_01_sword_throw_sword.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.99_99_sword_slash_upper_end.loop_mode
 tellraw @a ["",{"text":"["},{"text":"Animated Java","color":"aqua"},{"text":"] "},[{"text":"INFO ℹ","color":"green"},{"text":" > ","color":"gray"},{"text":"The haruclaire Rig has been uninstalled successfully.\n"},{"text":"Please remove the Rig's functions from the datapack before reloading.","color":"gray"}]]

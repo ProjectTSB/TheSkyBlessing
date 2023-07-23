@@ -29,6 +29,11 @@ scoreboard objectives add aj.haruclaire.animation.12_02_sword_slash_move_to_slas
 scoreboard objectives add aj.haruclaire.animation.12_03_sword_slash_upper.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.12_04_sword_slash_lower.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.12_05_sword_slash_spin.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.13_01_sword_warp_start.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.13_02_sword_warp_slash_normal.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.13_03_sword_warp_slash_upper.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.13_04_sword_warp_slash_finish.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.14_01_sword_throw_sword.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.99_99_sword_slash_upper_end.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.01_01_rod_idle.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.01_02_rod_idle_rare.loop_mode dummy
@@ -54,6 +59,11 @@ scoreboard objectives add aj.haruclaire.animation.12_02_sword_slash_move_to_slas
 scoreboard objectives add aj.haruclaire.animation.12_03_sword_slash_upper.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.12_04_sword_slash_lower.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.12_05_sword_slash_spin.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.13_01_sword_warp_start.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.13_02_sword_warp_slash_normal.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.13_03_sword_warp_slash_upper.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.13_04_sword_warp_slash_finish.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.14_01_sword_throw_sword.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.99_99_sword_slash_upper_end.loop_mode dummy
 scoreboard players set $aj.haruclaire.animation.01_01_rod_idle aj.id 0
 scoreboard players set $aj.haruclaire.animation.01_02_rod_idle_rare aj.id 1
@@ -79,7 +89,12 @@ scoreboard players set $aj.haruclaire.animation.12_02_sword_slash_move_to_slash 
 scoreboard players set $aj.haruclaire.animation.12_03_sword_slash_upper aj.id 21
 scoreboard players set $aj.haruclaire.animation.12_04_sword_slash_lower aj.id 22
 scoreboard players set $aj.haruclaire.animation.12_05_sword_slash_spin aj.id 23
-scoreboard players set $aj.haruclaire.animation.99_99_sword_slash_upper_end aj.id 24
+scoreboard players set $aj.haruclaire.animation.13_01_sword_warp_start aj.id 24
+scoreboard players set $aj.haruclaire.animation.13_02_sword_warp_slash_normal aj.id 25
+scoreboard players set $aj.haruclaire.animation.13_03_sword_warp_slash_upper aj.id 26
+scoreboard players set $aj.haruclaire.animation.13_04_sword_warp_slash_finish aj.id 27
+scoreboard players set $aj.haruclaire.animation.14_01_sword_throw_sword aj.id 28
+scoreboard players set $aj.haruclaire.animation.99_99_sword_slash_upper_end aj.id 29
 scoreboard players set $aj.haruclaire.variant.default aj.id 0
 scoreboard players set $aj.haruclaire.variant.blink aj.id 1
 scoreboard players set $aj.haruclaire.variant.wink aj.id 2
@@ -87,6 +102,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.haruclaire.export_version aj.i 452762224
+scoreboard players set aj.haruclaire.export_version aj.i -511848300
 scoreboard players reset * aj.haruclaire.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.haruclaire.root] run function animated_java:haruclaire/zzzzzzzz/on_load
