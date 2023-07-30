@@ -1,1 +1,0 @@
-function animated_java:haruclaire/zzzzzzzz/animations/99_99_sword_slash_upper_end/tick_animation

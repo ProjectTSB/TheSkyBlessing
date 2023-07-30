@@ -33,8 +33,17 @@ scoreboard objectives remove aj.haruclaire.animation.13_01_sword_warp_start.loca
 scoreboard objectives remove aj.haruclaire.animation.13_02_sword_warp_slash_normal.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.13_03_sword_warp_slash_upper.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.13_04_sword_warp_slash_finish.local_anim_time
-scoreboard objectives remove aj.haruclaire.animation.14_01_sword_throw_sword.local_anim_time
-scoreboard objectives remove aj.haruclaire.animation.99_99_sword_slash_upper_end.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.14_01_sword_laser_shot_0.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.14_02_sword_laser_slash.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.15_03_sword_laser_shot_1.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.15_04_sword_laser_shot_2.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.15_05_sword_laser_slash_finish.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.16_01_sword_charge_charge_0.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.16_02_sword_charge_slash_0.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.16_03_sword_charge_slash_1.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.16_04_sword_charge_charge_1.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.16_05_sword_charge_counter.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.17_01_sword_rain_start.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.01_01_rod_idle.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.01_02_rod_idle_rare.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.02_01_rod_attack_move.loop_mode
@@ -63,6 +72,15 @@ scoreboard objectives remove aj.haruclaire.animation.13_01_sword_warp_start.loop
 scoreboard objectives remove aj.haruclaire.animation.13_02_sword_warp_slash_normal.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.13_03_sword_warp_slash_upper.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.13_04_sword_warp_slash_finish.loop_mode
-scoreboard objectives remove aj.haruclaire.animation.14_01_sword_throw_sword.loop_mode
-scoreboard objectives remove aj.haruclaire.animation.99_99_sword_slash_upper_end.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.14_01_sword_laser_shot_0.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.14_02_sword_laser_slash.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.15_03_sword_laser_shot_1.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.15_04_sword_laser_shot_2.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.15_05_sword_laser_slash_finish.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.16_01_sword_charge_charge_0.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.16_02_sword_charge_slash_0.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.16_03_sword_charge_slash_1.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.16_04_sword_charge_charge_1.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.16_05_sword_charge_counter.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.17_01_sword_rain_start.loop_mode
 tellraw @a ["",{"text":"["},{"text":"Animated Java","color":"aqua"},{"text":"] "},[{"text":"INFO ℹ","color":"green"},{"text":" > ","color":"gray"},{"text":"The haruclaire Rig has been uninstalled successfully.\n"},{"text":"Please remove the Rig's functions from the datapack before reloading.","color":"gray"}]]

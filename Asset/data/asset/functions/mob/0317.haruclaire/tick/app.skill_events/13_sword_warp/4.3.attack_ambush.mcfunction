@@ -10,7 +10,7 @@
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.1
 
 # ターゲット取得
-    execute positioned ^ ^-1 ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2.8] add 8T.Temp.AttackTarget
+    execute positioned ^ ^-1 ^1 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2.3] add 8T.Temp.AttackTarget
 
 # TODO：与えるダメージの調整
 # ダメージ

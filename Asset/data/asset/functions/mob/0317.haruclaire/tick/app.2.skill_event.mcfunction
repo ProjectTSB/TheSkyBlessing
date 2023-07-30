@@ -46,3 +46,10 @@
 
 ## ワープ斬りコンボ
     execute if entity @s[tag=8T.Skill.Sword.Warp] run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/1.main
+
+## レーザー斬りコンボ
+    execute if entity @s[tag=8T.Skill.Sword.Laser] run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/1.main
+
+## 溜め斬りコンボ
+
+## 氷雨コンボ

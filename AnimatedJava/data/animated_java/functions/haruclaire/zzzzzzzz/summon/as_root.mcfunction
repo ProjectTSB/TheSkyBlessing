@@ -67,10 +67,28 @@ execute if score #animation aj.i = $aj.haruclaire.animation.13_03_sword_warp_sla
 execute if score #animation aj.i = $aj.haruclaire.animation.13_03_sword_warp_slash_upper aj.id run scoreboard players operation @s aj.haruclaire.animation.13_03_sword_warp_slash_upper.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.13_04_sword_warp_slash_finish aj.id run function animated_java:haruclaire/zzzzzzzz/animations/13_04_sword_warp_slash_finish/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.13_04_sword_warp_slash_finish aj.id run scoreboard players operation @s aj.haruclaire.animation.13_04_sword_warp_slash_finish.local_anim_time = #frame aj.i
-execute if score #animation aj.i = $aj.haruclaire.animation.14_01_sword_throw_sword aj.id run function animated_java:haruclaire/zzzzzzzz/animations/14_01_sword_throw_sword/apply_frame_as_root
-execute if score #animation aj.i = $aj.haruclaire.animation.14_01_sword_throw_sword aj.id run scoreboard players operation @s aj.haruclaire.animation.14_01_sword_throw_sword.local_anim_time = #frame aj.i
-execute if score #animation aj.i = $aj.haruclaire.animation.99_99_sword_slash_upper_end aj.id run function animated_java:haruclaire/zzzzzzzz/animations/99_99_sword_slash_upper_end/apply_frame_as_root
-execute if score #animation aj.i = $aj.haruclaire.animation.99_99_sword_slash_upper_end aj.id run scoreboard players operation @s aj.haruclaire.animation.99_99_sword_slash_upper_end.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.14_01_sword_laser_shot_0 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/14_01_sword_laser_shot_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.14_01_sword_laser_shot_0 aj.id run scoreboard players operation @s aj.haruclaire.animation.14_01_sword_laser_shot_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.14_02_sword_laser_slash aj.id run function animated_java:haruclaire/zzzzzzzz/animations/14_02_sword_laser_slash/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.14_02_sword_laser_slash aj.id run scoreboard players operation @s aj.haruclaire.animation.14_02_sword_laser_slash.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.15_03_sword_laser_shot_1 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/15_03_sword_laser_shot_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.15_03_sword_laser_shot_1 aj.id run scoreboard players operation @s aj.haruclaire.animation.15_03_sword_laser_shot_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.15_04_sword_laser_shot_2 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/15_04_sword_laser_shot_2/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.15_04_sword_laser_shot_2 aj.id run scoreboard players operation @s aj.haruclaire.animation.15_04_sword_laser_shot_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.15_05_sword_laser_slash_finish aj.id run function animated_java:haruclaire/zzzzzzzz/animations/15_05_sword_laser_slash_finish/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.15_05_sword_laser_slash_finish aj.id run scoreboard players operation @s aj.haruclaire.animation.15_05_sword_laser_slash_finish.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_01_sword_charge_charge_0 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_01_sword_charge_charge_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_01_sword_charge_charge_0 aj.id run scoreboard players operation @s aj.haruclaire.animation.16_01_sword_charge_charge_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_02_sword_charge_slash_0 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_02_sword_charge_slash_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_02_sword_charge_slash_0 aj.id run scoreboard players operation @s aj.haruclaire.animation.16_02_sword_charge_slash_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_03_sword_charge_slash_1 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_03_sword_charge_slash_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_03_sword_charge_slash_1 aj.id run scoreboard players operation @s aj.haruclaire.animation.16_03_sword_charge_slash_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_04_sword_charge_charge_1 aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_04_sword_charge_charge_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_04_sword_charge_charge_1 aj.id run scoreboard players operation @s aj.haruclaire.animation.16_04_sword_charge_charge_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_05_sword_charge_counter aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_05_sword_charge_counter/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_05_sword_charge_counter aj.id run scoreboard players operation @s aj.haruclaire.animation.16_05_sword_charge_counter.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.17_01_sword_rain_start aj.id run function animated_java:haruclaire/zzzzzzzz/animations/17_01_sword_rain_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.17_01_sword_rain_start aj.id run scoreboard players operation @s aj.haruclaire.animation.17_01_sword_rain_start.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:haruclaire/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i

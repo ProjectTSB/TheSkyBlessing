@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.16_05_sword_charge_counter

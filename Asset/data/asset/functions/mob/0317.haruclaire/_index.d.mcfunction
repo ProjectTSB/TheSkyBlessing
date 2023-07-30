@@ -42,3 +42,7 @@
     #declare tag 8T.Skill.Sword.Damage 怯み
     #declare tag 8T.Skill.Sword.Slash 斬撃コンボ
     #declare tag 8T.Skill.Sword.Warp ワープ斬りコンボ
+    #declare tag 8T.Skill.Sword.Throw 武器投げコンボ
+    #declare tag 8T.Skill.Sword.Charge 溜め斬りコンボ
+    #declare tag 8T.Skill.Sword.Laser レーザー斬りコンボ
+    #declare tag 8T.Skill.Sword.Shot 射撃コンボ
