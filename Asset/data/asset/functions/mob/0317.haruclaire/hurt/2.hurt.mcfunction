@@ -5,7 +5,11 @@
 # @within function asset:mob/0317.haruclaire/hurt/1.trigger
 
 # 効果音
-    playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
+    execute if entity @s[tag=!8T.Temp.Counter] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
+
+# カウンター処理
+    # 溜め斬り中
+        execute if entity @s[tag=8T.Temp.Counter] run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/6.1.start_counter
 
 # 怯み処理
     # 怯み継続
@@ -14,3 +18,4 @@
         execute if entity @s[tag=8T.Temp.NotArmor] unless entity @s[tag=8T.Temp.Damage] run function asset:mob/0317.haruclaire/tick/app.general/4.start_damage_animation
     # 一定時間以上殴られ続けたら怯みキャンセル
         execute if entity @s[tag=8T.Temp.Damage] if score @s 8T.DamageTimer matches 120.. run function asset:mob/0317.haruclaire/tick/app.general/6.cancel_damage_animation
+

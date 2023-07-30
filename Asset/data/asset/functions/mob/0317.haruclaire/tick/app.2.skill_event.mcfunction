@@ -51,5 +51,6 @@
     execute if entity @s[tag=8T.Skill.Sword.Laser] run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/1.main
 
 ## 溜め斬りコンボ
+    execute if entity @s[tag=8T.Skill.Sword.Charge] run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/1.main
 
-## 氷雨コンボ
+## みぞれコンボ

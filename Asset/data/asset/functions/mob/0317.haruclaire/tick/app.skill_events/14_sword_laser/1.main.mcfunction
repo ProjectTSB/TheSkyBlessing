@@ -2,6 +2,7 @@
 #
 # アニメーションのイベントハンドラ 剣モード・レーザー斬りコンボ
 # レーザーと剣を組み合わせた攻撃を行う．
+# 最後の斬撃の回避後に攻撃を受けると怯む．
 #
 # @within function asset:mob/0317.haruclaire/tick/app.2.skill_event
 
@@ -55,7 +56,7 @@
 # 演出
     execute if score @s 8T.AnimationTimer matches 115 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.1.effect_teleport
 
-## 射撃-3
+## 交差射撃
 # animated javaアニメーション再生 (長さ：20tick)
     execute if score @s 8T.AnimationTimer matches 116 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/3.4.play_shot_2_animation
 # プレイヤーの方を向く

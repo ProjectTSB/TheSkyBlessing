@@ -23,7 +23,7 @@
     tag @s remove 8T.Skill.Sword.Warp
     tag @s remove 8T.Skill.Sword.Laser
     tag @s remove 8T.Skill.Sword.Charge
-    tag @s remove 8T.Skill.Sword.Rain
+    tag @s remove 8T.Skill.Sword.IceRain
 
 # animated java再生停止
     execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/pause_all

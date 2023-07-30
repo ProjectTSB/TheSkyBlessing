@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.16_06_sword_charge_counter_short

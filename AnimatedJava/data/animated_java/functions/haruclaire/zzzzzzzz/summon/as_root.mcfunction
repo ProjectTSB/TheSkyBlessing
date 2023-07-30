@@ -87,6 +87,8 @@ execute if score #animation aj.i = $aj.haruclaire.animation.16_04_sword_charge_c
 execute if score #animation aj.i = $aj.haruclaire.animation.16_04_sword_charge_charge_1 aj.id run scoreboard players operation @s aj.haruclaire.animation.16_04_sword_charge_charge_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.16_05_sword_charge_counter aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_05_sword_charge_counter/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.16_05_sword_charge_counter aj.id run scoreboard players operation @s aj.haruclaire.animation.16_05_sword_charge_counter.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.16_06_sword_charge_counter_short aj.id run function animated_java:haruclaire/zzzzzzzz/animations/16_06_sword_charge_counter_short/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.16_06_sword_charge_counter_short aj.id run scoreboard players operation @s aj.haruclaire.animation.16_06_sword_charge_counter_short.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.17_01_sword_rain_start aj.id run function animated_java:haruclaire/zzzzzzzz/animations/17_01_sword_rain_start/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.17_01_sword_rain_start aj.id run scoreboard players operation @s aj.haruclaire.animation.17_01_sword_rain_start.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:haruclaire/on_summon/as_root

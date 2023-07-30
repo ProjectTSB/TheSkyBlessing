@@ -36,4 +36,5 @@ execute if entity @s[tag=aj.haruclaire.animation.16_02_sword_charge_slash_0] run
 execute if entity @s[tag=aj.haruclaire.animation.16_03_sword_charge_slash_1] run function animated_java:haruclaire/zzzzzzzz/animations/16_03_sword_charge_slash_1/tick
 execute if entity @s[tag=aj.haruclaire.animation.16_04_sword_charge_charge_1] run function animated_java:haruclaire/zzzzzzzz/animations/16_04_sword_charge_charge_1/tick
 execute if entity @s[tag=aj.haruclaire.animation.16_05_sword_charge_counter] run function animated_java:haruclaire/zzzzzzzz/animations/16_05_sword_charge_counter/tick
+execute if entity @s[tag=aj.haruclaire.animation.16_06_sword_charge_counter_short] run function animated_java:haruclaire/zzzzzzzz/animations/16_06_sword_charge_counter_short/tick
 execute if entity @s[tag=aj.haruclaire.animation.17_01_sword_rain_start] run function animated_java:haruclaire/zzzzzzzz/animations/17_01_sword_rain_start/tick
