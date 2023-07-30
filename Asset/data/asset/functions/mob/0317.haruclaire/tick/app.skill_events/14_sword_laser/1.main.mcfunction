@@ -62,7 +62,7 @@
 # プレイヤーの方を向く
     execute if score @s 8T.AnimationTimer matches 116..125 at @s facing entity @p feet run tp @s ~ ~0.05 ~ ~ ~
 # 攻撃地点設置
-    execute if score @s 8T.AnimationTimer matches 125 at @p facing entity @s feet positioned ^ ^ ^5 run summon area_effect_cloud ^ ^1 ^ {CustomNameVisible:0b,Particle:"block air",Duration:20,Tags:["Object","8T.SkillEv.Sword.Laser.AttackPos"]}
+    execute if score @s 8T.AnimationTimer matches 125 at @p facing entity @s feet positioned ^ ^ ^4.5 run summon area_effect_cloud ^ ^1 ^ {CustomNameVisible:0b,Particle:"block air",Duration:20,Tags:["Object","8T.SkillEv.Sword.Laser.AttackPos"]}
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 130 rotated ~ 0 positioned ^4 ^2 ^ facing entity @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] feet run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser
     execute if score @s 8T.AnimationTimer matches 130 rotated ~ 0 positioned ^-4 ^2 ^ facing entity @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] feet run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser

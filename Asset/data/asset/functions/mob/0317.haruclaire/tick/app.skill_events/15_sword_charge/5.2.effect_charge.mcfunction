@@ -25,3 +25,11 @@ execute if score @s 8T.AnimationTimer matches 50 at @s positioned ~ ~1 ~ run fun
 execute if score @s 8T.AnimationTimer matches 60 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
 execute if score @s 8T.AnimationTimer matches 70 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
 execute if score @s 8T.AnimationTimer matches 80 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+
+execute if score @s 8T.AnimationTimer matches 160 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 170 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 180 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 190 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 200 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 210 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle
+execute if score @s 8T.AnimationTimer matches 220 at @s positioned ~ ~1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.3.effect_charge_circle

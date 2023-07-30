@@ -5,6 +5,7 @@
 # @within function asset:mob/0317.haruclaire/**
     ## API用
     #declare tag SpreadMarker
+    #declare tag Attacker
     
     ## 処理用
     #declare tag 8T.ModelRoot animated_javaモデルにつける処理簡略化用のタグ 
