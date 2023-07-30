@@ -1,8 +1,8 @@
-#> asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.3.attack_lower
+#> asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.3.attack_slash_finish
 #
-# アニメーションのイベントハンドラ 剣モード・斬撃コンボ 斬り下ろし攻撃判定
+# アニメーションのイベントハンドラ 剣モード・レーザー斬りコンボ 斬撃-2攻撃判定
 #
-# @within function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/1.main
+# @within function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/1.main
 
 # TODO：演出を練る
 # 演出

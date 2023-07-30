@@ -25,13 +25,14 @@
     #declare tag 8T.SkillEv.Rod.Idle.MoveToHome 待機移動モード・初期位置に移動
     #declare tag 8T.SkillEv.Rod.Idle.MoveToSide 待機移動モード・すべる
     #declare tag 8T.SkillEv.Rod.IcePillar.AttackPos つらら攻撃位置
+    #declare tag 8T.SkillEv.Sword.Laser.AttackPos 交差レーザー攻撃位置
 
     ## スキル：杖モード
     #declare tag 8T.Skill.Rod.Idle 待機
     #declare tag 8T.Skill.Rod.Attack 杖殴り
     #declare tag 8T.Skill.Rod.IcePillar つらら
     #declare tag 8T.Skill.Rod.Laser レーザー
-    #declare tag 8T.Skill.Rod.IceBullet 氷弾
+    #declare tag 8T.Skill.Rod.IceBullet あられ
     #declare tag 8T.Skill.Rod.Shot 射撃
     #declare tag 8T.Skill.Rod.MoveShot.Right 移動射撃
     #declare tag 8T.Skill.Rod.MoveShot.Left 移動射撃
@@ -45,4 +46,4 @@
     #declare tag 8T.Skill.Sword.Throw 武器投げコンボ
     #declare tag 8T.Skill.Sword.Charge 溜め斬りコンボ
     #declare tag 8T.Skill.Sword.Laser レーザー斬りコンボ
-    #declare tag 8T.Skill.Sword.Shot 射撃コンボ
+    #declare tag 8T.Skill.Sword.Rain 氷雨コンボ

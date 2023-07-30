@@ -1,6 +1,6 @@
 #> asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/4.attack
 #
-# アニメーションのイベントハンドラ 杖モード・氷弾 攻撃演出
+# アニメーションのイベントハンドラ 杖モード・あられ 攻撃演出
 #
 # @within function asset:mob/0317.haruclaire/tick/app.skill_events/05_rod_icebullet/1.main
 

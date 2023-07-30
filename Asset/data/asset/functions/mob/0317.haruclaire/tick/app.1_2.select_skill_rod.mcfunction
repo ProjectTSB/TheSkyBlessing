@@ -26,7 +26,7 @@
 # 待機
     execute if score @s 8T.ActionCount matches 5 run tag @s add 8T.Skill.Rod.Idle
 
-# 氷弾
+# あられ
     execute if score @s 8T.ActionCount matches 6 run tag @s add 8T.Skill.Rod.IceBullet
 
 # 移動射撃
