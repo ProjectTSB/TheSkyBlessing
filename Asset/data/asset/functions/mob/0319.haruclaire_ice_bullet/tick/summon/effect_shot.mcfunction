@@ -14,7 +14,7 @@
     data modify storage lib: Argument.Distance set value 3
     data modify storage lib: Argument.Spread set value 1
     execute facing entity @p[gamemode=!spectator,distance=..30] feet as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
-    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
+    execute if entity @s[tag=!8V.IsIceRain] facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # リセット
     kill @e[type=marker,tag=SpreadMarker]

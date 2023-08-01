@@ -13,6 +13,8 @@
 # 移動
     execute if score @s 8T.AnimationTimer matches 16..25 at @s positioned ~ ~0.1 ~ run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
     execute if score @s 8T.AnimationTimer matches 70..80 at @s positioned ^ ^-0.05 ^-0.05 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
+# 攻撃
+    execute if score @s 8T.AnimationTimer matches 25 rotated ~ 0 positioned ~ ~-1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/4.1.attack_rain
 
 ## ワープ
 # animated javaアニメーション再生 (長さ：1tick)

@@ -21,3 +21,6 @@
 # 飛距離と速度(m/tick)を設定
     scoreboard players set @s 8V.Range 400
     scoreboard players set @s 8V.Speed 7
+
+# 判別用タグ付与
+    tag @s add 8V.IceBullet
