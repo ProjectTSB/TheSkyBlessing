@@ -49,4 +49,4 @@
     #declare tag 8T.Skill.Sword.Throw 武器投げコンボ
     #declare tag 8T.Skill.Sword.Charge 溜め斬りコンボ
     #declare tag 8T.Skill.Sword.Laser レーザー斬りコンボ
-    #declare tag 8T.Skill.Sword.IceRain みぞれコンボ
+    #declare tag 8T.Skill.Sword.IceRain ひさめコンボ

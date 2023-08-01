@@ -45,6 +45,10 @@ scoreboard objectives add aj.haruclaire.animation.16_04_sword_charge_charge_1.lo
 scoreboard objectives add aj.haruclaire.animation.16_05_sword_charge_counter.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.16_06_sword_charge_counter_short.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.17_01_sword_rain_start.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.17_02_sword_rain_shot_0.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.17_03_sword_rain_shot_1.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.17_04_sword_rain_laser.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.99_01_hide.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.01_01_rod_idle.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.01_02_rod_idle_rare.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.02_01_rod_attack_move.loop_mode dummy
@@ -85,6 +89,10 @@ scoreboard objectives add aj.haruclaire.animation.16_04_sword_charge_charge_1.lo
 scoreboard objectives add aj.haruclaire.animation.16_05_sword_charge_counter.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.16_06_sword_charge_counter_short.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.17_01_sword_rain_start.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.17_02_sword_rain_shot_0.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.17_03_sword_rain_shot_1.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.99_01_hide.loop_mode dummy
 scoreboard players set $aj.haruclaire.animation.01_01_rod_idle aj.id 0
 scoreboard players set $aj.haruclaire.animation.01_02_rod_idle_rare aj.id 1
 scoreboard players set $aj.haruclaire.animation.02_01_rod_attack_move aj.id 2
@@ -125,6 +133,10 @@ scoreboard players set $aj.haruclaire.animation.16_04_sword_charge_charge_1 aj.i
 scoreboard players set $aj.haruclaire.animation.16_05_sword_charge_counter aj.id 37
 scoreboard players set $aj.haruclaire.animation.16_06_sword_charge_counter_short aj.id 38
 scoreboard players set $aj.haruclaire.animation.17_01_sword_rain_start aj.id 39
+scoreboard players set $aj.haruclaire.animation.17_02_sword_rain_shot_0 aj.id 40
+scoreboard players set $aj.haruclaire.animation.17_03_sword_rain_shot_1 aj.id 41
+scoreboard players set $aj.haruclaire.animation.17_04_sword_rain_laser aj.id 42
+scoreboard players set $aj.haruclaire.animation.99_01_hide aj.id 43
 scoreboard players set $aj.haruclaire.variant.default aj.id 0
 scoreboard players set $aj.haruclaire.variant.blink aj.id 1
 scoreboard players set $aj.haruclaire.variant.wink aj.id 2
@@ -132,6 +144,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.haruclaire.export_version aj.i 367408355
+scoreboard players set aj.haruclaire.export_version aj.i 1789581057
 scoreboard players reset * aj.haruclaire.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.haruclaire.root] run function animated_java:haruclaire/zzzzzzzz/on_load

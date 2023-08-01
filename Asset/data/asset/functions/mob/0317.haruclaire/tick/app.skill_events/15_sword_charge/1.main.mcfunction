@@ -3,6 +3,7 @@
 # アニメーションのイベントハンドラ 剣モード・溜め斬りコンボ
 # 力をためた後，遠距離に届く斬撃で攻撃する．
 # 溜め中に攻撃を受けると，攻撃を回避したうえでカウンター攻撃をする．
+# その後プレイヤーの近くに移動し，斬撃を2回行った後，中心点に移動して再度溜める．
 # 2回目の溜め後のカウンターを回避すると隙が生じる．
 #
 # @within function asset:mob/0317.haruclaire/tick/app.2.skill_event
@@ -110,7 +111,7 @@
     execute if score @s 8T.AnimationTimer matches 253 run scoreboard players set @s 8T.AnimationTimer 400
 
 ## カウンター
-# (長さ：65tick)
+# アニメーションはhurt側の処理で実行(長さ：65tick)
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 258 positioned as @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] rotated ~90 60 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.2.attack_counter
 # 演出

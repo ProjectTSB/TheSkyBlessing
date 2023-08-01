@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/tick_animation

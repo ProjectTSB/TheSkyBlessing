@@ -53,4 +53,5 @@
 ## 溜め斬りコンボ
     execute if entity @s[tag=8T.Skill.Sword.Charge] run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/1.main
 
-## みぞれコンボ
+## ひさめコンボ
+    execute if entity @s[tag=8T.Skill.Sword.IceRain] run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/1.main
