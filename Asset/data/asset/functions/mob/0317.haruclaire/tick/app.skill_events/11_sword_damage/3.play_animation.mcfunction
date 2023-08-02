@@ -9,10 +9,16 @@
 # ほしい範囲に剰余算
     scoreboard players operation $Random Temporary %= $3 Const
 
+# 前のアニメーションと同じ場合は被らないようにする
+    execute if score @s 8T.CurrentDamageAnimationType = $Random Temporary run scoreboard players add $Random Temporary 1
+    execute if score $Random Temporary matches 3.. run scoreboard players set $Random Temporary 0
+
 # 再生
     execute if score $Random Temporary matches 0 as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/11_01_sword_damage_1/play
     execute if score $Random Temporary matches 1 as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/11_01_sword_damage_2/play
     execute if score $Random Temporary matches 2 as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/11_01_sword_damage_3/play
 
+# 保持
+    scoreboard players operation @s 8T.CurrentDamageAnimationType = $Random Temporary
 # リセット
     scoreboard players reset $Random Temporary

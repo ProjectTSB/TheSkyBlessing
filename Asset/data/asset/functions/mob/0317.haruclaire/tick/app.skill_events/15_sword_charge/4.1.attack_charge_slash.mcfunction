@@ -104,7 +104,7 @@
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性
-        data modify storage lib: Argument.ElementType set value "None"
+        data modify storage lib: Argument.ElementType set value "Water"
 # 補正functionを実行
     function lib:damage/modifier
 # 対象にダメージ

@@ -10,7 +10,8 @@
     scoreboard objectives add 8T.AnimationTimer dummy
     # 行動回数
     scoreboard objectives add 8T.ActionCount dummy
-    # 怯み時間
+    # 怯み処理用
     scoreboard objectives add 8T.DamageTimer dummy
+    scoreboard objectives add 8T.CurrentDamageAnimationType dummy
     # 処理用カウンター
     scoreboard objectives add 8T.TempCount dummy

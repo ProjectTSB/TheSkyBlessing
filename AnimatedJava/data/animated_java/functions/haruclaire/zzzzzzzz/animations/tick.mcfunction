@@ -1,3 +1,4 @@
+execute if entity @s[tag=aj.haruclaire.animation.00_01_start] run function animated_java:haruclaire/zzzzzzzz/animations/00_01_start/tick
 execute if entity @s[tag=aj.haruclaire.animation.01_01_rod_idle] run function animated_java:haruclaire/zzzzzzzz/animations/01_01_rod_idle/tick
 execute if entity @s[tag=aj.haruclaire.animation.01_02_rod_idle_rare] run function animated_java:haruclaire/zzzzzzzz/animations/01_02_rod_idle_rare/tick
 execute if entity @s[tag=aj.haruclaire.animation.02_01_rod_attack_move] run function animated_java:haruclaire/zzzzzzzz/animations/02_01_rod_attack_move/tick
@@ -41,4 +42,5 @@ execute if entity @s[tag=aj.haruclaire.animation.17_01_sword_rain_start] run fun
 execute if entity @s[tag=aj.haruclaire.animation.17_02_sword_rain_shot_0] run function animated_java:haruclaire/zzzzzzzz/animations/17_02_sword_rain_shot_0/tick
 execute if entity @s[tag=aj.haruclaire.animation.17_03_sword_rain_shot_1] run function animated_java:haruclaire/zzzzzzzz/animations/17_03_sword_rain_shot_1/tick
 execute if entity @s[tag=aj.haruclaire.animation.17_04_sword_rain_laser] run function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/tick
+execute if entity @s[tag=aj.haruclaire.animation.17_05_sword_rain_laser_end] run function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/tick
 execute if entity @s[tag=aj.haruclaire.animation.99_01_hide] run function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/tick

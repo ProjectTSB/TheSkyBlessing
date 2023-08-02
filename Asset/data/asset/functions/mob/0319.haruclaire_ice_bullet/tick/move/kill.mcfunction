@@ -11,6 +11,9 @@
     playsound block.amethyst_block.break hostile @a ~ ~ ~ 1 1.5
     playsound block.glass.break hostile @a ~ ~ ~ 1 1.2
 
+# 氷雨の弾の場合，追加演出
+    execute if entity @s[tag=8V.IsIceRain] positioned ~ ~0.3 ~ run function asset:mob/0319.haruclaire_ice_bullet/tick/move/particle
+
 # 消去
     scoreboard players set @s 8V.Range 0
     kill @s

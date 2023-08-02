@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..105 run function animated_java:haruclaire/zzzzzzzz/animations/00_01_start/tree/branch_0_105

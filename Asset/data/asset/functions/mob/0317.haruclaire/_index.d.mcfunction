@@ -31,6 +31,7 @@
     #declare tag 8T.SkillEv.Sword.Laser.AttackPos 交差レーザー攻撃位置
 
     ## スキル：杖モード
+    #declare tag 8T.Skill.Rod.Start 登場
     #declare tag 8T.Skill.Rod.Idle 待機
     #declare tag 8T.Skill.Rod.Attack 杖殴り
     #declare tag 8T.Skill.Rod.IcePillar つらら
@@ -40,6 +41,7 @@
     #declare tag 8T.Skill.Rod.MoveShot.Right 移動射撃
     #declare tag 8T.Skill.Rod.MoveShot.Left 移動射撃
     #declare tag 8T.Skill.Rod.Teleport テレポート
+    #declare tag 8T.Skill.Rod.ToSword 武器持ち替え
 
     ## スキル：剣モード
     #declare tag 8T.Skill.Sword.Idle 待機

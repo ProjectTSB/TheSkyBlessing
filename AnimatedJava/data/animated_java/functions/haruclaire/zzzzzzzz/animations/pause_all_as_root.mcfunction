@@ -1,3 +1,4 @@
+function animated_java:haruclaire/zzzzzzzz/animations/00_01_start/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/01_01_rod_idle/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/01_02_rod_idle_rare/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/02_01_rod_attack_move/pause_as_root
@@ -41,4 +42,5 @@ function animated_java:haruclaire/zzzzzzzz/animations/17_01_sword_rain_start/pau
 function animated_java:haruclaire/zzzzzzzz/animations/17_02_sword_rain_shot_0/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/17_03_sword_rain_shot_1/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/pause_as_root
+function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/pause_as_root

@@ -8,5 +8,8 @@
     effect give @s invisibility infinite 0 true
 
 # スコア初期化
-    scoreboard players set @s 8T.AnimationTimer -1
+    scoreboard players set @s 8T.AnimationTimer 0
     scoreboard players set @s 8T.ActionCount 0
+
+# 登場演出再生
+    tag @s add 8T.Skill.Rod.Start

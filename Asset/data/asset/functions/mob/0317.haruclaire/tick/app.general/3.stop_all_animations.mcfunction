@@ -8,6 +8,7 @@
     scoreboard players set @s 8T.AnimationTimer -1
 
 # タグ消去
+    tag @s remove 8T.Skill.Rod.Start
     tag @s remove 8T.Skill.Rod.Idle
     tag @s remove 8T.Skill.Rod.Attack
     tag @s remove 8T.Skill.Rod.IcePillar
@@ -17,6 +18,7 @@
     tag @s remove 8T.Skill.Rod.MoveShot.Right
     tag @s remove 8T.Skill.Rod.MoveShot.Left
     tag @s remove 8T.Skill.Rod.Teleport
+    tag @s remove 8T.Skill.Rod.ToSword
     tag @s remove 8T.Skill.Sword.Idle
     tag @s remove 8T.Skill.Sword.Damage
     tag @s remove 8T.Skill.Sword.Slash

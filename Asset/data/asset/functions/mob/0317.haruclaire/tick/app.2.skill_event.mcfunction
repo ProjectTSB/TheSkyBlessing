@@ -5,6 +5,15 @@
 # @within function asset:mob/0317.haruclaire/tick/2.tick
 
 ###########################################################################
+## 汎用
+
+## 登場演出
+    execute if entity @s[tag=8T.Skill.Rod.Start] run function asset:mob/0317.haruclaire/tick/app.skill_events/00_rod_start/1.main
+
+## 武器持ち替え
+    execute if entity @s[tag=8T.Skill.Rod.ToSword] run function asset:mob/0317.haruclaire/tick/app.skill_events/09_rod_to_sword/1.main
+
+###########################################################################
 ## 杖モード
 
 ## 待機

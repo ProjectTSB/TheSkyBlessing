@@ -11,6 +11,8 @@ execute if score #variant aj.i = $aj.haruclaire.variant.default aj.id run functi
 execute if score #variant aj.i = $aj.haruclaire.variant.blink aj.id run function animated_java:haruclaire/zzzzzzzz/apply_variant/blink/as_root
 execute if score #variant aj.i = $aj.haruclaire.variant.wink aj.id run function animated_java:haruclaire/zzzzzzzz/apply_variant/wink/as_root
 execute if score #animation aj.i matches 0.. run scoreboard players operation @s aj.anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.00_01_start aj.id run function animated_java:haruclaire/zzzzzzzz/animations/00_01_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.00_01_start aj.id run scoreboard players operation @s aj.haruclaire.animation.00_01_start.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.01_01_rod_idle aj.id run function animated_java:haruclaire/zzzzzzzz/animations/01_01_rod_idle/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.01_01_rod_idle aj.id run scoreboard players operation @s aj.haruclaire.animation.01_01_rod_idle.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.01_02_rod_idle_rare aj.id run function animated_java:haruclaire/zzzzzzzz/animations/01_02_rod_idle_rare/apply_frame_as_root
@@ -97,6 +99,8 @@ execute if score #animation aj.i = $aj.haruclaire.animation.17_03_sword_rain_sho
 execute if score #animation aj.i = $aj.haruclaire.animation.17_03_sword_rain_shot_1 aj.id run scoreboard players operation @s aj.haruclaire.animation.17_03_sword_rain_shot_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.17_04_sword_rain_laser aj.id run function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.17_04_sword_rain_laser aj.id run scoreboard players operation @s aj.haruclaire.animation.17_04_sword_rain_laser.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire.animation.17_05_sword_rain_laser_end aj.id run function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire.animation.17_05_sword_rain_laser_end aj.id run scoreboard players operation @s aj.haruclaire.animation.17_05_sword_rain_laser_end.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire.animation.99_01_hide aj.id run function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire.animation.99_01_hide aj.id run scoreboard players operation @s aj.haruclaire.animation.99_01_hide.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:haruclaire/on_summon/as_root

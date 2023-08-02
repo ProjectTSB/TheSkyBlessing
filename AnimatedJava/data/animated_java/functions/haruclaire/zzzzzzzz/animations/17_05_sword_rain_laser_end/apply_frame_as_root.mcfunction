@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..20 run function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/tree/branch_0_20

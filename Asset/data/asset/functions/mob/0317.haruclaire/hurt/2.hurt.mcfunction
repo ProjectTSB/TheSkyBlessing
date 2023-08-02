@@ -7,6 +7,10 @@
 # 効果音
     execute if entity @s[tag=!8T.Temp.Counter] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
 
+# 武器持ち替え
+    execute if entity @s[tag=!8T.Weapon.HasSword] run function asset:mob/0317.haruclaire/hurt/app.1.change_weapon
+
+
 # カウンター処理
     # 溜め斬り中
         execute if entity @s[tag=8T.Temp.Counter] run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/6.1.start_counter
