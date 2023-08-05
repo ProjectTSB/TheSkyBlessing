@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/tick_animation

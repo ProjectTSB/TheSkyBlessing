@@ -1,0 +1,2 @@
+execute if score @s aj.anim_time matches 0..63 run function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/tree/branch_0_63
+execute if score @s aj.anim_time matches 70 run function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/tree/leaf_70

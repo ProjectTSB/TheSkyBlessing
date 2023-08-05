@@ -50,6 +50,7 @@ scoreboard objectives remove aj.haruclaire.animation.17_02_sword_rain_shot_0.loc
 scoreboard objectives remove aj.haruclaire.animation.17_03_sword_rain_shot_1.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.17_04_sword_rain_laser.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.17_05_sword_rain_laser_end.local_anim_time
+scoreboard objectives remove aj.haruclaire.animation.18_01_death.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.99_01_hide.local_anim_time
 scoreboard objectives remove aj.haruclaire.animation.00_01_start.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.01_01_rod_idle.loop_mode
@@ -96,5 +97,6 @@ scoreboard objectives remove aj.haruclaire.animation.17_02_sword_rain_shot_0.loo
 scoreboard objectives remove aj.haruclaire.animation.17_03_sword_rain_shot_1.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.17_05_sword_rain_laser_end.loop_mode
+scoreboard objectives remove aj.haruclaire.animation.18_01_death.loop_mode
 scoreboard objectives remove aj.haruclaire.animation.99_01_hide.loop_mode
 tellraw @a ["",{"text":"["},{"text":"Animated Java","color":"aqua"},{"text":"] "},[{"text":"INFO ℹ","color":"green"},{"text":" > ","color":"gray"},{"text":"The haruclaire Rig has been uninstalled successfully.\n"},{"text":"Please remove the Rig's functions from the datapack before reloading.","color":"gray"}]]

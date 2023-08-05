@@ -50,6 +50,7 @@ scoreboard objectives add aj.haruclaire.animation.17_02_sword_rain_shot_0.local_
 scoreboard objectives add aj.haruclaire.animation.17_03_sword_rain_shot_1.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.17_04_sword_rain_laser.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.17_05_sword_rain_laser_end.local_anim_time dummy
+scoreboard objectives add aj.haruclaire.animation.18_01_death.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.99_01_hide.local_anim_time dummy
 scoreboard objectives add aj.haruclaire.animation.00_01_start.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.01_01_rod_idle.loop_mode dummy
@@ -96,6 +97,7 @@ scoreboard objectives add aj.haruclaire.animation.17_02_sword_rain_shot_0.loop_m
 scoreboard objectives add aj.haruclaire.animation.17_03_sword_rain_shot_1.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.17_05_sword_rain_laser_end.loop_mode dummy
+scoreboard objectives add aj.haruclaire.animation.18_01_death.loop_mode dummy
 scoreboard objectives add aj.haruclaire.animation.99_01_hide.loop_mode dummy
 scoreboard players set $aj.haruclaire.animation.00_01_start aj.id 0
 scoreboard players set $aj.haruclaire.animation.01_01_rod_idle aj.id 1
@@ -142,7 +144,8 @@ scoreboard players set $aj.haruclaire.animation.17_02_sword_rain_shot_0 aj.id 41
 scoreboard players set $aj.haruclaire.animation.17_03_sword_rain_shot_1 aj.id 42
 scoreboard players set $aj.haruclaire.animation.17_04_sword_rain_laser aj.id 43
 scoreboard players set $aj.haruclaire.animation.17_05_sword_rain_laser_end aj.id 44
-scoreboard players set $aj.haruclaire.animation.99_01_hide aj.id 45
+scoreboard players set $aj.haruclaire.animation.18_01_death aj.id 45
+scoreboard players set $aj.haruclaire.animation.99_01_hide aj.id 46
 scoreboard players set $aj.haruclaire.variant.default aj.id 0
 scoreboard players set $aj.haruclaire.variant.blink aj.id 1
 scoreboard players set $aj.haruclaire.variant.wink aj.id 2
@@ -150,6 +153,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.haruclaire.export_version aj.i -317546205
+scoreboard players set aj.haruclaire.export_version aj.i 741996775
 scoreboard players reset * aj.haruclaire.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.haruclaire.root] run function animated_java:haruclaire/zzzzzzzz/on_load

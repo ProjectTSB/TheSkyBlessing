@@ -43,4 +43,5 @@ execute if entity @s[tag=aj.haruclaire.animation.17_02_sword_rain_shot_0] run fu
 execute if entity @s[tag=aj.haruclaire.animation.17_03_sword_rain_shot_1] run function animated_java:haruclaire/zzzzzzzz/animations/17_03_sword_rain_shot_1/tick
 execute if entity @s[tag=aj.haruclaire.animation.17_04_sword_rain_laser] run function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/tick
 execute if entity @s[tag=aj.haruclaire.animation.17_05_sword_rain_laser_end] run function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/tick
+execute if entity @s[tag=aj.haruclaire.animation.18_01_death] run function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/tick
 execute if entity @s[tag=aj.haruclaire.animation.99_01_hide] run function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/tick

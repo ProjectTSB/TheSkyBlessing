@@ -43,4 +43,5 @@ function animated_java:haruclaire/zzzzzzzz/animations/17_02_sword_rain_shot_0/pa
 function animated_java:haruclaire/zzzzzzzz/animations/17_03_sword_rain_shot_1/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/pause_as_root
+function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/pause_as_root
 function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/pause_as_root

@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.18_01_death.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/18_01_death/end_loop
+execute if score @s aj.haruclaire.animation.18_01_death.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/18_01_death/stop
+execute if score @s aj.haruclaire.animation.18_01_death.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/18_01_death/pause

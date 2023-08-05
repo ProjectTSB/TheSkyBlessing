@@ -8,9 +8,11 @@
     #declare tag Attacker
     
     ## 処理用
-    #declare tag 8T.ModelRoot animated_javaモデルにつける処理簡略化用のタグ 
+    #declare tag 8T.ModelRoot animated_javaモデルにつける処理簡略化用のタグ
+    #declare tag 8T.ModelRoot.Death animated_javaモデルにつける処理簡略化用のタグ(死亡処理用)
     #declare tag 8T.Marker.SpawnPoint 召喚中心点の記録
     #declare tag 8T.Weapon.HasSword 剣モード
+    #declare tag 8T.Armorstand.Ice 死亡演出用の氷
 
     ## 処理用(一時)
     #declare tag 8T.Temp.Me 汎用処理に使う一時的なタグ，自身に付与

@@ -8,7 +8,6 @@
     playsound item.trident.return hostile @a ~ ~ ~ 1 1.8
     playsound item.trident.return hostile @a ~ ~ ~ 1 2
     particle end_rod ~ ~1 ~ 0.3 0.8 0.3 0.2 10 normal @a
-    particle flash ~ ~1 ~ 0 0 0 0 1 normal @a
 
 # 残像召喚
     data modify storage api: Argument.ID set value 323
