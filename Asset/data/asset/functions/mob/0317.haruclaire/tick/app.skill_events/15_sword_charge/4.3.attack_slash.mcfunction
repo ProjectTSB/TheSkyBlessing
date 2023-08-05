@@ -1,6 +1,6 @@
-#> asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.2.attack_counter
+#> asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.3.attack_slash
 #
-# アニメーションのイベントハンドラ 剣モード・溜め斬りコンボ カウンター攻撃判定
+# アニメーションのイベントハンドラ 剣モード・溜め斬りコンボ 斬り攻撃判定
 #
 # @within function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/1.main
 
@@ -95,12 +95,12 @@
     particle dust 1 1000000000 1000000000 2 ^0 ^ ^9 0.1 0.1 0.1 0 5 normal @a
 
 # ターゲット取得
-    tag @a[tag=!PlayerShouldInvulnerable,distance=..1.2] add 8T.Temp.AttackTarget
+    tag @a[tag=!PlayerShouldInvulnerable,distance=..2.5] add 8T.Temp.AttackTarget
 
-# TODO：与えるダメージの調整，大きめに設定する
+# TODO：与えるダメージの調整
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 50f
+        data modify storage lib: Argument.Damage set value 55f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Physical"
     # 第二属性

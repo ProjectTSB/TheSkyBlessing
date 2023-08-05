@@ -21,10 +21,9 @@
     execute if score @s 8T.AnimationTimer matches 29 run playsound item.armor.equip_diamond hostile @a ~ ~ ~ 1 0.7
 
 # 演出
-    execute if score @s 8T.AnimationTimer matches 41 positioned ~0.6 ~-1.5 ~0.4 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
     execute if score @s 8T.AnimationTimer matches 45 positioned ~0.4 ~-1.5 ~0.4 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
     execute if score @s 8T.AnimationTimer matches 50 positioned ~0.3 ~-1.4 ~-0.2 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
-    execute if score @s 8T.AnimationTimer matches 52 positioned ~-0.5 ~-1 ~0.2 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
+    execute if score @s 8T.AnimationTimer matches 52 positioned ~-0.4 ~-1 ~0.2 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
     execute if score @s 8T.AnimationTimer matches 54 positioned ~-0.3 ~-0.9 ~-0.1 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
     execute if score @s 8T.AnimationTimer matches 56 positioned ~0.2 ~-0.8 ~0.1 run function asset:mob/0317.haruclaire/death/app.3.summon_ice
     execute if score @s 8T.AnimationTimer matches 58 positioned ~-0.1 ~-0.9 ~-0.2 run function asset:mob/0317.haruclaire/death/app.3.summon_ice

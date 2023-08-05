@@ -7,10 +7,9 @@
 # 位置を指定してキル（なんとなく）
     execute positioned ~ ~0.3 ~ run kill @e[type=item_display,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~ ~1.8 ~ run kill @e[type=item_display,tag=8T.Armorstand.Ice,distance=..0.01]
-    execute positioned ~0.6 ~-1.5 ~0.4 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~0.4 ~-1.5 ~0.4 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~0.3 ~-1.4 ~-0.2 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
-    execute positioned ~-0.5 ~-1 ~0.2 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
+    execute positioned ~-0.4 ~-1 ~0.2 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~-0.3 ~-0.9 ~-0.1 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~0.2 ~-0.8 ~0.1 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]
     execute positioned ~-0.1 ~-0.9 ~-0.2 run kill @e[type=armor_stand,tag=8T.Armorstand.Ice,distance=..0.01]

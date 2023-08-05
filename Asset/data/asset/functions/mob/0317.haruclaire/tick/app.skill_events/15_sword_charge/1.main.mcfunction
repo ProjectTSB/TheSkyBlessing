@@ -49,7 +49,7 @@
 # animated javaアニメーション再生 (長さ：25tick)
     execute if score @s 8T.AnimationTimer matches 111 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/3.3.play_slash_animation
 # 攻撃
-    execute if score @s 8T.AnimationTimer matches 124 positioned ^ ^ ^2 rotated ~90 30 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.1.attack_charge_slash
+    execute if score @s 8T.AnimationTimer matches 124 positioned ^ ^ ^2 rotated ~90 30 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.3.attack_slash
 # 演出
     execute if score @s 8T.AnimationTimer matches 124 positioned ~ ~1.6 ~ rotated ~90 ~40 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.4.effect_slash
     execute if score @s 8T.AnimationTimer matches 127 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9
@@ -64,7 +64,7 @@
 # animated javaアニメーション再生 (長さ：25tick)
     execute if score @s 8T.AnimationTimer matches 132 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/3.3.play_slash_animation
 # 攻撃
-    execute if score @s 8T.AnimationTimer matches 145 positioned ^ ^ ^2 rotated ~90 45 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.1.attack_charge_slash
+    execute if score @s 8T.AnimationTimer matches 145 positioned ^ ^ ^2 rotated ~90 45 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/4.3.attack_slash
 # 演出
     execute if score @s 8T.AnimationTimer matches 145 positioned ~ ~1.6 ~ rotated ~90 ~40 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.4.effect_slash
     execute if score @s 8T.AnimationTimer matches 148 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9

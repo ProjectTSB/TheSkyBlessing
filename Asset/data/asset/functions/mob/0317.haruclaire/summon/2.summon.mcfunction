@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value 
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 10000
+    data modify storage asset:mob Health set value 50000
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value 
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
@@ -58,15 +58,12 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.8
 
-# TODO：以下のコメント実装
-    # animated javaモデル召喚
-        execute rotated ~ 0 run function animated_java:haruclaire/summon
-    # 待機アニメーション再生    
-        # execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/01_01_rod_idle/play
-    # 起点召喚
-        summon marker ~ ~2 ~ {Tags:["8T.Marker.SpawnPoint"]}
-    # Mob独自のInit処理実行（optional）
-        execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/0317.haruclaire/summon/app.1.init
+# animated javaモデル召喚
+    execute rotated ~ 0 run function animated_java:haruclaire/summon
+# 中心点召喚
+    summon marker ~ ~2 ~ {Tags:["8T.Marker.SpawnPoint"]}
+# Mob独自のInit処理実行（optional）
+    execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/0317.haruclaire/summon/app.1.init
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=wither_skeleton,tag=MobInit,distance=..0.01] run function asset:mob/common/summon

@@ -24,11 +24,11 @@
 # TODO：与えるダメージの調整
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 1f
+        data modify storage lib: Argument.Damage set value 30f
     # 第一属性
-        data modify storage lib: Argument.AttackType set value "Physical"
+        data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
-        data modify storage lib: Argument.ElementType set value "None"
+        data modify storage lib: Argument.ElementType set value "Water"
 # 補正functionを実行
     function lib:damage/modifier
 # 対象にダメージ
