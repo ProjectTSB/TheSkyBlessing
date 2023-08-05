@@ -1,0 +1,2 @@
+execute if entity @s[tag=aj.haruclaire_illusion.animation.0_upper] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/0_upper/tick
+execute if entity @s[tag=aj.haruclaire_illusion.animation.1_lower] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/1_lower/tick

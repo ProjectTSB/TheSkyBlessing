@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:haruclaire_illusion/zzzzzzzz/apply_variant/2/as_bone

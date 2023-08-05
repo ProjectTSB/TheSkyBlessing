@@ -52,3 +52,6 @@
     #declare tag 8T.Skill.Sword.Charge 溜め斬りコンボ
     #declare tag 8T.Skill.Sword.Laser レーザー斬りコンボ
     #declare tag 8T.Skill.Sword.IceRain ひさめコンボ
+
+    ## 残像Mob処理用
+    #declare tag 8Z.MarkerRoot

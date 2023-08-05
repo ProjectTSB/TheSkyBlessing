@@ -1,0 +1,17 @@
+execute if entity @s[tag=aj.haruclaire_illusion.bone.hat] run data modify entity @s item.tag.CustomModelData set value 126
+execute if entity @s[tag=aj.haruclaire_illusion.bone.head] run data modify entity @s item.tag.CustomModelData set value 127
+execute if entity @s[tag=aj.haruclaire_illusion.bone.weapon_rod] run data modify entity @s item.tag.CustomModelData set value 128
+execute if entity @s[tag=aj.haruclaire_illusion.bone.arm_right_1] run data modify entity @s item.tag.CustomModelData set value 129
+execute if entity @s[tag=aj.haruclaire_illusion.bone.arm_right_0] run data modify entity @s item.tag.CustomModelData set value 130
+execute if entity @s[tag=aj.haruclaire_illusion.bone.weapon_sword2] run data modify entity @s item.tag.CustomModelData set value 131
+execute if entity @s[tag=aj.haruclaire_illusion.bone.arm_left_1] run data modify entity @s item.tag.CustomModelData set value 132
+execute if entity @s[tag=aj.haruclaire_illusion.bone.arm_left_0] run data modify entity @s item.tag.CustomModelData set value 133
+execute if entity @s[tag=aj.haruclaire_illusion.bone.wing_right] run data modify entity @s item.tag.CustomModelData set value 134
+execute if entity @s[tag=aj.haruclaire_illusion.bone.wing_left] run data modify entity @s item.tag.CustomModelData set value 135
+execute if entity @s[tag=aj.haruclaire_illusion.bone.body_0] run data modify entity @s item.tag.CustomModelData set value 136
+execute if entity @s[tag=aj.haruclaire_illusion.bone.leg_right_1] run data modify entity @s item.tag.CustomModelData set value 137
+execute if entity @s[tag=aj.haruclaire_illusion.bone.leg_right_0] run data modify entity @s item.tag.CustomModelData set value 138
+execute if entity @s[tag=aj.haruclaire_illusion.bone.leg_left_1] run data modify entity @s item.tag.CustomModelData set value 139
+execute if entity @s[tag=aj.haruclaire_illusion.bone.leg_left_0] run data modify entity @s item.tag.CustomModelData set value 140
+execute if entity @s[tag=aj.haruclaire_illusion.bone.ribbon] run data modify entity @s item.tag.CustomModelData set value 141
+execute if entity @s[tag=aj.haruclaire_illusion.bone.body_1] run data modify entity @s item.tag.CustomModelData set value 142

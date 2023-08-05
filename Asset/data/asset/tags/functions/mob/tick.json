@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0323.haruclaire_illusion/tick/1.trigger",
         "asset:mob/0322.haruclaire_icerain_center/tick/1.trigger",
         "asset:mob/0320.haruclaire_shot/tick/1.trigger",
         "asset:mob/0319.haruclaire_ice_bullet/tick/1.trigger",

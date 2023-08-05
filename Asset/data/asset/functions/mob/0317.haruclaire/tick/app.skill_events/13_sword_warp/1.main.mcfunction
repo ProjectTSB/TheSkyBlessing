@@ -20,12 +20,12 @@
     execute if score @s 8T.AnimationTimer matches 10 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 1.2
 
 ## ワープ
-# プレイヤーの前方に移動
-    execute if score @s 8T.AnimationTimer matches 30 at @r[distance=..25] rotated ~ 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^0.3 ^-12.5 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 20 positioned ^ ^ ^-1 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/5.1.effect_teleport
     execute if score @s 8T.AnimationTimer matches 30 run playsound item.trident.return hostile @a ~ ~ ~ 1 1.8
     execute if score @s 8T.AnimationTimer matches 30 run playsound item.trident.return hostile @a ~ ~ ~ 1 2
+# プレイヤーの前方に移動
+    execute if score @s 8T.AnimationTimer matches 30 at @r[distance=..25] rotated ~ 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^0.3 ^-12.5 run tp @s ~ ~ ~ ~ ~
 
 ## 斬撃
 # カウンター増加
@@ -40,10 +40,10 @@
     execute if score @s 8T.AnimationTimer matches 50 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/4.1.attack_slash
 
 ## ワープ
-# プレイヤーの前方に移動
-    execute if score @s 8T.AnimationTimer matches 57 at @r[distance=..25] rotated ~ 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^0.3 ^-12.5 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 57 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/5.1.effect_teleport
+# プレイヤーの前方に移動
+    execute if score @s 8T.AnimationTimer matches 57 at @r[distance=..25] rotated ~ 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^0.3 ^-12.5 run tp @s ~ ~ ~ ~ ~
 
 ## 一定確率で斬撃を繰り返す
     execute if score @s 8T.AnimationTimer matches 57 if score @s 8T.TempCount matches ..3 if predicate lib:random_pass_per/70 run scoreboard players set @s 8T.AnimationTimer 30
@@ -59,10 +59,10 @@
     execute if score @s 8T.AnimationTimer matches 77 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/4.2.attack_upper
 
 ## ワープ
-# プレイヤーの目の前に移動
-    execute if score @s 8T.AnimationTimer matches 84 at @p rotated ~ 0 positioned ^ ^2 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 84 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/5.1.effect_teleport
+# プレイヤーの目の前に移動
+    execute if score @s 8T.AnimationTimer matches 84 at @p rotated ~ 0 positioned ^ ^2 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 
 ## 不意打ち
 # animated javaアニメーション再生 (長さ：65tick)
