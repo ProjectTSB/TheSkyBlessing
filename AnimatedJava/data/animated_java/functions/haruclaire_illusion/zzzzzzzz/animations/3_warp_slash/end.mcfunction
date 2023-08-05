@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire_illusion.animation.3_warp_slash.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire_illusion/zzzzzzzz/animations/3_warp_slash/end_loop
+execute if score @s aj.haruclaire_illusion.animation.3_warp_slash.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire_illusion/animations/3_warp_slash/stop
+execute if score @s aj.haruclaire_illusion.animation.3_warp_slash.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire_illusion/animations/3_warp_slash/pause

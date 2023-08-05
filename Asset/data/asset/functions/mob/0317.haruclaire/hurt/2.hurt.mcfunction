@@ -22,4 +22,3 @@
         execute if entity @s[tag=8T.Temp.NotArmor] unless entity @s[tag=8T.Temp.Damage] run function asset:mob/0317.haruclaire/tick/app.general/4.start_damage_animation
     # 一定時間以上殴られ続けたら怯みキャンセル
         execute if entity @s[tag=8T.Temp.Damage] if score @s 8T.DamageTimer matches 120.. run function asset:mob/0317.haruclaire/tick/app.general/6.cancel_damage_animation
-

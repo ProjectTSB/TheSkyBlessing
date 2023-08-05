@@ -15,6 +15,30 @@ execute if score #animation aj.i = $aj.haruclaire_illusion.animation.0_upper aj.
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.0_upper aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.0_upper.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.1_lower aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/1_lower/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.1_lower aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.1_lower.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.2_warp_start aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/2_warp_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.2_warp_start aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.2_warp_start.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.3_warp_slash aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/3_warp_slash/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.3_warp_slash aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.3_warp_slash.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.4_laser_0 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/4_laser_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.4_laser_0 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.4_laser_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.5_laser_1 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/5_laser_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.5_laser_1 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.5_laser_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.6_laser_2 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/6_laser_2/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.6_laser_2 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.6_laser_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.7_charge aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/7_charge/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.7_charge aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.7_charge.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.8_charge_slash_0 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/8_charge_slash_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.8_charge_slash_0 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.8_charge_slash_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.9_charge_slash_1 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/9_charge_slash_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.9_charge_slash_1 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.9_charge_slash_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.10_rain_start aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/10_rain_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.10_rain_start aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.10_rain_start.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.11_rain_shot_0 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/11_rain_shot_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.11_rain_shot_0 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.11_rain_shot_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.12_rain_shot_1 aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/12_rain_shot_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.12_rain_shot_1 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.12_rain_shot_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.13_rain_laser aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/13_rain_laser/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.13_rain_laser aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.13_rain_laser.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:haruclaire_illusion/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i

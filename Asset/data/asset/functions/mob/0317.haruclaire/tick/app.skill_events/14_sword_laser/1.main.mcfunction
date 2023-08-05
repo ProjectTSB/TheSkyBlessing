@@ -19,10 +19,10 @@
     execute if score @s 8T.AnimationTimer matches 45 rotated ~ 0 positioned ^ ^1 ^1.7 rotated as @s run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser
 
 ## ワープ
-# プレイヤーの目の前に移動
-    execute if score @s 8T.AnimationTimer matches 59 at @p rotated ~ 0 positioned ^ ^0.2 ^2.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 59 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.1.effect_teleport
+# プレイヤーの目の前に移動
+    execute if score @s 8T.AnimationTimer matches 59 at @p rotated ~ 0 positioned ^ ^0.2 ^2.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 
 ## 斬撃-1
 # animated javaアニメーション再生 (長さ：31tick)
@@ -51,10 +51,10 @@
     execute if score @s 8T.AnimationTimer matches 104 rotated ~ 0 positioned ^ ^1 ^1.7 rotated as @s run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser
 
 ## ワープ
-#  上空に移動
-    execute if score @s 8T.AnimationTimer matches 115 facing entity @p eyes positioned as @p positioned ^ ^ ^-8 run tp @s ~ ~4 ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 115 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.1.effect_teleport
+#  上空に移動
+    execute if score @s 8T.AnimationTimer matches 115 facing entity @p eyes positioned as @p positioned ^ ^ ^-8 run tp @s ~ ~4 ~ ~ ~
 
 ## 交差射撃
 # animated javaアニメーション再生 (長さ：20tick)
@@ -68,10 +68,10 @@
     execute if score @s 8T.AnimationTimer matches 130 rotated ~ 0 positioned ^-4 ^2 ^ facing entity @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] feet run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser
 
 ## ワープ
-#  プレイヤーの目の前に移動
-    execute if score @s 8T.AnimationTimer matches 137 at @p rotated ~ 0 positioned ^ ^0.2 ^2.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 137 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.1.effect_teleport
+#  プレイヤーの目の前に移動
+    execute if score @s 8T.AnimationTimer matches 137 at @p rotated ~ 0 positioned ^ ^0.2 ^2.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 
 ## 斬撃-2
 # animated javaアニメーション再生 (長さ：76tick)

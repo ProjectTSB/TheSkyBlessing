@@ -10,5 +10,9 @@
 # 初期化
     execute if score @s 8Z.AnimationTimer matches 1 run function asset:mob/0323.haruclaire_illusion/tick/init
 
+# カウンターの場合，横に移動
+    execute if score @s 8Z.AnimationTimer matches 3 if entity @s[tag=8Z.Charge] as @e[type=item_display,tag=8Z.ModelRoot,sort=nearest,limit=1] run tp @s ^1.5 ^ ^
+    execute if score @s 8Z.AnimationTimer matches 3 if entity @s[tag=8Z.Charge] run tp @s ^1.5 ^ ^
+
 # 消去
     execute if score @s 8Z.AnimationTimer matches 6.. run function asset:mob/0323.haruclaire_illusion/tick/kill

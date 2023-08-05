@@ -17,13 +17,13 @@
     execute if score @s 8T.AnimationTimer matches 25 rotated ~ 0 positioned ~ ~-1 ~ run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/4.1.attack_rain
 
 ## ワープ
+# 演出
+    execute if score @s 8T.AnimationTimer matches 81 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 # animated javaアニメーション再生 (長さ：1tick)
     execute if score @s 8T.AnimationTimer matches 81 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/3.3.play_hide_animation
 # 中心点に移動
     execute if score @s 8T.AnimationTimer matches 81 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 81 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
-# 演出
-    execute if score @s 8T.AnimationTimer matches 81 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 
 ## ワープ
 # プレイヤーの前方に移動
@@ -43,10 +43,10 @@
     execute if score @s 8T.AnimationTimer matches 122 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/4.2.attack_shot
 
 ## ワープ
-# プレイヤーの前方に移動
-    execute if score @s 8T.AnimationTimer matches 126 at @r[distance=..25] rotated ~-30 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^1 ^-7.5 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 126 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
+# プレイヤーの前方に移動
+    execute if score @s 8T.AnimationTimer matches 126 at @r[distance=..25] rotated ~-30 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^1 ^-7.5 run tp @s ~ ~ ~ ~ ~
 
 ## 射撃
 # animated javaアニメーション再生 (長さ：25tick)
@@ -59,10 +59,10 @@
     execute if score @s 8T.AnimationTimer matches 148 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/4.2.attack_shot
 
 ## ワープ
-# プレイヤーの前方に移動
-    execute if score @s 8T.AnimationTimer matches 152 at @r[distance=..25] rotated ~30 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^1 ^-7.5 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 152 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
+# プレイヤーの前方に移動
+    execute if score @s 8T.AnimationTimer matches 152 at @r[distance=..25] rotated ~30 0 positioned ^ ^ ^0.1 facing entity @p feet rotated ~ 0 positioned ^ ^1 ^-7.5 run tp @s ~ ~ ~ ~ ~
 
 ## 射撃
 # animated javaアニメーション再生 (長さ：56tick)
@@ -83,11 +83,11 @@
     execute if score @s 8T.AnimationTimer matches 207 run tag @s remove 8T.Temp.NotArmor
 
 ## ワープ
+# 演出
+    execute if score @s 8T.AnimationTimer matches 209 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 # 中心点に移動
     execute if score @s 8T.AnimationTimer matches 209 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 209 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~ ~
-# 演出
-    execute if score @s 8T.AnimationTimer matches 209 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 
 ## レーザー
 # animated javaアニメーション再生 (長さ：65tick)
@@ -109,11 +109,11 @@
     execute if score @s 8T.AnimationTimer matches 275 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/3.6.play_laser_end_animation
 
 ## ワープ
+# 演出
+    execute if score @s 8T.AnimationTimer matches 295 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 # 中心点に移動
     execute if score @s 8T.AnimationTimer matches 295 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 295 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
-# 演出
-    execute if score @s 8T.AnimationTimer matches 295 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 
 # 終了
     execute if score @s 8T.AnimationTimer matches 296.. run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/2.end

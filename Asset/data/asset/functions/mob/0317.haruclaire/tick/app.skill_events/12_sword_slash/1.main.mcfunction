@@ -62,7 +62,6 @@
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 101 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.3.attack_lower
 
-
 ## ワープ
 # 演出
     execute if score @s 8T.AnimationTimer matches 116 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.1.effect_teleport

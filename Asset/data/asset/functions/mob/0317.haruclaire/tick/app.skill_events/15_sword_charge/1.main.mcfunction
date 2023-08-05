@@ -36,13 +36,14 @@
 # 演出
     execute if score @s 8T.AnimationTimer matches 97 positioned ~ ~1.6 ~ rotated ~90 ~-30 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.4.effect_slash
     execute if score @s 8T.AnimationTimer matches 101 positioned as @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9
-# カウンター終了
-    execute if score @s 8T.AnimationTimer matches 101 run tag @s remove 8T.Temp.PlayCounterAnimation
+
 ## ワープ
-# プレイヤーの目の前に移動
-    execute if score @s 8T.AnimationTimer matches 110 at @r rotated ~ 0 positioned ^ ^0.5 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 110 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.1.effect_teleport
+# プレイヤーの目の前に移動
+    execute if score @s 8T.AnimationTimer matches 110 at @r rotated ~ 0 positioned ^ ^0.5 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
+# カウンター終了
+    execute if score @s 8T.AnimationTimer matches 110 run tag @s remove 8T.Temp.PlayCounterAnimation
 
 ## 斬撃
 # animated javaアニメーション再生 (長さ：25tick)
@@ -54,10 +55,10 @@
     execute if score @s 8T.AnimationTimer matches 127 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9
 
 ## ワープ
-# プレイヤーの目の前に移動
-    execute if score @s 8T.AnimationTimer matches 131 at @r rotated ~ 0 positioned ^ ^0.5 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 131 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.1.effect_teleport
+# プレイヤーの目の前に移動
+    execute if score @s 8T.AnimationTimer matches 131 at @r rotated ~ 0 positioned ^ ^0.5 ^1.5 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 
 ## 斬撃
 # animated javaアニメーション再生 (長さ：25tick)
@@ -69,11 +70,11 @@
     execute if score @s 8T.AnimationTimer matches 148 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9
 
 ## ワープ
+# 演出
+    execute if score @s 8T.AnimationTimer matches 157 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.1.effect_teleport
 # 中心点に移動
     execute if score @s 8T.AnimationTimer matches 157 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 157 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
-# 演出
-    execute if score @s 8T.AnimationTimer matches 157 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.1.effect_teleport
 
 ## 溜め
 # animated javaアニメーション再生 (長さ：80tick)
@@ -102,11 +103,12 @@
 # 演出
     execute if score @s 8T.AnimationTimer matches 240 positioned ~ ~1.6 ~ rotated ~90 ~-30 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.4.effect_slash
     execute if score @s 8T.AnimationTimer matches 244 positioned as @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.9
+
 ##  ワープ
-# 後方に移動
-    execute if score @s 8T.AnimationTimer matches 253 rotated ~ 0 positioned ^ ^ ^-3 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 演出
     execute if score @s 8T.AnimationTimer matches 253 run function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/5.1.effect_teleport
+# 後方に移動
+    execute if score @s 8T.AnimationTimer matches 253 rotated ~ 0 positioned ^ ^ ^-3 facing entity @p eyes rotated ~ 0 run tp @s ~ ~ ~ ~ ~
 # 終了
     execute if score @s 8T.AnimationTimer matches 253 run scoreboard players set @s 8T.AnimationTimer 400
 
