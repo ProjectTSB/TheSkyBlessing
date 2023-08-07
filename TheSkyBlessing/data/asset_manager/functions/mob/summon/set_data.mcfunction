@@ -18,7 +18,8 @@
 #   Resist.Fire : float
 #   Resist.Water : float
 #   Resist.Thunder : float
-#   Field? : Any
+#   Field? : compound
+#   FieldOverride? : compound
 # @within function asset:mob/common/summon
 
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
@@ -78,6 +79,7 @@
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
 # フィールド
+    execute if data storage asset:mob FieldOverride run data modify storage asset:mob Field merge from storage asset:mob FieldOverride
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:mob Field
 # ボスバーの表示
     execute if data storage asset:mob {Type:"Enemy.Boss"} run function asset_manager:mob/bossbar/init
