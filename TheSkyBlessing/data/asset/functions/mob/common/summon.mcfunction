@@ -25,7 +25,8 @@
 #   Resist.Fire? : float
 #   Resist.Water? : float
 #   Resist.Thunder? : float
-#   Field? : Any
+#   Field? : compound
+#   FieldOverride? : compound
 # @output storage asset:mob Return.Summoned : boolean
 # @within function
 #   api:mob/core/summon
@@ -85,3 +86,4 @@
     data remove storage asset:mob KnockBackResist
     data remove storage asset:mob Resist
     data remove storage asset:mob Field
+    data remove storage asset:mob FieldOverride
