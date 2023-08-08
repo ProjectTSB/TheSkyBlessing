@@ -9,11 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Test
         uses: ChenCMD/datapack-linter@v1
         with:
           outputDefine: public
           notOutputSuccess: true
+          ignoreLintPathPattern: |
+            animated_java:**
