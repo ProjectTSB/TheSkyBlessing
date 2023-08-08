@@ -16,7 +16,7 @@
 # 固定加算
     scoreboard players add $MaxHealth Global 20000
     execute as @a run function player_manager:bonus/update_health_bonus
-    scoreboard players add $MaxMP Global 4
+    scoreboard players add $BonusMP Global 4
     execute as @a run function player_manager:bonus/update_mp_bonus
 # 選択トリガー
     scoreboard players enable @s 02.Trigger

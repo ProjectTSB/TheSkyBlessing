@@ -11,7 +11,7 @@
     execute if score @s 02.Trigger matches 1 run scoreboard players add $MaxHealth Global 10000
     execute if score @s 02.Trigger matches 1 as @a run function player_manager:bonus/update_health_bonus
 # MP
-    execute if score @s 02.Trigger matches 2 run scoreboard players add $MaxMP Global 2
+    execute if score @s 02.Trigger matches 2 run scoreboard players add $BonusMP Global 2
     execute if score @s 02.Trigger matches 2 as @a run function player_manager:bonus/update_mp_bonus
 # 攻撃
     execute if score @s 02.Trigger matches 3 run scoreboard players add $AttackBonus Global 1
