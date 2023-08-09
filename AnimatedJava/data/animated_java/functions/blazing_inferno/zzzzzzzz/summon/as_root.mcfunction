@@ -23,6 +23,8 @@ execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_charge aj.
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_charge aj.id run scoreboard players operation @s aj.blazing_inferno.animation.dash_charge.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_active aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_active/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_active aj.id run scoreboard players operation @s aj.blazing_inferno.animation.dash_active.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.blazing_inferno.animation.triple_punch aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/triple_punch/apply_frame_as_root
+execute if score #animation aj.i = $aj.blazing_inferno.animation.triple_punch aj.id run scoreboard players operation @s aj.blazing_inferno.animation.triple_punch.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_end aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_end/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.dash_end aj.id run scoreboard players operation @s aj.blazing_inferno.animation.dash_end.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.death_loop aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/death_loop/apply_frame_as_root
