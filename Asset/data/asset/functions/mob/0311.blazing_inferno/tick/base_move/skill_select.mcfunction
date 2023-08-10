@@ -13,15 +13,15 @@
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # スキル選択
-    scoreboard players operation $Random Temporary %= $4 Const
+    scoreboard players operation $Random Temporary %= $5 Const
 
 # デバッグのコマンド
-    scoreboard players set $Random Temporary 4
-    #scoreboard players set @s 8N.MoveCount 5
+    #scoreboard players set $Random Temporary 2
+    #scoreboard players set @s 8N.MoveCount 0
 
 # 数回に一回の行動は固定
-    #execute if score @s 8N.MoveCount matches 5.. run tag @s add 8N.Skill.Summon
-    #execute if score @s 8N.MoveCount matches 5.. run scoreboard players reset $Random Temporary
+    execute if score @s 8N.MoveCount matches 5.. run tag @s add 8N.Skill.Summon
+    execute if score @s 8N.MoveCount matches 5.. run scoreboard players reset $Random Temporary
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add 8N.Skill.TripleFireball
