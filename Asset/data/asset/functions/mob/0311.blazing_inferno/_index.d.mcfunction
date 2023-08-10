@@ -24,6 +24,7 @@
 
     #declare tag 8N.Health.50Per
 
+    #declare tag 8N.Turn.HighSpeed
     #declare tag 8N.Turn.Clockwise
     #declare tag 8N.Turn.CounterClockwise
     #declare tag 8N.Turn.Wait

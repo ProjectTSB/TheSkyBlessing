@@ -21,9 +21,13 @@
 
 # マーカーを回す。タグによって方向が変わる。
     # 本気前
-        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise,tag=!8N.Health.50Per] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.3 ~
-        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise,tag=!8N.Health.50Per] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.3 ~
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise,tag=!8N.Health.50Per,tag=!8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.3 ~
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise,tag=!8N.Health.50Per,tag=!8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.3 ~
 
     # 本気後
-        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise,tag=8N.Health.50Per] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.4 ~
-        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise,tag=8N.Health.50Per] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.4 ~
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise,tag=8N.Health.50Per,tag=!8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~0.4 ~
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise,tag=8N.Health.50Per,tag=!8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-0.4 ~
+
+    # ハイスピード
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.Clockwise,tag=8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~2 ~
+        execute if entity @s[tag=8N.RailMove,tag=8N.Turn.CounterClockwise,tag=8N.Turn.HighSpeed] as @e[type=marker,tag=8N.Marker.SpawnPoint,distance=..60,sort=nearest,limit=1] at @s run tp @s ~ ~ ~ ~-2 ~
