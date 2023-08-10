@@ -10,7 +10,6 @@
     playsound minecraft:block.fire.ambient hostile @a ~ ~ ~ 2 2
     playsound minecraft:entity.witch.throw hostile @a ~ ~ ~ 2 0.7
 
-
 # 自機狙いファイアボール
     function asset:mob/0311.blazing_inferno/tick/skill/triple_fireball/summon_fireball_aim
 
