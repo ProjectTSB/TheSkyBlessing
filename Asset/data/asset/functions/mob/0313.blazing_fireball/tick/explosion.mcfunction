@@ -28,7 +28,7 @@
     execute as @a[tag=Hit,tag=!PlayerShouldInvulnerable] run function lib:damage/
 
 # 付近の地雷を起爆
-    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..2] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
+    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..4] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # リセット
     function lib:damage/reset
