@@ -15,7 +15,7 @@
     function asset:mob/0311.blazing_inferno/tick/skill/rush_punch/break_block
 
 # ダメージ設定
-    data modify storage lib: Argument.Damage set value 7f
+    data modify storage lib: Argument.Damage set value 5f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
 
@@ -23,10 +23,10 @@
     function lib:damage/modifier
 
 # ダメージを与える
-    execute positioned ^ ^ ^2 as @a[tag=!PlayerShouldInvulnerable,distance=..1.5] run function lib:damage/
+    execute positioned ^ ^ ^1.5 as @a[tag=!PlayerShouldInvulnerable,distance=..1.5] run function lib:damage/
 
 # プレイヤーを捉える
-    execute at @s positioned ^ ^ ^2 run tp @a[distance=..1.5] ^ ^1 ^1
+    execute at @s positioned ^ ^ ^1.5 run tp @a[distance=..1.5] ^ ^1 ^1
 
 # リセット
     function lib:damage/reset

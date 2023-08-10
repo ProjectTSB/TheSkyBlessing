@@ -10,7 +10,7 @@
 # ゆっくりと向きを変える
     execute if entity @s[scores={8N.Tick=20..50}] facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-500 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
 
-# トリプルパンチのアニメ再生
+# ラッシュパンチのアニメ再生
     execute if score @s 8N.Tick matches 50 as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/rush_loop/play
 
 # 攻撃判定
