@@ -5,6 +5,6 @@ execute if entity @s[tag=aj.blazing_inferno.animation.left1_active] run function
 execute if entity @s[tag=aj.blazing_inferno.animation.dash_windup] run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_windup/tick
 execute if entity @s[tag=aj.blazing_inferno.animation.dash_charge] run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_charge/tick
 execute if entity @s[tag=aj.blazing_inferno.animation.dash_active] run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_active/tick
-execute if entity @s[tag=aj.blazing_inferno.animation.triple_punch] run function animated_java:blazing_inferno/zzzzzzzz/animations/triple_punch/tick
+execute if entity @s[tag=aj.blazing_inferno.animation.rush_loop] run function animated_java:blazing_inferno/zzzzzzzz/animations/rush_loop/tick
 execute if entity @s[tag=aj.blazing_inferno.animation.dash_end] run function animated_java:blazing_inferno/zzzzzzzz/animations/dash_end/tick
 execute if entity @s[tag=aj.blazing_inferno.animation.death_loop] run function animated_java:blazing_inferno/zzzzzzzz/animations/death_loop/tick

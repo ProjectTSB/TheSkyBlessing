@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..21 run function animated_java:blazing_inferno/zzzzzzzz/animations/triple_punch/tree/branch_0_21

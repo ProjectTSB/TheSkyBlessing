@@ -1,0 +1,1 @@
+function animated_java:blazing_inferno/zzzzzzzz/animations/rush_loop/tick_animation
