@@ -13,8 +13,8 @@
 
 # サウンド
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1.5 1
-    playsound minecraft:block.basalt.break hostile @a ~ ~ ~ 1.5 0.5
-
+    playsound minecraft:item.trident.hit_ground hostile @a ~ ~ ~ 2 0.5
+    
 # 引数の設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 30.0f

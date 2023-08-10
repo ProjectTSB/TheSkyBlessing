@@ -12,7 +12,7 @@
     execute if score $Interval Temporary matches 0 run function asset:mob/0314.blazing_bomb/tick/event/lingering/aoe
 
 # しばらくするときえる
-    execute if score @s 8Q.Tick matches 100 run kill @s
+    execute if score @s 8Q.Tick matches 200 run kill @s
 
 # リセット
     scoreboard players reset $Interval Temporary
