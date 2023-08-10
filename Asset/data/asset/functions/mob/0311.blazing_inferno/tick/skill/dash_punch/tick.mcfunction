@@ -25,7 +25,7 @@
     execute if score @s 8N.Tick matches 80 run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/end
 
 # 元の地点に戻る
-    execute if score @s 8N.Tick matches 150 at @s run function asset:mob/0311.blazing_inferno/tick/skill/dash_punch/return
+    execute if score @s 8N.Tick matches 150 at @s run function asset:mob/0311.blazing_inferno/tick/base_move/return_to_rail
 
 # リセット
     execute if score @s 8N.Tick matches 150 run function asset:mob/0311.blazing_inferno/tick/base_move/reset

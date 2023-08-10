@@ -31,10 +31,10 @@
     function lib:damage/modifier
 
 # ダメージを与える
-    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2.5] run function lib:damage/
 
 # 付近の地雷を起爆
-    execute positioned ^ ^ ^2 as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..4] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
+    execute positioned ^ ^ ^2 as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..6] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # リセット
     function lib:damage/reset
