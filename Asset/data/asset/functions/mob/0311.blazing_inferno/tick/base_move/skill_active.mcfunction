@@ -16,5 +16,8 @@
 # 地雷設置
     execute if entity @e[tag=8N.Skill.SpreadMine] run function asset:mob/0311.blazing_inferno/tick/skill/spread_mine/tick
 
+# ラッシュパンチ
+    execute if entity @e[tag=8N.Skill.RushPunch] run function asset:mob/0311.blazing_inferno/tick/skill/rush_punch/tick
+
 # 召喚&方向転換
     execute if entity @e[tag=8N.Skill.Summon] run function asset:mob/0311.blazing_inferno/tick/skill/turn/tick

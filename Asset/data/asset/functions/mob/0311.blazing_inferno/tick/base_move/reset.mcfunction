@@ -17,6 +17,7 @@
     tag @s remove 8N.Skill.Firebomb
     tag @s remove 8N.Skill.Summon
     tag @s remove 8N.Skill.SpreadMine
+    tag @s remove 8N.Skill.RushPunch
 
 # 円移動タグとこっち向くタグを付与
     tag @s add 8N.RailMove
