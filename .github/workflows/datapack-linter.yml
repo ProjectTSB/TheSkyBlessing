@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Test
-        uses: ChenCMD/datapack-linter@v1
+        uses: ChenCMD/datapack-linter@dist
         with:
           outputDefine: public
           notOutputSuccess: true
