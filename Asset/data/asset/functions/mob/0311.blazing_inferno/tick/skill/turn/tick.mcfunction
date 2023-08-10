@@ -4,15 +4,15 @@
 #
 # @within function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
-# すでにいる雑魚は退散
-    execute if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run tp @s ~ -100 ~
-    execute if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run kill @s
+# すでにいる雑魚は退散、ただしノーマルモード以下に限る
+    execute unless predicate api:global_vars/difficulty/min/normal if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run tp @s ~ -100 ~
+    execute unless predicate api:global_vars/difficulty/min/normal if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run kill @s
 
 # 攻撃
     # 予備動作
         execute if score @s 8N.Tick matches 7 as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/right1_active/play
     # 召喚1
-        execute if score @s 8N.Tick matches 10 rotated ~ 0 positioned ^ ^ ^5 run function asset:mob/0311.blazing_inferno/tick/skill/turn/summon_minion
+        execute if score @s 8N.Tick matches 10 rotated ~ 0 positioned ^ ^ ^1 run function asset:mob/0311.blazing_inferno/tick/skill/turn/summon_minion
     # 予備動作
         execute if score @s[tag=8N.Health.50Per] 8N.Tick matches 17 as @e[type=item_display,tag=8N.ModelRoot,sort=nearest,limit=1] run function animated_java:blazing_inferno/animations/left1_active/play
     # 召喚2
