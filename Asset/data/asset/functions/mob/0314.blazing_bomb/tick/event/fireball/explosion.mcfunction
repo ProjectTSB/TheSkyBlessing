@@ -9,12 +9,12 @@
 #declare tag 8S.Ready
 
 # パーティクル
-    particle minecraft:explosion ~ ~ ~ 3 1 3 0 35 force @a[distance=..60]
+    particle minecraft:explosion ~ ~ ~ 3 1 3 0 20 force @a[distance=..10]
 
 # サウンド
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1.5 1
-    playsound minecraft:item.trident.hit_ground hostile @a ~ ~ ~ 2 0.5
-    
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.8
+
 # 引数の設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 30.0f
@@ -31,8 +31,11 @@
     function lib:damage/reset
 
 # 付近の地雷を起爆
-    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..6] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
+    execute as @e[type=item_display,tag=!8S.Ready,scores={MobID=316},distance=..12] run function asset:mob/0316.blazing_mine/tick/event/bomb/start
 
 # Tickをリセットし、残存モードに移行
     tag @s add 8Q.AOE
     scoreboard players reset @s 8Q.Tick
+
+# 眼の前にブロックなかったら消える
+    execute if block ^ ^ ^1 #lib:no_collision run kill @s
