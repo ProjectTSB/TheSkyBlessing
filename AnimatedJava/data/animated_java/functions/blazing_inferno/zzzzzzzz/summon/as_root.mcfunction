@@ -14,6 +14,8 @@ execute if score #animation aj.i = $aj.blazing_inferno.animation.neurtal aj.id r
 execute if score #animation aj.i = $aj.blazing_inferno.animation.neurtal aj.id run scoreboard players operation @s aj.blazing_inferno.animation.neurtal.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.intro aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/intro/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.intro aj.id run scoreboard players operation @s aj.blazing_inferno.animation.intro.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.blazing_inferno.animation.burst aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/burst/apply_frame_as_root
+execute if score #animation aj.i = $aj.blazing_inferno.animation.burst aj.id run scoreboard players operation @s aj.blazing_inferno.animation.burst.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.right1_active aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/right1_active/apply_frame_as_root
 execute if score #animation aj.i = $aj.blazing_inferno.animation.right1_active aj.id run scoreboard players operation @s aj.blazing_inferno.animation.right1_active.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.blazing_inferno.animation.left1_active aj.id run function animated_java:blazing_inferno/zzzzzzzz/animations/left1_active/apply_frame_as_root

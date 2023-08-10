@@ -1,5 +1,6 @@
 function animated_java:blazing_inferno/zzzzzzzz/animations/neurtal/pause_as_root
 function animated_java:blazing_inferno/zzzzzzzz/animations/intro/pause_as_root
+function animated_java:blazing_inferno/zzzzzzzz/animations/burst/pause_as_root
 function animated_java:blazing_inferno/zzzzzzzz/animations/right1_active/pause_as_root
 function animated_java:blazing_inferno/zzzzzzzz/animations/left1_active/pause_as_root
 function animated_java:blazing_inferno/zzzzzzzz/animations/dash_windup/pause_as_root
