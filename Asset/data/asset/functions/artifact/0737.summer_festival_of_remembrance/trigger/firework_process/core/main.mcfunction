@@ -4,12 +4,6 @@
 #
 # @within function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/loop
 
-# 回転
-    tp @s ~ ~ ~ ~2 ~
-
-# vfx
-    execute if entity @p[distance=..5] rotated ~ 0 positioned ~ ~0.3 ~ run function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/vfx
-
 # 一定間隔で花火召喚のためのランダムな位置にマーカーを配置する
     scoreboard players operation $Temp Temporary = @s KH.Tick
     scoreboard players operation $Temp Temporary %= $6 Const
@@ -18,10 +12,6 @@
 
 # スコア
     scoreboard players add @s KH.Tick 1
-
-# プレイヤーが少しの間スニークした場合、消えるという処理
-    execute if entity @p[predicate=lib:is_sneaking] run function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/stop
-    execute if entity @s[scores={KH.SneakTime=1..}] unless entity @p[predicate=lib:is_sneaking] run scoreboard players reset @s KH.SneakTime
 
 # 消滅
     execute if entity @s[scores={KH.Tick=1800..}] run kill @s
