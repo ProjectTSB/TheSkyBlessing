@@ -1,8 +1,8 @@
-#> asset:mob/0324.slash_entity/_/register
+#> asset:mob/9000.slash_entity/_/register
 #
 #
 #
-# @within function asset:mob/0324.slash_entity/0.load
+# @within function asset:mob/9000.slash_entity/0.load
 
 
 # ExtendsSafe (boolean) (オプション)

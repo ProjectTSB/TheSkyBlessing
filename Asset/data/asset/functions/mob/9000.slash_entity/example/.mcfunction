@@ -1,4 +1,4 @@
-#> asset:mob/0324.slash_entity/example/
+#> asset:mob/9000.slash_entity/example/
 #
 # 斬撃召喚のお手本。目線ちょっと下に斜めの斬撃を出す
 #
@@ -12,4 +12,4 @@
     data modify storage api: Argument.FieldOverride set value {Color:65501,Scale:5.0f,Rotation:45.0f,Brightness:15}
 
 # 斬撃呼び出し
-    execute anchored eyes positioned ^ ^-0.5 ^1 run function asset:mob/0324.slash_entity/slash/
+    execute anchored eyes positioned ^ ^-0.5 ^1 run function asset:mob/9000.slash_entity/slash/
