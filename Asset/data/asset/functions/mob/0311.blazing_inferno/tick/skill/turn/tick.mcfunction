@@ -5,8 +5,8 @@
 # @within function asset:mob/0311.blazing_inferno/tick/base_move/skill_active
 
 # すでにいる雑魚は退散、ただしノーマルモード以下に限る
-    execute unless predicate api:global_vars/difficulty/min/normal if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run tp @s ~ -100 ~
-    execute unless predicate api:global_vars/difficulty/min/normal if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run kill @s
+    execute unless predicate api:global_vars/difficulty/min/hard if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run tp @s ~ -100 ~
+    execute unless predicate api:global_vars/difficulty/min/hard if score @s 8N.Tick matches 0 as @e[type=blaze,scores={MobID=315},distance=..30] run kill @s
 
 # 攻撃
     # 予備動作
