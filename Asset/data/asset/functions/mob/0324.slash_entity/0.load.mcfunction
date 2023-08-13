@@ -6,4 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/0324.slash_entity/**
-    scoreboard objectives add 
+    scoreboard objectives add 90.Tick dummy
