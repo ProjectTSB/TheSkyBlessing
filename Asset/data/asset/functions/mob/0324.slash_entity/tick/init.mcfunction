@@ -1,12 +1,14 @@
 #> asset:mob/0324.slash_entity/tick/init
 #
-#
+# 本当は召喚処理で済ませたいが、Tickからじゃないと個人ストレージが取得できない
 #
 # @within function asset:mob/0324.slash_entity/tick/
 
-# 向きを召喚者準拠に
-    execute store result entity @s Rotation[0] float 1 run data get entity @p Rotation[0]
-    execute store result entity @s Rotation[1] float 1 run data get entity @p Rotation[1]
+# 向き
+    execute facing entity @e[type=marker,tag=90.FacingMarker,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
+
+# マーカーキル
+    kill @e[type=marker,tag=90.FacingMarker,sort=nearest,limit=1]
 
 # サイズを決める
     data modify entity @s transformation.scale set from storage asset:context this.Scale
