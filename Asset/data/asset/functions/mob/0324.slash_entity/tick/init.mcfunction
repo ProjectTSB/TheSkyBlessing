@@ -11,7 +11,9 @@
     kill @e[type=marker,tag=90.FacingMarker,sort=nearest,limit=1]
 
 # サイズを決める
-    data modify entity @s transformation.scale set from storage asset:context this.Scale
+    data modify entity @s transformation.scale[0] set from storage asset:context this.Scale
+    data modify entity @s transformation.scale[1] set from storage asset:context this.Scale
+    data modify entity @s transformation.scale[2] set from storage asset:context this.Scale
 
 # 角度を決める
     data modify storage 90.storage: Rotation set value {axis:[0f,0f,1f],angle:0}
