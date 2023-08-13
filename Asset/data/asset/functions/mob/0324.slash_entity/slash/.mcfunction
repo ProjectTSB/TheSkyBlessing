@@ -1,8 +1,8 @@
 #> asset:mob/0324.slash_entity/slash/
 #
+# 外部からはコレを呼び出す
 #
-#
-# @within function asset:**
+# @within function asset/**
 
 # 方向を決める
     summon marker ^ ^0.01 ^1 {Tags:["90.FacingMarker"]}
