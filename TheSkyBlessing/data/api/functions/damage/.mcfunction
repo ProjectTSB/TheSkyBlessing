@@ -18,7 +18,7 @@
 #       └ Argument.BypassResistance? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
-# @private
+# @api
 
 # 引数チェック
     execute unless data storage api: Argument.Damage run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Damage","color":"red"}]
