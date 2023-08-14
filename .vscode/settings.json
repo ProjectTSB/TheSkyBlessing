@@ -1940,7 +1940,7 @@
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/tick/",
+                    "rel": "data/asset/functions/mob/%namespace%/tick/.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/tick/",
                         "#",
@@ -1954,13 +1954,13 @@
                     "rel": "data/asset/tags/functions/mob/tick.json",
                     "content": {
                         "values": [
-                            "asset:mob/%namespace%/tick/1.trigger"
+                            "asset:mob/%namespace%/_/tick"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:mob/%namespace%/tick/1.trigger"
+                        "elem": "asset:mob/%namespace%/_/tick"
                     }
                 }
             ],
