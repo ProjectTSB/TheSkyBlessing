@@ -1516,7 +1516,7 @@
             ]
         },
         {
-            "label": "MOB/テンプレートV2",
+            "label": "MOB/テンプレート V2",
             "generates": [
                 {
                     "type": "file",
@@ -1547,7 +1547,21 @@
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/register",
+                    "rel": "data/asset/tags/functions/mob/summon.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/_/summon"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/_/summon"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/register.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/register",
                         "#",
@@ -1623,21 +1637,21 @@
                         "#",
                         "# @within tag/function asset:mob/register",
                         "",
-                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/register/"
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/register"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/mob/summon.json",
+                    "rel": "data/asset/tags/functions/mob/register.json",
                     "content": {
                         "values": [
-                            "asset:mob/%namespace%/_/summon"
+                            "asset:mob/%namespace%/_/register"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:mob/%namespace%/_/summon"
+                        "elem": "asset:mob/%namespace%/_/register"
                     }
                 },
                 {
@@ -1847,7 +1861,7 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/_/death",
+                    "rel": "data/asset/functions/mob/%namespace%/_/death.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/_/death",
                         "#",
