@@ -15,9 +15,8 @@ jobs:
           fetch-depth: 0
 
       - name: Test
-        uses: ChenCMD/datapack-linter@v1
+        uses: ChenCMD/datapack-linter@v2
         with:
-          outputDefine: public
-          notOutputSuccess: true
+          muteSuccessResult: true
           ignoreLintPathPattern: |
             animated_java:**
