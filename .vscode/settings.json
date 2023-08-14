@@ -1561,6 +1561,21 @@
                 },
                 {
                     "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/summon/debug",
+                    "content": [
+                        "#> asset:mob/%namespace%/summon/debug",
+                        "#",
+                        "# モブの動作チェック用の召喚処理 使い終わったら消してもいいかも",
+                        "#",
+                        "# @within asset:mob/%namespace%/summon/debug",
+                        "",
+                        "# モブを召喚",
+                        "   data modify storage api: Argument.ID set value 15",
+                        "   function api:mob/summon"
+                    ]
+                },
+                {
+                    "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/register.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/register",
