@@ -1561,7 +1561,7 @@
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/summon/debug",
+                    "rel": "data/asset/functions/mob/%namespace%/summon/debug.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/summon/debug",
                         "#",
@@ -1570,7 +1570,7 @@
                         "# @within asset:mob/%namespace%/summon/debug",
                         "",
                         "# モブを召喚",
-                        "   data modify storage api: Argument.ID set value 15",
+                        "   data modify storage api: Argument.ID set value %id%",
                         "   function api:mob/summon"
                     ]
                 },
