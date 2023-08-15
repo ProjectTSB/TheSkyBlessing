@@ -12,8 +12,7 @@
 
 # アニメーション
     execute if score @s 90.Tick matches 2 run function asset:mob/9000.slash_entity/tick/start_animation
-    execute if score @s 90.Tick matches 3 run data modify entity @s item.tag.CustomModelData set value 20336
-    execute if score @s 90.Tick matches 4 run data modify entity @s item.tag.CustomModelData set value 20337
+    execute if score @s 90.Tick matches 3.. store result entity @s item.tag.CustomModelData int -1 run data get entity @s item.tag.CustomModelData -1.000000000000001
 
 # キル
     kill @s[scores={90.Tick=5}]

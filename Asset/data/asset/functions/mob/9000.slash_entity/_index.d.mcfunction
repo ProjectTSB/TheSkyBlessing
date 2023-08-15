@@ -6,4 +6,4 @@
 
 #declare tag 6Y0.Init
 #declare tag 6Y0.FacingMarker
-#declare storage 6Y0.storage:
+#declare storage 6y0.storage:

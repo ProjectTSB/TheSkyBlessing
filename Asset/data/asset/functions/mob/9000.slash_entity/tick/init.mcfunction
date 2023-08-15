@@ -21,10 +21,10 @@
     execute unless data storage asset:context this.Brightness run data remove entity @s brightness
 
 # 角度を決める
-    data modify storage 6Y0.storage: Rotation set value {axis:[0f,0f,1f],angle:0}
-    execute store result storage 6Y0.storage: Rotation.angle float 0.01745 run data get storage asset:context this.Rotation
-    data modify entity @s transformation.left_rotation set from storage 6Y0.storage: Rotation
-    data remove storage 6Y0.storage: Rotation
+    data modify storage 6y0.storage: Rotation set value {axis:[0f,0f,1f],angle:0}
+    execute store result storage 6y0.storage: Rotation.angle float 0.01745 run data get storage asset:context this.Rotation
+    data modify entity @s transformation.left_rotation set from storage 6y0.storage: Rotation
+    data remove storage 6y0.storage: Rotation
 
 # Init完了
     tag @s add 6Y0.Init
