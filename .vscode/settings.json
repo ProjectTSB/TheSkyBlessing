@@ -1584,7 +1584,7 @@
                         "#",
                         "# @within function asset:mob/%namespace%/_/register",
                         "",
-                        "# ExtendsSafe (boolean) (オプション)",
+                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
                         "    # data modify storage asset:mob ExtendsSafe set value ",
                         "# ID (int)",
                         "    data modify storage asset:mob ID set value %id%",
