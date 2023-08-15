@@ -9,4 +9,4 @@
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:modifier/core/max_mp/remove
 # データ代入
-    execute store result score @s MPMax run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxMP 1
+    function api:mp/update_max
