@@ -10,7 +10,6 @@
 # @private
     #declare score_holder $Diff
     #declare score_holder $isNegative
-    #declare score_holder $isNegative
 
 # 差分にする
     scoreboard players operation $Diff Temporary = $MaxHealth Global
