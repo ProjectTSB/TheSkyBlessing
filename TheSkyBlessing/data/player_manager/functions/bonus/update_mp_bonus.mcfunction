@@ -8,8 +8,8 @@
 
 #> Diff
 # @private
-    #declare score_holder $BonusMPOld
     #declare score_holder $Diff
+    #declare score_holder $RemovedAmount
     #declare score_holder $isNegative
 
 # 古いのをremove
@@ -17,17 +17,18 @@
     function api:modifier/max_mp/remove
 
 # 差分にする
-    execute store result score $BonusMPOld Temporary run data get storage api: Removed.Amount
     scoreboard players operation $Diff Temporary = $BonusMP Global
-    scoreboard players operation $Diff Temporary -= $BonusMPOld Temporary
+    execute store result score $RemovedAmount Temporary run data get storage api: Removed.Amount 1
+    execute unless score $RemovedAmount Temporary matches -2147483648..2147483647 run scoreboard players set $RemovedAmount Temporary 0
+    scoreboard players operation $Diff Temporary -= $RemovedAmount Temporary
 # 出力
     execute store result score $isNegative Temporary if score $Diff Temporary matches ..-1
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Diff Temporary *= $-1 Const
     execute if score $isNegative Temporary matches 0 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大魔力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"増加した","color":"white"}]
     execute if score $isNegative Temporary matches 1 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大魔力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"減少した","color":"white"}]
 # リセット
-    scoreboard players reset $BonusMPOld Temporary
     scoreboard players reset $Diff Temporary
+    scoreboard players reset $RemovedAmount Temporary
     scoreboard players reset $isNegative Temporary
 
 # 適用
