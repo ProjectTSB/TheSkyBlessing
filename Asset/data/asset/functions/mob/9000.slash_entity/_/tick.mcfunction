@@ -2,6 +2,6 @@
 #
 #
 #
-# @within function asset:mob/9000.slash_entity/tick/2.tick
+# @within tag/function asset:mob/tick
 
 execute if data storage asset:context {id:324} run function asset:mob/9000.slash_entity/tick/
