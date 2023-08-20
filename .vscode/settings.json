@@ -1413,6 +1413,25 @@
             ]
         },
         {
+            "label": "神器/トリガー: 回復",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/artifact/heal.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
             "label": "神器/トリガー: 装備着脱",
             "generates": [
                 {
