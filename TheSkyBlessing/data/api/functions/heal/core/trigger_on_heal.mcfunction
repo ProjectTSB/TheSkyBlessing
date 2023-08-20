@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:heal/core/receive_modifier
+# @within function api:heal/core/player
 
 # asset_managerへ引き継ぎ
     tag @s add TriggerFlag.Heal
