@@ -49,6 +49,7 @@
     execute if data storage asset:artifact {Trigger:"keepSneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒間以上スニーク"
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.AB set value ""
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.B set value ""
+    execute if data storage asset:artifact {Trigger:"onHeal"} run data modify storage asset:artifact Temp.Trigger.B set value "回復"
 # 設定されてなかったらエラーメッセージ
     execute unless data storage asset:artifact Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"}]
     execute unless data storage asset:artifact Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"}]
