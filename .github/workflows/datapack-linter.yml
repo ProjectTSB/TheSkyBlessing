@@ -31,8 +31,14 @@ jobs:
 
       - name: Generate declares.d.mcfunction
         # if: ${{ github.ref == 'refs/heads/main' }}
-        run: node ./.github/workflows/make-declares-mcf.js "/home/runner/work/TheSkyBlessing/TheSkyBlessing/" "https://github.com/ProjectTSB/TheSkyBlessing/blob/master/" 4 "asset:.*|public" "./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction" "minecraft:declares.d"
-
+        run: node ./.github/workflows/make-declares-mcf.js
+        env:
+          CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
+          REPOSITORY: ProjectTSB/TheSkyBlessing
+          BRANCH: master
+          VISIBILITY_FILTER: \*\*|asset:.+
+          OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
+          OUTPUT_RESOURCE_PATH: minecraft:declares.d
       # - name: Deploy declares to Asset Repository
       #   if: ${{ github.ref == 'refs/heads/main' }}
       #   uses: actions-js/push@v1.4

@@ -12,18 +12,29 @@ const fsp = require("fs/promises");
  * @typedef {{ [type in CacheType]?: CacheCategory }} ClientCache
  * */
 /** @type {(paths: string[]) => void} */
-const run = async (args) => {
-    const checkoutPath = args[0];
-    const repositoryPath = args[1];
-    const indent = args[2];
-    const path = args[3];
-    const outputPath = args[4];
-    const outputResourcePath = args[5];
+const run = async () => {
+    /** @type {(message: string) => never} */
+    const throwError = m => { throw new Error(m) }
+    const env = {
+        /** @type {(key: string, defaultValue: string) => string} */
+        getOrDefault: (key, defaultValue) => process.env[key] ?? defaultValue,
+        /** @type {(key: string) => string} */
+        getOrThrow: key => process.env[key] ?? throwError(`Missing environment key: ${key}`)
+    };
+    const checkoutPath = env.getOrThrow('CHECKOUT_PATH');
+    const reposName = env.getOrThrow('REPOSITORY');
+    const branch = env.getOrDefault('BRANCH', "master");
+    const indent = env.getOrDefault('INDENT', 4);
+    const visibilityFilter = env.getOrThrow('VISIBILITY_FILTER');
+    const outputPath = env.getOrDefault('OUTPUT_PATH', "./declares.mcfunction");
+    const outputResourcePath = env.getOrDefault('OUTPUT_RESOURCE_PATH', "minecraft:declares");
+    const defaultVisibility = (() => {
+        const dv = env.getOrDefault('DEFAULT_VISIBILITY', "public");
+        return dv === "public" ? "**" : dv;
+    })();
 
     /** @type {ClientCache} */
     const dlsData = JSON.parse(await fsp.readFile(".cache/dls.json", { encoding: "utf-8" })).cache;
-
-    const defaultVisibility = process.env['DEFAULT_VISIBILITY'] ?? "public";
 
     /** @typedef {{ str: string, from: { uri: string | undefined, line: [number, number] | undefined } }} Hoge */
     /** @type {Map<string, { declare: Hoge[], alias: Hoge[] }>} */
@@ -34,46 +45,49 @@ const run = async (args) => {
         for (const [resourceId, { doc, dcl, def, foo }] of Object.entries(cache)) {
             const cp = [...(dcl ?? []), ...(def ?? [])].find(cpos =>
                 (cpos.visibility?.map(cv => cv.pattern) ?? [defaultVisibility])
-                    .some(cp => RegExp(`^(${path})$`).test(cp))
+                    .some(cp => RegExp(`^(${visibilityFilter})$`).test(cp))
             );
             if (!cp) continue;
-            const declares = decMap.get(doc) ?? { declare: [], alias: [] };
-            if (type.startsWith("alias")) {
-                declares.alias.push({ str: `#alias ${resourceId} ${foo}`, from: { uri: cp.uri, line: cp.startLine && cp.endLine && [cp.startLine + 1, cp.endLine + 1] } });
-            } else {
-                declares.declare.push({ str: `#declare ${type} ${resourceId}`, from: { uri: cp.uri, line: cp.startLine && cp.endLine && [cp.startLine + 1, cp.endLine + 1] } });
+            const decs = decMap.get(doc ?? defaultVisibility) ?? { declare: [], alias: [] };
+            const from = {
+                uri: cp.uri,
+                line: cp.startLine !== undefined && cp.endLine !== undefined && [cp.startLine + 1, cp.endLine + 1]
             }
-            decMap.set(doc ?? defaultVisibility, declares);
+            if (type.startsWith("alias")) {
+                decs.alias.push({ str: `#alias ${resourceId} ${foo}`, from });
+            } else {
+                decs.declare.push({ str: `#declare ${type} ${resourceId}`, from });
+            }
+            decMap.set(doc ?? defaultVisibility, decs);
         }
     }
-    const declares =
-        [
-            `#> ${outputResourcePath}`,
-            "# @private",
-            "",
-            Array.from(decMap.entries())
-                .map(([doc, v]) => {
-                    const lines = doc.replace(/\n{3}|\n{2}/g, "\n").split("\n");
-                    const hoge = [...v.alias, ...v.declare];
-                    return [
-                        `#> ${lines[0]}`,
-                        ...lines.slice(1).map(v => `# ${v}`),
-                        ...hoge.map(s => {
-                            const line = s.from
-                                ? s.from.line[0] !== s.from.line[1]
-                                    ? `L${s.from.line[0]}-L${s.from.line[1]}`
-                                    : `L${s.from.line[0]}`
-                                : "L1";
-                            return `${hoge.length !== 1 ? " ".repeat(indent) : ""}${s.str}  // declared from: ${s.from.uri.replace(checkoutPath, repositoryPath)}#${line}`
-                        })
-                    ].join("\n");
-                })
-                .join("\n\n"),
-            ""
-        ].join("\n");
+    const declares = [
+        `#> ${outputResourcePath}`,
+        "# @private",
+        "",
+        Array.from(decMap.entries())
+            .map(([doc, v]) => {
+                const lines = doc.replace(/\n{3}|\n{2}/g, "\n").split("\n");
+                const hoge = [...v.alias, ...v.declare];
+                return [
+                    `#> ${lines[0]}`,
+                    ...lines.slice(1).map(v => `# ${v}`),
+                    ...hoge.map(s => {
+                        const line = s.from
+                            ? s.from.line[0] !== s.from.line[1]
+                                ? `L${s.from.line[0]}-L${s.from.line[1]}`
+                                : `L${s.from.line[0]}`
+                            : "L1";
+                        return `${hoge.length !== 1 ? " ".repeat(indent) : ""}${s.str}  // declared from: ${s.from.uri.replace(checkoutPath, `https://github.com/${reposName}/blob/${branch}/`)}#${line}`
+                    })
+                ].join("\n");
+            })
+            .join("\n\n"),
+        ""
+    ].join("\n");
     console.log(declares)
     await fsp.mkdir(require("path").dirname(outputPath), { recursive: true })
     await fsp.writeFile(outputPath, declares)
 };
 
-run(process.argv.slice(2))
+run()
