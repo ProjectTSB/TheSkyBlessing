@@ -34,7 +34,7 @@ const run = async (args) => {
         for (const [resourceId, { doc, dcl, def, foo }] of Object.entries(cache)) {
             const cp = [...(dcl ?? []), ...(def ?? [])].find(cpos =>
                 (cpos.visibility?.map(cv => cv.pattern) ?? [defaultVisibility])
-                    .some(cp => RegExp(`^${path}$`).test(cp))
+                    .some(cp => RegExp(`^(${path})$`).test(cp))
             );
             if (!cp) continue;
             const declares = decMap.get(doc) ?? { declare: [], alias: [] };
