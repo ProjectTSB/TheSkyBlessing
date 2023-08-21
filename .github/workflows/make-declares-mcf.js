@@ -71,6 +71,7 @@ const run = async (args) => {
                 .join("\n\n"),
             ""
         ].join("\n");
+    console.log(declares)
     await fsp.mkdir(require("path").dirname(outputPath), { recursive: true })
     await fsp.writeFile(outputPath, declares)
 };
