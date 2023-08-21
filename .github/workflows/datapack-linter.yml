@@ -31,7 +31,7 @@ jobs:
 
       - name: Pre deploy declares
         # if: ${{ github.ref == 'refs/heads/main' }}
-        run: node ./make-declares-mcf.js "/home/runner/work/TheSkyBlessing/TheSkyBlessing/" "https://github.com/ProjectTSB/TheSkyBlessing/blob/master/" 4 ".*" "./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction" "minecraft:declares.d"
+        run: node ./.github/workflows/make-declares-mcf.js "/home/runner/work/TheSkyBlessing/TheSkyBlessing/" "https://github.com/ProjectTSB/TheSkyBlessing/blob/master/" 4 ".*" "./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction" "minecraft:declares.d"
 
       - run: cat ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction | echo
       # - name: Deploy declares to Asset Repository
