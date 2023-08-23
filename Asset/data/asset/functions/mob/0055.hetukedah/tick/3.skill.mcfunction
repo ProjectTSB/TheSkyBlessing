@@ -12,6 +12,8 @@
         execute store result score $Random Temporary run function lib:random/
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $3 Const
+    # デバッグ
+        scoreboard players set $Random Temporary 0
     # メッセージ出力
         execute if score $Random Temporary matches 0 run function asset:mob/0055.hetukedah/tick/4.skill1_otetebeam
         execute if score $Random Temporary matches 1 run function asset:mob/0055.hetukedah/tick/5.magicattack
