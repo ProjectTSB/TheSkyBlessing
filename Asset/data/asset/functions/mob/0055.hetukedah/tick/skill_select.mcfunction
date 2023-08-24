@@ -19,11 +19,12 @@
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $3 Const
     # デバッグ
-        scoreboard players set $Random Temporary 0
+        scoreboard players set $Random Temporary 1
     # スキル選択
         execute if score $Random Temporary matches 0 run tag @s add 1J.Skill.OteteBeam
-        execute if score $Random Temporary matches 1 run function asset:mob/0055.hetukedah/tick/5.magicattack
-        execute if score $Random Temporary matches 2 run function asset:mob/0055.hetukedah/tick/6.speedup
+        execute if score $Random Temporary matches 1 run tag @s add 1J.Skill.Explosion
+        #execute if score $Random Temporary matches 1 run function asset:mob/0055.hetukedah/tick/5.magicattack
+        #execute if score $Random Temporary matches 2 run function asset:mob/0055.hetukedah/tick/6.speedup
 
     # リセット
         scoreboard players reset $Random Temporary

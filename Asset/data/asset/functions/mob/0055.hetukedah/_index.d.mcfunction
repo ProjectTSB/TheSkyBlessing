@@ -6,4 +6,5 @@
     #declare tag Landing
     #declare tag LandingTarget
     #declare tag 1J.Skill.OteteBeam
+    #declare tag 1J.Skill.Explosion
     #declare tag 1J.InAction
