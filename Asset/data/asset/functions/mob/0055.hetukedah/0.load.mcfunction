@@ -8,4 +8,4 @@
 # @within function asset:mob/0055.hetukedah/**
     scoreboard objectives add 1J.BossTime dummy
     scoreboard objectives add 1J.Tick dummy
-    scoreboard objectives add 1J.Counter dummy
+    scoreboard objectives add 1J.MoveCount dummy

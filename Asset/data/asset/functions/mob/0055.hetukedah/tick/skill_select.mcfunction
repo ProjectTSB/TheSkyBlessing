@@ -18,14 +18,17 @@
         execute store result score $Random Temporary run function lib:random/
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $3 Const
+    # 動作カウント増やす
+        scoreboard players add @s 1J.MoveCount 1
     # デバッグ
-        scoreboard players set $Random Temporary 1
+        #scoreboard players set $Random Temporary 1
+        scoreboard players set @s 1J.MoveCount 5
+    # 数回に一回の行動は固定
+        execute if score @s 1J.MoveCount matches 5.. run tag @s add 1J.Skill.Summon
+        execute if score @s 1J.MoveCount matches 5.. run scoreboard players reset $Random Temporary
     # スキル選択
         execute if score $Random Temporary matches 0 run tag @s add 1J.Skill.OteteBeam
         execute if score $Random Temporary matches 1 run tag @s add 1J.Skill.Explosion
-        #execute if score $Random Temporary matches 1 run function asset:mob/0055.hetukedah/tick/5.magicattack
-        #execute if score $Random Temporary matches 2 run function asset:mob/0055.hetukedah/tick/6.speedup
-
     # リセット
         scoreboard players reset $Random Temporary
 

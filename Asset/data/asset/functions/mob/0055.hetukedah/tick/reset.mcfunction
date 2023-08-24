@@ -6,7 +6,10 @@
 
 # タグリセット
     tag @s remove 1J.Skill.OteteBeam
+    tag @s remove 1J.Skill.Explosion
+    tag @s remove 1J.Skill.Summon
     tag @s remove 1J.InAction
+
 # スコアリセット
     scoreboard players reset @s 1J.Tick
 
