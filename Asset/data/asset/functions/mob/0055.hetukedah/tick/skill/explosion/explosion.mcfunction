@@ -11,6 +11,9 @@
     playsound minecraft:entity.wither.death hostile @a ~ ~ ~ 0.5 2
     playsound minecraft:entity.generic.explode hostile @a ~ ~ ~ 1.5 1
 
+# ハメ防止
+    function asset:mob/0055.hetukedah/tick/skill/explosion/break_block
+
 # ダメージ設定
     # 与えるダメージ
         data modify storage lib: Argument.Damage set value 12.0f
