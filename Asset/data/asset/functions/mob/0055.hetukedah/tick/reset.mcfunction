@@ -9,6 +9,8 @@
     tag @s remove 1J.Skill.Explosion
     tag @s remove 1J.Skill.Summon
     tag @s remove 1J.InAction
+    tag @s remove 1J.Turn.Left
+    tag @s remove 1J.Turn.Right
 
 # スコアリセット
     scoreboard players reset @s 1J.Tick
