@@ -8,7 +8,7 @@
     data modify storage api: Argument.ID set value 64
     function api:mob/summon
 
-# 召喚した目玉をこっちに向かせる
+# こっちに向かせる
     execute as @e[type=zombie,scores={MobID=64},sort=nearest,limit=1] at @s facing entity @r[distance=..30] eyes run tp @s ~ ~ ~ ~ ~
 
 # 演出
