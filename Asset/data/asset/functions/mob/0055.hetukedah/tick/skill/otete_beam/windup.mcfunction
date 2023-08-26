@@ -5,7 +5,7 @@
 # @within function asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
 
 # こっち見る
-    execute facing entity @p eyes run tp @s ~ ~ ~ ~ ~
+    execute facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # 演出
     particle minecraft:dust 1 1 0 1 ~ ~1 ~ 0.5 0.5 0.5 0 100 force @a[distance=..30]

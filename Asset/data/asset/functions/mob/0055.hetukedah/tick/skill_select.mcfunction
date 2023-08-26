@@ -24,7 +24,7 @@
         execute if score @s 1J.MoveCount matches 5.. run tag @s add 1J.Skill.Summon
         execute if score @s 1J.MoveCount matches 5.. run scoreboard players reset $Random Temporary
     # デバッグ
-        scoreboard players set $Random Temporary 3
+        scoreboard players set $Random Temporary 0
         scoreboard players set @s 1J.MoveCount 1
     # スキル選択
         execute if score $Random Temporary matches 0 run tag @s add 1J.Skill.OteteBeam

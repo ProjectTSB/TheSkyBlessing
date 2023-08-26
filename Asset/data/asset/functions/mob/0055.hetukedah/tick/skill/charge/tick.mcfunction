@@ -16,8 +16,8 @@
 # 爆発
     execute if score @s 1J.Tick matches 50 run function asset:mob/0055.hetukedah/tick/skill/charge/end
 
-# ループする
-    #execute if score @s[scores={1J.LoopCount=..2}] 1J.Tick matches 60 run scoreboard players set @s 1J.Tick 20
+# ハードだとループする
+    execute if predicate api:global_vars/difficulty/min/hard if score @s[scores={1J.LoopCount=..2}] 1J.Tick matches 60 run scoreboard players set @s 1J.Tick 30
 
 # リセット
     execute if score @s 1J.Tick matches 70.. run function asset:mob/0055.hetukedah/tick/reset
