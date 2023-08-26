@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/0055.hetukedah/tick/skill/flamethrower/tick
 
-
 # 演出
     particle minecraft:dust 1 0.6 0 1 ~ ~1 ~ 0.5 0.5 0.5 0 50 force @a[distance=..30]
     particle minecraft:flame ~ ~1 ~ 0.5 0.5 0.5 0 10 force @a[distance=..30]
