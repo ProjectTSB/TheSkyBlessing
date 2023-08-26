@@ -7,6 +7,9 @@
 # 移動
     #execute facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.2 ~ ~
 
+# 冒頭の動作
+    execute if score @s[tag=!1J.InAction] 1J.Tick matches -30 run function asset:mob/0055.hetukedah/tick/title
+
 # スコア付与
     scoreboard players add @s 1J.Tick 1
 

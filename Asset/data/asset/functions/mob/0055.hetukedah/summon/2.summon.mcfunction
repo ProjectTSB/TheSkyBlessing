@@ -24,23 +24,11 @@
 # 防具
     # 頭 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Head set value {id:"minecraft:stick",Count:1b,tag:{CustomModelData:20015}}
-    # 胴 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Chest set value
-    # 脚 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Legs set value
-    # 足 (Compound(Item)) (オプション)
-        # data modify storage asset:mob Armor.Feet set value
-# 防具ドロップ率 ([float, float]) (オプション)
-    # data modify storage asset:mob ArmorDropChances set value
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 3100
 # 攻撃力 (double) (オプション)
     data modify storage asset:mob AttackDamage set value 10
-# 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
-    #data modify storage asset:mob Defense set value 0
-# 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
-    #data modify storage asset:mob SpecialDefense set value 0
-# 移動速度 (double) (オプション)
+# 移動速度、ハードかどうかによってちょっと変わる
     execute unless predicate api:global_vars/difficulty/min/hard run data modify storage asset:mob Speed set value 0.2
     execute if predicate api:global_vars/difficulty/min/hard run data modify storage asset:mob Speed set value 0.25
 # 索敵範囲 (double) (オプション)
@@ -58,6 +46,12 @@
         data modify storage asset:mob Resist.Water set value 1.0
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 1.0
+
+# スコアをセットする
+    scoreboard players set @e[type=zombie,tag=MobInit,distance=..0.01] 1J.Tick -60
+
+# 最初は鈍足をつけておく
+    effect give @e[type=zombie,tag=MobInit,distance=..0.01] slowness 4 10 true
 
 # MobInitタグ持ちを対象にして召喚関数呼び出し
     execute as @e[type=zombie,tag=MobInit,distance=..0.01] run function asset:mob/common/summon
