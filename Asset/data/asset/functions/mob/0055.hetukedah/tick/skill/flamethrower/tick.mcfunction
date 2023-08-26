@@ -18,8 +18,5 @@
 # スタート
     execute if score @s 1J.Tick matches 40..100 run function asset:mob/0055.hetukedah/tick/skill/flamethrower/shoot
 
-# 途中でNOAI解除
-    execute if score @s 1J.Tick matches 100 run data merge entity @s {NoAI:0b}
-
 # リセット
-    execute if score @s 1J.Tick matches 160.. run function asset:mob/0055.hetukedah/tick/reset
+    execute if score @s 1J.Tick matches 100.. run function asset:mob/0055.hetukedah/tick/reset
