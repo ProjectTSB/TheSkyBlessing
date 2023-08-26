@@ -10,5 +10,8 @@
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1
     playsound minecraft:entity.ravager.celebrate hostile @a ~ ~ ~ 2 2
 
+# ループカウントを0に
+    scoreboard players set @s 1J.LoopCount 0
+
 # NoAIにする
     data merge entity @s {NoAI:1b}
