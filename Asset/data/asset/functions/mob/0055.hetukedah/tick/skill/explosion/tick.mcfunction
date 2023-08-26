@@ -11,12 +11,7 @@
     execute if score @s 1J.Tick matches 30 run function asset:mob/0055.hetukedah/tick/skill/explosion/start
 
 # 加速
-    execute unless predicate api:global_vars/difficulty/min/hard if score @s 1J.Tick matches 30..60 run function asset:mob/0055.hetukedah/tick/skill/explosion/dash
-
-# ハードだとワープしてくる
-    execute if predicate api:global_vars/difficulty/min/hard if score @s 1J.Tick matches 30 at @s run function asset:mob/0055.hetukedah/tick/skill/explosion/warp
-    execute if predicate api:global_vars/difficulty/min/hard if score @s 1J.Tick matches 30 at @r[distance=..30] rotated ~ 0 positioned ^ ^ ^1.5 facing entity @p eyes run tp @s ~ ~ ~ ~ ~
-    execute if predicate api:global_vars/difficulty/min/hard if score @s 1J.Tick matches 30 at @s run function asset:mob/0055.hetukedah/tick/skill/explosion/warp
+    execute if score @s 1J.Tick matches 30..60 run function asset:mob/0055.hetukedah/tick/skill/explosion/dash
 
 # プレイヤーを捉えたら
     execute if score @s 1J.Tick matches 30..60 if entity @a[distance=..2] run scoreboard players set @s 1J.Tick 60
