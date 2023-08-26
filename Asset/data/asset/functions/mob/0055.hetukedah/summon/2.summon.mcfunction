@@ -5,7 +5,7 @@
 # @within function asset:mob/0055.hetukedah/summon/1.trigger
 
 # 元となるMobを召喚する
-    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AntiVoid"],DeathLootTable:"asset:mob/death/0055.hetukedah"}
+    summon zombie ~ ~ ~ {Silent:1b,Tags:["MobInit","AlwaysInvisible","AlwaysSlowFall","AntiVoid"],DeathLootTable:"asset:mob/death/0055.hetukedah"}
 # ID (int)
     data modify storage asset:mob ID set value 55
 # Type (string) Wikiを参照
@@ -41,7 +41,8 @@
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
     #data modify storage asset:mob SpecialDefense set value 0
 # 移動速度 (double) (オプション)
-    data modify storage asset:mob Speed set value 0.2
+    execute unless predicate api:global_vars/difficulty/min/hard run data modify storage asset:mob Speed set value 0.2
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage asset:mob Speed set value 0.25
 # 索敵範囲 (double) (オプション)
     data modify storage asset:mob FollowRange set value 32
 # ノックバック耐性 (double) (オプション)
