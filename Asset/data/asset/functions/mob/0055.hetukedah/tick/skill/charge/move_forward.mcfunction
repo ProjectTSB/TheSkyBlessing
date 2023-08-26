@@ -24,7 +24,7 @@
     execute as @a[tag=!PlayerShouldInvulnerable,distance=..2] run function asset:mob/0055.hetukedah/tick/skill/charge/hit
 
 # ハードでは壁を破壊
-    execute if predicate api:global_vars/difficulty/min/hard positioned ^ ^ ^1 run function asset:mob/0055.hetukedah/tick/skill/charge/break_block
+    execute if predicate api:global_vars/difficulty/min/hard rotated ~ 0 positioned ^ ^ ^1 run function asset:mob/0055.hetukedah/tick/skill/charge/break_block
 
 # 壁があったら終了
     execute unless block ^ ^ ^1 #lib:no_collision run scoreboard players set @s 1J.Tick 50
