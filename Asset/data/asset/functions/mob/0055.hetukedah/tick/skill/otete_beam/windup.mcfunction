@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
+# @within function
+#   asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
+#   asset:mob/0055.hetukedah/tick/skill/otete_beam/tick_hard
 
 # こっち見る
     execute facing entity @p feet run tp @s ~ ~ ~ ~ ~

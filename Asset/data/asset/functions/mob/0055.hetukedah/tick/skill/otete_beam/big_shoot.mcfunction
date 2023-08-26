@@ -1,8 +1,10 @@
 #> asset:mob/0055.hetukedah/tick/skill/otete_beam/big_shoot
 #
+# でかビーム発射
 #
-#
-# @within function asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
+# @within function
+#   asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
+#   asset:mob/0055.hetukedah/tick/skill/otete_beam/tick_hard
 
 # 演出
     playsound tsb_sounds:blaster2 hostile @a ~ ~ ~ 1.5 1.5
