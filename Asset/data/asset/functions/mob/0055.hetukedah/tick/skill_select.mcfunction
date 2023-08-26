@@ -18,14 +18,14 @@
         execute store result score $Random Temporary run function lib:random/
     # ほしい範囲に剰余算
         scoreboard players operation $Random Temporary %= $4 Const
-    # 動作カウント増やす
-        scoreboard players add @s 1J.MoveCount 1
+    # ハードだったら動作カウント増やす
+        execute if predicate api:global_vars/difficulty/min/hard run scoreboard players add @s 1J.MoveCount 1
+    # デバッグ
+        #scoreboard players set $Random Temporary 0
+        #scoreboard players set @s 1J.MoveCount 5
     # 数回に一回の行動は固定
         execute if score @s 1J.MoveCount matches 5.. run tag @s add 1J.Skill.Summon
         execute if score @s 1J.MoveCount matches 5.. run scoreboard players reset $Random Temporary
-    # デバッグ
-        scoreboard players set $Random Temporary 0
-        scoreboard players set @s 1J.MoveCount 1
     # スキル選択
         execute if score $Random Temporary matches 0 run tag @s add 1J.Skill.OteteBeam
         execute if score $Random Temporary matches 1 run tag @s add 1J.Skill.Explosion
