@@ -9,6 +9,8 @@
     playsound entity.player.attack.sweep master @a ~ ~ ~ 1 0.7
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 0.7
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1
+    execute positioned ~ ~1.5 ~ rotated ~90 10 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.4.effect_spin
+    execute positioned ~ ~1.5 ~ rotated ~90 -15 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.5.effect_spin_r
 
 # ターゲット取得
 # 範囲攻撃
