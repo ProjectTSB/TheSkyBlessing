@@ -12,3 +12,4 @@ execute if entity @s[tag=aj.haruclaire_illusion.animation.10_rain_start] run fun
 execute if entity @s[tag=aj.haruclaire_illusion.animation.11_rain_shot_0] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/11_rain_shot_0/tick
 execute if entity @s[tag=aj.haruclaire_illusion.animation.12_rain_shot_1] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/12_rain_shot_1/tick
 execute if entity @s[tag=aj.haruclaire_illusion.animation.13_rain_laser] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/13_rain_laser/tick
+execute if entity @s[tag=aj.haruclaire_illusion.animation.14_spear] run function animated_java:haruclaire_illusion/zzzzzzzz/animations/14_spear/tick

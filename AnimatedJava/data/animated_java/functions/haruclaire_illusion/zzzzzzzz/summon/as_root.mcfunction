@@ -39,6 +39,8 @@ execute if score #animation aj.i = $aj.haruclaire_illusion.animation.12_rain_sho
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.12_rain_shot_1 aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.12_rain_shot_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.13_rain_laser aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/13_rain_laser/apply_frame_as_root
 execute if score #animation aj.i = $aj.haruclaire_illusion.animation.13_rain_laser aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.13_rain_laser.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.14_spear aj.id run function animated_java:haruclaire_illusion/zzzzzzzz/animations/14_spear/apply_frame_as_root
+execute if score #animation aj.i = $aj.haruclaire_illusion.animation.14_spear aj.id run scoreboard players operation @s aj.haruclaire_illusion.animation.14_spear.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:haruclaire_illusion/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i

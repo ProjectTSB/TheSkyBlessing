@@ -4,8 +4,8 @@
 #
 # @within function asset:mob/0318.haruclaire_rod/tick/1.trigger
 
-# パーティクル
-    # particle minecraft:witch ~ ~ ~ 0 0 0 0 1 force @a[distance=..30]
+# 演出
+    execute positioned ~ ~1.4 ~ rotated ~-90 ~ run particle firework ~ ~ ~ 0 0 0 0 1
 
 # 再帰カウントが0なら弾速からセット
     scoreboard players operation @s 8U.CurrentSpeed = @s 8U.Speed

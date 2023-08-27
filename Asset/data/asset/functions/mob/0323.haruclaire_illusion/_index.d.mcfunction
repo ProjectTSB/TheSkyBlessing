@@ -21,3 +21,4 @@
     #declare tag 8Z.RainShot0
     #declare tag 8Z.RainShot1
     #declare tag 8Z.RainLaser
+    #declare tag 8Z.Spear

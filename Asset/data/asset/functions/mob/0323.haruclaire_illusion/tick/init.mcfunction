@@ -22,3 +22,4 @@
     execute if entity @s[tag=8Z.RainShot0] as @e[type=item_display,tag=8Z.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire_illusion/animations/11_rain_shot_0/play
     execute if entity @s[tag=8Z.RainShot1] as @e[type=item_display,tag=8Z.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire_illusion/animations/12_rain_shot_1/play
     execute if entity @s[tag=8Z.RainLaser] as @e[type=item_display,tag=8Z.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire_illusion/animations/13_rain_laser/play
+    execute if entity @s[tag=8Z.Spear] as @e[type=item_display,tag=8Z.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire_illusion/animations/14_spear/play

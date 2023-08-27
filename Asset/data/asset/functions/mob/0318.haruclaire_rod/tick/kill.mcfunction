@@ -6,7 +6,7 @@
 
 # 演出
     particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.5 20
-    particle snowflake ~ ~ ~ 0.2 0.2 0.2 0.1 40
+    particle snowflake ~ ~ ~ 0.2 0.2 0.2 0.5 10
     playsound block.amethyst_block.break hostile @a ~ ~ ~ 1 1.5
     playsound block.amethyst_block.break hostile @a ~ ~ ~ 1 1.5
     playsound block.glass.break hostile @a ~ ~ ~ 1 1.2

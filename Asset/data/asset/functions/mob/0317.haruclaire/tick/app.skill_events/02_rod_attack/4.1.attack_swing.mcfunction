@@ -6,12 +6,9 @@
 
 # TODO：演出を練る
 # 演出
-    # particle dust 1 1000000000 1000000000 1 ~ ~1.2 ~ 0 1 0 1 10 normal @a
-    # particle dust 1 1000000000 1000000000 1 ~ ~0.6 ~ 0.1 0.5 0.1 1 10 normal @a
-    # particle dust 1 1000000000 1000000000 1 ~ ~0 ~ 0.4 0.25 0.4 1 10 normal @a
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.5
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.2
-
+    execute positioned ^ ^1 ^2 rotated ~90 ~10 run function asset:mob/0317.haruclaire/tick/app.skill_events/02_rod_attack/5.1.particle_swing
 
 # TODO：与えるダメージの調整
 # ダメージ
