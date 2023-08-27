@@ -36,5 +36,9 @@
     execute if score @s 8T.AnimationTimer matches 44 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/4.1.attack
     execute if score @s 8T.AnimationTimer matches 47 rotated ~ 0 positioned ^ ^1 ^1.7 facing entity @p feet run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/4.1.attack
 
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 6..14 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
+    execute if score @s 8T.AnimationTimer matches 31..55 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
+
 # 終了
     execute if score @s 8T.AnimationTimer matches 107.. run function asset:mob/0317.haruclaire/tick/app.skill_events/07_02_rod_moveshot_left/2.end

@@ -38,6 +38,8 @@
     execute if score @s 8T.AnimationTimer matches 55..57 at @s positioned ^ ^ ^0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 50 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/4.1.attack_slash
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 31..41 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出
@@ -57,6 +59,8 @@
     execute if score @s 8T.AnimationTimer matches 83..84 at @s positioned ^ ^0.1 ^0.05 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 77 run function asset:mob/0317.haruclaire/tick/app.skill_events/13_sword_warp/4.2.attack_upper
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 58..68 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出

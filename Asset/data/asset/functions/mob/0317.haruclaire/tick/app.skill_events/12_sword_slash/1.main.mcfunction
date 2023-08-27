@@ -18,6 +18,8 @@
     execute if score @s 8T.AnimationTimer matches 20..35 at @s positioned ^ ^ ^0.8 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # ある程度プレイヤーに近づいた場合，攻撃モーションに移行
     execute if score @s 8T.AnimationTimer matches 20..35 positioned ^ ^ ^1.5 if entity @a[distance=..2] run scoreboard players set @s 8T.AnimationTimer 37
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 20..35 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## 突進斬り
 # animated javaアニメーション再生 (長さ：41tick)
@@ -33,6 +35,8 @@
     execute if score @s 8T.AnimationTimer matches 68..77 at @s positioned ^ ^ ^1 unless entity @a[distance=..1.5] run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 39 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.1.attack_move_to_slash
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 68..77 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## 斬り上げ
 # animated javaアニメーション再生 (長さ：21tick)
@@ -46,6 +50,8 @@
 # 攻撃地点設置
     execute if score @s 8T.AnimationTimer matches 91 at @p run summon area_effect_cloud ^ ^ ^0.1 {CustomNameVisible:0b,Particle:"block air",Duration:10,Tags:["Object","8T.SkillEv.Sword.Laser.AttackPos"]}
     execute if score @s 8T.AnimationTimer matches 91 as @e[type=area_effect_cloud,tag=8T.SkillEv.Sword.Laser.AttackPos,sort=nearest,limit=1] at @s facing entity @p feet run tp @s ~ ~ ~ ~ ~
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 78..82 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出
@@ -61,6 +67,8 @@
     execute if score @s 8T.AnimationTimer matches 104..111 at @s rotated ~ 0 positioned ^ ^-0.1 ^0.05 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 101 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.3.attack_lower
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 99..103 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出
@@ -80,6 +88,8 @@
     execute if score @s 8T.AnimationTimer matches 137..152 at @s positioned ^ ^ ^0.8 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # ある程度プレイヤーに近づいた場合，攻撃モーションに移行
     execute if score @s 8T.AnimationTimer matches 137..152 positioned ^ ^ ^1.5 if entity @a[distance=..2] run scoreboard players set @s 8T.AnimationTimer 153
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 137..152 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## 突進斬り
 # animated javaアニメーション再生 (長さ：41tick)
@@ -95,6 +105,8 @@
     execute if score @s 8T.AnimationTimer matches 184..193 at @s positioned ^ ^ ^1 unless entity @a[distance=..1.5] run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 155 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.1.attack_move_to_slash
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 184..193 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## 斬り上げ
 # animated javaアニメーション再生 (長さ：21tick)
@@ -105,6 +117,8 @@
     execute if score @s 8T.AnimationTimer matches 194..198 at @s positioned ^ ^ ^0.4 unless entity @a[distance=..1.5] run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 196 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/4.2.attack_upper
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 194..198 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出

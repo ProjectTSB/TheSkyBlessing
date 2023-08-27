@@ -51,6 +51,8 @@
     execute if score @s 8T.AnimationTimer matches 109..115 at @s positioned ^ ^-0.03 ^-0.1 run function asset:mob/0317.haruclaire/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 104 rotated ~ 0 positioned ^ ^1 ^1.7 rotated as @s run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.1.1.attack_laser
+# 軌跡
+    execute if score @s 8T.AnimationTimer matches 90..98 positioned ~ ~1 ~ run particle firework ~ ~ ~ 0 0 0 0.05 1
 
 ## ワープ
 # 演出
