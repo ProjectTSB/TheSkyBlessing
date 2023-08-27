@@ -8,8 +8,8 @@
 # 演出
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 0.9
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.3
-    execute positioned ^ ^ ^1.5 positioned ~ ~1 ~ rotated ~90 90 positioned ^ ^ ^0.5 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.2.effect_slash
-    execute positioned ^ ^ ^2 positioned ~ ~1 ~ rotated ~90 90 positioned ^ ^ ^1 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.2.effect_slash
+    execute positioned ^ ^ ^1.5 positioned ~ ~1 ~ rotated ~90 -90 positioned ^ ^ ^0.5 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.3.effect_slash_r
+    execute positioned ^ ^ ^2.2 positioned ~ ~1 ~ rotated ~90 -90 positioned ^ ^ ^1 run function asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/5.3.effect_slash_r
 
 # ターゲット取得
 # 前方に広い判定

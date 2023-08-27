@@ -34,6 +34,8 @@
 # 攻撃
     execute if score @s 8T.AnimationTimer matches 72 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.2.attack_slash
     execute if score @s 8T.AnimationTimer matches 83 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/4.2.attack_slash
+    execute if score @s 8T.AnimationTimer matches 72 positioned ^ ^ ^1.5 positioned ~ ~1 ~ rotated ~90 30 positioned ^ ^ ^0.5 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.2.effect_slash
+    execute if score @s 8T.AnimationTimer matches 83 positioned ^ ^ ^1.5 positioned ~ ~1 ~ rotated ~90 -45 positioned ^ ^ ^0.5 run function asset:mob/0317.haruclaire/tick/app.skill_events/14_sword_laser/5.2.effect_slash
 
 ## 射撃-2
 # animated javaアニメーション再生 (長さ：25tick)
