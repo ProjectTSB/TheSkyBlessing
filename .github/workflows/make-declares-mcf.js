@@ -21,15 +21,15 @@ const run = async () => {
         /** @type {(key: string) => string} */
         getOrThrow: key => process.env[key] ?? throwError(`Missing environment key: ${key}`)
     };
-    const checkoutPath = env.getOrThrow('CHECKOUT_PATH');
-    const reposName = env.getOrThrow('REPOSITORY');
-    const branch = env.getOrDefault('BRANCH', "master");
-    const indent = env.getOrDefault('INDENT', 4);
-    const visibilityFilter = env.getOrThrow('VISIBILITY_FILTER');
-    const outputPath = env.getOrDefault('OUTPUT_PATH', "./declares.mcfunction");
-    const outputResourcePath = env.getOrDefault('OUTPUT_RESOURCE_PATH', "minecraft:declares");
+    const checkoutPath = env.getOrThrow("CHECKOUT_PATH");
+    const reposName = env.getOrThrow("REPOSITORY");
+    const branch = env.getOrDefault("BRANCH", "master");
+    const indent = env.getOrDefault("INDENT", 4);
+    const testPaths = env.getOrThrow("VISIBILITY_FILTER").split(/,|\n/).map(s => s.trim());
+    const outputPath = env.getOrDefault("OUTPUT_PATH", "./declares.mcfunction");
+    const outputResourcePath = env.getOrDefault("OUTPUT_RESOURCE_PATH", "minecraft:declares");
     const defaultVisibility = (() => {
-        const dv = env.getOrDefault('DEFAULT_VISIBILITY', "public");
+        const dv = env.getOrDefault("DEFAULT_VISIBILITY", "public");
         return dv === "public" ? "**" : dv;
     })();
 
@@ -37,6 +37,8 @@ const run = async () => {
     const dlsData = JSON.parse(await fsp.readFile(".cache/dls.json", { encoding: "utf-8" })).cache;
 
     /** @typedef {{ str: string, from: { uri: string | undefined, line: [number, number] | undefined } }} Hoge */
+    /** @type {[string, string][]} */
+    const vpReplacers = [["?", "[^:/]"], ["**/", ".{0,}"], ["**", ".{0,}"], ["*", "[^:/]{0,}"]]
     /** @type {Map<string, { declare: Hoge[], alias: Hoge[] }>} */
     const decMap = new Map();
     for (const [t, cache] of Object.entries(dlsData)) {
@@ -45,7 +47,8 @@ const run = async () => {
         for (const [resourceId, { doc, dcl, def, foo }] of Object.entries(cache)) {
             const cp = [...(dcl ?? []), ...(def ?? [])].find(cpos =>
                 (cpos.visibility?.map(cv => cv.pattern) ?? [defaultVisibility])
-                    .some(cp => RegExp(`^(${visibilityFilter})$`).test(cp))
+                    .map(v => RegExp(`^${vpReplacers.reduce((s, [r1, r2]) => s.replace(r1, r2), v)}$`))
+                    .some(cp => testPaths.some(v => cp.test(v)))
             );
             if (!cp) continue;
             const decs = decMap.get(doc ?? defaultVisibility) ?? { declare: [], alias: [] };

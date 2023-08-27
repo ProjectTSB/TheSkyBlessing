@@ -36,7 +36,8 @@ jobs:
           CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
           REPOSITORY: ProjectTSB/TheSkyBlessing
           BRANCH: master
-          VISIBILITY_FILTER: \*\*|asset:.+
+          VISIBILITY_FILTER: |
+            asset:mob/artifact/
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
       # - name: Deploy declares to Asset Repository
