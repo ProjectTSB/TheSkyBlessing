@@ -33,7 +33,7 @@
 # 防具ドロップ率 ([float, float]) (オプション)
     # data modify storage asset:mob ArmorDropChances set value 
 # 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 20000
+    data modify storage asset:mob Health set value 50000
 # 攻撃力 (double) (オプション)
     # data modify storage asset:mob AttackDamage set value 
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
