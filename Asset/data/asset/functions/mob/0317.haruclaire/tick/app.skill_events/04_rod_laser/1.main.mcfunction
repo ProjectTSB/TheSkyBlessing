@@ -29,6 +29,8 @@
     execute if score @s 8T.AnimationTimer matches 37 rotated ~ 0 positioned ^ ^1 ^1.7 run particle snowflake ~ ~ ~ 0 0 0 1 20
     execute if score @s 8T.AnimationTimer matches 37..93 rotated ~ 0 positioned ^ ^1 ^1.7 rotated as @s run function asset:mob/0317.haruclaire/tick/app.skill_events/04_rod_laser/5.1.attack
     execute if score @s 8T.AnimationTimer matches 37..73 run playsound minecraft:block.beacon.ambient hostile @a ~ ~ ~ 2 2
+# 演出
+    execute if score @s 8T.AnimationTimer matches 37 rotated ~ 0 positioned ^ ^1 ^1.7 run function asset:mob/0317.haruclaire/tick/app.skill_events/04_rod_laser/5.6.particle_start_laser
 # 発射終了
     execute if score @s 8T.AnimationTimer matches 94 rotated ~ 0 positioned ^ ^1 ^1.7 run particle flash ~ ~ ~ 0 0 0 0 3
     execute if score @s 8T.AnimationTimer matches 94 run playsound block.large_amethyst_bud.break hostile @a ~ ~ ~ 1.5 2
