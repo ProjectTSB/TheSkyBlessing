@@ -12,7 +12,7 @@
     execute if score @s 8T.AnimationTimer matches 1 run function asset:mob/0317.haruclaire/tick/app.skill_events/09_rod_to_sword/3.play_animation
 
 # 中心点に移動
-    execute if score @s 8T.AnimationTimer matches 1 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
+    execute if score @s 8T.AnimationTimer matches 1 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 1 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 1 at @s facing entity @p feet run tp @s ~ ~ ~ ~ 0
     execute if score @s 8T.AnimationTimer matches 1 run playsound entity.fox.teleport hostile @a ~ ~ ~ 1 1

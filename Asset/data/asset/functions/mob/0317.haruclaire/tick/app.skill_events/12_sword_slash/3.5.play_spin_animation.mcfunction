@@ -5,4 +5,4 @@
 # @within asset:mob/0317.haruclaire/tick/app.skill_events/12_sword_slash/1.main
 
 # 再生
-    execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/12_05_sword_slash_spin/play
+    execute as @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:haruclaire/animations/12_05_sword_slash_spin/play

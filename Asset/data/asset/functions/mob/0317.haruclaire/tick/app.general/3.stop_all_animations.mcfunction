@@ -28,4 +28,4 @@
     tag @s remove 8T.Skill.Sword.IceRain
 
 # animated java再生停止
-    execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/pause_all
+    execute as @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:haruclaire/animations/pause_all

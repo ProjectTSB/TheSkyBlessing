@@ -5,9 +5,9 @@
 # @within function asset:mob/0317.haruclaire/tick/app.skill_events/15_sword_charge/6.1.start_counter
 
 # アニメーション変更
-    execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/16_01_sword_charge_charge_0/stop
+    execute as @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:haruclaire/animations/16_01_sword_charge_charge_0/stop
     scoreboard players set @s 8T.AnimationTimer 94
-    execute as @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] run function animated_java:haruclaire/animations/16_06_sword_charge_counter_short/play
+    execute as @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:haruclaire/animations/16_06_sword_charge_counter_short/play
     tag @s add 8T.Temp.PlayCounterAnimation
 
 ## ワープ

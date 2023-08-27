@@ -4,12 +4,14 @@
 #
 # @within function asset:mob/0317.haruclaire/hurt/1.trigger
 
+# 対象のanimated javaモデルを紐づけ
+    tag @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] add 8T.ModelRoot.Target
+
 # 効果音
     execute if entity @s[tag=!8T.Temp.Counter] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
 
 # 武器持ち替え
     execute if entity @s[tag=!8T.Weapon.HasSword] run function asset:mob/0317.haruclaire/hurt/app.1.change_weapon
-
 
 # カウンター処理
     # 溜め斬り中
@@ -22,3 +24,6 @@
         execute if entity @s[tag=8T.Temp.NotArmor] unless entity @s[tag=8T.Temp.Damage] run function asset:mob/0317.haruclaire/tick/app.general/4.start_damage_animation
     # 一定時間以上殴られ続けたら怯みキャンセル
         execute if entity @s[tag=8T.Temp.Damage] if score @s 8T.DamageTimer matches 120.. run function asset:mob/0317.haruclaire/tick/app.general/6.cancel_damage_animation
+
+# 紐づけ終了
+    tag @e[type=item_display,tag=8T.ModelRoot.Target] remove 8T.ModelRoot.Target

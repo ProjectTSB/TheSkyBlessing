@@ -22,7 +22,7 @@
 # animated javaアニメーション再生 (長さ：1tick)
     execute if score @s 8T.AnimationTimer matches 81 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/3.3.play_hide_animation
 # 中心点に移動
-    execute if score @s 8T.AnimationTimer matches 81 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
+    execute if score @s 8T.AnimationTimer matches 81 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 81 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
 
 ## ワープ
@@ -86,7 +86,7 @@
 # 演出
     execute if score @s 8T.AnimationTimer matches 209 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 # 中心点に移動
-    execute if score @s 8T.AnimationTimer matches 209 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
+    execute if score @s 8T.AnimationTimer matches 209 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 209 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~ ~
 
 ## レーザー
@@ -112,7 +112,7 @@
 # 演出
     execute if score @s 8T.AnimationTimer matches 295 run function asset:mob/0317.haruclaire/tick/app.skill_events/16_sword_icerain/5.1.effect_teleport
 # 中心点に移動
-    execute if score @s 8T.AnimationTimer matches 295 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot,sort=nearest,limit=1] ~ ~-2 ~
+    execute if score @s 8T.AnimationTimer matches 295 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @e[type=item_display,tag=8T.ModelRoot.Target,sort=nearest,limit=1] ~ ~-2 ~
     execute if score @s 8T.AnimationTimer matches 295 positioned as @e[type=marker,tag=8T.Marker.SpawnPoint,sort=nearest,limit=1] run tp @s ~ ~-2 ~
 
 # 終了
