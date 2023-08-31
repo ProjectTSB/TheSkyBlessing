@@ -33,6 +33,3 @@
         execute if score $Random Temporary matches 3 run tag @s add 1J.Skill.Charge
     # リセット
         scoreboard players reset $Random Temporary
-
-# スコアを戻す
-    scoreboard players set @s 1J.BossTime 0
