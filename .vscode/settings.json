@@ -1984,7 +1984,7 @@
                         "#",
                         "# Mobの召喚時に実行されるfunction",
                         "#",
-                        "# @within tag/function asset:mob/init",
+                        "# @within tag/function asset:mob/initialize",
                         "",
                         "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/init/"
                     ]
