@@ -1974,6 +1974,57 @@
             ]
         },
         {
+            "label": "MOB/トリガー: init",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/_/init.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/_/init",
+                        "#",
+                        "# Mobの召喚時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/init",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/init/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/init/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/init/",
+                        "#",
+                        "# Mob召喚時のInit処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/_/init"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/initialize.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/_/init"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/_/init"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
             "label": "MOB/特殊トリガー: 再Join",
             "generates": [
                 {
