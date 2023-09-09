@@ -1526,7 +1526,7 @@
                         "#",
                         "# Mob召喚処理の呼び出し時に実行されるfunction",
                         "#",
-                        "# @within tag/function asset:mob/summon",
+                        "# @within asset:mob/%namespace%/_/summon",
                         "",
                         "# 元となるMobを召喚する",
                         "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"],DeathLootTable:\"asset:mob/death/%namespace%\"}"
