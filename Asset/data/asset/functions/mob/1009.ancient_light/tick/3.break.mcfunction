@@ -6,7 +6,7 @@
 
 # 演出
     playsound minecraft:block.glass.break neutral @a ~ ~ ~ 1.5 0.9
-    playsound item.trident.riptide_3 neutral @a ~ ~ ~ 1.5 2
+    playsound minecraft:item.trident.riptide_3 neutral @a ~ ~ ~ 1.5 2
     particle minecraft:electric_spark ~ ~ ~ 0 0 0 1 50
 
 # ダメージを与える
