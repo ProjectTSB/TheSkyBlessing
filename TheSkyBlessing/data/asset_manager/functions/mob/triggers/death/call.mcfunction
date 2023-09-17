@@ -4,7 +4,6 @@
 #
 # @within function
 #   asset_manager:mob/triggers/death/
-#   asset_manager:mob/triggers/death/manual
 #   asset_manager:mob/triggers/death/call_super_method
 
 function #asset:mob/death

@@ -134,6 +134,11 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"mangrove_propagule",Count:1b}
 
+# 取引 オークの苗木を桜の苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"cherry_sapling",Count:1b}
+
 # 取引 オークの苗木を深紅のキノコに
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"oak_sapling",Count:1b}
@@ -174,6 +179,11 @@
     data modify storage asset:trader Trades[-1].BuyA set value {id:"mangrove_propagule",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
 
+# 取引 桜の苗木をオークの苗木に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {id:"cherry_sapling",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"oak_sapling",Count:1b}
+
 # 取引 深紅のキノコをオークの苗木に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {id:"crimson_fungus",Count:1b}
@@ -199,20 +209,35 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"white_dye",Count:8b}
 
+# 取引 下位通貨を薄灰色の染料に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"light_gray_dye",Count:8b}
+
+# 取引 下位通貨を灰色の染料に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"gray_dye",Count:8b}
+
+# 取引 下位通貨を黒色の染料に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"black_dye",Count:8b}
+
+# 取引 下位通貨を茶色の染料に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"brown_dye",Count:8b}
+
+# 取引 下位通貨を赤色の染料に
+    data modify storage asset:trader Trades append value {}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"red_dye",Count:8b}
+
 # 取引 下位通貨を橙色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"orange_dye",Count:8b}
-
-# 取引 下位通貨を赤紫色の染料に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"magenta_dye",Count:8b}
-
-# 取引 下位通貨を空色の染料に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"light_blue_dye",Count:8b}
 
 # 取引 下位通貨を黄色の染料に
     data modify storage asset:trader Trades append value {}
@@ -224,55 +249,40 @@
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"lime_dye",Count:8b}
 
-# 取引 下位通貨を桃色の染料に
+# 取引 下位通貨を緑色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"pink_dye",Count:8b}
-
-# 取引 下位通貨を灰色の染料に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"gray_dye",Count:8b}
-
-# 取引 下位通貨を薄灰色の染料に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"light_gray_dye",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"green_dye",Count:8b}
 
 # 取引 下位通貨を青緑色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"cyan_dye",Count:8b}
 
-# 取引 下位通貨を紫色の染料に
+# 取引 下位通貨を空色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"purple_dye",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"light_blue_dye",Count:8b}
 
 # 取引 下位通貨を青色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set value {id:"blue_dye",Count:8b}
 
-# 取引 下位通貨を茶色の染料に
+# 取引 下位通貨を紫色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"brown_dye",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"purple_dye",Count:8b}
 
-# 取引 下位通貨を緑色の染料に
+# 取引 下位通貨を赤紫色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"green_dye",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"magenta_dye",Count:8b}
 
-# 取引 下位通貨を赤色の染料に
+# 取引 下位通貨を桃色の染料に
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"red_dye",Count:8b}
-
-# 取引 下位通貨を黒色の染料に
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set value {id:"black_dye",Count:8b}
+    data modify storage asset:trader Trades[-1].Sell set value {id:"pink_dye",Count:8b}
 
 # 登録
     function asset:trader/common/register
