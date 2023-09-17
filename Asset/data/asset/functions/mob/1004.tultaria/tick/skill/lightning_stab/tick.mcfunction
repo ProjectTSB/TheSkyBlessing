@@ -44,7 +44,7 @@
     execute if score @s RW.Tick matches 30 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/dash_stab_end/play
 
 # 待機モーション再生
-    execute if score @s RW.Tick matches 50 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
+    #execute if score @s RW.Tick matches 50 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
 # 雷撃を片付ける
     execute if score @s RW.Tick matches 36 run kill @e[type=marker,tag=RW.ChainLightning.Common,distance=..300]

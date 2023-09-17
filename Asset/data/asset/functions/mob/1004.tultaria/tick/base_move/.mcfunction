@@ -28,6 +28,13 @@
 # 移動タグ付きなら移動
     execute if entity @s[tag=RW.Move] run function asset:mob/1004.tultaria/tick/move/teleport/move_to_marker
 
+# リセットからの復帰時に待機アニメを再生
+    execute if score @s RW.Tick matches -1 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
+
+#
+    #execute if score @s RW.Tick matches 0.. facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s rotated ~90 ~ run tp @s ^ ^ ^0.1 ~ ~
+
+
 ## 嘘慣性
     # 下が空気なら通常実行
         execute if entity @s[tag=!RW.DisableInertia,scores={RW.FakeInertia=0..}] if block ~ ~-1 ~ #lib:no_collision run function asset:mob/1004.tultaria/tick/base_move/fake_inertia

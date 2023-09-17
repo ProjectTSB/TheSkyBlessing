@@ -5,7 +5,7 @@
 # @within function asset:mob/1004.tultaria/tick/skill/dash_slash/1.tick
 
 # 待機モーション再生
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
+    #execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
 # 自身のモデルにモーションを再生させる
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/dash_slash_active/play

@@ -31,7 +31,7 @@
         execute if entity @s[scores={RW.Phase=3}] run scoreboard players operation $Random Temporary %= $8 Const
 
 # デバッグ用、実行する技を確定させる
-    #scoreboard players set $Random Temporary 2
+    scoreboard players set $Random Temporary 2
 
 # スキル選択
     execute if score $Random Temporary matches 0 run tag @s add RW.Skill.Meteor
@@ -45,3 +45,6 @@
 
 # リセット
     scoreboard players reset $Random Temporary
+
+#
+    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/stop

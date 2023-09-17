@@ -10,7 +10,6 @@
 
 
 # 自身のモデルにモーションを再生させる
-    execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/return_to_neutral/play
 
 # スキルのタグをリセットする
@@ -31,7 +30,7 @@
     tag @s remove Uninterferable
 
 # スコアを戻す
-    scoreboard players set @s RW.Tick 0
+    scoreboard players set @s RW.Tick -26
     scoreboard players set @s RW.LoopCount 0
     scoreboard players reset @s RW.FakeInertia
 
