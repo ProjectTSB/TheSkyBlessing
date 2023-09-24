@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.4_3_former_upper_damage.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/4_3_former_upper_damage/end_loop
+execute if score @s aj.eclael.animation.4_3_former_upper_damage.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/4_3_former_upper_damage/stop
+execute if score @s aj.eclael.animation.4_3_former_upper_damage.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/4_3_former_upper_damage/pause

@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..21 run function animated_java:eclael/zzzzzzzz/animations/4_2_former_upper_shot_end/tree/branch_0_21

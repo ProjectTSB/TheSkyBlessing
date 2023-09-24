@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/2_4_former_slash_2/tick_animation

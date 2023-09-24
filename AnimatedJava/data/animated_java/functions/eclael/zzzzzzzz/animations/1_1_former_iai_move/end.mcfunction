@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.1_1_former_iai_move.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/1_1_former_iai_move/end_loop
+execute if score @s aj.eclael.animation.1_1_former_iai_move.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/1_1_former_iai_move/stop
+execute if score @s aj.eclael.animation.1_1_former_iai_move.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/1_1_former_iai_move/pause

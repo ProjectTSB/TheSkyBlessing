@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/tick_animation

@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:eclael/zzzzzzzz/apply_variant/akubi/as_bone

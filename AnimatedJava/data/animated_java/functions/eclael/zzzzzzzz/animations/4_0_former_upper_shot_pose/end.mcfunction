@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.4_0_former_upper_shot_pose.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/4_0_former_upper_shot_pose/end_loop
+execute if score @s aj.eclael.animation.4_0_former_upper_shot_pose.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/4_0_former_upper_shot_pose/stop
+execute if score @s aj.eclael.animation.4_0_former_upper_shot_pose.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/4_0_former_upper_shot_pose/pause

@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0327.eclael/rejoin_process",
         "asset:artifact/0985.ark_of_the_sanctuary/trigger/rejoin_process",
         "asset:artifact/0647.thorn_armor/trigger/rejoin_process",
         "asset:artifact/0976.brave_sword/trigger/rejoin_process",

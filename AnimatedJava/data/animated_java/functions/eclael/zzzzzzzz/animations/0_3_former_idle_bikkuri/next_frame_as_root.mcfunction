@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/0_3_former_idle_bikkuri/tick_animation

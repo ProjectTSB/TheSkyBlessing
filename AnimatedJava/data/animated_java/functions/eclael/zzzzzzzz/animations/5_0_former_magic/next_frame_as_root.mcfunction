@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/5_0_former_magic/tick_animation

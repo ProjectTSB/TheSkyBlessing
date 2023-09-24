@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..30 run function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start2/tree/branch_0_30

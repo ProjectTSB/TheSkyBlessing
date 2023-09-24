@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.0_3_former_idle_bikkuri.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/0_3_former_idle_bikkuri/end_loop
+execute if score @s aj.eclael.animation.0_3_former_idle_bikkuri.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/0_3_former_idle_bikkuri/stop
+execute if score @s aj.eclael.animation.0_3_former_idle_bikkuri.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/0_3_former_idle_bikkuri/pause

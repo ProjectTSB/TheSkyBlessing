@@ -1,0 +1,2 @@
+execute if score @s aj.tween_time matches 1.. run function animated_java:eclael/zzzzzzzz/animations/1_2_former_iai_attack/tick_tween
+execute unless score @s aj.tween_time matches 1.. run function animated_java:eclael/zzzzzzzz/animations/1_2_former_iai_attack/tick_animation

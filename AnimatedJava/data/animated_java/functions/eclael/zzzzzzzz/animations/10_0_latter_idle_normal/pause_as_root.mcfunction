@@ -1,0 +1,1 @@
+tag @s remove aj.eclael.animation.10_0_latter_idle_normal

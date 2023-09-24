@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/12_1_latter_warp_move_right/tick_animation

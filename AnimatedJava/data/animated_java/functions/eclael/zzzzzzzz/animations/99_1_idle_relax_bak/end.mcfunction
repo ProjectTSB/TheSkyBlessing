@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.99_1_idle_relax_bak.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/end_loop
+execute if score @s aj.eclael.animation.99_1_idle_relax_bak.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/99_1_idle_relax_bak/stop
+execute if score @s aj.eclael.animation.99_1_idle_relax_bak.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/99_1_idle_relax_bak/pause

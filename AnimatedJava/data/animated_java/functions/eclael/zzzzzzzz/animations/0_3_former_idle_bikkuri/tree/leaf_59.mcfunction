@@ -1,0 +1,2 @@
+execute on passengers run function animated_java:eclael/zzzzzzzz/animations/0_3_former_idle_bikkuri/tree/leaf_59_as_bone
+function animated_java:eclael/zzzzzzzz/apply_variant/default/as_root

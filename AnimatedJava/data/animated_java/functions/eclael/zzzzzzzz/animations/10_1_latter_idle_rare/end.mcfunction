@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.10_1_latter_idle_rare.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/10_1_latter_idle_rare/end_loop
+execute if score @s aj.eclael.animation.10_1_latter_idle_rare.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/10_1_latter_idle_rare/stop
+execute if score @s aj.eclael.animation.10_1_latter_idle_rare.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/10_1_latter_idle_rare/pause
