@@ -1,1 +1,1 @@
-execute if score @s aj.anim_time matches 0..20 run function animated_java:eclael/zzzzzzzz/animations/2_1_former_slash_0/tree/branch_0_20
+execute if score @s aj.anim_time matches 0..15 run function animated_java:eclael/zzzzzzzz/animations/2_1_former_slash_0/tree/branch_0_15

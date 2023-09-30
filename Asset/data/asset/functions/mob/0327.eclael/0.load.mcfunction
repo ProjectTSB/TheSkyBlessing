@@ -11,6 +11,7 @@
     # 行動回数
     scoreboard objectives add 93.ActionCount dummy
     # 怯み処理用
+    scoreboard objectives add 93.DamageIntervalTimer dummy
     scoreboard objectives add 93.DamageTimer dummy
     # 処理用カウンター
     scoreboard objectives add 93.TempCount dummy

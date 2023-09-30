@@ -58,8 +58,6 @@
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.7f
 
-# animated javaモデル召喚
-    execute rotated ~ 0 run function animated_java:eclael/summon
 # 中心点召喚
     summon marker ~ ~2 ~ {Tags:["93.Marker.SpawnPoint"]}
 # Mob独自のInit処理実行（optional）

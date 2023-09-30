@@ -12,6 +12,7 @@ scoreboard objectives remove aj.eclael.animation.0_3_former_idle_bikkuri.local_a
 scoreboard objectives remove aj.eclael.animation.1_0_former_iai_start.local_anim_time
 scoreboard objectives remove aj.eclael.animation.1_1_former_iai_move.local_anim_time
 scoreboard objectives remove aj.eclael.animation.1_2_former_iai_attack.local_anim_time
+scoreboard objectives remove aj.eclael.animation.1_3_former_iai_damage.local_anim_time
 scoreboard objectives remove aj.eclael.animation.2_0_former_slash_start.local_anim_time
 scoreboard objectives remove aj.eclael.animation.2_1_former_slash_0.local_anim_time
 scoreboard objectives remove aj.eclael.animation.2_2_former_slash_1.local_anim_time
@@ -31,10 +32,8 @@ scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start.local_an
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_left.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_right.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_0.local_anim_time
-scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_2.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_3_latter_warp_slash_1.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start2.local_anim_time
-scoreboard objectives remove aj.eclael.animation.99_0_idle_normal_bak.local_anim_time
 scoreboard objectives remove aj.eclael.animation.99_1_idle_relax_bak.local_anim_time
 scoreboard objectives remove aj.eclael.animation.99_0_magic_bak.local_anim_time
 scoreboard objectives remove aj.eclael.animation.0_0_former_idle_normal.loop_mode
@@ -44,6 +43,7 @@ scoreboard objectives remove aj.eclael.animation.0_3_former_idle_bikkuri.loop_mo
 scoreboard objectives remove aj.eclael.animation.1_0_former_iai_start.loop_mode
 scoreboard objectives remove aj.eclael.animation.1_1_former_iai_move.loop_mode
 scoreboard objectives remove aj.eclael.animation.1_2_former_iai_attack.loop_mode
+scoreboard objectives remove aj.eclael.animation.1_3_former_iai_damage.loop_mode
 scoreboard objectives remove aj.eclael.animation.2_0_former_slash_start.loop_mode
 scoreboard objectives remove aj.eclael.animation.2_1_former_slash_0.loop_mode
 scoreboard objectives remove aj.eclael.animation.2_2_former_slash_1.loop_mode
@@ -63,10 +63,8 @@ scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start.loop_mod
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_left.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_right.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_0.loop_mode
-scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_2.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_3_latter_warp_slash_1.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start2.loop_mode
-scoreboard objectives remove aj.eclael.animation.99_0_idle_normal_bak.loop_mode
 scoreboard objectives remove aj.eclael.animation.99_1_idle_relax_bak.loop_mode
 scoreboard objectives remove aj.eclael.animation.99_0_magic_bak.loop_mode
 tellraw @a ["",{"text":"["},{"text":"Animated Java","color":"aqua"},{"text":"] "},[{"text":"INFO ℹ","color":"green"},{"text":" > ","color":"gray"},{"text":"The eclael Rig has been uninstalled successfully.\n"},{"text":"Please remove the Rig's functions from the datapack before reloading.","color":"gray"}]]

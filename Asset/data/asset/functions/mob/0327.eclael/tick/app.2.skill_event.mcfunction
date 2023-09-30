@@ -21,12 +21,16 @@
 
 ## 寝る
 
-## 居合斬り・単発
-    # execute if entity @s[tag=8T.Skill.Rod.Attack] run function asset:mob/0327.eclael/tick/app.skill_events/02_rod_attack/1.main
+## 居合斬り
+    execute if entity @s[tag=93.Skill.Former.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/1.main
+    ## 居合斬り・怯み
+        execute if entity @s[tag=93.Skill.Former.Iai.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/01_1_former_iai_damage/1.main
 
-## 居合斬り・連続
+## 連続斬り
+    execute if entity @s[tag=93.Skill.Former.Slash] run function asset:mob/0327.eclael/tick/app.skill_events/02_former_slash/1.main
 
 ## 射撃
+    execute if entity @s[tag=93.Skill.Former.Shot] run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/1.main
 
 ## 曲射
 
@@ -34,4 +38,3 @@
 
 ###########################################################################
 ## 後半
-
