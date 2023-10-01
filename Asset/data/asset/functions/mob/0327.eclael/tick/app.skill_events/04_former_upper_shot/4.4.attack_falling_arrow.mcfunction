@@ -7,6 +7,7 @@
 # 演出
     playsound entity.arrow.hit hostile @a ~ ~ ~ 1 1
     playsound item.trident.hit_ground hostile @a ~ ~ ~ 1 1
+    playsound entity.evoker.prepare_summon hostile @a ~ ~ ~ 0.4 2
     # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAjAGxEAcZAnHQMYC01ADAExHMAsAhnR6sARnDbMA7AFYp1RhSlMpRKWFwY+AWwTJAW74ACMmrAw+AJy0BnJOEYB7PBghIpbXADMzdzTbAA3PhQ8HXAADyQ3MCgIgF8Y3Ag7XwCgkLBwxEjoxDIpONw7d3dLOGdM3FEALzQ4MwjcNEsAIThq2oBRAEc8QJQoAGVTRjgSRHdAkriAXSA_3
     # 線 1
     particle dust 100000000 1 100000000 2 ^0 ^ ^0 0.1 0.1 0.1 0 2

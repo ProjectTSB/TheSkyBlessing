@@ -32,6 +32,7 @@
     #declare tag 93.Skill.Former.Shot 射撃
     #declare tag 93.Skill.Former.UpperShot 曲射
     #declare tag 93.Skill.Former.UpperShot.Damage 曲射・怯み
+    #declare tag 93.Skill.Former.Magic 魔法
 
     ## TODO:以下，実装完了時に削除する
     #declare tag 93.ChangeAnimation アニメーションを強制的に変更する

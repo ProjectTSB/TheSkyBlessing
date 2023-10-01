@@ -28,6 +28,8 @@
 
 # animated javaモデルを自分の位置に移動
     execute at @s rotated ~ 0 run tp @e[type=item_display,tag=93.ModelRoot.Target,sort=nearest,limit=1] ~ ~ ~ ~ ~
+# 一時タグ消去
+    tag @s remove 93.Temp.Me
 
 # 紐づけ終了
     tag @e[type=item_display,tag=93.ModelRoot.Target] remove 93.ModelRoot.Target

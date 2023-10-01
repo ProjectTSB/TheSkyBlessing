@@ -38,6 +38,7 @@
         execute if entity @s[tag=93.Skill.Former.UpperShot.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/04_1_former_upper_damage/1.main
 
 ## 魔法
+    execute if entity @s[tag=93.Skill.Former.Magic] run function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/1.main
 
 ###########################################################################
 ## 後半
