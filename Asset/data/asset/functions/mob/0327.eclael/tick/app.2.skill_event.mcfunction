@@ -33,6 +33,7 @@
     execute if entity @s[tag=93.Skill.Former.Shot] run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/1.main
 
 ## 曲射
+    execute if entity @s[tag=93.Skill.Former.UpperShot] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/1.main
 
 ## 魔法
 
