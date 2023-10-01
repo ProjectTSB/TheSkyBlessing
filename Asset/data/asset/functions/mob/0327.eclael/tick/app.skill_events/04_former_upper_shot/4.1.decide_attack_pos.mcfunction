@@ -4,16 +4,12 @@
 #
 # @within function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/1.main
 
-# 前方拡散設定
-    summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
-    data modify storage lib: Argument.Distance set value 12.0
-    data modify storage lib: Argument.Spread set value 4.5
+# 位置決定用Entity召喚
+    summon area_effect_cloud ~ ~-3 ~ {CustomNameVisible:0b,Particle:"block air",Duration:100,Tags:["Object","93.Aec.AttackPos","93.Temp.GeneralTarget"]}
 
-# 前方拡散を実行する
-    execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
+# 拡散
+    data modify storage lib: Argument.Bounds set value [[18,18],[0,0],[18,18]]
+    execute as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,tag=!93.Aec.AttackPos.Init,sort=nearest,limit=1] at @s run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.2.spread_attack_pos
 
-# 発砲
-    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet anchored eyes positioned ^ ^ ^4 run particle flash
-
-# リセット
-    kill @e[type=marker,tag=SpreadMarker,limit=1]
+# 終了
+    scoreboard players set @s 93.SubTimer 0

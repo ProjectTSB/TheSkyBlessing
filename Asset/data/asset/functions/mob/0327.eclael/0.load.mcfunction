@@ -8,6 +8,7 @@
 # @within function asset:mob/0327.eclael/**
     # 処理用タイマー
     scoreboard objectives add 93.AnimationTimer dummy
+    scoreboard objectives add 93.SubTimer dummy
     # 行動回数
     scoreboard objectives add 93.ActionCount dummy
     # 怯み処理用
