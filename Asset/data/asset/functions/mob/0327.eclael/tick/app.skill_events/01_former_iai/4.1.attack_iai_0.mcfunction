@@ -1,6 +1,6 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.1.attack_iai_0
 #
-# アニメーションのイベントハンドラ 杖モード・杖殴り なぎ払い攻撃判定
+# アニメーションのイベントハンドラ 前半・居合斬り 1段目攻撃判定
 #
 # @within function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/1.main
 
@@ -8,7 +8,7 @@
 # 演出
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.5
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.2
-    # execute positioned ^ ^1 ^2 rotated ~90 ~10 run function asset:mob/0327.eclael/tick/app.skill_events/02_rod_attack/5.1.particle_swing
+    execute positioned ^ ^1 ^2 rotated ~90 ~-40 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/5.2.particle_slash_0
 
 # TODO：与えるダメージの調整
 # ダメージ

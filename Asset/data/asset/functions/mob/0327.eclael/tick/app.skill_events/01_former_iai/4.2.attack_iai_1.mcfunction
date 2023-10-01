@@ -8,7 +8,7 @@
 # 演出
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.5
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 1 1.2
-    # execute positioned ^ ^1 ^2 rotated ~90 ~10 run function asset:mob/0327.eclael/tick/app.skill_events/02_rod_attack/5.1.particle_swing
+    execute positioned ^ ^1 ^2 rotated ~90 ~-30 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/5.3.particle_slash_1
 
 # TODO：与えるダメージの調整
 # ダメージ
