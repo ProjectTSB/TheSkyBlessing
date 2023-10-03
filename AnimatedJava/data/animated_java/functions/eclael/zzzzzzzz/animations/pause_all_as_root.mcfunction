@@ -19,6 +19,7 @@ function animated_java:eclael/zzzzzzzz/animations/4_2_former_upper_shot_end/paus
 function animated_java:eclael/zzzzzzzz/animations/4_3_former_upper_damage/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/4_4_former_upper_damage_end/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/5_0_former_magic/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/6_0_former_shortmagic/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/10_0_latter_idle_normal/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/10_1_latter_idle_rare/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start/pause_as_root
@@ -26,6 +27,8 @@ function animated_java:eclael/zzzzzzzz/animations/12_1_latter_warp_move_left/pau
 function animated_java:eclael/zzzzzzzz/animations/12_1_latter_warp_move_right/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/12_2_latter_warp_slash_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/12_3_latter_warp_slash_1/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/12_4_letter_warp_slash_2/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/12_4_letter_warp_slash_99/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/pause_as_root

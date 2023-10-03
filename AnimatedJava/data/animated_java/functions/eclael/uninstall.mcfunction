@@ -26,6 +26,7 @@ scoreboard objectives remove aj.eclael.animation.4_2_former_upper_shot_end.local
 scoreboard objectives remove aj.eclael.animation.4_3_former_upper_damage.local_anim_time
 scoreboard objectives remove aj.eclael.animation.4_4_former_upper_damage_end.local_anim_time
 scoreboard objectives remove aj.eclael.animation.5_0_former_magic.local_anim_time
+scoreboard objectives remove aj.eclael.animation.6_0_former_shortmagic.local_anim_time
 scoreboard objectives remove aj.eclael.animation.10_0_latter_idle_normal.local_anim_time
 scoreboard objectives remove aj.eclael.animation.10_1_latter_idle_rare.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start.local_anim_time
@@ -33,6 +34,8 @@ scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_left.loca
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_right.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_0.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_3_latter_warp_slash_1.local_anim_time
+scoreboard objectives remove aj.eclael.animation.12_4_letter_warp_slash_2.local_anim_time
+scoreboard objectives remove aj.eclael.animation.12_4_letter_warp_slash_99.local_anim_time
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start2.local_anim_time
 scoreboard objectives remove aj.eclael.animation.99_1_idle_relax_bak.local_anim_time
 scoreboard objectives remove aj.eclael.animation.99_0_magic_bak.local_anim_time
@@ -57,6 +60,7 @@ scoreboard objectives remove aj.eclael.animation.4_2_former_upper_shot_end.loop_
 scoreboard objectives remove aj.eclael.animation.4_3_former_upper_damage.loop_mode
 scoreboard objectives remove aj.eclael.animation.4_4_former_upper_damage_end.loop_mode
 scoreboard objectives remove aj.eclael.animation.5_0_former_magic.loop_mode
+scoreboard objectives remove aj.eclael.animation.6_0_former_shortmagic.loop_mode
 scoreboard objectives remove aj.eclael.animation.10_0_latter_idle_normal.loop_mode
 scoreboard objectives remove aj.eclael.animation.10_1_latter_idle_rare.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start.loop_mode
@@ -64,6 +68,8 @@ scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_left.loop
 scoreboard objectives remove aj.eclael.animation.12_1_latter_warp_move_right.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_2_latter_warp_slash_0.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_3_latter_warp_slash_1.loop_mode
+scoreboard objectives remove aj.eclael.animation.12_4_letter_warp_slash_2.loop_mode
+scoreboard objectives remove aj.eclael.animation.12_4_letter_warp_slash_99.loop_mode
 scoreboard objectives remove aj.eclael.animation.12_0_latter_warp_start2.loop_mode
 scoreboard objectives remove aj.eclael.animation.99_1_idle_relax_bak.loop_mode
 scoreboard objectives remove aj.eclael.animation.99_0_magic_bak.loop_mode

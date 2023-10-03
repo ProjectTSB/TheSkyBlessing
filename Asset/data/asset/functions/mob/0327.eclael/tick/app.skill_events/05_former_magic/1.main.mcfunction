@@ -1,7 +1,7 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/1.main
 #
-# アニメーションのイベントハンドラ 前半・射撃
-# 距離を取って弓で撃つ．
+# アニメーションのイベントハンドラ 前半・魔法
+# 力を溜めたのち，広範囲に雷を落とす．
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
 

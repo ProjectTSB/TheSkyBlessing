@@ -40,5 +40,8 @@
 ## 魔法
     execute if entity @s[tag=93.Skill.Former.Magic] run function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/1.main
 
+## 簡易魔法
+    execute if entity @s[tag=93.Skill.Former.ShortMagic] run function asset:mob/0327.eclael/tick/app.skill_events/06_former_shortmagic/1.main
+
 ###########################################################################
 ## 後半
