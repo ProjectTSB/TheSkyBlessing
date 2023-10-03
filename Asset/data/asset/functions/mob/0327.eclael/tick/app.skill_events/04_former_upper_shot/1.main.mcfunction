@@ -1,7 +1,8 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/1.main
 #
-# アニメーションのイベントハンドラ 前半・射撃
-# 距離を取って弓で撃つ．
+# アニメーションのイベントハンドラ 前半・曲射
+# プレイヤーの周囲をランダムに攻撃する．
+# 自分に矢が当たると怯み，隙が生じる．
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
 
@@ -20,7 +21,7 @@
     execute if score @s 93.AnimationTimer matches 15..70 run particle electric_spark ^0.2 ^1.9 ^0.1 0 0 0 1 5
 # 攻撃地点決定
     execute if score @s 93.AnimationTimer matches 5..70 run scoreboard players add @s 93.SubTimer 1
-    execute if score @s 93.AnimationTimer matches 5..70 if score @s 93.SubTimer matches 4.. run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.decide_attack_pos
+    execute if score @s 93.AnimationTimer matches 5..70 if score @s 93.SubTimer matches 5.. at @a[tag=!PlayerShouldInvulnerable,distance=..30,sort=random,limit=1] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.decide_attack_pos
 # プレイヤー狙いの攻撃地点決定
     execute if score @s 93.AnimationTimer matches 10 positioned as @a[tag=!PlayerShouldInvulnerable,distance=..30] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.1.decide_attack_pos_player
     execute if score @s 93.AnimationTimer matches 25 positioned as @a[tag=!PlayerShouldInvulnerable,distance=..30] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.1.decide_attack_pos_player
