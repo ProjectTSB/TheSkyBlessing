@@ -20,12 +20,14 @@
     #declare tag 93.Temp.GeneralTarget 汎用処理に使う一時的なタグ，対象に付与
     #declare tag 93.Temp.NotArmor 非スーパーアーマー状態，この間に攻撃されると怯む
     #declare tag 93.Temp.Damage 怯み中判別用処理
+    #declare tag 93.Temp.SleepDamage 眠り中に攻撃された
     #declare tag 93.Temp.AttackTarget 攻撃対象取得用
     #declare tag 93.Temp.MoveToLeft 左移動
     #declare tag 93.Temp.MoveToRight 右移動
 
     ## スキル：前半
     #declare tag 93.Skill.Former.Idle 待機
+    #declare tag 93.Skill.Former.Idle.Sleep 居眠り
     #declare tag 93.Skill.Former.Iai 居合斬り
     #declare tag 93.Skill.Former.Iai.Damage 居合斬り・怯み
     #declare tag 93.Skill.Former.Slash 連続斬り

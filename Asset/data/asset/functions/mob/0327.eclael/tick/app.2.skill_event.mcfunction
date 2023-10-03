@@ -18,9 +18,9 @@
 
 ## 待機
     execute if entity @s[tag=93.Skill.Former.Idle] run function asset:mob/0327.eclael/tick/app.skill_events/00_former_idle/1.main
-
-## 寝る
-
+    ## 居眠り
+        execute if entity @s[tag=93.Skill.Former.Idle.Sleep] run function asset:mob/0327.eclael/tick/app.skill_events/00_1_former_idle_sleep/1.main
+    
 ## 居合斬り
     execute if entity @s[tag=93.Skill.Former.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/1.main
     ## 居合斬り・怯み
