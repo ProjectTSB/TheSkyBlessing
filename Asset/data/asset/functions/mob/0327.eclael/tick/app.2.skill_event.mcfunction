@@ -45,3 +45,9 @@
 
 ###########################################################################
 ## 後半
+
+## 待機
+    execute if entity @s[tag=93.Skill.Latter.Idle] run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/1.main
+
+## 遠距離斬り
+    execute if entity @s[tag=93.Skill.Latter.Whip] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main

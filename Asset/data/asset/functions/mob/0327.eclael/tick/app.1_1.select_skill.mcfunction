@@ -5,7 +5,7 @@
 # @within function asset:mob/0327.eclael/tick/2.tick
 
 # デバッグ用強制再生
-    tag @s add 93.Skill.Former.Idle.Sleep
+    tag @s add 93.Skill.Latter.Whip
 # デバッグ用初期位置移動
     tp @s 187 210.5 14
 
