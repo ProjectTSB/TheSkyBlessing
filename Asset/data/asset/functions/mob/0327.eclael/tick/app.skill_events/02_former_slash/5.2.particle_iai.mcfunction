@@ -2,7 +2,7 @@
 #
 # アニメーションのイベントハンドラ 前半・連続斬り 居合斬り演出
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/02_former_slash/**
+# @within function asset:mob/0327.eclael/tick/app.skill_events/**
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAhgMxEBGAZmXAGwC0FcATEcwCwAMcAdmYBOCgN7N2ARin1eAYwpTqA4WFwYyAWwTJAW74ACdurAwyAJ20BnJOHkB7PBghJ2A3LXP2ttsADcyFDxdcAAPJF5cKCRmAFYAX3jcCHtfAKCQsHDESLBoxASksHtaWis4FxzcajgALzQ4cyQpADpGXDQrACE6hvMAUQBHPECUKABlM3k4EkR6FHLEgF0gA_3
 # 線 2

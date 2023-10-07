@@ -2,7 +2,7 @@
 #
 # アニメーションのイベントハンドラ 前半・居合斬り
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.1.attack_iai_0
+# @within function asset:mob/0327.eclael/tick/app.skill_events/**
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAbAMwAMAhmQEYVEC0AjHABxXMAsPHHZgE5WAMwDszKnADG7KkTJweNAKxhcGGgFsEyQFu+AAlYawMGgCcdAZyTgZAezwYISAEwVcoiw+12wAG40KHh64AAeSFS4UEjMFAC+CbgQDv5BIWFgkYjRYLGIiclgDqKi1nCuubj0cABeaHAW7gB0HLho1gBC9Y0WAKIAjnjBKFAAyuYycCSIosEVSQC6QA_3
 # 線 1

@@ -1,3 +1,0 @@
-execute if score @s aj.eclael.animation.12_0_latter_warp_start2.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start2/end_loop
-execute if score @s aj.eclael.animation.12_0_latter_warp_start2.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/12_0_latter_warp_start2/stop
-execute if score @s aj.eclael.animation.12_0_latter_warp_start2.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/12_0_latter_warp_start2/pause

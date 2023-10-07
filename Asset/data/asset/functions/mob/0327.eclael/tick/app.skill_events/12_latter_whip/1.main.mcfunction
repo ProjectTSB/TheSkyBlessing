@@ -16,7 +16,9 @@
     execute if score @s 93.AnimationTimer matches 8 run function asset:mob/0327.eclael/tick/app.general/8.teleport_effect
     execute if score @s 93.AnimationTimer matches 13..16 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 17..22 at @s positioned ^ ^ ^-0.4 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    
+# 移動方向決定
+    execute if score @s 93.AnimationTimer matches 34 if predicate lib:random_pass_per/50 run tag @s add 93.Temp.MoveToLeft
+
 ## 左右ワープ
 ## 右
 # animated javaアニメーション再生 (長さ：20tick)

@@ -39,7 +39,8 @@
 
     ## スキル：後半
     #declare tag 93.Skill.Latter.Idle 待機
-    #declare tag 93.Skill.Latter.Whip 鞭コンボ
+    #declare tag 93.Skill.Latter.Whip 遠距離斬り
+    #declare tag 93.Skill.Latter.Quick 七連斬り
 
     ## TODO:以下，実装完了時に削除する
     #declare tag 93.ChangeAnimation アニメーションを強制的に変更する

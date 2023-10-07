@@ -2,7 +2,7 @@
 #
 # アニメーションのイベントハンドラ 後半・鞭コンボ 2段目攻撃判定
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
+# @within function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/**
 
 # 演出
     execute if score @s 93.AnimationTimer matches 230 positioned ^ ^ ^6 run playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 1 1

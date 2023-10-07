@@ -60,6 +60,8 @@ execute if score #animation aj.i = $aj.eclael.animation.10_0_latter_idle_normal 
 execute if score #animation aj.i = $aj.eclael.animation.10_0_latter_idle_normal aj.id run scoreboard players operation @s aj.eclael.animation.10_0_latter_idle_normal.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.10_1_latter_idle_rare aj.id run function animated_java:eclael/zzzzzzzz/animations/10_1_latter_idle_rare/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.10_1_latter_idle_rare aj.id run scoreboard players operation @s aj.eclael.animation.10_1_latter_idle_rare.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.11_0_latter_damage_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/11_0_latter_damage_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.11_0_latter_damage_0 aj.id run scoreboard players operation @s aj.eclael.animation.11_0_latter_damage_0.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.12_0_latter_warp_start aj.id run function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.12_0_latter_warp_start aj.id run scoreboard players operation @s aj.eclael.animation.12_0_latter_warp_start.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.12_1_latter_warp_move_left aj.id run function animated_java:eclael/zzzzzzzz/animations/12_1_latter_warp_move_left/apply_frame_as_root
@@ -72,14 +74,28 @@ execute if score #animation aj.i = $aj.eclael.animation.12_3_latter_warp_slash_1
 execute if score #animation aj.i = $aj.eclael.animation.12_3_latter_warp_slash_1 aj.id run scoreboard players operation @s aj.eclael.animation.12_3_latter_warp_slash_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.12_4_letter_warp_slash_2 aj.id run function animated_java:eclael/zzzzzzzz/animations/12_4_letter_warp_slash_2/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.12_4_letter_warp_slash_2 aj.id run scoreboard players operation @s aj.eclael.animation.12_4_letter_warp_slash_2.local_anim_time = #frame aj.i
-execute if score #animation aj.i = $aj.eclael.animation.12_4_letter_warp_slash_99 aj.id run function animated_java:eclael/zzzzzzzz/animations/12_4_letter_warp_slash_99/apply_frame_as_root
-execute if score #animation aj.i = $aj.eclael.animation.12_4_letter_warp_slash_99 aj.id run scoreboard players operation @s aj.eclael.animation.12_4_letter_warp_slash_99.local_anim_time = #frame aj.i
-execute if score #animation aj.i = $aj.eclael.animation.12_0_latter_warp_start2 aj.id run function animated_java:eclael/zzzzzzzz/animations/12_0_latter_warp_start2/apply_frame_as_root
-execute if score #animation aj.i = $aj.eclael.animation.12_0_latter_warp_start2 aj.id run scoreboard players operation @s aj.eclael.animation.12_0_latter_warp_start2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_0_latter_quick_start aj.id run function animated_java:eclael/zzzzzzzz/animations/13_0_latter_quick_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_0_latter_quick_start aj.id run scoreboard players operation @s aj.eclael.animation.13_0_latter_quick_start.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_1_latter_quick_slash_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_1_latter_quick_slash_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_1_latter_quick_slash_0 aj.id run scoreboard players operation @s aj.eclael.animation.13_1_latter_quick_slash_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_2_latter_quick_slash_1 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_2_latter_quick_slash_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_2_latter_quick_slash_1 aj.id run scoreboard players operation @s aj.eclael.animation.13_2_latter_quick_slash_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_3_latter_quick_slash_2 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_3_latter_quick_slash_2/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_3_latter_quick_slash_2 aj.id run scoreboard players operation @s aj.eclael.animation.13_3_latter_quick_slash_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_4_latter_quick_move aj.id run function animated_java:eclael/zzzzzzzz/animations/13_4_latter_quick_move/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_4_latter_quick_move aj.id run scoreboard players operation @s aj.eclael.animation.13_4_latter_quick_move.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_5_latter_quick_iai_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_5_latter_quick_iai_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_5_latter_quick_iai_0 aj.id run scoreboard players operation @s aj.eclael.animation.13_5_latter_quick_iai_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_6_latter_quick_iai_1/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id run scoreboard players operation @s aj.eclael.animation.13_6_latter_quick_iai_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_1_idle_relax_bak aj.id run function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.99_1_idle_relax_bak aj.id run scoreboard players operation @s aj.eclael.animation.99_1_idle_relax_bak.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_0_magic_bak aj.id run function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.99_0_magic_bak aj.id run scoreboard players operation @s aj.eclael.animation.99_0_magic_bak.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run function animated_java:eclael/zzzzzzzz/animations/99_pose/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run scoreboard players operation @s aj.eclael.animation.99_pose.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.99_invisible aj.id run function animated_java:eclael/zzzzzzzz/animations/99_invisible/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.99_invisible aj.id run scoreboard players operation @s aj.eclael.animation.99_invisible.local_anim_time = #frame aj.i
 execute at @s run function #animated_java:eclael/on_summon/as_root
 tag @s remove aj.new
 scoreboard players reset #frame aj.i

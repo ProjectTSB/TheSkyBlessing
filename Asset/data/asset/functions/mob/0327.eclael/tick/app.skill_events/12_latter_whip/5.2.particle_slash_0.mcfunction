@@ -2,7 +2,7 @@
 #
 # アニメーションのイベントハンドラ 前半・居合斬り
 #
-# @within function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/**
+# @within function asset:mob/0327.eclael/tick/app.skill_events/**
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYARgIYDGcAnAMxFkC0AZgKwAcADMwCy049ZtU6d+VIqwqsAbHG7tussLgwUAtgmSAt3wAEARlVgYFAE6aAzknBUA9ngwQkAJnq5WZuxptgAbhQoeNrgAB5I3LhQSMzsAL5xuBB2vgFBIWDhiJFg0YjxiWB2rKyWcM7ZuGRwAF5ocGZI9AB0fLholgBCtfVmAKIAjniBKFAAyqY0JIjSKGUJALpAA_3
 # 線 1

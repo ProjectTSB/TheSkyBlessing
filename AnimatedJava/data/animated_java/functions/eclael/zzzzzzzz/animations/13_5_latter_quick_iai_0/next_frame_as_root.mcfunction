@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/13_5_latter_quick_iai_0/tick_animation

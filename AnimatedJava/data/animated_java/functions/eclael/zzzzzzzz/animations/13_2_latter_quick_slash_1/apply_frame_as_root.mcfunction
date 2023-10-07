@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..13 run function animated_java:eclael/zzzzzzzz/animations/13_2_latter_quick_slash_1/tree/branch_0_13

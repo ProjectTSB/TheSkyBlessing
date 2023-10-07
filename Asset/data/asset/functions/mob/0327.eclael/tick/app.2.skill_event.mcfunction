@@ -10,7 +10,7 @@
 ## 登場演出
     # execute if entity @s[tag=8T.Skill.Rod.Start] run function asset:mob/0327.eclael/tick/app.skill_events/00_rod_start/1.main
 
-## 武器持ち替え
+## 抜刀
     # execute if entity @s[tag=8T.Skill.Rod.ToSword] run function asset:mob/0327.eclael/tick/app.skill_events/09_rod_to_sword/1.main
 
 ###########################################################################
@@ -50,4 +50,8 @@
     execute if entity @s[tag=93.Skill.Latter.Idle] run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/1.main
 
 ## 遠距離斬り
-    execute if entity @s[tag=93.Skill.Latter.Whip] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
+    execute if entity @s[tag=93.Skill.Latter.Whip,tag=!93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
+    execute if entity @s[tag=93.Skill.Latter.Whip,tag=93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.1.main_mirror
+
+## 七連斬り
+    execute if entity @s[tag=93.Skill.Latter.Quick] run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/1.main

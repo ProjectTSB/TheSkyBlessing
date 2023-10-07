@@ -9,4 +9,4 @@
 
 # スコア初期化
     scoreboard players set @s 95.Timer 0
-    scoreboard players set @s 95.DamageInterval 0
+    scoreboard players set @s 95.DamageInterval 4

@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/99_pose/tick_animation
