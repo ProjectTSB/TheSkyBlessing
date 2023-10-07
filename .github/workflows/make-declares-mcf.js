@@ -25,63 +25,73 @@ const run = async () => {
     const reposName = env.getOrThrow("REPOSITORY");
     const branch = env.getOrDefault("BRANCH", "master");
     const indent = env.getOrDefault("INDENT", 4);
-    const testPaths = env.getOrThrow("VISIBILITY_FILTER").split(/,|\n/).map(s => s.trim());
+    /** @type { [string, string][] } */
+    const testPaths = env.getOrThrow("VISIBILITY_FILTER").split(/,|\n/).map(s => s.trim().split("@"));
     const outputPath = env.getOrDefault("OUTPUT_PATH", "./declares.mcfunction");
     const outputResourcePath = env.getOrDefault("OUTPUT_RESOURCE_PATH", "minecraft:declares");
+    /** @type { [string, string] } */
     const defaultVisibility = (() => {
         const dv = env.getOrDefault("DEFAULT_VISIBILITY", "public");
-        return dv === "public" ? "**" : dv;
+        return dv === "public" ? ["*","**"] : dv.split("@");
     })();
 
     /** @type {ClientCache} */
     const dlsData = JSON.parse(await fsp.readFile(".cache/dls.json", { encoding: "utf-8" })).cache;
 
-    /** @typedef {{ str: string, from: { uri: string | undefined, line: [number, number] | undefined } }} Hoge */
+    /** @typedef {{ str: string, from: { uri: string | undefined, line: [number, number] | undefined }, type: CacheType, resId: string }} Document */
     /** @type {[string, string][]} */
-    const vpReplacers = [["?", "[^:/]"], ["**/", ".{0,}"], ["**", ".{0,}"], ["*", "[^:/]{0,}"]]
-    /** @type {Map<string, { declare: Hoge[], alias: Hoge[] }>} */
+    const vpReplacers = [[/\?/g, "[^:/]"], [/\*\*\//g, ".{0,}"], [/\*\*/g, ".{0,}"], [/\*/g, "[^:/]{0,}"]];
+    /** @type {Map<string, { declare: Document[], alias: Document[] }>} */
     const decMap = new Map();
     for (const [t, cache] of Object.entries(dlsData)) {
         /** @type {CacheType} */
         const type = t;
         for (const [resourceId, { doc, dcl, def, foo }] of Object.entries(cache)) {
             const cp = [...(dcl ?? []), ...(def ?? [])].find(cpos =>
-                (cpos.visibility?.map(cv => cv.pattern) ?? [defaultVisibility])
-                    .map(v => RegExp(`^${vpReplacers.reduce((s, [r1, r2]) => s.replace(r1, r2), v)}$`))
-                    .some(cp => testPaths.some(v => cp.test(v)))
+                (cpos.visibility?.map(cv => [cv.type, cv.pattern]) ?? [defaultVisibility])
+                    .map(([v1, v2]) => [v1, RegExp(`^${vpReplacers.reduce((s, [r1, r2]) => s.replace(r1, r2), v2)}$`)])
+                    .some(([tt, cp]) => testPaths.some(tp => (tt === "" || tt === "*" || tt === tp[0]) && cp.test(tp[1])))
             );
             if (!cp) continue;
-            const decs = decMap.get(doc ?? defaultVisibility) ?? { declare: [], alias: [] };
+            const decs = decMap.get(doc ?? defaultVisibility[1]) ?? { declare: [], alias: [] };
             const from = {
-                uri: cp.uri,
+                uri: decodeURI(cp.uri.slice("file://")).replace(checkoutPath, `https://github.com/${reposName}/blob/${branch}/`),
                 line: cp.startLine !== undefined && cp.endLine !== undefined && [cp.startLine + 1, cp.endLine + 1]
             }
             if (type.startsWith("alias")) {
-                decs.alias.push({ str: `#alias ${resourceId} ${foo}`, from });
+                decs.alias.push({ str: `#alias ${type.slice("alias/".length)} ${resourceId} ${foo}`, from, type, resId: resourceId });
             } else {
-                decs.declare.push({ str: `#declare ${type} ${resourceId}`, from });
+                decs.declare.push({ str: `#declare ${type} ${resourceId}`, from, type, resId: resourceId });
             }
-            decMap.set(doc ?? defaultVisibility, decs);
+            decMap.set(doc ?? defaultVisibility[1], decs);
         }
     }
+    const sort = (a, b) => {
+        const x = a.type.localeCompare(b.type);
+        if (x !== 0) return x;
+        return a.resId.localeCompare(b.resId);
+    };
     const declares = [
         `#> ${outputResourcePath}`,
         "# @private",
         "",
         Array.from(decMap.entries())
             .map(([doc, v]) => {
+                console.log(doc)
                 const lines = doc.replace(/\n{3}|\n{2}/g, "\n").split("\n");
-                const hoge = [...v.alias, ...v.declare];
+                const docs = [...v.alias.sort(sort), ...v.declare.sort(sort)];
+                const maxDecLen = docs.reduce((a, b) => Math.max(a, b.str.length), 0);
+                const i = docs.length !== 1 ? " ".repeat(indent) : "";
                 return [
                     `#> ${lines[0]}`,
                     ...lines.slice(1).map(v => `# ${v}`),
-                    ...hoge.map(s => {
+                    ...docs.map(s => {
                         const line = s.from
                             ? s.from.line[0] !== s.from.line[1]
                                 ? `L${s.from.line[0]}-L${s.from.line[1]}`
                                 : `L${s.from.line[0]}`
                             : "L1";
-                        return `${hoge.length !== 1 ? " ".repeat(indent) : ""}${s.str}  // declared from: ${s.from.uri.replace(checkoutPath, `https://github.com/${reposName}/blob/${branch}/`)}#${line}`
+                        return `${i}${s.str} ${" ".repeat(maxDecLen - s.str.length)}from ${s.from.uri}#${line}`
                     })
                 ].join("\n");
             })
