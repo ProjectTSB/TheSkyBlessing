@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/10_01_sword_idle/tick_animation

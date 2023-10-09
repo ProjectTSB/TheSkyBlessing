@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/06_01_rod_shot_magic/tick_animation

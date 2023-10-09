@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/17_02_sword_rain_shot_0/tick_animation

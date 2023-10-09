@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.02_01_rod_attack_move

@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.16_05_sword_charge_counter.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/16_05_sword_charge_counter/end_loop
+execute if score @s aj.haruclaire.animation.16_05_sword_charge_counter.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/16_05_sword_charge_counter/stop
+execute if score @s aj.haruclaire.animation.16_05_sword_charge_counter.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/16_05_sword_charge_counter/pause

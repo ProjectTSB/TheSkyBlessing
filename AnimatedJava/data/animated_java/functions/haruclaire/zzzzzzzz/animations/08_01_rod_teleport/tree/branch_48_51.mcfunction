@@ -1,0 +1,3 @@
+execute if score @s aj.anim_time matches 48 run function animated_java:haruclaire/zzzzzzzz/animations/08_01_rod_teleport/tree/leaf_48
+execute if score @s aj.anim_time matches 49 run function animated_java:haruclaire/zzzzzzzz/animations/08_01_rod_teleport/tree/leaf_49
+execute if score @s aj.anim_time matches 50 run function animated_java:haruclaire/zzzzzzzz/animations/08_01_rod_teleport/tree/leaf_50

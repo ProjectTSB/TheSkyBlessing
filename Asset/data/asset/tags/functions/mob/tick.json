@@ -1,5 +1,11 @@
 {
     "values": [
+        "asset:mob/0323.haruclaire_illusion/tick/1.trigger",
+        "asset:mob/0322.haruclaire_icerain_center/tick/1.trigger",
+        "asset:mob/0320.haruclaire_shot/tick/1.trigger",
+        "asset:mob/0319.haruclaire_ice_bullet/tick/1.trigger",
+        "asset:mob/0318.haruclaire_rod/tick/1.trigger",
+        "asset:mob/0317.haruclaire/tick/1.trigger",
         "asset:mob/0176.killer_bee/tick/1.trigger",
         "asset:mob/0186.ferocious_bee/tick/1.trigger",
         "asset:mob/0266.small_dark_ball/tick/1.trigger",

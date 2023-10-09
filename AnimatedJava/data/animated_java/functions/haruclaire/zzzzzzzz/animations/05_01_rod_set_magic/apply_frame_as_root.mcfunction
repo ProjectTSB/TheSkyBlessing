@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..106 run function animated_java:haruclaire/zzzzzzzz/animations/05_01_rod_set_magic/tree/branch_0_106

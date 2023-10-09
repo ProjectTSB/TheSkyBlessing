@@ -1,0 +1,1 @@
+function animated_java:haruclaire_illusion/zzzzzzzz/animations/12_rain_shot_1/tick_animation

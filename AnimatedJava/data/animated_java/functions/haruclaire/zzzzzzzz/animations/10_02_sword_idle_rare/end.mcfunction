@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.10_02_sword_idle_rare.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/10_02_sword_idle_rare/end_loop
+execute if score @s aj.haruclaire.animation.10_02_sword_idle_rare.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/10_02_sword_idle_rare/stop
+execute if score @s aj.haruclaire.animation.10_02_sword_idle_rare.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/10_02_sword_idle_rare/pause

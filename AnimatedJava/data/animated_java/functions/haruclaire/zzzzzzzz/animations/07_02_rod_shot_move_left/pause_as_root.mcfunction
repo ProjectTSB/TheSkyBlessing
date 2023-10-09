@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.07_02_rod_shot_move_left

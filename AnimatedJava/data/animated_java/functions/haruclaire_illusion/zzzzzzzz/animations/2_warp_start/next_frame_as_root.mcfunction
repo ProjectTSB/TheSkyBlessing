@@ -1,0 +1,1 @@
+function animated_java:haruclaire_illusion/zzzzzzzz/animations/2_warp_start/tick_animation

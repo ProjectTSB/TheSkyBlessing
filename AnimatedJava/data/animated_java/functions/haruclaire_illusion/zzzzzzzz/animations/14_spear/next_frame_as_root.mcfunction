@@ -1,0 +1,1 @@
+function animated_java:haruclaire_illusion/zzzzzzzz/animations/14_spear/tick_animation

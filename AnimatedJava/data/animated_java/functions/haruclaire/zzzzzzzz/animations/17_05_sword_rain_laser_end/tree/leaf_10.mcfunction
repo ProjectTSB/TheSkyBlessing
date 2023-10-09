@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:haruclaire/zzzzzzzz/animations/17_05_sword_rain_laser_end/tree/leaf_10_as_bone

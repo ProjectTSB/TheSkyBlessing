@@ -1,0 +1,1 @@
+execute on passengers run function animated_java:haruclaire/zzzzzzzz/apply_variant/wink/as_bone

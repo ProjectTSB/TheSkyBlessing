@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire/zzzzzzzz/animations/17_04_sword_rain_laser/end_loop
+execute if score @s aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire/animations/17_04_sword_rain_laser/stop
+execute if score @s aj.haruclaire.animation.17_04_sword_rain_laser.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire/animations/17_04_sword_rain_laser/pause

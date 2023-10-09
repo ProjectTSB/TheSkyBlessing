@@ -1,0 +1,17 @@
+execute if entity @s[tag=aj.haruclaire.bone.hat] run data modify entity @s item.tag.CustomModelData set value 43
+execute if entity @s[tag=aj.haruclaire.bone.head] run data modify entity @s item.tag.CustomModelData set value 44
+execute if entity @s[tag=aj.haruclaire.bone.weapon_rod] run data modify entity @s item.tag.CustomModelData set value 45
+execute if entity @s[tag=aj.haruclaire.bone.arm_right_1] run data modify entity @s item.tag.CustomModelData set value 46
+execute if entity @s[tag=aj.haruclaire.bone.arm_right_0] run data modify entity @s item.tag.CustomModelData set value 47
+execute if entity @s[tag=aj.haruclaire.bone.weapon_sword2] run data modify entity @s item.tag.CustomModelData set value 48
+execute if entity @s[tag=aj.haruclaire.bone.arm_left_1] run data modify entity @s item.tag.CustomModelData set value 49
+execute if entity @s[tag=aj.haruclaire.bone.arm_left_0] run data modify entity @s item.tag.CustomModelData set value 50
+execute if entity @s[tag=aj.haruclaire.bone.wing_right] run data modify entity @s item.tag.CustomModelData set value 51
+execute if entity @s[tag=aj.haruclaire.bone.wing_left] run data modify entity @s item.tag.CustomModelData set value 52
+execute if entity @s[tag=aj.haruclaire.bone.body_0] run data modify entity @s item.tag.CustomModelData set value 53
+execute if entity @s[tag=aj.haruclaire.bone.leg_right_1] run data modify entity @s item.tag.CustomModelData set value 54
+execute if entity @s[tag=aj.haruclaire.bone.leg_right_0] run data modify entity @s item.tag.CustomModelData set value 55
+execute if entity @s[tag=aj.haruclaire.bone.leg_left_1] run data modify entity @s item.tag.CustomModelData set value 56
+execute if entity @s[tag=aj.haruclaire.bone.leg_left_0] run data modify entity @s item.tag.CustomModelData set value 57
+execute if entity @s[tag=aj.haruclaire.bone.ribbon] run data modify entity @s item.tag.CustomModelData set value 58
+execute if entity @s[tag=aj.haruclaire.bone.body_1] run data modify entity @s item.tag.CustomModelData set value 59

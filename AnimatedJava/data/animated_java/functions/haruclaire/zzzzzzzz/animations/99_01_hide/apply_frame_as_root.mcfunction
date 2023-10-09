@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0 run function animated_java:haruclaire/zzzzzzzz/animations/99_01_hide/tree/leaf_0

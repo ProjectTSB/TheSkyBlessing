@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/04_01_rod_laser_pre/tick_animation

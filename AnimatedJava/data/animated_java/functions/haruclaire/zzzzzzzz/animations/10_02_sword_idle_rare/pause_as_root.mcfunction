@@ -1,0 +1,1 @@
+tag @s remove aj.haruclaire.animation.10_02_sword_idle_rare

@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..6 run function animated_java:haruclaire_illusion/zzzzzzzz/animations/11_rain_shot_0/tree/branch_0_6

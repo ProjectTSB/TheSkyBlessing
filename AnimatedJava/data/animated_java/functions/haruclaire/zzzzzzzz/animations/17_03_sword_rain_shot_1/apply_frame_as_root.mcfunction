@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..56 run function animated_java:haruclaire/zzzzzzzz/animations/17_03_sword_rain_shot_1/tree/branch_0_56

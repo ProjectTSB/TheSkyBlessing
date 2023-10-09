@@ -1,0 +1,1 @@
+function animated_java:haruclaire/zzzzzzzz/animations/11_01_sword_damage_2/tick_animation

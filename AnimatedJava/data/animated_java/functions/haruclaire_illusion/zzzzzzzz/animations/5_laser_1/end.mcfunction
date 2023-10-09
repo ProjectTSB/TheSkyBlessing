@@ -1,0 +1,3 @@
+execute if score @s aj.haruclaire_illusion.animation.5_laser_1.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:haruclaire_illusion/zzzzzzzz/animations/5_laser_1/end_loop
+execute if score @s aj.haruclaire_illusion.animation.5_laser_1.loop_mode = $aj.loop_mode.once aj.i run function animated_java:haruclaire_illusion/animations/5_laser_1/stop
+execute if score @s aj.haruclaire_illusion.animation.5_laser_1.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:haruclaire_illusion/animations/5_laser_1/pause

@@ -1,0 +1,2 @@
+execute if score @s aj.tween_time matches 1.. run function animated_java:haruclaire/zzzzzzzz/animations/12_05_sword_slash_spin/tick_tween
+execute unless score @s aj.tween_time matches 1.. run function animated_java:haruclaire/zzzzzzzz/animations/12_05_sword_slash_spin/tick_animation
