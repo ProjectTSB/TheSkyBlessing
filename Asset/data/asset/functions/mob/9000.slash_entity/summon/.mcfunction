@@ -1,0 +1,8 @@
+#> asset:mob/9000.slash_entity/summon/
+#
+#
+#
+# @within function asset:mob/9000.slash_entity/_/summon
+
+# 元となるMobを召喚する
+    summon item_display ~ ~ ~ {brightness:{sky:0,block:0},item_display:"head",Tags:["MobInit","AntiVoid"]}
