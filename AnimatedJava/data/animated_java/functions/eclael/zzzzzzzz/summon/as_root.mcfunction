@@ -88,6 +88,12 @@ execute if score #animation aj.i = $aj.eclael.animation.13_5_latter_quick_iai_0 
 execute if score #animation aj.i = $aj.eclael.animation.13_5_latter_quick_iai_0 aj.id run scoreboard players operation @s aj.eclael.animation.13_5_latter_quick_iai_0.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id run function animated_java:eclael/zzzzzzzz/animations/13_6_latter_quick_iai_1/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id run scoreboard players operation @s aj.eclael.animation.13_6_latter_quick_iai_1.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.14_0_latter_moveshot_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_0/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.14_0_latter_moveshot_0 aj.id run scoreboard players operation @s aj.eclael.animation.14_0_latter_moveshot_0.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune aj.id run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune aj.id run scoreboard players operation @s aj.eclael.animation.15_0_sorafune.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj.id run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj.id run scoreboard players operation @s aj.eclael.animation.15_0_sorafune_tousoku.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_1_idle_relax_bak aj.id run function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.99_1_idle_relax_bak aj.id run scoreboard players operation @s aj.eclael.animation.99_1_idle_relax_bak.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_0_magic_bak aj.id run function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/apply_frame_as_root

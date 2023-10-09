@@ -20,7 +20,7 @@
     execute if score @s 93.AnimationTimer matches 29 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
     execute if score @s 93.AnimationTimer matches 41 run playsound item.axe.scrape hostile @a ~ ~ ~ 1 2
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 43 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 43 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 43 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火
@@ -40,7 +40,7 @@
 # 攻撃
     execute if score @s 93.AnimationTimer matches 59 run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/4.1.attack_slash_0
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 63 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 63 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 63 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火
@@ -60,7 +60,7 @@
 # 攻撃
     execute if score @s 93.AnimationTimer matches 78 run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/4.2.attack_slash_1
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 82 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 82 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 82 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火
@@ -80,7 +80,7 @@
 # 攻撃
     execute if score @s 93.AnimationTimer matches 97 run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/4.1.attack_slash_0
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 109 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 109 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 109 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火
@@ -105,7 +105,7 @@
     execute if score @s 93.AnimationTimer matches 115..118 at @s positioned ^ ^0.5 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 122..126 at @s positioned ^ ^-1 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 140 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 140 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 140 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火
@@ -147,7 +147,7 @@
     execute if score @s 93.AnimationTimer matches 216 run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 221 run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/4.2.attack_slash_1
 # 攻撃地点決定
-    execute if score @s 93.AnimationTimer matches 226 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 226 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 226 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
 
 ## 電光石火

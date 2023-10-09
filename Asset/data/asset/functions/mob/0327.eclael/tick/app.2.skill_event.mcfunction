@@ -55,3 +55,8 @@
 
 ## 七連斬り
     execute if entity @s[tag=93.Skill.Latter.Quick] run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/1.main
+
+
+
+## 宙船
+    execute if entity @s[tag=93.Skill.Latter.Sorafune] run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/1.main

@@ -1,0 +1,3 @@
+execute if score @s aj.anim_time matches 112 run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/tree/leaf_112
+execute if score @s aj.anim_time matches 113 run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/tree/leaf_113
+execute if score @s aj.anim_time matches 114 run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/tree/leaf_114

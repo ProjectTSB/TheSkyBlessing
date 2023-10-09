@@ -36,6 +36,9 @@ function animated_java:eclael/zzzzzzzz/animations/13_3_latter_quick_slash_2/paus
 function animated_java:eclael/zzzzzzzz/animations/13_4_latter_quick_move/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/13_5_latter_quick_iai_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/13_6_latter_quick_iai_1/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_0/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_pose/pause_as_root
