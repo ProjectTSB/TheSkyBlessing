@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/tick_animation

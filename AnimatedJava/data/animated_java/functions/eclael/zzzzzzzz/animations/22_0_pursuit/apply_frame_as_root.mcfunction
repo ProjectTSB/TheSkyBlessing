@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..49 run function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/tree/branch_0_49

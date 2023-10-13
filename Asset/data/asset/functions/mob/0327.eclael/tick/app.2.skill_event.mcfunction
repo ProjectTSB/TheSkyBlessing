@@ -49,14 +49,25 @@
 ## 待機
     execute if entity @s[tag=93.Skill.Latter.Idle] run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/1.main
 
-## 遠距離斬り
+## 袈裟斬り
+    execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=!93.Temp.Near] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.main
+    execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=93.Temp.Near] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
+
+## 居合斬り
+    execute if entity @s[tag=93.Skill.Latter.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/1.main
+
+## 射撃
+
+## 魔法
+
+## 大技：延斬り
     execute if entity @s[tag=93.Skill.Latter.Whip,tag=!93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
     execute if entity @s[tag=93.Skill.Latter.Whip,tag=93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.1.main_mirror
 
-## 七連斬り
+## 大技：七連斬り
     execute if entity @s[tag=93.Skill.Latter.Quick] run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/1.main
 
 
 
-## 宙船
+## 大技：宙船
     execute if entity @s[tag=93.Skill.Latter.Sorafune] run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/1.main

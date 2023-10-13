@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/18_0_latter_attack_moveslash/tick_animation

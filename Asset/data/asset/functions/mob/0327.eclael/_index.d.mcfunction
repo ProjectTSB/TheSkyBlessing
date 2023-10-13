@@ -24,6 +24,7 @@
     #declare tag 93.Temp.AttackTarget 攻撃対象取得用
     #declare tag 93.Temp.MoveToLeft 左移動
     #declare tag 93.Temp.MoveToRight 右移動
+    #declare tag 93.Temp.Near 近距離判定用
 
     ## スキル：前半
     #declare tag 93.Skill.Former.Idle 待機
@@ -39,9 +40,10 @@
 
     ## スキル：後半
     #declare tag 93.Skill.Latter.Idle 待機
-    #declare tag 93.Skill.Latter.Whip 遠距離斬り
+    #declare tag 93.Skill.Latter.MoveSlash 袈裟斬り
+    #declare tag 93.Skill.Latter.Iai 居合
+    #declare tag 93.Skill.Latter.Whip 延斬り
     #declare tag 93.Skill.Latter.Quick 七連斬り
-
     #declare tag 93.Skill.Latter.Sorafune 宙船
 
     ## TODO:以下，実装完了時に削除する
