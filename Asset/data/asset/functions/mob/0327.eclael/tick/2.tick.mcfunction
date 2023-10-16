@@ -19,9 +19,8 @@
 # スキルのイベントハンドラ
     execute if score @s 93.AnimationTimer matches 1.. run function asset:mob/0327.eclael/tick/app.2.skill_event
 
-# TODO:怯み処理
-    # 怯み中の場合，タイマーを増加する
-        # execute if entity @s[tag=93.Temp.Damage] run scoreboard players add @s 8T.DamageTimer 1
+# 怯み中の場合，タイマーを増加する
+    execute if entity @s[tag=93.Temp.Damage] run scoreboard players add @s 93.DamageTimer 1
 
 # 以下仮実装
     # function asset:mob/0327.eclael/tick/app.skill_events/00_former_idle/1.main

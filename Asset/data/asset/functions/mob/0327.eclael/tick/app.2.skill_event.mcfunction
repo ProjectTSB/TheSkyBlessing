@@ -50,9 +50,9 @@
     execute if entity @s[tag=93.Skill.Latter.Idle] run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/1.main
 
 ## 怯み
-    
+    execute if entity @s[tag=93.Skill.Latter.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/11_latter_damage/1.main
     ## 怯み・バク転
-
+        execute if entity @s[tag=93.Skill.Latter.Damage.Move] run function asset:mob/0327.eclael/tick/app.skill_events/11_1_latter_damage_move/1.main
 
 ## 袈裟斬り
     execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=!93.Temp.Near] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.main

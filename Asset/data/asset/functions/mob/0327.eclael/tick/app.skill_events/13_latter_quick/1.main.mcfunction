@@ -172,5 +172,9 @@
 # 移動
     execute if score @s 93.AnimationTimer matches 234..238 at @s positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
 
+# 怯み受け付け
+    execute if score @s 93.AnimationTimer matches 246 run tag @s add 93.Temp.NotArmor
+    execute if score @s 93.AnimationTimer matches 305 run tag @s remove 93.Temp.NotArmor
+
 # 終了
     execute if score @s 93.AnimationTimer matches 306.. run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/2.end

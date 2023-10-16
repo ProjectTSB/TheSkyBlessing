@@ -46,5 +46,9 @@
     execute if score @s 93.AnimationTimer matches 117 run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/4.2.attack_slash_1
     execute if score @s 93.AnimationTimer matches 120 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
 
+# 怯み受け付け
+    execute if score @s 93.AnimationTimer matches 121 run tag @s add 93.Temp.NotArmor
+    execute if score @s 93.AnimationTimer matches 155 run tag @s remove 93.Temp.NotArmor
+
 # 終了
     execute if score @s 93.AnimationTimer matches 156.. run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/2.end

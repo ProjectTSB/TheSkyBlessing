@@ -16,6 +16,22 @@
     tag @s remove 93.Skill.Former.UpperShot
     tag @s remove 93.Skill.Former.UpperShot.Damage
     tag @s remove 93.Skill.Former.Magic
+    tag @s remove 93.Skill.Latter.Idle
+    tag @s remove 93.Skill.Latter.Damage
+    tag @s remove 93.Skill.Latter.Damage.Move
+    tag @s remove 93.Skill.Latter.MoveSlash
+    tag @s remove 93.Skill.Latter.Iai
+    tag @s remove 93.Skill.Latter.Iai.Damage
+    tag @s remove 93.Skill.Latter.Shot
+    tag @s remove 93.Skill.Latter.Magic
+    tag @s remove 93.Skill.Latter.Pursuit
+    tag @s remove 93.Skill.Latter.Move
+    tag @s remove 93.Skill.Latter.Whip
+    tag @s remove 93.Skill.Latter.Quick
+    tag @s remove 93.Skill.Latter.MoveShot
+    tag @s remove 93.Skill.Latter.Sorafune
+    tag @s remove 93.Skill.Latter.Momiji
+    tag @s remove 93.Skill.Latter.SpinSlash
 
 # animated java再生停止
     execute as @e[type=item_display,tag=93.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:eclael/animations/pause_all

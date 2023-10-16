@@ -40,10 +40,15 @@
 
     ## スキル：後半
     #declare tag 93.Skill.Latter.Idle 待機
+    #declare tag 93.Skill.Latter.Damage 怯み
+    #declare tag 93.Skill.Latter.Damage.Move 怯み・バク転
     #declare tag 93.Skill.Latter.MoveSlash 袈裟斬り
     #declare tag 93.Skill.Latter.Iai 居合斬り
+    #declare tag 93.Skill.Latter.Iai.Damage 居合斬り・怯み
     #declare tag 93.Skill.Latter.Shot 射撃
     #declare tag 93.Skill.Latter.Magic 魔法
+    #declare tag 93.Skill.Latter.Pursuit 追撃
+    #declare tag 93.Skill.Latter.Move 電光石火
     #declare tag 93.Skill.Latter.Whip 長剣
     #declare tag 93.Skill.Latter.Quick 七連斬り
     #declare tag 93.Skill.Latter.MoveShot 移動射撃

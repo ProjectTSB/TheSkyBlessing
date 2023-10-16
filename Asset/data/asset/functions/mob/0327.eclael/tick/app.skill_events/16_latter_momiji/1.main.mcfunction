@@ -44,5 +44,9 @@
 # 演出
     execute if score @s 93.AnimationTimer matches 28..31 run playsound block.grass.step hostile @a ~ ~ ~ 1 0.7
 
+# 怯み受け付け
+    execute if score @s 93.AnimationTimer matches 70 run tag @s add 93.Temp.NotArmor
+    execute if score @s 93.AnimationTimer matches 109 run tag @s remove 93.Temp.NotArmor
+
 # 終了
     execute if score @s 93.AnimationTimer matches 110.. run function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/2.end
