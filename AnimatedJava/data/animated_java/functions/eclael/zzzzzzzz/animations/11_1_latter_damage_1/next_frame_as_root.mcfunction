@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/11_1_latter_damage_1/tick_animation

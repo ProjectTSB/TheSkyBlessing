@@ -41,10 +41,15 @@
     ## スキル：後半
     #declare tag 93.Skill.Latter.Idle 待機
     #declare tag 93.Skill.Latter.MoveSlash 袈裟斬り
-    #declare tag 93.Skill.Latter.Iai 居合
-    #declare tag 93.Skill.Latter.Whip 延斬り
+    #declare tag 93.Skill.Latter.Iai 居合斬り
+    #declare tag 93.Skill.Latter.Shot 射撃
+    #declare tag 93.Skill.Latter.Magic 魔法
+    #declare tag 93.Skill.Latter.Whip 長剣
     #declare tag 93.Skill.Latter.Quick 七連斬り
+    #declare tag 93.Skill.Latter.MoveShot 移動射撃
     #declare tag 93.Skill.Latter.Sorafune 宙船
+    #declare tag 93.Skill.Latter.Momiji 紅葉舞
+    #declare tag 93.Skill.Latter.SpinSlash 回転斬り
 
     ## TODO:以下，実装完了時に削除する
     #declare tag 93.ChangeAnimation アニメーションを強制的に変更する

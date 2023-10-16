@@ -27,9 +27,12 @@ scoreboard objectives add aj.eclael.animation.4_3_former_upper_damage.local_anim
 scoreboard objectives add aj.eclael.animation.4_4_former_upper_damage_end.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.5_0_former_magic.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.6_0_former_shortmagic.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.6_0_former_shortmagic2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.10_0_latter_idle_normal.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.10_1_latter_idle_rare.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.11_0_latter_damage_0.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.11_1_latter_damage_1.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.11_2_latter_damage_2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.12_0_latter_warp_start.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.12_1_latter_warp_move_left.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.12_1_latter_warp_move_right.local_anim_time dummy
@@ -44,20 +47,29 @@ scoreboard objectives add aj.eclael.animation.13_4_latter_quick_move.local_anim_
 scoreboard objectives add aj.eclael.animation.13_5_latter_quick_iai_0.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.13_6_latter_quick_iai_1.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.14_0_latter_moveshot_0.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.14_0_latter_moveshot_1.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.15_0_sorafune.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.15_0_sorafune_tousoku.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.16_0_momiji.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.16_1_momiji_start.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.17_0_latter_spinslash.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.17_1_latter_spinslash_to_momiji.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.18_0_latter_attack_moveslash.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.18_1_latter_attack_moveslash_near.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.19_0_latter_attack_iai_0.local_anim_time dummy
-scoreboard objectives add aj.eclael.animation.19_0_latter_attack_iai_2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.19_1_latter_attack_iai_1.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.19_2_latter_attack_iai_2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.20_0_latter_attack_shot_0.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.20_1_latter_attack_shot_1.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.20_2_latter_attack_shot_2.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.21_0_latter_attack_magic_0.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.21_1_latter_attack_magic_1.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.22_0_pursuit.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.23_0_lightningfast.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_1_idle_relax_bak.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_0_magic_bak.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.16_0_momiji2.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.18_1_latter_attack_moveslash_near2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_pose.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_invisible.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.0_0_former_idle_normal.loop_mode dummy
@@ -82,9 +94,12 @@ scoreboard objectives add aj.eclael.animation.4_3_former_upper_damage.loop_mode 
 scoreboard objectives add aj.eclael.animation.4_4_former_upper_damage_end.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.5_0_former_magic.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.6_0_former_shortmagic.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.6_0_former_shortmagic2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.10_0_latter_idle_normal.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.10_1_latter_idle_rare.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.11_0_latter_damage_0.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.11_1_latter_damage_1.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.11_2_latter_damage_2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.12_0_latter_warp_start.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.12_1_latter_warp_move_left.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.12_1_latter_warp_move_right.loop_mode dummy
@@ -99,20 +114,29 @@ scoreboard objectives add aj.eclael.animation.13_4_latter_quick_move.loop_mode d
 scoreboard objectives add aj.eclael.animation.13_5_latter_quick_iai_0.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.13_6_latter_quick_iai_1.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.14_0_latter_moveshot_0.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.14_0_latter_moveshot_1.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.15_0_sorafune.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.15_0_sorafune_tousoku.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.16_0_momiji.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.16_1_momiji_start.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.17_0_latter_spinslash.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.17_1_latter_spinslash_to_momiji.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.18_0_latter_attack_moveslash.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.18_1_latter_attack_moveslash_near.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.19_0_latter_attack_iai_0.loop_mode dummy
-scoreboard objectives add aj.eclael.animation.19_0_latter_attack_iai_2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.19_1_latter_attack_iai_1.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.19_2_latter_attack_iai_2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.20_0_latter_attack_shot_0.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.20_1_latter_attack_shot_1.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.20_2_latter_attack_shot_2.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.21_0_latter_attack_magic_0.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.21_1_latter_attack_magic_1.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.22_0_pursuit.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.23_0_lightningfast.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_1_idle_relax_bak.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_0_magic_bak.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.16_0_momiji2.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.18_1_latter_attack_moveslash_near2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_pose.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_invisible.loop_mode dummy
 scoreboard players set $aj.eclael.animation.0_0_former_idle_normal aj.id 0
@@ -137,39 +161,51 @@ scoreboard players set $aj.eclael.animation.4_3_former_upper_damage aj.id 18
 scoreboard players set $aj.eclael.animation.4_4_former_upper_damage_end aj.id 19
 scoreboard players set $aj.eclael.animation.5_0_former_magic aj.id 20
 scoreboard players set $aj.eclael.animation.6_0_former_shortmagic aj.id 21
-scoreboard players set $aj.eclael.animation.10_0_latter_idle_normal aj.id 22
-scoreboard players set $aj.eclael.animation.10_1_latter_idle_rare aj.id 23
-scoreboard players set $aj.eclael.animation.11_0_latter_damage_0 aj.id 24
-scoreboard players set $aj.eclael.animation.12_0_latter_warp_start aj.id 25
-scoreboard players set $aj.eclael.animation.12_1_latter_warp_move_left aj.id 26
-scoreboard players set $aj.eclael.animation.12_1_latter_warp_move_right aj.id 27
-scoreboard players set $aj.eclael.animation.12_2_latter_warp_slash_0 aj.id 28
-scoreboard players set $aj.eclael.animation.12_3_latter_warp_slash_1 aj.id 29
-scoreboard players set $aj.eclael.animation.12_4_letter_warp_slash_2 aj.id 30
-scoreboard players set $aj.eclael.animation.13_0_latter_quick_start aj.id 31
-scoreboard players set $aj.eclael.animation.13_1_latter_quick_slash_0 aj.id 32
-scoreboard players set $aj.eclael.animation.13_2_latter_quick_slash_1 aj.id 33
-scoreboard players set $aj.eclael.animation.13_3_latter_quick_slash_2 aj.id 34
-scoreboard players set $aj.eclael.animation.13_4_latter_quick_move aj.id 35
-scoreboard players set $aj.eclael.animation.13_5_latter_quick_iai_0 aj.id 36
-scoreboard players set $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id 37
-scoreboard players set $aj.eclael.animation.14_0_latter_moveshot_0 aj.id 38
-scoreboard players set $aj.eclael.animation.15_0_sorafune aj.id 39
-scoreboard players set $aj.eclael.animation.15_0_sorafune_tousoku aj.id 40
-scoreboard players set $aj.eclael.animation.16_0_momiji aj.id 41
-scoreboard players set $aj.eclael.animation.18_0_latter_attack_moveslash aj.id 42
-scoreboard players set $aj.eclael.animation.18_1_latter_attack_moveslash_near aj.id 43
-scoreboard players set $aj.eclael.animation.19_0_latter_attack_iai_0 aj.id 44
-scoreboard players set $aj.eclael.animation.19_0_latter_attack_iai_2 aj.id 45
-scoreboard players set $aj.eclael.animation.19_1_latter_attack_iai_1 aj.id 46
-scoreboard players set $aj.eclael.animation.20_0_latter_attack_shot_0 aj.id 47
-scoreboard players set $aj.eclael.animation.20_1_latter_attack_shot_1 aj.id 48
-scoreboard players set $aj.eclael.animation.20_2_latter_attack_shot_2 aj.id 49
-scoreboard players set $aj.eclael.animation.22_0_pursuit aj.id 50
-scoreboard players set $aj.eclael.animation.99_1_idle_relax_bak aj.id 51
-scoreboard players set $aj.eclael.animation.99_0_magic_bak aj.id 52
-scoreboard players set $aj.eclael.animation.99_pose aj.id 53
-scoreboard players set $aj.eclael.animation.99_invisible aj.id 54
+scoreboard players set $aj.eclael.animation.6_0_former_shortmagic2 aj.id 22
+scoreboard players set $aj.eclael.animation.10_0_latter_idle_normal aj.id 23
+scoreboard players set $aj.eclael.animation.10_1_latter_idle_rare aj.id 24
+scoreboard players set $aj.eclael.animation.11_0_latter_damage_0 aj.id 25
+scoreboard players set $aj.eclael.animation.11_1_latter_damage_1 aj.id 26
+scoreboard players set $aj.eclael.animation.11_2_latter_damage_2 aj.id 27
+scoreboard players set $aj.eclael.animation.12_0_latter_warp_start aj.id 28
+scoreboard players set $aj.eclael.animation.12_1_latter_warp_move_left aj.id 29
+scoreboard players set $aj.eclael.animation.12_1_latter_warp_move_right aj.id 30
+scoreboard players set $aj.eclael.animation.12_2_latter_warp_slash_0 aj.id 31
+scoreboard players set $aj.eclael.animation.12_3_latter_warp_slash_1 aj.id 32
+scoreboard players set $aj.eclael.animation.12_4_letter_warp_slash_2 aj.id 33
+scoreboard players set $aj.eclael.animation.13_0_latter_quick_start aj.id 34
+scoreboard players set $aj.eclael.animation.13_1_latter_quick_slash_0 aj.id 35
+scoreboard players set $aj.eclael.animation.13_2_latter_quick_slash_1 aj.id 36
+scoreboard players set $aj.eclael.animation.13_3_latter_quick_slash_2 aj.id 37
+scoreboard players set $aj.eclael.animation.13_4_latter_quick_move aj.id 38
+scoreboard players set $aj.eclael.animation.13_5_latter_quick_iai_0 aj.id 39
+scoreboard players set $aj.eclael.animation.13_6_latter_quick_iai_1 aj.id 40
+scoreboard players set $aj.eclael.animation.14_0_latter_moveshot_0 aj.id 41
+scoreboard players set $aj.eclael.animation.14_0_latter_moveshot_1 aj.id 42
+scoreboard players set $aj.eclael.animation.15_0_sorafune aj.id 43
+scoreboard players set $aj.eclael.animation.15_0_sorafune_tousoku aj.id 44
+scoreboard players set $aj.eclael.animation.16_0_momiji aj.id 45
+scoreboard players set $aj.eclael.animation.16_1_momiji_start aj.id 46
+scoreboard players set $aj.eclael.animation.17_0_latter_spinslash aj.id 47
+scoreboard players set $aj.eclael.animation.17_1_latter_spinslash_to_momiji aj.id 48
+scoreboard players set $aj.eclael.animation.18_0_latter_attack_moveslash aj.id 49
+scoreboard players set $aj.eclael.animation.18_1_latter_attack_moveslash_near aj.id 50
+scoreboard players set $aj.eclael.animation.19_0_latter_attack_iai_0 aj.id 51
+scoreboard players set $aj.eclael.animation.19_1_latter_attack_iai_1 aj.id 52
+scoreboard players set $aj.eclael.animation.19_2_latter_attack_iai_2 aj.id 53
+scoreboard players set $aj.eclael.animation.20_0_latter_attack_shot_0 aj.id 54
+scoreboard players set $aj.eclael.animation.20_1_latter_attack_shot_1 aj.id 55
+scoreboard players set $aj.eclael.animation.20_2_latter_attack_shot_2 aj.id 56
+scoreboard players set $aj.eclael.animation.21_0_latter_attack_magic_0 aj.id 57
+scoreboard players set $aj.eclael.animation.21_1_latter_attack_magic_1 aj.id 58
+scoreboard players set $aj.eclael.animation.22_0_pursuit aj.id 59
+scoreboard players set $aj.eclael.animation.23_0_lightningfast aj.id 60
+scoreboard players set $aj.eclael.animation.99_1_idle_relax_bak aj.id 61
+scoreboard players set $aj.eclael.animation.99_0_magic_bak aj.id 62
+scoreboard players set $aj.eclael.animation.16_0_momiji2 aj.id 63
+scoreboard players set $aj.eclael.animation.18_1_latter_attack_moveslash_near2 aj.id 64
+scoreboard players set $aj.eclael.animation.99_pose aj.id 65
+scoreboard players set $aj.eclael.animation.99_invisible aj.id 66
 scoreboard players set $aj.eclael.variant.default aj.id 0
 scoreboard players set $aj.eclael.variant.akubi aj.id 1
 scoreboard players set $aj.eclael.variant.blink aj.id 2
@@ -178,6 +214,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.eclael.export_version aj.i -110089622
+scoreboard players set aj.eclael.export_version aj.i 360469777
 scoreboard players reset * aj.eclael.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.eclael.root] run function animated_java:eclael/zzzzzzzz/on_load

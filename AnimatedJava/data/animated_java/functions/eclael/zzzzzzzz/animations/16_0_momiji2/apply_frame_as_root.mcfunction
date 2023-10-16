@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..50 run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/tree/branch_0_50

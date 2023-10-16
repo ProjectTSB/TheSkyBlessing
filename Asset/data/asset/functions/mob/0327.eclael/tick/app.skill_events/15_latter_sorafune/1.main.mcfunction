@@ -9,10 +9,8 @@
 # animated javaアニメーション再生 (長さ：155tick)
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/3.0.play_animation
 # プレイヤーの方を向く
-    execute if score @s 93.AnimationTimer matches 1..31 run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 1..31 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
-    execute if score @s 93.AnimationTimer matches 55..67 run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 55..67 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    execute if score @s 93.AnimationTimer matches 1..41 run tag @s add 93.Temp.Me
+    execute if score @s 93.AnimationTimer matches 1..41 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
     execute if score @s 93.AnimationTimer matches 87..112 run tag @s add 93.Temp.Me
     execute if score @s 93.AnimationTimer matches 87..112 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
 # ハードの場合，常にプレイヤーを向く
@@ -20,6 +18,7 @@
     execute if predicate api:global_vars/difficulty/min/hard if score @s 93.AnimationTimer matches 32..118 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
     tag @s remove 93.Temp.Me
 # 移動
+    execute if score @s 93.AnimationTimer matches 1..15 at @s positioned ^ ^-0.1 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 10..15 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 16..30 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 51..55 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
@@ -48,4 +47,4 @@
     execute if score @s 93.AnimationTimer matches 120 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
 
 # 終了
-    execute if score @s 93.AnimationTimer matches 156.. run function asset:mob/0327.eclael/tick/app.skill_events/13_latter_quick/2.end
+    execute if score @s 93.AnimationTimer matches 156.. run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/2.end

@@ -1,0 +1,3 @@
+execute if score @s aj.anim_time matches 48 run function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/tree/leaf_48
+execute if score @s aj.anim_time matches 49 run function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/tree/leaf_49
+execute if score @s aj.anim_time matches 50 run function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/tree/leaf_50

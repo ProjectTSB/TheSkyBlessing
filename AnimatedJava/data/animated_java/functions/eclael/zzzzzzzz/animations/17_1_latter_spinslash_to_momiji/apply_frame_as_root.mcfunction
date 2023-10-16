@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..95 run function animated_java:eclael/zzzzzzzz/animations/17_1_latter_spinslash_to_momiji/tree/branch_0_95

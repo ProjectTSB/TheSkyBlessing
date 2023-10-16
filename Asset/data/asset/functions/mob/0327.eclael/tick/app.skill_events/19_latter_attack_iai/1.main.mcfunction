@@ -45,15 +45,14 @@
     execute if score @s 93.AnimationTimer matches 62..66 at @s positioned ^ ^ ^0.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 83..89 at @s positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 攻撃
-    execute if score @s 93.AnimationTimer matches 64 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.1.attack_iai_0
-    execute if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.2.attack_iai_1
-    execute if score @s 93.AnimationTimer matches 86 run function asset:mob/0327.eclael/tick/app.skill_events/02_former_slash/4.3.attack_slash_2
+    execute if score @s 93.AnimationTimer matches 64 run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/4.1.attack_slash_0
+    execute if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/4.2.attack_slash_1
+    execute if score @s 93.AnimationTimer matches 86 run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/4.3.attack_slash_2
 # 演出
     execute if score @s 93.AnimationTimer matches 58 run playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 1 2
     execute if score @s 93.AnimationTimer matches 58 run particle electric_spark ^0.6 ^0.8 ^ 0 0 0 1 10
     execute if score @s 93.AnimationTimer matches 52 run playsound block.grass.step hostile @a ~ ~ ~ 1 1
     execute if score @s 93.AnimationTimer matches 52 run playsound block.grass.step hostile @a ~ ~ ~ 1 1
-    execute if score @s 93.AnimationTimer matches 52 at @s run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/5.1.particle_move
     execute if score @s 93.AnimationTimer matches 65 run playsound item.axe.scrape hostile @a ~ ~ ~ 1 2
     execute if score @s 93.AnimationTimer matches 89 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.7
 

@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/23_0_lightningfast/tick_animation

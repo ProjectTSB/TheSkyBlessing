@@ -1,6 +1,6 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
 #
-# アニメーションのイベントハンドラ 後半・延斬り
+# アニメーションのイベントハンドラ 後半・長剣
 # 左右に振りながら剣を伸ばして攻撃する．
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
