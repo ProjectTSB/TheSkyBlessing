@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.14_0_latter_moveshot_single.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_single/end_loop
+execute if score @s aj.eclael.animation.14_0_latter_moveshot_single.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/14_0_latter_moveshot_single/stop
+execute if score @s aj.eclael.animation.14_0_latter_moveshot_single.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/14_0_latter_moveshot_single/pause

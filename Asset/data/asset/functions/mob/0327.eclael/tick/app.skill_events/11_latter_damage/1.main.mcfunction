@@ -13,4 +13,5 @@
     execute if score @s 93.AnimationTimer matches 2..10 positioned ^ ^ ^-0.1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
 
 # 終了
-    execute if score @s 93.AnimationTimer matches 26.. run function asset:mob/0327.eclael/tick/app.skill_events/11_latter_damage/2.end
+# 5tickは怯み継続用のマージン
+    execute if score @s 93.AnimationTimer matches 31.. run function asset:mob/0327.eclael/tick/app.skill_events/11_latter_damage/2.end

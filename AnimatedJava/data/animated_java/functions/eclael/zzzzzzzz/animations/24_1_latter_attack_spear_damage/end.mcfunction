@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.24_1_latter_attack_spear_damage.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/24_1_latter_attack_spear_damage/end_loop
+execute if score @s aj.eclael.animation.24_1_latter_attack_spear_damage.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/24_1_latter_attack_spear_damage/stop
+execute if score @s aj.eclael.animation.24_1_latter_attack_spear_damage.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/24_1_latter_attack_spear_damage/pause

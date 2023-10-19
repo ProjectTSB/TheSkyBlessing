@@ -10,8 +10,8 @@
 # animated javaアニメーション再生 (長さ：34tick)
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/3.0.play_start_animation
 # プレイヤーの方を向く
-    execute if score @s 93.AnimationTimer matches 1..30 run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 1..30 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    execute if score @s 93.AnimationTimer matches 1..34 run tag @s add 93.Temp.Me
+    execute if score @s 93.AnimationTimer matches 1..34 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
 # 演出
     execute if score @s 93.AnimationTimer matches 5 run playsound item.armor.equip_gold hostile @a ~ ~ ~ 1 0.7
     execute if score @s 93.AnimationTimer matches 10 run playsound item.armor.equip_gold hostile @a ~ ~ ~ 1 0.7
@@ -19,6 +19,8 @@
 # 攻撃地点決定
     execute if score @s 93.AnimationTimer matches 34 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:18,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 34 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0
+# 敵がある程度近い場合は即座に攻撃する
+    execute if score @s 93.AnimationTimer matches 34 if entity @a[distance=..12] run scoreboard players set @s 93.AnimationTimer 42
 
 ## 電光石火
 # animated javaアニメーション再生 (長さ：1tick)
@@ -55,6 +57,10 @@
     execute if score @s 93.AnimationTimer matches 52 run playsound block.grass.step hostile @a ~ ~ ~ 1 1
     execute if score @s 93.AnimationTimer matches 65 run playsound item.axe.scrape hostile @a ~ ~ ~ 1 2
     execute if score @s 93.AnimationTimer matches 89 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 0.7
+# 刀を抜く直前に攻撃を受けると怯む
+# ただし，直近に攻撃を受けていない場合のみ
+    execute if score @s 93.AnimationTimer matches 58 if score @s 93.DamageIntervalTimer matches ..0 run tag @s add 93.Temp.NotArmor
+    execute if score @s 93.AnimationTimer matches 62 run tag @s remove 93.Temp.NotArmor
 
 # 終了
     execute if score @s 93.AnimationTimer matches 136.. run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/2.end

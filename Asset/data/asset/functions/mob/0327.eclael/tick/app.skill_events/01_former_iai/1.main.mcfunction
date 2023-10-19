@@ -40,8 +40,8 @@
 # animated javaアニメーション再生 (長さ：76tick)
     execute if score @s 93.AnimationTimer matches 61 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/3_2.play_attack_animation
 # プレイヤーの方を向く
-    execute if score @s 93.AnimationTimer matches 61..64 run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 61..64 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    execute if score @s 93.AnimationTimer matches 61..67 run tag @s add 93.Temp.Me
+    execute if score @s 93.AnimationTimer matches 61..67 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
 # 移動
     execute if score @s 93.AnimationTimer matches 61..68 at @s unless entity @a[distance=..3] positioned ^ ^ ^1.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 69..70 at @s unless entity @a[distance=..2] positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
@@ -58,7 +58,8 @@
     execute if score @s 93.AnimationTimer matches 61 at @s run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/5.1.particle_move
     execute if score @s 93.AnimationTimer matches 103 run playsound item.axe.scrape hostile @a ~ ~ ~ 1 2
 # 刀を抜く直前に攻撃を受けると怯む
-    execute if score @s 93.AnimationTimer matches 67 run tag @s add 93.Temp.NotArmor
+# ただし，直近に攻撃を受けていない場合のみ
+    execute if score @s 93.AnimationTimer matches 67 if score @s 93.DamageIntervalTimer matches ..0 run tag @s add 93.Temp.NotArmor
     execute if score @s 93.AnimationTimer matches 71 run tag @s remove 93.Temp.NotArmor
 
 # 終了

@@ -40,6 +40,7 @@ function animated_java:eclael/zzzzzzzz/animations/13_4_latter_quick_move/pause_a
 function animated_java:eclael/zzzzzzzz/animations/13_5_latter_quick_iai_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/13_6_latter_quick_iai_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_0/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_single/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/pause_as_root
@@ -59,9 +60,12 @@ function animated_java:eclael/zzzzzzzz/animations/21_0_latter_attack_magic_0/pau
 function animated_java:eclael/zzzzzzzz/animations/21_1_latter_attack_magic_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/23_0_lightningfast/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/24_0_latter_attack_spear/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/24_1_latter_attack_spear_damage/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/18_1_latter_attack_moveslash_near2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_pose/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_invisible/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/new/pause_as_root

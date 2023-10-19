@@ -5,7 +5,7 @@
 # @within function asset:mob/0327.eclael/tick/2.tick
 
 # デバッグ用強制再生
-    tag @s add 93.Skill.Latter.SpinSlash
+    tag @s add 93.Skill.Latter.MoveSlash
 # デバッグ用初期位置移動
     tp @s 187 210 14
 

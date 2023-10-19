@@ -5,6 +5,24 @@
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
 
+## 移動射撃
+# animated javaアニメーション再生 (長さ：80tick)
+    execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/14_latter_moveshot/3_0.play_shot_move_animation
+# プレイヤーの方を向く
+    execute if score @s 93.AnimationTimer matches 1..80 run tag @s add 93.Temp.Me
+    execute if score @s 93.AnimationTimer matches 1..80 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+# 移動
+    execute if score @s 93.AnimationTimer matches 1..14 at @s positioned ^ ^0.1 ^-0.4 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 15..22 at @s positioned ^ ^ ^-0.1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 66..72 at @s positioned ^ ^0.2 ^-0.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+# 演出
+    execute if score @s 93.AnimationTimer matches 3 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 0.5
+    execute if score @s 93.AnimationTimer matches 13 run playsound item.crossbow.loading_start hostile @a ~ ~ ~ 2 1.3
+# 攻撃
+    execute if score @s 93.AnimationTimer matches 35 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~1 ~ {CustomNameVisible:0b,Particle:"block air",Duration:6,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 40 at @s positioned ^ ^1 ^1 run function asset:mob/0327.eclael/tick/app.skill_events/14_latter_moveshot/4.1.attack_shot
+    execute if score @s 93.AnimationTimer matches 45 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~1 ~ {CustomNameVisible:0b,Particle:"block air",Duration:6,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 50 at @s positioned ^ ^1 ^1 run function asset:mob/0327.eclael/tick/app.skill_events/14_latter_moveshot/4.1.attack_shot
 # 攻撃地点決定
     execute if score @s 93.AnimationTimer matches 80 at @r[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~ ~ {CustomNameVisible:0b,Particle:"block air",Duration:40,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 80 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] at @p rotated ~ 0 run tp @s ^ ^ ^ ~ 0

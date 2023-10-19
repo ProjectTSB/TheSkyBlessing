@@ -14,8 +14,10 @@
 # 特殊怯み処理
     # 居眠り
         execute if entity @s[tag=93.Skill.Former.Idle.Sleep,tag=!93.Temp.SleepDamage] run tag @s add 93.Temp.SleepDamage
-    # 居合斬り
+    # 前半・居合斬り
         execute if entity @s[tag=93.Temp.NotArmor,tag=93.Skill.Former.Iai] if score @s 93.DamageIntervalTimer matches ..0 if entity @a[tag=Attacker,distance=..4] run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/6.start_damage_animation
+    # 後半・居合斬り
+        execute if entity @s[tag=93.Temp.NotArmor,tag=93.Skill.Latter.Iai] if score @s 93.DamageIntervalTimer matches ..0 if entity @a[tag=Attacker,distance=..4] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/6.start_damage_animation
 
 # 怯み処理
     # 怯み継続

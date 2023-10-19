@@ -25,6 +25,7 @@
     #declare tag 93.Temp.MoveToLeft 左移動
     #declare tag 93.Temp.MoveToRight 右移動
     #declare tag 93.Temp.Near 近距離判定用
+    #declare tag 93.Temp.ScheduleTargetPlayer scheduleのターゲットとなるプレイヤー
 
     ## スキル：前半
     #declare tag 93.Skill.Former.Idle 待機
@@ -49,9 +50,12 @@
     #declare tag 93.Skill.Latter.Magic 魔法
     #declare tag 93.Skill.Latter.Pursuit 追撃
     #declare tag 93.Skill.Latter.Move 電光石火
+    #declare tag 93.Skill.Latter.Spear 突き
+    #declare tag 93.Skill.Latter.Spear.Damage 突き・怯み
     #declare tag 93.Skill.Latter.Whip 長剣
     #declare tag 93.Skill.Latter.Quick 七連斬り
     #declare tag 93.Skill.Latter.MoveShot 移動射撃
+    #declare tag 93.Skill.Latter.MoveShot.Single 移動射撃・単発
     #declare tag 93.Skill.Latter.Sorafune 宙船
     #declare tag 93.Skill.Latter.Momiji 紅葉舞
     #declare tag 93.Skill.Latter.SpinSlash 回転斬り
