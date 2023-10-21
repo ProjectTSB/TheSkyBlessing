@@ -6,7 +6,7 @@
 
 # 弱い耐性付与
     effect clear @s resistance
-    effect give @s resistance infinite 1 true
+    effect give @s resistance infinite 2 true
 
 # ガード処理用タグ消去
     tag @s remove 93.Temp.PrepareGuard

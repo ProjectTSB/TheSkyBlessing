@@ -26,6 +26,7 @@
     tag @s remove 93.Skill.Latter.Magic
     tag @s remove 93.Skill.Latter.Pursuit
     tag @s remove 93.Skill.Latter.Move
+    tag @s remove 93.Skill.Latter.Move.Back
     tag @s remove 93.Skill.Latter.Spear
     tag @s remove 93.Skill.Latter.Spear.Damage
     tag @s remove 93.Skill.Latter.Whip

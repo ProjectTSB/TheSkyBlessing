@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..44 run function animated_java:eclael/zzzzzzzz/animations/18_3_latter_attack_moveslash_near_hard_1/tree/branch_0_44

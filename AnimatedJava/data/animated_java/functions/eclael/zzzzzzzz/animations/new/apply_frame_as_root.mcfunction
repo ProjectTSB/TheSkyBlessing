@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..7 run function animated_java:eclael/zzzzzzzz/animations/new/tree/branch_0_7

@@ -14,6 +14,7 @@
     #declare tag 93.Marker.SpawnPoint 召喚中心点の記録用Marker
     #declare tag 93.Aec.AttackPos 攻撃処理の保存用AEC
     #declare tag 93.Aec.AttackPos.Init 攻撃処理の保存用AEC
+    #declare tag 93.Phase.Latter 後半戦
 
     ## 処理用(一時)
     #declare tag 93.Temp.Me 汎用処理に使う一時的なタグ，自身に付与
@@ -56,6 +57,7 @@
     #declare tag 93.Skill.Latter.Magic 魔法
     #declare tag 93.Skill.Latter.Pursuit 追撃
     #declare tag 93.Skill.Latter.Move 電光石火
+    #declare tag 93.Skill.Latter.Move.Back 電光石火・帰還
     #declare tag 93.Skill.Latter.Spear 突き
     #declare tag 93.Skill.Latter.Spear.Damage 突き・怯み
     #declare tag 93.Skill.Latter.Whip 長剣

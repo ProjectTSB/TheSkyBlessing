@@ -83,6 +83,8 @@
 
 ## 電光石火
     execute if entity @s[tag=93.Skill.Latter.Move] run function asset:mob/0327.eclael/tick/app.skill_events/23_latter_lightningfast/1.main
+    ## 電光石火・帰還
+        execute if entity @s[tag=93.Skill.Latter.Move.Back] run function asset:mob/0327.eclael/tick/app.skill_events/23_latter_lightningfast/1.1.main_back
 
 ## 大技：長剣
     execute if entity @s[tag=93.Skill.Latter.Whip,tag=!93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main

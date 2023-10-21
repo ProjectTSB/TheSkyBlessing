@@ -18,5 +18,8 @@
     execute if score @s 93.AnimationTimer matches 6 run function asset:mob/0327.eclael/tick/app.skill_events/22_latter_pursuit/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 13 run function asset:mob/0327.eclael/tick/app.skill_events/22_latter_pursuit/4.2.attack_slash_1
 
+# ガード受け付け
+    execute if score @s 93.AnimationTimer matches 20 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
+
 # 終了
     execute if score @s 93.AnimationTimer matches 50.. run function asset:mob/0327.eclael/tick/app.skill_events/22_latter_pursuit/2.end

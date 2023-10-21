@@ -11,6 +11,9 @@
     execute if entity @s[tag=!93.Temp.PrepareGuard,tag=!93.Temp.Guard] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
     execute if entity @s[tag=93.Temp.Guard] run playsound item.shield.block hostile @a ~ ~ ~ 1 2
 
+# フェーズ変更
+    execute if entity @s[tag=!93.Phase.Latter] run function asset:mob/0327.eclael/hurt/app.1.change_phase
+
 # ガード処理
     # 怯み継続
         execute if entity @s[tag=93.Temp.PrepareGuard,tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/14.continue_guard_animation

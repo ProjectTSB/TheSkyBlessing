@@ -1,1 +1,0 @@
-function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/tick_animation

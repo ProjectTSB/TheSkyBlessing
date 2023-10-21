@@ -1,0 +1,4 @@
+scoreboard players add @s aj.eclael.animation.18_3_latter_attack_moveslash_near_hard_1.local_anim_time 1
+scoreboard players operation @s aj.anim_time = @s aj.eclael.animation.18_3_latter_attack_moveslash_near_hard_1.local_anim_time
+function animated_java:eclael/zzzzzzzz/animations/18_3_latter_attack_moveslash_near_hard_1/apply_frame_as_root
+execute if score @s aj.eclael.animation.18_3_latter_attack_moveslash_near_hard_1.local_anim_time matches 44.. run function animated_java:eclael/zzzzzzzz/animations/18_3_latter_attack_moveslash_near_hard_1/end

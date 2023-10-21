@@ -1,7 +1,7 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/23_latter_lightningfast/1.main
 #
-# アニメーションのイベントハンドラ 後半・待機
-# その場でふよふよする．
+# アニメーションのイベントハンドラ 後半・電光石火
+# 高速でランダムなプレイヤーの位置に移動する．
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
 

@@ -50,6 +50,8 @@ function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/pause_as
 function animated_java:eclael/zzzzzzzz/animations/17_1_latter_spinslash_to_momiji/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/18_0_latter_attack_moveslash/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/18_1_latter_attack_moveslash_near/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/18_2_latter_attack_moveslash_near_hard_0/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/18_3_latter_attack_moveslash_near_hard_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/19_0_latter_attack_iai_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/19_1_latter_attack_iai_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/pause_as_root
@@ -62,13 +64,9 @@ function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/23_0_lightningfast/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/24_0_latter_attack_spear/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/24_1_latter_attack_spear_damage/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/24_2_latter_attack_spear_hard/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/25_0_guard_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/25_1_guard_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/18_1_latter_attack_moveslash_near2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_pose/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_invisible/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/new/pause_as_root

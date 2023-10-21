@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..69 run function animated_java:eclael/zzzzzzzz/animations/18_1_latter_attack_moveslash_near2/tree/branch_0_69

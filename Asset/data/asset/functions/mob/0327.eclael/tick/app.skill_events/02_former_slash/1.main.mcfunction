@@ -53,8 +53,8 @@
     execute if score @s 93.AnimationTimer matches 63..83 as @p run function asset:mob/0327.eclael/tick/app.general/1.rotate
 # 移動
     execute if score @s 93.AnimationTimer matches 63..73 at @s unless entity @a[distance=..3] positioned ^ ^ ^0.5 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 63..65 at @s run tp @s ~ ~-0.4 ~
-    execute if score @s 93.AnimationTimer matches 66..68 at @s run tp @s ~ ~-0.1 ~
+    execute if score @s 93.AnimationTimer matches 63..65 at @s positioned ~ ~-0.4 ~ run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 66..68 at @s positioned ~ ~-0.1 ~ run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 演出
     execute if score @s 93.AnimationTimer matches 85 run playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 1 2
     execute if score @s 93.AnimationTimer matches 85 run particle electric_spark ^0.5 ^0.8 ^ 0 0 0 1 10
