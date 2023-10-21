@@ -21,5 +21,11 @@
 # 攻撃
     execute if score @s 93.AnimationTimer matches 15 run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 37 run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/4.2.attack_slash_1
+
+# 追撃
+    execute if entity @s[tag=93.Temp.AttackHit] if score @s 93.AnimationTimer matches 51 run function asset:mob/0327.eclael/tick/app.general/10.1.check_pursuit
+# ガード受け付け
+    execute if entity @s[tag=!93.Temp.AttackHit] if score @s 93.AnimationTimer matches 45 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
+
 # 終了
     execute if score @s 93.AnimationTimer matches 69.. run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/2.end

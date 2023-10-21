@@ -26,6 +26,9 @@
     #declare tag 93.Temp.MoveToRight 右移動
     #declare tag 93.Temp.Near 近距離判定用
     #declare tag 93.Temp.ScheduleTargetPlayer scheduleのターゲットとなるプレイヤー
+    #declare tag 93.Temp.AttackHit 攻撃の命中確認
+    #declare tag 93.Temp.PrepareGuard ガード可能状態，この間に攻撃されるとガードに移行する
+    #declare tag 93.Temp.Guard ガード中判別用
 
     ## スキル：前半
     #declare tag 93.Skill.Former.Idle 待機
@@ -43,6 +46,9 @@
     #declare tag 93.Skill.Latter.Idle 待機
     #declare tag 93.Skill.Latter.Damage 怯み
     #declare tag 93.Skill.Latter.Damage.Move 怯み・バク転
+    #declare tag 93.Skill.Latter.Guard.0 ガード
+    #declare tag 93.Skill.Latter.Guard.1 ガード
+    #declare tag 93.Skill.Latter.Guard.2 ガード
     #declare tag 93.Skill.Latter.MoveSlash 袈裟斬り
     #declare tag 93.Skill.Latter.Iai 居合斬り
     #declare tag 93.Skill.Latter.Iai.Damage 居合斬り・怯み

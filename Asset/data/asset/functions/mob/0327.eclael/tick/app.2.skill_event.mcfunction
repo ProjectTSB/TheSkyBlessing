@@ -54,9 +54,13 @@
     ## 怯み・バク転
         execute if entity @s[tag=93.Skill.Latter.Damage.Move] run function asset:mob/0327.eclael/tick/app.skill_events/11_1_latter_damage_move/1.main
 
+## ガード
+    execute if entity @s[tag=93.Skill.Latter.Guard.0] run function asset:mob/0327.eclael/tick/app.skill_events/25_latter_guard/1.1.main_0
+    execute if entity @s[tag=93.Skill.Latter.Guard.1] run function asset:mob/0327.eclael/tick/app.skill_events/25_latter_guard/1.2.main_1
+    execute if entity @s[tag=93.Skill.Latter.Guard.2] run function asset:mob/0327.eclael/tick/app.skill_events/25_latter_guard/1.3.main_2
+
 ## 袈裟斬り
-    execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=!93.Temp.Near] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.main
-    execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=93.Temp.Near] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
+    execute if entity @s[tag=93.Skill.Latter.MoveSlash] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
 
 ## 居合斬り
     execute if entity @s[tag=93.Skill.Latter.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/1.main
@@ -75,12 +79,14 @@
         execute if entity @s[tag=93.Skill.Latter.Spear.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/24_1_latter_spear_damage/1.main
 
 ## 追撃
+    execute if entity @s[tag=93.Skill.Latter.Pursuit] run function asset:mob/0327.eclael/tick/app.skill_events/22_latter_pursuit/1.main
 
 ## 電光石火
     execute if entity @s[tag=93.Skill.Latter.Move] run function asset:mob/0327.eclael/tick/app.skill_events/23_latter_lightningfast/1.main
 
 ## 大技：長剣
     execute if entity @s[tag=93.Skill.Latter.Whip,tag=!93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.main
+    ## 長剣・左右反転
     execute if entity @s[tag=93.Skill.Latter.Whip,tag=93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/1.1.main_mirror
 
 ## 大技：七連斬り
@@ -98,4 +104,5 @@
 
 ## 大技：回転斬り
     execute if entity @s[tag=93.Skill.Latter.SpinSlash] if predicate api:global_vars/difficulty/max/normal run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.main
-    execute if entity @s[tag=93.Skill.Latter.SpinSlash] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.1.main_hard
+    ## 回転斬り・ハード用
+        execute if entity @s[tag=93.Skill.Latter.SpinSlash] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.1.main_hard

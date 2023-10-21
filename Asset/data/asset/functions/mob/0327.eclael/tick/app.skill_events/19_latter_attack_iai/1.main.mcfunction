@@ -62,5 +62,8 @@
     execute if score @s 93.AnimationTimer matches 58 if score @s 93.DamageIntervalTimer matches ..0 run tag @s add 93.Temp.NotArmor
     execute if score @s 93.AnimationTimer matches 62 run tag @s remove 93.Temp.NotArmor
 
+# ガード受け付け
+    execute if score @s 93.AnimationTimer matches 109 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
+
 # 終了
     execute if score @s 93.AnimationTimer matches 136.. run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/2.end

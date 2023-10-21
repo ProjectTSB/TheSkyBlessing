@@ -4,11 +4,14 @@
 #
 # @within function asset:mob/0327.eclael/hurt/2.hurt
 
+# 耐性消去
+    effect clear @s resistance
+
 # 怯み時間設定
     scoreboard players set @s 93.DamageTimer 0
     # 宙船・紅葉舞の怯みは通常より長くする
-        execute if entity @s[tag=93.Skill.Latter.Sorafune] run scoreboard players set @s 93.DamageTimer -120
-        execute if entity @s[tag=93.Skill.Latter.Momiji] run scoreboard players set @s 93.DamageTimer -120
+        execute if entity @s[tag=93.Skill.Latter.Sorafune] run scoreboard players set @s 93.DamageTimer -80
+        execute if entity @s[tag=93.Skill.Latter.Momiji] run scoreboard players set @s 93.DamageTimer -80
 
 # アニメーション再生停止
     function asset:mob/0327.eclael/tick/app.general/3.stop_all_animations

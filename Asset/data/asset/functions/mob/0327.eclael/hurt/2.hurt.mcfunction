@@ -8,8 +8,14 @@
     tag @e[type=item_display,tag=93.ModelRoot,sort=nearest,limit=1] add 93.ModelRoot.Target
 
 # 効果音
-    playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
-    # execute if entity @s[tag=!93.Temp.Counter] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
+    execute if entity @s[tag=!93.Temp.PrepareGuard,tag=!93.Temp.Guard] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
+    execute if entity @s[tag=93.Temp.Guard] run playsound item.shield.block hostile @a ~ ~ ~ 1 2
+
+# ガード処理
+    # 怯み継続
+        execute if entity @s[tag=93.Temp.PrepareGuard,tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/14.continue_guard_animation
+    # 怯み開始
+        execute if entity @s[tag=93.Temp.PrepareGuard] unless entity @s[tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/13.start_guard_animation
 
 # 特殊怯み処理
     # 居眠り
@@ -21,11 +27,11 @@
 
 # 怯み処理
     # 怯み継続
-        execute if entity @s[tag=93.Temp.Damage] if score @s 93.DamageTimer matches ..119 run function asset:mob/0327.eclael/tick/app.general/5.continue_damage_animation
+        execute if entity @s[tag=93.Temp.Damage] if score @s 93.DamageTimer matches ..79 run function asset:mob/0327.eclael/tick/app.general/5.continue_damage_animation
     # 怯み開始
         execute if entity @s[tag=93.Temp.NotArmor] unless entity @s[tag=93.Temp.Damage] run function asset:mob/0327.eclael/tick/app.general/4.start_damage_animation
     # 一定時間以上殴られ続けたら怯みキャンセル
-        execute if entity @s[tag=93.Temp.Damage] if score @s 93.DamageTimer matches 120.. run function asset:mob/0327.eclael/tick/app.general/6.cancel_damage_animation
+        execute if entity @s[tag=93.Temp.Damage] if score @s 93.DamageTimer matches 80.. run function asset:mob/0327.eclael/tick/app.general/6.cancel_damage_animation
 
 # ダメージインターバル更新
     scoreboard players set @s 93.DamageIntervalTimer 20

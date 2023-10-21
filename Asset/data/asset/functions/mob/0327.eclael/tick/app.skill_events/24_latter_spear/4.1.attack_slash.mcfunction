@@ -27,7 +27,8 @@
     function lib:damage/modifier
 # 対象にダメージ
     # ある程度高く飛んでいるプレイヤーにはダメージを与えない
-        execute as @a[tag=93.Temp.AttackTarget] at @s unless block ~ ~-2.2 ~ #lib:no_collision_without_fluid if block ~ ~-1.2 ~ #lib:no_collision_without_fluid run tag @s add 93.Temp.ScheduleTargetPlayer
+        execute as @a[tag=93.Temp.AttackTarget] at @s unless block ~ ~-2.1 ~ #lib:no_collision_without_fluid if block ~ ~-1.1 ~ #lib:no_collision_without_fluid run tag @s add 93.Temp.ScheduleTargetPlayer
+    execute if entity @a[tag=93.Temp.AttackTarget,tag=!93.Temp.ScheduleTargetPlayer] run tag @s add 93.Temp.AttackHit
     execute as @a[tag=93.Temp.AttackTarget,tag=!93.Temp.ScheduleTargetPlayer] run function lib:damage/
 # リセット
     function lib:damage/reset

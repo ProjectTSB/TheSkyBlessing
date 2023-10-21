@@ -48,5 +48,8 @@
     execute if score @s 93.AnimationTimer matches 96 positioned ^ ^3 ^1 rotated ~ -60 run function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/4.3.attack_shot
     execute if score @s 93.AnimationTimer matches 106..130 as @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=random,limit=1] at @s rotated ~ -90 run function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/4.4.attack_falling_arrow
 
+# ガード受け付け
+    execute if score @s 93.AnimationTimer matches 135 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
+
 # 終了
     execute if score @s 93.AnimationTimer matches 157.. run function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/2.end

@@ -62,6 +62,9 @@ function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/23_0_lightningfast/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/24_0_latter_attack_spear/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/24_1_latter_attack_spear_damage/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/25_0_guard_0/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/25_1_guard_1/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_1_idle_relax_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_0_magic_bak/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/pause_as_root

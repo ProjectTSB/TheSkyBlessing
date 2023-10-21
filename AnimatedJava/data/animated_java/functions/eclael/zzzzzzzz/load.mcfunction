@@ -69,6 +69,9 @@ scoreboard objectives add aj.eclael.animation.22_0_pursuit.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.23_0_lightningfast.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.24_0_latter_attack_spear.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.24_1_latter_attack_spear_damage.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.25_0_guard_0.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.25_1_guard_1.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.25_2_guard_2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_1_idle_relax_bak.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_0_magic_bak.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.16_0_momiji2.local_anim_time dummy
@@ -140,6 +143,9 @@ scoreboard objectives add aj.eclael.animation.22_0_pursuit.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.23_0_lightningfast.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.24_0_latter_attack_spear.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.24_1_latter_attack_spear_damage.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.25_0_guard_0.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.25_1_guard_1.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.25_2_guard_2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_1_idle_relax_bak.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_0_magic_bak.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.16_0_momiji2.loop_mode dummy
@@ -211,13 +217,16 @@ scoreboard players set $aj.eclael.animation.22_0_pursuit aj.id 60
 scoreboard players set $aj.eclael.animation.23_0_lightningfast aj.id 61
 scoreboard players set $aj.eclael.animation.24_0_latter_attack_spear aj.id 62
 scoreboard players set $aj.eclael.animation.24_1_latter_attack_spear_damage aj.id 63
-scoreboard players set $aj.eclael.animation.99_1_idle_relax_bak aj.id 64
-scoreboard players set $aj.eclael.animation.99_0_magic_bak aj.id 65
-scoreboard players set $aj.eclael.animation.16_0_momiji2 aj.id 66
-scoreboard players set $aj.eclael.animation.18_1_latter_attack_moveslash_near2 aj.id 67
-scoreboard players set $aj.eclael.animation.99_pose aj.id 68
-scoreboard players set $aj.eclael.animation.99_invisible aj.id 69
-scoreboard players set $aj.eclael.animation.new aj.id 70
+scoreboard players set $aj.eclael.animation.25_0_guard_0 aj.id 64
+scoreboard players set $aj.eclael.animation.25_1_guard_1 aj.id 65
+scoreboard players set $aj.eclael.animation.25_2_guard_2 aj.id 66
+scoreboard players set $aj.eclael.animation.99_1_idle_relax_bak aj.id 67
+scoreboard players set $aj.eclael.animation.99_0_magic_bak aj.id 68
+scoreboard players set $aj.eclael.animation.16_0_momiji2 aj.id 69
+scoreboard players set $aj.eclael.animation.18_1_latter_attack_moveslash_near2 aj.id 70
+scoreboard players set $aj.eclael.animation.99_pose aj.id 71
+scoreboard players set $aj.eclael.animation.99_invisible aj.id 72
+scoreboard players set $aj.eclael.animation.new aj.id 73
 scoreboard players set $aj.eclael.variant.default aj.id 0
 scoreboard players set $aj.eclael.variant.akubi aj.id 1
 scoreboard players set $aj.eclael.variant.blink aj.id 2
@@ -226,6 +235,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.eclael.export_version aj.i -1098144753
+scoreboard players set aj.eclael.export_version aj.i -62658085
 scoreboard players reset * aj.eclael.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.eclael.root] run function animated_java:eclael/zzzzzzzz/on_load

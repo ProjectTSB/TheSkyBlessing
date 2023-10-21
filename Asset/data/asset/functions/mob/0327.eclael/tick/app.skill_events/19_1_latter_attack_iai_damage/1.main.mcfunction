@@ -9,7 +9,6 @@
 # animated javaアニメーション再生 (長さ：50tick)
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/19_1_latter_attack_iai_damage/3_0.play_start_animation
 # 移動
-    execute if score @s 93.AnimationTimer matches 45 run playsound item.axe.scrape hostile @a ~ ~ ~ 1 2
     execute if score @s 93.AnimationTimer matches 1..4 at @s positioned ^ ^ ^-0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 5..10 at @s positioned ^ ^ ^-0.1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 11..15 at @s positioned ^ ^ ^-0.05 run function asset:mob/0327.eclael/tick/app.general/2.teleport

@@ -16,7 +16,7 @@
     execute if score @s 93.AnimationTimer matches 1..8 at @s positioned ^ ^ ^-0.1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 9..15 at @s positioned ^ ^ ^-0.05 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 26..33 at @s positioned ^ ^ ^1.2 unless entity @a[distance=..1.5] run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 34..37 at @s positioned ^ ^ ^0.4 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 34..37 at @s positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 演出
     execute if score @s 93.AnimationTimer matches 3 run playsound item.armor.equip_gold hostile @a ~ ~ ~ 1 0.7
     execute if score @s 93.AnimationTimer matches 8 run playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 1 2
@@ -25,6 +25,12 @@
     execute if score @s 93.AnimationTimer matches 26..27 run playsound block.grass.step hostile @a ~ ~ ~ 1 1
 # 攻撃
     execute if score @s 93.AnimationTimer matches 38 run function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/4.1.attack_slash
+
+# 追撃
+    execute if entity @s[tag=93.Temp.AttackHit] if score @s 93.AnimationTimer matches 56 run function asset:mob/0327.eclael/tick/app.general/10.1.check_pursuit
+
+# ガード受け付け
+    execute if entity @s[tag=!93.Temp.AttackHit] if score @s 93.AnimationTimer matches 56 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
 
 # 終了
     execute if score @s 93.AnimationTimer matches 71.. run function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/2.end
