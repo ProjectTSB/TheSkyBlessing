@@ -11,11 +11,11 @@
 # プレイヤーの方を向く
     execute if score @s 93.AnimationTimer matches 1..18 run tag @s add 93.Temp.Me
     execute if score @s 93.AnimationTimer matches 1..18 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
-    execute if score @s 93.AnimationTimer matches 30..50 run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 30..50 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    execute if score @s 93.AnimationTimer matches 30..53 run tag @s add 93.Temp.Me
+    execute if score @s 93.AnimationTimer matches 30..53 as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
 # 移動
     execute if score @s 93.AnimationTimer matches 10..17 at @s positioned ^ ^ ^0.5 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 18..21 at @s positioned ^ ^ ^0.4 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 18..21 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 演出
     execute if score @s 93.AnimationTimer matches 5 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
 # 攻撃

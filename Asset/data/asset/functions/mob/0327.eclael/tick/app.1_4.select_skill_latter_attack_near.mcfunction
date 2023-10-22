@@ -8,7 +8,7 @@
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
 # プレイヤーが単体の場合は電光石火は選択しない
-    execute unless score $PlayerCount Global matches 2.. runscoreboard players operation $Random Temporary %= $4 Const
+    execute unless score $PlayerCount Global matches 2.. run scoreboard players operation $Random Temporary %= $4 Const
     execute if score $PlayerCount Global matches 2.. run scoreboard players operation $Random Temporary %= $5 Const
 
 # 袈裟斬り

@@ -16,6 +16,8 @@
     tag @s remove 93.Skill.Former.UpperShot
     tag @s remove 93.Skill.Former.UpperShot.Damage
     tag @s remove 93.Skill.Former.Magic
+    tag @s remove 93.Skill.Former.ShortMagic
+    tag @s remove 93.Skill.Latter.Start
     tag @s remove 93.Skill.Latter.Idle
     tag @s remove 93.Skill.Latter.Damage
     tag @s remove 93.Skill.Latter.Damage.Move

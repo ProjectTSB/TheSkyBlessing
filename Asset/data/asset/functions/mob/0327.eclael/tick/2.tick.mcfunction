@@ -13,8 +13,6 @@
 
 # スキル選択
     execute if score @s 93.AnimationTimer matches 0 run function asset:mob/0327.eclael/tick/app.1_1.select_skill
-    # TODO:以下実装時削除
-    # execute if entity @s[tag=93.ChangeAnimation] run function asset:mob/0327.eclael/tick/app.1_1.select_skill
 
 # スキルのイベントハンドラ
     execute if score @s 93.AnimationTimer matches 1.. run function asset:mob/0327.eclael/tick/app.2.skill_event

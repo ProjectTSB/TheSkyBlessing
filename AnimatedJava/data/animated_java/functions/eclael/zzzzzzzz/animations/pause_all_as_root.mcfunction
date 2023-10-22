@@ -45,7 +45,6 @@ function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_1/pause_a
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_0_momiji/pause_as_root
-function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_1_momiji_start/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/17_1_latter_spinslash_to_momiji/pause_as_root
@@ -56,9 +55,11 @@ function animated_java:eclael/zzzzzzzz/animations/18_3_latter_attack_moveslash_n
 function animated_java:eclael/zzzzzzzz/animations/19_0_latter_attack_iai_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/19_1_latter_attack_iai_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/19_3_latter_attack_iai_hard/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/20_0_latter_attack_shot_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/20_1_latter_attack_shot_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/20_2_latter_attack_shot_2/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/20_3_latter_attack_shot_hard/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/21_0_latter_attack_magic_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/21_1_latter_attack_magic_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/22_0_pursuit/pause_as_root
@@ -69,5 +70,6 @@ function animated_java:eclael/zzzzzzzz/animations/24_2_latter_attack_spear_hard/
 function animated_java:eclael/zzzzzzzz/animations/25_0_guard_0/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/25_1_guard_1/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/26_0_phase_change/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_pose/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_invisible/pause_as_root

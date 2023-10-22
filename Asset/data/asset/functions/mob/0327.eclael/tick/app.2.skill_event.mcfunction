@@ -11,7 +11,7 @@
     # execute if entity @s[tag=8T.Skill.Rod.Start] run function asset:mob/0327.eclael/tick/app.skill_events/00_rod_start/1.main
 
 ## 抜刀
-    # execute if entity @s[tag=8T.Skill.Rod.ToSword] run function asset:mob/0327.eclael/tick/app.skill_events/09_rod_to_sword/1.main
+    execute if entity @s[tag=93.Skill.Latter.Start] run function asset:mob/0327.eclael/tick/app.skill_events/26_latter_start/1.main
 
 ###########################################################################
 ## 前半
@@ -60,17 +60,21 @@
     execute if entity @s[tag=93.Skill.Latter.Guard.2] run function asset:mob/0327.eclael/tick/app.skill_events/25_latter_guard/1.3.main_2
 
 ## 袈裟斬り
-    execute if entity @s[tag=93.Skill.Latter.MoveSlash] if predicate api:global_vars/difficulty/max/normal run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
-    ## 袈裟斬り・ハード用
-        execute if entity @s[tag=93.Skill.Latter.MoveSlash] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/18_1_latter_attack_moveslash_hard/1.main
+    execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
+    ## 袈裟斬り・追い斬り
+        execute if entity @s[tag=93.Skill.Latter.MoveSlash,tag=93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/18_1_latter_attack_moveslash_hard/1.main
 
 ## 居合斬り
-    execute if entity @s[tag=93.Skill.Latter.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/1.main
+    execute if entity @s[tag=93.Skill.Latter.Iai,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/1.main
+    ## 居合斬り・十文字
+        execute if entity @s[tag=93.Skill.Latter.Iai,tag=93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/19_2_latter_attack_iai_cross/1.main
     ## 居合斬り・怯み
         execute if entity @s[tag=93.Skill.Latter.Iai.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/19_1_latter_attack_iai_damage/1.main
 
 ## 射撃
-    execute if entity @s[tag=93.Skill.Latter.Shot] run function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/1.main
+    execute if entity @s[tag=93.Skill.Latter.Shot,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/1.main
+    ## 射撃・連射
+        execute if entity @s[tag=93.Skill.Latter.Shot,tag=93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/20_1_latter_shot_hard/1.main
 
 ## 魔法
     execute if entity @s[tag=93.Skill.Latter.Magic] run function asset:mob/0327.eclael/tick/app.skill_events/21_latter_magic/1.main
@@ -109,6 +113,6 @@
         execute if entity @s[tag=93.Skill.Latter.Sorafune] run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/1.main
 
 ## 大技：回転斬り
-    execute if entity @s[tag=93.Skill.Latter.SpinSlash] if predicate api:global_vars/difficulty/max/normal run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.main
-    ## 回転斬り・ハード用
-        execute if entity @s[tag=93.Skill.Latter.SpinSlash] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.1.main_hard
+    execute if entity @s[tag=93.Skill.Latter.SpinSlash,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.main
+    ## 回転斬り・紅葉舞遷移
+        execute if entity @s[tag=93.Skill.Latter.SpinSlash,tag=93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.1.main_hard

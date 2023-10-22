@@ -9,7 +9,7 @@
     function asset:mob/0327.eclael/tick/app.general/3.stop_all_animations
 
 # 武器持ち替えアニメーション再生開始
-    # tag @s add 8T.Skill.Rod.ToSword
+    tag @s add 93.Skill.Latter.Start
     tag @s add 93.Phase.Latter
     scoreboard players set @s 93.AnimationTimer 0
     scoreboard players set @s 93.ActionCount 0

@@ -14,5 +14,9 @@
 # 弾召喚
     data modify storage api: Argument.ID set value 328
     execute facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet run function api:mob/summon
+    execute if entity @s[tag=93.Phase.HardLatter] run data modify storage api: Argument.ID set value 328
+    execute if entity @s[tag=93.Phase.HardLatter] facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet rotated ~-10 ~-2 run function api:mob/summon
+    execute if entity @s[tag=93.Phase.HardLatter] run data modify storage api: Argument.ID set value 328
+    execute if entity @s[tag=93.Phase.HardLatter] facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet rotated ~10 ~-2 run function api:mob/summon
 
 execute unless entity @e[type=marker,scores={MobID=328}] run say 弾がいない

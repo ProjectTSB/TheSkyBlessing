@@ -15,6 +15,7 @@
     #declare tag 93.Aec.AttackPos 攻撃処理の保存用AEC
     #declare tag 93.Aec.AttackPos.Init 攻撃処理の保存用AEC
     #declare tag 93.Phase.Latter 後半戦
+    #declare tag 93.Phase.HardLatter ハード後半戦
 
     ## 処理用(一時)
     #declare tag 93.Temp.Me 汎用処理に使う一時的なタグ，自身に付与
@@ -44,6 +45,7 @@
     #declare tag 93.Skill.Former.ShortMagic 簡易魔法
 
     ## スキル：後半
+    #declare tag 93.Skill.Latter.Start 後半戦開始
     #declare tag 93.Skill.Latter.Idle 待機
     #declare tag 93.Skill.Latter.Damage 怯み
     #declare tag 93.Skill.Latter.Damage.Move 怯み・バク転

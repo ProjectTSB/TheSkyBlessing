@@ -106,8 +106,6 @@ execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj
 execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj.id run scoreboard players operation @s aj.eclael.animation.15_0_sorafune_tousoku.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji aj.id run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji aj.id run scoreboard players operation @s aj.eclael.animation.16_0_momiji.local_anim_time = #frame aj.i
-execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji2 aj.id run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/apply_frame_as_root
-execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji2 aj.id run scoreboard players operation @s aj.eclael.animation.16_0_momiji2.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.16_1_momiji_start aj.id run function animated_java:eclael/zzzzzzzz/animations/16_1_momiji_start/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.16_1_momiji_start aj.id run scoreboard players operation @s aj.eclael.animation.16_1_momiji_start.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.17_0_latter_spinslash aj.id run function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/apply_frame_as_root
@@ -128,12 +126,16 @@ execute if score #animation aj.i = $aj.eclael.animation.19_1_latter_attack_iai_1
 execute if score #animation aj.i = $aj.eclael.animation.19_1_latter_attack_iai_1 aj.id run scoreboard players operation @s aj.eclael.animation.19_1_latter_attack_iai_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.19_2_latter_attack_iai_2 aj.id run function animated_java:eclael/zzzzzzzz/animations/19_2_latter_attack_iai_2/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.19_2_latter_attack_iai_2 aj.id run scoreboard players operation @s aj.eclael.animation.19_2_latter_attack_iai_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.19_3_latter_attack_iai_hard aj.id run function animated_java:eclael/zzzzzzzz/animations/19_3_latter_attack_iai_hard/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.19_3_latter_attack_iai_hard aj.id run scoreboard players operation @s aj.eclael.animation.19_3_latter_attack_iai_hard.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.20_0_latter_attack_shot_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/20_0_latter_attack_shot_0/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.20_0_latter_attack_shot_0 aj.id run scoreboard players operation @s aj.eclael.animation.20_0_latter_attack_shot_0.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.20_1_latter_attack_shot_1 aj.id run function animated_java:eclael/zzzzzzzz/animations/20_1_latter_attack_shot_1/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.20_1_latter_attack_shot_1 aj.id run scoreboard players operation @s aj.eclael.animation.20_1_latter_attack_shot_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.20_2_latter_attack_shot_2 aj.id run function animated_java:eclael/zzzzzzzz/animations/20_2_latter_attack_shot_2/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.20_2_latter_attack_shot_2 aj.id run scoreboard players operation @s aj.eclael.animation.20_2_latter_attack_shot_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.20_3_latter_attack_shot_hard aj.id run function animated_java:eclael/zzzzzzzz/animations/20_3_latter_attack_shot_hard/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.20_3_latter_attack_shot_hard aj.id run scoreboard players operation @s aj.eclael.animation.20_3_latter_attack_shot_hard.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.21_0_latter_attack_magic_0 aj.id run function animated_java:eclael/zzzzzzzz/animations/21_0_latter_attack_magic_0/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.21_0_latter_attack_magic_0 aj.id run scoreboard players operation @s aj.eclael.animation.21_0_latter_attack_magic_0.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.21_1_latter_attack_magic_1 aj.id run function animated_java:eclael/zzzzzzzz/animations/21_1_latter_attack_magic_1/apply_frame_as_root
@@ -154,6 +156,8 @@ execute if score #animation aj.i = $aj.eclael.animation.25_1_guard_1 aj.id run f
 execute if score #animation aj.i = $aj.eclael.animation.25_1_guard_1 aj.id run scoreboard players operation @s aj.eclael.animation.25_1_guard_1.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.25_2_guard_2 aj.id run function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.25_2_guard_2 aj.id run scoreboard players operation @s aj.eclael.animation.25_2_guard_2.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.26_0_phase_change aj.id run function animated_java:eclael/zzzzzzzz/animations/26_0_phase_change/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.26_0_phase_change aj.id run scoreboard players operation @s aj.eclael.animation.26_0_phase_change.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run function animated_java:eclael/zzzzzzzz/animations/99_pose/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run scoreboard players operation @s aj.eclael.animation.99_pose.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_invisible aj.id run function animated_java:eclael/zzzzzzzz/animations/99_invisible/apply_frame_as_root

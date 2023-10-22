@@ -21,9 +21,12 @@
     execute if score @s 93.AnimationTimer matches 30 positioned ~ ~1 ~ rotated ~ ~ run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/5.1.particle_effect
     execute if score @s 93.AnimationTimer matches 40 positioned ~ ~1 ~ rotated ~ ~ run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/5.1.particle_effect
 # 攻撃
-    execute if score @s 93.AnimationTimer matches 66 run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/4.2.attack_slash_1
-    execute if score @s 93.AnimationTimer matches 69 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.2
-    execute if score @s 93.AnimationTimer matches 70 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
+    execute if score @s 93.AnimationTimer matches 66 if predicate api:global_vars/difficulty/max/normal run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/4.2.attack_slash_1
+    execute if score @s 93.AnimationTimer matches 69 if predicate api:global_vars/difficulty/max/normal run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.2
+    execute if score @s 93.AnimationTimer matches 70 if predicate api:global_vars/difficulty/max/normal run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
+    execute if score @s 93.AnimationTimer matches 56 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/4.2.attack_slash_1
+    execute if score @s 93.AnimationTimer matches 59 if predicate api:global_vars/difficulty/min/hard run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.2
+    execute if score @s 93.AnimationTimer matches 60 if predicate api:global_vars/difficulty/min/hard run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
 
 # 怯み受け付け
     execute if score @s 93.AnimationTimer matches 71 run tag @s add 93.Temp.NotArmor

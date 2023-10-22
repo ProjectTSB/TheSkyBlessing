@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..70 run function animated_java:eclael/zzzzzzzz/animations/19_3_latter_attack_iai_hard/tree/branch_0_70

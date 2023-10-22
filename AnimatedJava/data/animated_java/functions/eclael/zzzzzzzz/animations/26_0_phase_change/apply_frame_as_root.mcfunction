@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..75 run function animated_java:eclael/zzzzzzzz/animations/26_0_phase_change/tree/branch_0_75
