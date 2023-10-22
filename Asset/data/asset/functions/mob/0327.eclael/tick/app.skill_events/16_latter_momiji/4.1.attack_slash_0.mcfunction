@@ -1,6 +1,6 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/4.1.attack_slash_0
 #
-# アニメーションのイベントハンドラ 後半・宙船
+# アニメーションのイベントハンドラ 後半・紅葉舞
 #
 # @within function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/**
 
@@ -9,8 +9,7 @@
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 1.1
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 0.7
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 1 1.2
-    execute positioned ~ ~2 ~ rotated ~-160 ~-15 run function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/5.1.particle_slash_0
-    execute positioned ~ ~2 ~ rotated ~ ~10 run function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/5.2.particle_slash_1
+    execute positioned ~ ~2 ~ rotated ~20 ~15 run function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/5.1.particle_slash_0
 
 # ターゲット取得
     execute positioned ^-4 ^-2 ^10 run tag @a[tag=!PlayerShouldInvulnerable,distance=..2.5] add 93.Temp.AttackTarget

@@ -40,5 +40,8 @@
     tag @s remove 93.Skill.Latter.Guard.1
     tag @s remove 93.Skill.Latter.Guard.2
 
+# 分岐用一時タグ消去
+    tag @s remove 93.Temp.MoveToLeft
+
 # animated java再生停止
     execute as @e[type=item_display,tag=93.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:eclael/animations/pause_all

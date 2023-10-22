@@ -6,6 +6,7 @@
 
 # スキル判別用タグ消去
     tag @s remove 93.Skill.Latter.Spear
+    tag @s remove 93.Temp.MoveToLeft
     tag @s remove 93.Temp.AttackHit
 
 # タイマーリセット

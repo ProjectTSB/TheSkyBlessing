@@ -106,6 +106,8 @@ execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj
 execute if score #animation aj.i = $aj.eclael.animation.15_0_sorafune_tousoku aj.id run scoreboard players operation @s aj.eclael.animation.15_0_sorafune_tousoku.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji aj.id run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji aj.id run scoreboard players operation @s aj.eclael.animation.16_0_momiji.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji2 aj.id run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.16_0_momiji2 aj.id run scoreboard players operation @s aj.eclael.animation.16_0_momiji2.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.16_1_momiji_start aj.id run function animated_java:eclael/zzzzzzzz/animations/16_1_momiji_start/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.16_1_momiji_start aj.id run scoreboard players operation @s aj.eclael.animation.16_1_momiji_start.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.17_0_latter_spinslash aj.id run function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/apply_frame_as_root

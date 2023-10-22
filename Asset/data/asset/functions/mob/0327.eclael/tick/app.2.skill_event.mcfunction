@@ -60,7 +60,9 @@
     execute if entity @s[tag=93.Skill.Latter.Guard.2] run function asset:mob/0327.eclael/tick/app.skill_events/25_latter_guard/1.3.main_2
 
 ## 袈裟斬り
-    execute if entity @s[tag=93.Skill.Latter.MoveSlash] run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
+    execute if entity @s[tag=93.Skill.Latter.MoveSlash] if predicate api:global_vars/difficulty/max/normal run function asset:mob/0327.eclael/tick/app.skill_events/18_latter_attack_moveslash/1.1.main_near
+    ## 袈裟斬り・ハード用
+        execute if entity @s[tag=93.Skill.Latter.MoveSlash] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/18_1_latter_attack_moveslash_hard/1.main
 
 ## 居合斬り
     execute if entity @s[tag=93.Skill.Latter.Iai] run function asset:mob/0327.eclael/tick/app.skill_events/19_latter_attack_iai/1.main
@@ -74,7 +76,9 @@
     execute if entity @s[tag=93.Skill.Latter.Magic] run function asset:mob/0327.eclael/tick/app.skill_events/21_latter_magic/1.main
 
 ## 突き
-    execute if entity @s[tag=93.Skill.Latter.Spear] run function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/1.main
+    execute if entity @s[tag=93.Skill.Latter.Spear,tag=!93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/1.main
+    ## 移動突き
+        execute if entity @s[tag=93.Skill.Latter.Spear,tag=93.Temp.MoveToLeft] run function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/1.1.main_move
     ## 突き・怯み
         execute if entity @s[tag=93.Skill.Latter.Spear.Damage] run function asset:mob/0327.eclael/tick/app.skill_events/24_1_latter_spear_damage/1.main
 

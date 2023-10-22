@@ -45,6 +45,7 @@ function animated_java:eclael/zzzzzzzz/animations/14_0_latter_moveshot_1/pause_a
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_0_momiji/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/16_1_momiji_start/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/17_1_latter_spinslash_to_momiji/pause_as_root

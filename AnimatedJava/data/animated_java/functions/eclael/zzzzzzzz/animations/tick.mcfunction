@@ -45,6 +45,7 @@ execute if entity @s[tag=aj.eclael.animation.14_0_latter_moveshot_1] run functio
 execute if entity @s[tag=aj.eclael.animation.15_0_sorafune] run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune/tick
 execute if entity @s[tag=aj.eclael.animation.15_0_sorafune_tousoku] run function animated_java:eclael/zzzzzzzz/animations/15_0_sorafune_tousoku/tick
 execute if entity @s[tag=aj.eclael.animation.16_0_momiji] run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji/tick
+execute if entity @s[tag=aj.eclael.animation.16_0_momiji2] run function animated_java:eclael/zzzzzzzz/animations/16_0_momiji2/tick
 execute if entity @s[tag=aj.eclael.animation.16_1_momiji_start] run function animated_java:eclael/zzzzzzzz/animations/16_1_momiji_start/tick
 execute if entity @s[tag=aj.eclael.animation.17_0_latter_spinslash] run function animated_java:eclael/zzzzzzzz/animations/17_0_latter_spinslash/tick
 execute if entity @s[tag=aj.eclael.animation.17_1_latter_spinslash_to_momiji] run function animated_java:eclael/zzzzzzzz/animations/17_1_latter_spinslash_to_momiji/tick
