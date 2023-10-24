@@ -16,8 +16,5 @@
 # 攻撃
     execute if score @s 3N.Tick matches 30..35 if entity @s[tag=!3N.SkillIceAreaHit] run function asset:mob/0131.haruclaire/tick/skill_ice_area/2.skill_ice_area_attack
 
-# タグを消す
-    execute if score @s 3N.Tick matches 60 run tag @s remove 3N.SkillIceArea
-    execute if score @s 3N.Tick matches 60 run tag @s remove 3N.SkillIceAreaHit
-# スコアを少し進めた状態に戻す
-    execute if score @s 3N.Tick matches 60 run scoreboard players set @s 3N.Tick -30
+# リセット
+    execute if score @s 3N.Tick matches 60 run function asset:mob/0131.haruclaire/tick/reset

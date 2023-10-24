@@ -44,10 +44,4 @@
     tag @a[tag=3L.SkillSwordDamageThis] remove 3L.SkillSwordDamageThis
 
 # 前方にテレポート
-    # アマスタにタグを付与
-        tag @e[type=armor_stand,tag=3L.ArmorStand,distance=..0.01,sort=nearest,limit=1] add 3L.ArmorStandThis
-    # ワープ
-        tp @s ^ ^ ^9
-    # アマスタを持ってきてタグを消す
-        tp @e[type=armor_stand,tag=3L.ArmorStandThis,sort=nearest,limit=1] @s
-        tag @e[type=armor_stand,tag=3L.ArmorStandThis,sort=nearest,limit=1] remove 3L.ArmorStandThis
+    execute positioned ^ ^ ^9 run function asset:mob/0129.lexiel/tick/move/teleport
