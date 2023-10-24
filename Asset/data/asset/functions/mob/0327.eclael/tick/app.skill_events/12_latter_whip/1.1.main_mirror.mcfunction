@@ -103,7 +103,7 @@
     execute if score @s 93.AnimationTimer matches 240 run function asset:mob/0327.eclael/tick/app.skill_events/12_latter_whip/4.5.attack_thunder_main
 
 # 怯み受け付け
-    execute if score @s 93.AnimationTimer matches 220 run tag @s add 93.Temp.NotArmor
+    execute if score @s 93.AnimationTimer matches 240 run tag @s add 93.Temp.NotArmor
     execute if score @s 93.AnimationTimer matches 276 run tag @s remove 93.Temp.NotArmor
 
 # 終了

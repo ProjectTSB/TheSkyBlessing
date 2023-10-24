@@ -19,9 +19,9 @@
 # 大技：七連斬り
     execute if score @s 93.ActionCount matches 6 run tag @s add 93.Skill.Latter.Quick
 # 待機
-    execute if score @s 93.ActionCount matches 8 run tag @s add 93.Skill.Latter.Idle
-# 通常攻撃
-    execute if score @s 93.ActionCount matches 9 run function asset:mob/0327.eclael/tick/app.1_7.select_skill_latter_attack_switch
+    execute if score @s 93.ActionCount matches 7 run tag @s add 93.Skill.Latter.Idle
+# 通常攻撃・最大2回
+    execute if score @s 93.ActionCount matches 8..9 run function asset:mob/0327.eclael/tick/app.1_7.select_skill_latter_attack_switch
 # 大技：回転斬り
     execute if score @s 93.ActionCount matches 10 run tag @s add 93.Skill.Latter.SpinSlash
 # 待機

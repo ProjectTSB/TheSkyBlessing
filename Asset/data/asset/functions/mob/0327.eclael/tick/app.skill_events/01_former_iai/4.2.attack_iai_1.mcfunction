@@ -1,6 +1,6 @@
 #> asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.2.attack_iai_1
 #
-# アニメーションのイベントハンドラ 杖モード・杖殴り なぎ払い攻撃判定
+# アニメーションのイベントハンドラ 前半・居合斬り 2段目攻撃判定
 #
 # @within function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/1.main
 

@@ -70,9 +70,6 @@
     #declare tag 93.Skill.Latter.Momiji 紅葉舞
     #declare tag 93.Skill.Latter.SpinSlash 回転斬り
 
-    ## TODO:以下，実装完了時に削除する
-    #declare tag 93.ChangeAnimation アニメーションを強制的に変更する
-
 ## メモ，実装完了時に削除する
 # 赤白グラデ
 # particle dust 100000000 1 1
