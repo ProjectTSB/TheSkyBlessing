@@ -26,6 +26,8 @@
     execute if score @s 93.AnimationTimer matches 68..86 at @s positioned ^ ^ ^0.3 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 87..112 at @s positioned ^ ^ ^0.1 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 113..117 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 15..87 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
+    execute if score @s 93.AnimationTimer matches 113..117 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 攻撃
     execute if score @s 93.AnimationTimer matches 15 run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 15 positioned ^ ^1 ^2 rotated ~90 ~10 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/5.2.particle_slash_0

@@ -26,8 +26,9 @@
     execute if score @s 93.AnimationTimer matches 36..40 at @s positioned ^ ^0.06 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 66..70 at @s positioned ^ ^-0.05 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 70..79 at @s positioned ^ ^-0.07 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 80..90 at @s positioned ^ ^-0.2 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 80..90 at @s positioned ^ ^-0.4 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 移動
+    execute if score @s 93.AnimationTimer matches 1..25 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
     execute if score @s 93.AnimationTimer matches 30..35 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..8] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 36..45 at @s positioned ^ ^ ^0.1 positioned ~ ~-1.8 ~ unless entity @a[distance=..8] positioned ~ ~1.8 ~ run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # ハードの場合は大きく追いかける

@@ -35,6 +35,7 @@
     execute if score @s 93.AnimationTimer matches 44 run playsound block.grass.step hostile @a ~ ~ ~ 1 1
     execute if score @s 93.AnimationTimer matches 44..51 at @s unless entity @a[distance=..3] positioned ^ ^ ^1.5 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 52..58 at @s unless entity @a[distance=..3] positioned ^ ^ ^0.6 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 44..58 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 
 ## 攻撃
 # animated javaアニメーション再生 (長さ：76tick)
@@ -47,6 +48,7 @@
     execute if score @s 93.AnimationTimer matches 69..70 at @s unless entity @a[distance=..2] positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 71..75 at @s positioned ^ ^ ^0.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 81..85 at @s positioned ^ ^ ^-0.05 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 61..70 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 攻撃
     execute if score @s 93.AnimationTimer matches 73 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.1.attack_iai_0
     execute if score @s 93.AnimationTimer matches 78 run function asset:mob/0327.eclael/tick/app.skill_events/01_former_iai/4.2.attack_iai_1

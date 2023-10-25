@@ -43,6 +43,7 @@
     execute if score @s 93.AnimationTimer matches 52..59 at @s unless entity @a[distance=..4] positioned ^ ^ ^1.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 60..61 at @s unless entity @a[distance=..4] positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 62..66 at @s positioned ^ ^ ^0.2 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 52..61 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 攻撃
     execute if score @s 93.AnimationTimer matches 64 run function asset:mob/0327.eclael/tick/app.skill_events/19_2_latter_attack_iai_cross/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/19_2_latter_attack_iai_cross/4.2.attack_slash_1

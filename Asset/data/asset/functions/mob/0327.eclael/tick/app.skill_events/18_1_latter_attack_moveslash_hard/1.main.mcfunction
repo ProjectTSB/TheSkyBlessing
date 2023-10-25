@@ -16,6 +16,7 @@
 # 移動
     execute if score @s 93.AnimationTimer matches 10..17 at @s positioned ^ ^ ^0.5 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 18..21 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 1..21 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 演出
     execute if score @s 93.AnimationTimer matches 5 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
 # 攻撃
@@ -29,6 +30,7 @@
     execute if score @s 93.AnimationTimer matches 46..52 at @s positioned ^ ^ ^0.8 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 53..58 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 59..61 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 46..58 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 攻撃
     execute if score @s 93.AnimationTimer matches 61 run function asset:mob/0327.eclael/tick/app.skill_events/18_1_latter_attack_moveslash_hard/4.3.attack_slash_2
 # 演出
