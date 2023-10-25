@@ -7,6 +7,9 @@
 # 対象のanimated javaモデルを紐づけ
     tag @e[type=item_display,tag=93.ModelRoot,sort=nearest,limit=1] add 93.ModelRoot.Target
 
+# 天候を取得
+    execute if predicate lib:weather/is_thundering run tag @s add 93.Temp.IsThunder
+
 # タイマー計算
     scoreboard players add @s 93.AnimationTimer 1
     execute if score @s 93.DamageIntervalTimer matches 1.. run scoreboard players remove @s 93.DamageIntervalTimer 1
@@ -24,6 +27,7 @@
     execute at @s rotated ~ 0 run tp @e[type=item_display,tag=93.ModelRoot.Target,sort=nearest,limit=1] ~ ~ ~ ~ ~
 # 一時タグ消去
     tag @s remove 93.Temp.Me
+    tag @s remove 93.Temp.IsThunder
 
 # 紐づけ終了
     tag @e[type=item_display,tag=93.ModelRoot.Target] remove 93.ModelRoot.Target

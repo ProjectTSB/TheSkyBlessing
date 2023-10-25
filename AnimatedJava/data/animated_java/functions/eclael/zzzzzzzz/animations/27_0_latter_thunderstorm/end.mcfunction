@@ -1,0 +1,3 @@
+execute if score @s aj.eclael.animation.27_0_latter_thunderstorm.loop_mode = $aj.loop_mode.loop aj.i run function animated_java:eclael/zzzzzzzz/animations/27_0_latter_thunderstorm/end_loop
+execute if score @s aj.eclael.animation.27_0_latter_thunderstorm.loop_mode = $aj.loop_mode.once aj.i run function animated_java:eclael/animations/27_0_latter_thunderstorm/stop
+execute if score @s aj.eclael.animation.27_0_latter_thunderstorm.loop_mode = $aj.loop_mode.hold aj.i run function animated_java:eclael/animations/27_0_latter_thunderstorm/pause

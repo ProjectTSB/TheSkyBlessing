@@ -7,7 +7,7 @@
 # 疑似乱数取得
     execute store result score $Random Temporary run function lib:random/
 # ほしい範囲に剰余算
-    scoreboard players operation $Random Temporary %= $4 Const
+    scoreboard players operation $Random Temporary %= $3 Const
 
 # 居合斬り
     execute if score $Random Temporary matches 0 run tag @s add 93.Skill.Latter.Iai
@@ -15,8 +15,6 @@
     execute if score $Random Temporary matches 1 run tag @s add 93.Skill.Latter.Shot
 # 電光石火
     execute if score $Random Temporary matches 2 run tag @s add 93.Skill.Latter.Move
-# 魔法
-    execute if score $Random Temporary matches 3 run tag @s add 93.Skill.Latter.Magic
 
 # リセット
     scoreboard players reset $Random Temporary

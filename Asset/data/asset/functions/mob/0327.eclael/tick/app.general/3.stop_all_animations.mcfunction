@@ -41,6 +41,7 @@
     tag @s remove 93.Skill.Latter.Guard.0
     tag @s remove 93.Skill.Latter.Guard.1
     tag @s remove 93.Skill.Latter.Guard.2
+    tag @s remove 93.Skill.Latter.Thunderstorm
 
 # 分岐用一時タグ消去
     tag @s remove 93.Temp.MoveToLeft

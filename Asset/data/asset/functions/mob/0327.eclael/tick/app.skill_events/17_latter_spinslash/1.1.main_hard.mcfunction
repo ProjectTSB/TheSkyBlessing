@@ -30,5 +30,16 @@
     execute if score @s 93.AnimationTimer matches 56 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/4.2.attack_slash_1
     execute if score @s 93.AnimationTimer matches 59 if predicate api:global_vars/difficulty/min/hard run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.2
     execute if score @s 93.AnimationTimer matches 60 if predicate api:global_vars/difficulty/min/hard run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 0.7
+
+# 追撃
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~ ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~45 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~90 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~135 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~180 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~225 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~270 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 70 rotated ~315 ~ positioned ^ ^ ^13 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+
 # 終了
     execute if score @s 93.AnimationTimer matches 96.. run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/2.1.end_hard

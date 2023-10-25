@@ -9,3 +9,5 @@
         kill @e[type=marker,tag=93.Marker.SpawnPoint,sort=nearest,limit=1]
     # モデル削除
         function animated_java:eclael/remove/all
+    # 天候を戻す
+        weather clear

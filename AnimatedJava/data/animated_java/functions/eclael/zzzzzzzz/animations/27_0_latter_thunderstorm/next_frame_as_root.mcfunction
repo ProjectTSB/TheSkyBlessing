@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/27_0_latter_thunderstorm/tick_animation

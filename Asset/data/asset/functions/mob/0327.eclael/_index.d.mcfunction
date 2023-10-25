@@ -31,6 +31,7 @@
     #declare tag 93.Temp.AttackHit 攻撃の命中確認
     #declare tag 93.Temp.PrepareGuard ガード可能状態，この間に攻撃されるとガードに移行する
     #declare tag 93.Temp.Guard ガード中判別用
+    #declare tag 93.Temp.IsThunder 天候が雷雨である
 
     ## スキル：前半
     #declare tag 93.Skill.Former.Idle 待機
@@ -69,17 +70,4 @@
     #declare tag 93.Skill.Latter.Sorafune 宙船
     #declare tag 93.Skill.Latter.Momiji 紅葉舞
     #declare tag 93.Skill.Latter.SpinSlash 回転斬り
-
-## メモ，実装完了時に削除する
-# 赤白グラデ
-# particle dust 100000000 1 1
-# 緑白グラデ
-# particle dust 1 100000000 1
-# 青白グラデ
-# particle dust 1 1 100000000
-# 赤紫白グラデ
-# particle dust 100000000 1 100000000
-# 黄白グラデ
-# particle dust 100000000 100000000 1
-# 水白グラデ
-# particle dust 1 100000000 100000000
+    #declare tag 93.Skill.Latter.Thunderstorm 雷雨

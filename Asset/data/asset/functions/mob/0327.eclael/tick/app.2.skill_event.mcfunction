@@ -116,3 +116,6 @@
     execute if entity @s[tag=93.Skill.Latter.SpinSlash,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.main
     ## 回転斬り・紅葉舞遷移
         execute if entity @s[tag=93.Skill.Latter.SpinSlash,tag=93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.1.main_hard
+
+## 大技：雷雨
+    execute if entity @s[tag=93.Skill.Latter.Thunderstorm] run function asset:mob/0327.eclael/tick/app.skill_events/27_latter_thunderstorm/1.main

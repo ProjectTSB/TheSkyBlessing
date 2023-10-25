@@ -9,9 +9,9 @@
     function api:mob/get_health_percent
     execute store result score $HealthPer Temporary run data get storage api: Return.HealthPer 100
 
-
 # ハード：体力50%以下の場合本気を出す
     execute if score $HealthPer Temporary matches ..50 run tag @s add 93.Phase.HardLatter
+    execute if score $HealthPer Temporary matches ..50 run scoreboard players set @s 93.ActionCount 0
 
 # 終了
     scoreboard players reset $HealthPer Temporary

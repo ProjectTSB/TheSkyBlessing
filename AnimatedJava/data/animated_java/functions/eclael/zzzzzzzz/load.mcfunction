@@ -78,6 +78,7 @@ scoreboard objectives add aj.eclael.animation.25_0_guard_0.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.25_1_guard_1.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.25_2_guard_2.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.26_0_phase_change.local_anim_time dummy
+scoreboard objectives add aj.eclael.animation.27_0_latter_thunderstorm.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_pose.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.99_invisible.local_anim_time dummy
 scoreboard objectives add aj.eclael.animation.0_0_former_idle_normal.loop_mode dummy
@@ -153,6 +154,7 @@ scoreboard objectives add aj.eclael.animation.25_0_guard_0.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.25_1_guard_1.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.25_2_guard_2.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.26_0_phase_change.loop_mode dummy
+scoreboard objectives add aj.eclael.animation.27_0_latter_thunderstorm.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_pose.loop_mode dummy
 scoreboard objectives add aj.eclael.animation.99_invisible.loop_mode dummy
 scoreboard players set $aj.eclael.animation.0_0_former_idle_normal aj.id 0
@@ -228,8 +230,9 @@ scoreboard players set $aj.eclael.animation.25_0_guard_0 aj.id 69
 scoreboard players set $aj.eclael.animation.25_1_guard_1 aj.id 70
 scoreboard players set $aj.eclael.animation.25_2_guard_2 aj.id 71
 scoreboard players set $aj.eclael.animation.26_0_phase_change aj.id 72
-scoreboard players set $aj.eclael.animation.99_pose aj.id 73
-scoreboard players set $aj.eclael.animation.99_invisible aj.id 74
+scoreboard players set $aj.eclael.animation.27_0_latter_thunderstorm aj.id 73
+scoreboard players set $aj.eclael.animation.99_pose aj.id 74
+scoreboard players set $aj.eclael.animation.99_invisible aj.id 75
 scoreboard players set $aj.eclael.variant.default aj.id 0
 scoreboard players set $aj.eclael.variant.akubi aj.id 1
 scoreboard players set $aj.eclael.variant.blink aj.id 2
@@ -238,6 +241,6 @@ scoreboard players add .aj.last_id aj.id 0
 scoreboard players set $aj.loop_mode.loop aj.i 0
 scoreboard players set $aj.loop_mode.once aj.i 1
 scoreboard players set $aj.loop_mode.hold aj.i 2
-scoreboard players set aj.eclael.export_version aj.i 1891455978
+scoreboard players set aj.eclael.export_version aj.i -27799096
 scoreboard players reset * aj.eclael.rig_loaded
 execute as @e[type=minecraft:item_display,tag=aj.eclael.root] run function animated_java:eclael/zzzzzzzz/on_load

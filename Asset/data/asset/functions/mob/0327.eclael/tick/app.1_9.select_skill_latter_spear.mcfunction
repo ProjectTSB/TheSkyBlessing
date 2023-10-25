@@ -8,4 +8,4 @@
     tag @s add 93.Skill.Latter.Spear
 
 # ハードの場合，移動突きをランダムで使用
-    execute if predicate lib:random_pass_per/50 run tag @s add 93.Temp.MoveToLeft
+    execute if predicate api:global_vars/difficulty/min/hard if predicate lib:random_pass_per/80 run tag @s add 93.Temp.MoveToLeft

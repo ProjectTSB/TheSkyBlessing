@@ -71,5 +71,6 @@ execute if entity @s[tag=aj.eclael.animation.25_0_guard_0] run function animated
 execute if entity @s[tag=aj.eclael.animation.25_1_guard_1] run function animated_java:eclael/zzzzzzzz/animations/25_1_guard_1/tick
 execute if entity @s[tag=aj.eclael.animation.25_2_guard_2] run function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/tick
 execute if entity @s[tag=aj.eclael.animation.26_0_phase_change] run function animated_java:eclael/zzzzzzzz/animations/26_0_phase_change/tick
+execute if entity @s[tag=aj.eclael.animation.27_0_latter_thunderstorm] run function animated_java:eclael/zzzzzzzz/animations/27_0_latter_thunderstorm/tick
 execute if entity @s[tag=aj.eclael.animation.99_pose] run function animated_java:eclael/zzzzzzzz/animations/99_pose/tick
 execute if entity @s[tag=aj.eclael.animation.99_invisible] run function animated_java:eclael/zzzzzzzz/animations/99_invisible/tick

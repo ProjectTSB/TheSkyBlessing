@@ -63,5 +63,13 @@
 # ガード受け付け
     execute if score @s 93.AnimationTimer matches 99 if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
 
+# 追撃
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~30 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~90 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~150 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~210 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~270 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 79 rotated ~330 ~ positioned ^ ^ ^10 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+
 # 終了
     execute if score @s 93.AnimationTimer matches 113.. run function asset:mob/0327.eclael/tick/app.skill_events/19_2_latter_attack_iai_cross/2.end

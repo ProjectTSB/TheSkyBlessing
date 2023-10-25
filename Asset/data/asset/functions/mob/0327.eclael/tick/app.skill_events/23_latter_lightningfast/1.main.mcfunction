@@ -18,5 +18,9 @@
     execute if score @s 93.AnimationTimer matches 12 at @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] positioned ^ ^0.1 ^3 facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet rotated ~ 0 run tp @s ~ ~ ~ ~ 0
     execute if score @s 93.AnimationTimer matches 12 run function asset:mob/0327.eclael/tick/app.general/9.lightning_fast_effect
 
+# 追撃
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 8 positioned ^ ^-2 ^ run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 11 positioned ^ ^-6 ^ run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+
 # 終了
     execute if score @s 93.AnimationTimer matches 36.. run function asset:mob/0327.eclael/tick/app.skill_events/23_latter_lightningfast/2.end
