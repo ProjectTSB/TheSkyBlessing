@@ -32,9 +32,9 @@
     execute if score @s 93.AnimationTimer matches 30..35 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..8] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 36..45 at @s positioned ^ ^ ^0.1 positioned ~ ~-1.8 ~ unless entity @a[distance=..8] positioned ~ ~1.8 ~ run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # ハードの場合は大きく追いかける
-    execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard run tag @s add 93.Temp.Me
-    execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
-    execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard at @s positioned ~ ~-1.8 ~ unless entity @a[distance=..8] facing entity @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] eyes positioned ^ ^ ^0.6 positioned ~ ~1.8 ~ rotated ~ 0 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    # execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard run tag @s add 93.Temp.Me
+    # execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard as @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    # execute if score @s 93.AnimationTimer matches 26..65 if predicate api:global_vars/difficulty/min/hard at @s positioned ~ ~-1.8 ~ unless entity @a[distance=..8] facing entity @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] eyes positioned ^ ^ ^0.6 positioned ~ ~1.8 ~ rotated ~ 0 run function asset:mob/0327.eclael/tick/app.general/2.teleport
 # 攻撃
     execute if score @s 93.AnimationTimer matches 33 run function asset:mob/0327.eclael/tick/app.skill_events/16_latter_momiji/4.1.attack_slash_0
     execute if score @s 93.AnimationTimer matches 35 run playsound item.trident.return hostile @a ~ ~ ~ 2 1.3

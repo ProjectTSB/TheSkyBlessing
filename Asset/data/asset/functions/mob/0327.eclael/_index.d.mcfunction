@@ -71,3 +71,4 @@
     #declare tag 93.Skill.Latter.Momiji 紅葉舞
     #declare tag 93.Skill.Latter.SpinSlash 回転斬り
     #declare tag 93.Skill.Latter.Thunderstorm 雷雨
+    #declare tag 93.Skill.Latter.Sorafune.Start 宙船・単発

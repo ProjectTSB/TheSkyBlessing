@@ -111,6 +111,8 @@
     execute if entity @s[tag=93.Skill.Latter.MoveShot.Single] run function asset:mob/0327.eclael/tick/app.skill_events/14_latter_moveshot/1.main
     ## 遷移：宙船
         execute if entity @s[tag=93.Skill.Latter.Sorafune] run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/1.main
+## 大技：宙船・単発
+    execute if entity @s[tag=93.Skill.Latter.Sorafune.Start] run function asset:mob/0327.eclael/tick/app.skill_events/28_latter_sorafune_start/1.main
 
 ## 大技：回転斬り
     execute if entity @s[tag=93.Skill.Latter.SpinSlash,tag=!93.Phase.HardLatter] run function asset:mob/0327.eclael/tick/app.skill_events/17_latter_spinslash/1.main

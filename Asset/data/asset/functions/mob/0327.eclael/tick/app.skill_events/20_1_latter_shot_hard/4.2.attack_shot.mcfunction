@@ -13,7 +13,7 @@
 
 # 弾召喚
     data modify storage api: Argument.ID set value 328
-    execute facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet run function api:mob/summon
+    execute facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet rotated ~ ~ run function api:mob/summon
     data modify storage api: Argument.ID set value 328
     execute facing entity @e[type=area_effect_cloud,tag=93.Aec.AttackPos,sort=nearest,limit=1] feet rotated ~20 ~ run function api:mob/summon
     data modify storage api: Argument.ID set value 328

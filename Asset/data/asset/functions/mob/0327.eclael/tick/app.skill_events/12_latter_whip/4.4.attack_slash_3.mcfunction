@@ -29,7 +29,7 @@
 # TODO：与えるダメージの調整
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 60f
+        data modify storage lib: Argument.Damage set value 52f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性

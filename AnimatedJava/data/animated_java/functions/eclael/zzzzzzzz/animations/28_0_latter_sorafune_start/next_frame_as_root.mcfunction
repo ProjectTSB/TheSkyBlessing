@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/28_0_latter_sorafune_start/tick_animation

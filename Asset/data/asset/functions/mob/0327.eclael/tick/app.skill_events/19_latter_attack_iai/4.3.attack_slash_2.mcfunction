@@ -15,7 +15,7 @@
 # TODO：与えるダメージの調整
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 62f
+        data modify storage lib: Argument.Damage set value 52f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -23,7 +23,7 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象に
-    execute positioned ^ ^ ^3 as @a[tag=!PlayerShouldInvulnerable,distance=..3.3] run function lib:damage/
+    execute positioned ^ ^ ^3 as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
 

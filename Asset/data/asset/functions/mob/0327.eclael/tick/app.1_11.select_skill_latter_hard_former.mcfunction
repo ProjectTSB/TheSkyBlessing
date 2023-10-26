@@ -8,7 +8,7 @@
     scoreboard players add @s 93.ActionCount 1
 
 # カウントリセット
-    execute if score @s 93.ActionCount matches 27.. run scoreboard players set @s 93.ActionCount 1
+    execute if score @s 93.ActionCount matches 26.. run scoreboard players set @s 93.ActionCount 1
 
 # 待機
     execute if score @s 93.ActionCount matches ..1 run tag @s add 93.Skill.Latter.Idle
@@ -46,5 +46,3 @@
     execute if score @s 93.ActionCount matches 22 run function asset:mob/0327.eclael/tick/app.1_11_1.select_skill_latter_hard_former_move
 # 通常攻撃・最大3回
     execute if score @s 93.ActionCount matches 23..25 run function asset:mob/0327.eclael/tick/app.1_7.select_skill_latter_attack_switch
-# 移動・帰還
-    execute if score @s 93.ActionCount matches 26 run function asset:mob/0327.eclael/tick/app.1_11_2.select_skill_latter_hard_former_moveback

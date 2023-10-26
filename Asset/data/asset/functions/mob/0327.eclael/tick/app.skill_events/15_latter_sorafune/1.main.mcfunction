@@ -19,13 +19,13 @@
     tag @s remove 93.Temp.Me
 # 移動
     execute if score @s 93.AnimationTimer matches 1..15 at @s positioned ^ ^-0.1 ^ run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 10..15 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 10..15 at @s positioned ^ ^ ^0.4 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 16..30 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 51..55 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 51..55 at @s positioned ^ ^ ^0.4 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 56..67 at @s positioned ^ ^ ^0.2 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 68..86 at @s positioned ^ ^ ^0.3 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 68..86 at @s positioned ^ ^ ^0.25 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 87..112 at @s positioned ^ ^ ^0.1 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 113..117 at @s positioned ^ ^ ^0.6 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 113..117 at @s positioned ^ ^ ^0.4 unless entity @a[distance=..3] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 15..87 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
     execute if score @s 93.AnimationTimer matches 113..117 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 攻撃
@@ -51,6 +51,11 @@
 # 怯み受け付け
     execute if score @s 93.AnimationTimer matches 121 run tag @s add 93.Temp.NotArmor
     execute if score @s 93.AnimationTimer matches 155 run tag @s remove 93.Temp.NotArmor
+
+# 追撃
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 33 rotated ~ ~ positioned ^ ^ ^6.5 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 33 rotated ~-30 ~ positioned ^ ^ ^6 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+    execute if entity @s[tag=93.Temp.IsThunder] if score @s 93.AnimationTimer matches 33 rotated ~30 ~ positioned ^ ^ ^6 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
 
 # 終了
     execute if score @s 93.AnimationTimer matches 156.. run function asset:mob/0327.eclael/tick/app.skill_events/15_latter_sorafune/2.end

@@ -19,7 +19,6 @@
     execute if score @s 93.AnimationTimer matches 16..22 at @s positioned ^0.1 ^ ^-0.05 run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 26..33 at @s positioned ^ ^ ^1.2 unless entity @a[distance=..1.5] run function asset:mob/0327.eclael/tick/app.general/2.teleport
     execute if score @s 93.AnimationTimer matches 34..37 at @s positioned ^ ^ ^0.3 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 1..15 run function asset:mob/0327.eclael/tick/app.general/15.update_altitude
 # 演出
     execute if score @s 93.AnimationTimer matches 3 run playsound item.armor.equip_gold hostile @a ~ ~ ~ 1 0.7
     execute if score @s 93.AnimationTimer matches 25 run playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 1 2

@@ -160,6 +160,8 @@ execute if score #animation aj.i = $aj.eclael.animation.26_0_phase_change aj.id 
 execute if score #animation aj.i = $aj.eclael.animation.26_0_phase_change aj.id run scoreboard players operation @s aj.eclael.animation.26_0_phase_change.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.27_0_latter_thunderstorm aj.id run function animated_java:eclael/zzzzzzzz/animations/27_0_latter_thunderstorm/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.27_0_latter_thunderstorm aj.id run scoreboard players operation @s aj.eclael.animation.27_0_latter_thunderstorm.local_anim_time = #frame aj.i
+execute if score #animation aj.i = $aj.eclael.animation.28_0_latter_sorafune_start aj.id run function animated_java:eclael/zzzzzzzz/animations/28_0_latter_sorafune_start/apply_frame_as_root
+execute if score #animation aj.i = $aj.eclael.animation.28_0_latter_sorafune_start aj.id run scoreboard players operation @s aj.eclael.animation.28_0_latter_sorafune_start.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run function animated_java:eclael/zzzzzzzz/animations/99_pose/apply_frame_as_root
 execute if score #animation aj.i = $aj.eclael.animation.99_pose aj.id run scoreboard players operation @s aj.eclael.animation.99_pose.local_anim_time = #frame aj.i
 execute if score #animation aj.i = $aj.eclael.animation.99_invisible aj.id run function animated_java:eclael/zzzzzzzz/animations/99_invisible/apply_frame_as_root

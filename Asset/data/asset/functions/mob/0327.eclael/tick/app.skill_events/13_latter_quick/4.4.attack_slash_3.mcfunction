@@ -15,7 +15,7 @@
 # TODO：与えるダメージの調整
 # ダメージ
     # 与えるダメージ = 20
-        data modify storage lib: Argument.Damage set value 60f
+        data modify storage lib: Argument.Damage set value 50f
     # 第一属性
         data modify storage lib: Argument.AttackType set value "Magic"
     # 第二属性
@@ -30,7 +30,3 @@
 # 弾召喚
     data modify storage api: Argument.ID set value 329
     execute positioned ^ ^1 ^4 run function api:mob/summon
-    # data modify storage api: Argument.ID set value 329
-    # execute rotated ~-50 ~ positioned ^ ^1 ^4 run function api:mob/summon
-    # data modify storage api: Argument.ID set value 329
-    # execute rotated ~50 ~ positioned ^ ^1 ^4 run function api:mob/summon

@@ -35,6 +35,6 @@
 # 補正functionを実行
     function lib:damage/modifier
 # 対象に
-    execute as @a[tag=!PlayerShouldInvulnerable,distance=..3] run function lib:damage/
+    execute as @a[tag=!PlayerShouldInvulnerable,distance=..2.4] run function lib:damage/
 # リセット
     function lib:damage/reset

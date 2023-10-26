@@ -16,9 +16,9 @@
     execute if entity @s[tag=93.Phase.Latter,tag=!93.Phase.HardLatter] if predicate api:global_vars/difficulty/min/hard run function asset:mob/0327.eclael/hurt/app.2.change_phase_hard
 
 # ガード処理
-    # 怯み継続
+    # ガード継続
         execute if entity @s[tag=93.Temp.PrepareGuard,tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/14.continue_guard_animation
-    # 怯み開始
+    # ガード開始
         execute if entity @s[tag=93.Temp.PrepareGuard] unless entity @s[tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/13.start_guard_animation
 
 # 特殊怯み処理

@@ -16,7 +16,7 @@
     data modify storage asset:mob Name set value '{"text":"エクレール"}'
 # 体力 (double) (オプション) 
 # * エクレールには常に耐性付与されていることを考慮してやや低めに設定する
-    data modify storage asset:mob Health set value 42000
+    data modify storage asset:mob Health set value 40000
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 0
 # ノックバック耐性 (double) (オプション)
@@ -29,7 +29,7 @@
     # 火倍率 (float) (オプション)
         data modify storage asset:mob Resist.Fire set value 1.0f
     # 水倍率 (float) (オプション)
-        data modify storage asset:mob Resist.Water set value 1.2f
+        data modify storage asset:mob Resist.Water set value 1.0f
     # 雷倍率 (float) (オプション)
         data modify storage asset:mob Resist.Thunder set value 0.7f
 

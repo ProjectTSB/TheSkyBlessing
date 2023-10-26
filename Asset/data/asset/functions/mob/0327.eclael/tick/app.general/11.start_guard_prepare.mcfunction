@@ -6,7 +6,7 @@
 
 # 耐性付与
     effect clear @s resistance
-    effect give @s resistance infinite 8 true
+    effect give @s resistance infinite 5 true
 
 # タグ付与
     tag @s add 93.Temp.PrepareGuard
