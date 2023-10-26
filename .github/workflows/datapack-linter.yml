@@ -65,4 +65,7 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             branch: master
             directory: ./Asset2
-            message: Update Declares from ProjectTSB/TheSkyBlessing@${{ github.SHA }}
+            message: |
+                Update Declares from ProjectTSB/TheSkyBlessing@${{ github.SHA }}
+                
+                [regenerate cache]
