@@ -49,6 +49,9 @@ jobs:
             function@asset:mob/mob_name/death/
             function@asset:mob/mob_name/hurt/
             function@asset:mob/mob_name/tick/
+            function@asset:mob/mob_name/attack/something_function
+            function@asset:mob/mob_name/death/something_function
+            function@asset:mob/mob_name/hurt/something_function
             function@asset:spawner/spawner_id/register
             function@asset:teleporter/tp_id/register
             function@asset:trader/trader_name/register/register
