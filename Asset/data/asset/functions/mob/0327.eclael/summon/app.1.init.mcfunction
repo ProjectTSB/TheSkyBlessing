@@ -16,7 +16,4 @@
     execute positioned ~ ~-100 ~ rotated ~ 0 run function animated_java:eclael/summon
 
 # TODO:登場演出再生
-    # tag @s add 8T.Skill.Rod.Start
-
-# TODO:以下実装時削除
-    tag @s add 93.Skill.Former.Idle
+    tag @s add 93.Skill.Former.Start

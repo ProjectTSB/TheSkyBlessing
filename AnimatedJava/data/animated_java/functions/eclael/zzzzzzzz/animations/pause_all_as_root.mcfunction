@@ -73,5 +73,7 @@ function animated_java:eclael/zzzzzzzz/animations/25_2_guard_2/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/26_0_phase_change/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/27_0_latter_thunderstorm/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/28_0_latter_sorafune_start/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/29_0_phase_start/pause_as_root
+function animated_java:eclael/zzzzzzzz/animations/30_0_phase_death/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_pose/pause_as_root
 function animated_java:eclael/zzzzzzzz/animations/99_invisible/pause_as_root

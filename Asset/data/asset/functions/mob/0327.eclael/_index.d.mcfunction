@@ -34,6 +34,7 @@
     #declare tag 93.Temp.IsThunder 天候が雷雨である
 
     ## スキル：前半
+    #declare tag 93.Skill.Former.Start 登場演出
     #declare tag 93.Skill.Former.Idle 待機
     #declare tag 93.Skill.Former.Idle.Sleep 居眠り
     #declare tag 93.Skill.Former.Iai 居合斬り

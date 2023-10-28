@@ -8,7 +8,7 @@
 ## 汎用
 
 ## 登場演出
-    # execute if entity @s[tag=8T.Skill.Rod.Start] run function asset:mob/0327.eclael/tick/app.skill_events/00_rod_start/1.main
+    execute if entity @s[tag=93.Skill.Former.Start] run function asset:mob/0327.eclael/tick/app.skill_events/29_former_start/1.main
 
 ## 抜刀
     execute if entity @s[tag=93.Skill.Latter.Start] run function asset:mob/0327.eclael/tick/app.skill_events/26_latter_start/1.main

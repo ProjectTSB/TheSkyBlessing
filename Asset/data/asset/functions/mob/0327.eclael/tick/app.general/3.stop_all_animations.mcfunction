@@ -8,6 +8,7 @@
     scoreboard players set @s 93.AnimationTimer -1
 
 # タグ消去
+    tag @s remove 93.Skill.Former.Start
     tag @s remove 93.Skill.Former.Idle
     tag @s remove 93.Skill.Former.Iai
     tag @s remove 93.Skill.Former.Iai.Damage

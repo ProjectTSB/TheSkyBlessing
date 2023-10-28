@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..100 run function animated_java:eclael/zzzzzzzz/animations/30_0_phase_death/tree/branch_0_100

@@ -1,0 +1,1 @@
+function animated_java:eclael/zzzzzzzz/animations/30_0_phase_death/tick_animation

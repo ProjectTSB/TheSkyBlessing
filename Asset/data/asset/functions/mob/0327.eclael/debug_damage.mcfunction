@@ -61,6 +61,7 @@
     function asset:mob/0327.eclael/tick/app.skill_events/20_latter_shot/4.4.attack_falling_arrow
 
 # 突き：1回攻撃
+# 1
     function asset:mob/0327.eclael/tick/app.skill_events/24_latter_spear/4.1.attack_slash
 
 # 追撃：2回攻撃
@@ -151,6 +152,8 @@
     function asset:mob/0327.eclael/tick/app.skill_events/19_2_latter_attack_iai_cross/4.2.attack_slash_1
 # 3（雷）
     function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack
+
+# 突き：特に変わらないため割愛
 
 # 射撃・連射：3回→1回，合計4回攻撃
 # 1-4：ダメージ処理は矢で行うため割愛
