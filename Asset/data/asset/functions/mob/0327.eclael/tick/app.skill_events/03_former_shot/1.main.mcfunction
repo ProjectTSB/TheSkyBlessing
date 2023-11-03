@@ -56,9 +56,9 @@
     execute if score @s 93.AnimationTimer matches 66 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 0.5
     execute if score @s 93.AnimationTimer matches 66 run playsound item.crossbow.loading_start hostile @a ~ ~ ~ 1 1.3
 # 攻撃
-    execute if score @s 93.AnimationTimer matches 92 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~1 ~ {CustomNameVisible:0b,Particle:"block air",Duration:8,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 92 run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/1.2.target_select
     execute if score @s 93.AnimationTimer matches 96 at @s positioned ^ ^1 ^1 run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/4.1.attack_shot
-    execute if score @s 93.AnimationTimer matches 103 at @a[tag=!PlayerShouldInvulnerable,sort=nearest,limit=1] run summon area_effect_cloud ~ ~1 ~ {CustomNameVisible:0b,Particle:"block air",Duration:20,Tags:["Object","93.Aec.AttackPos"]}
+    execute if score @s 93.AnimationTimer matches 103 run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/1.2.target_select
     execute if score @s 93.AnimationTimer matches 106 at @s positioned ^ ^1 ^1 run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/4.1.attack_shot
 
 # 終了
