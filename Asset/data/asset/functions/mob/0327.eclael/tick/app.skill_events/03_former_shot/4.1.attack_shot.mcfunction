@@ -6,9 +6,9 @@
 
 # TODO：演出を練る
 # 演出
-    playsound entity.wither.shoot hostile @a ~ ~ ~ 1 1.8
-    playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
-    playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
+    execute as @a at @s facing entity @e[type=wither_skeleton,scores={MobID=327},distance=..40,limit=1] eyes positioned ^ ^ ^3 run playsound entity.wither.shoot hostile @s ~ ~ ~ 0.6 1.8
+    execute as @a at @s facing entity @e[type=wither_skeleton,scores={MobID=327},distance=..40,limit=1] eyes positioned ^ ^ ^3 run playsound item.trident.riptide_1 hostile @s ~ ~ ~ 0.4 1.8
+    execute as @a at @s facing entity @e[type=wither_skeleton,scores={MobID=327},distance=..40,limit=1] eyes positioned ^ ^ ^3 run playsound item.trident.riptide_1 hostile @s ~ ~ ~ 0.4 1.8
     particle flash ~ ~ ~ 0 0 0 0 1
 
 # 弾召喚
