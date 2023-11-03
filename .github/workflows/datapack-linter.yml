@@ -33,7 +33,9 @@ jobs:
 
       - name: Generate declares.d.mcfunction
         if: ${{ github.ref == 'refs/heads/master' }}
-        run: node ./.github/workflows/make-declares-mcf.js
+        run: |
+            npm i -g ts-node
+            ts-node ./.github/workflows/make-declares-mcf.js
         env:
           CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
           REPOSITORY: ProjectTSB/TheSkyBlessing
@@ -67,5 +69,5 @@ jobs:
             directory: ./Asset2
             message: |
                 Update Declares from ProjectTSB/TheSkyBlessing@${{ github.SHA }}
-                
+
                 [regenerate cache]
