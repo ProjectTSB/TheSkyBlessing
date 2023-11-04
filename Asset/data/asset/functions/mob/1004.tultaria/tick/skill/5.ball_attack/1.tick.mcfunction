@@ -16,16 +16,14 @@
 
 # 弾を放つ。フェイズによって撃つ数が変わる
     execute if score @s RW.Tick matches 29 positioned ^20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 31 positioned ^5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 33 positioned ^ ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 35 positioned ^-5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 37 positioned ^-20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s RW.Tick matches 31 positioned ^ ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    execute if score @s RW.Tick matches 33 positioned ^-20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
 
-    execute if score @s RW.Tick matches 45 positioned ^-20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 47 positioned ^-5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 49 positioned ^ ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 51 positioned ^5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
-    execute if score @s RW.Tick matches 53 positioned ^20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    #execute if score @s RW.Tick matches 45 positioned ^-20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    #execute if score @s RW.Tick matches 47 positioned ^-5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    #execute if score @s RW.Tick matches 49 positioned ^ ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    #execute if score @s RW.Tick matches 51 positioned ^5 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
+    #execute if score @s RW.Tick matches 53 positioned ^20 ^ ^5 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/5.summon
 
 # サウンド
     #execute if score @s RW.Tick matches 30 positioned ~ ~1 ~ positioned ^ ^ ^2 run function asset:mob/1004.tultaria/tick/skill/5.ball_attack/6.sound

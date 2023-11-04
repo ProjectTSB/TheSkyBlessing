@@ -8,6 +8,9 @@
     #declare score_holder $Count
     #declare score_holder $4tInterval
 
+# スコア加算
+    scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
+
 # 最寄りのモデルのRootを自身の座標にもってくる
     execute as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run tp @s ~ ~ ~
 
@@ -25,9 +28,6 @@
 
 # フェーズ3移行動作
     execute if entity @s[tag=RW.SkillDeadly2] run function asset:mob/1004.tultaria/tick/wait_time/phase3_transition/1.tick
-
-# スコア加算
-    scoreboard players add @s[tag=!RW.TickLock] RW.Tick 1
 
 ## HP減少時、パーティクルをまとう
 #    execute if entity @s[tag=RW.HPless75per] run particle smoke ~ ~0.7 ~ 0.3 0.5 0.3 0 3

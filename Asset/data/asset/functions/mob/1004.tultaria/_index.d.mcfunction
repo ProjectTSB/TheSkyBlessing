@@ -41,6 +41,13 @@
     #declare tag RW.Skill.SpreadShot
     #declare tag RW.Skill.BlazingSlash
     #declare tag RW.Skill.LightningStab
+    ## ボスの使う小技のタグ
+    #declare tag RW.Skill.Mini.MoveShot
+    #declare tag RW.Skill.Mini.MoveShotLeft
+    #declare tag RW.Skill.Mini.MoveShotRight
+    #declare tag RW.Skill.Mini.SpreadShot
+    #declare tag RW.Skill.Mini.Slash
+    #declare tag RW.Skill.Mini.BackShot
     ## ボスの使う大技のタグ
     #declare tag RW.Skill.Deadly1
     #declare tag RW.Skill.Deadly2
