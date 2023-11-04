@@ -33,6 +33,7 @@
     scoreboard players set @s RW.Tick -26
     scoreboard players set @s RW.LoopCount 0
     scoreboard players reset @s RW.FakeInertia
+    scoreboard players reset @s RW.MiniSkillCount
 
 # 速度設定
     scoreboard players set @s[scores={RW.Phase=1}] RW.Speed 4

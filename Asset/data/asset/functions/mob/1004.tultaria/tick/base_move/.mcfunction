@@ -8,10 +8,10 @@
     execute if entity @s[tag=!RW.InAction] unless entity @s[scores={RW.FakeInertia=0..}] facing entity @p feet run tp @s ~ ~ ~ ~ ~
 
 # プレイヤーが周囲にいたらスキル選択
-    execute if score @s[tag=!RW.InAction,scores={RW.Phase=1..2}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/base_move/skill_select
+    execute if score @s[tag=!RW.InAction,scores={RW.Phase=1..2}] RW.Tick matches 30.. if entity @p[distance=..100] run function asset:mob/1004.tultaria/tick/base_move/skill_select/mini
 
 # ミニスキル使った後に技発動(フェイズ3)
-    execute if score @s[tag=RW.MiniSkillUsed,tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/base_move/skill_select
+    #execute if score @s[tag=RW.MiniSkillUsed,tag=!RW.InAction,scores={RW.Phase=2..}] RW.Tick matches 40.. if entity @p[gamemode=!spectator,distance=..100] run function asset:mob/1004.tultaria/tick/base_move/skill_select
 
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す
     execute if score @s RW.Tick matches 40.. unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s RW.Tick 0
@@ -31,8 +31,6 @@
 # リセットからの復帰時に待機アニメを再生
     execute if score @s RW.Tick matches -1 as @e[type=item_display,tag=RW.ModelRoot,sort=nearest,limit=1] run function animated_java:tultaria/animations/neutral/play
 
-#
-    #execute if score @s RW.Tick matches 0.. facing entity @p feet positioned ^ ^ ^-100 rotated as @s positioned ^ ^ ^-800 facing entity @s eyes positioned as @s rotated ~90 ~ run tp @s ^ ^ ^0.1 ~ ~
 
 
 ## 嘘慣性

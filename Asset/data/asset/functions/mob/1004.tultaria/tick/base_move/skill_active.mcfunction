@@ -48,3 +48,13 @@
         execute if entity @s[tag=RW.MiniSkillShot] run function asset:mob/1004.tultaria/tick/skill/phase3/5.n-way_shot/1.tick
     # 拡散ショット
         execute if entity @s[tag=RW.MiniSkillLaser] run function asset:mob/1004.tultaria/tick/skill/phase3/3.explosion_laser/1.tick
+
+## 小技
+    # 移動射撃
+        execute if entity @s[tag=RW.Skill.Mini.MoveShot] run function asset:mob/1004.tultaria/tick/skill/mini/move_shot/
+    # 拡散ショット
+        execute if entity @s[tag=RW.Skill.Mini.SpreadShot] run function asset:mob/1004.tultaria/tick/skill/mini/spread_shot/
+    # 近接攻撃
+        execute if entity @s[tag=RW.Skill.Mini.Slash] run function asset:mob/1004.tultaria/tick/skill/mini/slash/
+    # 引き撃ち
+        execute if entity @s[tag=RW.Skill.Mini.BackShot] run function asset:mob/1004.tultaria/tick/skill/mini/back_shot/
