@@ -6,7 +6,4 @@
 
 #> 定義類はここに
 # @within function asset:mob/1013.tultaria_shot/**
-    scoreboard objectives add S5.Range dummy
-    scoreboard objectives add S5.Speed dummy
     scoreboard objectives add S5.Tick dummy
-    scoreboard objectives add S5.MoveTimesPerTick dummy
