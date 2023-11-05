@@ -34,7 +34,13 @@ const accessorToString = (visibilities: [type: FileType, pattern: string][]): st
     return ["# @within", ...visibilities.map(v => toMessages(v)).map(s => `#   ${s}`)].join("\n");
 }
 
+/**
+ * Datapack Linter の吐き出すキャッシュファイルを使用し、
+ * 全てのリソース定義の内 $(VISIBILITY_FILTER) に定義されるリソースパスから観測することができるリソース定義を
+ * $(OUTPUT_RESOURCE_PATH) に一つの mcfunction として纏める。
+ */
 const run = async () => {
+    // 設定を読み込む
     const checkoutPath = env.getOrThrow("CHECKOUT_PATH");
     const reposName = env.getOrThrow("REPOSITORY");
     const branch = env.getOrDefault("BRANCH", "master");
@@ -49,13 +55,17 @@ const run = async () => {
         return dv === "public" ? ["*" as FileType, "**"] : dv.split("@") as [FileType, string];
     })();
 
+    // Datapack Linter の吐き出したキャッシュを読み込む
     const dlsData: ClientCache = JSON.parse(await fsp.readFile(".cache/dls.json", { encoding: "utf-8" })).cache;
 
+    // VISIBILITY_FILTER に合致する定義をまとめる
     const vpReplacers: [RegExp, string][] = [[/\?/g, "[^:/]"], [/\*\*\//g, ".{0,}"], [/\*\*/g, ".{0,}"], [/\*/g, "[^:/]{0,}"]];
     const decMap: Map<string, { declare: Document[], alias: Document[] }> = new Map();
     for (const [type, cache] of Object.entries(dlsData) as [CacheType, CacheCategory][]) {
         for (const [resourceId, { dcl, def, foo }] of Object.entries(cache)) {
+            // declare も define も同じ扱い
             const declares = [...(dcl ?? []), ...(def ?? [])];
+            // VISIBILITY_FILTER の検査
             const matched = declares.some(cpos =>
                 (cpos.visibility?.map(cv => [cv.type, cv.pattern]) ?? [defaultVisibility])
                     .map(([a, b]) =>
@@ -69,6 +79,7 @@ const run = async () => {
             );
             if (!matched) continue;
 
+            // Map のキーとしてアクセス修飾子文字列を使う
             const key = accessorToString(
                 removeDuplicates(
                     declares.flatMap(v =>
@@ -77,7 +88,10 @@ const run = async () => {
                     ([t, p]) => `${t}%${p}`
                 )
             )
+
             const decs = decMap.get(key) ?? { declare: [], alias: [] };
+
+            // 定義下 URL を生成する
             const from: Document["from"] = declares
                 .filter(d => d.uri).map(v => v as CachePosition & { uri: string })
                 .map(cp => ({
@@ -87,6 +101,7 @@ const run = async () => {
                     ),
                     line: [(cp.startLine ?? 0) + 1, (cp.endLine ?? 0) + 1]
                 }));
+
             if (type.startsWith("alias")) {
                 decs.alias.push({ str: `#alias ${type.slice("alias/".length)} ${resourceId} ${foo}`, from, type, resId: resourceId });
             } else {
@@ -95,10 +110,13 @@ const run = async () => {
             decMap.set(key, decs);
         }
     }
+    // 定義ファイルの文字列を生成する
     const declares = [
+        // 定義ファイルそのものの IMPDoc
         `#> ${outputResourcePath}`,
         "# @private",
         "",
+        // 各定義
         Array.from(decMap.entries())
             .map(([accessor, v]) => {
                 const docs = [...v.alias.sort(documentComparator), ...v.declare.sort(documentComparator)];
@@ -107,9 +125,13 @@ const run = async () => {
                 const calcLine = (x: [number, number] | undefined): string =>
                     x && x[0] !== x[1] ? `L${x[0]}-L${x[1]}` : `L${x?.[0] ?? 1}`;
                 const genFromStr = (x: Document["from"][number]): string => `${x.uri}#${calcLine(x.line)}`
+
                 return [
+                    // ヘッダー
                     `#> declare`,
+                    // アクセス修飾子
                     ...accessor.split("\n").map(v => v === "# @within * **" ? "# @public" : v),
+                    // 定義
                     ...docs
                         .flatMap(doc => doc.from.length !== 1
                             ? [...doc.from.map(from => `# from ${genFromStr(from)}`), doc.str]
@@ -121,6 +143,7 @@ const run = async () => {
             .join("\n\n"),
         ""
     ].join("\n");
+    // ファイルに書き込む
     await fsp.mkdir(require("path").dirname(outputPath), { recursive: true });
     await fsp.writeFile(outputPath, declares);
 };
