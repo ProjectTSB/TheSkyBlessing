@@ -11,6 +11,11 @@ type CacheUnit = { doc?: string, foo?: any } & { [t in CacheUnitPositionType]?: 
 type CacheCategory = { [resourceId: string]: CacheUnit }
 type ClientCache = { [type in CacheType]?: CacheCategory }
 type Document = { str: string, from: { uri: string, line: [number, number] }[], type: CacheType, resId: string };
+const documentComparator = (a: Document, b: Document) => {
+    const x = a.type.localeCompare(b.type);
+    if (x !== 0) return x;
+    return a.resId.localeCompare(b.resId);
+};
 
 const throwError: (message: string) => never = m => { throw new Error(m) };
 const env: { getOrDefault: (key: string, defaultValue: string) => string, getOrThrow: (key: string) => string } = {
@@ -18,6 +23,7 @@ const env: { getOrDefault: (key: string, defaultValue: string) => string, getOrT
     getOrThrow: key => process.env[key] ?? throwError(`Missing environment key: ${key}`)
 };
 const removeDuplicates = <A, K extends string | number>(arr: A[], f: (elem: A) => K): A[] => [...new Map(arr.map(v => [f(v), v])).values()];
+const trimHeadIf = (s: string, ifString: string): string => s.startsWith(ifString) ? s.slice(ifString.length) : s;
 
 const accessorToString = (visibilities: [type: FileType, pattern: string][]): string => {
     const toMessages = (visibility: [type: FileType, pattern: string]) =>
@@ -63,7 +69,6 @@ const run = async () => {
             );
             if (!matched) continue;
 
-            const trimHeadIf = (s: string, ifString: string): string => s.startsWith(ifString) ? s.slice(ifString.length) : s;
             const key = accessorToString(
                 removeDuplicates(
                     declares.flatMap(v =>
@@ -73,7 +78,7 @@ const run = async () => {
                 )
             )
             const decs = decMap.get(key) ?? { declare: [], alias: [] };
-            const from: { uri: string, line: [number, number] }[] = declares
+            const from: Document["from"] = declares
                 .filter(d => d.uri).map(v => v as CachePosition & { uri: string })
                 .map(cp => ({
                     uri: trimHeadIf(
@@ -90,18 +95,13 @@ const run = async () => {
             decMap.set(key, decs);
         }
     }
-    const sort = (a: Document, b: Document) => {
-        const x = a.type.localeCompare(b.type);
-        if (x !== 0) return x;
-        return a.resId.localeCompare(b.resId);
-    };
     const declares = [
         `#> ${outputResourcePath}`,
         "# @private",
         "",
         Array.from(decMap.entries())
             .map(([accessor, v]) => {
-                const docs = [...v.alias.sort(sort), ...v.declare.sort(sort)];
+                const docs = [...v.alias.sort(documentComparator), ...v.declare.sort(documentComparator)];
                 const maxDecLen = docs.reduce((a, b) => Math.max(a, b.str.length), 0);
                 const i = docs.length !== 1 ? " ".repeat(indent) : "";
                 const calcLine = (x: [number, number] | undefined): string =>
