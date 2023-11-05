@@ -33,7 +33,8 @@ jobs:
       - name: Generate declares.d.mcfunction
         run: |
             npm i -g ts-node
-            ts-node ./.github/workflows/make-declares-mcf.js
+            npm i -D @types/node
+            ts-node ./.github/workflows/make-declares-mcf.ts
         env:
           CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
           REPOSITORY: ProjectTSB/TheSkyBlessing
