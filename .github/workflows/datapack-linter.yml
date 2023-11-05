@@ -30,10 +30,13 @@ jobs:
           ref: master
           path: ./Asset2
 
-      - name: Generate declares.d.mcfunction
+      - name: Setup minimum typescript code runner
         run: |
             npm i -g ts-node
             npm i -D @types/node
+
+      - name: Generate declares.d.mcfunction
+        run: |
             ts-node ./.github/workflows/make-declares-mcf.ts
         env:
           CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
