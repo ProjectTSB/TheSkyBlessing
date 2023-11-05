@@ -26,7 +26,7 @@ jobs:
       - name: Checkout Asset2
         uses: actions/checkout@v3
         with:
-          repository: Asset
+          repository: ProjectTSB/Asset
           ref: master
           path: ./Asset2
 
