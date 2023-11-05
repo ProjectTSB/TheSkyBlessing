@@ -24,7 +24,6 @@ jobs:
             animated_java:**
 
       - name: Checkout Asset2
-        if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/checkout@v3
         with:
           repository: Asset
@@ -32,7 +31,6 @@ jobs:
           path: ./Asset2
 
       - name: Generate declares.d.mcfunction
-        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
             npm i -g ts-node
             ts-node ./.github/workflows/make-declares-mcf.js
@@ -59,7 +57,7 @@ jobs:
             function@asset:trader/trader_name/register/register
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
-
+      - run: cat ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
       - name: Deploy declares to Asset Repository
         if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions-js/push@v1.4
