@@ -17,6 +17,7 @@ const env: { getOrDefault: (key: string, defaultValue: string) => string, getOrT
     getOrDefault: (key, defaultValue) => process.env[key] ?? defaultValue,
     getOrThrow: key => process.env[key] ?? throwError(`Missing environment key: ${key}`)
 };
+const removeDuplicates = <A, K extends string | number>(arr: A[], f: (elem: A) => K): A[] => [...new Map(arr.map(v => [f(v), v])).values()];
 
 const accessorToString = (visibilities: [type: FileType, pattern: string][]): string => {
     const toMessages = (visibility: [type: FileType, pattern: string]) =>
@@ -63,7 +64,14 @@ const run = async () => {
             if (!matched) continue;
 
             const trimHeadIf = (s: string, ifString: string): string => s.startsWith(ifString) ? s.slice(ifString.length) : s;
-            const key = accessorToString(declares.flatMap(v => v.visibility?.map(w => [w.type, w.pattern.replace(/\\/g, "")] as [FileType, string]) ?? [defaultVisibility]))
+            const key = accessorToString(
+                removeDuplicates(
+                    declares.flatMap(v =>
+                        v.visibility?.map(w => [w.type, w.pattern.replace(/\\/g, "")] as [FileType, string]) ?? [defaultVisibility]
+                    ),
+                    ([t, p]) => `${t}%${p}`
+                )
+            )
             const decs = decMap.get(key) ?? { declare: [], alias: [] };
             const from: { uri: string, line: [number, number] }[] = declares
                 .filter(d => d.uri).map(v => v as CachePosition & { uri: string })
