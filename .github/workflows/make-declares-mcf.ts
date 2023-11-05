@@ -32,7 +32,7 @@ const run = async () => {
     const reposName = env.getOrThrow("REPOSITORY");
     const branch = env.getOrDefault("BRANCH", "master");
     const indent = parseInt(env.getOrDefault("INDENT", "4"));
-    const testPaths: [string, string][] = env.getOrThrow("VISIBILITY_FILTER")
+    const testPaths = env.getOrThrow("VISIBILITY_FILTER")
         .split(/,|\n/)
         .map(s => s.trim().split("@") as [string, string]);
     const outputPath = env.getOrDefault("OUTPUT_PATH", "./declares.mcfunction");
@@ -49,18 +49,17 @@ const run = async () => {
     for (const [type, cache] of Object.entries(dlsData) as [CacheType, CacheCategory][]) {
         for (const [resourceId, { dcl, def, foo }] of Object.entries(cache)) {
             const declares = [...(dcl ?? []), ...(def ?? [])];
-            const matched = declares
-                .some(cpos =>
-                    (cpos.visibility?.map(cv => [cv.type, cv.pattern]) ?? [defaultVisibility])
-                        .map(([a, b]) =>
-                            [a, RegExp(`^${vpReplacers.reduce((s, [r1, r2]) => s.replace(r1, r2), b)}$`)] as [string, RegExp]
+            const matched = declares.some(cpos =>
+                (cpos.visibility?.map(cv => [cv.type, cv.pattern]) ?? [defaultVisibility])
+                    .map(([a, b]) =>
+                        [a, RegExp(`^${vpReplacers.reduce((s, [r1, r2]) => s.replace(r1, r2), b)}$`)] as [string, RegExp]
+                    )
+                    .some(([actualType, re]) =>
+                        testPaths.some(([expectType, path]) =>
+                            ["", "*", expectType].includes(actualType) && re.test(path)
                         )
-                        .some(([actualType, re]) =>
-                            testPaths.some(([expectType, path]) =>
-                                ["", "*", expectType].includes(actualType) && re.test(path)
-                            )
-                        )
-                );
+                    )
+            );
             if (!matched) continue;
 
             const trimHeadIf = (s: string, ifString: string): string => s.startsWith(ifString) ? s.slice(ifString.length) : s;
@@ -97,28 +96,18 @@ const run = async () => {
                 const docs = [...v.alias.sort(sort), ...v.declare.sort(sort)];
                 const maxDecLen = docs.reduce((a, b) => Math.max(a, b.str.length), 0);
                 const i = docs.length !== 1 ? " ".repeat(indent) : "";
+                const calcLine = (x: [number, number] | undefined): string =>
+                    x && x[0] !== x[1] ? `L${x[0]}-L${x[1]}` : `L${x?.[0] ?? 1}`;
+                const genFromStr = (x: Document["from"][number]): string => `${x.uri}#${calcLine(x.line)}`
                 return [
                     `#> declare`,
                     ...accessor.split("\n").map(v => v === "# @within * **" ? "# @public" : v),
-                    ...docs.flatMap(s => {
-                        if (s.from.length === 1) {
-                            const line = s.from
-                                ? s.from[0].line[0] !== s.from[0].line[1]
-                                    ? `L${s.from[0].line[0]}-L${s.from[0].line[1]}`
-                                    : `L${s.from[0].line[0]}`
-                                : "L1";
-                            return [`${i}${s.str} ${" ".repeat(maxDecLen - s.str.length)}from ${s.from[0].uri}#${line}`];
-                        }
-                        const from = s.from.map(f => {
-                            const line = s.from
-                                ? f.line[0] !== f.line[1]
-                                    ? `L${f.line[0]}-L${f.line[1]}`
-                                    : `L${f.line[0]}`
-                                : "L1";
-                            return `${i}# from ${f.uri}#${line}`;
-                        });
-                        return [...from, `${i}${s.str}`];
-                    })
+                    ...docs
+                        .flatMap(doc => doc.from.length !== 1
+                            ? [...doc.from.map(from => `# from ${genFromStr(from)}`), doc.str]
+                            : [`${doc.str} ${" ".repeat(maxDecLen - doc.str.length)}from ${genFromStr(doc.from[0])}`]
+                        )
+                        .map(s => i + s)
                 ].join("\n");
             })
             .join("\n\n"),
