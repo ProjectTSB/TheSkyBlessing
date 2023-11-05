@@ -27,15 +27,20 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/checkout@v3
         with:
-          repository: Asset
+          repository: ProjectTSB/Asset
           ref: master
           path: ./Asset2
+
+      - name: Setup minimum typescript code runner
+        if: ${{ github.ref == 'refs/heads/master'}}
+        run: |
+            npm i -g ts-node
+            npm i -D @types/node
 
       - name: Generate declares.d.mcfunction
         if: ${{ github.ref == 'refs/heads/master' }}
         run: |
-            npm i -g ts-node
-            ts-node ./.github/workflows/make-declares-mcf.js
+            ts-node ./.github/workflows/make-declares-mcf.ts
         env:
           CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
           REPOSITORY: ProjectTSB/TheSkyBlessing
