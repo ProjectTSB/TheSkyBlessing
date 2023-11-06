@@ -22,3 +22,57 @@ jobs:
           muteSuccessResult: true
           ignoreLintPathPattern: |
             animated_java:**
+
+      - name: Checkout Asset2
+        if: ${{ github.ref == 'refs/heads/master' }}
+        uses: actions/checkout@v3
+        with:
+          repository: ProjectTSB/Asset
+          ref: master
+          path: ./Asset2
+
+      - name: Setup minimum typescript code runner
+        if: ${{ github.ref == 'refs/heads/master'}}
+        run: |
+            npm i -g ts-node
+            npm i -D @types/node
+
+      - name: Generate declares.d.mcfunction
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: |
+            ts-node ./.github/workflows/make-declares-mcf.ts
+        env:
+          CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
+          REPOSITORY: ProjectTSB/TheSkyBlessing
+          BRANCH: master
+          VISIBILITY_FILTER: |
+            function@asset:artifact/artifact_name/trigger/2.check_condition
+            function@asset:artifact/artifact_name/trigger/3.main
+            function@asset:artifact/artifact_name/give/2.give
+            function@asset:island/island_id/register/register
+            function@asset:mob/mob_name/summon/2.summon
+            function@asset:mob/mob_name/register
+            function@asset:mob/mob_name/attack/
+            function@asset:mob/mob_name/death/
+            function@asset:mob/mob_name/hurt/
+            function@asset:mob/mob_name/tick/
+            function@asset:mob/mob_name/attack/SOMETHING_FUNCTION
+            function@asset:mob/mob_name/death/SOMETHING_FUNCTION
+            function@asset:mob/mob_name/hurt/SOMETHING_FUNCTION
+            function@asset:spawner/spawner_id/register
+            function@asset:teleporter/tp_id/register
+            function@asset:trader/trader_name/register/register
+          OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
+          OUTPUT_RESOURCE_PATH: minecraft:declares.d
+
+      - name: Deploy declares to Asset Repository
+        if: ${{ github.ref == 'refs/heads/master' }}
+        uses: actions-js/push@v1.4
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: master
+            directory: ./Asset2
+            message: |
+                Update Declares from ProjectTSB/TheSkyBlessing@${{ github.SHA }}
+
+                [regenerate cache]
