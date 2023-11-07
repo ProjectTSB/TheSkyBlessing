@@ -24,7 +24,6 @@ jobs:
             animated_java:**
 
       - name: Checkout Asset2
-        if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/checkout@v3
         with:
           repository: ProjectTSB/Asset
@@ -32,13 +31,11 @@ jobs:
           path: ./Asset2
 
       - name: Setup minimum typescript code runner
-        if: ${{ github.ref == 'refs/heads/master'}}
         run: |
             npm i -g ts-node
             npm i -D @types/node
 
       - name: Generate declares.d.mcfunction
-        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
             ts-node ./.github/workflows/make-declares-mcf.ts
         env:
@@ -66,7 +63,6 @@ jobs:
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
 
       - name: Deploy declares to Asset Repository
-        if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions-js/push@v1.4
         with:
             github_token: ${{ secrets.ORG_PAT }}
