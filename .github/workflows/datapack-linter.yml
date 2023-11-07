@@ -70,6 +70,7 @@ jobs:
         uses: actions-js/push@v1.4
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
+            repository: ProjectTSB/Asset
             branch: master
             directory: ./Asset2
             message: |
