@@ -30,6 +30,8 @@ jobs:
           repository: ProjectTSB/Asset
           ref: master
           path: ./Asset2
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup minimum typescript code runner
         if: ${{ github.ref == 'refs/heads/master'}}
