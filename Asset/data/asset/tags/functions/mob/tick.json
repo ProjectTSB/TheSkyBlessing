@@ -1,17 +1,6 @@
 {
     "values": [
         "asset:mob/0240.lunatic_laser/tick/1.trigger",
-        "asset:mob/0176.killer_bee/tick/1.trigger",
-        "asset:mob/0186.ferocious_bee/tick/1.trigger",
-        "asset:mob/0266.small_dark_ball/tick/1.trigger",
-        "asset:mob/0265.dark_familiar/tick/1.trigger",
-        "asset:mob/0264.dark_summoner/tick/1.trigger",
-        "asset:mob/0275.destroyed_block/tick/1.trigger",
-        "asset:mob/0273.hell_blade/tick/1.trigger",
-        "asset:mob/0229.burning_blaze.shot/tick/1.trigger",
-        "asset:mob/0174.burning_blaze/tick/1.trigger",
-        "asset:mob/0204_infernal_watcher/tick/1.trigger",
-        "asset:mob/0082.thunder_curtain/tick/1.trigger",
         "asset:mob/0237.lunatic_mage/tick/1.trigger",
         "asset:mob/0046.clock_of_despair/tick/1.trigger",
         "asset:mob/example/tick/1.trigger",

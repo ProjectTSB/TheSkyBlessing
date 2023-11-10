@@ -1,16 +1,6 @@
 {
     "values": [
         "asset:mob/0240.lunatic_laser/0.load",
-        "asset:mob/0176.killer_bee/0.load",
-        "asset:mob/0186.ferocious_bee/0.load",
-        "asset:mob/0266.small_dark_ball/0.load",
-        "asset:mob/0265.dark_familiar/0.load",
-        "asset:mob/0264.dark_summoner/0.load",
-        "asset:mob/0275.destroyed_block/0.load",
-        "asset:mob/0273.hell_blade/0.load",
-        "asset:mob/0174.burning_blaze/0.load",
-        "asset:mob/0204_infernal_watcher/0.load",
-        "asset:mob/0082.thunder_curtain/0.load",
         "asset:mob/0237.lunatic_mage/0.load",
         "asset:mob/0046.clock_of_despair/0.load",
         "asset:mob/0060.self_destructor/0.load",
