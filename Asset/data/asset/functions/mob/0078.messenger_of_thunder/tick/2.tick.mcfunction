@@ -20,8 +20,9 @@
 # ワープのクールダウン処理(0以下ならワープ可能になる)
     execute if entity @s[scores={26.TPCool=0..}] run scoreboard players remove @s 26.TPCool 1
 
-# ハメ対策
-    execute unless entity @s[scores={26.TPCool=0..}] unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] unless block ~ ~ ~ #walls run function asset:mob/0078.messenger_of_thunder/tick/teleport
+# ハメ、落下対策でワープする
+    execute unless entity @s[scores={26.TPCool=0..}] unless block ~ ~ ~ #lib:no_collision_without_fluid at @p[gamemode=!spectator,distance=..50] unless block ~ ~ ~ #walls run tag @s add WarpTrigger
+    execute unless entity @s[scores={26.TPCool=0..}] if block ~ ~-0.5 ~ #lib:no_collision if block ~ ~-1.5 ~ #lib:no_collision if block ~ ~-2.5 ~ #lib:no_collision if block ~ ~-3.5 ~ #lib:no_collision at @p[gamemode=!spectator,distance=..50] run tag @s add WarpTrigger
 
-# 落下対策
-    execute unless entity @s[scores={26.TPCool=0..}] if block ~ ~-0.5 ~ #lib:no_collision if block ~ ~-1.5 ~ #lib:no_collision if block ~ ~-2.5 ~ #lib:no_collision if block ~ ~-3.5 ~ #lib:no_collision at @p[gamemode=!spectator,distance=..50] run function asset:mob/0078.messenger_of_thunder/tick/teleport
+# ワープ
+    execute if entity @s[tag=WarpTrigger] run function asset:mob/0078.messenger_of_thunder/tick/teleport

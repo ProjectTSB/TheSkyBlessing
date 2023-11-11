@@ -10,10 +10,13 @@
 
 # ランダムでワープ
     data modify storage lib: Argument.Bounds set value [[8d,8d],[0d,0d],[8d,8d]]
-    function lib:spread_entity/
+    execute at @p run function lib:spread_entity/
 
 # リセット
     data remove storage lib: Argument
 
 # ワープのクールダウンを設定
     scoreboard players set @s 26.TPCool 30
+
+# Tagを削除
+    tag @s remove WarpTrigger
