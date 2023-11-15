@@ -95,6 +95,7 @@ team modify NoCollision collisionRule never
 
 
 #> スコアボード類
+
     #> 1tickで消す一時変数の保存用スコアボード
     # @public
         scoreboard objectives add Temporary dummy
