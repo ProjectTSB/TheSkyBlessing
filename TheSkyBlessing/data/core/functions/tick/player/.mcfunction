@@ -8,8 +8,8 @@
 # @within *
 #   core:tick/player/
 #   player_manager:vanilla_attack/show_log
-#   asset_manager:sacred_treasure/triggers/**
-#   asset:sacred_treasure/**
+#   asset_manager:artifact/triggers/**
+#   asset:artifact/**
 #   asset_manager:teleporter/tick/**
     #declare tag this
 
@@ -39,7 +39,7 @@
 # 神の処理
     function player_manager:god/tick
 # 神器処理
-    function asset_manager:sacred_treasure/tick/player
+    function asset_manager:artifact/tick/player
 # MP回復処理
     function player_manager:mp/regen/check
 # テレポーター処理

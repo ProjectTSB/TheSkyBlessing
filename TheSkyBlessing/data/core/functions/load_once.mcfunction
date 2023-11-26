@@ -82,8 +82,10 @@ kill 0-0-0-0-0
 #   lib:**
 #   mob_manager:**
 #   player_manager:**
-    #alias entity commonEntity 0-0-0-0-0
+    #alias entity commonMarker 0-0-0-0-0
+    #alias entity commonArmorStand 0-0-0-0-1
 summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
+summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
 
 #> 当たり判定を消す汎用Teamの作成
@@ -93,6 +95,7 @@ team modify NoCollision collisionRule never
 
 
 #> スコアボード類
+
     #> 1tickで消す一時変数の保存用スコアボード
     # @public
         scoreboard objectives add Temporary dummy
@@ -127,7 +130,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: 神器
     # @within function
     #   core:load_once
-    #   asset_manager:sacred_treasure/**
+    #   asset_manager:artifact/**
         bossbar add asset:special_cooldown {"text":"特殊クールダウン"}
         scoreboard objectives add Sneak.Mainhand custom:sneak_time {"text":"スニークタイム: メインハンド"}
         scoreboard objectives add Sneak.Offhand custom:sneak_time {"text":"スニークタイム: オフハンド"}
@@ -179,7 +182,7 @@ team modify NoCollision collisionRule never
 
     #> イベントハンドラ用スコアボード
     # @within function
-    #   asset_manager:sacred_treasure/triggers/**
+    #   asset_manager:artifact/triggers/**
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
@@ -206,13 +209,11 @@ team modify NoCollision collisionRule never
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function
-    #       player_manager:pos_diff
+    #       player_manager:pos_fix_and_calc_diff
     #       api:player_vector/get
     #   predicate lib:is_player_moving
-        scoreboard objectives add PlayerPosDiff.X dummy
-        scoreboard objectives add PlayerPosDiff.Y dummy
-        scoreboard objectives add PlayerPosDiff.Z dummy
         scoreboard objectives add PlayerStopTime dummy
+        scoreboard objectives add PosPacketLossDetectAfterTick dummy
 
     #> PlayerManager - AdjustHunger用スコアボード
     # @within function player_manager:adjust_hunger/**
@@ -297,7 +298,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
-    scoreboard objectives setdisplay belowName Health
+    scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 
@@ -306,7 +307,7 @@ team modify NoCollision collisionRule never
     #   core:load_once
     #   core:handler/first_join
     #   player_manager:bonus/**
-    #   asset:sacred_treasure/0002.blessing/trigger/**
+    #   asset:artifact/0002.blessing/trigger/**
         #declare score_holder $MaxHealth
         #declare score_holder $MaxMP
         #declare score_holder $AttackBonus
@@ -350,7 +351,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
-    #   asset_manager:sacred_treasure/triggers/damage
+    #   asset_manager:artifact/triggers/damage
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
@@ -358,7 +359,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:tick/
     #   asset_manager:*/triggers/
-    #   asset_manager:sacred_treasure/triggers/attack
+    #   asset_manager:artifact/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
         scoreboard objectives add AttackedEntity dummy
@@ -370,7 +371,7 @@ team modify NoCollision collisionRule never
         team add Enemy
 
 #> 各Asset側のロード処理
-    function #asset:sacred_treasure/load
+    function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
 

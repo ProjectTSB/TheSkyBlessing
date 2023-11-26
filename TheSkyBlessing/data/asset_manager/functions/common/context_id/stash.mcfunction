@@ -4,12 +4,15 @@
 #
 # @within function
 #   api:mob/summon
+#   api:mob/core/summon
 #   asset:*/extends
 #   asset:*/super.*
-#   api:sacred_treasure/*/from_id
+#   api:artifact/*/from_id
 #   api:entity/mob/effect/core/give
 #   asset_manager:mob/triggers/death/manual
 #   asset_manager:effect/events/*/call_super_method
+#   asset_manager:mob/triggers/*/call_super_method
+#   asset_manager:artifact/give
 #   api:spawner/subtract_hp
 
 # スタックに新しい空間を追加する

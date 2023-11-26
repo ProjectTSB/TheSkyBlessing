@@ -12,13 +12,13 @@
     function lib:message/common/dispel_island
 # 祝福を与える
     data modify storage api: Argument.ID set value 2
-    execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:sacred_treasure/give/from_id
+    execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:artifact/give/from_id
 # アイテム返す
     function player_manager:lost_item/give_all/
 # データ取得
     function oh_my_dat:please
 # 二度と祈れないようにする
-    tag @s add DispelledCursedTreasure
+    tag @s add DispelledCursedArtifact
 # テレポーターを起動する
     data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
     data modify storage api: Argument.ActivationState set value "Activate"
