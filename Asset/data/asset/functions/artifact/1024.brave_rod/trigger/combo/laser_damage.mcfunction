@@ -1,10 +1,10 @@
-#> asset:sacred_treasure/1024.brave_rod/trigger/combo/laser_damage
+#> asset:artifact/1024.brave_rod/trigger/combo/laser_damage
 #
 # レーザーのダメージ処理
 #
 # @within function
-#   asset:sacred_treasure/1024.brave_rod/trigger/combo/laser
-#   asset:sacred_treasure/1024.brave_rod/trigger/combo/laser_finish
+#   asset:artifact/1024.brave_rod/trigger/combo/laser
+#   asset:artifact/1024.brave_rod/trigger/combo/laser_finish
 
 # 使用者にヒットタグ付与
     tag @p[tag=SG.Used] add SG.Hit

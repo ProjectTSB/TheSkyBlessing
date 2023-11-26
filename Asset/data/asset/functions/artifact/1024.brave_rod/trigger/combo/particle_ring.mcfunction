@@ -1,11 +1,11 @@
-#> asset:sacred_treasure/1024.brave_rod/trigger/combo/particle_ring
+#> asset:artifact/1024.brave_rod/trigger/combo/particle_ring
 #
 #
 #
 # @within function
-#   asset:sacred_treasure/1024.brave_rod/trigger/combo/beam1_shot
-#   asset:sacred_treasure/1024.brave_rod/trigger/combo/beam2_shot
-#   asset:sacred_treasure/1024.brave_rod/trigger/combo/beam3_shot
+#   asset:artifact/1024.brave_rod/trigger/combo/beam1_shot
+#   asset:artifact/1024.brave_rod/trigger/combo/beam2_shot
+#   asset:artifact/1024.brave_rod/trigger/combo/beam3_shot
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGwAcAzCnACyOUC0lArHAAyuMCMpfqwCczNpQBmAI1r8ATNwCGAdhSkOYAgDslAWwTJAYYoACflrAwlGfQGck4FAHtC2iElrcCDN3AwOwADclbEJDcAAPJC8wKGiAX3iCG1I0QntEbgA6RgJbCGt3TII4bGw0GFtDfm4YjCcCiEMYtFsAUTKKqraAR0IQ7CgAZSsGckRJEKrEvHBoeAp0LFwLYjIKFX5VaW4UYRRmOD5KWVZqE+pWSUolWnkVRiVpFRURC10DClN5CysbPQyjhcbiQjBiPia-kQ4GCoXCYCixViCSSYBSaQy2Q4eQKGCKMVK5Uq1VqyQaSia0QIrQ6RO6fQGw1GcHGk2w03iAF0gA_3
 # 円 2

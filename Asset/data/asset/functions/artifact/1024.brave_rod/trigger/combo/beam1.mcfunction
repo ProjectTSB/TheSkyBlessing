@@ -1,8 +1,8 @@
-#> asset:sacred_treasure/1024.brave_rod/trigger/combo/beam1
+#> asset:artifact/1024.brave_rod/trigger/combo/beam1
 #
 #
 #
-# @within function asset:sacred_treasure/1024.brave_rod/trigger/3.main
+# @within function asset:artifact/1024.brave_rod/trigger/3.main
 
 #> SpreadLib
 # @private
@@ -22,6 +22,6 @@
     # 拡散
         execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
     # その位置から実行
-        execute at @e[type=marker,tag=SpreadMarker,limit=1] rotated as @s run function asset:sacred_treasure/1024.brave_rod/trigger/combo/beam1_shot
+        execute at @e[type=marker,tag=SpreadMarker,limit=1] rotated as @s run function asset:artifact/1024.brave_rod/trigger/combo/beam1_shot
     # リセット
         kill @e[type=marker,tag=SpreadMarker]
