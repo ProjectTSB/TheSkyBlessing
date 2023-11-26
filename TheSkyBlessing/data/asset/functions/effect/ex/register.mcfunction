@@ -28,10 +28,8 @@
     data modify storage asset:effect IsBadEffect set value false
 # 死亡時のエフェクトの処遇 (default = "remove")
     # data modify storage asset:effect ProcessOnDied set value
-# APIで消す際に必要なLv (default = 1)
-    # data modify storage asset:effect RequireClearLvWithApi set value
-# 牛乳で消せるか (default = true)
-    # data modify storage asset:effect AllowClearWithMilk set value
+# エフェクトを消す際に必要なLv (default = 1)
+    # data modify storage asset:effect RequireClearLv set value
 # フィールド (本当はこういうのはスタックでやったほうがいい)
     data modify storage asset:effect Field.Tick set value 0
     data modify storage asset:effect Field.HealAmount set value 1

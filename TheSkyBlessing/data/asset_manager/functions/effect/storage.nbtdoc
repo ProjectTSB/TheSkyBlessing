@@ -28,9 +28,7 @@ compound AssetEffect {
     /// 死亡時のエフェクトの処遇 (default: Remove)
     ProcessOnDied?: DiedProccess,
     /// APIで消す際に必要なLv (default: 1)
-    RequireClearLvWithApi?: ClearLv,
-    /// 牛乳で消せるか (default: true)
-    AllowClearWithMilk?: boolean,
+    RequireClearLv?: ClearLv,
 
     /// 任意データ
     Field: Any
@@ -84,9 +82,7 @@ compound EffectData {
     /// 死亡時のエフェクトの処遇
     ProcessOnDied: DiedProccess,
     /// APIで消す際に必要なLv
-    RequireClearLvWithApi: ClearLv,
-    /// 牛乳で消せるか
-    AllowClearWithMilk: boolean,
+    RequireClearLv: ClearLv,
 
     /// 任意データ
     Field: Any,

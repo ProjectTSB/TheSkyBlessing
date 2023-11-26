@@ -22,8 +22,7 @@
     data modify storage asset:effect DurationMax set value 2147483647
     data modify storage asset:effect StackMax set value 2147483647
     data modify storage asset:effect ProcessOnDied set value "remove"
-    data modify storage asset:effect RequireClearLvWithApi set value 1
-    data modify storage asset:effect AllowClearWithMilk set value true
+    data modify storage asset:effect RequireClearLv set value 1
 
 # データを取得
     function #asset:effect/register
@@ -45,8 +44,7 @@
     data remove storage asset:effect MaxStack
     data remove storage asset:effect IsBadEffect
     data remove storage asset:effect ProcessOnDied
-    data remove storage asset:effect RequireClearLvWithApi
-    data remove storage asset:effect AllowClearWithMilk
+    data remove storage asset:effect RequireClearLv
     data remove storage asset:effect Field
 
     data remove storage asset:effect NonExistsInRom
