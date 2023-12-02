@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"湖鏡映天","color":"gold"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"月無き湖畔の星空を取り込んだとされる鏡。","color":"blue"}]','[{"text":"星降る夜に響く波の音は夜の静寂を引き立てる。","color":"blue"}]','[{"text":"使用時、","color":"#C4C4C4"},{"text":"星湖","color":"#3643FF"},{"text":"を設置する。","color":"#C4C4C4"}]','[{"text":"星湖","color":"#3643FF"},{"text":"は内部の敵に継続的にダメージを与え、","color":"#C4C4C4"}]','[{"text":"定期的に","color":"#C4C4C4"},{"text":"星波","color":"#3643FF"},{"text":"を発生させダメージを与える。","color":"#C4C4C4"}]','[{"text":"また、内部のプレイヤーに","color":"#C4C4C4"},{"text":"水攻撃+30%","color":"aqua"},{"text":"を付与する。","color":"#C4C4C4"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"月無き湖畔の星空を取り込んだとされる鏡。","color":"blue"}]','[{"text":"星降る夜に響く波の音は夜の静寂を引き立てる。","color":"blue"}]','[{"text":"使用時、","color":"#C4C4C4"},{"text":"星湖","color":"#3643FF"},{"text":"を設置する。","color":"#C4C4C4"}]','[{"text":"星湖","color":"#3643FF"},{"text":"は内部の敵に継続的にダメージを与え、","color":"#C4C4C4"}]','[{"text":"定期的に","color":"#C4C4C4"},{"text":"星波","color":"#3643FF"},{"text":"を発生させダメージを与える。","color":"#C4C4C4"}]','[{"text":"また、内部のプレイヤーに","color":"#C4C4C4"},{"text":"映天","color":"#3643FF"},{"text":"効果を付与する。","color":"#C4C4C4"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
