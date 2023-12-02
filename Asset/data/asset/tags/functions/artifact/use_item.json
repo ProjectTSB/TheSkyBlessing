@@ -1,31 +1,5 @@
 {
     "values": [
-        "asset:artifact/0515.time_medicine/trigger/1.trigger",
-        "asset:artifact/0771.milk_pack/trigger/1.trigger",
-        "asset:artifact/0146.mystica_nectar/trigger/1.trigger",
-        "asset:artifact/0145.aure_nectar/trigger/1.trigger",
-        "asset:artifact/0144.hi_nectar/trigger/1.trigger",
-        "asset:artifact/0143.nectar/trigger/1.trigger",
-        "asset:artifact/0003.humanity/trigger/1.trigger",
-        "asset:artifact/0012.sketchy_herb/trigger/1.trigger",
-        "asset:artifact/0043.fruit_of_wisdom/trigger/1.trigger",
-        "asset:artifact/0105.secret_meat/trigger/1.trigger",
-        "asset:artifact/0135.amrita/trigger/1.trigger",
-        "asset:artifact/0136.hi_amrita/trigger/1.trigger",
-        "asset:artifact/0137.aure_amrita/trigger/1.trigger",
-        "asset:artifact/0138.mystica_amrita/trigger/1.trigger",
-        "asset:artifact/0139.soma/trigger/1.trigger",
-        "asset:artifact/0140.hi_soma/trigger/1.trigger",
-        "asset:artifact/0141.aure_soma/trigger/1.trigger",
-        "asset:artifact/0159.extracted_mp_bottle/trigger/1.trigger",
-        "asset:artifact/0217.fish/trigger/1.trigger",
-        "asset:artifact/0272.infinity_food/trigger/1.trigger",
-        "asset:artifact/0245.skewered_meat/trigger/1.trigger",
-        "asset:artifact/0142.mystica_soma/trigger/1.trigger",
-        "asset:artifact/0455.takenoko/trigger/1.trigger",
-        "asset:artifact/0437.only_the_crabs_know/trigger/1.trigger",
-        "asset:artifact/0454.kinoko/trigger/1.trigger",
-        "asset:artifact/0456.potion_of_stalling_power/trigger/1.trigger",
-        "asset:artifact/0617.blue_jelly_fragment/trigger/1.trigger"
+        "asset:artifact/0105.secret_meat/trigger/1.trigger"
     ]
 }
