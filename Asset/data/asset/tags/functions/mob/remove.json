@@ -1,14 +1,6 @@
 {
     "values": [
         "asset:mob/0237.lunatic_mage/remove/1.trigger",
-        "asset:mob/0120.convict/remove/1.trigger",
-        "asset:mob/0216.gray_guardian/remove/1.trigger",
-        "asset:mob/0046.clock_of_despair/remove/1.trigger",
-        "asset:mob/0262.frestchika/remove/1.trigger",
-        "asset:mob/0022.red_knight/remove/1.trigger",
-        "asset:mob/0129.lexiel/remove/1.trigger",
-        "asset:mob/0131.haruclaire/remove/1.trigger",
-        "asset:mob/0175.queen_bee/remove/1.trigger",
-        "asset:mob/1004.tultaria/remove/1.trigger"
+        "asset:mob/0046.clock_of_despair/remove/1.trigger"
     ]
 }

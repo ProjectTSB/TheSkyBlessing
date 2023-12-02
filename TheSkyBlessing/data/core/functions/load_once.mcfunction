@@ -95,6 +95,7 @@ team modify NoCollision collisionRule never
 
 
 #> スコアボード類
+
     #> 1tickで消す一時変数の保存用スコアボード
     # @public
         scoreboard objectives add Temporary dummy
@@ -297,7 +298,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
-    scoreboard objectives setdisplay belowName Health
+    scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 

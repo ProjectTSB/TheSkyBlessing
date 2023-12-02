@@ -1,12 +1,4 @@
 {
     "values": [
-        "asset:artifact/0914.reactive_armor_feet/trigger/1.trigger",
-        "asset:artifact/0913.reactive_armor_legs/trigger/1.trigger",
-        "asset:artifact/0912.reactive_armor_chest/trigger/1.trigger",
-        "asset:artifact/0911.reactive_armor_head/trigger/1.trigger",
-        "asset:artifact/0253.holy_barrier/trigger/1.trigger",
-        "asset:artifact/0555.catastrophe/trigger/1.trigger",
-        "asset:artifact/0647.thorn_armor/trigger/6.hurt_trigger",
-        "asset:artifact/0731.mouse_feet/trigger/1.trigger"
     ]
 }

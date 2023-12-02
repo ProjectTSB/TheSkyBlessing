@@ -8,6 +8,7 @@
     function asset:artifact/common/check_condition/auto
 # すでに選択待機中ならキャンセル
     execute if score @s 02.Trigger matches 0 run tag @s remove CanUsed
+    execute if score @s 02.Trigger matches 0 run tellraw @s [{"text":"前回の能力ボーナスが未選択です","color":"red"}]
     execute if score @s 02.Trigger matches 0 run function asset:artifact/0002.blessing/trigger/show_trigger_chat
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:artifact/0002.blessing/trigger/3.main

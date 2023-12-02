@@ -4,27 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Master Merge",
+            "label": "Update Resourcepack sha1",
             "type": "shell",
-            "command": "now=`git rev-parse --abbrev-ref HEAD` && git stash -u && git checkout master && git pull && git checkout $now && git merge master && git stash pop",
-            "presentation": {
-                "echo": false,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "dependsOn": [
-                "change world file"
-            ],
-            "promptOnClose": true,
-            "problemMatcher": []
-        },
-        {
-            "label": "change world file",
-            "type": "shell",
-            "command": "sed -i -e \"s/^level-name=.*$/level-name=The SkyBlock/\" ./server.properties",
+            "command": "sed -e \"s/^resource-pack-sha1=.*$/resource-pack-sha1=$(curl -L https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip | sha1sum | tr ' ' '\t' | cut -f1)/\" -i ./server.properties",
             "options": {
                 "cwd": "../../"
             },
@@ -54,7 +36,7 @@
                 "clear": true
             },
             "dependsOn": [
-                "change world file"
+                "Update Resourcepack sha1"
             ],
             "promptOnClose": true,
             "problemMatcher": []

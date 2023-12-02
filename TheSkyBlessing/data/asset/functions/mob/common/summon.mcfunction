@@ -25,7 +25,9 @@
 #   Resist.Fire? : float
 #   Resist.Water? : float
 #   Resist.Thunder? : float
-#   Field? : Any
+#   Field? : compound
+#   FieldOverride? : compound
+# @output storage asset:mob Return.Summoned : boolean
 # @within function
 #   api:mob/core/summon
 #   asset:mob/*/summon/2.summon
@@ -64,3 +66,24 @@
 
 # 初期化イベント
     execute if entity @s run function #asset:mob/initialize
+
+# 返り値
+    data modify storage asset:mob Return.Summoned set value true
+
+# リセット
+    data remove storage asset:mob ID
+    data remove storage asset:mob Type
+    data remove storage asset:mob Interferable
+    data remove storage asset:mob Name
+    data remove storage asset:mob Weapon
+    data remove storage asset:mob Armor
+    data remove storage asset:mob Health
+    data remove storage asset:mob AttackDamage
+    data remove storage asset:mob Defense
+    data remove storage asset:mob SpecialDefense
+    data remove storage asset:mob Speed
+    data remove storage asset:mob FollowRange
+    data remove storage asset:mob KnockBackResist
+    data remove storage asset:mob Resist
+    data remove storage asset:mob Field
+    data remove storage asset:mob FieldOverride

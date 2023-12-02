@@ -10,7 +10,7 @@
 # 回復/ダメージを適用
     scoreboard players operation @s ScoreToHealth += @s ScoreToHPFluc
 # 1<=体力: ダメージ演出
-    execute if score @s ScoreToHPFluc matches ..-1 if score @s ScoreToHealth matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute if score @s ScoreToHPFluc matches ..-1 if score @s ScoreToHealth matches 1.. run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,effects:[{id:"resistance",amplifier:127b,duration:1,show_particles:0b},{id:"instant_damage",amplifier:0b,duration:1,show_particles:0b}]}
 # 0>=体力: kill処理
     execute if score @s ScoreToHealth matches ..0 run function lib:score_to_health_wrapper/core/die
 # リセット
