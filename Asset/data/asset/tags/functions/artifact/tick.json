@@ -1,17 +1,4 @@
 {
     "values": [
-        "asset:artifact/0702.bright_lamp/trigger/1.trigger",
-        "asset:artifact/0741.abyss_insurance_card/trigger/1.trigger",
-        "asset:artifact/0844.closed_eyes_of_love/trigger/1.trigger",
-        "asset:artifact/0933.auto_torch/trigger/1.trigger",
-        "asset:artifact/0860.angel_wing/trigger/1.trigger",
-        "asset:artifact/0164.blessing_boots/trigger/1.trigger",
-        "asset:artifact/0165.blessing_leggings/trigger/1.trigger",
-        "asset:artifact/0166.blessing_armor/trigger/1.trigger",
-        "asset:artifact/0167.blessing_helmet/trigger/1.trigger",
-        "asset:artifact/0204.spelunker_shoes/trigger/1.trigger",
-        "asset:artifact/0207.life_is_transitory/trigger/1.trigger",
-        "asset:artifact/0468.raging_demon/trigger/1.trigger",
-        "asset:artifact/0563.heartland/trigger/1.trigger"
     ]
 }

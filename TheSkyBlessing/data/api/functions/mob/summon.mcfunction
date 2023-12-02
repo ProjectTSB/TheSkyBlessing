@@ -2,7 +2,9 @@
 #
 # MobAssetの召喚処理を叩く処理
 #
-# @input storage api: Argument.ID
+# @input storage api:
+#   Argument.ID : int
+#   Argument.FieldOverride? : compound
 # @api
 
 # validate
@@ -11,3 +13,4 @@
     execute if data storage api: Argument.ID run function api:mob/core/summon
 # リセット
     data remove storage api: Argument.ID
+    data remove storage api: Argument.FieldOverride
