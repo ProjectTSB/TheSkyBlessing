@@ -17,7 +17,7 @@
     summon marker ~ ~0.1 ~ {Tags:["Object","KA.Lake","KA.RejoinTarget"]}
 
 # UserIDをコピー
-    scoreboard players operation @e[type=marker,tag=KA.Lake,distance=..0.1,limit=1] KA.UserID = @s UserID
+    scoreboard players operation @e[type=marker,tag=KA.Lake,distance=..0.11,limit=1] KA.UserID = @s UserID
 
 # 湖のループ
     schedule function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/loop 1t replace
