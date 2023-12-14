@@ -19,18 +19,29 @@
 # @within function lib:random/with_biased/*
 #declare score_holder $max
 
-$data modify storage lib: RecentHits set from storage lib: RecentHitsData.$(key)
-$scoreboard players set $max Temporary $(max)
+# マクロ引数をスコアとして取得する
+    $scoreboard players set $max Temporary $(max)
 
-function lib:random/with_biased/rec
+# そのキーの過去の生成結果を取得する
+    $data modify storage lib: RecentHits set from storage lib: RecentHitsData.$(key)
 
-data modify storage lib: RecentHits append from storage lib: Random.value
-execute store result score $size Temporary if data storage lib: RecentHits[]
-$execute if score $size Temporary matches $(scarcity_history_size).. run data remove storage lib: RecentHits[0]
-$data modify storage lib: RecentHitsData.$(key) set from storage lib: RecentHits
+# 値を生成する
+    function lib:random/with_biased/rec
 
-scoreboard players reset $max Temporary
-data remove storage lib: Random
-data remove storage lib: RecentHits
+# 生成結果を追加する
+    data modify storage lib: RecentHits append from storage lib: Random.value
 
-$data get storage lib: RecentHitsData.$(key)[-1]
+# 生成結果のサイズが scarcityHistorySize 以上の場合先頭を削除する
+    execute store result score $size Temporary if data storage lib: RecentHits[]
+    $execute if score $size Temporary matches $(scarcity_history_size).. run data remove storage lib: RecentHits[0]
+
+# 生成結果を保存する
+    $data modify storage lib: RecentHitsData.$(key) set from storage lib: RecentHits
+
+# 諸々リセット
+    scoreboard players reset $max Temporary
+    data remove storage lib: Random
+    data remove storage lib: RecentHits
+
+# 値を返すために get する
+    $data get storage lib: RecentHitsData.$(key)[-1]

@@ -11,9 +11,10 @@
 #       生成結果の範囲
 # @api
 
-$data modify storage lib: Args set value {key:"$(key)",max:$(max)}
+# オーバーロード用の値を設定する
+    $data modify storage lib: Args set value {key:"$(key)",max:$(max)}
+    $execute store result storage lib: Args.scarcity_history_size int 0.35 run scoreboard players set $max Temporary $(max)
+    scoreboard players reset $max Temporary
 
-$execute store result storage lib: Args.scarcity_history_size int 0.35 run scoreboard players set $max Temporary $(max)
-scoreboard players reset $max Temporary
-
-function lib:random/with_biased/manual.m with storage lib: Args
+# マニュアル側を呼び出す
+    function lib:random/with_biased/manual.m with storage lib: Args
