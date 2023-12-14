@@ -1,7 +1,0 @@
-#> asset:spawner/335/
-#
-# スポナーのチェック
-#
-# @within tag/function asset:spawner/register/*
-
-execute unless data storage asset:spawner DPR[{D:overworld,X:-200,Y:152,Z:120}] in overworld positioned -200 152 120 if entity @p[predicate=api:is_completed_player_chunk_load_waiting_time,distance=..80] run function asset:spawner/335/register
