@@ -16,8 +16,5 @@
     particle dust 1 0.29 0.278 1 ~ ~1 ~ 0.2 0.2 0.2 0 20
     particle crit ~ ~1 ~ 0 0 0 0.5 10
 
-# 個数を取得
-    execute store result score $Count Temporary if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:1032}}}]
-
 # 補正を追加
-    function asset:artifact/1032.life_charm/trigger/add_modifier
+    execute if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:1032}}}] run function asset:artifact/1032.life_charm/trigger/add_modifier
