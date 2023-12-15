@@ -2,3 +2,4 @@
 MACOSX
 *.zip
 cspell.json
+server-env.sh
