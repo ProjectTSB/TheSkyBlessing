@@ -17,4 +17,4 @@
     particle crit ~ ~1 ~ 0 0 0 0.5 10
 
 # 補正を追加
-    execute if data storage asset:context New.Items.hotbar[{tag:{TSB:{ID:1032}}}] run function asset:artifact/1032.life_charm/trigger/add_modifier
+    function asset:artifact/1032.life_charm/trigger/add_modifier
