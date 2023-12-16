@@ -27,7 +27,6 @@
 # 代入 / kill
     execute if score $Health Temporary matches 1.. run scoreboard players operation $Health Temporary /= $1000 Const
     execute if score $Health Temporary matches 1.. run scoreboard players operation @s MobHealth = $Health Temporary
-    tellraw @a [{"text":"score: "},{"score":{"objective":"Temporary","name":"$Health"}}]
     execute if score $Health Temporary matches ..0 as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add Killer
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score $Health Temporary matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]

@@ -11,8 +11,5 @@
     execute if score @s MobHealth matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]
     execute if score @s MobHealth matches ..0 run kill @s
 
-    tellraw @a [{"text":"score: "},{"score":{"objective":"MobHealth","name":"@s"}}]
-
-
 # ヘルス再生
     data modify entity @s AbsorptionAmount set value 1024f
