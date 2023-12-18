@@ -14,7 +14,7 @@
 
 # 竹を持ってるかチェック
     execute store result score $Count Temporary run clear @s bamboo 0
-    execute if score $Count Temporary matches ..64 run tag @s remove CanUsed
+    execute if score $Count Temporary matches ..63 run tag @s remove CanUsed
     execute if score $Count Temporary matches ..63 run function lib:message/artifact/dont_have_require_items
     scoreboard players reset $Count Temporary
 
