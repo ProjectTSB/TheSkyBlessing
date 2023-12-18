@@ -24,7 +24,7 @@
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
 # 弾を召喚する
-    execute anchored eyes positioned ^-0.35 ^-0.15 ^ run summon marker ~ ~ ~ {Tags:["Projectile","L2.Bullet","Init"]}
+    execute anchored eyes positioned ^-0.35 ^-0.15 ^0.5 run summon marker ~ ~ ~ {Tags:["Projectile","L2.Bullet","Init"]}
 
 # 弾の向きを合わせる
     execute as @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3] at @s facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
