@@ -10,7 +10,7 @@
 # ここから先は神器側の効果の処理を書く
 
 # 消費
-    clear @s bamboo 16
+    clear @s bamboo 64
 
 # 演出
     particle block bamboo ~ ~1.2 ~ 0.4 0.4 0.4 0 20 normal @a

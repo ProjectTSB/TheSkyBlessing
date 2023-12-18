@@ -17,7 +17,7 @@
 # 神器の説明文 (TextComponentString[])
     data modify storage asset:artifact Lore set value ['[{"text":"竹製の竹を発射する竹々しい銃。","color":"#9FFF21"}]','[{"text":"竹をありったけ装填することで再使用できる。","color":"#9FFF21"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
-    data modify storage asset:artifact CostText set value '[{"translate":"block.minecraft.bamboo"},{"text":" x16"}]'
+    data modify storage asset:artifact CostText set value '[{"translate":"block.minecraft.bamboo"},{"text":" x64"}]'
 # 使用回数 (int) (オプション)
     data modify storage asset:artifact RemainingCount set value 1
 # 神器を発動できるスロット (string) Wikiを参照
