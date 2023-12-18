@@ -12,7 +12,7 @@
 
 # 範囲内のプレイヤーにTagを付与する
     tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
-    execute positioned ~ ~1.2 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
-    execute positioned ~ ~2.4 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
-    execute positioned ~ ~3.6 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
-    execute positioned ~ ~4.8 ~ run tag @a[gamemode=!spectator,distance=..2] add ThunderTarget
+    execute positioned ~ ~1.2 ~ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
+    execute positioned ~ ~2.4 ~ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
+    execute positioned ~ ~3.6 ~ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
+    execute positioned ~ ~4.8 ~ run tag @a[tag=!PlayerShouldInvulnerable,distance=..2] add ThunderTarget
