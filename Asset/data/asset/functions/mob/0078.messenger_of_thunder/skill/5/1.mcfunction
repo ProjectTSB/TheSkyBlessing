@@ -5,7 +5,7 @@
 # @within function asset:mob/0078.messenger_of_thunder/tick/4.skill_branch
 
 # 演出
-    execute if entity @s[scores={26.Tick=0}] run playsound minecraft:entity.zombie_villager.converted hostile @a ^ ^ ^ 1 1.2 0
+    execute if entity @s[scores={26.Tick=0}] run playsound entity.zombie_villager.converted hostile @a ~ ~ ~ 1 1.5 0
 
 
 # 設置するためにAECを設置する
