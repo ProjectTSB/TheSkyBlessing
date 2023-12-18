@@ -19,7 +19,7 @@
 
 # 消滅
     execute unless block ~ ~ ~ #lib:no_collision run kill @s
-    execute if entity @s[scores={L2.Tick=12..}] run kill @s
+    execute if entity @s[scores={L2.Tick=16..}] run kill @s
 
 # スケジュールループ
     schedule function asset:artifact/0758.sina_tk/trigger/bullet/loop 1t replace

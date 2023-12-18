@@ -11,7 +11,7 @@
     particle block bamboo ~ ~ ~ 0.1 0.1 0.1 0 2 normal @a
 
 # 前方に進む
-    execute at @s run tp @s ^ ^ ^0.4
+    execute at @s run tp @s ^ ^ ^0.5
 
 # ヒット
     execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Object,dx=0] run tag @e[type=#lib:living,type=!player,tag=!Uninterferable,tag=!Object,dx=0] add Target
