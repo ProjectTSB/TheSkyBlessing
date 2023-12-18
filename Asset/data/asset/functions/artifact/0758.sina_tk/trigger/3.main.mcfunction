@@ -19,7 +19,7 @@
 # 前方拡散設定
     execute anchored eyes positioned ^-0.35 ^-0.15 ^ run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 2.0
-    data modify storage lib: Argument.Spread set value 0.5
+    data modify storage lib: Argument.Spread set value 0.25
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker,limit=1] run function lib:forward_spreader/circle
 
@@ -27,13 +27,13 @@
     execute anchored eyes positioned ^-0.35 ^-0.15 ^0.5 run summon marker ~ ~ ~ {Tags:["Projectile","L2.Bullet","Init"]}
 
 # 弾の向きを合わせる
-    execute as @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3] at @s facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @s ~ ~ ~ ~ ~
+    execute as @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3] at @s facing entity @e[type=marker,tag=SpreadMarker,distance=..5,limit=1] feet run tp @s ~ ~ ~ ~ ~
 
 # UserIDコピー
-    scoreboard players operation @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3] L2.UserID = @s UserID
+    scoreboard players operation @e[type=marker,tag=L2.Bullet,tag=Init,tag=Init,distance=..3,limit=1] L2.UserID = @s UserID
 
 # ループスタート
     schedule function asset:artifact/0758.sina_tk/trigger/bullet/loop 1t replace
 
-    kill @e[type=marker,tag=SpreadMarker]
+    kill @e[type=marker,tag=SpreadMarker,distance=..5]
     tag @e[type=marker,tag=L2.Bullet,tag=Init,distance=..3] remove Init
