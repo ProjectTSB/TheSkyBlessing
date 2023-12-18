@@ -14,9 +14,6 @@
     function asset:artifact/0758.sina_tk/trigger/bullet/recursive
     scoreboard players reset $Rucursive Temporary
 
-# ダメージ処理
-    execute if entity @e[type=#lib:living,tag=Target,distance=..3,limit=1] run function asset:artifact/0758.sina_tk/trigger/bullet/hit
-
 # 消滅
     execute unless block ~ ~ ~ #lib:no_collision run kill @s
     execute if entity @s[scores={L2.Tick=16..}] run kill @s
