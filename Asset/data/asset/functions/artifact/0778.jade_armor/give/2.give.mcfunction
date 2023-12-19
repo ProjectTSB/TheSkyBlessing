@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"翡翠の鎧","color":"#38b48b"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"美しい渓流で取れた翡翠で作られた鎧","color":"#38B48B"}]','[{"text":"装着者は水の加護を得る","color":"#38B48B"}]','[{"text":"水耐性+5% 水攻撃+5% ","color":"aqua"},{"text":"MP回復量+4% ","color":"green"}]','[{"text":"雷耐性-5%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+5% 水攻撃+5% ","color":"aqua"},{"text":"MP回復量+4% ","color":"green"}]','[{"text":"雷耐性-5%","color":"dark_red"}]','[{"text":"美しい渓流で取れた翡翠で作られた鎧。","color":"#38B48B"}]','[{"text":"装着者は水の加護を得る。","color":"#38B48B"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
