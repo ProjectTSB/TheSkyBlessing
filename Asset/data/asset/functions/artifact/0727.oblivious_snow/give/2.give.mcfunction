@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"吹雪に消えた足跡","color":"#ABF4FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"「彼の者が何処へ去ったかは分からない。","color":"gray","italic":"true"}]','[{"text":" 何故なら、吹雪が全てを隠してしまったから。」","color":"gray","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+10% ","color":"aqua"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"被回復量-15%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+10% 水攻撃+10% ","color":"aqua"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"被回復量-15%","color":"dark_red"}]','[{"text":"「彼の者が何処へ去ったかは分からない。","color":"gray","italic":"true"}]','[{"text":" 何故なら、吹雪が全てを隠してしまったから。」","color":"gray","italic":"true"}]',]
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)

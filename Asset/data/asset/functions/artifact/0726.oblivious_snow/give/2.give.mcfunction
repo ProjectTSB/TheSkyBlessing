@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"白銀の面影","color":"#ABF4FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"「故郷の面影はなく、白銀の荒野が広がるのみ。","color":"gray","italic":"true"}]','[{"text":" ただ氷風と深雪だけの地と化していた。」","color":"gray","italic":"true"}]','[{"text":"水耐性+10% 水攻撃+10% ","color":"aqua"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"被回復量-15%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+10% 水攻撃+10% ","color":"aqua"}]','[{"text":"MP回復量+8% ","color":"green"},{"text":"被回復量-15%","color":"dark_red"}]','[{"text":"「故郷の面影はなく、白銀の荒野が広がるのみ。","color":"gray","italic":"true"}]','[{"text":" ただ氷風と深雪だけの地と化していた。」","color":"gray","italic":"true"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
