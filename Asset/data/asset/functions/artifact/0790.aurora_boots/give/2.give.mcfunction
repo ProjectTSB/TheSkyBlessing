@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"オーロラブーツ","color":"#008bff"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"夜空に輝くオーロラを封じ込めた鎧。","color":"#0C64B0"}]','[{"text":"その蒼翠の光は進むべき道を照らす。","color":"#0C64B0"}]','[{"text":"魔法耐性+5% ","color":"dark_purple"},{"text":"雷耐性+10% 雷攻撃+5%","color":"yellow"}]','[{"text":"MP回復+5% ","color":"green"},{"text":"物理耐性-10%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"魔法耐性+5% ","color":"dark_purple"},{"text":"雷耐性+10% 雷攻撃+5%","color":"yellow"}]','[{"text":"MP回復+5% ","color":"green"},{"text":"物理耐性-10%","color":"dark_red"}]','[{"text":"夜空に輝くオーロラを封じ込めた鎧。","color":"gray"}]','[{"text":"その蒼翠の光は進むべき道を照らす。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
