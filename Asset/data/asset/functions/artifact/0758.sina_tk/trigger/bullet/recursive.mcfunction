@@ -21,4 +21,4 @@
     scoreboard players add $Rucursive Temporary 1
 
 # 再帰数が8以下かつTargetがいないなら再帰する
-    execute if score $Rucursive Temporary matches ..8 at @s positioned ~-0.5 ~-0.5 ~-0.5 unless entity @e[type=#lib:living,dx=0] positioned ~0.5 ~0.5 ~0.5 run function asset:artifact/0758.sina_tk/trigger/bullet/recursive
+    execute if score $Rucursive Temporary matches ..8 at @s run function asset:artifact/0758.sina_tk/trigger/bullet/recursive
