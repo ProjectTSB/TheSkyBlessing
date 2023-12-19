@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"深海珊瑚の靴","color":"#fecffe"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['{"text":"暗き底の水圧により耐えていたとされる","color":"white"}]','[{"text":"自然から賜った神秘の珊瑚の靴","color":"white"}]','[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"回復量+5% ","color":"light_purple"},{"text":"火耐性-10%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"回復量+5% ","color":"light_purple"},{"text":"火耐性-10%","color":"dark_red"}]','{"text":"暗き底の水圧により耐えていたとされる","color":"gray"}]','[{"text":"自然から賜った神秘の珊瑚の靴。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
