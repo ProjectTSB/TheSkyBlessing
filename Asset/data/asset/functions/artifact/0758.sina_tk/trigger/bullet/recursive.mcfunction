@@ -7,7 +7,7 @@
 #   asset:artifact/0758.sina_tk/trigger/bullet/recursive
 
 # 演出
-    particle dust 0.486 0.780 0.102 1 ^ ^ ^ 0.05 0.05 0.05 0 2 normal
+    particle dust 0.486 0.780 0.102 0.5 ^ ^ ^ 0.05 0.05 0.05 0 2 normal
     particle block bamboo ^ ^ ^ 0.05 0.05 0.05 0 2 normal @a
 
 # 前方に進む
