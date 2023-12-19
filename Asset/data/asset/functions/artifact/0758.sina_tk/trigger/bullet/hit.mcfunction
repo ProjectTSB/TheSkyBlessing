@@ -5,7 +5,7 @@
 # @within function asset:artifact/0758.sina_tk/trigger/bullet/recursive
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 80f
+    data modify storage lib: Argument.Damage set value 160f
     data modify storage lib: Argument.AttackType set value "Physical"
 # 補正
     execute at @a if score @s L2.UserID = @p UserID as @p run function lib:damage/modifier
