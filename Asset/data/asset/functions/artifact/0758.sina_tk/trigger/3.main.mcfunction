@@ -17,7 +17,7 @@
     playsound block.bamboo.place player @a ~ ~ ~ 0.4 0.7 0
 
 # 前方拡散設定
-    execute anchored eyes positioned ^-0.35 ^-0.15 ^ run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
+    execute anchored eyes positioned ^-0.35 ^-0.15 ^0.5 run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
     data modify storage lib: Argument.Distance set value 2.0
     data modify storage lib: Argument.Spread set value 0.25
 # 前方拡散を実行する
