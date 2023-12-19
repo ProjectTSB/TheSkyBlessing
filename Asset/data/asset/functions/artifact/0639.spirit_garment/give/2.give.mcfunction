@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"精霊の詩衣","color":"#B0FFD7"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"精霊への詩を紡ぐ者が纏う衣","color":"gray"}]','[{"text":"その衣を纏う者は癒しの力を得る。","color":"gray"}]','[{"text":"体力回復量+6% 最大体力+8","color":"light_purple"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"体力回復量+6% 最大体力+8","color":"light_purple"}]','[{"text":"精霊への詩を紡ぐ者が纏う衣。","color":"gray"}]','[{"text":"その衣を纏う者は癒しの力を得る。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
