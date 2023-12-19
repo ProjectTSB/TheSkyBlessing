@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"スチームコア","color":"#BF675A","bold":"true"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"凄まじい効率を誇る蒸気機関の鎧。","color":"gray"}]','[{"text":"着用すると蒸気が体中から溢れてくる。","color":"gray"}]','[{"text":"火攻撃+15% ","color":"red"},{"text":"水攻撃+15% ","color":"aqua"},{"text":"被回復量-15%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"火攻撃+15% ","color":"red"},{"text":"水攻撃+15% ","color":"aqua"},{"text":"被回復量-15%","color":"dark_red"}]','[{"text":"凄まじい効率を誇る蒸気機関の鎧。","color":"gray"}]','[{"text":"着用すると蒸気が体中から溢れてくる。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
