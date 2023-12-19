@@ -10,7 +10,7 @@
 # 補正
     execute at @a if score @s L2.UserID = @p UserID as @p run function lib:damage/modifier
 # 実行
-    execute as @e[type=#lib:living,dx=0,limit=1] run function lib:damage/
+    execute as @e[type=#lib:living,type=!player,dx=0,sort=nearest,limit=1] run function lib:damage/
 # リセット
     function lib:damage/reset
 # 消滅
