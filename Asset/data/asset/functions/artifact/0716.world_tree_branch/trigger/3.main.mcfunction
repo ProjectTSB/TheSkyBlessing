@@ -21,7 +21,7 @@
     playsound ogg:block.amethyst.step2 player @a ~ ~ ~ 0.5 1.2 0
 
 # 体力+5%
-    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-02cc00000005 "0716.MaxHealth" 5 multiply_base
+    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-02cc00000005 "0716.MaxHealth" 0.05 multiply_base
 
 # 移動速度+5％
     attribute @s generic.movement_speed modifier add 00000001-0000-0001-0000-02cc00000005 "0716.Speed" 0.05 multiply_base
