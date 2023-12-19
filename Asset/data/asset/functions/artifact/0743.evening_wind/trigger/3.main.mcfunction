@@ -9,12 +9,12 @@
 
 # ここから先は神器側の効果の処理を書く
 
-#particle dust 1 0.373 0.165
-#particle dust 1 0.635 0
+#particle dust 1 0.373 0.373 1
+#particle dust 1 0.635 0 1
 
 # 演出
-    particle dust_color_transition 1 0.373 0.165 1.6 1 0.635 0 ~ ~1.3 ~ 0.9 0.6 0.9 0 60 normal @a
-    particle dust_color_transition 1 0.635 0 1.6 1 0.373 0.165 ~ ~1.3 ~ 0.9 0.6 0.9 0 60 normal @a
+    particle dust_color_transition 1 0.373 0.373 1.6 1 0.635 0 ~ ~1.3 ~ 0.9 0.6 0.9 0 60 normal @a
+    particle dust_color_transition 1 0.635 0 1.6 1 0.373 0.373 ~ ~1.3 ~ 0.9 0.6 0.9 0 60 normal @a
     particle flame ~ ~1.3 ~ 0.9 0.6 0.9 0.12 30 normal @a
     playsound block.fire.ambient player @a ~ ~ ~ 0.7 0.7 0
     playsound block.fire.ambient player @a ~ ~ ~ 0.7 0.8 0
