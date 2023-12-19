@@ -23,7 +23,7 @@
 # 神器を発動できるスロット (string) Wikiを参照
     data modify storage asset:artifact Slot set value "mainhand"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:artifact Trigger set value "sneak1s"
+    data modify storage asset:artifact Trigger set value "0秒以上スニーク"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:artifact Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)
