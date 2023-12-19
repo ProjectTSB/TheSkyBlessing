@@ -8,11 +8,10 @@
 #   asset:artifact/0713.deep_sea_coral_leggings/trigger/3.main
 #   asset:artifact/0714.deep_sea_coral_boots/trigger/3.main
 
-# 演出
-    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 0.439 0.737 1 1"}
-    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 0.494 0.545 1 1"}
-    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 0.686 0.49 1 1"}
-    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 1 0.549 1 1"}
+# 演出 濃くするために重ねる
+    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 1 1 1000000000 1"}
+    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 1 1 1000000000 1"}
+    summon minecraft:area_effect_cloud ~ ~0.3 ~ {Age:0,Duration:8,WaitTime:0,Radius:3f,Tags:["Object","Uninterferable"],Particle:"dust 1 1 1000000000 1"}
 
     playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 0.5 2
     playsound ogg:block.amethyst_cluster.break2 player @a ~ ~ ~ 0.5 1.75
