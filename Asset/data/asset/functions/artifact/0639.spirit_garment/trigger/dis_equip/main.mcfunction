@@ -4,6 +4,10 @@
 #
 # @within function asset:artifact/0639.spirit_garment/trigger/dis_equip/
 
+# 演出
+    playsound minecraft:entity.allay.ambient_without_item player @a ~ ~ ~ 0.7 1.2 1
+    playsound minecraft:entity.allay.ambient_without_item player @a ~ ~ ~ 0.7 1.0 1
+
 # UUID
     data modify storage api: Argument.UUID set value [I;1,1,639,5]
 # 補正の追加
