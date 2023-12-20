@@ -8,7 +8,9 @@
 #   storage api: Argument.Attacker?: int(MobUUID)
 #   storage api: Argument.AttackType?: Enum(AttackType)
 #   storage api: Argument.ElementType?: Enum(ElementType)
-# @within function lib:**
+# @within function
+#   lib:**
+#   api:**
 
 #> temp
 # @private

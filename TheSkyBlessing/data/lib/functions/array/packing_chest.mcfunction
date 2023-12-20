@@ -3,12 +3,13 @@
 # 配列の後ろから27個を別の配列にSlotを付与して移します。
 #
 # @input
-#   storage lib: Array: any[]
+#   T extends any
+#   storage lib: Array: [T] @ N
 #   操作する配列データ
 # @output storage lib:
-#   Array: any[]
+#   Array: [T] @ ..N
 #   要素が最大27個後ろから抜き取られた配列
-#   Package: any[]
+#   Package: [T] @ ..27
 #   Slotが付与された27個以下のリスト
 # @public
 

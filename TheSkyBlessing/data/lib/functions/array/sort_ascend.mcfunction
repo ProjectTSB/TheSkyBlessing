@@ -3,8 +3,11 @@
 # 配列の要素を昇順ソートします。
 #
 # @input
-#   storage lib: Array: int[]
+#   storage lib: Array: [int] @ N
 #   配列データ
+# @output
+#   storage lib: Array: [int] @ N
+#   昇順にソートされた配列データ
 # @public
 
 

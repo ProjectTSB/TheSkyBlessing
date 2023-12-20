@@ -6,14 +6,14 @@
 
 #> Private
 # @private
-    #declare score_holder $Health
-    #declare score_holder $MaxHealth
+    #declare score_holder $HealthPer
 
 # 体力が半分以下かどうかを検知する
-    execute store result score $Health Temporary run data get entity @s AbsorptionAmount 100
-    execute store result score $MaxHealth Temporary run function api:mob/get_max_health
-    scoreboard players operation $Health Temporary /= $MaxHealth Temporary
-    execute if score $Health Temporary matches ..50 run item replace entity @s weapon.mainhand with bow{CustomModelData:20188,Enchantments:[{id:"punch",lvl:3s}]}
-    execute if score $Health Temporary matches ..50 run tag @s add 26.HPLess50Per
-    scoreboard players reset $Health Temporary
-    scoreboard players reset $MaxHealth Temporary
+    function api:mob/get_health_percent
+# 代入する
+    execute store result score $HealthPer Temporary run data get storage api: Return.HealthPer 100
+
+# 体力半分以下を検知
+    execute if score $HealthPer Temporary matches ..50 run item replace entity @s weapon.mainhand with bow{CustomModelData:20188,Enchantments:[{id:"punch",lvl:3s}]}
+    execute if score $HealthPer Temporary matches ..50 run tag @s add 26.HPLess50Per
+    scoreboard players reset $HealthPer Temporary

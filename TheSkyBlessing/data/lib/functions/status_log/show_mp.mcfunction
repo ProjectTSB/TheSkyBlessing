@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:mp/fluctuation
+# @within function api:mp/fluctuation
 
 #> For Init
 # @private

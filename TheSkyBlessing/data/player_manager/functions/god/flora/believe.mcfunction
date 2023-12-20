@@ -4,7 +4,7 @@
 #
 # @within
 #   function player_manager:god/change_believe/believe2
-#   function lib:debug/change_believe/flora
+#   function debug:change_believe/flora
 
 # 信仰タグ付与
     tag @s add Believe.Flora
@@ -12,14 +12,14 @@
     data modify storage api: Argument.UUID set value [2, 1, 1, 10]
     data modify storage api: Argument.Amount set value 0.2
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/attack/water/add
+    function api:modifier/attack/water/add
 # 水耐性+20%
     data modify storage api: Argument.UUID set value [2, 1, 1, 10]
     data modify storage api: Argument.Amount set value 0.2
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/water/add
+    function api:modifier/defense/water/add
 # 火耐性-20%
     data modify storage api: Argument.UUID set value [2, 1, 1, 10]
     data modify storage api: Argument.Amount set value -0.2
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:player_modifier/defense/fire/add
+    function api:modifier/defense/fire/add

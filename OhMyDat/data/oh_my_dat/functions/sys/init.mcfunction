@@ -20,6 +20,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 #   oh_*:**
 #   lib:**
 #   api:**
+#   debug:**
 #   core:**
 #   asset_manager:**
 #   player_manager:**

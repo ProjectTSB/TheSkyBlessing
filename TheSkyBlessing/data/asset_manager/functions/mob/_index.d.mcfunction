@@ -3,6 +3,11 @@
 
 #> storage
 # @within *
+#   api:mob/core/**
+#   asset:mob/*/register
+#   asset:mob/*/*/
+#   asset:mob/extends
+#   asset:mob/super.*
 #   asset_manager:mob/**
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/**
@@ -10,6 +15,8 @@
 
 #> 初期化タグ
 # @within function
+#   api:mob/core/summon
+#   asset:mob/*/summon/
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/summon
     #declare tag MobInit
@@ -38,7 +45,7 @@
 #> Killer
 # @within *
 #   asset_manager:mob/triggers/death/*
-#   lib:damage/core/health_subtract/non-player
+#   api:damage/core/health_subtract/non-player
 #   asset:mob/*/death/**
     #declare tag Killer
 

@@ -19,7 +19,7 @@
     execute at @e[type=area_effect_cloud,tag=AntiVoidTarget] run function asset_manager:mob/common_tag/anti_void_action/vfx/
 # 最後の処理
     execute if score @s VoidActionTime matches 60 run function asset_manager:mob/common_tag/anti_void_action/teleport
-    execute if score @s VoidActionTime matches 63 as @a[gamemode=!spectator,gamemode=!creative,distance=..5] run function asset_manager:mob/common_tag/anti_void_action/damage
+    execute if score @s VoidActionTime matches 63 as @a[tag=!PlayerShouldInvulnerable,distance=..5] run function asset_manager:mob/common_tag/anti_void_action/damage
     execute if score @s VoidActionTime matches 65 run function asset_manager:mob/common_tag/anti_void_action/reset
 # リセット
     tag @s remove AntiVoidTarget

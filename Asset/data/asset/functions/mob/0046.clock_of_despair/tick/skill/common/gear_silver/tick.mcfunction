@@ -24,7 +24,7 @@ execute if score @s 1A.LifeTime matches 126..130 positioned ~ ~5 ~ run function 
 execute if score @s 1A.LifeTime matches 131..135 positioned ~ ~5 ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/vfx/burst_rain/2
 execute if score @s 1A.LifeTime matches 136..140 positioned ~ ~5 ~ run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/vfx/burst_rain/3
 execute if score @s 1A.LifeTime matches 126..140 positioned ~ ~4 ~ run particle flash
-execute if score @s 1A.LifeTime matches 126..140 positioned ~ ~4 ~ run playsound minecraft:entity.firework_rocket.twinkle_far master @a ~ ~ ~ 1 2
+execute if score @s 1A.LifeTime matches 126..140 positioned ~ ~4 ~ run playsound minecraft:entity.firework_rocket.twinkle_far hostile @a ~ ~ ~ 1 2
 
 execute if score @s 1A.LifeTime matches 126..140 if entity @e[type=#lib:living,tag=Friend,tag=!PlayerShouldInvulnerable,tag=!Uninterferable,distance=..8.5] run function asset:mob/0046.clock_of_despair/tick/skill/common/gear_silver/damage
 

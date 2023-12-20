@@ -1,13 +1,11 @@
 {
-    "datapack.env.cmdVersion": "1.19",
-    "datapack.env.dataSource": "GitHub",
-    "datapack.env.dataVersion": "1.19",
+    "datapack.env.cmdVersion": "1.20.2",
+    "datapack.env.dataVersion": "1.20.2",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
     "datapack.env.detectionDepth": 1,
     "datapack.env.exclude": [],
     "datapack.env.include": [],
-    "datapack.env.jsonVersion": "1.19",
     "datapack.env.permissionLevel": 2,
     "datapack.features.semanticColoring": false,
     "datapack.lint.blockStateBracketSpacing": {
@@ -416,140 +414,140 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/give.json",
+                    "rel": "data/asset/tags/functions/artifact/give.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/give/1.trigger"
+                            "asset:artifact/%namespace%/give/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/give/1.trigger"
+                        "elem": "asset:artifact/%namespace%/give/1.trigger"
                     }
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/1.trigger.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/give/1.trigger.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "#> asset:artifact/%namespace%/give/1.trigger",
                         "#",
                         "# 神器の取得処理の呼び出し時に実行されるfunction",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/give",
+                        "# @within tag/function asset:artifact/give",
                         "",
-                        "execute if data storage asset:context {id:%ItemID%} run function asset:sacred_treasure/%namespace%/give/2.give"
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:artifact/%namespace%/give/2.give"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/2.give.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/give/2.give.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/give/2.give",
+                        "#> asset:artifact/%namespace%/give/2.give",
                         "#",
                         "# 神器の作成部 ここでID等を定義する",
                         "#",
                         "# @user",
-                        "# @within function asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "# @within function asset:artifact/%namespace%/give/1.trigger",
                         "",
                         "# 神器の説明や消費MPなどをここで設定する。",
-                        "# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。",
+                        "# 最後にasset:artifact/common/giveを実行することで入手可能。",
                         "",
                         "# 神器のID (int) スプレッドシートの値を入れる",
-                        "    data modify storage asset:sacred_treasure ID set value %ItemID%",
+                        "    data modify storage asset:artifact ID set value %ItemID%",
                         "# 神器のベースアイテム",
-                        "    data modify storage asset:sacred_treasure Item set value ",
+                        "    data modify storage asset:artifact Item set value ",
                         "# 神器の名前 (TextComponentString)",
-                        "    data modify storage asset:sacred_treasure Name set value ",
+                        "    data modify storage asset:artifact Name set value ",
                         "# 神器の説明文 (TextComponentString[])",
-                        "    data modify storage asset:sacred_treasure Lore set value []",
+                        "    data modify storage asset:artifact Lore set value []",
                         "# MP以外の消費物 (TextComponentString) (オプション)",
-                        "    # data modify storage asset:sacred_treasure CostText set value ",
+                        "    # data modify storage asset:artifact CostText set value ",
                         "# 使用回数 (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure RemainingCount set value ",
+                        "    # data modify storage asset:artifact RemainingCount set value ",
                         "# 神器を発動できるスロット (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Slot set value \"%slot%\"",
+                        "    data modify storage asset:artifact Slot set value \"%slot%\"",
                         "# 神器のトリガー (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Trigger set value ",
+                        "    data modify storage asset:artifact Trigger set value ",
                         "# 神器の発動条件 (TextComponentString) (オプション)",
-                        "    # data modify storage asset:sacred_treasure Condition set value ",
+                        "    # data modify storage asset:artifact Condition set value ",
                         "# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]",
+                        "    # data modify storage asset:artifact AttackInfo.Damage set value [0,0]",
                         "# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]",
+                        "    # data modify storage asset:artifact AttackInfo.AttackType set value [Physical,Magic]",
                         "# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
+                        "    # data modify storage asset:artifact AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
                         "# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value ",
+                        "    # data modify storage asset:artifact AttackInfo.BypassResist set value ",
                         "# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value ",
+                        "    # data modify storage asset:artifact AttackInfo.IsRangeAttack set value ",
                         "# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value ",
+                        "    # data modify storage asset:artifact AttackInfo.AttackRange set value ",
                         "# MP消費量 (int) ",
-                        "    data modify storage asset:sacred_treasure MPCost set value ",
+                        "    data modify storage asset:artifact MPCost set value ",
                         "# MP必要量 (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure MPRequire set value ",
+                        "    # data modify storage asset:artifact MPRequire set value ",
                         "# 神器のクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
+                        "    # data modify storage asset:artifact LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
+                        "    # data modify storage asset:artifact SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
-                        "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "    # data modify storage asset:artifact DisableCooldownMessage set value ",
                         "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
-                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
+                        "    # data modify storage asset:artifact DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure CanUsedGod set value []",
+                        "    data modify storage asset:artifact CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
-                        "    # data modify storage asset:sacred_treasure CustomNBT set value {}",
+                        "    # data modify storage asset:artifact CustomNBT set value {}",
                         "",
                         "# 神器の入手用function",
-                        "    function asset:sacred_treasure/common/give"
+                        "    function asset:artifact/common/give"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/1.trigger.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/1.trigger.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "#> asset:artifact/%namespace%/trigger/1.trigger",
                         "#",
                         "# 指定したイベントタイミングで実行されるfunction",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/**",
+                        "# @within tag/function asset:artifact/**",
                         "",
                         "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/trigger/2.check_condition"
+                        "    execute if data storage asset:context id{%slot%:%ItemID%} run function asset:artifact/%namespace%/trigger/2.check_condition"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/2.check_condition.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/2.check_condition.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "#> asset:artifact/%namespace%/trigger/2.check_condition",
                         "#",
                         "# 神器の発動条件をチェックします",
                         "#",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "# @within function asset:artifact/%namespace%/trigger/1.trigger",
                         "",
                         "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
-                        "    function asset:sacred_treasure/common/check_condition/%slot%",
+                        "    function asset:artifact/common/check_condition/%slot%",
                         "# 他にアイテム等確認する場合はここに書く",
                         "    ",
                         "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
-                        "    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/%namespace%/trigger/3.main"
+                        "    execute if entity @s[tag=CanUsed] run function asset:artifact/%namespace%/trigger/3.main"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/3.main.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/3.main.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/3.main",
+                        "#> asset:artifact/%namespace%/trigger/3.main",
                         "#",
                         "# 神器のメイン処理部",
                         "#",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "# @within function asset:artifact/%namespace%/trigger/2.check_condition",
                         "",
                         "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
-                        "    function asset:sacred_treasure/common/use/%slot%",
+                        "    function asset:artifact/common/use/%slot%",
                         "",
                         "# ここから先は神器側の効果の処理を書く",
                         "    say test: %namespace%"
@@ -577,142 +575,142 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/give.json",
+                    "rel": "data/asset/tags/functions/artifact/give.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/give/1.trigger"
+                            "asset:artifact/%namespace%/give/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/give/1.trigger"
+                        "elem": "asset:artifact/%namespace%/give/1.trigger"
                     }
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/1.trigger.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/give/1.trigger.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "#> asset:artifact/%namespace%/give/1.trigger",
                         "#",
                         "# 神器の取得処理の呼び出し時に実行されるfunction",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/give",
+                        "# @within tag/function asset:artifact/give",
                         "",
-                        "execute if data storage asset:context {id:%ItemID%} run function asset:sacred_treasure/%namespace%/give/2.give"
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:artifact/%namespace%/give/2.give"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/give/2.give.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/give/2.give.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/give/2.give",
+                        "#> asset:artifact/%namespace%/give/2.give",
                         "#",
                         "# 神器の作成部 ここでID等を定義する",
                         "#",
                         "# @user",
-                        "# @within function asset:sacred_treasure/%namespace%/give/1.trigger",
+                        "# @within function asset:artifact/%namespace%/give/1.trigger",
                         "",
                         "# 神器の説明や消費MPなどをここで設定する。",
-                        "# 最後にasset:sacred_treasure/common/giveを実行することで入手可能。",
+                        "# 最後にasset:artifact/common/giveを実行することで入手可能。",
                         "",
                         "# 神器のID (int) スプレッドシートの値を入れる",
-                        "    data modify storage asset:sacred_treasure ID set value %ItemID%",
+                        "    data modify storage asset:artifact ID set value %ItemID%",
                         "# 神器のベースアイテム",
-                        "    data modify storage asset:sacred_treasure Item set value ",
+                        "    data modify storage asset:artifact Item set value ",
                         "# 神器の名前 (TextComponentString)",
-                        "    data modify storage asset:sacred_treasure Name set value ",
+                        "    data modify storage asset:artifact Name set value ",
                         "# 神器の説明文 (TextComponentString[])",
-                        "    data modify storage asset:sacred_treasure Lore set value []",
+                        "    data modify storage asset:artifact Lore set value []",
                         "# MP以外の消費物 (TextComponentString) (オプション)",
-                        "    # data modify storage asset:sacred_treasure CostText set value ",
+                        "    # data modify storage asset:artifact CostText set value ",
                         "# 使用回数 (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure RemainingCount set value ",
+                        "    # data modify storage asset:artifact RemainingCount set value ",
                         "# 神器を発動できるスロット (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Slot set value \"hotbar\"",
+                        "    data modify storage asset:artifact Slot set value \"hotbar\"",
                         "# 神器のトリガー (string) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure Trigger set value ",
+                        "    data modify storage asset:artifact Trigger set value ",
                         "# 神器の発動条件 (TextComponentString) (オプション)",
-                        "    # data modify storage asset:sacred_treasure Condition set value ",
+                        "    # data modify storage asset:artifact Condition set value ",
                         "# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.Damage set value [0,0]",
+                        "    # data modify storage asset:artifact AttackInfo.Damage set value [0,0]",
                         "# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackType set value [Physical,Magic]",
+                        "    # data modify storage asset:artifact AttackInfo.AttackType set value [Physical,Magic]",
                         "# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
+                        "    # data modify storage asset:artifact AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
                         "# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.BypassResist set value ",
+                        "    # data modify storage asset:artifact AttackInfo.BypassResist set value ",
                         "# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.IsRangeAttack set value ",
+                        "    # data modify storage asset:artifact AttackInfo.IsRangeAttack set value ",
                         "# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)",
-                        "    # data modify storage asset:sacred_treasure AttackInfo.AttackRange set value ",
+                        "    # data modify storage asset:artifact AttackInfo.AttackRange set value ",
                         "# MP消費量 (int) ",
-                        "    data modify storage asset:sacred_treasure MPCost set value ",
+                        "    data modify storage asset:artifact MPCost set value ",
                         "# MP必要量 (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure MPRequire set value ",
+                        "    # data modify storage asset:artifact MPRequire set value ",
                         "# 神器のクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure LocalCooldown set value ",
+                        "    # data modify storage asset:artifact LocalCooldown set value ",
                         "# グローバルクールダウン (int) (オプション)",
-                        "    # data modify storage asset:sacred_treasure SpecialCooldown set value ",
+                        "    # data modify storage asset:artifact SpecialCooldown set value ",
                         "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
-                        "    # data modify storage asset:sacred_treasure DisableCooldownMessage set value ",
+                        "    # data modify storage asset:artifact DisableCooldownMessage set value ",
                         "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
-                        "    # data modify storage asset:sacred_treasure DisableMPMessage set value ",
+                        "    # data modify storage asset:artifact DisableMPMessage set value ",
                         "# 扱える神 (string[]) Wikiを参照",
-                        "    data modify storage asset:sacred_treasure CanUsedGod set value []",
+                        "    data modify storage asset:artifact CanUsedGod set value []",
                         "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
-                        "    # data modify storage asset:sacred_treasure CustomNBT set value {}",
+                        "    # data modify storage asset:artifact CustomNBT set value {}",
                         "",
                         "# 神器の入手用function",
-                        "    function asset:sacred_treasure/common/give"
+                        "    function asset:artifact/common/give"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/1.trigger.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/1.trigger.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "#> asset:artifact/%namespace%/trigger/1.trigger",
                         "#",
                         "# 指定したイベントタイミングで実行されるfunction",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/**",
+                        "# @within tag/function asset:artifact/**",
                         "",
                         "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
-                        "    execute if data storage asset:context id{hotbar:[%ItemID%]} run function asset:sacred_treasure/%namespace%/trigger/2.check_condition"
+                        "    execute if data storage asset:context id{hotbar:[%ItemID%]} run function asset:artifact/%namespace%/trigger/2.check_condition"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/2.check_condition.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/2.check_condition.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "#> asset:artifact/%namespace%/trigger/2.check_condition",
                         "#",
                         "# 神器の発動条件をチェックします",
                         "#",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/1.trigger",
+                        "# @within function asset:artifact/%namespace%/trigger/1.trigger",
                         "",
                         "# ID指定する",
-                        "    data modify storage asset:sacred_treasure TargetID set value %ItemID%",
+                        "    data modify storage asset:artifact TargetID set value %ItemID%",
                         "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
-                        "    function asset:sacred_treasure/common/check_condition/hotbar",
+                        "    function asset:artifact/common/check_condition/hotbar",
                         "# 他にアイテム等確認する場合はここに書く",
                         "",
                         "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
-                        "    execute if entity @s[tag=CanUsed] run function asset:sacred_treasure/%namespace%/trigger/3.main"
+                        "    execute if entity @s[tag=CanUsed] run function asset:artifact/%namespace%/trigger/3.main"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/3.main.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/3.main.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/3.main",
+                        "#> asset:artifact/%namespace%/trigger/3.main",
                         "#",
                         "# 神器のメイン処理部",
                         "#",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/2.check_condition",
+                        "# @within function asset:artifact/%namespace%/trigger/2.check_condition",
                         "",
                         "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
-                        "    function asset:sacred_treasure/common/use/hotbar",
+                        "    function asset:artifact/common/use/hotbar",
                         "",
                         "# ここから先は神器側の効果の処理を書く",
                         "    say test: %namespace%"
@@ -733,29 +731,29 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/register.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/register.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/register",
+                        "#> asset:artifact/%namespace%/register",
                         "#",
                         "# 神器プールへの登録処理",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/register",
+                        "# @within tag/function asset:artifact/register",
                         "",
-                        "data modify storage asset:sacred_treasure RarityRegistry[%Rarity%] append value %ItemID%"
+                        "data modify storage asset:artifact RarityRegistry[%Rarity%] append value %ItemID%"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/register.json",
+                    "rel": "data/asset/tags/functions/artifact/register.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/register"
+                            "asset:artifact/%namespace%/register"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/register"
+                        "elem": "asset:artifact/%namespace%/register"
                     }
                 }
             ],
@@ -779,31 +777,31 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/0.load.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/0.load.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/0.load",
+                        "#> asset:artifact/%namespace%/trigger/0.load",
                         "#",
                         "# 神器に利用するスコアボード等の初期化処理",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/load",
+                        "# @within tag/function asset:artifact/load",
                         "",
                         "#> 定義類はここに",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/**",
+                        "# @within function asset:artifact/%namespace%/trigger/**",
                         "    scoreboard objectives add "
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/load.json",
+                    "rel": "data/asset/tags/functions/artifact/load.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/0.load"
+                            "asset:artifact/%namespace%/trigger/0.load"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/0.load"
+                        "elem": "asset:artifact/%namespace%/trigger/0.load"
                     }
                 }
             ]
@@ -813,13 +811,13 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/_index.d.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/_index.d.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/_index.d",
+                        "#> asset:artifact/%namespace%/trigger/_index.d",
                         "# @private",
                         "",
                         "#> tag",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/**",
+                        "# @within function asset:artifact/%namespace%/trigger/**",
                         "    #declare"
                     ]
                 }
@@ -830,16 +828,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/click.carrot_on_a_stick.json",
+                    "rel": "data/asset/tags/functions/artifact/click.carrot_on_a_stick.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -849,16 +847,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/attack.json",
+                    "rel": "data/asset/tags/functions/artifact/attack.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -868,16 +866,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/attack/melee.json",
+                    "rel": "data/asset/tags/functions/artifact/attack/melee.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -887,16 +885,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/attack/projectile.json",
+                    "rel": "data/asset/tags/functions/artifact/attack/projectile.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -906,16 +904,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage.json",
+                    "rel": "data/asset/tags/functions/artifact/damage.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -925,16 +923,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/explode.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/explode.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -944,16 +942,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/fire.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/fire.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -963,16 +961,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/from_entity/.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -982,16 +980,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/blocked.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/from_entity/blocked.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1001,16 +999,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/melee.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/from_entity/melee.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1020,16 +1018,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/damage/from_entity/projectile.json",
+                    "rel": "data/asset/tags/functions/artifact/damage/from_entity/projectile.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1039,16 +1037,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/killed.json",
+                    "rel": "data/asset/tags/functions/artifact/killed.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1058,16 +1056,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/killed/melee.json",
+                    "rel": "data/asset/tags/functions/artifact/killed/melee.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1077,16 +1075,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/killed/projectile.json",
+                    "rel": "data/asset/tags/functions/artifact/killed/projectile.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1096,16 +1094,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/use_item.json",
+                    "rel": "data/asset/tags/functions/artifact/use_item.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1115,16 +1113,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1134,16 +1132,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/1s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/1s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1153,16 +1151,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/2s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/2s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1172,16 +1170,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/3s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/3s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1191,16 +1189,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/4s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/4s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1210,16 +1208,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/5s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/5s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1229,16 +1227,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/10s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/10s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1248,16 +1246,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1267,16 +1265,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/1s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/1s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1286,16 +1284,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/2s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/2s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1305,16 +1303,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/3s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/3s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1324,16 +1322,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/4s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/4s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1343,16 +1341,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/5s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/5s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1362,16 +1360,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/sneak/keep/10s.json",
+                    "rel": "data/asset/tags/functions/artifact/sneak/keep/10s.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1381,16 +1379,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/using_item.json",
+                    "rel": "data/asset/tags/functions/artifact/using_item.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1400,16 +1398,16 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/tick.json",
+                    "rel": "data/asset/tags/functions/artifact/tick.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 }
             ]
@@ -1419,56 +1417,56 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/dis_equip/.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/dis_equip/.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/dis_equip/",
+                        "#> asset:artifact/%namespace%/trigger/dis_equip/",
                         "#",
                         "# 装備を外した時に外した部位にのみのidが入った状態でトリガーされる",
                         "#",
-                        "# @within tag/function asset:sacred_treasure/dis_equip",
+                        "# @within tag/function asset:artifact/dis_equip",
                         "",
-                        "execute if data storage asset:context id{%slot%:%ItemID%} run function asset:sacred_treasure/%namespace%/trigger/dis_equip/main"
+                        "execute if data storage asset:context id{%slot%:%ItemID%} run function asset:artifact/%namespace%/trigger/dis_equip/main"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/dis_equip/main.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/dis_equip/main.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/dis_equip/main",
+                        "#> asset:artifact/%namespace%/trigger/dis_equip/main",
                         "#",
                         "# 装備を外した時のメイン処理",
                         "#",
-                        "# @within function asset:sacred_treasure/%namespace%/trigger/dis_equip/",
+                        "# @within function asset:artifact/%namespace%/trigger/dis_equip/",
                         "",
                         ""
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/equip.json",
+                    "rel": "data/asset/tags/functions/artifact/equip.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                            "asset:artifact/%namespace%/trigger/1.trigger"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/1.trigger"
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
                     }
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/sacred_treasure/dis_equip.json",
+                    "rel": "data/asset/tags/functions/artifact/dis_equip.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/dis_equip/"
+                            "asset:artifact/%namespace%/trigger/dis_equip/"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/dis_equip/"
+                        "elem": "asset:artifact/%namespace%/trigger/dis_equip/"
                     }
                 }
             ],
@@ -1492,9 +1490,9 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/sacred_treasure/%namespace%/trigger/rejoin_process.mcfunction",
+                    "rel": "data/asset/functions/artifact/%namespace%/trigger/rejoin_process.mcfunction",
                     "content": [
-                        "#> asset:sacred_treasure/%namespace%/trigger/rejoin_process",
+                        "#> asset:artifact/%namespace%/trigger/rejoin_process",
                         "#",
                         "# 使い方は必ずwikiを見ること",
                         "#",
@@ -1506,13 +1504,13 @@
                     "rel": "data/asset/tags/functions/rejoin.json",
                     "content": {
                         "values": [
-                            "asset:sacred_treasure/%namespace%/trigger/rejoin_process"
+                            "asset:artifact/%namespace%/trigger/rejoin_process"
                         ]
                     },
                     "append": {
                         "addFirst": true,
                         "key": "values",
-                        "elem": "asset:sacred_treasure/%namespace%/trigger/rejoin_process"
+                        "elem": "asset:artifact/%namespace%/trigger/rejoin_process"
                     }
                 }
             ]
@@ -1553,6 +1551,8 @@
                         "    data modify storage asset:mob Interferable set value ",
                         "# 名前 (TextComponentString) (オプション)",
                         "    # data modify storage asset:mob Name set value ",
+                        "# Mobの説明文 (TextComponentString[]) (オプション)",
+                        "    # data modify storage asset:mob Lore set value ",
                         "# 武器",
                         "    # メインハンド (Compound(Item)) (オプション)",
                         "        # data modify storage asset:mob Weapon.Mainhand set value ",
@@ -1948,6 +1948,57 @@
                     }
                 }
             ]
+        },
+        {
+            "label": "MOB/特殊トリガー: remove",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/remove/1.trigger",
+                        "#",
+                        "# 天使が居なくなる際に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:mob/remove",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/remove/2.remove"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/remove/2.remove.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/remove/2.remove",
+                        "#",
+                        "# Mobのremove時の処理",
+                        "#",
+                        "# @within function asset:mob/%namespace%/remove/1.trigger"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/mob/remove.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/remove/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/remove/1.trigger"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "MobのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
         }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
@@ -1968,7 +2019,7 @@
         "master"
     ],
     "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
-    "gitmoji.additionalEmojis": [
+    "gitmoji.addCustomEmoji": [
         {
             "code": ":balance_scale:",
             "emoji": "⚖️",
@@ -1977,6 +2028,10 @@
         }
     ],
     "git-graph.customEmojiShortcodeMappings": [
+        {
+            "shortcode": ":technologist:",
+            "emoji": "🧑‍💻"
+        },
         {
             "shortcode": ":balance_scale:",
             "emoji": "⚖️"

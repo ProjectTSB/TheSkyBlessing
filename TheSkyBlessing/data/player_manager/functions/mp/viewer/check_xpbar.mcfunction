@@ -2,7 +2,7 @@
 #
 # 経験値が想定される表示とずれている場合に修正します
 #
-# @within function core:tick/4_interval
+# @within function core:tick/player/post
 
 #> private
 # @private

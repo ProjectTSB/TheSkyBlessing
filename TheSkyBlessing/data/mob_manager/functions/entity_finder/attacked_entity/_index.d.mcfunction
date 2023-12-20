@@ -5,7 +5,7 @@
 # `@e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150]`
 # @public function
 #   mob_manager:entity_finder/attacked_entity/**
-#   asset_manager:sacred_treasure/triggers/
+#   asset_manager:artifact/triggers/
 #   asset_manager:mob/triggers/tick_check
     #declare tag AttackedEntity
 
@@ -17,6 +17,5 @@
 #> lib:damage/からの攻撃検出用
 # @within function
 #   mob_manager:entity_finder/attacked_entity/on_attack
-#   mob_manager:entity_finder/attacked_entity/fetch_attacked_entity
-#   lib:damage/core/trigger_on_attack
+#   api:damage/core/trigger_on_attack
     #declare tag VictimFromLibrary

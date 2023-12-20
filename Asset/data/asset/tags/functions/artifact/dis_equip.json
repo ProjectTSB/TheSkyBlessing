@@ -1,0 +1,25 @@
+{
+    "values": [
+        "asset:artifact/1032.life_charm/trigger/dis_equip/",
+        "asset:artifact/0667.soul_fire_armor/trigger/dis_equip/",
+        "asset:artifact/0666.soul_fire_armor/trigger/dis_equip/",
+        "asset:artifact/0665.soul_fire_armor/trigger/dis_equip/",
+        "asset:artifact/0664.soul_fire_armor/trigger/dis_equip/",
+        "asset:artifact/0624.flame_helm/trigger/dis_equip/",
+        "asset:artifact/0625.flame_armor/trigger/dis_equip/",
+        "asset:artifact/0626.flame_leggings/trigger/dis_equip/",
+        "asset:artifact/0627.flame_boots/trigger/dis_equip/",
+        "asset:artifact/0642.raimei_helmet/trigger/dis_equip/",
+        "asset:artifact/0643.raimei_chestplate/trigger/dis_equip/",
+        "asset:artifact/0644.raimei_leggings/trigger/dis_equip/",
+        "asset:artifact/0645.raimei_boots/trigger/dis_equip/",
+        "asset:artifact/0632.elec_helm/trigger/dis_equip/",
+        "asset:artifact/0633.elec_armor/trigger/dis_equip/",
+        "asset:artifact/0634.elec_leggings/trigger/dis_equip/",
+        "asset:artifact/0635.elec_boots/trigger/dis_equip/",
+        "asset:artifact/0628.ice_helm/trigger/dis_equip/",
+        "asset:artifact/0629.ice_armor/trigger/dis_equip/",
+        "asset:artifact/0630.ice_leggings/trigger/dis_equip/",
+        "asset:artifact/0631.ice_boots/trigger/dis_equip/"
+    ]
+}

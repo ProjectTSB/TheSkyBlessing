@@ -2,11 +2,20 @@
 #
 # lib:damageの引数及び
 #
+# @deprecated change to `api:damage/reset`
 # @api
 
-# 補正されずに実行されている場合の処理は2022/05/20現在許容されているため記載しない。
+data remove storage lib: Argument.Damage
+data remove storage lib: Argument.AttackType
+data remove storage lib: Argument.ElementType
+data remove storage lib: Argument.DeathMessage
+data remove storage lib: Argument.FixedDamage
+data remove storage lib: Argument.BypassModifier
+data remove storage lib: Argument.BypassArmorDefense
+data remove storage lib: Argument.BypassToughness
+data remove storage lib: Argument.BypassEnchantments
+data remove storage lib: Argument.BypassResistance
+data remove storage lib: Argument.DisableParticle
+data remove storage lib: Argument.ReduceEnchantment
 
-# 補正フラグを下ろす
-    data modify storage lib: DamageLibModified set value false
-# リセット
-    function lib:damage/core/reset
+function api:damage/reset

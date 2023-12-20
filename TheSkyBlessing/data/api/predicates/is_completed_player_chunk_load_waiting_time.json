@@ -1,0 +1,7 @@
+{
+    "condition": "entity_scores",
+    "entity": "this",
+    "scores": {
+        "ChunkLoadWaitingTime": 0
+    }
+}
