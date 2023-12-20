@@ -32,7 +32,10 @@
     data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect NextTickEffects[-1]
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect NextTickEffects[-1]
-    execute if entity @s[tag=Death] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect NextTickEffects[-1]
+# でもやっぱり消すかもしれない
+    execute if score @s UsedMilk matches 1.. run data modify storage api: Argument.ClearLv set value 3
+    execute if score @s UsedMilk matches 1.. run function api:entity/mob/effect/remove/from_level
+    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect NextTickEffects[-1]
 # リセット
     data remove storage asset:context this
     data remove storage asset:context id

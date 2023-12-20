@@ -180,6 +180,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
         scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
+    #> AssetManager: Effect
+    # @within function
+    #   asset_manager:effect/**
+        scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
+        scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
+
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**

@@ -9,7 +9,7 @@
 #   asset:effect/*/register
 #   asset:effect/*/
 #   asset_manager:effect/**
-#declare storage asset:effect
+    #declare storage asset:effect
 
 #> Tags
 # @within function
@@ -17,4 +17,6 @@
 #   core:tick/
 #   asset_manager:effect/give/give
 #   asset_manager:effect/tick
-#declare tag HasAssetEffect
+#   asset_manager:effect/foreach
+    #declare tag ClearEffect
+    #declare tag HasAssetEffect
