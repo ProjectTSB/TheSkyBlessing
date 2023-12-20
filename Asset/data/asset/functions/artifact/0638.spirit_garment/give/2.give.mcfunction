@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"精霊の詩衣","color":"#B0FFD7"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"体力回復量+6% 最大体力+8","color":"light_purple"}]','[{"text":"精霊への詩を紡ぐ者が纏う衣。","color":"gray"}]','[{"text":"その衣を纏う者は癒しの力を得る。","color":"gray"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"体力回復量+6% 最大体力+8","color":"light_purple"}]','[{"text":"物理耐性-5%","color":"dark_red"}]','[{"text":"精霊への詩を紡ぐ者が纏う衣。","color":"gray"}]','[{"text":"その衣を纏う者は癒しの力を得る。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
@@ -53,7 +53,7 @@
 # 扱える神 (string[]) Wikiを参照
     data modify storage asset:artifact CanUsedGod set value ["Flora", "Nyaptov", "Wi-ki", "Rumor"]
 # カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)
-    data modify storage asset:artifact CustomNBT set value {HideFlags:68,display:{color:11599831},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:2.7,Operation:0,UUID:[I;1,1,638,6],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,638,6],Slot:"head"}]}
+    data modify storage asset:artifact CustomNBT set value {HideFlags:68,display:{color:11599831},Unbreakable:1b,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3.5,Operation:0,UUID:[I;1,1,638,6],Slot:"head"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:1,Operation:0,UUID:[I;1,1,638,6],Slot:"head"}]}
 
 # 神器の入手用function
     function asset:artifact/common/give

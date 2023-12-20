@@ -8,10 +8,13 @@
     playsound minecraft:entity.allay.ambient_without_item player @a ~ ~ ~ 0.7 1.2 1
     playsound minecraft:entity.allay.ambient_without_item player @a ~ ~ ~ 0.7 1.0 1
 
-# UUID
+# 回復量
     data modify storage api: Argument.UUID set value [I;1,1,638,6]
-# 補正の削除
     function api:modifier/heal/remove
+
+# 物理耐性
+    data modify storage api: Argument.UUID set value [I;1,1,638,6]
+    function api:modifier/attack/physical/remove
 
 # 最大体力+8
     attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-027e0000000

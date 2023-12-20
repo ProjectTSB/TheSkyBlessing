@@ -16,15 +16,17 @@
     playsound entity.allay.ambient_without_item player @a ~ ~ ~ 1 1.7
     playsound block.amethyst_block.break player @a ~ ~ ~ 1 0.8
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,639,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.06
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 回復量+6%
+    data modify storage api: Argument.UUID set value [I;1,1,639,5]
+    data modify storage api: Argument.Amount set value 0.06
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/heal/add
+
+# 物理耐性-5%
+    data modify storage api: Argument.UUID set value [I;1,1,639,5]
+    data modify storage api: Argument.Amount set value -0.05
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/physical/add
 
 # 最大体力+8
     attribute @s generic.max_health modifier add 00000001-0000-0001-0000-027f00000005 "MaxHealth" 7.5 add
