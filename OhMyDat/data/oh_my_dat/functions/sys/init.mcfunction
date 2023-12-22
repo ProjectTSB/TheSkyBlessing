@@ -22,6 +22,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 #   api:**
 #   debug:**
 #   core:**
+#   asset:**
 #   asset_manager:**
 #   player_manager:**
 #   world_manager:**
