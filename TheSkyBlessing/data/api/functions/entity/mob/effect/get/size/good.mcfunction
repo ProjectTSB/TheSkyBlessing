@@ -1,4 +1,4 @@
-#> api:entity/mob/effect/get_size/good
+#> api:entity/mob/effect/get/size/good
 #
 # entityに付与されている良い効果のエフェクトの数を取得します。
 #

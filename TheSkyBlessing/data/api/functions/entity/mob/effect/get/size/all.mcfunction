@@ -1,4 +1,4 @@
-#> api:entity/mob/effect/get_size/all
+#> api:entity/mob/effect/get/size/all
 #
 # entityに付与されている全てのエフェクトの数を取得します。
 #

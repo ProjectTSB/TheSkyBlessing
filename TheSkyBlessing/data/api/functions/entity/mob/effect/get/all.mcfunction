@@ -1,7 +1,8 @@
-#> api:entity/mob/effect/get_all
+#> api:entity/mob/effect/get/all
 #
 # Effect一覧を取得する
 #
+# @input as player
 # @api
 
 # storage呼び出し
