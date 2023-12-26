@@ -18,7 +18,7 @@
 # 補正
     execute at @a[distance=..160] if score @s KI.UserID = @p UserID run function lib:damage/modifier
 # 実行
-    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,dx=0] run function lib:damage/
+    execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[type=#lib:living,tag=Enemy,dx=0,sort=nearest,limit=1] run function lib:damage/
 # リセット
     function lib:damage/reset
 
