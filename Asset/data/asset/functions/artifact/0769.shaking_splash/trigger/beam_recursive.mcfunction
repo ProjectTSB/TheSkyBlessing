@@ -7,8 +7,8 @@
 #   asset:artifact/0769.shaking_splash/trigger/beam_recursive
 
 # 演出
-    particle dust 0.4 1 1 1 ~ ~ ~ 0.1 0.1 0.1 0 7 normal @a
-    particle dust 0.4 1 1 1 ^ ^ ^0.25 0.1 0.1 0.1 0 7 normal @a
+    particle dust 0.8 700000000 1000000000 1 ~ ~ ~ 0.1 0.1 0.1 0 7 normal @a
+    particle dust 0.8 700000000 1000000000 1 ^ ^ ^0.25 0.1 0.1 0.1 0 7 normal @a
     particle firework ~ ~ ~ 0.3 0.3 0.3 0.25 1
     particle firework ^ ^ ^0.25 0.3 0.3 0.3 0.25 1
     particle bubble ~ ~ ~ 0.1 0.1 0.1 0 2 normal @a

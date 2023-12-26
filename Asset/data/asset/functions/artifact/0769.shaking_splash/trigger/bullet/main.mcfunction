@@ -5,7 +5,7 @@
 # @within function asset:artifact/0769.shaking_splash/trigger/bullet/loop
 
 # 演出
-    particle minecraft:dust_color_transition 0 1 1 1.4 1 1 1 ~ ~ ~ 0.2 0.2 0.2 0 8
+    particle dust 0.8 500000000 1000000000 1 ~ ~ ~ 0.2 0.2 0.2 0 8
     particle bubble ~ ~ ~ 0.3 0.3 0.3 0 8 normal @a
     particle dolphin ~ ~ ~ 0.3 0.3 0.3 0 8
     playsound block.bubble_column.bubble_pop neutral @a ~ ~ ~ 1.3 0 0
