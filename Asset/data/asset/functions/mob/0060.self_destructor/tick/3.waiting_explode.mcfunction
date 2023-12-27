@@ -9,5 +9,5 @@
 
 # 爆破待機のバフ 完全に停止はノーマル以下だけ
     effect give @s resistance 10 10 true
-    execute if predicate api:global_vars/difficulty/max/normal run effect give @s slowness 10 5 true
+    execute if predicate api:global_vars/difficulty/max/normal run effect give @s slowness 10 9 true
     execute if predicate api:global_vars/difficulty/min/hard run effect give @s slowness 10 2 true
