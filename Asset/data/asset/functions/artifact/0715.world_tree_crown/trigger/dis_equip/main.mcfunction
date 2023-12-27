@@ -11,7 +11,7 @@
 
 # 以下の補正を消す
 
-# 体力+5
+# 体力+5%
     attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-02cb00000006
 
 # 移動速度+5％
