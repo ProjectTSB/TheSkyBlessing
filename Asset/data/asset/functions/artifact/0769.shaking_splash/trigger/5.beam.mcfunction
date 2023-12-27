@@ -5,9 +5,9 @@
 # @within function asset:artifact/0769.shaking_splash/trigger/3.main
 
 # 演出
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.5 1.6 0
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.5 1.3 0
-    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.5 1.0 0
+    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.25 1.6 0
+    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.25 1.3 0
+    playsound block.bubble_column.upwards_ambient player @a ~ ~ ~ 0.25 1.0 0
     playsound block.bubble_column.bubble_pop player @a ~ ~ ~ 1 0 0
     playsound entity.wither.shoot player @a ~ ~ ~ 0.1 1.8 0
     particle firework ~ ~0.6 ~ 0.3 0.3 0.3 0.25 20
