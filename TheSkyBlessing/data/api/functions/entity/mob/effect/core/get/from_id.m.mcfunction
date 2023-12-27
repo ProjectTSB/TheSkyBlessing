@@ -1,4 +1,7 @@
-#> api:entity/mob/effect/core/get/from_id
+#> api:entity/mob/effect/core/get/from_id.m
+# @input args
+#   ID : int
+#       欲しいエフェクトのID
 # @within function api:entity/mob/effect/get/from_id
 
 function oh_my_dat:please
