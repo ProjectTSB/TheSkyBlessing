@@ -5,7 +5,6 @@
 # @within function asset:mob/0060.self_destructor/tick/4.self-desruct
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 12
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
 # デスログ
