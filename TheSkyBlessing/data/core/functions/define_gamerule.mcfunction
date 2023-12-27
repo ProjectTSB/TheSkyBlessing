@@ -26,6 +26,7 @@ gamerule doTraderSpawning false
 execute if data storage global {IsProduction:1b} run gamerule doWeatherCycle true
 execute if data storage global {IsProduction:0b} run gamerule doWeatherCycle false
 gamerule drowningDamage true
+gamerule enderPearlsVanishOnDeath true
 gamerule fallDamage true
 gamerule fireDamage true
 gamerule forgiveDeadPlayers false
