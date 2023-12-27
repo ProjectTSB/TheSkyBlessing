@@ -14,7 +14,7 @@
 # 最低値分の値を増やしてstorageに代入
     execute store result storage asset:temp Firework.LifeTime int 1 run scoreboard players add $Random Temporary 30
 
-# storageをlist型に設定
+# storageに必要なnbtを設定しておく
     data modify storage asset:temp Firework.Explosions set value {Flicker:1b}
 
 # 花火の形を設定する
