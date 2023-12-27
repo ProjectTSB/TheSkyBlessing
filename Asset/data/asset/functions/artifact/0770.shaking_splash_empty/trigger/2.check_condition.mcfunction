@@ -22,7 +22,7 @@
 # 負の値だった場合正の値にする
     execute if score $Diff Temporary matches ..-1 run scoreboard players operation $Diff Temporary *= $-1 Const
 
-# 差が29以下ならCanUsedを削除
+# 差が19以下ならCanUsedを削除
     execute if score $Diff Temporary matches ..19 run tag @s remove CanUsed
 
 # リセット等
