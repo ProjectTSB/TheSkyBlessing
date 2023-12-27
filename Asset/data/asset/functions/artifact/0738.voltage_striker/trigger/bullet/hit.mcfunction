@@ -12,7 +12,7 @@
     playsound item.trident.return neutral @a ~ ~ ~ 0.5 2 0
 
 # ダメージ
-    data modify storage lib: Argument.Damage set value 200.0f
+    data modify storage lib: Argument.Damage set value 160.0f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # 補正
