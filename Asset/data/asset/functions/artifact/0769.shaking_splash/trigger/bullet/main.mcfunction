@@ -14,17 +14,12 @@
 # スコア
     scoreboard players add @s LD.Tick 1
 
-# ヒット
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,tag=Enemy,dx=0,limit=1] at @s run function asset:artifact/0769.shaking_splash/trigger/bullet/hit
+# 雪玉がいない場合ヒット
+    execute unless predicate lib:is_vehicle run function asset:artifact/0769.shaking_splash/trigger/bullet/hit
 
-# 消滅
+# 一定時間経過で雪玉ごと消滅
+    execute if entity @s[scores={LD.Tick=80..}] run kill @e[type=snowball,tag=LD.Bullet,distance=..0.01,sort=nearest,limit=1]
     execute if entity @s[scores={LD.Tick=80..}] run kill @s
-
-# ブロックに当たった場合破裂
-    execute rotated ~ ~3 unless block ^ ^ ^0.9 #lib:no_collision run function asset:artifact/0769.shaking_splash/trigger/bullet/hit
-
-# 移動
-    tp @s ^ ^ ^0.9 ~ ~3
 
 # ループ
     schedule function asset:artifact/0769.shaking_splash/trigger/bullet/loop 1t replace

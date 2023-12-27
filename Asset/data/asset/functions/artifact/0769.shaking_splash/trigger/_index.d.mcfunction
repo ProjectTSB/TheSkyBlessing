@@ -5,7 +5,7 @@
 # @within function
 #   asset:artifact/0769.shaking_splash/trigger/4.shoot
 #   asset:artifact/0769.shaking_splash/trigger/rejoin_process
-#   asset:artifact/0769.shaking_splash/trigger/bullet/loop
+#   asset:artifact/0769.shaking_splash/trigger/bullet/**
     #declare tag LD.Bullet
 
 #> Init Tag
