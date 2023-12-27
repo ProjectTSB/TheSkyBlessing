@@ -15,5 +15,6 @@
     particle firework ~ ~1.2 ~ 0 0.3 0 0.5 20
 
 # ラスト1回でgive
+    execute unless data storage asset:context Items.mainhand.id run stopsound @a * entity.item.break
     execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 769
     execute unless data storage asset:context Items.mainhand.id run function api:artifact/give/from_id
