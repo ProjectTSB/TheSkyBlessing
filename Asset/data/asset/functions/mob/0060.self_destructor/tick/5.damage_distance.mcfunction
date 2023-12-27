@@ -13,7 +13,7 @@
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの爆発により、微粒子になった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
 
 # ダメージ量
-    execute if entity @s[distance=..7] run data modify storage lib: Argument.Damage set value 12f
+    execute if entity @s[distance=..7.5] run data modify storage lib: Argument.Damage set value 12f
     execute if entity @s[distance=..4] run data modify storage lib: Argument.Damage set value 18f
     execute if entity @s[distance=..3] run data modify storage lib: Argument.Damage set value 24f
     execute if entity @s[distance=..2] run data modify storage lib: Argument.Damage set value 28f
@@ -23,7 +23,7 @@
     execute if predicate api:global_vars/difficulty/min/hard store result storage lib: Argument.Damage int 2 run data get storage lib: Argument.Damage
 
 # modifier
-    execute as @e[type=zombie,tag=this,distance=..7,limit=1] run function lib:damage/modifier
+    execute as @e[type=zombie,tag=this,distance=..7.5,limit=1] run function lib:damage/modifier
 
 # ダメージ
     function lib:damage/
