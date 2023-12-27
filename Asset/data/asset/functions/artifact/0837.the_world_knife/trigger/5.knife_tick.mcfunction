@@ -8,5 +8,5 @@
     scoreboard players add @s N9.Time 1
 
 # 一定時間になったらナイフに動くタグを付与する
-    execute if score @s N9.Time matches 30 run playsound item.trident.throw player @a[distance=..20] ~ ~ ~ 1 1 1
-    execute if score @s N9.Time matches 30.. run tag @s add N9.Start
+    execute if score @s N9.Time matches 15 run playsound item.trident.throw player @a[distance=..20] ~ ~ ~ 1 1 1
+    execute if score @s N9.Time matches 15.. run tag @s add N9.Start
