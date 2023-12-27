@@ -33,7 +33,9 @@
 # リセット
     scoreboard players reset $ClearLv Temporary
     scoreboard players reset $RequiredLv Temporary
+    data remove storage asset:effect ID
+    data remove storage asset:effect TargetEffectData
 
 # 残っていたら再帰
     data remove storage asset:effect IDList[0]
-    execute unless data storage asset:effect {Succeeded:1,IsSingle:true} if data storage asset:effect IDList[0] run function api:entity/mob/effect/core/remove/from_level/loop
+    execute unless data storage asset:effect {CanRemove:true,IsSingle:true} if data storage asset:effect IDList[0] run function api:entity/mob/effect/core/remove/from_level/loop
