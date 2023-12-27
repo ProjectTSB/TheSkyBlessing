@@ -7,7 +7,6 @@
 # エリア内の平面上にに敵がいた場合、その位置で召喚するという処理
     execute as @e[type=#lib:living,tag=Enemy,distance=..7.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=4,dz=14] positioned ~7.5 ~1 ~7.5 run tag @s add RippleTarget
 
-
 # 切り取ってもRippleTargetがいた場合、その敵の位置に召喚する
     execute at @e[type=#lib:living,tag=RippleTarget,distance=..7.5,sort=random,limit=1] run summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
 # SpreadMarkerを拡散する値を設定する
