@@ -15,7 +15,7 @@
     data modify storage asset:effect ID set from storage asset:effect IDList[0]
     function asset_manager:effect/common/try_pop_effect_data
 
-# 存在する場合]
+# 存在する場合
         data modify storage asset:effect CanRemove set value true
     # レベルチェック
         execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect CanRemove set value false
