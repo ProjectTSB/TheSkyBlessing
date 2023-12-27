@@ -18,5 +18,5 @@
    scoreboard players set @e[type=zombie,scores={MobID=60},distance=..7.5] 1O.ExplodeCnt 8
 
   # 消滅
-      tp @s ~ -10 ~
-      kill @s
+    tp @s ~ -10 ~
+    kill @s
