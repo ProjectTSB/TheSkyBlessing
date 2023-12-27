@@ -21,6 +21,6 @@
     data modify storage api: Argument.UUID set value [I;1,1,716,5]
     function api:modifier/mp_regen/remove
 
-# 攻撃力-2.5%
+# 攻撃力-5%
     data modify storage api: Argument.UUID set value [I;1,1,715,6]
     function api:modifier/attack/base/remove
