@@ -6,8 +6,8 @@
 
 # 演出
     particle dust 0.8 500000000 1000000000 1 ~ ~ ~ 0.2 0.2 0.2 0 8
-    particle bubble ~ ~ ~ 0.3 0.3 0.3 0 8 normal @a
-    particle dolphin ~ ~ ~ 0.3 0.3 0.3 0 8
+    particle bubble ~ ~ ~ 0.1 0.1 0.1 0 4 normal @a
+    particle dolphin ~ ~ ~ 0.1 0.1 0.1 0 4 normal @a
     playsound block.bubble_column.bubble_pop neutral @a ~ ~ ~ 1.3 0 0
     playsound block.bubble_column.bubble_pop neutral @a ~ ~ ~ 1.3 0.5 0
 
