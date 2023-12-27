@@ -14,7 +14,7 @@
     scoreboard players add @s KH.Tick 1
 
 # 消滅
-    execute if entity @s[scores={KH.Tick=1800..}] run kill @s
+    execute if entity @s[scores={KH.Tick=1200..}] run kill @s
 
 # ループ
     schedule function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/loop 1t replace
