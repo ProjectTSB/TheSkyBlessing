@@ -20,5 +20,5 @@
 # 何回再帰したか計るようスコア
     scoreboard players add $Rucursive Temporary 1
 
-# 再帰数が8以下かつTargetがいないなら再帰する
+# 再帰数が8以下なら再帰する
     execute if score $Rucursive Temporary matches ..8 at @s run function asset:artifact/0758.sina_tk/trigger/bullet/recursive
