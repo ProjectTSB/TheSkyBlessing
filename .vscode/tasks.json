@@ -4,29 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Update Resourcepack sha1",
-            "type": "shell",
-            "command": "sed -e \"s/^resource-pack-sha1=.*$/resource-pack-sha1=$(curl -L https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip | sha1sum | tr ' ' '\t' | cut -f1)/\" -i ./server.properties",
-            "options": {
-                "cwd": "../../"
-            },
-            "presentation": {
-                "echo": false,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
             "label": "Open SkyBlock Server",
             "type": "shell",
-            "command": "java -Xms2G -Xmx4G -Dlog4j2.formatMsgNoLookups=true -jar ./server.jar nogui",
-            "options": {
-                "cwd": "../../"
-            },
+            "command": "bash",
+            "args": ["./.vscode/server-start.sh"],
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -35,9 +16,6 @@
                 "showReuseMessage": true,
                 "clear": true
             },
-            "dependsOn": [
-                "Update Resourcepack sha1"
-            ],
             "promptOnClose": true,
             "problemMatcher": []
         }
