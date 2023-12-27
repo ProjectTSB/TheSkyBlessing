@@ -15,7 +15,6 @@
     data modify storage asset:context id set from storage asset:effect TargetEffect.ID
     data modify storage asset:context Stack set from storage asset:effect TargetEffect.Stack
     data modify storage asset:context this set from storage asset:effect TargetEffect.Field
-# tellraw @a [{"text":"{}: "},{"storage":"asset:context","nbt":"{}"}]
 # 各種イベントを呼び出す
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
