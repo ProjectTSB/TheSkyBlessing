@@ -3,9 +3,14 @@
 #
 #
 # @within function
-#   api:mob/summon
+#   api:mob/core/summon
+#   asset:*/extends
+#   asset:*/super.*
 #   api:artifact/*/from_id
-#   asset_manager:mob/triggers/death/manual
+#   api:mob/core/summon
+#   asset:mob/extends
+#   asset:mob/super.*
+#   asset_manager:mob/triggers/*/call_super_method
 #   asset_manager:artifact/give
 #   api:spawner/subtract_hp
 

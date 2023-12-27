@@ -82,8 +82,10 @@ kill 0-0-0-0-0
 #   lib:**
 #   mob_manager:**
 #   player_manager:**
-    #alias entity commonEntity 0-0-0-0-0
+    #alias entity commonMarker 0-0-0-0-0
+    #alias entity commonArmorStand 0-0-0-0-1
 summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
+summon armor_stand 0.0 0.0 0.0 {UUID:[I;0,0,0,1],Marker:1b,Invisible:1b}
 
 
 #> 当たり判定を消す汎用Teamの作成
@@ -93,6 +95,7 @@ team modify NoCollision collisionRule never
 
 
 #> スコアボード類
+
     #> 1tickで消す一時変数の保存用スコアボード
     # @public
         scoreboard objectives add Temporary dummy
@@ -295,7 +298,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
-    scoreboard objectives setdisplay belowName Health
+    scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 
