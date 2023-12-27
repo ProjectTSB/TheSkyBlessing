@@ -14,3 +14,7 @@
 
 # スニークしているときは再帰ビームを発射
     execute if predicate lib:is_sneaking run function asset:artifact/0769.shaking_splash/trigger/5.beam
+
+# ラスト1回でgive
+    execute unless data storage asset:context Items.mainhand.id run data modify storage api: Argument.ID set value 770
+    execute unless data storage asset:context Items.mainhand.id run function api:artifact/give/from_id
