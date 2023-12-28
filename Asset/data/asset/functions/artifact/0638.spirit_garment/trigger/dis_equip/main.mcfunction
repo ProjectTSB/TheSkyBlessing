@@ -17,4 +17,4 @@
     function api:modifier/defense/physical/remove
 
 # 最大体力+8
-    attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-027e0000000
+    attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-027e00000006
