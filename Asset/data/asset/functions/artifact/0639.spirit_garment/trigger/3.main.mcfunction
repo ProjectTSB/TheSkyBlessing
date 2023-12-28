@@ -29,4 +29,4 @@
     function api:modifier/defense/physical/add
 
 # 最大体力+8
-    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-027f00000005 "MaxHealth" 7.5 add
+    attribute @s generic.max_health modifier add 00000001-0000-0001-0000-027f00000005 "MaxHealth" 8 add
