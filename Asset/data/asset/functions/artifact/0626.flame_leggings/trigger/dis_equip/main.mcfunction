@@ -4,10 +4,13 @@
 #
 # @within function asset:artifact/0626.flame_leggings/trigger/dis_equip/
 
-# UUID
+# 火耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,626,4]
-# 補正の削除
     function api:modifier/defense/fire/remove
+
+# 火攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,626,4]
+    function api:modifier/attack/fire/remove
 
 # 演出
     playsound entity.generic.burn player @a ~ ~ ~ 0.2 1 0
