@@ -10,15 +10,11 @@
 
 # 水耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,629,0]
-    data modify storage api: Argument.Amount set value 0.03
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:modifier/defense/water/add
+    function api:modifier/defense/water/remove
 
 # 水攻撃+3%
     data modify storage api: Argument.UUID set value [I;1,1,629,0]
-    data modify storage api: Argument.Amount set value 0.03
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:modifier/attack/water/add
+    function api:modifier/attack/water/remove
 
 # Tag削除
     tag @s remove HH.Fullset
