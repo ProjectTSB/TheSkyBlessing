@@ -8,8 +8,9 @@
 # @private
     #declare score_holder $Temp
 
-# AECを召喚
+# AECを召喚 ハードだと個数2倍
     execute if entity @s[scores={26.Tick=0}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point1
+    execute if entity @s[scores={26.Tick=0}] if predicate api:global_vars/difficulty/min/hard at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point1
 
 # 演出
     scoreboard players operation $Temp Temporary = @s 26.Tick
