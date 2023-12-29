@@ -5,7 +5,7 @@
 # @within function asset:mob/0078.messenger_of_thunder/tick/4.skill_branch
 
 # 演出
-    execute if entity @s[scores={26.Tick=0}] run playsound entity.zombie_villager.converted hostile @a ~ ~ ~ 1 1.5 0
+    execute if entity @s[scores={26.Tick=0}] run playsound entity.zombie_villager.converted hostile @a[distance=..50] ~ ~ ~ 2 1.5 1
 
 # 設置するためにMarkerを設置する
     execute if entity @s[scores={26.Tick=2}] at @p[gamemode=!spectator] run function asset:mob/0078.messenger_of_thunder/skill/5/2.spread
