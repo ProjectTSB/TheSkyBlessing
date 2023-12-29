@@ -9,7 +9,7 @@
 
 # 拡散する ハードだと拡散範囲が拡大
     data modify storage lib: Argument.Bounds set value [[10d,10d],[0d,0d],[10d,10d]]
-    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Bounds set value [[15d,15d],[0d,0d],[15d,15d]]
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Bounds set value [[12.5d,12.5d],[0d,0d],[12.5d,12.5d]]
 
     execute as @e[type=area_effect_cloud,tag=26.SkillThunderMarker,distance=..0.01,limit=1] run function lib:spread_entity/
 
