@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0086.cross_thunder/0.load",
         "asset:mob/0082.thunder_curtain/0.load",
         "asset:mob/0079.return_thunder/0.load",
         "asset:mob/0237.lunatic_mage/0.load",
