@@ -7,8 +7,8 @@
 # 演出
     particle dust 1 1 0 1 ~ ~4 ~ 0.2 3 0.2 0 180
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 5
-    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.3 2 0
-    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.3 0 0
+    playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.15 2 0
+    playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.15 0 0
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 25.0f
