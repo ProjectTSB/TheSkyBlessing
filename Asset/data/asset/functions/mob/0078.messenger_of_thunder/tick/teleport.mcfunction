@@ -19,4 +19,4 @@
     scoreboard players set @s 26.TPCool 30
 
 # Tagを削除
-    tag @s remove WarpTrigger
+    tag @s remove TPTrigger
