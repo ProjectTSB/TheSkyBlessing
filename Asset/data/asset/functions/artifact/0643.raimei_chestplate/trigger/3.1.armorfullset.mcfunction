@@ -14,10 +14,10 @@
     particle minecraft:explosion ~ ~ ~ 0.3 0 0.3 0 10
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 100
 
-    playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2
-    playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 1 2
-    playsound entity.lightning_bolt.impact player @a ~ ~ ~ 1 0
-    playsound block.end_portal.spawn player @a ~ ~ ~ 1 1
+    playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 0.7 2
+    playsound entity.lightning_bolt.thunder player @a ~ ~ ~ 0.7 2
+    playsound entity.lightning_bolt.impact player @a ~ ~ ~ 0.7 0
+    playsound block.end_portal.spawn player @a ~ ~ ~ 0.7 1
 
 # タグを付与する
     tag @s add HV.Full
