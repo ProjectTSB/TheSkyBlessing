@@ -15,7 +15,7 @@
 # 演出
     scoreboard players operation $Temp Temporary = @s 26.Tick
     scoreboard players operation $Temp Temporary %= $3 Const
-    execute if score $Temp Temporary matches 0 at @e[type=area_effect_cloud,tag=26.SkillThunderMarker,distance=..60,limit=5] positioned ~ ~0.3 ~ run function asset:mob/0078.messenger_of_thunder/skill/1/4.vfx
+    execute if score $Temp Temporary matches 0 at @e[type=area_effect_cloud,tag=26.SkillThunderMarker,distance=..60,limit=10] positioned ~ ~0.3 ~ run function asset:mob/0078.messenger_of_thunder/skill/1/4.vfx
     scoreboard players reset $Temp Temporary
 
 # AECの位置に雷を落とす

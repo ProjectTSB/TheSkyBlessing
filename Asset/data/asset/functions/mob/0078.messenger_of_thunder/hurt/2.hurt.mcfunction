@@ -11,6 +11,3 @@
 
 # 体力半分以下で強化の処理
     execute if entity @s[tag=!26.HPLess50Per] run function asset:mob/0078.messenger_of_thunder/hurt/3.check_health
-
-# ハードなら被ダメ時確率でサイドステップ
-    execute if predicate api:global_vars/difficulty/min/hard if predicate lib:random_pass_per/25 run function asset:mob/0078.messenger_of_thunder/hurt/4.side_step
