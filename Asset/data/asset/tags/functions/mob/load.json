@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0240.lunatic_laser/0.load",
+        "asset:mob/0082.thunder_curtain/0.load",
+        "asset:mob/0079.return_thunder/0.load",
         "asset:mob/0237.lunatic_mage/0.load",
         "asset:mob/0046.clock_of_despair/0.load",
         "asset:mob/0060.self_destructor/0.load",

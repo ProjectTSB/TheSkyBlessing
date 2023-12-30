@@ -1,6 +1,8 @@
 {
     "values": [
         "asset:mob/0240.lunatic_laser/summon/1.trigger",
+        "asset:mob/0082.thunder_curtain/summon/1.trigger",
+        "asset:mob/0079.return_thunder/summon/1.trigger",
         "asset:mob/0237.lunatic_mage/summon/1.trigger",
         "asset:mob/0046.clock_of_despair/summon/1.trigger",
         "asset:mob/0083.thunder_trifler/summon/1.trigger",
