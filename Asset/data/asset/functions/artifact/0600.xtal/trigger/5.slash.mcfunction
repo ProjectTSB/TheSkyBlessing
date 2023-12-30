@@ -29,7 +29,7 @@
         data modify storage lib: Argument.ElementType set value "None"
     # ダメージ
         function lib:damage/modifier
-        execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..3] positioned ^ ^ ^3 run function lib:damage/
+        execute positioned ^ ^ ^3 as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,distance=..3] run function lib:damage/
 # リセット
     function lib:damage/reset
 # スコアもリセットする
