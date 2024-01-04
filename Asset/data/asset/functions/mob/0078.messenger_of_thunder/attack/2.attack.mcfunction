@@ -18,7 +18,7 @@
 
 # ハードならダメージ増加
     execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 27.5d
-    execute if entity @s[tag=26.HPLess50Per] if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 32d
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag=26.HPLess50Per] run data modify storage lib: Argument.Damage set value 32d
 
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
