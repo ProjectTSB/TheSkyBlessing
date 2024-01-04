@@ -5,10 +5,10 @@
 # @within function asset:artifact/0769.shaking_splash/trigger/bullet/main
 
 # 演出
-    playsound block.fire.extinguish neutral @a ~ ~ ~ 0.2 1.5 0
-    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.5 2 0
-    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.5 0.5 0
-    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.5 1 0
+    playsound block.fire.extinguish neutral @a ~ ~ ~ 0.3 1.5 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.8 2 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.8 0.5 0
+    playsound block.bubble_column.upwards_ambient neutral @a ~ ~ ~ 0.8 1 0
     particle dust 0.8 500000000 1000000000 1.6 ~ ~ ~ 1 1 1 0 100
     particle dolphin ~ ~ ~ 1 1 1 0 80
     particle firework ~ ~ ~ 0.3 0.3 0.3 0.25 80
