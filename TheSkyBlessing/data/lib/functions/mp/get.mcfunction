@@ -9,4 +9,4 @@
 
 # 取得
     function api:mp/get_current
-    data get storage api: Return.CurrentMP
+    return run data get storage api: Return.CurrentMP
