@@ -174,6 +174,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
+    #> AssetManager: Teleporter
+    # @within function
+    #   asset_manager:teleporter/**
+        scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
+
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
