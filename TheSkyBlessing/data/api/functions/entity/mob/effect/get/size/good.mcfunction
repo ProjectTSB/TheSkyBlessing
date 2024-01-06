@@ -7,4 +7,4 @@
 # storage呼び出し
     function oh_my_dat:please
 # エフェクト数を取得
-    execute store result storage asset:effect Size.Good int 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{IsBadEffect: 0b}]
+    execute store result storage api: Return.EffectSize.Good int 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{IsBadEffect: 0b}]
