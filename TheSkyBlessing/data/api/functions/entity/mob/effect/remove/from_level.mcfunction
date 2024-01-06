@@ -4,8 +4,8 @@
 #
 # @input storage api:
 #   Argument.ClearLv : int
-#   Argument.ClearType? : ("all" | "bad" | "good")
-#   Argument.IsSingle? : bool
+#   Argument.ClearType? : "all" | "bad" | "good" (default: "all")
+#   Argument.IsSingle? : bool (default: false)
 # @api
 
 # validate

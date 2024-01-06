@@ -4,10 +4,10 @@
 #
 # @input storage api:
 #   Argument.ID : int
-#   Argument.Duration? : int
-#   Argument.Stack? : int
-#   Argument.DurationOperation? : "forceReplace" | "replace" | "add"
-#   Argument.StackOperation? : "forceReplace" | "replace" | "add"
+#   Argument.Duration? : int (default: 0)
+#   Argument.Stack? : int (default: 1)
+#   Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
+#   Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
 # @api
 
 # validate
