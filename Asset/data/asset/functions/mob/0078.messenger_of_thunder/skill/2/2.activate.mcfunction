@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/skill/2/2.activate
 #
-#
+# 雷を召喚しバックステップする
 #
 # @within function asset:mob/0078.messenger_of_thunder/skill/2/1
 

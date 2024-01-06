@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/tick/teleport
 #
-#
+# テレポートする
 #
 # @within function
 #   asset:mob/0078.messenger_of_thunder/tick/2.tick

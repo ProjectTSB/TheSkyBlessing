@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/tick/reset
 #
-#
+# 諸々をリセットする
 #
 # @within function
 #   asset:mob/0078.messenger_of_thunder/skill/*/1

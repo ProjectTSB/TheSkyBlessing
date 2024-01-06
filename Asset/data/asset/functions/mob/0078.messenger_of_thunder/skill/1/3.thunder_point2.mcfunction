@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/skill/1/3.thunder_point2
 #
-#
+# 雷を落とす位置用のAECを召喚し拡散する
 #
 # @within function asset:mob/0078.messenger_of_thunder/skill/1/2.thunder_point1
 
