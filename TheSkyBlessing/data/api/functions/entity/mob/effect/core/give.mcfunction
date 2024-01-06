@@ -19,8 +19,8 @@
     execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set value "replace"
     execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set value "replace"
 # register側Opt値のprefill
-    data modify storage asset:effect DurationMax set value 2147483647
-    data modify storage asset:effect StackMax set value 2147483647
+    data modify storage asset:effect MaxDuration set value 2147483647
+    data modify storage asset:effect MaxStack set value 2147483647
     data modify storage asset:effect ProcessOnDied set value "remove"
     data modify storage asset:effect RequireClearLv set value 1
 
