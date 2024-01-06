@@ -12,6 +12,7 @@
 
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 18.0f
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 27.0f
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
