@@ -12,7 +12,7 @@
     data modify storage asset:effect ClearType set from storage api: Argument.ClearType
     data modify storage asset:effect IsSingle set from storage api: Argument.IsSingle
 # ループに入れる
-    function api:entity/mob/effect/core/remove/from_level/loop
+    function api:entity/mob/effect/core/remove/from_level/recursion
 # リセット
     data remove storage asset:effect IDList
     data remove storage asset:effect Type
