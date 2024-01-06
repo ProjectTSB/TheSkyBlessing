@@ -13,8 +13,10 @@
     playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.4 2 0
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.4 0 0
 
-# ダメージ
+# ダメージ ハード以上でダメージ増加
     data modify storage lib: Argument.Damage set value 20.0f
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 30.0f
+
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Thunder"
 # デスログ
