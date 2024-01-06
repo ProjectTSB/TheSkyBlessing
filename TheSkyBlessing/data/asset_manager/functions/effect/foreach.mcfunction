@@ -6,6 +6,10 @@
 #   asset_manager:effect/tick
 #   asset_manager:effect/foreach
 
+#> Private
+# @private
+    #declare score_holder $RequireClearLv
+
 # 移動
     data modify storage asset:effect TargetEffect set from storage asset:effect Effects[-1]
     data remove storage asset:effect Effects[-1]
@@ -18,8 +22,8 @@
 # 各種イベントを呼び出す
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=Death] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!Death] run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!ClearEffect] run function asset_manager:effect/events/tick/
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
@@ -27,15 +31,16 @@
     data modify storage asset:effect TargetEffect.Stack set from storage asset:context Stack
 # ゴミを消す
     data remove storage asset:effect TargetEffect.NextEvent
-# 処理済み配列に追加する
-    data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
-    execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect NextTickEffects[-1]
-    execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect NextTickEffects[-1]
-# でもやっぱり消すかもしれない
-    execute if score @s UsedMilk matches 1.. run data modify storage api: Argument.ClearLv set value 3
-    execute if score @s UsedMilk matches 1.. run function api:entity/mob/effect/remove/from_level
-    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect NextTickEffects[-1]
+# 条件を満たしていればエフェクトを消す
+    execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
+    execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..3 run data remove storage asset:effect TargetEffect
+    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect TargetEffect
+    execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect TargetEffect
+    execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
+# 残っていれば引継ぎ
+    execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
 # リセット
+    scoreboard players reset $RequireClearLv Temporary
     data remove storage asset:context this
     data remove storage asset:context id
     data remove storage asset:effect TargetEffect
