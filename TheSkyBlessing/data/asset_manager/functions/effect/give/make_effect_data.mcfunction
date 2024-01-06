@@ -1,6 +1,11 @@
 #> asset_manager:effect/give/make_effect_data
 #
-#
+# asset:effect の情報からエンティティに追加するエフェクトのストレージデータを作成する。
+# 該当エフェクトが付与済みの場合 stack と duration について operation が
+# add の場合、既存の値に加算
+# replace の場合、既存値と新規値のうち大きい方に置換
+# forceReplace の場合、新規値に上書き
+# を行う
 #
 # @output storage asset:effect EffectData
 # @within function asset_manager:effect/give/give
