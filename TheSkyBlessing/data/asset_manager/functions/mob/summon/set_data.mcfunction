@@ -58,11 +58,9 @@
         data modify entity @s Attributes set from storage asset:mob Attributes
     # 体力
         data modify entity @s Health set value 0.01f
-        scoreboard players set @s MobHealthMax 2048
-    #    execute store result score @s MobHealthMax run data get storage asset:mob Health 1
+        execute store result score @s MobHealthMax run data get storage asset:mob Health 1
         execute if data storage asset:mob {Type:"Enemy"} run function mob_manager:init/multiplay_multiplier/normal
         execute if data storage asset:mob {Type:"Enemy.Boss"} run function mob_manager:init/multiplay_multiplier/angel
-        attribute @s generic.max_absorption base set 2048
         execute store result entity @s AbsorptionAmount float 1 run scoreboard players get @s MobHealthMax
     # そのまま適用するやつ
         execute store result score @s MobID run data get storage asset:mob ID

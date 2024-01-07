@@ -1,19 +1,19 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "entity_hurt_player",
-        "conditions": {
-          "damage": {
-            "type": {
-              "tags": [
-                {
-                  "id": "is_fire",
-                  "expected": true
-                }
-              ]
-            }
-          }
-        }
-      }
-    }
-  }
+	"criteria": {
+		"trigger": {
+			"trigger": "entity_hurt_player",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "is_fire",
+								"expected": true
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}
