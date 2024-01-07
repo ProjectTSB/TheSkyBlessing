@@ -1,14 +1,19 @@
 {
     "criteria": {
-        "trigger": {
-            "trigger": "entity_hurt_player",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "is_explosion": true
-                    }
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "damage": {
+            "type": {
+              "tags": [
+                {
+                  "id": "minecraft:is_explosion",
+                  "expected": true
                 }
+              ]
             }
+          }
         }
+      }
     }
-}
+  }
