@@ -1,14 +1,19 @@
 {
     "criteria": {
-        "trigger": {
-            "trigger": "player_hurt_entity",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "is_projectile": false
-                    }
+      "requirement": {
+        "trigger": "player_hurt_entity",
+        "conditions": {
+          "damage": {
+            "type": {
+              "tags": [
+                {
+                  "id": "is_projectile",
+                  "expected": false
                 }
+              ]
             }
+          }
         }
+      }
     }
-}
+  }

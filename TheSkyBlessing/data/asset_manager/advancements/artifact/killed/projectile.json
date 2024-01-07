@@ -1,12 +1,12 @@
 {
     "criteria": {
       "requirement": {
-        "trigger": "minecraft:player_killed_entity",
+        "trigger": "player_killed_entity",
         "conditions": {
           "killing_blow": {
             "tags": [
               {
-                "id": "minecraft:is_projectile",
+                "id": "is_projectile",
                 "expected": true
               }
             ]
