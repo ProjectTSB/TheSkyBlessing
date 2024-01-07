@@ -28,7 +28,7 @@ compound AssetEffect {
     /// 死亡時のエフェクトの処遇 (default: Remove)
     ProcessOnDied?: DiedProccess,
     /// APIで消す際に必要なLv (default: 1)
-    RequireClearLv?: ClearLv,
+    RequireClearLv?: int @ 1..,
 
     /// 任意データ
     Field: Any
@@ -41,15 +41,6 @@ enum(string) EffectOperation {
     Replace = "replace",
     /// 現在値に加算する
     Add = "add"
-}
-
-enum(string) ClearLv {
-    /// 消せない
-    Impossible = "impossible",
-    /// エフェクト削除[弱]
-    Weak = "weak",
-    /// エフェクト削除[強]
-    Powerful = "powerful"
 }
 
 AssetEffect describes minecraft:storage[asset:effect]
@@ -82,7 +73,7 @@ compound EffectData {
     /// 死亡時のエフェクトの処遇
     ProcessOnDied: DiedProccess,
     /// APIで消す際に必要なLv
-    RequireClearLv: ClearLv,
+    RequireClearLv: int @ 1..,
 
     /// 任意データ
     Field: Any,
@@ -100,8 +91,7 @@ enum(string) DiedProcess {
     Keep = "keep"
 }
 
-enum(string) DiedProcess {
+enum(string) Event {
     Given = "given",
-    ReGiven = "re-given",
-    Remove = "remove"
+    ReGiven = "re-given"
 }
