@@ -34,7 +34,10 @@
     execute if score $Health Temporary matches 1.. store result entity @s AbsorptionAmount float 0.001 run scoreboard players get $Health Temporary
     execute if score $Health Temporary matches ..0 as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add Killer
     execute if score $Health Temporary matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
+# 近接トリガーが誤爆しないようなタグ処理
+    tag @s add Attacked
     execute if score $Health Temporary matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]
+    tag @s remove Attacked
     execute if score $Health Temporary matches ..0 run kill @s
 # リセット
     tag @a[tag=UUIDAttacker] remove UUIDAttacker
