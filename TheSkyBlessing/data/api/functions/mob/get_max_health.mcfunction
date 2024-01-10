@@ -4,4 +4,4 @@
 #
 # @api
 
-scoreboard players get @s MobHealthMax
+return run scoreboard players get @s MobHealthMax

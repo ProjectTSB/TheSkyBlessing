@@ -6,4 +6,4 @@
 # @output result MaxHealthMultiplier(e1)
 # @api
 
-scoreboard players get @s MobMaxHealthMultiplier
+return run scoreboard players get @s MobMaxHealthMultiplier
