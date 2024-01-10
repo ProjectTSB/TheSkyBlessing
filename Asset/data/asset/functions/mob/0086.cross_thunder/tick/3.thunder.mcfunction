@@ -5,7 +5,7 @@
 # @within function asset:mob/0086.cross_thunder/tick/2.tick
 
 # 演出
-    particle dust 1 1 0 1 ~ ~4 ~ 0.2 3 0.2 0 180
+    particle dust 1 1 0 1 ~ ~3 ~ 0.2 2 0.2 0 120
     particle minecraft:large_smoke ~ ~ ~ 0 0 0 0.4 5
     playsound entity.lightning_bolt.thunder hostile @a ~ ~ ~ 0.15 2 0
     playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 0.15 0 0
