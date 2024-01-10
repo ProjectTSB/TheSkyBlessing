@@ -6,7 +6,7 @@
 
 # 一定間隔で花火召喚のためのランダムな位置にマーカーを配置する
     scoreboard players operation $Temp Temporary = @s KH.Tick
-    scoreboard players operation $Temp Temporary %= $6 Const
+    scoreboard players operation $Temp Temporary %= $10 Const
     execute if score $Temp Temporary matches 0 run function asset:artifact/0737.summer_festival_of_remembrance/trigger/firework_process/core/spread
     scoreboard players reset $Temp Temporary
 
