@@ -7,3 +7,8 @@
 # PlayerShouldInvulnerable
     tag @s[tag=PlayerShouldInvulnerable] remove PlayerShouldInvulnerable
     tag @s[gamemode=!adventure,gamemode=!survival] add PlayerShouldInvulnerable
+
+# PlayerNearbyEnemy
+    tag @s[tag=PlayerNearbyEnemy] remove PlayerNearbyEnemy
+    execute if entity @e[tag=Enemy,distance=..15] run tag @s add PlayerNearbyEnemy
+    execute if entity @e[tag=Enemy.Boss,distance=..100] run tag @s add PlayerNearbyEnemy
