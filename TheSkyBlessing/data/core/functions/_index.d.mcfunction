@@ -17,6 +17,10 @@
 # @public
     #declare tag Death
 
+#> RespawnTag
+# @public
+    #declare tag InRespawnEvent
+
 #> DistributedIntervalGroup
 # @within function **6_distributed_interval
 #declare score_holder $DistributeGroup
