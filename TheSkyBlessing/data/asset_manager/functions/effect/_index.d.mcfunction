@@ -18,5 +18,5 @@
 #   asset_manager:effect/give/give
 #   asset_manager:effect/tick
 #   asset_manager:effect/foreach
-    #declare tag ClearEffect
+    #declare tag DeathProcess
     #declare tag HasAssetEffect

@@ -25,9 +25,9 @@
 # 各種イベントを呼び出す
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"stopTickUntilRespawn"} unless score @s RespawnEvent matches 81.. run function asset_manager:effect/events/tick/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!ClearEffect] run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=DeathProcess] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=DeathProcess] if data storage asset:effect TargetEffect{ProcessOnDied:"stopTickUntilRespawn"} unless score @s RespawnEvent matches 81.. run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess] run function asset_manager:effect/events/tick/
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
@@ -36,7 +36,7 @@
 # ゴミを消す
     data remove storage asset:effect TargetEffect.NextEvent
 # 条件を満たしていればエフェクトを消す
-    execute if entity @s[tag=ClearEffect] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect TargetEffect
+    execute if entity @s[tag=DeathProcess] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
 # 残っていれば引継ぎ
