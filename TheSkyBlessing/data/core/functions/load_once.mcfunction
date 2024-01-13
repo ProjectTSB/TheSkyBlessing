@@ -194,7 +194,6 @@ team modify NoCollision collisionRule never
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**
-    #   asset_manager:effect/foreach
     #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
