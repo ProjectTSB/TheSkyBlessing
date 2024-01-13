@@ -18,7 +18,9 @@
     #declare tag Death
 
 #> RespawnTag
-# @public
+# @within function
+#   core:handler/respawn*
+#   asset_manager:effect/*
     #declare tag InRespawnEvent
 
 #> DistributedIntervalGroup
