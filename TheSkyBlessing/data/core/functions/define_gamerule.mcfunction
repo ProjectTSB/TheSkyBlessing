@@ -41,12 +41,18 @@ gamerule lavaSourceConversion false
 execute if data storage global {IsProduction:1b} run gamerule logAdminCommands false
 execute if data storage global {IsProduction:0b} run gamerule logAdminCommands true
 gamerule maxCommandChainLength 2147483647
+gamerule maxCommandForkCount 2147483647
 gamerule maxEntityCramming 24
 gamerule mobExplosionDropDecay true
 execute if data storage global {IsProduction:1b} run gamerule mobGriefing true
 execute if data storage global {IsProduction:0b} run gamerule mobGriefing false
 gamerule naturalRegeneration true
 gamerule playersSleepingPercentage 100
+gamerule playersNetherPortalCreativeDelay 1
+execute if data storage global {IsProduction:1b} run gamerule playersNetherPortalDefaultDelay 80
+execute if data storage global {IsProduction:0b} run gamerule playersNetherPortalDefaultDelay 1
+execute if data storage global {IsProduction:1b} run gamerule projectilesCanBreakBlocks true
+execute if data storage global {IsProduction:0b} run gamerule projectilesCanBreakBlocks false
 gamerule randomTickSpeed 3
 execute if data storage global {IsProduction:1b} run gamerule reducedDebugInfo true
 execute if data storage global {IsProduction:0b} run gamerule reducedDebugInfo false

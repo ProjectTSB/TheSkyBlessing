@@ -19,6 +19,7 @@ jobs:
       - name: Test
         uses: ChenCMD/datapack-linter@v2
         with:
+          GITHUB_TOKEN: ${{ github.token }}
           muteSuccessResult: true
           ignoreLintPathPattern: |
             animated_java:**
