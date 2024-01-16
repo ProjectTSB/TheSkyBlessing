@@ -31,7 +31,7 @@
     execute if score $Interval Temporary matches 15 run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/wave/16
 
 # $Intervalが0の時に、エリア全体にいるプレイヤーにバフを掛ける
-    execute if score $Interval Temporary matches 0 as @a[distance=..7.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=1,dz=14] positioned ~7.5 ~1 ~7.5 run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/buff
+    execute if score $Interval Temporary matches 0 as @a[distance=..7.5] positioned ~-7.5 ~-1 ~-7.5 if entity @s[dx=14,dy=1,dz=14] run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/buff
 
 # $Intervalが0~15の時に敵にダメージ
     execute if score $Interval Temporary matches 0..15 run function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/damage
