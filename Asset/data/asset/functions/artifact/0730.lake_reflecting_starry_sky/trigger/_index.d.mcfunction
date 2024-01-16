@@ -8,7 +8,6 @@
 #> 湖本体のTag
 # @within function
 #   asset:artifact/0730.lake_reflecting_starry_sky/trigger/3.main
-#   asset:artifact/0730.lake_reflecting_starry_sky/trigger/rejoin_branch
 #   asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/damage
 #   asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/loop
 #   asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/wave/**
@@ -22,10 +21,3 @@
     #declare tag KA.Ripple
     #declare tag RippleTarget
     #declare tag SpreadMarker
-
-#> 補正用Tag
-# @within function asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/buff/**
-    #declare tag KA.Buff
-
-#> rejoin_processでコマンドの記述が増えすぎないための共通のTag
-    #declare tag KA.RejoinTarget
