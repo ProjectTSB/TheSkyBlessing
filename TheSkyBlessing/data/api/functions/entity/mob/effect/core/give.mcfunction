@@ -15,6 +15,7 @@
     data modify storage asset:effect DurationOperation set from storage api: Argument.DurationOperation
     data modify storage asset:effect StackOperation set from storage api: Argument.StackOperation
 # API側Opt値のprefill
+    execute unless data storage asset:effect Duration run data modify storage asset:effect Duration set value 0
     execute unless data storage asset:effect Stack run data modify storage asset:effect Stack set value 1
     execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set value "replace"
     execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set value "replace"
@@ -36,6 +37,8 @@
 # リセット
     data remove storage asset:effect ID
     data remove storage asset:effect Extends
+    data remove storage asset:effect Name
+    data remove storage asset:effect Description
     data remove storage asset:effect Duration
     data remove storage asset:effect Stack
     data remove storage asset:effect DurationOperation
@@ -46,8 +49,6 @@
     data remove storage asset:effect ProcessOnDied
     data remove storage asset:effect RequireClearLv
     data remove storage asset:effect Field
-
-    data remove storage asset:effect NonExistsInRom
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
