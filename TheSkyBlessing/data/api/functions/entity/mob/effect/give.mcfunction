@@ -4,14 +4,14 @@
 #
 # @input storage api:
 #   Argument.ID : int
-#   Argument.Duration? : int (default: 0)
+#   Argument.Duration? : int (default: Asset | error)
 #   Argument.Stack? : int (default: 1)
 #   Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
 #   Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
 # @api
 
 # validate
-    execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
+    execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
 # 呼び出し
     execute if data storage api: Argument.ID run function api:entity/mob/effect/core/give
 # リセット
