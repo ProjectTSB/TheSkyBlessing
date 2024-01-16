@@ -1,4 +1,4 @@
-#> asset:effect/ex/given/
+#> asset:effect/0224.reflecting_sky/given
 #
 #
 #
