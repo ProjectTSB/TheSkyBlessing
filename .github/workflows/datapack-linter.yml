@@ -52,6 +52,12 @@ jobs:
             function@asset:artifact/artifact_name/trigger/2.check_condition
             function@asset:artifact/artifact_name/trigger/3.main
             function@asset:artifact/artifact_name/give/2.give
+            function@asset:effect/effect_name/register
+            function@asset:effect/effect_name/given/
+            function@asset:effect/effect_name/tick/
+            function@asset:effect/effect_name/re-given/
+            function@asset:effect/effect_name/remove/
+            function@asset:effect/effect_name/end/
             function@asset:island/island_id/register/register
             function@asset:mob/mob_name/summon/2.summon
             function@asset:mob/mob_name/register
