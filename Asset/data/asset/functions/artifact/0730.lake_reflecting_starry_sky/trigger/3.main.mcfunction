@@ -14,7 +14,7 @@
     particle end_rod ~ ~1.2 ~ 0 0 0 0.4 150 normal @a
 
 # 湖を召喚
-    summon marker ~ ~0.1 ~ {Tags:["Object","KA.Lake"]}
+    summon marker ~ ~0.1 ~ {Tags:["Object","KA.Lake","KA.RejoinTarget"]}
 
 # UserIDをコピー
     scoreboard players operation @e[type=marker,tag=KA.Lake,distance=..0.11,limit=1] KA.UserID = @s UserID

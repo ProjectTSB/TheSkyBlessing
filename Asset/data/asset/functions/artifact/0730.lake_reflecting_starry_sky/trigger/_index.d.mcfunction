@@ -21,3 +21,11 @@
     #declare tag KA.Ripple
     #declare tag RippleTarget
     #declare tag SpreadMarker
+
+#> Rejoin関係のTag
+# @within function
+#   asset:artifact/0730.lake_reflecting_starry_sky/trigger/3.main
+#   asset:artifact/0730.lake_reflecting_starry_sky/trigger/rejoin_target
+#   asset:artifact/0730.lake_reflecting_starry_sky/trigger/rejoin_branch
+#   asset:artifact/0730.lake_reflecting_starry_sky/trigger/lake/ripple/summon_position
+    #declare tag KA.RejoinTarget
