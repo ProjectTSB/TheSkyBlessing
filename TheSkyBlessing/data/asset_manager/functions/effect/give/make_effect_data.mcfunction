@@ -4,8 +4,7 @@
 # 該当エフェクトが付与済みの場合 stack と duration について operation が
 # add の場合、既存の値に加算
 # replace の場合、既存値と新規値のうち大きい方に置換
-# forceReplace の場合、新規値に上書き
-# を行う
+# forceReplace の場合、新規値に上書きを行う
 #
 # @output storage asset:effect EffectData
 # @within function asset_manager:effect/give/give
@@ -40,6 +39,8 @@
     data modify storage asset:effect EffectData set value {}
 
     data modify storage asset:effect EffectData.ID set from storage asset:effect ID
+    data modify storage asset:effect EffectData.Name set from storage asset:effect Name
+    data modify storage asset:effect EffectData.Description set from storage asset:effect Description
     execute store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
     execute store result storage asset:effect EffectData.Stack int 1 run scoreboard players get $Stack Temporary
     data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect

@@ -20,6 +20,7 @@
     execute unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
     data modify storage asset:context id set from storage asset:effect TargetEffect.ID
+    data modify storage asset:context Duration set from storage asset:effect TargetEffect.Duration
     data modify storage asset:context Stack set from storage asset:effect TargetEffect.Stack
     data modify storage asset:context this set from storage asset:effect TargetEffect.Field
 # 各種イベントを呼び出す
@@ -31,8 +32,9 @@
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
-    data modify storage asset:effect TargetEffect.Field set from storage asset:context this
+    data modify storage asset:effect TargetEffect.Duration set from storage asset:context Duration
     data modify storage asset:effect TargetEffect.Stack set from storage asset:context Stack
+    data modify storage asset:effect TargetEffect.Field set from storage asset:context this
 # ゴミを消す
     data remove storage asset:effect TargetEffect.NextEvent
 # 条件を満たしていればエフェクトを消す
