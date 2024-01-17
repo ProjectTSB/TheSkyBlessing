@@ -18,5 +18,8 @@
     execute unless entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/cancel/check
     execute if entity @s[tag=TPCancel] run function asset_manager:teleporter/tick/cancel/
 
+# テレポート失敗時ログのクールダウンを減らす
+    scoreboard players remove @s[scores={TeleporterLogCD=0..}] TeleporterLogCD 1
+
 # リセット
     tag @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] remove FromTeleporter
