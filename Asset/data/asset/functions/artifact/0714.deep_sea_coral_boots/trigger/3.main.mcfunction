@@ -34,7 +34,7 @@
 
 # 火耐性-10%
     data modify storage api: Argument.UUID set value [I;1,1,714,3]
-    data modify storage api: Argument.Amount set value -0.2
+    data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/fire/add
 

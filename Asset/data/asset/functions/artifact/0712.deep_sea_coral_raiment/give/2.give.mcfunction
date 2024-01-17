@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"深海珊瑚の羽衣","color":"#c3c9ff"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"回復量+5% ","color":"light_purple"},{"text":"火耐性-10%","color":"dark_red"}]','[{"text":"全て装備した時、追加で","color":"white"},{"text":"水攻撃+5%","color":"aqua"},{"text":"を得て","color":"white"}]','[{"text":"水に触れていると特殊な効果を得る","color":"aqua"}]','{"text":"暗き底の水圧に耐えていたとされる","color":"gray"}]','[{"text":"自然から賜った神秘の珊瑚の羽衣。","color":"gray"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+10% 水攻撃+5% ","color":"aqua"}]','[{"text":"回復量+5% ","color":"light_purple"},{"text":"火耐性-10%","color":"dark_red"}]','[{"text":"全て装備した時、追加で","color":"white"},{"text":"水攻撃+5%","color":"aqua"},{"text":"を得て、","color":"white"}]','[{"text":"水に触れていると特殊な効果を得る。","color":"white"}]','{"text":"暗き底の水圧に耐えていたとされる","color":"gray"}]','[{"text":"自然から賜った神秘の珊瑚の羽衣。","color":"gray"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
