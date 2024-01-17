@@ -9,7 +9,7 @@
     particle snowflake ~ ~0.3 ~ 1.5 0.1 1.5 0.1 2 normal @a[distance=..16]
 
 # 周囲に鈍足を付与
-    effect give @e[type=#lib:living,tag=Enemy,tag=!Enemy.Boss,distance=..3.5] slowness 1 1 true
+    effect give @e[type=#lib:living,tag=Enemy,tag=!Enemy.Boss,distance=..3.5] slowness 1 0 true
 
 # 攻撃CD処理
     execute if entity @s[scores={K4.AttackCD=1..}] run scoreboard players remove @s K4.AttackCD 1
