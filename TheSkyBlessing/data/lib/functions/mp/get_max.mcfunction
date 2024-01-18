@@ -9,4 +9,4 @@
 
 # 取得
     function api:mp/get_max
-    data get storage api: Return.MaxMP
+    return run data get storage api: Return.MaxMP
