@@ -62,6 +62,9 @@
         execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
         execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
 
+# エフェクト処理
+    execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
+
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
 
