@@ -20,8 +20,9 @@
     execute if score $ActivateStarCount Temporary matches 2.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Temp.Teleporters set from storage asset:teleporter FilteredTeleporters
     execute if score $ActivateStarCount Temporary matches 2.. run tag @s add TeleporterInitializing
 # なければ初期化済タグを付与し、メッセージを出す
-    execute if score $ActivateStarCount Temporary matches ..1 run tellraw @s {"text":"このテレポーターはどこにも繋がっていないようだ...","color":"light_purple"}
     execute if score $ActivateStarCount Temporary matches ..1 run tag @s add TeleporterInitialized
+    execute if score $ActivateStarCount Temporary matches ..1 unless score @s TeleporterLogCD matches 0.. run tellraw @s {"text":"このテレポーターはどこにも繋がっていないようだ...","color":"light_purple"}
+    execute if score $ActivateStarCount Temporary matches ..1 unless score @s TeleporterLogCD matches 0.. run scoreboard players set @s TeleporterLogCD 60
 # リセット
     scoreboard players reset $ActivateStarCount Temporary
     data remove storage asset:teleporter FilteredTeleporters
