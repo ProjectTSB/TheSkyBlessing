@@ -17,6 +17,12 @@
 # @public
     #declare tag Death
 
+#> RespawnTag
+# @within function
+#   core:handler/respawn*
+#   asset_manager:effect/*
+    #declare tag InRespawnEvent
+
 #> DistributedIntervalGroup
 # @within function **6_distributed_interval
 #declare score_holder $DistributeGroup
