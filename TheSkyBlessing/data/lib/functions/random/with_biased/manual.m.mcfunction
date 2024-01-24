@@ -40,6 +40,7 @@
 
 # 諸々リセット
     scoreboard players reset $max Temporary
+    data remove storage lib: isScarcityHistoryIncluded
     data remove storage lib: Random
     data remove storage lib: RecentHits
 
