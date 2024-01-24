@@ -1,0 +1,97 @@
+compound AssetEffect {
+    /// 継承安全か (default: false)
+    ExtendsSafe?: boolean,
+    /// ID
+    ID: int @ 1..65535,
+    /// 継承元のID (default: null)
+    Extends?: int @ 1..65535,
+    /// 名前(TextComponent)
+    Name: string,
+    /// 説明文(TextComponent)
+    Description: [string] @ 1..,
+
+    /// 残り時間 (default: API || error)
+    Duration?: int @ 1..,
+    /// スタック (default: API || 1)
+    Stack?: int @ 1..,
+    /// 残り時間の操作方法 (default: API || Replace)
+    DurationOperation?: EffectOperation,
+    /// スタックの操作方法 (default: API || Replace)
+    StackOperation?: EffectOperation,
+
+    /// 最大残り時間 (default: 2147483647)
+    MaxDuration?: int,
+    /// 最大スタック (default: 2147483647)
+    MaxStack?: int @ 1..,
+    /// 悪い効果か否か
+    IsBadEffect: boolean,
+    /// 死亡時のエフェクトの処遇 (default: Remove)
+    ProcessOnDied?: DiedProccess,
+    /// APIで消す際に必要なLv (default: 1)
+    RequireClearLv?: int @ 1..,
+
+    /// 任意データ
+    Field: Any
+}
+
+enum(string) EffectOperation {
+    /// 常に上書きする
+    ForceReplce = "forceReplace",
+    /// 現在値より大きければ上書きする
+    Replace = "replace",
+    /// 現在値に加算する
+    Add = "add"
+}
+
+AssetEffect describes minecraft:storage[asset:effect]
+
+inject compound ::rom {
+    /// 該当IDのエフェクトデータ
+    Effect: GlobalEffectData
+}
+
+compound GlobalEffectData {
+    /// 継承元
+    Extends: int @ 1..65535
+}
+
+inject compound ::ohmydat::Mob {
+    /// 現在付与されているエフェクトのデータ
+    Effects: [EffectData]
+}
+
+compound EffectData {
+    /// ID
+    ID: int @ 1..65535,
+    /// 残り時間 (0: end, -1: remove)
+    Duration: int @ -1..,
+    /// スタック
+    Stack: int @ 1..,
+
+    /// 悪い効果か否か
+    IsBadEffect: boolean,
+    /// 死亡時のエフェクトの処遇
+    ProcessOnDied: DiedProccess,
+    /// APIで消す際に必要なLv
+    RequireClearLv: int @ 1..,
+
+    /// 任意データ
+    Field: Any,
+
+    /// 発火待ちのイベント
+    NextEvent?: Event
+}
+
+enum(string) DiedProcess {
+    /// 削除する
+    Remove = "remove",
+    /// リスポーンするまでevent/tickを発火しない
+    StopTickUntilRespawn = "stopTickUntilRespawn",
+    /// event/tickを発火し続ける
+    Keep = "keep"
+}
+
+enum(string) Event {
+    Given = "given",
+    ReGiven = "re-given"
+}

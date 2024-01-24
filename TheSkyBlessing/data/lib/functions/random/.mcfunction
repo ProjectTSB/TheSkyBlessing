@@ -11,4 +11,4 @@ scoreboard players operation $Random.Carry Global = $Random.Base Global
 scoreboard players operation $Random.Carry Global /= $65536 Const
 scoreboard players operation $Random.Base Global %= $65536 Const
 
-scoreboard players get $Random.Base Global
+return run scoreboard players get $Random.Base Global
