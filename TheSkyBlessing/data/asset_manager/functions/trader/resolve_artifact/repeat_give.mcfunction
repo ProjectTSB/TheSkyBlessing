@@ -8,7 +8,7 @@
 
 # 一つgiveする
     data modify storage api: Argument.ID set from storage asset:trader BoughtArtifacts[-1].tag.TSB.ID
-    function api:sacred_treasure/give/from_id
+    function api:artifact/give/from_id
 
 # 減らす
     scoreboard players remove $N Temporary 1
