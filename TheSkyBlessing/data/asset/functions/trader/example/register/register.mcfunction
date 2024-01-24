@@ -12,11 +12,11 @@
     data modify storage asset:trader Rotation set value 180f
 # 取引
     data modify storage asset:trader Trades append value {}
-    # 要求物1 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
+    # 要求物1 (int(artifactID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
         data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:16b}
-    # 要求物2 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
+    # 要求物2 (int(artifactID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte }) (オプション)
         data modify storage asset:trader Trades[-1].BuyB set value {id:"minecraft:egg",Count:1b}
-    # 販売物 (int(sacred_treasureID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
+    # 販売物 (int(artifactID) | { id: string, Count: byte } | { PresetItem: string(preset), Count: byte })
         data modify storage asset:trader Trades[-1].Sell set value 1
     # 取引可能回数 (int) (オプション)
         data modify storage asset:trader Trades[-1].MaxUses set value 5

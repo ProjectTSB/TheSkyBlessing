@@ -4,9 +4,15 @@
 #
 # @within function
 #   api:mob/summon
-#   api:sacred_treasure/*/from_id
+#   api:mob/core/summon
+#   asset:*/extends
+#   asset:*/super.*
+#   api:artifact/*/from_id
+#   api:entity/mob/effect/core/give
 #   asset_manager:mob/triggers/death/manual
-#   asset_manager:sacred_treasure/give
+#   asset_manager:effect/events/*/call_super_method
+#   asset_manager:mob/triggers/*/call_super_method
+#   asset_manager:artifact/give
 #   api:spawner/subtract_hp
 
 # idを掃除
