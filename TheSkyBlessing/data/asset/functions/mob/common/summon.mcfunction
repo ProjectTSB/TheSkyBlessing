@@ -68,8 +68,14 @@
 # リセット
     tag @s remove MobInit
 
+# フィールドを取り出す
+    data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
+
 # 初期化イベント
     execute if entity @s run function #asset:mob/initialize
+
+# フィールドを元に戻す
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
 
 # 返り値
     data modify storage asset:mob Return.Summoned set value true
@@ -91,3 +97,4 @@
     data remove storage asset:mob Resist
     data remove storage asset:mob Field
     data remove storage asset:mob FieldOverride
+    data remove storage asset:context this
