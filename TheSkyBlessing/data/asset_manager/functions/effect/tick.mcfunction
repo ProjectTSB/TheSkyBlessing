@@ -12,6 +12,7 @@
     execute if entity @s[tag=Death] run tag @s add DeathProcess
     execute if score @s UsedTotem matches 1.. run tag @s add DeathProcess
 # 各エフェクトを処理する
+    data modify storage asset:effect NextTickEffects set value []
     execute if data storage asset:effect Effects[0] run function asset_manager:effect/foreach
 # 付与されているエフェクトが何もなければタグを消す
     execute unless data storage asset:effect NextTickEffects[0] run tag @s remove HasAssetEffect
