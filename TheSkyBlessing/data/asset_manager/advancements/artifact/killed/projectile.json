@@ -1,12 +1,17 @@
 {
-    "criteria": {
-        "trigger": {
-            "trigger": "player_killed_entity",
-            "conditions": {
-                "killing_blow": {
-                    "is_projectile": true
-                }
-            }
-        }
-    }
+	"criteria": {
+		"trigger": {
+			"trigger": "player_killed_entity",
+			"conditions": {
+				"killing_blow": {
+					"tags": [
+						{
+							"id": "is_projectile",
+							"expected": true
+						}
+					]
+				}
+			}
+		}
+	}
 }
