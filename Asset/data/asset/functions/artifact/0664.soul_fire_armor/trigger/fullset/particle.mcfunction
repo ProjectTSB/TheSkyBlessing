@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:artifact/0664.soul_fire_armor/trigger/fullset/
-#   asset:artifact/0664.soul_fire_armor/trigger/fullset/melee
+#   asset:artifact/0664.soul_fire_armor/trigger/fullset/attack
 
 # 1つ目の円
     execute rotated ~0 0 positioned ^ ^0.2 ^0.8 facing entity @s feet rotated ~ ~-5 run particle soul ~ ~ ~ ^ ^ ^300000000 0.0000000001 0 normal @a
