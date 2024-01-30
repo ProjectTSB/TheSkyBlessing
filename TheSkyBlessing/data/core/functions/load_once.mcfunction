@@ -217,6 +217,11 @@ team modify NoCollision collisionRule never
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
+    #> Library用スコアボード - Particle
+    # @within * lib:**
+        scoreboard objectives add ParticleFrame dummy
+        scoreboard objectives add ParticleTick dummy
+
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function
