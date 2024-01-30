@@ -27,8 +27,9 @@
 # 角度
     data modify entity @s transformation.left_rotation set from storage lib: Particle.Rotation
 
-# フレーム
+# フレームをプラス1して保存
     execute store result score @s ParticleFrame run data get storage lib: Particle.Frame
+    scoreboard players operation @s ParticleFrame += $1 Const
 
 # カラー
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Particle.Color set from storage lib: Particle.Color
