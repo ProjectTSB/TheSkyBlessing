@@ -62,6 +62,9 @@
         execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
         execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
 
+# お墓の処理
+    execute as @e[type=armor_stand,tag=Grave] at @s run function player_manager:grave/tick
+
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
 

@@ -24,6 +24,7 @@
 #> GraveTag
 # @within
 #   player_manager:grave/**
+#   core:tick/
     #declare tag Grave
     #declare tag GraveInit
 
