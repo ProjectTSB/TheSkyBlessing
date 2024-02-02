@@ -13,5 +13,6 @@
     data modify storage core:temp MetaData set from storage api: Inventory[].tag.TSB.ItemMetaData
 # 各MetaData処理
     execute if data storage core:temp {MetaData:["BanPossession"]} run clear @a #lib:all{TSB:{ItemMetaData:["BanPossession"]}}
+    execute if data storage core:temp {MetaData:["ArtifactBoughtFromTrader"]} run function asset_manager:trader/resolve_artifact/
 # リセット
     data remove storage core:temp MetaData

@@ -174,11 +174,22 @@ team modify NoCollision collisionRule never
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
 
+    #> AssetManager: Teleporter
+    # @within function
+    #   asset_manager:teleporter/**
+        scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
+
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
         scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
         scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
+
+    #> AssetManager: Effect
+    # @within function
+    #   asset_manager:effect/**
+        scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
+        scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -298,7 +309,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
-    scoreboard objectives setdisplay belowName Health
+    scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 
@@ -373,6 +384,7 @@ team modify NoCollision collisionRule never
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
+    function #asset:effect/load
 
 
 #> 神の慈悲アイテムを定義する
