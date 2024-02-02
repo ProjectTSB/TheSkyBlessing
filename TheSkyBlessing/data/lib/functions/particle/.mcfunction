@@ -12,8 +12,6 @@
 # 無記入だった場合デフォ数値を設定する
     # ビルボード
         execute unless data storage lib: Particle.Billboard run data modify storage api: Particle.Billboard set value center
-    # 角度
-        #execute unless data storage lib: Particle.Brightness run data modify storage api: Particle.Billboard set value 0
     # カラー
         execute unless data storage lib: Particle.Color run data modify storage api: Particle.Color set value FFFFFF
     # スケール
