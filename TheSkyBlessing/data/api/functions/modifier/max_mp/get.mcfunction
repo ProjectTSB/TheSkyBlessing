@@ -2,6 +2,9 @@
 #
 #
 #
+# @input as player
+# @output storage api:
+#   Return.MaxMP : double
 # @api
 
 function oh_my_dat:please
