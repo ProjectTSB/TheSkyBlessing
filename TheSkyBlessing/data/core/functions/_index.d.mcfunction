@@ -21,6 +21,12 @@
 # @public
     #declare tag Death
 
+#> GraveTag
+# @within
+#   player_manager:grave/**
+    #declare tag Grave
+    #declare tag GraveInit
+
 #> RespawnTag
 # @within function
 #   core:handler/respawn*

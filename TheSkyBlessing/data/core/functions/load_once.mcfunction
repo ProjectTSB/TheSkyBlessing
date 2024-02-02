@@ -381,6 +381,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:mob/summon/set_data
         team add Enemy
 
+    #> 墓処理用スコアボード
+    # @within function
+    #   player_manager:grave/**
+        scoreboard objectives add GraveTick dummy
+        scoreboard objectives add GraveID dummy
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
