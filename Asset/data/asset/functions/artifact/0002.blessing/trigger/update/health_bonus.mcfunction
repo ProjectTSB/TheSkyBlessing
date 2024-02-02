@@ -1,4 +1,4 @@
-#> player_manager:bonus/update_health_bonus
+#> asset:artifact/0002.blessing/trigger/update/health_bonus
 #
 #
 #
@@ -9,23 +9,29 @@
 #> Diff
 # @private
     #declare score_holder $Diff
+    #declare score_holder $RemovedAmount
     #declare score_holder $isNegative
 
+# 古いのをremove
+    data modify storage api: Argument.UUID set value [I;1,1,2,0]
+    function api:modifier/max_health/remove
+
 # 差分にする
-    scoreboard players operation $Diff Temporary = $MaxHealth Global
-    scoreboard players operation $Diff Temporary -= @s ScoreToMaxHealth
-# 符号を記録して正数に補正する
+    scoreboard players operation $Diff Temporary = $BonusHealth Global
+    execute store result score $RemovedAmount Temporary run data get storage api: Removed.Amount 1
+    execute unless score $RemovedAmount Temporary matches -2147483648..2147483647 run scoreboard players set $RemovedAmount Temporary 0
+    scoreboard players operation $Diff Temporary -= $RemovedAmount Temporary
+# 出力
     execute store result score $isNegative Temporary if score $Diff Temporary matches ..-1
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Diff Temporary *= $-1 Const
-# 整数部のみを取り出す
-    scoreboard players operation $Diff Temporary = $Diff Temporary
-    scoreboard players operation $Diff Temporary /= $10000 Const
-# 出力
     execute if score $isNegative Temporary matches 0 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大体力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"増加した","color":"white"}]
     execute if score $isNegative Temporary matches 1 if score $Diff Temporary matches 1.. run tellraw @s [{"text":"最大体力が","color":"white"},{"score":{"name":"$Diff","objective":"Temporary"},"color":"aqua"},{"text":"減少した","color":"white"}]
 # リセット
     scoreboard players reset $Diff Temporary
+    scoreboard players reset $RemovedAmount Temporary
     scoreboard players reset $isNegative Temporary
 
 # 適用
-    scoreboard players operation @s ScoreToMaxHealth = $MaxHealth Global
+    data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"add"}
+    execute store result storage api: Argument.Amount double 1 run scoreboard players get $BonusHealth Global
+    function api:modifier/max_health/add
