@@ -17,4 +17,4 @@
     scoreboard players reset $max Temporary
 
 # マニュアル側を呼び出す
-    function lib:random/with_biased/manual.m with storage lib: Args
+    return run function lib:random/with_biased/manual.m with storage lib: Args

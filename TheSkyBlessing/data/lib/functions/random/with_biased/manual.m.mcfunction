@@ -13,11 +13,11 @@
 
 #> Private
 # @private
-#declare score_holder $size
+    #declare score_holder $size
 
 #> Private
 # @within function lib:random/with_biased/*
-#declare score_holder $max
+    #declare score_holder $max
 
 # マクロ引数をスコアとして取得する
     $scoreboard players set $max Temporary $(max)
@@ -45,4 +45,4 @@
     data remove storage lib: RecentHits
 
 # 値を返すために get する
-    $data get storage lib: RecentHitsData.$(key)[-1]
+    $return run data get storage lib: RecentHitsData.$(key)[-1]
