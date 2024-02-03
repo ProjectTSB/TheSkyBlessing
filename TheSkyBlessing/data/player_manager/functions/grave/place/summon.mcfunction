@@ -9,4 +9,5 @@
 #declare tag Init
 
 # 墓を召喚
-    $summon armor_stand ~ ~ ~ {CustomNameVisible:0b,CustomName:'{"text":"右クリックで回収","color":"white","italic":false}',Tags:["Grave","GraveInit"],Passengers:[{id:"minecraft:interaction",height:-2f,Tags:["Grave_Interaction"]}],Rotation:[$(Rotation)F,0F]}
+    #$summon armor_stand ~ ~ ~ {Small:1b,CustomNameVisible:1b,CustomName:'$(Name)',Tags:["Grave","GraveInit"],Passengers:[{id:"minecraft:interaction",height:-1f,Tags:["Grave_Interaction"]}],Rotation:[$(Rotation)F,0F]}
+    $summon item_display ~ ~ ~ {Rotation:[$(Rotation)F,0F],Tags:["Grave","GraveInit"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[1f,1f,1f]},Passengers:[{id:"minecraft:interaction"},{id:"minecraft:armor_stand",CustomNameVisible:1b,Small:1b,Invisible:1b,CustomName:'$(Name)'}],item:{id:"minecraft:cobblestone",Count:1b,tag:{CustomModelData:1}}}
