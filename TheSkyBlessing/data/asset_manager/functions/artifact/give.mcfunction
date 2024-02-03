@@ -19,8 +19,13 @@
 # データサイズを取得
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
 # 対象Indexを決定
-    execute store result score $Argument.Index Lib run function lib:random/
-    scoreboard players operation $Argument.Index Lib %= $CandidateLength Temporary
+    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Args.key set value "artifact_lv-1"
+    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Args.key set value "artifact_lv-2"
+    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Args.key set value "artifact_lv-3"
+    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Args.key set value "artifact_lv-4"
+    execute store result storage lib: Args.max int 1 run scoreboard players get $CandidateLength Temporary
+    execute store result storage lib: Args.scarcity_history_size int 0.35 run scoreboard players get $CandidateLength Temporary
+    execute store result score $Argument.Index Lib run function lib:random/with_biased/manual.m with storage lib: Args
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
 # asset:context idがある場合は退避
@@ -34,4 +39,5 @@
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
+    data remove storage lib: Args
     data remove storage lib: Array
