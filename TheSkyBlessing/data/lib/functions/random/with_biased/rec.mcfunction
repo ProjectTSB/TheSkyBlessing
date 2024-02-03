@@ -3,7 +3,7 @@
 
 #> Private
 # @private
-#declare score_holder $value
+    #declare score_holder $value
 
 # 乱数生成して Random.value に入れる
     execute store result score $value Temporary run function lib:random/
