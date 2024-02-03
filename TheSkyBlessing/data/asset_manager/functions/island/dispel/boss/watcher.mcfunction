@@ -4,7 +4,7 @@
 #
 # @within function asset_manager:island/tick/
 
-#>
+#> Private
 # @private
     #declare tag Target
 

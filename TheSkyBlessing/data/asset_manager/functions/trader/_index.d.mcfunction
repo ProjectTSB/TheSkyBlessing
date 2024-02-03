@@ -1,7 +1,7 @@
 #> asset_manager:trader/_index.d
 # @private
 
-#>
+#> InitTag
 # @within asset_manager:trader/**
     #declare tag TraderInit
 
