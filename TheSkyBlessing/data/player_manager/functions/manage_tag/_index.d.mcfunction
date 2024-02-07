@@ -6,5 +6,8 @@
 #declare tag PlayerShouldInvulnerable
 
 #> 敵の近くにいるプレイヤー
-# @public
+# @within
+#   function
+#       player_manager:manage_tag/
+#   predicate lib:in_battle
 #declare tag PlayerNearbyEnemy
