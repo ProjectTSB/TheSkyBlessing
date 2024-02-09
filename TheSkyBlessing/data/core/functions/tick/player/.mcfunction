@@ -7,10 +7,11 @@
 #> this
 # @within *
 #   core:tick/player/
-#   player_manager:vanilla_attack/show_log
+#   player_manager:vanilla_attack/**
 #   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
+#   core:handler/attack
     #declare tag this
 
 # thisタグ付与

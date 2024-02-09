@@ -29,6 +29,8 @@
     scoreboard players operation $Health Temporary < $MaxHealth Temporary
 # 代入 / kill
     execute store result entity @s AbsorptionAmount float 0.01 run scoreboard players get $Health Temporary
+    scoreboard players operation @s MobHealth = $Health Temporary
+    scoreboard players operation @s MobHealth /= $100 Const
 # 回復量表示
     scoreboard players operation $Fluctuation Lib = $Heal Temporary
     execute at @s run function lib:status_log/show_health
