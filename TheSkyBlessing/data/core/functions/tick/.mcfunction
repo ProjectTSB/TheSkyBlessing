@@ -61,6 +61,8 @@
     # MobAsset処理
         execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
         execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
+    # 緩衝体力が1024ではない場合の処理
+        execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{AbsorptionAmount:1024f}] run function mob_manager:calc_absorption
 
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick

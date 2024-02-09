@@ -61,9 +61,6 @@
     # execute unless data storage asset:mob Field run
 # データ適用
     execute if entity @s run function asset_manager:mob/summon/set_data
-# 通常攻撃に対して無敵に
-    effect give @s[type=!#lib:undead] instant_health infinite 100 true
-    effect give @s[type=#lib:undead] instant_damage infinite 100 true
 
 # リセット
     tag @s remove MobInit

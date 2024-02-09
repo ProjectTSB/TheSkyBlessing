@@ -10,3 +10,6 @@
     execute if score @s MobHealth matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score @s MobHealth matches ..0 run damage @s 9999 minecraft:player_attack by @p[tag=Killer]
     execute if score @s MobHealth matches ..0 run kill @s
+
+# 回復
+    data modify entity @s AbsorptionAmount set value 1024f

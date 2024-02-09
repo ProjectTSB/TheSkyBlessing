@@ -201,7 +201,7 @@ team modify NoCollision collisionRule never
     #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
-        scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
+        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
