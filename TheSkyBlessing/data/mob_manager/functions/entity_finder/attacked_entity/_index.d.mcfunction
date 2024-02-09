@@ -7,6 +7,7 @@
 #   mob_manager:entity_finder/attacked_entity/**
 #   asset_manager:artifact/triggers/
 #   asset_manager:mob/triggers/tick_check
+#   core:handler/attack
     #declare tag AttackedEntity
 
 #> フラグ
