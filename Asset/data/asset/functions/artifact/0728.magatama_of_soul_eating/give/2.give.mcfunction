@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"魂喰らいの勾玉","color":"dark_aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['{"text":"不気味な暗い青緑色をした勾玉","color":"gray","italic":"true"}','{"text":"見つめると魂が吸われているような感覚がする。","color":"gray","italic":"true"}','{"text":"発動時、体力を最大体力の値に応じて回復する。","color":"white"}','{"text":"多く持つほど回復量が増加する。","color":"white"}']
+    data modify storage asset:artifact Lore set value ['{"text":"発動時、体力を最大体力の値に応じて回復する。","color":"white"}','{"text":"多く持つほど回復量が増加する。","color":"white"}','{"text":"不気味な暗い青緑色をした勾玉。","color":"gray"}','{"text":"見つめると魂が吸われているような感覚がする。","color":"gray"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
