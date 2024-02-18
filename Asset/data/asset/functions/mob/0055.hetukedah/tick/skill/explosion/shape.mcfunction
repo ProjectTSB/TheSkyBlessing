@@ -1,8 +1,9 @@
-#> asset:mob/0055.hetukedah/tick/5.1.particle
+#> asset:mob/0055.hetukedah/tick/skill/explosion/shape
 #
-# 魔法陣
 #
-# @within function asset:mob/0055.hetukedah/tick/5.magicattack
+#
+# @within function asset:mob/0055.hetukedah/tick/skill/explosion/explosion
+
 
 # パーティクル
     particle flame ^0 ^ ^-3 0 0 0 0 1
@@ -240,105 +241,3 @@
     particle flame ^2.12839 ^ ^-3.04056 0 0 0 0 1
     particle flame ^2.43245 ^ ^-3.04056 0 0 0 0 1
     particle flame ^2.7365 ^ ^-3.04056 0 0 0 0 1
-
-# lava
-    particle lava ^0 ^ ^-4 0 0 0 0 1
-    particle lava ^0.11756 ^ ^-3.6382 0 0 0 0 1
-    particle lava ^0.23511 ^ ^-3.27639 0 0 0 0 1
-    particle lava ^0.35267 ^ ^-2.91459 0 0 0 0 1
-    particle lava ^0.47023 ^ ^-2.55279 0 0 0 0 1
-    particle lava ^0.58779 ^ ^-2.19098 0 0 0 0 1
-    particle lava ^0.70534 ^ ^-1.82918 0 0 0 0 1
-    particle lava ^0.8229 ^ ^-1.46738 0 0 0 0 1
-    particle lava ^0.94046 ^ ^-1.10557 0 0 0 0 1
-    particle lava ^1.05801 ^ ^-0.74377 0 0 0 0 1
-    particle lava ^1.17557 ^ ^-0.38197 0 0 0 0 1
-    particle lava ^1.29313 ^ ^-0.02016 0 0 0 0 1
-    particle lava ^1.41068 ^ ^0.34164 0 0 0 0 1
-    particle lava ^1.52824 ^ ^0.70344 0 0 0 0 1
-    particle lava ^1.6458 ^ ^1.06525 0 0 0 0 1
-    particle lava ^1.76336 ^ ^1.42705 0 0 0 0 1
-    particle lava ^1.88091 ^ ^1.78885 0 0 0 0 1
-    particle lava ^1.99847 ^ ^2.15066 0 0 0 0 1
-    particle lava ^2.11603 ^ ^2.51246 0 0 0 0 1
-    particle lava ^2.23358 ^ ^2.87426 0 0 0 0 1
-    particle lava ^3.80423 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^3.49646 ^ ^-1.01246 0 0 0 0 1
-    particle lava ^3.18869 ^ ^-0.78885 0 0 0 0 1
-    particle lava ^2.88092 ^ ^-0.56525 0 0 0 0 1
-    particle lava ^2.57315 ^ ^-0.34164 0 0 0 0 1
-    particle lava ^2.26538 ^ ^-0.11803 0 0 0 0 1
-    particle lava ^1.95762 ^ ^0.10557 0 0 0 0 1
-    particle lava ^1.64985 ^ ^0.32918 0 0 0 0 1
-    particle lava ^1.34208 ^ ^0.55279 0 0 0 0 1
-    particle lava ^1.03431 ^ ^0.77639 0 0 0 0 1
-    particle lava ^0.72654 ^ ^1 0 0 0 0 1
-    particle lava ^0.41877 ^ ^1.22361 0 0 0 0 1
-    particle lava ^0.11101 ^ ^1.44721 0 0 0 0 1
-    particle lava ^-0.19676 ^ ^1.67082 0 0 0 0 1
-    particle lava ^-0.50453 ^ ^1.89443 0 0 0 0 1
-    particle lava ^-0.8123 ^ ^2.11803 0 0 0 0 1
-    particle lava ^-1.12007 ^ ^2.34164 0 0 0 0 1
-    particle lava ^-1.42784 ^ ^2.56525 0 0 0 0 1
-    particle lava ^-1.7356 ^ ^2.78885 0 0 0 0 1
-    particle lava ^-2.04337 ^ ^3.01246 0 0 0 0 1
-    particle lava ^2.35114 ^ ^3.23607 0 0 0 0 1
-    particle lava ^2.04337 ^ ^3.01246 0 0 0 0 1
-    particle lava ^1.7356 ^ ^2.78885 0 0 0 0 1
-    particle lava ^1.42784 ^ ^2.56525 0 0 0 0 1
-    particle lava ^1.12007 ^ ^2.34164 0 0 0 0 1
-    particle lava ^0.8123 ^ ^2.11803 0 0 0 0 1
-    particle lava ^0.50453 ^ ^1.89443 0 0 0 0 1
-    particle lava ^0.19676 ^ ^1.67082 0 0 0 0 1
-    particle lava ^-0.11101 ^ ^1.44721 0 0 0 0 1
-    particle lava ^-0.41877 ^ ^1.22361 0 0 0 0 1
-    particle lava ^-0.72654 ^ ^1 0 0 0 0 1
-    particle lava ^-1.03431 ^ ^0.77639 0 0 0 0 1
-    particle lava ^-1.34208 ^ ^0.55279 0 0 0 0 1
-    particle lava ^-1.64985 ^ ^0.32918 0 0 0 0 1
-    particle lava ^-1.95762 ^ ^0.10557 0 0 0 0 1
-    particle lava ^-2.26538 ^ ^-0.11803 0 0 0 0 1
-    particle lava ^-2.57315 ^ ^-0.34164 0 0 0 0 1
-    particle lava ^-2.88092 ^ ^-0.56525 0 0 0 0 1
-    particle lava ^-3.18869 ^ ^-0.78885 0 0 0 0 1
-    particle lava ^-3.49646 ^ ^-1.01246 0 0 0 0 1
-    particle lava ^-2.35114 ^ ^3.23607 0 0 0 0 1
-    particle lava ^-2.23358 ^ ^2.87426 0 0 0 0 1
-    particle lava ^-2.11603 ^ ^2.51246 0 0 0 0 1
-    particle lava ^-1.99847 ^ ^2.15066 0 0 0 0 1
-    particle lava ^-1.88091 ^ ^1.78885 0 0 0 0 1
-    particle lava ^-1.76336 ^ ^1.42705 0 0 0 0 1
-    particle lava ^-1.6458 ^ ^1.06525 0 0 0 0 1
-    particle lava ^-1.52824 ^ ^0.70344 0 0 0 0 1
-    particle lava ^-1.41068 ^ ^0.34164 0 0 0 0 1
-    particle lava ^-1.29313 ^ ^-0.02016 0 0 0 0 1
-    particle lava ^-1.17557 ^ ^-0.38197 0 0 0 0 1
-    particle lava ^-1.05801 ^ ^-0.74377 0 0 0 0 1
-    particle lava ^-0.94046 ^ ^-1.10557 0 0 0 0 1
-    particle lava ^-0.8229 ^ ^-1.46738 0 0 0 0 1
-    particle lava ^-0.70534 ^ ^-1.82918 0 0 0 0 1
-    particle lava ^-0.58779 ^ ^-2.19098 0 0 0 0 1
-    particle lava ^-0.47023 ^ ^-2.55279 0 0 0 0 1
-    particle lava ^-0.35267 ^ ^-2.91459 0 0 0 0 1
-    particle lava ^-0.23511 ^ ^-3.27639 0 0 0 0 1
-    particle lava ^-0.11756 ^ ^-3.6382 0 0 0 0 1
-    particle lava ^-3.80423 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-3.4238 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-3.04338 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-2.66296 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-2.28254 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-1.90211 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-1.52169 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-1.14127 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-0.76085 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^-0.38042 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^0 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^0.38042 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^0.76085 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^1.14127 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^1.52169 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^1.90211 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^2.28254 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^2.66296 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^3.04338 ^ ^-1.23607 0 0 0 0 1
-    particle lava ^3.4238 ^ ^-1.23607 0 0 0 0 1
