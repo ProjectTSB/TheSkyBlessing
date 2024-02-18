@@ -8,6 +8,8 @@
     data modify storage lib: Argument.Damage set value 32f
     data modify storage lib: Argument.AttackType set value "Magic"
     data modify storage lib: Argument.ElementType set value "Fire"
+# ハード以上でならダメージ増加
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 36f
     execute as @e[type=zombie,tag=this,distance=..0.01,limit=1] run function lib:damage/modifier
     function lib:damage/
 # リセット

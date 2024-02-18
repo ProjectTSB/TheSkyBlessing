@@ -17,5 +17,10 @@
     execute if entity @s[scores={6L.Tick=41}] at @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
     execute if entity @s[scores={6L.Tick=61}] at @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ run function asset:mob/0237.lunatic_mage/magic_summon/water
 
+# ハードの場合、追加で二つ置く
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[scores={6L.Tick=21}] positioned as @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/0237.lunatic_mage/skill/water/2.spread
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[scores={6L.Tick=41}] positioned as @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ rotated ~90 0 run function asset:mob/0237.lunatic_mage/skill/water/2.spread
+    execute if predicate api:global_vars/difficulty/min/hard if entity @s[scores={6L.Tick=61}] positioned as @a[gamemode=!spectator,distance=..50,sort=random,limit=5] positioned ~ ~0.3 ~ rotated ~ 0 run function asset:mob/0237.lunatic_mage/skill/water/2.spread
+
 # リセット
     execute if entity @s[scores={6L.Tick=66..}] run function asset:mob/0237.lunatic_mage/tick/5.reset

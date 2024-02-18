@@ -24,6 +24,8 @@
 # ダメージ設定
     data modify storage lib: Argument.Damage set value 50f
     data modify storage lib: Argument.AttackType set value "Magic"
+# ハードの場合、ダメージ増加
+    execute if predicate api:global_vars/difficulty/min/hard run data modify storage lib: Argument.Damage set value 55f
     function lib:damage/modifier
     execute as @a[tag=LandingTarget,distance=..60] run function lib:damage/
 # リセット

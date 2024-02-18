@@ -2,7 +2,10 @@
 #
 # 自身の出現位置を中心として拡散テレポート
 #
-# @within function asset:mob/0237.lunatic_mage/tick/5.reset
+# @within function
+#   asset:mob/0237.lunatic_mage/tick/5.reset
+#   asset:mob/0237.lunatic_mage/skill/*/**
+
 
 # ワープ中はモデル外して透明化
     item replace entity @s armor.head with minecraft:air
