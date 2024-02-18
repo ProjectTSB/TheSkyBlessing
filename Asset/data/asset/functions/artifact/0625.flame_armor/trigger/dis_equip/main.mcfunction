@@ -4,13 +4,16 @@
 #
 # @within function asset:artifact/0625.flame_armor/trigger/dis_equip/
 
-# UUID
+# 火耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,625,5]
-# 補正の削除
     function api:modifier/defense/fire/remove
+
+# 火攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,625,5]
+    function api:modifier/attack/fire/remove
 
 # 演出
     playsound entity.generic.burn player @a ~ ~ ~ 0.2 1 0
 
-# フルセットの耐性削除
-    execute if data storage asset:context id.all{head:624,chest:625,legs:626,feet:627} run function asset:artifact/0625.flame_armor/trigger/5.fullset_dis_equip
+# フルセット効果を削除
+    execute if entity @s[tag=HD.Fullset] run function asset:artifact/0625.flame_armor/trigger/5.fullset_dis_equip

@@ -11,15 +11,17 @@
 # Tag付与
     tag @s add HH.Fullset
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,629,0]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.03
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 水耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,629,0]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/water/add
+
+# 水攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,629,0]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/water/add
 
 # 演出
     particle falling_dust diamond_block ~ ~1.2 ~ 0.4 0.5 0.4 0 20 normal @a

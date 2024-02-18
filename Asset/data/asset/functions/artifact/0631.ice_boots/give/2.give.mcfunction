@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"アイスブーツ","color":"aqua"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+3%","color":"aqua"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"水耐性+3% 水攻撃+3%","color":"aqua"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)

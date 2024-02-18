@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"エレキレギンス","color":"yellow"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['{"text":"雷耐性+3%","color":"yellow"}']
+    data modify storage asset:artifact Lore set value ['{"text":"雷耐性+3% 雷攻撃+3%","color":"yellow"}']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)

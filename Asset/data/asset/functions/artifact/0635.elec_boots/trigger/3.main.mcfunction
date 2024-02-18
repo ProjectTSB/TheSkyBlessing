@@ -9,15 +9,17 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,635,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.03
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 雷耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,635,3]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/thunder/add
+
+# 雷耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,635,3]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/thunder/add
 
 #ちょっとした演出
     particle dust 1 1 0 1 ~ ~0.3 ~ 0.4 0.1 0.4 0 6 normal @a

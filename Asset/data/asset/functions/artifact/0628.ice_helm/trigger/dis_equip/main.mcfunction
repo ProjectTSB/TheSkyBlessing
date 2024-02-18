@@ -4,10 +4,13 @@
 #
 # @within function asset:artifact/0628.ice_helm/trigger/dis_equip/
 
-# UUID
+# 水耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,628,6]
-# 補正の削除
     function api:modifier/defense/water/remove
+
+# 水攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,628,6]
+    function api:modifier/attack/water/remove
 
 # 演出
     playsound minecraft:block.glass.break player @a ~ ~ ~ 0.4 0.8 0
