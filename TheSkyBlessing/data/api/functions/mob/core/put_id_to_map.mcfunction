@@ -15,10 +15,10 @@
     function api:rom/please
 
 # データを保存しつつ、すでにデータが入っているかを確認する
-    execute store result storage asset:mob NonExistsInRom byte 1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends set from storage asset:mob Extends[-1]
+    data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends set from storage asset:mob Extends[-1]
 
 # リセット
     data remove storage asset:mob Extends[-1]
 
 # まだExtendsが残っていて、かつROMに保存されていなければれば再帰する
-    execute if data storage asset:mob Extends[0] if data storage asset:mob {NonExistsInRom:true} run function api:mob/core/put_id_to_map
+    execute if data storage asset:mob Extends[0] run function api:mob/core/put_id_to_map
