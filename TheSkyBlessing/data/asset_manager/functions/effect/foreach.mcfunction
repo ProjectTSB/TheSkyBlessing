@@ -17,7 +17,7 @@
     execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
     execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..3 run data modify storage asset:effect TargetEffect.Duration set value -1
 # 死亡判定
-    execute if entity @s[tag=DeathProcess] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data modify storage asset:effect TargetEffect.Duration set value -1
+    execute if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} if entity @s[tag=DeathProcess] run data modify storage asset:effect TargetEffect.Duration set value -1
 # 効果時間を減少させる
     execute unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
@@ -28,9 +28,9 @@
 # 各種イベントを呼び出す
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
-    execute unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
-    # execute unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if data storage asset:effect TargetEffect{ProcessOnDied:"stopTickUntilRespawn"}
-    execute if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/tick/
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
+    # execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] if data storage asset:effect TargetEffect{ProcessOnDied:"stopTickUntilRespawn"}
+    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] run function asset_manager:effect/events/tick/
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
