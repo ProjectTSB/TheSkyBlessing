@@ -16,6 +16,8 @@
 # 牛乳チェック
     execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
     execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..3 run data modify storage asset:effect TargetEffect.Duration set value -1
+# 死亡判定
+    execute if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} if entity @s[tag=DeathProcess] run data modify storage asset:effect TargetEffect.Duration set value -1
 # 効果時間を減少させる
     execute unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
@@ -38,7 +40,6 @@
 # ゴミを消す
     data remove storage asset:effect TargetEffect.NextEvent
 # 条件を満たしていればエフェクトを消す
-    execute if entity @s[tag=DeathProcess] if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} run data remove storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
 # 残っていれば引継ぎ
