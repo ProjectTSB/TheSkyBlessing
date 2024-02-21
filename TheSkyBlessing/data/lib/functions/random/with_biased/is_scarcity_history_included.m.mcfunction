@@ -4,4 +4,4 @@
 #       生成された値
 # @within function lib:random/with_biased/rec
 
-$execute if data storage lib: {RecentHits:[$(value)]}
+$return run execute if data storage lib: {RecentHits:[$(value)]}

@@ -49,7 +49,5 @@
     data remove storage asset:effect RequireClearLv
     data remove storage asset:effect Field
 
-    data remove storage asset:effect NonExistsInRom
-
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop

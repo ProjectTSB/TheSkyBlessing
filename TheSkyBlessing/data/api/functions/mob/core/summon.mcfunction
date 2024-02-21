@@ -32,7 +32,6 @@
 
 # リセット
     data remove storage asset:mob Return.Summoned
-    data remove storage asset:mob NonExistsInRom
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
