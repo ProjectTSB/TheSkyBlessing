@@ -328,12 +328,12 @@ team modify NoCollision collisionRule never
     #   core:handler/first_join
     #   player_manager:bonus/**
     #   asset:artifact/0002.blessing/trigger/**
-        #declare score_holder $MaxHealth
-        #declare score_holder $MaxMP
+        #declare score_holder $BonusHealth
+        #declare score_holder $BonusMP
         #declare score_holder $AttackBonus
         #declare score_holder $DefenseBonus
-    scoreboard players set $MaxHealth Global 200000
-    scoreboard players set $MaxMP Global 100
+    scoreboard players set $BonusHealth Global 0
+    scoreboard players set $BonusMP Global 0
     scoreboard players set $AttackBonus Global 0
     scoreboard players set $DefenseBonus Global 0
 

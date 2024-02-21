@@ -17,8 +17,10 @@
     data modify storage api: Modifiers set from storage api: NewModifiers
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Fire set from storage api: Modifiers
 # データの更新
+    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.Attack.Fire
     function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack.Fire set from storage api: Modifier
 # リセット
+    data remove storage api: Base
     data remove storage api: Modifiers
     data remove storage api: NewModifiers

@@ -1,4 +1,4 @@
-#> player_manager:bonus/update_defense_bonus
+#> asset:artifact/0002.blessing/trigger/update/defense_bonus
 #
 #
 #
@@ -13,7 +13,7 @@
     #declare score_holder $isNegative
 
 # 古いのをremove
-    data modify storage api: Argument.UUID set value [I;2,2,1,1]
+    data modify storage api: Argument.UUID set value [I;1,1,2,0]
     function api:modifier/defense/base/remove
 # 差分にする
     scoreboard players operation $Diff Temporary = $DefenseBonus Global
@@ -31,6 +31,6 @@
     scoreboard players reset $isNegative Temporary
 
 # 適用
-    data modify storage api: Argument set value {Amount:-1,UUID:[I;2,2,1,1],Operation:"multiply"}
+    data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"multiply"}
     execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $DefenseBonus Global
     function api:modifier/defense/base/add
