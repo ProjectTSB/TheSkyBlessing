@@ -3,6 +3,7 @@
 #
 #
 # @within function
+#   api:modifier/**/add
 #   api:modifier/**/remove
 #   api:modifier/core/common/remove_modifier
 
