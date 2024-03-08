@@ -58,6 +58,7 @@
     #declare tag Victim
     #declare tag Equip
     #declare tag DisEquip
+    #declare tag Healer
 
 #> セレクターテンプレート
 # @within * asset:artifact/**
