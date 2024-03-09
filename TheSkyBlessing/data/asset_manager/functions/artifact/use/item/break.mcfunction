@@ -5,7 +5,7 @@
 # @within function asset_manager:artifact/use/item/has_remain
 
 # 音
-    playsound entity.item.break player @a
+    execute unless data storage asset:artifact TargetItems[-1].tag.TSB{DisableBreakSound:true} run playsound entity.item.break player @a
 # そのスロットを消し飛ばす
     execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} run data modify storage api: SelectedItemSlot set from storage asset:context SelectedItemSlot
     execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} run function api:inventory/refer_selected_item_slot/replace_air
