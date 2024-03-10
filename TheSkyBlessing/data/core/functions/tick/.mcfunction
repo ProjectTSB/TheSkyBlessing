@@ -65,6 +65,9 @@
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
 
+# パーティクル
+    execute as @e[type=text_display,tag=CustomParticle] at @s run function lib:particle/tick
+
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
 
