@@ -14,8 +14,8 @@
     function asset_manager:artifact/create/set_trigger
 # 1? 使用条件
     execute if data storage asset:artifact Condition run loot replace block 10000 0 10000 container.1 loot asset_manager:artifact/generate_lore/condition
-# 2? 重複可能(hotbar時)
-    execute if data storage asset:artifact {EnableDuplication:true,Slot:"hotbar"} run loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/enable_duplication
+# 2? 重複可能(hotbarのみ)
+    execute if data storage asset:artifact {Slot:"hotbar",EnableDuplication:true} run loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/enable_duplication
 # 3? 攻撃情報
     execute if data storage asset:artifact AttackInfo run function asset_manager:artifact/create/set_attack_info
 # 4? 必要MP
