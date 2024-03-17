@@ -11,6 +11,7 @@
 #   Slot : Slot
 #   Trigger : Trigger
 #   Condition? : TextComponent
+#   EnableDuplication? : boolean
 #   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
@@ -60,6 +61,7 @@
     data remove storage asset:artifact Slot
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
+    data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
