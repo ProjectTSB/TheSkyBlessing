@@ -53,7 +53,7 @@
             execute unless data storage asset:artifact AttackInfo.ElementType[0] run data modify storage asset:artifact Line2[5] set value '{"text":"無 ","color":"white"}'
 
     # lootしてLoreに落とし込む
-        loot replace block 10000 0 10000 container.3 loot asset_manager:artifact/generate_lore/attack_info
+        loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/attack_info
 
     # リセット
         data remove storage asset:artifact Line1

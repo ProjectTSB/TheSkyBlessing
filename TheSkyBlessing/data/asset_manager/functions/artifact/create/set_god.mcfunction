@@ -18,6 +18,6 @@
     execute if data storage asset:artifact {CanUsedGod:["Wi-ki"]} run data modify storage asset:artifact Temp.CanUsedGod[3] set from storage global GodIcon.Wi-ki
     execute if data storage asset:artifact {CanUsedGod:["Rumor"]} run data modify storage asset:artifact Temp.CanUsedGod[4] set from storage global GodIcon.Rumor
 # 生成
-    loot replace block 10000 0 10000 container.9 loot asset_manager:artifact/generate_lore/god
+    loot replace block 10000 0 10000 container.8 loot asset_manager:artifact/generate_lore/god
 # リセット
     data remove storage asset:artifact Temp
