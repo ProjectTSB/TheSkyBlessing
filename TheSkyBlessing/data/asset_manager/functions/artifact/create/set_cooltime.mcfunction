@@ -30,7 +30,7 @@
     execute store result storage asset:artifact LocalCooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
 
 # lootする
-    loot replace block 10000 0 10000 container.6 loot asset_manager:artifact/generate_lore/cooldown
+    loot replace block 10000 0 10000 container.7 loot asset_manager:artifact/generate_lore/cooldown
 
 # リセット
     scoreboard players reset $Cooldown
