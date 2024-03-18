@@ -1,14 +1,15 @@
 #> lib:rotatable_dxyz/m
 #
 # 回転可能なdx,dy,dz判定
+# 実行位置を"中央とする"直方体範囲内の検索対象にタグを付与する
 #
 # @input args
 #   dx: double
-#       検索範囲のX方向の大きさ（0以上）
+#       中央からX方向の面までの距離
 #   dy: double
-#       検索範囲のY方向の大きさ（0以上）
+#       中央からY方向の面までの距離
 #   dz: double
-#       検索範囲のZ方向の大きさ（0以上）
+#       中央からZ方向の面までの距離
 #   selector: string
 #       検索対象のセレクタ
 #
@@ -36,9 +37,9 @@
     $tag $(selector) add DXYZTemp
 
 # -X,-Y,-Z方向に範囲外のエンティティを除外
-    $execute as $(selector) positioned as @s facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^4 ^ ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^4 ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^ ^4 run tag @s[distance=5..] remove DXYZTemp
+    $execute as $(selector) positioned as @s positioned ^$(dx) ^ ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^4 ^ ^ run tag @s[distance=5..] remove DXYZTemp
+    $execute as $(selector) positioned as @s positioned ^ ^$(dy) ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^4 ^ run tag @s[distance=5..] remove DXYZTemp
+    $execute as $(selector) positioned as @s positioned ^ ^ ^$(dz) facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^ ^4 run tag @s[distance=5..] remove DXYZTemp
 
 # X,Y,Z方向に範囲外のエンティティを除外
     $execute as $(selector) positioned as @s positioned ^-$(dx) ^ ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^-4 ^ ^ run tag @s[distance=5..] remove DXYZTemp
