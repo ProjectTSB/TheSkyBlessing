@@ -5,9 +5,6 @@
 
 # validate
     execute unless data storage asset:temp Modifiers[-1].Type run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Type","color":"red"}]
-    execute unless data storage asset:temp Modifiers[-1].Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
-    # execute unless data storage asset:temp Modifiers[-1].RequiredParts run
-    execute if data storage asset:temp Modifiers[-1].RequiredParts unless data storage asset:artifact SetID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" SetID","color":"red"}]
     execute unless data storage asset:temp Modifiers[-1].Amount run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Amount","color":"red"}]
     execute unless data storage asset:temp Modifiers[-1].Operation run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Operation","color":"red"}]
 
