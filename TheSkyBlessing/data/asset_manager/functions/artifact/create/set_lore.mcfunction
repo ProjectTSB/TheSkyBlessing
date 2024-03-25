@@ -8,6 +8,11 @@
     data modify block 10000 0 10000 Items set value []
 # 通常説明文
     function asset_manager:artifact/create/lore_append
+# 装備時効果
+    data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Modifiers
+    execute if data storage asset:artifact CopiedModifiers[0] run data modify storage asset:artifact Items.tag.display.Lore append value '""'
+    execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/modifier/
+    data remove storage asset:artifact CopiedModifiers
 # 空行セパレータ
     data modify storage asset:artifact Item.tag.display.Lore append value '""'
 # 0 使用方法
