@@ -1,16 +1,16 @@
-#> asset_manager:artifact/triggers/equip
+#> asset_manager:artifact/triggers/dis_equip/
 #
 # 各神器処理へデータ受け渡し
 #
 # @within function asset_manager:artifact/triggers/
 
 # イベント発火前に実行するやつ
-    function asset_manager:artifact/data/new/set_to_current
-# 全スロットを参照できるidを作る
-    data modify storage asset:context id.all set from storage asset:context id
+    function asset_manager:artifact/data/old/set_to_current
 # 変更のなかったスロットをマスクする
     function asset_manager:artifact/triggers/equipments/mask_slot/
+# 外したアイテムのModifier反映
+    function asset_manager:artifact/triggers/dis_equip/modifier/
 # 神器側に受け渡し
-    function #asset:artifact/equip
+    function #asset:artifact/dis_equip
 # イベント発火後に実行するやつ
-    function asset_manager:artifact/data/new/revert_from_current
+    function asset_manager:artifact/data/old/revert_from_current
