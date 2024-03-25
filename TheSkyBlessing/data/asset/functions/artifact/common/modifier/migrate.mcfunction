@@ -8,7 +8,6 @@
     data modify storage asset:artifact Modifiers append value {}
 # データを移し替える
     data modify storage asset:artifact Modifiers[-1].Type set from storage asset:temp Modifier.AttributeName
-    data modify storage asset:artifact Modifiers[-1].Slot set from storage asset:artifact Triggers[0].Slot
     data modify storage asset:artifact Modifiers[-1].Amount set from storage asset:temp Modifier.Amount
     execute if data storage asset:temp Modifier{Operation:0} run data modify storage asset:artifact Modifiers[-1].Operation set value "add"
     execute if data storage asset:temp Modifier{Operation:1} run data modify storage asset:artifact Modifiers[-1].Operation set value "multiply_base"
