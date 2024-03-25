@@ -47,10 +47,6 @@
     execute if data storage asset:artifact Modifier{Type:"heal"} run data modify storage asset:artifact Line[1] set value '{"text":"回復量(与)","color":"green"}'
     execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run data modify storage asset:artifact Line[1] set value '{"text":"回復量(受)","color":"green"}'
-    execute if data storage asset:artifact Modifier{Type:"maxHealth"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"maxHealth"} run data modify storage asset:artifact Line[1] set value '{"text":"最大体力","color":"dark_red"}'
-    execute if data storage asset:artifact Modifier{Type:"maxMP"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"maxMP"} run data modify storage asset:artifact Line[1] set value '{"text":"最大MP","color":"blue"}'
     execute if data storage asset:artifact Modifier{Type:"mpRegen"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"mpRegen"} run data modify storage asset:artifact Line[1] set value '{"text":"MP回復","color":"blue"}'
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/create/modifier/generic.m with storage asset:artifact Modifier
