@@ -32,5 +32,3 @@
     data remove storage asset:artifact CopiedEquipChanges
     data remove storage asset:artifact CopiedItems
     data remove storage asset:artifact Equipments
-
-# idを取得すると同時に神器リストと総数も取得する
