@@ -28,7 +28,7 @@
     execute if data storage asset:artifact Modifier{Type:"attackThunder"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"attackThunder"} run function api:modifier/attack/thunder/remove
     execute if data storage asset:artifact Modifier{Type:"attackWater"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackThunder"} run function api:modifier/attack/water/remove
+    execute if data storage asset:artifact Modifier{Type:"attackWater"} run function api:modifier/attack/water/remove
     execute if data storage asset:artifact Modifier{Type:"defenseBase"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"defenseBase"} run function api:modifier/defense/base/remove
     execute if data storage asset:artifact Modifier{Type:"defenseFire"} run scoreboard players set $CustomModifier Temporary 1
@@ -40,7 +40,7 @@
     execute if data storage asset:artifact Modifier{Type:"defenseThunder"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"defenseThunder"} run function api:modifier/defense/thunder/remove
     execute if data storage asset:artifact Modifier{Type:"defenseWater"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseThunder"} run function api:modifier/defense/water/remove
+    execute if data storage asset:artifact Modifier{Type:"defenseWater"} run function api:modifier/defense/water/remove
     execute if data storage asset:artifact Modifier{Type:"heal"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"heal"} run function api:modifier/heal/remove
     execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run scoreboard players set $CustomModifier Temporary 1
