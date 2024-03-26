@@ -34,8 +34,9 @@
     summon marker ~ ~ ~ {UUID:[I; -1939065600, 247743830, -1206377468, 1787433810]}
     tp 8c6c3500-0ec4-4556-b818-24046a8a1352 ~ ~ ~ ~ ~
 
-$execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) run function lib:rotatable_dxyz/each_a
-$execute as $(selector) positioned ^-$(dx) ^-$(dy) ^-$(dz) run function lib:rotatable_dxyz/each_b
+# 各エンティティにファンクション実行
+    $execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) run function lib:rotatable_dxyz/each_a
+    $execute as $(selector) positioned ^-$(dx) ^-$(dy) ^-$(dz) run function lib:rotatable_dxyz/each_b
 
 # 一時エンティティ削除
     kill 8c6c3500-0ec4-4556-b818-24046a8a1352
