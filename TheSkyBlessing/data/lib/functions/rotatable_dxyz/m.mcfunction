@@ -22,8 +22,9 @@
     #declare tag DXYZ
 #
 #> temp
-# @private
+# @within function lib:rotatable_dxyz/*
     #declare tag DXYZTemp
+    #declare entity 8c6c3500-0ec4-4556-b818-24046a8a1352
 
 
 # 実行位置が読み込まれていなかったら失敗
@@ -33,22 +34,8 @@
     summon marker ~ ~ ~ {UUID:[I; -1939065600, 247743830, -1206377468, 1787433810]}
     tp 8c6c3500-0ec4-4556-b818-24046a8a1352 ~ ~ ~ ~ ~
 
-# 対象エンティティに一時タグ付与
-    $tag $(selector) add DXYZTemp
-
-# -X,-Y,-Z方向に範囲外のエンティティを除外
-    $execute as $(selector) positioned as @s positioned ^$(dx) ^ ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^4 ^ ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s positioned ^ ^$(dy) ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^4 ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s positioned ^ ^ ^$(dz) facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^ ^4 run tag @s[distance=5..] remove DXYZTemp
-
-# X,Y,Z方向に範囲外のエンティティを除外
-    $execute as $(selector) positioned as @s positioned ^-$(dx) ^ ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^-4 ^ ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s positioned ^ ^-$(dy) ^ facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^-4 ^ run tag @s[distance=5..] remove DXYZTemp
-    $execute as $(selector) positioned as @s positioned ^ ^ ^-$(dz) facing entity 8c6c3500-0ec4-4556-b818-24046a8a1352 feet positioned as @s positioned ^ ^ ^3 rotated as 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^ ^ ^-4 run tag @s[distance=5..] remove DXYZTemp
+$execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) run function lib:rotatable_dxyz/each_a
+$execute as $(selector) positioned ^-$(dx) ^-$(dy) ^-$(dz) run function lib:rotatable_dxyz/each_b
 
 # 一時エンティティ削除
     kill 8c6c3500-0ec4-4556-b818-24046a8a1352
-
-# 一時タグを本タグに付け替え
-    $execute as $(selector) run tag @s[tag=DXYZTemp] add DXYZ
-    $tag $(selector) remove DXYZTemp
