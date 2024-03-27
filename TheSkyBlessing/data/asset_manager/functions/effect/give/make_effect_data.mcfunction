@@ -20,20 +20,21 @@
 
 # 計算用にスコアとして取得する
     execute store result score $OriginDuration Temporary run data get storage asset:effect TargetEffectData.Duration
-    execute store result score $Duration Temporary run data get storage asset:effect Duration
-    execute store result score $MaxDuration Temporary run data get storage asset:effect MaxDuration
+    execute if data storage asset:effect {Duration:"infinite"} run data modify storage asset:effect EffectData.Duration set value "infinite"
+    execute unless data storage asset:effect {Duration:"infinite"} store result score $Duration Temporary run data get storage asset:effect Duration
+    execute unless data storage asset:effect {Duration:"infinite"} store result score $MaxDuration Temporary run data get storage asset:effect MaxDuration
 
     execute store result score $OriginStack Temporary run data get storage asset:effect TargetEffectData.Stack
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
 # Operationに合わせてDurationとStackを計算する // forceReplaceはそのまま新しい値が使われるので何もしなくて良い
-    execute if data storage asset:effect {DurationOperation:"replace"} run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
-    execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
+    execute if data storage asset:effect {DurationOperation:"replace"} unless data storage asset:effect {Duration:"infinite"} run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
+    execute if data storage asset:effect {DurationOperation:"add"} unless data storage asset:effect {Duration:"infinite"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
 
     execute if data storage asset:effect {StackOperation:"replace"} run scoreboard players operation $Stack Temporary > $OriginStack Temporary
     execute if data storage asset:effect {StackOperation:"add"} run scoreboard players operation $Stack Temporary += $OriginStack Temporary
 # 最大値を超えてたら最大値にする
-    scoreboard players operation $Duration Temporary < $MaxDuration Temporary
+    execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary < $MaxDuration Temporary
     scoreboard players operation $Stack Temporary < $MaxStack Temporary
 # データを作る
     data modify storage asset:effect EffectData set value {}
@@ -41,7 +42,7 @@
     data modify storage asset:effect EffectData.ID set from storage asset:effect ID
     data modify storage asset:effect EffectData.Name set from storage asset:effect Name
     data modify storage asset:effect EffectData.Description set from storage asset:effect Description
-    execute store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
+    execute if data storage asset:effect {DurationOperation:"add"} store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
     execute store result storage asset:effect EffectData.Stack int 1 run scoreboard players get $Stack Temporary
     data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect
     data modify storage asset:effect EffectData.ProcessOnDied set from storage asset:effect ProcessOnDied

@@ -19,7 +19,7 @@
 # 死亡判定
     execute if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} if entity @s[tag=DeathProcess] run data modify storage asset:effect TargetEffect.Duration set value -1
 # 効果時間を減少させる
-    execute unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
+    execute unless data storage asset:effect TargetEffect{Duration:-1} unless data storage asset:effect TargetEffect{Duration:"infinite"} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
     data modify storage asset:context id set from storage asset:effect TargetEffect.ID
     data modify storage asset:context Duration set from storage asset:effect TargetEffect.Duration
