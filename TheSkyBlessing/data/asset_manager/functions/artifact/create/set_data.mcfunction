@@ -20,6 +20,11 @@
 #       LocalCooldown : int
 #       SpecialCooldown : int
 #       CanUsedGod : God[]
+#       EquipID? : int
+#       Modifiers : Component[]
+#       ├ Type : string
+#       ├ Amount : double
+#       └ Operation : "add" | "multiply_base" | "multiply"
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
 
@@ -56,6 +61,8 @@
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
+    data modify storage asset:artifact Item.tag.TSB.EquipID set from storage asset:artifact EquipID
+    data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 
 # 名前
     # 残り回数が存在する場合

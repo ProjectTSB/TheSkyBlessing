@@ -20,12 +20,21 @@
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
 #   CanUsedGod : God[]
+#   EquipID? : int
+#   Modifiers : Component[]
+#   ├ Type : string
+#   ├ Amount : double
+#   └ Operation : "add" | "multiply_base" | "multiply"
+#   CustomNBT? : Component
 # @output item 神器
 # @within function asset:artifact/*/give/2.give
 
 #> Inv
 # @private
-#declare score_holder $InvSize
+    #declare score_holder $InvSize
+
+# AttributeModifierの内部化
+    execute unless data storage asset:artifact Modifiers[0] if data storage asset:artifact CustomNBT.AttributeModifiers[0] run function asset:artifact/common/modifier/migrate
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
@@ -36,6 +45,9 @@
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     execute unless data storage asset:artifact MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
+    execute if data storage asset:artifact Modifiers[0] run data modify storage asset:temp Modifiers set from storage asset:artifact Modifiers
+    execute if data storage asset:artifact Modifiers[0] run function asset:artifact/common/modifier/check
+    execute if data storage asset:artifact Modifiers[0] run data remove storage asset:temp Modifiers
 # 各データ設定
     function asset_manager:artifact/create/set_data
 # 神器排出
@@ -65,6 +77,8 @@
     data remove storage asset:artifact MPRequire
     data remove storage asset:artifact CostText
     data remove storage asset:artifact CanUsedGod
+    data remove storage asset:artifact EquipID
+    data remove storage asset:artifact Modifiers
     data remove storage asset:artifact CustomNBT
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact SpecialCooldown
