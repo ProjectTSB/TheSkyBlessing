@@ -17,7 +17,7 @@
     scoreboard players set $CustomModifier Temporary 0
     function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/custom
 # バニラでModifierで処理
-    execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/generic.m
+    execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/generic.m with storage asset:artifact Modifier
 
 # リセット&ループ
     scoreboard players reset $CustomModifier Temporary
