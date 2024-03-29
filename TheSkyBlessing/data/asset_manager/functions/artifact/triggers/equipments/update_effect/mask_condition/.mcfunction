@@ -40,6 +40,7 @@
 # リセット&ループ
     scoreboard players remove $SlotIndex Temporary 1
     scoreboard players reset $CanUsed Temporary
+    scoreboard players reset $DifferentSlot Temporary
     data remove storage asset:artifact TargetSlot
     data remove storage asset:artifact Slot
     data remove storage asset:artifact SetID
