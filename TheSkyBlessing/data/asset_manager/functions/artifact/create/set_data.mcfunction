@@ -10,15 +10,18 @@
 #       Name : TextComponent
 #       Lore : TextComponent[]
 #       RemainingCount? : int
-#       Slot : Slot
-#       Trigger : Trigger
-#       Condition? : TextComponent
-#       AttackInfo? : Component
-#       MPCost : int
-#       MPRequire : int
-#       CostText? : TextComponent
-#       LocalCooldown : int
-#       SpecialCooldown : int
+#       Triggers : Component[]
+#       ├ Slot : Slot
+#       ├ Trigger : Trigger
+#       ├ Condition? : TextComponent
+#       ├ AttackInfo? : Component
+#       ├ MPCost : int
+#       ├ MPRequire? : int
+#       ├ CostText? : TextComponent
+#       ├ LocalCooldown? : int
+#       ├ SpecialCooldown? : int
+#       ├ DisableCooldownMessage? : boolean
+#       └ DisableMPMessage? : boolean
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
@@ -46,16 +49,9 @@
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
-    data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
-    data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
-    data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
+    data modify storage asset:artifact Item.tag.TSB.Triggers set from storage asset:artifact Triggers
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
-    data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
 
 # 名前
     # 残り回数が存在する場合

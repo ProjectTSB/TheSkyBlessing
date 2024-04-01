@@ -6,12 +6,12 @@
 #   as player
 #   storage asset:artifact TargetItems : [ItemData]
 # @within function
-#   asset_manager:artifact/check/
-#   asset_manager:artifact/use/item/
+#   asset_manager:artifact/check/.m
+#   asset_manager:artifact/use/item/.m
 
 #> ScoreHolder
 # @private
-#declare score_holder $Remain
+    #declare score_holder $Remain
 
 # 対象スロットの残り使用回数取得
     execute store result score $Remain Temporary run data get storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount
