@@ -24,7 +24,9 @@
 #   Modifiers : Component[]
 #   ├ Type : string
 #   ├ Amount : double
-#   └ Operation : "add" | "multiply_base" | "multiply"
+#   ├ Operation : "add" | "multiply_base" | "multiply"
+#   ├ MaxStack? : int
+#   └ StackReduction? : double
 #   CustomNBT? : Component
 # @output item 神器
 # @within function asset:artifact/*/give/2.give

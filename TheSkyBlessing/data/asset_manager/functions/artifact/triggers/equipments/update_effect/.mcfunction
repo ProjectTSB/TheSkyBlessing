@@ -18,9 +18,6 @@
 # Modifierを一旦削除
     execute if data storage asset:artifact Old.Modifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
-# リセット
-    data remove storage asset:artifact Old.Modifiers
-
 # データを取得
     data modify storage asset:artifact CopiedItemData set from storage asset:artifact ItemData
 # 装備条件のチェック
@@ -37,6 +34,7 @@
 # リセット
     data remove storage asset:artifact CopeidItemData
     data remove storage asset:artifact EquipList
+    data remove storage asset:artifact Old.Modifiers
     data remove storage asset:artifact Modifiers
     data remove storage asset:artifact EquipIDList
     data remove storage asset:artifact New.Modifiers

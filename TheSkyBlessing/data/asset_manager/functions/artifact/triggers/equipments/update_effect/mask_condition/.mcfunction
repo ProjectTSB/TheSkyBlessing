@@ -35,7 +35,7 @@
     # SetID
         execute if score $CanUsed Temporary matches 1 if data storage asset:artifact SetID run function asset_manager:artifact/triggers/equipments/update_effect/mask_condition/equip_set
     # Modifiers
-        execute if score $CanUsed Temporary matches 1 if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/mask_condition/modifier.m with storage asset:artifact
+        execute if score $CanUsed Temporary matches 1 if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/triggers/equipments/update_effect/mask_condition/modifier/.m with storage asset:artifact
 
 # リセット&ループ
     scoreboard players remove $SlotIndex Temporary 1
