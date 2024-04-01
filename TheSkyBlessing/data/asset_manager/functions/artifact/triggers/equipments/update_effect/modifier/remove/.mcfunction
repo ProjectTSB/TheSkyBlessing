@@ -1,7 +1,7 @@
-#> asset_manager:artifact/triggers/equipments/update_effect/modifier/remove
+#> asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 # @within function
 #   asset_manager:artifact/triggers/equipments/update_effect/
-#   asset_manager:artifact/triggers/equipments/update_effect/modifier/remove
+#   asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/
 
 # データを取得
     data modify storage asset:artifact Modifier set from storage asset:artifact Old.Modifiers[-1]
@@ -17,6 +17,7 @@
     scoreboard players set $CustomModifier Temporary 0
     function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/custom
 # バニラでModifierで処理
+    execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/third_id/
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/generic.m with storage asset:artifact Modifier
 
 # リセット&ループ
