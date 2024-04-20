@@ -15,7 +15,8 @@
 #       ├ Argument.BypassArmorDefense? : boolean
 #       ├ Argument.BypassToughness? : boolean
 #       ├ Argument.BypassEnchantments? : boolean
-#       └ Argument.BypassResistance? : boolean
+#       ├ Argument.BypassResistance? : boolean
+#       └ Argument.BypassDifficulty? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
 # @api
@@ -29,11 +30,13 @@
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassToughness set value true
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassEnchantments set value true
     execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassResistance set value true
+    execute if data storage api: Argument{FixedDamage:true} run data modify storage api: Argument.BypassDifficulty set value true
     execute unless data storage api: Argument.BypassModifier run data modify storage api: Argument.BypassModifier set value false
     execute unless data storage api: Argument.BypassArmorDefense run data modify storage api: Argument.BypassArmorDefense set value false
     execute unless data storage api: Argument.BypassToughness run data modify storage api: Argument.BypassToughness set value false
     execute unless data storage api: Argument.BypassEnchantments run data modify storage api: Argument.BypassEnchantments set value false
     execute unless data storage api: Argument.BypassResistance run data modify storage api: Argument.BypassResistance set value false
+    execute unless data storage api: Argument.BypassDifficulty run data modify storage api: Argument.BypassDifficulty set value false
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
     execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack

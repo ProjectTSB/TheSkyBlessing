@@ -19,3 +19,5 @@
     data modify storage api: Argument.Fluctuation set from storage api: Argument.Heal
 # Healthを持つEntityであれば実行
     function lib:score_to_health_wrapper/fluctuation
+# onHealのトリガー
+    function api:heal/core/trigger_on_heal
