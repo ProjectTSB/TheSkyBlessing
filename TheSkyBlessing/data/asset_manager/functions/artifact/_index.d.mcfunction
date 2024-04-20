@@ -23,6 +23,7 @@
 # @within function
 #   asset_manager:artifact/triggers/**
 #   api:damage/core/trigger_on_**
+#   api:heal/core/trigger_on_**
 #   core:handler/**
     #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
@@ -32,6 +33,7 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
+    #declare tag TriggerFlag.Heal
 
 #> check用の失敗フラグ
 # @within function
@@ -67,3 +69,8 @@
     #declare score_holder $Value
     #declare score_holder $NormalizedValue
     #declare score_holder $Max
+
+#> リセット用
+# @within function asset_manager:artifact/triggers/equipments/update_cooldown/*
+    #declare score_holder $Tick
+    #declare score_holder $LatestUsedTick

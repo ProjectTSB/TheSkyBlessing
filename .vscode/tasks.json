@@ -4,47 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Master Merge",
-            "type": "shell",
-            "command": "now=`git rev-parse --abbrev-ref HEAD` && git stash -u && git checkout master && git pull && git checkout $now && git merge master && git stash pop",
-            "presentation": {
-                "echo": false,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "dependsOn": [
-                "change world file"
-            ],
-            "promptOnClose": true,
-            "problemMatcher": []
-        },
-        {
-            "label": "change world file",
-            "type": "shell",
-            "command": "sed -i -e \"s/^level-name=.*$/level-name=The SkyBlock/\" ./server.properties",
-            "options": {
-                "cwd": "../../"
-            },
-            "presentation": {
-                "echo": false,
-                "reveal": "never",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
             "label": "Open SkyBlock Server",
             "type": "shell",
-            "command": "java -Xms2G -Xmx4G -Dlog4j2.formatMsgNoLookups=true -jar ./server.jar nogui",
-            "options": {
-                "cwd": "../../"
-            },
+            "command": "bash",
+            "args": ["./.vscode/server-start.sh"],
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -53,9 +16,6 @@
                 "showReuseMessage": true,
                 "clear": true
             },
-            "dependsOn": [
-                "change world file"
-            ],
             "promptOnClose": true,
             "problemMatcher": []
         }

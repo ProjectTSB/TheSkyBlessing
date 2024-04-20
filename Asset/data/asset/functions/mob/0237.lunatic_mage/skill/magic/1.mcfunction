@@ -4,9 +4,9 @@
 #
 # @within function asset:mob/0237.lunatic_mage/tick/4.skill_branch
 
-#>
+#> Private
 # @private
-#declare tag 6L.RotationMarker
+    #declare tag 6L.RotationMarker
 
 # ポーズ変更
     execute if entity @s[scores={6L.Tick=2}] run item replace entity @s armor.head with stick{CustomModelData:20199}

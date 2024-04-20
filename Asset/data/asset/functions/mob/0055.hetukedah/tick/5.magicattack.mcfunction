@@ -17,6 +17,6 @@
         data modify storage lib: Argument.ElementType set value "Fire"
     # ダメージ
         function lib:damage/modifier
-        execute as @p[tag=!PlayerShouldInvulnerable,distance=..4] at @s run function lib:damage/
+        execute as @a[tag=!PlayerShouldInvulnerable,distance=..4] run function lib:damage/
 # リセット
     function lib:damage/reset
