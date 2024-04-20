@@ -8,17 +8,18 @@
 #   Name : TextComponent
 #   Lore : TextComponent[]
 #   RemainingCount? : int
-#   Slot : Slot
-#   Trigger : Trigger
-#   Condition? : TextComponent
-#   AttackInfo? : Component
-#   MPCost : int
-#   MPRequire? : int
-#   CostText? : TextComponent
-#   LocalCooldown? : int
-#   SpecialCooldown? : int
-#   DisableCooldownMessage? : boolean
-#   DisableMPMessage? : boolean
+#   Triggers : Component[]
+#   ├ Slot : Slot
+#   ├ Trigger : Trigger
+#   ├ Condition? : TextComponent
+#   ├ AttackInfo? : Component
+#   ├ MPCost : int
+#   ├ MPRequire? : int
+#   ├ CostText? : TextComponent
+#   ├ LocalCooldown? : int
+#   ├ SpecialCooldown? : int
+#   ├ DisableCooldownMessage? : boolean
+#   └ DisableMPMessage? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:artifact/*/give/2.give
@@ -27,14 +28,19 @@
 # @private
 #declare score_holder $InvSize
 
+# Triggerの並列化
+    execute unless data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/migrate
+
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
     execute unless data storage asset:artifact Item run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Item","color":"red"}]
     execute unless data storage asset:artifact Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
     execute unless data storage asset:artifact Lore run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Lore","color":"red"}]
-    execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
-    execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
-    execute unless data storage asset:artifact MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
+    # execute unless data storage asset:artifact RemainingCount run
+    # execute unless data storage asset:artifact Triggers[0] run
+    execute if data storage asset:artifact Triggers[0] run data modify storage asset:temp Triggers set from storage asset:artifact Triggers
+    execute if data storage asset:artifact Triggers[0] run function asset:artifact/common/trigger/check
+    execute if data storage asset:artifact Triggers[0] run data remove storage asset:temp Triggers
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
@@ -57,16 +63,6 @@
     data remove storage asset:artifact Name
     data remove storage asset:artifact Lore
     data remove storage asset:artifact RemainingCount
-    data remove storage asset:artifact Slot
-    data remove storage asset:artifact Trigger
-    data remove storage asset:artifact Condition
-    data remove storage asset:artifact AttackInfo
-    data remove storage asset:artifact MPCost
-    data remove storage asset:artifact MPRequire
-    data remove storage asset:artifact CostText
+    data remove storage asset:artifact Triggers
     data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
-    data remove storage asset:artifact LocalCooldown
-    data remove storage asset:artifact SpecialCooldown
-    data remove storage asset:artifact DisableCooldownMessage
-    data remove storage asset:artifact DisableMPMessage

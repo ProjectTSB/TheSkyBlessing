@@ -14,7 +14,7 @@
 #> 特殊クールダウン
 # @within function
 #   asset_manager:artifact/check/check_special_cooldown
-#   asset_manager:artifact/use/
+#   asset_manager:artifact/check/.m
 #   asset_manager:artifact/tick/
 #   core:tick/
     #declare score_holder $ArtifactSpecialCooldown
