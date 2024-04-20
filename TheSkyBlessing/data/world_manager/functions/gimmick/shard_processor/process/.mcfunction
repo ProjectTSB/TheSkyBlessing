@@ -4,9 +4,9 @@
 #
 # @within function world_manager:gimmick/shard_processor/check_item/
 
-#>
+#> Temp
 # @private
-#declare score_holder $Rotation
+    #declare score_holder $Rotation
 
 # 回す
     execute store result score $Rotation Temporary run data get storage world_manager:gimmick FrameData.ItemRotation

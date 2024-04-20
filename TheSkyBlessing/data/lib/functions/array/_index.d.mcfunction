@@ -1,7 +1,7 @@
 #> lib:array/_index.d
 # @private
 
-#>
+#> 共通スコアホルダー
 # @within function lib:array/**
     #declare score_holder $Index
     #declare score_holder $ListSize
