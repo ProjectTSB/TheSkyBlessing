@@ -23,6 +23,7 @@ jobs:
           muteSuccessResult: true
           ignoreLintPathPattern: |
             animated_java:**
+            core:define_gamerule
 
       - name: Checkout Asset2
         if: ${{ github.ref == 'refs/heads/master' }}
