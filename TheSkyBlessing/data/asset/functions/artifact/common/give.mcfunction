@@ -20,6 +20,7 @@
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
+#   DisableBreakSound? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:artifact/*/give/2.give
@@ -72,3 +73,4 @@
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact DisableBreakSound
