@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:artifact/1024.brave_rod/trigger/rejoin_process",
         "asset:artifact/0600.xtal/trigger/rejoin_process",
         "asset:artifact/0837.the_world_knife/trigger/rejoin_process",
         "asset:artifact/0664.soul_fire_armor/trigger/rejoin_process",
