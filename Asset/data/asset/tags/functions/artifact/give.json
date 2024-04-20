@@ -1,5 +1,10 @@
 {
     "values": [
+        "asset:artifact/0820.jewel_rod_of_horai/give/1.trigger",
+        "asset:artifact/0819.swallows_cowry/give/1.trigger",
+        "asset:artifact/0818.bhuddas_bowl/give/1.trigger",
+        "asset:artifact/0817.dragons_neck_ball/give/1.trigger",
+        "asset:artifact/0816.fur_coad_of_firerat/give/1.trigger",
         "asset:artifact/0728.magatama_of_soul_eating/give/1.trigger",
         "asset:artifact/0837.the_world_knife/give/1.trigger",
         "asset:artifact/0667.soul_fire_armor/give/1.trigger",
