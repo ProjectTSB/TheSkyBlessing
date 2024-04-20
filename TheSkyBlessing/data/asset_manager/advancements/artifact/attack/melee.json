@@ -1,14 +1,31 @@
 {
-    "criteria": {
-        "trigger": {
-            "trigger": "player_hurt_entity",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "is_projectile": false
-                    }
-                }
-            }
-        }
-    }
+	"criteria": {
+		"trigger": {
+			"trigger": "player_hurt_entity",
+			"conditions": {
+				"damage": {
+					"type": {
+						"tags": [
+							{
+								"id": "is_projectile",
+								"expected": false
+							}
+						]
+					}
+				},
+				"entity": [
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"nbt": "{Tags:[\"Attacked\"]}"
+							}
+						}
+					}
+				]
+			}
+		}
+	}
 }

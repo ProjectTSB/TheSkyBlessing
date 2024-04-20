@@ -4,9 +4,9 @@
 #
 # @api
 
-#>
+#> Temp
 # @private
-#declare score_holder $MilliSecond
+    #declare score_holder $MilliSecond
 
 execute store result score $MilliSecond Temporary in the_end run worldborder get
 
