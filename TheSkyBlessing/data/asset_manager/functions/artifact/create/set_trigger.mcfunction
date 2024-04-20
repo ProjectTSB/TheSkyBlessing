@@ -4,6 +4,9 @@
 #
 # @within function asset_manager:artifact/create/set_lore
 
+# 指定スロットがhotbarでかつ重複可能か
+    execute if data storage asset:artifact {Slot:"hotbar",EnableDuplication:true} run data modify storage asset:artifact Temp.EnableDuplication set value "[重複可能] "
+
 # スロット
     execute if data storage asset:artifact {Slot:"auto"} run data modify storage asset:artifact Temp.Trigger.A set value "どちらかの手に所持"
     execute if data storage asset:artifact {Slot:"mainhand"} run data modify storage asset:artifact Temp.Trigger.A set value "メインハンドに所持"
@@ -21,18 +24,18 @@
     execute if data storage asset:artifact {Trigger:"shot"} run data modify storage asset:artifact Temp.Trigger.B set value "発射"
     execute if data storage asset:artifact {Trigger:"itemUse"} run data modify storage asset:artifact Temp.Trigger.B set value "使用"
     execute if data storage asset:artifact {Trigger:"passive"} run data modify storage asset:artifact Temp.Trigger.B set value "ている限り"
-    execute if data storage asset:artifact {Trigger:"onAttack"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを攻撃"
-    execute if data storage asset:artifact {Trigger:"onAttackByMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを近接攻撃"
-    execute if data storage asset:artifact {Trigger:"onAttackByProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを遠距離攻撃"
+    execute if data storage asset:artifact {Trigger:"onAttack"} run data modify storage asset:artifact Temp.Trigger.B set value "攻撃"
+    execute if data storage asset:artifact {Trigger:"onAttackByMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "近接攻撃"
+    execute if data storage asset:artifact {Trigger:"onAttackByProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "遠距離攻撃"
     execute if data storage asset:artifact {Trigger:"onDamage"} run data modify storage asset:artifact Temp.Trigger.B set value "被ダメージ"
     execute if data storage asset:artifact {Trigger:"onDamageFromExplode"} run data modify storage asset:artifact Temp.Trigger.B set value "被爆発ダメージ"
     execute if data storage asset:artifact {Trigger:"onDamageFromBurn"} run data modify storage asset:artifact Temp.Trigger.B set value "被延焼ダメージ"
     execute if data storage asset:artifact {Trigger:"onDamageFromEntity"} run data modify storage asset:artifact Temp.Trigger.B set value "被攻撃ダメージ"
     execute if data storage asset:artifact {Trigger:"onDamageFromMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "被近接ダメージ"
     execute if data storage asset:artifact {Trigger:"onDamageFromProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "被遠距離ダメージ"
-    execute if data storage asset:artifact {Trigger:"onKilled"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを殺害"
-    execute if data storage asset:artifact {Trigger:"onKilledByMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを近接攻撃で殺害"
-    execute if data storage asset:artifact {Trigger:"onKilledByProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "Entityを遠距離攻撃で殺害"
+    execute if data storage asset:artifact {Trigger:"onKilled"} run data modify storage asset:artifact Temp.Trigger.B set value "撃破"
+    execute if data storage asset:artifact {Trigger:"onKilledByMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "近接攻撃で撃破"
+    execute if data storage asset:artifact {Trigger:"onKilledByProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "遠距離攻撃で撃破"
     execute if data storage asset:artifact {Trigger:"sneak"} run data modify storage asset:artifact Temp.Trigger.B set value "スニーク"
     execute if data storage asset:artifact {Trigger:"sneak1s"} run data modify storage asset:artifact Temp.Trigger.B set value "1秒間スニーク"
     execute if data storage asset:artifact {Trigger:"sneak2s"} run data modify storage asset:artifact Temp.Trigger.B set value "2秒間スニーク"
@@ -49,6 +52,7 @@
     execute if data storage asset:artifact {Trigger:"keepSneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒間以上スニーク"
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.AB set value ""
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.B set value ""
+    execute if data storage asset:artifact {Trigger:"onHeal"} run data modify storage asset:artifact Temp.Trigger.B set value "回復"
 # 設定されてなかったらエラーメッセージ
     execute unless data storage asset:artifact Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"}]
     execute unless data storage asset:artifact Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"}]

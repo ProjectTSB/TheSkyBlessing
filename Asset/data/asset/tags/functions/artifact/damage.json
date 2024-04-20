@@ -1,12 +1,5 @@
 {
     "values": [
-        "asset:artifact/0566.great_sage_helmet/damage/1.fullset_check",
-        "asset:artifact/0920.dal_i_thalion/trigger/1.trigger",
-        "asset:artifact/0801.red_secret_stone/trigger/1.trigger",
-        "asset:artifact/0247.heavenly_herb/trigger/1.trigger",
-        "asset:artifact/0277.nudist_carnival/trigger/1.trigger",
-        "asset:artifact/0033.magic_shield/trigger/1.1.damage_trigger",
-        "asset:artifact/0201.cowardly_soul/trigger/1.trigger",
-        "asset:artifact/0529.safety_helmet/trigger/1.trigger"
+        "asset:artifact/0566.great_sage_helmet/damage/1.fullset_check"
     ]
 }

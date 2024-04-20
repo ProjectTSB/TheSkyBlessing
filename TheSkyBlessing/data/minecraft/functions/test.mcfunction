@@ -1,32 +1,4 @@
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={0.0=true}}] run say 0.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={0.1=true}}] run say 0.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={1.0=true}}] run say 1.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={1.1=true}}] run say 1.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={2.0=true}}] run say 2.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={2.1=true}}] run say 2.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={3.0=true}}] run say 3.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={3.1=true}}] run say 3.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={4.0=true}}] run say 4.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={4.1=true}}] run say 4.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={5.0=true}}] run say 5.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={5.1=true}}] run say 5.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={6.0=true}}] run say 6.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={6.1=true}}] run say 6.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={7.0=true}}] run say 7.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={7.1=true}}] run say 7.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={8.0=true}}] run say 8.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={8.1=true}}] run say 8.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={9.0=true}}] run say 9.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={9.1=true}}] run say 9.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={10.0=true}}] run say 10.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={10.1=true}}] run say 10.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={11.0=true}}] run say 11.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={11.1=true}}] run say 11.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={12.0=true}}] run say 12.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={12.1=true}}] run say 12.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={13.0=true}}] run say 13.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={13.1=true}}] run say 13.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={14.0=true}}] run say 14.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={14.1=true}}] run say 14.1
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={15.0=true}}] run say 15.0
-execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={15.1=true}}] run say 15.1
+
+data modify storage api: Argument.ID set value 65533
+data modify storage api: Argument.Duration set value 200
+function api:entity/mob/effect/give

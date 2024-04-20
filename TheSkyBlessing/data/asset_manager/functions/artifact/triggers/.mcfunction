@@ -24,6 +24,7 @@
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
     execute if entity @s[tag=TriggerFlag.Attack] run function asset_manager:artifact/triggers/attack
     execute if entity @s[tag=TriggerFlag.Damage] run function asset_manager:artifact/triggers/damage
+    execute if entity @s[tag=TriggerFlag.Heal] run function asset_manager:artifact/triggers/heal
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
@@ -39,3 +40,4 @@
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak
     tag @s remove TriggerFlag.UsingItem
+    tag @s remove TriggerFlag.Heal

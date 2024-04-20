@@ -42,4 +42,5 @@
 # クールダウンリセット
     scoreboard players set @s MPRegenCooldown 0
 # リセット
-     scoreboard players reset $AmountFloat Temporary
+    scoreboard players reset $AmountFloat Temporary
+    scoreboard players reset $isNegative Temporary

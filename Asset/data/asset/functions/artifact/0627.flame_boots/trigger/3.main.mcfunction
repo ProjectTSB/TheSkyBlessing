@@ -9,17 +9,19 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,627,3]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.03
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 火耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,627,3]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/fire/add
 
-#ちょっとした演出
+# 火攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,627,3]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/fire/add
+
+# 演出
     particle flame ~ ~0.3 ~ 0.4 0.2 0.4 0 10 normal @a
     playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.4 1
 
