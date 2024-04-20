@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/skill/2/3.addition_thunder
 #
-# 雷を2本追加で召喚
+# 雷を2本追加で召喚する
 #
 # @within function asset:mob/0078.messenger_of_thunder/skill/2/1
 

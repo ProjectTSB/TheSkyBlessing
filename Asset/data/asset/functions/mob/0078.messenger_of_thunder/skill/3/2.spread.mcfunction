@@ -1,6 +1,6 @@
 #> asset:mob/0078.messenger_of_thunder/skill/3/2.spread
 #
-#
+# ワープする
 #
 # @within function asset:mob/0078.messenger_of_thunder/skill/3/1
 
