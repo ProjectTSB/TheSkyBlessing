@@ -24,3 +24,6 @@
     scoreboard players operation $Index Temporary -= $Argument.Index Lib
 # 再帰的に動かす
     execute if score $Index Temporary matches 1.. run function lib:array/core/move
+
+# リセット
+    scoreboard players reset $Index Temporary
