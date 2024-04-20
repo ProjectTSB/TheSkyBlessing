@@ -1,12 +1,12 @@
-#> asset:artifact/0837.the_world_knife/trigger/knife_summon
+#> asset:artifact/0837.the_world_knife/trigger/knife/summon/
 #
 #
 #
 # @within function asset:artifact/0837.the_world_knife/trigger/**
 
-#> Private
+#> private
 # @private
-    #declare tag SpreadMarker
+    #declare tag N9.Temp
 
 # 前方拡散設定
     summon marker ~ ~ ~ {Tags:["SpreadMarker"]}
@@ -16,10 +16,14 @@
 # 前方拡散を実行する
     execute as @e[type=marker,tag=SpreadMarker,distance=..10,limit=1] run function lib:forward_spreader/circle
 
+# データを用意
+    execute positioned ^ ^-0.8 ^1 run summon marker ~ ~ ~ {Tags:["N9.Temp"]}
+    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] feet run tp @e[type=marker,tag=N9.Temp,limit=1] ~ ~ ~ facing ^ ^ ^10
+    data modify storage asset:temp 837.Rotation set from entity @e[type=marker,tag=N9.Temp,limit=1] Rotation
+    data modify storage asset:temp 837.Pose set value [0f,0f,0f]
+    data modify storage asset:temp 837.Pose[0] set from storage asset:temp 837.Rotation[1]
 # 弾を召喚
-    summon armor_stand ~ ~-100 ~ {Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Small:1b,Pose:{Head:[10f,0f,0f]},Tags:["N9.First","N9.Knife","Projectile"],ArmorItems:[{},{},{},{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:837}}]}
-    execute facing entity @e[type=marker,tag=SpreadMarker,limit=1] eyes anchored eyes positioned ^ ^ ^2 run tp @e[type=armor_stand,tag=N9.First] ~ ~-1 ~ facing ^ ^ ^10
-    data modify entity @e[type=armor_stand,tag=N9.First,distance=..10,sort=nearest,limit=1] Pose.Head[0] set from entity @e[type=armor_stand,tag=N9.First,distance=..10,sort=nearest,limit=1] Rotation[1]
+    execute positioned ^ ^-0.8 ^1 run function asset:artifact/0837.the_world_knife/trigger/knife/summon/exec.m with storage asset:temp 837
 # ユーザーID適応
     scoreboard players operation @e[type=armor_stand,tag=N9.First,distance=..10] N9.UserID = @s UserID
 # 特定条件ですぐ投げるように
@@ -29,5 +33,7 @@
 # タグを消す
     tag @e[type=armor_stand,tag=N9.First,distance=..10] remove N9.First
 
-# 前方拡散をキル
+# リセット
+    data remove storage asset:temp 837
+    kill @e[type=marker,tag=N9.Temp,distance=..10]
     kill @e[type=marker,tag=SpreadMarker,distance=..10]
