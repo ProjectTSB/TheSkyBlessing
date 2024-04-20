@@ -4,4 +4,4 @@
 #
 # @within function api:damage/core/get_epf/
 
-data modify storage api: Enchantments append from entity @s ArmorItems[].tag.Enchantments
+data modify storage api: Enchantments append from entity @s ArmorItems[].tag.Enchantments[]

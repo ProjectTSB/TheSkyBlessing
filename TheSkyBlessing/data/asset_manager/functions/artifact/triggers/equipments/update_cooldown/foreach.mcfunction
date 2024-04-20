@@ -6,9 +6,7 @@
 
 #> Private
 # @private
-    #declare score_holder $Tick
     #declare score_holder $Max
-    #declare score_holder $LatestUsedTick
 
 # データ取得
     execute store result score $Tick Temporary run time query gametime

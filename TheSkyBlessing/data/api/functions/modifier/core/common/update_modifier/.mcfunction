@@ -4,13 +4,13 @@
 #
 # @within function api:modifier/core/**
 
-# Modifiersに補正の配列が入ってるので1dをデフォルト値として計算する、その後Modifierに戻す
+# Modifiersに補正の配列が入ってるのでベース値を元として計算する、その後Modifierに戻す
 # 処理としては最初にModifiersをforEachしてOperation毎に別の配列にする、そのあと順番に処理する
 
 # Operation毎に分離する
     function api:modifier/core/common/update_modifier/separate_modifiers
-# デフォルト値の設定
-    scoreboard players set $Modifier Temporary 1000
+# ベース値の設定
+    execute store result score $Modifier Temporary run data get storage api: Base 1000
 # Addの処理
     scoreboard players operation $Modifier Temporary += $Add Temporary
 # MultiplyBaseの処理

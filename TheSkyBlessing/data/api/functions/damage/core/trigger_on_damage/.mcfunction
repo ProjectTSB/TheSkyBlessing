@@ -2,7 +2,7 @@
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
-# @within function api:damage/core/health_subtract/player
+# @within function api:damage/core/health_subtract/player/
 
 # MOB特定
     execute as @e[type=!player,distance=..150] if score @s MobUUID = $LatestModifiedEntity MobUUID run tag @s add TargetAttacker

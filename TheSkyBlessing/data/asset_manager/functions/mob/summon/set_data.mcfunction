@@ -18,6 +18,8 @@
 #   Resist.Fire : float
 #   Resist.Water : float
 #   Resist.Thunder : float
+#   Field? : compound
+#   FieldOverride? : compound
 # @within function asset:mob/common/summon
 
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
@@ -69,13 +71,20 @@
 # Enemyのチーム設定
     execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy
+# EntityStorage呼び出し
+    function oh_my_dat:please
 # 属性耐性
-    # EntityStorage呼び出し
-        function oh_my_dat:please
     # Baseを追加
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Defense set from storage asset:mob Resist
+# フィールド
+    execute if data storage asset:mob FieldOverride run data modify storage asset:mob Field merge from storage asset:mob FieldOverride
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:mob Field
+# LoreをROMに書き込む
+    data modify storage api: Argument.Address set from storage asset:mob ID
+    function api:rom/please
+    data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Lore set from storage asset:mob Lore
 # ボスバーの表示
     execute if data storage asset:mob {Type:"Enemy.Boss"} run function asset_manager:mob/bossbar/init
 # データ初期化
