@@ -25,7 +25,7 @@
     execute store result score $DamageAdd Temporary run scoreboard players operation $Difficulty Temporary *= $4 Const
     execute store result storage lib: Argument.Damage int 1 run scoreboard players operation $DamageValue Temporary += $DamageAdd Temporary
 
-# その他ダメージ類
+# その他ダメージ設定
     data modify storage lib: Argument.AttackType set value "Physical"
     data modify storage lib: Argument.ElementType set value "Fire"
     data modify storage lib: Argument.DeathMessage append value '[{"translate": "%1$sは%2$sの爆発に巻き込まれた","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]'
