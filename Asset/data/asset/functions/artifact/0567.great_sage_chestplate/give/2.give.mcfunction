@@ -15,7 +15,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value '{"text":"大賢者のローブ(上)","color":"#FED4FF"}'
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['[{"text":"大賢者エリュサスの祈りが込められたローブ","color":"#FED4FF"}]','{"text":"この衣服はエリュサスの写し身そのものだ","color":"#FED4FF"}','{"text":"魔法耐性+7.5% 魔法攻撃+7.5%","color":"dark_purple"}]','[{"text":"MP回復量+10%","color":"green"}]','[{"text":"物理耐性","color":"dark_green"},{"text":"-10% ","color":"dark_red"},{"text":"物理攻撃","color":"dark_green"},{"text":"-17.5%","color":"dark_red"}]']
+    data modify storage asset:artifact Lore set value ['[{"text":"大賢者エリュサスの祈りが込められたローブ","color":"#FED4FF"}]','{"text":"この衣服はエリュサスの写し身そのものだ","color":"#FED4FF"}','[{"text":"魔法耐性+7.5% 魔法攻撃+7.5%","color":"dark_purple"}]','[{"text":"MP回復量+10%","color":"green"}]','[{"text":"物理耐性","color":"dark_green"},{"text":"-10% ","color":"dark_red"},{"text":"物理攻撃","color":"dark_green"},{"text":"-17.5%","color":"dark_red"}]']
 # MP以外の消費物 (TextComponentString) (オプション)
     # data modify storage asset:artifact CostText set value
 # 使用回数 (int) (オプション)
