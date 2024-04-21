@@ -25,7 +25,7 @@
     # 属性
         data modify storage api: Argument.AttackType set value "Physical"
 # 補正functionを実行
-    execute as @a if score @s UserID = @e[type=armor_stand,tag=N9.This,distance=..0.1,limit=1] N9.UserID run function api:damage/modifier
+    execute at @s as @a if score @s UserID = @e[type=armor_stand,tag=N9.This,distance=..0.01,limit=1] N9.UserID run function api:damage/modifier
 # 攻撃した対象に実行
     execute as @e[type=#lib:living,tag=N9.Target,distance=..2] run function api:damage/
 # リセット
