@@ -23,7 +23,6 @@
 #
 #> temp
 # @within function lib:rotatable_dxyz/*
-    #declare tag DXYZTemp
     #declare entity 8c6c3500-0ec4-4556-b818-24046a8a1352
 
 
@@ -35,8 +34,7 @@
     tp 8c6c3500-0ec4-4556-b818-24046a8a1352 ~ ~ ~ ~ ~
 
 # 各エンティティにファンクション実行
-    $execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) run function lib:rotatable_dxyz/each_a
-    $execute as $(selector) positioned ^-$(dx) ^-$(dy) ^-$(dz) run function lib:rotatable_dxyz/each_b
+    $execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) if function lib:rotatable_dxyz/each_plus at 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^-$(dx) ^-$(dy) ^-$(dz) if function lib:rotatable_dxyz/each_minus run tag @s add DXYZ
 
 # 一時エンティティ削除
     kill 8c6c3500-0ec4-4556-b818-24046a8a1352
