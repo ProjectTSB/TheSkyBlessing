@@ -1,4 +1,4 @@
-#> lib:rotatable_dxyz/each_plus
+#> lib:rotatable_dxyz/core/each_plus
 #
 # @within function lib:rotatable_dxyz/m
 
