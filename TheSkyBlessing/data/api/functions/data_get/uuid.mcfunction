@@ -12,8 +12,6 @@
 
 # EntityStorage呼び出し
     function oh_my_dat:please
-# outputをきれいにする
-    data remove storage api: UUID
 # キャッシュされていなければ取得
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data set from entity @s UUID
 # outputのstorageに移す
