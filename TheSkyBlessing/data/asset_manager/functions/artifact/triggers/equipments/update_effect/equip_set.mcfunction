@@ -1,4 +1,3 @@
-#> asset
 #> asset_manager:artifact/triggers/equipments/update_effect/equip_set
 # @within function
 #   asset_manager:artifact/triggers/equipments/update_effect/
