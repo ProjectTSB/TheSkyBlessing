@@ -46,8 +46,9 @@
     data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect
     data modify storage asset:effect EffectData.ProcessOnDied set from storage asset:effect ProcessOnDied
     data modify storage asset:effect EffectData.RequireClearLv set from storage asset:effect RequireClearLv
-    data modify storage asset:effect EffectData.Field set from storage asset:effect TargetEffectData.Field
-    data modify storage asset:effect EffectData.Field merge from storage asset:effect Field
+    execute unless data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.Field set from storage asset:effect Field
+    execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.Field set from storage asset:effect TargetEffectData.Field
+    execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.Field merge from storage asset:effect Field
 # イベント設定
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
     execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
