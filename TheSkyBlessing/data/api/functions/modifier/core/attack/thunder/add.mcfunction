@@ -20,7 +20,7 @@
     data modify storage api: Modifiers[-1].Amount set from storage api: Argument.Amount
     data modify storage api: Modifiers[-1].Operation set from storage api: Argument.Operation
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Attack.Thunder set from storage api: Modifiers
-# データの更新
+# データを更新
     data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.Attack.Thunder
     function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Attack.Thunder set from storage api: Modifier
@@ -28,3 +28,4 @@
     data remove storage api: Base
     data remove storage api: Modifiers
     data remove storage api: Modifier
+    data remove storage api: NewModifiers
