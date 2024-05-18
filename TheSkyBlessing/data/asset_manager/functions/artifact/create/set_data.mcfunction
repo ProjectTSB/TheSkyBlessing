@@ -64,6 +64,7 @@
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
+    data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
     data modify storage asset:artifact Item.tag.TSB.EquipID set from storage asset:artifact EquipID
     data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 

@@ -13,7 +13,7 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"自爆者","color":"red"}'
+    data modify storage asset:mob Name set value '{"text":"自爆者","color":"dark_red"}'
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:tnt",Count:1b}
@@ -35,7 +35,7 @@
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 250
 # 攻撃力 (double) (オプション)
-    data modify storage asset:mob AttackDamage set value 6.0
+    data modify storage asset:mob AttackDamage set value 1.0
 # 防御力 (double) (オプション) // 被ダメージがある程度大きい場合1ptにつき0.8%カット、小さい場合1ptにつき約4%カット 20pt以上は頭打ち
     data modify storage asset:mob Defense set value 0
 # 特殊防御力 (double) (オプション) // 4pointにつきダメージを大きく減らす
