@@ -48,8 +48,9 @@
     execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
 # リセット
     scoreboard players reset $RequireClearLv Temporary
-    data remove storage asset:context this
     data remove storage asset:context id
+    data remove storage asset:context this
+    data remove storage asset:context PreviousField
     data remove storage asset:effect TargetEffect
 # まだ処理してないエフェクトがあれば再帰
     execute if data storage asset:effect Effects[0] run function asset_manager:effect/foreach
