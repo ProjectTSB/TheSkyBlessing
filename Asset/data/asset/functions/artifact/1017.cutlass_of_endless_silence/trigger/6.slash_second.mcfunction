@@ -40,6 +40,6 @@
     function lib:damage/modifier
     execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,nbt={OnGround:1b},distance=..20] run function lib:damage/
 # 上空へ飛ばす
-    execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,nbt={OnGround:1b},distance=..20] at @s run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,Effects:[{Id:25,Amplifier:80b,Duration:3,ShowParticles:0b},{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+    execute as @e[type=#lib:living,tag=Enemy,tag=!Uninterferable,nbt={OnGround:1b},distance=..20] at @s run summon area_effect_cloud ~ ~ ~ {Duration:14,Age:4,effects:[{id:"levitation",amplifier:80b,duration:3,show_particles:0b},{id:"resistance",amplifier:127b,duration:1,show_particles:0b},{id:"instant_damage",amplifier:0b,duration:1,show_particles:0b}]}
 # リセット
     function lib:damage/reset
