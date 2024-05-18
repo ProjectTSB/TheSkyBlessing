@@ -1,5 +1,6 @@
 {
     "values": [
+        "asset:mob/0302.call_gun/tick/1.trigger",
         "asset:mob/0082.thunder_curtain/tick/1.trigger",
         "asset:mob/0079.return_thunder/tick/1.trigger",
         "asset:mob/0237.lunatic_mage/tick/1.trigger",
