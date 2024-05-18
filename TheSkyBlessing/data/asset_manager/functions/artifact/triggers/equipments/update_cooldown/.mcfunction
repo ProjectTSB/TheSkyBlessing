@@ -10,6 +10,7 @@
     function lib:array/session/open
 # 配列として取得
     data modify storage asset:artifact CopiedItemData set from storage asset:artifact ItemData
+    data remove storage asset:artifact CopiedItemData[0]
 # それぞれについて更新
     function asset_manager:artifact/triggers/equipments/update_cooldown/foreach
 # 反転
