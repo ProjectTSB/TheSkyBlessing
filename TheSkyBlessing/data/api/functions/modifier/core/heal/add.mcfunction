@@ -21,8 +21,10 @@
     data modify storage api: Modifiers[-1].Operation set from storage api: Argument.Operation
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Heal set from storage api: Modifiers
 # データの更新
+    data modify storage api: Base set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Base.Heal
     function api:modifier/core/common/update_modifier/
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Heal set from storage api: Modifier
 # リセット
+    data remove storage api: Base
     data remove storage api: Modifiers
     data remove storage api: Modifier
