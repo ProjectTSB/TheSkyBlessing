@@ -7,6 +7,7 @@
 #   api:heal/core/non-player
 #   lib:score_to_health_wrapper/fluctuation
 #   player_manager:vanilla_attack
+#   mob_manager:environmental_damage
 
 #> For Init
 # @private
