@@ -6,7 +6,7 @@
 # @output storage api: FallDistance
 # @public
 
-#>Temp
+#> Temp
 # @private
     #declare score_holder $NotLatestData
 

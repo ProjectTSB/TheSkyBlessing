@@ -6,7 +6,7 @@
 # @output storage api: Rotation
 # @public
 
-#>Temp
+#> Temp
 # @private
     #declare score_holder $NotLatestData
 
