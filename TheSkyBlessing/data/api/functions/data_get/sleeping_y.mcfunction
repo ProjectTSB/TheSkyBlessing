@@ -12,10 +12,8 @@
 
 # EntityStorage呼び出し
     function oh_my_dat:please
-# outputをきれいにする
-    data remove storage api: SleepingY
 # 最新のものかチェックし、最新じゃなければ取得
     execute store result score $NotLatestData Temporary run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.SleepingY.Time set from storage global Time
-    execute if score $NotLatestData Temporary matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.SleepingY.Data set from entity @s SleepingY
+    execute if score $NotLatestData Temporary matches 1 run function api:data_get/sleeping_y_fetch
 # outputのstorageに移す
     data modify storage api: SleepingY set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.SleepingY.Data
