@@ -157,6 +157,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
     #> AssetManager: Mob -Private
     # @within function
@@ -194,13 +195,13 @@ team modify NoCollision collisionRule never
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**
-    #   player_manager:vanilla_attack/show_log
+    #   player_manager:vanilla_attack/**
     #   core:load_once
     #   core:handler/*
     #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
-        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
+        scoreboard objectives add AttackEvent custom:damage_dealt {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
@@ -382,6 +383,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
+    #   core:handler/attack
         scoreboard objectives add AttackedEntity dummy
 
     #> MobManager - Teams
