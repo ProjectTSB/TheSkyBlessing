@@ -11,7 +11,6 @@
 # スコアを増やす
     scoreboard players add @s 1A.LifeTime 1
 
-
 # プレイヤーが周囲にいないのに時間がきてしまった場合。スコアを戻す。
     execute if score @s 1A.LifeTime matches 0 unless entity @p[gamemode=!spectator,distance=..100] run scoreboard players set @s 1A.LifeTime -1
 
