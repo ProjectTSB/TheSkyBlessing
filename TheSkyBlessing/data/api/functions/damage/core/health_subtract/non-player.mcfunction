@@ -10,8 +10,8 @@
     #declare tag UUIDAttacker
 
 # ダメージ表示
-    scoreboard players set $Fluctuation Lib 0
-    scoreboard players operation $Fluctuation Lib -= $Damage Temporary
+    scoreboard players operation $Fluctuation Lib = $Damage Temporary
+    scoreboard players operation $Fluctuation Lib /= $-100 Const
     execute at @s run function lib:status_log/show_health
 # MobのHealthよりダメージが高い場合Healthに設定
     scoreboard players operation $Damage Temporary < $Health Temporary
