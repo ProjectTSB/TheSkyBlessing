@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"trigger": {
+		"generic": {
 			"trigger": "player_hurt_entity",
 			"conditions": {
 				"damage": {
@@ -14,13 +14,23 @@
 					}
 				},
 				"entity": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"AttackedByApi\"]}"
+                            }
+                        }
+                    },
 					{
-						"condition": "minecraft:inverted",
+						"condition": "inverted",
 						"term": {
-							"condition": "minecraft:entity_properties",
+							"condition": "entity_properties",
 							"entity": "this",
 							"predicate": {
-								"nbt": "{Tags:[\"Attacked\"]}"
+								"nbt": "{Tags:[\"AttackedByProjectile\"]}"
 							}
 						}
 					}

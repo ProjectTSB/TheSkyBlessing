@@ -12,6 +12,16 @@
     #declare score_holder $LatestModifiedUser
     #declare score_holder $LatestModifiedEntity
 
+#> タグ定義
+# @within
+#   function
+#       api:damage/core/health_subtract/non-player
+#       player_manager:vanilla_attack
+#   advancement
+#       asset_manager:artifact/**
+    #declare tag AttackedByApi
+    #declare tag AttackedByProjectile
+
 #> Declare
 # @within function api:damage/core/trigger_on_damage/**
     #declare tag TargetAttacker

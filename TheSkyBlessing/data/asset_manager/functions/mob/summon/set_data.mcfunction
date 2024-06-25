@@ -47,7 +47,7 @@
         execute if data storage asset:mob FollowRange run data modify storage asset:mob Attributes append value {Name:"generic.follow_range"}
         execute if data storage asset:mob KnockBackResist run data modify storage asset:mob Attributes append value {Name:"generic.knockback_resistance"}
     # Attribute
-        data modify storage asset:mob Attributes[{Name:"generic.max_health"}].Base set value 0.01d
+        data modify storage asset:mob Attributes[{Name:"generic.max_health"}].Base set value 1024f
         data modify storage asset:mob Attributes[{Name:"generic.attack_damage"}].Base set from storage asset:mob AttackDamage
         data modify storage asset:mob Attributes[{Name:"generic.armor"}].Base set from storage asset:mob Defense
         data modify storage asset:mob Attributes[{Name:"generic.armor_toughness"}].Base set from storage asset:mob SpecialDefense
@@ -56,12 +56,12 @@
         data modify storage asset:mob Attributes[{Name:"generic.knockback_resistance"}].Base set from storage asset:mob KnockBackResist
     # 適用
         data modify entity @s Attributes set from storage asset:mob Attributes
-    # 体力
-        data modify entity @s Health set value 0.01f
+    # 体力 (e2)
+        data modify entity @s Health set value 512f
         execute store result score @s MobHealthMax run data get storage asset:mob Health 1
         execute if data storage asset:mob {Type:"Enemy"} run function mob_manager:init/multiplay_multiplier/normal
         execute if data storage asset:mob {Type:"Enemy.Boss"} run function mob_manager:init/multiplay_multiplier/angel
-        execute store result entity @s AbsorptionAmount float 1 run scoreboard players get @s MobHealthMax
+        scoreboard players operation @s MobHealth = @s MobHealthMax
     # そのまま適用するやつ
         execute store result score @s MobID run data get storage asset:mob ID
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name

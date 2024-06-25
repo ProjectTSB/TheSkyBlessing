@@ -46,6 +46,7 @@
 # @within *
 #   asset_manager:mob/triggers/death/*
 #   api:damage/core/health_subtract/non-player
+#   player_manager:vanilla_attack
 #   asset:mob/*/death/**
     #declare tag Killer
 
@@ -90,4 +91,4 @@
 # @within function
 #   asset_manager:mob/tick/*
 #   asset_manager:mob/bossbar/*
-#declare tag BossbarTarget
+    #declare tag BossbarTarget
