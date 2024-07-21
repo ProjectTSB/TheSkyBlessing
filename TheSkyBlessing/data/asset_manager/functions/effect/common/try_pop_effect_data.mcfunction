@@ -18,6 +18,7 @@
     data modify storage lib: CompareTarget set from storage asset:effect ID
     function lib:array/compare_single
 # 該当IDのデータの取得を試みる
+    data remove storage asset:effect TargetEffectData
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
     data modify storage lib: Masks set from storage lib: CompareResult
     function lib:array/mask_inverted
