@@ -7,13 +7,16 @@
 #> private
 # @private
     #declare score_holder $Damage
+    #declare score_holder $Fluctuation
 
-# 攻撃処理
+# 減算
     execute store result score $Damage Temporary run data get entity @s Health 100
     scoreboard players remove $Damage Temporary 51200
+    scoreboard players operation @s MobHealth += $Damage Temporary
+# ダメージ表示
     scoreboard players operation $Fluctuation Lib = $Damage Temporary
     execute unless score $Fluctuation Lib matches 0 run function lib:status_log/show_health
-    scoreboard players operation @s MobHealth += $Damage Temporary
+# 代入 / kill
     execute if score @s MobHealth matches ..0 run tag @p[tag=this] add Killer
     execute if score @s MobHealth matches ..0 as @p[tag=Killer] run advancement grant @s only core:handler/killed
     execute if score @s MobHealth matches ..0 run effect clear @s resistance
