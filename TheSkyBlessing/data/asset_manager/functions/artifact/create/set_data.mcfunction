@@ -20,6 +20,13 @@
 #       LocalCooldown : int
 #       SpecialCooldown : int
 #       CanUsedGod : God[]
+#       EquipID? : int
+#       Modifiers : Component[]
+#       ├ Type : string
+#       ├ Amount : double
+#       ├ Operation : "add" | "multiply_base" | "multiply"
+#       ├ MaxStack? : int
+#       └ StackReduction? : double
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
 
@@ -46,6 +53,7 @@
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
+    data modify storage asset:artifact Item.tag.TSB.Slot set from storage asset:artifact Slot
     data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
     data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
@@ -57,6 +65,8 @@
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
     data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
+    data modify storage asset:artifact Item.tag.TSB.EquipID set from storage asset:artifact EquipID
+    data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 
 # 名前
     # 残り回数が存在する場合
