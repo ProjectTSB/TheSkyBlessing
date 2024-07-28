@@ -1,5 +1,16 @@
 {
-    "condition": "weather_check",
-    "raining": true,
-    "thundering": true
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "weather_check",
+            "raining": true,
+            "thundering": true
+        },
+        {
+            "condition": "location_check",
+            "predicate": {
+                "dimension": "the_end"
+            }
+        }
+    ]
 }
