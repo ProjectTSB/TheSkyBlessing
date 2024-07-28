@@ -5,7 +5,7 @@
 # @within function api:damage/core/attack
 
 # 体力
-    execute if entity @s[type=!player] store result score $Health Temporary run data get entity @s AbsorptionAmount 1000
+    execute if entity @s[type=!player] store result score $Health Temporary run scoreboard players get @s MobHealth
 # ダメージ
     execute if data storage api: Argument{BypassModifier:false} run function api:damage/core/get_status/modify_and_get_damage
     execute if data storage api: Argument{BypassModifier: true} store result score $Damage Temporary run data get storage api: Argument.Damage 100
