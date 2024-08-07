@@ -1,6 +1,6 @@
 #> api:damage/core/modify_damage
 #
-# ダメージをlib: Modifiersを元に補正します
+# ダメージをapi: Modifiersを元に補正します
 #
 # @within function
 #   api:damage/core/modify/player
