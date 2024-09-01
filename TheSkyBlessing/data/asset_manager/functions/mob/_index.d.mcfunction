@@ -29,6 +29,11 @@
 #   asset_manager:mob/**
     #declare tag AssetMob
 
+#> ObjectAsset側で定義されたEntityに付けられるタグ
+# @within function
+#   core:tick/
+    #declare tag AssetObject
+
 #> MobAsset以外のEntityにCommonTagを実行させるためのタグ
 # @within function
 #   core:tick/
