@@ -14,6 +14,7 @@
 #   asset_manager:mob/triggers/*/call_super_method
 #   asset_manager:artifact/give
 #   api:spawner/subtract_hp
+#   asset_manager:object/summon/
 
 # idを掃除
     data remove storage asset:context id
