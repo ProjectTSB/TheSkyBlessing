@@ -2183,18 +2183,18 @@
                         "# @within function asset:mob/%namespace%/_/register",
                         "",
                         "# 他のモブに継承されることを許可するか (boolean) (オプション)",
-                        "    # data modify storage asset:mob ExtendsSafe set value ",
+                        "    # data modify storage asset:object ExtendsSafe set value ",
                         "# ID (int)",
-                        "    data modify storage asset:mob ID set value %id%",
+                        "    data modify storage asset:object ID set value %id%",
                         "# フィールド",
-                        "    # data modify storage asset:mob Field.myValue set value "
+                        "    # data modify storage asset:object Field.myValue set value "
                     ]
                 }
             ],
             "customQuestion": [
                 {
                     "name": "id",
-                    "question": "MobのID",
+                    "question": "ObjectのID",
                     "pattern": "[1-9][0-9]*",
                     "patternErrorMessage": "数値のみが許されるよ"
                 },
