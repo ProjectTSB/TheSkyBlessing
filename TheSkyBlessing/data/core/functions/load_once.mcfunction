@@ -168,6 +168,10 @@ team modify NoCollision collisionRule never
     bossbar set asset:bossbar color pink
     bossbar set asset:bossbar style notched_10
 
+    #> AssetManager: Object -Public
+    # @public
+        scoreboard objectives add ObjectID dummy {"text":"ObjectAssetのID"}
+
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**
@@ -225,7 +229,7 @@ team modify NoCollision collisionRule never
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerStopTime dummy
         scoreboard objectives add PosPacketLossDetectAfterTick dummy
-    
+
     #> PlayerManager - 戦闘判定用スコアボード
     # @within
     #   function
