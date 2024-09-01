@@ -20,21 +20,16 @@
 #> return
 # @api
     #declare tag DXYZ
-#
-#> temp
-# @within function lib:rotatable_dxyz/**
-    #declare entity 8c6c3500-0ec4-4556-b818-24046a8a1352
 
 
 # 実行位置が読み込まれていなかったら失敗
     execute unless loaded ~ ~ ~ run return fail
 
-# 一時エンティティ召喚＆実行方向に向ける
-    summon marker ~ ~ ~ {UUID:[I; -1939065600, 247743830, -1206377468, 1787433810]}
-    tp 8c6c3500-0ec4-4556-b818-24046a8a1352 ~ ~ ~ ~ ~
+# 汎用エンティティを実行位置・向きにtp
+    tp 0-0-0-0-0 ~ ~ ~ ~ ~
 
 # 各エンティティにファンクション実行
-    $execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) if function lib:rotatable_dxyz/core/each_plus at 8c6c3500-0ec4-4556-b818-24046a8a1352 positioned ^-$(dx) ^-$(dy) ^-$(dz) if function lib:rotatable_dxyz/core/each_minus run tag @s add DXYZ
+    $execute as $(selector) positioned ^$(dx) ^$(dy) ^$(dz) if function lib:rotatable_dxyz/core/each_plus at 0-0-0-0-0 positioned ^-$(dx) ^-$(dy) ^-$(dz) if function lib:rotatable_dxyz/core/each_minus run tag @s add DXYZ
 
-# 一時エンティティ削除
-    kill 8c6c3500-0ec4-4556-b818-24046a8a1352
+# 汎用エンティティを原点にtp
+    execute in overworld run tp 0-0-0-0-0 0.0 0.0 0.0 0.0 0.0
