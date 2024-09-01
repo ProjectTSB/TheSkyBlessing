@@ -4,5 +4,5 @@
 #
 # @within function asset_manager:object/summon/
 
-$function asset:object/alias/$(ID)/register
-$function asset:object/alias/$(ID)/summon
+$function asset:object/alias/$(id)/register
+$function asset:object/alias/$(id)/summon
