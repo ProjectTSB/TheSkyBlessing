@@ -21,3 +21,4 @@
     execute if score $ReflectionBullet.Loop Temporary matches 1.. run function lib:reflection_bullet/core/loop
 # 後片付け
     scoreboard players reset $ReflectionBullet.Loop Temporary
+    scoreboard players reset $Speed Lib
