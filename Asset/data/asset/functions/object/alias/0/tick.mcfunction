@@ -2,6 +2,6 @@
 #
 #
 #
-# @within  ../TheSkyBlessing/data/asset_manager/functions/object/tick/tick.m.mcfunction
+# @within  asset_manager:object/tick/tick.m
 
 function asset:object/0000.sample/tick/
