@@ -1,6 +1,6 @@
 #> asset:object/0000.sample/register
 #
-# オブジェクトのデータを登録
+# Objectのデータを指定
 #
 # @within  asset:object/alias/0/register
 
