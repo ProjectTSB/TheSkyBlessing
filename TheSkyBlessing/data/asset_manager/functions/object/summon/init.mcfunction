@@ -17,11 +17,11 @@
 # 共通タグ付与
     tag @s add AssetObject
 
-# フィールドを取り出す
-    data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
-
-# フィールドを元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
+# EntityStorage呼び出し
+    function oh_my_dat:please
+# フィールド
+    execute if data storage asset:object FieldOverride run data modify storage asset:object Field merge from storage asset:object FieldOverride
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField set from storage asset:object Field
 
 # リセット
     data remove storage asset:context this

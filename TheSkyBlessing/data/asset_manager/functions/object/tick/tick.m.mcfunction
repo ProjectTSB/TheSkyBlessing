@@ -4,4 +4,4 @@
 #
 # @within function asset_manager:object/tick/
 
-$function asset:object/alias/$(TickID)/tick
+$function asset:object/alias/$(id)/tick
