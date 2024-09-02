@@ -5,6 +5,7 @@
 # @within *
 #   asset_manager:object/**
 #   asset:object/**
+#   api:object/extends
     #declare storage asset:object
 
 #> 初期化タグ

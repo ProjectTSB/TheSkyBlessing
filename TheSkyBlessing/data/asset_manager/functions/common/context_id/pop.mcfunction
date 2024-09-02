@@ -15,6 +15,7 @@
 #   asset_manager:artifact/give
 #   api:spawner/subtract_hp
 #   asset_manager:object/summon/
+#   api:object/extends
 
 # idを掃除
     data remove storage asset:context id

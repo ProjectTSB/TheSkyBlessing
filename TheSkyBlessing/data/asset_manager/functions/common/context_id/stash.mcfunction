@@ -15,6 +15,7 @@
 #   asset_manager:artifact/give
 #   api:spawner/subtract_hp
 #   asset_manager:object/summon/
+#   api:object/extends
 
 # スタックに新しい空間を追加する
     data modify storage asset:context IDStashStack append value {}
