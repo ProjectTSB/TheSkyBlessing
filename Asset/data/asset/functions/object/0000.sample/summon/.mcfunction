@@ -1,6 +1,6 @@
 #> asset:object/0000.sample/summon/
 #
-# オブジェクトの召喚処理
+# Object召喚処理の呼び出し時に実行されるfunction
 #
 # @within function asset:object/alias/0/summon
 

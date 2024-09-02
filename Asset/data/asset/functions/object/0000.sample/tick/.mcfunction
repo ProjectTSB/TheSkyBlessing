@@ -1,6 +1,6 @@
 #> asset:object/0000.sample/tick/
 #
-# オブジェクトのTick処理
+# Objectのtick時の処理
 #
 # @within asset:object/alias/0/tick
 
@@ -20,3 +20,6 @@
 # オブジェクトは基本的に自然消滅しないし倒すこともできないので、基本的には時間での消滅処理を作ることを推奨する
     scoreboard players add @s Generic.Object.Tick 1
     kill @s[scores={Generic.Object.Tick=200..}]
+
+# 継承可能な処理にする
+    data modify storage asset:object Implement set value true
