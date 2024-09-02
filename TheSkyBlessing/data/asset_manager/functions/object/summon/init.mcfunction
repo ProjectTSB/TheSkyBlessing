@@ -11,6 +11,9 @@
 # リセット
     tag @s remove ObjectInit
 
+# IDをそのまま付与
+    execute store result score @s ObjectID run data get storage api: Argument.ID
+
 # 共通タグ付与
     tag @s add AssetObject
 
