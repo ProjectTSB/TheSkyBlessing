@@ -12,3 +12,9 @@
 #   asset_manager:object/**
 #   asset:object/**
     #declare tag ObjectInit
+
+#> ObjectAsset側で定義されたEntityに付けられるタグ
+# @within function
+#   core:tick/
+#   asset_manager:object/summon/init
+    #declare tag AssetObject
