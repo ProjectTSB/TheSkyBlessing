@@ -172,6 +172,12 @@ team modify NoCollision collisionRule never
     # @public
         scoreboard objectives add ObjectID dummy {"text":"ObjectAssetのID"}
 
+    #> AssetManager: Object -Public
+    # @public
+    #   core:load_once
+    #   asset:object/**
+        scoreboard objectives add Generic.Object.Tick dummy {"text":"ObjectAsset内で使用できるTick用スコア"}
+
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**
