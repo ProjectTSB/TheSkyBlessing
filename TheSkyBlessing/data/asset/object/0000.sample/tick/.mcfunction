@@ -21,5 +21,5 @@
     scoreboard players add @s Generic.Object.Tick 1
     kill @s[scores={Generic.Object.Tick=200..}]
 
-# 継承可能な処理にする
+# 実装フラグを立てる
     data modify storage asset:object Implement set value true
