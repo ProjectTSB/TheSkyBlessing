@@ -5,7 +5,7 @@
 # @within *
 #   asset_manager:object/**
 #   asset:object/**
-#   api:object/extends/
+#   api:object/**
     #declare storage asset:object
 
 #> 初期化タグ
@@ -19,3 +19,9 @@
 #   core:tick/
 #   asset_manager:object/summon/init
     #declare tag AssetObject
+
+#> thisタグ
+# @within function
+#   asset_manager:object/triggers/tick
+#   assst:object/**
+    #declare tag this
