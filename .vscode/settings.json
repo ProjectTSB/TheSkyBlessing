@@ -2151,7 +2151,7 @@
                         "#",
                         "# Object召喚処理のエイリアス",
                         "#",
-                        "# @within asset:object/alias/%id%/summon",
+                        "# @within asset_manager:object/summon/summon.m",
                         "",
                         "# 元の召喚処理を呼び出す",
                         "   function asset:object/%namespace%/summon/"
@@ -2206,6 +2206,50 @@
                 }
             ]
         },
+        {
+            "label": "Object/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/tick/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/tick/",
+                        "#",
+                        "# Objectのtick時の処理",
+                        "#",
+                        "# @within asset:object/alias/%id%/tick",
+                        "",
+                        "# Tick加算",
+                        "   scoreboard players add @s Generic.Object.Tick 1",
+                        "",
+                        "# 消滅処理",
+                        "   kill @s[scores={Generic.Object.Tick=1000..}]"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/tick.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/tick",
+                        "#",
+                        "# Tick時処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/tick/tick.m",
+                        "",
+                        "# 元のTick処理を呼び出す",
+                        "   function asset:object/%namespace%/tick/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
