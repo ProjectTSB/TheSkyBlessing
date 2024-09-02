@@ -2249,6 +2249,57 @@
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
             ]
+        },
+        {
+            "label": "Object/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/load.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/load",
+                        "#",
+                        "# Objectに利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:object/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:object/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/object/load.json",
+                    "content": {
+                        "values": [
+                            "asset:object/%namespace%/load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:object/%namespace%/load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Object/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:object/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
         }
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
