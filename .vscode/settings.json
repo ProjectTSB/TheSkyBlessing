@@ -2189,7 +2189,21 @@
                         "# フィールド",
                         "    # data modify storage asset:object Field.myValue set value "
                     ]
-                }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/summon.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/summon",
+                        "#",
+                        "# Objectのデータ指定処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/summon/summon.m",
+                        "",
+                        "# 元の登録処理を呼び出す",
+                        "   function asset:object/%namespace%/register"
+                    ]
+                },
             ],
             "customQuestion": [
                 {
