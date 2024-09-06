@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:object/summon/
+# @within function api:object/core/summon
 
 # validate
     execute unless entity @s run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"データを適用するEntityが存在しません\nasを利用して対象のEntityを実行者にしてください"}]
