@@ -2127,7 +2127,52 @@
             ]
         },
         {
-            "label": "Object/テンプレート",
+            "label": "Object/登録処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/register",
+                        "#",
+                        "# Objectのデータを指定",
+                        "#",
+                        "# @within function asset:object/alias/%namespace%/register",
+                        "",
+                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
+                        "    # data modify storage asset:object ExtendsSafe set value ",
+                        "# ID (int)",
+                        "    data modify storage asset:object ID set value %id%",
+                        "# フィールド",
+                        "    # data modify storage asset:object Field.myValue set value "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/register.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/register",
+                        "#",
+                        "# Objectのデータ指定処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/summon/summon.m",
+                        "",
+                        "# 元の登録処理を呼び出す",
+                        "   function asset:object/%namespace%/register"
+                    ]
+                },
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/ 召喚処理",
             "generates": [
                 {
                     "type": "file",
@@ -2140,7 +2185,10 @@
                         "# @within asset:object/alias/%id%/summon",
                         "",
                         "# 元となるEntityを召喚する",
-                        "    summon %entity% ~ ~ ~ {Tags:[\"ObjectInit\"]}"
+                        "    summon %entity% ~ ~ ~ {Tags:[\"ObjectInit\"]}",
+                        "",
+                        "# 実装フラグを立てる",
+                        "data modify storage asset:object Implement set value true"
                     ]
                 },
                 {
@@ -2171,39 +2219,7 @@
                         "   data modify storage api: Argument.ID set value %id%",
                         "   function api:object/summon"
                     ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/object/%namespace%/register.mcfunction",
-                    "content": [
-                        "#> asset:object/%namespace%/register",
-                        "#",
-                        "# Objectのデータを指定",
-                        "#",
-                        "# @within function asset:object/alias/%namespace%/register",
-                        "",
-                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
-                        "    # data modify storage asset:object ExtendsSafe set value ",
-                        "# ID (int)",
-                        "    data modify storage asset:object ID set value %id%",
-                        "# フィールド",
-                        "    # data modify storage asset:object Field.myValue set value "
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/object/alias/%id%/summon.mcfunction",
-                    "content": [
-                        "#> asset:object/alias/%id%/summon",
-                        "#",
-                        "# Objectのデータ指定処理のエイリアス",
-                        "#",
-                        "# @within asset_manager:object/summon/summon.m",
-                        "",
-                        "# 元の登録処理を呼び出す",
-                        "   function asset:object/%namespace%/register"
-                    ]
-                },
+                }
             ],
             "customQuestion": [
                 {
@@ -2237,7 +2253,10 @@
                         "   scoreboard players add @s Generic.Object.Tick 1",
                         "",
                         "# 消滅処理",
-                        "   kill @s[scores={Generic.Object.Tick=1000..}]"
+                        "   kill @s[scores={Generic.Object.Tick=1000..}]",
+                        "",
+                        "# 実装フラグを立てる",
+                        "data modify storage asset:object Implement set value true"
                     ]
                 },
                 {
