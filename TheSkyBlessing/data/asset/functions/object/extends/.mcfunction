@@ -11,7 +11,7 @@
     data modify storage asset:context id set from storage asset:object Extends[-1]
 
 # 取得したIDを用いてマクロを実行する
-    function asset:object/extends/register.m with storage asset:context
+    function asset_manager:object/summon/register.m with storage asset:context
 
 # データチェック
     execute unless data storage asset:object ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのObjectは存在しません: "},{"storage":"asset:context","nbt":"id"}]

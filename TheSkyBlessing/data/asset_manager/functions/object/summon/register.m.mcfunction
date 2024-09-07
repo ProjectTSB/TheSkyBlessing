@@ -2,6 +2,8 @@
 #
 #
 #
-# @within function api:object/core/summon
+# @within function
+#   api:object/core/summon
+#   asset:object/extends/
 
 $function asset:object/alias/$(id)/register
