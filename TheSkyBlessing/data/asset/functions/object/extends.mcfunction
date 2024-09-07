@@ -1,4 +1,4 @@
-#> asset:object/extends/
+#> asset:object/extends
 #
 # 他のオブジェクトを継承する
 #
