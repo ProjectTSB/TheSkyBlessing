@@ -25,9 +25,9 @@
 # 長いので一度コピーしましょう
     data modify storage asset:artifact LCDs set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown
 # 各スロットのCDをデクリメントする LCDs(normal) -> DecrementedLCDs(inverted)
-    function asset_manager:artifact/cooldown/foreach/decrement
+    function asset_manager:artifact/cooldown/mini_bar/foreach_decrement
 # 各スロットの表示データ構築 + DecrementedLCDs(inverted) -> ( LCDs(normal), LCDMessages(normal) )
-    function asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+    function asset_manager:artifact/cooldown/mini_bar/construct_msgs_and_revert_lcds
 # プレイヤーの現在スロット
     function api:data_get/selected_item_slot
 # メインハンドを設定する

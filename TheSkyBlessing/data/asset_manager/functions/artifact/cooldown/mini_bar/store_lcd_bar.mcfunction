@@ -1,8 +1,8 @@
-#> asset_manager:artifact/cooldown/foreach/store_lcd_bar
+#> asset_manager:artifact/cooldown/mini_bar/store_lcd_bar
 #
 #
 #
-# @within function asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+# @within function asset_manager:artifact/cooldown/mini_bar/construct_msgs_and_revert_lcds
 
 execute if score $NormalizedValue Temporary matches 00 run data modify storage asset:artifact LCDMessages append value '{"text":"a","color":"white"}'
 execute if score $NormalizedValue Temporary matches 01 run data modify storage asset:artifact LCDMessages append value '{"text":"b","color":"white"}'

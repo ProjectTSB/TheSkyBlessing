@@ -1,10 +1,10 @@
-#> asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+#> asset_manager:artifact/cooldown/mini_bar/construct_msgs_and_revert_lcds
 #
 #
 #
 # @within function
 #   asset_manager:artifact/cooldown/
-#   asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+#   asset_manager:artifact/cooldown/mini_bar/construct_msgs_and_revert_lcds
 
 # a 16/16
 # b 15/16
@@ -43,8 +43,8 @@
         scoreboard players operation $NormalizedValue Temporary *= $-1 Const
     # LCDMessagesに追加
         execute if score $Value Temporary matches -15 run data modify storage asset:artifact LCDMessages append value '{"text":"ε","color":"white"}'
-        execute unless score $Value Temporary matches -15 run function asset_manager:artifact/cooldown/foreach/store_lcd_bar
+        execute unless score $Value Temporary matches -15 run function asset_manager:artifact/cooldown/mini_bar/store_lcd_bar
 # 末尾削除
     data remove storage asset:artifact DecrementedLCDs[-1]
 # 要素があれば再帰
-    execute if data storage asset:artifact DecrementedLCDs[0] run function asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+    execute if data storage asset:artifact DecrementedLCDs[0] run function asset_manager:artifact/cooldown/mini_bar/construct_msgs_and_revert_lcds
