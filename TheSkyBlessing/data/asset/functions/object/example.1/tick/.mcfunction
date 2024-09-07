@@ -1,8 +1,8 @@
-#> asset:object/0000.sample/tick/
+#> asset:object/example.1/tick/
 #
 # Objectのtick時の処理
 #
-# @within asset:object/alias/0/tick
+# @within asset:object/alias/65534/tick
 
 # ここに書いた処理は毎Tick実行される
 
@@ -17,7 +17,7 @@
 # 何か個別でスコアボードが必要になった場合などはload処理に書くこと。
 
 # 消滅処理
-# オブジェクトは基本的に自然消滅しないし倒すこともできないので、基本的には時間での消滅処理を作ることを推奨する
+# オブジェクトは基本的に自然消滅しないし、攻撃で倒すこともできないので、基本的には時間での消滅処理を作ることを推奨する
     scoreboard players add @s Generic.Object.Tick 1
     kill @s[scores={Generic.Object.Tick=200..}]
 

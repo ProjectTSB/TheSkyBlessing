@@ -1,8 +1,8 @@
-#> asset:object/0000.sample/summon/
+#> asset:object/example.1/register
 #
-# Object召喚処理の呼び出し時に実行されるfunction
+# Objectのデータを指定
 #
-# @within function asset:object/alias/0/summon
+# @within function asset:object/alias/example.1/register
 
 # オブジェクトはモブとは違い、基本的には攻撃などの対象とされない。
 # Tick以外のトリガーを持たないためモブより軽いが、その分用途は限られがち。
@@ -10,6 +10,9 @@
 # 「攻撃で破壊可能な飛び道具や設置物」といった、なんらかの方法でダメージを受けるものや、
 # 「バニラAIで攻撃してくるもの」といった、コマンドではない手段で攻撃してくるものはMobAssetで実装すること。
 
-# 元となるEntityを召喚する
-# 「防具をかぶせたアーマースタンドがいい」とかそういう場合は、モブアセットとは違いここにそのまま書くこと
-    summon item_display ~ ~ ~ {teleport_duration:1,billboard:"center",Tags:["ObjectInit"],item:{id:"minecraft:ender_pearl",Count:1b}}
+# 他のモブに継承されることを許可するか (boolean) (オプション)
+    data modify storage asset:object ExtendsSafe set value true
+# ID (int)
+    data modify storage asset:object ID set value 65534
+# フィールド
+    data modify storage asset:object Field.myValue set value "object_sample.1"
