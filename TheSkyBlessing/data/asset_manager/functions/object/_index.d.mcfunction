@@ -11,6 +11,7 @@
 #> 初期化タグ
 # @within
 #   asset_manager:object/**
+#   api:object/core/summon
 #   asset:object/**
     #declare tag ObjectInit
 
