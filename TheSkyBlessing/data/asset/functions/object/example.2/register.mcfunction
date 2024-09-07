@@ -9,5 +9,8 @@
     data modify storage asset:object Extends append value 65534
     function asset:object/extends
 
+# 他のモブに継承されることを許可するか (boolean) (オプション)
+    data modify storage asset:object ExtendsSafe set value true
+
 # ID (int)
     data modify storage asset:object ID set value 65533
