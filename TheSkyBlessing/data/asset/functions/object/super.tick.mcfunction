@@ -4,4 +4,4 @@
 #
 # @within function asset:object/*/tick/
 
-function asset_manager:object/summon/call_super_method
+function asset_manager:object/tick/call_super_method

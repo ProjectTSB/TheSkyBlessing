@@ -2,9 +2,7 @@
 #
 #
 #
-# @within function
-#   asset_manager:object/summon/
-#   asset:object/super.tick
+# @within function asset_manager:object/summon/
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
