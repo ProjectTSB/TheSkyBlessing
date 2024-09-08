@@ -2250,10 +2250,10 @@
                         "# @within asset:object/alias/%id%/tick",
                         "",
                         "# Tick加算",
-                        "   scoreboard players add @s Generic.Object.Tick 1",
+                        "   scoreboard players add @s General.Object.Tick 1",
                         "",
                         "# 消滅処理",
-                        "   kill @s[scores={Generic.Object.Tick=1000..}]",
+                        "   kill @s[scores={General.Object.Tick=1000..}]",
                         "",
                         "# 実装フラグを立てる",
                         "data modify storage asset:object Implement set value true"
