@@ -21,10 +21,10 @@
     scoreboard players add @s General.Object.Tick 1
     kill @s[scores={General.Object.Tick=200..}]
 
-# メソッドを実行、この場合はObjectに実装されている"test"というメソッドを実行する
+# 付近にプレイヤーがいたらメソッドを実行、この場合はObjectに実装されている"test"というメソッドを実行する
 # ただし、こいつにはtestメソッドが実装されてないため、めっちゃエラーが出る
 # この場合、example.1は単独で召喚されるものではなく、他のもので継承して使うことを前提とされているといえる
-    function asset:object/call.m {method:test}
+    execute if entity @a[distance=..5] run function asset:object/call.m {method:test}
 
 # 実装フラグを立てる
     data modify storage asset:object Implement set value true
