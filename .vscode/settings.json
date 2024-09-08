@@ -2368,7 +2368,7 @@
                 {
                     "name": "method_name",
                     "question": "メソッドの名前",
-                    "pattern": "[a-z0-9./_-]",
+                    "pattern": "[a-z0-9./_-]*",
                     "patternErrorMessage": "使用できない文字が入っているようです"
                 },
                 {
