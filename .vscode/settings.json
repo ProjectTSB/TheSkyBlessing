@@ -2355,7 +2355,7 @@
                     "type": "file",
                     "rel": "data/asset/functions/object/alias/%id%/%method_name%.mcfunction",
                     "content": [
-                        "#> asset:object/alias/%id%/tick",
+                        "#> asset:object/alias/%id%/%method_name%",
                         "#",
                         "# メソッド処理のエイリアス",
                         "#",
