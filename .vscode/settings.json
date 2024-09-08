@@ -2345,13 +2345,15 @@
                         "#",
                         "# 継承先などから実行される処理",
                         "#",
-                        "# @within asset:object/alias/%id%/method",
-                        ""
+                        "# @within asset:object/alias/%id%/%method_name%",
+                        "",
+                        "# 実装フラグを立てる",
+                        "data modify storage asset:object Implement set value true"
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/object/alias/%id%/method.mcfunction",
+                    "rel": "data/asset/functions/object/alias/%id%/%method_name%.mcfunction",
                     "content": [
                         "#> asset:object/alias/%id%/tick",
                         "#",
