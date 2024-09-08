@@ -5,6 +5,7 @@
 # @within function
 #   asset:object/call_method/
 #   asset_manager:object/call_method/
+#   asset:object/super.method
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
