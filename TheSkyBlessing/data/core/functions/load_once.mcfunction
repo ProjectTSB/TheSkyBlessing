@@ -405,7 +405,7 @@ team modify NoCollision collisionRule never
     function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
-
+    function #asset:object/load
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
