@@ -2,7 +2,7 @@
 #
 # Objectのデータを指定
 #
-# @within function asset:object/alias/example.1/register
+# @within function asset:object/alias/65534/register
 
 # オブジェクトはモブとは違い、基本的には攻撃などの対象とされない。
 # Tick以外のトリガーを持たないためモブより軽いが、その分用途は限られがち。

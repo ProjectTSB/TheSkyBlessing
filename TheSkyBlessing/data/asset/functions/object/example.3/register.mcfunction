@@ -2,7 +2,7 @@
 #
 # Objectのデータを指定
 #
-# @within function asset:object/alias/example.3/register
+# @within function asset:object/alias/65532/register
 
 # ID65533(example.2)を継承する
 # この場合、example.3にはsummon処理がないため、example.2のsummon処理が使用される。
