@@ -157,6 +157,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
     #> AssetManager: Mob -Private
     # @within function
@@ -204,13 +205,11 @@ team modify NoCollision collisionRule never
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**
-    #   player_manager:vanilla_attack/show_log
     #   core:load_once
     #   core:handler/*
     #   core:tick/**
         scoreboard objectives add FirstJoinEvent custom:play_time {"text":"イベント: 初回Join"}
         scoreboard objectives add RejoinEvent custom:leave_game {"text":"イベント: 再Join"}
-        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed {"text":"イベント: 攻撃"}
         scoreboard objectives add DeathEvent deathCount {"text":"イベント: 死亡"}
         scoreboard objectives add RespawnEvent custom:time_since_death {"text":"イベント: リスポーン"}
         scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick {"text":"イベント: クリック 人参棒"}
@@ -374,8 +373,9 @@ team modify NoCollision collisionRule never
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
-        scoreboard objectives add MobHealthMax dummy
-        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e1)"}
+    #   mob_manager:fix_health
+        scoreboard objectives add MobHealthMax dummy {"text":"MOBの最大体力(e2)"}
+        scoreboard objectives add MobMaxHealthMultiplier dummy {"text":"MOBの体力のマルチプレイ補正倍率 (e2)"}
 
     #> MobManager用スコアボード - 攻撃元
     # @within function
@@ -392,6 +392,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/triggers/attack
     #   player_manager:vanilla_attack/show_log
     #   mob_manager:entity_finder/attacked_entity/*
+    #   core:handler/attack
         scoreboard objectives add AttackedEntity dummy
 
     #> MobManager - Teams

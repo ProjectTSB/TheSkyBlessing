@@ -1,5 +1,5 @@
 {
-    "type": "generic",
+    "type": "command",
     "pools": [
         {
             "rolls": 1,

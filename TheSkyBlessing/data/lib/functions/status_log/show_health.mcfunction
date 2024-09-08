@@ -6,7 +6,8 @@
 #   api:damage/core/health_subtract/non-player
 #   api:heal/core/non-player
 #   lib:score_to_health_wrapper/fluctuation
-#   player_manager:vanilla_attack/show_log
+#   player_manager:vanilla_attack
+#   mob_manager:fix_health
 
 #> For Init
 # @private

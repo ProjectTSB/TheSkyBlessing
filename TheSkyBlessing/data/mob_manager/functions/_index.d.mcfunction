@@ -10,6 +10,7 @@
     #declare tag Npc
     #declare tag Object
     #declare tag Uninterferable
+    #declare tag Immovable
 
 #> InitTag
 # @within function
