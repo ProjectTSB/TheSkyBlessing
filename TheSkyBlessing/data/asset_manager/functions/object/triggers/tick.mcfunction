@@ -12,6 +12,7 @@
 
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s ObjectID
+    execute store result storage asset:context originID int 1 run scoreboard players get @s ObjectID
     data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField
 
 # Tick処理を実行
@@ -25,5 +26,6 @@
 
 # リセット
     data remove storage asset:context id
+    data remove storage asset:context originID
     data remove storage asset:context this
     tag @s remove this
