@@ -3,4 +3,4 @@
 
 #> declare
 # @within function asset_manager:artifact/cooldown/main_bar/*
-    #declare score_holder $LeftBar
+    #declare score_holder $Unicode
