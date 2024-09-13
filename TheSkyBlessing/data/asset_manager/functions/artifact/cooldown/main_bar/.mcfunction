@@ -32,7 +32,8 @@
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:artifact MainBarMessage append value '{"text":"","color":"#74E72A"}'
     execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. run function asset_manager:artifact/cooldown/main_bar/append_bar.m with storage asset:artifact MainBarUnicode
 # else
-    execute unless data storage asset:artifact MainBarMessage[0] run data modify storage asset:artifact MainBarMessage set value ['{"text":"\\u1101"}']
+    execute unless data storage asset:artifact MainBarMessage[0] run data modify storage asset:artifact MainBarMessage set value ['{"text":"\\u1000","color":"#74E72A"}']
+    # execute unless data storage asset:artifact MainBarMessage[0] run data modify storage asset:artifact MainBarMessage set value ['{"text":"\\u1101"}']
 # リセット
     scoreboard players reset $Unicode Temporary
     data remove storage asset:artifact TargetLCD

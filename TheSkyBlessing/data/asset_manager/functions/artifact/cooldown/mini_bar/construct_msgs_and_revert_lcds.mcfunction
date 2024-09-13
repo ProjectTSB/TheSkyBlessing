@@ -42,7 +42,8 @@
         scoreboard players operation $NormalizedValue Temporary /= $Max Temporary
         scoreboard players operation $NormalizedValue Temporary *= $-1 Const
     # LCDMessagesに追加
-        execute if score $Value Temporary matches -15 run data modify storage asset:artifact LCDMessages append value '{"text":"ε","color":"white"}'
+        # execute if score $Value Temporary matches -15 run data modify storage asset:artifact LCDMessages append value '{"text":"ε","color":"white"}'
+        execute if score $Value Temporary matches -15 run data modify storage asset:artifact LCDMessages append value '{"text":"a","color":"white"}'
         execute unless score $Value Temporary matches -15 run function asset_manager:artifact/cooldown/mini_bar/store_lcd_bar
 # 末尾削除
     data remove storage asset:artifact DecrementedLCDs[-1]

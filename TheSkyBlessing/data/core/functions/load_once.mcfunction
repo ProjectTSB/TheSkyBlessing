@@ -216,6 +216,13 @@ team modify NoCollision collisionRule never
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
+    #> PlayerManager - 緩衝体力用スコアボード
+    # @within
+    #   function
+    #       player_manager:absorption/**
+    #       api:**
+        scoreboard objectives add PlayerAbsorption dummy
+
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function
