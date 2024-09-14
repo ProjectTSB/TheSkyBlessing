@@ -24,16 +24,12 @@
     scoreboard players operation $Value Temporary /= $Max Temporary
     scoreboard players operation $Value Temporary *= $-1 Const
 # ゼロパディングの代わりに+1000してstorageに保存
-    scoreboard players operation $Unicode Temporary = $Value Temporary
-    scoreboard players add $Unicode Temporary 1000
-    execute store result storage asset:artifact MainBarUnicode.Value int 1 run scoreboard players get $Unicode Temporary
+    scoreboard players operation $NormalizedValue Temporary = $Value Temporary
+    scoreboard players add $NormalizedValue Temporary 1000
+    execute store result storage asset:artifact MainBar.Value int 1 run scoreboard players get $NormalizedValue Temporary
 # if (Maxが0では無い && Valueが負数で無い) ならば表示バーを構築する // ここで負数であるのは-15の場合のみ。
-    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 1.. run data modify storage asset:artifact MainBarMessage append value '{"text":"","color":"#00D3FF"}'
-    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:artifact MainBarMessage append value '{"text":"","color":"#74E72A"}'
-    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. run function asset_manager:artifact/cooldown/main_bar/append_bar.m with storage asset:artifact MainBarUnicode
-# else
-    execute unless data storage asset:artifact MainBarMessage[0] run data modify storage asset:artifact MainBarMessage set value ['{"text":"\\u1000","color":"#74E72A"}']
-    # execute unless data storage asset:artifact MainBarMessage[0] run data modify storage asset:artifact MainBarMessage set value ['{"text":"\\u1101"}']
+    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 1.. run data modify storage asset:artifact MainBar.Color set value "#00D3FF"
+    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0 run data modify storage asset:artifact MainBar.Color set value "#74E72A"
+    execute unless score $Max Temporary matches 0 if score $Value Temporary matches 0.. run function asset_manager:artifact/cooldown/main_bar/construct_message.m with storage asset:artifact MainBar
 # リセット
-    scoreboard players reset $Unicode Temporary
     data remove storage asset:artifact TargetLCD
