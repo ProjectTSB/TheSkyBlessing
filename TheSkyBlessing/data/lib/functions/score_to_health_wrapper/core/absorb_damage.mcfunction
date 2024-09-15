@@ -22,4 +22,5 @@
     execute if score $PrevAbsorption Temporary >= $PrevDamage Temporary run scoreboard players set @s ScoreToHPFluc 0
 
 # リセット
+    scoreboard players reset $PrevAbsorption Temporary
     scoreboard players reset $PrevDamage Temporary
