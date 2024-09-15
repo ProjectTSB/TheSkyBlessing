@@ -11,6 +11,5 @@
 
 # 他のモブに継承されることを許可するか (boolean) (オプション)
     data modify storage asset:object ExtendsSafe set value true
-
 # ID (int)
     data modify storage asset:object ID set value 65533
