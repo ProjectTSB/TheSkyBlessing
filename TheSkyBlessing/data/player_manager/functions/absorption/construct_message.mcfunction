@@ -7,8 +7,10 @@
 # 開始位置調節
     data modify storage player_manager:absorption AbsorptionMessage append value '{"text":"\\uC091","font":"space"}'
 
-# 最大体力を取得
-    execute store result score $MaxHealth Temporary run attribute @s generic.max_health get 1
+# 最大体力を少数切り上げで取得
+    execute store result score $MaxHealth Temporary run attribute @s generic.max_health get -10000
+    scoreboard players operation $MaxHealth Temporary /= $10000 Const
+    scoreboard players operation $MaxHealth Temporary *= $-1 Const
 
 # 最大体力のハート数 (半分も1つとカウントする)
     scoreboard players operation $MaxHealthHeartCount Temporary = $MaxHealth Temporary
