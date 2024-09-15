@@ -1,10 +1,10 @@
-#> asset_manager:artifact/cooldown/foreach/decrement
+#> asset_manager:artifact/cooldown/mini_bar/foreach_decrement
 #
 #
 #
 # @within function
 #   asset_manager:artifact/cooldown/
-#   asset_manager:artifact/cooldown/foreach/decrement
+#   asset_manager:artifact/cooldown/mini_bar/foreach_decrement
 
 # デクリメント
     data modify storage asset:artifact DecrementedLCDs append from storage asset:artifact LCDs[-1]
@@ -14,4 +14,4 @@
 # 末尾削除
     data remove storage asset:artifact LCDs[-1]
 # 要素があれば再帰
-    execute if data storage asset:artifact LCDs[0] run function asset_manager:artifact/cooldown/foreach/decrement
+    execute if data storage asset:artifact LCDs[0] run function asset_manager:artifact/cooldown/mini_bar/foreach_decrement

@@ -25,25 +25,29 @@
 # 長いので一度コピーしましょう
     data modify storage asset:artifact LCDs set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown
 # 各スロットのCDをデクリメントする LCDs(normal) -> DecrementedLCDs(inverted)
-    function asset_manager:artifact/cooldown/foreach/decrement
-# 各スロットの表示データ構築 + DecrementedLCDs(inverted) -> ( LCDs(normal), LCDMessages(normal) )
-    function asset_manager:artifact/cooldown/foreach/construct_msgs_and_revert_lcds
+    function asset_manager:artifact/cooldown/mini_bar/foreach_decrement
+# 各スロットのCDを表示用に正規化 + DecrementedLCDs(inverted) -> ( LCDs(normal), NormalizedLCDs(normal) )
+    function asset_manager:artifact/cooldown/mini_bar/normalize_and_revert_lcds
+# 各スロットのCD表示を構築
+    data modify storage asset:artifact MiniBars.Offhand set from storage asset:artifact NormalizedLCDs[0]
+    data modify storage asset:artifact MiniBars.Feet set from storage asset:artifact NormalizedLCDs[1]
+    data modify storage asset:artifact MiniBars.Legs set from storage asset:artifact NormalizedLCDs[2]
+    data modify storage asset:artifact MiniBars.Chest set from storage asset:artifact NormalizedLCDs[3]
+    data modify storage asset:artifact MiniBars.Head set from storage asset:artifact NormalizedLCDs[4]
+    data modify storage asset:artifact MiniBars.Hotbar0 set from storage asset:artifact NormalizedLCDs[5]
+    data modify storage asset:artifact MiniBars.Hotbar1 set from storage asset:artifact NormalizedLCDs[6]
+    data modify storage asset:artifact MiniBars.Hotbar2 set from storage asset:artifact NormalizedLCDs[7]
+    data modify storage asset:artifact MiniBars.Hotbar3 set from storage asset:artifact NormalizedLCDs[8]
+    data modify storage asset:artifact MiniBars.Hotbar4 set from storage asset:artifact NormalizedLCDs[9]
+    data modify storage asset:artifact MiniBars.Hotbar5 set from storage asset:artifact NormalizedLCDs[10]
+    data modify storage asset:artifact MiniBars.Hotbar6 set from storage asset:artifact NormalizedLCDs[11]
+    data modify storage asset:artifact MiniBars.Hotbar7 set from storage asset:artifact NormalizedLCDs[12]
+    data modify storage asset:artifact MiniBars.Hotbar8 set from storage asset:artifact NormalizedLCDs[13]
+    function asset_manager:artifact/cooldown/mini_bar/construct_message.m with storage asset:artifact MiniBars
 # プレイヤーの現在スロット
     function api:data_get/selected_item_slot
 # メインハンドを設定する
     function asset_manager:artifact/cooldown/main_bar/
-# メインハンドのスロットのホットバー側をマスクする
-    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact LCDMessages[5] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:artifact LCDMessages[6] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:artifact LCDMessages[7] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:artifact LCDMessages[8] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:artifact LCDMessages[9] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:artifact LCDMessages[10] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:artifact LCDMessages[11] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:artifact LCDMessages[12] set value '{"text":"ε","color":"white"}'
-    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:artifact LCDMessages[13] set value '{"text":"ε","color":"white"}'
-# 出力
-    title @s actionbar [{"text":">","font":"cooldown/main_bar"},{"storage":"asset:artifact","nbt":"MainBarMessage[]","separator":"","interpret":true},{"text":"~"},{"storage":"asset:artifact","nbt":"LCDMessages[0]","interpret":true,"font":"cooldown/mini_bar/offhand"},{"text":"<"},{"storage":"asset:artifact","nbt":"LCDMessages[1]","interpret":true,"font":"cooldown/mini_bar/feet"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[2]","interpret":true,"font":"cooldown/mini_bar/legs"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[3]","interpret":true,"font":"cooldown/mini_bar/chest"},{"text":"*"},{"storage":"asset:artifact","nbt":"LCDMessages[4]","interpret":true,"font":"cooldown/mini_bar/head"},{"text":">"},{"storage":"asset:artifact","nbt":"LCDMessages[5]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[6]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[7]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[8]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[9]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[10]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[11]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[12]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[13]","interpret":true,"font":"cooldown/mini_bar/"},{"storage":"asset:artifact","nbt":"LCDMessages[14]","interpret":true,"font":"cooldown/mini_bar/"}]
 # 元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage asset:artifact LCDs
 # リセット
@@ -51,6 +55,7 @@
     scoreboard players reset $NormalizedValue Temporary
     scoreboard players reset $Max Temporary
     data remove storage asset:artifact LCDs
-    data remove storage asset:artifact DecrementedCLDs
-    data remove storage asset:artifact MainBarMessage
-    data remove storage asset:artifact LCDMessages
+    data remove storage asset:artifact DecrementedLCDs
+    data remove storage asset:artifact MainBar
+    data remove storage asset:artifact NormalizedLCDs
+    data remove storage asset:artifact MiniBars
