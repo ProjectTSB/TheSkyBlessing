@@ -25,3 +25,5 @@
 
 # リセット
     data remove storage asset:context this
+    data remove storage asset:context ID
+    data remove storage asset:context Field

@@ -9,4 +9,4 @@
     summon item_display ~ ~ ~ {teleport_duration:1,billboard:"center",Tags:["ObjectInit"],item:{id:"minecraft:ender_pearl",Count:1b}}
 
 # 実装フラグを立てる
-data modify storage asset:object Implement set value true
+    data modify storage asset:object Implement set value true
