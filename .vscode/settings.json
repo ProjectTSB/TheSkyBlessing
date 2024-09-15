@@ -2163,6 +2163,21 @@
                         "   function asset:object/%namespace%/register"
                     ]
                 },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/summon/debug.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/summon/debug",
+                        "#",
+                        "# 動作チェック用の召喚処理 使い終わったら消してもいいかも",
+                        "#",
+                        "# @within asset:object/%namespace%/summon/debug",
+                        "",
+                        "# 召喚",
+                        "   data modify storage api: Argument.ID set value %id%",
+                        "   function api:object/summon"
+                    ]
+                }
             ],
             "customQuestion": [
                 {
@@ -2205,21 +2220,6 @@
                         "",
                         "# 元の召喚処理を呼び出す",
                         "   function asset:object/%namespace%/summon/"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/object/%namespace%/summon/debug.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/summon/debug",
-                        "#",
-                        "# 動作チェック用の召喚処理 使い終わったら消してもいいかも",
-                        "#",
-                        "# @within asset:object/%namespace%/summon/debug",
-                        "",
-                        "# 召喚",
-                        "   data modify storage api: Argument.ID set value %id%",
-                        "   function api:object/summon"
                     ]
                 }
             ],
