@@ -40,6 +40,7 @@ jobs:
         run: |
             npm i -g ts-node
             npm i -D @types/node
+            echo '{"compilerOptions": {"target": "ESNext"}}' > ./tsconfig.json
 
       - name: Generate declares.d.mcfunction
         if: ${{ github.ref == 'refs/heads/master' }}
