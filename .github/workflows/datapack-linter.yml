@@ -26,6 +26,7 @@ jobs:
             core:define_gamerule
 
       - name: Checkout Asset2
+        if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/checkout@v3
         with:
           repository: ProjectTSB/Asset
@@ -35,12 +36,14 @@ jobs:
           persist-credentials: false
 
       - name: Setup minimum typescript code runner
+        if: ${{ github.ref == 'refs/heads/master'}}
         run: |
             npm i -g ts-node
             npm i -D @types/node
             echo '{"compilerOptions": {"target": "ESNext"}}' > ./tsconfig.json
 
       - name: Generate declares.d.mcfunction
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
             ts-node ./.github/workflows/make-declares-mcf.ts
         env:
@@ -72,10 +75,6 @@ jobs:
             function@asset:trader/trader_name/register/register
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
-
-      - name: view declares.d.mcfunction
-        run: |
-            cat ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
 
       - name: Deploy declares to Asset Repository
         if: ${{ github.ref == 'refs/heads/master' }}
