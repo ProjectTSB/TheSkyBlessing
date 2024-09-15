@@ -24,7 +24,6 @@
     function oh_my_dat:please
 # 長いので一度コピーしましょう
     data modify storage asset:artifact LCDs set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown
-    # tellraw @a [{"storage":"asset:artifact","nbt":"LCDs"}]
 # 各スロットのCDをデクリメントする LCDs(normal) -> DecrementedLCDs(inverted)
     function asset_manager:artifact/cooldown/mini_bar/foreach_decrement
 # 各スロットのCDを表示用に正規化 + DecrementedLCDs(inverted) -> ( LCDs(normal), NormalizedLCDs(normal) )
