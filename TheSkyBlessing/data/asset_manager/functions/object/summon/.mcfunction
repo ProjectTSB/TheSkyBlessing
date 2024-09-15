@@ -6,6 +6,9 @@
 #   api:object/core/summon
 #   asset_manager:object/summon/call_super_method
 
+# IsAbstractがtrueだった場合はエラーが出る
+    execute if data storage asset:object {IsAbstract:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"このオブジェクトは継承せずに呼び出してはいけない！"}]
+
 # 召喚
     function asset_manager:object/summon/summon.m with storage asset:context
 
