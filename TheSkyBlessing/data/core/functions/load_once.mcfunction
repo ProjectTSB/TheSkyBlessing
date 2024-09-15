@@ -169,6 +169,15 @@ team modify NoCollision collisionRule never
     bossbar set asset:bossbar color pink
     bossbar set asset:bossbar style notched_10
 
+    #> AssetManager: Object -Public
+    # @public
+        scoreboard objectives add ObjectID dummy {"text":"ObjectAssetのID"}
+
+    #> AssetManager: Object -Public
+    # @within function
+    #   asset:object/**
+        scoreboard objectives add General.Object.Tick dummy {"text":"ObjectAsset内で使用できるTick用スコア"}
+
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**
@@ -402,7 +411,7 @@ team modify NoCollision collisionRule never
     function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
-
+    function #asset:object/load
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init

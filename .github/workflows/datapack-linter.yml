@@ -73,6 +73,8 @@ jobs:
             function@asset:spawner/spawner_id/register
             function@asset:teleporter/tp_id/register
             function@asset:trader/trader_name/register/register
+            function@asset:object/OBJECT_NAME/register
+            function@asset:object/OBJECT_NAME/tick/
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
 
