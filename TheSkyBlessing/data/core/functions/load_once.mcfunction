@@ -220,8 +220,8 @@ team modify NoCollision collisionRule never
     # @within
     #   function
     #       player_manager:absorption/**
-    #       api:**
-        scoreboard objectives add PlayerAbsorption dummy
+    #       lib:score_to_health_wrapper/core/absorb_damage
+        scoreboard objectives add PlayerAbsorption dummy {"text":"緩衝体力(e2)"}
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within

@@ -21,9 +21,11 @@
 
 # 緩衝体力のハート数 (半分も1つとカウントする)
     scoreboard players operation $AbsorptionHeartCount Temporary = @s PlayerAbsorption
-    scoreboard players operation $AbsorptionHeartCount Temporary /= $2 Const
+    scoreboard players operation $AbsorptionHeartCount Temporary /= $200 Const
     scoreboard players operation $AbsorptionOdd Temporary = @s PlayerAbsorption
-    scoreboard players operation $AbsorptionOdd Temporary %= $2 Const
+    scoreboard players operation $AbsorptionOdd Temporary %= $200 Const
+    execute if score $AbsorptionOdd Temporary matches 101..199 run scoreboard players set $AbsorptionOdd Temporary 0
+    execute if score $AbsorptionOdd Temporary matches 001..100 run scoreboard players set $AbsorptionOdd Temporary 1
     scoreboard players operation $AbsorptionHeartCount Temporary += $AbsorptionOdd Temporary
 
 # 最大体力と緩衝体力を合計したハート数
