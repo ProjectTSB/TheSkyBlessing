@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset:object/example.1/tick/
+# @within function asset:object/*/**
 
 # 既存のasset:context idを退避させる
     function asset_manager:common/context_id/stash
