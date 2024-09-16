@@ -1,8 +1,9 @@
-#> asset_manager:object/summon/call_super_method
+#> asset_manager:object/init/call_super_method
 #
 #
 #
-# @within function asset_manager:object/summon/
+# @within function asset:object/super.init
+
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
@@ -14,8 +15,8 @@
 # ROMから継承元の情報を持ってくる
     data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
 
-# super.summon呼び出し
-    execute if data storage asset:context id run function asset_manager:object/summon/
+# super.init呼び出し
+    execute if data storage asset:context id run function asset_manager:object/init/
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
