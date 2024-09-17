@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:object/super.init
+# @within function
+#   asset_manager:object/init/
+#   asset:object/super.init
 
 
 # IDをアドレスとしてROMを呼び出す
