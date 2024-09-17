@@ -2,9 +2,10 @@
 #
 #
 #
-# @within
-#   function asset_manager:object/init/
-#   function asset_manager:object/init/call_super_method
+# @within function
+#   asset_manager:object/summon/init
+#   asset_manager:object/init/
+#   asset_manager:object/init/call_super_method
 
 # Init処理
     function asset_manager:object/init/init.m with storage asset:context
