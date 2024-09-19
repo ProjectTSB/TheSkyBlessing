@@ -2287,6 +2287,45 @@
             ]
         },
         {
+            "label": "Object/トリガー: init",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/init/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/init/",
+                        "#",
+                        "# Objectのinit時の処理",
+                        "#",
+                        "# @within asset:object/alias/%id%/init",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/init.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/init",
+                        "#",
+                        "# Init処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/init/init.m",
+                        "",
+                        "# 元のInit処理を呼び出す",
+                        "   function asset:object/%namespace%/init/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
             "label": "Object/テンプレート: 初期化処理",
             "generates": [
                 {

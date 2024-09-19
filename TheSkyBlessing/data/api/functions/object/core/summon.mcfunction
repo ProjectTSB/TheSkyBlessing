@@ -25,12 +25,11 @@
 # Summon処理を実行
     function asset_manager:object/summon/
 
-# リセット
-    data remove storage asset:context id
-    data remove storage asset:context this
-
 # 初期化処理を実行
     execute as @e[tag=ObjectInit,distance=..0.01] run function asset_manager:object/summon/init
+
+# リセット
+    data remove storage asset:context id
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context_id/pop
