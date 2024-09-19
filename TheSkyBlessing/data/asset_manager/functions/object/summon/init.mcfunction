@@ -20,14 +20,6 @@
 # EntityStorage呼び出し
     function oh_my_dat:please
 
-
-# フィールド
-    execute if data storage asset:object FieldOverride run data modify storage asset:object Field merge from storage asset:object FieldOverride
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField set from storage asset:object Field
-
-# フィールドを取り出す
-    data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField
-
 # Object側に実装されてるInitを実行
     function asset_manager:object/init/ with storage asset:context
 
