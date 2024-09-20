@@ -20,9 +20,6 @@
 # EntityStorage呼び出し
     function oh_my_dat:please
 
-# フィールドを取り出す
-    data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField
-
 # Object側に実装されてるInitを実行
     function asset_manager:object/init/ with storage asset:context
 
