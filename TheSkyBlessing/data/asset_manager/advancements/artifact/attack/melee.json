@@ -1,19 +1,43 @@
 {
-	"criteria": {
-		"generic": {
-			"trigger": "player_hurt_entity",
-			"conditions": {
-				"damage": {
-					"type": {
-						"tags": [
-							{
-								"id": "is_projectile",
-								"expected": false
-							}
-						]
-					}
-				},
-				"entity": [
+    "criteria": {
+        "generic": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_drowning",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_explosion",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_fall",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_fire",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_freezing",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_lightning",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_projectile",
+                                "expected": false
+                            }
+                        ]
+                    }
+                },
+                "entity": [
                     {
                         "condition": "inverted",
                         "term": {
@@ -24,18 +48,18 @@
                             }
                         }
                     },
-					{
-						"condition": "inverted",
-						"term": {
-							"condition": "entity_properties",
-							"entity": "this",
-							"predicate": {
-								"nbt": "{Tags:[\"AttackedByProjectile\"]}"
-							}
-						}
-					}
-				]
-			}
-		}
-	}
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"AttackedByProjectile\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
 }
