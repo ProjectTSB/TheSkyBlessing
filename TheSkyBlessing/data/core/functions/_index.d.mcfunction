@@ -9,6 +9,8 @@
 #> Global Vars - Islands
 # @within function
 #   core:load_once
+#   api:global_vars/islands_purified
+#   api:global_vars/game_progress
 #   asset_manager:island/dispel/successful
 #   lib:message/common/*
     #declare score_holder $PurifiedIslands
