@@ -19,10 +19,11 @@
     function asset_manager:object/tick/
 
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
-    function oh_my_dat:please
+# 死んでいたら呼び出さないようにする
+    execute unless score @s ObjectID matches -2147483648..2147483647 run function oh_my_dat:please
 
 # フィールドを元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField set from storage asset:context this
+    execute unless score @s ObjectID matches -2147483648..2147483647 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField set from storage asset:context this
 
 # リセット
     data remove storage asset:context id
