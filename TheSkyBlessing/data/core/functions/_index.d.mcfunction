@@ -6,6 +6,14 @@
     #declare score_holder $PlayerCount
     #declare score_holder $LoadTime
 
+#> Global Vars - Islands
+# @within function
+#   core:load_once
+#   asset_manager:island/dispel/successful
+#   lib:message/common/*
+    #declare score_holder $PurifiedIslands
+    #declare score_holder $TotalIslands
+
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
 #> Global Vars - Private
 # @within
