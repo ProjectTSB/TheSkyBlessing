@@ -28,3 +28,5 @@
     tag @a[tag=Victim] remove Victim
     tag @a[tag=Attacker] remove Attacker
     tag @s remove this
+# 死んでいたらスコアを完全に削除する
+    execute unless score @s MobUUID matches -2147483648..2147483647 run scoreboard players reset @s

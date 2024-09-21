@@ -29,3 +29,6 @@
     data remove storage asset:context originID
     data remove storage asset:context this
     tag @s remove this
+
+# 死んでいたらスコアを完全に削除する
+    execute unless score @s ObjectID matches -2147483648..2147483647 run scoreboard players reset @s
