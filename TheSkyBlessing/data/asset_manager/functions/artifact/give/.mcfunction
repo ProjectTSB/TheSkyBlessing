@@ -29,8 +29,13 @@
     execute store result score $Argument.Index Lib run function lib:random/with_biased/manual.m with storage lib: Args
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
-# 候補データを再設定する
-    data modify storage lib: Array set from storage lib: Array[-1]
+# 一旦リセット
+    data modify storage asset:artifact Picks set from storage lib: Array[-1]
+    function lib:array/session/close
+# 候補データの再設定
+    function lib:array/session/open
+    data modify storage lib: Array set from storage asset:artifact Picks
+# プル数を乱数により設定
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
     tellraw @a [{"storage":"lib:","nbt":"Array"}]
     scoreboard players remove $CandidateLength Temporary 1
@@ -41,8 +46,8 @@
     scoreboard players operation $Pulls Temporary /= $100 Const
     tellraw @a [{"score":{"name":"$Pulls","objective":"Temporary"}}]
 # シャッフルして取り出す
+    scoreboard players add $CandidateLength Temporary 1
     data modify storage asset:artifact Type set from storage asset:context Type
-    function lib:array/shuffle
     function asset_manager:artifact/give/candidates
 # リセット
     function lib:array/session/close
