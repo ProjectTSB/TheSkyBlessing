@@ -19,12 +19,15 @@
     execute if entity @s[tag=AttackingEntity] run function asset_manager:mob/triggers/attack/
     execute if entity @s[tag=AttackedEntity] run function asset_manager:mob/triggers/hurt/
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
-    function oh_my_dat:please
+# 死んでいたら呼び出さないようにする
+    execute unless score @s MobUUID matches -2147483648..2147483647 run function oh_my_dat:please
 # フィールドを元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
+    execute unless score @s MobUUID matches -2147483648..2147483647 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
 # リセット
     data remove storage asset:context id
     data remove storage asset:context this
     tag @a[tag=Victim] remove Victim
     tag @a[tag=Attacker] remove Attacker
     tag @s remove this
+# 死んでいたらスコアを完全に削除する
+    execute unless score @s MobUUID matches -2147483648..2147483647 run scoreboard players reset @s
