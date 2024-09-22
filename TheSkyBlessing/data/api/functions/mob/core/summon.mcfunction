@@ -40,4 +40,4 @@
     function asset_manager:common/context/id/pop
 
 # 退避させたasset:context thisを戻す
-    function asset_manager:common/context/this/stash
+    function asset_manager:common/context/this/pop
