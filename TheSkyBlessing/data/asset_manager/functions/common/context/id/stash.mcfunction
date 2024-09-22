@@ -1,4 +1,4 @@
-#> asset_manager:common/context_id/stash
+#> asset_manager:common/context/id/stash
 #
 #
 #

@@ -5,7 +5,10 @@
 # @within function api:mob/summon
 
 # 既存にasset:context idが存在する場合に備えて退避させる
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
+
+# 既存にasset:context thisが存在する場合に備えて退避させる
+    function asset_manager:common/context/this/stash
 
 # 念のためリセット
     data remove storage asset:mob Return.Summoned
@@ -34,4 +37,7 @@
     data remove storage asset:mob Return.Summoned
 
 # 退避させたasset:context idを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop
+
+# 退避させたasset:context thisを戻す
+    function asset_manager:common/context/this/pop
