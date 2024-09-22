@@ -33,6 +33,9 @@
 # リセット
     data remove storage asset:effect ID
     data remove storage asset:effect TargetEffectData
+    data remove storage asset:effect CanRemove
+    scoreboard players reset $ClearLv Temporary
+    scoreboard players reset $RequiredLv Temporary
 
 # 残っていたら再帰
     data remove storage asset:effect IDList[-1]
