@@ -8,5 +8,5 @@
     data modify storage asset:context MethodStashStack append value {}
 # methodを退避(Valueに突っ込んでいるのは、methodが存在しない場合があるため)
     data modify storage asset:context MethodStashStack[-1].Value set from storage asset:context method
-# idを掃除
+# methodを掃除
     data remove storage asset:context method
