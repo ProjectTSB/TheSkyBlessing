@@ -7,6 +7,9 @@
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context/id/stash
 
+# 既存にasset:context thisが存在する場合に備えて退避させる
+    function asset_manager:common/context/this/stash
+
 # ID
     data modify storage asset:context id set from storage api: Argument.ID
 
@@ -33,3 +36,6 @@
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
+
+# 退避させたasset:context thisを戻す
+    function asset_manager:common/context/this/pop

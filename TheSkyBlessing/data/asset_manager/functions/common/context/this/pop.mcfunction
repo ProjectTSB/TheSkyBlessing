@@ -19,7 +19,6 @@
 #   asset_manager:object/*/call_super_method
 #   asset:object/call.m
 
-
 # thisを掃除
     data remove storage asset:context this
 # thisを戻す
