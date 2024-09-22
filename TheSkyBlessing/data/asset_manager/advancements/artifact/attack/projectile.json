@@ -1,14 +1,39 @@
 {
     "criteria": {
-        "trigger": {
+        "generic": {
             "trigger": "player_hurt_entity",
             "conditions": {
                 "damage": {
                     "type": {
-                        "is_projectile": true
+                        "tags": [
+                            {
+                                "id": "is_projectile",
+                                "expected": true
+                            }
+                        ]
                     }
                 }
             }
+        },
+        "api": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"AttackedByProjectile\"]}"
+                        }
+                    }
+                ]
+            }
         }
-    }
+    },
+    "requirements": [
+        [
+            "generic",
+            "api"
+        ]
+    ]
 }

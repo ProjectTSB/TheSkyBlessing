@@ -1,11 +1,28 @@
 {
     "criteria": {
-        "trigger": {
+        "generic": {
             "trigger": "player_killed_entity",
             "conditions": {
                 "killing_blow": {
-                    "is_projectile": false
-                }
+                    "tags": [
+                        {
+                            "id": "is_projectile",
+                            "expected": false
+                        }
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"AttackedByProjectile\"]}"
+                            }
+                        }
+                    }
+                ]
             }
         }
     }

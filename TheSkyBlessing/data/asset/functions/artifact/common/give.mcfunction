@@ -11,6 +11,7 @@
 #   Slot : Slot
 #   Trigger : Trigger
 #   Condition? : TextComponent
+#   EnableDuplication? : boolean
 #   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
@@ -19,6 +20,7 @@
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
+#   DisableBreakSound? : boolean
 #   CanUsedGod : God[]
 # @output item 神器
 # @within function asset:artifact/*/give/2.give
@@ -60,6 +62,7 @@
     data remove storage asset:artifact Slot
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
+    data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
@@ -70,3 +73,4 @@
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact DisableBreakSound

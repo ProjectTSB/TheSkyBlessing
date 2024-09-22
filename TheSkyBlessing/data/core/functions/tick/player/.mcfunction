@@ -7,10 +7,11 @@
 #> this
 # @within *
 #   core:tick/player/
-#   player_manager:vanilla_attack/show_log
+#   player_manager:vanilla_attack
 #   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
+#   core:handler/attack
     #declare tag this
 
 # thisタグ付与
@@ -26,7 +27,7 @@
     execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
     execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
     execute if entity @s[advancements={core:handler/consume_item=true}] run function core:handler/consume_item
-    execute if entity @s[scores={AttackEvent=1..}] run function core:handler/attack
+    execute if entity @s[advancements={core:handler/attack=true}] run function core:handler/attack
     execute if entity @s[advancements={core:handler/damage=true}] run function core:handler/damage
     execute if entity @s[advancements={core:handler/killed=true}] run function core:handler/killed
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
@@ -48,6 +49,10 @@
     function asset_manager:teleporter/tick/player
 # チーム処理
     function player_manager:set_team_and_per_health
+# 緩衝体力処理
+    function player_manager:absorption/
+# actionbar表示
+    function player_manager:actionbar/
 
 # リセット
     tag @s remove this

@@ -5,7 +5,12 @@
             "conditions": {
                 "damage": {
                     "type": {
-                        "is_fire": true
+                        "tags": [
+                            {
+                                "id": "is_fire",
+                                "expected": true
+                            }
+                        ]
                     }
                 }
             }

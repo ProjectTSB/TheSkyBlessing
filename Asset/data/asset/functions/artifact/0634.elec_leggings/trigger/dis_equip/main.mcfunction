@@ -4,10 +4,17 @@
 #
 # @within function asset:artifact/0634.elec_leggings/trigger/dis_equip/
 
-# UUID
+# 雷耐性+3%
     data modify storage api: Argument.UUID set value [I;1,1,634,4]
-# 補正の削除
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/thunder/remove
+
+# 雷攻撃+3%
+    data modify storage api: Argument.UUID set value [I;1,1,634,4]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/thunder/remove
 
 # 演出
     playsound minecraft:entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 1.1 0

@@ -8,4 +8,5 @@
 #   asset:*/extends
 #   asset:*/super.*
 #   api:**
+#   asset:object/call.m
     #declare storage asset:context

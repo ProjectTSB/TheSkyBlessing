@@ -5,7 +5,12 @@
             "conditions": {
                 "damage": {
                     "type": {
-                        "is_projectile": true
+                        "tags": [
+                            {
+                                "id": "is_projectile",
+                                "expected": true
+                            }
+                        ]
                     },
                     "source_entity": {}
                 }
