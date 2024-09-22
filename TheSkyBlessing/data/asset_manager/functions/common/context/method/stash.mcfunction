@@ -1,4 +1,4 @@
-#> asset_manager:common/custom/method/stash
+#> asset_manager:common/context/method/stash
 #
 #
 #
