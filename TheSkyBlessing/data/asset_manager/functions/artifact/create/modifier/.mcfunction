@@ -44,9 +44,9 @@
     execute if data storage asset:artifact Modifier{Type:"defenseWater"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"defenseWater"} run data modify storage asset:artifact Line[1] set value '"水耐性"'
     execute if data storage asset:artifact Modifier{Type:"heal"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"heal"} run data modify storage asset:artifact Line[1] set value '"回復(与)"'
+    execute if data storage asset:artifact Modifier{Type:"heal"} run data modify storage asset:artifact Line[1] set value '"回復量"'
     execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run data modify storage asset:artifact Line[1] set value '"回復(受)"'
+    execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run data modify storage asset:artifact Line[1] set value '"被回復量"'
     execute if data storage asset:artifact Modifier{Type:"mpRegen"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"mpRegen"} run data modify storage asset:artifact Line[1] set value '"MP回復量"'
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/create/modifier/generic.m with storage asset:artifact Modifier
