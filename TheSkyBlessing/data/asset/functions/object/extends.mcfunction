@@ -5,7 +5,7 @@
 # @within function asset:object/*/register
 
 # 既存にasset:context idが存在する場合に備えて退避させる
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
 
 # IDを取得
     data modify storage asset:context id set from storage asset:object Extends[-1]
@@ -21,4 +21,4 @@
     data remove storage asset:object ExtendsSafe
 
 # 退避させたデータを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop

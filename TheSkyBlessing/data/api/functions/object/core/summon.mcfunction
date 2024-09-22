@@ -5,7 +5,7 @@
 # @within function api:object/summon
 
 # 既存にasset:context idが存在する場合に備えて退避させる
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
 
 # ID
     data modify storage asset:context id set from storage api: Argument.ID
@@ -32,4 +32,4 @@
     data remove storage asset:context id
 
 # 退避させたasset:context idを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop

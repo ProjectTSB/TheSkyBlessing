@@ -5,7 +5,7 @@
 # @within function asset:object/*/**
 
 # 既存のasset:context idを退避させる
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
 # 既存のasset:context methodを退避させる
     function asset_manager:common/custom_method/stash
 
@@ -19,6 +19,6 @@
     function asset_manager:object/call_method/
 
 # 退避させたasset:context idを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop
 # 退避させたasset:context methodを戻す
     function asset_manager:common/custom_method/pop

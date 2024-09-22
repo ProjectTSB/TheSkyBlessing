@@ -1,4 +1,4 @@
-#> asset_manager:common/context_id/pop
+#> asset_manager:common/context/id/stash
 #
 #
 #
@@ -19,9 +19,9 @@
 #   asset_manager:object/*/call_super_method
 #   asset:object/call.m
 
+# スタックに新しい空間を追加する
+    data modify storage asset:context IDStashStack append value {}
+# idを退避(Valueに突っ込んでいるのは、idのデータ型が一意に定まらず特定の型のリストとして持てないため)
+    data modify storage asset:context IDStashStack[-1].Value set from storage asset:context id
 # idを掃除
     data remove storage asset:context id
-# idを戻す
-    data modify storage asset:context id set from storage asset:context IDStashStack[-1].Value
-# スタックの要素を消す
-    data remove storage asset:context IDStashStack[-1]
