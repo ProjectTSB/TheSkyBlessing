@@ -1,6 +1,10 @@
 #> player_manager:fall_damage/_index.d
 # @private
 
+#> Storage
+# @within function player_manager:fall_damage/**
+#declare storage player_manager:fall_damage
+
 #> Val
 # @within function player_manager:fall_damage/**
 #declare tag Falling

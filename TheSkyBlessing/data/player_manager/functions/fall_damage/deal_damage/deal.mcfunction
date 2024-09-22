@@ -18,11 +18,13 @@
     data modify storage api: Argument.BypassEnchantments set value false
     data modify storage api: Argument.BypassResistance set value false
     data modify storage api: Argument.ReduceEnchantment set value "minecraft:feather_falling"
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "death.fell.accident.generic","with":[{"selector":"@s"}]}]'
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は紐なしバンジージャンプで人生を終えた","with":[{"selector":"@s"}]}]'
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は足元の確認を怠った","with":[{"selector":"@s"}]}]'
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は初心を思い出した","with":[{"selector":"@s"}]}]'
+    execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "death.fell.accident.generic","with":[{"selector":"@s"}]}]'
+    execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は紐なしバンジージャンプで人生を終えた","with":[{"selector":"@s"}]}]'
+    execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は足元の確認を怠った","with":[{"selector":"@s"}]}]'
+    execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は初心を思い出した","with":[{"selector":"@s"}]}]'
+    execute if data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append from storage player_manager:fall_damage CustomDeathMessage
 # 与える
     function api:damage/
 # リセット
     function api:damage/reset
+    data remove storage player_manager:fall_damage CustomDeathMessage
