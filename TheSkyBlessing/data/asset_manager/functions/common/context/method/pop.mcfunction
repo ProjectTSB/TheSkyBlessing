@@ -1,4 +1,4 @@
-#> asset_manager:common/custom_method/pop
+#> asset_manager:common/custom/method/pop
 #
 #
 #
