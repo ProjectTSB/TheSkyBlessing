@@ -36,6 +36,7 @@
     function lib:array/session/open
     data modify storage lib: Array set from storage asset:artifact Picks
 # プル数を乱数により設定
+# $Pulls = floor( $CandidateLength * 0.30~0.70(e2) ) / e2
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
     scoreboard players remove $CandidateLength Temporary 1
     execute store result score $Pulls Temporary run function lib:random/
