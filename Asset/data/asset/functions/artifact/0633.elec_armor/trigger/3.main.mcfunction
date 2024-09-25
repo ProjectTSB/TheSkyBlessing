@@ -9,17 +9,19 @@
 
 # ここから先は神器側の効果の処理を書く
 
-# 引数の設定
-    # UUID
-        data modify storage api: Argument.UUID set value [I;1,1,633,5]
-    # 補正値
-        data modify storage api: Argument.Amount set value 0.03
-    # 補正方法
-        data modify storage api: Argument.Operation set value "multiply_base"
-# 補正の追加
+# 雷耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,633,5]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/thunder/add
 
-#ちょっとした演出
+# 雷耐性+3%
+    data modify storage api: Argument.UUID set value [I;1,1,633,5]
+    data modify storage api: Argument.Amount set value 0.03
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/attack/thunder/add
+
+# 演出
     particle dust 1 1 0 1 ~ ~1.3 ~ 0.4 0.3 0.4 0 6 normal @a
     particle firework ~ ~1.3 ~ 0.4 0.3 0.4 0 6 normal @a
     playsound minecraft:entity.firework_rocket.twinkle player @a ~ ~ ~ 0.4 1.5 0

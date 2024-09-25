@@ -9,6 +9,7 @@
 #   asset:artifact/*/trigger/2.check_condition
 #   asset:artifact/*/trigger/3.main
 #   asset:artifact/common/**
+#   player_manager:actionbar/
     #declare storage asset:artifact
 
 #> 特殊クールダウン
@@ -23,6 +24,7 @@
 # @within function
 #   asset_manager:artifact/triggers/**
 #   api:damage/core/trigger_on_**
+#   api:heal/core/trigger_on_**
 #   core:handler/**
     #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
@@ -32,6 +34,7 @@
     #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
+    #declare tag TriggerFlag.Heal
 
 #> check用の失敗フラグ
 # @within function

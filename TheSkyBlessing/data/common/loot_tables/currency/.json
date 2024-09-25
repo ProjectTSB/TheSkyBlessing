@@ -1,5 +1,5 @@
 {
-    "type": "generic",
+    "type": "command",
     "pools": [
         {
             "rolls": 1,
@@ -48,7 +48,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20111,Currency:1b}"
+                            "tag": "{CustomModelData:20111,TSB:{Currency:1b}}"
                         }
                     ]
                 }

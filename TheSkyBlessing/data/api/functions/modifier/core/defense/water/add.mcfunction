@@ -17,7 +17,7 @@
 # 新しいModifierを追加する
     data modify storage api: Modifiers append value {}
     data modify storage api: Modifiers[-1].UUID set from storage api: Argument.UUID
-    data modify storage api: Modifiers[-1].Amount set from storage api: Argument.Amount
+    execute store result storage api: Modifiers[-1].Amount double -0.001 run data get storage api: Argument.Amount 1000
     data modify storage api: Modifiers[-1].Operation set from storage api: Argument.Operation
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Modifier.Defense.Water set from storage api: Modifiers
 # データを更新

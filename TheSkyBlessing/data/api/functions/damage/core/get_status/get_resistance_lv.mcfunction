@@ -4,6 +4,8 @@
 #
 # @within function api:damage/core/get_status/
 
+# 念のためactive_effectsを削除
+    data remove storage api: active_effects
 # active_effectsの取得
     execute if entity @s[type=player] run function api:data_get/active_effects
     execute if entity @s[type=!player] run data modify storage api: active_effects set from entity @s active_effects

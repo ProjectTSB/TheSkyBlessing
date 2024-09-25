@@ -29,13 +29,13 @@
 # 候補データを操作して対象Indexを-1に持ってくる
     function lib:array/move
 # asset:context idがある場合は退避
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
 # 取得してそのまま引数に代入
     data modify storage asset:context id set from storage lib: Array[-1]
 # 呼び出し
     function #asset:artifact/give
 # asset:context idを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
