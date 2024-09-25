@@ -14,3 +14,5 @@
     execute if data storage api: Argument.UUID run function api:modifier/core/max_mp/remove
 # データ代入
     function api:mp/update_max
+# リセット
+    data remove storage api: Argument.UUID

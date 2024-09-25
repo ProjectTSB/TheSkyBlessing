@@ -2,11 +2,8 @@
 #
 # プレイヤーの最大MPを更新します。
 #
-# @input
-#   as player
-#   storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxMP
-# @output
-#   score @s MPMax
+# @input as player
+# @output score @s MPMax
 # @api
 
 # Storage呼び出し
