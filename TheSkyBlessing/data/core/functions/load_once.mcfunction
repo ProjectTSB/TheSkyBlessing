@@ -112,6 +112,8 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
     scoreboard players set $Difficulty Global 2
+    scoreboard players set $PurifiedIslands Global 0
+    scoreboard players set $TotalIslands Global 50
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -169,6 +171,15 @@ team modify NoCollision collisionRule never
     bossbar set asset:bossbar color pink
     bossbar set asset:bossbar style notched_10
 
+    #> AssetManager: Object -Public
+    # @public
+        scoreboard objectives add ObjectID dummy {"text":"ObjectAssetのID"}
+
+    #> AssetManager: Object -Public
+    # @within function
+    #   asset:object/**
+        scoreboard objectives add General.Object.Tick dummy {"text":"ObjectAsset内で使用できるTick用スコア"}
+
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**
@@ -215,6 +226,13 @@ team modify NoCollision collisionRule never
     # @within * lib:**
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
+
+    #> PlayerManager - 緩衝体力用スコアボード
+    # @within
+    #   function
+    #       player_manager:absorption/**
+    #       lib:score_to_health_wrapper/core/absorb_damage
+        scoreboard objectives add PlayerAbsorption dummy {"text":"緩衝体力(e2)"}
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
@@ -395,7 +413,7 @@ team modify NoCollision collisionRule never
     function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
-
+    function #asset:object/load
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init

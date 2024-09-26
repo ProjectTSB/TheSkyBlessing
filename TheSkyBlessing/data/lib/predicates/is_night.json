@@ -1,0 +1,33 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "inverted",
+            "term": {
+                "condition": "any_of",
+                "terms": [
+                    {
+                        "condition": "time_check",
+                        "value": {
+                            "min": 0,
+                            "max": 12999
+                        },
+                        "period": 24000
+                    },
+                    {
+                        "condition": "location_check",
+                        "predicate": {
+                            "dimension": "the_nether"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "condition": "location_check",
+            "predicate": {
+                "dimension": "the_end"
+            }
+        }
+    ]
+}

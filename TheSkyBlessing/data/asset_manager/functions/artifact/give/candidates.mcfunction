@@ -8,7 +8,7 @@
     #declare score_holder $Pulls
 
 # asset:context idがある場合は退避
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
 # 配列をランダムに動かす
     execute store result score $Argument.Index Lib run function lib:random/
     scoreboard players operation $Argument.Index Lib %= $CandidateLength Temporary
@@ -19,7 +19,7 @@
 # 呼び出し
     function #asset:artifact/give
 # asset:context idを戻す
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop
 
 # リセット&ループ
     data remove storage lib: Array[-1]

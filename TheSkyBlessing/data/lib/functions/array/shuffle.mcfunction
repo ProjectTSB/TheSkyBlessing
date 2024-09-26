@@ -24,3 +24,5 @@
     data modify storage lib: Array set from storage lib: ArrayO
 # リセット
     data remove storage lib: ArrayO
+    scoreboard players reset $ListSize Lib
+    scoreboard players reset $Index Temporary
