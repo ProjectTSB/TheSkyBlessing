@@ -6,7 +6,7 @@
 
 # 共通Join処理
     function core:handler/join
-# asset_managerへの引継ぎ
-    tag @s add TriggerFlag.Rejoin
+# Assetのrejoin処理
+    function #asset:rejoin
 # Reset
     scoreboard players reset @s RejoinEvent
