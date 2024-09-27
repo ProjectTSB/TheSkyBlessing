@@ -26,7 +26,6 @@
 #   api:damage/core/trigger_on_**
 #   api:heal/core/trigger_on_**
 #   core:handler/**
-    #declare tag TriggerFlag.Rejoin
     #declare tag TriggerFlag.Attack
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
