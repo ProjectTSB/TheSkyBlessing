@@ -14,6 +14,7 @@
     execute if predicate lib:in_battle store result storage api: Argument.Heal double 0.001 run attribute @s generic.max_health get 10
     execute unless predicate lib:in_battle store result storage api: Argument.Heal double 0.002 run attribute @s generic.max_health get 10
     data modify storage api: Argument.FixedHeal set value true
+    data modify storage api: Argument.DisableLog set value true
     function api:heal/
     function api:heal/reset
 
