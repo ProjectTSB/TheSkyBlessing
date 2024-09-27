@@ -331,6 +331,7 @@ team modify NoCollision collisionRule never
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
+        scoreboard objectives add HPRegenCooldown dummy {"text":"HP自然回復のクールダウン"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
