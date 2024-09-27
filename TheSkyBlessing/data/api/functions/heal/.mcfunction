@@ -9,6 +9,7 @@
 #   storage api: Argument.Heal : float
 #   storage api: Argument.FixedHeal? : boolean(default: false)
 #   storage api: Argument.DisableLog? : boolean(default: false)
+#   storage api: Argument.DisableHealTrigger? : boolean(default: false)
 # @api
 
 # 引数チェック

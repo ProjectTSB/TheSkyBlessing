@@ -20,4 +20,4 @@
 # Healthを持つEntityであれば実行
     function lib:score_to_health_wrapper/fluctuation
 # onHealのトリガー
-    function api:heal/core/trigger_on_heal
+    execute unless data storage api: Argument{DisableHealTrigger:true} run function api:heal/core/trigger_on_heal
