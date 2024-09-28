@@ -11,4 +11,5 @@
     function api:rom/please
 
 # データを保存する
+    data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
     data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends set from storage asset:object Extends
