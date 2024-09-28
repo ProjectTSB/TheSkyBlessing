@@ -16,7 +16,7 @@
 #   api:spawner/subtract_hp
 #   asset_manager:object/summon/
 #   api:object/core/summon
-#   asset_manager:object/*/call_super_method
+#   asset_manager:object/*/call_super_methods/
 #   asset:object/call.m
 
 # スタックに新しい空間を追加する

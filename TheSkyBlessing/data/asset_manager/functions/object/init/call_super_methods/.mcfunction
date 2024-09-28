@@ -1,4 +1,4 @@
-#> asset_manager:object/init/call_super_method
+#> asset_manager:object/init/call_super_methods/
 #
 #
 #
@@ -15,10 +15,13 @@
     function asset_manager:common/context/id/stash
 
 # ROMから継承元の情報を持ってくる
-    data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
+    data modify storage asset:object Extends set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
 
-# super.init呼び出し
-    execute if data storage asset:context id run function asset_manager:object/init/
+# すべての継承元のinit呼び出し
+    execute if data storage asset:object Extends[0] run function asset_manager:object/init/call_super_methods/foreach
+
+# リセット
+    data remove storage asset:object Extends
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
