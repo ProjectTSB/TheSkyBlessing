@@ -12,6 +12,7 @@
 # @within function
 #   lib:**
 #   api:**
+#   player_manager:health/regen/do
 
 #> temp
 # @private
