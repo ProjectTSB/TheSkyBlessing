@@ -12,7 +12,7 @@
 
 # $JumpBoost(e1) = ($JumpBoost(e1) ?? -1(e1)) + 1(e1)
 # $DamageableFallDistance(e1) = $FallDistance(e1) - 3(e1) - $JumpBoost(e1)
-# $FixedDamagePart(e5) = $DamageableFallDistance(e1) * 0.8(e1) * 1(e3)
+# $FixedDamagePart(e5) = $DamageableFallDistance(e1) * 0.5(e1) * 1(e3)
 # $FlexibleDamagePart(e5) = $DamageableFallDistance(e1) * 0.5(e3) / 20 * $MaxHealth(e2) / 1(e1)
 # $Damage(e2) = ($FixedDamagePart(e5) + $FlexibleDamagePart(e5)) * 1(e-2) * $DamageMultiplier(e1) * 1(e-2)
 
