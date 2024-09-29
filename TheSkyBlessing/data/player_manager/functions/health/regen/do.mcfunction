@@ -11,7 +11,7 @@
 #  7..17    0.25%      0.75%
 #   ..6     0.00%      0.25%
 
-#> PrivateS
+#> Private
 # @private
     #declare score_holder $FoodLevel
 
