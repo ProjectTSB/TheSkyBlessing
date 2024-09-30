@@ -5,7 +5,8 @@
 # @within function asset:object/extends
 
 # ID をキーにする
-    data modify storage api: Argument.Address set from storage asset:object ID
+    data modify storage api: Argument.Address set from storage asset:context id
+    # execute unless data storage api: Argument.Address run data modify storage api: Argument.Address set from storage asset:object ID
 
 # キーからROMを呼び出す
     function api:rom/please

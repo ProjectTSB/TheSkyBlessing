@@ -15,13 +15,14 @@
     function asset_manager:common/context/id/stash
 
 # ROMから継承元の情報を持ってくる
-    data modify storage asset:object Extends set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
+    data modify storage asset:object CopiedExtends append value []
+    data modify storage asset:object CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
 
 # すべての継承元のinit呼び出し
-    execute if data storage asset:object Extends[0] run function asset_manager:object/init/call_super_methods/foreach
+    execute if data storage asset:object CopiedExtends[-1][0] run function asset_manager:object/init/call_super_methods/foreach
 
 # リセット
-    data remove storage asset:object Extends
+    data remove storage asset:object CopiedExtends[-1]
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop

@@ -6,3 +6,6 @@
 
 say 「私は"@s"です。以下のフィールドを持っています:」
 tellraw @p {"storage":"asset:context","nbt":"this.myValue"}
+
+# 実装フラグを立てる
+data modify storage asset:object Implement set value true
