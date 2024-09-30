@@ -394,16 +394,6 @@ team modify NoCollision collisionRule never
     #   mob_manager:entity_finder/attacking_entity/*
         scoreboard objectives add AttackingEntity dummy
 
-    #> MobManager用スコアボード - 攻撃先
-    # @within function
-    #   core:tick/
-    #   asset_manager:*/triggers/
-    #   asset_manager:artifact/triggers/attack
-    #   player_manager:vanilla_attack/show_log
-    #   mob_manager:entity_finder/attacked_entity/*
-    #   core:handler/attack
-        scoreboard objectives add AttackedEntity dummy
-
     #> MobManager - Teams
     # @within function
     #   mob_manager:init/set_tag_and_team

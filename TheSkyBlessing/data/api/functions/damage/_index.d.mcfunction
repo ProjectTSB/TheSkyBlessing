@@ -16,9 +16,9 @@
 # @within
 #   function
 #       api:damage/core/health_subtract/non-player
-#       player_manager:vanilla_attack
+#       asset_manager:artifact/triggers/attack/vanilla
 #   advancement
-#       asset_manager:artifact/**
+#       mob_manager:entity_finder/check_attacked_entity
     #declare tag AttackedByApi
     #declare tag AttackedByProjectile
 
