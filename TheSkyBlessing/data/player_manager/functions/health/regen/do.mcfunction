@@ -20,6 +20,7 @@
     execute store result score $FoodLevel Temporary run data get storage api: foodLevel
 
 # 回復する
+# 戦闘時かつ満腹度が6以下なら回復しない
     # 戦闘時
         execute if predicate lib:in_battle if score $FoodLevel Temporary matches 20 store result storage api: Argument.Fluctuation double 0.0025 run attribute @s generic.max_health get 10
         execute if predicate lib:in_battle if score $FoodLevel Temporary matches 18..19 store result storage api: Argument.Fluctuation double 0.002 run attribute @s generic.max_health get 10
@@ -29,8 +30,8 @@
         execute unless predicate lib:in_battle if score $FoodLevel Temporary matches 18..19 store result storage api: Argument.Fluctuation double 0.003 run attribute @s generic.max_health get 10
         execute unless predicate lib:in_battle if score $FoodLevel Temporary matches 7..17 store result storage api: Argument.Fluctuation double 0.0015 run attribute @s generic.max_health get 10
         execute unless predicate lib:in_battle if score $FoodLevel Temporary matches ..6 store result storage api: Argument.Fluctuation double 0.0005 run attribute @s generic.max_health get 10
-    data modify storage api: Argument.DisableLog set value true
-    function lib:score_to_health_wrapper/fluctuation
+    execute if data storage api: Argument.Fluctuation run data modify storage api: Argument.DisableLog set value true
+    execute if data storage api: Argument.Fluctuation run function lib:score_to_health_wrapper/fluctuation
 
 # スコアのリセット
     scoreboard players reset @s HPRegenCooldown
