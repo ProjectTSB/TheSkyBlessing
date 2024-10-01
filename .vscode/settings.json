@@ -2125,7 +2125,304 @@
                     "patternErrorMessage": "数値のみが許されるよ"
                 }
             ]
-        }
+        },
+        {
+            "label": "Object/登録処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/register",
+                        "#",
+                        "# Objectのデータを指定",
+                        "#",
+                        "# @within function asset:object/alias/%id%/register",
+                        "",
+                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
+                        "    # data modify storage asset:object ExtendsSafe set value ",
+                        "# 継承されることを前提とした、抽象的なオブジェクトであるかどうか(boolean)",
+                        "   data modify storage asset:object IsAbstract set value false",
+                        "# ID (int)",
+                        "    data modify storage asset:object ID set value %id%",
+                        "# フィールド",
+                        "    # data modify storage asset:object Field.myValue set value "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/register.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/register",
+                        "#",
+                        "# Objectのデータ指定処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/summon/register.m",
+                        "",
+                        "# 元の登録処理を呼び出す",
+                        "   function asset:object/%namespace%/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/summon/debug.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/summon/debug",
+                        "#",
+                        "# 動作チェック用の召喚処理 使い終わったら消してもいいかも",
+                        "#",
+                        "# @user",
+                        "# @private",
+                        "",
+                        "# 召喚",
+                        "   data modify storage api: Argument.ID set value %id%",
+                        "   function api:object/summon"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/ 召喚処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/summon/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/summon/",
+                        "#",
+                        "# Object召喚処理の呼び出し時に実行されるfunction",
+                        "#",
+                        "# @within asset:object/alias/%id%/summon",
+                        "",
+                        "# 元となるEntityを召喚する",
+                        "    summon %entity% ~ ~ ~ {Tags:[\"ObjectInit\"]}",
+                        "",
+                        "# 実装フラグを立てる",
+                        "data modify storage asset:object Implement set value true"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/summon.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/summon",
+                        "#",
+                        "# Object召喚処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/summon/summon.m",
+                        "",
+                        "# 元の召喚処理を呼び出す",
+                        "   function asset:object/%namespace%/summon/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "entity",
+                    "question": "元となるentity",
+                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "patternErrorMessage": "Entityの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/tick/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/tick/",
+                        "#",
+                        "# Objectのtick時の処理",
+                        "#",
+                        "# @within asset:object/alias/%id%/tick",
+                        "",
+                        "# Tick加算",
+                        "   scoreboard players add @s General.Object.Tick 1",
+                        "",
+                        "# 消滅処理",
+                        "   kill @s[scores={General.Object.Tick=1000..}]",
+                        "",
+                        "# 実装フラグを立てる",
+                        "data modify storage asset:object Implement set value true"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/tick.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/tick",
+                        "#",
+                        "# Tick時処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/tick/tick.m",
+                        "",
+                        "# 元のTick処理を呼び出す",
+                        "   function asset:object/%namespace%/tick/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/トリガー: init",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/init/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/init/",
+                        "#",
+                        "# Objectのinit時の処理",
+                        "#",
+                        "# @within asset:object/alias/%id%/init",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/init.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/init",
+                        "#",
+                        "# Init処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/init/init.m",
+                        "",
+                        "# 元のInit処理を呼び出す",
+                        "   function asset:object/%namespace%/init/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/load.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/load",
+                        "#",
+                        "# Objectに利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:object/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:object/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/object/load.json",
+                    "content": {
+                        "values": [
+                            "asset:object/%namespace%/load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:object/%namespace%/load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Object/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:object/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object/メソッド",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/%namespace%/%method_name%/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/%method_name%/",
+                        "#",
+                        "# 継承先などから実行される処理",
+                        "#",
+                        "# @within asset:object/alias/%id%/%method_name%",
+                        "",
+                        "# 実装フラグを立てる",
+                        "   data modify storage asset:object Implement set value true"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/object/alias/%id%/%method_name%.mcfunction",
+                    "content": [
+                        "#> asset:object/alias/%id%/%method_name%",
+                        "#",
+                        "# メソッド処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/tick/tick.m",
+                        "",
+                        "# 元のメソッド処理を呼び出す",
+                        "   function asset:object/%namespace%/%method_name%/"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "method_name",
+                    "question": "メソッドの名前",
+                    "pattern": "[a-z0-9./_-]*",
+                    "patternErrorMessage": "使用できない文字が入っているようです"
+                },
+                {
+                    "name": "id",
+                    "question": "ObjectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
     ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
@@ -2162,5 +2459,7 @@
             "shortcode": ":balance_scale:",
             "emoji": "⚖️"
         }
-    ]
+    ],
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
 }

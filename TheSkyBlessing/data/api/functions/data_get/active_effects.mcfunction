@@ -6,7 +6,7 @@
 # @output storage api: active_effects
 # @public
 
-#>Temp
+#> Temp
 # @private
     #declare score_holder $NotLatestData
 
