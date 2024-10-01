@@ -3,6 +3,7 @@
 
 #> Storage
 # @within function
+#   core:load_once
 #   api:**
 #   asset:*/super.*
 #   asset_manager:**

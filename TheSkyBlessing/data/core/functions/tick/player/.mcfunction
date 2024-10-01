@@ -37,6 +37,8 @@
     execute if entity @s[scores={DropEvent=1..}] run function core:handler/drop
 # エリア処理
     function world_manager:area/
+# 落下ダメージの処理
+    function player_manager:fall_damage/
 # 神の処理
     function player_manager:god/tick
 # 神器処理
