@@ -420,4 +420,5 @@ team modify NoCollision collisionRule never
     function player_manager:god/mercy/offering/init
 
 #> ROMを初期化する
-    function rom:init
+#> ROMが初期化されてなければ初期化する
+    execute unless data storage rom: _ run function rom:init
