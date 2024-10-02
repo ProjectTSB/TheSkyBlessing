@@ -4,4 +4,4 @@
 #
 # @within function asset:object/*/init
 
-function asset_manager:object/init/call_super_method
+function asset_manager:object/init/call_super_methods/
