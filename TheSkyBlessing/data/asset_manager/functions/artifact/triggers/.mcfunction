@@ -33,7 +33,7 @@
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset
     tag @e[tag=Attacker] remove Attacker
-    tag @e[tag=Victim] remove Victim
+    tag @e[type=#lib:living,type=!player,tag=AttackedEntity] remove AttackedEntity
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.Damage
     tag @s remove TriggerFlag.Killed

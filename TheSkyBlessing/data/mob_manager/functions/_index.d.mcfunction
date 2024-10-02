@@ -12,6 +12,10 @@
     #declare tag Uninterferable
     #declare tag Immovable
 
+#> Storage
+# @within function mob_manager:entity_finder/**
+#declare storage mob_manager:entity_finder
+
 #> InitTag
 # @within function
 #   core:tick/

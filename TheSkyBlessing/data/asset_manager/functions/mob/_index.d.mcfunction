@@ -58,7 +58,7 @@
 
 #> Attacker
 # @within *
-#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/hurt/foreach
 #   asset:mob/*/hurt/**
     #declare tag Attacker
 

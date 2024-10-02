@@ -32,5 +32,6 @@
     data remove storage asset:artifact Event
     data remove storage asset:context Attack
     scoreboard players reset $AttackTarget Temporary
+    tag @e[type=#lib:living,type=!player,tag=Victim] remove Victim
 # イベントがまだあれば再帰する
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/foreach
