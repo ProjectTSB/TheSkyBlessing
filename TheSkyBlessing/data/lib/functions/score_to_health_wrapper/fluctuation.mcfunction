@@ -8,9 +8,11 @@
 #   storage api: Argument.Attacker?: int(MobUUID)
 #   storage api: Argument.AttackType?: Enum(AttackType)
 #   storage api: Argument.ElementType?: Enum(ElementType)
+#   storage api: Argument.DisableLog?: boolean(default: false)
 # @within function
 #   lib:**
 #   api:**
+#   player_manager:health/regen/do
 
 #> temp
 # @private
@@ -23,6 +25,6 @@
 # 攻撃情報を記録する
     execute if score $Fluctuation Lib matches ..-1 run function lib:score_to_health_wrapper/core/store_attack_info
 # ログ表示
-    execute at @s run function lib:status_log/show_health
+    execute unless data storage api: Argument{DisableLog:true} at @s run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Fluctuation Lib

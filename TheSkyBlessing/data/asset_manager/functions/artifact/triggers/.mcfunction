@@ -4,8 +4,6 @@
 #
 # @within function asset_manager:artifact/tick/player
 
-# 神器のリログ対策用トリガー呼び出し
-    execute if entity @s[tag=TriggerFlag.Rejoin] run function #asset:rejoin
 # IDの代入
     function asset_manager:artifact/data/old/init
     function asset_manager:artifact/data/new/init
@@ -39,7 +37,6 @@
     tag @e[tag=Attacker] remove Attacker
     tag @e[tag=Victim] remove Victim
     tag @s remove Believe.Changed
-    tag @s remove TriggerFlag.Rejoin
     tag @s remove TriggerFlag.Attack
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.Damage

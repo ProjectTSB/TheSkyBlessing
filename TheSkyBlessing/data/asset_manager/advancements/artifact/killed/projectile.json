@@ -1,17 +1,37 @@
 {
-	"criteria": {
-		"trigger": {
-			"trigger": "player_killed_entity",
-			"conditions": {
-				"killing_blow": {
-					"tags": [
-						{
-							"id": "is_projectile",
-							"expected": true
-						}
-					]
-				}
-			}
-		}
-	}
+    "criteria": {
+        "generic": {
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "killing_blow": {
+                    "tags": [
+                        {
+                            "id": "is_projectile",
+                            "expected": true
+                        }
+                    ]
+                }
+            }
+        },
+        "api": {
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "nbt": "{Tags:[\"AttackedByProjectile\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "generic",
+            "api"
+        ]
+    ]
 }

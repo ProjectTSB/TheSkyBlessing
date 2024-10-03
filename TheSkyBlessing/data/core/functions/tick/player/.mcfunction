@@ -7,10 +7,11 @@
 #> this
 # @within *
 #   core:tick/player/
-#   player_manager:vanilla_attack/show_log
+#   player_manager:vanilla_attack
 #   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
+#   core:handler/attack
     #declare tag this
 
 # thisタグ付与
@@ -26,7 +27,7 @@
     execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
     execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
     execute if entity @s[advancements={core:handler/consume_item=true}] run function core:handler/consume_item
-    execute if entity @s[scores={AttackEvent=1..}] run function core:handler/attack
+    execute if entity @s[advancements={core:handler/attack=true}] run function core:handler/attack
     execute if entity @s[advancements={core:handler/damage=true}] run function core:handler/damage
     execute if entity @s[advancements={core:handler/killed=true}] run function core:handler/killed
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
@@ -36,16 +37,24 @@
     execute if entity @s[scores={DropEvent=1..}] run function core:handler/drop
 # エリア処理
     function world_manager:area/
+# 落下ダメージの処理
+    function player_manager:fall_damage/
 # 神の処理
     function player_manager:god/tick
 # 神器処理
     function asset_manager:artifact/tick/player
+# HP自然回復処理
+    function player_manager:health/regen/check
 # MP回復処理
     function player_manager:mp/regen/check
 # テレポーター処理
     function asset_manager:teleporter/tick/player
 # チーム処理
     function player_manager:set_team_and_per_health
+# 緩衝体力処理
+    function player_manager:absorption/
+# actionbar表示
+    function player_manager:actionbar/
 
 # リセット
     tag @s remove this

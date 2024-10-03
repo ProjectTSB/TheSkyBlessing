@@ -4,6 +4,7 @@
 #
 # @within function core:load_once
 
+scoreboard players set $-10000 Const -10000
 scoreboard players set $-100 Const -100
 scoreboard players set $-99 Const -99
 scoreboard players set $-98 Const -98

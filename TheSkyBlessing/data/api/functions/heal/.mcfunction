@@ -8,6 +8,7 @@
 #   as living entity
 #   storage api: Argument.Heal : float
 #   storage api: Argument.FixedHeal? : boolean(default: false)
+#   storage api: Argument.DisableLog? : boolean(default: false)
 # @api
 
 # 引数チェック
