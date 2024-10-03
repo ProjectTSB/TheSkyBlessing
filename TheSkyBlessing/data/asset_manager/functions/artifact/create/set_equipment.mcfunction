@@ -5,10 +5,10 @@
 # @within function asset_manager:artifact/create/set_lore
 
 # IDから効果を抜き取る
-    function asset_manager:common/context_id/stash
+    function asset_manager:common/context/id/stash
     data modify storage asset:context id set from storage asset:artifact EquipID
     function #asset:effect/register
-    function asset_manager:common/context_id/pop
+    function asset_manager:common/context/id/pop
 
 # 空行セパレータ
     data modify storage asset:artifact Item.tag.display.Lore append value '""'
