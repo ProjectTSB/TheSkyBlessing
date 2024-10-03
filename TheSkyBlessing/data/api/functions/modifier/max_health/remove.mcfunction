@@ -14,6 +14,6 @@
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:modifier/core/max_health/remove
 # データ代入
-    execute store result score @s ScoreToMaxHealth run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.MaxHealth 10000
+    execute store result score @s ScoreToMaxHealth run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.MaxHealth 10000
 # リセット
     data remove storage api: Argument.UUID

@@ -17,7 +17,8 @@
     function player_manager:god/none/set_tag
 # ステータス初期化
     function oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers set value {Heal:1d,ReceiveHeal:1d,Attack:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},Defense:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},MaxMP:100d,MPRegen:1d,MaxHealth:20d,Base:{Heal:1d,ReceiveHeal:1d,Attack:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},Defense:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},MaxMP:100d,MPRegen:1d,MaxHealth:20d}}
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Default set value {Heal:1d,ReceiveHeal:1d,Attack:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},Defense:{Base:1d,Physical:1d,Magic:1d,None:1d,Fire:1d,Water:1d,Thunder:1d},MaxMP:100d,MPRegen:1d,MaxHealth:20d}
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Default
 # 神器クールダウンの初期化
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set value [{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0},{Value:-15,Max:0}]
 

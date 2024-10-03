@@ -15,9 +15,9 @@
 
 # 固定加算
     scoreboard players add $BonusHealth Global 2
-    execute as @a run function asset:artifact/0002.blessing/trigger/update/health_bonus
+    execute as @a run function api:modifier/max_health/update_bonus
     scoreboard players add $BonusMP Global 4
-    execute as @a run function asset:artifact/0002.blessing/trigger/update/mp_bonus
+    execute as @a run function api:modifier/max_mp/update_bonus
 # 選択トリガー
     scoreboard players enable @s 02.Trigger
 # チャット

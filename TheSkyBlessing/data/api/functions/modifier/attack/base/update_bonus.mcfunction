@@ -1,10 +1,8 @@
-#> asset:artifact/0002.blessing/trigger/update/attack_bonus
+#> api:modifier/attack/base/update_bonus
 #
+# 祝福による補正を更新する
 #
-#
-# @within function
-#   core:handler/join
-#   asset:artifact/0002.blessing/trigger/**
+# @api
 
 #> Diff
 # @private
