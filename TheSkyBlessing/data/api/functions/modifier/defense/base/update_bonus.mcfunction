@@ -14,7 +14,7 @@
     data modify storage api: Argument.UUID set value [I;1,1,2,0]
     function api:modifier/defense/base/remove
 # 差分にする
-    scoreboard players operation $Diff Temporary = $DefenseBonus Global
+    scoreboard players operation $Diff Temporary = $BonusDefense Global
     execute store result score $RemovedAmount Temporary run data get storage api: Removed.Amount 100
     execute unless score $RemovedAmount Temporary matches -2147483648..2147483647 run scoreboard players set $RemovedAmount Temporary 0
     scoreboard players operation $Diff Temporary -= $RemovedAmount Temporary
@@ -30,5 +30,5 @@
 
 # 適用
     data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"multiply"}
-    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $DefenseBonus Global
+    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $BonusDefense Global
     function api:modifier/defense/base/add

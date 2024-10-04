@@ -347,12 +347,12 @@ team modify NoCollision collisionRule never
     #   asset:artifact/0002.blessing/trigger/**
         #declare score_holder $BonusHealth
         #declare score_holder $BonusMP
-        #declare score_holder $AttackBonus
-        #declare score_holder $DefenseBonus
+        #declare score_holder $BonusAttack
+        #declare score_holder $BonusDefense
     scoreboard players set $BonusHealth Global 0
     scoreboard players set $BonusMP Global 0
-    scoreboard players set $AttackBonus Global 0
-    scoreboard players set $DefenseBonus Global 0
+    scoreboard players set $BonusAttack Global 0
+    scoreboard players set $BonusDefense Global 0
 
     #> WorldManager用スコアボード - ChunkLoadProtect
     # @within
