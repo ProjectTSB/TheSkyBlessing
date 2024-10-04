@@ -263,32 +263,8 @@
                     "type": {
                         "tags": [
                             {
-                                "id": "is_drowning",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_explosion",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_fall",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_fire",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_freezing",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_lightning",
-                                "expected": false
-                            },
-                            {
-                                "id": "is_projectile",
-                                "expected": false
+                                "id": "is_melee",
+                                "expected": true
                             }
                         ]
                     }
