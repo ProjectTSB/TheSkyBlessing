@@ -1,10 +1,8 @@
-#> player_manager:bonus/update_attack_bonus
+#> api:modifier/attack/base/update_bonus
 #
+# 祝福による補正を更新する
 #
-#
-# @within function
-#   core:handler/join
-#   asset:artifact/0002.blessing/trigger/**
+# @api
 
 #> Diff
 # @private
@@ -13,10 +11,10 @@
     #declare score_holder $isNegative
 
 # 古いのをremove
-    data modify storage api: Argument.UUID set value [I;2,2,1,1]
+    data modify storage api: Argument.UUID set value [I;1,1,2,0]
     function api:modifier/attack/base/remove
 # 差分にする
-    scoreboard players operation $Diff Temporary = $AttackBonus Global
+    scoreboard players operation $Diff Temporary = $BonusAttack Global
     execute store result score $RemovedAmount Temporary run data get storage api: Removed.Amount 100
     execute unless score $RemovedAmount Temporary matches -2147483648..2147483647 run scoreboard players set $RemovedAmount Temporary 0
     scoreboard players operation $Diff Temporary -= $RemovedAmount Temporary
@@ -31,6 +29,6 @@
     scoreboard players reset $isNegative Temporary
 
 # 適用
-    data modify storage api: Argument set value {Amount:-1,UUID:[I;2,2,1,1],Operation:"multiply"}
-    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $AttackBonus Global
+    data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"multiply"}
+    execute store result storage api: Argument.Amount double 0.01 run scoreboard players get $BonusAttack Global
     function api:modifier/attack/base/add

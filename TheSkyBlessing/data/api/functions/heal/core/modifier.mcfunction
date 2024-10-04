@@ -13,7 +13,7 @@
     function oh_my_dat:please
 # 必要なデータ取得
     execute store result score $Heal Temporary run data get storage api: Argument.Heal 100
-    execute store result score $Modifier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Modifiers.Heal 100
+    execute store result score $Modifier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.Heal 100
 # 補正
     scoreboard players operation $Heal Temporary *= $Modifier Temporary
 # 代入
