@@ -22,12 +22,9 @@
 # ノックバックを無効に
     attribute @s minecraft:generic.knockback_resistance modifier add 3-0-1-0-100000001 "Temp_Resist" 1 add
 # 敵対させるためのダメージ
-    tag @s add AttackedByApi
-    execute if data storage api: Argument{DamageType:"Projectile"} run tag @s add AttackedByProjectile
     execute if score $Health Temporary matches 1.. as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add UUIDAttacker
+    execute if score $Health Temporary matches 1.. run tag @p[tag=UUIDAttacker] add AttackedByApi
     execute if score $Health Temporary matches 1.. run damage @s 0 player_attack by @p[tag=UUIDAttacker]
-    tag @s remove AttackedByApi
-    tag @s remove AttackedByProjectile
 # ノックバック無効を削除
     attribute @s minecraft:generic.knockback_resistance modifier remove 3-0-1-0-100000001
 # 代入 / kill
@@ -39,6 +36,7 @@
     execute if score $Health Temporary matches ..0 run damage @s 9999 player_attack by @p[tag=Killer]
     tag @s remove AttackedByProjectile
 # リセット
+    tag @a[tag=AttackedByApi] remove AttackedByApi
     tag @a[tag=UUIDAttacker] remove UUIDAttacker
 # onAttackのトリガー
     execute if score $Health Temporary matches 1.. run function api:damage/core/trigger_on_attack

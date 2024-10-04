@@ -5,7 +5,7 @@
 # @within advancement mob_manager:entity_finder/check_attacked_entity
 
 # フィルター
-    execute if entity @s[advancements={mob_manager:entity_finder/check_attacked_entity={type-vanilla=true}}] run function mob_manager:entity_finder/attacked_entity/filters/
+    execute if entity @s[tag=!AttackedByApi] run function mob_manager:entity_finder/attacked_entity/filters/
 # 戦闘中判定スコアをセットする
     execute if entity @e[tag=AttackedEntity,tag=Enemy,distance=..150] run scoreboard players set @s InBattleTick 160
 # リセット

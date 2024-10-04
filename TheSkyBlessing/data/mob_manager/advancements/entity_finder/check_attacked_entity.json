@@ -300,32 +300,6 @@
                     }
                 }
             }
-        },
-        "type-vanilla": {
-            "trigger": "player_hurt_entity",
-            "conditions": {
-                "entity": [
-                    {
-                        "condition": "inverted",
-                        "term": {
-                            "condition": "entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "nbt": "{Tags:[\"AttackedByApi\"]}"
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        "type-api": {
-            "trigger": "player_hurt_entity",
-            "conditions": {
-                "condition": "entity_properties",
-                "entity": {
-                    "nbt": "{Tags:[\"AttackedByApi\"]}"
-                }
-            }
         }
     },
     "requirements": [
@@ -397,10 +371,6 @@
             "type-melee",
             "type-projectile",
             "type-explosion"
-        ],
-        [
-            "type-vanilla",
-            "type-api"
         ]
     ],
     "rewards": {
