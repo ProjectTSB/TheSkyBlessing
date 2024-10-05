@@ -34,4 +34,5 @@
 
 # リセット
     data modify entity @s Health set value 512f
+    data remove storage mob_manager:entity_finder DamageType
     scoreboard players reset $Damage Temporary

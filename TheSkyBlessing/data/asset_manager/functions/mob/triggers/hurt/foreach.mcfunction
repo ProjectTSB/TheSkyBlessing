@@ -27,5 +27,6 @@
     data remove storage asset:mob Event
     data remove storage asset:context Hurt
     scoreboard players reset $AttackedFrom Temporary
+    tag @p[tag=Attacker] remove Attacker
 # イベントがまだあれば再帰する
     execute if data storage asset:mob MobEvents.Hurt[0] run function asset_manager:mob/triggers/hurt/foreach
