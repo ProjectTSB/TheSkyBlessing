@@ -31,3 +31,7 @@ execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run scoreboa
 execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run function api:modifier/receive_heal/add
 execute if data storage asset:artifact Modifier{Type:"mpRegen"} run scoreboard players set $CustomModifier Temporary 1
 execute if data storage asset:artifact Modifier{Type:"mpRegen"} run function api:modifier/mp_regen/add
+execute if data storage asset:artifact Modifier{Type:"maxHealth"} run scoreboard players set $CustomModifier Temporary 1
+execute if data storage asset:artifact Modifier{Type:"maxHealth"} run function api:modifier/max_health/add
+execute if data storage asset:artifact Modifier{Type:"maxMP"} run scoreboard players set $CustomModifier Temporary 1
+execute if data storage asset:artifact Modifier{Type:"maxMP"} run function api:modifier/max_mp/add
