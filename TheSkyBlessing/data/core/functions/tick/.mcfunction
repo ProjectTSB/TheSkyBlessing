@@ -82,8 +82,5 @@
 # tick処理後のプレイヤー処理部
     execute as @a at @s run function core:tick/player/post
 
-# 攻撃元/先の紐づけをリセット
-    execute if entity @a[scores={AttackingEntity=0..}] run function mob_manager:entity_finder/attacking_entity/reset
-
 # 0-0-0-0-0消失警告
     execute if entity @p[predicate=api:is_completed_player_chunk_load_waiting_time,distance=..80] unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]

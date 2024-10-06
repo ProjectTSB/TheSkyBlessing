@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:mob/triggers/attack/
+#   asset_manager:mob/triggers/attack/attempt_call
 #   asset:mob/super.attack
 
 # IDをアドレスとしてROMを呼び出す
@@ -17,7 +17,7 @@
     data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
 # super.attack呼び出し
-    execute if data storage asset:context id run function asset_manager:mob/triggers/attack/
+    execute if data storage asset:context id run function asset_manager:mob/triggers/attack/attempt_call
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop

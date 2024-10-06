@@ -1,9 +1,9 @@
-#> asset_manager:mob/triggers/attack/
+#> asset_manager:mob/triggers/attack/attempt_call
 #
 #
 #
 # @within function
-#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/attack/foreach
 #   asset_manager:mob/triggers/attack/call_super_method
 
 function #asset:mob/attack

@@ -52,7 +52,7 @@
 
 #> Victim
 # @within *
-#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/attack/foreach
 #   asset:mob/*/attack/**
     #declare tag Victim
 

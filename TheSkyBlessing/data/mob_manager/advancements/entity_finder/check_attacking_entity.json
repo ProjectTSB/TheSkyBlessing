@@ -319,6 +319,72 @@
                     }
                 }
             }
+        },
+        "type-melee": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_melee",
+                                "expected": true
+                            }
+                        ]
+                    },
+                    "source_entity": {}
+                }
+            }
+        },
+        "type-projectile": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_projectile",
+                                "expected": true
+                            }
+                        ]
+                    },
+                    "source_entity": {}
+                }
+            }
+        },
+        "type-explosion": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_explosion",
+                                "expected": true
+                            }
+                        ]
+                    },
+                    "source_entity": {}
+                }
+            }
+        },
+        "blocked": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "blocked": true,
+                    "source_entity": {}
+                }
+            }
+        },
+        "blocked-false": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "blocked": false,
+                    "source_entity": {}
+                }
+            }
         }
     },
     "requirements": [
@@ -385,6 +451,15 @@
         [
             "15-0",
             "15-1"
+        ],
+        [
+            "type-melee",
+            "type-projectile",
+            "type-explosion"
+        ],
+        [
+            "blocked",
+            "blocked-false"
         ]
     ],
     "rewards": {
