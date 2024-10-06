@@ -18,7 +18,7 @@
     execute store result score $MaxHealth Temporary run attribute @s generic.max_health get 10
 
 # 計算結果を api: Return.HealthPer
-    execute store result storage api: Return.HealthPer double 0.0001 run scoreboard players operation $Health Temporary /= $MaxHealth Temporary
+    execute store result storage api: Return.HealthPer double 0.001 run scoreboard players operation $Health Temporary /= $MaxHealth Temporary
 
 # リセット
     scoreboard players reset $Health Temporary
