@@ -24,5 +24,5 @@
 #> thisタグ
 # @within function
 #   asset_manager:object/triggers/tick
-#   assst:object/**
+#   asset:object/**
     #declare tag this
