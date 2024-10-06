@@ -45,20 +45,20 @@
 #> Killer
 # @within *
 #   asset_manager:mob/triggers/death/*
+#   asset_manager:artifact/triggers/attack/vanilla
 #   api:damage/core/health_subtract/non-player
-#   player_manager:vanilla_attack
 #   asset:mob/*/death/**
     #declare tag Killer
 
 #> Victim
 # @within *
-#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/attack/foreach
 #   asset:mob/*/attack/**
     #declare tag Victim
 
 #> Attacker
 # @within *
-#   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/hurt/foreach
 #   asset:mob/*/hurt/**
     #declare tag Attacker
 
