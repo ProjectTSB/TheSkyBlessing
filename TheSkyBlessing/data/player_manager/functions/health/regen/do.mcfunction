@@ -18,6 +18,8 @@
 # 満腹度を取得する
     function api:data_get/food_level
     execute store result score $FoodLevel Temporary run data get storage api: foodLevel
+# 最大体力を取得する
+    function api:modifier/max_health/get
 
 # 最大体力を取得
     function api:modifier/max_health/get

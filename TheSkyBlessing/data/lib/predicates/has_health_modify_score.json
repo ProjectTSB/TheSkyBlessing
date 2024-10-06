@@ -2,14 +2,29 @@
     "condition": "any_of",
     "terms": [
         {
-            "condition": "entity_scores",
-            "entity": "this",
-            "scores": {
-                "ScoreToHPFluc": {
-                    "min": -2147483648,
-                    "max": 2147483648
+            "condition": "all_of",
+            "terms": [
+                {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "ScoreToHPFluc": {
+                            "min": -2147483648,
+                            "max": 2147483648
+                        }
+                    }
+                },
+                {
+                    "condition": "inverted",
+                    "term": {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ScoreToHPFluc": 0
+                        }
+                    }
                 }
-            }
+            ]
         },
         {
             "condition": "entity_scores",

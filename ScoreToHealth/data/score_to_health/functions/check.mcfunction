@@ -12,7 +12,8 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-execute store result score $_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
+function api:modifier/max_health/get
+execute store result score $_ ScoreToHealth run data get storage api: Return.MaxHealth 100
 function api:data_get/health
 execute store result score $__ ScoreToHealth run data get storage api: Health 100
 scoreboard players operation $__ ScoreToHealth -= $_ ScoreToHealth
