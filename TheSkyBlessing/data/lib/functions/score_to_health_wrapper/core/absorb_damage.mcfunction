@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:score_to_health_wrapper/proc
+# @within function lib:score_to_health_wrapper/proc/
 
 #> Private
 # @private

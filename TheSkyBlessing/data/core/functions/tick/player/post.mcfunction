@@ -11,7 +11,7 @@
     function core:tick/check_item_meta/inventory
 
 # プレイヤーの体力の変更Queueの消化
-    execute if entity @s[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
+    execute if entity @s[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc/
 # MPを経験値バーに同期
     function player_manager:mp/viewer/check_xpbar
 

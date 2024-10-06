@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function lib:score_to_health_wrapper/proc
+# @within function lib:score_to_health_wrapper/proc/
 
 # 独自の死亡メッセージを出すためにバニラのを無効化する
     gamerule showDeathMessages false
