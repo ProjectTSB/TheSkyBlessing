@@ -11,7 +11,6 @@
 # イベントデータ取得
     data modify storage asset:context Damage set from storage asset:artifact ArtifactEvents.Damage[-1]
     data remove storage asset:artifact ArtifactEvents.Damage[-1]
-    tellraw @a [{"text":"Damage: "},{"storage":"asset:context","nbt":"Damage"}]
 # 攻撃元を取得し、Attacker を付与する (null の可能性もある)
     execute if data storage asset:context Damage.From store result score $AttackedFrom Temporary run data get storage asset:context Damage.From
     execute if data storage asset:context Damage.From as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker

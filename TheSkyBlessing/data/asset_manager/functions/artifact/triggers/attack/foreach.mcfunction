@@ -17,7 +17,6 @@
     scoreboard players reset $AttackTarget Temporary
 # 神器側に受け渡し
     function #asset:artifact/attack
-    # tellraw @a [{"text":"Event: "},{"storage":"asset:artifact","nbt":"Event.Type"}]
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run tag @s add ShouldVanillaAttack
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run function #asset:artifact/attack/melee
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } if entity @s[tag=ShouldVanillaAttack] as @e[type=#lib:living,type=!player,tag=Victim,distance=..8] at @s run function asset_manager:artifact/triggers/attack/vanilla
