@@ -13,7 +13,8 @@
     scoreboard players operation $Health Temporary = @s Health
     scoreboard players operation $Health Temporary *= $1000 Const
 # 最大体力取得
-    execute store result score $MaxHealth Temporary run attribute @s generic.max_health get 10
+    function api:modifier/max_health/get
+    execute store result score $MaxHealth Temporary run data get storage api: Return.MaxHealth 10
 # 割合を計算する
     scoreboard players operation $Health Temporary /= $MaxHealth Temporary
 # 割合をもとにチーム振り分け
