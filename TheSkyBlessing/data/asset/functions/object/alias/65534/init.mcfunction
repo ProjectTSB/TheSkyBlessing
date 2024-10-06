@@ -5,4 +5,4 @@
 # @within asset_manager:object/summon/init.m
 
 # 元のInit処理を呼び出す
-   function asset:object/example.1/init/
+    function asset:object/example.1/init/

@@ -6,6 +6,7 @@
 #   as player
 #   storage api:
 #       Argument.UUID : [int] @ 4
+# @output storage api: Removed
 # @api
 
 # データ検証

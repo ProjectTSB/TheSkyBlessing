@@ -5,4 +5,4 @@
 # @within asset_manager:object/summon/summon.m
 
 # 元の召喚処理を呼び出す
-   function asset:object/example.2/summon/
+    function asset:object/example.2/summon/

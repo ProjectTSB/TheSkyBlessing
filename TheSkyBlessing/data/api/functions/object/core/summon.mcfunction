@@ -20,8 +20,7 @@
     execute unless data storage asset:object ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
     execute unless data storage asset:object ID run return fail
 
-# 継承が行われている場合そのデータを追加する
-    execute if data storage asset:object Extends[0] run function asset_manager:object/summon/put_id_to_map
+# フィールド設定
     data modify storage asset:context this set from storage asset:object Field
     data modify storage asset:context this merge from storage api: Argument.FieldOverride
 
