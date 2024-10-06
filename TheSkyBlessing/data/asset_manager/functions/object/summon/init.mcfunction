@@ -17,11 +17,11 @@
 # 共通タグ付与
     tag @s add AssetObject
 
-# EntityStorage呼び出し
-    function oh_my_dat:please
-
 # Object側に実装されてるInitを実行
     function asset_manager:object/init/ with storage asset:context
+
+# EntityStorage呼び出し
+    execute if score @s ObjectID matches -2147483648..2147483647 run function oh_my_dat:please
 
 # フィールドを元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ObjectField set from storage asset:context this
