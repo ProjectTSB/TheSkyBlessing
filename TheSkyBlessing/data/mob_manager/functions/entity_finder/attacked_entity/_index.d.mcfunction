@@ -2,9 +2,7 @@
 # @private
 
 #> 攻撃したPlayer
-# @within function
-#   mob_manager:entity_finder/attacked_entity/**
-#   asset_manager:mob/triggers/hurt/foreach
+# @within function mob_manager:entity_finder/attacked_entity/**
 #declare tag AttackedPlayer
 
 #> 攻撃されたEntity
