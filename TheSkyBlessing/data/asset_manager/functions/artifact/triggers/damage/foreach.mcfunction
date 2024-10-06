@@ -20,7 +20,7 @@
     execute if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/melee
     execute if data storage asset:context Damage{Type:"vanilla_drowning"  } run function #asset:artifact/damage/drowning
     execute if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/projectile
-    execute if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/explode
+    execute if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/explosion
     execute if data storage asset:context Damage{Type:"vanilla_fire"      } run function #asset:artifact/damage/fire
     execute if data storage asset:context Damage{Type:"vanilla_freezing"  } run function #asset:artifact/damage/freezing
     execute if data storage asset:context Damage{Type:"vanilla_lightning" } run function #asset:artifact/damage/lightning
