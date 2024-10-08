@@ -1549,99 +1549,7 @@
                         "",
                         "# 他のモブに継承されることを許可するか (boolean) (オプション)",
                         "    # data modify storage asset:mob ExtendsSafe set value ",
-                        "# 継承されることを前提とした、抽象的なオブジェクトであるかどうか(boolean)",
-                        "    data modify storage asset:mob IsAbstract set value false",
-                        "# ID (int)",
-                        "    data modify storage asset:mob ID set value %id%",
-                        "# フィールド",
-                        "    # data modify storage asset:mob Field.myValue set value "
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/alias/%id%/register.mcfunction",
-                    "content": [
-                        "#> asset:mob/alias/%id%/register",
-                        "#",
-                        "# Mobのデータ指定処理のエイリアス",
-                        "#",
-                        "# @within asset_manager:mob/summon/register.m",
-                        "",
-                        "# 元の登録処理を呼び出す",
-                        "   function asset:mob/%namespace%/register"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/summon/debug.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/summon/debug",
-                        "#",
-                        "# 動作チェック用の召喚処理 使い終わったら消してもいいかも",
-                        "#",
-                        "# @user",
-                        "# @private",
-                        "",
-                        "# 召喚",
-                        "   data modify storage api: Argument.ID set value %id%",
-                        "   function api:mob/summon"
-                    ]
-                }
-            ],
-            "customQuestion": [
-                {
-                    "name": "id",
-                    "question": "MobtのID",
-                    "pattern": "[1-9][0-9]*",
-                    "patternErrorMessage": "数値のみが許されるよ"
-                }
-            ]
-        },
-        {
-            "label": "MOB/テンプレート",
-            "generates": [
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/summon/.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/summon/",
-                        "#",
-                        "# Mob召喚処理の呼び出し時に実行されるfunction",
-                        "#",
-                        "# @within asset:mob/alias/%id%/summon",
-                        "",
-                        "# 元となるMobを召喚する",
-                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"],DeathLootTable:\"asset:mob/death/%namespace%\"}"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/summon/debug.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/summon/debug",
-                        "#",
-                        "# モブの動作チェック用の召喚処理 使い終わったら消してもいいかも",
-                        "#",
-                        "# @within asset:mob/%namespace%/summon/debug",
-                        "",
-                        "# モブを召喚",
-                        "   data modify storage api: Argument.ID set value %id%",
-                        "   function api:mob/summon"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/register.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/register",
-                        "#",
-                        "# Mobのデータを指定",
-                        "#",
-                        "# @within function asset:mob/%namespace%/_/register",
-                        "",
-                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
-                        "    # data modify storage asset:mob ExtendsSafe set value ",
-                        "# 継承されることを前提とした、抽象的なオブジェクトであるかどうか(boolean)",
+                        "# 継承されることを前提とした、抽象的なモブであるかどうか(boolean)",
                         "    data modify storage asset:mob IsAbstract set value false",
                         "# ID (int)",
                         "    data modify storage asset:mob ID set value %id%",
@@ -1696,9 +1604,38 @@
                         "        # data modify storage asset:mob Resist.Water set value ",
                         "    # 雷倍率 (float) (オプション)",
                         "        # data modify storage asset:mob Resist.Thunder set value ",
-                        "",
                         "# フィールド",
                         "    # data modify storage asset:mob Field.myValue set value "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/alias/%id%/register.mcfunction",
+                    "content": [
+                        "#> asset:mob/alias/%id%/register",
+                        "#",
+                        "# Mobのデータ指定処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:mob/summon/register.m",
+                        "",
+                        "# 元の登録処理を呼び出す",
+                        "   function asset:mob/%namespace%/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/functions/mob/%namespace%/summon/debug.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/summon/debug",
+                        "#",
+                        "# 動作チェック用の召喚処理 使い終わったら消してもいいかも",
+                        "#",
+                        "# @user",
+                        "# @private",
+                        "",
+                        "# 召喚",
+                        "   data modify storage api: Argument.ID set value %id%",
+                        "   function api:mob/summon"
                     ]
                 },
                 {
