@@ -2,8 +2,9 @@
 #
 #
 #
-# @within function asset_manager:mob/init/
-
+# @within function
+#   asset_manager:mob/init/
+#   asset:mob/super.init
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
