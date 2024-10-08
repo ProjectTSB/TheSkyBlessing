@@ -5,4 +5,5 @@
 # @within function asset_manager:mob/summon/
 
 $function asset:mob/alias/$(id)/summon
-$say function asset:mob/alias/$(id)/summon
+$execute store success storage asset:mob Implement byte 1 run schedule function asset:mob/alias/$(id)/summon 2147483647t
+$schedule clear asset:mob/alias/$(id)/summon
