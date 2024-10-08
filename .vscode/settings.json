@@ -1715,7 +1715,7 @@
                         "#",
                         "# @within asset_manager:mob/summon/summon.m",
                         "",
-                        "# 元の召喚処理を呼び出す",
+                        "# 本来の処理を呼び出す",
                         "   function asset:mob/%namespace%/summon/"
                     ]
                 }
@@ -1794,7 +1794,7 @@
                         "#",
                         "# @within asset_manager:mob/tick/tick.m",
                         "",
-                        "# 元のメソッド処理を呼び出す",
+                        "# 本来の処理を呼び出す",
                         "   function asset:mob/%namespace%/%method_name%/"
                     ]
                 }
@@ -1836,41 +1836,29 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/_/attack.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/_/attack",
-                        "#",
-                        "# Mobの攻撃時に実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/attack",
-                        "",
-                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/attack/"
-                    ]
-                },
-                {
-                    "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/attack/.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/attack/",
                         "#",
                         "# Mobの攻撃時の処理",
                         "#",
-                        "# @within function asset:mob/%namespace%/_/attack"
+                        "# @within function asset:mob/alias/%id%/attack",
+                        ""
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/mob/attack.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/_/attack"
-                        ]
-                    },
-                    "append": {
-                        "addFirst": true,
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/_/attack"
-                    }
+                    "rel": "data/asset/functions/mob/alias/%id%/attack.mcfunction",
+                    "content": [
+                        "#> asset:mob/alias/%id%/attack",
+                        "#",
+                        "# Mobの攻撃時の処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:mob/triggers/attack/attack.m",
+                        "",
+                        "# 本来の処理を呼び出す",
+                        "   function asset:mob/%namespace%/attack/",
+                    ]
                 }
             ],
             "customQuestion": [
@@ -1887,41 +1875,29 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/_/hurt.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/_/hurt",
-                        "#",
-                        "# Mobの被ダメージに実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/hurt",
-                        "",
-                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/hurt/"
-                    ]
-                },
-                {
-                    "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/hurt/.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/hurt/",
                         "#",
-                        "# Mobの被ダメージ時の処理",
+                        "# Mobのダメージ時の処理",
                         "#",
-                        "# @within function asset:mob/%namespace%/_/hurt"
+                        "# @within function asset:mob/alias/%id%/hurt",
+                        ""
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/mob/hurt.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/_/hurt"
-                        ]
-                    },
-                    "append": {
-                        "addFirst": true,
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/_/hurt"
-                    }
+                    "rel": "data/asset/functions/mob/alias/%id%/hurt.mcfunction",
+                    "content": [
+                        "#> asset:mob/alias/%id%/hurt",
+                        "#",
+                        "# Mobのダメージ時の処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:mob/triggers/hurt/hurt.m",
+                        "",
+                        "# 本来の処理を呼び出す",
+                        "   function asset:mob/%namespace%/hurt/",
+                    ]
                 }
             ],
             "customQuestion": [
@@ -2007,7 +1983,7 @@
                         "#",
                         "# Tick時処理のエイリアス",
                         "#",
-                        "# @within asset_manager:mob/tick/tick.m",
+                        "# @within asset_manager:mob/triggers/tick/tick.m",
                         "",
                         "# 元のTick処理を呼び出す",
                         "   function asset:mob/%namespace%/tick/"
