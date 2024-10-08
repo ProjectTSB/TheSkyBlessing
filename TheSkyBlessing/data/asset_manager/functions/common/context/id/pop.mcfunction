@@ -18,6 +18,7 @@
 #   api:object/core/summon
 #   asset_manager:object/*/call_super_methods/
 #   asset:object/call.m
+#   asset_manager:mob/*/call_super_methods/
 
 # idを掃除
     data remove storage asset:context id
