@@ -6,7 +6,7 @@
 #   asset_manager:mob/triggers/
 #   asset_manager:mob/triggers/hurt/call_super_method
 
-function #asset:mob/hurt
+function asset_manager:mob/triggers/hurt/hurt.m with storage asset:context
 
 execute unless data storage asset:mob {Implement:true} run function asset_manager:mob/triggers/hurt/call_super_method
 
