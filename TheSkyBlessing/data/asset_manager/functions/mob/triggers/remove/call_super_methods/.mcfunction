@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset_manager:mob/triggers/remove/
+# @within function
+#   asset_manager:mob/triggers/remove/
+#    asset:super.remove
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
