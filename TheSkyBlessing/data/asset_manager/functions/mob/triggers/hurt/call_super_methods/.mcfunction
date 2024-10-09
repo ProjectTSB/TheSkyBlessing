@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset_manager:mob/triggers/hurt/
+# @within function
+#   asset_manager:mob/triggers/hurt/
+#   asset:mob/super.hurt
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
