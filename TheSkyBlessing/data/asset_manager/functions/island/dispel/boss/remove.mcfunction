@@ -10,7 +10,7 @@
 # context作成
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
 # 削除処理
-    function #asset:mob/remove
+    function asset_manager:mob/triggers/remove/ with storage asset:context
 # Deathトリガー防止
     data modify entity @s DeathLootTable set value "empty"
 # さよなら～
