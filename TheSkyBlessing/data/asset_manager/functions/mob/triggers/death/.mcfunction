@@ -2,9 +2,7 @@
 #
 # 死亡トリガーの処理
 #
-# @within function
-#   core:tick/check_item_meta/entity
-#   asset_manager:mob/triggers/death/call_super_methods/foreach
+# @within function core:tick/check_item_meta/entity
 
 # 軽量化のためにstorageに入れる
     data modify storage asset:mob DeathLog set from entity @s Item.tag
