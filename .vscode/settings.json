@@ -1688,7 +1688,7 @@
             ]
         },
         {
-            "label": "Mob/ 召喚処理",
+            "label": "Mob/召喚処理",
             "generates": [
                 {
                     "type": "file",

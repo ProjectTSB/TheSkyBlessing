@@ -1,10 +1,8 @@
-#> asset_manager:mob/triggers/tick/call_super_method
+#> asset_manager:mob/triggers/hurt/call_super_methods/
 #
 #
 #
-# @within function
-#   asset_manager:mob/triggers/tick/
-#   asset:mob/super.tick
+# @within function asset_manager:mob/triggers/hurt/
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
@@ -16,8 +14,11 @@
 # ROMから継承元の情報を持ってくる
     data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
-# super.tick呼び出し
-    execute if data storage asset:context id run function asset_manager:mob/triggers/tick/
+# すべての継承元のinit呼び出し
+    execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/hurt/call_super_methods/foreach
+
+# リセット
+    data remove storage asset:mob CopiedExtends[-1]
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
