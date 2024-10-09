@@ -16,7 +16,7 @@
 # ROMから継承元の情報を持ってくる
     data modify storage asset:context id set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
-# すべての継承元のinit呼び出し
+# すべての継承元のtick呼び出し
     execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/tick/call_super_methods/foreach
 
 # リセット

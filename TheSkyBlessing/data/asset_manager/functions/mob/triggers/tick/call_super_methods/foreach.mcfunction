@@ -9,7 +9,7 @@
 # IDを取得
     data modify storage asset:context id set from storage asset:mob CopiedExtends[-1][0]
 
-# super.init呼び出し
+# super.tick呼び出し
     function asset_manager:mob/triggers/tick/
 
 # 先頭削除 (Extends が十分に小さいことがわかっているため先頭再帰する)

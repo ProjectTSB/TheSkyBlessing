@@ -17,7 +17,7 @@
     data modify storage asset:mob CopiedExtends append value []
     data modify storage asset:mob CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
 
-# すべての継承元のinit呼び出し
+# すべての継承元のremove呼び出し
     execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/remove/call_super_methods/foreach
 
 # リセット
