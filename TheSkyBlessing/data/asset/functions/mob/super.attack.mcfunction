@@ -4,4 +4,4 @@
 #
 # @within function asset:mob/*/attack/
 
-function asset_manager:mob/triggers/attack/call_super_method
+function asset_manager:mob/triggers/attack/call_super_methods/
