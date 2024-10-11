@@ -49,9 +49,6 @@
 # フィールドを取り出す
     data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
 
-# 初期化イベント
-    execute if entity @s run function #asset:mob/initialize
-
 # フィールドを元に戻す
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
 
