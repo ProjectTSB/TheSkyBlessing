@@ -1,15 +1,16 @@
-#> asset:mob/ex.2/register
+#> asset:mob/65533.example_2/register
 #
+# Mobのデータを指定
 #
-#
-# @within function asset:mob/ex.2/_/register
+# @within function asset:mob/alias/65533/register
 
 # extends
     data modify storage asset:mob Extends append value 65534
     function asset:mob/extends
-
 # ExtendsSafe (boolean) (オプション)
     data modify storage asset:mob ExtendsSafe set value true
+# 継承されることを前提とした、抽象的なモブであるかどうか(boolean)
+    data modify storage asset:mob IsAbstract set value false
 # ID (int)
     data modify storage asset:mob ID set value 65533
 # 防具
