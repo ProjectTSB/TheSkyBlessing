@@ -10,14 +10,8 @@
 # 既存にasset:context thisが存在する場合に備えて退避させる
     function asset_manager:common/context/this/stash
 
-# 念のためリセット
-#    data remove storage asset:mob Return.Summoned
-
 # ID
     data modify storage asset:context id set from storage api: Argument.ID
-
-# データを取得
-#    function #asset:mob/register
 
 # データ登録
     function asset_manager:mob/summon/register.m with storage asset:context
