@@ -1695,7 +1695,7 @@
                         "# @within asset:mob/alias/%id%/summon",
                         "",
                         "# 元となるEntityを召喚する",
-                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"]},DeathLootTable:\"asset:mob/death/%namespace%\"}",
+                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"],DeathLootTable:\"asset:mob/death/%namespace%\"}",
                         ""
                     ]
                 },
