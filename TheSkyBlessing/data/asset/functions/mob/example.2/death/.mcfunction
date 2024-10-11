@@ -1,4 +1,4 @@
-#> asset:mob/65533.example_2/death/
+#> asset:mob/example.2/death/
 #
 # Mobの死亡時の処理
 #

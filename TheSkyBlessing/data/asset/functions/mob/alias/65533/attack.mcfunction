@@ -5,4 +5,4 @@
 # @within asset_manager:mob/triggers/attack/attack.m
 
 # 本来の処理を呼び出す
-   function asset:mob/65533.example_2/attack/
+   function asset:mob/example.2/attack/

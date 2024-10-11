@@ -1,4 +1,4 @@
-#> asset:mob/65533.example_2/hurt/
+#> asset:mob/example.2/hurt/
 #
 # Mobのダメージ時の処理
 #

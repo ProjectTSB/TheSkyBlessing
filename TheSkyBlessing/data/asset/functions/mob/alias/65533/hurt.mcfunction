@@ -5,4 +5,4 @@
 # @within asset_manager:mob/triggers/hurt/hurt.m
 
 # 本来の処理を呼び出す
-   function asset:mob/65533.example_2/hurt/
+   function asset:mob/example.2/hurt/

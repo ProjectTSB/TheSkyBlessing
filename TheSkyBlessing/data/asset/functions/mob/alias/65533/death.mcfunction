@@ -5,4 +5,4 @@
 # @within asset_manager:mob/triggers/death/death.m
 
 # 本来の処理を呼び出す
-   function asset:mob/65533.example_2/death/
+   function asset:mob/example.2/death/

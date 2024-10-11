@@ -1,4 +1,4 @@
-#> asset:mob/65533.example_2/tick/
+#> asset:mob/example.2/tick/
 #
 # Objectのtick時の処理
 #
