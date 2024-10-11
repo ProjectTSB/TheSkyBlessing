@@ -1,8 +1,8 @@
-#> asset:mob/ex.3/register
+#> asset:mob/example.3/register
 #
+# Mobのデータを指定
 #
-#
-# @within function asset:mob/ex.3/_/register
+# @within function asset:mob/alias/65532/register
 
 # extends
     data modify storage asset:mob Extends append value 65533
