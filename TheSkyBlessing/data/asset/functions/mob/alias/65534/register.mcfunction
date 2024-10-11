@@ -5,4 +5,4 @@
 # @within asset_manager:mob/summon/register.m
 
 # 元の登録処理を呼び出す
-   function asset:mob/65534.example_1/register
+   function asset:mob/example.1/register

@@ -1,4 +1,4 @@
-#> asset:mob/65534.example_1/summon/debug
+#> asset:mob/example.1/summon/debug
 #
 # 動作チェック用の召喚処理 使い終わったら消してもいいかも
 #

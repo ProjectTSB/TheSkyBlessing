@@ -1,4 +1,4 @@
-#> asset:mob/65534.example_1/register
+#> asset:mob/example.1/register
 #
 # Mobのデータを指定
 #

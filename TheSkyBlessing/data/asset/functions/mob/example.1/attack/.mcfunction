@@ -1,4 +1,4 @@
-#> asset:mob/65534.example_1/attack/
+#> asset:mob/example.1/attack/
 #
 # Mobの攻撃時の処理
 #

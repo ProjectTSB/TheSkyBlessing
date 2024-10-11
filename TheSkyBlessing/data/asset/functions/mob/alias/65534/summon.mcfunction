@@ -5,4 +5,4 @@
 # @within asset_manager:mob/summon/summon.m
 
 # 本来の処理を呼び出す
-   function asset:mob/65534.example_1/summon/
+   function asset:mob/example.1/summon/
