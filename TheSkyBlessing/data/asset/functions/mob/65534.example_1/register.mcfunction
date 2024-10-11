@@ -1,11 +1,13 @@
-#> asset:mob/ex.1/register
+#> asset:mob/65534.example_1/register
 #
+# Mobのデータを指定
 #
-#
-# @within function asset:mob/ex.1/_/register
+# @within function asset:mob/alias/65534/register
 
-# ExtendsSafe (boolean) (オプション)
+# 他のモブに継承されることを許可するか (boolean) (オプション)
     data modify storage asset:mob ExtendsSafe set value true
+# 継承されることを前提とした、抽象的なモブであるかどうか(boolean)
+    data modify storage asset:mob IsAbstract set value false
 # ID (int)
     data modify storage asset:mob ID set value 65534
 # Type (string) Wikiを参照
@@ -14,8 +16,6 @@
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
     data modify storage asset:mob Name set value '{"text":"サンプルの敵"}'
-# 体力 (double) (オプション)
-    data modify storage asset:mob Health set value 100.0
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:iron_sword",Count:1b}
@@ -31,4 +31,4 @@
     # 足 (Compound(Item)) (オプション)
         data modify storage asset:mob Armor.Feet set value {id:"minecraft:iron_boots",Count:1b}
 # フィールド
-    data modify storage asset:mob Field.myValue set value "ex.1"
+    data modify storage asset:mob Field.myValue set value "example.1"
