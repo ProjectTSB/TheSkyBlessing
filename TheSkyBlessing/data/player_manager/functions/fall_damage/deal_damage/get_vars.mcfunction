@@ -9,7 +9,8 @@
 #declare score_holder $YVec
 
 # 最大体力取得
-    execute store result score $MaxHealth Temporary run attribute @s generic.max_health get 100
+    function api:modifier/max_health/get
+    execute store result score $MaxHealth Temporary run data get storage api: Return.MaxHealth 100
 
 # 1tick前のFallDistance取得
     execute store result score $FallDistance Temporary run scoreboard players get @s OldFallDistance
