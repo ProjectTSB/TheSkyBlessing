@@ -45,9 +45,9 @@
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     execute unless data storage asset:artifact MPCost run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"}]
-    execute if data storage asset:artifact Modifiers[0] run data modify storage asset:temp Modifiers set from storage asset:artifact Modifiers
+    execute if data storage asset:artifact Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Modifiers
     execute if data storage asset:artifact Modifiers[0] run function asset:artifact/common/modifier/check
-    execute if data storage asset:artifact Modifiers[0] run data remove storage asset:temp Modifiers
+    execute if data storage asset:artifact Modifiers[0] run data remove storage asset:artifact CopiedModifiers
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
