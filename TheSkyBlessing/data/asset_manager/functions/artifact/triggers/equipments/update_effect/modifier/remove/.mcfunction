@@ -7,7 +7,7 @@
     data modify storage asset:artifact Modifier set from storage asset:artifact Old.Modifiers[-1]
 
 # データを整える
-    data modify storage asset:artifact Modifier.UUID set value [I;1,1,0,0]
+    data modify storage asset:artifact Modifier.UUID set value [I;1,1,-1,-1]
     data modify storage asset:artifact Modifier.UUID[2] set from storage asset:artifact Modifier.ID
     function asset_manager:artifact/triggers/equipments/update_effect/modifier/fourth_id
 
