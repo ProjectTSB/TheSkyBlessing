@@ -4,7 +4,8 @@
 -execute store result score #_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
 -execute store result score #__ ScoreToHealth run data get entity @s Health 100
 -scoreboard players operation #__ ScoreToHealth -= #_ ScoreToHealth
-+execute store result score $_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
++function api:modifier/max_health/get
++execute store result score $_ ScoreToHealth run data get storage api: Return.MaxHealth 100
 +function api:data_get/health
 +execute store result score $__ ScoreToHealth run data get storage api: Health 100
 +scoreboard players operation $__ ScoreToHealth -= $_ ScoreToHealth
