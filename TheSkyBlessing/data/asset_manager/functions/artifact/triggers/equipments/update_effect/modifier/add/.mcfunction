@@ -11,7 +11,7 @@
     execute if data storage asset:artifact Modifier{Slot:"hotbar"} run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/calculate
     data modify storage asset:artifact Modifier.UUID set value [I;1,1,0,0]
     data modify storage asset:artifact Modifier.UUID[2] set from storage asset:artifact Modifier.ID
-    function asset_manager:artifact/triggers/equipments/update_effect/modifier/fourth_id
+    function asset_manager:artifact/triggers/equipments/update_effect/modifier/get_slot_id
 
 # apiに移す
     data modify storage api: Argument.UUID set from storage asset:artifact Modifier.UUID
