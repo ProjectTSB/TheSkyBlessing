@@ -32,7 +32,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Equipments.IDList set from storage asset:artifact New.EquipIDList
 
 # リセット
-    data remove storage asset:artifact CopeidItemData
+    data remove storage asset:artifact CopiedItemData
     data remove storage asset:artifact EquipList
     data remove storage asset:artifact Old.Modifiers
     data remove storage asset:artifact Modifiers
