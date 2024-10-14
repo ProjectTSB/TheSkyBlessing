@@ -11,14 +11,14 @@
 
 # 装備時効果
     data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Modifiers
-    execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.tag.diplay.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
     execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/modifier/
     data remove storage asset:artifact CopiedModifiers
 # セット効果
     execute if data storage asset:artifact EquipID run function asset_manager:artifact/create/set_equipment
 
 # 空行セパレータ
-    execute if data storage asset:artifact Item.tag.diplay.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
 # 使用方法
     function asset_manager:artifact/create/set_trigger
 # 使用条件
