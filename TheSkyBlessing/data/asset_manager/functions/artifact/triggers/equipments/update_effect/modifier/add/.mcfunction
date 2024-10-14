@@ -19,8 +19,8 @@
     data modify storage api: Argument.Operation set from storage asset:artifact Modifier.Operation
 # カスタムModifierで処理
     scoreboard players set $CustomModifier Temporary 0
-    function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/custom
-# バニラでModifierで処理
+    function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/custom.m with storage asset:artifact Modifier
+# バニラModifierで処理
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/dec_to_hex/
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/generic.m with storage asset:artifact Modifier
 

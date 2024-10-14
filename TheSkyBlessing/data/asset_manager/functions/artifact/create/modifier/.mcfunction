@@ -19,36 +19,40 @@
     data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""']
 
 # カスタムModifier
-    execute if data storage asset:artifact Modifier{Type:"attackBase"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackBase"} run data modify storage asset:artifact Line[1] set value '"攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"attackFire"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackFire"} run data modify storage asset:artifact Line[1] set value '"火攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"attackMagic"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackMagic"} run data modify storage asset:artifact Line[1] set value '"魔法攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"attackPhysical"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackPhysical"} run data modify storage asset:artifact Line[1] set value '"物理攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"attackThunder"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackThunder"} run data modify storage asset:artifact Line[1] set value '"雷攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"attackWater"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"attackWater"} run data modify storage asset:artifact Line[1] set value '"水攻撃"'
-    execute if data storage asset:artifact Modifier{Type:"defenseBase"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseBase"} run data modify storage asset:artifact Line[1] set value '"耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defenseFire"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseFire"} run data modify storage asset:artifact Line[1] set value '"火耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defenseMagic"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseMagic"} run data modify storage asset:artifact Line[1] set value '"魔法耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defensePhysical"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defensePhysical"} run data modify storage asset:artifact Line[1] set value '"物理耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defenseThunder"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseThunder"} run data modify storage asset:artifact Line[1] set value '"雷耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defenseWater"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defenseWater"} run data modify storage asset:artifact Line[1] set value '"水耐性"'
+    execute if data storage asset:artifact Modifier{Type:"attack/base"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/base"} run data modify storage asset:artifact Line[1] set value '"攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"attack/fire"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/fire"} run data modify storage asset:artifact Line[1] set value '"火攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"attack/magic"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/magic"} run data modify storage asset:artifact Line[1] set value '"魔法攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"attack/physical"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/physical"} run data modify storage asset:artifact Line[1] set value '"物理攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"attack/thunder"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/thunder"} run data modify storage asset:artifact Line[1] set value '"雷攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"attack/water"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"attack/water"} run data modify storage asset:artifact Line[1] set value '"水攻撃"'
+    execute if data storage asset:artifact Modifier{Type:"defense/base"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/base"} run data modify storage asset:artifact Line[1] set value '"耐性"'
+    execute if data storage asset:artifact Modifier{Type:"defense/fire"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/fire"} run data modify storage asset:artifact Line[1] set value '"火耐性"'
+    execute if data storage asset:artifact Modifier{Type:"defense/magic"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/magic"} run data modify storage asset:artifact Line[1] set value '"魔法耐性"'
+    execute if data storage asset:artifact Modifier{Type:"defense/physical"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/physical"} run data modify storage asset:artifact Line[1] set value '"物理耐性"'
+    execute if data storage asset:artifact Modifier{Type:"defense/thunder"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/thunder"} run data modify storage asset:artifact Line[1] set value '"雷耐性"'
+    execute if data storage asset:artifact Modifier{Type:"defense/water"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"defense/water"} run data modify storage asset:artifact Line[1] set value '"水耐性"'
     execute if data storage asset:artifact Modifier{Type:"heal"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"heal"} run data modify storage asset:artifact Line[1] set value '"回復量"'
-    execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"receiveHeal"} run data modify storage asset:artifact Line[1] set value '"被回復量"'
-    execute if data storage asset:artifact Modifier{Type:"mpRegen"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"mpRegen"} run data modify storage asset:artifact Line[1] set value '"MP回復量"'
+    execute if data storage asset:artifact Modifier{Type:"receive_heal"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"receive_heal"} run data modify storage asset:artifact Line[1] set value '"被回復量"'
+    execute if data storage asset:artifact Modifier{Type:"mp_regen"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"mp_regen"} run data modify storage asset:artifact Line[1] set value '"MP回復量"'
+    execute if data storage asset:artifact Modifier{Type:"max_health"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"max_health"} run data modify storage asset:artifact Line[1] set value '"最大体力"'
+    execute if data storage asset:artifact Modifier{Type:"max_mp"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"max_mp"} run data modify storage asset:artifact Line[1] set value '"最大MP"'
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/create/modifier/generic.m with storage asset:artifact Modifier
 # 数値チェック
 # Operation == "add":

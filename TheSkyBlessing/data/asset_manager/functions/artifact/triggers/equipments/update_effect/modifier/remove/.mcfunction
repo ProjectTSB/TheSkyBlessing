@@ -15,7 +15,7 @@
     data modify storage api: Argument.UUID set from storage asset:artifact Modifier.UUID
 # カスタムModifierで処理
     scoreboard players set $CustomModifier Temporary 0
-    function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/custom
+    function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/custom.m with storage asset:artifact Modifier
 # バニラでModifierで処理
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/dec_to_hex/
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/update_effect/modifier/remove/generic.m with storage asset:artifact Modifier
