@@ -15,27 +15,8 @@
                                 [
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "Line[0]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line[1]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line[2]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line[3]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line[4]",
+                                        "nbt": "Line[]",
+                                        "separator": "",
                                         "interpret": true
                                     }
                                 ]
