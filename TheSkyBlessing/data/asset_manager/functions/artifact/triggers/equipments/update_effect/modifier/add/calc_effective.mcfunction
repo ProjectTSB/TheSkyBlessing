@@ -1,4 +1,4 @@
-#> asset_manager:artifact/triggers/equipments/update_effect/modifier/add/calculate
+#> asset_manager:artifact/triggers/equipments/update_effect/modifier/add/calc_effective
 # @within function asset_manager:artifact/triggers/equipments/update_effect/modifier/add/
 
 #> Private
