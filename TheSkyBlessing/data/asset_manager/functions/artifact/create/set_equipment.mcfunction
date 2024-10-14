@@ -11,7 +11,7 @@
     function asset_manager:common/context/id/pop
 
 # 空行セパレータ
-    data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
 # 名前をLoreに組み込む
     data modify storage asset:artifact EquipName set from storage asset:effect Name
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/equipment
