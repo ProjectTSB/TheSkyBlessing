@@ -15,6 +15,7 @@
     data modify storage lib: Array set from storage api: Inventory
     data remove storage lib: Array[].Slot
     data remove storage lib: Array[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
+    data remove storage lib: Array[{tag:{TSB:{SoulBound:true}}}]
 
 # 一回目
     function lib:array/packing_chest
@@ -31,6 +32,10 @@
 
 # ベクトル大きくする
     execute positioned ~ ~1 ~ as @e[type=item,distance=..0.5] run function player_manager:lost_item/drop/motion_multiple
+
+
+# SoulBound のアイテムをインベントリに戻す
+    execute if data storage api: Inventory[{tag:{TSB:{SoulBound:true}}}] run function player_manager:lost_item/regive_soulbound
 
 
 # リセット
