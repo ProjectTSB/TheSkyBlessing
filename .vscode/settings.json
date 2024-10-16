@@ -1951,7 +1951,7 @@
                     "content": [
                         "#> asset:mob/%namespace%/tick/",
                         "#",
-                        "# Objectのtick時の処理",
+                        "# Mobのtick時の処理",
                         "#",
                         "# @within asset:mob/alias/%id%/tick",
                         ""
@@ -1990,7 +1990,7 @@
                     "content": [
                         "#> asset:mob/%namespace%/init/",
                         "#",
-                        "# Objectのinit時の処理",
+                        "# Mobのinit時の処理",
                         "#",
                         "# @within asset:mob/alias/%id%/init",
                         ""
