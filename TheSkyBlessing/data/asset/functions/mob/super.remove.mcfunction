@@ -1,4 +1,4 @@
-#> asset:super.remove
+#> asset:mob/super.remove
 #
 #
 #
