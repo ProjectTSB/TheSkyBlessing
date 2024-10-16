@@ -2025,9 +2025,9 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/rejoin_process.mcfunction",
+                    "rel": "data/asset/functions/mob/%namespace%/rejoin_process/.mcfunction",
                     "content": [
-                        "#> asset:mob/%namespace%/rejoin_process",
+                        "#> asset:mob/%namespace%/rejoin_process/",
                         "#",
                         "# 使い方は必ずwikiを見ること",
                         "#",
@@ -2055,41 +2055,29 @@
             "generates": [
                 {
                     "type": "file",
-                    "rel": "data/asset/functions/mob/%namespace%/_/remove.mcfunction",
-                    "content": [
-                        "#> asset:mob/%namespace%/_/remove",
-                        "#",
-                        "# 天使が居なくなる際に実行されるfunction",
-                        "#",
-                        "# @within tag/function asset:mob/remove",
-                        "",
-                        "execute if data storage asset:context {id:%id%} run function asset:mob/%namespace%/remove/"
-                    ]
-                },
-                {
-                    "type": "file",
                     "rel": "data/asset/functions/mob/%namespace%/remove/.mcfunction",
                     "content": [
                         "#> asset:mob/%namespace%/remove/",
                         "#",
-                        "# Mobのremove時の処理",
+                        "# 天使が居なくなる際に実行される処理",
                         "#",
-                        "# @within function asset:mob/%namespace%/_/remove"
+                        "# @within asset:mob/alias/%id%/remove",
+                        ""
                     ]
                 },
                 {
                     "type": "file",
-                    "rel": "data/asset/tags/functions/mob/remove.json",
-                    "content": {
-                        "values": [
-                            "asset:mob/%namespace%/_/remove"
-                        ]
-                    },
-                    "append": {
-                        "addFirst": true,
-                        "key": "values",
-                        "elem": "asset:mob/%namespace%/_/remove"
-                    }
+                    "rel": "data/asset/functions/mob/alias/%id%/remove.mcfunction",
+                    "content": [
+                        "#> asset:mob/alias/%id%/init",
+                        "#",
+                        "# Remove処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:mob/remove/remove.m",
+                        "",
+                        "# 元のInit処理を呼び出す",
+                        "   function asset:mob/%namespace%/remove/"
+                    ]
                 }
             ],
             "customQuestion": [
