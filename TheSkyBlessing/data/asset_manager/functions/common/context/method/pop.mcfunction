@@ -2,7 +2,8 @@
 #
 #
 #
-# @within function asset:object/call.m
+# @within function
+#   asset:*/call.m
 
 # methodを掃除
     data remove storage asset:context method

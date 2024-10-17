@@ -18,6 +18,8 @@
 #   api:object/core/summon
 #   asset_manager:object/*/call_super_method
 #   asset:object/call.m
+#   asset_manager:mob/*/call_super_method
+#   asset:mob/call.m
 
 # スタックに新しい空間を追加する
     data modify storage asset:context ThisStashStack append value {}

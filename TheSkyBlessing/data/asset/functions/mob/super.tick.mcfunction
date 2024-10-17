@@ -4,4 +4,4 @@
 #
 # @within function asset:mob/*/tick/
 
-function asset_manager:mob/triggers/tick/call_super_method
+function asset_manager:mob/triggers/tick/call_super_methods/
