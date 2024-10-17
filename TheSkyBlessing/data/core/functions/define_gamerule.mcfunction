@@ -45,7 +45,7 @@ gamerule maxEntityCramming 24
 gamerule mobExplosionDropDecay true
 execute if data storage global {IsProduction:1b} run gamerule mobGriefing true
 execute if data storage global {IsProduction:0b} run gamerule mobGriefing false
-gamerule naturalRegeneration true
+gamerule naturalRegeneration false
 gamerule playersSleepingPercentage 100
 gamerule playersNetherPortalCreativeDelay 1
 execute if data storage global {IsProduction:1b} run gamerule playersNetherPortalDefaultDelay 80
