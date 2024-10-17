@@ -2204,9 +2204,7 @@
                         "",
                         "# 元となるEntityを召喚する",
                         "    summon %entity% ~ ~ ~ {Tags:[\"ObjectInit\"]}",
-                        "",
-                        "# 実装フラグを立てる",
-                        "data modify storage asset:object Implement set value true"
+                        ""
                     ]
                 },
                 {
@@ -2257,9 +2255,7 @@
                         "",
                         "# 消滅処理",
                         "   kill @s[scores={General.Object.Tick=1000..}]",
-                        "",
-                        "# 実装フラグを立てる",
-                        "data modify storage asset:object Implement set value true"
+                        ""
                     ]
                 },
                 {
@@ -2388,9 +2384,7 @@
                         "# 継承先などから実行される処理",
                         "#",
                         "# @within asset:object/alias/%id%/%method_name%",
-                        "",
-                        "# 実装フラグを立てる",
-                        "   data modify storage asset:object Implement set value true"
+                        ""
                     ]
                 },
                 {
