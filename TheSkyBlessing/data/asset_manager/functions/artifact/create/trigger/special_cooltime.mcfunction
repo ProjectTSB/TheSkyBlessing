@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_special_cooltime
+#> asset_manager:artifact/create/trigger/special_cooltime
 #
 # スペシャルクールタイムを秒数にする 1tickとかだと表示が変になる
 #
-# @within function asset_manager:artifact/create/set_lore
+# @within function asset_manager:artifact/create/trigger/
 
 #> Temp
 # @private
@@ -11,10 +11,10 @@
     #declare score_holder $CooldownMinutes
 
 # 5? スペシャル☆クールタイムを秒数に変換
-    execute store result score $Cooldown Temporary run data get storage asset:artifact SpecialCooldown
+    execute store result score $Cooldown Temporary run data get storage asset:artifact Trigger.SpecialCooldown
     scoreboard players operation $Cooldown Temporary /= $20 Const
 # 5? スペシャル☆クールタイムの小数第一位まで求める
-    execute store result score $CooldownDecimal Temporary run data get storage asset:artifact SpecialCooldown
+    execute store result score $CooldownDecimal Temporary run data get storage asset:artifact Trigger.SpecialCooldown
     scoreboard players operation $CooldownDecimal Temporary %= $20 Const
     scoreboard players operation $CooldownDecimal Temporary *= $5 Const
 # 5? 秒数を分に変換
