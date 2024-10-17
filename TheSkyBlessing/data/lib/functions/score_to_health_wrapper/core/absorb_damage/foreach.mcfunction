@@ -18,7 +18,7 @@
     execute store result score $isCompleteAbsorb Temporary if score $BaseDamage Temporary < $Absorption Temporary
 # ダメージよりも緩衝体力のほうが大きくない場合(同一も)、その分ダメージを軽減する
     execute if score $isCompleteAbsorb Temporary matches 0 run scoreboard players operation $BaseDamage Temporary -= $Absorption Temporary
-    execute if score $isCompleteAbsorb Temporary matches 0 run function lib:score_to_health_wrapper/core/absorb_damage/call_wiped_callback.m with storage lib: HeadAbsorption
+    execute if score $isCompleteAbsorb Temporary matches 0 if data storage lib: HeadAbsorption.WipedCallback run function lib:score_to_health_wrapper/core/absorb_damage/call_wiped_callback.m with storage lib: HeadAbsorption
 # ダメージよりも緩衝体力のほうが大きい場合、ダメージを全て削除し、その分緩衝体力を減少させる
     execute if score $isCompleteAbsorb Temporary matches 1 run scoreboard players operation $Absorption Temporary -= $BaseDamage Temporary
     execute if score $isCompleteAbsorb Temporary matches 1 run scoreboard players set $BaseDamage Temporary 0
