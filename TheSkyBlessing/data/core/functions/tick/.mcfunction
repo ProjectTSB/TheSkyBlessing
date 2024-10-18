@@ -65,7 +65,7 @@
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
 
 # Objects処理
-    execute as @e[tag=AssetObject] at @s run function asset_manager:object/triggers/tick
+    execute as @e[tag=AssetObject,tag=!Object.DisableTick] at @s run function asset_manager:object/triggers/tick
 
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
