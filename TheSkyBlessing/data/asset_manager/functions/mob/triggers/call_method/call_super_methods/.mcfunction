@@ -5,6 +5,7 @@
 # @within function
 #   asset_manager:mob/triggers/call_method/
 #   asset:mob/call.m
+#   asset:mob/super.method
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
@@ -18,6 +19,7 @@
     data modify storage asset:mob CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
 # すべての継承元のmethod呼び出し
+    execute unless data storage asset:mob CopiedExtends[-1][0] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"メソッド"},{"storage":"asset:context","nbt":"method"},{"text":"の実装が存在しません ID: ","color":"red"},{"storage":"asset:context","nbt":"originID"}]
     execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/call_method/call_super_methods/foreach
 
 # リセット
