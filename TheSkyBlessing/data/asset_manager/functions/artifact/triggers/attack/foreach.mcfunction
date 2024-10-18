@@ -25,6 +25,7 @@
     execute if data storage asset:context Attack{Type:"vanilla_explosion" } run function #asset:artifact/attack/explosion
 # リセット
     data remove storage asset:context Attack
+    tag @s remove ShouldVanillaAttack
     tag @e[type=#lib:living,type=!player,tag=Victim] remove Victim
 # イベントがまだあれば再帰する
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/foreach
