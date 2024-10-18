@@ -14,7 +14,7 @@
     data modify storage asset:context id set from storage api: Argument.ID
 
 # データ登録
-    function asset_manager:mob/triggers/summon/register.m with storage asset:context
+    function asset_manager:mob/summon/register.m with storage asset:context
 
 # validate
     execute unless data storage asset:mob ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
@@ -28,7 +28,7 @@
     function asset_manager:mob/triggers/summon/
 
 # 初期化処理を実行
-    execute as @e[tag=MobInit,distance=..0.01] run function asset_manager:mob/triggers/summon/init
+    execute as @e[tag=MobInit,distance=..0.01] run function asset_manager:mob/summon/init
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
