@@ -2,7 +2,7 @@
 #
 # 信仰をチェックします
 #
-# @within function asset_manager:artifact/check/
+# @within function asset_manager:artifact/check/.m
 
 # タグの事前付与
     tag @s add CheckFailed

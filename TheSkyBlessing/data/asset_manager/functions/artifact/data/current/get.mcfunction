@@ -9,8 +9,8 @@
 #   Item : [ItemData]
 #   TargetDefaultSlot : Slot
 # @within function
-#   asset_manager:artifact/check/
-#   asset_manager:artifact/use/
+#   asset_manager:artifact/check/.m
+#   asset_manager:artifact/use/.m
 
 # autoで無い場合はそのままDefaultSlotに突っ込む
     execute unless data storage asset:artifact {TargetSlot:"auto"} run data modify storage asset:artifact TargetDefaultSlot set from storage asset:artifact TargetSlot
