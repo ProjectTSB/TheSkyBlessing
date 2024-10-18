@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:mob/triggers/summon/init
+#   asset_manager:mob/summon/init
 #   asset_manager:mob/triggers/init/call_super_methods/foreach
 
 # Init処理

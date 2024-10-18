@@ -385,7 +385,7 @@ team modify NoCollision collisionRule never
     #> MobManager用スコアボード - 最大体力
     # @within function
     #   api:mob/get_max_health*
-    #   asset_manager:mob/triggers/summon/set_data
+    #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
     #   mob_manager:fix_health
@@ -413,7 +413,7 @@ team modify NoCollision collisionRule never
     #> MobManager - Teams
     # @within function
     #   mob_manager:init/set_tag_and_team
-    #   asset_manager:mob/triggers/summon/set_data
+    #   asset_manager:mob/summon/set_data
         team add Enemy
 
 #> 各Asset側のロード処理

@@ -1,4 +1,4 @@
-#> asset_manager:mob/triggers/summon/put_id_to_map
+#> asset_manager:mob/summon/put_id_to_map
 #
 #
 #
