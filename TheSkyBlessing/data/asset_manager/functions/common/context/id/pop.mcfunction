@@ -13,6 +13,7 @@
 #   asset_manager:effect/events/*/call_super_method
 #   asset_manager:mob/triggers/*/call_super_method
 #   asset_manager:artifact/give/candidates
+#   asset_manager:artifact/create/set_equipment
 #   api:spawner/subtract_hp
 #   asset_manager:object/summon/
 #   api:object/core/summon

@@ -25,3 +25,6 @@
     function api:modifier/attack/magic/add
 # ノックバック軽減+30%
     attribute @s generic.knockback_resistance modifier add 1-0-2-0-d "Urban believe bonus" 0.3 multiply_base
+
+# 全装備を再チェック
+    tag @s add Believe.Changed
