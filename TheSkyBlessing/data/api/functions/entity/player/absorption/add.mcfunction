@@ -5,7 +5,7 @@
 # 複数の緩衝体力がある際は、Argument.Priority が大きいものから消費されます。
 # Argument.Priority は 0 ~ 10 の整数である必要があります。
 #
-# また、その UUID の全ての緩衝体力が消費された時、Argument.WipeCallback が呼び出されます。
+# また、その UUID の全ての緩衝体力が消費された時、Argument.WipedCallback が呼び出されます。
 #
 # @input
 #   as player
