@@ -16,4 +16,4 @@
     function player_manager:absorption/set.m with storage lib: {}
 
 # セッション閉じる
-function lib:array/session/close
+    function lib:array/session/close
