@@ -15,7 +15,7 @@
     data remove storage asset:mob MobEvents.Hurt[-1]
 # 攻撃先を取得し、Victim を付与する (null の可能性もある)
     execute if data storage asset:context Hurt.From store result score $AttackedFrom Temporary run data get storage asset:context Hurt.From
-    execute if data storage asset:context Hurt.From as @p[tag=AttackedPlayer,distance=..150] if score @s UserID = $AttackedFrom Temporary run tag @s add Attacker
+    execute if data storage asset:context Hurt.From as @a[distance=..150] if score @s UserID = $AttackedFrom Temporary run tag @s add Attacker
     scoreboard players reset $AttackedFrom Temporary
 # MOB 側に受け渡し
     function asset_manager:mob/triggers/hurt/attempt_call
