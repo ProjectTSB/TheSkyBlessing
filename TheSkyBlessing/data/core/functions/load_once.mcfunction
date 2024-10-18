@@ -180,6 +180,11 @@ team modify NoCollision collisionRule never
     #   asset:object/**
         scoreboard objectives add General.Object.Tick dummy {"text":"ObjectAsset内で使用できるTick用スコア"}
 
+    #> AssetManager: Mob -Public
+    # @within function
+    #   asset:mob/**
+        scoreboard objectives add General.Mob.Tick dummy {"text":"MobAsset内で使用できるTick用スコア"}
+
     #> AssetManager: Spawner
     # @within function
     #   asset_manager:spawner/**

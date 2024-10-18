@@ -6,6 +6,7 @@
 #   api:mob/core/**
 #   asset:mob/*/register
 #   asset:mob/*/*/
+#   asset:mob/**
 #   asset:mob/extends
 #   asset:mob/super.*
 #   asset_manager:mob/**
@@ -17,8 +18,8 @@
 # @within function
 #   api:mob/core/summon
 #   asset:mob/*/summon/
-#   asset:mob/*/summon/2.summon
 #   asset:mob/common/summon
+#   asset_manager:mob/summon/init
     #declare tag MobInit
 
 #> MobAsset側で定義されたMobに付けられるタグ
@@ -61,6 +62,12 @@
 #   asset_manager:mob/triggers/hurt/foreach
 #   asset:mob/*/hurt/**
     #declare tag Attacker
+
+#> RemovingEntity
+# @within function
+#   asset_manager:mob/triggers/
+#   asset_manager:island/dispel/boss/remove
+    #declare tag RemovingEntity
 
 #> 汎用タグ類
 # @within function
