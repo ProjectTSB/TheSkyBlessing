@@ -12,7 +12,6 @@
 #   asset_manager:mob/**
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/**
-
     #declare storage asset:mob
 
 #> 初期化タグ
