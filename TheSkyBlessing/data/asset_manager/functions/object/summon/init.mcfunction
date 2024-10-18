@@ -18,7 +18,7 @@
     tag @s add AssetObject
 
 # Tickしたくないようであれば
-    execute if data storage asset:object IsTicking{false} run tag @s add Object.DisableTicking
+    execute if data storage asset:object {IsTicking:false} run tag @s add Object.DisableTicking
 
 # Object側に実装されてるInitを実行
     function asset_manager:object/init/ with storage asset:context
