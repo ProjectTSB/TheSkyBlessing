@@ -1,4 +1,4 @@
-#> asset_manager:mob/summon/set_data
+#> asset_manager:mob/triggers/summon/set_data
 #
 # 召喚されたAssetMobのデータを初期化します
 #
@@ -20,7 +20,7 @@
 #   Resist.Thunder : float
 #   Field? : compound
 #   FieldOverride? : compound
-# @within function asset_manager:mob/summon/init
+# @within function asset_manager:mob/triggers/summon/init
 
 # validate
     # execute unless data storage asset:mob Name run
@@ -97,7 +97,7 @@
         execute if data storage asset:mob Name run data modify entity @s CustomName set from storage asset:mob Name
         data modify entity @s CustomNameVisible set value 0b
 # タグ周り
-    function asset_manager:mob/summon/set_tag
+    function asset_manager:mob/triggers/summon/set_tag
 # Enemyのチーム設定
     execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy

@@ -1,9 +1,9 @@
-#> asset_manager:mob/summon/call_super_methods/
+#> asset_manager:mob/triggers/summon/call_super_methods/
 #
 #
 #
 # @within function
-#   asset_manager:mob/summon/
+#   asset_manager:mob/triggers/summon/
 
 # IDをアドレスとしてROMを呼び出す
     data modify storage api: Argument.Address set from storage asset:context id
@@ -17,7 +17,7 @@
     data modify storage asset:mob CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
 # すべての継承元のtick呼び出し
-    execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/summon/call_super_methods/foreach
+    execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/summon/call_super_methods/foreach
 
 # リセット
     data remove storage asset:mob CopiedExtends[-1]

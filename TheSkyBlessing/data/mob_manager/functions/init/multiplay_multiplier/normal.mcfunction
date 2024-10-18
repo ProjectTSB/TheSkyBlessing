@@ -6,7 +6,7 @@
 # @output score MobHealthMax
 # @within function
 #   mob_manager:init/modify_health
-#   asset_manager:mob/summon/set_data
+#   asset_manager:mob/triggers/summon/set_data
 
 #> Val
 # @private

@@ -1,4 +1,4 @@
-#> asset_manager:mob/summon/register.m
+#> asset_manager:mob/triggers/summon/register.m
 #
 #
 #

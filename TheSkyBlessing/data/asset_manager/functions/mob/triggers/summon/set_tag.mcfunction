@@ -1,8 +1,8 @@
-#> asset_manager:mob/summon/set_tag
+#> asset_manager:mob/triggers/summon/set_tag
 #
 # 召喚されたAssetMobのタグを初期化します
 #
-# @within function asset_manager:mob/summon/set_data
+# @within function asset_manager:mob/triggers/summon/set_data
 
 # デフォルト
     tag @s add AssetMob

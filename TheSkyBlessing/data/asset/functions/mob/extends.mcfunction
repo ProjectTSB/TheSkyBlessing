@@ -5,7 +5,7 @@
 # @within function asset:mob/*/register
 
 # 継承情報を保存する
-    function asset_manager:mob/summon/put_id_to_map
+    function asset_manager:mob/triggers/summon/put_id_to_map
 
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context/id/stash

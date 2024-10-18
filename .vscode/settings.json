@@ -1616,7 +1616,7 @@
                         "#",
                         "# Mobのデータ指定処理のエイリアス",
                         "#",
-                        "# @within asset_manager:mob/summon/register.m",
+                        "# @within asset_manager:mob/triggers/summon/register.m",
                         "",
                         "# 元の登録処理を呼び出す",
                         "   function asset:mob/%namespace%/register"
@@ -1707,7 +1707,7 @@
                         "#",
                         "# Mob召喚処理のエイリアス",
                         "#",
-                        "# @within asset_manager:mob/summon/summon.m",
+                        "# @within asset_manager:mob/triggers/summon/summon.m",
                         "",
                         "# 本来の処理を呼び出す",
                         "   function asset:mob/%namespace%/summon/"

@@ -1,4 +1,4 @@
-#> asset_manager:mob/summon/init
+#> asset_manager:mob/triggers/summon/init
 #
 #
 #
@@ -21,7 +21,7 @@
     function asset_manager:mob/init/ with storage asset:context
 
 # データセット
-    function asset_manager:mob/summon/set_data
+    function asset_manager:mob/triggers/summon/set_data
 
 # EntityStorage呼び出し
     execute if score @s MobID matches -2147483648..2147483647 run function oh_my_dat:please

@@ -4,7 +4,7 @@
 #
 # @within function
 #   core:tick/
-#   asset_manager:mob/summon/set_data
+#   asset_manager:mob/triggers/summon/set_data
 
 # 識別用のフラグセット
     function mob_manager:init/add_flag
