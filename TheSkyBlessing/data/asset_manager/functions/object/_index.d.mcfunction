@@ -24,8 +24,9 @@
 #> ObjectのTickを無効化するタグ
 # @within
 #   core:tick/
-#   asset:object/*/summon/
-    #declare tag Object.DisableTick
+#   asset:object/*/register
+#   asset_manager:object/summon/init
+    #declare tag Object.DisableTicking
 
 #> thisタグ
 # @within function
