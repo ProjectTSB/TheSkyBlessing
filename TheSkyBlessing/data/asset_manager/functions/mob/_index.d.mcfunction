@@ -64,6 +64,12 @@
 #   asset:mob/*/hurt/**
     #declare tag Attacker
 
+#> RemovingEntity
+# @within function
+#   asset_manager:mob/triggers/
+#   asset_manager:island/dispel/boss/remove
+    #declare tag RemovingEntity
+
 #> 汎用タグ類
 # @within function
 #   asset_manager:mob/common_tag/*

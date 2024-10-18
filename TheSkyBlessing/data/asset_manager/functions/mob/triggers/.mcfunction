@@ -19,6 +19,8 @@
     function asset_manager:mob/triggers/tick/
     execute if entity @s[tag=AttackingEntity] run function asset_manager:mob/triggers/attack/
     execute if entity @s[tag=AttackedEntity] run function asset_manager:mob/triggers/hurt/
+    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
+    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/kill
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
 # 死んでいたら呼び出さないようにする
     execute if score @s MobUUID matches -2147483648..2147483647 run function oh_my_dat:please
