@@ -1,9 +1,9 @@
-#> asset_manager:mob/init/call_super_methods/
+#> asset_manager:mob/triggers/init/call_super_methods/
 #
 #
 #
 # @within function
-#   asset_manager:mob/init/
+#   asset_manager:mob/triggers/init/
 #   asset:mob/super.init
 
 # IDをアドレスとしてROMを呼び出す
@@ -18,7 +18,7 @@
     data modify storage asset:mob CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Extends
 
 # すべての継承元のinit呼び出し
-    execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/init/call_super_methods/foreach
+    execute if data storage asset:mob CopiedExtends[-1][0] run function asset_manager:mob/triggers/init/call_super_methods/foreach
 
 # リセット
     data remove storage asset:mob CopiedExtends[-1]

@@ -18,7 +18,7 @@
     tag @s add AssetMob
 
 # Mob側に実装されてるInitを実行
-    function asset_manager:mob/init/ with storage asset:context
+    function asset_manager:mob/triggers/init/ with storage asset:context
 
 # データセット
     function asset_manager:mob/triggers/summon/set_data
