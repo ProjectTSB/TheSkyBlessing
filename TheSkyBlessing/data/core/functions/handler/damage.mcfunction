@@ -4,7 +4,7 @@
 #
 # @within function core:tick/player/
 
-# asset_managerへの引継ぎ
-    tag @s add TriggerFlag.Damage
+# バニラ攻撃判定
+    function asset_manager:artifact/handler/on_damage_without_source
 # Reset
     advancement revoke @s only core:handler/damage

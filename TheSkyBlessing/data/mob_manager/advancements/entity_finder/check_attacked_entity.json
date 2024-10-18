@@ -255,6 +255,51 @@
                     "nbt": "{Tags:[\"FindFlag15.1\"]}"
                 }
             }
+        },
+        "type-melee": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_melee",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-projectile": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_projectile",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-explosion": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_explosion",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
         }
     },
     "requirements": [
@@ -321,6 +366,11 @@
         [
             "15-0",
             "15-1"
+        ],
+        [
+            "type-melee",
+            "type-projectile",
+            "type-explosion"
         ]
     ],
     "rewards": {

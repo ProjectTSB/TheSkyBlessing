@@ -9,11 +9,6 @@
 #   asset_manager:mob/triggers/tick_check
     #declare tag AttackingEntity
 
-#> フラグ
-# @within function mob_manager:entity_finder/attacking_entity/**
-    #declare storage mob_manager:attacking_entity
-    #declare score_holder $AttackingEntityIndex
-
 #> lib:damage/からの攻撃検出用
 # @within function
 #   mob_manager:entity_finder/attacking_entity/on_hurt

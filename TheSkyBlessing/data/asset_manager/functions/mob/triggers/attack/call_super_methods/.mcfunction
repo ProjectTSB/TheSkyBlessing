@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:mob/triggers/attack/
+#   asset_manager:mob/triggers/attack/attempt_call
 #   asset:mob/super.attack
 
 # IDをアドレスとしてROMを呼び出す

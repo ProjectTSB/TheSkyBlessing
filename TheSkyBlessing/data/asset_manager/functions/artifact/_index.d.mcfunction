@@ -26,7 +26,6 @@
 #   api:damage/core/trigger_on_**
 #   api:heal/core/trigger_on_**
 #   core:handler/**
-    #declare tag TriggerFlag.Attack
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Damage
@@ -34,6 +33,12 @@
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
     #declare tag TriggerFlag.Heal
+
+#> バニラの攻撃を扱う用
+# @within function
+#   asset_manager:artifact/check/
+#   asset_manager:artifact/triggers/attack/*
+#declare tag ShouldVanillaAttack
 
 #> check用の失敗フラグ
 # @within function
