@@ -2,7 +2,8 @@
 #
 #
 #
-# @within function asset:object/call.m
+# @within function
+#   asset:*/call.m
 
 # スタックに新しい空間を追加する
     data modify storage asset:context MethodStashStack append value {}

@@ -18,6 +18,8 @@
 #   api:object/core/summon
 #   asset_manager:object/*/call_super_method
 #   asset:object/call.m
+#   asset_manager:mob/*/call_super_method
+#   asset:mob/call.m
 
 # thisを掃除
     data remove storage asset:context this

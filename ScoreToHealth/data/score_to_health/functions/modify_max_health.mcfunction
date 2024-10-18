@@ -184,6 +184,6 @@ execute if score @s ScoreToMaxHealth <= $_ ScoreToMaxHealth run scoreboard playe
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-00 "ScoreToMaxHealth" 0.0001 add
 execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0001
 
-effect give @s minecraft:instant_health 1 252 true
+effect give @s minecraft:instant_health 1 254 true
 scoreboard players operation @s STMHBackup = @s ScoreToMaxHealth
 tag @s add ScoreToHealth.Return

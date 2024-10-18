@@ -10,6 +10,7 @@
     function oh_my_dat:please
 # Contextの設定
     execute store result storage asset:context id int 1 run scoreboard players get @s MobID
+    execute store result storage asset:context originID int 1 run scoreboard players get @s MobID
     data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
 # Victim / Attackerのタグ設定
     execute if entity @s[tag=AttackingEntity] as @a[scores={AttackingEntity=0..}] if score @s AttackingEntity = @e[tag=this,limit=1] AttackingEntity run tag @s add Victim
@@ -18,6 +19,8 @@
     function asset_manager:mob/triggers/tick/
     execute if entity @s[tag=AttackingEntity] run function asset_manager:mob/triggers/attack/
     execute if entity @s[tag=AttackedEntity] run function asset_manager:mob/triggers/hurt/
+    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
+    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/kill
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
 # 死んでいたら呼び出さないようにする
     execute if score @s MobUUID matches -2147483648..2147483647 run function oh_my_dat:please
