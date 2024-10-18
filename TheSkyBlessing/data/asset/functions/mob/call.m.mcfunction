@@ -16,7 +16,7 @@
     $data modify storage asset:context method set value $(method)
 
 # メソッドの呼び出し
-    function asset_manager:mob/call_method/
+    function asset_manager:mob/triggers/call_method/
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
