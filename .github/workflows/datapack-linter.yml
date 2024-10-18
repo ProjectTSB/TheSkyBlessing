@@ -61,11 +61,12 @@ jobs:
             function@asset:effect/effect_name/remove/
             function@asset:effect/effect_name/end/
             function@asset:island/island_id/register/register
-            function@asset:mob/mob_name/summon/2.summon
+            function@asset:mob/mob_name/summon/
             function@asset:mob/mob_name/register
             function@asset:mob/mob_name/attack/
             function@asset:mob/mob_name/death/
             function@asset:mob/mob_name/hurt/
+            function@asset:mob/mob_name/remove/
             function@asset:mob/mob_name/tick/
             function@asset:mob/mob_name/attack/SOMETHING_FUNCTION
             function@asset:mob/mob_name/death/SOMETHING_FUNCTION
