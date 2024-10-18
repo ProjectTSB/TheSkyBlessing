@@ -18,7 +18,6 @@
 # @within function
 #   api:mob/core/summon
 #   asset:mob/*/summon/
-#   asset:mob/*/summon/2.summon
 #   asset:mob/common/summon
 #   asset_manager:mob/summon/init
     #declare tag MobInit
