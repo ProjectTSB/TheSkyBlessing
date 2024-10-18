@@ -15,5 +15,5 @@ execute unless entity @s[tag=!AntiBurn,tag=!AlwaysBurn] run function asset_manag
 execute if entity @s[tag=AntiFallDamage] run function asset_manager:mob/common_tag/check_fall_distance
 execute if entity @s[type=skeleton,tag=!Frozen] run function asset_manager:mob/common_tag/check_frozen
 execute if entity @s[type=#lib:drownable,tag=!Drown,predicate=lib:is_in_water/] run function asset_manager:mob/common_tag/check_drowning
-execute unless score @s VoidActionTime matches -2147483648..2147483647 if entity @s[tag=AntiVoid,y=-2,dy=-100] run scoreboard players set @s VoidActionTime 0
+execute unless score @s VoidActionTime matches -2147483648..2147483647 if entity @s[tag=AntiVoid,y=-65,dy=-100] run scoreboard players set @s VoidActionTime 0
 execute if score @s VoidActionTime matches -2147483648..2147483647 run function asset_manager:mob/common_tag/anti_void_action/
