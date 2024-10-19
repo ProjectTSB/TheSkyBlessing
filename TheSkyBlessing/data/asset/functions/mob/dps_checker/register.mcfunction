@@ -1,5 +1,5 @@
 #> asset:mob/dps_checker/register
-# @within function asset:mob/dps_checker/65500/register
+# @within function asset:mob/alias/65500/register
 
 data modify storage asset:mob ID set value 65500
 
