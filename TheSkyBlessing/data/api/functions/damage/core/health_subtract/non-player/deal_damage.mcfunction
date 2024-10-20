@@ -23,4 +23,4 @@
     scoreboard players operation @s MobHealth = $Health Temporary
 
 # onAttackのトリガー
-    function api:damage/core/trigger_events/to_non-player/
+    function api:damage/core/trigger_events/non-player/

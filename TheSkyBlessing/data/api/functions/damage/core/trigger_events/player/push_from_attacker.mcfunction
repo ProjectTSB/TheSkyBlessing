@@ -1,8 +1,8 @@
-#> api:damage/core/trigger_events/to_player/push_event_from_non-player
+#> api:damage/core/trigger_events/player/push_from_attacker
 #
 #
 #
-# @within function api:damage/core/trigger_events/to_player/
+# @within function api:damage/core/trigger_events/player/
 
 # 神器側で攻撃先を軽量に取得できるようにタグを付与しておく
     tag @s add AttackingEntity

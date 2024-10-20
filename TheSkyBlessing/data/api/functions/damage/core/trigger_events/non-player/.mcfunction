@@ -1,4 +1,4 @@
-#> api:damage/core/trigger_events/to_non-player/
+#> api:damage/core/trigger_events/non-player/
 #
 # attackトリガー用の進捗を手動でトリガーします
 #

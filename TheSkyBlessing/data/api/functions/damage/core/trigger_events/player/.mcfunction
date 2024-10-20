@@ -1,11 +1,11 @@
-#> api:damage/core/trigger_events/to_player/
+#> api:damage/core/trigger_events/player/
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
 # @within function api:damage/core/health_subtract/player/
 
 #> Declare
-# @within function api:damage/core/trigger_events/to_player/*
+# @within function api:damage/core/trigger_events/player/*
     #declare tag Damager
 
 # プレイヤーにイベントを追加する
@@ -16,5 +16,5 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[-1].ElementType set from storage api: Argument.ElementType
 # モブ側から行う処理
     tag @s add Damager
-    execute as @e[type=!player,distance=..150] if score @s MobUUID = $LatestModifiedEntity MobUUID run function api:damage/core/trigger_events/to_player/push_event_from_non-player
+    execute as @e[type=!player,distance=..150] if score @s MobUUID = $LatestModifiedEntity MobUUID run function api:damage/core/trigger_events/player/push_from_attacker
     tag @s remove Damager
