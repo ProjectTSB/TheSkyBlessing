@@ -7,7 +7,7 @@
     #declare score_holder $Damage
 
 execute store result score $Sum Temporary run data get storage asset:context this.Sum
-execute store result score $Damage Temporary run data get storage asset:context Hurt.Damage 100
+execute store result score $Damage Temporary run data get storage asset:context Hurt.Amount 100
 
 scoreboard players operation $Sum Temporary += $Damage Temporary
 

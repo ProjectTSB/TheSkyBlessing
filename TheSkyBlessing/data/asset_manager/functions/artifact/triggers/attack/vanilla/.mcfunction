@@ -13,7 +13,7 @@
     #declare score_holder $Fluctuation
 
 # Damage
-    execute store result score $Damage Temporary run data get storage asset:context Attack.Damage -100
+    execute store result score $Damage Temporary run data get storage asset:context Attack.Amount -100
 # 減算
     scoreboard players operation @s MobHealth += $Damage Temporary
 # ダメージ表示
