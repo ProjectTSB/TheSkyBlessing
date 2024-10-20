@@ -6,4 +6,4 @@
 
 # 処理
     execute if entity @s[type=player] run function api:damage/core/health_subtract/player/
-    execute if entity @s[type=!player] run function api:damage/core/health_subtract/non-player
+    execute if entity @s[type=!player] run function api:damage/core/health_subtract/non-player/

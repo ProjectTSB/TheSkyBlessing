@@ -15,7 +15,7 @@
 #> タグ定義
 # @within
 #   function
-#       api:damage/core/health_subtract/non-player
+#       api:damage/core/health_subtract/non-player/*
 #       asset_manager:artifact/triggers/attack/vanilla
 #       mob_manager:entity_finder/attacked_entity/on_attack
     #declare tag AttackedByApi
