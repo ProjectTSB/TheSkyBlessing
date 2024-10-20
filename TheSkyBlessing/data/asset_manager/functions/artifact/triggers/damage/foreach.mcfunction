@@ -13,7 +13,7 @@
     data remove storage asset:artifact ArtifactEvents.Damage[-1]
 # 攻撃元を取得し、Attacker を付与する (null の可能性もある)
     execute if data storage asset:context Damage.From store result score $AttackedFrom Temporary run data get storage asset:context Damage.From
-    execute if data storage asset:context Damage.From as @e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker
+    execute if data storage asset:context Damage.From as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker
     scoreboard players reset $AttackedFrom Temporary
 # 神器側に受け渡し
     function #asset:artifact/attack

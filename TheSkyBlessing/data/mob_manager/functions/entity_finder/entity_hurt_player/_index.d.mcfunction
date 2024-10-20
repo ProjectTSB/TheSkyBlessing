@@ -3,4 +3,4 @@
 
 #> 攻撃されたPlayer
 # @within function mob_manager:entity_finder/entity_hurt_player/**
-#declare tag AttackingPlayer
+#declare tag DamagedPlayer

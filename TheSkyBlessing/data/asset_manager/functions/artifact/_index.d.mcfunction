@@ -38,16 +38,17 @@
 # @within function
 #   asset_manager:artifact/triggers/
 #   asset_manager:artifact/triggers/attack/foreach
-#   api:damage/core/trigger_events/non-player/attack_and_hurt
+#   api:damage/core/trigger_events/non-player/
 #   mob_manager:entity_finder/player_hurt_entity/fetch_entity
-#declare tag AttackedEntity
+#declare tag DamagedEntity
 
 #> 攻撃してきたEntity
 # @within function
 #   asset_manager:artifact/triggers/
+#   asset_manager:artifact/triggers/damage/foreach
 #   api:damage/core/trigger_events/player/push_from_attacker
 #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
-#declare tag AttackingEntity
+#declare tag AttackedEntity
 
 #> バニラの攻撃を扱う用
 # @within function

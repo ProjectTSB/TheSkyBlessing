@@ -11,7 +11,7 @@
 # プレイヤー特定
     execute as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add TargetAttacker
 # 神器側で攻撃先を軽量に取得できるようにタグを付与しておく
-    tag @s add AttackedEntity
+    tag @s add DamagedEntity
 # プレイヤーにイベントを追加する
     execute as @a[tag=TargetAttacker] run function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append value {Type: "api",IsVanilla:false}
