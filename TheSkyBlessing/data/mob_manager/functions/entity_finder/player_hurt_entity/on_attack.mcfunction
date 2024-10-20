@@ -7,6 +7,6 @@
 # フィルター
     execute if entity @s[tag=!AttackedByApi] run function mob_manager:entity_finder/player_hurt_entity/filters/
 # 戦闘中判定スコアをセットする
-    execute if entity @e[tag=AttackedEntity,tag=Enemy,distance=..150] run scoreboard players set @s InBattleTick 160
+    scoreboard players set @s InBattleTick 160
 # リセット
     advancement revoke @s only mob_manager:entity_finder/check_player_hurt_entity
