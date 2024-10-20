@@ -13,7 +13,6 @@
 # イベントデータ取得
     data modify storage asset:context Death set from storage asset:mob MobEvents.Death[-1]
     data remove storage asset:mob MobEvents.Death[-1]
-    tellraw @a [{"text":"Death: "},{"storage":"asset:context","nbt":"Death"}]
 # 攻撃先を取得し、Victim を付与する (null の可能性もある)
     execute if data storage asset:context Death.From store result score $KilledFrom Temporary run data get storage asset:context Death.From
     execute if data storage asset:context Death.From as @a[distance=..150] if score @s UserID = $KilledFrom Temporary run tag @s add Killer

@@ -4,7 +4,6 @@
 #
 # @within function asset_manager:artifact/triggers/
 
-# tellraw @a [{"text":"ArtifactEvents: "},{"storage":"asset:artifact","nbt":"ArtifactEvents"}]
 # イベント発火前に実行するやつ
     function asset_manager:artifact/data/new/set_to_current
 # イベントを順に発火する
