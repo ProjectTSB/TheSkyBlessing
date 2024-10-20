@@ -46,12 +46,6 @@
     execute unless data storage asset:mob Resist.Thunder run data modify storage asset:mob Resist.Thunder set value 1f
     # execute unless data storage asset:mob Field run
 
-# フィールドを取り出す
-    data modify storage asset:context this set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField
-
-# フィールドを元に戻す
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobField set from storage asset:context this
-
 # リリース時、負荷軽減のためツールでsummonコマンドに統合し削除する
     # 武器防具の事前追加
         data modify storage asset:mob HandItems set value []
