@@ -8,8 +8,9 @@
     data modify storage player_manager:lost_item Temp set from storage api: Inventory
 # Slotを削除
     data remove storage player_manager:lost_item Temp[].Slot
-# 消滅の呪い付きアイテムを削除
+# 消滅の呪い付きアイテムを削除する
     data remove storage player_manager:lost_item Temp[{tag:{Enchantments:[{id:"minecraft:vanishing_curse"}]}}]
+# SoulBound 付きのアイテムを削除する (手元に残すので)
     data remove storage player_manager:lost_item Temp[{tag:{TSB:{SoulBound:true}}}]
 # UserStorage呼び出し
     function oh_my_dat:please
