@@ -34,6 +34,21 @@
     #declare tag TriggerFlag.UsingItem
     #declare tag TriggerFlag.Heal
 
+#> 攻撃されたEntity
+# @within function
+#   asset_manager:artifact/triggers/
+#   asset_manager:artifact/triggers/attack/foreach
+#   api:damage/core/trigger_events/non-player/attack_and_hurt
+#   mob_manager:entity_finder/attacked_entity/fetch_attacked_entity
+#declare tag AttackedEntity
+
+#> 攻撃してきたEntity
+# @within function
+#   asset_manager:artifact/triggers/
+#   api:damage/core/trigger_events/player/push_from_attacker
+#   mob_manager:entity_finder/attacking_entity/fetch_attacking_entity
+#declare tag AttackingEntity
+
 #> バニラの攻撃を扱う用
 # @within function
 #   asset_manager:artifact/check/
