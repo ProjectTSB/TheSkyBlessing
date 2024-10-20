@@ -17,11 +17,11 @@
 # 共通タグ付与
     tag @s add AssetMob
 
-# Mob側に実装されてるInitを実行
-    function asset_manager:mob/triggers/init/ with storage asset:context
-
 # データセット
     function asset_manager:mob/summon/set_data
+
+# Mob側に実装されてるInitを実行
+    function asset_manager:mob/triggers/init/ with storage asset:context
 
 # EntityStorage呼び出し
     execute if score @s MobID matches -2147483648..2147483647 run function oh_my_dat:please
