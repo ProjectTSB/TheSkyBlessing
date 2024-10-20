@@ -9,6 +9,7 @@
 #   asset:effect/*/register
 #   asset:effect/*/
 #   asset_manager:effect/**
+#   asset_manager:artifact/create/set_equipment
     #declare storage asset:effect
 
 #> Tags
