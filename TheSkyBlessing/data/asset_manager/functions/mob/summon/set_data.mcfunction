@@ -133,4 +133,3 @@
     data remove storage asset:mob Resist
     data remove storage asset:mob Field
     data remove storage asset:mob FieldOverride
-    data remove storage asset:context this
