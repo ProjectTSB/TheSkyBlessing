@@ -20,7 +20,3 @@
 #       mob_manager:entity_finder/attacked_entity/on_attack
     #declare tag AttackedByApi
     #declare tag AttackedByProjectile
-
-#> Declare
-# @within function api:damage/core/trigger_on_damage/**
-    #declare tag TargetAttacker
