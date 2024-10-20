@@ -39,4 +39,4 @@
     tag @a[tag=AttackedByApi] remove AttackedByApi
     tag @a[tag=UUIDAttacker] remove UUIDAttacker
 # onAttackのトリガー
-    execute if score $Health Temporary matches 1.. run function api:damage/core/trigger_strike/to_non-player/
+    execute if score $Health Temporary matches 1.. run function api:damage/core/trigger_events/to_non-player/
