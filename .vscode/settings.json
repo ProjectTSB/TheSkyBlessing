@@ -2108,6 +2108,8 @@
                         "   data modify storage asset:object IsAbstract set value false",
                         "# ID (int)",
                         "    data modify storage asset:object ID set value %id%",
+                        "# Tickするかどうか(boolean) (オプション)",
+                        "    # data modify storage asset:object IsTicking set value ",
                         "# フィールド",
                         "    # data modify storage asset:object Field.myValue set value "
                     ]

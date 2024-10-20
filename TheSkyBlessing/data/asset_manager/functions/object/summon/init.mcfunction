@@ -17,6 +17,9 @@
 # 共通タグ付与
     tag @s add AssetObject
 
+# Tickしたくないようであれば
+    execute if data storage asset:object {IsTicking:false} run tag @s add Object.DisableTicking
+
 # Object側に実装されてるInitを実行
     function asset_manager:object/init/ with storage asset:context
 
@@ -28,5 +31,6 @@
 
 # リセット
     data remove storage asset:context this
-    data remove storage asset:context ID
-    data remove storage asset:context Field
+    data remove storage asset:object ID
+    data remove storage asset:object IsTicking
+    data remove storage asset:object Field
