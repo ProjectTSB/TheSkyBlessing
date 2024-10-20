@@ -4,7 +4,8 @@
 -execute store result score #_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
 -execute store result score #__ ScoreToHealth run data get entity @s Health 100
 -scoreboard players operation #__ ScoreToHealth -= #_ ScoreToHealth
-+execute store result score $_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
++function api:modifier/max_health/get
++execute store result score $_ ScoreToHealth run data get storage api: Return.MaxHealth 100
 +function api:data_get/health
 +execute store result score $__ ScoreToHealth run data get storage api: Health 100
 +scoreboard players operation $__ ScoreToHealth -= $_ ScoreToHealth
@@ -23,8 +24,7 @@
 +#   score_to_health:**
 +#   lib:score_to_health_wrapper/**
 +#   lib:has_health_modify_score
-+#   player_manager:bonus/**
-+#   core:handler/first_join
++#   api:modifier/max_health/**
 +    scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
 +    scoreboard objectives add ScoreToMaxHealth dummy {"text":"プレイヤーをこの最大体力にする(*0.0001HP)"}
 +
@@ -397,7 +397,7 @@
 +execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0002-00 "ScoreToMaxHealth" 0.0001 add
 +execute if score @s ScoreToMaxHealth > $_ ScoreToMaxHealth run scoreboard players add $__ ScoreToMaxHealth 0001
 +
-+effect give @s minecraft:instant_health 1 252 true
++effect give @s minecraft:instant_health 1 254 true
 +scoreboard players operation @s STMHBackup = @s ScoreToMaxHealth
 +tag @s add ScoreToHealth.Return
 \ No newline at end of file

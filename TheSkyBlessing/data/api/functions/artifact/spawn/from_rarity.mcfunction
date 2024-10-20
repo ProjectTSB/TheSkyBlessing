@@ -12,7 +12,7 @@
 # 呼び出し
     data modify storage asset:context Type set value "drop"
     data modify storage asset:context Important set from storage api: Argument.Important
-    execute if data storage api: Argument.Rarity run function asset_manager:artifact/give
+    execute if data storage api: Argument.Rarity run function asset_manager:artifact/give/
 # リセット
     data remove storage asset:context Important
     data remove storage api: Argument.Rarity

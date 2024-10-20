@@ -112,6 +112,8 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
     scoreboard players set $Difficulty Global 2
+    scoreboard players set $PurifiedIslands Global 0
+    scoreboard players set $TotalIslands Global 50
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -168,6 +170,20 @@ team modify NoCollision collisionRule never
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
     bossbar set asset:bossbar color pink
     bossbar set asset:bossbar style notched_10
+
+    #> AssetManager: Object -Public
+    # @public
+        scoreboard objectives add ObjectID dummy {"text":"ObjectAssetのID"}
+
+    #> AssetManager: Object -Public
+    # @within function
+    #   asset:object/**
+        scoreboard objectives add General.Object.Tick dummy {"text":"ObjectAsset内で使用できるTick用スコア"}
+
+    #> AssetManager: Mob -Public
+    # @within function
+    #   asset:mob/**
+        scoreboard objectives add General.Mob.Tick dummy {"text":"MobAsset内で使用できるTick用スコア"}
 
     #> AssetManager: Spawner
     # @within function
@@ -313,10 +329,12 @@ team modify NoCollision collisionRule never
     #   * player_manager:**
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
+        scoreboard objectives add HPRegenCooldown dummy {"text":"HP自然回復のクールダウン"}
         scoreboard objectives add MP dummy {"text":"MP"}
         scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
+        scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
     scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
@@ -325,16 +343,16 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:load_once
     #   core:handler/first_join
-    #   player_manager:bonus/**
+    #   api:modifier/**/update_bonus
     #   asset:artifact/0002.blessing/trigger/**
-        #declare score_holder $MaxHealth
-        #declare score_holder $MaxMP
-        #declare score_holder $AttackBonus
-        #declare score_holder $DefenseBonus
-    scoreboard players set $MaxHealth Global 200000
-    scoreboard players set $MaxMP Global 100
-    scoreboard players set $AttackBonus Global 0
-    scoreboard players set $DefenseBonus Global 0
+        #declare score_holder $BonusHealth
+        #declare score_holder $BonusMP
+        #declare score_holder $BonusAttack
+        #declare score_holder $BonusDefense
+    scoreboard players set $BonusHealth Global 0
+    scoreboard players set $BonusMP Global 0
+    scoreboard players set $BonusAttack Global 0
+    scoreboard players set $BonusDefense Global 0
 
     #> WorldManager用スコアボード - ChunkLoadProtect
     # @within
@@ -395,10 +413,11 @@ team modify NoCollision collisionRule never
     function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
-
+    function #asset:object/load
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
 
 #> ROMを初期化する
-    function rom:init
+#> ROMが初期化されてなければ初期化する
+    execute unless data storage rom: _ run function rom:init
