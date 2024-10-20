@@ -23,15 +23,11 @@
 #> Trigger検知用
 # @within function
 #   asset_manager:artifact/triggers/**
-#   api:damage/core/trigger_on_**
-#   api:heal/core/trigger_on_**
 #   core:handler/**
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
-    #declare tag TriggerFlag.Damage
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
-    #declare tag TriggerFlag.Heal
 
 #> 攻撃されたEntity
 # @within function

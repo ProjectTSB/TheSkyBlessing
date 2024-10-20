@@ -4,5 +4,6 @@
 #
 # @within function api:heal/core/player
 
-# asset_managerへ引き継ぎ
-    tag @s add TriggerFlag.Heal
+function oh_my_dat:please
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal append value {}
+execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].Heal double 0.01 run data get storage api: Argument.Fluctuation 100

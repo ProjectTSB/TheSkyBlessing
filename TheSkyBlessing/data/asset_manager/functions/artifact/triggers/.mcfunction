@@ -25,7 +25,7 @@
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/
     execute if data storage asset:artifact ArtifactEvents.Damage[0] run function asset_manager:artifact/triggers/damage/
     execute if data storage asset:artifact ArtifactEvents.Kill[0] run function asset_manager:artifact/triggers/killed/
-    execute if entity @s[tag=TriggerFlag.Heal] run function asset_manager:artifact/triggers/heal
+    execute if data storage asset:artifact ArtifactEvents.Heal[0] run function asset_manager:artifact/triggers/heal/
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
@@ -37,8 +37,6 @@
     function asset_manager:artifact/data/current/reset
     tag @e[tag=Attacker] remove Attacker
     tag @s remove TriggerFlag.ClickCarrot
-    tag @s remove TriggerFlag.Damage
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak
     tag @s remove TriggerFlag.UsingItem
-    tag @s remove TriggerFlag.Heal
