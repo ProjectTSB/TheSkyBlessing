@@ -2,7 +2,7 @@
 #
 # MP必要量が足りているかをチェックします
 #
-# @within function asset_manager:artifact/check/
+# @within function asset_manager:artifact/check/.m
 
 #> Private
 # @private
