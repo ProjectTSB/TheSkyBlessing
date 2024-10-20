@@ -1,6 +1,10 @@
 #> mob_manager:entity_finder/attacking_entity/_index.d
 # @private
 
+#> 攻撃されたPlayer
+# @within function mob_manager:entity_finder/attacking_entity/**
+#declare tag AttackingPlayer
+
 #> 攻撃してきたEntity
 # `@e[type=#lib:living,type=!player,tag=AttackingEntity,distance=..150]`
 # @public function
