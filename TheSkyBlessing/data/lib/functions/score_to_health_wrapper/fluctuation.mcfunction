@@ -28,3 +28,8 @@
     execute unless data storage api: Argument{DisableLog:true} at @s run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Fluctuation Lib
+    data remove storage api: Argument.Fluctuation
+    data remove storage api: Argument.Attacker
+    data remove storage api: Argument.AttackType
+    data remove storage api: Argument.ElementType
+    data remove storage api: Argument.DisableLog

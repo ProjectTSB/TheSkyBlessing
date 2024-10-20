@@ -445,4 +445,5 @@
     ],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "github.copilot.editor.enableAutoCompletions": false,
 }
