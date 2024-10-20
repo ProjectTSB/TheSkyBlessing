@@ -13,7 +13,7 @@
 # 神器側で攻撃先を軽量に取得できるようにタグを付与しておく
     tag @s add DamagedEntity
 # プレイヤーにイベントを追加する
-    execute as @a[tag=TargetAttacker] run function oh_my_dat:please
+    execute as @p[tag=TargetAttacker] run function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append value {Type: "api",IsVanilla:false}
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To int 1 run scoreboard players get @s MobUUID
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Damage double 0.01 run scoreboard players get $Damage Temporary
