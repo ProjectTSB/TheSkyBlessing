@@ -29,7 +29,6 @@
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Damage
-    #declare tag TriggerFlag.Killed
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
     #declare tag TriggerFlag.Heal
@@ -38,9 +37,16 @@
 # @within function
 #   asset_manager:artifact/triggers/
 #   asset_manager:artifact/triggers/attack/foreach
-#   api:damage/core/trigger_events/non-player/
+#   api:damage/core/trigger_events/non-player/attack_and_hurt
 #   mob_manager:entity_finder/player_hurt_entity/fetch_entity
 #declare tag DamagedEntity
+
+#> 殺されたEntity
+# @within function
+#   asset_manager:artifact/triggers/killed/foreach
+#   api:damage/core/trigger_events/non-player/kill_and_death
+#   asset_manager:artifact/triggers/attack/vanilla/push_kill_and_death_event
+#declare tag KilledEntity
 
 #> 攻撃してきたEntity
 # @within function
@@ -53,7 +59,7 @@
 #> バニラの攻撃を扱う用
 # @within function
 #   asset_manager:artifact/check/
-#   asset_manager:artifact/triggers/attack/*
+#   asset_manager:artifact/triggers/attack/**
 #declare tag ShouldVanillaAttack
 
 #> check用の失敗フラグ

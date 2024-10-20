@@ -1,9 +1,9 @@
-#> asset_manager:mob/triggers/death/call
+#> asset_manager:mob/triggers/death/attempt_call
 #
 #
 #
 # @within function
-#   asset_manager:mob/triggers/death/
+#   asset_manager:mob/triggers/death/foreach
 #   asset_manager:mob/triggers/death/call_super_methods/foreach
 
 function asset_manager:mob/triggers/death/death.m with storage asset:context

@@ -10,7 +10,7 @@
     data modify storage asset:context id set from storage asset:mob CopiedExtends[-1][0]
 
 # super.death呼び出し
-    function asset_manager:mob/triggers/death/call
+    function asset_manager:mob/triggers/death/attempt_call
 
 # 先頭削除 (Extends が十分に小さいことがわかっているため先頭再帰する)
     data remove storage asset:mob CopiedExtends[-1][0]
