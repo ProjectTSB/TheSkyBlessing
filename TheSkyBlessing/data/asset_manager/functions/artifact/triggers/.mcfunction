@@ -34,6 +34,7 @@
     function asset_manager:artifact/data/current/reset
     tag @e[tag=Attacker] remove Attacker
     tag @e[type=#lib:living,type=!player,tag=AttackedEntity] remove AttackedEntity
+    tag @e[type=#lib:living,type=!player,tag=AttackingEntity] remove AttackingEntity
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.Damage
     tag @s remove TriggerFlag.Killed
