@@ -1,4 +1,4 @@
-#> api:damage/core/trigger_on_attack
+#> api:damage/core/trigger_strike/to_non-player/
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
