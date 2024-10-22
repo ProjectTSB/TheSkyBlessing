@@ -4,6 +4,8 @@
 #
 # 実行者はHealthを持つEntityである必要があります。
 #
+# Metadata に指定したデータは、artifact, mob の関連トリガーに渡されます。
+#
 # @input
 #   as entity
 #   storage api:
@@ -19,6 +21,7 @@
 #       └ Argument.BypassDifficulty? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
+#       Argument.Metadata? : any
 # @api
 
 # 引数チェック
