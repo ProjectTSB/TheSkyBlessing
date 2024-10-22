@@ -38,7 +38,7 @@
     # execute unless data storage asset:mob SpecialDefense run
     # execute unless data storage asset:mob Speed run
     # execute unless data storage asset:mob FollowRange run
-    # execute unless data storage asset:mob KnockBackResist run
+    execute unless data storage asset:mob KnockBackResist run data modify storage asset:mob KnockBackResist set value 0.75f
     execute unless data storage asset:mob Resist.Physical run data modify storage asset:mob Resist.Physical set value 1f
     execute unless data storage asset:mob Resist.Magic run data modify storage asset:mob Resist.Magic set value 1f
     execute unless data storage asset:mob Resist.Fire run data modify storage asset:mob Resist.Fire set value 1f
