@@ -6,4 +6,4 @@
 
 tag @s add Death
 
-function api:damage/core/trigger_events/non-player/kill_and_death
+function api:damage/core/trigger_events/non-player/kill_and_death/
