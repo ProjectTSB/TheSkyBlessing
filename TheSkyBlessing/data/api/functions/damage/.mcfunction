@@ -21,6 +21,7 @@
 #       └ Argument.BypassDifficulty? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
+#       Argument.DisableLog? : boolean (default: false)
 #       Argument.Metadata? : any
 # @api
 
@@ -40,6 +41,7 @@
     execute unless data storage api: Argument.BypassEnchantments run data modify storage api: Argument.BypassEnchantments set value false
     execute unless data storage api: Argument.BypassResistance run data modify storage api: Argument.BypassResistance set value false
     execute unless data storage api: Argument.BypassDifficulty run data modify storage api: Argument.BypassDifficulty set value false
+    execute unless data storage api: Argument.DisableLog run data modify storage api: Argument.DisableLog set value false
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
     execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
