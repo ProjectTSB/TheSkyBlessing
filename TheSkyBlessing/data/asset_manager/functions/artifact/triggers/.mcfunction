@@ -10,6 +10,7 @@
 # 装備の変更チェック
     execute if data storage asset:context Old run function asset_manager:artifact/triggers/equipments/compare
 # 変更時の更新処理
+    execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/get_equip_list
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown/
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     function asset_manager:artifact/triggers/tick
