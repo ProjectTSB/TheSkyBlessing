@@ -4,21 +4,24 @@
 #
 # @within function asset:object/*/register
 
+# 継承情報を保存する
+    function asset_manager:object/summon/put_id_to_map
+
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context/id/stash
 
-# IDを取得
-    data modify storage asset:context id set from storage asset:object Extends[-1]
+# 再帰時に使うデータをスタックに積む
+    data modify storage asset:object CopiedExtends append from storage asset:object Extends
+    data modify storage asset:object IsFirstExtend append value {_:{_:true}}
+# Extends を削除する
+    data remove storage asset:object Extends
 
-# 取得したIDを用いてマクロを実行する
-    function asset_manager:object/summon/register.m with storage asset:context
-
-# データチェック
-    execute unless data storage asset:object ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのObjectは存在しません: "},{"storage":"asset:context","nbt":"id"}]
-    execute unless data storage asset:object {ExtendsSafe:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDのObjectを継承することは出来ません: "},{"storage":"asset:context","nbt":"id"}]
+# 継承先を一つ一つ辿っていく
+    function asset:object/extends/foreach
 
 # リセット
-    data remove storage asset:object ExtendsSafe
-
+    data remove storage asset:object IsFirstExtend[-1]
+    data remove storage asset:object CopiedExtends[-1]
+    data remove storage asset:object Extends
 # 退避させたデータを戻す
     function asset_manager:common/context/id/pop

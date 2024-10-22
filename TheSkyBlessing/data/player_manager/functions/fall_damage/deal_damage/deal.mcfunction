@@ -17,6 +17,7 @@
     data modify storage api: Argument.BypassToughness set value true
     data modify storage api: Argument.BypassEnchantments set value false
     data modify storage api: Argument.BypassResistance set value false
+    data modify storage api: Argument.DisableLog set value true
     data modify storage api: Argument.ReduceEnchantment set value "minecraft:feather_falling"
     execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "death.fell.accident.generic","with":[{"selector":"@s"}]}]'
     execute unless data storage player_manager:fall_damage CustomDeathMessage run data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$s は紐なしバンジージャンプで人生を終えた","with":[{"selector":"@s"}]}]'

@@ -21,8 +21,15 @@
 #   asset_manager:object/summon/init
     #declare tag AssetObject
 
+#> ObjectのTickを無効化するタグ
+# @within
+#   core:tick/
+#   asset:object/*/register
+#   asset_manager:object/summon/init
+    #declare tag Object.DisableTicking
+
 #> thisタグ
 # @within function
 #   asset_manager:object/triggers/tick
-#   assst:object/**
+#   asset:object/**
     #declare tag this
