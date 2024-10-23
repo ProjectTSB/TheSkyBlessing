@@ -6,7 +6,7 @@
 
 # プレイヤーにイベントを追加する
     execute as @p[tag=this] run function oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Kill append from storage asset:context Attack
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Killed append from storage asset:context Attack
 # Mob にもイベントを追加する
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Death append from storage asset:context Attack

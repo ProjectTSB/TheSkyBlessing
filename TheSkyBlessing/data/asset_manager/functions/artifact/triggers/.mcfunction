@@ -24,7 +24,7 @@
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/
     execute if data storage asset:artifact ArtifactEvents.Damage[0] run function asset_manager:artifact/triggers/damage/
-    execute if data storage asset:artifact ArtifactEvents.Kill[0] run function asset_manager:artifact/triggers/killed/
+    execute if data storage asset:artifact ArtifactEvents.Killed[0] run function asset_manager:artifact/triggers/killed/
     execute if data storage asset:artifact ArtifactEvents.Heal[0] run function asset_manager:artifact/triggers/heal/
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
