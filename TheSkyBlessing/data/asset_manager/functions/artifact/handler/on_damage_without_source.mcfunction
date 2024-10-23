@@ -10,7 +10,9 @@
 
 function oh_my_dat:please
 
-execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[{IsVanilla:true}] run return 1
+# MobManager 側で処理されるような source が居る攻撃ならば、
+# 既に IsVanilla が true であるようなイベントが追加されているため処理を中断する
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[{IsVanilla:true}] run return 1
 
 # ダメージ種別取得
     execute if entity @s[advancements={core:handler/damage={type-drowning=true}}] run data modify storage asset:artifact DamageType set value "vanilla_drowning"
