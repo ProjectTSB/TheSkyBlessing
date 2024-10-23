@@ -35,7 +35,6 @@
     data remove storage asset:artifact EquipmentChanges
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset
-    tag @e[tag=Attacker] remove Attacker
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak
