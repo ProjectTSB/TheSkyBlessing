@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:mob/triggers/
+# @within function core:tick/
 
 effect clear @s resistance
 attribute @s generic.armor modifier add 3-0-0-0-1 "kill modifier" -1 multiply

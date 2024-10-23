@@ -22,8 +22,6 @@
     execute if data storage asset:mob MobEvents.Death[0] run function asset_manager:mob/triggers/death/foreach
     execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
     execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/kill
-# Death トリガー付いてたら消す // TODO Mob を殺すのってここの責務か？？
-    execute if entity @s[tag=Death] run function mob_manager:kill_entity
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
 # 死んでいたら呼び出さないようにする
     execute if score @s MobUUID matches -2147483648..2147483647 run function oh_my_dat:please

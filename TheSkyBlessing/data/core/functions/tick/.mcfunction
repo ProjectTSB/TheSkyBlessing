@@ -63,7 +63,8 @@
         execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
     # 環境ダメージ処理
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
-
+    # Death トリガー付いてるモブを消し飛ばす
+        execute as @e[type=#lib:living,type=!player,tag=Death] run function mob_manager:kill_entity
 # Objects処理
     execute as @e[tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 
