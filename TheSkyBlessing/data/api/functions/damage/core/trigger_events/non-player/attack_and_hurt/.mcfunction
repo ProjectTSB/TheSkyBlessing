@@ -2,7 +2,7 @@
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
-# @within function api:damage/core/health_subtract/non-player/deal_damage
+# @within function api:damage/core/health_subtract/non-player/*
 
 #> Declare
 # @within function api:damage/core/trigger_events/non-player/attack_and_hurt/*
