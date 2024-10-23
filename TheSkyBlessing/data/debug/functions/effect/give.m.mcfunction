@@ -7,6 +7,6 @@
 # @private
 # @user
 
-# マクロからIDを取得し召喚
+# マクロからIDを取得し付与
     $data modify storage api: Argument.ID set value $(ID)
     function api:entity/mob/effect/give
