@@ -23,3 +23,10 @@
 #   function core:handler/flying_elytra
 #   function player_manager:god/nyaptov/passive
     #declare tag Nyaptov.FlyingElytra
+
+#> Tag for Equipment Update
+# @within function
+#   player_manager:god/*/believe
+#   player_manager:god/none/set_tag
+#   asset_manager:artifact/triggers/
+    #declare tag Believe.Changed
