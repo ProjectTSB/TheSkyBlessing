@@ -15,13 +15,8 @@
 #> タグ定義
 # @within
 #   function
-#       api:damage/core/health_subtract/non-player
-#       player_manager:vanilla_attack
-#   advancement
-#       asset_manager:artifact/**
+#       api:damage/core/health_subtract/non-player/*
+#       asset_manager:artifact/triggers/attack/vanilla
+#       mob_manager:entity_finder/player_hurt_entity/on_attack
     #declare tag AttackedByApi
     #declare tag AttackedByProjectile
-
-#> Declare
-# @within function api:damage/core/trigger_on_damage/**
-    #declare tag TargetAttacker

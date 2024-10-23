@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:mob/triggers/attack/
+# @within function asset_manager:mob/triggers/attack/attempt_call
 
 $function asset:mob/alias/$(id)/attack
 $execute store success storage asset:mob Implement byte 1 run schedule function asset:mob/alias/$(id)/attack 2147483647t

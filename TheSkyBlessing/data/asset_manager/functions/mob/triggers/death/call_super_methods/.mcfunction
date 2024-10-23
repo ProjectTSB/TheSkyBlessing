@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:mob/triggers/death/call
+#   asset_manager:mob/triggers/death/attempt_call
 #   asset:mob/super.death
 
 # IDをアドレスとしてROMを呼び出す
