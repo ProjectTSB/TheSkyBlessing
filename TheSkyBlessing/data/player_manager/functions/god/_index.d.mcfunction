@@ -17,9 +17,3 @@
 #> storage for process
 # @within function player_manager:god/mercy/**
     #declare storage player_manager:god
-
-#> Tag for Nyaptov Passive
-# @within
-#   function core:handler/flying_elytra
-#   function player_manager:god/nyaptov/passive
-    #declare tag Nyaptov.FlyingElytra
