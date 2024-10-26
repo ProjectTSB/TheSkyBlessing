@@ -4,4 +4,4 @@
 #
 # @within function world_manager:area/02.arena/
 
-# メモ 島々のギミック処理とかを小さなサブエリアを作った上で書く
+execute if predicate lib:is_flying_elytra run function world_manager:area/02.arena/break_elytra
