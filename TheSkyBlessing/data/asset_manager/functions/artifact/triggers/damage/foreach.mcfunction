@@ -16,7 +16,7 @@
     execute if data storage asset:context Damage.From as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker
     scoreboard players reset $AttackedFrom Temporary
 # 神器側に受け渡し
-    function #asset:artifact/attack
+    function #asset:artifact/damage
     execute if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/melee
     execute if data storage asset:context Damage{Type:"vanilla_drowning"  } run function #asset:artifact/damage/drowning
     execute if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/projectile
