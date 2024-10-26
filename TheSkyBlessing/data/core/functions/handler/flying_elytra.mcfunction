@@ -4,8 +4,8 @@
 #
 # @within function core:tick/player/
 
-# Nyaptov恩恵で使用
-    tag @s add Nyaptov.FlyingElytra
+# predicate 用にタグ管理
+    tag @s add FlyingElytra
 
 # リセット
     scoreboard players reset @s Elytra
