@@ -1,9 +1,225 @@
 {
     "criteria": {
-        "trigger": {
-            "trigger": "entity_hurt_player"
+        "type-drowning": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_drowning",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-explosion": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_explosion",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-fire": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_fire",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-freezing": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_freezing",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-lightning": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_lightning",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-melee": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_melee",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-projectile": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_projectile",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "type-other": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_drowning",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_explosion",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_fire",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_freezing",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_lightning",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_melee",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_projectile",
+                                "expected": false
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "blocked": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "blocked": true
+                }
+            }
+        },
+        "blocked-false": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "blocked": false
+                }
+            }
+        },
+        "is-dummy": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "effects": {
+                                "unluck": {
+                                    "amplifier": 127
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "is-dummy-false": {
+            "trigger": "entity_hurt_player",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "inverted",
+                        "term": {
+                            "condition": "entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "effects": {
+                                    "unluck": {
+                                        "amplifier": 127
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
         }
     },
+    "requirements": [
+        [
+            "type-drowning",
+            "type-explosion",
+            "type-fire",
+            "type-freezing",
+            "type-lightning",
+            "type-melee",
+            "type-projectile",
+            "type-other"
+        ],
+        [
+            "blocked",
+            "blocked-false"
+        ],
+        [
+            "is-dummy",
+            "is-dummy-false"
+        ]
+    ],
     "rewards": {
         "function": "core:early_handler/damage"
     }

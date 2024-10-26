@@ -24,6 +24,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 #   core:**
 #   asset:**
 #   asset_manager:**
+#   mob_manager:**
 #   player_manager:**
 #   world_manager:**
     #declare storage oh_my_dat:

@@ -32,5 +32,7 @@ data modify storage api: Argument.BypassEnchantments set from storage lib: Argum
 data modify storage api: Argument.BypassResistance set from storage lib: Argument.BypassResistance
 data modify storage api: Argument.ReduceEnchantment set from storage lib: Argument.ReduceEnchantment
 data modify storage api: Argument.DeathMessage set from storage lib: Argument.DeathMessage
+execute if data storage lib: Argument.Metadata run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"Metadata を ","color":"white"},{"text":"lib:damage/","color":"gold"},{"text":" で使うことは出来ません。","color":"white"}]
+execute if data storage lib: Argument.Metadata run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:damage/","color":"gold"},{"text":" への移行を検討してください。","color":"white"}]
 
 function api:damage/
