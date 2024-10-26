@@ -37,6 +37,12 @@
 #   asset_manager:effect/*
     #declare tag InRespawnEvent
 
+#> エリトラ用タグ
+# @within
+#   function core:handler/flying_elytra
+#   predicate lib:is_flying_elytra
+    #declare tag FlyingElytra
+
 #> DistributedIntervalGroup
 # @within function **6_distributed_interval
 #declare score_holder $DistributeGroup
