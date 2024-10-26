@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/01-10.flora_temple
+# @within function world_manager:area/00-10.flora_temple
 
 # 教徒
     execute if entity @s[tag=Believe.Flora] run function player_manager:god/mercy/

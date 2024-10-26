@@ -7,5 +7,5 @@
     #declare score_holder $NextInSubArea
 
 #> GodBoundaries Declares
-# @within world_manager:area/01-*
+# @within world_manager:area/00-*
     #declare tag TutorialEnded
