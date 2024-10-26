@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/01-13.urban_temple
+# @within function world_manager:area/00-13.urban_temple
 
 # 教徒
     execute if entity @s[tag=Believe.Urban] run function player_manager:god/mercy/
