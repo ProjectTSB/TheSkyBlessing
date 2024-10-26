@@ -7,6 +7,10 @@
         },
         {
             "condition": "reference",
+            "name": "world_manager:area/02.arena"
+        },
+        {
+            "condition": "reference",
             "name": "world_manager:area/10.nether"
         },
         {
