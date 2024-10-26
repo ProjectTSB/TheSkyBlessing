@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_trigger
+#> asset_manager:artifact/create/trigger/trigger
 #
 # 使用の条件を設定します
 #
-# @within function asset_manager:artifact/create/set_lore
+# @within function asset_manager:artifact/create/trigger/
 
 # 指定スロットがhotbarでかつ重複可能か
     execute if data storage asset:artifact {Slot:"hotbar",EnableDuplication:true} run data modify storage asset:artifact Temp.EnableDuplication set value "[重複可能] "

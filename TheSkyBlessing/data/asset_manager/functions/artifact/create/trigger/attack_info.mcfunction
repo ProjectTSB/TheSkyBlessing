@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_attack_info
+#> asset_manager:artifact/create/trigger/attack_info
 #
 # 攻撃に関する情報をLoreに追加します
 #
-# @within function asset_manager:artifact/create/set_lore
+# @within function asset_manager:artifact/create/trigger/
 
 #> private
 # @private
