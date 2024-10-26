@@ -1,0 +1,9 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "reference",
+            "name": "world_manager:area/01.islands"
+        }
+    ]
+}

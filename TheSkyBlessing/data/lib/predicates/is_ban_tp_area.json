@@ -3,15 +3,19 @@
     "terms": [
         {
             "condition": "reference",
-            "name": "world_manager:area/01.god_boundaries"
+            "name": "world_manager:area/00.god_boundaries"
         },
         {
             "condition": "reference",
-            "name": "world_manager:area/03.nether"
+            "name": "world_manager:area/02.arena"
         },
         {
             "condition": "reference",
-            "name": "world_manager:area/04.end"
+            "name": "world_manager:area/10.nether"
+        },
+        {
+            "condition": "reference",
+            "name": "world_manager:area/20.end"
         },
         {
             "condition": "location_check",
