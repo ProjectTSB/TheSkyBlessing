@@ -5,7 +5,9 @@
 # @within function mob_manager:entity_finder/player_hurt_entity/filters/0
 
 #> Private
-# @private
+# @within function
+#   mob_manager:entity_finder/player_hurt_entity/fetch_entity
+#   mob_manager:entity_finder/player_hurt_entity/make_attack_event_data
 #declare score_holder $Damage
 
 # ダメージ種別取得
@@ -18,10 +20,12 @@
     scoreboard players operation $Damage Temporary *= $-1 Const
 
 # ArtifactEvents にデータ追加
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append value {IsVanilla:true}
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Type set from storage mob_manager:entity_finder DamageType
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To int 1 run scoreboard players get @s MobUUID
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Amount double 0.01 run scoreboard players get $Damage Temporary
+    data modify storage mob_manager:entity_finder AttackEventData set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[{IsVanilla:true}]
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[{IsVanilla:true}]
+    execute unless data storage mob_manager:entity_finder AttackEventData run function mob_manager:entity_finder/player_hurt_entity/make_attack_event_data
+    data modify storage mob_manager:entity_finder AttackEventData.To append value -1
+    execute store result storage mob_manager:entity_finder AttackEventData.To[-1] int 1 run scoreboard players get @s MobUUID
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append from storage mob_manager:entity_finder AttackEventData
 
 # 攻撃された Entity の EntityStorage 取得
     function oh_my_dat:please
@@ -34,5 +38,6 @@
 # 体力をもとに戻す
     data modify entity @s Health set value 512f
 # リセット
+    data remove storage mob_manager:entity_finder AttackEventData
     data remove storage mob_manager:entity_finder DamageType
     scoreboard players reset $Damage Temporary
