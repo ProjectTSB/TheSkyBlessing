@@ -6,6 +6,7 @@
 #   Argument.ID : int
 #   Argument.Duration? : int (default: Asset | error)
 #   Argument.Stack? : int (default: 1)
+#   Argument.FieldOverride? : compound
 # @api
 
 # validate
@@ -16,3 +17,4 @@
     data remove storage api: Argument.ID
     data remove storage api: Argument.Duration
     data remove storage api: Argument.Stack
+    data remove storage api: Argument.FieldOverride

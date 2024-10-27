@@ -7,8 +7,9 @@
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context/id/stash
 
-# ID
+# 引数の移動
     data modify storage asset:context id set from storage api: Argument.ID
+    data modify storage asset:effect FieldOverride set from storage api: Argument.FieldOverride
 
 # データを取得
     function #asset:effect/register
@@ -48,6 +49,7 @@
     data remove storage asset:effect ProcessOnDied
     data remove storage asset:effect RequireClearLv
     data remove storage asset:effect Field
+    data remove storage asset:effect FieldOverride
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
