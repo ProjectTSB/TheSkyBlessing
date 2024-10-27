@@ -29,9 +29,6 @@
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
-    tag @e[type=#lib:living,type=!player,tag=DamagedEntity] remove DamagedEntity
-    tag @e[type=#lib:living,type=!player,tag=AttackedEntity] remove AttackedEntity
-    # tag @e[type=#lib:living,type=!player,tag=KilledEntity] remove KilledEntity どうせ死ぬので消さなくて良い
     data remove storage asset:artifact EquipmentChanges
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset

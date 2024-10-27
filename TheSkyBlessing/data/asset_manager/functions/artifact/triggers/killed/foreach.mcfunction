@@ -13,7 +13,7 @@
     data remove storage asset:artifact ArtifactEvents.Killed[-1]
 # 攻撃先を取得し、Victim を付与する (null の可能性もある)
     execute if data storage asset:context Killed.To store result score $KillTarget Temporary run data get storage asset:context Killed.To
-    execute if data storage asset:context Killed.To as @e[type=#lib:living,type=!player,tag=KilledEntity,distance=..150] if score @s MobUUID = $KillTarget Temporary run tag @s add Victim
+    execute if data storage asset:context Killed.To as @e[type=#lib:living,type=!player,distance=..150] if score @s MobUUID = $KillTarget Temporary run tag @s add Victim
     scoreboard players reset $KillTarget Temporary
 # 神器側に受け渡し
     function #asset:artifact/killed

@@ -4,8 +4,6 @@
 #
 # @within function api:damage/core/trigger_events/non-player/kill_and_death/
 
-# 神器側で攻撃先を軽量に取得できるようにタグを付与しておく
-    tag @s add KilledEntity
 # Mob にイベントを追加する
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Death[-1].From int 1 run scoreboard players get @s UserID
 # プレイヤーにイベントを追加する
