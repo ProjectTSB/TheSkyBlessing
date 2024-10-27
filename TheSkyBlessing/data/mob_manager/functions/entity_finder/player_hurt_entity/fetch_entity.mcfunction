@@ -8,9 +8,6 @@
 # @private
 #declare score_holder $Damage
 
-# 軽量にセレクターを利用する用のtag
-    tag @s add DamagedEntity
-
 # ダメージ種別取得
     execute if entity @p[tag=AttackedPlayer,advancements={mob_manager:entity_finder/check_player_hurt_entity={type-melee=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_melee"
     execute if entity @p[tag=AttackedPlayer,advancements={mob_manager:entity_finder/check_player_hurt_entity={type-projectile=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_projectile"

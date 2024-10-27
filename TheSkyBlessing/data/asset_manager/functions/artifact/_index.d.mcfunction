@@ -29,28 +29,6 @@
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
 
-#> 攻撃されたEntity
-# @within function
-#   asset_manager:artifact/triggers/
-#   asset_manager:artifact/triggers/attack/foreach
-#   api:damage/core/trigger_events/non-player/attack_and_hurt/push_from_attacker
-#   mob_manager:entity_finder/player_hurt_entity/fetch_entity
-#declare tag DamagedEntity
-
-#> 殺されたEntity
-# @within function
-#   asset_manager:artifact/triggers/killed/foreach
-#   api:damage/core/trigger_events/non-player/kill_and_death/push_from_attacker
-#   asset_manager:artifact/triggers/attack/vanilla/push_kill_and_death_event
-#declare tag KilledEntity
-
-#> 攻撃してきたEntity
-# @within function
-#   asset_manager:artifact/triggers/
-#   asset_manager:artifact/triggers/damage/foreach
-#   api:damage/core/trigger_events/player/attack_and_damage/push_from_attacker
-#   mob_manager:entity_finder/entity_hurt_player/fetch_entity
-#declare tag AttackedEntity
 
 #> バニラの攻撃を扱う用
 # @within function

@@ -4,8 +4,6 @@
 #
 # @within function api:damage/core/trigger_events/player/attack_and_damage/
 
-# 神器側で攻撃先を軽量に取得できるようにタグを付与しておく
-    tag @s add AttackedEntity
 # プレイヤーにイベントを追加する
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[-1].From int 1 run scoreboard players get @s MobUUID
 # Mob にもイベントを追加する
