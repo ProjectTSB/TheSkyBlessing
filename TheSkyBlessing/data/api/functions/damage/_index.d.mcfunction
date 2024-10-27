@@ -11,6 +11,7 @@
     #declare score_holder $Resistance
     #declare score_holder $LatestModifiedUser
     #declare score_holder $LatestModifiedEntity
+    #declare score_holder $ModifierIndex
 
 #> タグ定義
 # @within

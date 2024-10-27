@@ -6,3 +6,5 @@
 
 # 攻撃者情報の記録
     execute store result score $LatestModifiedEntity MobUUID run data get storage api: Argument.MobUUID
+# ModifierIndex をインクリメントする
+    scoreboard players add $ModifierIndex Global 1

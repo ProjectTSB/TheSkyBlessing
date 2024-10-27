@@ -53,6 +53,7 @@
 
 #> Victim
 # @within *
+#   asset_manager:mob/triggers/attack/add_tag_each_victim
 #   asset_manager:mob/triggers/attack/foreach
 #   asset:mob/*/attack/**
     #declare tag Victim
