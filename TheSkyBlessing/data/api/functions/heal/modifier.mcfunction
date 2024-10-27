@@ -10,4 +10,4 @@
 # @api
 
 # 補正
-    execute if entity @s[type=player] unless data storage api: Argument{FixedHeal:true} run function api:heal/core/modifier
+    execute if entity @s[type=player] run function api:heal/core/modifier/

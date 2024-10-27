@@ -4,6 +4,4 @@
 #
 # @api
 
-data remove storage api: Argument.Heal
-data remove storage api: Argument.FixedHeal
-data remove storage api: Argument.DisableLog
+function api:heal/core/reset
