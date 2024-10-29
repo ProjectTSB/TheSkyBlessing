@@ -57,6 +57,8 @@
 #   asset:artifact/**
     #declare tag Attacker
     #declare tag Victim
+    #declare tag Healer
+    #declare tag Receiver
     #declare tag Equip
     #declare tag DisEquip
 
