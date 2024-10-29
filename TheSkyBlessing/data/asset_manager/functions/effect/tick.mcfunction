@@ -6,9 +6,15 @@
 
 # EntityStorage呼び出し
     function oh_my_dat:please
+# お約束
+    function lib:array/session/open
 # 必要なデータ取得
-    data modify storage asset:effect Effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
+    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
+# 先に付与したEffectが先に呼び出されるように
+    function lib:array/reverse
+    data modify storage asset:effect Effects set from storage lib: Array
+    function lib:array/session/close
 # 死亡判定
     execute if entity @s[tag=Death] run tag @s add DeathProcess
     execute if score @s UsedTotem matches 1.. run tag @s add DeathProcess
