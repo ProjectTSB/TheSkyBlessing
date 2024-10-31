@@ -8,7 +8,8 @@
     data modify storage asset:context Attack set from storage asset:artifact ArtifactEvents.Attack[-1]
     data remove storage asset:artifact ArtifactEvents.Attack[-1]
 # 攻撃先を取得し、Victim を付与する (null の可能性もある)
-    execute if data storage asset:context Attack.To[0] run function asset_manager:artifact/triggers/attack/add_tag_each_victim
+    data modify storage asset:artifact AttackTargets set from storage asset:context Attack.To
+    execute if data storage asset:artifact AttackTargets[0] run function asset_manager:artifact/triggers/attack/add_tag_each_victim
 # 最大ダメージの計算
     function lib:array/session/open
     data modify storage lib: Array set from storage asset:context Attack.Amounts
@@ -25,6 +26,7 @@
     execute if data storage asset:context Attack{Type:"vanilla_explosion" } run function #asset:artifact/attack/explosion
 # リセット
     data remove storage asset:context Attack
+    data remove storage asset:artifact AttackTargets
     tag @s remove ShouldVanillaAttack
     tag @e[type=#lib:living,type=!player,tag=Victim] remove Victim
 # イベントがまだあれば再帰する
