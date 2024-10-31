@@ -23,9 +23,9 @@
     execute store success score $isNumeric Temporary run data get storage lib: Array[-1] 1
 # 最大値を計算する
     function lib:array/core/math/max
-# 総和をSumResultに突っ込む
-    execute if score $isNumeric Temporary matches 0 store result storage lib: SumResult int 1.00 run scoreboard players get $Max Temporary
-    execute if score $isNumeric Temporary matches 1 store result storage lib: SumResult double 0.01 run scoreboard players get $Max Temporary
+# 総和をMaxResultに突っ込む
+    execute if score $isNumeric Temporary matches 0 store result storage lib: MaxResult int 1.00 run scoreboard players get $Max Temporary
+    execute if score $isNumeric Temporary matches 1 store result storage lib: MaxResult double 0.01 run scoreboard players get $Max Temporary
 # リセット
     scoreboard players reset $Max Temporary
     scoreboard players reset $Temp Temporary
