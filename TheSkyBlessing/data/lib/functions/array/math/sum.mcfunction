@@ -19,6 +19,8 @@
 
 # 初期化
     scoreboard players set $Sum Temporary 0
+# 配列が Numeric 型か検証する
+    execute store success score $isNumeric Temporary run data get storage lib: Array[-1] 1
 # 総和を計算する
     function lib:array/core/math/sum
 # 総和をSumResultに突っ込む
