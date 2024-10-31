@@ -9,6 +9,12 @@
     data remove storage asset:artifact ArtifactEvents.Attack[-1]
 # 攻撃先を取得し、Victim を付与する (null の可能性もある)
     execute if data storage asset:context Attack.To[0] run function asset_manager:artifact/triggers/attack/add_tag_each_victim
+# 最大ダメージの計算
+    function lib:array/session/open
+    data modify storage lib: Array set from storage asset:context Attack.Amounts
+    function lib:array/math/max
+    data modify storage asset:context Attack.Amount set from storage lib: MaxResult
+    function lib:array/session/close
 # 神器側に受け渡し
     function #asset:artifact/attack
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run tag @s add ShouldVanillaAttack

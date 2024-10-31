@@ -22,7 +22,10 @@
 # ArtifactEvents にデータ追加
     data modify storage mob_manager:entity_finder AttackEventData set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[{IsVanilla:true}]
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[{IsVanilla:true}]
-    execute unless data storage mob_manager:entity_finder AttackEventData run function mob_manager:entity_finder/player_hurt_entity/make_attack_event_data
+    execute unless data storage mob_manager:entity_finder AttackEventData run data modify storage mob_manager:entity_finder AttackEventData set value {IsVanilla:true}
+    data modify storage mob_manager:entity_finder AttackEventData.Type set from storage mob_manager:entity_finder DamageType
+    data modify storage mob_manager:entity_finder AttackEventData.Amounts append value -1d
+    execute store result storage mob_manager:entity_finder AttackEventData.Amounts[-1] double 0.01 run scoreboard players get $Damage Temporary
     data modify storage mob_manager:entity_finder AttackEventData.To append value -1
     execute store result storage mob_manager:entity_finder AttackEventData.To[-1] int 1 run scoreboard players get @s MobUUID
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append from storage mob_manager:entity_finder AttackEventData
