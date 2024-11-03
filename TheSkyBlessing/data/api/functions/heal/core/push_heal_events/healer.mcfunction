@@ -18,7 +18,7 @@
         execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal append value {}
         execute unless score $LastIndex Temporary = $ModifierIndex Global run execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].Index int 1 run scoreboard players get $ModifierIndex Global
     # ヒール対象に追加する
-        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].Amounts append value -1
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].Amounts append value -1d
         execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].Amounts[-1] double 0.01 run data get storage api: Argument.Fluctuation 100
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].To append value -1
         execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Heal[-1].To[-1] int 1 run scoreboard players get $ReceiverUUID Temporary
