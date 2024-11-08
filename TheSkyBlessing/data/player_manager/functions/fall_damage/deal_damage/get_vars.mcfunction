@@ -19,8 +19,7 @@
     scoreboard players operation $FallDistance Temporary -= $YVec Temporary
 
 # 落下ダメージ倍率の初期化
-    scoreboard players set $DamageMultiplier Temporary 10
-
+    execute store result score $DamageMultiplier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.FallDamage 10
 # ジャンプ力上昇のlvを取得する
 # $JumpBoost(e1) = ($JumpBoost(e1) ?? -1(e1)) + 1(e1)
     execute store result score $JumpBoost Temporary run data get storage api: ActiveEffects[{Id:8}].Amplifier 10
