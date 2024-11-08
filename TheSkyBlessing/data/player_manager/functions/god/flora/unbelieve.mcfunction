@@ -17,3 +17,6 @@
 # 火耐性-20%
     data modify storage api: Argument.UUID set value [2, 1, 1, 10]
     function api:modifier/defense/fire/remove
+
+# 固有スコアリセット
+    scoreboard players reset @s FloraFoodRegenCooldown
