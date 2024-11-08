@@ -17,5 +17,6 @@
 # 魔法攻撃-20%
     data modify storage api: Argument.UUID set value [2, 1, 1, 13]
     function api:modifier/attack/magic/remove
-# ノックバック軽減+30%
-    attribute @s generic.knockback_resistance modifier remove 1-0-2-0-d
+# 被回復-15%
+    data modify storage api: Argument.UUID set value [2, 1, 1, 13]
+    function api:modifier/receive_heal/remove
