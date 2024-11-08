@@ -18,8 +18,8 @@
     data modify storage api: Argument.Amount set value -0.2
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/attack/base/add
-# 水耐性-15%
+# 水耐性-10%
     data modify storage api: Argument.UUID set value [2, 1, 1, 11]
-    data modify storage api: Argument.Amount set value -0.15
+    data modify storage api: Argument.Amount set value -0.10
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/water/add
