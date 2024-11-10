@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:artifact/cooldown/
+#   asset_manager:artifact/cooldown/mini_bar/
 #   asset_manager:artifact/cooldown/mini_bar/normalize_lcds
 
 #! MiniBar
