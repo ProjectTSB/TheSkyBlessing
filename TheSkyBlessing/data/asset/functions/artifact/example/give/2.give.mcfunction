@@ -9,20 +9,43 @@
 # 最後にasset:artifact/common/giveを実行することで入手可能。
 
 data modify storage asset:artifact ID set value 2147483647
-data modify storage asset:artifact Item set value "minecraft:raw_gold"
-data modify storage asset:artifact Name set value '{"text":"雷のブローチ","color":"yellow"}'
-data modify storage asset:artifact Lore set value ['{"text":"攻撃を与えたとき、対象に"}','{"text":"現在体力に依存した割合攻撃を追加与える"}','{"text":""}']
-# data modify storage asset:artifact CostText set value '{"text":""}'
-data modify storage asset:artifact RemainingCount set value 50
-data modify storage asset:artifact Slot set value "hotbar"
-data modify storage asset:artifact Trigger set value "onAttack"
-# data modify storage asset:artifact Condition set value '{"text":""}'
-# data modify storage asset:artifact AttackInfo set value {Damage:[0,0],AttackType:[Physical,Magic],ElementType:[Fire,Water,Thunder,None],BypassResist:1b,IsrangeAttack:never}
-data modify storage asset:artifact MPCost set value 20
-# data modify storage asset:artifact MPRequire set value 100
-data modify storage asset:artifact LocalCooldown set value 40
-# data modify storage asset:artifact SpecialCooldown set value 5
-data modify storage asset:artifact CanUsedGod set value ["Flora","Nyaptov","Wi-ki"]
-# data modify storage asset:artifact CustomNBT set value {Unbreakable:1b}
+
+
+data modify storage asset:artifact Item set value "minecraft:iron_sword"
+
+data modify storage asset:artifact Name set value '{"text":"ツルギ","color":"gray"}'
+
+data modify storage asset:artifact Lore set value ['{"text":"きる"}']
+
+data modify storage asset:artifact CostText set value '[{"translate":"item.minecraft.iron_ingot"},{"text":"x1"}]'
+
+data modify storage asset:artifact RemainingCount set value 1024
+
+data modify storage asset:artifact Slot set value "mainhand"
+
+data modify storage asset:artifact Trigger set value "onAttackByMelee"
+
+data modify storage asset:artifact Condition set value '{"text":"ねこ"}'
+
+data modify storage asset:artifact AttackInfo.Damage set value 10
+data modify storage asset:artifact AttackInfo.AttackType set value ["Physical"]
+data modify storage asset:artifact AttackInfo.ElementType set value ["None"]
+data modify storage asset:artifact AttackInfo.BypassResist set value 1b
+data modify storage asset:artifact AttackInfo.IsRangeAttack set value "always"
+data modify storage asset:artifact AttackInfo.AttackRange set value "1.5"
+
+data modify storage asset:artifact MPCost set value 5
+data modify storage asset:artifact MPRequire set value 10
+
+data modify storage asset:artifact LocalCooldown set value 80
+
+data modify storage asset:artifact TypeCooldown.Type set value "shortRange"
+data modify storage asset:artifact TypeCooldown.Duration set value 40
+
+data modify storage asset:artifact SpecialCooldown set value 20
+
+data modify storage asset:artifact CanUsedGod set value ["Flora","Urban","Nyaptov","Wi-ki","Rumor"]
+
+data modify storage asset:artifact CustomNBT set value {Unbreakable:1b,AttributeModifiers:[]}
 
 function asset:artifact/common/give
