@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_trigger
+#> asset_manager:artifact/create/set_lore/0.trigger
 #
 # 使用の条件を設定します
 #
-# @within function asset_manager:artifact/create/set_lore
+# @within function asset_manager:artifact/create/set_lore/
 
 # 指定スロットがhotbarでかつ重複可能か
     execute if data storage asset:artifact {Slot:"hotbar",EnableDuplication:true} run data modify storage asset:artifact Temp.EnableDuplication set value "[重複可能] "
@@ -58,6 +58,6 @@
     execute unless data storage asset:artifact Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"}]
     execute unless data storage asset:artifact Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"}]
 # 生成
-    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/trigger
+    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/0.trigger
 # リセット
     data remove storage asset:artifact Temp

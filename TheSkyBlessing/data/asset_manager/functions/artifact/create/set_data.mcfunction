@@ -66,7 +66,7 @@
     data modify storage asset:artifact Item.tag.display.Name set from block 10000 0 10000 Items[0].tag.display.Name
 
 # Lore
-    function asset_manager:artifact/create/set_lore
+    function asset_manager:artifact/create/set_lore/
 # カスタムNBT
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
 
