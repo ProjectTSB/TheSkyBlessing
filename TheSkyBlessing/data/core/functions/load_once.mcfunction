@@ -61,11 +61,11 @@ data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
-data modify storage global GodIcon.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
-data modify storage global GodIcon.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
-data modify storage global GodIcon.Nyaptov set value '{"text":"\\uE012","color":"white","font":"tsb"}'
-data modify storage global GodIcon.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
-data modify storage global GodIcon.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
+data modify storage global Icon.God.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
+data modify storage global Icon.God.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
+data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE012","color":"white","font":"tsb"}'
+data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
+data modify storage global Icon.God.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
 
 
 #> リセット必須オブジェクト等の削除
