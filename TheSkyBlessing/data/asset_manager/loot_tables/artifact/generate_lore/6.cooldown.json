@@ -1,0 +1,38 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "debug_stick",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "クールダウン: "
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "Cooldown[]",
+                                        "interpret": true,
+                                        "separator": " / "
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

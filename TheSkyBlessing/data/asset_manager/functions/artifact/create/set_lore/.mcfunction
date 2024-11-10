@@ -23,11 +23,9 @@
 # 5? 消費アイテム
     execute if data storage asset:artifact CostText run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/5.cost_item
 # 6? クールダウン
-    execute if data storage asset:artifact LocalCooldown run function asset_manager:artifact/create/set_lore/cooldown.m {Path: "LocalCooldown", ExportSlot: 6}
-# 7? スペシャルクールダウン
-    execute if data storage asset:artifact SpecialCooldown run function asset_manager:artifact/create/set_lore/cooldown.m {Path: "SpecialCooldown", ExportSlot: 7}
-# 8 使える神
-    function asset_manager:artifact/create/set_lore/8.god
+    function asset_manager:artifact/create/set_lore/6.cooldown/
+# 7 使える神
+    function asset_manager:artifact/create/set_lore/7.god
 # Lore一括追加
     data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
 # リセット

@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "storage": "asset:artifact",
+                                        "nbt": "CooldownIcon",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -33,7 +38,7 @@
                                         "nbt": "CooldownDecimal"
                                     },
                                     {
-                                        "text": "秒"
+                                        "text": " 秒"
                                     }
                                 ]
                             ],
@@ -64,28 +69,26 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "storage": "asset:artifact",
+                                        "nbt": "CooldownIcon",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownMinutes"
                                     },
                                     {
-                                        "text": "分"
+                                        "text": " 分 "
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownSecond"
                                     },
                                     {
-                                        "text": "."
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "CooldownDecimal"
-                                    },
-                                    {
-                                        "text": "秒"
+                                        "text": " 秒"
                                     }
                                 ]
                             ],
