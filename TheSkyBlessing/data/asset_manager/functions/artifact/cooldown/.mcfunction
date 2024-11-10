@@ -25,6 +25,8 @@
 
 # ローカルクールダウンを減らす () -> LCDs(normal)
     function asset_manager:artifact/cooldown/decrement/local/
+# 種別クールダウンを減らす () -> TCDs(normal)
+    function asset_manager:artifact/cooldown/decrement/type/
 
 # ミニバーを作る
     function asset_manager:artifact/cooldown/mini_bar/
@@ -36,3 +38,4 @@
     scoreboard players reset $Max Temporary
     scoreboard players reset $NormalizedValue Temporary
     data remove storage asset:artifact LCDs
+    data remove storage asset:artifact TCDs
