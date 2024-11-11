@@ -14,4 +14,3 @@
     function asset_manager:artifact/check/check_local_cooldown/foreach
 # リセット
     data remove storage asset:artifact CopiedItem
-    scoreboard players reset $Tick Temporary
