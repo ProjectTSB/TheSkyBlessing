@@ -31,6 +31,10 @@
         execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB{DisableMPMessage:true} run scoreboard players set @s MPLogCD 20
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
+    # TypeCooldownによる制限
+        function asset_manager:artifact/check/check_type_cooldown/
+        execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
+        tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
         function asset_manager:artifact/check/check_local_cooldown/
         execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB{DisableCooldownMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
