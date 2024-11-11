@@ -9,7 +9,7 @@
 # 空配列なら ↓ を実行する必要はないので return する
     execute unless data storage asset:artifact TCDs[0] run return 0
 
-# 各スロットの CD をデクリメントする TCDs(normal) -> DecrementedTCDs(inverted)
+# 各種別 CD をデクリメントする TCDs(normal) -> DecrementedTCDs(inverted)
     function asset_manager:artifact/cooldown/decrement/type/foreach
 # 反転させる DecrementedTCDs(inverted) -> TCDs(normal)
     function lib:array/session/open
