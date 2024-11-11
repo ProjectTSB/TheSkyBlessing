@@ -36,6 +36,5 @@
 # リセット
     scoreboard players reset $Value Temporary
     scoreboard players reset $Max Temporary
-    scoreboard players reset $NormalizedValue Temporary
     data remove storage asset:artifact LCDs
     data remove storage asset:artifact TCDs

@@ -1,10 +1,10 @@
-#> asset_manager:artifact/cooldown/mini_bar/normalize_lcds
+#> asset_manager:artifact/cooldown/mini_bar/normalize_cds
 #
 #
 #
 # @within function
 #   asset_manager:artifact/cooldown/mini_bar/
-#   asset_manager:artifact/cooldown/mini_bar/normalize_lcds
+#   asset_manager:artifact/cooldown/mini_bar/normalize_cds
 
 #! MiniBar
 # \u1000 16/16
@@ -27,8 +27,8 @@
 # \u9999  null
 
 # 取得
-    execute store result score $Value Temporary run data get storage asset:artifact LCDs[-1].Value
-    execute store result score $Max Temporary run data get storage asset:artifact LCDs[-1].Max
+    execute store result score $Value Temporary run data get storage asset:artifact CDs[-1].Value
+    execute store result score $Max Temporary run data get storage asset:artifact CDs[-1].Max
 
 # 0除算回避の為に0なら1にする
     execute if score $Max Temporary matches 0 run scoreboard players set $Max Temporary 1
@@ -44,11 +44,11 @@
 # ゼロパディングの代わりに+1000する
     scoreboard players add $NormalizedValue Temporary 1000
 
-# NormalizedLCDsに追加
-    data modify storage asset:artifact NormalizedLCDs append value 9999
-    execute unless score $Value Temporary matches -15 store result storage asset:artifact NormalizedLCDs[-1] int 1 run scoreboard players get $NormalizedValue Temporary
+# NormalizedCDsに追加
+    data modify storage asset:artifact NormalizedCDs append value 9999
+    execute unless score $Value Temporary matches -15 store result storage asset:artifact NormalizedCDs[-1] int 1 run scoreboard players get $NormalizedValue Temporary
 
 # 末尾削除
-    data remove storage asset:artifact LCDs[-1]
+    data remove storage asset:artifact CDs[-1]
 # 要素があれば再帰
-    execute if data storage asset:artifact LCDs[0] run function asset_manager:artifact/cooldown/mini_bar/normalize_lcds
+    execute if data storage asset:artifact CDs[0] run function asset_manager:artifact/cooldown/mini_bar/normalize_cds
