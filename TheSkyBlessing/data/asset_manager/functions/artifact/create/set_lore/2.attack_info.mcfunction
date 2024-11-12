@@ -1,8 +1,8 @@
-#> asset_manager:artifact/create/set_attack_info
+#> asset_manager:artifact/create/set_lore/2.attack_info
 #
 # 攻撃に関する情報をLoreに追加します
 #
-# @within function asset_manager:artifact/create/set_lore
+# @within function asset_manager:artifact/create/set_lore/
 
 #> private
 # @private
@@ -53,7 +53,7 @@
             execute unless data storage asset:artifact AttackInfo.ElementType[0] run data modify storage asset:artifact Line2[5] set value '{"text":"無 ","color":"white"}'
 
     # lootしてLoreに落とし込む
-        loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/attack_info
+        loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/2.attack_info
 
     # リセット
         data remove storage asset:artifact Line1

@@ -19,21 +19,26 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "storage": "asset:artifact",
+                                        "nbt": "CooldownIcon",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "LocalCooldownSecond"
+                                        "nbt": "CooldownSecond"
                                     },
                                     {
                                         "text": "."
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "LocalCooldownDecimal"
+                                        "nbt": "CooldownDecimal"
                                     },
                                     {
-                                        "text": "秒"
+                                        "text": " 秒"
                                     }
                                 ]
                             ],
@@ -64,28 +69,26 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "storage": "asset:artifact",
+                                        "nbt": "CooldownIcon",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": " "
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "LocalCooldownMinutes"
+                                        "nbt": "CooldownMinutes"
                                     },
                                     {
-                                        "text": "分"
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "LocalCooldownSecond"
-                                    },
-                                    {
-                                        "text": "."
+                                        "text": " 分 "
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "LocalCooldownDecimal"
+                                        "nbt": "CooldownSecond"
                                     },
                                     {
-                                        "text": "秒"
+                                        "text": " 秒"
                                     }
                                 ]
                             ],
@@ -94,9 +97,9 @@
                                     "condition": "minecraft:entity_scores",
                                     "entity": "this",
                                     "scores": {
-                                    "Temporary": {
-                                        "min": 1,
-                                        "max": 1
+                                        "Temporary": {
+                                            "min": 1,
+                                            "max": 1
                                         }
                                     }
                                 }

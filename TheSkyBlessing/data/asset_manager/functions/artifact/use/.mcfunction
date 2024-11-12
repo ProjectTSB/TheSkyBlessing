@@ -8,6 +8,8 @@
     function asset_manager:artifact/data/current/get
 # MP減少処理
     function asset_manager:artifact/use/remove_mp
+# 種別クールダウン保存
+    execute if data storage asset:artifact TargetItems[0].tag.TSB.TypeCooldown run function asset_manager:artifact/use/update_type_cooldown.m with storage asset:artifact TargetItems[0].tag.TSB.TypeCooldown
 # 特殊クールダウン保存
     execute if data storage asset:artifact TargetItems[0].tag.TSB.SpecialCooldown store result score $ArtifactSpecialCooldown Global run data get storage asset:artifact TargetItems[0].tag.TSB.SpecialCooldown
     execute if data storage asset:artifact TargetItems[0].tag.TSB.SpecialCooldown store result bossbar asset:special_cooldown max run scoreboard players get $ArtifactSpecialCooldown Global

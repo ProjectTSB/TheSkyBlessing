@@ -53,6 +53,7 @@
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
+    data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
@@ -66,7 +67,7 @@
     data modify storage asset:artifact Item.tag.display.Name set from block 10000 0 10000 Items[0].tag.display.Name
 
 # Lore
-    function asset_manager:artifact/create/set_lore
+    function asset_manager:artifact/create/set_lore/
 # カスタムNBT
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
 

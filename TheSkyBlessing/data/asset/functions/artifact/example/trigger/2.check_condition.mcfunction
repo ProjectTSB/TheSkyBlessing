@@ -7,6 +7,6 @@
 # 神器IDの設定
     data modify storage asset:artifact TargetID set value 2147483647
 # 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く
-    function asset:artifact/common/check_condition/hotbar
+    function asset:artifact/common/check_condition/mainhand
 # CanUsedタグをチェックして3.main.mcfunctionを実行する
     execute if entity @s[tag=CanUsed] run function asset:artifact/example/trigger/3.main

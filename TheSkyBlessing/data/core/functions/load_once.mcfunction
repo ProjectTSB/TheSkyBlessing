@@ -67,6 +67,12 @@ data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE012","color"
 data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
 data modify storage global Icon.God.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
 
+data modify storage global Icon.Cooldown.Local set value '{"text":"ﾛｰ","color":"white"}'
+data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"近","color":"white"}'
+data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"遠","color":"white"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"召","color":"white"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"癒","color":"white"}'
+data modify storage global Icon.Cooldown.Global set value '{"text":"ｸﾞ","color":"white"}'
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
