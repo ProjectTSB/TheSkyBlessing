@@ -21,7 +21,7 @@
 #       └ Argument.BypassDifficulty? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
-#       Argument.AdditionalMPHeal? : int
+#       Argument.AdditionalMPHeal? : int (default: PersistentArgument.AdditionalMPHeal)
 #       Argument.DisableLog? : boolean (default: false)
 #       Argument.Metadata? : any
 # @api
@@ -42,6 +42,7 @@
     execute unless data storage api: Argument.BypassEnchantments run data modify storage api: Argument.BypassEnchantments set value false
     execute unless data storage api: Argument.BypassResistance run data modify storage api: Argument.BypassResistance set value false
     execute unless data storage api: Argument.BypassDifficulty run data modify storage api: Argument.BypassDifficulty set value false
+    execute unless data storage api: Argument.AdditionalMPHeal run data modify storage api: Argument.AdditionalMPHeal set from storage api: PersistentArgument.AdditionalMPHeal
     execute unless data storage api: Argument.DisableLog run data modify storage api: Argument.DisableLog set value false
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
