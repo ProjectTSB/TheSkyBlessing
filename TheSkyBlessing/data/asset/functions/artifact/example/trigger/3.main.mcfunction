@@ -13,4 +13,8 @@
     function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..5] run data modify entity @s Motion[1] set value 2.5d
+    data modify storage api: Argument.Damage set value 1
+    data modify storage api: Argument.AttackType set value "Physical"
+    function api:damage/modifier
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function api:damage/
+    function api:damage/reset
