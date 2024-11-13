@@ -37,6 +37,8 @@ data modify storage asset:artifact AttackInfo.AttackRange set value "1.5"
 data modify storage asset:artifact MPCost set value 5
 data modify storage asset:artifact MPRequire set value 10
 
+data modify storage asset:artifact MPHealWhenHit set value 15
+
 data modify storage asset:artifact LocalCooldown set value 80
 
 data modify storage asset:artifact TypeCooldown.Type set value "shortRange"

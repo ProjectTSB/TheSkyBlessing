@@ -18,14 +18,16 @@
     execute if data storage asset:artifact AttackInfo run function asset_manager:artifact/create/set_lore/2.attack_info
 # 3? 必要MP
     execute if data storage asset:artifact MPRequire run loot replace block 10000 0 10000 container.3 loot asset_manager:artifact/generate_lore/3.mp_require
-# 4 消費MP
-    loot replace block 10000 0 10000 container.4 loot asset_manager:artifact/generate_lore/4.mp_cost
-# 5? 消費アイテム
-    execute if data storage asset:artifact CostText run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/5.cost_item
-# 6? クールダウン
-    function asset_manager:artifact/create/set_lore/6.cooldown/
-# 7 使える神
-    function asset_manager:artifact/create/set_lore/7.god
+# 4? 消費MP
+    execute if data storage asset:artifact MPCost run loot replace block 10000 0 10000 container.4 loot asset_manager:artifact/generate_lore/4.mp_cost
+# 5? ヒット時MP回復
+    execute if data storage asset:artifact MPHealWhenHit run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/5.mp_heal_when_hit
+# 6? 消費アイテム
+    execute if data storage asset:artifact CostText run loot replace block 10000 0 10000 container.6 loot asset_manager:artifact/generate_lore/6.cost_item
+# 7? クールダウン
+    function asset_manager:artifact/create/set_lore/7.cooldown/
+# 8 使える神
+    function asset_manager:artifact/create/set_lore/8.god
 # Lore一括追加
     data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
 # リセット
