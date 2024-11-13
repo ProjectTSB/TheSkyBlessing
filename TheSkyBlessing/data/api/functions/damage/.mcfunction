@@ -21,6 +21,7 @@
 #       └ Argument.BypassDifficulty? : boolean
 #       Argument.ReduceEnchantment? : id(minecraft:enchantment) | { id: id(minecraft:enchantment), modifier?: int }
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
+#       Argument.AdditionalMPHeal? : int
 #       Argument.DisableLog? : boolean (default: false)
 #       Argument.Metadata? : any
 # @api
