@@ -16,6 +16,7 @@
 #       AttackInfo? : Component
 #       MPCost : int
 #       MPRequire : int
+#       MPHealWhenHit : int
 #       CostText? : TextComponent
 #       LocalCooldown : int
 #       SpecialCooldown : int
@@ -49,6 +50,7 @@
     data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
     data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
+    data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount

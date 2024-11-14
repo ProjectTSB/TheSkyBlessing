@@ -34,8 +34,10 @@ data modify storage asset:artifact AttackInfo.BypassResist set value 1b
 data modify storage asset:artifact AttackInfo.IsRangeAttack set value "always"
 data modify storage asset:artifact AttackInfo.AttackRange set value "1.5"
 
-data modify storage asset:artifact MPCost set value 5
-data modify storage asset:artifact MPRequire set value 10
+# data modify storage asset:artifact MPCost set value 5
+# data modify storage asset:artifact MPRequire set value 10
+
+data modify storage asset:artifact MPHealWhenHit set value 5
 
 data modify storage asset:artifact LocalCooldown set value 80
 
