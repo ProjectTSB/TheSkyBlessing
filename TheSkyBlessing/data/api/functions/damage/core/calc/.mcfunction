@@ -9,20 +9,19 @@
     #declare score_holder $isDefenseCalcSkip
 
 # 計算式:
-# damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - min(5, resistanceLv) / 5) * (1 - (min(20, cappedEPF) / 25))
+# damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - min(10, resistanceLv) / 10) * (1 - (min(20, cappedEPF) / 25))
 
-# 計算的なダメージ上限(21474.83)チェック
-    execute if score $Damage Temporary matches 2147483.. run scoreboard players set $Damage Temporary 2147483
+# 計算的なダメージ上限(214748.36)チェック
+    execute if score $Damage Temporary matches 21474836.. run scoreboard players set $Damage Temporary 21474836
 # 防御による軽減計算部
     execute if score $defensePoints Temporary matches 0 if score $toughness Temporary matches 0 run scoreboard players set $isDefenseCalcSkip Temporary 1
     execute unless score $isDefenseCalcSkip Temporary matches 1 run function api:damage/core/calc/defense
-    execute if score $isDefenseCalcSkip Temporary matches 1 run scoreboard players operation $Damage Temporary *= $100 Const
 # 耐性エフェクトによる軽減計算部
     execute if score $Resistance Temporary matches 1.. run function api:damage/core/calc/resistance
 # エンチャントによる軽減計算部
     execute if score $EPF Temporary matches 1.. run function api:damage/core/calc/enchantment
-# システム的なダメージ上限(9999.9/99999999(e4))チェック
-    execute if score $Damage Temporary matches 99999000.. run scoreboard players set $Damage Temporary 99999000
+# システム的なダメージ上限(99999.9(e2))チェック
+    execute if score $Damage Temporary matches 9999990.. run scoreboard players set $Damage Temporary 9999990
 # Reset
     scoreboard players reset $isDefenseCalcSkip Temporary
     scoreboard players reset $defensePoints Temporary

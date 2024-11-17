@@ -8,7 +8,7 @@
 # @private
     #declare score_holder $Mul
 
-# $Resistance(e1) *= min(5, $Resistance(e0)) * e1 / 5
+# $Resistance(e1) *= min(5, $Resistance(e0)) * e1 / 10
     scoreboard players operation $Resistance Temporary < $10 Const
 # $Mul(e1) = 1 * e1 - $Resistance(e1)
     scoreboard players operation $Mul Temporary = $10 Const
