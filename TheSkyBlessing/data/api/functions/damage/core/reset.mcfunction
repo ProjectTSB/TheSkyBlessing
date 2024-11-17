@@ -14,6 +14,7 @@ data remove storage api: Argument.BypassArmorDefense
 data remove storage api: Argument.BypassToughness
 data remove storage api: Argument.BypassEnchantments
 data remove storage api: Argument.BypassResistance
+data remove storage api: Argument.BypassDifficulty
 data remove storage api: Argument.DisableParticle
 data remove storage api: Argument.ReduceEnchantment
 data remove storage api: Argument.AdditionalMPHeal
