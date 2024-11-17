@@ -6,4 +6,4 @@
 # @within tag/function asset:artifact/**
 
 # storage asset:context idのfeet/legs/chest/head/mainhand/offhandに装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する
-    execute if data storage asset:context id{hotbar:[2147483647]} run function asset:artifact/example/trigger/2.check_condition
+    execute if data storage asset:context id{mainhand:2147483647} run function asset:artifact/example/trigger/2.check_condition
