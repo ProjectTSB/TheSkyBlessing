@@ -11,7 +11,7 @@
     scoreboard players add $Difficulty Temporary 6
     scoreboard players operation $Damage Temporary *= $Difficulty Temporary
     scoreboard players operation $Damage Temporary /= $10 Const
-    execute if score $Damage Temporary matches 999990000.. run scoreboard players set $Damage Temporary 999990000
+    execute if score $Damage Temporary matches 9999990.. run scoreboard players set $Damage Temporary 9999990
 
 # リセット
     scoreboard players reset $Difficulty Temporary
