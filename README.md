@@ -17,7 +17,6 @@
 
 ## ライセンスについて
 このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
-* [Asset](Asset)ディレクトリ ([MIT License](Asset/LICENSE))
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 * [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
