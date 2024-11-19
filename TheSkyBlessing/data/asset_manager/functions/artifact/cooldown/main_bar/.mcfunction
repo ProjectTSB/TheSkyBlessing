@@ -57,3 +57,4 @@
     data remove storage asset:artifact LCD
     data remove storage asset:artifact TCD
     data remove storage asset:artifact MainBar
+    scoreboard players reset $NormalizedValue Temporary
