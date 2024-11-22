@@ -13,8 +13,8 @@
     data modify storage asset:teleporter GroupID set value "example"
 # デフォルトの起動状態 ("InvisibleDeactivate" | "VisibleDeactivate" | "Activate")
     data modify storage asset:teleporter ActivationState set value "Activate"
-# 色 ("white" | "aqua")
-    data modify storage asset:teleporter Color set value "aqua"
+# 色 (Optional)
+    data modify storage asset:teleporter Color set value 53706
 
 # 登録
     function asset:teleporter/common/register
