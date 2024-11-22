@@ -7,7 +7,7 @@
 #   GroupIDs : string
 #   ActivationState : string("InvisibleDeactivate","VisibleDeactivate","Activate")
 #   Dimension: string("minecraft:overworld","minecraft:the_nether","minecraft:the_end")
-#   Color? : int(default: 16776960)
+#   Color? : int(default: 16777215)
 # @within function asset:teleporter/*/register
 
 # パラメータチェック
