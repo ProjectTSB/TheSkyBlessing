@@ -1,56 +1,98 @@
 #> asset_manager:artifact/give/
 #
+# 神器を入手します
 #
-#
-# @within function api:artifact/*/from_rarity
+# @input storage asset:artifact
+#   ID : int
+#   Item : ItemID
+#   Name : TextComponent
+#   Lore : TextComponent[]
+#   RemainingCount? : int
+#   RemainingCountMax? : int
+#   Slot : Slot
+#   Trigger : Trigger
+#   SubTriggers : Trigger[]
+#   Condition? : TextComponent
+#   AttackInfo? : Component
+#   CostText? : TextComponent
+#   MPCost : int
+#   MPRequire? : int
+#   LocalCooldown? : int
+#   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#   SpecialCooldown? : int
+#   DisableCooldownMessage? : boolean
+#   DisableMPMessage? : boolean
+#   DisableBreakSound? : boolean
+#   CanUsedGod : God[]
+#   EquipID? : int
+#   Modifiers : Component[]
+#   ├ Type : string
+#   ├ Amount : double
+#   ├ Operation : "add" | "multiply_base" | "multiply"
+#   ├ MaxStack? : int
+#   └ StackReduction? : double
+#   CustomNBT? : Component
+# @output item 神器
+# @within function api:artifact/core/from_id
 
-#> For calc
+#> Inv
 # @private
-    #declare score_holder $CandidateLength
-    #declare score_holder $Argument.Index
-    #declare score_holder $Pulls
+    #declare score_holder $InvSize
 
-# セッション開ける
-    function lib:array/session/open
-# 該当レアリティのデータを取得
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[1]
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[2]
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[3]
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[4]
-# データサイズを取得
-    execute store result score $CandidateLength Temporary if data storage lib: Array[]
-# 対象Indexを決定
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Args.key set value "artifact_lv-1"
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Args.key set value "artifact_lv-2"
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Args.key set value "artifact_lv-3"
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Args.key set value "artifact_lv-4"
-    execute store result storage lib: Args.max int 1 run scoreboard players get $CandidateLength Temporary
-    execute store result storage lib: Args.scarcity_history_size int 0.35 run scoreboard players get $CandidateLength Temporary
-    execute store result score $Argument.Index Lib run function lib:random/with_biased/manual.m with storage lib: Args
-# 候補データを操作して対象Indexを-1に持ってくる
-    function lib:array/move
-# 一旦リセット
-    data modify storage asset:artifact Picks set from storage lib: Array[-1]
-    function lib:array/session/close
-# 候補データの再設定
-    function lib:array/session/open
-    data modify storage lib: Array set from storage asset:artifact Picks
-# プル数を乱数により設定
-# $Pulls = floor( $CandidateLength * 0.30~0.70(e2) ) / e2
-    execute store result score $CandidateLength Temporary if data storage lib: Array[]
-    scoreboard players remove $CandidateLength Temporary 1
-    execute store result score $Pulls Temporary run function lib:random/
-    scoreboard players operation $Pulls Temporary %= $41 Const
-    scoreboard players add $Pulls Temporary 30
-    scoreboard players operation $Pulls Temporary *= $CandidateLength Temporary
-    scoreboard players operation $Pulls Temporary /= $100 Const
-# シャッフルして取り出す
-    scoreboard players add $CandidateLength Temporary 1
-    data modify storage asset:artifact Type set from storage asset:context Type
-    function asset_manager:artifact/give/candidates
+# storage検証
+    execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
+    execute unless data storage asset:artifact Item run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Item","color":"red"}]
+    execute unless data storage asset:artifact Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
+    execute unless data storage asset:artifact Lore run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Lore","color":"red"}]
+    # execute unless data storage asset:artifact RemainingCount run
+    execute unless data storage asset:artifact RemainingCountMax if data storage asset:artifact RemainingCount run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
+    execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
+    # execute unless data storage asset:artifact Trigger run
+    execute if data storage asset:artifact Trigger run function asset_manager:artifact/give/validate/trigger
+    # execute unless data storage asset:artifact SubTriggers[0] run
+    # execute unless data storage asset:artifact DisableBreakSound run
+    execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
+    # execute unless data storage asset:artifact EquipID run
+    # execute unless data storage asset:artifact Modifiers[0] run
+    execute if data storage asset:artifact Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Modifiers
+    execute if data storage asset:artifact Modifiers[0] run function asset_manager:artifact/give/validate/modifier
+    execute if data storage asset:artifact Modifiers[0] run data remove storage asset:artifact CopiedModifiers
+    # execute unless data storage asset:artifact CustomNBT run
+# 各データ設定
+    function asset_manager:artifact/create/set_data
+# 神器排出
+    # execute if data storage asset:context {Type:"box"} // 何もする必要がない
+    execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset_manager:artifact/give/protect
+    execute if data storage asset:context {Type:"give"} run function api:inventory/get_size
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches ..35 run loot give @s mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
+    execute if data storage asset:context {Type:"give"} if score $InvSize Lib matches 36.. as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset_manager:artifact/give/protect
+    execute if data storage asset:context {Type:"replace"} run function asset_manager:artifact/give/replace
 # リセット
-    function lib:array/session/close
-    scoreboard players reset $CandidateLength Temporary
-    scoreboard players reset $Pulls Temporary
-    data remove storage lib: Args
-    data remove storage asset:artifact Type
+    scoreboard players reset $InvSize Lib
+    data remove storage asset:context Type
+    data remove storage asset:artifact ID
+    data remove storage asset:artifact Item
+    data remove storage asset:artifact Name
+    data remove storage asset:artifact Lore
+    data remove storage asset:artifact RemainingCount
+    data remove storage asset:artifact RemainingCountMax
+    data remove storage asset:artifact Slot
+    data remove storage asset:artifact Trigger
+    data remove storage asset:artifact SubTriggers
+    data remove storage asset:artifact Condition
+    data remove storage asset:artifact AttackInfo
+    data remove storage asset:artifact CostText
+    data remove storage asset:artifact MPCost
+    data remove storage asset:artifact MPRequire
+    data remove storage asset:artifact LocalCooldown
+    data remove storage asset:artifact TypeCooldown
+    data remove storage asset:artifact SpecialCooldown
+    data remove storage asset:artifact DisableCooldownMessage
+    data remove storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact DisableBreakSound
+    data remove storage asset:artifact CanUsedGod
+    data remove storage asset:artifact EquipID
+    data remove storage asset:artifact Modifiers
+    data remove storage asset:artifact CustomNBT

@@ -34,7 +34,7 @@
                                     "color": "green"
                                 },
                                 {
-                                    "nbt": "Item.tag.TSB.RemainingCountMAX",
+                                    "nbt": "Item.tag.TSB.RemainingCountMax",
                                     "storage": "asset:artifact",
                                     "color": "green"
                                 }

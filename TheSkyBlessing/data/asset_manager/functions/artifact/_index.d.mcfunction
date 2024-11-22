@@ -3,12 +3,10 @@
 
 #> storage
 # @within *
-#   asset_manager:artifact/**
+#   api:artifact/core/**
+#   asset:artifact/*/enroll_pool
 #   asset:artifact/*/register
-#   asset:artifact/*/give/2.give
-#   asset:artifact/*/trigger/2.check_condition
-#   asset:artifact/*/trigger/3.main
-#   asset:artifact/common/**
+#   asset_manager:artifact/**
 #   player_manager:actionbar/
     #declare storage asset:artifact
 

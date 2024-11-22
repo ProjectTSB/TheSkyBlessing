@@ -10,19 +10,31 @@
 #       Name : TextComponent
 #       Lore : TextComponent[]
 #       RemainingCount? : int
+#       RemainingCountMax? : int
 #       Slot : Slot
 #       Trigger : Trigger
+#       SubTriggers? : Trigger[]
 #       Condition? : TextComponent
 #       AttackInfo? : Component
-#       MPCost : int
-#       MPRequire : int
-#       MPHealWhenHit : int
+#       MPCost? : int
+#       MPRequire? : int
+#       MPHealWhenHit? : int
 #       CostText? : TextComponent
-#       LocalCooldown : int
-#       SpecialCooldown : int
+#       LocalCooldown? : int
+#       SpecialCooldown? : int
+#       DisableCooldownMessage? : boolean
+#       DisableMPMessage? : boolean
+#       DisableBreakSound? : boolean
 #       CanUsedGod : God[]
+#       EquipID? : int
+#       Modifiers : Component[]
+#       ├ Type : string
+#       ├ Amount : double
+#       ├ Operation : "add" | "multiply_base" | "multiply"
+#       ├ MaxStack : int
+#       └ StackReduction : double
 #       CustomNBT : Item.tag
-# @within function asset:artifact/common/give
+# @within function asset_manager:artifact/give/
 
 #> Private
 # @private
@@ -47,19 +59,23 @@
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
+    data modify storage asset:artifact Item.tag.TSB.Slot set from storage asset:artifact Slot
     data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
+    data modify storage asset:artifact Item.tag.TSB.SubTriggers set from storage asset:artifact SubTriggers
     data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
     data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
     data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
     data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
+    data modify storage asset:artifact Item.tag.TSB.EquipID set from storage asset:artifact EquipID
+    data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
 
 # 名前
     # 残り回数が存在する場合
@@ -69,7 +85,7 @@
     data modify storage asset:artifact Item.tag.display.Name set from block 10000 0 10000 Items[0].tag.display.Name
 
 # Lore
-    function asset_manager:artifact/create/set_lore/
+    function asset_manager:artifact/create/set_lore
 # カスタムNBT
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
 
