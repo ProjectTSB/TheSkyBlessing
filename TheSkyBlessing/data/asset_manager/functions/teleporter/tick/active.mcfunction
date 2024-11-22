@@ -7,7 +7,7 @@
 # 接地しているかの取得
     function api:data_get/on_ground
 # 初期化
-    execute if data storage api: {OnGround:true} if entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/summon_star/init
+    execute if data storage api: {OnGround:true} if entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/summon_star/init/
 # 初期化中
     execute if data storage api: {OnGround:true} if entity @s[tag=TeleporterInitializing] run function asset_manager:teleporter/tick/summon_star/summon/
     execute if data storage api: {OnGround:true} if entity @s[tag=TeleporterInitializing] run function asset_manager:teleporter/tick/summon_star/summon/
