@@ -65,7 +65,7 @@ execute align xz run tp @s ~0.5 ~ ~0.5 0 0
 
 execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/002/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
+execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 diamond_block keep
 
 execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/004/register
