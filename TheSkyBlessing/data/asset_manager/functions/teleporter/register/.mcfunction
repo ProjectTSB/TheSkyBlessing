@@ -10,12 +10,12 @@
     execute as @e[type=item_display,tag=Teleporter,distance=..0.01,limit=1] run function oh_my_dat:please
 # 直接入れるやつ
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ID set from storage asset:teleporter ID
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupID set from storage asset:teleporter GroupID
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage asset:teleporter ActivationState
 # グループ側に入れるやつ
     data modify storage asset:teleporter Teleporters append value {}
     data modify storage asset:teleporter Teleporters[-1].ID set from storage asset:teleporter ID
-    data modify storage asset:teleporter Teleporters[-1].GroupID set from storage asset:teleporter GroupID
+    data modify storage asset:teleporter Teleporters[-1].GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage asset:teleporter ActivationState
     execute if data storage asset:teleporter Color run function asset_manager:teleporter/register/calculate_and_insert_color_data
     data modify storage asset:teleporter Teleporters[-1].Dimension set from storage asset:teleporter Dimension
