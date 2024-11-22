@@ -23,8 +23,8 @@
 # ジャンプ力上昇のlvを取得する
 # $JumpBoost(e1) = ($JumpBoost(e1) ?? -1(e1)) + 1(e1)
     function api:data_get/active_effects
-    execute store result score $JumpBoost Temporary run data get storage api: active_effects[{id:"jump_boost"}].amplifier 10
-    execute unless data storage api: active_effects[{id:"jump_boost"}] run scoreboard players set $JumpBoost Temporary -10
+    execute store result score $JumpBoost Temporary run data get storage api: active_effects[{id:"minecraft:jump_boost"}].amplifier 10
+    execute unless data storage api: active_effects[{id:"minecraft:jump_boost"}] run scoreboard players set $JumpBoost Temporary -10
     scoreboard players add $JumpBoost Temporary 10
 
 # リセット
