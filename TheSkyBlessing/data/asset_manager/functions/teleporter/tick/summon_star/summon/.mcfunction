@@ -3,10 +3,7 @@
 #
 #
 # @input storage asset:teleporter FilteredTeleporters
-# @within function
-#   asset_manager:teleporter/tick/active
-#   asset_manager:teleporter/tick/summon_star/summon_n
-
+# @within function asset_manager:teleporter/tick/active
 
 # EntityStorage 呼び出し
     function oh_my_dat:please
