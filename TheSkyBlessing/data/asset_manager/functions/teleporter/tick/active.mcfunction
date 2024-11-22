@@ -9,7 +9,8 @@
 # 初期化
     execute if data storage api: {OnGround:true} if entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/summon_star/init
 # 初期化中
-    execute if data storage api: {OnGround:true} if entity @s[tag=TeleporterInitializing] run function asset_manager:teleporter/tick/summon_star/summon_n
+    execute if data storage api: {OnGround:true} if entity @s[tag=TeleporterInitializing] run function asset_manager:teleporter/tick/summon_star/summon/
+    execute if data storage api: {OnGround:true} if entity @s[tag=TeleporterInitializing] run function asset_manager:teleporter/tick/summon_star/summon/
 # ジャンプ検知
     execute if data storage api: {OnGround:false} unless entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/tp/
 # VFX
