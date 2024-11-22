@@ -27,10 +27,7 @@
 # ActivationState を更新する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage api: Argument.ActivationState
 # バージョンを更新する
-    scoreboard players set $Version Temporary 0
-    execute store result score $Version Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationStateVersion
-    scoreboard players add $Version Temporary 1
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationStateVersion int 1 run scoreboard players get $Version Temporary
+    function asset_manager:teleporter/common/increment_activation_state_version
 
 # IDから対象テレポーターのマスタデータを取得する
     data modify storage asset:teleporter Args.ID set from storage api: Argument.ID
@@ -42,5 +39,4 @@
     data modify storage asset:teleporter Teleporters append from storage asset:teleporter TargetTeleporterData
 
 # リセット
-    scoreboard players reset $Version Temporary
     data remove storage asset:teleporter TargetTeleporterData

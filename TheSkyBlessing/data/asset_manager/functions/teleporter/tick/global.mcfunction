@@ -11,6 +11,10 @@
 # EntityStorage 呼び出し
     function oh_my_dat:please
 
+# 天使確認
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{AngelProtection:     true} unless entity @e[type=#lib:living,tag=Enemy.Boss,distance=..120] run function asset_manager:teleporter/tick/angel_protection/disable
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{AngelProtection: true} if entity @e[type=#lib:living,tag=Enemy.Boss,distance=..120] run function asset_manager:teleporter/tick/angel_protection/enable
+
 # 更新処理
     scoreboard players set $Version Temporary 0
     execute store result score $Version Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationStateVersion
