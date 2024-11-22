@@ -26,7 +26,7 @@
     #declare tag TPCancel
 
 #> for Init
-# @within asset_manager:teleporter/tick/star_init/*
+# @within asset_manager:teleporter/tick/summon_star/**
     #declare tag TPStarInit
 
 #> OpenDeclares
