@@ -9,10 +9,6 @@
 #   Argument.ActivationState : string("InvisibleDeactivate","VisibleDeactivate","Activate")
 # @within function api:teleporter/set_activation_state/from_id
 
-#> Private
-# @private
-#declare score_holder $Version
-
 # テレポーターのIDから対象テレポーターのEntityStorageのIDの取得を試みる
     data modify storage asset:teleporter Args.ID set from storage api: Argument.ID
     function asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter.m with storage asset:teleporter Args
