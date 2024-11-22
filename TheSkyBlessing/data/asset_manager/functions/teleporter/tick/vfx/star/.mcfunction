@@ -9,6 +9,9 @@
 # 点滅が開始したら毎 tick インクリメントする
     execute if score @s TeleporterStarBlinkTick matches 1.. run scoreboard players add @s TeleporterStarBlinkTick 1
 
+# 2tick ごとに点滅をいい感じに行う
+# ここで呼び出す先のマクロ function が同一の内容で 3 つに分かれているのは、
+# マクロのキャッシュが 8 パターンまでしか行われないことに由来する
 execute if score @s TeleporterStarBlinkTick matches 00 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:0.95}
 execute if score @s TeleporterStarBlinkTick matches 02 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:0.90}
 execute if score @s TeleporterStarBlinkTick matches 04 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:0.85}
