@@ -48,4 +48,4 @@ execute if score @s TeleporterStarBlinkTick matches 64 run function asset_manage
 execute if score @s TeleporterStarBlinkTick matches 66 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:0.90}
 execute if score @s TeleporterStarBlinkTick matches 68 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:0.95}
 execute if score @s TeleporterStarBlinkTick matches 70 run function asset_manager:teleporter/tick/vfx/star/blink/1.m {Percentage:1.00}
-execute if score @s TeleporterStarBlinkTick matches 100 run scoreboard players reset @s TeleporterStarBlinkTick
+execute if score @s TeleporterStarBlinkTick matches 140 run scoreboard players reset @s TeleporterStarBlinkTick
