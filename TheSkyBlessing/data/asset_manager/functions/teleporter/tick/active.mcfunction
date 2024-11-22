@@ -14,3 +14,4 @@
     execute if data storage api: {OnGround:false} unless entity @s[tag=!TeleporterInitializing,tag=!TeleporterInitialized] run function asset_manager:teleporter/tick/tp/
 # VFX
     summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,effects:[{id:"blindness",amplifier:0b,duration:25,show_particles:0b}]}
+    execute anchored eyes positioned ^ ^ ^ as @e[type=item_display,tag=TPStar,distance=..1.8] if score @s TPStarFromUserID = @p[tag=this] UserID facing entity @s feet positioned as @s run function asset_manager:teleporter/tick/vfx/star/

@@ -22,6 +22,7 @@ scoreboard players operation $Color Temporary *= $256 Const
 scoreboard players operation $Color Temporary += $B Temporary
 
 execute store result storage asset:teleporter Teleporters[-1].Data.Color int 1 run scoreboard players get $Color Temporary
+data modify storage asset:teleporter Teleporters[-1].Data.ColorPart set from storage asset:teleporter Color
 
 scoreboard players reset $R Temporary
 scoreboard players reset $G Temporary
