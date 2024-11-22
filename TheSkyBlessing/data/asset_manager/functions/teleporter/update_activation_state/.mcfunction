@@ -9,11 +9,38 @@
 #   Argument.ActivationState : string("InvisibleDeactivate","VisibleDeactivate","Activate")
 # @within function api:teleporter/set_activation_state/from_id
 
+#> Private
+# @private
+#declare score_holder $Version
+
 # テレポーターのIDから対象テレポーターのEntityStorageのIDの取得を試みる
-    function asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
-# 該当するテレポーターが存在するならば更新する
-    execute if score $TeleporterExists Temporary matches 1 run function asset_manager:teleporter/update_activation_state/update_state
+    data modify storage asset:teleporter Args.ID set from storage api: Argument.ID
+    function asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter.m with storage asset:teleporter Args
+    data remove storage asset:teleporter Args.ID
+
+# テレポーターが存在しなければ return
+    execute unless score $ OhMyDatID matches -2147483648..2147483647 run return 0
+
+# テレポーターのEntityStorageを取得する
+    function oh_its_dat:please
+
+# ActivationState を更新する
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage api: Argument.ActivationState
+# バージョンを更新する
+    scoreboard players set $Version Temporary 0
+    execute store result score $Version Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationStateVersion
+    scoreboard players add $Version Temporary 1
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationStateVersion int 1 run scoreboard players get $Version Temporary
+
+# IDから対象テレポーターのマスタデータを取得する
+    data modify storage asset:teleporter Args.ID set from storage api: Argument.ID
+    function asset_manager:teleporter/update_activation_state/pop_master_data_from_teleporter_id.m with storage asset:teleporter Args
+    data remove storage asset:teleporter Args.ID
+# 状態を更新する
+    data modify storage asset:teleporter TargetTeleporterData.Data.ActivationState set from storage api: Argument.ActivationState
+# 元に戻す
+    data modify storage asset:teleporter Teleporters append from storage asset:teleporter TargetTeleporterData
 
 # リセット
-    scoreboard players reset $TeleporterExists Temporary
+    scoreboard players reset $Version Temporary
     data remove storage asset:teleporter TargetTeleporterData
