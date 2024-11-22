@@ -4,6 +4,11 @@
 #
 # @within function asset_manager:teleporter/tick/player
 
+# テレポーターの EntityStorage 取得
+    execute as @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
+# 戦闘中になったら
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{AngelProtection:true} run tag @s add TPCancel
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} run tag @s add TPCancel
 # スニークを解除したら
     execute unless predicate lib:is_sneaking run tag @s add TPCancel
 # 地面がなくなったら

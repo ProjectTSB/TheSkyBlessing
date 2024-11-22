@@ -10,6 +10,7 @@
 
 #> Teleporter
 # @within
+#   core:tick/
 #   asset_manager:teleporter/**
 #   api:teleporter/set_activation_state/from_nearest
     #declare tag Teleporter
@@ -20,19 +21,14 @@
     #declare tag TeleporterInitialized
     #declare tag TeleporterInitializing
     #declare tag TPStar
-    #declare tag TPStar.White
-    #declare tag TPStar.Aqua
+    #declare tag TPStar.Active
     #declare tag SuppressTeleport
     #declare tag TPCancel
 
 #> for Init
-# @within asset_manager:teleporter/tick/star_init/*
+# @within asset_manager:teleporter/tick/summon_star/**
     #declare tag TPStarInit
 
 #> OpenDeclares
 # @within asset_manager:island/dispel/register_tp
     #declare tag Teleporter
-
-#> TeleporterExists
-# @within asset_manager:teleporter/update_activation_state/*
-    #declare score_holder $TeleporterExists

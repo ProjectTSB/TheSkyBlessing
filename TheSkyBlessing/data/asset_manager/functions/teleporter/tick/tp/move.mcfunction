@@ -2,19 +2,19 @@
 #
 #
 #
+# @input args
+#   Dimension: string
+#   X: Numeric
+#   Y: Numeric
+#   Z: Numeric
 # @within function asset_manager:teleporter/tick/tp/
 
-# TP先へ移動
-    data modify entity @s Pos set from storage asset:teleporter TargetPos
-# プレイヤーを飛ばす
-    execute positioned as @s run tp @p[tag=this] ~ ~ ~
-    tp @p[tag=this] @p[tag=this]
+# TP
+    $execute in $(Dimension) run tp @s $(X) $(Y) $(Z)
 # VFX
     function asset_manager:teleporter/tick/vfx/teleport/from
-    execute positioned as @s run function asset_manager:teleporter/tick/vfx/teleport/to
+    execute at @s run function asset_manager:teleporter/tick/vfx/teleport/to
 # 盲目を消す
-    effect clear @p[tag=this] blindness
+    effect clear @s blindness
 # TP後タグ付与
-    tag @p[tag=this] add SuppressTeleport
-# 汎用entityを戻す
-    execute in overworld run tp @s 0.0 0.0 0.0
+    tag @s add SuppressTeleport
