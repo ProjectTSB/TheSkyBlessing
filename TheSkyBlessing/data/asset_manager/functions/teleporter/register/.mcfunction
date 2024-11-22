@@ -18,6 +18,7 @@
     data modify storage asset:teleporter Teleporters[-1].GroupID set from storage asset:teleporter GroupID
     data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage asset:teleporter ActivationState
     execute if data storage asset:teleporter Color run function asset_manager:teleporter/register/calculate_and_insert_color_data
+    data modify storage asset:teleporter Teleporters[-1].Dimension set from storage asset:teleporter Dimension
     data modify storage asset:teleporter Teleporters[-1].Pos set from entity @e[type=item_display,tag=Teleporter,distance=..0.01,limit=1] Pos
 # 参照情報を保存する
     data modify storage asset:teleporter TeleporterOMDMap append value {}

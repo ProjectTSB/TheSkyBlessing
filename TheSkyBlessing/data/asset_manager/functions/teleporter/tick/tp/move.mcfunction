@@ -3,13 +3,14 @@
 #
 #
 # @input args
+#   Dimension: string
 #   X: Numeric
 #   Y: Numeric
 #   Z: Numeric
 # @within function asset_manager:teleporter/tick/tp/
 
 # TP
-    $tp @s $(X) $(Y) $(Z)
+    $execute in $(Dimension) run tp @s $(X) $(Y) $(Z)
 # VFX
     function asset_manager:teleporter/tick/vfx/teleport/from
     execute at @s run function asset_manager:teleporter/tick/vfx/teleport/to
