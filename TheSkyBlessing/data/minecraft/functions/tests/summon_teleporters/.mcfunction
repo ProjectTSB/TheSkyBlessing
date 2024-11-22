@@ -52,10 +52,6 @@
     #declare function asset:teleporter/052/register
     #declare function asset:teleporter/053/register
     #declare function asset:teleporter/054/register
-    #declare function asset:teleporter/300/register
-    #declare function asset:teleporter/301/register
-    #declare function asset:teleporter/302/register
-    #declare function asset:teleporter/303/register
     #declare tag Teleporter
     #declare storage asset:teleporter
 
@@ -67,201 +63,166 @@ data remove storage asset:teleporter TeleporterOMDMap
 
 execute align xz run tp @s ~0.5 ~ ~0.5 0 0
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/002/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/004/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/005/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/006/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/007/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/008/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/009/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/010/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/011/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/012/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/013/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/014/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/015/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/016/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/017/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/018/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/019/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/020/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/021/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/022/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/023/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/024/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/025/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/026/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/028/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/030/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/031/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/032/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/033/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/034/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/035/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/036/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/037/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/038/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/039/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/040/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/041/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/042/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/043/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
+execute at @s run tp @s ~ ~ ~ ~9 ~
 execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/044/register
 execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/045/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/046/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/047/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/048/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/050/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/051/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/052/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/053/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
-
-execute at @s run tp @s ~ ~ ~ ~7.2 ~
-execute at @s positioned ^ ^ ^30 align xz positioned ~0.5 ~ ~0.5 run function asset:teleporter/054/register
-execute at @s positioned ^ ^ ^30 align xz run setblock ~0.5 ~-1 ~0.5 glass keep
 
 data modify storage api: Argument.ID set value 7
 data modify storage api: Argument.ActivationState set value "Activate"
@@ -288,11 +249,5 @@ data modify storage api: Argument.ID set value 38
 data modify storage api: Argument.ActivationState set value "Activate"
 function api:teleporter/set_activation_state/from_id
 data modify storage api: Argument.ID set value 42
-data modify storage api: Argument.ActivationState set value "Activate"
-function api:teleporter/set_activation_state/from_id
-data modify storage api: Argument.ID set value 50
-data modify storage api: Argument.ActivationState set value "Activate"
-function api:teleporter/set_activation_state/from_id
-data modify storage api: Argument.ID set value 52
 data modify storage api: Argument.ActivationState set value "Activate"
 function api:teleporter/set_activation_state/from_id
