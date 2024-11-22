@@ -9,7 +9,7 @@
 #declare score_holder $ActivateStarCount
 
 # EntityStorageを再度取得する
-    execute as @e[type=marker,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
+    execute as @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
 # グループIDから対象TP先を取得する
     data modify storage asset:teleporter TargetGroupID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupID
     execute if data storage asset:teleporter TargetGroupID run function asset_manager:teleporter/tick/star_init/get_teleporters_from_group_id
