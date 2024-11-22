@@ -11,6 +11,6 @@
     execute unless data storage asset:teleporter TargetPos anchored eyes positioned ^0.03 ^ ^1 positioned ~ ~-0.4 ~ run function asset_manager:teleporter/tick/tp/find_target_star
     execute unless data storage asset:teleporter TargetPos anchored eyes positioned ^-.03 ^ ^1 positioned ~ ~-0.4 ~ run function asset_manager:teleporter/tick/tp/find_target_star
 # 視点先に星が存在する場合はテレポート処理
-    execute if data storage asset:teleporter TargetPos as 0-0-0-0-0 run function asset_manager:teleporter/tick/tp/move
+    execute if data storage asset:teleporter TargetPos run function asset_manager:teleporter/tick/tp/move
 # リセット
     data remove storage asset:teleporter TargetPos

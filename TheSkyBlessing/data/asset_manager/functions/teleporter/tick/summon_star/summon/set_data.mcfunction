@@ -9,7 +9,9 @@
 # EntityStorage 取得
     function oh_my_dat:please
 # 座標データ
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TPStarData.TargetPos set from storage asset:teleporter TargetTeleporter.Pos
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TPStarData.TargetPos.X set from storage asset:teleporter TargetTeleporter.Pos[0]
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TPStarData.TargetPos.Y set from storage asset:teleporter TargetTeleporter.Pos[1]
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TPStarData.TargetPos.Z set from storage asset:teleporter TargetTeleporter.Pos[2]
 # 有効化されているならタグ付与
     execute if data storage asset:teleporter TargetTeleporter.Data{ActivationState:"Activate"} run tag @s add TPStar.Active
 # 有効化されているならサイズ大きく
