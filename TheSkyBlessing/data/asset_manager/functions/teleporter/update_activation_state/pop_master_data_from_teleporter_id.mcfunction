@@ -6,7 +6,7 @@
 # @output storage asset:teleporter
 #   TargetTeleporterData : compound GroupData
 #   Teleporters : Teleporters - Teleporters[id=Argument.ID]
-# @within function asset_manager:teleporter/update_activation_state/
+# @within function asset_manager:teleporter/update_activation_state/update_state
 
 # セッション開く
     function lib:array/session/open

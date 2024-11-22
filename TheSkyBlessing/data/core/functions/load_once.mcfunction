@@ -200,6 +200,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Teleporter
     # @within function
     #   asset_manager:teleporter/**
+        scoreboard objectives add TeleporterActivationStateVersion dummy {"text":"テレポーターの更新がどこまで反映されているか"}
         scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
 
     #> AssetManager: Island

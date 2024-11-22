@@ -10,6 +10,7 @@
 
 #> Teleporter
 # @within
+#   core:tick/
 #   asset_manager:teleporter/**
 #   api:teleporter/set_activation_state/from_nearest
     #declare tag Teleporter

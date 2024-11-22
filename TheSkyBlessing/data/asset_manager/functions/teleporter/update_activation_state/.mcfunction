@@ -11,20 +11,8 @@
 
 # テレポーターのIDから対象テレポーターのEntityStorageのIDの取得を試みる
     function asset_manager:teleporter/update_activation_state/try_get_storage_id_from_teleporter
-
-# テレポーターのEntityStorageを取得する
-    execute if score $TeleporterExists Temporary matches 1 run function oh_its_dat:please
-# 状態を更新する
-    execute if score $TeleporterExists Temporary matches 1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage api: Argument.ActivationState
-# 更新した状態を item_display に反映させる
-    execute if score $TeleporterExists Temporary matches 1 run function asset_manager:teleporter/common/update_display_state
-
-# IDから対象テレポーターのマスタデータを取得する
-    execute if score $TeleporterExists Temporary matches 1 run function asset_manager:teleporter/update_activation_state/pop_master_data_from_teleporter_id
-# 状態を更新する
-    execute if score $TeleporterExists Temporary matches 1 run data modify storage asset:teleporter TargetTeleporterData.Data.ActivationState set from storage api: Argument.ActivationState
-# 元に戻す
-    execute if score $TeleporterExists Temporary matches 1 run data modify storage asset:teleporter Teleporters append from storage asset:teleporter TargetTeleporterData
+# 該当するテレポーターが存在するならば更新する
+    execute if score $TeleporterExists Temporary matches 1 run function asset_manager:teleporter/update_activation_state/update_state
 
 # リセット
     scoreboard players reset $TeleporterExists Temporary
