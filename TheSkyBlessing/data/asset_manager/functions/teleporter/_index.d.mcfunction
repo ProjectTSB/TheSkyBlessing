@@ -21,6 +21,7 @@
     #declare tag TeleporterInitialized
     #declare tag TeleporterInitializing
     #declare tag TPStar
+    #declare tag TPStar.Active
     #declare tag SuppressTeleport
     #declare tag TPCancel
 
