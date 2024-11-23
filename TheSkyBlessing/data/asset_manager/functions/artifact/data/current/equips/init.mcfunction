@@ -4,7 +4,6 @@
 #
 # @within function
 #   asset_manager:artifact/data/*/revert_from_current
-#   asset_manager:artifact/triggers/equipments/mask_slot/
 
 # 初期化
     data modify storage asset:artifact Equipments set value []

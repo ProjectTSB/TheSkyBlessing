@@ -20,45 +20,21 @@
 
 #> Trigger検知用
 # @within function
-#   asset_manager:artifact/triggers/**
 #   core:handler/**
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
 
-
-#> バニラの攻撃を扱う用
-# @within function
-#   asset_manager:artifact/check/
-#   asset_manager:artifact/triggers/attack/**
-#declare tag ShouldVanillaAttack
-
 #> check用の失敗フラグ
 # @within function
 #   asset_manager:artifact/check/**
     #declare tag CheckFailed
 
-#> スニークの閾値用スコアホルダー
-# @within function asset_manager:artifact/triggers/sneak/*
-    #declare score_holder $SneakThreshold
-
 #> use_itemの誤検知対策タグ
 # @within function
 #   core:handler/drop
-#   asset_manager:artifact/triggers/use_item/check_item_drop
     #declare tag StrictCheckMainhand
-
-#> 神器側にさらすタグ
-# @within *
-#   asset_manager:artifact/triggers/**
-#   asset:artifact/**
-    #declare tag Attacker
-    #declare tag Victim
-    #declare tag Healer
-    #declare tag Receiver
-    #declare tag Equip
-    #declare tag DisEquip
 
 #> セレクターテンプレート
 # @within * asset:artifact/**
@@ -71,7 +47,9 @@
     #declare score_holder $NormalizedValue
     #declare score_holder $Max
 
-#> リセット用
-# @within function asset_manager:artifact/triggers/equipments/update_cooldown/*
-    #declare score_holder $Tick
-    #declare score_holder $LatestUsedTick
+#> 使用条件
+# @within function
+#   asset:artifact/*/*/check**
+#   asset_manager:artifact/check/
+#   asset_manager:artifact/use/
+    #declare tag CanUsed

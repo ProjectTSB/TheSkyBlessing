@@ -16,6 +16,5 @@
     function player_manager:mp/viewer/check_xpbar
 
 # リセット
-    execute if entity @s[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:artifact/triggers/sneak/reset
     scoreboard players reset @s[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
     tag @s remove FlyingElytra

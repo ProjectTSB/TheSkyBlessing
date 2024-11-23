@@ -8,7 +8,6 @@
 # @within *
 #   core:tick/player/
 #   player_manager:vanilla_attack
-#   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
 #   core:handler/attack

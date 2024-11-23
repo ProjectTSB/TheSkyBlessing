@@ -4,7 +4,6 @@
 #
 # @within function
 #   asset_manager:artifact/data/*/*_current
-#   asset_manager:artifact/triggers/
 
 # リセット
     data remove storage asset:context Inventory

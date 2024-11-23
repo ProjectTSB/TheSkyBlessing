@@ -13,6 +13,3 @@
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $Damage Temporary
-
-# MP 回復
-    execute if data storage api: Argument.AdditionalMPHeal if entity @s[type=!player] as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/mp_heal

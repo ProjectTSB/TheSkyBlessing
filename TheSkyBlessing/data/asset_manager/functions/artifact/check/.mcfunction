@@ -4,12 +4,12 @@
 #
 # @input
 #   as player
-#   storage asset:artifact TargetSlot : Slot
+#   storage asset:artifact
+#       TargetItem : ItemData
+#       TargetItems : ItemData[]
 # @output tag @s CanUsed
 # @within function asset:artifact/common/check_condition/*
 
-# 対象スロットのデータの取得
-    function asset_manager:artifact/data/current/get
 # 事前にtag付与
     tag @s add CanUsed
 # 条件を満たしてなかったらtag削除
@@ -43,9 +43,6 @@
         tag @s[tag=CheckFailed] remove CheckFailed
 # 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
     execute if entity @s[tag=!CanUsed] if data storage asset:artifact TargetItems[0].tag.TSB.RemainingCount if data storage asset:artifact TargetItems[0].tag.TSB{Trigger:"itemUse"} run function asset_manager:artifact/use/item/has_remain
-
-# mainhand の場合はタグを削除する
-    execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} if data storage asset:context Attack{Type:"vanilla_melee"} run tag @s remove ShouldVanillaAttack
 
 # リセット
     data remove storage asset:artifact TargetSlot

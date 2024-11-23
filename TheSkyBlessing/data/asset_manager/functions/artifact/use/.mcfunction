@@ -4,16 +4,6 @@
 #
 # @within function asset:artifact/common/use/*
 
-# 神器データの取得
-    function asset_manager:artifact/data/current/get
-# 神器処理内で利用される DamageAPI 用に MP 回復量のデータを追加する
-# DamageAPI で MP 回復をするのは設計上非常に正しくなく、
-# 本来は、DamageAPI 時に割り込みで呼び出された回数を記録し、
-# 神器処理終了後にまとめて MPHealWhenHit * Cnt を回復するのが正しいと思われる。
-# が、実装時点では神器の処理終了時に追加で処理を実行することが出来ないため、
-# すべてを諦めて DamageAPI で回復を行う。
-    data remove storage api: PersistentArgument.AdditionalMPHeal
-    execute store result storage api: PersistentArgument.AdditionalMPHeal int 1 run data get storage asset:artifact TargetItems[0].tag.TSB.MPHealWhenHit
 # MP減少処理
     execute if data storage asset:artifact TargetItems[0].tag.TSB.MPCost run function asset_manager:artifact/use/remove_mp
 # 種別クールダウン保存
