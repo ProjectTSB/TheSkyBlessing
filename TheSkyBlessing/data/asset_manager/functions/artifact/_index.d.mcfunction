@@ -40,6 +40,10 @@
 #   asset_manager:artifact/check/**
     #declare tag CheckFailed
 
+#> スニーク用スコアホルダー
+# @within function asset_manager:artifact/triggers/*sneak*/*
+    #declare score_holder $SneakTime
+
 #> use_itemの誤検知対策タグ
 # @within function
 #   core:handler/drop

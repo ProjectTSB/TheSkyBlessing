@@ -218,6 +218,7 @@ team modify NoCollision collisionRule never
 
     #> イベントハンドラ用スコアボード
     # @within function
+    #   asset_manager:artifact/triggers/**
     #   core:load_once
     #   core:handler/*
     #   core:tick/**
