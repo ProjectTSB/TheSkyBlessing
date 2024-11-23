@@ -28,3 +28,6 @@
     data modify storage api: Argument.Amount set value -0.1
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/base/add
+
+# 全装備を再チェック
+    tag @s add Believe.Changed
