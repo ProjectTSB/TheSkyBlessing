@@ -17,6 +17,7 @@
 # 変更時の更新処理
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown/
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown_type
+    execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:artifact/triggers/event/sneak/reset_when_change_item
 # 各神器にトリガー受けわたし
     function asset_manager:artifact/triggers/trigger/
 # EntityStorageにデータ突っ込む
