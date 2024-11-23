@@ -12,6 +12,9 @@
 # contextを設定
     data modify storage asset:context id set from storage asset:artifact TargetItem.ID
 
+# アイテムを消費中であることを登録する
+    execute if data storage asset:artifact TargetItem{Trigger:"use_item"} unless data storage asset:artifact New.Consumable.ID if entity @s[tag=TriggerFlag.UsingItem,tag=!ConsumingItem] run function asset_manager:artifact/triggers/event/use_item/init
+
 # サブトリガーを先に処理するのは、主トリガーでデータを潰してしまってもいいように
 # サブトリガーを処理する
     # equipは別処理をしているので弾く
@@ -27,8 +30,8 @@
     # サブトリガーが存在するようならそれぞれ処理する
         execute if data storage asset:artifact CopiedTriggers[0] run function asset_manager:artifact/triggers/trigger/foreach/sub/
 # トリガーを持っていれば処理を実行する
-# equipは別処理をしているので弾く
-    execute unless data storage asset:artifact TargetItem{Trigger:"equip"} run function asset_manager:artifact/triggers/trigger/foreach/call.m with storage asset:artifact TargetItem
+# equipとuse_itemは別処理をしているので弾く
+    execute unless data storage asset:artifact TargetItem{Trigger:"equip"} unless data storage asset:artifact TargetItem{Trigger:"use_item"} run function asset_manager:artifact/triggers/trigger/foreach/call.m with storage asset:artifact TargetItem
 
 # リセット
     data remove storage asset:artifact TargetItem
