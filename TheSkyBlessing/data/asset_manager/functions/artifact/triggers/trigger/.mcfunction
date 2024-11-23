@@ -6,6 +6,12 @@
 
 # バニラ攻撃をしているならフラグを建てる
     execute if data storage asset:artifact ArtifactEvents.Attack[{Type:"vanilla_melee"}] run tag @s add ShouldVanillaAttack
+# アイテムを消費したなら処理する
+    execute if entity @s[tag=TriggerFlag.UseItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/use_item/
+# アイテムを消費している最中なら引き継ぐ
+    execute if entity @s[tag=TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/continue
+# アイテムを消費していないなら解除する
+    execute if entity @s[tag=!TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/reset
 
 # 神器のデータを取得する
     function lib:array/session/open

@@ -21,8 +21,7 @@
 
 #> Trigger検知用
 # @within function
-#   asset_manager:artifact/triggers/
-#   asset_manager:artifact/triggers/*/
+#   asset_manager:artifact/triggers/**
 #   core:handler/**
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
@@ -44,10 +43,11 @@
 # @within function asset_manager:artifact/triggers/*sneak*/*
     #declare score_holder $SneakTime
 
-#> use_itemの誤検知対策タグ
+#> アイテム消費中
 # @within function
-#   core:handler/drop
-    #declare tag StrictCheckMainhand
+#   asset_manager:artifact/triggers/trigger/foreach/
+#   asset_manager:artifact/triggers/event/use_item/**
+    #declare tag ConsumingItem
 
 #> 神器側にさらすタグ
 # @within *
