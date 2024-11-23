@@ -9,9 +9,10 @@
 # EntityStorage呼び出し
     function oh_my_dat:please
 # 突っ込む
-    # data modify storage asset:artifact Old.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Inventory
+    data modify storage asset:artifact Old.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Inventory
     data modify storage asset:artifact Old.SelectedItemSlot set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.SelectedItemSlot
     data modify storage asset:artifact Old.Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Items
     data modify storage asset:artifact Old.ItemData set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.ItemData
+    data modify storage asset:artifact Old.Consumable set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Consumable
 # EntityStorageから削除
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash

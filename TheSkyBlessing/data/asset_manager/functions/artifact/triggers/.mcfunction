@@ -18,7 +18,7 @@
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown/
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown_type
 # 各神器にトリガー受けわたし
-
+    function asset_manager:artifact/triggers/trigger/
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
@@ -26,7 +26,3 @@
     data remove storage asset:artifact ArtifactEvents
     data remove storage asset:artifact New
     data remove storage asset:artifact Old
-    tag @s remove TriggerFlag.ClickCarrot
-    tag @s remove TriggerFlag.UseItem
-    tag @s remove TriggerFlag.Sneak
-    tag @s remove TriggerFlag.UsingItem

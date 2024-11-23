@@ -12,16 +12,19 @@
 # キーチェック
     execute store result score $ID Temporary run data get storage lib: Array[-1].ID
 # スロットチェック
-    # 今のslotを取得する
+    # チェックしているslotを取得する
         execute store result storage asset:artifact Enum.Index int 1 run scoreboard players add $SlotIndex Temporary 1
         function asset:artifact/enum/index/.m with storage asset:artifact Enum
-    # autoを処理しておく
-        data modify storage asset:artifact TargetSlot set from storage lib: Array[-1].Slot
-        execute if data storage asset:artifact {TargetSlot:"auto"} if data storage asset:artifact Enum{Slot:"mainhand"} run data modify storage lib: Array[-1].Slot set from storage asset:artifact Enum.Slot
-        execute if data storage asset:artifact {TargetSlot:"auto"} if data storage asset:artifact Enum{Slot: "offhand"} run data modify storage lib: Array[-1].Slot set from storage asset:artifact Enum.Slot
-        data remove storage asset:artifact TargetSlot
+    # 神器のスロットのデータを保管する
+    # これはauto処理のため
+        data modify storage lib: Array[-1].TargetSlot set from storage lib: Array[-1].Slot
+
+        data modify storage asset:artifact CopiedSlot set from storage lib: Array[-1].Slot
+        execute if data storage asset:artifact {CopiedSlot:"auto"} if data storage asset:artifact Enum{Slot:"mainhand"} run data modify storage lib: Array[-1].TargetSlot set from storage asset:artifact Enum.Slot
+        execute if data storage asset:artifact {CopiedSlot:"auto"} if data storage asset:artifact Enum{Slot: "offhand"} run data modify storage lib: Array[-1].TargetSlot set from storage asset:artifact Enum.Slot
+        data remove storage asset:artifact CopiedSlot
     # Slotが一致しているか確認する
-        execute store success score $InvalidSlot Temporary run data modify storage lib: Array[-1].Slot set from storage asset:artifact Enum.Slot
+        execute store success score $InvalidSlot Temporary run data modify storage lib: Array[-1].TargetSlot set from storage asset:artifact Enum.Slot
 # データが正しそうなら引っ張り出す
     data modify storage asset:artifact New.ItemData append value {}
     execute if score $ID Temporary matches 1.. unless score $InvalidSlot Temporary matches 1.. run data modify storage asset:artifact New.ItemData[-1] set from storage lib: Array[-1]
