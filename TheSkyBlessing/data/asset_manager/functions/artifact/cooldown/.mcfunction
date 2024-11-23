@@ -4,7 +4,7 @@
 #
 # @within function asset_manager:artifact/tick/player
 
-#! LocalCoolDown
+#! LocalCooldown
 #  0. offhand
 #  1. feet
 #  2. legs
