@@ -6,6 +6,7 @@
 #   api:artifact/core/**
 #   asset:artifact/*/enroll_pool
 #   asset:artifact/*/register
+#   asset:artifact/enum/**
 #   asset_manager:artifact/**
 #   player_manager:actionbar/
     #declare storage asset:artifact
@@ -20,6 +21,7 @@
 
 #> Trigger検知用
 # @within function
+#   asset_manager:artifact/triggers/**
 #   core:handler/**
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
@@ -47,9 +49,23 @@
     #declare score_holder $NormalizedValue
     #declare score_holder $Max
 
+#> クールダウンリセット用
+# @within function asset_manager:artifact/triggers/equipments/update_cooldown/**
+    #declare score_holder $Tick
+    #declare score_holder $Max
+    #declare score_holder $LatestUsedTick
+
+#> スロットの数値化
+# @within function
+#   asset_manager:artifact/data/new/fetch_data/*
+#   asset_manager:artifact/triggers/trigger/**
+    #declare score_holder $SlotIndex
+
 #> 使用条件
 # @within function
 #   asset:artifact/*/*/check**
 #   asset_manager:artifact/check/
 #   asset_manager:artifact/use/
+#   asset_manager:artifact/triggers/*/*
+#   asset_manager:artifact/triggers/trigger/foreach/exec
     #declare tag CanUsed
