@@ -21,12 +21,19 @@
 
 #> Trigger検知用
 # @within function
-#   asset_manager:artifact/triggers/**
+#   asset_manager:artifact/triggers/
+#   asset_manager:artifact/triggers/*/
 #   core:handler/**
     #declare tag TriggerFlag.ClickCarrot
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
+
+#> バニラの攻撃を扱う用
+# @within function
+#   asset_manager:artifact/triggers/trigger/
+#   asset_manager:artifact/triggers/attack_melee/foreach
+    #declare tag ShouldVanillaAttack
 
 #> check用の失敗フラグ
 # @within function
@@ -37,6 +44,15 @@
 # @within function
 #   core:handler/drop
     #declare tag StrictCheckMainhand
+
+#> 神器側にさらすタグ
+# @within *
+#   asset_manager:artifact/triggers/**
+#   asset:artifact/**
+    #declare tag Attacker
+    #declare tag Victim
+    #declare tag Healer
+    #declare tag Receiver
 
 #> セレクターテンプレート
 # @within * asset:artifact/**

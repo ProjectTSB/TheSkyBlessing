@@ -6,6 +6,7 @@
 #   api:damage/core/health_subtract/non-player/
 #   api:heal/core/non-player
 #   lib:score_to_health_wrapper/fluctuation
+#   asset_manager:artifact/triggers/vanilla/damage
 #   mob_manager:fix_health
 
 #> For Init
