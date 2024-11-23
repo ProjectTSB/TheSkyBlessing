@@ -3,6 +3,7 @@
 #
 #
 # @within function
+#   asset_manager:artifact/triggers/
 #   asset_manager:artifact/triggers/trigger/
 #   asset_manager:artifact/triggers/use_item/
 

@@ -8,6 +8,7 @@
     # EquipIDは必要なのでlib:array/maskは使わない
     # 改宗時は問答無用で通すようにする
         data modify storage asset:artifact Mask set from storage asset:artifact CopiedChanges[-1]._._
+        execute if entity @s[tag=Believe.Changed] run data modify storage asset:artifact Mask set value false
         data modify storage asset:artifact Old.MaskedItemData append from storage asset:artifact Old.CopiedItemData[-1]
         execute unless data storage asset:artifact Old.MaskedItemData[-1].EquipID run data modify storage asset:artifact Old.MaskedItemData[-1].EquipID set value -2
         execute if data storage asset:artifact Old.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact Old.MaskedItemData[-1].Modifiers[].ID set from storage asset:artifact Old.CopiedItemData[-1].ID
