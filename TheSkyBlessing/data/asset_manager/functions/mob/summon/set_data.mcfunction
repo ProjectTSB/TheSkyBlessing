@@ -109,8 +109,6 @@
     data modify storage api: Argument.Address set from storage asset:mob ID
     function api:rom/please
     data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Lore set from storage asset:mob Lore
-# ボスバーの表示
-    execute if data storage asset:mob {Type:"Enemy.Boss"} run function asset_manager:mob/bossbar/init
 # データ初期化
     function mob_manager:init/
 # リセット

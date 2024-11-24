@@ -54,8 +54,6 @@
     function world_manager:gimmick/
 
 # Mob処理部
-    # AssetMobのグローバル処理
-        function asset_manager:mob/tick/global
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理

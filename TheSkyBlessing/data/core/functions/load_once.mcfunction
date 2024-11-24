@@ -171,11 +171,8 @@ team modify NoCollision collisionRule never
     # @within function
     #   core:load_once
     #   asset_manager:mob/**
-        bossbar add asset:bossbar {"text":""}
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
-    bossbar set asset:bossbar color pink
-    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Object -Public
     # @public
