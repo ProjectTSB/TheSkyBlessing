@@ -66,6 +66,7 @@ jobs:
             function@asset:mob/mob_name/attack/
             function@asset:mob/mob_name/death/
             function@asset:mob/mob_name/hurt/
+            function@asset:mob/mob_name/init/
             function@asset:mob/mob_name/remove/
             function@asset:mob/mob_name/tick/
             function@asset:mob/mob_name/attack/SOMETHING_FUNCTION
