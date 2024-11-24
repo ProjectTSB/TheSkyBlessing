@@ -8,18 +8,12 @@
 
 # 信仰タグ削除
     tag @s remove Believe.Rumor
-# 雷攻撃+15%
-    data modify storage api: Argument.UUID set value [2, 1, 1, 12]
-    function api:modifier/attack/thunder/remove
 # 雷耐性-15%
     data modify storage api: Argument.UUID set value [2, 1, 1, 12]
     function api:modifier/defense/thunder/remove
 # 攻撃-10%
     data modify storage api: Argument.UUID set value [2, 1, 1, 12]
     function api:modifier/attack/base/remove
-# 耐性-10%
-    data modify storage api: Argument.UUID set value [2, 1, 1, 12]
-    function api:modifier/defense/base/remove
 
 # PassiveBuffの補正を削除
     function player_manager:god/rumor/passive/remove
