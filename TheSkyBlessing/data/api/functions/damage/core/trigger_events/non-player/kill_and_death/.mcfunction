@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:damage/core/health_subtract/non-player/kill
+# @within function api:damage/core/health_subtract/non-player/
 
 #> Declare
 # @within function api:damage/core/trigger_events/non-player/kill_and_death/*
