@@ -67,7 +67,7 @@
 #> RemovingEntity
 # @within function
 #   asset_manager:mob/triggers/
-#   asset_manager:island/dispel/boss/remove
+#   api:mob/remove
     #declare tag RemovingEntity
 
 #> 汎用タグ類
