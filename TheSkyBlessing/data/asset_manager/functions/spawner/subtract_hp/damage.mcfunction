@@ -22,6 +22,7 @@
 # サイズ反映
     execute store result entity @s transformation.scale[0] float 0.01 run scoreboard players get $Size Temporary
     execute store result entity @s transformation.scale[1] float 0.01 run scoreboard players get $Size Temporary
+    data modify entity @s start_interpolation set value 0
 # リセット
     scoreboard players reset $Size Temporary
     scoreboard players reset $MaxHP Temporary
