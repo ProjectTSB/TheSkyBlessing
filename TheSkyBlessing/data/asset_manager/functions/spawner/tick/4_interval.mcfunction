@@ -5,4 +5,4 @@
 # @within function core:tick/4_interval
 
 # VFX
-    execute at @e[type=snowball,tag=Spawner,tag=!BreakSpawner] run function asset_manager:spawner/tick/particle
+    execute at @e[type=item_display,tag=Spawner] run function asset_manager:spawner/tick/particle
