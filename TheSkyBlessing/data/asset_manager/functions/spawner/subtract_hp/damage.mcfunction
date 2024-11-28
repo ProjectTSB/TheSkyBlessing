@@ -16,9 +16,9 @@
     execute store result score $MaxHP Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxHP
     scoreboard players operation $Size Temporary = @s SpawnerHP
 # サイズ計算 (e2)
-    scoreboard players operation $Size Temporary *= $600 Const
+    scoreboard players operation $Size Temporary *= $60 Const
     scoreboard players operation $Size Temporary /= $MaxHP Temporary
-    scoreboard players add $Size Temporary 200
+    scoreboard players add $Size Temporary 20
 # サイズ反映
     execute store result entity @s transformation.scale[0] float 0.01 run scoreboard players get $Size Temporary
     execute store result entity @s transformation.scale[1] float 0.01 run scoreboard players get $Size Temporary
