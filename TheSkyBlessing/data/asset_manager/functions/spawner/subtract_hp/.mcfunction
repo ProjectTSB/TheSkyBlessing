@@ -7,7 +7,7 @@
 # TargetMobID取得
     execute store result score $TargetMobID Temporary run data get storage asset:context id
 # そのMobを特定/処理する
-    execute as @e[type=item_display,tag=Spawner,distance=..100,sort=nearest] run function asset_manager:spawner/subtract_hp/check_already_find
+    execute at @s as @e[type=item_display,tag=Spawner,distance=..100,sort=nearest] run function asset_manager:spawner/subtract_hp/check_already_find
 # リセット
     scoreboard players reset $TargetMobID Temporary
     data remove storage asset:spawner AlreadyFind
