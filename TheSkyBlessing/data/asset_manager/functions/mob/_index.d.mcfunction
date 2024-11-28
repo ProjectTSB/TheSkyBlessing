@@ -26,6 +26,7 @@
 # @within function
 #   core:tick/
 #   mob_manager:init/
+#   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
