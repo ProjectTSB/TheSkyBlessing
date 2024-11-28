@@ -85,6 +85,12 @@
     #declare tag Frozen
     #declare tag Drown
 
+#> AntiTeleport
+# @within function
+#   asset_manager:mob/summon/set_tag
+#   asset:**
+    #declare tag AntiTeleport
+
 #> 汎用奈落耐性処理用タグ
 # @within function
 #   asset_manager:mob/common_tag/anti_void_action/**
