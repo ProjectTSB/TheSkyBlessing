@@ -10,7 +10,7 @@
 
     # 初期化
         data modify storage asset:artifact Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]','""']
-        data modify storage asset:artifact Line2 set value ['{"storage":"global","nbt":"Icon.Attack.Physical","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Magic","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Fire","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Water","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Thunder","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.None","color":"#333333","interpret":true}']
+        data modify storage asset:artifact Line2 set value ['{"storage":"global","nbt":"Icon.Attack.Physical","color":"#444444","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Magic","color":"#444444","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Fire","color":"#444444","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Water","color":"#444444","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Thunder","color":"#444444","interpret":true}','{"storage":"global","nbt":"Icon.Attack.None","color":"#444444","interpret":true}']
 
 
     # Line-1
