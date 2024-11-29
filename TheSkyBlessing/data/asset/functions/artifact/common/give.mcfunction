@@ -76,3 +76,4 @@
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
     data remove storage asset:artifact DisableBreakSound
+    data remove storage asset:artifact MPHealWhenHit
