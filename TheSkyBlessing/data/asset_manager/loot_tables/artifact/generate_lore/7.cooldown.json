@@ -25,7 +25,7 @@
                                         "storage": "asset:artifact",
                                         "nbt": "Cooldown[]",
                                         "interpret": true,
-                                        "separator": " / "
+                                        "separator": " "
                                     }
                                 ]
                             ]

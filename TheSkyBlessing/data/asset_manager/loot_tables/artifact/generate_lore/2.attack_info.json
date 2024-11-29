@@ -60,12 +60,24 @@
                                         "interpret": true
                                     },
                                     {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[1]",
                                         "interpret": true
                                     },
                                     {
-                                        "text": "| "
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "|"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -73,14 +85,26 @@
                                         "interpret": true
                                     },
                                     {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[3]",
                                         "interpret": true
                                     },
                                     {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[4]",
                                         "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
