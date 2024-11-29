@@ -68,6 +68,7 @@ data modify storage global Icon.God.Urban set value '{"text":"\\uE001","color":"
 data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE002","color":"white","font":"icon"}'
 data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE003","color":"white","font":"icon"}'
 data modify storage global Icon.God.Rumor set value '{"text":"\\uE004","color":"white","font":"icon"}'
+data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
 
 data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
@@ -279,6 +280,7 @@ team modify NoCollision collisionRule never
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
+    #   core:update_team_prefix.m
     #   player_manager:set_team_and_per_health
         team add None.LowHP
         team add None.MedHP
@@ -316,24 +318,7 @@ team modify NoCollision collisionRule never
     team modify Rumor.LowHP color red
     team modify Rumor.MedHP color yellow
     team modify Rumor.HighHP color green
-    team modify None.LowHP prefix {"text":"  ","color":"white"}
-    team modify None.MedHP prefix {"text":"  ","color":"white"}
-    team modify None.HighHP prefix {"text":"  ","color":"white"}
-    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Flora.MedHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Flora.HighHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.LowHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.MedHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.HighHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.LowHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.MedHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.HighHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.LowHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.MedHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.HighHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.LowHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.MedHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.HighHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    function core:update_team_prefix.m with storage global Icon.God
 
     #> PlayerManager用スコアボード
     # @within
