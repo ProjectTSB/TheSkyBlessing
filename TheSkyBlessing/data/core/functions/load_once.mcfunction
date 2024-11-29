@@ -61,25 +61,27 @@ data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
-data modify storage global Icon.God.Flora set value '{"text":"\\uB000<\\uE000","color":"white","font":"icon"}'
-data modify storage global Icon.God.Urban set value '{"text":"\\uB000<\\uE001","color":"white","font":"icon"}'
-data modify storage global Icon.God.Nyaptov set value '{"text":"\\uB000<\\uE002","color":"white","font":"icon"}'
-data modify storage global Icon.God.Wi-ki set value '{"text":"\\uB000<\\uE003","color":"white","font":"icon"}'
-data modify storage global Icon.God.Rumor set value '{"text":"\\uB000<\\uE004","color":"white","font":"icon"}'
+data modify storage global Icon.Frame set value '{"text":"\\uB000<","color":"white","font":"icon"}'
 
-data modify storage global Icon.Cooldown.Local set value '{"text":"\\uB000<\\uE200","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uB000<\\uE202","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uB000<\\uE203","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uB000<\\uE204","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uB000<\\uE205","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Global set value '{"text":"\\uB000<\\uE201","color":"white","font":"icon"}'
+data modify storage global Icon.God.Flora set value '{"text":"\\uE000","color":"white","font":"icon"}'
+data modify storage global Icon.God.Urban set value '{"text":"\\uE001","color":"white","font":"icon"}'
+data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE002","color":"white","font":"icon"}'
+data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE003","color":"white","font":"icon"}'
+data modify storage global Icon.God.Rumor set value '{"text":"\\uE004","color":"white","font":"icon"}'
 
-data modify storage global Icon.Attack.Physical set value '{"text":"\\uB000<\\uE100","color":"white","font":"icon"}'
-data modify storage global Icon.Attack.Magic set value '{"text":"\\uB000<\\uE101","color":"white","font":"icon"}'
-data modify storage global Icon.Attack.Fire set value '{"text":"\\uB000<\\uE102","color":"white","font":"icon"}'
-data modify storage global Icon.Attack.Water set value '{"text":"\\uB000<\\uE103","color":"white","font":"icon"}'
-data modify storage global Icon.Attack.Thunder set value '{"text":"\\uB000<\\uE104","color":"white","font":"icon"}'
-data modify storage global Icon.Attack.None set value '{"text":"\\uB000<\\uE105","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE204","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
+
+data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Magic set value '{"text":"\\uE101","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Fire set value '{"text":"\\uE102","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Water set value '{"text":"\\uE103","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug

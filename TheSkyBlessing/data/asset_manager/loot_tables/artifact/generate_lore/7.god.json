@@ -27,12 +27,22 @@
                                         "color": "dark_gray"
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[0]",
                                         "interpret": true
                                     },
                                     {
                                         "text": " "
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -43,6 +53,11 @@
                                         "text": " "
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[2]",
                                         "interpret": true
@@ -51,12 +66,22 @@
                                         "text": " "
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Temp.CanUsedGod[3]",
                                         "interpret": true
                                     },
                                     {
                                         "text": " "
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
