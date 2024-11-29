@@ -10,7 +10,7 @@
 
     # 初期化
         data modify storage asset:artifact Line1 set value ['""','{"text":"???"}','[{"text":"範囲-"},{"text":"不明","color":"gray"}]','""']
-        data modify storage asset:artifact Line2 set value ['{"text":"物理 ","color":"dark_gray"}','{"text":"魔法 ","color":"dark_gray"}','{"text":"火 ","color":"dark_gray"}','{"text":"水 ","color":"dark_gray"}','{"text":"雷 ","color":"dark_gray"}','{"text":"無 ","color":"dark_gray"}']
+        data modify storage asset:artifact Line2 set value ['{"storage":"global","nbt":"Icon.Attack.Physical","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Magic","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Fire","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Water","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.Thunder","color":"#333333","interpret":true}','{"storage":"global","nbt":"Icon.Attack.None","color":"#333333","interpret":true}']
 
 
     # Line-1
@@ -39,18 +39,18 @@
 
     # Line-2
         # 物理/魔法を表示 //未設定-物理
-            execute if data storage asset:artifact {AttackInfo:{AttackType:[Physical]}} run data modify storage asset:artifact Line2[0] set value '{"text":"物理 ","color":"dark_green"}'
-            execute if data storage asset:artifact {AttackInfo:{AttackType:[Magic]}} run data modify storage asset:artifact Line2[1] set value '{"text":"魔法 ","color":"dark_purple"}'
+            execute if data storage asset:artifact {AttackInfo:{AttackType:[Physical]}} run data modify storage asset:artifact Line2[0] set value '{"storage":"global","nbt":"Icon.Attack.Physical","color":"white","interpret":true}'
+            execute if data storage asset:artifact {AttackInfo:{AttackType:[Magic]}} run data modify storage asset:artifact Line2[1] set value '{"storage":"global","nbt":"Icon.Attack.Magic","color":"white","interpret":true}'
 
-            execute unless data storage asset:artifact AttackInfo.AttackType[0] run data modify storage asset:artifact Line2[0] set value '{"text":"物理 ","color":"dark_green"}'
+            execute unless data storage asset:artifact AttackInfo.AttackType[0] run data modify storage asset:artifact Line2[0] set value '{"storage":"global","nbt":"Icon.Attack.Physical","color":"white","interpret":true}'
 
         # 属性を表示 //未設定-無
-            execute if data storage asset:artifact {AttackInfo:{ElementType:[Fire]}} run data modify storage asset:artifact Line2[2] set value '{"text":"火 ","color":"red"}'
-            execute if data storage asset:artifact {AttackInfo:{ElementType:[Water]}} run data modify storage asset:artifact Line2[3] set value '{"text":"水 ","color":"aqua"}'
-            execute if data storage asset:artifact {AttackInfo:{ElementType:[Thunder]}} run data modify storage asset:artifact Line2[4] set value '{"text":"雷 ","color":"yellow"}'
-            execute if data storage asset:artifact {AttackInfo:{ElementType:[None]}} run data modify storage asset:artifact Line2[5] set value '{"text":"無 ","color":"white"}'
+            execute if data storage asset:artifact {AttackInfo:{ElementType:[Fire]}} run data modify storage asset:artifact Line2[2] set value '{"storage":"global","nbt":"Icon.Attack.Fire","color":"white","interpret":true}'
+            execute if data storage asset:artifact {AttackInfo:{ElementType:[Water]}} run data modify storage asset:artifact Line2[3] set value '{"storage":"global","nbt":"Icon.Attack.Water","color":"white","interpret":true}'
+            execute if data storage asset:artifact {AttackInfo:{ElementType:[Thunder]}} run data modify storage asset:artifact Line2[4] set value '{"storage":"global","nbt":"Icon.Attack.Thunder","color":"white","interpret":true}'
+            execute if data storage asset:artifact {AttackInfo:{ElementType:[None]}} run data modify storage asset:artifact Line2[5] set value '{"storage":"global","nbt":"Icon.Attack.None","color":"white","interpret":true}'
 
-            execute unless data storage asset:artifact AttackInfo.ElementType[0] run data modify storage asset:artifact Line2[5] set value '{"text":"無 ","color":"white"}'
+            execute unless data storage asset:artifact AttackInfo.ElementType[0] run data modify storage asset:artifact Line2[5] set value '{"storage":"global","nbt":"Icon.Attack.None","color":"white","interpret":true}'
 
     # lootしてLoreに落とし込む
         loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/2.attack_info

@@ -15,6 +15,14 @@
                                 [
                                     {
                                         "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "使用可能: "
+                                    },
+                                    {
+                                        "text": "",
                                         "italic": false,
                                         "color": "dark_gray"
                                     },
