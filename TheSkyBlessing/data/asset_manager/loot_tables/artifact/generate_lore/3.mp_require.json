@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "必要MP: "
+                                        "text": "ＭＰ必要　　",
+                                        "font": "misaki/gothic_2nd"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
