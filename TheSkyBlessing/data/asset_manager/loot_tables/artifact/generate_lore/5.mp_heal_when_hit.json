@@ -19,11 +19,32 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "ヒット時MP回復: "
+                                        "text": "ＭＰ回復　　",
+                                        "font": "misaki/gothic_2nd"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "MPHealWhenHit"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "/",
+                                        "font": "default"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "Hit",
+                                        "font": "default"
                                     }
                                 ]
                             ]

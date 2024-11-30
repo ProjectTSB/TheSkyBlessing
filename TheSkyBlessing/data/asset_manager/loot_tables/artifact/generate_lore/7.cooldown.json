@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "text": "クールダウン",
+                                        "font": "misaki/gothic_2nd"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",

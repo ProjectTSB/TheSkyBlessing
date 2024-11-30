@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "攻撃情報: "
+                                        "text": "攻撃情報　　",
+                                        "font": "misaki/gothic_2nd"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -50,9 +55,17 @@
                                 ],
                                 [
                                     {
-                                        "text": "攻撃属性: ",
+                                        "text": "",
                                         "color": "white",
                                         "italic": false
+                                    },
+                                    {
+                                        "text": "攻撃属性　　",
+                                        "font": "misaki/gothic_2nd"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
