@@ -68,6 +68,11 @@
                                         "font": "space"
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[0]",
                                         "interpret": true
@@ -75,6 +80,11 @@
                                     {
                                         "text": "\u0002",
                                         "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -93,6 +103,11 @@
                                         "font": "space"
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[2]",
                                         "interpret": true
@@ -100,6 +115,11 @@
                                     {
                                         "text": "\u0002",
                                         "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -111,6 +131,11 @@
                                         "font": "space"
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[4]",
                                         "interpret": true
@@ -118,6 +143,11 @@
                                     {
                                         "text": "\u0002",
                                         "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",

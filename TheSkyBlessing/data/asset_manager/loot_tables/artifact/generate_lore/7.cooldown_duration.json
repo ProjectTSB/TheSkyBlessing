@@ -19,6 +19,11 @@
                                         "italic": false
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownIcon",
                                         "interpret": true
@@ -72,6 +77,11 @@
                                         "text": "",
                                         "color": "white",
                                         "italic": false
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
