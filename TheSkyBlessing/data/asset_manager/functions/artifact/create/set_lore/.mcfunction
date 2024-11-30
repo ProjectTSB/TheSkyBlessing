@@ -23,7 +23,7 @@
 # 5? ヒット時MP回復
     execute if data storage asset:artifact MPHealWhenHit run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/5.mp_heal_when_hit
 # 6? 消費アイテム
-    execute if data storage asset:artifact CostText run function asset_manager:artifact/create/set_lore/6.consume_item
+    execute if data storage asset:artifact ConsumeItem run function asset_manager:artifact/create/set_lore/6.consume_item
 # 7? クールダウン
     function asset_manager:artifact/create/set_lore/7.cooldown/
 # 8 使える神

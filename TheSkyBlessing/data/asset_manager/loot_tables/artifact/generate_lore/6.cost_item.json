@@ -28,7 +28,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText.Item",
+                                        "nbt": "ConsumeItem.Item",
                                         "interpret": true
                                     },
                                     {
@@ -45,7 +45,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText.Count",
+                                        "nbt": "ConsumeItem.Count",
                                         "font": "default"
                                     }
                                 ]
@@ -86,7 +86,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText.Item",
+                                        "nbt": "ConsumeItem.Item",
                                         "interpret": true
                                     },
                                     {
@@ -103,7 +103,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText.Count",
+                                        "nbt": "ConsumeItem.Count",
                                         "font": "default"
                                     },
                                     {
@@ -116,7 +116,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText.Extra",
+                                        "nbt": "ConsumeItem.Extra",
                                         "interpret": true
                                     },
                                     {

@@ -15,7 +15,7 @@
 #   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
-#   CostText? : {Item: TextComponent, Count: int, Extra?: TextComponent}
+#   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
