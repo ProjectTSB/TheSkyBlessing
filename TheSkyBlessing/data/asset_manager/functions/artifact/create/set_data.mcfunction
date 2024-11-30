@@ -17,7 +17,7 @@
 #       MPCost : int
 #       MPRequire : int
 #       MPHealWhenHit : int
-#       CostText? : TextComponent
+#       CostText? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #       LocalCooldown : int
 #       SpecialCooldown : int
 #       CanUsedGod : God[]
