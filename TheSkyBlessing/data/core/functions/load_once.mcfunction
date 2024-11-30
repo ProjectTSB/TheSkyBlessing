@@ -62,6 +62,7 @@ data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 data modify storage global Icon.Frame set value '{"text":"\\uB000<","color":"white","font":"icon"}'
+data modify storage global Icon.FrameWhite set value '{"text":"\\uB001<","color":"white","font":"icon"}'
 
 data modify storage global Icon.God.Flora set value '{"text":"\\uE000","color":"white","font":"icon"}'
 data modify storage global Icon.God.Urban set value '{"text":"\\uE001","color":"white","font":"icon"}'
