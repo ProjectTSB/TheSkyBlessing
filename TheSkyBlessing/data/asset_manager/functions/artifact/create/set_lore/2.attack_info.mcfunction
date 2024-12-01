@@ -16,7 +16,7 @@
     execute if data storage asset:artifact AttackInfo.AttackRange run data modify storage asset:artifact Line1 append value '[{"text":"射程","font":"default"},{"text":"\\u0002","font":"space"},{"storage":"asset:artifact","nbt":"AttackInfo.AttackRange"},{"text":"\\u0002","font":"space"},{"text":"m","font":"default"}]'
 # 範囲情報
     execute unless data storage asset:artifact AttackInfo run data modify storage asset:artifact Line1 append value '{"text":"[不明]","color":"gray"}'
-    execute if data storage asset:artifact AttackInfo{IsRangeAttack:"never"} run data modify storage asset:artifact Line1 append value '{"text":"[単体]","color":"aqua"}'
+    execute if data storage asset:artifact AttackInfo{IsRangeAttack:"never"} run data modify storage asset:artifact Line1 append value '{"text":"[単体]","color":"white"}'
     execute if data storage asset:artifact AttackInfo{IsRangeAttack:"probability"} run data modify storage asset:artifact Line1 append value '[{"text":"[範囲","color":"aqua"},{"text":"\\u0002","font":"space"},{"text":"|","font":"default"},{"text":"\\u0002","font":"space"},{"text":"確率]","font":"default"}]'
     execute if data storage asset:artifact AttackInfo{IsRangeAttack:"condition"} run data modify storage asset:artifact Line1 append value '[{"text":"[範囲","color":"green"},{"text":"\\u0002","font":"space"},{"text":"|","font":"default"},{"text":"\\u0002","font":"space"},{"text":"条件]","font":"default"}]'
     execute if data storage asset:artifact AttackInfo{IsRangeAttack:"every"} run data modify storage asset:artifact Line1 append value '{"text":"[範囲]","color":"gold"}'
