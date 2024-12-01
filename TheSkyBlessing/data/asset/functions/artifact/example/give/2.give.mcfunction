@@ -17,7 +17,9 @@ data modify storage asset:artifact Name set value '{"text":"ツルギ","color":"
 
 data modify storage asset:artifact Lore set value ['{"text":"きる"}']
 
-data modify storage asset:artifact CostText set value '[{"translate":"item.minecraft.iron_ingot"},{"text":"x1"}]'
+data modify storage asset:artifact ConsumeItem.Item set value '{"translate":"item.minecraft.iron_ingot"}'
+data modify storage asset:artifact ConsumeItem.Count set value 1
+data modify storage asset:artifact ConsumeItem.Extra set value '{"text":"10%"}'
 
 data modify storage asset:artifact RemainingCount set value 1024
 
@@ -27,11 +29,11 @@ data modify storage asset:artifact Trigger set value "onAttackByMelee"
 
 data modify storage asset:artifact Condition set value '{"text":"ねこ"}'
 
-data modify storage asset:artifact AttackInfo.Damage set value 10
+data modify storage asset:artifact AttackInfo.Damage set value [1000,2000]
 data modify storage asset:artifact AttackInfo.AttackType set value ["Physical"]
 data modify storage asset:artifact AttackInfo.ElementType set value ["None"]
-data modify storage asset:artifact AttackInfo.BypassResist set value 1b
-data modify storage asset:artifact AttackInfo.IsRangeAttack set value "always"
+data modify storage asset:artifact AttackInfo.BypassResist set value false
+data modify storage asset:artifact AttackInfo.IsRangeAttack set value "probability"
 data modify storage asset:artifact AttackInfo.AttackRange set value "1.5"
 
 # data modify storage asset:artifact MPCost set value 5

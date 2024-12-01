@@ -20,7 +20,7 @@
                                     },
                                     {
                                         "text": "攻撃情報　　",
-                                        "font": "misaki/gothic_2nd"
+                                        "font": "misaki/gothic"
                                     },
                                     {
                                         "text": "\u0006",
@@ -28,29 +28,9 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "Line1[0]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[1]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "text": " Damage"
-                                    },
-                                    {
-                                        "text": " "
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[2]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[3]",
-                                        "interpret": true
+                                        "nbt": "Line1[]",
+                                        "interpret": true,
+                                        "separator": " "
                                     }
                                 ],
                                 [
@@ -61,7 +41,7 @@
                                     },
                                     {
                                         "text": "攻撃属性　　",
-                                        "font": "misaki/gothic_2nd"
+                                        "font": "misaki/gothic"
                                     },
                                     {
                                         "text": "\u0006",

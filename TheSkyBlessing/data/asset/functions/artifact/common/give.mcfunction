@@ -15,7 +15,7 @@
 #   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
-#   CostText? : TextComponent
+#   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
@@ -67,7 +67,7 @@
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
-    data remove storage asset:artifact CostText
+    data remove storage asset:artifact ConsumeItem
     data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
     data remove storage asset:artifact LocalCooldown
