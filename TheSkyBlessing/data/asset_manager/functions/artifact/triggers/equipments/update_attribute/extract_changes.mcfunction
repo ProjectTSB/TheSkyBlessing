@@ -13,10 +13,12 @@
         execute unless data storage asset:artifact Old.MaskedItemData[-1].EquipID run data modify storage asset:artifact Old.MaskedItemData[-1].EquipID set value -2
         execute if data storage asset:artifact Old.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact Old.MaskedItemData[-1].Modifiers[].ID set from storage asset:artifact Old.CopiedItemData[-1].ID
         execute if data storage asset:artifact Old.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact Old.MaskedItemData[-1].Modifiers[].Slot set from storage asset:artifact Old.CopiedItemData[-1].TargetSlot
+        execute if data storage asset:artifact Old.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact Old.MaskedItemData[-1].Modifiers[].Max set from storage asset:artifact Old.CopiedItemData[-1].PartsMax
         data modify storage asset:artifact New.MaskedItemData append from storage asset:artifact New.CopiedItemData[-1]
         execute unless data storage asset:artifact New.MaskedItemData[-1].EquipID run data modify storage asset:artifact New.MaskedItemData[-1].EquipID set value -2
         execute if data storage asset:artifact New.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact New.MaskedItemData[-1].Modifiers[].ID set from storage asset:artifact New.CopiedItemData[-1].ID
         execute if data storage asset:artifact New.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact New.MaskedItemData[-1].Modifiers[].Slot set from storage asset:artifact New.CopiedItemData[-1].TargetSlot
+        execute if data storage asset:artifact New.MaskedItemData[-1].Modifiers[0] run data modify storage asset:artifact New.MaskedItemData[-1].Modifiers[].Max set from storage asset:artifact New.CopiedItemData[-1].PartsMax
     # 古い方のデータ
         data modify storage asset:artifact TargetID set from storage asset:artifact Old.CopiedItemData[-1].ID
         execute if data storage asset:artifact {Mask:true} unless data storage asset:artifact {TargetID:-2} run data modify storage asset:artifact Old.MaskedItemData[-1] merge value {ID:-1,UUID:-1}
