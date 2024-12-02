@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "セット装備: "
+                                        "text": "装備時効果　",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
