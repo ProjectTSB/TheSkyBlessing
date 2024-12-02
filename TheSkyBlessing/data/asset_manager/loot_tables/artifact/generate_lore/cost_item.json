@@ -19,14 +19,123 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "消費アイテム: "
+                                        "text": "消費アイテム",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "CostText",
+                                        "nbt": "ConsumeItem.Item",
                                         "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "x",
+                                        "font": "default"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "ConsumeItem.Count",
+                                        "font": "default"
                                     }
                                 ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "inverted",
+                                    "term": {
+                                        "condition": "minecraft:entity_scores",
+                                        "entity": "this",
+                                        "scores": {
+                                            "Temporary": {
+                                                "min": 1,
+                                                "max": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "消費アイテム",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "ConsumeItem.Item",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "x",
+                                        "font": "default"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "ConsumeItem.Count",
+                                        "font": "default"
+                                    },
+                                    {
+                                        "text": "\u0004",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "(",
+                                        "font": "default"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "ConsumeItem.Extra",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": ")",
+                                        "font": "default"
+                                    }
+                                ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        "Temporary": {
+                                            "min": 1,
+                                            "max": 1
+                                        }
+                                    }
+                                }
                             ]
                         }
                     ]

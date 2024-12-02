@@ -15,11 +15,11 @@ data modify storage asset:artifact Trigger set value "attack"
 data modify storage asset:artifact SubTriggers set value ["equip"]
 # data modify storage asset:artifact Condition set value
 data modify storage asset:artifact AttackInfo set value {Damage:["???"],AttackType:[Physical],ElementType:[None],BypassResist:true,IsRangeAttack:never}
-# data modify storage asset:artifact CostText set value '{"text":""}'
+# data modify storage asset:artifact ConsumeItem set value {Item:'{"text":""}',Count:0}
 data modify storage asset:artifact MPCost set value 100
 # data modify storage asset:artifact MPRequire set value
 data modify storage asset:artifact LocalCooldown set value 0
-# data modify storage asset:artifact TypeCooldown set value
+# data modify storage asset:artifact TypeCooldown set value {Type:"shortRange",Duration:1}
 # data modify storage asset:artifact SpecialCooldown set value
 data modify storage asset:artifact DisableCooldownMessage set value true
 data modify storage asset:artifact DisableMPMessage set value true

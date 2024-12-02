@@ -19,44 +19,51 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "攻撃情報: "
+                                        "text": "攻撃情報　　",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "Line1[0]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[1]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "text": " Damage"
-                                    },
-                                    {
-                                        "text": " "
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[2]",
-                                        "interpret": true
-                                    },
-                                    {
-                                        "storage": "asset:artifact",
-                                        "nbt": "Line1[3]",
-                                        "interpret": true
+                                        "nbt": "Line1[]",
+                                        "interpret": true,
+                                        "separator": " "
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "攻撃属性: ",
+                                        "text": "",
                                         "color": "white",
                                         "italic": false
                                     },
                                     {
+                                        "text": "攻撃属性　　",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[0]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
                                         "interpret": true
                                     },
                                     {
@@ -65,11 +72,33 @@
                                         "interpret": true
                                     },
                                     {
-                                        "text": "| "
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "|"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[2]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
                                         "interpret": true
                                     },
                                     {
@@ -78,8 +107,26 @@
                                         "interpret": true
                                     },
                                     {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "Line2[4]",
+                                        "interpret": true
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
                                         "interpret": true
                                     },
                                     {

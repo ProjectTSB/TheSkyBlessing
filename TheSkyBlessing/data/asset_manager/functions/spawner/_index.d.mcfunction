@@ -14,12 +14,6 @@
 #   core:tick/
     #declare tag Spawner
 
-#> SpawnerTag
-# @within *
-#   asset_manager:spawner/**
-#   core:tick/
-    #declare tag BreakSpawner
-
 #> Register
 # @within * asset_manager:spawner/register/**
     #declare tag SpawnerInit

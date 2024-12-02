@@ -45,7 +45,7 @@
     execute as @e[type=armor_stand,tag=CursedArtifact,tag=!DispelledCursedArtifact] at @s run function asset_manager:island/tick/
 
 # スポナー処理部
-    execute as @e[type=snowball,tag=Spawner,tag=!BreakSpawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
+    execute as @e[type=item_display,tag=Spawner] at @s if entity @p[distance=..40] run function asset_manager:spawner/tick/
 
 # テレポーター
     execute as @e[type=item_display,tag=Teleporter] at @s if entity @p[distance=..50] run function asset_manager:teleporter/tick/global
@@ -54,8 +54,6 @@
     function world_manager:gimmick/
 
 # Mob処理部
-    # AssetMobのグローバル処理
-        function asset_manager:mob/tick/global
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理

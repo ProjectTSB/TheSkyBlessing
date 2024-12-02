@@ -19,12 +19,18 @@
                                         "italic": false
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownIcon",
                                         "interpret": true
                                     },
                                     {
-                                        "text": " "
+                                        "text": "\u0002",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
@@ -38,7 +44,11 @@
                                         "nbt": "CooldownDecimal"
                                     },
                                     {
-                                        "text": " 秒"
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "秒"
                                     }
                                 ]
                             ],
@@ -69,26 +79,44 @@
                                         "italic": false
                                     },
                                     {
+                                        "storage": "global",
+                                        "nbt": "Icon.Frame",
+                                        "interpret": true
+                                    },
+                                    {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownIcon",
                                         "interpret": true
                                     },
                                     {
-                                        "text": " "
+                                        "text": "\u0002",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownMinutes"
                                     },
                                     {
-                                        "text": " 分 "
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "分"
+                                    },
+                                    {
+                                        "text": "\u0002",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "CooldownSecond"
                                     },
                                     {
-                                        "text": " 秒"
+                                        "text": "\u0002",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "text": "秒"
                                     }
                                 ]
                             ],

@@ -6,11 +6,11 @@
 
 # ベース文字列
     data modify storage asset:artifact Temp.CanUsedGod set value []
-    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Flora","color":"#333333","interpret":true}'
-    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Urban","color":"#333333","interpret":true}'
-    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Nyaptov","color":"#333333","interpret":true}'
-    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Wi-ki","color":"#333333","interpret":true}'
-    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Rumor","color":"#333333","interpret":true}'
+    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Flora","color":"#444444","interpret":true}'
+    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Urban","color":"#444444","interpret":true}'
+    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Nyaptov","color":"#444444","interpret":true}'
+    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Wi-ki","color":"#444444","interpret":true}'
+    data modify storage asset:artifact Temp.CanUsedGod append value '{"storage":"global","nbt":"Icon.God.Rumor","color":"#444444","interpret":true}'
 # それぞれ
     execute if data storage asset:artifact {CanUsedGod:["Flora"]} run data modify storage asset:artifact Temp.CanUsedGod[0] set from storage global Icon.God.Flora
     execute if data storage asset:artifact {CanUsedGod:["Urban"]} run data modify storage asset:artifact Temp.CanUsedGod[1] set from storage global Icon.God.Urban
