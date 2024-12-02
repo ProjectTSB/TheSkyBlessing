@@ -5,7 +5,7 @@
 # @within function asset:spawner/common/register
 
 # スポナーの本体 // 機会があれば見た目を変えれるようにCMDを振っておく
-    summon snowball ~ ~0.4 ~ {Tags:["Object","Spawner","SpawnerInit","Uninterferable"],Item:{id:"ender_eye",Count:1b,tag:{CustomModelData:1}},NoGravity:1b}
+    summon item_display ~ ~0.5 ~ {Tags:["Object","Spawner","SpawnerInit","Uninterferable"],item:{id:"ender_eye",Count:1b},billboard:"center",brightness:{sky:15,block:15},transformation:{scale:[0.8f,0.8f,0.1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.1f,0f]},interpolation_duration:4}
     setblock ~ ~ ~ barrier
 # データの適用
-    execute positioned ~ ~0.4 ~ as @e[type=snowball,tag=SpawnerInit,distance=..0.01,limit=1] run function asset_manager:spawner/register/set_data
+    execute positioned ~ ~0.5 ~ as @e[type=item_display,tag=SpawnerInit,distance=..0.01,limit=1] run function asset_manager:spawner/register/set_data

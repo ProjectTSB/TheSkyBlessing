@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "使用方法: "
+                                        "text": "使用方法　　",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",

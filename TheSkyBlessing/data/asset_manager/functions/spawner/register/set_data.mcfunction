@@ -13,6 +13,7 @@
     function asset_manager:spawner/register/process_spawn_potentials/
 # EntityStorageに保存するもの
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.ID set from storage asset:spawner ID
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxHP set from storage asset:spawner HP
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos set from entity @s Pos
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials set from storage asset:spawner NormalizedSpawnPotentials
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnCount set from storage asset:spawner SpawnCount

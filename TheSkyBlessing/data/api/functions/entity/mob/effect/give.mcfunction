@@ -6,6 +6,8 @@
 #   Argument.ID : int
 #   Argument.Duration? : int (default: Asset | error)
 #   Argument.Stack? : int (default: 1)
+#   Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
+#   Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
 #   Argument.FieldOverride? : compound
 # @api
 
@@ -17,4 +19,6 @@
     data remove storage api: Argument.ID
     data remove storage api: Argument.Duration
     data remove storage api: Argument.Stack
+    data remove storage api: Argument.DurationOperation
+    data remove storage api: Argument.StackOperation
     data remove storage api: Argument.FieldOverride

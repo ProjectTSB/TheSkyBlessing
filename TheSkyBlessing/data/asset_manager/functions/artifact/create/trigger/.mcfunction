@@ -21,10 +21,9 @@
 # 5? ヒット時MP回復
     execute if data storage asset:artifact MPHealWhenHit run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/mp_heal_when_hit
 # 6? 消費アイテム
-    execute if data storage asset:artifact CostText run loot replace block 10000 0 10000 container.6 loot asset_manager:artifact/generate_lore/cost_item
+    execute if data storage asset:artifact ConsumeItem run function asset_manager:artifact/create/trigger/consume_item
 # 7? クールタイム
     function asset_manager:artifact/create/trigger/cooldown/
-
 # Lore一括追加
     data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
 # リセット

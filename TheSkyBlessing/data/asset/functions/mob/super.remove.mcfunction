@@ -2,6 +2,6 @@
 #
 #
 #
-# @within function asset:object/super.method
+# @within function asset:mob/*/remove/
 
 function asset_manager:mob/triggers/remove/call_super_methods/

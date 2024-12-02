@@ -18,6 +18,8 @@
     execute unless data storage asset:effect Duration run data modify storage asset:effect Duration set from storage api: Argument.Duration
     execute if data storage asset:effect Stack if data storage api: Argument.Stack run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"Effect の Stack が API とデフォルト値の両方で設定されています"}]
     execute unless data storage asset:effect Stack run data modify storage asset:effect Stack set from storage api: Argument.Stack
+    execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set from storage api: Argument.DurationOperation
+    execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set from storage api: Argument.StackOperation
 # デフォルト値
     execute unless data storage asset:effect Stack run data modify storage asset:effect Stack set value 1
     execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set value "replace"

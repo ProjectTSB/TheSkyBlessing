@@ -19,7 +19,7 @@
 #       MPCost? : int
 #       MPRequire? : int
 #       MPHealWhenHit? : int
-#       CostText? : TextComponent
+#       ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #       LocalCooldown? : int
 #       SpecialCooldown? : int
 #       DisableCooldownMessage? : boolean

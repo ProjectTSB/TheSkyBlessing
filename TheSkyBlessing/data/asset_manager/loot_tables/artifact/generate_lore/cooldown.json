@@ -19,13 +19,18 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "クールダウン: "
+                                        "text": "クールダウン",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",
                                         "nbt": "Cooldown[]",
                                         "interpret": true,
-                                        "separator": " / "
+                                        "separator": " "
                                     }
                                 ]
                             ]

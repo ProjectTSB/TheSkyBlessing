@@ -26,6 +26,7 @@
 # @within function
 #   core:tick/
 #   mob_manager:init/
+#   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
     #declare tag AssetMob
@@ -66,7 +67,7 @@
 #> RemovingEntity
 # @within function
 #   asset_manager:mob/triggers/
-#   asset_manager:island/dispel/boss/remove
+#   api:mob/remove
     #declare tag RemovingEntity
 
 #> 汎用タグ類
