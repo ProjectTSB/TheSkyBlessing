@@ -35,5 +35,9 @@
         execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItem{DisableCooldownMessage:true} run scoreboard players set @s LocalCDLogCD 20
         execute if entity @s[tag=CheckFailed] unless data storage asset:artifact TargetItemList[0] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
+    # PartsMaxによる制限
+    # ついでに反転した配列の順序を解消する
+        function asset_manager:artifact/check/limit_parts_max/
+        execute unless data storage asset:artifact TargetItemList[0] run tag @s remove CanUsed
 # 条件を満たしてない && 使用回数が存在する && トリガーがuse_itemならば使用回数を減らす
     execute if entity @s[tag=!CanUsed] if data storage asset:artifact TargetItem.RemainingCount if data storage asset:artifact TargetItem{Trigger:"use_item"} run function asset_manager:artifact/use/item/has_remain

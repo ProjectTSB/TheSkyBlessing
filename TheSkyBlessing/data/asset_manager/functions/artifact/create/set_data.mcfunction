@@ -25,7 +25,6 @@
 #       DisableCooldownMessage? : boolean
 #       DisableMPMessage? : boolean
 #       DisableBreakSound? : boolean
-#       CanUsedGod : God[]
 #       EquipID? : int
 #       Modifiers : Component[]
 #       ├ Type : string
@@ -33,6 +32,8 @@
 #       ├ Operation : "add" | "multiply_base" | "multiply"
 #       ├ MaxStack : int
 #       └ StackReduction : double
+#       PartsMax? : int
+#       CanUsedGod : God[]
 #       CustomNBT : Item.tag
 # @within function asset_manager:artifact/give/
 
@@ -76,6 +77,7 @@
     data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
     data modify storage asset:artifact Item.tag.TSB.EquipID set from storage asset:artifact EquipID
     data modify storage asset:artifact Item.tag.TSB.Modifiers set from storage asset:artifact Modifiers
+    data modify storage asset:artifact Item.tag.TSB.PartsMax set from storage asset:artifact PartsMax
 
 # 名前
     # 残り回数が存在する場合

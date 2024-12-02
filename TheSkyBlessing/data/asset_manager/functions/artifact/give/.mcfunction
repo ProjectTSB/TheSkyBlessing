@@ -23,7 +23,6 @@
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
 #   DisableBreakSound? : boolean
-#   CanUsedGod : God[]
 #   EquipID? : int
 #   Modifiers : Component[]
 #   ├ Type : string
@@ -31,6 +30,8 @@
 #   ├ Operation : "add" | "multiply_base" | "multiply"
 #   ├ MaxStack? : int
 #   └ StackReduction? : double
+#   PartsMax? : int
+#   CanUsedGod : God[]
 #   CustomNBT? : Component
 # @output item 神器
 # @within function api:artifact/core/from_id
@@ -47,16 +48,16 @@
     # execute unless data storage asset:artifact RemainingCount run
     execute unless data storage asset:artifact RemainingCountMax if data storage asset:artifact RemainingCount run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
-    # execute unless data storage asset:artifact Trigger run
     execute if data storage asset:artifact Trigger run function asset_manager:artifact/give/validate/trigger
     # execute unless data storage asset:artifact SubTriggers[0] run
     # execute unless data storage asset:artifact DisableBreakSound run
-    execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
     # execute unless data storage asset:artifact EquipID run
     # execute unless data storage asset:artifact Modifiers[0] run
     execute if data storage asset:artifact Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Modifiers
     execute if data storage asset:artifact Modifiers[0] run function asset_manager:artifact/give/validate/modifier
     execute if data storage asset:artifact Modifiers[0] run data remove storage asset:artifact CopiedModifiers
+    execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
+    execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
     # execute unless data storage asset:artifact CustomNBT run
 # 各データ設定
     function asset_manager:artifact/create/set_data
@@ -92,7 +93,8 @@
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
     data remove storage asset:artifact DisableBreakSound
-    data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact EquipID
     data remove storage asset:artifact Modifiers
+    data remove storage asset:artifact PartsMax
+    data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
