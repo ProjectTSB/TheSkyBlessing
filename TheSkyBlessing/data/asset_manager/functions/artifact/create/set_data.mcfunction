@@ -19,8 +19,9 @@
 #       MPCost? : int
 #       MPRequire? : int
 #       MPHealWhenHit? : int
-#       CostText? : TextComponent
+#       ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #       LocalCooldown? : int
+#       TypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #       SpecialCooldown? : int
 #       DisableCooldownMessage? : boolean
 #       DisableMPMessage? : boolean

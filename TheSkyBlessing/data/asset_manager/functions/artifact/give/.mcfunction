@@ -14,7 +14,7 @@
 #   SubTriggers : Trigger[]
 #   Condition? : TextComponent
 #   AttackInfo? : Component
-#   CostText? : TextComponent
+#   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   MPCost : int
 #   MPRequire? : int
 #   LocalCooldown? : int

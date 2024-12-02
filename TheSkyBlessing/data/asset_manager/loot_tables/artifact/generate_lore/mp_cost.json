@@ -19,7 +19,12 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "消費MP: "
+                                        "text": "ＭＰ消費　　",
+                                        "font": "misaki/gothic"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "storage": "asset:artifact",

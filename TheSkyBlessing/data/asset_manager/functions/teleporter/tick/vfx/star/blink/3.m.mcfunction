@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/tick/vfx/star/blink/2.m
+#> asset_manager:teleporter/tick/vfx/star/blink/3.m
 #
 #
 #

@@ -11,6 +11,8 @@
 
 # TP
     $execute in $(Dimension) run tp @s $(X) $(Y) $(Z)
+# 地面がなかったら作ってあげる
+    execute at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 glass replace #lib:air
 # VFX
     function asset_manager:teleporter/tick/vfx/teleport/from
     execute at @s run function asset_manager:teleporter/tick/vfx/teleport/to
