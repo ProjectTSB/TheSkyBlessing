@@ -20,7 +20,7 @@
 # 対象アイテムの要素数を拾う
     execute store result score $OldItems Temporary if data storage asset:artifact TargetItemList[]
 # すべてのアイテムについて更新処理を行う
-    function asset_manager:artifact/use/item/
+    execute unless data storage asset:artifact TargetItem{IgnoreItemUpdate:true} run function asset_manager:artifact/use/item/
 # データを更新する
 # 要素数が変わっていれば一つ以上破壊されている
     execute store result score $NewItems Temporary if data storage asset:artifact RenewedItemList[]
