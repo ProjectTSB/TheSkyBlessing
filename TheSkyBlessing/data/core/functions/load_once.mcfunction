@@ -242,7 +242,7 @@ team modify NoCollision collisionRule never
     #> Library用スコアボード
     # @public
         scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
-        scoreboard objectives add DamageForwardTargetMobUUID dummy {"text":"ダメージを転送する対象"}
+        scoreboard objectives add ForwardTargetMobUUID dummy {"text":"ダメージを転送する対象"}
 
     #> Library用スコアボード - PrivateUse
     # @within * lib:**
