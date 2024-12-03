@@ -18,7 +18,6 @@
     # 神器のスロットのデータを保管する
     # これはauto処理のため
         data modify storage lib: Array[-1].TargetSlot set from storage lib: Array[-1].Slot
-
         data modify storage asset:artifact CopiedSlot set from storage lib: Array[-1].Slot
         execute if data storage asset:artifact {CopiedSlot:"auto"} if data storage asset:artifact Enum{Slot:"mainhand"} run data modify storage lib: Array[-1].TargetSlot set from storage asset:artifact Enum.Slot
         execute if data storage asset:artifact {CopiedSlot:"auto"} if data storage asset:artifact Enum{Slot: "offhand"} run data modify storage lib: Array[-1].TargetSlot set from storage asset:artifact Enum.Slot

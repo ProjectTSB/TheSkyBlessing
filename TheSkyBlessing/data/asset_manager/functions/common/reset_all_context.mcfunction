@@ -5,3 +5,4 @@
 # @within function core:tick/
 
 data remove storage asset:context id
+data remove storage asset:context Slot
