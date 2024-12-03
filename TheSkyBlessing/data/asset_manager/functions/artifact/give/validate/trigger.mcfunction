@@ -15,3 +15,4 @@ execute unless data storage asset:artifact MPCost unless data storage asset:arti
 # execute unless data storage asset:artifact SpecialCooldown run
 # execute unless data storage asset:artifact DisableCooldownMessage run
 # execute unless data storage asset:artifact DisableMPMessage run
+# execute unless data storage asset:artifact IgnoreItemUpdate run

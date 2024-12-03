@@ -22,6 +22,7 @@
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
+#   IgnoreItemUpdate? : boolean
 #   DisableBreakSound? : boolean
 #   EquipID? : int
 #   Modifiers : Component[]
@@ -92,6 +93,7 @@
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact IgnoreItemUpdate
     data remove storage asset:artifact DisableBreakSound
     data remove storage asset:artifact EquipID
     data remove storage asset:artifact Modifiers
