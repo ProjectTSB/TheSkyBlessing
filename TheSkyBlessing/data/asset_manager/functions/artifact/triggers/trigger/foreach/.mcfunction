@@ -11,6 +11,7 @@
     data modify storage asset:artifact TargetItemList set from storage asset:artifact NormalizedItemData[-1]._
 # contextを設定
     data modify storage asset:context id set from storage asset:artifact TargetItem.ID
+    data modify storage asset:context Slot set from storage asset:artifact TargetItem.TargetSlot
 
 # アイテムを消費中であることを登録する
     execute if data storage asset:artifact TargetItem{Trigger:"use_item"} unless data storage asset:artifact New.Consumable.ID if entity @s[tag=TriggerFlag.UsingItem,tag=!ConsumingItem] run function asset_manager:artifact/triggers/event/use_item/init
