@@ -3,7 +3,7 @@
 #
 #
 # @api
-say api:entity/mob/effect/reset
+
 # リセット
     data remove storage api: Argument.ID
     data remove storage api: Argument.Duration

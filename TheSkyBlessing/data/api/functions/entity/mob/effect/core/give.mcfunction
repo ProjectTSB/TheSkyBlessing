@@ -3,7 +3,7 @@
 #
 #
 # @within function api:entity/mob/effect/give
-say api:entity/mob/effect/core/give
+
 # 既存にasset:context idが存在する場合に備えて退避させる
     function asset_manager:common/context/id/stash
 

@@ -7,7 +7,7 @@
 # @within function
 #   api:entity/mob/effect/**
 #   api:entity/mob/effect/core/apply_to_forward_target/only_initial_apply.m
-say api:entity/mob/effect/core/apply_to_forward_target/apply.m
+
 #> Private
 # @private
 #declare score_holder $ForwardTarget
