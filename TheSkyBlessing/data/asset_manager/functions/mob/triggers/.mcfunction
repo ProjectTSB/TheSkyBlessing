@@ -19,8 +19,8 @@
     function asset_manager:mob/triggers/tick/
     execute if data storage asset:mob MobEvents.Attack[0] run function asset_manager:mob/triggers/attack/foreach
     execute if data storage asset:mob MobEvents.Hurt[0] run function asset_manager:mob/triggers/hurt/foreach
-    execute if data storage asset:mob MobEvents.Death[0] run function asset_manager:mob/triggers/death/foreach
     execute if data storage asset:mob MobEvents.Death[0] run tag @s add Death
+    execute if data storage asset:mob MobEvents.Death[0] run function asset_manager:mob/triggers/death/foreach
     execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
     execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/kill
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
