@@ -5,7 +5,7 @@
 # @api
 
 # 殺す
-    tag @s add Death
+    tag @s[tag=!AssetMob] add Death
 # HP を 0 に
     scoreboard players set @s MobHealth 0
 # イベントを追加する
