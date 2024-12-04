@@ -29,6 +29,8 @@
 #   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
+#   api:damage/core/health_subtract/non-player/
+#   api:mob/kill
     #declare tag AssetMob
 
 #> MobAsset以外のEntityにCommonTagを実行させるためのタグ
