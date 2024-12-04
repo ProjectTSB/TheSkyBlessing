@@ -13,8 +13,6 @@
     function asset:artifact/common/use/mainhand
 
 # ここから先は神器側の効果の処理を書く
-    data modify storage api: Argument.Damage set value 1
-    data modify storage api: Argument.AttackType set value "Physical"
-    function api:damage/modifier
-    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function api:damage/
-    function api:damage/reset
+    data modify storage api: Argument.ID set value 219
+    execute as @e[type=#lib:living,type=!player,tag=Victim,distance=..6] run function api:entity/mob/effect/give
+    function api:entity/mob/effect/reset
