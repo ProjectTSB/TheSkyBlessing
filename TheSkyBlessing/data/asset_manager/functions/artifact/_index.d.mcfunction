@@ -3,12 +3,11 @@
 
 #> storage
 # @within *
-#   asset_manager:artifact/**
+#   api:artifact/core/**
+#   asset:artifact/*/enroll_pool
 #   asset:artifact/*/register
-#   asset:artifact/*/give/2.give
-#   asset:artifact/*/trigger/2.check_condition
-#   asset:artifact/*/trigger/3.main
-#   asset:artifact/common/**
+#   asset:artifact/enum/**
+#   asset_manager:artifact/**
 #   player_manager:actionbar/
     #declare storage asset:artifact
 
@@ -29,27 +28,26 @@
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
 
-
 #> バニラの攻撃を扱う用
 # @within function
-#   asset_manager:artifact/check/
-#   asset_manager:artifact/triggers/attack/**
-#declare tag ShouldVanillaAttack
+#   asset_manager:artifact/triggers/trigger/
+#   asset_manager:artifact/triggers/attack_melee/foreach
+    #declare tag ShouldVanillaAttack
 
 #> check用の失敗フラグ
 # @within function
 #   asset_manager:artifact/check/**
     #declare tag CheckFailed
 
-#> スニークの閾値用スコアホルダー
-# @within function asset_manager:artifact/triggers/sneak/*
-    #declare score_holder $SneakThreshold
+#> スニーク用スコアホルダー
+# @within function asset_manager:artifact/triggers/*sneak*/*
+    #declare score_holder $SneakTime
 
-#> use_itemの誤検知対策タグ
+#> アイテム消費中
 # @within function
-#   core:handler/drop
-#   asset_manager:artifact/triggers/use_item/check_item_drop
-    #declare tag StrictCheckMainhand
+#   asset_manager:artifact/triggers/trigger/foreach/
+#   asset_manager:artifact/triggers/event/use_item/**
+    #declare tag ConsumingItem
 
 #> 神器側にさらすタグ
 # @within *
@@ -59,8 +57,6 @@
     #declare tag Victim
     #declare tag Healer
     #declare tag Receiver
-    #declare tag Equip
-    #declare tag DisEquip
 
 #> セレクターテンプレート
 # @within * asset:artifact/**
@@ -73,7 +69,23 @@
     #declare score_holder $NormalizedValue
     #declare score_holder $Max
 
-#> リセット用
-# @within function asset_manager:artifact/triggers/equipments/update_cooldown/*
+#> クールダウンリセット用
+# @within function asset_manager:artifact/triggers/equipments/update_cooldown/**
     #declare score_holder $Tick
+    #declare score_holder $Max
     #declare score_holder $LatestUsedTick
+
+#> スロットの数値化
+# @within function
+#   asset_manager:artifact/data/new/fetch_data/*
+#   asset_manager:artifact/triggers/trigger/**
+    #declare score_holder $SlotIndex
+
+#> 使用条件
+# @within function
+#   asset:artifact/*/*/check**
+#   asset_manager:artifact/check/
+#   asset_manager:artifact/use/
+#   asset_manager:artifact/triggers/*/*
+#   asset_manager:artifact/triggers/trigger/foreach/exec
+    #declare tag CanUsed
