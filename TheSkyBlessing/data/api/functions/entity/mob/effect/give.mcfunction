@@ -14,11 +14,5 @@
 # validate
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
 # 呼び出し
-    execute if data storage api: Argument.ID run function api:entity/mob/effect/core/give
-# リセット
-    data remove storage api: Argument.ID
-    data remove storage api: Argument.Duration
-    data remove storage api: Argument.Stack
-    data remove storage api: Argument.DurationOperation
-    data remove storage api: Argument.StackOperation
-    data remove storage api: Argument.FieldOverride
+    execute if data storage api: Argument.ID unless score @s ForwardTargetMobUUID matches -2147483648..2147483647 run function api:entity/mob/effect/core/give
+    execute if data storage api: Argument.ID if score @s ForwardTargetMobUUID matches -2147483648..2147483647 run function api:entity/mob/effect/core/apply_to_forward_target/only_initial_apply.m {CB:"api:entity/mob/effect/core/give"}
