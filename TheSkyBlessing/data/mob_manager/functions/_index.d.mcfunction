@@ -22,6 +22,14 @@
 #   mob_manager:init/
     #declare tag AlreadyInitMob
 
+#> KillTag
+# @within function
+#   core:tick/
+#   api:damage/core/health_subtract/non-player/
+#   api:mob/kill
+#   asset_manager:mob/triggers/
+    #declare tag Kill
+
 #> FlagIndex
 # @within function
 #   mob_manager:init/
