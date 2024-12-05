@@ -35,8 +35,9 @@
 # 代入
     scoreboard players operation @s MobHealth = $Health Temporary
 
-# 死んでるならタグ付与 (AssetMob の場合は Death トリガーをもとに付けるのでここでは付けない)
-    execute if score $Health Temporary matches ..0 if entity @s[tag=!AssetMob] run tag @s add Death
+# 死んでるならタグ付与 (Kill は AssetMob の場合 Death トリガーをもとに付けるのでここでは付けない)
+    execute if score $Health Temporary matches ..0 run tag @s add Death
+    execute if score $Health Temporary matches ..0 if entity @s[tag=!AssetMob] run tag @s add Kill
 # イベントの追加
     function api:damage/core/trigger_events/non-player/attack_and_hurt/
     execute if score $Health Temporary matches ..0 run function api:damage/core/trigger_events/non-player/kill_and_death/

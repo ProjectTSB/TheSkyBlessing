@@ -4,8 +4,9 @@
 #
 # @api
 
-# 殺す
-    tag @s[tag=!AssetMob] add Death
+# 殺す (Kill は AssetMob の場合 Death トリガーをもとに付けるのでここでは付けない)
+    tag @s add Death
+    execute if entity @s[tag=!AssetMob] run tag @s add Kill
 # HP を 0 に
     scoreboard players set @s MobHealth 0
 # イベントを追加する
