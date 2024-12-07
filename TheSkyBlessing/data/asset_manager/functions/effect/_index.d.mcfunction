@@ -9,6 +9,7 @@
 #   asset:effect/*/register
 #   asset:effect/*/
 #   asset_manager:effect/**
+#   player_manager:actionbar/
     #declare storage asset:effect
 
 #> Tags
