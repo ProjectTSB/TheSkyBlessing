@@ -27,6 +27,8 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects append from storage asset:effect NextTickEffects[]
 # 付与されているエフェクトが何もなければタグを消す
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0] run tag @s remove HasAssetEffect
+# エフェクト表示を構築
+    function asset_manager:effect/display/construct_message/
 
 # リセット
     scoreboard players reset @s UsedMilk

@@ -46,6 +46,9 @@
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
 # 残っていれば引継ぎ
     execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
+# アイコン作成
+    execute if data storage asset:effect TargetEffect run function asset_manager:effect/display/icon/
+
 # リセット
     scoreboard players reset $RequireClearLv Temporary
     data remove storage asset:context id
