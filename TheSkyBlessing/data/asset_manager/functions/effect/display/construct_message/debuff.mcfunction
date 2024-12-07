@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:effect/display/construct_message/buff
+# @within function asset_manager:effect/display/construct_message/
 
 
 
