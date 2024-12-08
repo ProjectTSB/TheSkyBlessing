@@ -13,5 +13,6 @@
     execute if data storage asset:container Items run data modify block ~ ~ ~ Items set from storage asset:container NormalizedItems
 # リセット
     data remove storage asset:container Item
+    data remove storage asset:container Items
     data remove storage asset:container NormalizedItems
     data remove storage asset:container Args
