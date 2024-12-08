@@ -4,14 +4,14 @@
 #
 # @within function asset_manager:effect/tick
 
-
-# data modify storage asset:effect EffectMessage append value '{"text":"\\u0110","font":"space"}'
-
-execute if data storage asset:effect Display.Buff[0] run function asset_manager:effect/display/construct_message/buff
-execute if data storage asset:effect Display.Debuff[0] run function asset_manager:effect/display/construct_message/debuff
-
-# tellraw @a {"storage":"asset:effect","nbt":"Display"}
-# tellraw @a {"storage":"asset:effect","nbt":"EffectMessage"}
+# 開始位置移動
+    data modify storage asset:effect EffectMessage append value '{"text":"\\u0098","font":"space"}'
+# バフ行
+    execute if data storage asset:effect Display.Buff.Icons[0] run function asset_manager:effect/display/construct_message/buff
+# デバフ行
+    execute if data storage asset:effect Display.Debuff.Icons[0] run function asset_manager:effect/display/construct_message/debuff
+# 開始位置移動分ネガティブ
+    data modify storage asset:effect EffectMessage append value '{"text":"\\uC098","font":"space"}'
 
 # リセット
     data remove storage asset:effect Display
