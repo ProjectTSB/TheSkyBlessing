@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/01.islands/on_tick
+# @within function world_manager:area/02.islands/on_tick
 
 
 # エリアセット

@@ -1,8 +1,8 @@
-#> world_manager:area/00-11.nyaptov_temple
+#> world_manager:area/01-11.nyaptov_temple
 #
 #
 #
-# @within function world_manager:area/00.god_boundaries/on_tick
+# @within function world_manager:area/01.god_boundaries/on_tick
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 11

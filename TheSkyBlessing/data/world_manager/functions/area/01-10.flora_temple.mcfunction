@@ -1,8 +1,8 @@
-#> world_manager:area/00-10.flora_temple
+#> world_manager:area/01-10.flora_temple
 #
 #
 #
-# @within function world_manager:area/00.god_boundaries/on_tick
+# @within function world_manager:area/01.god_boundaries/on_tick
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 10

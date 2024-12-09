@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/00.god_boundaries/on_tick
+# @within function world_manager:area/00.tutorial/on_tick
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 98

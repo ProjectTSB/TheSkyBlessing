@@ -1,8 +1,8 @@
-#> world_manager:area/00-30.gate_island-lower
+#> world_manager:area/01-30.gate_island-lower
 #
 #
 #
-# @within function world_manager:area/00.god_boundaries/on_tick
+# @within function world_manager:area/01.god_boundaries/on_tick
 
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 30
