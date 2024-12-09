@@ -6,7 +6,7 @@
 
 # 共通処理
 # アイテムを破壊するとBrokeItemが追加される
-    function asset_manager:artifact/use/
+    execute unless data storage asset:context {SubTrigger:true} run function asset_manager:artifact/use/
 
 # 処理対象の神器の重複数を取得する
     execute store result storage asset:context Count int 1 if data storage asset:artifact TargetItemList[]
