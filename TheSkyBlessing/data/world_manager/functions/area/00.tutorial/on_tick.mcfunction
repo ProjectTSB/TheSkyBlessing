@@ -15,3 +15,5 @@
     execute if predicate world_manager:area/00-08.tutorial-tp_point run function world_manager:area/00-08.tutorial-tp_point
 # 初期リス
     execute if predicate world_manager:area/00-99.world-spawn run function world_manager:area/00-99.world-spawn
+# エリア下部
+    execute if predicate world_manager:area/00-30.tutorial-lower run function world_manager:area/00-30.tutorial-lower
