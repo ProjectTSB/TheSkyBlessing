@@ -8,8 +8,8 @@
                 "entity": "this",
                 "predicate": {
                     "type_specific": {
-                        "type": "minecraft:player",
-                        "gamemode": "creative"
+                        "type": "player",
+                        "gamemode": "spectator"
                     }
                 }
             }
