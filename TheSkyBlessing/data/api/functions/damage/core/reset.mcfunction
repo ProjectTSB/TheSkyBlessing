@@ -20,5 +20,7 @@ data remove storage api: Argument.ReduceEnchantment
 data remove storage api: Argument.DisableLog
 data remove storage api: Argument.Metadata
 
+data remove storage api: AttackForwardTargetSet
+
 scoreboard players reset $LatestModifiedUser UserID
 scoreboard players reset $LatestModifiedEntity MobUUID
