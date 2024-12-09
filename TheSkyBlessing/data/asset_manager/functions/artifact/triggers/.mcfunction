@@ -17,11 +17,9 @@
 # 変更時の更新処理
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown/
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown_type
-    execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_attribute/
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:artifact/triggers/event/sneak/reset_when_change_item
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:artifact/triggers/event/use_item/reset_when_change_item
 # 改宗時の更新処理
-    execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_attribute/
     execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/event/sneak/reset
     execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/event/use_item/reset
 # 各神器にトリガー受けわたし
