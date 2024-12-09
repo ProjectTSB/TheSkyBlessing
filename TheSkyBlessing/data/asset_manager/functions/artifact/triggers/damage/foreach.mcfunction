@@ -4,33 +4,22 @@
 #
 # @within function asset_manager:artifact/triggers/damage/*
 
-#> Private
-# @private
-#declare score_holder $AttackedFrom
+# イベントデータ処理
+    # データを取得
+        data modify storage asset:context Damage set from storage asset:artifact Events[-1]
+    # 攻撃元を取得し、Attacker を付与する (null の可能性もある)
+        function asset_manager:artifact/triggers/event/damage/add_tag_attacker
 
-# イベントデータ取得
-    data modify storage asset:context Damage set from storage asset:artifact ArtifactEvents.Damage[-1]
-    data remove storage asset:artifact ArtifactEvents.Damage[-1]
-# 攻撃元を取得し、Attacker を付与する (null の可能性もある)
-    execute if data storage asset:context Damage.From store result score $AttackedFrom Temporary run data get storage asset:context Damage.From
-    execute if data storage asset:context Damage.From as @e[type=#lib:living,type=!player,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker
-    scoreboard players reset $AttackedFrom Temporary
-# 神器側に受け渡し
-    function #asset:artifact/damage
-    execute if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/melee
-    execute if data storage asset:context Damage{Type:"vanilla_drowning"  } run function #asset:artifact/damage/drowning
-    execute if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/projectile
-    execute if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/explosion
-    execute if data storage asset:context Damage{Type:"vanilla_fire"      } run function #asset:artifact/damage/fire
-    execute if data storage asset:context Damage{Type:"vanilla_freezing"  } run function #asset:artifact/damage/freezing
-    execute if data storage asset:context Damage{Type:"vanilla_lightning" } run function #asset:artifact/damage/lightning
-    execute if data storage asset:context Damage{Type:"vanilla_other"     } run function #asset:artifact/damage/other
-    execute if data storage asset:context Damage.From run function #asset:artifact/damage/from_entity/
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/from_entity/melee
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/from_entity/projectile
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/from_entity/explosion
+# 使用条件を満たしているか確認する
+    function asset_manager:artifact/check/
+    function asset_manager:artifact/triggers/damage/check.m with storage asset:context
+# 条件を満たしていれば使用する
+    execute if entity @s[tag=CanUsed] run function asset_manager:artifact/triggers/damage/use
+
 # リセット
-    data remove storage asset:context Damage
     tag @e[type=#lib:living,type=!player,tag=Attacker] remove Attacker
-# イベントがまだあれば再帰する
-    execute if data storage asset:artifact ArtifactEvents.Damage[0] run function asset_manager:artifact/triggers/damage/foreach
+    tag @s remove CanUsed
+    data remove storage asset:context Damage
+    data remove storage asset:artifact Events[-1]
+# 要素が残っているなら再帰
+    execute if data storage asset:artifact Events[0] run function asset_manager:artifact/triggers/damage/foreach

@@ -8,29 +8,19 @@
     function oh_my_dat:please
 # セッション開く
     function lib:array/session/open
-# 配列として取得
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.offhand.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.feet.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.legs.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.chest.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.head.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[0].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[1].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[2].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[3].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[4].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[5].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[6].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[7].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[8].tag.TSB
-# それぞれについて更新
+# 配列をコピー
+# mainhandは二重更新しないように削除する
+    data modify storage asset:artifact New.CopiedItemData set from storage asset:artifact New.ItemData
+    data remove storage asset:artifact New.CopiedItemData[0]
+# それぞれについて更新 // New.CopiedItemData (normal) -> LocalCooldown (inverted)
     function asset_manager:artifact/triggers/equipments/update_cooldown/foreach
-# 反転
+# 反転する // LocalCooldown (inverted) -> Array (normal)
+    data modify storage lib: Array set from storage asset:artifact LocalCooldown
     function lib:array/reverse
 # 設定
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown set from storage lib: Array
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown set from storage lib: Array
 # リセット
     function lib:array/session/close
-    data remove storage asset:artifact ItemData
+    data remove storage asset:artifact New.CopiedItemData
+    data remove storage asset:artifact LocalCooldown
     scoreboard players reset $Tick Temporary
-    scoreboard players reset $LatestUsedTick Temporary

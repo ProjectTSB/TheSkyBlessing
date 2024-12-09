@@ -4,8 +4,5 @@
 #
 # @within function core:tick/
 
-data remove storage asset:context New
-data remove storage asset:context Old
 data remove storage asset:context id
-data remove storage asset:context Items
-data remove storage asset:context Inventory
+data remove storage asset:context Slot
