@@ -393,6 +393,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/handler/on_damage_without_source
     #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
         scoreboard objectives add TakenDamage custom:damage_taken
+        scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
     #> MobManager - Teams
     # @within function

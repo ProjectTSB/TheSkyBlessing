@@ -28,7 +28,8 @@ function oh_my_dat:please
     execute if entity @s[advancements={core:handler/damage={blocked=false}}] run data modify storage asset:artifact Blocked set value false
 
 # ダメージ取得
-    scoreboard players operation $Damage Temporary = @s TakenDamage
+    scoreboard players operation $Damage Temporary += @s TakenDamage
+    scoreboard players operation $Damage Temporary += @s AbsorbedDamage
     scoreboard players operation $Damage Temporary *= $10 Const
 # ArtifactEvents にデータ追加
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage append value {IsVanilla:true}
@@ -40,4 +41,5 @@ function oh_my_dat:please
     data remove storage asset:artifact Blocked
     data remove storage asset:artifact DamageType
     scoreboard players reset @s TakenDamage
+    scoreboard players reset @s AbsorbedDamage
     scoreboard players reset $Damage Temporary

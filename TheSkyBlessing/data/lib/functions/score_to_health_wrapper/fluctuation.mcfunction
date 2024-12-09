@@ -12,6 +12,7 @@
 # @within function
 #   lib:**
 #   api:**
+#   mob_manager:entity_finder/entity_hurt_player/fetch_entity
 #   player_manager:health/regen/do
 
 #> temp
