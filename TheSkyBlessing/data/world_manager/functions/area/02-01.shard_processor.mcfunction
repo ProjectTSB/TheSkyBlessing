@@ -1,4 +1,4 @@
-#> world_manager:area/01-01.shard_processor
+#> world_manager:area/02-01.shard_processor
 #
 #
 #
