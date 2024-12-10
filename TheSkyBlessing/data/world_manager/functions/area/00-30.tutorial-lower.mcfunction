@@ -4,4 +4,7 @@
 #
 # @within function world_manager:area/00.tutorial/on_tick
 
-tp @s 4093 165.5 -468 90 0
+# エリアセット
+    scoreboard players set $NextInSubArea Temporary 30
+# 初期リスにテレポートする
+    tp @s 4093 165.5 -468 90 0
