@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function world_manager:area/01-14.wi-ki_temple
+# @within function world_manager:area/01-05.wi-ki_temple
 
 # 教徒
     execute if entity @s[tag=Believe.Wi-ki] run function player_manager:god/mercy/
