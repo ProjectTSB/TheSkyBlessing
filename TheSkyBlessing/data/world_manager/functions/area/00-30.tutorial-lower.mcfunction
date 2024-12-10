@@ -7,4 +7,4 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 30
 # 初期リスにテレポートする
-    tp @s 4093 165.5 -468 90 0
+    tp @s 4257 196 -443 90 0
