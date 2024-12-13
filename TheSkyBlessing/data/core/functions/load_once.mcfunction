@@ -74,8 +74,8 @@ data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
 data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE204","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE204","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
 
 data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
