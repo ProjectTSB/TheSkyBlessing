@@ -341,6 +341,13 @@ team modify NoCollision collisionRule never
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 
+    #> PlayerManager - Arrow
+    # @within function
+    #   asset_manager:artifact/triggers/
+    #   core:load_once
+    #   player_manager:arrow/**
+    scoreboard objectives add ArrowOwner dummy
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:load_once

@@ -29,7 +29,6 @@
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
 
-
 #> バニラの攻撃を扱う用
 # @within function
 #   asset_manager:artifact/check/
@@ -61,6 +60,7 @@
     #declare tag Receiver
     #declare tag Equip
     #declare tag DisEquip
+    #declare tag ShotArrow
 
 #> セレクターテンプレート
 # @within * asset:artifact/**
