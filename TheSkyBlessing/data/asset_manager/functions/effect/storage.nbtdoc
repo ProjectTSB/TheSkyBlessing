@@ -15,7 +15,7 @@ compound AssetEffect {
     /// スタック (default: API || 1)
     Stack?: int @ 1..,
     /// スタックを表示するか (default: true)
-    DisplayStack?: boolean,
+    StackVisible?: boolean,
     /// 残り時間の操作方法 (default: API || Replace)
     DurationOperation?: EffectOperation,
     /// スタックの操作方法 (default: API || Replace)
@@ -70,7 +70,7 @@ compound EffectData {
     /// スタック
     Stack: int @ 1..,
     /// スタックを表示するか
-    DisplayStack: int @ 1..,
+    StackVisible: int @ 1..,
 
     /// 悪い効果か否か
     IsBadEffect: boolean,
