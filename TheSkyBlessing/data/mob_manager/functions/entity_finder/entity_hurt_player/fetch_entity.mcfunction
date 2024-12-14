@@ -16,6 +16,7 @@
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=true}}] run data modify storage mob_manager:entity_finder Blocked set value true
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=false}}] run data modify storage mob_manager:entity_finder Blocked set value false
 # ダメージ取得
+    scoreboard players set $Damage Temporary 0
     scoreboard players operation $Damage Temporary += @p[tag=DamagedPlayer] TakenDamage
     scoreboard players operation $Damage Temporary += @p[tag=DamagedPlayer] AbsorbedDamage
     scoreboard players operation $Damage Temporary *= $10 Const
