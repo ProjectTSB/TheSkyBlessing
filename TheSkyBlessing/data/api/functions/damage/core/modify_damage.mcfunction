@@ -4,7 +4,7 @@
 #
 # @within function
 #   api:damage/core/modify/player
-#   api:damage/core/get_status/modify_and_get_damage
+#   api:damage/core/attack
 
 #> Temp
 # @private
@@ -16,7 +16,7 @@
 
 # 必要なデータの取得と加算
     # 元ダメージ
-        execute store result score $Damage Temporary run data get storage api: Argument.Damage 100
+        execute store result score $Damage Temporary run data get storage api: Damage 100
     # Base値による補正
         execute store result score $Modifier Temporary run data get storage api: Modifiers.Base 100
         execute unless data storage api: Modifiers.Base run scoreboard players set $Modifier Temporary 100
@@ -53,6 +53,7 @@
 # 代入
     execute store result storage api: ModifiedDamage double 0.0001 run scoreboard players get $Damage Temporary
 # リセット
+    data remove storage api: Damage
     data remove storage api: Modifiers
     scoreboard players reset $Damage Temporary
     scoreboard players reset $Modifier Temporary
