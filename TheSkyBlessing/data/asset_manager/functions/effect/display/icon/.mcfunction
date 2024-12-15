@@ -28,7 +28,7 @@
     data modify storage asset:effect CopiedEffect.ID set string storage asset:effect CopiedEffect.ID -4
 # 10以上のstackをX表記、非表示を0(透明)に
     execute store result score $Stack Temporary run data get storage asset:effect CopiedEffect.Stack 1
-    execute if score $Stack Temporary matches 10.. run data modify storage asset:effect CopiedEffect.Stack set value "X"
+    execute if score $Stack Temporary matches 10.. run data modify storage asset:effect CopiedEffect.Stack set value "F"
     execute if data storage asset:effect CopiedEffect{StackVisible:0b} run data modify storage asset:effect CopiedEffect.Stack set value 0
 # テキストコンポーネント作成
     execute if data storage asset:effect CopiedEffect{IsBadEffect:0b} run function asset_manager:effect/display/icon/buff.m with storage asset:effect CopiedEffect
