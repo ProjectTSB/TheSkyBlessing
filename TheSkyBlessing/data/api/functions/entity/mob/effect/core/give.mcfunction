@@ -22,6 +22,7 @@
     execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set from storage api: Argument.StackOperation
 # デフォルト値
     execute unless data storage asset:effect Stack run data modify storage asset:effect Stack set value 1
+    execute unless data storage asset:effect StackVisible run data modify storage asset:effect StackVisible set value true
     execute unless data storage asset:effect DurationOperation run data modify storage asset:effect DurationOperation set value "replace"
     execute unless data storage asset:effect StackOperation run data modify storage asset:effect StackOperation set value "replace"
     execute unless data storage asset:effect MaxDuration run data modify storage asset:effect MaxDuration set value 2147483647
@@ -43,6 +44,7 @@
     data remove storage asset:effect Description
     data remove storage asset:effect Duration
     data remove storage asset:effect Stack
+    data remove storage asset:effect StackVisible
     data remove storage asset:effect DurationOperation
     data remove storage asset:effect StackOperation
     data remove storage asset:effect MaxDuration
