@@ -346,7 +346,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/triggers/
     #   core:load_once
     #   player_manager:arrow/**
-    scoreboard objectives add ArrowOwner dummy
+    scoreboard objectives add ArrowOwnerUserID dummy
 
     #> 最大値用スコアホルダー
     # @within function

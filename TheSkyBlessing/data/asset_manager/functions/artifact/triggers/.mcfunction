@@ -21,7 +21,7 @@
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:artifact/triggers/use_item/
     execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:artifact/triggers/sneak/
     execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:artifact/triggers/using_item
-    execute as @e[type=#arrows,nbt={life:0s}] if score @s ArrowOwner = @p[tag=this] UserID run tag @s add ShotArrow
+    execute as @e[type=#arrows,nbt={life:0s}] if score @s ArrowOwnerUserID = @p[tag=this] UserID run tag @s add ShotArrow
     execute if entity @e[type=#arrows,tag=ShotArrow] run function asset_manager:artifact/triggers/shot
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/dis_equip
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
