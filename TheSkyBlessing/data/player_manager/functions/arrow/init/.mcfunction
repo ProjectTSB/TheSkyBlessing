@@ -4,10 +4,6 @@
 #
 # @within function core:tick/
 
-#> private
-# @private
-    #declare storage player_manager:arrow
-
 # 処理用タグをつける
     tag @s add InitArrow
 # 処理済みタグをつける
