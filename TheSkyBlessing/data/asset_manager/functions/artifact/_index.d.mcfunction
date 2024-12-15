@@ -77,3 +77,7 @@
 # @within function asset_manager:artifact/triggers/equipments/update_cooldown/*
     #declare score_holder $Tick
     #declare score_holder $LatestUsedTick
+
+#> 矢検知
+# @within function asset_manager:artifact/triggers/
+    #declare score_holder $GameTime

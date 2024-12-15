@@ -347,6 +347,7 @@ team modify NoCollision collisionRule never
     #   core:load_once
     #   player_manager:arrow/**
     scoreboard objectives add ArrowOwnerUserID dummy
+    scoreboard objectives add ArrowShotTick dummy
 
     #> 最大値用スコアホルダー
     # @within function

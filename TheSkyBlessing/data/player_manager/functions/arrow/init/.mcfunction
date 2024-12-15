@@ -9,6 +9,9 @@
 # 処理済みタグをつける
     tag @s add AlreadyInitArrow
 
+# 撃ったときのTickを入れる
+    execute store result score @s ArrowShotTick run data get storage global Time
+
 # 撃ったプレイヤーのUUIDを取得する
     data modify storage player_manager:arrow TargetUUID set from entity @s Owner
 # 撃ったプレイヤーと結びつける

@@ -21,8 +21,6 @@
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:artifact/triggers/use_item/
     execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:artifact/triggers/sneak/
     execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:artifact/triggers/using_item
-    execute as @e[type=#arrows,nbt={life:0s}] if score @s ArrowOwnerUserID = @p[tag=this] UserID run tag @s add ShotArrow
-    execute if entity @e[type=#arrows,tag=ShotArrow] run function asset_manager:artifact/triggers/shot
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/dis_equip
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/
@@ -30,6 +28,12 @@
     execute if data storage asset:artifact ArtifactEvents.Killed[0] run function asset_manager:artifact/triggers/killed/
     execute if data storage asset:artifact ArtifactEvents.Heal[0] run function asset_manager:artifact/triggers/heal/
     execute if data storage asset:artifact ArtifactEvents.ReceiveHeal[0] run function asset_manager:artifact/triggers/receive_heal/
+# 弓の発射処理 (一時的処置)
+    execute if entity @e[type=#arrows,distance=..5,limit=1] store result score $GameTime Temporary run data get storage global Time
+    execute as @e[type=#arrows,distance=..5] if score @s ArrowOwnerUserID = @p[tag=this] UserID if score @s ArrowShotTick = $GameTime Temporary run tag @s add ShotArrow
+    execute if entity @e[type=#arrows,tag=ShotArrow,distance=..5,limit=1] run function asset_manager:artifact/triggers/shot
+    tag @e[type=#arrows,distance=..5] remove ShotArrow
+    scoreboard players reset $GameTime Temporary
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
