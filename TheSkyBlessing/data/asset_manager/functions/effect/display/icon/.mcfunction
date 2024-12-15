@@ -13,7 +13,7 @@
     data modify storage asset:effect CopiedEffect set from storage asset:effect TargetEffect
 # Durationが100以下で点滅
     execute store result score $Duration Temporary run data get storage asset:effect CopiedEffect.Duration 1
-    execute if score $Duration Temporary matches ..100 run scoreboard players operation $Duration Temporary %= $10 Const
+    execute if score $Duration Temporary matches ..60 run scoreboard players operation $Duration Temporary %= $10 Const
     execute if score $Duration Temporary matches 8 run data modify storage asset:effect CopiedEffect.Color set value "#EFEFEF"
     execute if score $Duration Temporary matches 7 run data modify storage asset:effect CopiedEffect.Color set value "#CCCCCC"
     execute if score $Duration Temporary matches 6 run data modify storage asset:effect CopiedEffect.Color set value "#999999"
