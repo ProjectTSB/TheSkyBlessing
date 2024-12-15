@@ -8,7 +8,8 @@
     #declare score_holder $isNotOwner
 
 # プレイヤーのUUIDを取得
-    data modify storage player_manager:arrow PlayerUUID set from entity @s UUID
+    function api:data_get/uuid
+    data modify storage player_manager:arrow PlayerUUID set from storage api: UUID
 # チェックする
     execute store success score $isNotOwner Temporary run data modify storage player_manager:arrow PlayerUUID set from storage player_manager:arrow TargetUUID
 # 一致していれば結びつける
