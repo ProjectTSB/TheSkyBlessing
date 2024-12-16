@@ -1,7 +1,9 @@
-#> api:damage/core/modify_damage
+#> api:damage/core/modify_damage.m
 #
 # ダメージをapi: Modifiersを元に補正します
 #
+# @input args
+#   Side : "Attack" | "Defense"
 # @within function
 #   api:damage/core/modify/player
 #   api:damage/core/attack
@@ -17,6 +19,10 @@
 # 必要なデータの取得と加算
     # 元ダメージ
         execute store result score $Damage Temporary run data get storage api: Damage 100
+    # 補正
+        function oh_my_dat:please
+        $data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.$(Side)
+# 補正値の計算
     # Base値による補正
         execute store result score $Modifier Temporary run data get storage api: Modifiers.Base 100
         execute unless data storage api: Modifiers.Base run scoreboard players set $Modifier Temporary 100

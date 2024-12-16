@@ -11,10 +11,8 @@
 # 与えるダメージの計算
     function api:damage/core/calc/
 # ダメージの補正
-    execute if data storage api: Argument{BypassModifier:false} run function oh_my_dat:please
     execute if data storage api: Argument{BypassModifier:false} store result storage api: Damage double 0.0001 run scoreboard players get $Damage Temporary
-    execute if data storage api: Argument{BypassModifier:false} run data modify storage api: Modifiers set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.Defense
-    execute if data storage api: Argument{BypassModifier:false} run function api:damage/core/modify_damage
+    execute if data storage api: Argument{BypassModifier:false} run function api:damage/core/modify_damage.m {Side:"Defense"}
     execute if data storage api: Argument{BypassModifier:false} store result score $Damage Temporary run data get storage api: ModifiedDamage 100
     execute if data storage api: Argument{BypassModifier: true} run scoreboard players operation $Damage Temporary /= $100 Const
 # システム的なダメージ上限(9999.9/99999999(e4))チェック
