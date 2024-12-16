@@ -9,7 +9,6 @@
 #   asset:artifact/*/trigger/2.check_condition
 #   asset:artifact/*/trigger/3.main
 #   asset:artifact/common/**
-#   player_manager:actionbar/
     #declare storage asset:artifact
 
 #> 特殊クールダウン

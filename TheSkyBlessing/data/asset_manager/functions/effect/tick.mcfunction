@@ -28,7 +28,7 @@
 # 付与されているエフェクトが何もなければタグを消す
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0] run tag @s remove HasAssetEffect
 # エフェクト表示を構築
-    execute if data storage asset:effect NextTickEffects[0] run function asset_manager:effect/display/construct_message/
+    execute if entity @s[type=player] if data storage asset:effect NextTickEffects[0] run function asset_manager:effect/display/construct_message/
 
 # リセット
     scoreboard players reset @s UsedMilk
