@@ -6,6 +6,8 @@
 
 # 体力
     execute if entity @s[type=!player] store result score $Health Temporary run scoreboard players get @s MobHealth
+# ダメージを取得
+    execute store result score $Damage Temporary run data get storage api: Argument.Damage 100
 # 防御力
     execute if data storage api: Argument{BypassArmorDefense:false} store result score $defensePoints Temporary run attribute @s generic.armor get 100
     execute if data storage api: Argument{BypassArmorDefense: true} run scoreboard players set $defensePoints Temporary 0
