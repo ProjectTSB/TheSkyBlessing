@@ -6,6 +6,8 @@
 
 # プレイヤー情報の記録
     scoreboard players operation $LatestModifiedUser UserID = @s UserID
+    execute store result storage api: Argument.Attacker int 1 run scoreboard players get @s UserID
+    data modify storage api: Argument.AttackerType set value "player"
 # ModifierIndex をインクリメントする
     scoreboard players add $ModifierIndex Global 1
 # ダメージに補正値を掛ける
