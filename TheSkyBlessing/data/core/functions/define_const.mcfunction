@@ -485,5 +485,5 @@ scoreboard players set $2147483647 Const 2147483647
 scoreboard players set $-2147483648 Const -2147483648
 scoreboard players set $2147483647 Const 2147483647
 
-scoreboard players set $155 Const 165
+scoreboard players set $155 Const 155
 scoreboard players set $165 Const 165
