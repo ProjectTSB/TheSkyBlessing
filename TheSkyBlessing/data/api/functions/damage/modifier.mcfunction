@@ -29,5 +29,5 @@
 # 補正フラグを立てる
     data modify storage api: DamageLibModified set value true
 # 補正
-    execute if entity @s[type=player] run function api:damage/core/modify/player
+    execute if entity @s[type= player] run function api:damage/core/modify/player
     execute if entity @s[type=!player] run function api:damage/core/modify/non-player
