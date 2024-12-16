@@ -8,7 +8,6 @@
     execute if data storage api: Argument{BypassDifficulty:false} run function api:damage/core/health_subtract/player/difficulty_modifier
 # 引数として代入
     execute store result storage api: Argument.Fluctuation double -0.01 run scoreboard players get $Damage Temporary
-    execute store result storage api: Argument.Attacker int 1 run scoreboard players get $LatestModifiedEntity MobUUID
     # data modify storage api: Argument.AttackType set from storage api: Argument.AttackType
     # data modify storage api: Argument.ElementType set from storage api: Argument.ElementType
     # data modify storage api: Argument.DisableLog set from storage api: Argument.DisableLog

@@ -24,6 +24,9 @@
 # プレイヤー事前処理
     execute as @a at @s run function core:tick/player/pre
 
+# 矢の事前処理
+    execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
+
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
     scoreboard players operation $4tInterval Global %= $4 Const
