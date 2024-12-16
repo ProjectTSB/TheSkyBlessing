@@ -18,5 +18,3 @@
     function api:mp/check
 # タグ付与
     execute unless data storage api: Return{IsThresholdOrMore:true} run tag @s add CheckFailed
-# リセット
-    scoreboard players reset $Length Temporary

@@ -13,8 +13,8 @@
     #declare score_holder $Length
 
 # 取得して減算
-    execute store result storage api: Argument.Fluctuation float -1 run data get storage asset:artifact TargetItems[0].tag.TSB.MPCost
-    data modify storage lib: Argument.DisableLog set value true
-    function lib:mp/fluctuation
+    execute store result storage api: Argument.Fluctuation float -0.01 run data get storage asset:artifact TargetItems[0].tag.TSB.MPCost 100
+    data modify storage api: Argument.DisableLog set value true
+    function api:mp/fluctuation
 # リセット
     scoreboard players reset $Fluctuation Temporary

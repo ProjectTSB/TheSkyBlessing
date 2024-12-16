@@ -12,7 +12,7 @@
     #declare score_holder $MP
 
 # 取得
-    execute store result score $MP Temporary run data get storage api: Argument.MP
+    execute store result score $MP Temporary run data get storage api: Argument.MP 10
 # セット
     scoreboard players operation @s MP = $MP Temporary
 # リセット
