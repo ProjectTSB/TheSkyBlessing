@@ -7,7 +7,10 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                    "nbt": "{Tags:[\"PlayerShouldInvulnerable\"]}"
+                    "type_specific": {
+                        "type": "player",
+                        "gamemode": "spectator"
+                    }
                 }
             }
         },

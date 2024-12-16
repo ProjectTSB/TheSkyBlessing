@@ -53,8 +53,6 @@
     function player_manager:set_team_and_per_health
 # 緩衝体力処理
     function player_manager:absorption/
-# actionbar表示
-    function player_manager:actionbar/
 
 # リセット
     tag @s remove this

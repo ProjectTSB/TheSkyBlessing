@@ -28,6 +28,12 @@
     execute if data storage asset:artifact ArtifactEvents.Killed[0] run function asset_manager:artifact/triggers/killed/
     execute if data storage asset:artifact ArtifactEvents.Heal[0] run function asset_manager:artifact/triggers/heal/
     execute if data storage asset:artifact ArtifactEvents.ReceiveHeal[0] run function asset_manager:artifact/triggers/receive_heal/
+# 弓の発射処理 (一時的処置)
+    execute if entity @e[type=#arrows,distance=..5,limit=1] store result score $GameTime Temporary run data get storage global Time
+    execute as @e[type=#arrows,distance=..5] if score @s ArrowOwnerUserID = @p[tag=this] UserID if score @s ArrowShotTick = $GameTime Temporary run tag @s add ShotArrow
+    execute if entity @e[type=#arrows,tag=ShotArrow,distance=..5,limit=1] run function asset_manager:artifact/triggers/shot
+    tag @e[type=#arrows,distance=..5] remove ShotArrow
+    scoreboard players reset $GameTime Temporary
 # EntityStorageにデータ突っ込む
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット

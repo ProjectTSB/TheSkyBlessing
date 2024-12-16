@@ -74,8 +74,8 @@ data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
 data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE204","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE204","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
 
 data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
@@ -341,6 +341,14 @@ team modify NoCollision collisionRule never
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
 
+    #> PlayerManager - Arrow
+    # @within function
+    #   asset_manager:artifact/triggers/
+    #   core:load_once
+    #   player_manager:arrow/**
+    scoreboard objectives add ArrowOwnerUserID dummy
+    scoreboard objectives add ArrowShotTick dummy
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:load_once
@@ -393,6 +401,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/handler/on_damage_without_source
     #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
         scoreboard objectives add TakenDamage custom:damage_taken
+        scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
     #> MobManager - Teams
     # @within function
