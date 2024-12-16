@@ -9,8 +9,6 @@
     #declare score_holder $Fluctuation
     #declare tag UUIDAttacker
 
-# ダメージ量を補正
-    scoreboard players operation $Damage Temporary /= $100 Const
 # ダメージ表示
     scoreboard players set $Fluctuation Lib 0
     scoreboard players operation $Fluctuation Lib -= $Damage Temporary
