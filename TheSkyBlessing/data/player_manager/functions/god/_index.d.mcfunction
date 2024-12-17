@@ -17,3 +17,11 @@
 #> storage for process
 # @within function player_manager:god/mercy/**
     #declare storage player_manager:god
+
+#> Tag for Equipment Update
+# @within function
+#   player_manager:god/*/believe
+#   player_manager:god/none/set_tag
+#   asset_manager:artifact/triggers/
+#   asset_manager:artifact/triggers/equipments/update_attribute/*
+    #declare tag Believe.Changed

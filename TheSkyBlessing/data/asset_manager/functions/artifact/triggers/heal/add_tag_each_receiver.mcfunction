@@ -8,7 +8,7 @@
 
 #> Private
 # @private
-#declare score_holder $HealTarget
+    #declare score_holder $HealTarget
 
 execute store result score $HealTarget Temporary run data get storage asset:artifact HealTargets[-1]
 data remove storage asset:artifact HealTargets[-1]
