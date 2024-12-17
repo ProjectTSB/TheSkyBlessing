@@ -15,6 +15,7 @@
 
 # アイテムを消費中であることを登録する
     execute if data storage asset:artifact TargetItem{Trigger:"use_item"} unless data storage asset:artifact New.Consumable.ID if entity @s[tag=TriggerFlag.UsingItem,tag=!ConsumingItem] run function asset_manager:artifact/triggers/event/use_item/init
+    execute if data storage asset:artifact TargetItem{Trigger:"shot"} unless data storage asset:artifact New.Consumable.ID if entity @s[tag=TriggerFlag.UsingItem,tag=!ConsumingItem] run function asset_manager:artifact/triggers/event/use_item/init
 
 # トリガーを持っていれば処理を実行する
 # equipとuse_itemは別処理をしているので弾く

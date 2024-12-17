@@ -74,8 +74,8 @@ data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
 data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE204","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE204","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
 
 data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
@@ -331,15 +331,22 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add HPRegenCooldown dummy {"text":"HP自然回復のクールダウン"}
-        scoreboard objectives add MP dummy {"text":"MP"}
-        scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
-        scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+        scoreboard objectives add MP dummy {"text":"MP (e1)"}
+        scoreboard objectives add MPMax dummy {"text":"MP上限値 (e1)"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
         scoreboard objectives add FloraFoodRegenCooldown dummy {"text":"フローラの満腹度回復のクールダウン"}
     scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
+
+    #> PlayerManager - Arrow
+    # @within function
+    #   asset_manager:artifact/triggers/trigger/
+    #   core:load_once
+    #   player_manager:arrow/**
+    scoreboard objectives add ArrowOwnerUserID dummy
+    scoreboard objectives add ArrowShotTick dummy
 
     #> 最大値用スコアホルダー
     # @within function
@@ -393,6 +400,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/handler/on_damage_without_source
     #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
         scoreboard objectives add TakenDamage custom:damage_taken
+        scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
     #> MobManager - Teams
     # @within function

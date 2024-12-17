@@ -14,6 +14,8 @@
     execute if entity @s[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
 # MPを経験値バーに同期
     function player_manager:mp/viewer/check_xpbar
+# actionbar表示
+    function player_manager:actionbar/
 
 # リセット
     execute if entity @s[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:artifact/triggers/event/sneak/reset
