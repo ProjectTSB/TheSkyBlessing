@@ -33,9 +33,9 @@
     execute unless data storage asset:mob WeaponDropChances run data modify storage asset:mob WeaponDropChances set value [0f,0f]
     execute unless data storage asset:mob ArmorDropChances run data modify storage asset:mob ArmorDropChances set value [0f,0f,0f,0f]
     execute unless data storage asset:mob Health store result storage asset:mob Health double 0.01 run attribute @s generic.max_health get 100
-    # execute unless data storage asset:mob AttackDamage run
-    # execute unless data storage asset:mob Defense run
-    # execute unless data storage asset:mob SpecialDefense run
+    execute unless data storage asset:mob AttackDamage run data modify storage asset:mob AttackDamage set value 0.01
+    execute unless data storage asset:mob Defense run data modify storage asset:mob Defense set value 0
+    execute unless data storage asset:mob SpecialDefense run data modify storage asset:mob SpecialDefense set value 0
     # execute unless data storage asset:mob Speed run
     # execute unless data storage asset:mob FollowRange run
     execute unless data storage asset:mob KnockBackResist run data modify storage asset:mob KnockBackResist set value 0.75f
@@ -51,11 +51,13 @@
         data modify storage asset:mob HandItems set value []
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Mainhand
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Offhand
+        data modify storage asset:mob HandItems[].AttributeModifiers set value []
         data modify storage asset:mob ArmorItems set value []
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Feet
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Legs
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Chest
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
+        data modify storage asset:mob ArmorItems[].AttributeModifiers set value []
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
