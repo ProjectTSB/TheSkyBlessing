@@ -51,11 +51,13 @@
         data modify storage asset:mob HandItems set value []
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Mainhand
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Offhand
+        data modify storage asset:mob HandItems[].AttributeModifiers set value []
         data modify storage asset:mob ArmorItems set value []
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Feet
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Legs
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Chest
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
+        data modify storage asset:mob ArmorItems[].AttributeModifiers set value []
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
