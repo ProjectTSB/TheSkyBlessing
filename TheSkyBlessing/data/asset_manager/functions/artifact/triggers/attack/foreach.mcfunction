@@ -19,6 +19,7 @@
 # 神器側に受け渡し
     function #asset:artifact/attack
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run tag @s add ShouldVanillaAttack
+    execute if data storage asset:context Attack{Type:"vanilla_melee"     } run function asset_manager:artifact/triggers/attack/store_crit_and_charge_percentage
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run function #asset:artifact/attack/melee
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } if entity @s[tag=ShouldVanillaAttack] as @e[type=#lib:living,type=!player,tag=Victim,distance=..8] at @s run function asset_manager:artifact/triggers/attack/vanilla/
     execute if data storage asset:context Attack{Type:"vanilla_projectile"} run function #asset:artifact/attack/projectile
