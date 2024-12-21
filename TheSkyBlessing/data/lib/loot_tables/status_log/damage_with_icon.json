@@ -17,6 +17,24 @@
                                     "font": "invisible_bg"
                                 },
                                 {
+                                    "storage": "lib:",
+                                    "nbt": "AttackType",
+                                    "interpret": true
+                                },
+                                {
+                                    "text": "\u0002",
+                                    "font": "space"
+                                },
+                                {
+                                    "storage": "lib:",
+                                    "nbt": "ElementType",
+                                    "interpret": true
+                                },
+                                {
+                                    "text": "\u0002",
+                                    "font": "space"
+                                },
+                                {
                                     "score": {
                                         "objective": "Temporary",
                                         "name": "$Int"
@@ -36,6 +54,10 @@
                                     },
                                     "color": "white",
                                     "font": "damage"
+                                },
+                                {
+                                    "text": "\u0010",
+                                    "font": "space"
                                 },
                                 {
                                     "text": "#",
