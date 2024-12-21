@@ -29,6 +29,7 @@
 #   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
+#   asset_manager:artifact/triggers/attack/vanilla/
 #   api:damage/core/health_subtract/non-player/
 #   api:mob/kill
     #declare tag AssetMob
