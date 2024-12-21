@@ -1,4 +1,4 @@
-#> asset_manager:effect/display/icon/construct.m
+#> asset_manager:effect/display/icon/buff.m
 #
 #
 #
