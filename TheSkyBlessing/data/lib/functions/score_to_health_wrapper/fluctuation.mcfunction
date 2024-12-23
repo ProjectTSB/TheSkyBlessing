@@ -31,3 +31,4 @@
 # リセット
     scoreboard players reset $Fluctuation Lib
     data remove storage api: Argument.Fluctuation
+    data remove storage api: Argument.DisableLog
