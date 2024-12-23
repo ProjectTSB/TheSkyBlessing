@@ -28,6 +28,7 @@
 #   core:tick/
 #   api:damage/core/health_subtract/non-player/
 #   api:mob/kill
+#   asset_manager:artifact/triggers/attack/vanilla/
 #   asset_manager:mob/triggers/
     #declare tag Kill
 
