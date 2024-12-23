@@ -16,6 +16,15 @@
     #declare score_holder $isNegative
     #declare tag SummonPosStand
 
+# アイコン選択
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{AttackType:"Physical"} run data modify storage lib: AttackType set from storage global Icon.Attack.Physical
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{AttackType:"Magic"} run data modify storage lib: AttackType set from storage global Icon.Attack.Magic
+
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{ElementType:"Fire"} run data modify storage lib: ElementType set from storage global Icon.Attack.Fire
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{ElementType:"Water"} run data modify storage lib: ElementType set from storage global Icon.Attack.Water
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{ElementType:"Thunder"} run data modify storage lib: ElementType set from storage global Icon.Attack.Thunder
+    execute if data storage global Config{EnableDamageTypeIcon:true} if data storage api: Argument{ElementType:"None"} run data modify storage lib: ElementType set from storage global Icon.Attack.None
+
 # 負数の場合の処理 // 0未満では無く、0以下なのは0の表記を赤くするため。
     execute store success score $isNegative Temporary if score $Fluctuation Lib matches ..0
     execute if score $isNegative Temporary matches 1 run scoreboard players operation $Fluctuation Lib *= $-1 Const
@@ -36,13 +45,16 @@
     execute anchored eyes positioned ^ ^ ^ at @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1] run summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Silent:1b,Invisible:1b,Tags:["LogAEC", "LogAECInit","Object"],CustomName:'""',CustomNameVisible:1b}
 # 表示文字列生成
     execute if score $isNegative Temporary matches 0 run loot replace block 10000 0 10000 container.0 loot lib:status_log/heal
-    execute if score $isNegative Temporary matches 1 run loot replace block 10000 0 10000 container.0 loot lib:status_log/damage
+    execute if score $isNegative Temporary matches 1 if data storage global Config{EnableDamageTypeIcon:true} run loot replace block 10000 0 10000 container.0 loot lib:status_log/damage_with_icon
+    execute if score $isNegative Temporary matches 1 unless data storage global Config{EnableDamageTypeIcon:true} run loot replace block 10000 0 10000 container.0 loot lib:status_log/damage
 # 文字列描画
     execute anchored eyes positioned ^ ^ ^ run data modify entity @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] CustomName set from block 10000 0 10000 Items[0].tag.display.Name
 # タグ削除
     execute anchored eyes positioned ^ ^ ^ run tag @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] remove LogAECInit
 # リセット
     execute anchored eyes positioned ^ ^ ^ run kill @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1]
+    data remove storage lib: AttackType
+    data remove storage lib: ElementType
     scoreboard players reset $Fluctuation Lib
     scoreboard players reset $Frac Temporary
     scoreboard players reset $Int Temporary
