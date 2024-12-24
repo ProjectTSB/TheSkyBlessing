@@ -2,7 +2,7 @@
 #
 # 座標取得
 #
-# @internal
+# @within function lib:distance/**
 
 # 汎用エンティティを実行位置にtp
     tp @s ~ ~ ~

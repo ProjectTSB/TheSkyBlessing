@@ -2,7 +2,7 @@
 #
 # ローカル相対座標をZ軸向きに回転させてtp
 #
-# @internal
+# @within function lib:distance/**
 
 # 幾何学で向き相対をZ軸方向に回転してtp
     $execute facing ^ ^$(Y) ^$(Z) facing ^$(X) ^-$(Y) ^$(Z) facing ^ ^$(Y) ^$(Z) run tp @s ^-$(X) ^-$(Y) ^$(Z)

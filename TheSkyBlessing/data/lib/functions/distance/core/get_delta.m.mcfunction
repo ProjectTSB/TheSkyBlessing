@@ -2,7 +2,7 @@
 #
 # 差分取得
 #
-# @internal
+# @within function lib:distance/**
 
 # 差分の位置にtp
     $tp @s ^$(X) ^$(Z) ^$(Y)
