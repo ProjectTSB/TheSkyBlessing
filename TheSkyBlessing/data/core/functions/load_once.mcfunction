@@ -402,6 +402,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add TakenDamage custom:damage_taken
         scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
+    #> MobManager - Teams
+    # @within function
+    #   mob_manager:init/set_tag_and_team
+    #   asset_manager:mob/summon/set_data
+        team add Enemy
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load

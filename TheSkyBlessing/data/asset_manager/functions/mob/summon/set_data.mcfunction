@@ -94,6 +94,9 @@
         data modify entity @s CustomNameVisible set value 0b
 # タグ周り
     function asset_manager:mob/summon/set_tag
+# Enemyのチーム設定
+    execute if data storage asset:mob {Type:"Enemy"} run team join Enemy
+    execute if data storage asset:mob {Type:"Enemy.Boss"} run team join Enemy
 # EntityStorage呼び出し
     function oh_my_dat:please
 # 属性耐性
