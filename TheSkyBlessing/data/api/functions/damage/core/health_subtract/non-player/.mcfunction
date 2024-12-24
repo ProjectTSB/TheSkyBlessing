@@ -23,9 +23,8 @@
     attribute @s minecraft:generic.knockback_resistance modifier add 3-0-1-0-100000001 "Temp_Resist" 1 add
 # 敵対させるためのダメージ
     execute as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add UUIDAttacker
-    tag @p[tag=UUIDAttacker] add AttackedByApi
-    damage @s 0 player_attack by @p[tag=UUIDAttacker]
-    tag @p[tag=AttackedByApi] remove AttackedByApi
+    data modify storage api: Argument.Attacker set value "@p[tag=UUIDAttacker]"
+    function api:mob/deal_dummy_damage
     tag @p[tag=UUIDAttacker] remove UUIDAttacker
 # ノックバック無効を削除
     attribute @s minecraft:generic.knockback_resistance modifier remove 3-0-1-0-100000001
