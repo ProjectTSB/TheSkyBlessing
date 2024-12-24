@@ -2,9 +2,7 @@
 #
 #
 #
-# @within function
-#   asset_manager:artifact/data/*/revert_from_current
-#   asset_manager:artifact/triggers/equipments/mask_slot/
+# @within function asset_manager:artifact/triggers/equipments/mask_slot/
 
 # 適用
     data modify storage asset:context id.hotbar[8] set from storage asset:artifact NewEquips[0]

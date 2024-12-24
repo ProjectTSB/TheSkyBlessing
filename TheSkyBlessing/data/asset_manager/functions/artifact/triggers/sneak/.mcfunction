@@ -66,7 +66,5 @@
         execute if score @s Sneak matches 200.. run scoreboard players set $SneakThreshold Temporary 200
         execute if score @s Sneak matches 200.. run function asset_manager:artifact/triggers/sneak/reset_value_not-equal
         execute if score @s Sneak matches 200.. run function #asset:artifact/sneak/10s
-# イベント発火後に実行するやつ
-    function asset_manager:artifact/data/new/revert_from_current
 # リセット
     data remove storage asset:context SneakTime
