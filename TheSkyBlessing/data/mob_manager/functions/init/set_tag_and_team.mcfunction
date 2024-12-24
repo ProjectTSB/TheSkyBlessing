@@ -1,4 +1,4 @@
-#> mob_manager:init/set_tag
+#> mob_manager:init/set_tag_and_team
 #
 #
 #
