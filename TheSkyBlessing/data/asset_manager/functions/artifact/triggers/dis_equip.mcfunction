@@ -12,5 +12,3 @@
     function asset_manager:artifact/triggers/equipments/mask_slot/
 # 神器側に受け渡し
     function #asset:artifact/dis_equip
-# イベント発火後に実行するやつ
-    function asset_manager:artifact/data/old/revert_from_current
