@@ -11,4 +11,4 @@
 # ダメージ
     function api:mob/core/deal_dummy_damage.m with storage api: Argument
 # リセット
-    data remove storage lib: Argument.Attacker
+    data remove storage api: Argument.Attacker
