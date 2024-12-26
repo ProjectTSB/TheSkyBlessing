@@ -3,9 +3,9 @@
 #
 #
 # @input args
-#   Attacker: string
+#   AttackerID: int
 # @within function api:mob/deal_dummy_damage
 
-$tag $(Attacker) add AttackedByApi
-$damage @s 0 player_attack by $(Attacker)
-$tag $(Attacker) remove AttackedByApi
+$tag @p[scores={UserID=$(AttackerID)}] add AttackedByApi
+$damage @s 0 player_attack by @p[scores={UserID=$(AttackerID)}]
+$tag @p[scores={UserID=$(AttackerID)}] remove AttackedByApi

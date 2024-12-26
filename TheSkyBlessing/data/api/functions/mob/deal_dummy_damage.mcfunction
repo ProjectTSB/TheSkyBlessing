@@ -1,14 +1,14 @@
 #> api:mob/deal_dummy_damage
 #
-# モブに Attacker からのダミーのダメージを与えます。
+# モブに AttackerID からのダミーのダメージを与えます。
 #
 # @input storage api:
-#   Argument.Attacker: string (selector)
+#   Argument.AttackerID: int
 # @api
 
 # validate
-    execute unless data storage api: Argument.Attacker run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Attacker","color":"red"}]
+    execute unless data storage api: Argument.AttackerID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" AttackerID","color":"red"}]
 # ダメージ
     function api:mob/core/deal_dummy_damage.m with storage api: Argument
 # リセット
-    data remove storage api: Argument.Attacker
+    data remove storage api: Argument.AttackerID

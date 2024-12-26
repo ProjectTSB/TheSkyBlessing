@@ -6,8 +6,7 @@
 
 #> Val
 # @private
-    #declare score_holder $Fluctuation
-    #declare tag UUIDAttacker
+#declare score_holder $Fluctuation
 
 # ダメージ表示
     scoreboard players set $Fluctuation Lib 0
@@ -22,10 +21,8 @@
 # ノックバックを無効に
     attribute @s minecraft:generic.knockback_resistance modifier add 3-0-1-0-100000001 "Temp_Resist" 1 add
 # 敵対させるためのダメージ
-    execute as @a if score @s UserID = $LatestModifiedUser UserID run tag @s add UUIDAttacker
-    data modify storage api: Argument.Attacker set value "@p[tag=UUIDAttacker]"
+    execute as @a if score @s UserID = $LatestModifiedUser UserID store result storage api: Argument.AttackerID int 1 run scoreboard players get @s UserID
     function api:mob/deal_dummy_damage
-    tag @p[tag=UUIDAttacker] remove UUIDAttacker
 # ノックバック無効を削除
     attribute @s minecraft:generic.knockback_resistance modifier remove 3-0-1-0-100000001
 
