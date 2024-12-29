@@ -6,6 +6,3 @@
 
 # 元となるEntityを召喚する
     summon item_display ~ ~ ~ {teleport_duration:1,billboard:"center",Tags:["ObjectInit"],item:{id:"minecraft:cake",Count:1b}}
-
-# 実装フラグを立てる
-data modify storage asset:object Implement set value true
