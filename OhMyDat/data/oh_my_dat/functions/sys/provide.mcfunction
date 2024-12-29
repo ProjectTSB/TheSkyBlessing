@@ -35,96 +35,72 @@ data remove storage oh_my_dat: _[6]
 data remove storage oh_my_dat: _[5]
 data remove storage oh_my_dat: _[4]
 
-# ストレージシフト１
-scoreboard players set $ OhMyDat 65536
-scoreboard players operation $ OhMyDatID *= $ OhMyDat
-# 01....
+# シフト１
+scoreboard players operation $ OhMyDatID *= $65536 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _ append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _ append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _ append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック２
+# チェック2
 execute unless data storage oh_my_dat: _[-4][0] run data modify storage oh_my_dat: _[-4] set from storage oh_my_dat: initial[0]
-# ストレージシフト２
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト2
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック３
+# チェック3
 execute unless data storage oh_my_dat: _[-4][-4][0] run data modify storage oh_my_dat: _[-4][-4] set from storage oh_my_dat: initial[0][0]
-# ストレージシフト３
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト3
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック４
+# チェック4
 execute unless data storage oh_my_dat: _[-4][-4][-4][0] run data modify storage oh_my_dat: _[-4][-4][-4] set from storage oh_my_dat: initial[0][0][0]
-# ストレージシフト４
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト4
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4][-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4][-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4][-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック５
+# チェック5
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][0] run data modify storage oh_my_dat: _[-4][-4][-4][-4] set from storage oh_my_dat: initial[0][0][0][0]
-# ストレージシフト５
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト5
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4][-4][-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4][-4][-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4][-4][-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック６
+# チェック6
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4] set from storage oh_my_dat: initial[0][0][0][0][0]
-# ストレージシフト６
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト6
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック７
+# チェック7
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4] set from storage oh_my_dat: initial[0][0][0][0][0][0]
-# ストレージシフト７
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト7
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4] append value []
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4] append from storage oh_my_dat: two_empty_lists[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4] append from storage oh_my_dat: three_empty_lists[]
 
-# ストレージチェック８
+# チェック8
 execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][0] run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4] set from storage oh_my_dat: initial[0][0][0][0][0][0][0]
-# ストレージシフト８
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-scoreboard players operation $ OhMyDatID += $ OhMyDatID
-# 01....
+# シフト8
+scoreboard players operation $ OhMyDatID *= $4 Const
+# 上位2bitを元にオフセット要素を末尾追加する
 execute if score $ OhMyDatID matches 1073741824.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4] append value {}
-# 10....
 execute if score $ OhMyDatID matches ..-1073741825 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4] append from storage oh_my_dat: two_empty_maps[]
-# 11....
 execute if score $ OhMyDatID matches -1073741824..-1 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4] append from storage oh_my_dat: three_empty_maps[]
