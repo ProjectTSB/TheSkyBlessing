@@ -11,7 +11,8 @@ execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle
 execute if entity @s[tag=AutoKillWhenDiePassenger] unless predicate lib:is_passenger run kill @s
 execute if entity @s[tag=AlwaysInvisible] run effect give @s invisibility 999999 0 true
 execute if entity @s[tag=AlwaysSlowFall] run effect give @s slow_falling 999999 0 true
-execute unless entity @s[tag=!AntiBurn,tag=!AlwaysBurn] run function asset_manager:mob/common_tag/check_burning
+execute if entity @s[tag=AlwaysBurn] unless predicate lib:is_burning run data modify entity @s Fire set value 32767s
+execute if entity @s[tag=AntiBurn] if predicate lib:is_burning run data modify entity @s Fire set value 0s
 execute if entity @s[tag=AntiFallDamage] run function asset_manager:mob/common_tag/check_fall_distance
 execute if entity @s[type=skeleton,tag=!Frozen] run function asset_manager:mob/common_tag/check_frozen
 execute if entity @s[type=#lib:drownable,tag=!Drown,predicate=lib:is_in_water/] run function asset_manager:mob/common_tag/check_drowning
