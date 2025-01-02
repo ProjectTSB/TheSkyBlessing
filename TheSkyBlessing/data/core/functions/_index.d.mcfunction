@@ -22,6 +22,7 @@
 #   function
 #       core:load_once
 #       api:global_vars/get_difficulty
+#       player_manager:god/change_difficulty/**
 #       world_manager:force_difficulty
 #   predicate
 #       api:global_vars/difficulty/**

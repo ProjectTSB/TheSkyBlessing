@@ -35,6 +35,8 @@ data modify storage global GameVersion set value "v0.1.6"
 #> gameruleの設定
 function core:define_gamerule
 
+#> 難易度の設定
+difficulty normal
 
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
@@ -277,6 +279,8 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe4 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe5 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
 
     #> PlayerManager - Teams
