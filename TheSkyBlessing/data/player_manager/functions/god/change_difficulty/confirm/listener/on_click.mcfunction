@@ -1,5 +1,5 @@
-#> player_manager:god/change_difficulty/confirm/on_click
-# @within function player_manager:god/change_difficulty/confirm/listener
+#> player_manager:god/change_difficulty/confirm/listener/on_click
+# @within function player_manager:god/change_difficulty/confirm/listener/
 
 # エラー値
     execute unless score @s Believe5 matches 1 run function lib:message/invalid_operation

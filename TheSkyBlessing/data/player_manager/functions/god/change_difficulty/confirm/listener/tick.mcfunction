@@ -1,8 +1,8 @@
-#> player_manager:god/change_difficulty/confirm/tick
+#> player_manager:god/change_difficulty/confirm/listener/tick
 #
 # ロック解除処理
 #
-# @within function player_manager:god/change_difficulty/confirm/listener
+# @within function player_manager:god/change_difficulty/confirm/listener/
 
 # ロック解除
     execute store result storage player_manager:god Difficulty.LockCount int 0.9999999999 run data get storage player_manager:god Difficulty.LockCount

@@ -1,7 +1,8 @@
-#> player_manager:god/change_difficulty/confirm/change
+#> player_manager:god/change_difficulty/confirm/approve/change
 # @within function
-#   player_manager:god/change_difficulty/confirm/approve
-#   player_manager:god/change_difficulty/confirm/schedule
+#   player_manager:god/change_difficulty/request/on_click
+#   player_manager:god/change_difficulty/confirm/approve/
+#   player_manager:god/change_difficulty/confirm/approve/schedule
 
 # 難度値を代入
     execute store result score $Difficulty Global run data get storage player_manager:god Difficulty.Target
@@ -18,3 +19,5 @@
 
 # リセット
     data modify storage player_manager:god Difficulty.Lock set value false
+    data remove storage player_manager:god Difficulty.Target
+    data remove storage player_manager:god Difficulty.Rejected

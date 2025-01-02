@@ -11,7 +11,7 @@
 # リスナー起動
     scoreboard players reset @a Believe5
     scoreboard players enable @a[tag=!Difficulty.Request] Believe5
-    schedule function player_manager:god/change_difficulty/confirm/listener 1t replace
+    schedule function player_manager:god/change_difficulty/confirm/listener/ 1t replace
 
 # 全体通知
     tellraw @a[tag=!Difficulty.Request] [{"selector":"@s"},{"text":"により、難易度変更の申請が行われました。"}]
@@ -29,6 +29,3 @@
     execute if entity @a[scores={Believe5=0}] run tellraw @a[tag= Difficulty.Request] [{"text":"却下がない場合、30秒経過ののち全プレイヤーの戦闘状態が解除されたときに難易度が変更されます。","color":"aqua"}]
     tellraw @a[tag=!Difficulty.Request] [{"text":"却下する場合は30秒以内に下の却下ボタンを押してください。","color":"aqua"}]
     tellraw @a[tag=!Difficulty.Request] [{"text":"[却下する]","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger Believe5 set 1"}}]
-
-# リセット
-    tag @s remove Difficulty.Request
