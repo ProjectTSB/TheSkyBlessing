@@ -32,9 +32,6 @@
     scoreboard players operation $4tInterval Global %= $4 Const
     execute if score $4tInterval Global matches 0 run function core:tick/4_interval
 
-# 6tick分散ワールド処理
-    function core:tick/6_distributed_interval
-
 # 神器のグローバルtick処理
     function asset_manager:artifact/tick/
 
