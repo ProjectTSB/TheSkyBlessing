@@ -418,5 +418,5 @@ team modify NoCollision collisionRule never
     function player_manager:god/mercy/offering/init
 
 #> ROMを初期化する
-#> ROMが初期化されてなければ初期化する
+    scoreboard players set $LatestProvidedAddress Global 0
     execute unless data storage rom: _ run function rom:init
