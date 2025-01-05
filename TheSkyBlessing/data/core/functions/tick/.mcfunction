@@ -27,6 +27,9 @@
 # 矢の事前処理
     execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
 
+# Nexus Loader
+    function world_manager:nexus_loader/tick
+
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
     scoreboard players operation $4tInterval Global %= $4 Const
