@@ -2,6 +2,7 @@
 #
 # 実行者ディスプレイの見た目上の角度を実行向きへと正確に向けます
 # 注意：scale[0]とscale[1]の値が異なるとせん断変形が起きます
+# 技術資料：https://qiita.com/komaramune/items/68823dd4dcfdcdda0a0e
 #
 # @input
 #   as entity（ディスプレイ系エンティティ限定）
