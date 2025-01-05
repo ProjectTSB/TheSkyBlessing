@@ -8,7 +8,7 @@
 execute rotated 90 ~ positioned 0.0 0.0 0.0 positioned ^ ^ ^1 rotated ~90 ~ positioned ^ ^1 ^ facing 0.0 ~ 0.0 run tp @s 0.0 0.0 0.0 ~ ~
 execute store result storage lib: laser.transformation.left_rotation.angle float 0.000001745 run data get entity @s Rotation[0] 10000
 
-# 倒す軸方向ベクトル特定
+# 起こす軸方向ベクトル特定
 execute positioned 0.0 0.0 0.0 run tp @s ^1 ^ ^ ~ ~
 data modify storage lib: laser.tmp_pos set from entity @s Pos
 data modify storage lib: laser.transformation.left_rotation.axis[0] set from storage lib: laser.tmp_pos[0]
