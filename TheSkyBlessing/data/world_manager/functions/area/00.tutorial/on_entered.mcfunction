@@ -6,3 +6,5 @@
 
 # ゲームモードをアドベンチャーに
     gamemode adventure @s[gamemode=!creative]
+# 初期スポーンだと方向指定が効かないので無理やり回転させる
+    execute if entity @s[tag=!TutorialEnded] run tp @s ~ ~ ~ 90 0
