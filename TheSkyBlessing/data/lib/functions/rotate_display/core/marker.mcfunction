@@ -17,5 +17,5 @@ data modify storage lib: laser.transformation.left_rotation.axis[1] set from sto
 # right_rotationの角度を特定
 execute store result storage lib: laser.transformation.right_rotation.angle float 0.000001745 run data get entity @s Rotation[0] 10000
 
-# 一時マーカー削除
-kill @s
+# 汎用エンティティを原点にtp
+execute in overworld run tp @s 0.0 0.0 0.0 0.0 0.0

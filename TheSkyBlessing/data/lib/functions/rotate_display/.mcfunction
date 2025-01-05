@@ -19,8 +19,8 @@ execute positioned as @s run tp @s ~ ~ ~ 0 90
 # ストレージ準備
 data modify storage lib: laser.transformation set value {left_rotation:{angle:0f,axis:[0d,0d,0d]},right_rotation:{angle:0f,axis:[0f,0f,1f]}}
 
-# 一時マーカーを実行者にして計算処理
-execute summon marker run function lib:rotate_display/core/marker
+# 汎用エンティティを実行者にして計算処理
+execute as 0-0-0-0-0 run function lib:rotate_display/core/marker
 
 # 変形反映
 data modify entity @s transformation merge from storage lib: laser.transformation
