@@ -11,19 +11,19 @@
 # @api
 
 # ディスプレイじゃなかったら失敗
-execute unless entity @s[type=#lib:display] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"rotate_displayの実行者がディスプレイ系エンティティではありません","color":"white"}]
+    execute unless entity @s[type=#lib:display] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"rotate_displayの実行者がディスプレイ系エンティティではありません","color":"white"}]
 
 # ディスプレイのエンティティ向きを真下に
-execute positioned as @s run tp @s ~ ~ ~ 0 90
+    execute positioned as @s run tp @s ~ ~ ~ 0 90
 
 # ストレージ準備
-data modify storage lib: laser.transformation set value {left_rotation:{angle:0f,axis:[0d,0d,0d]},right_rotation:{angle:0f,axis:[0f,0f,1f]}}
+    data modify storage lib: laser.transformation set value {left_rotation:{angle:0f,axis:[0d,0d,0d]},right_rotation:{angle:0f,axis:[0f,0f,1f]}}
 
 # 汎用エンティティを実行者にして計算処理
-execute as 0-0-0-0-0 run function lib:rotate_display/core/marker
+    execute as 0-0-0-0-0 run function lib:rotate_display/core/marker
 
 # 変形反映
-data modify entity @s transformation merge from storage lib: laser.transformation
+    data modify entity @s transformation merge from storage lib: laser.transformation
 
 # ストレージ掃除
-data remove storage lib: laser
+    data remove storage lib: laser
