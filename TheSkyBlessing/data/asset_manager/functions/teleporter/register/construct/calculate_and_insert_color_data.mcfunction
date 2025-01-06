@@ -1,8 +1,8 @@
-#> asset_manager:teleporter/register/calculate_and_insert_color_data
+#> asset_manager:teleporter/register/construct/calculate_and_insert_color_data
 #
 #
 #
-# @within function asset_manager:teleporter/register/
+# @within function asset_manager:teleporter/register/construct/at_pos
 
 #> Private
 # @private
