@@ -16,6 +16,7 @@
 
 #> storage for process
 # @within function
+#   player_manager:difficulty_check
 #   player_manager:god/mercy/**
 #   player_manager:god/change_difficulty/**
     #declare storage player_manager:god

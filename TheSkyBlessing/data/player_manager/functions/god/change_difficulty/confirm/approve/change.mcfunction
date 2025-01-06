@@ -13,9 +13,9 @@
     # data modify storage player_manager:god Difficulty.Log append value 0
     # execute store result storage player_manager:god Difficulty.Log[-1] int 1 run scoreboard players get $Difficulty Global
 # 通知
-    execute if score $Difficulty Global matches 1 run tellraw @a [{"text":"難易度を"},{"text":"イージー","color":"green"},{"text":"に変更しました"}]
-    execute if score $Difficulty Global matches 2 run tellraw @a [{"text":"難易度を"},{"text":"ノーマル","color":"yellow"},{"text":"に変更しました"}]
-    execute if score $Difficulty Global matches 3.. run tellraw @a [{"text":"難易度を"},{"text":"ハード","color":"red"},{"text":"に変更しました"}]
+    execute if score $Difficulty Global matches 1 run tellraw @s [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"player_manager:god","nbt":"Difficulty.RawText[1]","interpret":true}]}]
+    execute if score $Difficulty Global matches 2 run tellraw @s [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"player_manager:god","nbt":"Difficulty.RawText[2]","interpret":true}]}]
+    execute if score $Difficulty Global matches 3.. run tellraw @s [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"player_manager:god","nbt":"Difficulty.RawText[3]","interpret":true}]}]
 
 # リセット
     data modify storage player_manager:god Difficulty.Lock set value false
