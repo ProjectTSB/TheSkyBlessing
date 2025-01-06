@@ -1,6 +1,12 @@
-#> asset:container/example/generate
+#> asset:container/2147483647/register
 # @within function asset:container/example/register
 
+execute unless loaded 16 4 0 run return 1
+
+# ID (int)
+    data modify storage asset:container ID set value 2147483647
+# Pos ([int] @ 3)
+    data modify storage asset:container Pos set value [16,4,0]
 # ブロック (id(minecraft:block))
     data modify storage asset:container Block set value "chest[facing=east,waterlogged=true]"
 

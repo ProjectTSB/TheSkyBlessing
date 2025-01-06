@@ -1,8 +1,8 @@
-#> asset_manager:container/register/set_items/item_normalize/from_artifact
+#> asset_manager:container/register/construct/set_items/item_normalize/from_artifact
 #
 #
 #
-# @within function asset_manager:container/register/set_items/item_normalize/
+# @within function asset_manager:container/register/construct/set_items/item_normalize/
 
 # 初期化
     item replace block 10000 0 10000 container.0 with air
