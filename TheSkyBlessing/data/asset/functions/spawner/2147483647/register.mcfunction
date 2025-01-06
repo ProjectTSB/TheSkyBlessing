@@ -1,11 +1,15 @@
-#> asset:spawner/example/register
+#> asset:spawner/2147483647/register
 #
 #
 #
-# @within function asset:spawner/example/
+# @within function asset_manager:spawner/register/register.m
+
+execute unless loaded 16 4 0 run return 1
 
 # ID (int)
     data modify storage asset:spawner ID set value 2147483647
+# Pos ([int] @ 3)
+    data modify storage asset:spawner Pos set value [16,4,0]
 # 体力 (int) このスポナーから召喚されたMobがN体殺されると破壊されるか
     data modify storage asset:spawner HP set value 10
 # SpawnPotentials(int | int[] | ({ Weight: int, Id: int })[]) MobAssetのIDを指定する
@@ -24,5 +28,3 @@
     data modify storage asset:spawner MaxNearbyEntities set value 1
 # この範囲にプレイヤーが存在するとき、Mobの召喚を開始する // distance <= 100
     data modify storage asset:spawner RequiredPlayerRange set value 10
-
-function asset:spawner/common/register

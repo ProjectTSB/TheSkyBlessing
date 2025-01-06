@@ -1,11 +1,26 @@
 #> asset_manager:spawner/register/
-#
-# スポナーの実体を召喚しデータ適用処理に投げる
-#
-# @within function asset:spawner/common/register
+# @input storage asset:spawner Args.ID: int
+# @output success: spawner is loaded
+# @within function world_manager:nexus_loader/try_load_asset.m
 
-# スポナーの本体 // 機会があれば見た目を変えれるようにCMDを振っておく
-    summon item_display ~ ~0.5 ~ {Tags:["Object","Spawner","SpawnerInit","Uninterferable"],item:{id:"ender_eye",Count:1b},billboard:"center",brightness:{sky:15,block:15},transformation:{scale:[0.8f,0.8f,0.1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.1f,0f]},interpolation_duration:4}
-    setblock ~ ~ ~ barrier
-# データの適用
-    execute positioned ~ ~0.5 ~ as @e[type=item_display,tag=SpawnerInit,distance=..0.01,limit=1] run function asset_manager:spawner/register/set_data
+# register 呼び出し
+    function asset_manager:spawner/register/register.m with storage asset:spawner Args
+# 生成条件満たしてなかったらリセットして fail
+    execute unless data storage asset:spawner ID run function asset_manager:spawner/register/reset
+    execute unless data storage asset:spawner ID run return fail
+# DPR に含まれてるならリセットして success (すでに召喚されているはずなので)
+    execute store success storage asset:spawner ShouldLoadAsset byte 1 run function asset_manager:spawner/register/check_and_put_dpr.m with storage asset:spawner Args
+    execute if data storage asset:spawner {ShouldLoadAsset:false} run function asset_manager:spawner/register/reset
+    execute if data storage asset:spawner {ShouldLoadAsset:false} run return 1
+
+# 構築
+    data modify storage asset:spawner Args.X set from storage asset:spawner Pos[0]
+    data modify storage asset:spawner Args.Y set from storage asset:spawner Pos[1]
+    data modify storage asset:spawner Args.Z set from storage asset:spawner Pos[2]
+    function asset_manager:spawner/register/construct/m with storage asset:spawner Args
+
+# リセット
+    function asset_manager:spawner/register/reset
+
+# 成功
+    return 1

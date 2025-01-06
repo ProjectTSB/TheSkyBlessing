@@ -1,8 +1,8 @@
-#> asset_manager:spawner/register/set_data
+#> asset_manager:spawner/register/construct/set_data
 #
 # スポナーにデータを埋め込む
 #
-# @within function asset_manager:spawner/register/
+# @within function asset_manager:spawner/register/construct/at_pos
 
 # EntityStorage呼び出し
     function oh_my_dat:please
@@ -10,7 +10,7 @@
     execute store result score @s SpawnerHP run data get storage asset:spawner HP
     execute store result score @s SpawnerCooldown run data get storage asset:spawner Delay
 # SpawnPotentialsを正規化しWeightのSumを計算する
-    function asset_manager:spawner/register/process_spawn_potentials/
+    function asset_manager:spawner/register/construct/process_spawn_potentials/
 # EntityStorageに保存するもの
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.ID set from storage asset:spawner ID
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxHP set from storage asset:spawner HP
