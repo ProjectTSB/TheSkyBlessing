@@ -1,8 +1,8 @@
-#> asset_manager:island/register/set_data
+#> asset_manager:island/register/construct/set_data
 #
 #
 #
-# @within function asset_manager:island/register/
+# @within function asset_manager:island/register/construct/at_pos
 
 # EntityStorage呼び出し
     function oh_my_dat:please
