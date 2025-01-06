@@ -1,11 +1,15 @@
-#> asset:trader/example/register/register
+#> asset:trader/2147483647/register
 #
 #
 #
 # @within function asset:trader/example/register/
 
+execute unless loaded 16 4 0 run return 1
+
 # ID (int)
-    data modify storage asset:trader ID set value -2147483647
+    data modify storage asset:trader ID set value 2147483647
+# Pos ([int] @ 3)
+    data modify storage asset:trader Pos set value [16,4,0]
 # 名前 (TextComponent) (オプション)
     data modify storage asset:trader Name set value '{"text":"未知の商人"}'
 # 方向 (float) (オプション)
@@ -20,6 +24,3 @@
         data modify storage asset:trader Trades[-1].Sell set value 1
     # 取引可能回数 (int) (オプション)
         data modify storage asset:trader Trades[-1].MaxUses set value 5
-
-# 登録
-    function asset:trader/common/register

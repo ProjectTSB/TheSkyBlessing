@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:trader/register/
+# @within function asset_manager:trader/register/construct/at_pos
 
 # セッション開ける
     function lib:array/session/open
@@ -20,7 +20,7 @@
     data modify storage lib: Array set from storage asset:trader Trades
     function lib:array/reverse
     data modify storage asset:trader Trades set from storage lib: Array
-    execute if data storage asset:trader Trades[0] run function asset_manager:trader/register/trades_map/
+    execute if data storage asset:trader Trades[0] run function asset_manager:trader/register/construct/trades_map/
     data modify entity @s Offers.Recipes set from storage asset:trader Recipes
 
 # リセット
