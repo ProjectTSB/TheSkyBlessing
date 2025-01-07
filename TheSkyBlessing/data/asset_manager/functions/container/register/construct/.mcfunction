@@ -1,4 +1,4 @@
-#> asset_manager:container/register/construct/at_pos
+#> asset_manager:container/register/construct/
 #
 #
 #

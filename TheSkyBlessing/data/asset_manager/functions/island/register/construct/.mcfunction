@@ -1,8 +1,5 @@
-#> asset_manager:island/register/construct/at_pos
-#
-#
-#
-# @within function asset_manager:island/register/construct/m
+#> asset_manager:island/register/construct/
+# @within function world_manager:nexus_loader/try_load_asset/construct.m
 
 # 呪われた神器の本体
     summon armor_stand ~ ~ ~ {Tags:["Object","CursedArtifact","CursedArtifactInit","Uninterferable"],Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"stick",Count:1b,tag:{CustomModelData:20100}}]}

@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:container/register/construct/at_pos
+#   asset_manager:container/register/construct/
 #   asset_manager:container/register/construct/set_items/
 
 # データ処理

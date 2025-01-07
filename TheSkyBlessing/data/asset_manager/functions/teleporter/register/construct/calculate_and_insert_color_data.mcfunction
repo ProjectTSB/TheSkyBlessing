@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:teleporter/register/construct/at_pos
+# @within function asset_manager:teleporter/register/construct/
 
 #> Private
 # @private

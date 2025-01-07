@@ -4,6 +4,6 @@
 #
 # @input args
 #   Block
-# @within function asset_manager:container/register/construct/at_pos
+# @within function asset_manager:container/register/construct/
 
 $setblock ~ ~ ~ $(Block)

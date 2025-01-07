@@ -2,7 +2,7 @@
 #
 # スポナーにデータを埋め込む
 #
-# @within function asset_manager:spawner/register/construct/at_pos
+# @within function asset_manager:spawner/register/construct/
 
 # EntityStorage呼び出し
     function oh_my_dat:please

@@ -1,8 +1,8 @@
-#> asset_manager:trader/register/set_data
+#> asset_manager:trader/register/construct/set_data
 #
 #
 #
-# @within function asset_manager:trader/register/construct/at_pos
+# @within function asset_manager:trader/register/construct/
 
 # セッション開ける
     function lib:array/session/open

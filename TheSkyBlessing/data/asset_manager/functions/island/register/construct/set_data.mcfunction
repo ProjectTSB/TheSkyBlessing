@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:island/register/construct/at_pos
+# @within function asset_manager:island/register/construct/
 
 # EntityStorage呼び出し
     function oh_my_dat:please
