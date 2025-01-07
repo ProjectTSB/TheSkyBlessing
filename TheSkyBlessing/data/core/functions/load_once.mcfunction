@@ -130,7 +130,7 @@ team modify NoCollision collisionRule never
         kill @e[tag=Random,limit=1]
     scoreboard players set $Difficulty Global 2
     scoreboard players set $PurifiedIslands Global 0
-    scoreboard players set $TotalIslands Global 50
+    scoreboard players set $TotalIslands Global 60
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
