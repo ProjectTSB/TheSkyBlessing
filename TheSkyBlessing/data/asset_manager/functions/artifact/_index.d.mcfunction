@@ -8,6 +8,7 @@
 #   asset:artifact/*/give/2.give
 #   asset:artifact/*/trigger/2.check_condition
 #   asset:artifact/*/trigger/3.main
+#   asset:artifact/*/*/2.check_condition
 #   asset:artifact/common/**
     #declare storage asset:artifact
 
