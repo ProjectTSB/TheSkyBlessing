@@ -28,7 +28,7 @@
                                     },
                                     {
                                         "storage": "asset:artifact",
-                                        "nbt": "MPHealWhenHit"
+                                        "nbt": "Temp"
                                     },
                                     {
                                         "text": "\u0002",
