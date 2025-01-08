@@ -1,8 +1,8 @@
 #> lib:message/tutorial/07.lost_items
 #
-# 「◆ 推奨事項
-#   目の前が開けた後、正面に見えるであろう島のポータルへ入り、神を信仰することを強く推奨します。」
+# 没収されたアイテムは島を浄化すれば*返還*される。
+# 没収されたアイテムの一部であれば、神に慈悲を乞うことでも取り戻せる。
 #
 # @within function world_manager:area/00-07.tutorial-lost_items
 
-tellraw @s [{"text":"◆ 推奨事項\n","color":"light_purple"},{"text":"目の前が開けた後、正面に見えるであろう島のポータルへ入り、神を信仰することを強く推奨します。","color":"white"}]
+tellraw @s ["",{"text":"◆-------\n","color":"dark_gray"},{"text":"没収されたアイテムは島を浄化すれば"},{"text":"返還","color":"green"},{"text":"される。\n没収されたアイテムの一部であれば、神に慈悲を乞うことでも取り戻せる。"}]

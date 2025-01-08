@@ -1,11 +1,10 @@
 #> lib:message/tutorial/06.tomb
 #
-# 「◆ 失ったアイテムについて
-#   あなた[たち]の死亡時、所持していたアイテムはドロップする代わりに信仰する神によって全て保管されます。
-#   保管されたアイテムは島を浄化することで全て神殿に返還されます。
-#   島の浄化に苦戦する場合は信仰する神に対して慈悲を乞うのもありでしょう。」
+# あなた[たち]が死んだ時、その場には持ち物が埋まった*墓*が建つ。
+# 墓に辿り着けば持ち物を取り戻せるが、その前に命を落とせば神に没収される。
+# 奈落へ落ちると墓は建たず、そのまま没収される。
 #
 # @within function world_manager:area/00-06.tutorial-tomb
 
-execute if score $PlayerCount Global matches ..1 run tellraw @s [{"text":"◆ 失ったアイテムについて\n","color":"light_purple"},{"text":"あなたの死亡時、所持していたアイテムはドロップする代わりに信仰する神によって全て保管されます。\n保管されたアイテムは島を浄化することで全て神殿に返還されます。\n島の浄化に苦戦する場合は信仰する神に対して慈悲を乞うのもありでしょう。","color":"white"}]
-execute if score $PlayerCount Global matches 2.. run tellraw @s [{"text":"◆ 失ったアイテムについて\n","color":"light_purple"},{"text":"あなたたちの死亡時、所持していたアイテムはドロップする代わりに信仰する神によって全て保管されます。\n保管されたアイテムは島を浄化することで全て神殿に返還されます。\n島の浄化に苦戦する場合は信仰する神に対して慈悲を乞うのもありでしょう。","color":"white"}]
+execute if score $PlayerCount Global matches ..1 run tellraw @s ["",{"text":"◆------\n","color":"dark_gray"},{"text":"あなたが死んだ時、その場には持ち物が埋まった"},{"text":"墓","color":"dark_green"},{"text":"が建つ。\n墓に辿り着けば持ち物を取り戻せるが、その前に命を落とせば神に没収される。\n奈落へ落ちると墓は建たず、そのまま没収される。"}]
+execute if score $PlayerCount Global matches 2.. run tellraw @s ["",{"text":"◆------\n","color":"dark_gray"},{"text":"あなたたちが死んだ時、その場には持ち物が埋まった"},{"text":"墓","color":"dark_green"},{"text":"が建つ。\n墓に辿り着けば持ち物を取り戻せるが、その前に命を落とせば神に没収される。\n奈落へ落ちると墓は建たず、そのまま没収される。"}]

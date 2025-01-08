@@ -1,9 +1,8 @@
 #> lib:message/tutorial/03.artifact
 #
-# 「◆ 神器について
-#   この世界には、**神器**と呼ばれる特別なアイテムが存在します。
-#   しかしながら、使用するには神器の力を受け入れる神を信仰している必要があります。」
+# 島を浄化すると手に入る祝福。これは*神器*と呼ばれるアイテムの一つだ。
+# 神器とは、神を信仰する者のみが扱える特別なアイテムの事。
 #
 # @within function world_manager:area/00-03.tutorial-artifact
 
-tellraw @s [{"text":"◆ 神器について\n","color":"light_purple"},{"text":"この世界には、","color":"white"},{"text":"神器","bold":true,"color":"light_purple"},{"text":"と呼ばれる特別なアイテムが存在します。\nしかしながら、使用するには神器の力を受け入れる神を信仰している必要があります。","color":"white"}]
+tellraw @s ["",{"text":"◆---\n","color":"dark_gray"},{"text":"島を浄化すると手に入る祝福。これは"},{"text":"神器","color":"yellow"},{"text":"と呼ばれるアイテムの一つだ。\n神器とは、神を信仰する者のみが扱える特別なアイテムの事。"}]
