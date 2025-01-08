@@ -1,4 +1,4 @@
-#> lib:message/tutorial/artifact
+#> lib:message/tutorial/03.artifact
 #
 # 「◆ 神器について
 #   この世界には、**神器**と呼ばれる特別なアイテムが存在します。

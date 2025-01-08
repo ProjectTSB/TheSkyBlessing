@@ -5,14 +5,14 @@
 # @within function world_manager:area/00.tutorial/
 
 # チュートリアル
-    execute if predicate world_manager:area/00-01.tutorial-goal run function world_manager:area/00-01.tutorial-goal
-    execute if predicate world_manager:area/00-02.tutorial-island run function world_manager:area/00-02.tutorial-island
+    execute if predicate world_manager:area/00-01.tutorial-mission run function world_manager:area/00-01.tutorial-mission
+    execute if predicate world_manager:area/00-02.tutorial-curse run function world_manager:area/00-02.tutorial-curse
     execute if predicate world_manager:area/00-03.tutorial-artifact run function world_manager:area/00-03.tutorial-artifact
-    execute if predicate world_manager:area/00-04.tutorial-religion run function world_manager:area/00-04.tutorial-religion
+    execute if predicate world_manager:area/00-04.tutorial-gods run function world_manager:area/00-04.tutorial-gods
     execute if predicate world_manager:area/00-05.tutorial-spawner run function world_manager:area/00-05.tutorial-spawner
-    execute if predicate world_manager:area/00-06.tutorial-lost_items run function world_manager:area/00-06.tutorial-lost_items
-    execute if predicate world_manager:area/00-07.tutorial-recommend run function world_manager:area/00-07.tutorial-recommend
-    execute if predicate world_manager:area/00-08.tutorial-tp_point run function world_manager:area/00-08.tutorial-tp_point
+    execute if predicate world_manager:area/00-06.tutorial-tomb run function world_manager:area/00-06.tutorial-tomb
+    execute if predicate world_manager:area/00-07.tutorial-lost_items run function world_manager:area/00-07.tutorial-lost_items
+    execute if predicate world_manager:area/00-08.tutorial-tp_gate run function world_manager:area/00-08.tutorial-tp_gate
 # チュートリアル完了済フラグが付いていたらTPする
     execute if entity @s[tag=TutorialEnded] run tp @s 23.5 3.5 24.5
 # エリア下部

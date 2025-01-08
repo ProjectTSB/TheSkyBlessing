@@ -1,4 +1,4 @@
-#> lib:message/tutorial/spawner
+#> lib:message/tutorial/05.spawner
 #
 # 「◆ スポナーについて
 #   この世界に置かれたスポナーはどんなツールや神器を使っても壊すことは出来ません。
