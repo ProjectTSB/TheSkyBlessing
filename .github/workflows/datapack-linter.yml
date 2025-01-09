@@ -51,34 +51,28 @@ jobs:
           REPOSITORY: ProjectTSB/TheSkyBlessing
           BRANCH: master
           VISIBILITY_FILTER: |
-            function@asset:artifact/artifact_name/trigger/2.check_condition
-            function@asset:artifact/artifact_name/trigger/3.main
-            function@asset:artifact/artifact_name/give/2.give
-            function@asset:effect/effect_name/register
-            function@asset:effect/effect_name/given/
-            function@asset:effect/effect_name/tick/
-            function@asset:effect/effect_name/re-given/
-            function@asset:effect/effect_name/remove/
-            function@asset:effect/effect_name/end/
-            function@asset:mob/mob_name/summon/
-            function@asset:mob/mob_name/register
-            function@asset:mob/mob_name/attack/
-            function@asset:mob/mob_name/death/
-            function@asset:mob/mob_name/hurt/
-            function@asset:mob/mob_name/init/
-            function@asset:mob/mob_name/remove/
-            function@asset:mob/mob_name/tick/
-            function@asset:mob/mob_name/attack/SOMETHING_FUNCTION
-            function@asset:mob/mob_name/death/SOMETHING_FUNCTION
-            function@asset:mob/mob_name/hurt/SOMETHING_FUNCTION
+            function@asset:artifact/ARTIFACT_NAME/trigger/2.check_condition
+            function@asset:artifact/ARTIFACT_NAME/trigger/3.main
+            function@asset:artifact/ARTIFACT_NAME/give/2.give
+            function@asset:mob/MOB_NAME/register
+            function@asset:mob/MOB_NAME/summon/
+            function@asset:mob/MOB_NAME/attack/
+            function@asset:mob/MOB_NAME/death/
+            function@asset:mob/MOB_NAME/hurt/
+            function@asset:mob/MOB_NAME/init/
+            function@asset:mob/MOB_NAME/remove/
+            function@asset:mob/MOB_NAME/tick/
+            function@asset:mob/MOB_NAME/attack/SOMETHING_FUNCTION
+            function@asset:mob/MOB_NAME/death/SOMETHING_FUNCTION
+            function@asset:mob/MOB_NAME/hurt/SOMETHING_FUNCTION
             function@asset:object/OBJECT_NAME/register
             function@asset:object/OBJECT_NAME/init/
             function@asset:object/OBJECT_NAME/tick/
-            function@asset:container/container_id/register
-            function@asset:island/island_id/register
-            function@asset:spawner/spawner_id/register
-            function@asset:teleporter/teleporter_id/register
-            function@asset:trader/trader_id/register
+            function@asset:container/CONTAINER_ID/register
+            function@asset:island/ISLAND_ID/register
+            function@asset:spawner/SPAWNER_ID/register
+            function@asset:teleporter/TELEPORTER_ID/register
+            function@asset:trader/TRADER_ID/register
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction
           OUTPUT_RESOURCE_PATH: minecraft:declares.d
 
