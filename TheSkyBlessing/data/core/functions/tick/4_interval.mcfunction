@@ -10,5 +10,3 @@
     function asset_manager:island/tick/4_interval
 # 交易
     function asset_manager:trader/tick/4_interval
-# テレポーター
-    function asset_manager:teleporter/tick/4_interval

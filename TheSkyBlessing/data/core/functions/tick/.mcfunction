@@ -24,13 +24,13 @@
 # 矢の事前処理
     execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
 
+# Nexus Loader
+    function world_manager:nexus_loader/tick
+
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
     scoreboard players operation $4tInterval Global %= $4 Const
     execute if score $4tInterval Global matches 0 run function core:tick/4_interval
-
-# 6tick分散ワールド処理
-    function core:tick/6_distributed_interval
 
 # 神器のグローバルtick処理
     function asset_manager:artifact/tick/
