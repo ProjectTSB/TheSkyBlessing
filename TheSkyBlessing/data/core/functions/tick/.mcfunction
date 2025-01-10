@@ -10,9 +10,6 @@
 # @private
 #declare score_holder $4tInterval
 
-# デバッグ用TickRate操作システム
-    execute if data storage global {IsProduction:0b} if score $AwaitTime Global matches -2147483648..2147483647 run function debug:tps/watch
-
 # 現在の時間をglobalに代入する
     execute store result storage global Time int 1 run time query gametime
 # プレイヤー数をGlobalオブジェクトに設定する
@@ -27,13 +24,13 @@
 # 矢の事前処理
     execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
 
+# Nexus Loader
+    function world_manager:nexus_loader/tick
+
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
     scoreboard players operation $4tInterval Global %= $4 Const
     execute if score $4tInterval Global matches 0 run function core:tick/4_interval
-
-# 6tick分散ワールド処理
-    function core:tick/6_distributed_interval
 
 # 神器のグローバルtick処理
     function asset_manager:artifact/tick/
