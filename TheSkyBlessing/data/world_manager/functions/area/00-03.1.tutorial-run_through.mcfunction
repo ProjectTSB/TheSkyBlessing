@@ -7,4 +7,3 @@
 function lib:message/tutorial/03.1.run_through
 effect give @s slow_falling 1 0 true
 tp @s 4206 188 -400
-scoreboard players reset $Temp Temporary
