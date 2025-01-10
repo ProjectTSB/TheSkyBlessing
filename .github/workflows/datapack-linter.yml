@@ -54,6 +54,12 @@ jobs:
             function@asset:artifact/ARTIFACT_NAME/trigger/2.check_condition
             function@asset:artifact/ARTIFACT_NAME/trigger/3.main
             function@asset:artifact/ARTIFACT_NAME/give/2.give
+            function@asset:effect/EFFECT_NAME/register
+            function@asset:effect/EFFECT_NAME/given/
+            function@asset:effect/EFFECT_NAME/tick/
+            function@asset:effect/EFFECT_NAME/re-given/
+            function@asset:effect/EFFECT_NAME/remove/
+            function@asset:effect/EFFECT_NAME/end/
             function@asset:mob/MOB_NAME/register
             function@asset:mob/MOB_NAME/summon/
             function@asset:mob/MOB_NAME/attack/
