@@ -36,7 +36,7 @@ data modify storage global GameVersion set value "v0.1.6"
 function core:define_gamerule
 
 #> 難易度の設定
-difficulty normal
+difficulty easy
 
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
