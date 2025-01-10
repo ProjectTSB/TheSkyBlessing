@@ -1,4 +1,4 @@
-#> world_manager:area/00-06.tutorial-lost_items
+#> world_manager:area/00-06.tutorial-tomb
 #
 #
 #
@@ -11,6 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 06
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag6] run function lib:message/tutorial/lost_items
+    execute unless entity @s[tag=TutorialFlag6] run function lib:message/tutorial/06.tomb
 # 二度と表示されなくする
     tag @s add TutorialFlag6

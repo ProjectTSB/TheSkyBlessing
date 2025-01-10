@@ -1,4 +1,4 @@
-#> world_manager:area/00-04.tutorial-religion
+#> world_manager:area/00-04.tutorial-gods
 #
 #
 #
@@ -11,6 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 04
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag4] run function lib:message/tutorial/religion
+    execute unless entity @s[tag=TutorialFlag4] run function lib:message/tutorial/04.gods
 # 二度と表示されなくする
     tag @s add TutorialFlag4

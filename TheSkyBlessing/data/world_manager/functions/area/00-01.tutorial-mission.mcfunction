@@ -1,4 +1,4 @@
-#> world_manager:area/00-01.tutorial-goal
+#> world_manager:area/00-01.tutorial-mission
 #
 #
 #
@@ -11,6 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 01
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag1] run function lib:message/tutorial/goal
+    execute unless entity @s[tag=TutorialFlag1] run function lib:message/tutorial/01.mission
 # 二度と表示されなくする
     tag @s add TutorialFlag1

@@ -1,4 +1,4 @@
-#> world_manager:area/00-02.tutorial-island
+#> world_manager:area/00-02.tutorial-curse
 #
 #
 #
@@ -11,6 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 02
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag2] run function lib:message/tutorial/island
+    execute unless entity @s[tag=TutorialFlag2] run function lib:message/tutorial/02.curse
 # 二度と表示されなくする
     tag @s add TutorialFlag2
