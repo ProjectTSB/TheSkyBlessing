@@ -36,7 +36,7 @@ data modify storage global GameVersion set value "v0.1.6"
 function core:define_gamerule
 
 #> 難易度の設定
-difficulty easy
+execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
 
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public

@@ -4,23 +4,15 @@
 #
 # @within function core:tick/
 
-#> Val
-# @private
-    #declare score_holder $Difficulty
+# 数値が正しくないとき用
+    execute unless score $Difficulty Global matches 1.. run scoreboard players set $Difficulty Global 1
 
 # 難易度を取得する
     execute store result score $Difficulty Temporary run difficulty
-# ピースフルの場合
-    execute if score $Difficulty Temporary matches 0 run tellraw @a [{"storage":"global","nbt":"Prefix.FAILED"},{"text":"難易度をピースフルにすることは出来ません。"}]
-    execute if score $Difficulty Temporary matches 0 run tellraw @a [{"storage":"global","nbt":"Prefix.FAILED"},{"text":"難易度は変更されませんでした。"}]
-# Global変数に代入
-    execute unless score $Difficulty Global matches 3.. unless score $Difficulty Temporary matches 0 run scoreboard players operation $Difficulty Global = $Difficulty Temporary
-    execute if score $Difficulty Global matches 3.. if score $Difficulty Temporary matches 1..2 run scoreboard players operation $Difficulty Global = $Difficulty Temporary
-# ゲーム難易度の変更
-    execute if score $Difficulty Global matches ..0 run scoreboard players set $Difficulty Global 1
-    execute if score $Difficulty Global matches 1 run difficulty easy
-    execute if score $Difficulty Global matches 2 run difficulty normal
-    execute if score $Difficulty Global matches 3.. run difficulty hard
+# バニラの難易度を変数と合わせる
+    execute unless score $Difficulty Temporary = $Difficulty Global if score $Difficulty Global matches 1 run difficulty easy
+    execute unless score $Difficulty Temporary = $Difficulty Global if score $Difficulty Global matches 2 run difficulty normal
+    execute unless score $Difficulty Temporary = $Difficulty Global if score $Difficulty Global matches 3.. run difficulty hard
 
 # リセット
     scoreboard players reset $Difficulty Temporary
