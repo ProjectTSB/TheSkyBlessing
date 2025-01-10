@@ -17,11 +17,14 @@
     #declare score_holder $TotalIslands
 
 # TODO 上記のGlobal VarsをPrivateにしてAPIに移行する
-#> Global Vars - Private
+
+#> Global Vars - Difficulty
 # @within
 #   function
-#       core:load_once
 #       api:global_vars/get_difficulty
+#       core:load_once
+#       debug:change_difficulty/**
+#       player_manager:god/change_difficulty/**
 #       world_manager:force_difficulty
 #   predicate
 #       api:global_vars/difficulty/**
