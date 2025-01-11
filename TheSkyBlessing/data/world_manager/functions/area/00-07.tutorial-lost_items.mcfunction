@@ -1,4 +1,4 @@
-#> world_manager:area/00-07.tutorial-recommend
+#> world_manager:area/00-07.tutorial-lost_items
 #
 #
 #
@@ -11,8 +11,6 @@
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 07
 # メッセージ
-    execute unless entity @s[tag=TutorialFlag7] run function lib:message/tutorial/recommend
-# 盲目
-    effect give @s blindness 30 0 true
+    execute unless entity @s[tag=TutorialFlag7] run function lib:message/tutorial/07.lost_items
 # 二度と表示されなくする
     tag @s add TutorialFlag7

@@ -10,9 +10,7 @@
 #> 一応scheduleを消す
 # @private
     #declare function core:tick/4_interval
-    #declare function core:tick/6_distributed_interval
 schedule clear core:tick/4_interval
-schedule clear core:tick/6_distributed_interval
 
 #> from: fea94a6d6ba812974756ef4cdf4ed231b2e26959
 # @private
