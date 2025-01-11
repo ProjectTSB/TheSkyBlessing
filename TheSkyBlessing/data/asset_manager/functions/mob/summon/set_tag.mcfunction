@@ -32,3 +32,6 @@
     execute if data storage asset:mob {Interferable:false} run data modify entity @s Invulnerable set value 1b
     execute if data storage asset:mob {Interferable:false} run tag @s add Uninterferable
     execute if data storage asset:mob {Interferable:false} run tag @s add Immovable
+
+# ForwardTarget
+    execute if data storage asset:mob {IsForwardTarget:true} run tag @s add ForwardTarget
