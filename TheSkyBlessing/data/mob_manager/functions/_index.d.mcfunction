@@ -12,6 +12,7 @@
     #declare tag Object
     #declare tag Uninterferable
     #declare tag Immovable
+    #declare tag ExtendedCollision
 
 #> Storage
 # @within function mob_manager:entity_finder/**
@@ -31,6 +32,12 @@
 #   asset_manager:artifact/triggers/attack/vanilla/
 #   asset_manager:mob/triggers/
     #declare tag Kill
+
+#> ForwardTarget
+# @within function
+#   api:mob/apply_to_forward_target/*
+#   asset_manager:mob/summon/set_tag
+    #declare tag ForwardTarget
 
 #> FlagIndex
 # @within function
