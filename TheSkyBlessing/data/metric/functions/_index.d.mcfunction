@@ -1,6 +1,6 @@
 #> metric:_index.d
 # @private
 
-#> private
-# @within function metric:**
+#> storage
+# @public
     #declare storage metric:
