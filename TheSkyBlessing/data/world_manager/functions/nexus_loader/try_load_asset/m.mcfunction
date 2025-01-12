@@ -9,7 +9,6 @@
 # Args に Type を突っ込む
     $data modify storage world_manager:nexus_loader Args.Type set value "$(Type)"
 # register 呼び出し
-    tellraw @a [{"text":"Args: "},{"storage":"world_manager:nexus_loader","nbt":"Args"}]
     $function asset_manager:$(Type)/register/register.m with storage world_manager:nexus_loader Args
 # 生成条件満たしてなかったらリセットして fail
     $execute unless data storage asset:$(Type) ID run say ID not found
