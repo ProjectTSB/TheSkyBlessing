@@ -5,4 +5,4 @@
 # @input args id : int
 # @within function asset_manager:mob/triggers/
 
-data modify storage metric: Angel.$(id).KillTime set from storage global Time
+$data modify storage metric: Angel.$(id).KillTime set from storage global Time

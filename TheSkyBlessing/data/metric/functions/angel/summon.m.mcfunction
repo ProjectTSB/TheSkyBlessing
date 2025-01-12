@@ -11,6 +11,6 @@
 
 data modify storage metric: Args.SummonTime set from storage global Time
 execute store result storage metric: Args.Multiplier double 0.01 run scoreboard players get @s MobMaxHealthMultiplier
-execute unless data storage metric: Angel.$(ID).FirstProgress store result storage metric: Args.FirstProgress int 1 run scoreboard players get $PurifiedIslands Global
-data modify storage metric: Angel.$(ID) set from storage metric: Args
+$execute unless data storage metric: Angel.$(ID).FirstProgress store result storage metric: Args.FirstProgress int 1 run scoreboard players get $PurifiedIslands Global
+$data modify storage metric: Angel.$(ID) set from storage metric: Args
 data remove storage metric: Args
