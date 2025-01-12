@@ -428,6 +428,9 @@ team modify NoCollision collisionRule never
     function #asset:effect/load
     function #asset:object/load
 
+#> R 木のロード処理
+    function world_manager:nexus_loader/register
+
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
 
