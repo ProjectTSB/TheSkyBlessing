@@ -15,7 +15,6 @@
     $execute unless data storage asset:$(Type) ID run return fail
 # DPR に含まれてるならリセットして success (すでに召喚されているはずなので)
     execute store success storage world_manager:nexus_loader ShouldLoadAsset byte 1 run function world_manager:nexus_loader/try_load_asset/check_and_put_dpr.m with storage world_manager:nexus_loader Args
-    execute if data storage world_manager:nexus_loader {ShouldLoadAsset:false} run say already loaded
     $execute if data storage world_manager:nexus_loader {ShouldLoadAsset:false} run function asset_manager:$(Type)/register/reset
     execute if data storage world_manager:nexus_loader {ShouldLoadAsset:false} run return 1
 
