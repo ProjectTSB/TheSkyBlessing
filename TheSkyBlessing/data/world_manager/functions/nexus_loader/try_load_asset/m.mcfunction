@@ -11,7 +11,6 @@
 # register 呼び出し
     $function asset_manager:$(Type)/register/register.m with storage world_manager:nexus_loader Args
 # 生成条件満たしてなかったらリセットして fail
-    $execute unless data storage asset:$(Type) ID run say ID not found
     $execute unless data storage asset:$(Type) ID run function asset_manager:$(Type)/register/reset
     $execute unless data storage asset:$(Type) ID run return fail
 # DPR に含まれてるならリセットして success (すでに召喚されているはずなので)
