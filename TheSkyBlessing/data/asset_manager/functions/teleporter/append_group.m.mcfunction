@@ -6,7 +6,7 @@
 #
 # @input args
 #   ID: int
-#   State: int
+#   GroupID: string
 # @within function api:teleporter/modify_groups/add
 
 # テレポーターのIDから対象テレポーターのEntityStorageのIDの取得を試みる
@@ -20,7 +20,7 @@
     function oh_its_dat:please
 
 # GroupIDs を更新する
-    $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs append value "$(State)"
+    $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs append value "$(GroupID)"
 
 # 状態を更新する
-    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].GroupIDs append value "$(State)"
+    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].GroupIDs append value "$(GroupID)"
