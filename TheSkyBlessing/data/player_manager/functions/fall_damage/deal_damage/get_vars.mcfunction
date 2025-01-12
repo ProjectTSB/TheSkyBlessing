@@ -8,13 +8,10 @@
 # @private
 #declare score_holder $YVec
 
-# OldFallDistanceが0ならreturn
-    execute if score @s OldFallDistance matches 0 run return 0
-
 # 最大体力取得
     function api:modifier/max_health/get
     execute store result score $MaxHealth Temporary run data get storage api: Return.MaxHealth 100
-    
+
 # 1tick前のFallDistance取得
     execute store result score $FallDistance Temporary run scoreboard players get @s OldFallDistance
     function api:player_vector/get
