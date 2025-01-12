@@ -38,6 +38,7 @@
 # @within function
 #   core:handler/respawn*
 #   asset_manager:effect/*
+#   player_manager:grave/tick/check_with_user
     #declare tag InRespawnEvent
 
 #> エリトラ用タグ

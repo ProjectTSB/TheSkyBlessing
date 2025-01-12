@@ -35,7 +35,7 @@
 
 
 # SoulBound のアイテムをインベントリに戻す
-    execute if data storage api: Inventory[{tag:{TSB:{SoulBound:true}}}] run function player_manager:lost_item/regive_soulbound
+    execute if data storage api: Inventory[{tag:{TSB:{SoulBound:true}}}] run function player_manager:common/regive_soulbounds
 
 
 # リセット
