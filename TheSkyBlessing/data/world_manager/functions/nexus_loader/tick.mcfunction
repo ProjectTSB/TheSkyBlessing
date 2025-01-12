@@ -11,4 +11,4 @@
 #declare tag NexusLoader.Loaded
 
 execute unless entity @a[tag=!NexusLoader.Loaded] run tag @a remove NexusLoader.Loaded
-execute as @a[tag=!NexusLoader.Loaded,limit=4] run function world_manager:nexus_loader/load/
+execute as @a[tag=!NexusLoader.Loaded,limit=4] at @s run function world_manager:nexus_loader/load/
