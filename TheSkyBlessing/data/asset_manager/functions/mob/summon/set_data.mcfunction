@@ -87,6 +87,7 @@
         execute store result score @s MobHealthMax run data get storage asset:mob Health 1
         execute if data storage asset:mob {Type:"Enemy"} run function mob_manager:init/multiplay_multiplier/normal
         execute if data storage asset:mob {Type:"Enemy.Boss"} run function mob_manager:init/multiplay_multiplier/angel
+        execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run function mob_manager:init/multiplay_multiplier/angel
         scoreboard players operation @s MobHealth = @s MobHealthMax
     # そのまま適用するやつ
         execute store result score @s MobID run data get storage asset:mob ID
