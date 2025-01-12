@@ -355,6 +355,12 @@ team modify NoCollision collisionRule never
     scoreboard objectives add ArrowOwnerUserID dummy
     scoreboard objectives add ArrowShotTick dummy
 
+    #> PlayerManager - 墓
+    # @within function
+    #   player_manager:grave/**
+    scoreboard objectives add GraveVersion dummy
+    scoreboard objectives add GraveUserID dummy
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:load_once

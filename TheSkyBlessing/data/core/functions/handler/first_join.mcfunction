@@ -11,6 +11,9 @@
 # 固有ユーザーID
     scoreboard players add $UserIDIndex Global 1
     scoreboard players operation @s UserID = $UserIDIndex Global
+# 名前を取得しておく
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run function lib:get_name/
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name set from storage lib: Return.Name
 # お友達(概念)
     tag @s add Friend
 # 無信仰にする
