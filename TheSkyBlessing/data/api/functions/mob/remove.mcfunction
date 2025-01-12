@@ -4,5 +4,4 @@
 #
 # @api
 
-# remove 用タグを付与
-    tag @s add RemovingEntity
+function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:mob/core/remove",IsForwardedOnly:true}

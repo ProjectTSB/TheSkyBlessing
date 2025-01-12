@@ -3,6 +3,7 @@
 #
 #
 # @input args
+#   IsForwardedOnly: boolean
 #   CB: id(minecraft:function)
 # @api
 
@@ -10,6 +11,10 @@
 # @private
 #declare score_holder $ForwardTarget
 
+# そのまま実行する
+    $execute unless data storage global Boolean.$(IsForwardedOnly) run function $(CB)
+# 対象が ForwardTarget でなければ return
+    $execute unless predicate api:mob/has_forward_target run return run execute if predicate api:mob/has_forward_target run function $(CB)
 # ForwardTarget を実行者として CB を呼び出す
     scoreboard players operation $ForwardTarget Temporary = @s ForwardTargetMobUUID
     data modify storage api: IsForwarded set value true

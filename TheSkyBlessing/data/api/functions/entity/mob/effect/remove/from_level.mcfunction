@@ -16,5 +16,4 @@
     # execute unless data storage api: Argument.ClearCount run
     execute if data storage api: Argument{IsSingle:true} run data modify storage api: Argument.ClearCount set value 1
 # 呼び出し
-    execute if data storage api: Argument.ClearLv unless score @s ForwardTargetMobUUID matches -2147483648..2147483647 run function api:entity/mob/effect/core/remove/from_level/
-    execute if data storage api: Argument.ClearLv if score @s ForwardTargetMobUUID matches -2147483648..2147483647 run function api:entity/mob/effect/core/apply_to_forward_target/only_initial_apply.m {CB:"api:entity/mob/effect/core/remove/from_level/"}
+    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_level/",Key:"api:entity/mob/effect/remove/from_level",IsForwardedOnly:true}
