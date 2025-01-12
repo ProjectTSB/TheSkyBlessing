@@ -15,6 +15,9 @@
 # プレイヤー数をGlobalオブジェクトに設定する
     execute store result score $PlayerCount Global if entity @a
 
+# EntityFinder の初回攻撃判定をリセットする
+    function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"mob_manager:entity_finder/player_hurt_entity/fetch_entity"}
+
 # 難易度
     function world_manager:force_difficulty
 

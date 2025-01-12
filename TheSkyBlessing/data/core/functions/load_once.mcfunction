@@ -87,6 +87,11 @@ data modify storage global Icon.Attack.Water set value '{"text":"\\uE103","color
 data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","color":"white","font":"icon"}'
 data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
 
+# こうすることでマクロから一行で execute condition にできる
+data modify storage api: Boolean.1b set value true
+data modify storage api: Boolean.true set value true
+# data modify storage api: Boolean.0b set value null
+
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
 scoreboard objectives remove FirstJoinEvent
@@ -391,7 +396,8 @@ team modify NoCollision collisionRule never
 
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/get_max_health*
+    #   api:mob/core/get_max_health*
+    #   api:mob/core/get_health_percent
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*

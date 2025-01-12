@@ -7,6 +7,6 @@
 #   Return.MPRegen : double
 # @api
 
-function oh_my_dat:please
+function api:mob/apply_to_forward_target/with_idempotent.m {CB:"oh_my_dat:please",IsForwardedOnly:true}
 data remove storage api: Return.MPRegen
 data modify storage api: Return.MPRegen set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.MPRegen

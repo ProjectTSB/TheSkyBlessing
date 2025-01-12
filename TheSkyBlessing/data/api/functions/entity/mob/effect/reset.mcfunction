@@ -16,4 +16,6 @@
     data remove storage api: Argument.IsSingle
     data remove storage api: Argument.ClearCount
 
-    data remove storage api: ApplyForwardTargetSet
+    function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:entity/mob/effect/give"}
+    function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:entity/mob/effect/remove/from_id"}
+    function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:entity/mob/effect/remove/from_level"}

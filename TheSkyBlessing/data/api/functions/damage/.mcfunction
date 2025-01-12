@@ -46,5 +46,4 @@
     execute unless data storage api: Argument.DisableLog run data modify storage api: Argument.DisableLog set value false
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
-    execute unless score @s ForwardTargetMobUUID matches -2147483648..2147483647 if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
-    execute if score @s ForwardTargetMobUUID matches -2147483648..2147483647 if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack_to_forward_target/
+    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/attack",Key:"api:damage/",IsForwardedOnly:false}
