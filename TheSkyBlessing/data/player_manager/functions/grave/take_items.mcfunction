@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function core:handler/death
+# @within function
+#   core:handler/death
+#   player_manager:grave/build/
 
 # IDをIDSetに追加
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[-1] run data modify storage oh_my_dat: IDSet append value -2147483648
