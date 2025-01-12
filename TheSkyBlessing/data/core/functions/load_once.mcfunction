@@ -35,9 +35,6 @@ data modify storage global GameVersion set value "v0.1.6"
 #> gameruleの設定
 function core:define_gamerule
 
-#> 難易度の設定
-execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
-
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
     #alias vector shulkerA 10000 0 10000
@@ -135,7 +132,7 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
-    scoreboard players set $Difficulty Global 2
+    execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
 
