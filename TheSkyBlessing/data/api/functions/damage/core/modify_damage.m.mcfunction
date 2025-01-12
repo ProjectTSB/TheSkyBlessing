@@ -46,6 +46,7 @@
     # 補正値の計算
         scoreboard players operation $Modifier Temporary *= $Sum Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
+        scoreboard players operation $Metric Temporary = $Modifier Temporary
 # 最低値設定
 # $Modifier(e2) = max($Modifier(e2), (0.45 - $Difficulty * 0.10) * e2, 0)
     function api:global_vars/get_difficulty

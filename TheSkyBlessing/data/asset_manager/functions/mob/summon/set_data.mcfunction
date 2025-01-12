@@ -115,6 +115,8 @@
     data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Mob.Lore set from storage asset:mob Lore
 # データ初期化
     function mob_manager:init/
+# 統計データに放り込む
+    execute if entity @s[tag=Enemy.Boss] run function metric:angel/summon.m with storage asset:mob
 # リセット
     data remove storage asset:mob HandItems
     data remove storage asset:mob ArmorItems
