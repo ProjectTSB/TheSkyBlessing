@@ -1,8 +1,10 @@
-#> asset_manager:teleporter/register/construct/calculate_and_insert_color_data
+#> asset_manager:teleporter/register/common/calculate_and_insert_color_data
 #
 #
 #
-# @within function asset_manager:teleporter/register/construct/
+# @within function
+#   api:teleporter/unsafe/**
+#   asset_manager:teleporter/register/construct/
 
 #> Private
 # @private

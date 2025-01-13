@@ -10,11 +10,11 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage asset:teleporter ActivationState
 # グループ側に入れるやつ
-    data modify storage asset:teleporter Teleporters append value {}
+    function asset_manager:teleporter/register/common/append_or_reorder_teleporters.m with storage asset:teleporter {}
     data modify storage asset:teleporter Teleporters[-1].ID set from storage asset:teleporter ID
     data modify storage asset:teleporter Teleporters[-1].GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage asset:teleporter ActivationState
-    execute if data storage asset:teleporter Color run function asset_manager:teleporter/register/construct/calculate_and_insert_color_data
+    execute if data storage asset:teleporter Color run function asset_manager:teleporter/register/common/calculate_and_insert_color_data
     data modify storage asset:teleporter Teleporters[-1].Dimension set from storage asset:teleporter Dimension
     data modify storage asset:teleporter Teleporters[-1].Pos set from entity @e[type=item_display,tag=Teleporter,distance=..0.01,limit=1] Pos
 # 参照情報を保存する
