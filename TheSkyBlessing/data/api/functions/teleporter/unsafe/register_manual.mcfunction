@@ -18,7 +18,7 @@ execute if data storage api: Argument.Color run data modify storage asset:telepo
 execute if data storage api: Argument.Color run function asset_manager:teleporter/register/common/calculate_and_insert_color_data
 execute if data storage api: Argument.Color run data remove storage asset:teleporter Color
 data modify storage asset:teleporter Teleporters[-1].Dimension set from storage api: Argument.Dimension
-data modify storage asset:teleporter Teleporters[-1].Pos set from storage api: Argument.Dimension
+data modify storage asset:teleporter Teleporters[-1].Pos set from storage api: Argument.Pos
 
 data remove storage api: Argument.ID
 data remove storage api: Argument.GroupIDs
