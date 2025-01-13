@@ -19,9 +19,9 @@
     function oh_its_dat:please
 
 # ActivationState を更新する
-    $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set value "$(State)"
+    $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set value "$(ActivationState)"
 # バージョンを更新する
     function asset_manager:teleporter/common/increment_activation_state_version
 
 # 状態を更新する
-    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].Data.ActivationState set value "$(State)"
+    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].Data.ActivationState set value "$(ActivationState)"
