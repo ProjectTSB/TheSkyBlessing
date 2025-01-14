@@ -33,7 +33,6 @@
     scoreboard players operation $Damage Temporary += $FlexibleDamagePart Temporary
     scoreboard players operation $Damage Temporary /= $100 Const
     scoreboard players operation $Damage Temporary *= $DamageMultiplier Temporary
-
 # リセット
     scoreboard players reset $DamageableFallDistance Temporary
     scoreboard players reset $FixedDamagePart Temporary
