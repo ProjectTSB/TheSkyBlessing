@@ -33,8 +33,6 @@
     scoreboard players operation $Damage Temporary += $FlexibleDamagePart Temporary
     scoreboard players operation $Damage Temporary /= $100 Const
     scoreboard players operation $Damage Temporary *= $DamageMultiplier Temporary
-# 水に浸かっているという条件を満たしたなら、上記の計算結果を無視して0ダメージにする
-    execute if predicate lib:is_in_water/include_flowing run scoreboard players set $Damage Temporary 0
 # リセット
     scoreboard players reset $DamageableFallDistance Temporary
     scoreboard players reset $FixedDamagePart Temporary
