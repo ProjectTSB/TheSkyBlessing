@@ -15,7 +15,7 @@
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶けた","with":[{"selector":"@s"}]}]'
 # ダメージ (スペクテイターだろうがダメージを食らうようにする)
-    execute if entity @s[gamemode=!creative,tag=!DevPrivilege,predicate=lib:is_in_lava/include_flowing] unless score @s LavaDamageCooldown matches 1.. run function api:damage/
+    execute if entity @s[gamemode=!creative,tag=!DevPrivilege] unless score @s LavaDamageCooldown matches 1.. positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing run function api:damage/
     function api:damage/reset
 
 # 溶岩ダメージのクールダウン
