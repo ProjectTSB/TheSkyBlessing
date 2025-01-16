@@ -7,7 +7,7 @@
 # ユーザーIDをコピー
     scoreboard players operation @s TPStarFromUserID = @p[tag=this] UserID
 # ディメンション取得
-    function api:data_get/dimension
+    execute as @p[tag=this] run function api:data_get/dimension
 # EntityStorage 取得
     function oh_my_dat:please
 # 座標データ
