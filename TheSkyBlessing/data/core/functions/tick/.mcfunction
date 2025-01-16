@@ -28,7 +28,7 @@
     execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
 
 # Nexus Loader
-    function world_manager:nexus_loader/tick
+    execute if data storage global {IsProduction:1b} run function world_manager:nexus_loader/tick
 
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1

@@ -30,6 +30,9 @@
     scoreboard players operation @s MobMaxHealthMultiplier = $MultiplayMultiplier Temporary
 # マルチ補正の適用 MobHealthMax (e2) = MobHealthMax (e0) * $MultiplayMultiplier (e2)
     scoreboard players operation @s MobHealthMax *= $MultiplayMultiplier Temporary
+# 整数値に補正
+    scoreboard players operation @s MobHealthMax /= $100 Const
+    scoreboard players operation @s MobHealthMax *= $100 Const
 # リセット
     scoreboard players reset $NearbyPlayerCount Temporary
     scoreboard players reset $MultiplayMultiplier Temporary
