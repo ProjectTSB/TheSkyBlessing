@@ -29,8 +29,9 @@
 #   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
+#   asset_manager:artifact/triggers/vanilla/damage
 #   api:damage/core/health_subtract/non-player/
-#   api:mob/kill
+#   api:mob/core/kill
     #declare tag AssetMob
 
 #> MobAsset以外のEntityにCommonTagを実行させるためのタグ
@@ -69,7 +70,7 @@
 #> RemovingEntity
 # @within function
 #   asset_manager:mob/triggers/
-#   api:mob/remove
+#   api:mob/core/remove
     #declare tag RemovingEntity
 
 #> 汎用タグ類

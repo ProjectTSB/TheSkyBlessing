@@ -3,7 +3,7 @@
     "terms": [
         {
             "condition": "reference",
-            "name": "world_manager:area/01.islands"
+            "name": "world_manager:area/02.islands"
         }
     ]
 }

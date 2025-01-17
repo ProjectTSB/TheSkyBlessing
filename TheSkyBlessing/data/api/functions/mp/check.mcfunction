@@ -22,3 +22,4 @@
     execute store success storage api: Return.IsThresholdOrMore byte 1 if score $CheckMP Temporary <= @s MP
 # リセット
     scoreboard players reset $CheckMP Temporary
+    data remove storage api: Argument.Threshold

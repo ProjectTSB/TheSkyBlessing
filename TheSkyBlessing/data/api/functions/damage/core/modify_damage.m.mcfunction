@@ -33,7 +33,7 @@
         execute if data storage api: Argument{AttackType:"Magic"} unless data storage api: Modifiers.Magic run scoreboard players set $Temp Temporary 100
         scoreboard players operation $Sum Temporary += $Temp Temporary
     # 第二属性
-        execute if data storage api: Argument{ElementType:"None"} run scoreboard players operation $Temp Temporary = $Sum Temporary
+        execute if data storage api: Argument{ElementType:"None"} run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Fire"} store result score $Temp Temporary run data get storage api: Modifiers.Fire 100
         execute if data storage api: Argument{ElementType:"Fire"} unless data storage api: Modifiers.Fire run scoreboard players set $Temp Temporary 100
         execute if data storage api: Argument{ElementType:"Water"} store result score $Temp Temporary run data get storage api: Modifiers.Water 100
@@ -46,6 +46,7 @@
     # 補正値の計算
         scoreboard players operation $Modifier Temporary *= $Sum Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
+        scoreboard players operation $Metric Temporary = $Modifier Temporary
 # 最低値設定
 # $Modifier(e2) = max($Modifier(e2), (0.45 - $Difficulty * 0.10) * e2, 0)
     function api:global_vars/get_difficulty

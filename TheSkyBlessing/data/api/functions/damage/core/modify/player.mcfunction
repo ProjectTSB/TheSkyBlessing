@@ -13,6 +13,7 @@
 # ダメージに補正値を掛ける
     execute if data storage api: Argument{BypassModifier:false} run data modify storage api: Damage set from storage api: Argument.Damage
     execute if data storage api: Argument{BypassModifier:false} run function api:damage/core/modify_damage.m {Side:"Attack"}
+    execute if data storage api: Argument{BypassModifier:false} run scoreboard players reset $Metric Temporary
     execute if data storage api: Argument{BypassModifier:false} run data modify storage api: Argument.Damage set from storage api: ModifiedDamage
 # リセット
     data remove storage api: ModifiedDamage

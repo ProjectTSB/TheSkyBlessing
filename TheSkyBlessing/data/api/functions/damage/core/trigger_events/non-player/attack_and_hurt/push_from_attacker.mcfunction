@@ -9,7 +9,7 @@
 #declare score_holder $LastIndex
 
 # Mob にイベントを追加する
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt[-1].From int 1 run scoreboard players get @s UserID
+    execute unless predicate api:mob/has_forward_target store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt[-1].From int 1 run scoreboard players get @s UserID
 # プレイヤーにイベントを追加する
     function oh_my_dat:please
     # Index が同一 (即ち、同一の modifier 後の対象) ではない場合は、新規に追加する

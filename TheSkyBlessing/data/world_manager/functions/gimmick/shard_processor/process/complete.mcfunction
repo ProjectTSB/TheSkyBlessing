@@ -10,6 +10,7 @@
 
 # 神器を吐き出す
     execute store result storage api: Argument.Rarity int 1 run data get storage world_manager:gimmick FrameData.Item.tag.TSB.ShardRarity
+    function metric:shard.m with storage api: Argument
     execute positioned -33.8 21.6 -13.8 run function api:artifact/spawn/from_rarity
 
 # アマスタのモデルをリセットしてFixedを消す

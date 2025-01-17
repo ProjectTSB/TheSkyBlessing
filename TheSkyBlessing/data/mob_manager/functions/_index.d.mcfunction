@@ -12,6 +12,7 @@
     #declare tag Object
     #declare tag Uninterferable
     #declare tag Immovable
+    #declare tag ExtendedCollision
 
 #> Storage
 # @within function mob_manager:entity_finder/**
@@ -27,9 +28,16 @@
 # @within function
 #   core:tick/
 #   api:damage/core/health_subtract/non-player/
-#   api:mob/kill
+#   api:mob/core/kill
+#   asset_manager:artifact/triggers/vanilla/damage
 #   asset_manager:mob/triggers/
     #declare tag Kill
+
+#> ForwardTarget
+# @within function
+#   api:mob/apply_to_forward_target/*
+#   asset_manager:mob/summon/set_tag
+    #declare tag ForwardTarget
 
 #> FlagIndex
 # @within function

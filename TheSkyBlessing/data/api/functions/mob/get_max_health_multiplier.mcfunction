@@ -3,7 +3,7 @@
 # 実行MobのHP最大値補正倍率を取得します
 #
 # @input as @e[type=#lib:living,type=!player]
-# @output result MaxHealthMultiplier(e1)
+# @output storage api: Return.MaxHealthMultiplier
 # @api
 
-return run scoreboard players get @s MobMaxHealthMultiplier
+function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:mob/core/get_max_health_multiplier",IsForwardedOnly:true}

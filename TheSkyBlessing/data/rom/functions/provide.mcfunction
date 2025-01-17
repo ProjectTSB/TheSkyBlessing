@@ -7,10 +7,10 @@
 
 #> Val
 # @private
-#declare score_holder $Address
+    #declare score_holder $Address
 
-# IDを取得する
-    execute store result score $Address Temporary run data get storage api: Argument.Address
+# 提供したアドレスを保存しておく
+    scoreboard players operation $LatestProvidedAddress Global = $Address Temporary
 
 # リセット
     data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
@@ -114,6 +114,3 @@
     execute if score $Address Temporary matches 1073741824.. run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: OneEmptyMaps[]
     execute if score $Address Temporary matches ..-1073741825 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: TwoEmptyMaps[]
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4] append from storage rom: ThreeEmptyMaps[]
-
-# リセット
-    scoreboard players reset $Address Temporary

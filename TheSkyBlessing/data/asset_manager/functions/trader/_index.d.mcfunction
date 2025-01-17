@@ -14,8 +14,7 @@
 #> storage
 # @within
 #   asset_manager:trader/**
-#   asset:trader/*/register/*
-#   asset:trader/common/register
+#   asset:trader/*/register
     #declare storage asset:trader
 
 #> number of give

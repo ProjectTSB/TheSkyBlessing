@@ -4,6 +4,15 @@
 #
 # @within function core:tick/
 
+#> this
+# @within *
+#   core:tick/player/post
+#   player_manager:grave/build/*
+    #declare tag this
+
+# thisタグ付与
+    tag @s add this
+
 # 死亡処理チェック
     execute if entity @s[scores={DeathEvent=1..}] run function core:handler/death
 
@@ -21,3 +30,4 @@
     execute if entity @s[scores={Sneak=1..},predicate=!lib:is_sneaking] run function asset_manager:artifact/triggers/event/sneak/reset
     scoreboard players reset @s[scores={Sneak=1..},predicate=!lib:is_sneaking] Sneak
     tag @s remove FlyingElytra
+    tag @s remove this
