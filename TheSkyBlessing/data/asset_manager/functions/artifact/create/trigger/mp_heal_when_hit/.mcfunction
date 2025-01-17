@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:artifact/create/set_lore/
+# @within function asset_manager:artifact/create/trigger/
 
 # マクロを使ってSuffixを表示しないようにする
     data modify storage asset:artifact Temp.Val set from storage asset:artifact MPHealWhenHit

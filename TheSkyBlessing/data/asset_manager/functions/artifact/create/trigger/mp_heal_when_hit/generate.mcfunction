@@ -8,4 +8,4 @@
     $data modify storage asset:artifact Temp set value "$(Val)"
 
 # 生成
-    loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/5.mp_heal_when_hit
+    loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/mp_heal_when_hit
