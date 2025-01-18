@@ -15,7 +15,7 @@
 # HideFlagsの値を取得
     execute store result score $Temp1 Temporary run data get storage asset:artifact CustomNBT.HideFlags
 
-# 2^29乗を掛けてオーバーフロー式bit反転をする
+# 2^29を掛けてオーバーフロー式bit反転をする
     scoreboard players operation $Temp1 Temporary *= $536870912 Const
 
 # bit反転後、0以上なら4足す
