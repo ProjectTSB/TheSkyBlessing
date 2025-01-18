@@ -9,6 +9,9 @@
     #declare score_holder $Temp1
     #declare score_holder $Temp2
 
+# HideFlagsが未設定なら4にしてreturn
+    execute unless data storage asset:artifact CustomNBT.HideFlags run return run data modify storage asset:artifact CustomNBT.HideFlags set value 4
+
 # HideFlagsの値を取得
     execute store result score $Temp1 Temporary run data get storage asset:artifact CustomNBT.HideFlags
 
