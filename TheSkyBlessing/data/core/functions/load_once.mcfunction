@@ -349,7 +349,7 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - Arrow
     # @within function
-    #   asset_manager:artifact/triggers/
+    #   asset_manager:artifact/triggers/trigger/
     #   core:load_once
     #   player_manager:arrow/**
     scoreboard objectives add ArrowOwnerUserID dummy

@@ -8,15 +8,15 @@
     function api:data_get/selected_item_slot
 
 # 該当のローカルクールダウンを取得する
-    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[5]
-    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[6]
-    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[7]
-    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[8]
-    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[9]
-    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[10]
-    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[11]
-    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[12]
-    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCoolDown[13]
+    execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[5]
+    execute if data storage api: {SelectedItemSlot:1} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[6]
+    execute if data storage api: {SelectedItemSlot:2} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[7]
+    execute if data storage api: {SelectedItemSlot:3} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[8]
+    execute if data storage api: {SelectedItemSlot:4} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[9]
+    execute if data storage api: {SelectedItemSlot:5} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[10]
+    execute if data storage api: {SelectedItemSlot:6} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[11]
+    execute if data storage api: {SelectedItemSlot:7} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[12]
+    execute if data storage api: {SelectedItemSlot:8} run data modify storage asset:artifact LCD set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LocalCooldown[13]
 
 # 該当の種別クールダウンを取得する
     execute if data storage api: {SelectedItemSlot:0} run data modify storage asset:artifact CooldownType.Type set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EquipmentCooldownTypes[5]

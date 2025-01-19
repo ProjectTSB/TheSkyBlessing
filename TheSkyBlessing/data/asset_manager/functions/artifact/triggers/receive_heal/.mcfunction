@@ -1,10 +1,17 @@
 #> asset_manager:artifact/triggers/receive_heal/
 #
-# 各神器処理へデータ受け渡し
 #
-# @within function asset_manager:artifact/triggers/
+#
+# @within function
+#   asset_manager:artifact/triggers/trigger/foreach/call.m
+#   asset_manager:artifact/triggers/trigger/foreach/sub/call.m
 
-# イベント発火前に実行するやつ
-    function asset_manager:artifact/data/new/set_to_current
-# 神器側に受け渡し
+# フラグが存在しているか確認する
+    execute unless data storage asset:artifact ArtifactEvents.ReceiveHeal[0] run return fail
+# イベントを取得する
+    data modify storage asset:artifact Events append from storage asset:artifact ArtifactEvents.ReceiveHeal[]
+# それぞれについて処理する
     function asset_manager:artifact/triggers/receive_heal/foreach
+
+# リセット
+    data remove storage asset:artifact Events

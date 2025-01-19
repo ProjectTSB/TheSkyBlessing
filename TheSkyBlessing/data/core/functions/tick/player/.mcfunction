@@ -6,12 +6,12 @@
 
 #> this
 # @within *
-#   core:tick/player/
-#   player_manager:vanilla_attack
-#   asset_manager:artifact/triggers/**
 #   asset:artifact/**
+#   asset_manager:artifact/triggers/trigger/
+#   asset_manager:artifact/triggers/vanilla/push_kill_and_death_event
 #   asset_manager:teleporter/tick/**
 #   core:handler/attack
+#   core:tick/player/
     #declare tag this
 
 # thisタグ付与
