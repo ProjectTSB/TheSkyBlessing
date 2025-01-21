@@ -124,14 +124,6 @@ team modify NoCollision collisionRule never
     #> 常に値が設定される変数用スコアボード
     # @public
         scoreboard objectives add Global dummy
-    # 乱数値の設定
-        #> Private
-        # @private
-            #declare tag Random
-        summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-        execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
-        kill @e[tag=Random,limit=1]
     execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
