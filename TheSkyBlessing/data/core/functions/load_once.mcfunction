@@ -376,14 +376,6 @@ team modify NoCollision collisionRule never
     scoreboard players set $BonusAttack Global 0
     scoreboard players set $BonusDefense Global 0
 
-    #> WorldManager用スコアボード - ChunkLoadProtect
-    # @within
-    #   function
-    #       core:tick/player/pre
-    #       world_manager:chunk_io_protect/*
-    #   predicate api:is_completed_player_chunk_load_waiting_time
-        scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
-
     #> WorldManager用スコアボード - Area
     # @within function
     #   world_manager:area/**
