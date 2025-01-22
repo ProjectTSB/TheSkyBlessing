@@ -381,6 +381,11 @@ team modify NoCollision collisionRule never
     #   asset_manager:teleporter/tick/**
         scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
+    #> WorldManager用スコアボード - エンドの溶岩ダメージ
+    # @within function
+    #   world_manager:area/20-03.end_forgotten_star_higher
+        scoreboard objectives add LavaDamageCooldown dummy {"text":"溶岩ダメージのクールダウン"}
+
     #> MobManager用スコアボード - 最大体力
     # @within function
     #   api:mob/core/get_max_health*
