@@ -23,7 +23,7 @@
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶岩の温度を甘く見ていた","with":[{"selector":"@s"}]}]'
     data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは溶けた","with":[{"selector":"@s"}]}]'
 # ダメージ
-    execute if entity @s[tag=!NotInLava] unless score @s LavaDamageCooldown matches 1.. run function api:damage/
+    execute if entity @s[gamemode=!creative,tag=!DevPrivilege,tag=!NotInLava] unless score @s LavaDamageCooldown matches 1.. run function api:damage/
     function api:damage/reset
 
 # 溶岩ダメージのクールダウン
