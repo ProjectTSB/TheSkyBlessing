@@ -13,7 +13,7 @@
 
 # 溶岩に触れていないか判定
 # スペクテイターだろうがダメージを食らうようにする
-    execute positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing run tag @s add NotInLava
+    execute if entity @s[gamemode=!creative,tag=!DevPrivilege] positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.0 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~0.9 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~0.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~0.3 unless predicate lib:in_lava/include_flowing positioned ~-.3 ~1.8 ~-.3 unless predicate lib:in_lava/include_flowing run tag @s add NotInLava
 
 # おおよそ2秒で死ぬようにする
     data modify storage api: Argument.Damage set value 10
@@ -28,7 +28,7 @@
 
 # 溶岩ダメージのクールダウン
     execute if entity @s[tag=!NotInLava] run scoreboard players add @s LavaDamageCooldown 1
-    execute if entity @s[tag=!DevPrivilege] if score @s LavaDamageCooldown matches 10.. run scoreboard players reset @s LavaDamageCooldown
+    execute if entity @s[tag=!NotInLava] if score @s LavaDamageCooldown matches 10.. run scoreboard players reset @s LavaDamageCooldown
 
 # 溶岩の外に出たならクールダウンをリセット
     execute if entity @s[tag=NotInLava] run scoreboard players reset @s LavaDamageCooldown
