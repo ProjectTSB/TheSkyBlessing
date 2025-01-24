@@ -2,6 +2,8 @@
 #
 # 召喚するMobをSpawnPotentialsよりランダムに選択します
 #
+# @output storage asset:spawner
+#   Args.MobID: int
 # @within function
 #   asset_manager:spawner/spawn/
 #   asset_manager:spawner/spawn/single
@@ -14,7 +16,7 @@
 # TargetWeightが負の値になるまで減算しつつ要素を消す
     function asset_manager:spawner/spawn/choose_mob_id/subtract_for_each
 # 召喚するMobのIDを取得
-    execute store result score $MobID Temporary run data get storage asset:spawner ClonedSpawnPotentials[-1].Id
+    execute store result storage asset:spawner Args.MobID int 1 run data get storage asset:spawner ClonedSpawnPotentials[-1].Id
 # リセット
     scoreboard players reset $TargetWeight Temporary
     data remove storage asset:spawner ClonedSpawnPotentials

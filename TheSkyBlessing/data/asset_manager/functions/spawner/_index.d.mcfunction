@@ -29,7 +29,6 @@
 #> SpawnData
 # @within * asset_manager:spawner/spawn/**
     #declare score_holder $SpawnPotentialsWeightSum
-    #declare score_holder $MobID
     #declare score_holder $PosX
     #declare score_holder $PosY
     #declare score_holder $PosZ

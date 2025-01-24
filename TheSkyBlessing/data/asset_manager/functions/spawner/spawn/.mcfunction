@@ -13,7 +13,7 @@
     particle flame ~ ~0.1 ~ 0.3 0.3 0.3 0 10
 # スポナーデータの取得
     function oh_my_dat:please
-    data modify storage asset:spawner NearbyEntitiesCache set value []
+    data modify storage asset:spawner NearbyEntitiesCache set value {}
     data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
     execute store result score $SpawnPotentialsWeightSum Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum
     execute store result score $PosX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 100
@@ -22,12 +22,13 @@
     execute store result score $MinSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MinSpawnDelay
     execute store result score $MaxSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxSpawnDelay
     execute store result score $SpawnCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnCount
-    execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange 30
+    execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
+    execute store result storage asset:spawner Args.NearbyEntitiesCheckRange int 3 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
     execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
 # 召喚するMobをランダムに選択する
     function asset_manager:spawner/spawn/choose_mob_id/
 # 周囲のEntity数を取得する
-    function asset_manager:spawner/spawn/nearby_entities/get
+    function asset_manager:spawner/spawn/nearby_entities/get.m with storage asset:spawner Args
 # 再帰的にMOBを召喚する
     execute if score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run function asset_manager:spawner/spawn/single
 # 召喚クールダウンを設定する (min + rng(0, max - min))
@@ -42,7 +43,6 @@
     data remove storage asset:spawner NearbyEntitiesCache
     scoreboard players reset $NearbyEntities Temporary
     scoreboard players reset $SpawnDelayBound Temporary
-    scoreboard players reset $MobID Temporary
     scoreboard players reset $SpawnPotentialsWeightSum Temporary
     scoreboard players reset $NextDelay Temporary
     scoreboard players reset $PosX Temporary
