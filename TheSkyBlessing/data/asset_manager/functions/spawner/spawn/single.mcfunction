@@ -9,7 +9,7 @@
 # 召喚するMobをランダムに選択する
     function asset_manager:spawner/spawn/choose_mob_id/
 # 周囲のEntity数を取得する
-    function asset_manager:spawner/spawn/nearby_entities/get.m with storage asset:spawner Args
+    function asset_manager:spawner/spawn/get_nearby_entities/m with storage asset:spawner Args
 # 最大召喚数に達した場合は打ち切る
     execute unless score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run return fail
 
