@@ -6,7 +6,7 @@
 
 
 # ⚠️ リリース時のみtrueにすること。 これをtrueにした場合、ワールドに不可逆的な登録処理が発生します。 ⚠️
-    data modify storage global IsProduction set value false
+    data modify storage global IsProduction set value true
 
 
 # 初回限定ロード
