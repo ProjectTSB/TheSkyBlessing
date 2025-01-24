@@ -1,8 +1,8 @@
-#> asset_manager:spawner/subtract_hp/damage
+#> asset_manager:spawner/subtract_hp/subtract/damage
 #
 #
 #
-# @within function asset_manager:spawner/subtract_hp/subtract
+# @within function asset_manager:spawner/subtract_hp/subtract/
 
 #> Private
 # @private
@@ -10,7 +10,7 @@
     #declare score_holder $MaxHP
 
 # VFX
-    function asset_manager:spawner/subtract_hp/vfx/damage
+    function asset_manager:spawner/subtract_hp/subtract/vfx/damage
 
 # サイズ調整 0.2~0.8 = 0.0~0.6 + 0.2 = (0~6 + 2) * 0.1
     execute store result score $MaxHP Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxHP

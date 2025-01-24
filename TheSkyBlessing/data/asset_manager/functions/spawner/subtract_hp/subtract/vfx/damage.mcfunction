@@ -1,8 +1,8 @@
-#> asset_manager:spawner/subtract_hp/vfx/damage
+#> asset_manager:spawner/subtract_hp/subtract/vfx/damage
 #
 #
 #
-# @within function asset_manager:spawner/subtract_hp/damage
+# @within function asset_manager:spawner/subtract_hp/subtract/damage
 
 playsound block.end_portal_frame.fill block @a ~ ~ ~ 2 0.7
 playsound block.end_portal_frame.fill block @a ~ ~ ~ 2 0.7
