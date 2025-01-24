@@ -13,7 +13,6 @@
     particle flame ~ ~0.1 ~ 0.3 0.3 0.3 0 10
 # スポナーデータの取得
     function oh_my_dat:please
-    data modify storage asset:spawner NearbyEntitiesCache set value {}
     execute store result storage asset:spawner Args.SpawnerID int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.ID
     data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
     execute store result score $SpawnPotentialsWeightSum Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum
@@ -24,7 +23,6 @@
     execute store result score $MaxSpawnDelay Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxSpawnDelay
     execute store result score $SpawnCount Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnCount
     execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
-    execute store result storage asset:spawner Args.NearbyEntitiesCheckRange int 3 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
     execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
 # 再帰的にMOBを召喚する
     function asset_manager:spawner/spawn/single/
@@ -37,8 +35,8 @@
     scoreboard players operation $NextDelay Temporary += $MinSpawnDelay Temporary
     scoreboard players operation @s SpawnerCooldown = $NextDelay Temporary
 # リセット
+    data remove storage asset:spawner Args
     data remove storage asset:spawner NearbyEntitiesCache
-    scoreboard players reset $NearbyEntities Temporary
     scoreboard players reset $SpawnDelayBound Temporary
     scoreboard players reset $SpawnPotentialsWeightSum Temporary
     scoreboard players reset $NextDelay Temporary

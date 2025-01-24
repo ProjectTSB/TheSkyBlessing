@@ -36,7 +36,6 @@
     #declare score_holder $MaxSpawnDelay
     #declare score_holder $SpawnCount
     #declare score_holder $SpawnRange
-    #declare score_holder $NearbyEntities
     #declare score_holder $MaxNearbyEntities
     #declare tag SpawnMarker
 

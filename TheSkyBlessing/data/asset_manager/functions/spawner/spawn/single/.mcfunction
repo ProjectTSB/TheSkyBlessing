@@ -6,12 +6,8 @@
 #   asset_manager:spawner/spawn/
 #   asset_manager:spawner/spawn/single/
 
-# 召喚するMobをランダムに選択する
-    function asset_manager:spawner/spawn/choose_mob_id/
-# 周囲のEntity数を取得する
-    function asset_manager:spawner/spawn/get_nearby_entities/m with storage asset:spawner Args
-# 最大召喚数に達した場合は打ち切る
-    execute unless score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run return fail
+# 128m 内に居るそのスポナーから召喚された Mob の数が MaxNearbyEntities を超えていないことを検証する
+    execute unless function asset_manager:spawner/spawn/check_nearby_entities/ run return fail
 
 # 座標
     summon marker ~ ~ ~ {Tags:["SpawnMarker"]}

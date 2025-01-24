@@ -4,8 +4,9 @@
 #
 # @within function asset_manager:spawner/spawn/single/
 
-# 引数設定
-    data modify storage api: Argument.ID set from storage asset:spawner Args.MobID
+# 召喚する Mob をランダムに選択する
+    function asset_manager:spawner/spawn/choose_mob_id/
+# 追加の引数設定
     data modify storage api: Argument.PreInitInterceptFn set value "asset_manager:spawner/spawn/single/set_summoned_spawner_id"
 
 # スポナーに重なっているのであれば 1 マス上で召喚を試みる
