@@ -10,12 +10,12 @@
     summon marker ~ ~ ~ {Tags:["SpawnMarker"]}
     data modify storage lib: Argument.Bounds set value [[-1d,-1d],[-1d,-1d],[-1d,-1d]]
     execute store result storage lib: Argument.Bounds[][] double 0.0333333333 run scoreboard players get $SpawnRange Temporary
-    data modify storage lib: Argument.Bounds[1] set value [0d,3.0d]
+    data modify storage lib: Argument.Bounds[1] set value [0d,2.0d]
     execute as @e[type=marker,tag=SpawnMarker,distance=..0.01] run function lib:spread_entity/
 # 召喚
     execute store result storage api: Argument.ID int 1 run scoreboard players get $MobID Temporary
-    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~-1 ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run particle poof ~ ~ ~ 0.3 0.3 0.3 0 10 normal
-    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~-1 ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run function api:mob/summon
+    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run particle poof ~ ~ ~ 0.3 0.3 0.3 0 10 normal
+    execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~ ~0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~0.9 ~ #lib:no_collision if block ~ ~1.8 ~ #lib:no_collision run function api:mob/summon
 # リセット
     data remove storage api: Argument.ID
     kill @e[type=marker,tag=SpawnMarker,distance=..100]
