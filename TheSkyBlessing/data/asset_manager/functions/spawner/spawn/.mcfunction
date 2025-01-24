@@ -14,6 +14,7 @@
 # スポナーデータの取得
     function oh_my_dat:please
     data modify storage asset:spawner NearbyEntitiesCache set value {}
+    execute store result storage asset:spawner Args.SpawnerID int 1 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.ID
     data modify storage asset:spawner SpawnPotentials set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentials
     execute store result score $SpawnPotentialsWeightSum Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnPotentialsWeightSum
     execute store result score $PosX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 100

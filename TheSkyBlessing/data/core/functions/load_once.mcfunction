@@ -200,6 +200,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+        scoreboard objectives add SummonedSpawnerID dummy {"text":"自身を召喚したスポナーの ID"}
 
     #> AssetManager: Teleporter
     # @within function

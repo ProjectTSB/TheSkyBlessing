@@ -20,10 +20,8 @@
     data modify storage lib: Argument.Bounds[1] set value [0d,2.0d]
     execute as @e[type=marker,tag=SpawnMarker,distance=..0.01] run function lib:spread_entity/
 # 召喚
-    data modify storage api: Argument.ID set from storage asset:spawner Args.MobID
     execute at @e[type=marker,tag=SpawnMarker,distance=..100] align xz positioned ~0.5 ~ ~0.5 run function asset_manager:spawner/spawn/single/summon
 # リセット
-    data remove storage api: Argument.ID
     kill @e[type=marker,tag=SpawnMarker,distance=..100]
 # 召喚数を1減らす
     scoreboard players remove $SpawnCount Temporary 1
