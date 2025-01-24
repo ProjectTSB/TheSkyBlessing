@@ -6,6 +6,13 @@
 #   asset_manager:spawner/spawn/
 #   asset_manager:spawner/spawn/single
 
+# 召喚するMobをランダムに選択する
+    function asset_manager:spawner/spawn/choose_mob_id/
+# 周囲のEntity数を取得する
+    function asset_manager:spawner/spawn/nearby_entities/get.m with storage asset:spawner Args
+# 最大召喚数に達した場合は打ち切る
+    execute unless score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run return fail
+
 # 座標
     summon marker ~ ~ ~ {Tags:["SpawnMarker"]}
     data modify storage lib: Argument.Bounds set value [[-1d,-1d],[-1d,-1d],[-1d,-1d]]
@@ -21,9 +28,5 @@
     kill @e[type=marker,tag=SpawnMarker,distance=..100]
 # 召喚数を1減らす
     scoreboard players remove $SpawnCount Temporary 1
-# まだ召喚する必要があるなら召喚するMobをランダムに選択する
-    execute if score $SpawnCount Temporary matches 1.. run function asset_manager:spawner/spawn/choose_mob_id/
-# まだ召喚する必要があるなら周囲のEntity数を取得する
-    execute if score $SpawnCount Temporary matches 1.. run function asset_manager:spawner/spawn/nearby_entities/get.m with storage asset:spawner Args
 # まだ召喚する必要があるなら再帰
-    execute if score $SpawnCount Temporary matches 1.. if score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run function asset_manager:spawner/spawn/single
+    execute if score $SpawnCount Temporary matches 1.. run function asset_manager:spawner/spawn/single

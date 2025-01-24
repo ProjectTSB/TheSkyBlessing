@@ -25,12 +25,8 @@
     execute store result score $SpawnRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
     execute store result storage asset:spawner Args.NearbyEntitiesCheckRange int 3 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
     execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
-# 召喚するMobをランダムに選択する
-    function asset_manager:spawner/spawn/choose_mob_id/
-# 周囲のEntity数を取得する
-    function asset_manager:spawner/spawn/nearby_entities/get.m with storage asset:spawner Args
 # 再帰的にMOBを召喚する
-    execute if score $NearbyEntities Temporary < $MaxNearbyEntities Temporary run function asset_manager:spawner/spawn/single
+    function asset_manager:spawner/spawn/single
 # 召喚クールダウンを設定する (min + rng(0, max - min))
     scoreboard players operation $SpawnDelayBound Temporary = $MaxSpawnDelay Temporary
     scoreboard players operation $SpawnDelayBound Temporary -= $MinSpawnDelay Temporary
