@@ -4,7 +4,7 @@
 #
 # @output storage asset:spawner
 #   Args.MobID: int
-# @within function asset_manager:spawner/spawn/single
+# @within function asset_manager:spawner/spawn/single/
 
 # 配列を壊す操作なのでClone
     data modify storage asset:spawner ClonedSpawnPotentials set from storage asset:spawner SpawnPotentials

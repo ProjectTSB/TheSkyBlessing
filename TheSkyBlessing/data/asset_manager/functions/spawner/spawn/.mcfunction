@@ -26,7 +26,7 @@
     execute store result storage asset:spawner Args.NearbyEntitiesCheckRange int 3 run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.SpawnRange
     execute store result score $MaxNearbyEntities Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.MaxNearbyEntities
 # 再帰的にMOBを召喚する
-    function asset_manager:spawner/spawn/single
+    function asset_manager:spawner/spawn/single/
 # 召喚クールダウンを設定する (min + rng(0, max - min))
     scoreboard players operation $SpawnDelayBound Temporary = $MaxSpawnDelay Temporary
     scoreboard players operation $SpawnDelayBound Temporary -= $MinSpawnDelay Temporary

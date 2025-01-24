@@ -4,7 +4,7 @@
 #
 # @input args
 #   MobID: int
-# @within function asset_manager:spawner/spawn/single
+# @within function asset_manager:spawner/spawn/single/
 
 # キャッシュに存在する場合、取得する
     $execute if data storage asset:spawner NearbyEntitiesCache.$(MobID) store result score $NearbyEntities Temporary run data get storage asset:spawner NearbyEntitiesCache.$(MobID)
