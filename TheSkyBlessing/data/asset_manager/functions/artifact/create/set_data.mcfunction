@@ -92,6 +92,8 @@
 # Lore
     function asset_manager:artifact/create/set_lore
 # カスタムNBT
+    data modify storage asset:artifact CustomNBT.Unbreakable set value 1b
+    function asset_manager:artifact/create/set_hide_flags
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
 
 # データの適用

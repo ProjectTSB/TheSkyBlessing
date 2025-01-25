@@ -124,14 +124,6 @@ team modify NoCollision collisionRule never
     #> 常に値が設定される変数用スコアボード
     # @public
         scoreboard objectives add Global dummy
-    # 乱数値の設定
-        #> Private
-        # @private
-            #declare tag Random
-        summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-        execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
-        kill @e[tag=Random,limit=1]
     execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
@@ -208,6 +200,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+        scoreboard objectives add SummonedSpawnerID dummy {"text":"自身を召喚したスポナーの ID"}
 
     #> AssetManager: Teleporter
     # @within function
@@ -376,14 +369,6 @@ team modify NoCollision collisionRule never
     scoreboard players set $BonusAttack Global 0
     scoreboard players set $BonusDefense Global 0
 
-    #> WorldManager用スコアボード - ChunkLoadProtect
-    # @within
-    #   function
-    #       core:tick/player/pre
-    #       world_manager:chunk_io_protect/*
-    #   predicate api:is_completed_player_chunk_load_waiting_time
-        scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
-
     #> WorldManager用スコアボード - Area
     # @within function
     #   world_manager:area/**
@@ -396,6 +381,11 @@ team modify NoCollision collisionRule never
     # @within function
     #   asset_manager:teleporter/tick/**
         scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
+
+    #> WorldManager用スコアボード - エンドの溶岩ダメージ
+    # @within function
+    #   world_manager:area/20-03.end_forgotten_star_higher
+        scoreboard objectives add LavaDamageCooldown dummy {"text":"溶岩ダメージのクールダウン"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function

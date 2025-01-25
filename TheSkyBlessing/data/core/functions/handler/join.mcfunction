@@ -15,5 +15,3 @@
     function api:modifier/defense/base/update_bonus
     function api:modifier/max_health/update_bonus
     function api:modifier/max_mp/update_bonus
-# ロード待ち時間を更新する
-    function world_manager:chunk_io_protect/update_load_waiting_time

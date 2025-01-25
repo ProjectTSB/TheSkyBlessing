@@ -465,8 +465,6 @@ scoreboard players set $536870912 Const 536870912
 scoreboard players set $1073741824 Const 1073741824
 
 #その他定数
-scoreboard players set $31743 Const 31743
-
 scoreboard players set $byte.min Const -256
 scoreboard players set $byte.max Const 255
 scoreboard players set $short.min Const -32768
