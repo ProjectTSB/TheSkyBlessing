@@ -35,15 +35,20 @@
     execute store result score $Value Temporary run data get storage asset:artifact CD.Value
     execute store result score $Max Temporary run data get storage asset:artifact CD.Max
 
-# value が負数かつ -15 でなければ 0 にする
-    execute if score $Value Temporary matches -14..-1 run scoreboard players set $Value Temporary 0
-# 0~100 の範囲にする
-    scoreboard players operation $Value Temporary *= $-100 Const
-    scoreboard players operation $Value Temporary /= $Max Temporary
-    scoreboard players operation $Value Temporary *= $-1 Const
-# ゼロパディングの代わりに +1000 して storage に保存
+# 0除算回避の為に0なら1にする
+    execute if score $Max Temporary matches 0 run scoreboard players set $Max Temporary 1
+
+# $Valueを移す
     scoreboard players operation $NormalizedValue Temporary = $Value Temporary
+# valueが負数(!= -15)なら0にする
+    execute if score $NormalizedValue Temporary matches -14..-1 run scoreboard players set $NormalizedValue Temporary 0
+# 0~100の範囲に切り上げで補正する
+    execute unless score $Value Temporary matches -15 run scoreboard players operation $NormalizedValue Temporary *= $-100 Const
+    execute unless score $Value Temporary matches -15 run scoreboard players operation $NormalizedValue Temporary /= $Max Temporary
+    execute unless score $Value Temporary matches -15 run scoreboard players operation $NormalizedValue Temporary *= $-1 Const
+# ゼロパディングの代わりに+1000する
     scoreboard players add $NormalizedValue Temporary 1000
+# storage に入れる
     execute store result storage asset:artifact MainBar.Value int 1 run scoreboard players get $NormalizedValue Temporary
 
 # if (Max が 0 では無い && Value が負数で無い) ならば表示バーを構築する // ここで負数であるのは -15 の場合のみ。

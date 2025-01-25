@@ -32,7 +32,7 @@
     execute if data storage asset:artifact NormalizedItemData[0] run function asset_manager:artifact/triggers/trigger/foreach/
 
 # 神器でバニラ攻撃を処理していないならダメージを与える
-    execute if entity @s[tag=ShouldVanillaAttack] run function asset_manager:artifact/triggers/vanilla/
+    execute if entity @s[tag=ShouldVanillaAttack] as @e[type=#lib:living,type=!player,tag=Victim,tag=!Death,distance=..8] at @s run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:artifact/triggers/vanilla/",IsForwardedOnly:true}
 
 # リセット
     scoreboard players reset $SlotIndex Temporary
