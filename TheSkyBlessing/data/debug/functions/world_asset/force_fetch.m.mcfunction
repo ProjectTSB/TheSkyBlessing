@@ -2,7 +2,7 @@
 # @input args
 #   Type: string
 #   ID: string
-# @private
+# @within debug:**
 # @user
 
 #> Private
