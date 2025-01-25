@@ -9,6 +9,4 @@
 # validate
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
 # 呼び出し
-    execute if data storage api: Argument.ID if entity @s[tag=HasAssetEffect] run function api:entity/mob/effect/core/remove/from_id
-# リセット
-    data remove storage api: Argument.ID
+    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_id",Key:"api:entity/mob/effect/remove/from_id",IsForwardedOnly:true}

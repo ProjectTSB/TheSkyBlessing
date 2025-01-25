@@ -17,7 +17,8 @@
 # 最大体力/最大体力倍率取得
     execute store result score $MaxHealth Temporary run function api:mob/get_max_health
     scoreboard players operation $MaxHealth Temporary *= $100 Const
-    execute store result score $MaxHealthMultiplier Temporary run function api:mob/get_max_health_multiplier
+    function api:mob/get_max_health_multiplier
+    execute store result score $MaxHealthMultiplier Temporary run data get storage api: Return.MaxHealthMultiplier 10
 # 代入
     execute store result score $Heal Temporary run data get storage api: Argument.Heal 100
 # マルチ補正

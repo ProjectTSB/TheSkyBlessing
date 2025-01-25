@@ -24,4 +24,3 @@
     execute anchored eyes positioned ^ ^ ^ run tag @e[type=armor_stand,tag=LogAECInit,distance=..1.5,limit=1] remove LogAECInit
 # リセット
     execute anchored eyes positioned ^ ^ ^ run kill @e[type=armor_stand,tag=SummonPosStand,distance=..1.5,limit=1]
-    scoreboard players reset $Fluctuation Lib

@@ -30,13 +30,9 @@
     execute store result storage mob_manager:entity_finder AttackEventData.To[-1] int 1 run scoreboard players get @s MobUUID
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append from storage mob_manager:entity_finder AttackEventData
 
-# 攻撃された Entity の EntityStorage 取得
-    function oh_my_dat:please
-# こっちにもイベントデータ追加
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt append value {IsVanilla:true}
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt[-1].Type set from storage mob_manager:entity_finder DamageType
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt[-1].From int 1 run scoreboard players get @p[tag=AttackedPlayer] UserID
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Hurt[-1].Amount double 0.01 run scoreboard players get $Damage Temporary
+# 攻撃された Entity に hurt イベントを push する
+    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"mob_manager:entity_finder/player_hurt_entity/push_hurt_event",Key:"mob_manager:entity_finder/player_hurt_entity/fetch_entity",IsForwardedOnly:false}
+
 
 # 体力をもとに戻す
     data modify entity @s Health set value 512f

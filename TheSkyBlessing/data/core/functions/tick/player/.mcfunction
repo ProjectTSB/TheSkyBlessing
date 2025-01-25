@@ -7,6 +7,7 @@
 #> this
 # @within *
 #   asset:artifact/**
+#   asset_manager:artifact/triggers/trigger/
 #   asset_manager:artifact/triggers/vanilla/push_kill_and_death_event
 #   asset_manager:teleporter/tick/**
 #   core:handler/attack
@@ -23,7 +24,7 @@
     execute if entity @s[scores={FirstJoinEvent=1}] run function core:handler/first_join
     execute if entity @s[scores={RejoinEvent=1..}] run function core:handler/rejoin
     execute if entity @s[scores={RespawnEvent=1}] run function core:handler/respawn
-    execute if entity @s[scores={RespawnEvent=80}] run function core:handler/respawn.delay
+    execute if entity @s[tag=InRespawnEvent,scores={RespawnEvent=80..}] run function core:handler/respawn.delay
     execute if entity @s[scores={Sneak=1..},predicate=lib:is_sneaking] run function core:handler/sneak
     execute if entity @s[advancements={core:handler/consume_item=true}] run function core:handler/consume_item
     execute if entity @s[advancements={core:handler/attack=true}] run function core:handler/attack
@@ -52,8 +53,6 @@
     function player_manager:set_team_and_per_health
 # 緩衝体力処理
     function player_manager:absorption/
-# actionbar表示
-    function player_manager:actionbar/
 
 # リセット
     tag @s remove this

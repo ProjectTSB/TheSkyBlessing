@@ -15,8 +15,6 @@
         execute if data storage asset:artifact AttackTargets[0] run function asset_manager:artifact/triggers/event/attack/add_tag_each_victim
     # 最大ダメージの計算
         function asset_manager:artifact/triggers/event/attack/get_max_amount
-    # MPを命中回数分回復する
-        function asset_manager:artifact/triggers/event/attack/mp_heal
 
 # 使用条件を満たしているか確認する
     function asset_manager:artifact/check/

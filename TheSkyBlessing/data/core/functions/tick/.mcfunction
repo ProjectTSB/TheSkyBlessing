@@ -10,13 +10,13 @@
 # @private
 #declare score_holder $4tInterval
 
-# デバッグ用TickRate操作システム
-    execute if data storage global {IsProduction:0b} if score $AwaitTime Global matches -2147483648..2147483647 run function debug:tps/watch
-
 # 現在の時間をglobalに代入する
     execute store result storage global Time int 1 run time query gametime
 # プレイヤー数をGlobalオブジェクトに設定する
     execute store result score $PlayerCount Global if entity @a
+
+# EntityFinder の初回攻撃判定をリセットする
+    function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"mob_manager:entity_finder/player_hurt_entity/fetch_entity"}
 
 # 難易度
     function world_manager:force_difficulty
@@ -24,13 +24,16 @@
 # プレイヤー事前処理
     execute as @a at @s run function core:tick/player/pre
 
+# 矢の事前処理
+    execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
+
+# Nexus Loader
+    execute if data storage global {IsProduction:1b} run function world_manager:nexus_loader/tick
+
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
     scoreboard players operation $4tInterval Global %= $4 Const
     execute if score $4tInterval Global matches 0 run function core:tick/4_interval
-
-# 6tick分散ワールド処理
-    function core:tick/6_distributed_interval
 
 # 神器のグローバルtick処理
     function asset_manager:artifact/tick/
@@ -61,8 +64,8 @@
         execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
     # 環境ダメージ処理
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
-    # Death トリガー付いてるモブを消し飛ばす
-        execute as @e[type=#lib:living,type=!player,tag=Death] run function mob_manager:kill_entity
+    # Kill トリガー付いてるモブを消し飛ばす
+        execute as @e[type=#lib:living,type=!player,tag=Kill] run function mob_manager:kill_entity
 # Objects処理
     execute as @e[tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 
@@ -71,6 +74,9 @@
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
+
+# 墓
+    execute as @e[type=item_display,tag=Grave] at @s run function player_manager:grave/tick/
 
 # ItemMetaDataチェック
     execute as @e[type=item,tag=!ItemMetaChecked] run function core:tick/check_item_meta/entity

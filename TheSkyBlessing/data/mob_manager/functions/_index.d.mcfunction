@@ -6,11 +6,13 @@
     #declare tag Friend
     #declare tag Enemy
     #declare tag Enemy.Boss
+    #declare tag Enemy.EndGameBoss
     #declare tag Projectile
     #declare tag Npc
     #declare tag Object
     #declare tag Uninterferable
     #declare tag Immovable
+    #declare tag ExtendedCollision
 
 #> Storage
 # @within function mob_manager:entity_finder/**
@@ -21,6 +23,21 @@
 #   core:tick/
 #   mob_manager:init/
     #declare tag AlreadyInitMob
+
+#> KillTag
+# @within function
+#   core:tick/
+#   api:damage/core/health_subtract/non-player/
+#   api:mob/core/kill
+#   asset_manager:artifact/triggers/vanilla/damage
+#   asset_manager:mob/triggers/
+    #declare tag Kill
+
+#> ForwardTarget
+# @within function
+#   api:mob/apply_to_forward_target/*
+#   asset_manager:mob/summon/set_tag
+    #declare tag ForwardTarget
 
 #> FlagIndex
 # @within function

@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:teleporter/register/
+#   asset_manager:teleporter/register/construct/
 #   asset_manager:teleporter/tick/global
 
 execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{AngelProtection:    true} run data modify entity @s item set value {id:"minecraft:leather_horse_armor",Count:1b,tag:{display:{color:16711680},CustomModelData:20329}}

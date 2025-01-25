@@ -15,6 +15,12 @@
     execute if data storage asset:mob {Type:"Enemy.Boss"} run tag @s add Enemy
     execute if data storage asset:mob {Type:"Enemy.Boss"} run tag @s add Enemy.Boss
     execute if data storage asset:mob {Type:"Enemy.Boss"} run tag @s add Immovable
+
+    execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run data modify entity @s PersistenceRequired set value 1b
+    execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run tag @s add Enemy
+    execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run tag @s add Enemy.Boss
+    execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run tag @s add Enemy.EndGameBoss
+    execute if data storage asset:mob {Type:"Enemy.EndGameBoss"} run tag @s add Immovable
 # Projectile
     execute if data storage asset:mob {Type:"Projectile"} run tag @s add Projectile
 # Npc
@@ -26,3 +32,6 @@
     execute if data storage asset:mob {Interferable:false} run data modify entity @s Invulnerable set value 1b
     execute if data storage asset:mob {Interferable:false} run tag @s add Uninterferable
     execute if data storage asset:mob {Interferable:false} run tag @s add Immovable
+
+# ForwardTarget
+    execute if data storage asset:mob {IsForwardTarget:true} run tag @s add ForwardTarget
