@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.6"
+data modify storage global GameVersion set value "v1.0.0-CBT3"
 
 #> forceload chunksの設定
 # Origin
@@ -34,7 +34,6 @@ data modify storage global GameVersion set value "v0.1.6"
 
 #> gameruleの設定
 function core:define_gamerule
-
 
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
@@ -74,8 +73,8 @@ data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
 data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE204","color":"white","font":"icon"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE204","color":"white","font":"icon"}'
 data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
 
 data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
@@ -84,6 +83,11 @@ data modify storage global Icon.Attack.Fire set value '{"text":"\\uE102","color"
 data modify storage global Icon.Attack.Water set value '{"text":"\\uE103","color":"white","font":"icon"}'
 data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","color":"white","font":"icon"}'
 data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
+
+# こうすることでマクロから一行で execute condition にできる
+data modify storage api: Boolean.1b set value true
+data modify storage api: Boolean.true set value true
+# data modify storage api: Boolean.0b set value null
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
@@ -128,9 +132,9 @@ team modify NoCollision collisionRule never
         execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
         execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
         kill @e[tag=Random,limit=1]
-    scoreboard players set $Difficulty Global 2
+    execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
-    scoreboard players set $TotalIslands Global 50
+    scoreboard players set $TotalIslands Global 60
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -242,6 +246,7 @@ team modify NoCollision collisionRule never
     #> Library用スコアボード
     # @public
         scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
+        scoreboard objectives add ForwardTargetMobUUID dummy {"text":"ダメージを転送する対象"}
 
     #> Library用スコアボード - PrivateUse
     # @within * lib:**
@@ -276,7 +281,10 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe4 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe5 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+        function player_manager:god/change_difficulty/gen_text
 
     #> PlayerManager - Teams
     # @within function
@@ -330,15 +338,28 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add HPRegenCooldown dummy {"text":"HP自然回復のクールダウン"}
-        scoreboard objectives add MP dummy {"text":"MP"}
-        scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
-        scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+        scoreboard objectives add MP dummy {"text":"MP (e1)"}
+        scoreboard objectives add MPMax dummy {"text":"MP上限値 (e1)"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
         scoreboard objectives add FloraFoodRegenCooldown dummy {"text":"フローラの満腹度回復のクールダウン"}
     scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
+
+    #> PlayerManager - Arrow
+    # @within function
+    #   asset_manager:artifact/triggers/trigger/
+    #   core:load_once
+    #   player_manager:arrow/**
+    scoreboard objectives add ArrowOwnerUserID dummy
+    scoreboard objectives add ArrowShotTick dummy
+
+    #> PlayerManager - 墓
+    # @within function
+    #   player_manager:grave/**
+    scoreboard objectives add GraveVersion dummy
+    scoreboard objectives add GraveUserID dummy
 
     #> 最大値用スコアホルダー
     # @within function
@@ -378,7 +399,8 @@ team modify NoCollision collisionRule never
 
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/get_max_health*
+    #   api:mob/core/get_max_health*
+    #   api:mob/core/get_health_percent
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
@@ -392,6 +414,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/handler/on_damage_without_source
     #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
         scoreboard objectives add TakenDamage custom:damage_taken
+        scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
     #> MobManager - Teams
     # @within function
@@ -405,9 +428,12 @@ team modify NoCollision collisionRule never
     function #asset:effect/load
     function #asset:object/load
 
+#> R 木のロード処理
+    function world_manager:nexus_loader/register
+
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
 
 #> ROMを初期化する
-#> ROMが初期化されてなければ初期化する
+    scoreboard players set $LatestProvidedAddress Global 0
     execute unless data storage rom: _ run function rom:init

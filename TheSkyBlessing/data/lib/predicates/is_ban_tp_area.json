@@ -3,11 +3,11 @@
     "terms": [
         {
             "condition": "reference",
-            "name": "world_manager:area/00.god_boundaries"
+            "name": "world_manager:area/01.god_boundaries"
         },
         {
             "condition": "reference",
-            "name": "world_manager:area/02.arena"
+            "name": "world_manager:area/03.arena"
         },
         {
             "condition": "reference",

@@ -3,6 +3,7 @@
 
 #> storage
 # @within *
+#   api:teleporter/unsafe/**
 #   asset:teleporter/*/*
 #   asset:teleporter/common/register
 #   asset_manager:teleporter/**

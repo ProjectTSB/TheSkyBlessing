@@ -1,0 +1,16 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "dimension": "overworld",
+        "position": {
+            "x": {
+                "min": 2559,
+                "max": 3583
+            },
+            "z": {
+                "min": -1023,
+                "max": 1
+            }
+        }
+    }
+}

@@ -16,9 +16,4 @@
     # execute unless data storage api: Argument.ClearCount run
     execute if data storage api: Argument{IsSingle:true} run data modify storage api: Argument.ClearCount set value 1
 # 呼び出し
-    execute if data storage api: Argument.ClearLv if entity @s[tag=HasAssetEffect] run function api:entity/mob/effect/core/remove/from_level/
-# リセット
-    data remove storage api: Argument.ClearLv
-    data remove storage api: Argument.ClearType
-    data remove storage api: Argument.IsSingle
-    data remove storage api: Argument.ClearCount
+    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_level/",Key:"api:entity/mob/effect/remove/from_level",IsForwardedOnly:true}

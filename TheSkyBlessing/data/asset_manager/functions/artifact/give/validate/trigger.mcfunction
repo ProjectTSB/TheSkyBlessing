@@ -7,7 +7,7 @@
 execute if data storage asset:artifact {Trigger:"equip"} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"equipは主トリガーとしては利用できません"}]
 # execute unless data storage asset:artifact Condition run
 # execute unless data storage asset:artifact AttackInfo run
-# execute unless data storage asset:artifact CostText run
+# execute unless data storage asset:artifact ConsumeItem run
 execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
 # execute unless data storage asset:artifact MPRequire run
 # execute unless data storage asset:artifact LocalCooldown run

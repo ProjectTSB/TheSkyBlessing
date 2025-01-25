@@ -6,6 +6,7 @@
 #   asset_manager:artifact/triggers/
 #   asset_manager:artifact/triggers/trigger/
 #   asset_manager:artifact/triggers/use_item/
+#   asset_manager:artifact/triggers/shot/
 
 # タグをはがす
     tag @s remove ConsumingItem

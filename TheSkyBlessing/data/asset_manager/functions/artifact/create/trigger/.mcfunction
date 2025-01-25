@@ -19,7 +19,7 @@
 # 4? 消費MP
     execute if data storage asset:artifact MPCost run loot replace block 10000 0 10000 container.4 loot asset_manager:artifact/generate_lore/mp_cost
 # 5? ヒット時MP回復
-    execute if data storage asset:artifact MPHealWhenHit run loot replace block 10000 0 10000 container.5 loot asset_manager:artifact/generate_lore/mp_heal_when_hit
+    execute if data storage asset:artifact MPHealWhenHit run function asset_manager:artifact/create/trigger/mp_heal_when_hit/
 # 6? 消費アイテム
     execute if data storage asset:artifact ConsumeItem run function asset_manager:artifact/create/trigger/consume_item
 # 7? クールタイム
