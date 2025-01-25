@@ -7,8 +7,10 @@
 #   core:tick/
 
 execute if entity @s[tag=!AllowRideBannedVehicle,predicate=lib:is_placeable_vehicle] run function asset_manager:mob/common_tag/break_rides
-execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle run kill @s
-execute if entity @s[tag=AutoKillWhenDiePassenger] unless predicate lib:is_passenger run kill @s
+execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle if entity @s[type=#lib:living] run function api:mob/kill
+execute if entity @s[tag=AutoKillWhenDieVehicle] unless predicate lib:is_vehicle unless entity @s[type=#lib:living] run kill @s
+execute if entity @s[tag=AutoKillWhenDiePassenger] unless predicate lib:is_passenger if entity @s[type=#lib:living] run function api:mob/kill
+execute if entity @s[tag=AutoKillWhenDiePassenger] unless predicate lib:is_passenger unless entity @s[type=#lib:living] run kill @s
 execute if entity @s[tag=AlwaysInvisible] run effect give @s invisibility 999999 0 true
 execute if entity @s[tag=AlwaysSlowFall] run effect give @s slow_falling 999999 0 true
 execute if entity @s[tag=AlwaysBurn] unless predicate lib:is_burning run data modify entity @s Fire set value 32767s

@@ -60,14 +60,14 @@
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理
-        execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
-        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
+        execute as @e[type=!player,tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
+        execute as @e[type=!player,tag=AssetMob] at @s run function asset_manager:mob/tick/
     # 環境ダメージ処理
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
     # Kill トリガー付いてるモブを消し飛ばす
         execute as @e[type=#lib:living,type=!player,tag=Kill] run function mob_manager:kill_entity
 # Objects処理
-    execute as @e[tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
+    execute as @e[type=!player,tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
