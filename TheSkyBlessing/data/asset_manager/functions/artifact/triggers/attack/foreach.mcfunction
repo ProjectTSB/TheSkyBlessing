@@ -21,9 +21,9 @@
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run tag @s add ShouldVanillaAttack
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run function asset_manager:artifact/triggers/attack/store_crit_and_charge_percentage
     execute if data storage asset:context Attack{Type:"vanilla_melee"     } run function #asset:artifact/attack/melee
-    execute if data storage asset:context Attack{Type:"vanilla_melee"     } if entity @s[tag=ShouldVanillaAttack] as @e[type=#lib:living,type=!player,tag=Victim,distance=..8] at @s run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:artifact/triggers/attack/vanilla/",IsForwardedOnly:true}
+    execute if data storage asset:context Attack{Type:"vanilla_melee"     } if entity @s[tag=ShouldVanillaAttack] as @e[type=#lib:living,type=!player,tag=Victim,tag=!Death,distance=..8] at @s run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:artifact/triggers/attack/vanilla/",IsForwardedOnly:true}
     execute if data storage asset:context Attack{Type:"vanilla_projectile"} run function #asset:artifact/attack/projectile
-    execute if data storage asset:context Attack{Type:"vanilla_projectile"} as @e[type=#lib:living,type=!player,tag=Victim,distance=..150] at @s run function asset_manager:artifact/triggers/attack/vanilla/
+    execute if data storage asset:context Attack{Type:"vanilla_projectile"} as @e[type=#lib:living,type=!player,tag=Victim,tag=!Death,distance=..150] at @s run function asset_manager:artifact/triggers/attack/vanilla/
     execute if data storage asset:context Attack{Type:"vanilla_explosion" } run function #asset:artifact/attack/explosion
 # リセット
     data remove storage asset:context Attack

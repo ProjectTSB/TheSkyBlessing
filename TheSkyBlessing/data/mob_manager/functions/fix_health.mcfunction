@@ -1,4 +1,4 @@
-#> mob_manager:environmental_damage
+#> mob_manager:fix_health
 #
 # 緩衝体力が減っていた場合の処理
 #
@@ -18,11 +18,12 @@
     execute if entity @s[tag=!ExtendedCollision] run scoreboard players operation $Fluctuation Lib = $Damage Temporary
     execute if entity @s[tag=!ExtendedCollision] at @s run function lib:status_log/show_health
 
-# キル処理
-    execute if score @s MobHealth matches ..0 run kill @s
 # 回復
-    execute unless score @s MobHealth matches ..0 run attribute @s generic.max_health base set 1024
-    execute unless score @s MobHealth matches ..0 run data modify entity @s Health set value 512f
+    attribute @s generic.max_health base set 1024
+    data modify entity @s Health set value 512f
+
+# キル処理
+    execute if score @s MobHealth matches ..0 run function api:mob/kill
 
 # リセット
     scoreboard players reset $Damage Temporary
