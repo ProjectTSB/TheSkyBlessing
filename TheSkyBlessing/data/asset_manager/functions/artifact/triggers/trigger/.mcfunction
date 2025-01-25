@@ -36,6 +36,7 @@
 
 # リセット
     scoreboard players reset $SlotIndex Temporary
+    data remove storage api: PersistentArgument.AdditionalMPHeal
     data remove storage asset:artifact NormalizedItemData
     tag @s remove ShouldVanillaAttack
     tag @s remove TriggerFlag.ClickCarrot
