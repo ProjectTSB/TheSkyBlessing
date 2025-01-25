@@ -13,7 +13,7 @@
 # 一回目
     function lib:array/packing_chest
     data modify block 10000 0 10000 Items set from storage lib: Package
-    loot spawn ~ ~1 ~ mine 10000 0 10000 debug_stick
+    loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
 
 # リセット
     data remove storage lib: Package
@@ -21,8 +21,10 @@
 # 二回目
     function lib:array/packing_chest
     data modify block 10000 0 10000 Items set from storage lib: Package
-    loot spawn ~ ~1 ~ mine 10000 0 10000 debug_stick
+    loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
 
+# ばら撒いたときのモーションを無くす
+    execute as @e[type=item,distance=..0.5] run function player_manager:grave/tick/stop_motion
 # 壊す
     kill @s
 
