@@ -1,8 +1,8 @@
-#> asset:artifact/example/attack/damage
+#> asset:artifact/ex/attack/damage
 #
 #
 #
-# @within function asset:artifact/example/attack/
+# @within function asset:artifact/ex/attack/
 
 execute store result storage api: Argument.Damage float 1 run function api:mob/get_max_health
 data modify storage api: Argument.AttackType set value "Physical"

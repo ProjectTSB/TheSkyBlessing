@@ -1,8 +1,8 @@
-#> asset:artifact/example/attack/kill
+#> asset:artifact/ex/attack/kill
 #
 #
 #
-# @within function asset:artifact/example/attack/
+# @within function asset:artifact/ex/attack/
 
 #> private
 # @private

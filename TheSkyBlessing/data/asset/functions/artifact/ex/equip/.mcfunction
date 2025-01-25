@@ -1,8 +1,8 @@
-#> asset:artifact/example/equip/
+#> asset:artifact/ex/equip/
 #
 # 神器の装備した時の処理
 #
-# @within function asset:artifact/alias/65535/equip
+# @within function asset:artifact/alias/65500/equip
 
 # VFX
     playsound ogg:block.smithing_table.smithing_table2 player @a ~ ~ ~ 0.5 1.6

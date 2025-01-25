@@ -1,10 +1,10 @@
-#> asset:artifact/example/register
+#> asset:artifact/ex/register
 #
 # 神器の作成部 ここでID等を定義する
 #
-# @within function asset:artifact/alias/65535/register
+# @within function asset:artifact/alias/65500/register
 
-data modify storage asset:artifact ID set value 65535
+data modify storage asset:artifact ID set value 65500
 data modify storage asset:artifact Item set value "minecraft:stick"
 data modify storage asset:artifact Name set value '{"text":"","extra":[{"text":"イーカロス","color":"dark_red"}]}'
 data modify storage asset:artifact Lore set value ['{"text":"ある地に潜む研究者の末裔が作り出した、"}','{"text":"対天使兵器の最高傑作。"}','{"text":"攻撃した敵の傷口をさらに開き、致命傷に至らせる。"}','{"text":"「いかなる犠牲によっても、","color":"gray","italic":true}','{"text":"かの翼人らを討ち滅ぼさなければならぬのだ。」","color":"gray","italic":true}']
