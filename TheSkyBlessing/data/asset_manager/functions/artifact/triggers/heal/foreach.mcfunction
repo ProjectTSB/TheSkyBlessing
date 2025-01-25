@@ -19,11 +19,12 @@
 
 # 使用条件を満たしているか確認する
     function asset_manager:artifact/check/
-    function asset_manager:artifact/triggers/heal/check.m with storage asset:context
+    function asset_manager:artifact/triggers/event/check.m with storage asset:context
 # 条件を満たしていれば使用する
     execute if entity @s[tag=CanUsed] run function asset_manager:artifact/triggers/heal/use
 
 # リセット
+    function asset_manager:artifact/triggers/event/reset.m with storage asset:context
     tag @a[tag=Receiver] remove Receiver
     tag @s remove CanUsed
     data remove storage asset:context Heal

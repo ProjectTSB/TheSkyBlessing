@@ -13,7 +13,7 @@
     # execute if entity @e[type=#arrows,tag=ShotArrow,limit=1] run return fail
 # 使用条件を満たしているか確認する
     function asset_manager:artifact/check/
-    function asset_manager:artifact/triggers/shot/check.m with storage asset:context
+    function asset_manager:artifact/triggers/event/check.m with storage asset:context
 # 条件を満たしていれば使用する
     execute if entity @s[tag=CanUsed] run function asset_manager:artifact/triggers/shot/use
 

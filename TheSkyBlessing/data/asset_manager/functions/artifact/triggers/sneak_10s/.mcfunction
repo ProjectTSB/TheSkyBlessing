@@ -11,7 +11,7 @@
     execute store result score $SneakTime Temporary run data get storage asset:context SneakTime
 # 使用条件を満たしているか確認する
     execute if score $SneakTime Temporary matches 200 run function asset_manager:artifact/check/
-    execute if score $SneakTime Temporary matches 200 run function asset_manager:artifact/triggers/sneak_10s/check.m with storage asset:context
+    execute if score $SneakTime Temporary matches 200 run function asset_manager:artifact/triggers/event/check.m with storage asset:context
 # 条件を満たしていれば使用する
     execute if entity @s[tag=CanUsed] run function asset_manager:artifact/triggers/sneak_10s/use
 

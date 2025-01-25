@@ -15,7 +15,7 @@
     execute unless data storage asset:artifact TargetItem{Slot:"hotbar"} run data modify storage asset:context RemainingCount set from storage asset:artifact TargetItem.RemainingCount
 
 # 神器を呼び出し
-    function asset_manager:artifact/triggers/damage_freezing/damage_freezing.m with storage asset:context
+    function asset_manager:artifact/triggers/event/use.m with storage asset:context
 
 # リセット
     data remove storage asset:context BrokeItem

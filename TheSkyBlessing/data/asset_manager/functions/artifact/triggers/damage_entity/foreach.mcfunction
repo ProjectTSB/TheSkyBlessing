@@ -12,11 +12,12 @@
 
 # 使用条件を満たしているか確認する
     execute if entity @e[type=#lib:living,type=!player,tag=Attacker] run function asset_manager:artifact/check/
-    execute if entity @e[type=#lib:living,type=!player,tag=Attacker] run function asset_manager:artifact/triggers/damage_entity/check.m with storage asset:context
+    execute if entity @e[type=#lib:living,type=!player,tag=Attacker] run function asset_manager:artifact/triggers/event/check.m with storage asset:context
 # 条件を満たしていれば使用する
     execute if entity @s[tag=CanUsed] run function asset_manager:artifact/triggers/damage_entity/use
 
 # リセット
+    function asset_manager:artifact/triggers/event/reset.m with storage asset:context
     tag @e[type=#lib:living,type=!player,tag=Attacker] remove Attacker
     tag @s remove CanUsed
     data remove storage asset:context Damage
