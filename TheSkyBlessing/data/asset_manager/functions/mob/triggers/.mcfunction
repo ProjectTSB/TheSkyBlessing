@@ -20,6 +20,7 @@
     execute if data storage asset:mob MobEvents.Attack[0] run function asset_manager:mob/triggers/attack/foreach
     execute if data storage asset:mob MobEvents.Hurt[0] run function asset_manager:mob/triggers/hurt/foreach
     execute if data storage asset:mob MobEvents.Death[0] run tag @s add Kill
+    execute if data storage asset:mob MobEvents.Death[1] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"MOB に複数の死亡イベントが含まれています。\n","color":"white"},{"storage":"asset:mob","nbt":"MobEvents.Death[]","separator":"\n"}]
     execute if data storage asset:mob MobEvents.Death[0] if entity @s[tag=Enemy.Boss] run function metric:angel/kill.m with storage asset:context
     execute if data storage asset:mob MobEvents.Death[0] run function asset_manager:mob/triggers/death/foreach
     execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
