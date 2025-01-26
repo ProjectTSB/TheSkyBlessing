@@ -19,8 +19,7 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "攻撃情報　　",
-                                        "font": "misaki/gothic"
+                                        "text": "攻撃情報　　"
                                     },
                                     {
                                         "text": "\u0006",
@@ -40,8 +39,7 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "攻撃属性　　",
-                                        "font": "misaki/gothic"
+                                        "text": "攻撃属性　　"
                                     },
                                     {
                                         "text": "\u0006",
