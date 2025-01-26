@@ -9,9 +9,12 @@
 # セッション開く
     function lib:array/session/open
 # 配列をコピー
-# mainhandは二重更新しないように削除する
-    data modify storage asset:artifact New.CopiedItemData set from storage asset:artifact New.ItemData
-    data remove storage asset:artifact New.CopiedItemData[0]
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.offhand.tag.TSB
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.feet.tag.TSB
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.legs.tag.TSB
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.chest.tag.TSB
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.head.tag.TSB
+    data modify storage asset:artifact New.CopiedItemData append from storage asset:artifact New.Items.hotbar[].tag.TSB
 # それぞれについて更新 // New.CopiedItemData (normal) -> LocalCooldown (inverted)
     function asset_manager:artifact/triggers/equipments/update_cooldown/foreach
 # 反転する // LocalCooldown (inverted) -> Array (normal)
