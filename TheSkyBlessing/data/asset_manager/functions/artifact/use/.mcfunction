@@ -16,7 +16,7 @@
 # が、実装時点では神器の処理終了時に追加で処理を実行することが出来ないため、
 # すべてを諦めて DamageAPI で回復を行う。
     data remove storage api: PersistentArgument.AdditionalMPHeal
-    execute store result storage api: PersistentArgument.AdditionalMPHeal double 0.01 run data get storage asset:artifact TargetItems[0].tag.TSB.MPHealWhenHit 100
+    execute store result storage api: PersistentArgument.AdditionalMPHeal double 0.01 run data get storage asset:artifact TargetItem.MPHealWhenHit 100
 # MP減少処理
     execute if data storage asset:artifact TargetItem.MPCost run function asset_manager:artifact/use/remove_mp
 # 種別クールダウン保存
