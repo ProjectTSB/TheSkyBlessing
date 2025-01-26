@@ -88,6 +88,7 @@
     data remove storage asset:artifact ConsumeItem
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
+    data remove storage asset:artifact MPHealWhenHit
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
     data remove storage asset:artifact SpecialCooldown
