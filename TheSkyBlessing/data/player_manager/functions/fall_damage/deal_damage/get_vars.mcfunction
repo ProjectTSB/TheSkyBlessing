@@ -19,7 +19,7 @@
     scoreboard players operation $FallDistance Temporary -= $YVec Temporary
 
 # 落下ダメージ倍率の初期化
-    execute store result score $DamageMultiplier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.FallDamage 10
+    execute store result score $DamageMultiplier Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.Defense.Fall 10
 # ジャンプ力上昇のlvを取得する
 # $JumpBoost(e1) = max($JumpBoost(e1) ?? -1(e1)) + 1(e1), 0)
     function api:data_get/active_effects

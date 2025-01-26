@@ -1,4 +1,4 @@
-#> api:modifier/fall_damage/remove
+#> api:modifier/defense/fall/remove
 #
 #
 #
@@ -12,6 +12,6 @@
 # データ検証
     execute unless data storage api: Argument.UUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" UUID","color":"red"}]
 # データが正しいなら消す
-    execute if data storage api: Argument.UUID run function api:modifier/core/fall_damage/remove
+    execute if data storage api: Argument.UUID run function api:modifier/core/defense/fall/remove
 # リセット
     data remove storage api: Argument.UUID
