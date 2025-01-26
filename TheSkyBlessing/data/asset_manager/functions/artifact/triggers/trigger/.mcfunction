@@ -26,8 +26,12 @@
     data modify storage asset:artifact New.CopiedItemData set from storage lib: Array
     function lib:array/session/close
 # データを扱いやすくする
+    function lib:array/session/open
     scoreboard players set $SlotIndex Temporary -6
     function asset_manager:artifact/triggers/trigger/normalize/
+    function lib:array/reverse
+    data modify storage asset:artifact NormalizedItemData set from storage lib: Array
+    function lib:array/session/close
 # 各神器ごとに処理を実行する
     execute if data storage asset:artifact NormalizedItemData[0] run function asset_manager:artifact/triggers/trigger/foreach/
 
