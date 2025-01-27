@@ -14,23 +14,23 @@
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # SpecialCooldownによる制限
-        function asset_manager:artifact/check/check_special_cooldown
+        execute unless data storage asset:context {SubTrigger:true} run function asset_manager:artifact/check/check_special_cooldown
         execute if entity @s[tag=CheckFailed] unless score @s SpecialCDLogCD matches 0.. run tellraw @s {"text":"特殊クールダウンが終わっていません。","color":"red"}
         execute if entity @s[tag=CheckFailed] unless score @s SpecialCDLogCD matches 0.. run scoreboard players set @s SpecialCDLogCD 60
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # MP必要量による制限
-        function asset_manager:artifact/check/check_mp
+        execute unless data storage asset:context {SubTrigger:true} run function asset_manager:artifact/check/check_mp
         execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItem{DisableMPMessage:true} run tellraw @s {"text":"MPが足りない！","color":"red"}
         execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItem{DisableMPMessage:true} run scoreboard players set @s MPLogCD 20
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # TypeCooldownによる制限
-        function asset_manager:artifact/check/check_type_cooldown/
+        execute unless data storage asset:context {SubTrigger:true} run function asset_manager:artifact/check/check_type_cooldown/
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
-        function asset_manager:artifact/check/check_local_cooldown/
+        execute unless data storage asset:context {SubTrigger:true} run function asset_manager:artifact/check/check_local_cooldown/
         execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItem{DisableCooldownMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
         execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItem{DisableCooldownMessage:true} run scoreboard players set @s LocalCDLogCD 20
         execute if entity @s[tag=CheckFailed] unless data storage asset:artifact TargetItemList[0] run tag @s remove CanUsed
