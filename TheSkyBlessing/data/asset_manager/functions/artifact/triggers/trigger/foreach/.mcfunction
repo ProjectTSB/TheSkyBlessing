@@ -20,7 +20,7 @@
 # トリガーを持っていれば処理を実行する
 # equipとuse_itemは別処理をしているので弾く
     data modify storage asset:context Trigger set from storage asset:artifact TargetItem.Trigger
-    execute unless data storage asset:artifact TargetItem{Trigger:"equip"} unless data storage asset:artifact TargetItem{Trigger:"use_item"} run function asset_manager:artifact/triggers/trigger/foreach/call.m with storage asset:context
+    execute unless data storage asset:artifact TargetItem{Trigger:"equip"} unless data storage asset:artifact TargetItem{Trigger:"use_item"} unless data storage asset:artifact TargetItem{Trigger:"shot"} run function asset_manager:artifact/triggers/trigger/foreach/call.m with storage asset:context
 
 # リセット
     data remove storage asset:artifact TargetItem

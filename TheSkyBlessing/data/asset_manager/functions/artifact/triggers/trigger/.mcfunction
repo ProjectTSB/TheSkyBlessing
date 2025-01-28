@@ -13,10 +13,8 @@
     execute if data storage asset:artifact Old.Consumable.ID if entity @e[type=#arrows,tag=ShotArrow,distance=..5,limit=1] run function asset_manager:artifact/triggers/shot/
     tag @e[type=#arrows,distance=..5] remove ShotArrow
     scoreboard players reset $GameTime Temporary
-# アイテムを消費している最中なら引き継ぐ
-    execute if entity @s[tag=TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/continue
-# アイテムを消費していないなら解除する
-    execute if entity @s[tag=!TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/reset
+# アイテムを消費中の処理
+    execute if entity @s[tag= TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/continue
     execute if entity @s[tag=!TriggerFlag.UsingItem] if data storage asset:artifact Old.Consumable.ID run function asset_manager:artifact/triggers/event/use_item/reset
 
 # 神器のデータを取得する
