@@ -4,10 +4,7 @@
 #
 # @within function api:spawner/subtract_hp
 
-# TargetMobID取得
-    execute store result score $TargetMobID Temporary run data get storage asset:context id
-# そのMobを特定/処理する
-    execute at @s as @e[type=item_display,tag=Spawner,distance=..100,sort=nearest] run function asset_manager:spawner/subtract_hp/check_already_find
+# その Mob を召喚する最寄りのスポナー 1 つの体力を減少させる
+    execute as @e[type=item_display,tag=Spawner,distance=..128,sort=nearest] run function asset_manager:spawner/subtract_hp/attempt_subtract.m with storage api: Argument
 # リセット
-    scoreboard players reset $TargetMobID Temporary
     data remove storage asset:spawner AlreadyFind

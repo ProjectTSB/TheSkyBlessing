@@ -5,7 +5,7 @@
 # @within function core:tick/
 
 # AssetMob ならばスポナーの HP を減らそうとする
-    execute if entity @s[tag=AssetMob] store result storage api: Argument.ID int 1 run scoreboard players get @s MobID
+    execute if entity @s[tag=AssetMob] store result storage api: Argument.MobID int 1 run scoreboard players get @s MobID
     execute if entity @s[tag=AssetMob] run function api:spawner/subtract_hp
 
 # 絶対に消し飛ばす

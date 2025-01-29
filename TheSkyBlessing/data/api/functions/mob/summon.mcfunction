@@ -5,6 +5,7 @@
 # @input storage api:
 #   Argument.ID : int
 #   Argument.FieldOverride? : compound
+#   Argument.PreInitInterceptFn?: id(minecraft:function)
 # @api
 
 # validate
@@ -14,3 +15,4 @@
 # リセット
     data remove storage api: Argument.ID
     data remove storage api: Argument.FieldOverride
+    data remove storage api: Argument.PreInitInterceptFn

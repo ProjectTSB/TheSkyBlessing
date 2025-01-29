@@ -9,6 +9,7 @@
 # @within
 #   asset_manager:trader/**
 #   asset:trader/*/register/
+#   debug:trader/update
     #declare tag Trader
 
 #> storage

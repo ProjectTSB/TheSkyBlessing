@@ -28,7 +28,7 @@
     execute as @e[type=#arrows,tag=!AlreadyInitArrow] at @s run function player_manager:arrow/init/
 
 # Nexus Loader
-    function world_manager:nexus_loader/tick
+    execute if data storage global {IsProduction:1b} run function world_manager:nexus_loader/tick
 
 # 4tick毎のワールド側処理
     scoreboard players add $4tInterval Global 1
@@ -60,14 +60,14 @@
     # データ初期化部
         execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理
-        execute as @e[tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
-        execute as @e[tag=AssetMob] at @s run function asset_manager:mob/tick/
+        execute as @e[type=!player,tag=AllowProcessingCommonTag] at @s run function asset_manager:mob/common_tag/
+        execute as @e[type=!player,tag=AssetMob] at @s run function asset_manager:mob/tick/
     # 環境ダメージ処理
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
     # Kill トリガー付いてるモブを消し飛ばす
         execute as @e[type=#lib:living,type=!player,tag=Kill] run function mob_manager:kill_entity
 # Objects処理
-    execute as @e[tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
+    execute as @e[type=!player,tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 
 # エフェクト処理
     execute as @e[type=#lib:living,tag=HasAssetEffect] at @s run function asset_manager:effect/tick
@@ -88,4 +88,4 @@
     execute as @a at @s run function core:tick/player/post
 
 # 0-0-0-0-0消失警告
-    execute if entity @p[predicate=api:is_completed_player_chunk_load_waiting_time,distance=..80] unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]
+    execute if loaded 0 0 0 unless entity 0-0-0-0-0 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"0-0-0-0-0が参照できません。システム内で重大な問題が発生する可能性があります。"}]
