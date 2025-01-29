@@ -4,26 +4,26 @@
 #
 # @within function asset_manager:artifact/triggers/equipments/update_attribute/*
 
-# セッションを開ける
-    function lib:array/session/open
-
 # dis_equip
+    function lib:array/session/open
     data modify storage lib: Array set from storage asset:artifact Old.CopiedItemData[-1].SubTriggers
     data modify storage lib: CompareTarget set value "equip"
     function lib:array/compare_single
-    execute if data storage lib: CompareResult[{_:{_:true}}] run function asset_manager:artifact/triggers/dis_equip/
-
-# リセット
-    data modify storage lib: Array set value []
+    data modify storage asset:artifact IsEquipTrigger set from storage lib: CompareResult
+    function lib:array/session/close
+    execute if data storage asset:artifact IsEquipTrigger[{_:{_:true}}] run function asset_manager:artifact/triggers/dis_equip/
 
 # equip
+    function lib:array/session/open
     data modify storage lib: Array set from storage asset:artifact New.CopiedItemData[-1].SubTriggers
     data modify storage lib: CompareTarget set value "equip"
     function lib:array/compare_single
-    execute if data storage lib: CompareResult[{_:{_:true}}] run function asset_manager:artifact/triggers/equip/
+    data modify storage asset:artifact IsEquipTrigger set from storage lib: CompareResult
+    function lib:array/session/close
+    execute if data storage asset:artifact IsEquipTrigger[{_:{_:true}}] run function asset_manager:artifact/triggers/equip/
 
 # リセット
-    function lib:array/session/close
+    data remove storage asset:artifact IsEquipTrigger
     data remove storage asset:artifact Old.CopiedItemData[-1]
     data remove storage asset:artifact New.CopiedItemData[-1]
 
