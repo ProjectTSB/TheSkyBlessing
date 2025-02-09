@@ -11,7 +11,7 @@
 #   api:entity/mob/effect/core/give
 #   asset_manager:mob/triggers/death/manual
 #   asset_manager:effect/events/*/call_super_method
-#   asset_manager:artifact/give/candidates
+#   asset_manager:artifact/give/foreach
 #   api:spawner/subtract_hp
 #   asset_manager:object/summon/
 #   api:object/core/summon
