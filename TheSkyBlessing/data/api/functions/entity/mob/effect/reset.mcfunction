@@ -13,7 +13,6 @@
     data remove storage api: Argument.FieldOverride
     data remove storage api: Argument.ClearLv
     data remove storage api: Argument.ClearType
-    data remove storage api: Argument.IsSingle
     data remove storage api: Argument.ClearCount
 
     function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:entity/mob/effect/give"}

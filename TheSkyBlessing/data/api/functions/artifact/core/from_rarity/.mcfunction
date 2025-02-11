@@ -45,8 +45,9 @@
     scoreboard players operation $Pulls Temporary *= $CandidateLength Temporary
     scoreboard players operation $Pulls Temporary /= $100 Const
 # シャッフルして取り出す
-    scoreboard players add $CandidateLength Temporary 1
-    execute if data storage lib: Array[0] run function api:artifact/core/from_rarity/foreach
+    data modify storage asset:artifact Type set from storage asset:context Type
+    function lib:array/shuffle
+    execute if score $Pulls Temporary matches 0.. if data storage lib: Array[0] run function api:artifact/core/from_rarity/foreach
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidateLength Temporary
