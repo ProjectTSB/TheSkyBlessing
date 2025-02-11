@@ -368,6 +368,29 @@
                 }
             }
         },
+        "type-other": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "is_melee",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_projectile",
+                                "expected": false
+                            },
+                            {
+                                "id": "is_explosion",
+                                "expected": false
+                            }
+                        ]
+                    }
+                }
+            }
+        },
         "blocked": {
             "trigger": "entity_hurt_player",
             "conditions": {
@@ -455,7 +478,8 @@
         [
             "type-melee",
             "type-projectile",
-            "type-explosion"
+            "type-explosion",
+            "type-other"
         ],
         [
             "blocked",

@@ -12,6 +12,7 @@
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-melee=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_melee"
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-projectile=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_projectile"
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-explosion=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_explosion"
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-other=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_other"
 # 防御されたかの取得
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=true}}] run data modify storage mob_manager:entity_finder Blocked set value true
     execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=false}}] run data modify storage mob_manager:entity_finder Blocked set value false
