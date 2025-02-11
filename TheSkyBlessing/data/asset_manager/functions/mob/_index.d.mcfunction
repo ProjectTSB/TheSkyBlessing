@@ -29,7 +29,7 @@
 #   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
-#   asset_manager:artifact/triggers/attack/vanilla/
+#   asset_manager:artifact/triggers/vanilla/damage
 #   api:damage/core/health_subtract/non-player/
 #   api:mob/core/kill
     #declare tag AssetMob
@@ -50,7 +50,6 @@
 #> Killer
 # @within *
 #   asset_manager:mob/triggers/death/*
-#   asset_manager:artifact/triggers/attack/vanilla
 #   api:damage/core/health_subtract/non-player/kill
 #   asset:mob/*/death/**
     #declare tag Killer

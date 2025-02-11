@@ -51,9 +51,10 @@ jobs:
           REPOSITORY: ProjectTSB/TheSkyBlessing
           BRANCH: master
           VISIBILITY_FILTER: |
-            function@asset:artifact/ARTIFACT_NAME/trigger/2.check_condition
-            function@asset:artifact/ARTIFACT_NAME/trigger/3.main
-            function@asset:artifact/ARTIFACT_NAME/give/2.give
+            function@asset:artifact/ARTIFACT_NAME/TRIGGER_NAME/
+            function@asset:artifact/ARTIFACT_NAME/TRIGGER_NAME/check
+            function@asset:artifact/ARTIFACT_NAME/enroll_pool
+            function@asset:artifact/ARTIFACT_NAME/register
             function@asset:effect/EFFECT_NAME/register
             function@asset:effect/EFFECT_NAME/given/
             function@asset:effect/EFFECT_NAME/tick/

@@ -29,7 +29,7 @@
 #   core:tick/
 #   api:damage/core/health_subtract/non-player/
 #   api:mob/core/kill
-#   asset_manager:artifact/triggers/attack/vanilla/
+#   asset_manager:artifact/triggers/vanilla/damage
 #   asset_manager:mob/triggers/
     #declare tag Kill
 

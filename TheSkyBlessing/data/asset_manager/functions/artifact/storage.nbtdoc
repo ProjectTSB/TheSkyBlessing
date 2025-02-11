@@ -1,0 +1,216 @@
+compound AssetArtifact {
+    // ID
+    ID: int @ 1..65535,
+    // アイテム (ItemID)
+    Item: string,
+    // 名前 (TextComponent)
+    Name: string,
+    // 説明文 (TextComponent)
+    Lore: [string] @ 1..,
+    // 残り使用回数 (default: null)
+    RemainingCount?: int @ 1..,
+    // 残り使用回数最大値 (default: null)
+    RemainingCountMax?: int @ 1..,
+
+    // スロット
+    Slot: UseSlot,
+    // トリガー
+    // 先頭要素をメイントリガー、他をサブトリガーとして扱う
+    Triggers: UseTrigger,
+    // 使用条件の説明文 (default: null)
+    Condition?: string,
+    // 攻撃説明 (default: null)
+    AttackInfo?: TriggerAtkInfo,
+    // 消費アイテム (default: null)
+    ConsumeItem?: TriggerConsume,
+    // MP消費 (default: null)
+    MPCost?: int @ 0..,
+    // 要求MP (default: null)
+    MPRequire?: int @ 0..,
+    // MP回復 (default: null)
+    MPHealWhenHit?: double @ 0..,
+    // クールダウン - 個別 (default: null)
+    LocalCooldown?: int @ 0..,
+    // クールダウン - 種別 (default: null)
+    TypeCooldown?: TriggerTCD,
+    // クールダウン - 共有 (default: null)
+    SpecialCooldown?: int @ 0..,
+    // クールダウン中の使用不可メッセージの無効化 (default: false)
+    DisableCooldownMessage?: boolean,
+    // MP不足の使用不可メッセージの無効化 (default: false)
+    DisableMPMessage?: boolean,
+    // アイテム更新の無効化 (default: false)
+    IgnoreItemUpdate?: boolean,
+    // 破壊音の無効化 (default: false)
+    DisableBreakSound?: boolean,
+    // 装備時効果ID (default: null)
+    EquipID?: int @ 1..65535,
+    // 装備時補正 (default: null)
+    Modifiers: [Modifier],
+    // 最大発動回数 (default: 1)
+    PartsMax?: int @ 1..,
+    // 使用可能信仰
+    CanUsedGod: "ALL" || [God] @ 1..5,
+    // NBT (default: null)
+    CustomNBT?: NBT,
+}
+
+AssetEffect describes minecraft:storage[asset:artifact]
+
+enum(string) UseSlot {
+    Mainhand = "mainhand",
+    Offhand = "offhand",
+    Feet = "feet",
+    Legs = "legs",
+    Chest = "chest",
+    Head = "head",
+    Hotbar = "hotbar",
+    // Inventory = "inventory",
+    Auto = "auto",
+}
+
+compound UseTrigger {
+    // トリガー名
+    Trigger: TriggerName,
+    // トリガー変数 (default: null)
+    Argument?: TriggerArgument,
+}
+
+enum(string) TriggerName {
+    // 保持
+    Tick = "tick",
+    // 右クリック
+    Click = "click",
+    // 右クリック (長押し)
+    UsingItem = "using_item",
+    // 弓・クロスボウ発射
+    Shot = "shot",
+    // アイテム使用
+    UseItem = "use_item",
+    // 攻撃
+    Attack = "attack",
+    // 被ダメージ
+    Damage = "damage",
+    // 撃破
+    Kill = "kill",
+    // スニーク
+    Sneak = "sneak",
+    // 装備脱着
+    Equip = "equip",
+    // 回復
+    Heal = "heal",
+    // 被回復
+    ReceiveHeal = "receive_heal",
+}
+
+compound TriggerArgument {
+    // 種別 (Attack || Damage || Kill) (default: null)
+    Type?: DmgType
+    // エンティティからの攻撃か否か (Damage) (default: false)
+    FromEntity?: boolean,
+    // スニーク長押しに対応するか否か (Sneak) (default: false)
+    Keep?: boolean,
+    // スニーク閾値 (Sneak) (default: 0)
+    Threshold?: int @ 1..,
+}
+
+enum(string) DmgType {
+    Melee = "melee",
+    Projectile = "projectile",
+    Explosion = "explosion",
+    Drowning = "drowning",
+    Burn = "burn",
+    Freezing = "freezing",
+    Lightning = "lightning",
+}
+
+compound TriggerAtkInfo {
+    // ダメージ量 (default: "???")
+    Damage?: int || [int] @ 2,
+    // 防御貫通 (default: null)
+    BypassResist?: boolean,
+    // 射程 (default: null)
+    AttackRange?: int @ 0..,
+    // 範囲 (default: null)
+    IsRangeAttack?: RangeAtkOption,
+    // 第一属性
+    AttackType: AtkOption,
+    // 第二属性 (default: "None")
+    ElementType?: ElemOption,
+}
+
+enum(string) RangeAtkOption {
+    // 単体
+    Never = "never",
+    // 範囲 - 確率
+    probability = "probability",
+    // 範囲 - 条件
+    Conditional = "conditional",
+    // 範囲
+    Every = "every",
+}
+
+enum(string) AtkOption {
+    Physical = "Physical",
+    Magic = "Magic",
+}
+
+enum(string) ElemOption {
+    Fire = "Fire",
+    Water = "Water",
+    Thunder = "Thunder",
+    None = "None",
+}
+
+compound TriggerConsume {
+    // アイテム (TextComponent)
+    Item: string,
+    // 個数
+    Count: int @ 1..,
+    // その他条件など (TextComponent) (default: null)
+    Extra?: string,
+}
+
+compound TriggerTCD {
+    Type: TCDType,
+    Value: int @ 0..,
+}
+
+enum(string) TCDType {
+    ShortRange = "shortRange",
+    LongRange = "longRange",
+    Heal = "heal",
+    Summon = "summon",
+}
+
+compound Modifier {
+    // 種別
+    Type: ModifierType || AttributeName,
+    // 補正値
+    Amount: double,
+    // 計算方式
+    Operation: ModifierOperation,
+    // スタック減衰 (default: 0)
+    StuckReduction?: double,
+}
+
+enum(string) ModifierType {
+    AttackBase = "attack/base",
+    AttackPhysical = "attack/physical",
+    AttackMagic = "attack/magic",
+    AttackFire = "attack/fire",
+    AttackWater = "attack/water",
+    AttackThunder = "attack/thunder",
+    DefenseBase = "defense/base",
+    DefensePhysical = "defense/physical",
+    DefenseMagic = "defense/magic",
+    DefenseFire = "defense/fire",
+    DefenseWater = "defense/water",
+    DefenseThunder = "defense/thunder",
+    DefenseFall = "defense/fall",
+    Heal = "heal",
+    MaxHealth = "max_health",
+    MaxMP = "max_mp",
+    MPRegen = "mp_regen",
+    ReceiveHeal = "receive_heal",
+}

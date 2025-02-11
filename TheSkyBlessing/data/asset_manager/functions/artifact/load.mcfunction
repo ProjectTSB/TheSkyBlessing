@@ -5,6 +5,6 @@
 # @within function core:load
 
 # 定義データを吹き飛ばす
-    data modify storage asset:artifact RarityRegistry set value [["UNUSED"], [], [], [], []]
+    data modify storage asset:artifact ShardPool set value [["UNUSED"], [], [], [], []]
 # 読み込み
-    function #asset:artifact/register
+    function #asset:artifact/enroll_pool
