@@ -33,5 +33,9 @@
     execute if data storage asset:mob {Interferable:false} run tag @s add Uninterferable
     execute if data storage asset:mob {Interferable:false} run tag @s add Immovable
 
+# skeleton or #lib:drownable ならば AllowProcessingCommonTag
+    execute if entity @s[type=skeleton] run tag @s add AllowProcessingCommonTag
+    execute if entity @s[type=#lib:drownable] run tag @s add AllowProcessingCommonTag
+
 # ForwardTarget
     execute if data storage asset:mob {IsForwardTarget:true} run tag @s add ForwardTarget

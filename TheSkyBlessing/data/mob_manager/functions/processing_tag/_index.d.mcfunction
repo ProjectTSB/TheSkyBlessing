@@ -21,6 +21,7 @@
 # @within function
 #   mob_manager:processing_tag/
 #   asset:**
+#   asset_manager:mob/summon/set_tag
 #declare tag AllowProcessingCommonTag
 
 #> 汎用タグ類
