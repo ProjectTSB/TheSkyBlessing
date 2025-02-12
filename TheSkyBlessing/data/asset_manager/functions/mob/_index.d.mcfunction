@@ -25,13 +25,9 @@
 #> MobAsset側で定義されたMobに付けられるタグ
 # @within function
 #   core:tick/
-#   mob_manager:init/
-#   mob_manager:kill_entity
 #   asset:mob/**
 #   asset_manager:mob/**
-#   asset_manager:artifact/triggers/attack/vanilla/
-#   api:damage/core/health_subtract/non-player/
-#   api:mob/core/kill
+#   api:mob/is_asset_mob
     #declare tag AssetMob
 
 #> MobAsset以外のEntityにCommonTagを実行させるためのタグ
