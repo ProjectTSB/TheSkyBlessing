@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/check_drowning
+#> mob_manager:processing_tag/common_tag/check_drowning
 #
 # InWaterTimeNBTを検知して、ドラウンド化しないようにします
 #
-# @within function asset_manager:mob/common_tag/
+# @within function mob_manager:processing_tag/common_tag/
 
 #> Temp
 # @private

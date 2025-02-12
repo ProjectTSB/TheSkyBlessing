@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/vfx/tp_line
+#> mob_manager:processing_tag/common_tag/anti_void_action/vfx/tp_line
 #
 # テレポート時の縦線パーティクル
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/vfx/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/vfx/
 
 execute if score @s VoidActionTime matches 56 run particle electric_spark ~ ~3.8 ~ 0 0 0 0 1 force @a
 execute if score @s VoidActionTime matches 56 run particle electric_spark ~ ~3.6 ~ 0 0 0 0 1 force @a

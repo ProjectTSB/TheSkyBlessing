@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/vfx/warning
+#> mob_manager:processing_tag/common_tag/anti_void_action/vfx/warning
 #
 # 範囲予告パーティクル
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/vfx/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/vfx/
 
 particle dust 0.6 0 0 0.75 ~0 ~ ~-5 0 0 0 0 1
 particle dust 0.6 0 0 0.75 ~0.627 ~ ~-4.961 0 0 0 0 1

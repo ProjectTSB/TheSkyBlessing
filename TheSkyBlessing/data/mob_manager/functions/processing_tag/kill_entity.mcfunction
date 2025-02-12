@@ -1,8 +1,8 @@
-#> mob_manager:kill_entity
+#> mob_manager:processing_tag/kill_entity
 #
 #
 #
-# @within function core:tick/
+# @within function mob_manager:processing_tag/
 
 # AssetMob ならばスポナーの HP を減らそうとする
     execute if function api:mob/is_asset_mob store result storage api: Argument.MobID int 1 run scoreboard players get @s MobID

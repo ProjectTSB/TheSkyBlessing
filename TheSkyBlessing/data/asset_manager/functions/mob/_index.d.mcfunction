@@ -30,12 +30,6 @@
 #   api:mob/is_asset_mob
     #declare tag AssetMob
 
-#> MobAsset以外のEntityにCommonTagを実行させるためのタグ
-# @within function
-#   core:tick/
-#   asset:**
-    #declare tag AllowProcessingCommonTag
-
 #> this
 # @within *
 #   asset_manager:mob/triggers/
@@ -69,31 +63,6 @@
 #   asset_manager:mob/triggers/
 #   api:mob/core/remove
     #declare tag RemovingEntity
-
-#> 汎用タグ類
-# @within function
-#   asset_manager:mob/common_tag/*
-#   asset:**
-    #declare tag AllowRideBannedVehicle
-    #declare tag AntiFallDamage
-    #declare tag AntiVoid
-    #declare tag AntiBurn
-    #declare tag AlwaysBurn
-    #declare tag AlwaysInvisible
-    #declare tag AlwaysSlowFall
-    #declare tag AutoKillWhenDieVehicle
-    #declare tag AutoKillWhenDiePassenger
-    #declare tag Frozen
-    #declare tag Drown
-
-#> 汎用奈落耐性処理用タグ
-# @within function
-#   asset_manager:mob/common_tag/anti_void_action/**
-    #declare tag AntiVoidTargets
-    #declare tag AntiVoidTarget
-    #declare tag DefaultNoGravity
-    #declare tag this
-
 
 #> Bossbar用のタグ
 # @within function

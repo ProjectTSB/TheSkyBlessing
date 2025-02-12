@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/vfx/aoe/4
+#> mob_manager:processing_tag/common_tag/anti_void_action/vfx/aoe/4
 #
 # 範囲攻撃パーティクル(4m)
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/vfx/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/vfx/
 
 particle electric_spark ~0 ~ ~-4 ~ ~1000 ~ 0.0001 0
 particle electric_spark ~0.31384 ~ ~-3.98767 ~ ~1000 ~ 0.0001 0
