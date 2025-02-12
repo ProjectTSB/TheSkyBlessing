@@ -58,11 +58,12 @@
 #   asset:mob/*/hurt/**
     #declare tag Attacker
 
-#> RemovingEntity
+#> RemovingAssetEntity
 # @within function
 #   asset_manager:mob/triggers/
+#   asset_manager:mob/triggers/remove/
 #   api:mob/core/remove
-    #declare tag RemovingEntity
+#declare tag RemovingAssetEntity
 
 #> Bossbar用のタグ
 # @within function
