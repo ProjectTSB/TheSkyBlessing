@@ -15,6 +15,6 @@ execute if entity @s[tag=AlwaysBurn] unless predicate lib:is_burning run data mo
 execute if entity @s[tag=AntiBurn] if predicate lib:is_burning run data modify entity @s Fire set value 0s
 execute if entity @s[tag=AntiFallDamage] run function mob_manager:processing_tag/common_tag/check_fall_distance
 execute if entity @s[type=skeleton,tag=!Frozen] run function mob_manager:processing_tag/common_tag/check_frozen
-execute if entity @s[type=#lib:drownable,tag=!Drown] anchored eyes positioned ^ ^ ^ if predicate lib:in_water/include_flowing run data modify entity @s InWaterTime set value -999999
+execute if entity @s[type=#lib:drownable,tag=!Drown] anchored eyes positioned ^ ^ ^ positioned ~ ~-0.1111111119389534 ~ if predicate lib:in_water/include_flowing run data modify entity @s InWaterTime set value -999999
 execute unless score @s VoidActionTime matches -2147483648..2147483647 if entity @s[tag=AntiVoid] if predicate lib:is_void run scoreboard players set @s VoidActionTime 0
 execute if score @s VoidActionTime matches -2147483648..2147483647 run function mob_manager:processing_tag/common_tag/anti_void_action/
