@@ -64,7 +64,7 @@
     # 環境ダメージ処理
         execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
     # 汎用タグ処理
-        execute as @e[type=#lib:living,type=!player] run function mob_manager:processing_tag/
+        execute as @e[type=#lib:living,type=!player] at @s run function mob_manager:processing_tag/
 # Objects処理
     execute as @e[type=!player,tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 
