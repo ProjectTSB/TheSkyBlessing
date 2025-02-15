@@ -4,7 +4,7 @@
 #
 # @within function mob_manager:processing_tag/
 
-# Deathトリガー防止
+# ドロップ無くす
     data modify entity @s DeathLootTable set value "empty"
 # さよなら～
     tp @s ~ -300 ~
