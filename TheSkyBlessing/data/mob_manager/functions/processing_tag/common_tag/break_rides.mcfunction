@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/break_rides
+#> mob_manager:processing_tag/common_tag/break_rides
 #
 # 乗ったボートやトロッコを粉砕する。アイテムは返してやらん。
 #
-# @within function asset_manager:mob/common_tag/
+# @within function mob_manager:processing_tag/common_tag/
 
 # 演出がほしいな
     # トロッコ

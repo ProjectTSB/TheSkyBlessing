@@ -174,10 +174,9 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
         scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
 
-    #> AssetManager: Mob -Private
+    #> MobManager: Mob -Private
     # @within function
-    #   core:load_once
-    #   asset_manager:mob/**
+    #   mob_manager:processing_tag/common_tag/**
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
 
