@@ -11,6 +11,6 @@
 execute store result score $Random Temporary run function lib:random/
 scoreboard players operation $Random Temporary %= $3 Const
 
-execute if score $Random Temporary matches 0 run tellraw @a [{"translate": "%1$sは%2$sによって真っ青になった。","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
-execute if score $Random Temporary matches 1 run tellraw @a [{"translate": "%1$sは%2$sによって冷たくなった。","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
-execute if score $Random Temporary matches 2 run tellraw @a [{"translate": "%2$sによって%1$sはふやけてしまった。","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
+execute if score $Random Temporary matches 0 run tellraw @a [{"translate": "%1$sは%2$sによって真っ青になった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
+execute if score $Random Temporary matches 1 run tellraw @a [{"translate": "%1$sは%2$sによって冷たくなった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
+execute if score $Random Temporary matches 2 run tellraw @a [{"translate": "%2$sによって%1$sはふやけてしまった","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
