@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/damage
+#> mob_manager:processing_tag/common_tag/anti_void_action/damage
 #
 # 距離に応じて最大体力依存ダメージを与える
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/
 
 # 最大体力を取得
     function api:modifier/max_health/get

@@ -9,12 +9,13 @@
 #declare score_holder $Damage
 
 # ダメージ種別取得
-    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-melee=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_melee"
-    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-projectile=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_projectile"
-    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={type-explosion=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_explosion"
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-melee=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_melee"
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-projectile=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_projectile"
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-explosion=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_explosion"
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-other=true}}] run data modify storage mob_manager:entity_finder DamageType set value "vanilla_other"
 # 防御されたかの取得
-    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=true}}] run data modify storage mob_manager:entity_finder Blocked set value true
-    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/entity_hurt_player={blocked=false}}] run data modify storage mob_manager:entity_finder Blocked set value false
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={blocked=true}}] run data modify storage mob_manager:entity_finder Blocked set value true
+    execute if entity @p[tag=DamagedPlayer,advancements={mob_manager:entity_finder/check_entity_hurt_player={blocked=false}}] run data modify storage mob_manager:entity_finder Blocked set value false
 # ダメージ取得
     scoreboard players set $Damage Temporary 0
     scoreboard players operation $Damage Temporary += @p[tag=DamagedPlayer] TakenDamage
@@ -23,7 +24,7 @@
 # ScoreToHPFlucに衝撃吸収分だけ加算する
     execute store result storage api: Argument.Fluctuation double -0.1 run scoreboard players get @p[tag=DamagedPlayer] AbsorbedDamage
     execute store result storage api: Argument.Attacker int 1 run scoreboard players get @s MobUUID
-    data modify storage api: Argument.DeathMessage set value ['{"translate":"%1$sは%2$sに倒された。","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}']
+    data modify storage api: Argument.DeathMessage set value ['{"translate":"%1$sは%2$sに倒された","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}']
     data modify storage api: Argument.DisableLog set value true
     execute as @p[tag=DamagedPlayer] at @s run function lib:score_to_health_wrapper/fluctuation
 

@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/init
+#> mob_manager:processing_tag/common_tag/anti_void_action/init
 #
 # 初期化
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/
 
 #> Temp
 # @private

@@ -21,7 +21,7 @@
     execute unless data storage asset:context Attack{IsForwarded:true} unless score $Fluctuation Lib matches 0 run function lib:status_log/show_health
 # 代入 / kill
     execute if score @s MobHealth matches ..0 run tag @s add Death
-    execute if score @s MobHealth matches ..0 if entity @s[tag=!AssetMob] run tag @s add Kill
+    execute if score @s MobHealth matches ..0 unless function api:mob/is_asset_mob run tag @s add Kill
     execute if score @s MobHealth matches ..0 run function asset_manager:artifact/triggers/attack/vanilla/push_kill_and_death_event
 
 # リセット

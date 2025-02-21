@@ -1,12 +1,12 @@
-#> mob_manager:kill_entity
+#> mob_manager:processing_tag/kill_entity
 #
 #
 #
-# @within function core:tick/
+# @within function mob_manager:processing_tag/
 
 # AssetMob ならばスポナーの HP を減らそうとする
-    execute if entity @s[tag=AssetMob] store result storage api: Argument.MobID int 1 run scoreboard players get @s MobID
-    execute if entity @s[tag=AssetMob] run function api:spawner/subtract_hp
+    execute if function api:mob/is_asset_mob store result storage api: Argument.MobID int 1 run scoreboard players get @s MobID
+    execute if function api:mob/is_asset_mob run function api:spawner/subtract_hp
 
 # 絶対に消し飛ばす
     effect clear @s resistance

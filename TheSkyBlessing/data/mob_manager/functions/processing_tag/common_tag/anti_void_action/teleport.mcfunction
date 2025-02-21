@@ -1,8 +1,8 @@
-#> asset_manager:mob/common_tag/anti_void_action/teleport
+#> mob_manager:processing_tag/common_tag/anti_void_action/teleport
 #
 # 対象座標にテレポートする
 #
-# @within function asset_manager:mob/common_tag/anti_void_action/
+# @within function mob_manager:processing_tag/common_tag/anti_void_action/
 
 playsound entity.enderman.teleport hostile @a ~ ~ ~
 execute at @e[type=area_effect_cloud,tag=AntiVoidTarget,limit=1] run playsound entity.enderman.teleport hostile @a ~ ~ ~
