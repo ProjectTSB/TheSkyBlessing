@@ -8,7 +8,7 @@
     data modify storage asset:container Args.Block set from storage asset:container Block
     function asset_manager:container/register/construct/set_container_block.m with storage asset:container Args
 # 中身の設定
-    execute if data storage asset:container LootTable run data modify block ~ ~ ~ LootTable set from storage asset:container LootTable
+    execute if data storage asset:container LootTable run function asset_manager:container/register/construct/set_loot_table/
 
     execute if data storage asset:container Items[0] run function asset_manager:container/register/construct/set_items/
     execute if data storage asset:container NormalizedItems[0] run data modify block ~ ~ ~ Items set from storage asset:container NormalizedItems
