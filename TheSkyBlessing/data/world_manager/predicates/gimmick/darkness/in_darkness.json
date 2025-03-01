@@ -3,7 +3,7 @@
     "predicate": {
         "light": {
             "light": {
-                "max": 5
+                "max": 3
             }
         }
     }
