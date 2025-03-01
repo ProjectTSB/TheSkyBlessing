@@ -34,27 +34,27 @@
     execute store result score $BoundsZ- Temporary run data get storage lib: Argument.Bounds[2][0] 100
     execute store result score $BoundsZ+ Temporary run data get storage lib: Argument.Bounds[2][1] 100
 # X-
-    execute store result score $SubX Temporary run function lib:random/
+    execute store result score $SubX Temporary run random value 0..65535
     scoreboard players operation $SubX Temporary %= $BoundsX- Temporary
     execute unless score $BoundsX- Temporary matches 0 run scoreboard players operation $PosX Temporary -= $SubX Temporary
 # X+
-    execute store result score $AddX Temporary run function lib:random/
+    execute store result score $AddX Temporary run random value 0..65535
     scoreboard players operation $AddX Temporary %= $BoundsX+ Temporary
     execute unless score $BoundsX+ Temporary matches 0 run scoreboard players operation $PosX Temporary += $AddX Temporary
 # Y-
-    execute store result score $SubY Temporary run function lib:random/
+    execute store result score $SubY Temporary run random value 0..65535
     scoreboard players operation $SubY Temporary %= $BoundsY- Temporary
     execute unless score $BoundsY- Temporary matches 0 run scoreboard players operation $PosY Temporary -= $SubY Temporary
 # Y+
-    execute store result score $AddY Temporary run function lib:random/
+    execute store result score $AddY Temporary run random value 0..65535
     scoreboard players operation $AddY Temporary %= $BoundsY+ Temporary
     execute unless score $BoundsY+ Temporary matches 0 run scoreboard players operation $PosY Temporary += $AddY Temporary
 # Z-
-    execute store result score $SubZ Temporary run function lib:random/
+    execute store result score $SubZ Temporary run random value 0..65535
     scoreboard players operation $SubZ Temporary %= $BoundsZ- Temporary
     execute unless score $BoundsZ- Temporary matches 0 run scoreboard players operation $PosZ Temporary -= $SubZ Temporary
 # Z+
-    execute store result score $AddZ Temporary run function lib:random/
+    execute store result score $AddZ Temporary run random value 0..65535
     scoreboard players operation $AddZ Temporary %= $BoundsZ+ Temporary
     execute unless score $BoundsZ+ Temporary matches 0 run scoreboard players operation $PosZ Temporary += $AddZ Temporary
 # Posをセット

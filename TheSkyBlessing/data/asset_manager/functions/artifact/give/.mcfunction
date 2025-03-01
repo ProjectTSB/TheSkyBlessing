@@ -39,7 +39,7 @@
 # $Pulls = floor( $CandidateLength * 0.30~0.70(e2) ) / e2
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
     scoreboard players remove $CandidateLength Temporary 1
-    execute store result score $Pulls Temporary run function lib:random/
+    execute store result score $Pulls Temporary run random value 0..65535
     scoreboard players operation $Pulls Temporary %= $41 Const
     scoreboard players add $Pulls Temporary 30
     scoreboard players operation $Pulls Temporary *= $CandidateLength Temporary
