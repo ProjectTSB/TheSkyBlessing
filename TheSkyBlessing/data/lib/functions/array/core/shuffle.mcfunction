@@ -1,7 +1,7 @@
 #> lib:array/core/shuffle
 # @within function lib:array/**
 
-execute store result score $Index Temporary run function lib:random/
+execute store result score $Index Temporary run random value 0..65535
 scoreboard players operation $Index Temporary %= $ListSize Lib
 execute if score $Index Temporary matches 1.. run function lib:array/core/move
 data modify storage lib: ArrayO append from storage lib: Array[-1]

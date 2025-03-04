@@ -29,7 +29,7 @@
 # 召喚クールダウンを設定する (min + rng(0, max - min))
     scoreboard players operation $SpawnDelayBound Temporary = $MaxSpawnDelay Temporary
     scoreboard players operation $SpawnDelayBound Temporary -= $MinSpawnDelay Temporary
-    execute unless score $SpawnDelayBound Temporary matches 0 store result score $NextDelay Temporary run function lib:random/
+    execute unless score $SpawnDelayBound Temporary matches 0 store result score $NextDelay Temporary run random value 0..65535
     execute unless score $SpawnDelayBound Temporary matches 0 run scoreboard players operation $NextDelay Temporary %= $SpawnDelayBound Temporary
     execute if score $SpawnDelayBound Temporary matches 0 run scoreboard players set $NextDelay Temporary 0
     scoreboard players operation $NextDelay Temporary += $MinSpawnDelay Temporary
