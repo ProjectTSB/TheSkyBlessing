@@ -11,6 +11,6 @@
 # 統計送りにする
     execute at @s if entity @e[type=#lib:living,type=!player,tag=Enemy.Boss,distance=..100,limit=1] run function metric:angel/damage/
 # onAttackのトリガー
-    execute if data storage api: Argument{PushEvent:true} run function api:damage/core/trigger_events/player/attack_and_damage/
+    execute if data storage api: Argument{ActivateTrigger:true} run function api:damage/core/trigger_events/player/attack_and_damage/
 # 体力の減少を反映させる
     function lib:score_to_health_wrapper/fluctuation

@@ -9,12 +9,12 @@
 #   storage api: Argument.Heal : float
 #   storage api: Argument.FixedHeal? : boolean(default: false)
 #   storage api: Argument.DisableLog? : boolean(default: false)
-#   storage api: Argument.PushEvent? : boolean(default: true)
+#   storage api: Argument.ActivateTrigger? : boolean(default: true)
 # @api
 
 # 引数チェック
     execute unless data storage api: Argument.Heal run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Heal","color":"red"}]
-    execute unless data storage api: Argument.PushEvent run data modify storage api: Argument.PushEvent set value true
+    execute unless data storage api: Argument.ActivateTrigger run data modify storage api: Argument.ActivateTrigger set value true
 # プレイヤー
     execute if entity @s[type=player] run function api:heal/core/player
 # non-プレイヤー
