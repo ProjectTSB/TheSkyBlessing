@@ -18,6 +18,6 @@
 # 被回復量補正を掛ける
     execute unless data storage api: Argument{FixedHeal:true} run function api:heal/core/receive_modifier
 # onHealのトリガー
-    execute unless data storage api: Argument{Fluctuation:0} run function api:heal/core/push_heal_events/
+    execute unless data storage api: Argument{Fluctuation:0} if data storage api: Argument{PushEvent:true} run function api:heal/core/push_heal_events/
 # Healthを持つEntityであれば実行
     function lib:score_to_health_wrapper/fluctuation
