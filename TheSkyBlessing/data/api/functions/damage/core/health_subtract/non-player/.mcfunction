@@ -33,5 +33,5 @@
     execute unless predicate api:mob/has_forward_target if score $Health Temporary matches ..0 run tag @s add Death
     execute unless predicate api:mob/has_forward_target if score $Health Temporary matches ..0 unless function api:mob/is_asset_mob run tag @s add Kill
 # イベントの追加
-    execute if data storage api: Argument{ActivateTrigger:true} run function api:damage/core/trigger_events/non-player/attack_and_hurt/
-    execute if data storage api: Argument{ActivateTrigger:true} if score $Health Temporary matches ..0 run function api:damage/core/trigger_events/non-player/kill_and_death/
+    execute if data storage api: Argument{ApplyTrigger:true} run function api:damage/core/trigger_events/non-player/attack_and_hurt/
+    execute if data storage api: Argument{ApplyTrigger:true} if score $Health Temporary matches ..0 run function api:damage/core/trigger_events/non-player/kill_and_death/

@@ -21,7 +21,7 @@ data remove storage api: Argument.DisableParticle
 data remove storage api: Argument.ReduceEnchantment
 data remove storage api: Argument.AdditionalMPHeal
 data remove storage api: Argument.DisableLog
-data remove storage api: Argument.ActivateTrigger
+data remove storage api: Argument.ApplyTrigger
 data remove storage api: Argument.Metadata
 
 scoreboard players reset $LatestModifiedUser UserID
