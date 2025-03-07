@@ -15,6 +15,7 @@
     execute if data storage asset:container Item{PresetItem:"sacred_shard/lv-4"} run loot replace block 10000 0 10000 container.0 loot common:sacred_shard/lv-4
 # 個数をコピーする(消えちゃうので)
     data modify storage asset:container Count set from storage asset:container Item.Count
+    function asset_manager:container/register/construct/common/calculate_count_with_multiplay_multiplier
 # 設定
     data modify storage asset:container Item set from block 10000 0 10000 Items[{Slot:0b}]
     data modify storage asset:container Item.Count set from storage asset:container Count
