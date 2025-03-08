@@ -6,6 +6,8 @@
 
 # Mob にイベントを追加する
     execute unless predicate api:mob/has_forward_target store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].MobEvents.Death[-1].From int 1 run scoreboard players get @s UserID
+# プレイヤーへのイベント追加を打ち切る
+    execute if data storage api: Argument{ApplyTrigger:false} run return fail
 # プレイヤーにイベントを追加する
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Killed append value {Type: "api",IsVanilla:false}
