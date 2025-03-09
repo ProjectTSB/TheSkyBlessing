@@ -85,9 +85,10 @@ data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","col
 data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
 
 # こうすることでマクロから一行で execute condition にできる
-data modify storage api: Boolean.1b set value true
-data modify storage api: Boolean.true set value true
-# data modify storage api: Boolean.0b set value null
+data modify storage global Boolean.1 set value true
+data modify storage global Boolean.1b set value true
+data modify storage global Boolean.true set value true
+# data modify storage global Boolean.0b set value null
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
