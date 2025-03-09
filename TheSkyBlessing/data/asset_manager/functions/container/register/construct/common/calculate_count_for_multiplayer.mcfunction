@@ -1,4 +1,4 @@
-#> asset_manager:container/register/construct/common/calculate_count_with_multiplay_multiplier
+#> asset_manager:container/register/construct/common/calculate_count_for_multiplayer
 #
 #
 #

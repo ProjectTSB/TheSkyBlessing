@@ -18,12 +18,12 @@
     execute if data storage asset:container ArtifactSeeds[0] run function asset_manager:container/register/construct/set_loot_table/replace_artifact
 
 # 個数にマルチ補正を掛けるアイテムを取り出す
-    data modify storage asset:container MultiplayMaltiplyableItems set value []
-    data modify storage asset:container MultiplayMaltiplyableItems append from storage asset:container Items[{tag:{TSB:{Shard:true}}}]
-    data modify storage asset:container MultiplayMaltiplyableItems append from storage asset:container Items[{tag:{TSB:{Currency:1b}}}]
-    data modify storage asset:container MultiplayMaltiplyableItems append from storage asset:container Items[{tag:{TSB:{Currency:2b}}}]
+    data modify storage asset:container MultiplayerMultipliableItems set value []
+    data modify storage asset:container MultiplayerMultipliableItems append from storage asset:container Items[{tag:{TSB:{Shard:true}}}]
+    data modify storage asset:container MultiplayerMultipliableItems append from storage asset:container Items[{tag:{TSB:{Currency:1b}}}]
+    data modify storage asset:container MultiplayerMultipliableItems append from storage asset:container Items[{tag:{TSB:{Currency:2b}}}]
 # それぞれについて個数調整
-    execute if data storage asset:container MultiplayMaltiplyableItems[0] run function asset_manager:container/register/construct/set_loot_table/manipulate_item_count
+    execute if data storage asset:container MultiplayerMultipliableItems[0] run function asset_manager:container/register/construct/set_loot_table/manipulate_item_count
 
 # チェストに入れ直す
     data modify block ~ ~ ~ Items set from storage asset:container Items
