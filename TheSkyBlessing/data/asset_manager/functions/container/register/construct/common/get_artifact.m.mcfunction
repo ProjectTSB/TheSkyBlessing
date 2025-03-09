@@ -11,6 +11,7 @@
     $data modify storage api: Argument.ID set from storage asset:container $(IDPath)
     function api:artifact/box/from_id
 # 設定
+    data remove storage asset:container Item
     data modify storage asset:container Item set from block 10000 0 10000 Items[{Slot:0b}]
     data remove storage asset:container Item.Slot
 # ところで存在しない場合もありますよね
