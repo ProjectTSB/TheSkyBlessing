@@ -3,22 +3,18 @@
 # 神器Assetの入手処理を叩く処理
 #
 # @input storage api:
-#   Argument.ID
-#   Argument.Slot
+#   Argument.ID : int
+#   Argument.Slot? : string (default: "mainhand")
 # @api
 
 # validate
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
-# 既存にasset:context idが存在する場合に備えて退避させる
-    function asset_manager:common/context/id/stash
-# 代入
-    data modify storage asset:context id set from storage api: Argument.ID
-    execute if data storage api: Argument.Slot run data modify storage asset:context Slot set from storage api: Argument.Slot
-    data modify storage asset:context Type set value "replace"
+    execute unless data storage api: Argument.ID run return fail
+    execute unless data storage api: Argument.Slot run data modify storage api: Argument.Slot set value "mainhand"
 # 呼び出し
-    execute if data storage api: Argument.ID run function #asset:artifact/give
-# 退避させたasset:context idを戻す
-    function asset_manager:common/context/id/pop
+    data modify storage api: Argument.Type set value "replace"
+    function api:artifact/core/from_id
 # リセット
     data remove storage api: Argument.ID
     data remove storage api: Argument.Slot
+    data remove storage api: Argument.Type
