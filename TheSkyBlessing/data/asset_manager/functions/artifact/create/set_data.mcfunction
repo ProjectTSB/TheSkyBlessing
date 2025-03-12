@@ -60,6 +60,7 @@
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
     data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
+    data modify storage asset:artifact Item.tag.TSB.DisabledCheckFlags set from storage asset:artifact DisabledCheckFlags
 
 # 名前
     # 残り回数が存在する場合
