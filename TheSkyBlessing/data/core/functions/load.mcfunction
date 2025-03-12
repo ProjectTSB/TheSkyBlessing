@@ -16,5 +16,6 @@
 # マイグレーション
     function core:migration/
 
-# 神器のレジストリ読み込み
+# レジストリ読み込み
     function asset_manager:artifact/load
+    function asset_manager:mob/load
