@@ -1,4 +1,7 @@
 #> asset_manager:artifact/give/foreach
+#
+#
+#
 # @within function asset_manager:artifact/give/*
 
 #> private
@@ -9,6 +12,8 @@
     data modify storage api: Argument.ID set from storage lib: Array[-1]
 # 呼び出し
     function api:artifact/core/from_id
+# 返り値を取得
+    execute if data storage api: Argument{Type:"storage"} run data modify storage api: Return.Artifacts append from storage api: Return.Artifact
 
 # リセット & ループ
     data remove storage lib: Array[-1]

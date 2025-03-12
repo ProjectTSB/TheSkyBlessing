@@ -44,6 +44,7 @@
 # 神器排出
     execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
+    # execute if data storage asset:context {Type:"storage"} // 何もする必要がない
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
     execute if data storage asset:context {Type:"drop",Important:true} as @e[type=item,nbt={Item:{tag:{TSB:{}}}},distance=..0.3] run function asset:artifact/common/protect
     execute if data storage asset:context {Type:"give"} run function api:inventory/get_size
