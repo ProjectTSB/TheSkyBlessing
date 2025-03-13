@@ -3,12 +3,13 @@
 
 #> storage
 # @within *
-#   asset_manager:artifact/**
+#   api:artifact/core/**
 #   asset:artifact/*/register
 #   asset:artifact/*/give/2.give
 #   asset:artifact/*/*/2.check_condition
 #   asset:artifact/*/*/3.main
 #   asset:artifact/common/**
+#   asset_manager:artifact/**
     #declare storage asset:artifact
 
 #> 特殊クールダウン
