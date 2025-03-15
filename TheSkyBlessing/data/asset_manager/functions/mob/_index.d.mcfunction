@@ -12,6 +12,7 @@
 #   asset_manager:mob/**
 #   asset:mob/*/summon/2.summon
 #   asset:mob/common/**
+#   world_manager:gimmick/darkness/penalty/**
     #declare storage asset:mob
 
 #> 初期化タグ
