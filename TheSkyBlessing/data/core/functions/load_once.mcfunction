@@ -387,6 +387,11 @@ team modify NoCollision collisionRule never
     #   world_manager:area/20-03.end_forgotten_star_higher
         scoreboard objectives add LavaDamageCooldown dummy {"text":"溶岩ダメージのクールダウン"}
 
+    #> WorldManager - 暗所ペナルティ
+    # @within function
+    #   world_manager:gimmick/darkness/**
+        scoreboard objectives add DarknessAnxiety dummy {"text":"暗所ペナルティ"}
+
     #> MobManager用スコアボード - 最大体力
     # @within function
     #   api:mob/core/get_max_health*
