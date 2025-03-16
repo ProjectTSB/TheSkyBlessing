@@ -2,6 +2,7 @@
 #
 #
 #
+# @input args Level : int
 # @within function world_manager:gimmick/darkness/penalty/spawn
 
 # セッションを開ける
