@@ -226,7 +226,7 @@ team modify NoCollision collisionRule never
     # @within function
     #   asset_manager:trader/tick/4_interval
     #   asset_manager:trader/common/**
-        scoreboard objectives add RecipeVersion used:milk_bucket {"text":"商人の取引内容の更新チェック用スコア"}
+        scoreboard objectives add RecipeVersion dummy {"text":"商人の取引内容の更新チェック用スコア"}
 
     #> イベントハンドラ用スコアボード
     # @within function
