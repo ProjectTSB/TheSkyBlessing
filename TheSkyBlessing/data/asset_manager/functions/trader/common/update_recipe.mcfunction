@@ -17,6 +17,7 @@
     data modify storage lib: Array set from storage asset:trader Trades
     function lib:array/reverse
     data modify storage asset:trader Trades set from storage lib: Array
+    function lib:array/session/close
     execute if data storage asset:trader Trades[0] run function asset_manager:trader/common/trades_map/
     data modify entity @s Offers.Recipes set from storage asset:trader Recipes
 
