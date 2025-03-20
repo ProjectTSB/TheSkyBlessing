@@ -85,9 +85,10 @@ data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","col
 data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
 
 # こうすることでマクロから一行で execute condition にできる
-data modify storage api: Boolean.1b set value true
-data modify storage api: Boolean.true set value true
-# data modify storage api: Boolean.0b set value null
+data modify storage global Boolean.1 set value true
+data modify storage global Boolean.1b set value true
+data modify storage global Boolean.true set value true
+# data modify storage global Boolean.0b set value null
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
@@ -127,6 +128,7 @@ team modify NoCollision collisionRule never
     execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
+    scoreboard players set $TraderRecipeVersion Global 0
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -219,6 +221,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:effect/**
         scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
         scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
+
+    #> AssetManager: Trader
+    # @within function
+    #   asset_manager:trader/tick/4_interval
+    #   asset_manager:trader/common/**
+        scoreboard objectives add RecipeVersion dummy {"text":"商人の取引内容の更新チェック用スコア"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -385,6 +393,11 @@ team modify NoCollision collisionRule never
     # @within function
     #   world_manager:area/20-03.end_forgotten_star_higher
         scoreboard objectives add LavaDamageCooldown dummy {"text":"溶岩ダメージのクールダウン"}
+
+    #> WorldManager - 暗所ペナルティ
+    # @within function
+    #   world_manager:gimmick/darkness/**
+        scoreboard objectives add DarknessAnxiety dummy {"text":"暗所ペナルティ"}
 
     #> MobManager用スコアボード - 最大体力
     # @within function

@@ -23,6 +23,7 @@
 #       Argument.DeathMessage? : TextComponent || TextComponent[]
 #       Argument.AdditionalMPHeal? : int (default: PersistentArgument.AdditionalMPHeal)
 #       Argument.DisableLog? : boolean (default: false)
+#       Argument.ApplyTrigger? : boolean (default: true)
 #       Argument.Metadata? : any
 # @api
 
@@ -44,6 +45,7 @@
     execute unless data storage api: Argument.BypassDifficulty run data modify storage api: Argument.BypassDifficulty set value false
     execute unless data storage api: Argument.AdditionalMPHeal run data modify storage api: Argument.AdditionalMPHeal set from storage api: PersistentArgument.AdditionalMPHeal
     execute unless data storage api: Argument.DisableLog run data modify storage api: Argument.DisableLog set value false
+    execute unless data storage api: Argument.ApplyTrigger run data modify storage api: Argument.ApplyTrigger set value true
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
     execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/attack",Key:"api:damage/",IsForwardedOnly:false}

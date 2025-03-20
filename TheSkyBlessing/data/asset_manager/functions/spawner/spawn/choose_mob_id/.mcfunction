@@ -9,7 +9,7 @@
 # 配列を壊す操作なのでClone
     data modify storage asset:spawner ClonedSpawnPotentials set from storage asset:spawner SpawnPotentials
 # Weightの総和よりも小さい乱数を生成
-    execute store result score $TargetWeight Temporary run function lib:random/
+    execute store result score $TargetWeight Temporary run random value 0..65535
     scoreboard players operation $TargetWeight Temporary %= $SpawnPotentialsWeightSum Temporary
 # TargetWeightが負の値になるまで減算しつつ要素を消す
     function asset_manager:spawner/spawn/choose_mob_id/subtract_for_each

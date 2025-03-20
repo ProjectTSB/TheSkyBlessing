@@ -1,0 +1,35 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "offsetY": 1,
+            "predicate": {
+                "block": {
+                    "tag": "lib:no_collision_without_fluid"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "offsetY": 0,
+            "predicate": {
+                "block": {
+                    "tag": "lib:no_collision_without_fluid"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:location_check",
+                "offsetY": -1,
+                "predicate": {
+                    "block": {
+                        "tag": "lib:no_collision"
+                    }
+                }
+            }
+        }
+    ]
+}

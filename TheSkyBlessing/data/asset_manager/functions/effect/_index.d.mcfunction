@@ -7,7 +7,7 @@
 #   asset:effect/extends
 #   asset:effect/super.*
 #   asset:effect/*/register
-#   asset:effect/*/
+#   asset:effect/*/*/
 #   asset_manager:effect/**
     #declare storage asset:effect
 
