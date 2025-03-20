@@ -43,7 +43,6 @@
 # 各データ設定
     function asset_manager:artifact/create/set_data
 # 神器排出
-    execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
     # execute if data storage asset:context {Type:"storage"} // 何もする必要がない
     execute if data storage asset:context {Type:"drop"} run loot spawn ~ ~ ~ mine 10000 0 10000 debug_stick
@@ -56,7 +55,6 @@
 
 # リセット
     scoreboard players reset $InvSize Lib
-    data remove storage asset:context Type
     data remove storage asset:artifact ID
     data remove storage asset:artifact Item
     data remove storage asset:artifact Name

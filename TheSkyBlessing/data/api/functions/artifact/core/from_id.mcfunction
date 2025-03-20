@@ -20,3 +20,6 @@
 
 # 退避させた asset:context id を戻す
     function asset_manager:common/context/id/pop
+# リセット
+    data remove storage asset:context Type
+    data remove storage asset:context Important
