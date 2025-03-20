@@ -9,4 +9,4 @@
 # 島
     function asset_manager:island/tick/4_interval
 # 交易
-    function asset_manager:trader/tick/4_interval
+    execute as @e[type=villager,tag=Npc,tag=Trader] at @s run function asset_manager:trader/tick/4_interval

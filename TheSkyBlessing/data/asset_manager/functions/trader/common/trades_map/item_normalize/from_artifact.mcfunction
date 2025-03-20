@@ -1,8 +1,8 @@
-#> asset_manager:trader/register/construct/trades_map/item_normalize/from_artifact
+#> asset_manager:trader/common/trades_map/item_normalize/from_artifact
 #
 #
 #
-# @within function asset_manager:trader/register/construct/trades_map/item_normalize/
+# @within function asset_manager:trader/common/trades_map/item_normalize/
 
 # 初期化
     item replace block 10000 0 10000 container.0 with air

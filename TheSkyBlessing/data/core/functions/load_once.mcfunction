@@ -128,6 +128,7 @@ team modify NoCollision collisionRule never
     execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
+    scoreboard players set $TraderRecipeVersion Global 0
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
