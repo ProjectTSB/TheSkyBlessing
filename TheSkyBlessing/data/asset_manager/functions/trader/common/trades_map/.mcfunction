@@ -5,7 +5,6 @@
 # @input storage asset:trader Trades
 # @output storage asset:trader Recipes
 # @within function
-#   asset_manager:trader/register/construct/set_data
 #   asset_manager:trader/common/update_recipe
 #   asset_manager:trader/common/trades_map/
 

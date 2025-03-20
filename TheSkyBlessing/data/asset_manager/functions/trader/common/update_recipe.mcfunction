@@ -4,6 +4,7 @@
 #
 # @within function
 #   asset_manager:trader/tick/4_interval
+#   asset_manager:trader/register/construct/set_data
 
 # 攻略率を取得
     function api:global_vars/game_progress
