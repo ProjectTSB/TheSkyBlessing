@@ -19,6 +19,9 @@
     execute if data storage asset:trader Trades[0] run function asset_manager:trader/common/trades_map/
     data modify entity @s Offers.Recipes set from storage asset:trader Recipes
 
+# バージョンを更新
+    scoreboard players operation @s RecipeVersion = $TraderRecipeVersion Global
+
 # リセット
     scoreboard players reset $Current Temporary
     data remove storage asset:trader Trades

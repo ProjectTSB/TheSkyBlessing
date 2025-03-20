@@ -222,6 +222,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
         scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
 
+    #> AssetManager: Trader
+    # @within function
+    #   asset_manager:trader/tick/4_interval
+    #   asset_manager:trader/common/**
+        scoreboard objectives add RecipeVersion used:milk_bucket {"text":"商人の取引内容の更新チェック用スコア"}
+
     #> イベントハンドラ用スコアボード
     # @within function
     #   asset_manager:artifact/triggers/**

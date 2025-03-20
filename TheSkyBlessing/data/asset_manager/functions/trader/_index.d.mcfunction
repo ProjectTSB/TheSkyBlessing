@@ -27,6 +27,7 @@
 #> trader versioning
 # @within function
 #   asset_manager:trader/tick/4_interval
+#   asset_manager:trader/common/update_recipe
 #   asset_manager:island/dispel/successful
 #   core:load_once
     #declare score_holder $TraderRecipeVersion
