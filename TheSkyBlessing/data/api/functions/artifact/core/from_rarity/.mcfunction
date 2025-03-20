@@ -30,11 +30,11 @@
 # 候補データを操作して対象 Index を -1 に持ってくる
     function lib:array/move
 # 一旦リセット
-    data modify storage asset:artifact Picks set from storage lib: Array[-1]
+    data modify storage api: Picks set from storage lib: Array[-1]
     function lib:array/session/close
 # 候補データの再設定
     function lib:array/session/open
-    data modify storage lib: Array set from storage asset:artifact Picks
+    data modify storage lib: Array set from storage api: Picks
 # プル数を乱数により設定
 # $Pulls = floor( $CandidateLength * 0.30~0.70(e2) ) / e2
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
@@ -43,12 +43,12 @@
     scoreboard players operation $Pulls Temporary *= $CandidateLength Temporary
     scoreboard players operation $Pulls Temporary /= $100 Const
 # シャッフルして取り出す
-    data modify storage asset:artifact Type set from storage asset:context Type
     function lib:array/shuffle
-    execute if score $Pulls Temporary matches 0.. if data storage lib: Array[0] run function api:artifact/core/from_rarity/foreach
-# リセット
+    data modify storage api: Picks set from storage lib: Array
     function lib:array/session/close
+    execute if score $Pulls Temporary matches 0.. run function api:artifact/core/from_rarity/foreach
+# リセット
     scoreboard players reset $CandidateLength Temporary
     scoreboard players reset $Pulls Temporary
     data remove storage lib: Args
-    data remove storage asset:artifact Picks
+    data remove storage api: Picks
