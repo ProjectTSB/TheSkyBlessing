@@ -11,7 +11,6 @@
     function asset_manager:container/register/construct/set_items/item_normalize/
     data modify storage asset:container Item.Slot set from storage asset:container Items[-1].Slot
     data modify storage asset:container NormalizedItems append from storage asset:container Item
-# リセット
 # 末尾削除
     data remove storage asset:container Items[-1]
 # 要素があれば再帰

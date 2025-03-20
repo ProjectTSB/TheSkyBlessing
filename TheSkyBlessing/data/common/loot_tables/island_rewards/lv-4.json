@@ -8,14 +8,19 @@
             },
             "entries": [
                 {
-                    "weight": 50,
+                    "weight": 40,
                     "type": "loot_table",
                     "name": "common:sacred_shard/lv-3"
                 },
                 {
-                    "weight": 50,
+                    "weight": 35,
                     "type": "loot_table",
                     "name": "common:sacred_shard/lv-4"
+                },
+                {
+                    "weight": 25,
+                    "type": "loot_table",
+                    "name": "common:island_rewards/artifact_seed/lv-4"
                 }
             ]
         },
