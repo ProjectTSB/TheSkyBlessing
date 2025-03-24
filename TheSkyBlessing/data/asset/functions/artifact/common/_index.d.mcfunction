@@ -8,7 +8,3 @@
 #   asset_manager:artifact/check/
 #   asset:artifact/common/use/*
     #declare tag CanUsed
-
-#> 処理用一時storage
-# @within * asset:**
-    #declare storage asset:temp
