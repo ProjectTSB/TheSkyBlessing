@@ -1,10 +1,11 @@
-#> asset_manager:artifact/create/set_lore/7.cooldown/make_duration.m
+#> asset_manager:artifact/create/set_lore/cooldown/make_duration.m
+#
 #
 #
 # @input args
 #   CooldownPath: DataPath
 #   IconPath: DataPath
-# @within function asset_manager:artifact/create/set_lore/7.cooldown/
+# @within function asset_manager:artifact/create/set_lore/cooldown/
 
 #> Temp
 # @private
@@ -32,7 +33,7 @@
     execute store result storage asset:artifact CooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
     execute store result storage asset:artifact CooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
 # Lore にする
-    loot replace block 10000 1 10000 container.0 loot asset_manager:artifact/generate_lore/7.cooldown_duration
+    loot replace block 10000 1 10000 container.0 loot asset_manager:artifact/generate_lore/cooldown_duration
     data modify storage asset:artifact Cooldown append from block 10000 1 10000 Items[0].tag.display.Lore[0]
 # リセット
     scoreboard players reset $Cooldown

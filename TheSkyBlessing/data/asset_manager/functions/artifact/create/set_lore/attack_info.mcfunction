@@ -1,8 +1,12 @@
-#> asset_manager:artifact/create/set_lore/2.attack_info
+#> asset_manager:artifact/create/set_lore/attack_info
 #
 # 攻撃に関する情報をLoreに追加します
 #
 # @within function asset_manager:artifact/create/set_lore/
+
+#> private
+# @private
+    #declare score_holder $IsList
 
 # 1 行目の作成
 # 防御貫通
@@ -33,7 +37,7 @@
     execute if data storage asset:artifact AttackInfo{ElementType:["None"]} run data modify storage asset:artifact Line2[5] set value '{"storage":"global","nbt":"Icon.Attack.None","color":"white","interpret":true}'
 
 # lootしてLoreに落とし込む
-    loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/2.attack_info
+    loot replace block 10000 0 10000 container.2 loot asset_manager:artifact/generate_lore/attack_info
 
 # リセット
     data remove storage asset:artifact Line1

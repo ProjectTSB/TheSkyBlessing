@@ -6,6 +6,7 @@
 #   asset:*/extends
 #   asset:*/super.*
 #   api:artifact/*/from_id
+#   asset_manager:artifact/create/set_lore/equipment/
 #   api:entity/mob/effect/core/give
 #   asset_manager:effect/events/*/call_super_method
 #   api:mob/core/summon
