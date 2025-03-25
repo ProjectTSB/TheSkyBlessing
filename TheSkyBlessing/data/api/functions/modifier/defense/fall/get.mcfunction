@@ -1,4 +1,4 @@
-#> api:modifier/fall_damage/get
+#> api:modifier/defense/fall/get
 #
 #
 #
