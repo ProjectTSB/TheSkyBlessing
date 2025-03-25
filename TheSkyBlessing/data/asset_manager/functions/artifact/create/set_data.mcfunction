@@ -13,13 +13,16 @@
 #       Slot : Slot
 #       Trigger : Trigger
 #       Condition? : TextComponent
-#       AttackInfo? : Component
 #       MPCost : int
 #       MPRequire : int
 #       MPHealWhenHit : int
 #       ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
-#       LocalCooldown : int
-#       SpecialCooldown : int
+#       LocalCooldown? : int
+#       TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#       SpecialCooldown? : int
+#       AttackInfo? : Component
+#       Equip? : Component
+#       DisabledFlag? : Component
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
@@ -53,14 +56,12 @@
     data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
     data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
-    data modify storage asset:artifact Item.tag.TSB.DisabledCheckFlags set from storage asset:artifact DisabledCheckFlags
+    data modify storage asset:artifact Item.tag.TSB.Equip set from storage asset:artifact Equip
+    data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
 
 # 名前
     # 残り回数が存在する場合

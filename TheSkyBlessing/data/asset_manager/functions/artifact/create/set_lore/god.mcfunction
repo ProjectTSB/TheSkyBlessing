@@ -1,4 +1,4 @@
-#> asset_manager:artifact/create/set_lore/8.god
+#> asset_manager:artifact/create/set_lore/god
 #
 # 使用できる神を設定します
 #
@@ -18,6 +18,7 @@
     execute if data storage asset:artifact {CanUsedGod:["Wi-ki"]} run data modify storage asset:artifact Temp.CanUsedGod[3] set from storage global Icon.God.Wi-ki
     execute if data storage asset:artifact {CanUsedGod:["Rumor"]} run data modify storage asset:artifact Temp.CanUsedGod[4] set from storage global Icon.God.Rumor
 # 生成
-    loot replace block 10000 0 10000 container.8 loot asset_manager:artifact/generate_lore/8.god
+    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/god
+    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[0]
 # リセット
     data remove storage asset:artifact Temp

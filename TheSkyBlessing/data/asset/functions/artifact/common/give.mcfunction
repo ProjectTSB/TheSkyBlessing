@@ -11,25 +11,36 @@
 #   Slot : Slot
 #   Trigger : Trigger
 #   Condition? : TextComponent
-#   EnableDuplication? : boolean
-#   AttackInfo? : Component
 #   MPCost : int
 #   MPRequire? : int
+#   MPHealWhenHit : int
 #   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
-#   DisableCooldownMessage? : boolean
-#   DisableMPMessage? : boolean
-#   DisableBreakSound? : boolean
-#   DisabledCheckFlags? : Flag[]
+#   AttackInfo? : Component
+#   PartsMax? : int
+#   Equip? : Component
+#   DisabledFlag? : Component
 #   CanUsedGod : God[]
+#   CustomNBT? : Item.tag
 # @output item 神器
 # @within function asset:artifact/*/give/2.give
 
 #> Inv
 # @private
-#declare score_holder $InvSize
+    #declare score_holder $InvSize
+
+# マイグレーション (asset側を今置き換えたくない)
+    execute if data storage asset:artifact {EnableDuplication:true} run data modify storage asset:artifact PartsMax set value 9
+    execute if data storage asset:artifact {DisabledCheckFlags:["MPRequire"]} run data modify storage asset:artifact DisabledFlag.Check.MPRequire set value true
+    execute if data storage asset:artifact {DisabledCheckFlags:["LocalCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.LocalCooldown set value true
+    execute if data storage asset:artifact {DisabledCheckFlags:["TypeCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.TypeCooldown set value true
+    execute if data storage asset:artifact {DisabledCheckFlags:["SpecialCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.SpecialCooldown set value true
+    execute if data storage asset:artifact {DisabledCheckFlags:["Believe"]} run data modify storage asset:artifact DisabledFlag.Check.Believe set value true
+    data modify storage asset:artifact DisabledFlag.Check.CDMessage set from storage asset:artifact DisableCooldownMessage
+    data modify storage asset:artifact DisabledFlag.Check.MPMessage set from storage asset:artifact DisableMPMessage
+    data modify storage asset:artifact DisabledFlag.Use.BreakSound set from storage asset:artifact DisableBreakSound
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
@@ -39,6 +50,12 @@
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
+    execute unless data storage asset:artifact RemainingCountMax run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
+    execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
+    execute if data storage asset:artifact Equip unless data storage asset:artifact Equip.Slot run data modify storage asset:artifact Equip.Slot set from storage asset:artifact Slot
+    execute if data storage asset:artifact Equip.Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equip.Modifiers
+    execute if data storage asset:artifact Equip.Modifiers[0] run function asset:artifact/common/validate/modifier
+    execute if data storage asset:artifact Equip.Modifiers[0] run data remove storage asset:artifact CopiedModifiers
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
@@ -64,17 +81,19 @@
     data remove storage asset:artifact Trigger
     data remove storage asset:artifact Condition
     data remove storage asset:artifact EnableDuplication
-    data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
+    data remove storage asset:artifact MPHealWhenHit
     data remove storage asset:artifact ConsumeItem
-    data remove storage asset:artifact CanUsedGod
-    data remove storage asset:artifact CustomNBT
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
     data remove storage asset:artifact SpecialCooldown
+    data remove storage asset:artifact AttackInfo
+    data remove storage asset:artifact Equip
+    data remove storage asset:artifact DisabledFlags
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
     data remove storage asset:artifact DisableBreakSound
-    data remove storage asset:artifact MPHealWhenHit
     data remove storage asset:artifact DisabledCheckFlags
+    data remove storage asset:artifact CanUsedGod
+    data remove storage asset:artifact CustomNBT

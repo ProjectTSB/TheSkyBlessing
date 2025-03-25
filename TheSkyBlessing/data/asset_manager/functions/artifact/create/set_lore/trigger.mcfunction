@@ -1,22 +1,19 @@
-#> asset_manager:artifact/create/set_lore/0.trigger
+#> asset_manager:artifact/create/set_lore/trigger
 #
 # 使用の条件を設定します
 #
 # @within function asset_manager:artifact/create/set_lore/
 
-# 指定スロットがhotbarでかつ重複可能か
-    execute if data storage asset:artifact {Slot:"hotbar",EnableDuplication:true} run data modify storage asset:artifact Temp.EnableDuplication set value "[重複可能] "
-
 # スロット
-    execute if data storage asset:artifact {Slot:"auto"} run data modify storage asset:artifact Temp.Trigger.A set value "どちらかの手に所持"
-    execute if data storage asset:artifact {Slot:"mainhand"} run data modify storage asset:artifact Temp.Trigger.A set value "メインハンドに所持"
-    execute if data storage asset:artifact {Slot:"offhand"} run data modify storage asset:artifact Temp.Trigger.A set value "オフハンドに所持"
-    execute if data storage asset:artifact {Slot:"head"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
-    execute if data storage asset:artifact {Slot:"chest"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
-    execute if data storage asset:artifact {Slot:"legs"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
-    execute if data storage asset:artifact {Slot:"feet"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
+    execute if data storage asset:artifact {Slot:     "auto"} run data modify storage asset:artifact Temp.Trigger.A set value "どちらかの手に所持"
+    execute if data storage asset:artifact {Slot: "mainhand"} run data modify storage asset:artifact Temp.Trigger.A set value "メインハンドに所持"
+    execute if data storage asset:artifact {Slot:  "offhand"} run data modify storage asset:artifact Temp.Trigger.A set value "オフハンドに所持"
+    execute if data storage asset:artifact {Slot:     "head"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
+    execute if data storage asset:artifact {Slot:    "chest"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
+    execute if data storage asset:artifact {Slot:     "legs"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
+    execute if data storage asset:artifact {Slot:     "feet"} run data modify storage asset:artifact Temp.Trigger.A set value "装備"
     execute if data storage asset:artifact {Slot:"inventory"} run data modify storage asset:artifact Temp.Trigger.A set value "インベントリ内に保持"
-    execute if data storage asset:artifact {Slot:"hotbar"} run data modify storage asset:artifact Temp.Trigger.A set value "ホットバーに保持"
+    execute if data storage asset:artifact {Slot:   "hotbar"} run data modify storage asset:artifact Temp.Trigger.A set value "ホットバーに保持"
 # 接続詞
     data modify storage asset:artifact Temp.Trigger.AB set value "し"
 # トリガー
@@ -58,6 +55,6 @@
     execute unless data storage asset:artifact Temp.Trigger.A run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないSlotが指定されています","color":"white"}]
     execute unless data storage asset:artifact Temp.Trigger.B run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"登録されていないTriggerが指定されています","color":"white"}]
 # 生成
-    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/0.trigger
+    loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/trigger
 # リセット
     data remove storage asset:artifact Temp
