@@ -13,7 +13,7 @@
 # 説明文
     data modify storage asset:effect Description set value '{"text":"再生能力"}'
 # 残り時間 (default = API || error)
-    # data modify storage asset:effect Duration set value
+    data modify storage asset:effect Duration set value 100
 # スタック (default = API || 1)
     # data modify storage asset:effect Stack set value
 # 残り時間の操作方法 (default = API || "replace")
