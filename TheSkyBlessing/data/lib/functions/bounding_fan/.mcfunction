@@ -7,23 +7,28 @@
 #       扇型の中心角、厚みの中心
 #   rotation: 実行向き
 #       中心角から見て扇形が広がる方向
-#   Angle: double
+#   storage lib: Argument.BoundingFan.Angle: double
 #       扇形の中心角度
-#   Radius: double
+#   storage lib: Argument.BoundingFan.Radius: double
 #       扇形の半径
-#   Height: double
+#   storage lib: Argument.BoundingFan.Height: double
 #       範囲の厚み
-#   Selector: string
+#   storage lib: Argument.BoundingFan.Selector: string
 #       検索対象のセレクタ
 #
-# @output tag BFan
+# @output tag BoundingFan
 #
 # @api
 #
 #> return
 # @api
-    #declare tag BFan
+    #declare tag BoundingFan
 
+# 引数チェック
+    execute unless data storage lib: Argument.BoundingFan.Angle run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Radius run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Height run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Selector run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
 
 # 汎用エンティティを実行者にして計算
     execute as 0-0-0-0-0 run function lib:bounding_fan/core/calc
