@@ -8,7 +8,7 @@
 #   rotation: 実行向き
 #       中心角から見て扇形が広がる方向
 #   storage lib: Argument.BoundingFan.Angle: double
-#       扇形の中心角度
+#       扇形の中心角度(0°~360°)
 #   storage lib: Argument.BoundingFan.Radius: double
 #       扇形の半径
 #   storage lib: Argument.BoundingFan.Height: double
