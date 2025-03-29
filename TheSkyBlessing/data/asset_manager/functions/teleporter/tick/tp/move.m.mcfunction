@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/tick/tp/move
+#> asset_manager:teleporter/tick/tp/move.m
 #
 #
 #
@@ -7,7 +7,7 @@
 #   X: Numeric
 #   Y: Numeric
 #   Z: Numeric
-# @within function asset_manager:teleporter/tick/tp/
+# @within function asset_manager:teleporter/tick/active
 
 # TP
     $execute in $(Dimension) run tp @s $(X) $(Y) $(Z)
