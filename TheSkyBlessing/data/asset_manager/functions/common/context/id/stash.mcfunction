@@ -3,23 +3,19 @@
 #
 #
 # @within function
-#   api:mob/summon
-#   api:mob/core/summon
 #   asset:*/extends
 #   asset:*/super.*
 #   api:artifact/*/from_id
+#   asset_manager:artifact/create/set_lore/equipment/
 #   api:entity/mob/effect/core/give
-#   asset_manager:mob/triggers/death/manual
 #   asset_manager:effect/events/*/call_super_method
-#   asset_manager:artifact/give/foreach
-#   api:spawner/subtract_hp
-#   asset_manager:object/summon/
-#   api:object/core/summon
-#   asset_manager:object/*/call_super_methods/
-#   asset:object/call.m
-#   asset_manager:mob/triggers/*/call_super_methods/
-#   asset_manager:mob/*/call_super_methods/
+#   api:mob/core/summon
 #   asset:mob/call.m
+#   asset_manager:mob/triggers/*/call_super_methods/
+#   api:object/core/summon
+#   asset:object/call.m
+#   asset_manager:object/*/call_super_methods/
+#   api:spawner/subtract_hp
 
 # スタックに新しい空間を追加する
     data modify storage asset:context IDStashStack append value {}
