@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/tick/tp/move
+#> asset_manager:teleporter/tick/tp/move.m
 #
 #
 #
