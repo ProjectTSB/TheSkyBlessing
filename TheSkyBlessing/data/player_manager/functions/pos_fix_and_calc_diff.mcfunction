@@ -37,10 +37,6 @@
     scoreboard players reset @s[scores={PosPacketLossDetectAfterTick=2}] PosPacketLossDetectAfterTick
     scoreboard players add @s[scores={PosPacketLossDetectAfterTick=0..}] PosPacketLossDetectAfterTick 1
 
-# 異常に大きな差分(10m/tick,200m/s)があったらなかったことにする
-    execute if score $Cur.SquaredMagnitude Temporary matches 10000.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerPosDiff set value [0d,0d,0d]
-    execute if score $Cur.SquaredMagnitude Temporary matches 10000.. run scoreboard players set $Cur.SquaredMagnitude Temporary 0
-
 # 前tickの差分が十分な状態(0.05m/tick,1m/sec)でDiffが急に0になったらおそらくPosのパケロスが発生してるので、Posを前tickのPosとDiffから予測する
     execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players set @s PosPacketLossDetectAfterTick 0
     execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run data modify storage lib: ArrayA set from storage api: Pos
@@ -51,6 +47,10 @@
 # パケロスが検出されていたらDiffとCurSquaredMagnitudeを古いもので上書きする(即ち、更新が発生しなくなる)
     execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run data modify storage player_manager:pos_fix PosDiff set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerPosDiff
     execute if score $Prv.SquaredMagnitude Temporary matches 50.. if score $Cur.SquaredMagnitude Temporary matches ..15 unless score @s PosPacketLossDetectAfterTick matches 2 run scoreboard players operation $Cur.SquaredMagnitude Temporary = $Prv.SquaredMagnitude Temporary
+
+# 異常に大きな差分(10m/tick,200m/s)があったらなかったことにする
+    execute if score $Cur.SquaredMagnitude Temporary matches 10000.. run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].PlayerPosDiff set value [0d,0d,0d]
+    execute if score $Cur.SquaredMagnitude Temporary matches 10000.. run scoreboard players set $Cur.SquaredMagnitude Temporary 0
 
 # 止まってから20tick目に座標の補正がかかるのでそのtickに限っては無視する
     execute if score @s PlayerStopTime matches 19 run data modify storage player_manager:pos_fix PosDiff set value [0d,0d,0d]

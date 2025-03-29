@@ -21,7 +21,7 @@
 # 候補リストの長さを取得
     execute store result score $CandidatesLength Temporary if data storage lib: Array[]
 # ターゲットの名前をランダムに決める
-    execute store result score $Argument.Index Lib run function lib:random/
+    execute store result score $Argument.Index Lib run random value 0..65535
     scoreboard players operation $Argument.Index Lib %= $CandidatesLength Temporary
 # 移動
     function lib:array/move
@@ -34,7 +34,7 @@
     scoreboard players operation $Diff Temporary -= $Min Temporary
     scoreboard players add $Diff Temporary 1
 # 個数をランダムに設定する
-    execute store result score $Count Temporary run function lib:random/
+    execute store result score $Count Temporary run random value 0..65535
     scoreboard players operation $Count Temporary %= $Diff Temporary
     scoreboard players operation $Count Temporary += $Min Temporary
     execute store result storage player_manager:god TargetOfferingData.Next.Amount int 1 run scoreboard players get $Count Temporary

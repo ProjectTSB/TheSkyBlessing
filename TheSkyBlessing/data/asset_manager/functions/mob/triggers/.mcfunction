@@ -23,8 +23,7 @@
     execute if data storage asset:mob MobEvents.Death[1] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"MOB に複数の死亡イベントが含まれています。\n","color":"white"},{"storage":"asset:mob","nbt":"MobEvents.Death[]","separator":"\n"}]
     execute if data storage asset:mob MobEvents.Death[0] if entity @s[tag=Enemy.Boss] run function metric:angel/kill.m with storage asset:context
     execute if data storage asset:mob MobEvents.Death[0] run function asset_manager:mob/triggers/death/foreach
-    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/
-    execute if entity @s[tag=RemovingEntity] run function asset_manager:mob/triggers/remove/kill
+    execute if entity @s[tag=RemovingAssetEntity] run function asset_manager:mob/triggers/remove/
 # EntityStorage呼び出し(Asset側処理内でポインタが変わっている可能性があるので)
 # 死んでいたら呼び出さないようにする
     execute if score @s MobUUID matches -2147483648..2147483647 run function oh_my_dat:please

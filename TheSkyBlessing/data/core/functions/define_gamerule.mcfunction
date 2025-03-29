@@ -20,8 +20,7 @@ execute if data storage global {IsProduction:1b} run gamerule doInsomnia true
 execute if data storage global {IsProduction:0b} run gamerule doInsomnia false
 gamerule doLimitedCrafting false
 gamerule doMobLoot true
-execute if data storage global {IsProduction:1b} run gamerule doMobSpawning true
-execute if data storage global {IsProduction:0b} run gamerule doMobSpawning false
+gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops true
 gamerule doTraderSpawning false

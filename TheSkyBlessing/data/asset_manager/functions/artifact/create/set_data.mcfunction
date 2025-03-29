@@ -60,6 +60,7 @@
     data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
     data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
+    data modify storage asset:artifact Item.tag.TSB.DisabledCheckFlags set from storage asset:artifact DisabledCheckFlags
 
 # 名前
     # 残り回数が存在する場合
@@ -71,6 +72,7 @@
 # Lore
     function asset_manager:artifact/create/set_lore/
 # カスタムNBT
+    execute unless data storage asset:artifact CustomNBT.AttributeModifiers run data modify storage asset:artifact CustomNBT.AttributeModifiers set value []
     data modify storage asset:artifact CustomNBT.Unbreakable set value 1b
     function asset_manager:artifact/create/set_hide_flags
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT

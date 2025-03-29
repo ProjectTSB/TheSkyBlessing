@@ -4,5 +4,7 @@
 #
 # @within function api:mob/remove
 
-# remove 用タグを付与
-    tag @s add RemovingEntity
+# タグを付与
+    tag @s add Death
+    execute if function api:mob/is_asset_mob run tag @s add RemovingAssetEntity
+    execute unless function api:mob/is_asset_mob run tag @s add RemovingEntity
