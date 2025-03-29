@@ -19,8 +19,11 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "ＭＰ回復　　",
-                                        "font": "misaki/gothic"
+                                        "text": "回復MP\uE004　　"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
                                     },
                                     {
                                         "text": "\u0006",
