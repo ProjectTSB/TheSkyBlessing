@@ -105,6 +105,7 @@
     # Baseを追加
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Default.Defense set from storage asset:mob Resist
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.Defense set from storage asset:mob Resist
 # フィールド
     execute if data storage asset:mob FieldOverride run data modify storage asset:mob Field merge from storage asset:mob FieldOverride
