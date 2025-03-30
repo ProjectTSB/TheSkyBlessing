@@ -7,4 +7,4 @@
 #   Suffix : string
 # @within function asset_manager:common/datapack/update_state/update/get_path/
 
-$data modify storage asset:datapack DatapackStateQueue[-1].Path set value "file/$(Datapack)$(Suffix)"
+$data modify storage asset:datapack DatapackStateBuffer[-1].Path set value "file/$(Datapack)$(Suffix)"
