@@ -8,6 +8,6 @@
 # それぞれの要素について upsert する
     function asset_manager:common/datapack/update_state/upsert/
 # 有効化するデータパックがあるなら一括で実行
-    execute if data storage asset:datapack DatapackStateBuffer[{State:"enable"}] run function asset_manager:common/datapack/update_state/update/
+    execute if data storage asset:datapack DatapackStateBuffer[{Active:true}] run function asset_manager:common/datapack/update_state/update/
 # リセット
     data remove storage asset:datapack ActivationState
