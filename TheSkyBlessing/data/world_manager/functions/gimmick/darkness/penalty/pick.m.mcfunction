@@ -16,5 +16,6 @@
     execute store result score $Argument.Index Lib run function lib:random/with_biased/manual.m with storage lib: Args
     function lib:array/move
     data modify storage api: Argument.ID set from storage lib: Array[-1]
+    function lib:array/revert
 # セッションを閉じる
     function lib:array/session/close
