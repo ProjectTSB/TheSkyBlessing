@@ -10,8 +10,8 @@
     function world_manager:gimmick/darkness/do
     function world_manager:gimmick/darkness/do
     function world_manager:gimmick/darkness/do
-    function world_manager:gimmick/darkness/do
-    function world_manager:gimmick/darkness/do
+    # function world_manager:gimmick/darkness/do
+    # function world_manager:gimmick/darkness/do
     # function world_manager:gimmick/darkness/do
     # function world_manager:gimmick/darkness/do
     # function world_manager:gimmick/darkness/do
