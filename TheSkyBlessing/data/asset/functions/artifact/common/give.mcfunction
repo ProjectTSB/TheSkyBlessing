@@ -18,6 +18,7 @@
 #   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#   SecondTypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
@@ -72,6 +73,7 @@
     data remove storage asset:artifact CustomNBT
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
+    data remove storage asset:artifact SecondTypeCooldown
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
