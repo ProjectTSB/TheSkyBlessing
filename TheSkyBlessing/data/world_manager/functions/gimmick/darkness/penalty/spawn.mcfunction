@@ -10,7 +10,7 @@
 # $Random = Progress(e2) + (0 ~ 10)
     function api:global_vars/game_progress
     execute store result score $Random Temporary run random value 0..14
-    execute store result score $Progress Temporary run data get storage api: Return.Progress
+    execute store result score $Progress Temporary run data get storage api: Return.Progress 100
     scoreboard players operation $Random Temporary += $Progress Temporary
     scoreboard players operation $Random Temporary < $99 Const
 # ID を一覧から選定して召喚
