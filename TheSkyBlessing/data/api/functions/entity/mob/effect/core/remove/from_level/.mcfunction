@@ -19,4 +19,5 @@
 # リセット
     data remove storage asset:effect IDList
     data remove storage asset:effect Type
+    data remove storage asset:effect ClearType
     scoreboard players reset $ClearCount Temporary
