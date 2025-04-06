@@ -119,6 +119,8 @@
 # 統計データに放り込む
     execute if entity @s[tag=Enemy.Boss] run function metric:angel/summon.m with storage asset:mob
 # リセット
+    data remove storage asset:mob ExtendsSafe
+    data remove storage asset:mob IsAbstract
     data remove storage asset:mob HandItems
     data remove storage asset:mob ArmorItems
     data remove storage asset:mob Attributes
@@ -127,8 +129,11 @@
     data remove storage asset:mob Interferable
     data remove storage asset:mob IsForwardTarget
     data remove storage asset:mob Name
+    data remove storage asset:mob Lore
     data remove storage asset:mob Weapon
+    data remove storage asset:mob WeaponDropChances
     data remove storage asset:mob Armor
+    data remove storage asset:mob ArmorDropChances
     data remove storage asset:mob Health
     data remove storage asset:mob AttackDamage
     data remove storage asset:mob Defense
