@@ -21,6 +21,8 @@
 
 # プレイヤーの体力の変更Queueの消化
     execute if entity @s[predicate=lib:has_health_modify_score] run function lib:score_to_health_wrapper/proc
+# プレイヤーの体力の変更の反映
+    function score_to_health:player_tick
 # MPを経験値バーに同期
     function player_manager:mp/viewer/check_xpbar
 # actionbar表示
