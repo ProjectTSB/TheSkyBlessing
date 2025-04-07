@@ -18,6 +18,7 @@
 #   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#   SecondaryTypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
 #   DisableCooldownMessage? : boolean
 #   DisableMPMessage? : boolean
@@ -40,6 +41,7 @@
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
+    execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
 # 神器排出
@@ -72,6 +74,7 @@
     data remove storage asset:artifact CustomNBT
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
+    data remove storage asset:artifact SecondaryTypeCooldown
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
