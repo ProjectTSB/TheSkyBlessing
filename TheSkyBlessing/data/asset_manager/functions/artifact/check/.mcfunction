@@ -35,8 +35,8 @@
         execute unless data storage asset:artifact TargetItems[0].tag.TSB{DisabledCheckFlags:["TypeCooldown"]} run function asset_manager:artifact/check/check_type_cooldown/
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
-    # SecondTypeCooldownによる制限
-        execute unless data storage asset:artifact TargetItems[0].tag.TSB{DisabledCheckFlags:["SecondTypeCooldown"]} run function asset_manager:artifact/check/check_second_type_cooldown/
+    # SecondaryTypeCooldownによる制限
+        execute unless data storage asset:artifact TargetItems[0].tag.TSB{DisabledCheckFlags:["SecondaryTypeCooldown"]} run function asset_manager:artifact/check/check_second_type_cooldown/
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
