@@ -11,6 +11,7 @@
 # 近くの敵の数が多い場合はなかったことにする
     execute store result score $EnemyCount Temporary if entity @e[type=#lib:living,type=!player,tag=Enemy,distance=..32,limit=15]
     execute if score $EnemyCount Temporary matches 15 run return run scoreboard players reset $EnemyCount Temporary
+    scoreboard players reset $EnemyCount Temporary
 # 近くに天使がいる場合はなかったことにする
     execute if entity @e[type=#lib:living,type=!player,tag=Enemy.Boss,distance=..64,limit=1] run return fail
 
