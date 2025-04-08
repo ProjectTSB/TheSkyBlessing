@@ -15,7 +15,7 @@
     data remove storage asset:effect Effects[-1]
 # 牛乳チェック
     execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
-    execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..3 run data modify storage asset:effect TargetEffect.Duration set value -1
+    execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..2 run data modify storage asset:effect TargetEffect.Duration set value -1
 # 死亡判定
     execute if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} if entity @s[tag=DeathProcess] run data modify storage asset:effect TargetEffect.Duration set value -1
 # 効果時間を減少させる
