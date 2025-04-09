@@ -4,4 +4,4 @@
 #
 # @within function player_manager:god/change_believe/unbelieve1
 
-tellraw @s {"text":"フローラ「...裏切り者」"}
+tellraw @p [{"text":"\n3","font":"face/flora"},{"text":"\u0001","font":"space"},{"text":"<フローラ>\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"裏切りもの…\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"","font":"minecraft:default"}]
