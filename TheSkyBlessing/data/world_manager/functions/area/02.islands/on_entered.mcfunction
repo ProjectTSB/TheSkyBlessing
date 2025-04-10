@@ -6,3 +6,6 @@
 
 # ゲームモードをサバイバルに
     gamemode survival @s[gamemode=!creative]
+
+# TIPS
+    function player_manager:show_tips

@@ -7,5 +7,7 @@
     #declare score_holder $NextInSubArea
 
 #> GodBoundaries Declares
-# @within world_manager:area/00**
+# @within function
+#   world_manager:area/00**
+#   core:handler/join
     #declare tag TutorialEnded
