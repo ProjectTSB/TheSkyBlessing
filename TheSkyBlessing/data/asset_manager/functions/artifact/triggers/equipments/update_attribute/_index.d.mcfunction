@@ -8,6 +8,6 @@
     #declare score_holder $CheckBelieve
 
 #> dec to hex
-# @within function asset_manager:artifact/triggers/equipments/update_attribute/dec_to_hex/**
+# @within function asset_manager:artifact/triggers/equipments/update_attribute/decimal_to_hexadecimal/**
     #declare score_holder $F
     #declare score_holder $FFFF

@@ -1,5 +1,5 @@
-#> asset_manager:artifact/triggers/equipments/update_attribute/dec_to_hex/digit
-# @within function asset_manager:artifact/triggers/equipments/update_attribute/dec_to_hex/
+#> asset_manager:artifact/triggers/equipments/update_attribute/decimal_to_hexadecimal/digit
+# @within function asset_manager:artifact/triggers/equipments/update_attribute/decimal_to_hexadecimal/
 
 execute if score $F Temporary matches 0 run data modify storage asset:artifact Hexadecimal.Return set value "0"
 execute if score $F Temporary matches 1 run data modify storage asset:artifact Hexadecimal.Return set value "1"
