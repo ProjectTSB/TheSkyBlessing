@@ -6,7 +6,7 @@
 
 # エフェクトを付与する / 削除する
     data modify storage api: Argument.ID set from storage asset:artifact Temp.List[-1]._
-    function asset_manager:artifact/triggers/equipments/update_attribute/attire/parts_count.m with storage api: Argument
+    execute store result storage api: Argument.Stack int 1 run function asset_manager:artifact/triggers/equipments/update_attribute/attire/parts_count.m with storage api: Argument
     execute if data storage api: Argument{Stack:0} run function api:entity/mob/effect/remove/from_id
     execute unless data storage api: Argument{Stack:0} run function api:entity/mob/effect/give
     function api:entity/mob/effect/reset
