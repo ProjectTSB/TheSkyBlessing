@@ -43,8 +43,8 @@
     execute if data storage asset:artifact Modifier{Type:"defense/thunder"} run data modify storage asset:artifact Line[1] set value '"雷耐性"'
     execute if data storage asset:artifact Modifier{Type:"defense/water"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"defense/water"} run data modify storage asset:artifact Line[1] set value '"水耐性"'
-    execute if data storage asset:artifact Modifier{Type:"defense/fall"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"defense/fall"} run data modify storage asset:artifact Line[1] set value '"落下耐性"'
+    execute if data storage asset:artifact Modifier{Type:"fall_resistance"} run scoreboard players set $CustomModifier Temporary 1
+    execute if data storage asset:artifact Modifier{Type:"fall_resistance"} run data modify storage asset:artifact Line[1] set value '"落下耐性"'
     execute if data storage asset:artifact Modifier{Type:"heal"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"heal"} run data modify storage asset:artifact Line[1] set value '"回復量"'
     execute if data storage asset:artifact Modifier{Type:"receive_heal"} run scoreboard players set $CustomModifier Temporary 1
