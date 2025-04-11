@@ -8,7 +8,7 @@
 # asset:context New.EquipData への記録も兼ねる
     function asset_manager:artifact/triggers/equipments/set_and_modifier/filter/
 # セット装備効果の更新
-    function asset_manager:artifact/triggers/equipments/set_and_modifier/attire/
+    function asset_manager:artifact/triggers/equipments/set_and_modifier/set/
 # 装備時補正の更新
     function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/
     function asset_manager:artifact/triggers/equipments/set_and_modifier/add/

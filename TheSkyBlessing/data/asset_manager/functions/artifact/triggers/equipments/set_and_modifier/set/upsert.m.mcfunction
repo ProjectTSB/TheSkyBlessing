@@ -1,9 +1,9 @@
-#> asset_manager:artifact/triggers/equipments/set_and_modifier/attire/upsert.m
+#> asset_manager:artifact/triggers/equipments/set_and_modifier/set/upsert.m
 #
 #
 #
 # @input args Value : int
-# @within function asset_manager:artifact/triggers/equipments/set_and_modifier/attire/unique
+# @within function asset_manager:artifact/triggers/equipments/set_and_modifier/set/unique
 
 #> private
 # @private
