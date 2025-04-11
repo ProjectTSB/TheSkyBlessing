@@ -52,6 +52,7 @@
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
     execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
     execute if data storage asset:artifact Equipment unless data storage asset:artifact Equipment.Slot run data modify storage asset:artifact Equipment.Slot set from storage asset:artifact Slot
+    execute if data storage asset:artifact Equipment unless data storage asset:artifact Equipment.MaxStack run data modify storage asset:artifact Equipment.MaxStack set from storage asset:artifact PartsMax
     execute if data storage asset:artifact Equipment.Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
     execute if data storage asset:artifact Equipment.Modifiers[0] run function asset:artifact/common/validate/modifier
     execute if data storage asset:artifact Equipment.Modifiers[0] run data remove storage asset:artifact CopiedModifiers
@@ -83,6 +84,7 @@
     data remove storage asset:artifact MPCost
     data remove storage asset:artifact MPRequire
     data remove storage asset:artifact MPHealWhenHit
+    data remove storage asset:artifact PartsMax
     data remove storage asset:artifact ConsumeItem
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
