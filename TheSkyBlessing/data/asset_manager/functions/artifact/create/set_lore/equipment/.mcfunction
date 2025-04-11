@@ -6,7 +6,7 @@
 
 # IDから当該Effectを呼び出す
     function asset_manager:common/context/id/stash
-    data modify storage asset:context id set from storage asset:artifact Equip.SetID
+    data modify storage asset:context id set from storage asset:artifact Equip.SetEffectID
     function #asset:effect/register
     function asset_manager:common/context/id/pop
 

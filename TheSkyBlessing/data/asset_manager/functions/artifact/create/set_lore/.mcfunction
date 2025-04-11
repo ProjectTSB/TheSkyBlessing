@@ -15,7 +15,7 @@
         execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/
         data remove storage asset:artifact CopiedModifiers
     # セット効果
-        execute if data storage asset:artifact Equip.SetID run function asset_manager:artifact/create/set_lore/equipment/
+        execute if data storage asset:artifact Equip.SetEffectID run function asset_manager:artifact/create/set_lore/equipment/
     # リセット
         data modify block 10000 0 10000 Items set value []
 # 空行セパレータ

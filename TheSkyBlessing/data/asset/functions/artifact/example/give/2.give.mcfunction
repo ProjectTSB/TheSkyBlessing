@@ -43,7 +43,7 @@ data modify storage asset:artifact MPCost set value 0
 # data modify storage asset:artifact AttackInfo.IsRangeAttack set value "never"
 # data modify storage asset:artifact AttackInfo.AttackRange set value "?"
 
-data modify storage asset:artifact Equip.SetID set value 65535
+data modify storage asset:artifact Equip.SetEffectID set value 65535
 data modify storage asset:artifact Equip.Modifiers set value [{Type:"max_health",Amount:4d,Operation:"add"}]
 
 data modify storage asset:artifact CanUsedGod set value "ALL"
