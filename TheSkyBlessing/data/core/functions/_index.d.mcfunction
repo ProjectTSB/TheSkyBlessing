@@ -11,6 +11,7 @@
 #   core:load_once
 #   api:global_vars/islands_purified
 #   api:global_vars/game_progress
+#   api:global_vars/total_islands
 #   asset_manager:island/dispel/successful
 #   lib:message/common/*
     #declare score_holder $PurifiedIslands
