@@ -21,7 +21,7 @@
 #       TypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #       SpecialCooldown? : int
 #       AttackInfo? : Component
-#       Equip? : Component
+#       Equipment? : Component
 #       DisabledFlag? : Component
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
@@ -60,7 +60,7 @@
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
     data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.Equip set from storage asset:artifact Equip
+    data modify storage asset:artifact Item.tag.TSB.Equipment set from storage asset:artifact Equipment
     data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
 
 # 名前

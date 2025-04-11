@@ -15,7 +15,7 @@
         execute store result storage asset:artifact Enum.Index int 1 run scoreboard players add $SlotIndex Temporary 1
         function asset_manager:artifact/triggers/equipments/enum/index/.m with storage asset:artifact Enum
     # Slotが一致しているか確認する
-        execute store success score $InvalidSlot Temporary run data modify storage asset:artifact Temp.3[-1].Equip.Slot set from storage asset:artifact Enum.Slot
+        execute store success score $InvalidSlot Temporary run data modify storage asset:artifact Temp.3[-1].Equipment.Slot set from storage asset:artifact Enum.Slot
 # データが正しそうなら引っ張り出す
     data modify storage lib: Array append value {ID:-2,UUID:-2,LocalCooldown:0}
     execute unless score $InvalidSlot Temporary matches 1.. run data modify storage lib: Array[-1] set from storage asset:artifact Temp.3[-1]

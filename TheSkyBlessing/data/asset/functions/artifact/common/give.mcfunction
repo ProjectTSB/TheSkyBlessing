@@ -20,7 +20,7 @@
 #   SpecialCooldown? : int
 #   AttackInfo? : Component
 #   PartsMax? : int
-#   Equip? : Component
+#   Equipment? : Component
 #   DisabledFlag? : Component
 #   CanUsedGod : God[]
 #   CustomNBT? : Item.tag
@@ -52,10 +52,10 @@
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
     execute unless data storage asset:artifact RemainingCountMax run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
     execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
-    execute if data storage asset:artifact Equip unless data storage asset:artifact Equip.Slot run data modify storage asset:artifact Equip.Slot set from storage asset:artifact Slot
-    execute if data storage asset:artifact Equip.Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equip.Modifiers
-    execute if data storage asset:artifact Equip.Modifiers[0] run function asset:artifact/common/validate/modifier
-    execute if data storage asset:artifact Equip.Modifiers[0] run data remove storage asset:artifact CopiedModifiers
+    execute if data storage asset:artifact Equipment unless data storage asset:artifact Equipment.Slot run data modify storage asset:artifact Equipment.Slot set from storage asset:artifact Slot
+    execute if data storage asset:artifact Equipment.Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
+    execute if data storage asset:artifact Equipment.Modifiers[0] run function asset:artifact/common/validate/modifier
+    execute if data storage asset:artifact Equipment.Modifiers[0] run data remove storage asset:artifact CopiedModifiers
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
@@ -89,7 +89,7 @@
     data remove storage asset:artifact TypeCooldown
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact AttackInfo
-    data remove storage asset:artifact Equip
+    data remove storage asset:artifact Equipment
     data remove storage asset:artifact DisabledFlags
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
