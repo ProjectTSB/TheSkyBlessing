@@ -30,6 +30,7 @@
 #> Inv
 # @private
     #declare score_holder $InvSize
+    #declare score_holder $ID
 
 # マイグレーション (asset側を今置き換えたくない)
     execute if data storage asset:artifact {EnableDuplication:true} run data modify storage asset:artifact PartsMax set value 9
@@ -44,6 +45,9 @@
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
+    execute if data storage asset:artifact ID store result score $ID Temporary run data get storage asset:artifact ID
+    execute if data storage asset:artifact ID if score $ID Temporary > $65535 Const run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"65535より大きい ID は利用できません"}]
+    execute if data storage asset:artifact ID run scoreboard players reset $ID
     execute unless data storage asset:artifact Item run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Item","color":"red"}]
     execute unless data storage asset:artifact Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
     execute unless data storage asset:artifact Lore run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Lore","color":"red"}]
