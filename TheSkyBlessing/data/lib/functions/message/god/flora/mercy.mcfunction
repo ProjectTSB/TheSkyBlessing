@@ -1,6 +1,6 @@
 #> lib:message/god/flora/mercy
 #
-# 「フローラ「...うん。わかった」」
+# 「フローラ「...うん。わかった」
 #
 # @within function player_manager:god/mercy/mercy
 
