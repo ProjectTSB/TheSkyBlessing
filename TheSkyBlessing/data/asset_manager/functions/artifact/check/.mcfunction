@@ -35,6 +35,10 @@
         execute unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{TypeCooldown:true} run function asset_manager:artifact/check/check_type_cooldown/
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
+    # SecondaryTypeCooldownによる制限
+        execute unless data storage asset:artifact TargetItems[0].tag.TSB{DisabledCheckFlags:["SecondaryTypeCooldown"]} run function asset_manager:artifact/check/check_second_type_cooldown/
+        execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
+        tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
         execute unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{LocalCooldown:true} run function asset_manager:artifact/check/check_local_cooldown/
         execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag{CDMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}

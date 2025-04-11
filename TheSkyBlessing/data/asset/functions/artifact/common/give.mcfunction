@@ -17,6 +17,7 @@
 #   ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
 #   LocalCooldown? : int
 #   TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#   SecondaryTypeCooldown? : {Type: enum(CooldownType), Duration: int}
 #   SpecialCooldown? : int
 #   AttackInfo? : Component
 #   PartsMax? : int
@@ -61,6 +62,7 @@
     execute if data storage asset:artifact Equipment.Modifiers[0] run function asset:artifact/common/validate/modifier
     execute if data storage asset:artifact Equipment.Modifiers[0] run data remove storage asset:artifact CopiedModifiers
     execute unless data storage asset:artifact CanUsedGod run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" CanUsedGod","color":"red"}]
+    execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
 # 神器排出
@@ -92,6 +94,7 @@
     data remove storage asset:artifact ConsumeItem
     data remove storage asset:artifact LocalCooldown
     data remove storage asset:artifact TypeCooldown
+    data remove storage asset:artifact SecondaryTypeCooldown
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact Equipment

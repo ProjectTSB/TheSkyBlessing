@@ -6,13 +6,8 @@
 # @output storage api: UUID
 # @public
 
-#> Temp
-# @private
-    #declare score_holder $NotLatestData
-
-# EntityStorage呼び出し
-    function oh_my_dat:please
-# キャッシュされていなければ取得
-    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data set from entity @s UUID
+# 必要があれば fetch して取得
+    function api:data_get/_restore_or_fetch
 # outputのstorageに移す
-    data modify storage api: UUID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.UUID.Data
+    data remove storage api: UUID
+    data modify storage api: UUID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DataCache.Data.UUID

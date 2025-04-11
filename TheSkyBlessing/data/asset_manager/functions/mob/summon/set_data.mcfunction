@@ -51,18 +51,19 @@
         data modify storage asset:mob HandItems set value []
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Mainhand
         data modify storage asset:mob HandItems append from storage asset:mob Weapon.Offhand
-        data modify storage asset:mob HandItems[].AttributeModifiers set value []
+        data modify storage asset:mob HandItems[].tag.AttributeModifiers set value []
         data modify storage asset:mob ArmorItems set value []
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Feet
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Legs
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Chest
         data modify storage asset:mob ArmorItems append from storage asset:mob Armor.Head
-        data modify storage asset:mob ArmorItems[].AttributeModifiers set value []
+        data modify storage asset:mob ArmorItems[].tag.AttributeModifiers set value []
     # 武器防具
         data modify entity @s HandItems set from storage asset:mob HandItems
         data modify entity @s ArmorItems set from storage asset:mob ArmorItems
         data modify entity @s HandDropChances set from storage asset:mob WeaponDropChances
         data modify entity @s ArmorDropChances set from storage asset:mob ArmorDropChances
+
     # Attributeの事前追加
         data modify storage asset:mob Attributes set value []
         data modify storage asset:mob Attributes append value {Name:"generic.max_health"}
@@ -105,6 +106,7 @@
     # Baseを追加
         data modify storage asset:mob Resist.Base set value 1f
     # 適用
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Default.Defense set from storage asset:mob Resist
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Attributes.Value.Defense set from storage asset:mob Resist
 # フィールド
     execute if data storage asset:mob FieldOverride run data modify storage asset:mob Field merge from storage asset:mob FieldOverride
@@ -118,6 +120,8 @@
 # 統計データに放り込む
     execute if entity @s[tag=Enemy.Boss] run function metric:angel/summon.m with storage asset:mob
 # リセット
+    data remove storage asset:mob ExtendsSafe
+    data remove storage asset:mob IsAbstract
     data remove storage asset:mob HandItems
     data remove storage asset:mob ArmorItems
     data remove storage asset:mob Attributes
@@ -126,8 +130,11 @@
     data remove storage asset:mob Interferable
     data remove storage asset:mob IsForwardTarget
     data remove storage asset:mob Name
+    data remove storage asset:mob Lore
     data remove storage asset:mob Weapon
+    data remove storage asset:mob WeaponDropChances
     data remove storage asset:mob Armor
+    data remove storage asset:mob ArmorDropChances
     data remove storage asset:mob Health
     data remove storage asset:mob AttackDamage
     data remove storage asset:mob Defense
