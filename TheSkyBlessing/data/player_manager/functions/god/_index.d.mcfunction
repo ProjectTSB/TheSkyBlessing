@@ -29,7 +29,8 @@
 
 #> Tag for Equipment Update
 # @within function
-#   player_manager:god/*/believe
+#   player_manager:god/change_believe/believe2
+#   player_manager:god/change_believe/unbelieve2
 #   player_manager:god/none/set_tag
 #   asset_manager:artifact/triggers/
 #   asset_manager:artifact/triggers/equipments/update_attribute/*
