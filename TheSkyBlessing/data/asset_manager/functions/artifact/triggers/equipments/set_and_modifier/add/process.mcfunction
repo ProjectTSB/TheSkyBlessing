@@ -8,9 +8,8 @@
     execute if data storage asset:artifact Temp.Modifier.MaxStack run function asset_manager:artifact/triggers/equipments/set_and_modifier/add/calc_amount
     data modify storage asset:artifact Temp.Modifier.UUID set value [I;1,1,-1,-1]
     data modify storage asset:artifact Temp.Modifier.UUID[2] set from storage asset:artifact Temp.Modifier.ID
-    data modify storage asset:artifact Enum.Slot set from storage asset:artifact Temp.Modifier.Slot
-    execute store result storage asset:artifact Temp.Modifier.UUID[3] int 1 run function asset_manager:artifact/triggers/equipments/enum/slot/.m with storage asset:artifact Enum
-
+    function asset_manager:artifact/triggers/equipments/enum/slot.m with storage asset:artifact Temp.Modifier
+    data modify storage asset:artifact Temp.Modifier.UUID[3] set from storage asset:artifact Enum.Return
 # apiに移す
     data modify storage api: Argument.UUID set from storage asset:artifact Temp.Modifier.UUID
     data modify storage api: Argument.Amount set from storage asset:artifact Temp.Modifier.Amount
