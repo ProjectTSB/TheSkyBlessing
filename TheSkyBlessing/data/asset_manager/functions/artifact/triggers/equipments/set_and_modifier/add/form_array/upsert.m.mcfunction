@@ -1,8 +1,8 @@
-#> asset_manager:artifact/triggers/equipments/set_and_modifier/add/stack/calc.m
+#> asset_manager:artifact/triggers/equipments/set_and_modifier/add/form_array/upsert.m
 # @input args
 #   ID : int
 #   Type : string
-# @within function asset_manager:artifact/triggers/equipments/set_and_modifier/add/stack/foreach
+# @within function asset_manager:artifact/triggers/equipments/set_and_modifier/add/form_array/foreach
 
 #> Private
 # @private

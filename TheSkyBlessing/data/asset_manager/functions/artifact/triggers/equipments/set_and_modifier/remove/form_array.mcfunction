@@ -1,4 +1,4 @@
-#> asset_manager:artifact/triggers/equipments/set_and_modifier/remove/foreach
+#> asset_manager:artifact/triggers/equipments/set_and_modifier/remove/form_array
 # @within function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/*
 
 # Modifiersに値を追加
@@ -8,4 +8,4 @@
 # リセット
     data remove storage asset:artifact Temp.PreviousDifferentEquipments[-1]
 # ループ
-    execute if data storage asset:artifact Temp.PreviousDifferentEquipments[0] run function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/foreach
+    execute if data storage asset:artifact Temp.PreviousDifferentEquipments[0] run function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/form_array

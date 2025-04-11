@@ -14,7 +14,7 @@
     data modify storage api: Argument.UUID set from storage asset:artifact Temp.Modifier.UUID
 # カスタムModifierで処理
     scoreboard players set $CustomModifier Temporary 0
-    function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/custom.m with storage asset:artifact Temp.Modifier
+    function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/attempt_call.m with storage asset:artifact Temp.Modifier
 # バニラでModifierで処理
     execute unless score $CustomModifier Temporary matches 1 run data modify storage asset:artifact Temp.Modifier.SlotID set from storage asset:artifact Temp.Modifier.UUID[3]
     execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/set_and_modifier/decimal_to_hexadecimal/

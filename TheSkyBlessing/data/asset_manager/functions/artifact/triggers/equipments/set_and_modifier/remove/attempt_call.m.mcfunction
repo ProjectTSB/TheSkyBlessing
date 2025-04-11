@@ -1,4 +1,4 @@
-#> asset_manager:artifact/triggers/equipments/set_and_modifier/remove/custom.m
+#> asset_manager:artifact/triggers/equipments/set_and_modifier/remove/attempt_call.m
 # @input args
 #   Type : string
 # @within function asset_manager:artifact/triggers/equipments/set_and_modifier/remove/process
