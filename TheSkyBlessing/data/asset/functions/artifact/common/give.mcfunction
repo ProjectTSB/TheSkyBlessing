@@ -50,7 +50,6 @@
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
     execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
-    execute unless data storage asset:artifact RemainingCountMax run data modify storage asset:artifact RemainingCountMax set from storage asset:artifact RemainingCount
     execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
     execute if data storage asset:artifact Equipment unless data storage asset:artifact Equipment.Slot run data modify storage asset:artifact Equipment.Slot set from storage asset:artifact Slot
     execute if data storage asset:artifact Equipment.Modifiers[0] run data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers

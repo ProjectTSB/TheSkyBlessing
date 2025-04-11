@@ -84,3 +84,4 @@
 
 # リセット
     data remove storage asset:artifact BaseItem
+    data remove storage asset:artifact RemainingCountMax
