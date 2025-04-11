@@ -1,6 +1,6 @@
 #> player_manager:show_tips
 # @within function
-#   core:handler/join
+#   core:handler/rejoin
 #   world_manager:area/02.islands/on_entered
 
 #> Private

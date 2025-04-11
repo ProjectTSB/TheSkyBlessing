@@ -15,6 +15,3 @@
     function api:modifier/defense/base/update_bonus
     function api:modifier/max_health/update_bonus
     function api:modifier/max_mp/update_bonus
-
-# TIPS
-    execute if entity @s[tag=TutorialEnded] run function player_manager:show_tips

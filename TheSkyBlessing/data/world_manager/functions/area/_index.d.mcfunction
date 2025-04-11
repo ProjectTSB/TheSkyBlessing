@@ -9,5 +9,5 @@
 #> GodBoundaries Declares
 # @within function
 #   world_manager:area/00**
-#   core:handler/join
+#   core:handler/rejoin
     #declare tag TutorialEnded
