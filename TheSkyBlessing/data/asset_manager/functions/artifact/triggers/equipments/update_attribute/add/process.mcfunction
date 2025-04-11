@@ -5,7 +5,7 @@
     data modify storage asset:artifact Temp.Modifier set from storage asset:artifact Temp.Modifiers[-1]
 
 # データを整える
-    execute if data storage asset:artifact Temp.Modifier.MaxStack run function asset_manager:artifact/triggers/equipments/update_attribute/add/calc_effective
+    execute if data storage asset:artifact Temp.Modifier.MaxStack run function asset_manager:artifact/triggers/equipments/update_attribute/add/calc_amount
     data modify storage asset:artifact Temp.Modifier.UUID set value [I;1,1,-1,-1]
     data modify storage asset:artifact Temp.Modifier.UUID[2] set from storage asset:artifact Temp.Modifier.ID
     data modify storage asset:artifact Enum.Slot set from storage asset:artifact Temp.Modifier.Slot
