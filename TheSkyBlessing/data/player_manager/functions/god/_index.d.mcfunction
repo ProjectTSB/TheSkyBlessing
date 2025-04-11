@@ -33,5 +33,5 @@
 #   player_manager:god/change_believe/unbelieve2
 #   player_manager:god/none/set_tag
 #   asset_manager:artifact/triggers/
-#   asset_manager:artifact/triggers/equipments/update_attribute/*
+#   asset_manager:artifact/triggers/equipments/set_and_modifier/*
     #declare tag Believe.Changed
