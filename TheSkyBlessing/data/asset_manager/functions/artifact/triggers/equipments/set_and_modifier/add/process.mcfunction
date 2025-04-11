@@ -16,15 +16,14 @@
     data modify storage api: Argument.Amount set from storage asset:artifact Temp.Modifier.Amount
     data modify storage api: Argument.Operation set from storage asset:artifact Temp.Modifier.Operation
 # カスタムModifierで処理
-    scoreboard players set $CustomModifier Temporary 0
     function asset_manager:artifact/triggers/equipments/set_and_modifier/add/attempt_call.m with storage asset:artifact Temp.Modifier
 # バニラModifierで処理
-    execute unless score $CustomModifier Temporary matches 1 run data modify storage asset:artifact Temp.Modifier.SlotID set from storage asset:artifact Temp.Modifier.UUID[3]
-    execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/set_and_modifier/decimal_to_hexadecimal/
-    execute unless score $CustomModifier Temporary matches 1 run function asset_manager:artifact/triggers/equipments/set_and_modifier/add/generic.m with storage asset:artifact Temp.Modifier
+    execute unless data storage asset:artifact Temp{Implement:true} run data modify storage asset:artifact Temp.Modifier.SlotID set from storage asset:artifact Temp.Modifier.UUID[3]
+    execute unless data storage asset:artifact Temp{Implement:true} run function asset_manager:artifact/triggers/equipments/set_and_modifier/decimal_to_hexadecimal/
+    execute unless data storage asset:artifact Temp{Implement:true} run function asset_manager:artifact/triggers/equipments/set_and_modifier/add/generic.m with storage asset:artifact Temp.Modifier
 
 # リセット&ループ
-    scoreboard players reset $CustomModifier Temporary
     data remove storage asset:artifact Temp.Modifier
+    data remove storage asset:artifact Temp.Implement
     data remove storage asset:artifact Temp.Modifiers[-1]
     execute if data storage asset:artifact Temp.Modifiers[0] run function asset_manager:artifact/triggers/equipments/set_and_modifier/add/process
