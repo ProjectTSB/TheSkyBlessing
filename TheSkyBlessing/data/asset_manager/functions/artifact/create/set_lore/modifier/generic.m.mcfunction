@@ -1,6 +1,6 @@
-#> asset_manager:artifact/create/modifier/generic.m
+#> asset_manager:artifact/create/set_lore/modifier/generic.m
 # @input args
 #   Type : string
-# @within function asset_manager:artifact/create/modifier/
+# @within function asset_manager:artifact/create/set_lore/modifier/
 
 $data modify storage asset:artifact Line[1] set value '{"translate":"attribute.name.$(Type)"}'
