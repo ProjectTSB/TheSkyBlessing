@@ -4,4 +4,4 @@
 #
 # @within function player_manager:god/change_believe/unbelieve2
 
-tellraw @s [{"text":"\n3","font":"face/rumor"},{"text":"\u0002","font":"space"},{"text":"<ルーモア>\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"もういいわ、あなたなんて知らない。\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"どこか遠くにでも、行けばいいよ…。\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"","font":"minecraft:default"}]
+tellraw @s [{"text":"\n3","font":"face/rumor"},{"text":"\u0002","font":"space"},{"text":"<ルーモア>\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"もういい、あなたなんて知らない。\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"どこか遠くにでも、行けばいいよ…。\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"","font":"minecraft:default"}]
