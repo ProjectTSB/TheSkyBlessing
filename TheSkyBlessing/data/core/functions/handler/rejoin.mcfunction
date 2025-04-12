@@ -10,3 +10,6 @@
     function #asset:rejoin
 # Reset
     scoreboard players reset @s RejoinEvent
+
+# TIPS
+    execute if entity @s[tag=TutorialEnded] run function player_manager:show_tips
