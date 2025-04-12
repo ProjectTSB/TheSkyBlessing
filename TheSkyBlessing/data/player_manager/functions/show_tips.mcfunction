@@ -18,8 +18,8 @@ execute if score $TipRandom Temporary matches 4 run tellraw @s {"text":"奈落�
 execute if score $TipRandom Temporary matches 5 run tellraw @s {"text":"同じ取引を繰り返す場合、左のタブを選んで取引した後に、[space] キーを押すことで同じ取引を選択できる。","color":"white"}
 execute if score $TipRandom Temporary matches 6 run tellraw @s {"text":"羊を刈るよりも農業をしたほうが効率よく通貨を集めることができる。","color":"white"}
 execute if score $TipRandom Temporary matches 7 run tellraw @s {"text":"防具を装備せずに戦闘することは無謀である。\n簡易防具は安価で買うことが出来るので、もし防具神器が無いならば必ず装備しよう。","color":"white"}
-execute if score $TipRandom Temporary matches 8 run tellraw @s {"text":"雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を見ることができる。\n手持ちの神器の火力が討伐に不足しているなら、それは挑むべきではない。","color":"white"}
+execute if score $TipRandom Temporary matches 8 run tellraw @s {"text":"雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を見ることができる。\n手持ちの神器の火力が相手の撃破に不足しているなら、それは挑むべきではない。","color":"white"}
 execute if score $TipRandom Temporary matches 9 run tellraw @s {"text":"満腹度による体力回復は最大体力に比例する。","color":"white"}
 execute if score $TipRandom Temporary matches 10 run tellraw @s {"text":"あなたが戦闘をしている間、体力の自然回復は著しく減少する。\n損耗が多い場合は戦闘から離脱することも一つの戦い方と言えよう。","color":"white"}
-execute if score $TipRandom Temporary matches 11 run tellraw @s {"text":"全ての島にはいつでも訪れることが出来る。\nただし、あなたより遥かに強い敵と相対すことになる可能性にも注意だ。","color":"white"}
+execute if score $TipRandom Temporary matches 11 run tellraw @s {"text":"全ての島にはいつでも訪れることが出来る。\nただし、あなたより遥かに強い敵と相対することになる可能性にも注意だ。","color":"white"}
 execute if score $TipRandom Temporary matches 12 run tellraw @s {"text":"多くの攻撃神器には種別クールダウンと呼ばれるクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。","color":"white"}
