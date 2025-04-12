@@ -38,6 +38,7 @@
     execute if data storage asset:artifact {DisabledCheckFlags:["MPRequire"]} run data modify storage asset:artifact DisabledFlag.Check.MPRequire set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["LocalCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.LocalCooldown set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["TypeCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.TypeCooldown set value true
+    execute if data storage asset:artifact {DisabledCheckFlags:["SecondaryTypeCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.SecondaryTypeCooldown set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["SpecialCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.SpecialCooldown set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["Believe"]} run data modify storage asset:artifact DisabledFlag.Check.Believe set value true
     data modify storage asset:artifact DisabledFlag.Check.CDMessage set from storage asset:artifact DisableCooldownMessage
