@@ -27,8 +27,8 @@
         tag @s[tag=CheckFailed] remove CheckFailed
     # MP必要量による制限
         execute unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{MPRequire:true} run function asset_manager:artifact/check/check_mp
-        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag{MPMessage:true} run tellraw @s {"text":"MPが足りない！","color":"red"}
-        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag{MPMessage:true} run scoreboard players set @s MPLogCD 20
+        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{MPMessage:true} run tellraw @s {"text":"MPが足りない！","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{MPMessage:true} run scoreboard players set @s MPLogCD 20
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # TypeCooldownによる制限
