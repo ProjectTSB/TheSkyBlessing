@@ -1,0 +1,211 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": {
+                "min": 0,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "weight": 75,
+                    "type": "loot_table",
+                    "name": "common:sacred_shard/lv-1"
+                },
+                {
+                    "weight": 25,
+                    "type": "loot_table",
+                    "name": "common:island_rewards/artifact_seed/lv-1"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 0,
+                "max": 16
+            },
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "common:currency/"
+                }
+            ]
+        },
+        {
+            "rolls": {
+                "min": 1,
+                "max": 5
+            },
+            "entries": [
+                {
+                    "weight": 160,
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 16
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 200,
+                    "type": "item",
+                    "name": "rotten_flesh",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 100,
+                    "type": "item",
+                    "name": "bone",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 100,
+                    "type": "item",
+                    "name": "string",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 200,
+                    "type": "item",
+                    "name": "cookie",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 16
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "apple",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "potato",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "carrot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "beetroot",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 120,
+                    "type": "item",
+                    "name": "sweet_berries",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 90,
+                    "type": "item",
+                    "name": "egg",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "weight": 100,
+                    "type": "item",
+                    "name": "clay",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 32
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

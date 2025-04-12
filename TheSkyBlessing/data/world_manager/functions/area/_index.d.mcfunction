@@ -10,4 +10,5 @@
 # @within function
 #   world_manager:area/00**
 #   core:handler/rejoin
+#   core:handler/join
     #declare tag TutorialEnded
