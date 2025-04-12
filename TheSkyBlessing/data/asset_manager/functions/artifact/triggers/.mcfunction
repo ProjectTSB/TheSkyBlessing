@@ -12,6 +12,9 @@
 # 変更時の更新処理
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown/
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/update_cooldown_type
+    execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/set_and_modifier/
+# 信仰変更時の更新処理
+    execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equipments/set_and_modifier/
 # イベント情報を取得
     data modify storage asset:artifact ArtifactEvents set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents set value {}
@@ -41,6 +44,7 @@
     data remove storage asset:artifact EquipmentChanges
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset
+    tag @s remove Believe.Changed
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak

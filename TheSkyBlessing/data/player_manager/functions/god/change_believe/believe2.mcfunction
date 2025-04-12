@@ -19,3 +19,5 @@
     execute if score @s InSubArea matches 4 run function player_manager:god/urban/believe
     execute if score @s InSubArea matches 5 run function lib:message/god/wi-ki/believe2
     execute if score @s InSubArea matches 5 run function player_manager:god/wi-ki/believe
+# 全装備を再チェック
+    tag @s add Believe.Changed

@@ -5,7 +5,9 @@
 # @within function asset:artifact/common/use/*
 
 # 神器データの取得
+# TODO: IgnoreItemUpdate を true にしている神器の give 処理内で ItemUpdate を無効化するように変更する
     function asset_manager:artifact/data/current/get
+    execute unless data storage asset:artifact IgnoreItemUpdate run data modify storage asset:artifact IgnoreItemUpdate set from storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Use.ItemUpdate
 function metric:artifact.m with storage asset:artifact TargetItems[0].tag.TSB
 # 神器処理内で利用される DamageAPI 用に MP 回復量のデータを追加する
 # DamageAPI で MP 回復をするのは設計上非常に正しくなく、

@@ -26,3 +26,12 @@
 #   player_manager:god/change_difficulty/request/**
 #   player_manager:god/change_difficulty/confirm/**
     #declare tag Difficulty.Request
+
+#> Tag for Equipment Update
+# @within function
+#   player_manager:god/change_believe/believe2
+#   player_manager:god/change_believe/unbelieve2
+#   player_manager:god/none/set_tag
+#   asset_manager:artifact/triggers/
+#   asset_manager:artifact/triggers/equipments/set_and_modifier/*
+    #declare tag Believe.Changed
