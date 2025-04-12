@@ -98,7 +98,7 @@
     data remove storage asset:artifact SpecialCooldown
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact Equipment
-    data remove storage asset:artifact DisabledFlags
+    data remove storage asset:artifact DisabledFlag
     data remove storage asset:artifact DisableCooldownMessage
     data remove storage asset:artifact DisableMPMessage
     data remove storage asset:artifact DisableBreakSound
