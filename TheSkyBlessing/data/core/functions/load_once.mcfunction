@@ -174,7 +174,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
-        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力(e2)"}
 
     #> MobManager: Mob -Private
     # @within function
@@ -401,8 +401,7 @@ team modify NoCollision collisionRule never
 
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/core/get_max_health*
-    #   api:mob/core/get_health_percent
+    #   api:mob/core/**
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
