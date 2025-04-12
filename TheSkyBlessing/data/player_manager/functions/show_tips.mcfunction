@@ -17,7 +17,7 @@ execute if score $TipRandom Temporary matches 3 run tellraw @s {"text":"アイ�
 execute if score $TipRandom Temporary matches 4 run tellraw @s {"text":"奈落に落ちてしまった時でも、様々の神器の力で地上に帰ることが出来る。\n｢加護装備｣ もその一つだ。","color":"white"}
 execute if score $TipRandom Temporary matches 5 run tellraw @s {"text":"同じ取引を繰り返す場合、左のタブを選んで取引した後に、[space] キーを押すことで同じ取引を選択できる。","color":"white"}
 execute if score $TipRandom Temporary matches 6 run tellraw @s {"text":"羊を刈るよりも農業をしたほうが効率よく通貨を集めることができる。","color":"white"}
-execute if score $TipRandom Temporary matches 7 run tellraw @s {"text":"防具を装備せずに戦闘することは無謀である。\nもし防具神器が無いならば、簡易防具が安価で買うことが出来るので必ず装備しよう。","color":"white"}
+execute if score $TipRandom Temporary matches 7 run tellraw @s {"text":"防具を装備せずに戦闘することは無謀である。\n簡易防具は安価で買うことが出来るので、もし防具神器が無いならば必ず装備しよう。","color":"white"}
 execute if score $TipRandom Temporary matches 8 run tellraw @s {"text":"雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を見ることができる。\n手持ちの神器の火力が討伐に不足しているなら、それは挑むべきではない。","color":"white"}
 execute if score $TipRandom Temporary matches 9 run tellraw @s {"text":"満腹度による体力回復は最大体力に比例する。","color":"white"}
 execute if score $TipRandom Temporary matches 10 run tellraw @s {"text":"あなたが戦闘をしている間、体力の自然回復は著しく減少する。\n損耗が多い場合は戦闘から離脱することも一つの戦い方と言えよう。","color":"white"}
