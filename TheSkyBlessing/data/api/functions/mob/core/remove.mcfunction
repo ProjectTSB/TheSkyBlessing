@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:mob/remove
+# @within function api:mob/remove*
 
 # タグを付与
     tag @s add Death

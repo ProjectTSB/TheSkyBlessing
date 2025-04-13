@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function api:mob/kill
+# @within function api:mob/kill*
 
 # 殺す (Kill は AssetMob の場合 Death トリガーをもとに付けるのでここでは付けない)
     tag @s add Death
