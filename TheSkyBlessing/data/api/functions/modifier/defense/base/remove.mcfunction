@@ -10,7 +10,8 @@
 # @api
 
 # データ検証
-    execute unless data storage api: Argument.UUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" UUID","color":"red"}]
+    function api:modifier/core/common/validate_remove
+    execute if predicate api:mob/has_forward_target run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:modifier/**/remove が ForwardTarget を持つ Entity に対して実行されています","color":"white"}]
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:modifier/core/defense/base/remove
 # リセット

@@ -10,7 +10,8 @@
 # @api
 
 # データ検証
-    execute unless data storage api: Argument.UUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" UUID","color":"red"}]
+    function api:modifier/core/common/validate_remove
+    execute if entity @s[type=!player] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:modifier/attack/*/remove が非プレイヤーに対して使用されています","color":"white"}]
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:modifier/core/attack/fire/remove
 # リセット
