@@ -48,4 +48,4 @@
     execute unless data storage api: Argument.ApplyTrigger run data modify storage api: Argument.ApplyTrigger set value true
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
-    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/attack",Key:"api:damage/",IsForwardedOnly:false}
+    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
