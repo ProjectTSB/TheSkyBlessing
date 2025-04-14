@@ -25,10 +25,10 @@
 
 # 被ダメ演出
     execute if entity @s[tag=!ExtendedCollision] run function api:damage/core/health_subtract/non-player/damage_vfx
-    execute if entity @s[tag= ExtendedCollision] run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/health_subtract/non-player/damage_vfx",Key:"api:damage/core/health_subtract/non-player/::1",IsForwardedOnly:true}
+    execute if entity @s[tag= ExtendedCollision] run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/damage_vfx",IsForwardedOnly:true}
 
 # イベントの追加
-    execute if predicate api:mob/has_forward_target if entity @s[tag=!ExtendedCollision] run function api:damage/core/health_subtract/non-player/add_event
-    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/health_subtract/non-player/add_event",Key:"api:damage/core/health_subtract/non-player/::2",IsForwardedOnly:true}
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/add_event",IsForwardedOnly:false}
+
 # コアから実行する処理
-    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/health_subtract/non-player/for_health_entity",Key:"api:damage/core/health_subtract/non-player/::3",IsForwardedOnly:true}
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/for_health_entity",IsForwardedOnly:true}

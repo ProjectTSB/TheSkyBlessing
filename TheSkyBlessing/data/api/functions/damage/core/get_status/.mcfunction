@@ -5,7 +5,7 @@
 # @within function api:damage/core/attack
 
 # 体力
-    execute if entity @s[type=!player] run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:damage/core/get_status/get_health",Key:"api:damage/core/get_status/",IsForwardedOnly:false}
+    execute if entity @s[type=!player] run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/get_status/get_health",IsForwardedOnly:true}
 # ダメージを取得
     execute store result score $Damage Temporary run data get storage api: Argument.Damage 100
 # 防御力

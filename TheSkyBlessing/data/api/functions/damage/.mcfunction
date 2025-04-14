@@ -48,4 +48,5 @@
     execute unless data storage api: Argument.ApplyTrigger run data modify storage api: Argument.ApplyTrigger set value true
 
 # Healthを持つ干渉可能なEntityかつ死んでいなければ実行
-    execute if entity @s[type=#lib:living,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
+    execute if entity @s[type=#lib:living,tag= ExtendedCollision,tag=!Uninterferable,tag=!Death] at @s run return run function api:damage/core/check_duplicate_and_attack/
+    execute if entity @s[type=#lib:living,tag=!ExtendedCollision,tag=!Uninterferable,tag=!Death] at @s run function api:damage/core/attack
