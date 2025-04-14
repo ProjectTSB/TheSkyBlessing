@@ -31,3 +31,5 @@ function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/
 function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/core/health_subtract/non-player/::1"}
 function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/core/health_subtract/non-player/::2"}
 function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/core/health_subtract/non-player/::3"}
+
+execute unless data storage api: {DamageApiSingleDamageSessionOpened:true} run function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/"}

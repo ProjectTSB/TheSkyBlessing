@@ -4,4 +4,4 @@
 #
 # @within function player_manager:god/change_believe/believe2
 
-tellraw @s {"text":"ニャプトフ「ﾆｬｰ (気が向いたら魚でも持ってきてくれないかい？)」"}
+tellraw @s [{"text":"\n2","font":"face/nyaptov"},{"text":"\u0002","font":"space"},{"text":"<ニャプトフ>\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"にゃーん。\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"(気でも向いたらでいいんだけど、)\n","font":"minecraft:default"},{"text":"\u0035","font":"space"},{"text":"(魚とか、持ってきてくれると嬉しいなぁ。)","font":"minecraft:default"}]

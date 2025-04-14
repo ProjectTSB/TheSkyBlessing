@@ -16,7 +16,9 @@
     $data modify storage asset:context method set value $(method)
 
 # メソッドの呼び出し
+    data modify storage asset:object Essentials append value {_:{_:true}}
     function asset_manager:object/call_method/
+    data remove storage asset:object Essentials[-1]
 
 # 退避させたasset:context idを戻す
     function asset_manager:common/context/id/pop
