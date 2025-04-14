@@ -25,3 +25,6 @@ execute if score $TipRandom Temporary matches 11 run tellraw @s {"text":"全て�
 execute if score $TipRandom Temporary matches 12 run tellraw @s {"text":"多くの攻撃神器には種別クールダウンと呼ばれるクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。","color":"white"}
 execute if score $TipRandom Temporary matches 13 run tellraw @s {"text":"エンドには天候・時間の概念がない。\nそのため、それを条件とする神器をフルパワーで使用できる。","color":"white"}
 execute if score $TipRandom Temporary matches 14 run tellraw @s [{"text":"敵の付与するデバフの強さには","color":"white"},{"text":"[弱]","color":"#FFDD66"},{"text":"と","color":"white"},{"text":"[強]","color":"#FFDD66"},{"text":"が存在する。\nデバフの強さを判別するには、アイコン左上の線の本数を確認しよう。","color":"white"}]
+
+# リセット
+    scoreboard players reset $TipRandom Temporary
