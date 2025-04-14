@@ -3,7 +3,6 @@
 #
 #
 # @within function
-#   asset:object/call_method/
 #   asset_manager:object/call_method/
 #   asset:object/super.method
 
