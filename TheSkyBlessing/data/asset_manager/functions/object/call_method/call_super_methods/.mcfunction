@@ -19,7 +19,7 @@
     data modify storage asset:object CopiedExtends[-1] set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Object.Extends
 
 # すべての継承元のmethod呼び出し
-    execute unless data storage asset:object CopiedExtends[-1][0] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"メソッド"},{"storage":"asset:context","nbt":"method"},{"text":"の実装が存在しません ID: ","color":"red"},{"storage":"asset:context","nbt":"originID"}]
+    execute unless data storage asset:object CopiedExtends[-1][0] if data storage asset:object Essentials[-1]._{_:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"メソッド"},{"storage":"asset:context","nbt":"method"},{"text":"の実装が存在しません ID: ","color":"red"},{"storage":"asset:context","nbt":"originID"}]
     execute if data storage asset:object CopiedExtends[-1][0] run function asset_manager:object/call_method/call_super_methods/foreach
 
 # リセット
