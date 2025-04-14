@@ -13,7 +13,7 @@
     function asset_manager:object/call_method/
     data remove storage asset:object Essentials[-1]
 
-# 先頭削除 (Extends が十分に小さいことがわかっているため先頭再帰する)
+# 末尾削除
     data remove storage asset:object CopiedExtends[-1][-1]
 # 要素があれば再帰
     execute if data storage asset:object CopiedExtends[-1][-1] run function asset_manager:object/call_method/call_super_methods/foreach
