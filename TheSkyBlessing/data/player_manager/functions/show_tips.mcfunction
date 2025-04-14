@@ -9,7 +9,7 @@
 
 tellraw @s {"text":"[TIPS] ","color":"aqua"}
 
-execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:1}
+execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:15}
 execute if score $TipRandom Temporary matches 0 run tellraw @s {"text":"石を掘ることでそのピッケルに応じた確率で鉱石を入手することができる。\n丸石よりも焼き石のほうが確率が高い。","color":"white"}
 execute if score $TipRandom Temporary matches 1 run tellraw @s {"text":"スポナーをすべて破壊しなくても呪われた神器を解呪することができる。","color":"white"}
 execute if score $TipRandom Temporary matches 2 run tellraw @s {"text":"この世界は落下ダメージを通常より多く受ける。\n体力が増えたからと言って慢心しないようにしよう。","color":"white"}
