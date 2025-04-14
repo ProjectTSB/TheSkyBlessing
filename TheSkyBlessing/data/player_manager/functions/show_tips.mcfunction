@@ -9,7 +9,7 @@
 
 tellraw @s {"text":"[TIPS] ","color":"aqua"}
 
-execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:13}
+execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:15}
 execute if score $TipRandom Temporary matches 0 run tellraw @s {"text":"石を掘ることでそのピッケルに応じた確率で鉱石を入手することができる。\n丸石よりも焼き石のほうが確率が高い。","color":"white"}
 execute if score $TipRandom Temporary matches 1 run tellraw @s {"text":"スポナーをすべて破壊しなくても呪われた神器を解呪することができる。","color":"white"}
 execute if score $TipRandom Temporary matches 2 run tellraw @s {"text":"この世界は落下ダメージを通常より多く受ける。\n体力が増えたからと言って慢心しないようにしよう。","color":"white"}
@@ -23,3 +23,8 @@ execute if score $TipRandom Temporary matches 9 run tellraw @s {"text":"満腹�
 execute if score $TipRandom Temporary matches 10 run tellraw @s {"text":"あなたが戦闘をしている間、体力の自然回復は著しく減少する。\n損耗が多い場合は戦闘から離脱することも一つの戦い方と言えよう。","color":"white"}
 execute if score $TipRandom Temporary matches 11 run tellraw @s {"text":"全ての島にはいつでも訪れることが出来る。\nただし、あなたより遥かに強い敵と相対することになる可能性にも注意だ。","color":"white"}
 execute if score $TipRandom Temporary matches 12 run tellraw @s {"text":"多くの攻撃神器には種別クールダウンと呼ばれるクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。","color":"white"}
+execute if score $TipRandom Temporary matches 13 run tellraw @s {"text":"エンドには天候・時間の概念がない。\nそのため、それを条件とする神器をフルパワーで使用できる。","color":"white"}
+execute if score $TipRandom Temporary matches 14 run tellraw @s [{"text":"敵の付与するデバフの強さには","color":"white"},{"text":"[弱]","color":"#FFDD66"},{"text":"と","color":"white"},{"text":"[強]","color":"#FFDD66"},{"text":"が存在する。\nデバフの強さを判別するには、アイコン左上の線の本数を確認しよう。","color":"white"}]
+
+# リセット
+    scoreboard players reset $TipRandom Temporary
