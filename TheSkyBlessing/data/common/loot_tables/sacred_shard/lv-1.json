@@ -25,23 +25,26 @@
                             "lore": [
                                 [
                                     {
-                                        "text": "微量の不安定なマナが集まり結晶化した破片。",
+                                        "text": "微量の不安定なマナが集まり結晶化した破片",
                                         "italic": false,
-                                        "color": "light_purple"
+                                        "color": "white"
                                     }
                                 ],
                                 [
                                     {
-                                        "text": "加工することで数多の可能性を呼び寄せ、",
+                                        "text": "加工することで、",
                                         "italic": false,
-                                        "color": "light_purple"
-                                    }
-                                ],
-                                [
+                                        "color": "white"
+                                    },
                                     {
-                                        "text": "神器として顕現させることができる。",
+                                        "text": "神器",
                                         "italic": false,
-                                        "color": "light_purple"
+                                        "color": "gold"
+                                    },
+                                    {
+                                        "text": "を取り出す事ができる",
+                                        "italic": false,
+                                        "color": "white"
                                     }
                                 ]
                             ]

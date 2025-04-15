@@ -4,6 +4,7 @@
 #
 # @input storage api:
 #   Argument.Rarity : (1 | 2 | 3 | 4)
+#   Argument.Color? : ("red" | "blue" | "green")
 #   Argument.Important? : boolean (default: false)
 # @api
 
@@ -15,5 +16,6 @@
     function api:artifact/core/from_rarity/
 # リセット
     data remove storage api: Argument.Rarity
+    data remove storage api: Argument.Color
     data remove storage api: Argument.Important
     data remove storage api: Argument.Type

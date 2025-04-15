@@ -2,7 +2,9 @@
 #
 # 神器Assetの入手処理を叩く処理
 #
-# @input storage api: Argument.Rarity
+# @input storage api:
+#   Argument.Rarity : (1 | 2 | 3 | 4)
+#   Argument.Color? : ("red" | "blue" | "green")
 # @api
 
 # validate
@@ -12,4 +14,5 @@
     function api:artifact/core/from_rarity/
 # リセット
     data remove storage api: Argument.Rarity
+    data remove storage api: Argument.Color
     data remove storage api: Argument.Type
