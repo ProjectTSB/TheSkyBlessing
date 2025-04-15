@@ -5,7 +5,7 @@
 # @within function asset_manager:artifact/triggers/equipments/set_and_modifier/
 
 # 2つの配列を重複を起こさないように結合する
-# asset:artifact Temp.PreviousDifferentEquipments[].Equipment.Effects[].ID -> asset:artifact Temp.List[]._
+# asset:artifact Temp.PreviousDifferentEquipments[].Equipment.Effects[].ID -> asset:artifact Temp.List[]
     function lib:array/session/open
     data modify storage lib: Array append from storage asset:artifact Temp.PreviousDifferentEquipments[].Equipment.Effects[].ID
     data modify storage lib: Array append from storage asset:artifact Temp.CurrentDifferentEquipments[].Equipment.Effects[].ID
