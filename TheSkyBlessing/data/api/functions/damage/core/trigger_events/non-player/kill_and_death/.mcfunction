@@ -11,7 +11,7 @@
 # Mob の UUID を記録しておく
     scoreboard players operation $DamagerUUID Temporary = @s MobUUID
 # Death イベントの push
-    execute if entity @s[tag=!ExtendedCollision] run function api:damage/core/trigger_events/non-player/kill_and_death/death
+    function api:damage/core/trigger_events/non-player/kill_and_death/death
 # Kill イベントの push
     execute unless predicate api:mob/has_forward_target as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/kill_and_death/kill
 # リセット

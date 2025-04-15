@@ -27,4 +27,4 @@ data remove storage api: Argument.Metadata
 scoreboard players reset $LatestModifiedUser UserID
 scoreboard players reset $LatestModifiedEntity MobUUID
 
-execute unless data storage api: {DamageApiSingleDamageSessionOpened:true} run function api:damage/core/reset_duplicate_hit
+execute unless data storage api: {DamageApiSingleDamageSessionOpened:true} run function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/"}

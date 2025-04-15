@@ -16,7 +16,7 @@
 
 # ログ表示
     execute if entity @s[tag=!ExtendedCollision] run scoreboard players operation $Fluctuation Lib = $Damage Temporary
-    execute if entity @s[tag=!ExtendedCollision] at @s run function lib:status_log/show_health
+    execute if entity @s[tag=!ExtendedCollision] at @s anchored eyes positioned ^ ^ ^ run function lib:status_log/show_health
 
 # 回復
     attribute @s generic.max_health base set 1024

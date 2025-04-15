@@ -8,4 +8,4 @@ execute if data storage api: {DamageApiSingleDamageSessionOpened:false} run tell
 
 data remove storage api: DamageApiSingleDamageSessionOpened
 
-function api:damage/core/reset_duplicate_hit
+function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"api:damage/"}

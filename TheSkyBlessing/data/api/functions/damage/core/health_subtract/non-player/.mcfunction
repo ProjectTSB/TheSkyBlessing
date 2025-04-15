@@ -4,10 +4,10 @@
 #
 # @within function api:damage/core/health_subtract/
 
-#                   | ダメージ表示 | 被ダメ演出 | 体力減少 | イベント |
-# 通常 Mob          |     本体     |    本体    |   本体   |   本体   |
-# ForwardTarget     |     本体     |    本体    |    FT    |   両方   |
-# ExtendedCollision |     本体     |     FT     |    FT    |   本体   |
+#                   | ダメージ表示 | 被ダメ演出 | 体力減少 | イベント |                            備考                           |
+# 通常 Mob          |     本体     |    本体    |   本体   |   本体   |                                                           |
+# ForwardTarget     |     本体     |    本体    |    FT    |   両方   |                                                           |
+# ExtendedCollision |     本体     |     FT     |    FT    |    FT    | api:damage/ の時点で Forward してるから気にしなくていいよ |
 
 #> Val
 # @private
@@ -24,8 +24,7 @@
     function lib:status_log/show_health
 
 # 被ダメ演出
-    execute if entity @s[tag=!ExtendedCollision] run function api:damage/core/health_subtract/non-player/damage_vfx
-    execute if entity @s[tag= ExtendedCollision] run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/damage_vfx",IsForwardedOnly:true}
+    function api:damage/core/health_subtract/non-player/damage_vfx
 
 # イベントの追加
     function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/add_event",IsForwardedOnly:false}
