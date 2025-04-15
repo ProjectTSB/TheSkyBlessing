@@ -10,5 +10,5 @@
 #
 # @api
 
-execute if data storage lib: {DamageApiSingleDamageSessionOpened:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:damage/ のセッションが正常に閉じられていません。","color":"white"}]
+execute if data storage api: {DamageApiSingleDamageSessionOpened:true} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:damage/ のセッションが正常に閉じられていません。","color":"white"}]
 data modify storage api: DamageApiSingleDamageSessionOpened set value true

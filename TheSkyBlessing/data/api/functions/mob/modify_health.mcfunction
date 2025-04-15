@@ -9,12 +9,15 @@
 #
 # 天使の場合、ボスバーの更新を怠らないように気を付けてください
 #
+# また、この関数は ForwardTarget を持つ Entity に対しては実行できません
+#
 # @input storage api:
 #   Argument.Delta: double
 # @api
 
 execute unless data storage api: Argument.Delta run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" Delta","color":"red"}]
+execute if predicate api:mob/has_forward_target run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:mob/modify_health が ForwardTarget を持つ Entity に対して実行されています","color":"white"}]
 
-function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:mob/core/modify_health",IsForwardedOnly:true}
+function api:mob/core/modify_health
 
 data remove storage api: Argument.Delta

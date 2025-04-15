@@ -32,7 +32,7 @@
     scoreboard players operation @s MobHealth = $Health Temporary
 # 回復量表示
     scoreboard players operation $Fluctuation Lib = $Heal Temporary
-    execute at @s run function lib:status_log/show_health
+    execute at @s anchored eyes positioned ^ ^ ^ run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary

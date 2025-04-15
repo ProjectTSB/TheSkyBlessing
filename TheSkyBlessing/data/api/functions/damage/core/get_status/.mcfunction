@@ -5,7 +5,7 @@
 # @within function api:damage/core/attack
 
 # 体力
-    execute if entity @s[type=!player] store result score $Health Temporary run scoreboard players get @s MobHealth
+    execute if entity @s[type=!player] run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/get_status/get_health",IsForwardedOnly:true}
 # ダメージを取得
     execute store result score $Damage Temporary run data get storage api: Argument.Damage 100
 # 防御力

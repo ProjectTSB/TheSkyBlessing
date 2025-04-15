@@ -5,7 +5,7 @@
 # @within function
 #   mob_manager:processing_tag/
 #   api:mob/core/kill
-#   api:damage/core/health_subtract/non-player/
+#   api:damage/core/health_subtract/non-player/for_health_entity
 #   asset_manager:artifact/triggers/attack/vanilla/
 #   asset_manager:mob/triggers/
     #declare tag Kill
