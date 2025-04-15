@@ -3,7 +3,7 @@
 # 装備セットによる効果を設定する
 #
 # @within function
-#   asset_manager:artifact/create/set_lore/equipment/
+#   asset_manager:artifact/create/set_lore/equipment/register
 #   asset_manager:artifact/create/set_lore/equipment/description
 
 # 配列に追加

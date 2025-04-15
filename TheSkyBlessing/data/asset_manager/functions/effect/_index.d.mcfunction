@@ -10,7 +10,7 @@
 #       asset:effect/*/register
 #       asset:effect/*/*/
 #       asset_manager:effect/**
-#       asset_manager:artifact/create/set_lore/equipment/*
+#       asset_manager:artifact/create/set_lore/equipment/**
 #   loot_table
 #       asset_manager:artifact/generate_lore/equipment_description
     #declare storage asset:effect
