@@ -20,7 +20,7 @@
                                     },
                                     {
                                         "storage": "asset:effect",
-                                        "nbt": "Description[]",
+                                        "nbt": "Description[0]",
                                         "separator": "",
                                         "interpret": true
                                     }
