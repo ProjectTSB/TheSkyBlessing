@@ -41,9 +41,16 @@
     execute if data storage asset:artifact {DisabledCheckFlags:["SecondaryTypeCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.SecondaryTypeCooldown set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["SpecialCooldown"]} run data modify storage asset:artifact DisabledFlag.Check.SpecialCooldown set value true
     execute if data storage asset:artifact {DisabledCheckFlags:["Believe"]} run data modify storage asset:artifact DisabledFlag.Check.Believe set value true
+    data remove storage asset:artifact DisabledCheckFlags
     data modify storage asset:artifact DisabledFlag.Check.CDMessage set from storage asset:artifact DisableCooldownMessage
+    data remove storage asset:artifact DisableCooldownMessage
     data modify storage asset:artifact DisabledFlag.Check.MPMessage set from storage asset:artifact DisableMPMessage
+    data remove storage asset:artifact DisableMPMessage
     data modify storage asset:artifact DisabledFlag.Use.BreakSound set from storage asset:artifact DisableBreakSound
+    data remove storage asset:artifact DisableBreakSound
+    execute if data storage asset:artifact Equipment.SetEffectID run data modify storage asset:artifact Equipment.Effects set value [{ID:-1,Visible:true}]
+    execute if data storage asset:artifact Equipment.SetEffectID run data modify storage asset:artifact Equipment.Effects[0].ID set from storage asset:artifact Equipment.SetEffectID
+    data remove storage asset:artifact Equipment.SetEffectID
 
 # storage検証
     execute unless data storage asset:artifact ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
@@ -100,9 +107,5 @@
     data remove storage asset:artifact AttackInfo
     data remove storage asset:artifact Equipment
     data remove storage asset:artifact DisabledFlag
-    data remove storage asset:artifact DisableCooldownMessage
-    data remove storage asset:artifact DisableMPMessage
-    data remove storage asset:artifact DisableBreakSound
-    data remove storage asset:artifact DisabledCheckFlags
     data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
