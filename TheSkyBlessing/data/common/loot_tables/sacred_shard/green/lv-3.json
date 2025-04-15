@@ -13,9 +13,9 @@
                             "entity": "this",
                             "name": [
                                 {
-                                    "text": "ハイシャード",
+                                    "text": "アウレグリーンシャード",
                                     "italic": false,
-                                    "color": "aqua"
+                                    "color": "green"
                                 }
                             ]
                         },
@@ -25,7 +25,24 @@
                             "lore": [
                                 [
                                     {
-                                        "text": "少量の不安定なマナが集まり結晶化した破片",
+                                        "text": "中量の不安定なマナが集まり結晶化した破片",
+                                        "italic": false,
+                                        "color": "white"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "その中でも特に",
+                                        "italic": false,
+                                        "color": "white"
+                                    },
+                                    {
+                                        "text": "癒やしの力",
+                                        "italic": false,
+                                        "color": "green"
+                                    },
+                                    {
+                                        "text": "を宿しているとされる",
                                         "italic": false,
                                         "color": "white"
                                     }
@@ -51,7 +68,7 @@
                         },
                         {
                             "function": "set_nbt",
-                            "tag": "{CustomModelData:20091,TSB:{Shard:1b,ShardRarity:2b}}"
+                            "tag": "{CustomModelData:20534,TSB:{Shard:1b,ShardColor:\"green\",ShardRarity:3b}}"
                         }
                     ]
                 }

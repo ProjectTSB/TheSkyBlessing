@@ -12,21 +12,23 @@
 
 # セッション開ける
     function lib:array/session/open
+    execute unless data storage api: Argument.Color run data modify storage api: Argument.Color set value "normal"
+# 該当カラーのプールを取得
+    execute if data storage api: Argument{Color:"normal"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistry
+    execute if data storage api: Argument{Color:   "red"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistryWithColor.Red
+    execute if data storage api: Argument{Color:  "blue"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistryWithColor.Blue
+    execute if data storage api: Argument{Color: "green"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistryWithColor.Green
 # 該当レアリティのデータを取得
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[1]
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[2]
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[3]
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage asset:artifact RarityRegistry[4]
+    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage api: TargetRegistry[1]
+    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage api: TargetRegistry[2]
+    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage api: TargetRegistry[3]
+    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage api: TargetRegistry[4]
 # データサイズを取得
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
 # 対象 Index を決定
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Args.key set value "artifact_lv-1"
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Args.key set value "artifact_lv-2"
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Args.key set value "artifact_lv-3"
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Args.key set value "artifact_lv-4"
+    function api:artifact/core/from_rarity/construct_and_set_key.m with storage api: Argument
     execute store result storage lib: Args.max int 1 run scoreboard players get $CandidateLength Temporary
-    execute store result storage lib: Args.scarcity_history_size int 0.35 run scoreboard players get $CandidateLength Temporary
-    execute store result score $Argument.Index Lib run function lib:random/with_biased/manual.m with storage lib: Args
+    execute store result score $Argument.Index Lib run function lib:random/with_biased/m with storage lib: Args
 # 候補データを操作して対象 Index を -1 に持ってくる
     function lib:array/move
 # 一旦リセット
@@ -52,3 +54,4 @@
     scoreboard players reset $Pulls Temporary
     data remove storage lib: Args
     data remove storage api: Picks
+    data remove storage api: TargetRegistry
