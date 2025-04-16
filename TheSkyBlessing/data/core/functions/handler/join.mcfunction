@@ -16,4 +16,4 @@
     function api:modifier/max_health/update_bonus
     function api:modifier/max_mp/update_bonus
 # 攻略数の表示
-    execute if entity @s[tag=TutorialEnded] run function player_manager:show_progress
+    execute if data storage global {IsProduction:true} if entity @s[tag=TutorialEnded] run function player_manager:show_progress
