@@ -13,15 +13,15 @@
 # @private
 #declare score_holder $Fluctuation
 
-# MobのHealthよりダメージが高い場合Healthに設定
-    scoreboard players operation $Damage Temporary < $Health Temporary
-# 減算
-    scoreboard players operation $Health Temporary -= $Damage Temporary
-
 # ダメージ表示
     scoreboard players set $Fluctuation Lib 0
     scoreboard players operation $Fluctuation Lib -= $Damage Temporary
     function lib:status_log/show_health
+
+# MobのHealthよりダメージが高い場合Healthに設定
+    scoreboard players operation $Damage Temporary < $Health Temporary
+# 減算
+    scoreboard players operation $Health Temporary -= $Damage Temporary
 
 # 被ダメ演出
     function api:damage/core/health_subtract/non-player/damage_vfx
