@@ -19,10 +19,10 @@
     execute if data storage api: Argument{Color:  "blue"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistryWithColor.Blue
     execute if data storage api: Argument{Color: "green"} run data modify storage api: TargetRegistry set from storage asset:artifact RarityRegistryWithColor.Green
 # 該当レアリティのデータを取得
-    execute if data storage api: Argument{Rarity:1} run data modify storage lib: Array set from storage api: TargetRegistry[1]
-    execute if data storage api: Argument{Rarity:2} run data modify storage lib: Array set from storage api: TargetRegistry[2]
-    execute if data storage api: Argument{Rarity:3} run data modify storage lib: Array set from storage api: TargetRegistry[3]
-    execute if data storage api: Argument{Rarity:4} run data modify storage lib: Array set from storage api: TargetRegistry[4]
+    execute if data storage api: Argument{Rarity:1b} run data modify storage lib: Array set from storage api: TargetRegistry[1]
+    execute if data storage api: Argument{Rarity:2b} run data modify storage lib: Array set from storage api: TargetRegistry[2]
+    execute if data storage api: Argument{Rarity:3b} run data modify storage lib: Array set from storage api: TargetRegistry[3]
+    execute if data storage api: Argument{Rarity:4b} run data modify storage lib: Array set from storage api: TargetRegistry[4]
 # データサイズを取得
     execute store result score $CandidateLength Temporary if data storage lib: Array[]
 # 対象 Index を決定
