@@ -8,4 +8,4 @@
     gamemode survival @s[gamemode=!creative]
 
 # TIPS
-    function player_manager:show_tips
+    execute if data storage global {IsProduction:true} run function player_manager:show_tips
