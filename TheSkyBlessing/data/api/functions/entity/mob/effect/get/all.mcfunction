@@ -9,4 +9,5 @@
     function api:mob/apply_to_forward_target/with_idempotent.m {CB:"oh_my_dat:please",IsForwardedOnly:true}
 
 # エフェクトを取得
+    data remove storage api: Return.EffectList
     data modify storage api: Return.EffectList set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
