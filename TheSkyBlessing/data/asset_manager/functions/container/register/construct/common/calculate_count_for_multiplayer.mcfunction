@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:container/register/construct/set_items/item_normalize/from_preset
+#   asset_manager:container/register/construct/set_items/item_normalize/from_preset/
 #   asset_manager:container/register/construct/set_loot_table/manipulate_item_count
 
 #> Private

@@ -1,4 +1,4 @@
-#> asset_manager:container/register/construct/set_items/item_normalize/from_preset
+#> asset_manager:container/register/construct/set_items/item_normalize/from_preset/
 #
 #
 #
@@ -7,12 +7,7 @@
 # 初期化
     item replace block 10000 0 10000 container.0 with air
 # プリセット読み込み
-    execute if data storage asset:container Item{PresetItem:"currency/"} run loot replace block 10000 0 10000 container.0 loot common:currency/
-    execute if data storage asset:container Item{PresetItem:"currency/high"} run loot replace block 10000 0 10000 container.0 loot common:currency/high
-    execute if data storage asset:container Item{PresetItem:"sacred_shard/lv-1"} run loot replace block 10000 0 10000 container.0 loot common:sacred_shard/lv-1
-    execute if data storage asset:container Item{PresetItem:"sacred_shard/lv-2"} run loot replace block 10000 0 10000 container.0 loot common:sacred_shard/lv-2
-    execute if data storage asset:container Item{PresetItem:"sacred_shard/lv-3"} run loot replace block 10000 0 10000 container.0 loot common:sacred_shard/lv-3
-    execute if data storage asset:container Item{PresetItem:"sacred_shard/lv-4"} run loot replace block 10000 0 10000 container.0 loot common:sacred_shard/lv-4
+    function asset_manager:container/register/construct/set_items/item_normalize/from_preset/attempt_load.m with storage asset:container Item
 # 個数をコピーする(消えちゃうので)
     data modify storage asset:container Count set from storage asset:container Item.Count
     function asset_manager:container/register/construct/common/calculate_count_for_multiplayer
