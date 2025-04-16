@@ -8,7 +8,7 @@
 #   max: int
 #       生成結果の範囲
 #   scarcity_history_size: int
-#       過去何回の生成結果を出にくくするか
+#       過去何回の生成結果を出にくくするか、この値は 2 以上である必要があります
 # @api
 
 #> Private
@@ -18,6 +18,10 @@
 #> Private
 # @within function lib:random/with_biased/*
     #declare score_holder $max
+
+# Validate
+    $execute if score $0 Const matches $(scarcity_history_size) run tellraw @s [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"scarcity_history_size に 1 以下の値が指定されています。"}]
+    $execute if score $1 Const matches $(scarcity_history_size) run tellraw @s [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"scarcity_history_size に 1 以下の値が指定されています。"}]
 
 # マクロ引数をスコアとして取得する
     $scoreboard players set $max Temporary $(max)
