@@ -12,3 +12,5 @@
     execute if predicate world_manager:area/01-05.wi-ki_temple run function world_manager:area/01-05.wi-ki_temple
 # ゲート島
     execute if predicate world_manager:area/01-30.gate_island-lower run function world_manager:area/01-30.gate_island-lower
+# トレーニングエリア
+    execute if predicate world_manager:area/01-50.training_area run function world_manager:area/01-50.training_area/
