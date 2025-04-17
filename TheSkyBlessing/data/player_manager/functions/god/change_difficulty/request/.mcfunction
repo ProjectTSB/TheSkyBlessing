@@ -3,7 +3,7 @@
 # 難易度変更処理を呼び出す
 #
 # @within function
-#   player_manager:god/mercy/on_click
+#   player_manager:god/mercy/
 #   player_manager:god/change_believe/check-1/on_click
 
 # 警告

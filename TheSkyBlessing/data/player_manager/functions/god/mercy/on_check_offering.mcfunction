@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/mercy/on_click
+# @within function player_manager:god/mercy/
 
 function player_manager:god/mercy/offering/send_require_message
 

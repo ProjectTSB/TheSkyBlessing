@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/mercy/on_click
+# @within function player_manager:god/mercy/
 
 # UserStorage呼び出し
     function oh_my_dat:please
