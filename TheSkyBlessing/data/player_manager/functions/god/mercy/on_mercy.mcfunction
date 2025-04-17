@@ -1,13 +1,18 @@
-#> player_manager:god/mercy/on_mercy/check
+#> player_manager:god/mercy/on_mercy
 #
 #
 #
-# @within function player_manager:god/mercy/on_mercy/pre
+# @within function player_manager:god/mercy/
 
 #> 返り値
 # @private
     #declare score_holder $Amount
     #declare score_holder $Return.Amount
+
+# UserStorage呼び出し
+    function oh_my_dat:please
+# 失ったアイテムが無いならメッセージ
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LostItems[0] run return run tellraw @s [{"text":"今は慈悲を乞う必要は無さそうだ...","color":"light_purple"}]
 
 # 供物データを取得
     function player_manager:god/mercy/offering/get

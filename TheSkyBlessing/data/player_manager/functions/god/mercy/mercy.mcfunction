@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/mercy/on_mercy/check
+# @within function player_manager:god/mercy/on_mercy
 
 # 供物アイテムの削除
     data modify storage api: Argument.Target set from storage player_manager:god TargetOfferingData.Next.Item

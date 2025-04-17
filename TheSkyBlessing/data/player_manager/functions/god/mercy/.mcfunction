@@ -11,7 +11,7 @@ data modify storage api: Argument.Listener set value "player_manager:god/mercy/o
 function api:button/send
 
 data modify storage api: Argument.Label set value "慈悲を乞う"
-data modify storage api: Argument.Listener set value "player_manager:god/mercy/on_mercy/pre"
+data modify storage api: Argument.Listener set value "player_manager:god/mercy/on_mercy"
 function api:button/send
 
 data modify storage api: Argument.Label set value "難易度を変える"
