@@ -26,8 +26,9 @@
         },
         {
             "rolls": {
-                "min": 0,
-                "max": 2
+                "type": "binomial",
+                "p": 0.4,
+                "n": 2
             },
             "entries": [
                 {
@@ -120,20 +121,6 @@
                             "count": {
                                 "min": 1,
                                 "max": 8
-                            }
-                        }
-                    ]
-                },
-                {
-                    "weight": 10,
-                    "type": "item",
-                    "name": "trident",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 1
                             }
                         }
                     ]
