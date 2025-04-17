@@ -361,6 +361,11 @@ team modify NoCollision collisionRule never
     scoreboard objectives add GraveVersion dummy
     scoreboard objectives add GraveUserID dummy
 
+    #> PlayerManager - Trigger
+    # @within function
+    #   player_manager:trigger/**
+    scoreboard objectives add Trigger trigger
+
     #> 最大値用スコアホルダー
     # @within function
     #   core:load_once
