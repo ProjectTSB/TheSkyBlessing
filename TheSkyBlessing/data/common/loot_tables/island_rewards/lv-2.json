@@ -26,8 +26,9 @@
         },
         {
             "rolls": {
-                "min": 0,
-                "max": 2
+                "type": "binomial",
+                "p": 0.4,
+                "n": 2
             },
             "entries": [
                 {
