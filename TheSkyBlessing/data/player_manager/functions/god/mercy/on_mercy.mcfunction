@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/mercy/
+# @within function player_manager:god/common/send_believer_in_temple_menu
 
 #> 返り値
 # @private

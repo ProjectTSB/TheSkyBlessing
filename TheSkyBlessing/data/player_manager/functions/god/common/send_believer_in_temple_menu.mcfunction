@@ -1,4 +1,4 @@
-#> player_manager:god/mercy/
+#> player_manager:god/common/send_believer_in_temple_menu
 #
 #
 #

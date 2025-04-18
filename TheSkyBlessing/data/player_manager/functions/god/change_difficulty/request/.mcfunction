@@ -3,7 +3,7 @@
 # 難易度変更処理を呼び出す
 #
 # @within function
-#   player_manager:god/mercy/
+#   player_manager:god/common/send_believer_in_temple_menu
 #   player_manager:god/common/send_another_believer_in_temple_menu
 
 # 警告
