@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   player_manager:god/mercy/on_mercy/check
+#   player_manager:god/mercy/on_mercy
 #   player_manager:god/mercy/offering/send_require_message
 
 # 初期化

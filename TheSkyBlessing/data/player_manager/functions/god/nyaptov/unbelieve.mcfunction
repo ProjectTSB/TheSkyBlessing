@@ -3,7 +3,7 @@
 #
 #
 # @within
-#   function player_manager:god/change_believe/unbelieve2
+#   function player_manager:god/change_believe/change_process/unbelieve2
 #   function debug:change_believe/none
 
 # 信仰タグ削除

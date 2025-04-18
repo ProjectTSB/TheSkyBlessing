@@ -4,7 +4,7 @@
 #
 # @within function
 #   player_manager:god/mercy/on_check_offering
-#   player_manager:god/mercy/on_mercy/check
+#   player_manager:god/mercy/on_mercy
 
 function player_manager:god/mercy/offering/get
 

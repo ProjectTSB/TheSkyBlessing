@@ -1,8 +1,8 @@
-#> player_manager:god/change_believe/unbelieve1
+#> player_manager:god/change_believe/change_process/unbelieve1
 #
 #
 #
-# @within function player_manager:god/change_believe/change_task
+# @within function player_manager:god/change_believe/change_process/task
 
 # 共通処理
     effect give @s blindness 11 0 true

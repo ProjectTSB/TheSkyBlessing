@@ -14,6 +14,10 @@
     execute if predicate world_manager:area/03.arena run function world_manager:area/03.arena/
     execute if predicate world_manager:area/10.nether run function world_manager:area/10.nether/
     execute if predicate world_manager:area/20.end run function world_manager:area/20.end/
+# 神殿からの退出処理
+# TODO この処理はここにあるべきでなく、もっと汎用的にエリアの入退出処理を組むべき
+    execute unless score @s InArea = $NextInArea Temporary if score @s InSubArea matches 1..5 run function world_manager:area/01.god_boundaries/leave_temple
+    execute if score @s InArea = $NextInArea Temporary if score @s InArea matches 1 unless score @s InSubArea = $NextInSubArea Temporary if score @s InSubArea matches 1..5 run function world_manager:area/01.god_boundaries/leave_temple
 # 次のエリア情報を戻す
     scoreboard players operation @s InArea = $NextInArea Temporary
     scoreboard players operation @s InSubArea = $NextInSubArea Temporary

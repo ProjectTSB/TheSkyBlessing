@@ -1,8 +1,8 @@
-#> player_manager:god/change_believe/believe2
+#> player_manager:god/change_believe/change_process/believe2
 #
 #
 #
-# @within function player_manager:god/change_believe/change_task
+# @within function player_manager:god/change_believe/change_process/task
 
 # 共通処理
     tag @s remove Believe.None

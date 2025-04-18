@@ -3,8 +3,8 @@
 # 難易度変更処理を呼び出す
 #
 # @within function
-#   player_manager:god/mercy/on_click
-#   player_manager:god/change_believe/check-1/on_click
+#   player_manager:god/common/send_believer_in_temple_menu
+#   player_manager:god/common/send_another_believer_in_temple_menu
 
 # 警告
     tellraw @s [{"text":"[!] この機能は試験的に実装されたものです","color":"red"}]
