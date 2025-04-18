@@ -4,6 +4,7 @@
 #
 # @input storage api:
 #   Argument.Label: string
+#   Argument.Key: string
 #   Argument.Listener: id(minecraft:function)
 # @api
 
