@@ -11,7 +11,7 @@
 #declare score_holder $TriggerIndex
 
 # 既に割当済みのやつはそのまま返す
-    $execute store result storage player_manager:trigger Args.ID int 1 run function player_manager:trigger/register/find_already_registered_listener.m {Key:"$(Key)"}
+    $execute store result storage player_manager:trigger Args.ID int 1 run function player_manager:trigger/common/find_already_registered_listener.m {Key:"$(Key)"}
     execute unless data storage player_manager:trigger Args{ID:0} run return fail
 
 # 割り当てられてないやつは ID を割り当てて登録
