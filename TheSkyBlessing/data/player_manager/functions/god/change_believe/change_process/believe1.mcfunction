@@ -1,8 +1,8 @@
-#> player_manager:god/change_believe/believe1
+#> player_manager:god/change_believe/change_process/believe1
 #
 #
 #
-# @within function player_manager:god/change_believe/change_task
+# @within function player_manager:god/change_believe/change_process/task
 
 execute if score @s InSubArea matches 1 run function lib:message/god/flora/believe1
 execute if score @s InSubArea matches 2 run function lib:message/god/nyaptov/believe1

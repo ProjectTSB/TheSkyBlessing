@@ -3,7 +3,7 @@
 #
 #
 # @within
-#   function player_manager:god/change_believe/believe2
+#   function player_manager:god/change_believe/change_process/believe2
 #   function debug:change_believe/wi-ki
 
 # 信仰タグ付与

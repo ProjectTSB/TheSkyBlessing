@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/change_believe/
+# @within function player_manager:god/common/send_another_believer_in_temple_menu
 
 execute if score @s InSubArea matches 1 run function lib:message/god/flora/blessing
 execute if score @s InSubArea matches 2 run function lib:message/god/nyaptov/blessing
@@ -10,4 +10,4 @@ execute if score @s InSubArea matches 3 run function lib:message/god/rumor/bless
 execute if score @s InSubArea matches 4 run function lib:message/god/urban/blessing
 execute if score @s InSubArea matches 5 run function lib:message/god/wi-ki/blessing
 
-function player_manager:god/change_believe/
+function player_manager:god/common/send_another_believer_in_temple_buttons

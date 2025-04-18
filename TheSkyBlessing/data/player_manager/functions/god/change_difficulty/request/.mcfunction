@@ -4,7 +4,7 @@
 #
 # @within function
 #   player_manager:god/mercy/
-#   player_manager:god/change_believe/check-1/on_click
+#   player_manager:god/common/send_another_believer_in_temple_menu
 
 # 警告
     tellraw @s [{"text":"[!] この機能は試験的に実装されたものです","color":"red"}]

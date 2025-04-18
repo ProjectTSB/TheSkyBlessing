@@ -1,4 +1,4 @@
-#> player_manager:god/change_believe/
+#> player_manager:god/common/send_another_believer_in_temple_buttons
 #
 #
 #
