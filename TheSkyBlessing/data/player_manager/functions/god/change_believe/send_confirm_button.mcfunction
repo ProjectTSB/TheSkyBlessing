@@ -7,5 +7,6 @@
 tellraw @s [{"text":"今までに失ったアイテムが消滅しますが、本当に改宗しますか？\n"}]
 
 data modify storage api: Argument.Label set value "改宗する"
+data modify storage api: Argument.Key set value "change_believe_confirm"
 data modify storage api: Argument.Listener set value "player_manager:god/change_believe/change_process/start"
 function api:button/send
