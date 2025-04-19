@@ -35,5 +35,28 @@
 
     tellraw @s [{"storage":"settings:","nbt":"DifficultyButtons[]","interpret":true,"separator":" "}]
 
+# 死亡時インベントリ保護 - タイトル/現在の設定
+    tellraw @s {"text":""}
+    execute if data storage global Config{IsKeepInventory: true} run tellraw @s [{"text":"死亡時インベントリ保護: "},{"text":"有効","color":"green"}]
+    execute if data storage global Config{IsKeepInventory:false} run tellraw @s [{"text":"死亡時インベントリ保護: "},{"text":"無効","color":"red"}]
+
+# 死亡時インベントリ保護 - ボタン
+    data modify storage settings: KeepInventoryButtons set value ['{"text":""}']
+
+    data modify storage api: Argument.Label set value '"無効"'
+    data modify storage api: Argument.Key set value "change_keep_inventory_disable"
+    execute unless data storage global Config{IsKeepInventory:false} run data modify storage api: Argument.Listener set value "settings:change_keep_inventory/disable"
+    function api:button/create_text_component
+    data modify storage settings: KeepInventoryButtons append from storage api: Return.ButtonTextComponent
+
+    data modify storage api: Argument.Label set value '"有効"'
+    data modify storage api: Argument.Key set value "change_keep_inventory_enable"
+    execute unless data storage global Config{IsKeepInventory: true} run data modify storage api: Argument.Listener set value "settings:change_keep_inventory/enable"
+    function api:button/create_text_component
+    data modify storage settings: KeepInventoryButtons append from storage api: Return.ButtonTextComponent
+
+    tellraw @s [{"storage":"settings:","nbt":"KeepInventoryButtons[]","interpret":true,"separator":" "}]
+
 # リセット
     data remove storage settings: DifficultyButtons
+    data remove storage settings: KeepInventoryButtons

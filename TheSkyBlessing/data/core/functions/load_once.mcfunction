@@ -90,6 +90,8 @@ data modify storage global Boolean.1b set value true
 data modify storage global Boolean.true set value true
 # data modify storage global Boolean.0b set value null
 
+data modify storage global Config.IsKeepInventory set value false
+
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
 scoreboard objectives remove FirstJoinEvent
