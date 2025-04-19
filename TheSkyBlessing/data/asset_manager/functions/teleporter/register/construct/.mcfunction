@@ -10,7 +10,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.ActivationState set from storage asset:teleporter ActivationState
 # グループ側に入れるやつ
-    function asset_manager:teleporter/register/common/append_or_reorder_teleporters.m with storage asset:teleporter {}
+    function asset_manager:teleporter/common/append_or_reorder_teleporters.m with storage asset:teleporter {}
     data modify storage asset:teleporter Teleporters[-1].ID set from storage asset:teleporter ID
     data modify storage asset:teleporter Teleporters[-1].GroupIDs set from storage asset:teleporter GroupIDs
     data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage asset:teleporter ActivationState

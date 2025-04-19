@@ -1,4 +1,4 @@
-#> asset_manager:teleporter/register/common/append_or_reorder_teleporters.m
+#> asset_manager:teleporter/common/append_or_reorder_teleporters.m
 #
 #
 # @input args

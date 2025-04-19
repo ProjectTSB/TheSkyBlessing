@@ -10,7 +10,7 @@
 #   Argument.Pos: [double] @ 3
 # @api
 
-function asset_manager:teleporter/register/common/append_or_reorder_teleporters.m with storage api: Argument
+function asset_manager:teleporter/common/append_or_reorder_teleporters.m with storage api: Argument
 data modify storage asset:teleporter Teleporters[-1].ID set from storage api: Argument.ID
 data modify storage asset:teleporter Teleporters[-1].GroupIDs set from storage api: Argument.GroupIDs
 data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage api: Argument.ActivationState
