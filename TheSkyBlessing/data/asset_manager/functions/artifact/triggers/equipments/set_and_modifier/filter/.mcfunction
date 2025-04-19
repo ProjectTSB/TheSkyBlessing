@@ -43,6 +43,8 @@
         # 神器でない要素をマスクする
             data remove storage lib: Array[{ID:-2}]
             data modify storage asset:artifact Temp.CurrentDifferentEquipments set from storage lib: Array
+        # とりあえず装備データを抽出する
+            data modify storage asset:artifact Temp.CurrentEquipments append from storage asset:context New.EquipData[]
         # 前tick
         # 変更のない部位をマスクする
             data modify storage lib: Array set from storage asset:context Old.EquipData
