@@ -14,7 +14,8 @@
     scoreboard players operation $Random Temporary += $Progress Temporary
     scoreboard players operation $Random Temporary < $99 Const
 # ID を一覧から選定して召喚
-    execute if score $Random Temporary matches 00..30 run function world_manager:gimmick/darkness/penalty/pick.m {Level:1}
+    execute if score $Random Temporary matches 00..15 run function world_manager:gimmick/darkness/penalty/pick.m {Level:0}
+    execute if score $Random Temporary matches 16..30 run function world_manager:gimmick/darkness/penalty/pick.m {Level:1}
     execute if score $Random Temporary matches 31..55 run function world_manager:gimmick/darkness/penalty/pick.m {Level:2}
     execute if score $Random Temporary matches 56..80 run function world_manager:gimmick/darkness/penalty/pick.m {Level:3}
     execute if score $Random Temporary matches 81..99 run function world_manager:gimmick/darkness/penalty/pick.m {Level:4}
