@@ -77,6 +77,7 @@ jobs:
             function@asset:container/CONTAINER_ID/register
             function@asset:island/ISLAND_ID/register
             function@asset:spawner/SPAWNER_ID/register
+            function@asset:teleporter/TELEPORTER_ID/early_register
             function@asset:teleporter/TELEPORTER_ID/register
             function@asset:trader/TRADER_ID/register
           OUTPUT_PATH: ./Asset2/Asset/data/minecraft/functions/declares.d.mcfunction

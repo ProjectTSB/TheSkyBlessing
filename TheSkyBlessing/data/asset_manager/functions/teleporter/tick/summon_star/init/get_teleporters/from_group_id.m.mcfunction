@@ -7,4 +7,4 @@
 #
 # @within function asset_manager:teleporter/tick/summon_star/init/get_teleporters/
 
-$data modify storage asset:teleporter FilteredTeleporters append from storage asset:teleporter Teleporters[{GroupIDs:[$(TargetGroupID)]}]
+$data modify storage asset:teleporter FilteredTeleporters append from storage asset:teleporter Teleporters[{Data:{GroupIDs:[$(TargetGroupID)]}}]

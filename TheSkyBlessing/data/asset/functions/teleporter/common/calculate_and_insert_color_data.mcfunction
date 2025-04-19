@@ -1,10 +1,8 @@
-#> asset_manager:teleporter/register/common/calculate_and_insert_color_data
+#> asset:teleporter/common/calculate_and_insert_color_data
 #
 #
 #
-# @within function
-#   api:teleporter/unsafe/**
-#   asset_manager:teleporter/register/construct/
+# @within function asset:teleporter/*/early_register
 
 #> Private
 # @private
@@ -30,6 +28,7 @@
     data modify storage asset:teleporter Teleporters[-1].Data.ColorPart set from storage asset:teleporter Color
 
 # リセット
+    data remove storage asset:teleporter Color
     scoreboard players reset $R Temporary
     scoreboard players reset $G Temporary
     scoreboard players reset $B Temporary

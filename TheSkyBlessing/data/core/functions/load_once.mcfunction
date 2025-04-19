@@ -430,6 +430,7 @@ team modify NoCollision collisionRule never
     function #asset:mob/load
     function #asset:effect/load
     function #asset:object/load
+    function asset_manager:teleporter/early_register
 
 #> R 木のロード処理
     function world_manager:nexus_loader/register
