@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:grave/build/
+# @within function player_manager:grave/build/m
 
 # バージョン設定
     scoreboard players add @p[tag=this] GraveVersion 1

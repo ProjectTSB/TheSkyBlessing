@@ -35,6 +35,8 @@
     tag @s add HasGrave
 
 # 墓を作る
-    summon item_display ~ ~ ~ {Tags:["Grave","GraveInit","Object","Uninterferable"],item:{id:"minecraft:stick",Count:1b,tag:{CustomModelData:20346}},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[1f,1f,1f]}}
-
-    execute as @e[type=item_display,tag=GraveInit,distance=..0.1,limit=1] run function player_manager:grave/build/set_data
+    data modify storage player_manager:grave Args.Name set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Name
+    execute as 0-0-0-0-0 in minecraft:overworld positioned as @s positioned 0.0 0.0 0.0 rotated ~45 0 positioned ^ ^ ^-0.5 align xz facing -0.5 0.0 -0.5 rotated ~-45 0 run tp @s ~ ~ ~ ~ ~
+    data modify storage player_manager:grave Args.Rotation set from entity 0-0-0-0-0 Rotation
+    execute align xz positioned ~0.5 ~ ~0.5 run function player_manager:grave/build/m with storage player_manager:grave Args
+    data remove storage player_manager:grave Args
