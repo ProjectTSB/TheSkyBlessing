@@ -10,10 +10,10 @@
 # @api
 
 # 実行者位置Pos取得
-    execute positioned as @s as 0-0-0-0-0 run function lib:distance/core/get_pos
+    execute positioned as @s summon marker run function lib:distance/core/get_pos
 
 # 実行位置と実行者位置の差分取得
-    execute rotated 180 90 as 0-0-0-0-0 run function lib:distance/core/get_delta.m with storage lib: Distance.tmp
+    execute rotated 180 90 summon marker run function lib:distance/core/get_delta.m with storage lib: Distance.tmp
 
 # ストレージ掃除
     data remove storage lib: Distance
