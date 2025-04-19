@@ -9,18 +9,7 @@
 #   GroupID: string
 # @within function api:teleporter/modify_groups/add
 
-# テレポーターのIDから対象テレポーターのEntityStorageのIDの取得を試みる
-    scoreboard players reset $ OhMyDatID
-    $execute store result score $ OhMyDatID run data get storage asset:teleporter TeleporterOMDMap[{TeleporterID:$(ID)}].OhMyDatID
-
-# テレポーターが存在しなければ return
-    execute unless score $ OhMyDatID matches -2147483648..2147483647 run return 0
-
-# テレポーターのEntityStorageを取得する
-    function oh_its_dat:please
-
-# GroupIDs を更新する
-    $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs append value "$(GroupID)"
-
+# テレポーターのデータを取得する
+    function asset_manager:teleporter/common/append_or_reorder_teleporters.m with storage api: Argument
 # 状態を更新する
-    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].GroupIDs append value "$(GroupID)"
+    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].Data.GroupIDs append value "$(GroupID)"

@@ -11,7 +11,7 @@
     execute as @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
 
 # テレポートのメイン処理
-    execute if entity @s[tag=!SuppressTeleport,predicate=lib:is_sneaking] if entity @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{ActivationState:"Activate"} unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData{AngelProtection:true} run function asset_manager:teleporter/tick/active
+    execute if entity @s[tag=!SuppressTeleport,predicate=lib:is_sneaking] if entity @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] if data storage asset:teleporter Teleporters[-1].Data{ActivationState:"Activate"} unless data storage asset:teleporter Teleporters[-1].Data{AngelProtection:true} run function asset_manager:teleporter/tick/active
 # テレポート後のタグ解除処理
     execute if entity @s[tag=SuppressTeleport,predicate=!lib:is_sneaking] run tag @s remove SuppressTeleport
 # キャンセル処理

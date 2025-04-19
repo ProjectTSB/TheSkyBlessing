@@ -12,11 +12,11 @@
 # EntityStorageを再度取得する
     execute as @e[type=item_display,tag=FromTeleporter,distance=..1,limit=1] run function oh_my_dat:please
 # グループIDから対象TP先を取得する
-    data modify storage asset:teleporter TargetGroupIDs set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs
+    data modify storage asset:teleporter TargetGroupIDs set from storage asset:teleporter Teleporters[-1].Data.GroupIDs
     execute if data storage asset:teleporter TargetGroupIDs run function asset_manager:teleporter/tick/summon_star/init/get_teleporters/
 # 繋がってる星の個数のチェック (1つは自身のため、2つ以上のときに初めて繋がってると言える)
-    execute store result score $ActivateStarCount Temporary if data storage asset:teleporter FilteredTeleporters[].Data{ActivationState:"Activate"}
-    execute store result score $GroupCount Temporary if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.GroupIDs[]
+    execute store result score $ActivateStarCount Temporary if data storage asset:teleporter FilteredTeleporters[{Data:{ActivationState:"Activate"}}]
+    execute store result score $GroupCount Temporary if data storage asset:teleporter Teleporters[-1].Data.GroupIDs[]
 # つながっている星があるのであれば初期化中タグを付与し、星データをプレイヤーに格納する
     execute if score $ActivateStarCount Temporary > $GroupCount Temporary run function asset_manager:teleporter/tick/summon_star/init/setup
 # なければ初期化済タグを付与し、メッセージを出す
