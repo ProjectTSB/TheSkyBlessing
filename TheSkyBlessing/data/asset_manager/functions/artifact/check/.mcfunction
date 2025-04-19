@@ -10,7 +10,7 @@
 
 # 対象スロットのデータの取得
     function asset_manager:artifact/data/current/get
-    execute unless data storage asset:artifact DisabledCheckFlag run data modify storage asset:artifact DisabledCheckFlag set from storage asset:artifact DisabledFlag.Check
+    execute unless data storage asset:artifact DisabledCheckFlag run data modify storage asset:artifact DisabledCheckFlag set from storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check
 # 事前にtag付与
     tag @s add CanUsed
 # 条件を満たしてなかったらtag削除
