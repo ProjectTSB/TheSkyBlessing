@@ -5,6 +5,9 @@
 # @input args Level : int
 # @within function world_manager:gimmick/darkness/penalty/spawn
 
+# 要素数が2以下(= 1なら)直接IDを突っ込んでreturn
+    $execute unless data storage asset:mob SpawnPool[$(Level)][1] run return run data modify storage api: Argument.ID set from storage asset:mob SpawnPool[$(Level)][0]
+    
 # セッションを開ける
     function lib:array/session/open
 # ランダムに一つ抽出する
