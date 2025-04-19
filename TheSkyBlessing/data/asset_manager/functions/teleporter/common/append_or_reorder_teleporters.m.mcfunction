@@ -4,8 +4,8 @@
 # @input args ID: int
 # @within function asset_manager:teleporter/**
 
-$execute if data storage asset:teleporter Teleporters[{ID:$(ID)}] run data modify storage asset:teleporter Temp set from storage asset:teleporter Teleporters[{ID:$(ID)}]
-$execute if data storage asset:teleporter Teleporters[{ID:$(ID)}] run data remove storage asset:teleporter Teleporters[{ID:$(ID)}]
-$execute if data storage asset:teleporter Teleporters[{ID:$(ID)}] run data modify storage asset:teleporter Teleporters append from storage asset:teleporter Temp
-$execute if data storage asset:teleporter Teleporters[{ID:$(ID)}] run data remove storage asset:teleporter Temp
-$execute unless data storage asset:teleporter Teleporters[{ID:$(ID)}] run data modify storage asset:teleporter Teleporters append value {}
+$execute unless data storage asset:teleporter Teleporters[{ID:$(ID)}] run return run data modify storage asset:teleporter Teleporters append value {}
+$data modify storage asset:teleporter Temp set from storage asset:teleporter Teleporters[{ID:$(ID)}]
+$data remove storage asset:teleporter Teleporters[{ID:$(ID)}]
+data modify storage asset:teleporter Teleporters append from storage asset:teleporter Temp
+data remove storage asset:teleporter Temp
