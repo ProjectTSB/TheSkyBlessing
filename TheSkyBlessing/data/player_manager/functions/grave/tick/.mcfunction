@@ -16,7 +16,11 @@
 # 持ち主に触られた場合、触った持ち主から実行
     scoreboard players operation $UserID Temporary = @s GraveUserID
     execute on passengers if entity @s[type=interaction] if data entity @s interaction on target if score @s UserID = $UserID Temporary run function player_manager:grave/tick/check_with_user
-    execute as @a if score @s UserID = $UserID Temporary run function player_manager:grave/tick/check_with_user
+# 持ち主が近くにいると光る
+    execute as @a[gamemode=!spectator,tag=!Death,distance=..32] if score @s UserID = $UserID Temporary run data modify storage player_manager:grave IsGraveNearOwner set value true
+    execute if data storage player_manager:grave {IsGraveNearOwner:true} run data modify entity @s Glowing set value true
+    execute unless data storage player_manager:grave {IsGraveNearOwner:true} run data modify entity @s Glowing set value false
+    data remove storage player_manager:grave IsGraveNearOwner
 # 過去の墓なら削除する
     execute if score @s GraveVersion < $UserGraveVersion Temporary run data remove storage player_manager:grave IsOwnerTouchGrave
     execute if score @s GraveVersion < $UserGraveVersion Temporary run kill @s
