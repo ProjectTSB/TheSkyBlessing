@@ -7,9 +7,6 @@ function api:button/disable
 data modify storage api: Argument.Key set value "check_blessing"
 function api:button/disable
 
-data modify storage api: Argument.Key set value "change_difficulty_request"
-function api:button/disable
-
 data modify storage api: Argument.Key set value "check_offering"
 function api:button/disable
 

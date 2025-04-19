@@ -4,6 +4,8 @@
 #
 # @within function world_manager:area/01.god_boundaries/
 
+# ゲート島
+    execute if predicate world_manager:area/01-00.gate_island run function world_manager:area/01-00.gate_island
 # 神殿
     execute if predicate world_manager:area/01-01.flora_temple run function world_manager:area/01-01.flora_temple
     execute if predicate world_manager:area/01-02.nyaptov_temple run function world_manager:area/01-02.nyaptov_temple

@@ -90,6 +90,9 @@ data modify storage global Boolean.1b set value true
 data modify storage global Boolean.true set value true
 # data modify storage global Boolean.0b set value null
 
+execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
+execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
+
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
 scoreboard objectives remove FirstJoinEvent
@@ -281,7 +284,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Believe4 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add Believe5 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
-        function player_manager:god/change_difficulty/gen_text
+        function settings:init
 
     #> PlayerManager - Teams
     # @within function
