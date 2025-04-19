@@ -91,6 +91,7 @@ data modify storage global Boolean.true set value true
 # data modify storage global Boolean.0b set value null
 
 data modify storage global Config.IsKeepInventory set value false
+data modify storage global Config.EnableDamageTypeIcon set value false
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug

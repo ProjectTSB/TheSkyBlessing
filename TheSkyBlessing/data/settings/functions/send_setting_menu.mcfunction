@@ -57,6 +57,32 @@
 
     tellraw @s [{"storage":"settings:","nbt":"KeepInventoryButtons[]","interpret":true,"separator":" "}]
 
+# ダメージログ属性表示 - タイトル/現在の設定
+    tellraw @s {"text":""}
+    execute if data storage global Config{EnableDamageTypeIcon: true} run tellraw @s [{"text":"ダメージログ属性表示: "},{"text":"有効","color":"green"}]
+    execute if data storage global Config{EnableDamageTypeIcon:false} run tellraw @s [{"text":"ダメージログ属性表示: "},{"text":"無効","color":"red"}]
+
+# ダメージログ属性表示 - ボタン
+    data modify storage settings: DamageTypeIconButtons set value ['{"text":""}']
+
+    data modify storage api: Argument.Label set value '"無効"'
+    data modify storage api: Argument.Key set value "change_damage_type_icon_disable"
+    execute unless data storage global Config{IsKeepInventory:false} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/disable"
+    function api:button/create_text_component
+    data modify storage settings: DamageTypeIconButtons append from storage api: Return.ButtonTextComponent
+
+    data modify storage api: Argument.Label set value '"有効"'
+    data modify storage api: Argument.Key set value "change_damage_type_icon_enable"
+    execute unless data storage global Config{IsKeepInventory: true} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/enable"
+    function api:button/create_text_component
+    data modify storage settings: DamageTypeIconButtons append from storage api: Return.ButtonTextComponent
+
+    tellraw @s [{"storage":"settings:","nbt":"DamageTypeIconButtons[]","interpret":true,"separator":" "}]
+
+# フッター
+    tellraw @s [{"text":"------------------------------"}]
+
 # リセット
     data remove storage settings: DifficultyButtons
     data remove storage settings: KeepInventoryButtons
+    data remove storage settings: DamageTypeIconButtons
