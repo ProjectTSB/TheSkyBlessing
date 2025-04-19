@@ -15,7 +15,7 @@
     data modify storage asset:teleporter TargetGroupIDs set from storage asset:teleporter Teleporters[-1].Data.GroupIDs
     execute if data storage asset:teleporter TargetGroupIDs run function asset_manager:teleporter/tick/summon_star/init/get_teleporters/
 # 繋がってる星の個数のチェック (1つは自身のため、2つ以上のときに初めて繋がってると言える)
-    execute store result score $ActivateStarCount Temporary if data storage asset:teleporter FilteredTeleporters[{Data:{ActivationState:"Activate"}}]
+    execute store result score $ActivateStarCount Temporary if data storage asset:teleporter FilteredTeleporters[]
     execute store result score $GroupCount Temporary if data storage asset:teleporter Teleporters[-1].Data.GroupIDs[]
 # つながっている星があるのであれば初期化中タグを付与し、星データをプレイヤーに格納する
     execute if score $ActivateStarCount Temporary > $GroupCount Temporary run function asset_manager:teleporter/tick/summon_star/init/setup
