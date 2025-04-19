@@ -5,7 +5,7 @@
 # @input storage api:
 #   Argument.Label: string(TextComponent)
 #   Argument.Key: string
-#   Argument.Listener: id(minecraft:function)
+#   Argument.Listener?: id(minecraft:function)
 # @output storage api:
 #   Return.ButtonTextComponent: string(TextComponent)
 # @api
