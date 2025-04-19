@@ -2,9 +2,7 @@
 #
 #
 #
-# @within function
-#   api:teleporter/unsafe/**
-#   asset_manager:teleporter/register/construct/
+# @within function asset:teleporter/*/early_register
 
 #> Private
 # @private
