@@ -15,7 +15,7 @@ data modify storage asset:teleporter Teleporters[-1].ID set from storage api: Ar
 data modify storage asset:teleporter Teleporters[-1].GroupIDs set from storage api: Argument.GroupIDs
 data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set from storage api: Argument.ActivationState
 execute if data storage api: Argument.Color run data modify storage asset:teleporter Color set from storage api: Argument.Color
-execute if data storage api: Argument.Color run function asset_manager:teleporter/register/common/calculate_and_insert_color_data
+execute if data storage api: Argument.Color run function asset:teleporter/common/calculate_and_insert_color_data
 execute if data storage api: Argument.Color run data remove storage asset:teleporter Color
 data modify storage asset:teleporter Teleporters[-1].Dimension set from storage api: Argument.Dimension
 data modify storage asset:teleporter Teleporters[-1].Pos set from storage api: Argument.Pos
