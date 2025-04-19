@@ -80,7 +80,7 @@
     tellraw @s [{"storage":"settings:","nbt":"DamageTypeIconButtons[]","interpret":true,"separator":" "}]
 
 # フッター
-    tellraw @s [{"text":"------------------------------"}]
+    tellraw @s [{"text":"----------------------------"}]
 
 # リセット
     data remove storage settings: DifficultyButtons

@@ -12,9 +12,9 @@
     # data modify storage settings: Difficulty.Log append value 0
     # execute store result storage settings: Difficulty.Log[-1] int 1 run scoreboard players get $Difficulty Global
 # 通知
-    execute if score $Difficulty Global matches 1 run tellraw @a [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[1]","interpret":true}]}]
-    execute if score $Difficulty Global matches 2 run tellraw @a [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[2]","interpret":true}]}]
-    execute if score $Difficulty Global matches 3.. run tellraw @a [{"translate":"難易度を %s に変更しました","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[3]","interpret":true}]}]
+    execute if score $Difficulty Global matches 1 run tellraw @a [{"translate":"難易度を %s に変更しました。","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[1]","interpret":true}]}]
+    execute if score $Difficulty Global matches 2 run tellraw @a [{"translate":"難易度を %s に変更しました。","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[2]","interpret":true}]}]
+    execute if score $Difficulty Global matches 3.. run tellraw @a [{"translate":"難易度を %s に変更しました。","color":"white","with":[{"storage":"settings:","nbt":"TextRegistry.WithoutHoverEvent[3]","interpret":true}]}]
 
 # リセット
     data remove storage settings: DifficultyChangeLock
