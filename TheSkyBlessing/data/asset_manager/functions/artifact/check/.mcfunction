@@ -28,8 +28,8 @@
         tag @s[tag=CheckFailed] remove CheckFailed
     # MP必要量による制限
         execute unless data storage asset:artifact DisabledCheckFlag{MPRequire:true} run function asset_manager:artifact/check/check_mp
-        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{MPMessage:true} run tellraw @s {"text":"MPが足りない！","color":"red"}
-        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{MPMessage:true} run scoreboard players set @s MPLogCD 20
+        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact DisabledCheckFlag{MPMessage:true} run tellraw @s {"text":"MPが足りない！","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless score @s MPLogCD matches 0.. unless data storage asset:artifact DisabledCheckFlag{MPMessage:true} run scoreboard players set @s MPLogCD 20
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
     # TypeCooldownによる制限
@@ -42,8 +42,8 @@
         tag @s[tag=CheckFailed] remove CheckFailed
     # LocalCooldownによる制限
         execute unless data storage asset:artifact DisabledCheckFlag{LocalCooldown:true} run function asset_manager:artifact/check/check_local_cooldown/
-        execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{CDMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
-        execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check{CDMessage:true} run scoreboard players set @s LocalCDLogCD 20
+        execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact DisabledCheckFlag{CDMessage:true} run tellraw @s {"text":"クールダウンが終わっていません。","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless score @s LocalCDLogCD matches 0.. unless data storage asset:artifact DisabledCheckFlag{CDMessage:true} run scoreboard players set @s LocalCDLogCD 20
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
 # 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
