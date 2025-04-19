@@ -3,7 +3,7 @@
 # ボタンの TextComponent を作成します。
 #
 # @input storage api:
-#   Argument.Label: string
+#   Argument.Label: string(TextComponent)
 #   Argument.Key: string
 #   Argument.Listener: id(minecraft:function)
 # @output storage api:
