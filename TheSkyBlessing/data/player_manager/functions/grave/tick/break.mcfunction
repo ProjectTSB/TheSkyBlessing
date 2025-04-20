@@ -16,7 +16,7 @@
 # セッション開ける
     function lib:array/session/open
 
-# インベントリ取得
+# インベントリ取得 (ここで暗黙的に EntityStorage のポインタが GraveOwner を持つプレイヤーに向く)
     execute as @a[tag=GraveOwner,limit=1] run function api:data_get/inventory
     data modify storage lib: Array set from storage api: Inventory
 
