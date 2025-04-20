@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function settings:send_open_button
+# @within function
+#   settings:send_open_button
+#   settings:resend_setting_menu/as_schedule
 
 # タイトル
     tellraw @s [{"text":"--------- ゲーム設定 ----------"}]
