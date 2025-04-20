@@ -18,6 +18,7 @@
     execute if data storage api: Argument.ID run function #asset:artifact/give
 # 返り値を取得
     execute if data storage api: Argument{Type:"storage"} run data modify storage api: Return.Artifact set from block 10000 0 10000 Items[0]
+    execute if data storage api: Argument{Type:"storage"} run data remove storage api: Return.Artifact.Slot
 
 # 退避させた asset:context id を戻す
     function asset_manager:common/context/id/pop

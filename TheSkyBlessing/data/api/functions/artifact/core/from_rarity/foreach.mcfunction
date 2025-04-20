@@ -1,8 +1,10 @@
-#> asset_manager:artifact/give/foreach
+#> api:artifact/core/from_rarity/foreach
 #
 #
 #
-# @within function asset_manager:artifact/give/*
+# @within function
+#   api:artifact/core/from_rarity/
+#   api:artifact/core/from_rarity/foreach
 
 #> private
 # @private
