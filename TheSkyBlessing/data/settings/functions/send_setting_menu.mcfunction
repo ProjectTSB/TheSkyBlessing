@@ -67,13 +67,13 @@
 
     data modify storage api: Argument.Label set value '"無効"'
     data modify storage api: Argument.Key set value "change_damage_type_icon_disable"
-    execute unless data storage global Config{IsKeepInventory:false} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/disable"
+    execute unless data storage global Config{EnableDamageTypeIcon:false} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/disable"
     function api:button/create_text_component
     data modify storage settings: DamageTypeIconButtons append from storage api: Return.ButtonTextComponent
 
     data modify storage api: Argument.Label set value '"有効"'
     data modify storage api: Argument.Key set value "change_damage_type_icon_enable"
-    execute unless data storage global Config{IsKeepInventory: true} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/enable"
+    execute unless data storage global Config{EnableDamageTypeIcon: true} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/enable"
     function api:button/create_text_component
     data modify storage settings: DamageTypeIconButtons append from storage api: Return.ButtonTextComponent
 
