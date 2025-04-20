@@ -6,6 +6,8 @@
 
 # 独自の死亡メッセージを出すためにバニラのを無効化する
     gamerule showDeathMessages false
+# 死んだぜ！
+    function metric:angel/death/
 # ばいばい。
     kill @s
 # 死亡メッセージ読み込み用準備
