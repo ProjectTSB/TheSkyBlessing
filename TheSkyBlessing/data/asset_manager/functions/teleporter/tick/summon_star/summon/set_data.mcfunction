@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function asset_manager:teleporter/tick/summon_star/summon/as_common_marker
+# @within function asset_manager:teleporter/tick/summon_star/summon/as_marker
 
 # ユーザーIDをコピー
     scoreboard players operation @s TPStarFromUserID = @p[tag=this] UserID

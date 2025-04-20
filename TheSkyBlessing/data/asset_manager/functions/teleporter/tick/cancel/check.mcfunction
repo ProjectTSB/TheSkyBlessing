@@ -8,7 +8,7 @@
     execute as @e[type=item_display,tag=FromTeleporter,distance=..1.5,limit=1] run function oh_my_dat:please
 # 戦闘中になったら
     execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.Data{AngelProtection:true} run tag @s add TPCancel
-    execute unless data storage asset:teleporter Teleporters[-1].Data{ActivationState:"Activate"} run tag @s add TPCancel
+    execute unless data storage asset:teleporter {ActivationState:"Activate"} run tag @s add TPCancel
 # スニークを解除したら
     execute unless predicate lib:is_sneaking run tag @s add TPCancel
 # 地面がなくなったら
