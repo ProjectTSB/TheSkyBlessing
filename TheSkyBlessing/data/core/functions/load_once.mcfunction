@@ -357,6 +357,7 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - 墓
     # @within function
+    #   core:handler/death
     #   player_manager:grave/**
     scoreboard objectives add GraveVersion dummy
     scoreboard objectives add GraveUserID dummy
