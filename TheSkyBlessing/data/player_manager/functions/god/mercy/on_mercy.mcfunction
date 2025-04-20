@@ -24,6 +24,7 @@
     execute store result score $Amount Temporary run data get storage player_manager:god TargetOfferingData.Next.Amount
     execute unless score $Amount Temporary <= $Return.Amount Lib run function player_manager:god/mercy/offering/send_require_message
     execute if score $Amount Temporary <= $Return.Amount Lib run function player_manager:god/mercy/mercy
+    function player_manager:god/common/send_believer_in_temple_menu
 # リセット
     scoreboard players reset $Amount
     scoreboard players reset $Return.Amount

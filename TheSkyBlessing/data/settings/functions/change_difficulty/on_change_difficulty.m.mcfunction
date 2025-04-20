@@ -5,6 +5,7 @@
 
 # ボタン無効化
     function settings:disable_settings_menu
+    function settings:resend_setting_menu/reserve.m {Resend:30}
 
 # ロックチェック
     execute if data storage settings: {DifficultyChangeLock:1b} run return run tellraw @s [{"text":"既に難易度変更プロセスが進行中です。","color":"red"}]

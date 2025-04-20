@@ -429,6 +429,10 @@ team modify NoCollision collisionRule never
     #   asset_manager:mob/summon/set_data
         team add Enemy
 
+    #> Settings - Private
+    # @within function settings:**
+        scoreboard objectives add SettingMenuResendTime dummy
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
