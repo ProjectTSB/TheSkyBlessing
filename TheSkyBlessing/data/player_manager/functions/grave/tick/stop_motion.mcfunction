@@ -10,3 +10,5 @@
     damage @s 0
 # 拾えるまでの時間を調整する
     data modify entity @s PickupDelay set value 0s
+    data modify entity @s NoGravity set value true
+    data modify entity @s Invulnerable set value true

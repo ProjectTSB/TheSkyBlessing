@@ -12,11 +12,13 @@
     particle block stone_bricks ~ ~0.5 ~ 0.3 0.3 0.3 0 25
     particle block smooth_stone ~ ~0.5 ~ 0.3 0.3 0.3 0 25
 
-# セッション開ける
-    execute as @a if score @s UserID = $UserID Temporary run function lib:array/session/open
 
-# 取得
-    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems
+# セッション開ける
+    function lib:array/session/open
+
+# インベントリ取得
+    execute as @a[tag=GraveOwner,limit=1] run function api:data_get/inventory
+    data modify storage lib: Array set from storage api: Inventory
 
 # 一回目
     function lib:array/packing_chest
@@ -34,10 +36,16 @@
 # ばら撒いたときのモーションを無くす
     execute as @e[type=item,distance=..0.5] run function player_manager:grave/tick/stop_motion
 
+# セッション閉じる
+    function lib:array/session/close
+
+# インベントリをもとに戻す
+    data modify storage api: Argument.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems
+    execute as @a[tag=GraveOwner,limit=1] run function api:inventory/set
+
 # 壊す
     kill @s
 
 # リセット
-    function lib:array/session/close
     data remove storage player_manager:grave IsOwnerTouchGrave
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems
