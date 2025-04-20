@@ -12,6 +12,7 @@
 # context
     data modify storage asset:context id set from storage api: Argument.ID
     data modify storage asset:context Type set from storage api: Argument.Type
+    data modify storage asset:context Slot set from storage api: Argument.Slot
     data modify storage asset:context Important set from storage api: Argument.Important
 # 神器を give
     execute if data storage api: Argument.ID run function #asset:artifact/give
@@ -22,4 +23,5 @@
     function asset_manager:common/context/id/pop
 # リセット
     data remove storage asset:context Type
+    data remove storage asset:context Slot
     data remove storage asset:context Important
