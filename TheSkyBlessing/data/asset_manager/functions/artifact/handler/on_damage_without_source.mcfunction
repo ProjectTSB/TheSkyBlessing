@@ -37,6 +37,13 @@ function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[-1].Blocked set from storage asset:artifact Blocked
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Damage[-1].Amount double 0.01 run scoreboard players get $Damage Temporary
 
+# ScoreToHPFlucに衝撃吸収分だけ加算する
+    execute store result storage api: Argument.Fluctuation double -0.1 run scoreboard players get @s AbsorbedDamage
+    data modify storage api: Argument.DeathMessage set value ['{"translate":"%1$sは脅威に抗えなかった","with":[{"selector":"@s"}]}']
+    data modify storage api: Argument.DisableLog set value true
+    data modify storage api: Argument.DamageVfx set value false
+    execute unless data storage api: Argument{Fluctuation:0} run function lib:score_to_health_wrapper/fluctuation
+
 # リセット
     data remove storage asset:artifact Blocked
     data remove storage asset:artifact DamageType
