@@ -27,7 +27,7 @@
     function api:damage/core/health_subtract/non-player/damage_vfx
 
 # イベントの追加
-    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/add_event",IsForwardedOnly:false}
-
+    execute if data storage api: Argument{ApplyTrigger:true} run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/trigger_events/non-player/attack_and_hurt/",IsForwardedOnly:false}
+    execute if score $Health Temporary matches ..0 run function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/trigger_events/non-player/kill_and_death/",IsForwardedOnly:true}
 # コアから実行する処理
     function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/health_subtract/non-player/for_health_entity",IsForwardedOnly:true}
