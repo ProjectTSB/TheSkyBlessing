@@ -18,6 +18,9 @@
 # TODO この処理はここにあるべきでなく、もっと汎用的にエリアの入退出処理を組むべき
     execute if score @s InArea matches 1 if score @s InSubArea matches 1..5 unless score @s InArea = $NextInArea Temporary run function world_manager:area/01.god_boundaries/leave_temple
     execute if score @s InArea matches 1 if score @s InSubArea matches 1..5 if score @s InArea = $NextInArea Temporary unless score @s InSubArea = $NextInSubArea Temporary run function world_manager:area/01.god_boundaries/leave_temple
+# ゲート島からの退出処理
+    execute if score @s InArea matches 1 if score @s InSubArea matches 0 unless score @s InArea = $NextInArea Temporary run function world_manager:area/01.god_boundaries/leave_gate_island
+    execute if score @s InArea matches 1 if score @s InSubArea matches 0 if score @s InArea = $NextInArea Temporary unless score @s InSubArea = $NextInSubArea Temporary run function world_manager:area/01.god_boundaries/leave_gate_island
 # 次のエリア情報を戻す
     scoreboard players operation @s InArea = $NextInArea Temporary
     scoreboard players operation @s InSubArea = $NextInSubArea Temporary

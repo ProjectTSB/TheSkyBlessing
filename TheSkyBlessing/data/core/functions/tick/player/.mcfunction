@@ -11,6 +11,7 @@
 #   asset_manager:artifact/triggers/**
 #   asset:artifact/**
 #   asset_manager:teleporter/tick/**
+#   settings:change_difficulty/**
 #   core:handler/attack
     #declare tag this
 

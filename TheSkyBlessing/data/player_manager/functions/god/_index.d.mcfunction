@@ -15,17 +15,8 @@
     #declare tag Believe.Rumor
 
 #> storage for process
-# @within function
-#   player_manager:difficulty_check
-#   player_manager:god/mercy/**
-#   player_manager:god/change_difficulty/**
+# @within function player_manager:god/mercy/**
     #declare storage player_manager:god
-
-#> Tag for Difficulty Change
-# @within function
-#   player_manager:god/change_difficulty/request/**
-#   player_manager:god/change_difficulty/confirm/**
-    #declare tag Difficulty.Request
 
 #> Tag for Equipment Update
 # @within function

@@ -9,7 +9,7 @@
 # バージョンチェック
     function player_manager:version_check
 # 難易度チェック
-    function player_manager:difficulty_check
+    function player_manager:notice_difficulty
 # ボーナスの更新
     function api:modifier/attack/base/update_bonus
     function api:modifier/defense/base/update_bonus
