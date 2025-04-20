@@ -3,7 +3,6 @@
 #
 #
 # @within function
-#   asset_manager:teleporter/append_group.m
 #   asset_manager:teleporter/set_activate_state.m
 #   asset_manager:teleporter/tick/angel_protection/*
 

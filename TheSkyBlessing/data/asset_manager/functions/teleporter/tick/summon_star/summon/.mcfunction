@@ -8,7 +8,7 @@
 # EntityStorage 呼び出し
     function oh_my_dat:please
 # 召喚する
-    execute anchored eyes positioned ^ ^ ^ as 0-0-0-0-0 run function asset_manager:teleporter/tick/summon_star/summon/as_common_marker
+    execute anchored eyes positioned ^ ^ ^ summon marker run function asset_manager:teleporter/tick/summon_star/summon/as_marker
 # 召喚で EntityStorage の参照先が変わってるので再度呼び出し
     function oh_my_dat:please
 # 末尾削除

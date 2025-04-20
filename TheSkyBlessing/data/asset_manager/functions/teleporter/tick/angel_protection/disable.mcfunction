@@ -4,5 +4,6 @@
 #
 # @within function asset_manager:teleporter/tick/global
 
-data modify storage asset:teleporter Teleporters[-1].Data.AngelProtection set value false
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TeleporterData.Data.AngelProtection set value false
+function asset_manager:teleporter/common/append_or_reorder_teleporters.m with storage api: Argument
 function asset_manager:teleporter/common/increment_activation_state_version
