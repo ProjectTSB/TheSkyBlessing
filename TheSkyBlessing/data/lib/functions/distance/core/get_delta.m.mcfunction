@@ -21,5 +21,5 @@
 # 幾何学実行
     execute positioned 0.0 0.0 0.0 rotated 0 0 run function lib:distance/core/geometry.m with storage lib: Distance.tmp
 
-# 汎用エンティティを原点にtp
-    execute in overworld run tp @s 0.0 0.0 0.0 0.0 0.0
+# マーカー削除
+    kill @s
