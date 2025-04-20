@@ -12,4 +12,4 @@
 # バージョンを更新する
     function asset_manager:teleporter/common/increment_activation_state_version
 # 状態を更新する
-    $data modify storage asset:teleporter Teleporters[{ID:$(ID)}].Data.ActivationState set value "$(ActivationState)"
+    $data modify storage asset:teleporter Teleporters[-1].Data.ActivationState set value "$(ActivationState)"
