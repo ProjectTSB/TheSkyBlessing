@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "set_nbt",
-                            "tag": "{TSB:{ArtifactSeed:{Rarity:3}}}"
+                            "tag": "{TSB:{ArtifactSeed:{Rarity:3b}}}"
                         }
                     ]
                 }
