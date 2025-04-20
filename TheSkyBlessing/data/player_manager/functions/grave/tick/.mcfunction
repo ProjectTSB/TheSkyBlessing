@@ -11,8 +11,7 @@
 
 #> Temp
 # @private
-    #declare score_holder $UserID
-    #declare tag Target.Grave
+#declare score_holder $UserID
 
 # 持ち主に触られた場合、触った持ち主から実行
     scoreboard players operation $UserID Temporary = @s GraveUserID
