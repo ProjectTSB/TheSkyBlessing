@@ -24,5 +24,8 @@
 # 死亡メッセージが設定されていたら保存する
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage set from storage api: Argument.DeathMessage
+# ダメージ演出の要否を保存する (既に true の場合は false にならないようにする)
+    execute unless data storage api: Argument.DamageVfx run data modify storage api: Argument.DamageVfx set value true
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DamageVfx{_:true} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].DamageVfx._ set from storage api: Argument.DamageVfx
 # リセット
     scoreboard players reset $LatestAttacker Temporary

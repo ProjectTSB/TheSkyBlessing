@@ -10,11 +10,13 @@
 #   storage api: Argument.AttackType?: Enum(AttackType)
 #   storage api: Argument.ElementType?: Enum(ElementType)
 #   storage api: Argument.DisableLog?: boolean(default: false)
+#   storage api: Argument.DamageVfx?: boolean(default: true)
 # @within function
 #   lib:**
 #   api:**
 #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
 #   player_manager:health/regen/do
+#   asset_manager:artifact/handler/on_damage_without_source
 
 #> temp
 # @private
@@ -32,3 +34,4 @@
     scoreboard players reset $Fluctuation Lib
     data remove storage api: Argument.Fluctuation
     data remove storage api: Argument.DisableLog
+    data remove storage api: Argument.DamageVfx
