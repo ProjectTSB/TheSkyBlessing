@@ -12,6 +12,7 @@
     execute as @a[scores={GodMessagePhase=120}] run function player_manager:god/change_believe/change_process/unbelieve2
     execute as @a[scores={GodMessagePhase=280}] run function player_manager:god/change_believe/change_process/believe1
     execute as @a[scores={GodMessagePhase=380}] run function player_manager:god/change_believe/change_process/believe2
+    execute as @a[scores={GodMessagePhase=400}] run function player_manager:god/common/send_believer_in_temple_menu
     scoreboard players reset @a[scores={GodMessagePhase=400}] GodMessagePhase
 # 途中退出時
     execute as @a[scores={GodMessagePhase=0..}] unless score @s InArea matches 1 run scoreboard players reset @s GodMessagePhase
