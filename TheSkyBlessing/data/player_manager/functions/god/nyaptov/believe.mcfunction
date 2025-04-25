@@ -13,6 +13,11 @@
     data modify storage api: Argument.Amount set value 0.3
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/heal/add
+# 落下耐性+100%
+    data modify storage api: Argument.UUID set value [2, 1, 1, 11]
+    data modify storage api: Argument.Amount set value 1
+    data modify storage api: Argument.Operation set value "multiply_base"
+    function api:modifier/fall_resistance/add
 # 攻撃-20%
     data modify storage api: Argument.UUID set value [2, 1, 1, 11]
     data modify storage api: Argument.Amount set value -0.2
@@ -23,8 +28,3 @@
     data modify storage api: Argument.Amount set value -0.10
     data modify storage api: Argument.Operation set value "multiply_base"
     function api:modifier/defense/water/add
-# 落下ダメージ-100%
-    data modify storage api: Argument.UUID set value [2, 1, 1, 11]
-    data modify storage api: Argument.Amount set value 1
-    data modify storage api: Argument.Operation set value "multiply_base"
-    function api:modifier/fall_resistance/add
