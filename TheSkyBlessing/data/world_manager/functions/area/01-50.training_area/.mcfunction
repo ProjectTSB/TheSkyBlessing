@@ -47,5 +47,5 @@
         execute rotated 0 0 positioned 2695 105 -487 if loaded ~ ~ ~ run tag @e[type=skeleton,tag=!Doll.Physical.1,scores={MobID=441},distance=..0.1] add Doll.Physical.1
 
     # 魔法耐性人形
-        execute rotated 180 0 positioned 2698 105 -465 if loaded ~ ~ ~ unless entity @e[type=skeleton,tag=Doll.Magical.1,scores={MobID=441},distance=..128] run function world_manager:area/01-50.training_area/summon/magical_dummy
-        execute rotated 180 0 positioned 2698 105 -465 if loaded ~ ~ ~ run tag @e[type=skeleton,tag=!Doll.Magical.1,scores={MobID=441},distance=..0.1] add Doll.Magical.1
+        execute rotated 180 0 positioned 2698 105 -465 if loaded ~ ~ ~ unless entity @e[type=skeleton,tag=Doll.Magical.1,scores={MobID=442},distance=..128] run function world_manager:area/01-50.training_area/summon/magical_dummy
+        execute rotated 180 0 positioned 2698 105 -465 if loaded ~ ~ ~ run tag @e[type=skeleton,tag=!Doll.Magical.1,scores={MobID=442},distance=..0.1] add Doll.Magical.1
