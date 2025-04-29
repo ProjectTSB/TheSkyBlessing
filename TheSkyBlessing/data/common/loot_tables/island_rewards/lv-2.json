@@ -2,15 +2,21 @@
     "type": "generic",
     "pools": [
         {
-            "rolls": {
-                "min": 0,
-                "max": 2
-            },
+            "rolls": 1,
             "entries": [
                 {
                     "weight": 50,
                     "type": "loot_table",
-                    "name": "common:sacred_shard/lv-2"
+                    "name": "common:sacred_shard/lv-2",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 25,
@@ -21,6 +27,10 @@
                     "weight": 25,
                     "type": "loot_table",
                     "name": "common:island_rewards/artifact_seed/lv-2"
+                },
+                {
+                    "weight": 100,
+                    "type": "empty"
                 }
             ]
         },
