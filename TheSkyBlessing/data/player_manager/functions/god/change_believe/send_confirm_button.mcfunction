@@ -6,6 +6,8 @@
 
 function player_manager:god/common/disable_another_believer_in_temple_buttons
 
+tellraw @s {"text":""}
+
 tellraw @s [{"text":"今までに失ったアイテムが消滅しますが、本当に改宗しますか？\n"}]
 
 data modify storage api: Argument.Label set value '"改宗する"'
