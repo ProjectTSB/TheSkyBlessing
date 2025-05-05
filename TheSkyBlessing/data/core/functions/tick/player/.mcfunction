@@ -33,6 +33,7 @@
     execute if entity @s[advancements={core:handler/killed=true}] run function core:handler/killed
     execute if entity @s[advancements={core:handler/inventory_change=true}] run function core:handler/inventory_change
     execute if entity @s[advancements={core:handler/using_item=true}] run function core:handler/using_item
+    execute if entity @s[advancements={core:handler/enter_nether_portal=true}] run function core:handler/enter_nether_portal
     execute if entity @s[scores={ClickCarrotEvent=1..}] run function core:handler/click.carrot
     execute if entity @s[scores={Elytra=1..}] run function core:handler/flying_elytra
     execute if entity @s[scores={DropEvent=1..}] run function core:handler/drop
