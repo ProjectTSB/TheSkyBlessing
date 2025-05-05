@@ -7,6 +7,7 @@
 #   settings:resend_setting_menu/as_schedule
 
 # タイトル
+    tellraw @s {"text":""}
     tellraw @s [{"text":"--------- ゲーム設定 ----------"}]
 
 # 難易度 - タイトル/現在の難易度表示
