@@ -16,6 +16,9 @@
 # マイグレーション
     function core:migration/
 
+# データパック欠損チェック
+    function core:check_datapack_deficient
+
 # レジストリ読み込み
     function asset_manager:artifact/load
     function asset_manager:mob/load
