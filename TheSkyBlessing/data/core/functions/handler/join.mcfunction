@@ -8,6 +8,8 @@
 
 # バージョンチェック
     function player_manager:version_check
+# リソースパックチェック
+    tellraw @s [{"translate":"リソースパックが導入されてない、または古いバージョンのリソースパックが導入されています。\n正しいリソースパックを確認の上、導入して下さい。(リソースパックバージョン: v1.0.b)","color":"red"}]
 # 難易度チェック
     function player_manager:notice_difficulty
 # ボーナスの更新
