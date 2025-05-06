@@ -34,4 +34,4 @@
     function asset_manager:island/dispel/dispelled.m with storage asset:island Args
     data remove storage asset:island Args
 # 商人の取引内容を更新する
-    scoreboard players add $TraderRecipeVersion Global 1
+    function api:trader/schedule_recipe_update_check
