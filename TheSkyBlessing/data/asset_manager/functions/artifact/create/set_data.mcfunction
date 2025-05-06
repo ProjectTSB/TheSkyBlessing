@@ -10,6 +10,7 @@
 #       Name : TextComponent
 #       Lore : TextComponent[]
 #       RemainingCount? : int
+#       RemainingCountMax? : int
 #       Slot : Slot
 #       Trigger : Trigger
 #       Condition? : TextComponent
@@ -57,7 +58,7 @@
     data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCountMax
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
     data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SecondaryTypeCooldown set from storage asset:artifact SecondaryTypeCooldown
