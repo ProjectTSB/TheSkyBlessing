@@ -3,7 +3,7 @@
 # 神器Assetの入手処理を叩く処理
 #
 # @input storage api: Argument.ID
-# @output storage api: Return.Artifacts
+# @output storage api: Return.Artifact
 # @api
 
 # validate
