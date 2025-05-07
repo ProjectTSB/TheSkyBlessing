@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:debug_stick",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "text": "不定な神器",
+                                "color": "white",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "text": "神器が形になる寸前の姿",
+                                    "color": "gray",
+                                    "italic": false
+                                },
+                                {
+                                    "text": "投げれば神器に変わるかもしれない",
+                                    "color": "gray",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:20568,TSB:{ItemMetaData:[\"ArtifactSeed\"]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
