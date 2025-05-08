@@ -2,5 +2,14 @@
     "pack": {
         "pack_format": 26,
         "description": "軽量化、及び高い可読性を心がける事。"
+    },
+    "filter": {
+        "block": [
+            { "namespace": "minecraft", "path": "advancements/adventure/.*" },
+            { "namespace": "minecraft", "path": "advancements/end/.*" },
+            { "namespace": "minecraft", "path": "advancements/husbandry/.*" },
+            { "namespace": "minecraft", "path": "advancements/nether/.*" },
+            { "namespace": "minecraft", "path": "advancements/story/.*" }
+        ]
     }
 }
