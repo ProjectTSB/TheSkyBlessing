@@ -19,7 +19,7 @@
 # 回復/ダメージを適用
     execute if score @s ScoreToHPFluc matches -2147483648..2147483647 run function lib:score_to_health_wrapper/core/calc
 # 体力>=1 & 差分 = 0: リセット
-    execute if score @s ScoreToHPFluc matches 0 if score @s ScoreToHealth matches 1.. run scoreboard players reset @s ScoreToHealth
+    # execute if score @s ScoreToHPFluc matches 0 if score @s ScoreToHealth matches 1.. run scoreboard players reset @s ScoreToHealth
 # 体力<=0: kill処理
     execute if score @s ScoreToHealth matches ..0 run function lib:score_to_health_wrapper/core/die
 # リセット
