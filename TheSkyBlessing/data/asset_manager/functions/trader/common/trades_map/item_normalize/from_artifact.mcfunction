@@ -14,5 +14,6 @@
     data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "ArtifactBoughtFromTrader"
     data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "BanPossession"
     data remove storage asset:trader Item.Slot
+    data remove storage asset:trader Item.tag.TSB.UUID
 # ところで存在しない場合もありますよね
     execute unless data storage asset:trader Item.id run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDの神器は存在しません: "},{"storage":"asset:trader","nbt":"Item.PresetItem","color":"red"}]
