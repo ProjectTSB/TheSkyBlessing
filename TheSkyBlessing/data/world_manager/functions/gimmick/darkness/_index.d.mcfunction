@@ -1,6 +1,11 @@
 #> world_manager:gimmick/darkness/_index.d
 # @private
 
+#> darkness anxiety
+# @within function
+#   world_manager:gimmick/darkness/**
+    #declare score_holder $DarknessAnxiety
+
 #> check
 # @within function
 #   world_manager:gimmick/darkness/do
