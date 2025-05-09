@@ -13,4 +13,5 @@
 # 二度と処理しないように
     tag @s add ItemMetaChecked
 # リセット
+    data remove storage core:temp TSB
     data remove storage core:temp MetaData
