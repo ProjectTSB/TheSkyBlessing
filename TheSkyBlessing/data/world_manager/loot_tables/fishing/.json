@@ -61,7 +61,7 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "world_manager:fishing/shard",
-                    "weight": 16,
+                    "weight": 6,
                     "conditions": [
                         {
                             "condition": "minecraft:value_check",
