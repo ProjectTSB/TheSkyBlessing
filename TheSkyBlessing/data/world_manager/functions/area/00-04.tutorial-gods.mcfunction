@@ -4,10 +4,6 @@
 #
 # @within function world_manager:area/00.tutorial/on_tick
 
-#> Once
-# @private
-#declare tag TutorialFlag4
-
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 04
 # メッセージ
