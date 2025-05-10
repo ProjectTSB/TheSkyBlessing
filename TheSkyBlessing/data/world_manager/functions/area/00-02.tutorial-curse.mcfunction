@@ -5,7 +5,9 @@
 # @within function world_manager:area/00.tutorial/on_tick
 
 #> Once
-# @private
+# @within function
+#   debug:tutorial/*
+#   world_manager:area/00-02.tutorial-curse
 #declare tag TutorialFlag2
 
 # エリアセット

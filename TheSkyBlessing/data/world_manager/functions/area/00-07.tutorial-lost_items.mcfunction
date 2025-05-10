@@ -5,7 +5,9 @@
 # @within function world_manager:area/00.tutorial/on_tick
 
 #> Once
-# @private
+# @within function
+#   debug:tutorial/*
+#   world_manager:area/00-07.tutorial-lost_items
 #declare tag TutorialFlag7
 
 # エリアセット
