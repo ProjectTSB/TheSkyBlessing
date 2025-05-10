@@ -37,7 +37,7 @@
 #     core:load_once
 #     asset_manager:island/dispel/update_unlocked_shard_lv/*
 #   loot_table
-#     world_manager:fishing/
+#     world_manager:fishing/*
     #declare score_holder $UnlockedShardLv
 
 #> DeathTag

@@ -1,0 +1,96 @@
+{
+    "type": "minecraft:fishing",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cod",
+                    "weight": 30,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 1,
+                            "add": true,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:random_chance",
+                                    "chance": 0.25
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:salmon",
+                    "weight": 30,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 1,
+                            "add": true,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:random_chance",
+                                    "chance": 0.25
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:tropical_fish",
+                    "weight": 20,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 1,
+                            "add": true,
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:random_chance",
+                                    "chance": 0.25
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "world_manager:fishing/shard",
+                    "weight": 16,
+                    "conditions": [
+                        {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": {
+                                    "type": "minecraft:fixed",
+                                    "name": "$UnlockedShardLv"
+                                },
+                                "score": "Global"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "lib:artifact_seed",
+                    "weight": 2,
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{TSB:{ArtifactSeed:{ID:217}}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
