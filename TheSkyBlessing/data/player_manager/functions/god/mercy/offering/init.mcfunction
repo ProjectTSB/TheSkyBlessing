@@ -13,7 +13,8 @@
     data modify storage player_manager:god OfferingData.Nyaptov.GodName set value "ニャプトフ"
     data modify storage player_manager:god OfferingData.Nyaptov.Items set value []
     data modify storage player_manager:god OfferingData.Nyaptov.Items append value {Item:{id:"minecraft:cod"},Amount:[3,6],Name:'{"translate":"item.minecraft.cod"}'}
-    data modify storage player_manager:god OfferingData.Nyaptov.Items append value {Item:{id:"minecraft:salmon"},Amount:[1,2],Name:'{"translate":"item.minecraft.salmon"}'}
+    data modify storage player_manager:god OfferingData.Nyaptov.Items append value {Item:{id:"minecraft:salmon"},Amount:[3,6],Name:'{"translate":"item.minecraft.salmon"}'}
+    data modify storage player_manager:god OfferingData.Nyaptov.Items append value {Item:{id:"minecraft:tropical_fish"},Amount:[2,4],Name:'{"translate":"item.minecraft.tropical_fish"}'}
 # ルーモア
     data modify storage player_manager:god OfferingData.Rumor.GodName set value "ルーモア"
     data modify storage player_manager:god OfferingData.Rumor.Items set value []
