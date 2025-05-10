@@ -4,12 +4,6 @@
 #
 # @within function world_manager:area/00.tutorial/on_tick
 
-#> Once
-# @within function
-#   debug:tutorial/*
-#   world_manager:area/00-04.tutorial-gods
-#declare tag TutorialFlag4
-
 # エリアセット
     scoreboard players set $NextInSubArea Temporary 04
 # メッセージ
