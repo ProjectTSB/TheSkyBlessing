@@ -31,6 +31,15 @@
 #       api:global_vars/difficulty/**
     #declare score_holder $Difficulty
 
+#> Global Vars - UnlockedShardLevel
+# @within
+#   function
+#     core:load_once
+#     asset_manager:island/dispel/update_unlocked_shard_lv/*
+#   loot_table
+#     world_manager:fishing/*
+    #declare score_holder $UnlockedShardLv
+
 #> DeathTag
 # @public
     #declare tag Death
