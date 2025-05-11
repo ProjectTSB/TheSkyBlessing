@@ -21,9 +21,9 @@
     #declare tag BoundingCylinder
 
 # 引数チェック
-    execute unless data storage lib: Argument.BoundingCylinder.Radius run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
-    execute unless data storage lib: Argument.BoundingCylinder.Height run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
-    execute unless data storage lib: Argument.BoundingCylinder.Selector run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingCylinder.Radius run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"のRadius引数が不足しています。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingCylinder.Height run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"のHeight引数が不足しています。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingCylinder.Selector run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_cylinder/","color":"gold"},{"text":"のSelector引数が不足しています。","color":"white"}]
 
 # 実行位置取得
     execute summon marker run function lib:bounding_cylinder/core/get_pos
