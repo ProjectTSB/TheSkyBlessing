@@ -15,7 +15,7 @@
 # 攻略度に応じてスコアを更新
     scoreboard players set $UnlockedShardLv Global 0
     data modify storage asset:island Temp set from storage global UnlockShardProgress
-    function asset_manager:island/dispel/update_unlocked_shard_lv/core
+    function asset_manager:island/dispel/update_unlocked_shard_lv/compare_current_lv
 # リセット
     data remove storage asset:island Temp
     scoreboard players reset $Current Temporary

@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/update_unlocked_shard_lv/core
+#> asset_manager:island/dispel/update_unlocked_shard_lv/compare_current_lv
 #
 # 必要攻略度が小さい順になってないと正しく設定できません
 #
@@ -10,4 +10,4 @@
 
 # 次のレベルをチェックするために再帰
     data remove storage asset:island Temp[0]
-    execute if data storage asset:island Temp[0] run function asset_manager:island/dispel/update_unlocked_shard_lv/core
+    execute if data storage asset:island Temp[0] run function asset_manager:island/dispel/update_unlocked_shard_lv/compare_current_lv
