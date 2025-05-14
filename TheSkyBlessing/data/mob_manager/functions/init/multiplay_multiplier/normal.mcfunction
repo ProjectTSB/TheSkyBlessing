@@ -24,9 +24,9 @@
     scoreboard players operation $MultiplayMultiplier Temporary *= $NearbyPlayerCount Temporary
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # 難易度倍率の計算 (0.65(e2) || 1.0(e2) || 1.55(e2))
-    execute if predicate api:global_vars/difficulty/easy run scoreboard players operation $MultiplayMultiplier Temporary *= $65 Const
-    execute if predicate api:global_vars/difficulty/normal run scoreboard players operation $MultiplayMultiplier Temporary *= $100 Const
-    execute if predicate api:global_vars/difficulty/min/hard run scoreboard players operation $MultiplayMultiplier Temporary *= $130 Const
+    execute if predicate api:global_vars/difficulty/1_normal run scoreboard players operation $MultiplayMultiplier Temporary *= $65 Const
+    execute if predicate api:global_vars/difficulty/2_hard run scoreboard players operation $MultiplayMultiplier Temporary *= $100 Const
+    execute if predicate api:global_vars/difficulty/min/3_blessless run scoreboard players operation $MultiplayMultiplier Temporary *= $130 Const
     scoreboard players operation $MultiplayMultiplier Temporary /= $100 Const
 # 雑魚は一律一旦75% 0.75(e2)
     scoreboard players operation $MultiplayMultiplier Temporary *= $75 Const

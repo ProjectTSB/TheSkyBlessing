@@ -20,11 +20,11 @@
     scoreboard players operation $MultiplayMultiplier Temporary *= $PlayerCount Global
     scoreboard players operation $MultiplayMultiplier Temporary += $MultiplayMultiplierBase Temporary
 # 難易度倍率の計算 (0.65(e2) || 1.0(e2) || 1.50(e2) || 1.65(e2))
-    execute if predicate api:global_vars/difficulty/easy if entity @s[tag=!Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $65 Const
-    execute if predicate api:global_vars/difficulty/easy if entity @s[tag= Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $70 Const
-    execute if predicate api:global_vars/difficulty/normal run scoreboard players operation $MultiplayMultiplier Temporary *= $100 Const
-    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag=!Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $135 Const
-    execute if predicate api:global_vars/difficulty/min/hard if entity @s[tag= Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $120 Const
+    execute if predicate api:global_vars/difficulty/1_normal if entity @s[tag=!Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $65 Const
+    execute if predicate api:global_vars/difficulty/1_normal if entity @s[tag= Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $70 Const
+    execute if predicate api:global_vars/difficulty/2_hard run scoreboard players operation $MultiplayMultiplier Temporary *= $100 Const
+    execute if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=!Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $135 Const
+    execute if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag= Enemy.EndGameBoss] run scoreboard players operation $MultiplayMultiplier Temporary *= $120 Const
     scoreboard players operation $MultiplayMultiplier Temporary /= $100 Const
 # マルチ補正倍率の保存
     scoreboard players operation @s MobMaxHealthMultiplier = $MultiplayMultiplier Temporary
