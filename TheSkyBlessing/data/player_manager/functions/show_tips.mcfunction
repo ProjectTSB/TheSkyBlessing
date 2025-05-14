@@ -13,7 +13,7 @@ execute store result score $TipRandom Temporary run function lib:random/with_bia
 execute if score $TipRandom Temporary matches 0 run tellraw @s {"text":"石を掘ることでそのピッケルに応じた確率で鉱石を入手することができる。\n丸石よりも焼き石のほうが確率が高い。","color":"white"}
 execute if score $TipRandom Temporary matches 1 run tellraw @s {"text":"スポナーをすべて破壊しなくても呪われた神器を解呪することができる。","color":"white"}
 execute if score $TipRandom Temporary matches 2 run tellraw @s {"text":"この世界は落下ダメージを通常より多く受ける。\n体力が増えたからと言って慢心しないようにしよう。","color":"white"}
-execute if score $TipRandom Temporary matches 3 run tellraw @s {"text":"アイテムを没収されたとしても、慈悲を乞えば一部返してくれる。\nただし、慈悲にはアイテムが必要だ。","color":"white"}
+execute if score $TipRandom Temporary matches 3 run tellraw @s {"text":"アイテムを回収されたとしても、慈悲を乞えば一部返してくれる。\nただし、慈悲にはアイテムが必要だ。","color":"white"}
 execute if score $TipRandom Temporary matches 4 run tellraw @s {"text":"奈落に落ちてしまった時でも、様々の神器の力で地上に帰ることが出来る。\n｢加護装備｣ もその一つだ。","color":"white"}
 execute if score $TipRandom Temporary matches 5 run tellraw @s {"text":"同じ取引を繰り返す場合、左のタブを選んで取引した後に、[space] キーを押すことで同じ取引を選択できる。","color":"white"}
 execute if score $TipRandom Temporary matches 6 run tellraw @s {"text":"羊を刈るよりも農業をしたほうが効率よく通貨を集めることができる。","color":"white"}
