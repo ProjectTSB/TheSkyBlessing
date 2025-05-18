@@ -94,6 +94,9 @@ data modify storage global Boolean.true set value true
 execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
 execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
 
+#> シャードの自由入手解禁に必要な攻略度(割合)
+    data modify storage global UnlockShardProgress set value [5,29,54,75]
+
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
 scoreboard objectives remove FirstJoinEvent
@@ -133,6 +136,7 @@ team modify NoCollision collisionRule never
     scoreboard players set $PurifiedIslands Global 0
     scoreboard players set $TotalIslands Global 60
     scoreboard players set $TraderRecipeVersion Global 0
+    scoreboard players set $UnlockedShardLv Global 0
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
