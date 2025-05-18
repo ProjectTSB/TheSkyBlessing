@@ -25,10 +25,10 @@
     #declare tag BoundingFan
 
 # 引数チェック
-    execute unless data storage lib: Argument.BoundingFan.Angle run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
-    execute unless data storage lib: Argument.BoundingFan.Radius run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
-    execute unless data storage lib: Argument.BoundingFan.Height run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
-    execute unless data storage lib: Argument.BoundingFan.Selector run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"の引数が足りません。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Angle run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"のAngle引数が不足しています。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Radius run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"のRadius引数が不足しています。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Height run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"のHeight引数が不足しています。","color":"white"}]
+    execute unless data storage lib: Argument.BoundingFan.Selector run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:bounding_fan/","color":"gold"},{"text":"のSelector引数が不足しています。","color":"white"}]
 
 # 汎用エンティティを実行者にして計算
     execute as 0-0-0-0-0 run function lib:bounding_fan/core/calc
