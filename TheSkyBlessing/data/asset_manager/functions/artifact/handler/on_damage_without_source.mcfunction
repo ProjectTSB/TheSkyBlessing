@@ -43,6 +43,7 @@ function oh_my_dat:please
     data modify storage api: Argument.DisableLog set value true
     data modify storage api: Argument.DamageVfx set value false
     execute unless data storage api: Argument{Fluctuation:0} run function lib:score_to_health_wrapper/fluctuation
+    data remove storage api: Argument.DeathMessage
 
 # リセット
     data remove storage asset:artifact Blocked
