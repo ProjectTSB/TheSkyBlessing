@@ -18,6 +18,9 @@
     data modify storage asset:artifact Modifier set from storage asset:artifact CopiedModifiers[0]
     data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""']
 
+# ノックバック耐性だけバニラに合わせて表示を10倍しておく
+    execute if data storage asset:artifact Modifier{Type:"generic.knockback_resistance"} store result storage asset:artifact Modifier.Amount double 0.1 run data get storage asset:artifact Modifier.Amount 100
+
 # カスタムModifier
     execute if data storage asset:artifact Modifier{Type:"attack/base"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"attack/base"} run data modify storage asset:artifact Line[1] set value '"攻撃"'
