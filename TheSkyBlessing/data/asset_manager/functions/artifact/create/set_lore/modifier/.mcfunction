@@ -18,9 +18,6 @@
     data modify storage asset:artifact Modifier set from storage asset:artifact CopiedModifiers[0]
     data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""']
 
-# ノックバック耐性だけバニラに合わせて表示を10倍しておく
-    execute if data storage asset:artifact Modifier{Type:"generic.knockback_resistance"} store result storage asset:artifact Modifier.Amount double 0.1 run data get storage asset:artifact Modifier.Amount 100
-
 # カスタムModifier
     execute if data storage asset:artifact Modifier{Type:"attack/base"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"attack/base"} run data modify storage asset:artifact Line[1] set value '"攻撃"'
@@ -59,6 +56,10 @@
     execute if data storage asset:artifact Modifier{Type:"max_mp"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"max_mp"} run data modify storage asset:artifact Line[1] set value '"最大MP"'
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/create/set_lore/modifier/generic.m with storage asset:artifact Modifier
+
+# ノックバック耐性だけバニラに合わせて表示を10倍しておく
+    execute if data storage asset:artifact Modifier{Type:"generic.knockback_resistance"} store result storage asset:artifact Modifier.Amount double 0.1 run data get storage asset:artifact Modifier.Amount 100
+
 # 数値チェック
 # Operation == "add":
 #   $AmountInt = floor(abs(Amount))
