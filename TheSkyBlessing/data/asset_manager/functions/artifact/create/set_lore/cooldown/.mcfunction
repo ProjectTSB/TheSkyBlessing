@@ -19,6 +19,6 @@
     execute if data storage asset:artifact SecondaryTypeCooldown{Type:      "heal"} run function asset_manager:artifact/create/set_lore/cooldown/make_duration.m {CooldownPath:"storage asset:artifact SecondaryTypeCooldown.Duration",IconPath:"storage global Icon.Cooldown.Type.Heal"}
     execute if data storage asset:artifact SpecialCooldown run function asset_manager:artifact/create/set_lore/cooldown/make_duration.m {CooldownPath:"storage asset:artifact SpecialCooldown",IconPath:"storage global Icon.Cooldown.Global"}
 # lootする
-    execute if data storage asset:artifact Cooldown[0] run loot replace block 10000 0 10000 container.6 loot asset_manager:artifact/generate_lore/cooldown
+    execute if data storage asset:artifact Cooldown[0] run loot replace block 10000 0 10000 container.7 loot asset_manager:artifact/generate_lore/cooldown
 # リセット
     data remove storage asset:artifact Cooldown
