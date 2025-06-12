@@ -38,6 +38,9 @@
 # 神器のグローバルtick処理
     function asset_manager:artifact/tick/
 
+# 墓
+    execute as @e[type=item_display,tag=Grave] at @s run function player_manager:grave/tick/
+
 # プレイヤー処理部
     execute as @a at @s run function core:tick/player/
 
@@ -73,9 +76,6 @@
 
 # asset:contextの明示的な全削除
     function asset_manager:common/reset_all_context
-
-# 墓
-    execute as @e[type=item_display,tag=Grave] at @s run function player_manager:grave/tick/
 
 # ItemMetaDataチェック
     execute as @e[type=item,tag=!ItemMetaChecked] run function core:tick/check_item_meta/entity
