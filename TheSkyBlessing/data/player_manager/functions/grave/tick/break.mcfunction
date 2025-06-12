@@ -42,6 +42,7 @@
 # インベントリをもとに戻す
     data modify storage api: Argument.Inventory set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems
     execute as @a[tag=GraveOwner,limit=1] run function api:inventory/set
+    execute as @a[tag=GraveOwner,limit=1] run function api:data_get/invalidate_cache
 
 # 壊す
     kill @s
