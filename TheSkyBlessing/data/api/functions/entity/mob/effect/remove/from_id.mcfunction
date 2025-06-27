@@ -9,4 +9,5 @@
 # validate
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
 # 呼び出し
-    function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_id",Key:"api:entity/mob/effect/remove/from_id",IsForwardedOnly:true}
+    execute if entity @s[type=#lib:living,tag= ExtendedCollision,tag=!Uninterferable,tag=!Death] run return run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_id",Key:"api:entity/mob/effect/remove/from_id",IsForwardedOnly:true}
+    execute if entity @s[type=#lib:living,tag=!ExtendedCollision,tag=!Uninterferable,tag=!Death] run function api:entity/mob/effect/core/remove/from_id
