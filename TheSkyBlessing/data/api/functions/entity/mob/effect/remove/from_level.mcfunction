@@ -13,5 +13,4 @@
     execute unless data storage api: Argument.ClearType run data modify storage api: Argument.ClearType set value "all"
     execute unless data storage api: Argument.ClearCount run data modify storage api: Argument.ClearCount set value 2147483647
 # 呼び出し
-    execute if entity @s[type=#lib:living,tag= ExtendedCollision,tag=!Uninterferable,tag=!Death] run return run function api:mob/apply_to_forward_target/with_non-idempotent.m {CB:"api:entity/mob/effect/core/remove/from_level/",Key:"api:entity/mob/effect/remove/from_level",IsForwardedOnly:true}
-    execute if entity @s[type=#lib:living,tag=!ExtendedCollision,tag=!Uninterferable,tag=!Death] run function api:entity/mob/effect/core/remove/from_level/
+    execute if entity @s[tag=!Death] run function api:entity/mob/effect/core/remove/from_level/
