@@ -34,6 +34,7 @@
     execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] run function asset_manager:effect/events/tick/
     execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
+    execute unless data storage asset:effect TargetEffect{Duration:0} if data storage asset:effect TargetEffect{Stack:0} run function asset_manager:effect/events/end/
 # フィールドとスタックを元に戻す
     data modify storage asset:effect TargetEffect.Duration set from storage asset:context Duration
     data modify storage asset:effect TargetEffect.Stack set from storage asset:context Stack
@@ -44,6 +45,7 @@
 # 条件を満たしていればエフェクトを消す
     execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect TargetEffect
     execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
+    execute if data storage asset:effect TargetEffect{Stack:0} run data remove storage asset:effect TargetEffect
 # 残っていれば引継ぎ
     execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
 # アイコン作成
