@@ -43,9 +43,8 @@
     execute if entity @s[scores={DropEvent=1..}] run function core:handler/drop
 # ゲートウェイに重なっていないならタグを付与
     execute if entity @s[gamemode=!spectator] positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway positioned ~-.6 ~0.0 ~0.6 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway positioned ~0.3 ~0.9 ~0.3 positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway positioned ~-.6 ~0.0 ~0.6 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway positioned ~0.3 ~0.9 ~0.3 positioned ~0.3 ~0.0 ~0.3 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway positioned ~-.6 ~0.0 ~0.6 unless predicate lib:in_end_gateway positioned ~0.0 ~0.0 ~-.6 unless predicate lib:in_end_gateway run tag @s add NotInGateway
-# ゲートウェイに入っていたなら、落下処理をスキップする用のタグを付与
+# ゲートウェイに入っていたなら、低速落下を付与
     effect give @s[tag=!NotInGateway] slow_falling 1 0 true
-    tag @s[tag=!NotInGateway] add FallDamageImmunity
 # エリア処理
     function world_manager:area/
 # トリガー処理
@@ -68,5 +67,4 @@
     function player_manager:absorption/
 # リセット
     tag @s remove this
-    tag @s[tag=NotInGateway] remove FallDamageImmunity
     tag @s remove NotInGateway
