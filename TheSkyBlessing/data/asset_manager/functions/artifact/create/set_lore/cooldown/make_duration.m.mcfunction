@@ -31,6 +31,7 @@
     $data modify storage asset:artifact CooldownIcon set from $(IconPath)
     execute store result storage asset:artifact CooldownSecond int 1 run scoreboard players get $Cooldown Temporary
     execute store result storage asset:artifact CooldownDecimal int 1 run scoreboard players get $CooldownDecimal Temporary
+    execute if data storage asset:artifact {CooldownDecimal:5} run data modify storage asset:artifact CooldownDecimal set value "05"
     execute store result storage asset:artifact CooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
 # Lore にする
     loot replace block 10000 1 10000 container.0 loot asset_manager:artifact/generate_lore/cooldown_duration
