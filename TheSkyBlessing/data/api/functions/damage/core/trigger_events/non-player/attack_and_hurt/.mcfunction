@@ -13,6 +13,6 @@
 # Hurt イベントの push
     function api:damage/core/trigger_events/non-player/attack_and_hurt/hurt
 # Attack イベントの push
-    execute unless predicate api:mob/has_forward_target as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/attack_and_hurt/attack
+    execute if data storage api: Argument{ApplyTrigger:true} unless predicate api:mob/has_forward_target as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/attack_and_hurt/attack
 # リセット
     scoreboard players reset $DamagerUUID Temporary
