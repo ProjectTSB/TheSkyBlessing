@@ -8,6 +8,8 @@
 
 # 末尾を取得
     data modify storage asset:datapack Elem set from storage asset:datapack DatapackStateBuffer[-1]
+# 状態を保存する
+    function asset_manager:common/datapack/update_state/update/save_state.m with storage asset:datapack Elem
 # パスを取得する
     function asset_manager:common/datapack/update_state/update/get_path/
 # 状態を更新する
