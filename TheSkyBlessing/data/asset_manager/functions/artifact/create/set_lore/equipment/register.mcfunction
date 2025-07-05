@@ -12,6 +12,9 @@
 
 # 名前をLoreに組み込む
     data modify storage asset:artifact EquipName set from storage asset:effect Name
+    data modify storage asset:artifact EffectTypeName set value "装備時効果"
+    data modify storage asset:artifact IsSetEffect set from storage asset:artifact Equipment.Effects[0].IsSetEffect
+    execute if data storage asset:artifact {IsSetEffect:true} run data modify storage asset:artifact EffectTypeName set value "セット効果"
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/equipment
     data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[0]
 # 説明文をLoreに組み込む
@@ -19,6 +22,8 @@
 
 # リセット
     data remove storage asset:artifact EquipName
+    data remove storage asset:artifact EffectTypeName
+    data remove storage asset:artifact IsSetEffect
     data remove storage asset:effect ID
     data remove storage asset:effect Extends
     data remove storage asset:effect Name

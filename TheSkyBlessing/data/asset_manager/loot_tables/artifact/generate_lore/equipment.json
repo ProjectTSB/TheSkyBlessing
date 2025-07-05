@@ -19,7 +19,11 @@
                                         "italic": false
                                     },
                                     {
-                                        "text": "装備時効果　"
+                                        "storage": "asset:artifact",
+                                        "nbt": "EffectTypeName"
+                                    },
+                                    {
+                                        "text":"　"
                                     },
                                     {
                                         "text": "\u0006",
