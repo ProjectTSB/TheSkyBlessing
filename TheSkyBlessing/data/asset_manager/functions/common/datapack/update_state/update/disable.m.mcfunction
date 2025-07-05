@@ -3,6 +3,6 @@
 #
 #
 # @input args Path : string
-# @within function asset_manager:common/datapack/update_state/update/
+# @within function asset_manager:common/datapack/update_state/update/foreach
 
 $datapack disable "$(Path)"
