@@ -4,4 +4,4 @@
 #
 # @within function core:load
 
-# execute if data storage global {GameVersion:"vx.x.x"} run function core:migration/vx.x.x/
+execute if data storage global {GameVersion:"v1.0.0"} run function core:migration/v1.0.1/
