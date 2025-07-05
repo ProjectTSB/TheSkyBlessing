@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v1.0.0"
+data modify storage global GameVersion set value "v1.0.1"
 data modify storage global ExpectedDatapackCount set value 22
 
 #> forceload chunksの設定
