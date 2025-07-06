@@ -6,5 +6,4 @@
 #   Block
 # @within function asset_manager:container/register/construct/
 
-setblock ~ ~ ~ air
 $setblock ~ ~ ~ $(Block)
