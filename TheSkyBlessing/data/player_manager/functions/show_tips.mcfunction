@@ -9,25 +9,28 @@
 
 tellraw @s {"text":"[TIPS] ","color":"aqua"}
 
-execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:18}
-execute if score $TipRandom Temporary matches 0 run tellraw @s {"text":"石を掘ることでそのピッケルに応じた確率で鉱石を入手することができる。\n丸石よりも焼き石のほうが確率が高い。","color":"white"}
-execute if score $TipRandom Temporary matches 1 run tellraw @s {"text":"スポナーをすべて破壊しなくても呪われた神器を解呪することができる。","color":"white"}
-execute if score $TipRandom Temporary matches 2 run tellraw @s {"text":"この世界は落下ダメージを通常より多く受ける。\n体力が増えたからと言って慢心しないようにしよう。","color":"white"}
-execute if score $TipRandom Temporary matches 3 run tellraw @s {"text":"アイテムを回収されたとしても、慈悲を乞えば一部返してくれる。\nただし、慈悲にはアイテムが必要だ。","color":"white"}
-execute if score $TipRandom Temporary matches 4 run tellraw @s {"text":"奈落に落ちてしまった時でも、様々の神器の力で地上に帰ることが出来る。\n｢加護装備｣ もその一つだ。","color":"white"}
-execute if score $TipRandom Temporary matches 5 run tellraw @s {"text":"同じ取引を繰り返す場合、左のタブを選んで取引した後に、[space] キーを押すことで同じ取引を選択できる。","color":"white"}
-execute if score $TipRandom Temporary matches 6 run tellraw @s {"text":"羊を刈るよりも農業をしたほうが効率よく通貨を集めることができる。","color":"white"}
-execute if score $TipRandom Temporary matches 7 run tellraw @s {"text":"防具を装備せずに戦闘することは無謀である。\n簡易防具は安価で買うことが出来るので、もし防具神器が無いならば必ず装備しよう。","color":"white"}
-execute if score $TipRandom Temporary matches 8 run tellraw @s {"text":"雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を見ることができる。\n手持ちの神器の火力が相手の撃破に不足しているなら、それは挑むべきではない。","color":"white"}
-execute if score $TipRandom Temporary matches 9 run tellraw @s {"text":"満腹度による体力回復は最大体力に比例する。","color":"white"}
-execute if score $TipRandom Temporary matches 10 run tellraw @s {"text":"あなたが戦闘をしている間、体力の自然回復は著しく減少する。\n損耗が多い場合は戦闘から離脱することも一つの戦い方と言えよう。","color":"white"}
-execute if score $TipRandom Temporary matches 11 run tellraw @s {"text":"全ての島にはいつでも訪れることが出来る。\nただし、あなたより遥かに強い敵と相対することになる可能性にも注意だ。","color":"white"}
-execute if score $TipRandom Temporary matches 12 run tellraw @s {"text":"多くの攻撃神器には種別クールダウンと呼ばれるクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。","color":"white"}
-execute if score $TipRandom Temporary matches 13 run tellraw @s {"text":"エンドには天候・時間の概念がない。\nそのため、それを条件とする神器をフルパワーで使用できる。","color":"white"}
-execute if score $TipRandom Temporary matches 14 run tellraw @s [{"text":"敵の付与するデバフの強さには","color":"white"},{"text":"[弱]","color":"#FFDD66"},{"text":"と","color":"white"},{"text":"[強]","color":"#FFDD66"},{"text":"が存在する。\nデバフの強さを判別するには、アイコン左上の線の本数を確認しよう。","color":"white"}]
-execute if score $TipRandom Temporary matches 15 run tellraw @s {"text":"足元や広範囲に攻撃を行ってくる敵相手が手強い？\nそんな時は三人称視点を活用するのも一つの手段だ。","color":"white"}
-execute if score $TipRandom Temporary matches 16 run tellraw @s {"text":"ポーション商人の売るネクターは、最も簡単に回復が出来る神器だ。\n回復神器を持っていない場合、活用するのも一つの手段だ。","color":"white"}
-execute if score $TipRandom Temporary matches 17 run tellraw @s {"text":"特殊クールダウンを持つ神器は殆どの場合非常に強力である。\n敵が硬いと感じる場合は特殊クールダウンを持つ神器を意識して利用しよう。","color":"white"}
+execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:21}
+execute if score $TipRandom Temporary matches 00 run tellraw @s "石を掘ると確率で鉱石を入手できる。\n掘るピッケルに応じて確率は変化し、丸石よりも焼き石のほうが鉱石が出やすい。"
+execute if score $TipRandom Temporary matches 01 run tellraw @s "スポナーをすべて破壊しなくても呪われた神器を解呪できる。"
+execute if score $TipRandom Temporary matches 02 run tellraw @s "この世界では落下ダメージを通常よりも多く受ける。\n体力が増えても慢心しないようにしよう。"
+execute if score $TipRandom Temporary matches 03 run tellraw @s "神にアイテムを回収されたとしても、慈悲を乞えば一部を取り戻せる。"
+execute if score $TipRandom Temporary matches 04 run tellraw @s "奈落に落ちてしまっても、様々な神器の力で地上に帰ることが出来る。\n｢加護装備｣ もその一つだ。"
+execute if score $TipRandom Temporary matches 05 run tellraw @s "取引中、Spaceキーを押すと左のタブで選択した取引を素早く用意できる。\n同じ取引を繰り返す時に活用しよう。"
+execute if score $TipRandom Temporary matches 06 run tellraw @s "羊を刈るよりも農業をしたほうが効率よく通貨を集められる。"
+execute if score $TipRandom Temporary matches 07 run tellraw @s "防具すら装備せずに戦闘することは無謀だ。\n防具神器が無い時は安価で買える簡易防具を必ず装備しよう。"
+execute if score $TipRandom Temporary matches 08 run tellraw @s "雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を確認できる。\n手持ちの攻撃神器よりも相手が強力であったなら、挑むべきではない。"
+execute if score $TipRandom Temporary matches 09 run tellraw @s "満腹時の体力回復量は最大体力に比例する。"
+execute if score $TipRandom Temporary matches 10 run tellraw @s "戦闘中、体力の自然回復量は著しく減少する。\n体力が尽きかけた時にいち早く戦闘から離脱するのも良い戦い方だろう。"
+execute if score $TipRandom Temporary matches 11 run tellraw @s "全ての島にはいつでも訪れることが出来る。\nしかし、あなたより遥かに強い敵と相対することになるかもしれない。"
+execute if score $TipRandom Temporary matches 12 run tellraw @s "多くの攻撃神器には種類別のクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。"
+execute if score $TipRandom Temporary matches 13 run tellraw @s "天候・時間の概念がないエンドでは、それを条件とする神器をフルパワーで使用できる。"
+execute if score $TipRandom Temporary matches 14 run tellraw @s [{"text":"敵が付与するデバフの強さには","color":"white"},{"text":"弱","color":"#FFDD66"},{"text":"と","color":"white"},{"text":"強","color":"#FFDD66"},{"text":"がある。\nアイコン左上の線の本数で判別できる。","color":"white"}]
+execute if score $TipRandom Temporary matches 15 run tellraw @s "足元や広範囲に攻撃を行ってくる敵相手には、三人称視点を利用すると良いかもしれない。"
+execute if score $TipRandom Temporary matches 16 run tellraw @s "ポーション商人の売るネクターは最も簡単に回復が出来る神器だ。\n回復神器を持っていない場合、素晴らしい回復手段となるだろう。"
+execute if score $TipRandom Temporary matches 17 run tellraw @s "特殊クールダウンを持つ神器の殆どは非常に強力である。\n手強い相手への切り札として、意識して利用しよう。"
+execute if score $TipRandom Temporary matches 18 run tellraw @s [{"text": "予備の羊毛や食料、帰還用神器入れとして","color":"white"},{"translate":"block.minecraft.shulker_box","color":"white"},{"text": "を利用すると快適に冒険できるだろう。","color":"white"}]
+execute if score $TipRandom Temporary matches 19 run tellraw @s "遠くでふよふよ浮いている敵を狙いづらい時は、召喚神器の出番だ。\nあなたに代わって敵を片付けてくれる。"
+execute if score $TipRandom Temporary matches 20 run tellraw @s "敵の撃破に手こずる場合は、神器の相性が悪いのかもしれない。\n信仰による恩恵や相手の属性耐性、神器同士の組み合わせを見直してみよう。"
 
 # リセット
     scoreboard players reset $TipRandom Temporary
