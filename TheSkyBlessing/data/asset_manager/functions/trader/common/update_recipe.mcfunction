@@ -11,6 +11,7 @@
     execute store result score $Current Temporary run data get storage api: Return.Progress 100
 # 取引一覧を抽出
     function oh_my_dat:please
+    function asset_manager:trader/common/refresh_trades/m with storage global
     data modify storage asset:trader Trades set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.Trades
 # 取引一覧を更新
     function lib:array/session/open
