@@ -8,6 +8,8 @@
     function oh_my_dat:please
 # ID
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.ID set from storage asset:trader ID
+# Version
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.Version set from storage global GameVersion
 # Default位置
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultPos set from entity @s Pos
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation set from storage asset:trader Rotation
