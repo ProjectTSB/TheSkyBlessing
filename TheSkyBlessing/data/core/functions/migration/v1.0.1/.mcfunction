@@ -6,6 +6,7 @@
 
 # マイグレーション先バージョン設定
     data modify storage global GameVersion set value "v1.0.1"
+    data modify storage global FirstGameVersion set value "v1.0.0"
 
 
 #> from: https://github.com/ProjectTSB/TheSkyBlessing/commit/9c6e5b09ba43acea8890fb71d6460b520dcf1274

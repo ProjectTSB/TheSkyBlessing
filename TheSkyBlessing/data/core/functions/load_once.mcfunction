@@ -6,6 +6,7 @@
 
 #> バージョン情報の設定
 data modify storage global GameVersion set value "v1.0.2"
+data modify storage global FirstGameVersion set value "v1.0.2"
 data modify storage global ExpectedDatapackCount set value 22
 
 #> forceload chunksの設定
