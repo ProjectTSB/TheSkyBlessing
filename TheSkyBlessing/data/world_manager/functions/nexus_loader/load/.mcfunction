@@ -18,17 +18,17 @@
 
 # [2]
     execute if data storage world_manager:nexus_loader Registry[-3].N[0] if dimension minecraft:the_end if function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/tree/0
-    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:the_end unless function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/outliers/
+    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:the_end run function world_manager:nexus_loader/load/outliers/
 
 # [1]
     data remove storage world_manager:nexus_loader Registry[-1]
     execute if data storage world_manager:nexus_loader Registry[-3].N[0] if dimension minecraft:overworld if function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/tree/0
-    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:overworld unless function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/outliers/
+    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:overworld run function world_manager:nexus_loader/load/outliers/
 
 # [0]
     data remove storage world_manager:nexus_loader Registry[-1]
     execute if data storage world_manager:nexus_loader Registry[-3].N[0] if dimension minecraft:the_nether if function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/tree/0
-    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:the_nether unless function world_manager:nexus_loader/load/root_check run function world_manager:nexus_loader/load/outliers/
+    execute if data storage world_manager:nexus_loader Registry[-3].Outliers[0] if dimension minecraft:the_nether run function world_manager:nexus_loader/load/outliers/
 
 # リセット
     scoreboard players reset $PlayerX Temporary
