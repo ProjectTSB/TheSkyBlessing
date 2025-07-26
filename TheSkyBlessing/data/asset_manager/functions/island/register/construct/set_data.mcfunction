@@ -6,10 +6,6 @@
 
 # EntityStorage呼び出し
     function oh_my_dat:please
-# Entityの方向
-    data modify entity @s Pose.Head set value [0f,0.001f,0f]
-    #data modify entity @s Pose.Head[1] set from storage asset:island Rotation
-    data modify entity @s Rotation[0] set from storage asset:island Rotation
 # EntityStorageに保存するもの
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID set from storage asset:island ID
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.BossDatapack set from storage asset:island BossDatapack
