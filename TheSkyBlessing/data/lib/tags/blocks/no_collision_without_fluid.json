@@ -1,13 +1,13 @@
 {
     "replace": false,
     "values": [
+        "#lib:no_collision_corals",
+        "#lib:no_collision_flowers",
         "#minecraft:all_hanging_signs",
         "#minecraft:banners",
         "#minecraft:buttons",
-        "#minecraft:corals",
         "#minecraft:crops",
         "#minecraft:fire",
-        "#minecraft:flowers",
         "#minecraft:portals",
         "#minecraft:pressure_plates",
         "#minecraft:rails",
