@@ -1,5 +1,5 @@
 {
-    "datapack.env.cmdVersion": "1.20.3",
+    "datapack.env.cmdVersion": "1.20.2",
     "datapack.env.dataVersion": "1.20.4",
     "datapack.env.defaultVisibility": "public",
     "datapack.env.dependsOnVanilla": true,
