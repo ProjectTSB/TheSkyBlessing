@@ -4,9 +4,9 @@
 #
 # @input args
 #   position: 実行位置
-#       扇型の中心角、厚みの中心
+#       底面の扇型の中心角
 #   rotation: 実行向き
-#       中心角から見て扇形が広がる方向
+#       中心角から見て扇形が広がる方向（水平方向のみ反映）
 #   storage lib: Argument.BoundingFan.Angle: double
 #       扇形の中心角度(0°~360°)
 #   storage lib: Argument.BoundingFan.Radius: double
