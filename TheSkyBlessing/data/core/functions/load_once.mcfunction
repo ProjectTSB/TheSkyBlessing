@@ -94,6 +94,7 @@ data modify storage global Boolean.true set value true
 
 execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
 execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
+execute unless data storage global Config.ShowPlayTimeOnDispel run data modify storage global Config.ShowPlayTimeOnDispel set value false
 
 #> シャードの自由入手解禁に必要な攻略度(割合)
     data modify storage global UnlockShardProgress set value [5,29,54,75]

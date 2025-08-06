@@ -5,6 +5,7 @@
 # @public
     #declare score_holder $PlayerCount
     #declare score_holder $LoadTime
+    #declare score_holder $PlayTime
 
 #> Global Vars - Islands
 # @within function

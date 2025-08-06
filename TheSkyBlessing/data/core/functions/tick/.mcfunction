@@ -14,6 +14,8 @@
     execute store result storage global Time int 1 run time query gametime
 # プレイヤー数をGlobalオブジェクトに設定する
     execute store result score $PlayerCount Global if entity @a
+# プレイ時間計測
+    execute if score $PlayerCount Global matches 1.. run scoreboard players add $PlayTime Global 1
 
 # EntityFinder の初回攻撃判定をリセットする
     function api:mob/apply_to_forward_target/reset_initial_apply.m {Key:"mob_manager:entity_finder/player_hurt_entity/fetch_entity"}
