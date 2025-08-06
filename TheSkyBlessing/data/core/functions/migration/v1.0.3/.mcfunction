@@ -10,3 +10,6 @@
 
 #> From: https://github.com/ProjectTSB/TheSkyBlessing/commit/33c5c5aeed5886c4c1a580010a930746bacc3a82
 data remove storage metric: FallDamageLogs
+
+#> From: https://github.com/ProjectTSB/TheSkyBlessing/commit/ac5a23dc68b73213e95e8193759702cd7a2f1b7c
+data modify storage global Config.ShowPlayTimeOnDispel set value false
