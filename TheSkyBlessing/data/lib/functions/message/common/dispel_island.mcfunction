@@ -44,7 +44,8 @@
 # タイトル
     title @a times 10 60 30
     title @a title [{"text":"ISLAND PURIFIED","bold":true,"color":"light_purple"}]
-    title @a subtitle {"text":"","bold":false,"extra":[{"text":"PROGRESS ","color":"green"},{"score":{"name":"$PurifiedIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"/","color":"gray"},{"text":"\u0002","font":"space"},{"score":{"name":"$TotalIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"("},{"storage":"lib:","nbt":"Temp.Progress"},{"text":"%)  "},{"text":"TIME ","color":"gold"},{"storage":"lib:","nbt":"Temp.Time[]","separator":""}]}
+    execute if data storage global Config{ShowPlayTimeOnDispel: true} run title @a subtitle {"text":"","bold":false,"extra":[{"text":"PROGRESS ","color":"green"},{"score":{"name":"$PurifiedIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"/","color":"gray"},{"text":"\u0002","font":"space"},{"score":{"name":"$TotalIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"("},{"storage":"lib:","nbt":"Temp.Progress"},{"text":"%)  "},{"text":"TIME ","color":"gold"},{"storage":"lib:","nbt":"Temp.Time[]","separator":""}]}
+    execute if data storage global Config{ShowPlayTimeOnDispel:false} run title @a subtitle {"text":"","bold":false,"extra":[{"text":"PROGRESS ","color":"green"},{"score":{"name":"$PurifiedIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"/","color":"gray"},{"text":"\u0002","font":"space"},{"score":{"name":"$TotalIslands","objective":"Global"},"color":"white"},{"text":"\u0002","font":"space"},{"text":"("},{"storage":"lib:","nbt":"Temp.Progress"},{"text":"%)"}]}
 # チャット
     tellraw @a [{"text":"[!] すべてのアイテムが神殿に返還された。","color":"yellow"}]
 
