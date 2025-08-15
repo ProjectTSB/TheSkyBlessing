@@ -8,6 +8,7 @@
 data modify storage global GameVersion set value "v1.0.3"
 data modify storage global FirstGameVersion set from storage global GameVersion
 data modify storage global ExpectedDatapackCount set value 22
+data modify storage global ResourcePackVersion set value "v1.0.b"
 
 #> forceload chunksの設定
 # Origin
