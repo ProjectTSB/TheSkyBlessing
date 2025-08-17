@@ -9,6 +9,9 @@
     data modify storage global ResourcePackVersion set value "v1.0.c"
 
 
+#> Common Migration
+    function core:migration/common/
+
 #> From: https://github.com/ProjectTSB/TheSkyBlessing/commit/33c5c5aeed5886c4c1a580010a930746bacc3a82
 data remove storage metric: FallDamageLogs
 
