@@ -9,6 +9,9 @@
     data modify storage global FirstGameVersion set value "v1.0.0"
 
 
+#> Common Migration
+    function core:migration/common/
+
 #> from: https://github.com/ProjectTSB/TheSkyBlessing/commit/9c6e5b09ba43acea8890fb71d6460b520dcf1274
 data modify storage global ExpectedDatapackCount set value 22
 
