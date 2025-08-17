@@ -7,18 +7,18 @@
 #   world_manager:gimmick/darkness/penalty/spawn
 
 # 敵のレベルを決定する
-# $Random = Progress(e2) + (0 ~ 10)
+# $Random = Progress(e2) + (0 ~ 30)
     function api:global_vars/game_progress
-    execute store result score $Random Temporary run random value 0..14
+    execute store result score $Random Temporary run random value 0..30
     execute store result score $Progress Temporary run data get storage api: Return.Progress 100
     scoreboard players operation $Random Temporary += $Progress Temporary
-    scoreboard players operation $Random Temporary < $99 Const
+    # scoreboard players operation $Random Temporary < $99 Const
 # ID を一覧から選定して召喚
-    execute if score $Random Temporary matches 00..15 run function world_manager:gimmick/darkness/penalty/pick.m {Level:0}
-    execute if score $Random Temporary matches 16..30 run function world_manager:gimmick/darkness/penalty/pick.m {Level:1}
-    execute if score $Random Temporary matches 31..55 run function world_manager:gimmick/darkness/penalty/pick.m {Level:2}
-    execute if score $Random Temporary matches 56..80 run function world_manager:gimmick/darkness/penalty/pick.m {Level:3}
-    execute if score $Random Temporary matches 81..99 run function world_manager:gimmick/darkness/penalty/pick.m {Level:4}
+    execute if score $Random Temporary matches 000..044 run function world_manager:gimmick/darkness/penalty/pick.m {Level:0}
+    execute if score $Random Temporary matches 045..064 run function world_manager:gimmick/darkness/penalty/pick.m {Level:1}
+    execute if score $Random Temporary matches 065..084 run function world_manager:gimmick/darkness/penalty/pick.m {Level:2}
+    execute if score $Random Temporary matches 085..104 run function world_manager:gimmick/darkness/penalty/pick.m {Level:3}
+    execute if score $Random Temporary matches 105..130 run function world_manager:gimmick/darkness/penalty/pick.m {Level:4}
     function api:mob/summon
 
 # リセット
