@@ -1,10 +1,13 @@
 #> api:artifact/replace/from_id
 #
 # 神器Assetの入手処理を叩く処理
+# 実行者必須
 #
-# @input storage api:
-#   Argument.ID : int
-#   Argument.Slot? : string (default: "mainhand")
+# @input
+#   as entity
+#   storage api:
+#       Argument.ID : int
+#       Argument.Slot? : string (default: "mainhand")
 # @api
 
 # validate

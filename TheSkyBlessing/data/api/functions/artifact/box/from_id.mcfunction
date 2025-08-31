@@ -1,8 +1,11 @@
 #> api:artifact/box/from_id
 #
 # 神器Assetの入手処理を叩く処理
+# 実行者必須
 #
-# @input storage api: Argument.ID
+# @input
+#   as entity
+#   storage api: Argument.ID
 # @api
 
 # validate
