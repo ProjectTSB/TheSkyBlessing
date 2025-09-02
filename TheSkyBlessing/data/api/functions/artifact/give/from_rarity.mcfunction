@@ -1,10 +1,13 @@
 #> api:artifact/give/from_rarity
 #
 # 神器Assetの入手処理を叩く処理
+# 実行者必須
 #
-# @input storage api:
-#   Argument.Rarity : (1 | 2 | 3 | 4)
-#   Argument.Color? : ("red" | "blue" | "green")
+# @input
+#   as entity
+#   storage api:
+#       Argument.Rarity : (1 | 2 | 3 | 4)
+#       Argument.Color? : ("red" | "blue" | "green")
 # @api
 
 # validate

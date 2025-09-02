@@ -1,10 +1,13 @@
 #> api:artifact/spawn/from_id
 #
 # 神器Assetの入手処理を叩く処理
+# 実行者必須
 #
-# @input storage api:
-#   Argument.ID : int
-#   Argument.Important? : boolean (default: false)
+# @input
+#   as entity
+#   storage api:
+#       Argument.ID : int
+#       Argument.Important? : boolean (default: false)
 # @api
 
 # validate
