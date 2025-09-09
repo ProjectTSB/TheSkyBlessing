@@ -10,6 +10,7 @@
 #   asset:artifact/*/*/3.main
 #   asset:artifact/common/**
 #   asset_manager:artifact/**
+#   debug:catalog_container/artifact/init.m
     #declare storage asset:artifact
 
 #> 特殊クールダウン
