@@ -10,7 +10,7 @@
     function oh_my_dat:please
     execute store result score $RequiredPlayerRange Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.RequiredPlayerRange 10
     scoreboard players operation $RequiredPlayerRange Temporary *= $RequiredPlayerRange Temporary
-    execute as @p[gamemode=!spectator,distance=..40] run function asset_manager:spawner/tick/is_near_player
+    execute as @p[gamemode=!spectator,tag=!Death,distance=..40] run function asset_manager:spawner/tick/is_near_player
 # this削除
     tag @s remove this
 # 範囲内に居る場合tick処理を行う
