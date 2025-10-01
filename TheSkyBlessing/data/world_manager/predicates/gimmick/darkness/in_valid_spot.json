@@ -6,7 +6,7 @@
             "offsetY": 1,
             "predicate": {
                 "block": {
-                    "tag": "lib:no_collision_without_fluid"
+                    "tag": "lib:no_collision/without_fluid"
                 }
             }
         },
@@ -15,7 +15,7 @@
             "offsetY": 0,
             "predicate": {
                 "block": {
-                    "tag": "lib:no_collision_without_fluid"
+                    "tag": "lib:no_collision/without_fluid"
                 }
             }
         },
@@ -26,7 +26,7 @@
                 "offsetY": -1,
                 "predicate": {
                     "block": {
-                        "tag": "lib:no_collision"
+                        "tag": "lib:no_collision/"
                     }
                 }
             }

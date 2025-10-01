@@ -1,7 +1,7 @@
 {
     "replace": false,
     "values": [
-        "#lib:no_collision_without_fluid",
+        "#lib:no_collision/without_fluid",
         "lava",
         "water"
     ]
