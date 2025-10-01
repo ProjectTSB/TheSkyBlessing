@@ -1,6 +1,7 @@
 {
     "values": [
         "#minecraft:corals",
+        "#minecraft:wall_corals",
         "dead_tube_coral",
         "dead_tube_coral_fan",
         "dead_brain_coral",
