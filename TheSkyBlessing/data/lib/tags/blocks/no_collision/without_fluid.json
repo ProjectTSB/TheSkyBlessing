@@ -1,8 +1,9 @@
 {
     "replace": false,
     "values": [
-        "#lib:no_collision_corals",
-        "#lib:no_collision_flowers",
+        "#lib:no_collision/corals",
+        "#lib:no_collision/flowers",
+        "#lib:no_collision/saplings",
         "#minecraft:all_hanging_signs",
         "#minecraft:banners",
         "#minecraft:buttons",
