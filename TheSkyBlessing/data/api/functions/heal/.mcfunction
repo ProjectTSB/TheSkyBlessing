@@ -10,6 +10,7 @@
 #   storage api: Argument.FixedHeal? : boolean(default: false)
 #   storage api: Argument.DisableLog? : boolean(default: false)
 #   storage api: Argument.ApplyTrigger? : boolean(default: true)
+#   storage api: Argument.Metadata? : any
 # @api
 
 # 引数チェック
