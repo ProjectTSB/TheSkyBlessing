@@ -8,5 +8,6 @@ data remove storage api: Argument.Heal
 data remove storage api: Argument.FixedHeal
 data remove storage api: Argument.DisableLog
 data remove storage api: Argument.ApplyTrigger
+data remove storage api: Argument.Medata
 
 scoreboard players reset $LatestModifiedUser UserID
