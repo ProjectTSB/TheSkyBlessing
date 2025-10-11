@@ -1,1 +1,4 @@
-$execute store result score $d player_motion.internal.math run data get storage player_motion:arcsine arr[$(quotient)]
+#> player_motion:internal/math/trig/arcsine
+# @within function player_motion:internal/math/main
+
+$execute store result score $d PlayerMotion.Internal.Math run data get storage player_motion:arcsine arr[$(quotient)]
