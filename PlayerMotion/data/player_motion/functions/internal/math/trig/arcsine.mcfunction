@@ -1,0 +1,1 @@
+$execute store result score $d player_motion.internal.math run data get storage player_motion:arcsine arr[$(quotient)]
