@@ -17,7 +17,7 @@
     scoreboard players reset $HealedFrom Temporary
 # 神器側に受け渡し
     function #asset:artifact/receive_heal/all
-    execute if data storage asset:context ReceiveHeal{IsHoT:true} run function #asset:artifact/receive_heal/
+    execute unless data storage asset:context ReceiveHeal{IsHoT:true} run function #asset:artifact/receive_heal/
 
 # リセット
     data remove storage asset:context ReceiveHeal
