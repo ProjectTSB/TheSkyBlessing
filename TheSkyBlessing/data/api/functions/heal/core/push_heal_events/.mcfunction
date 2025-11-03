@@ -15,6 +15,7 @@
     execute unless data storage api: Argument{ApplyTrigger:true} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].IsHoT set value true
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].Metadata set from storage api: Argument.Metadata
 
+# ApplyTriggerがtrueでないなら与回復トリガーは実行しない
     execute unless data storage api: Argument{ApplyTrigger:true} run return fail
 
 # ヒールした側から行う処理
