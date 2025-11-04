@@ -16,7 +16,9 @@
     execute if data storage asset:context ReceiveHeal.From as @a if score @s UserID = $HealedFrom Temporary run tag @s add Healer
     scoreboard players reset $HealedFrom Temporary
 # 神器側に受け渡し
-    function #asset:artifact/receive_heal
+    function #asset:artifact/receive_heal/all
+    execute unless data storage asset:context ReceiveHeal{IsHoT:true} run function #asset:artifact/receive_heal/
+
 # リセット
     data remove storage asset:context ReceiveHeal
     tag @a[tag=Healer] remove Healer
