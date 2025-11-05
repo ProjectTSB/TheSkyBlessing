@@ -12,6 +12,7 @@
 #   core:tick/4_interval
 #   debug:trader/update
     #declare tag Trader
+    #declare tag Trader.DailyUpdate
 
 #> storage
 # @within

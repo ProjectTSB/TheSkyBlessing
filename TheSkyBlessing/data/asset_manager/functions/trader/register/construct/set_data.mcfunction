@@ -13,6 +13,8 @@
 # Default位置
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultPos set from entity @s Pos
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation set from storage asset:trader Rotation
+# 日替わり更新するか
+    execute if data storage asset:trader {DailyUpdate:true} run tag @s add Trader.DailyUpdate
 # 取引一覧
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.Trades set from storage asset:trader Trades
 # そのまま適用するやつ
