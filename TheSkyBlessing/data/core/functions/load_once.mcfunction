@@ -236,9 +236,11 @@ team modify NoCollision collisionRule never
     #> AssetManager: Trader
     # @within function
     #   asset_manager:trader/tick/**
+    #   asset_manager:trader/daily_update
     #   asset_manager:trader/common/**
         scoreboard objectives add RecipeVersion dummy {"text":"商人の取引内容の更新チェック用スコア"}
-        scoreboard objectives add LatestDayTime dummy {"text":"商人の日替わり更新チェック用スコア"}
+        scoreboard objectives add LatestDayTime dummy {"text":"商人の日替わり更新チェック用スコア1"}
+        scoreboard objectives add LatestDailyUpdateTick dummy {"text":"商人が最後に日替わり更新したTick"}
 
     #> イベントハンドラ用スコアボード
     # @within function
