@@ -18,8 +18,8 @@
 # 落下元らしき場所にAECをTPする
     execute as @e[type=area_effect_cloud,tag=AntiVoidTargetInit,distance=..0.01,limit=1] at @s rotated ~ -90 run function lib:score_to_move/
 # その位置から35m以内のランダムなプレイヤーにAECをTPする / 居ない場合は一番近いプレイヤー
-    execute as @e[type=area_effect_cloud,tag=AntiVoidTargetInit,limit=1] at @s at @a[distance=..35,sort=random,limit=1] run tp @s ~ ~ ~
-    execute as @e[type=area_effect_cloud,tag=AntiVoidTargetInit,limit=1] at @s unless entity @p[distance=..35] at @p run tp @s ~ ~ ~
+    execute as @e[type=area_effect_cloud,tag=AntiVoidTargetInit,limit=1] at @s at @a[gamemode=!spectator,tag=!Death,distance=..35,sort=random,limit=1] run tp @s ~ ~ ~
+    execute as @e[type=area_effect_cloud,tag=AntiVoidTargetInit,limit=1] at @s unless entity @p[gamemode=!spectator,tag=!Death,distance=..35] at @p[gamemode=!spectator,tag=!Death] run tp @s ~ ~ ~
 # AECから初期化タグ外す
     tag @e[type=area_effect_cloud,tag=AntiVoidTargetInit,limit=1] remove AntiVoidTargetInit
 
