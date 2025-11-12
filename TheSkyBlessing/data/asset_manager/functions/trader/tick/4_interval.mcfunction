@@ -11,4 +11,4 @@
     execute if entity @s[tag=Trader.DailyUpdate] run function asset_manager:trader/daily_update
 
 # 更新処理
-    execute unless score $TraderRecipeVersion Global = @s RecipeVersion run function asset_manager:trader/common/update_recipe
+    execute unless score $TraderRecipeVersion Global = @s RecipeVersion run function asset_manager:trader/common/update_recipe/by_progress/

@@ -21,7 +21,7 @@
     data modify entity @s CustomName set from storage asset:trader Name
     data modify entity @s Rotation[0] set from storage asset:trader Rotation
 # 取引データ
-    function asset_manager:trader/common/update_recipe
+    function asset_manager:trader/common/update_recipe/by_progress/
 
 # リセット
     tag @s remove TraderInit
