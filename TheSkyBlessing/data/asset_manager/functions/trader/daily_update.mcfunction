@@ -23,7 +23,7 @@
     execute if entity @s[tag=!Update] if score $GameTime Temporary matches 24000.. run tag @s add Update
 
 # 更新
-    execute if entity @s[tag=Update] run function asset_manager:trader/common/update_recipe/by_progress/
+    execute if entity @s[tag=Update] run function asset_manager:trader/common/update_recipe/by_daily
 
 # LatestDayTime/LatestUpdateTick更新
     execute store result score @s LatestDayTime run time query daytime

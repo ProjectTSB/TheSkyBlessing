@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:trader/common/update_recipe/by_daily/
+#   asset_manager:trader/common/update_recipe/by_daily
 #   asset_manager:trader/common/update_recipe/by_progress/
 
 # 攻略率を取得
