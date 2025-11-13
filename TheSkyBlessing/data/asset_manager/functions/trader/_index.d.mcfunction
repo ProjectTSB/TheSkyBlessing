@@ -38,4 +38,5 @@
 #   asset_manager:trader/common/update_recipe/update
 #   asset_manager:trader/common/trades_map/**
     #declare score_holder $Current
-    #declare score_holder $Required
+    #declare score_holder $RequiredToBuy
+    #declare score_holder $RequiredToDisplay
