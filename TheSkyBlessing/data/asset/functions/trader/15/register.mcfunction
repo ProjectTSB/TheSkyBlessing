@@ -25,24 +25,28 @@ execute unless loaded 37 15 -6 run return 1
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[1]
+    data modify storage asset:trader Trades[-1].MaxUses set value 1
     data modify storage asset:trader Trades[-1].RequiredProgress set value 5
 
 # 取引 Lv2神器
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[2]
+    data modify storage asset:trader Trades[-1].MaxUses set value 1
     data modify storage asset:trader Trades[-1].RequiredProgress set value 29
 
 # 取引 Lv3神器
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[3]
+    data modify storage asset:trader Trades[-1].MaxUses set value 1
     data modify storage asset:trader Trades[-1].RequiredProgress set value 54
 
 # 取引 Lv4神器
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:5b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[4]
+    data modify storage asset:trader Trades[-1].MaxUses set value 1
     data modify storage asset:trader Trades[-1].RequiredProgress set value 75
 
 # リセット
