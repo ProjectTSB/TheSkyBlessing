@@ -18,6 +18,9 @@
     execute store result score $RequiredToDisplay Temporary run data get storage asset:trader Trades[-1].RequiredProgressToDisplay
     function asset_manager:trader/common/trades_map/create_hidden_item.m with storage asset:trader Trades[-1]
 
+# もし、$RequiredToBuy < $RequiredToDisplayならエラーを出しておく (本来交換できないアイテムが交換できてしまうため)
+    execute if score $RequiredToBuy Temporary < $RequiredToDisplay Temporary run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"$RequiredToBuyが$RequiredToDisplayより小さい値に設定されています"}]
+
 # ベース
     data modify storage asset:trader Recipes append value {rewardExp:0b,maxUses:2147483647,xp:0}
 # データ設定
