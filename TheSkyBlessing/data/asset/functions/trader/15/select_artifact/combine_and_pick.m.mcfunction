@@ -10,7 +10,7 @@
     #declare score_holder $Random
 
 # 配列を結合
-    $data modify storage api: Return.Registry.Normal[$(Rarity)] append from storage api: Return.Registry.Rare[$(Rarity)]
+    $data modify storage api: Return.Registry.Normal[$(Rarity)] append from storage api: Return.Registry.Hide[$(Rarity)][]
 
 # 念のためdistinctして同一要素を取り除き、その中からPickする
 # distinctが要らないならレビューしてくれ～
@@ -35,7 +35,7 @@
 
 # 選んだ要素が要素数2以上ならもう一度picksする
     execute if data storage lib: Elements[1] run function asset:trader/15/select_artifact/re_picks
-    # tellraw @a {"storage":"lib:","nbt":"Elements"}
+    tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 配列に設定しておく
     $data modify storage asset:temp Sell[$(Rarity)] set from storage lib: Elements[0]
