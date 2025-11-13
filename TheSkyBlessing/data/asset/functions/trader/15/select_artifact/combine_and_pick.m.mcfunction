@@ -28,14 +28,14 @@
     execute store result score $Random Temporary run random value 0..65535
     execute store result storage lib: Picks[0] int 1 run scoreboard players operation $Random Temporary %= $CandidatesLength Temporary
     function lib:array/picks
-    tellraw @a {"storage":"lib:","nbt":"Elements"}
+    # tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 2次元配列を1次元にしておく
     data modify storage lib: Elements set from storage lib: Elements[]
 
 # 選んだ要素が要素数2以上ならもう一度picksする
     execute if data storage lib: Elements[1] run function asset:trader/15/select_artifact/re_picks
-    tellraw @a {"storage":"lib:","nbt":"Elements"}
+    # tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 配列に設定しておく
     $data modify storage asset:temp Sell[$(Rarity)] set from storage lib: Elements[0]
