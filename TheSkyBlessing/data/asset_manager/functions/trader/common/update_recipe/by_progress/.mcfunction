@@ -10,6 +10,7 @@
 # バージョンをチェックし、違うなら取引内容を更新する
     function oh_my_dat:please
     function asset_manager:trader/common/update_recipe/by_progress/check_version.m with storage global
+    data modify storage asset:trader Trades set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.Trades
 
 # 取引を更新
     function asset_manager:trader/common/update_recipe/update
