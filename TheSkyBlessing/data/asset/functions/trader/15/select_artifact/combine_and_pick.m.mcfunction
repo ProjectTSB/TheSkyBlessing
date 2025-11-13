@@ -35,7 +35,7 @@
 
 # 選んだ要素が要素数2以上ならもう一度picksする
     execute if data storage lib: Elements[1] run function asset:trader/15/select_artifact/re_picks
-    tellraw @a {"storage":"lib:","nbt":"Elements"}
+    # tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 配列に設定しておく
     $data modify storage asset:temp Sell[$(Rarity)] set from storage lib: Elements[0]
