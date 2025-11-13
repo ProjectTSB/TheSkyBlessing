@@ -9,5 +9,7 @@
     data modify storage asset:artifact RarityRegistryWithColor.Red set value [["UNUSED"], [], [], [], []]
     data modify storage asset:artifact RarityRegistryWithColor.Blue set value [["UNUSED"], [], [], [], []]
     data modify storage asset:artifact RarityRegistryWithColor.Green set value [["UNUSED"], [], [], [], []]
+    data modify storage asset:artifact HideRarityRegistry set value [["UNUSED"], [], [], [], []]
+
 # 読み込み
     function #asset:artifact/register
