@@ -28,7 +28,7 @@
     execute store result score $Random Temporary run random value 0..65535
     execute store result storage lib: Picks[0] int 1 run scoreboard players operation $Random Temporary %= $CandidatesLength Temporary
     function lib:array/picks
-    tellraw @a {"storage":"lib:","nbt":"Elements"}
+    # tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 2次元配列を1次元にしておく
     data modify storage lib: Elements set from storage lib: Elements[]
