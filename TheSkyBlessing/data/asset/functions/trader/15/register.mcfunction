@@ -21,41 +21,23 @@ execute unless loaded 37 15 -6 run return 1
 # 売る神器を決める
     function asset:trader/15/select_artifact/
 
-# 取引 Lv1神器
+# プレイヤーの攻略度に対応した神器
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-1",Count:1b}
     data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:1b}
-    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[1]
+    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.CurrentProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
     #data modify storage asset:trader Trades[-1].RequiredProgress set value 5
     #data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 5
 
-# 取引 Lv2神器
+# プレイヤーの攻略段階までの神器
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-2",Count:1b}
     data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:2b}
-    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[2]
+    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.UpToProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
-    data modify storage asset:trader Trades[-1].RequiredProgress set value 29
-    data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 29
-
-# 取引 Lv3神器
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-3",Count:1b}
-    data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:3b}
-    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[3]
-    data modify storage asset:trader Trades[-1].MaxUses set value 1
-    data modify storage asset:trader Trades[-1].RequiredProgress set value 54
-    data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 54
-
-# 取引 Lv4神器
-    data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-4",Count:1b}
-    data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:4b}
-    data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell[4]
-    data modify storage asset:trader Trades[-1].MaxUses set value 1
-    data modify storage asset:trader Trades[-1].RequiredProgress set value 75
-    data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 75
+    #data modify storage asset:trader Trades[-1].RequiredProgress set value 29
+    #data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 29
 
 # リセット
     data remove storage asset:temp Sell
