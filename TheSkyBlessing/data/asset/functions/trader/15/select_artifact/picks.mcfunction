@@ -27,7 +27,7 @@
 
     #tellraw @a {"storage":"lib:","nbt":"Elements"}
 
-# 選択した配列のが2次元でかつ、要素数が2以上でなければ、次元を1減らしてreturnする
+# 選択した配列が2次元でかつ、要素数が2以上でなければ、次元を1減らしてreturnする
     execute if data storage lib: Elements[][] unless data storage lib: Elements[][1] run return run data modify storage lib: Elements set from storage lib: Elements[]
 
 # 1次元配列ならreturn
