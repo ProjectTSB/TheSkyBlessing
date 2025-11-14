@@ -12,9 +12,7 @@
     #declare score_holder $CandidatesLength
     #declare score_holder $Random
 
-    #tellraw @a [{"text":"Array: "},{"storage":"lib:","nbt":"Array"}]
-
-    # data modify storage lib: Array set from storage asset:temp Pool
+# pickする
     data modify storage lib: Picks set value [0]
     execute store result score $CandidatesLength Temporary if data storage lib: Array[]
     execute store result score $Random Temporary run random value 0..65535
@@ -24,8 +22,6 @@
 # リセット
     scoreboard players reset $Random Temporary
     scoreboard players reset $CandidatesLength Temporary
-
-    #tellraw @a {"storage":"lib:","nbt":"Elements"}
 
 # 選択した配列が2次元でかつ、要素数が2以上でなければ、次元を1減らしてreturnする
     execute if data storage lib: Elements[][] unless data storage lib: Elements[][1] run return run data modify storage lib: Elements set from storage lib: Elements[]
