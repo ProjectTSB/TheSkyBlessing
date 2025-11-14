@@ -27,8 +27,6 @@ execute unless loaded 37 15 -6 run return 1
     data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:1b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.CurrentProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
-    #data modify storage asset:trader Trades[-1].RequiredProgress set value 5
-    #data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 5
 
 # プレイヤーの攻略段階までの神器
     data modify storage asset:trader Trades append value {}
@@ -36,8 +34,6 @@ execute unless loaded 37 15 -6 run return 1
     data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:2b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.UpToProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
-    #data modify storage asset:trader Trades[-1].RequiredProgress set value 29
-    #data modify storage asset:trader Trades[-1].RequiredProgressToDisplay set value 29
 
 # リセット
     data remove storage asset:temp Sell
