@@ -23,15 +23,13 @@ execute unless loaded 37 15 -6 run return 1
 
 # プレイヤーの攻略度に対応した神器
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-1",Count:1b}
-    data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:1b}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:8b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.CurrentProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
 
 # プレイヤーの攻略段階までの神器
     data modify storage asset:trader Trades append value {}
-    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"sacred_shard/lv-2",Count:1b}
-    data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/high",Count:2b}
+    data modify storage asset:trader Trades[-1].BuyA set value {PresetItem:"currency/high",Count:8b}
     data modify storage asset:trader Trades[-1].Sell set from storage asset:temp Sell.UpToProgress
     data modify storage asset:trader Trades[-1].MaxUses set value 1
 
