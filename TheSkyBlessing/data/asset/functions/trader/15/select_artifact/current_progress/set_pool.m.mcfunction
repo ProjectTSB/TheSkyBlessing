@@ -1,5 +1,5 @@
 #> asset:trader/15/select_artifact/current_progress/set_pool.m
-# args:
+# @input args:
 #   Rarity : int
 # @within function asset:trader/15/select_artifact/current_progress/
 
