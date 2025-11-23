@@ -51,3 +51,4 @@
     tag @s remove TriggerFlag.UseItem
     tag @s remove TriggerFlag.Sneak
     tag @s remove TriggerFlag.UsingItem
+    tag @s remove TriggerFlag.LeftClick

@@ -68,6 +68,9 @@
     data modify storage asset:artifact Item.components."minecraft:item_model" set from storage asset:artifact Model
 #    data modify storage asset:artifact Item.components."minecraft:item_name" set from storage asset:artifact Name
 
+# トリガー次第でデフォルトで入るコンポーネント
+    execute if data storage asset:artifact TriggerComponents{LeftClick:true} run function asset_manager:artifact/create/set_left_click
+    execute if data storage asset:artifact TriggerComponents{LeftClick:true} run say yo
 # 名前
     # 残り回数が存在する場合
         execute if data storage asset:artifact RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/has_remain

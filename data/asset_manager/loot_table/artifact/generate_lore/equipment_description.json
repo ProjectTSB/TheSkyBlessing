@@ -25,7 +25,8 @@
                                         "interpret": true
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

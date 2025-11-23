@@ -34,7 +34,8 @@
                                         "nbt": "MPRequire"
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

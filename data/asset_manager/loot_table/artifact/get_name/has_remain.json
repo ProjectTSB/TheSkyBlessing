@@ -38,7 +38,8 @@
                                     "storage": "asset:artifact",
                                     "color": "green"
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

@@ -66,7 +66,8 @@
                                         }
                                     }
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         },
                         {
                             "function": "set_lore",
@@ -131,7 +132,8 @@
                                         }
                                     }
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

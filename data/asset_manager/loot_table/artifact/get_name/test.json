@@ -21,7 +21,8 @@
                                     "storage": "asset:hoge",
                                     "interpret": true
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

@@ -20,7 +20,8 @@
                                         "interpret": true
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

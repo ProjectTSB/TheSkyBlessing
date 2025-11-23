@@ -35,7 +35,7 @@
     execute store result storage asset:artifact CooldownMinutes int 1 run scoreboard players get $CooldownMinutes Temporary
 # Lore にする
     loot replace block 10000 1 10000 container.0 loot asset_manager:artifact/generate_lore/cooldown_duration
-    data modify storage asset:artifact Cooldown append from block 10000 1 10000 Items[0].tag.display.Lore[0]
+    data modify storage asset:artifact Cooldown append from block 10000 1 10000 Items[0].components."minecraft:lore"[0]
 # リセット
     scoreboard players reset $Cooldown
     scoreboard players reset $CooldownDecimal

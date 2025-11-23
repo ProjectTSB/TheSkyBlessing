@@ -16,7 +16,7 @@
     data modify storage asset:artifact IsSetEffect set from storage asset:artifact Equipment.Effects[0].IsSetEffect
     execute if data storage asset:artifact {IsSetEffect:true} run data modify storage asset:artifact EffectTypeName set value "セット効果"
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/equipment
-    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[0]
+    data modify storage asset:artifact Item.components."minecraft:lore" append from block 10000 0 10000 Items[0].components."minecraft:lore"[0]
 # 説明文をLoreに組み込む
     execute if data storage asset:effect Description[0] run function asset_manager:artifact/create/set_lore/equipment/description
 

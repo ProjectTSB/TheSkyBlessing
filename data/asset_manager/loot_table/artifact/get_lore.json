@@ -24,7 +24,8 @@
                                         "interpret": true
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "append"
                         }
                     ]
                 }

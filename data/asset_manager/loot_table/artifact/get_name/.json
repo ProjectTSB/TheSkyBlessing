@@ -21,7 +21,8 @@
                                     "storage": "asset:artifact",
                                     "interpret": true
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

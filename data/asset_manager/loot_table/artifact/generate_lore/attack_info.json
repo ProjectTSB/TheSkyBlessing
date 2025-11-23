@@ -133,7 +133,8 @@
                                         "interpret": true
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

@@ -93,7 +93,8 @@
                                         "interpret": true
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

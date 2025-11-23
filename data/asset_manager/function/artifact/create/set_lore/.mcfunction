@@ -11,16 +11,16 @@
 # 装備時効果
     # ステータス補正
         data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
-        execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+        execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value '""'
         execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/
         data remove storage asset:artifact CopiedModifiers
     # セット効果
-        execute if data storage asset:artifact Equipment.Effects[{Visible:true}] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+        execute if data storage asset:artifact Equipment.Effects[{Visible:true}] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value '""'
         execute if data storage asset:artifact Equipment.Effects[0] run function asset_manager:artifact/create/set_lore/equipment/
     # リセット
         data modify block 10000 0 10000 Items set value []
 # 空行セパレータ
-    execute if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value ""
 # トリガー
     # 使用方法
         function asset_manager:artifact/create/set_lore/trigger
@@ -39,11 +39,13 @@
     # クールタイム
         function asset_manager:artifact/create/set_lore/cooldown/
     # Lore一括追加
-        data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[].tag.display.Lore[]
+    say hoh
+        data modify storage asset:hoge Item.components."minecraft:lore" append from block 10000 0 10000 Items[].components."minecraft:lore"[]
+        data modify storage asset:artifact Item.components."minecraft:lore" append from block 10000 0 10000 Items[].components."minecraft:lore"[]
     # リセット
         data modify block 10000 0 10000 Items set value []
 # 空行セパレータ
-    execute if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+    execute if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value ""
 # 最大装備数
     execute if data storage asset:artifact {Slot:"hotbar"} run function asset_manager:artifact/create/set_lore/parts_max
 # 使える神

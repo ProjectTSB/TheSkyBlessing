@@ -30,7 +30,8 @@
                                         "nbt": "PartsMax"
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

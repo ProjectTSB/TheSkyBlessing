@@ -16,7 +16,7 @@
 # 神器の名前 (TextComponentString)
     data modify storage asset:artifact Name set value {"text":"テストの剣","color":"green"}
 # 神器の説明文 (TextComponentString[])
-    data modify storage asset:artifact Lore set value ['{"text":"おそらく剣。","color":"white"}','{"text":"\\"すごくテスト用っぽい\\"","color":"gray"}']
+    data modify storage asset:artifact Lore set value [{"text":"おそらく剣。","color":"white"},{"text":""},{"text":"すごくテスト用っぽい","color":"gray"}]
 # 消費アイテム ({Item: TextComponent, Count: int, Extra?: TextComponent}) (オプション)
     # data modify storage asset:artifact ConsumeItem.Item set value
     # data modify storage asset:artifact ConsumeItem.Count set value
@@ -27,6 +27,12 @@
     data modify storage asset:artifact Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
     data modify storage asset:artifact Trigger set value "onClick"
+# 神器のトリガー(boolean)
+    data modify storage asset:artifact Trigger.LeftClick set value true
+#    data modify storage asset:artifact Trigger.RightClick set value "onClick"
+#    data modify storage asset:artifact Trigger.RightClick set value "onClick"
+#    data modify storage asset:artifact Trigger.RightClick set value "onClick"
+#    data modify storage asset:artifact Trigger.RightClick set value "onClick"
 # 神器の発動条件 (TextComponentString) (オプション)
     # data modify storage asset:artifact Condition set value
 # 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)

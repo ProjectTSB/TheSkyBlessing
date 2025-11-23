@@ -8,7 +8,7 @@
 
 # 配列に追加
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/equipment_description
-    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[]
+    data modify storage asset:artifact Item.components."minecraft:lore" append from block 10000 0 10000 Items[0].components."minecraft:lore"[]
 # 先頭を削除
     data remove storage asset:effect Description[0]
 # 再帰

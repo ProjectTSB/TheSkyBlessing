@@ -50,7 +50,8 @@
                                         "font": "default"
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

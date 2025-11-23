@@ -63,7 +63,8 @@
                                     "text": "#",
                                     "font": "invisible_bg"
                                 }
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

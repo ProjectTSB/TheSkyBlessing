@@ -32,7 +32,8 @@
                                         "separator": " "
                                     }
                                 ]
-                            ]
+                            ],
+                            "mode": "insert"
                         }
                     ]
                 }

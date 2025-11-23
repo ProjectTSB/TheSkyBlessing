@@ -29,6 +29,7 @@
     #declare tag TriggerFlag.UseItem
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
+    #declare tag TriggerFlag.LeftClick
 
 #> バニラの攻撃を扱う用
 # @within function

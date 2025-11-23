@@ -90,7 +90,7 @@
     execute if score $AmountFrac Temporary matches 1.. run data modify storage asset:artifact Line[3] set value '{"translate":"%s.%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"},{"storage":"asset:artifact","nbt":"Amount.Frac"}]}'
 # Lore追加
     loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/generate_lore/modifier
-    data modify storage asset:artifact Item.tag.display.Lore append from block 10000 0 10000 Items[0].tag.display.Lore[]
+    data modify storage asset:artifact Item.components."minecraft:lore" append from block 10000 0 10000 Items[0].components."minecraft:lore"[]
 
 # リセット
     scoreboard players reset $CustomModifier Temporary
