@@ -1,6 +1,8 @@
 {
     "pack": {
-        "pack_format": 26,
+        "pack_format": 88,
+        "min_format": 88,
+	    "max_format": 88,
         "description": "軽量化、及び高い可読性を心がける事。"
     },
     "filter": {

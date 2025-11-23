@@ -64,21 +64,25 @@
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
     data modify storage asset:artifact Item.tag.TSB.Equipment set from storage asset:artifact Equipment
     data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
+    data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
+    data modify storage asset:artifact Item.components."minecraft:item_model" set from storage asset:artifact Model
+#    data modify storage asset:artifact Item.components."minecraft:item_name" set from storage asset:artifact Name
 
 # 名前
     # 残り回数が存在する場合
         execute if data storage asset:artifact RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/has_remain
     # 残り回数が存在しない場合
         execute unless data storage asset:artifact RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/
-    data modify storage asset:artifact Item.tag.display.Name set from block 10000 0 10000 Items[0].tag.display.Name
+        data modify storage asset:artifact Item.components."minecraft:item_name" set from block 10000 0 10000 Items[0].components."minecraft:custom_name"
+        data modify storage asset:hoge Item.components."minecraft:item_name" set from block 10000 0 10000 Items[0].components."minecraft:custom_name"
 
 # Lore
     function asset_manager:artifact/create/set_lore/
 # カスタムNBT
-    execute unless data storage asset:artifact CustomNBT.AttributeModifiers run data modify storage asset:artifact CustomNBT.AttributeModifiers set value []
+    execute unless data storage asset:artifact CustomNBT.attribute_modifiers run data modify storage asset:artifact CustomNBT.attribute_modifiers set value []
     data modify storage asset:artifact CustomNBT.Unbreakable set value 1b
     function asset_manager:artifact/create/set_hide_flags
-    data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
+    data modify storage asset:artifact Item.components merge from storage asset:artifact CustomNBT
 
 # データの適用
     item replace block 10000 0 10000 container.0 with stone

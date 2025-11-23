@@ -110,3 +110,4 @@
     data remove storage asset:artifact DisabledFlag
     data remove storage asset:artifact CanUsedGod
     data remove storage asset:artifact CustomNBT
+    data remove storage asset:artifact Model
