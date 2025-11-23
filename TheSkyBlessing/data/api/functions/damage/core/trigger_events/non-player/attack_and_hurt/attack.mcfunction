@@ -24,7 +24,5 @@ function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To append value -1
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To[-1] int 1 run scoreboard players get $DamagerUUID Temporary
 
-say a
-
 # リセット
     scoreboard players reset $LastIndex Temporary
