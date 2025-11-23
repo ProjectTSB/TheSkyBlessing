@@ -39,7 +39,6 @@
     # クールタイム
         function asset_manager:artifact/create/set_lore/cooldown/
     # Lore一括追加
-    say hoh
         data modify storage asset:hoge Item.components."minecraft:lore" append from block 10000 0 10000 Items[].components."minecraft:lore"[]
         data modify storage asset:artifact Item.components."minecraft:lore" append from block 10000 0 10000 Items[].components."minecraft:lore"[]
     # リセット
