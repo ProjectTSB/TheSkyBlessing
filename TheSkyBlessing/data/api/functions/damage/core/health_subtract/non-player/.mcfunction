@@ -19,7 +19,7 @@
     function lib:status_log/show_health
 
 # MobのHealthよりダメージが高い場合Healthに設定
-    scoreboard players operation $Damage Temporary < $Health Temporary
+    # scoreboard players operation $Damage Temporary < $Health Temporary
 # 減算
     scoreboard players operation $Health Temporary -= $Damage Temporary
 
