@@ -20,9 +20,10 @@
     execute if data storage api: Argument{ApplyTrigger:false} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].IsHoT set value true
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].Metadata set from storage api: Argument.Metadata
 
-# リセット
+# returnされる場合もあるのでここでリセット
     scoreboard players reset $OverHeal Temporary
     scoreboard players reset $MaxHealth Temporary
+    scoreboard players reset $CurrentHealth Temporary
 
 # ApplyTriggerがtrueでないなら与回復トリガーは実行しない
     execute unless data storage api: Argument{ApplyTrigger:true} run return fail
