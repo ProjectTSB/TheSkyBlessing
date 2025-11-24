@@ -40,33 +40,32 @@
     data modify storage asset:artifact Item.Count set value 1b
 
 # Version
-    data modify storage asset:artifact Item.tag.TSB.Version set from storage global GameVersion
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.Version set from storage global GameVersion
 # Unique Universal Identifier
     scoreboard players add $ArtifactIndex Global 1
-    execute store result storage asset:artifact Item.tag.TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
+    execute store result storage asset:artifact Item.components."minecraft:custom_data".TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
 # 扱える神のエイリアスを修正する
     execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
 # そのまま入れれるやつ
     data modify storage asset:artifact Item.id set from storage asset:artifact BaseItem
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
-    data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
-    data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
-    data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
-    data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
-    data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
-    data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
-    data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
-    data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
-    data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
-    data modify storage asset:artifact Item.tag.TSB.SecondaryTypeCooldown set from storage asset:artifact SecondaryTypeCooldown
-    data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.Equipment set from storage asset:artifact Equipment
-    data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
-    data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.rawName set from storage asset:artifact Name
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.ID set from storage asset:artifact ID
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.Trigger set from storage asset:artifact Trigger
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.MPCost set from storage asset:artifact MPCost
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.MPRequire set from storage asset:artifact MPRequire
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.CanUsedGod set from storage asset:artifact CanUsedGod
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.RemainingCount set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.RemainingCountMax set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.LocalCooldown set from storage asset:artifact LocalCooldown
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.TypeCooldown set from storage asset:artifact TypeCooldown
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.SecondaryTypeCooldown set from storage asset:artifact SecondaryTypeCooldown
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.Equipment set from storage asset:artifact Equipment
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.DisabledFlag set from storage asset:artifact DisabledFlag
+    data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.DisabledFlag set from storage asset:artifact DisabledFlag
     data modify storage asset:artifact Item.components."minecraft:item_model" set from storage asset:artifact Model
-#    data modify storage asset:artifact Item.components."minecraft:item_name" set from storage asset:artifact Name
 
 # トリガー次第でデフォルトで入るコンポーネント
     execute if data storage asset:artifact TriggerComponents{LeftClick:true} run function asset_manager:artifact/create/set_left_click
