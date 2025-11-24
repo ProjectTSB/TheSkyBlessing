@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "trigger": {
+      "trigger": "using_item"
+    }
+  },
+  "rewards": {
+    "function": "core:early_handler/using_item"
+  }
+}
