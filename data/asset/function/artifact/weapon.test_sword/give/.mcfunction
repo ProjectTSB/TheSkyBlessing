@@ -24,12 +24,12 @@
 # 使用回数 (int) (オプション)
     # data modify storage asset:artifact RemainingCount set value
 # 神器を発動できるスロット (string) Wikiを参照
-    data modify storage asset:artifact Slot set value "auto"
+#    data modify storage asset:artifact Slot set value "auto"
 # 神器のトリガー (string) Wikiを参照
-    data modify storage asset:artifact Trigger set value "onClick"
+#    data modify storage asset:artifact Trigger set value "onClick"
 # 神器のトリガー(boolean)
     data modify storage asset:artifact Trigger.LeftClick set value true
-#    data modify storage asset:artifact Trigger.RightClick set value "onClick"
+    data modify storage asset:artifact Trigger.RightClick set value true
 #    data modify storage asset:artifact Trigger.RightClick set value "onClick"
 #    data modify storage asset:artifact Trigger.RightClick set value "onClick"
 #    data modify storage asset:artifact Trigger.RightClick set value "onClick"
