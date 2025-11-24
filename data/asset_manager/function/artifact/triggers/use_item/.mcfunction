@@ -13,7 +13,7 @@
         data modify storage api: SelectedItemSlot set from storage asset:context Old.SelectedItemSlot
         data modify storage api: Inventory set from storage asset:context New.Inventory
         function api:inventory/refer_selected_item_slot/get_item
-        execute unless data storage api: Item.tag.TSB run data modify storage api: Item.tag.TSB set value {ID:-2,LocalCooldown:0,UUID:-2}
+        execute unless data storage api: Item.components."minecraft:custom_data".TSB run data modify storage api: Item.components."minecraft:custom_data".TSB set value {ID:-2,LocalCooldown:0,UUID:-2}
     # アイテムの変更で特定を試みる
         function asset_manager:artifact/triggers/use_item/check_change
     # アイテムを入れ替えたかで特定を試みる
