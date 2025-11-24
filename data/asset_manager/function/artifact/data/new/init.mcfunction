@@ -47,26 +47,27 @@
     execute unless data storage asset:context New.Items.chest run data modify storage asset:context New.Items.chest set value {}
     execute unless data storage asset:context New.Items.head run data modify storage asset:context New.Items.head set value {}
 # 非TSBアイテムのNullCheck
-    execute unless data storage asset:context New.Items.mainhand.tag.TSB.ID run data modify storage asset:context New.Items.mainhand.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.offhand.tag.TSB.ID run data modify storage asset:context New.Items.offhand.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.feet.tag.TSB.ID run data modify storage asset:context New.Items.feet.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.legs.tag.TSB.ID run data modify storage asset:context New.Items.legs.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.chest.tag.TSB.ID run data modify storage asset:context New.Items.chest.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.head.tag.TSB.ID run data modify storage asset:context New.Items.head.tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[0].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[0].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[1].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[1].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[2].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[2].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[3].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[3].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[4].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[4].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[5].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[5].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[6].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[6].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[7].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[7].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
-    execute unless data storage asset:context New.Items.hotbar[8].tag.TSB.ID run data modify storage asset:context New.Items.hotbar[8].tag.TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.mainhand.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.mainhand.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.feet.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.feet.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.legs.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.legs.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.chest.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.chest.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.head.components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.head.components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[0].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[0].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[1].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[1].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[2].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[2].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[3].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[3].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[4].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[4].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[5].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[5].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[6].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[6].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[7].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[7].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+    execute unless data storage asset:context New.Items.hotbar[8].components."minecraft:custom_data".TSB.ID run data modify storage asset:context New.Items.hotbar[8].components."minecraft:custom_data".TSB set value {ID:-2,UUID:-2,LocalCooldown:0}
+
 # id
-    data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.tag.TSB.ID
-    data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.tag.TSB.ID
-    data modify storage asset:context New.id.feet set from storage asset:context New.Items.feet.tag.TSB.ID
-    data modify storage asset:context New.id.legs set from storage asset:context New.Items.legs.tag.TSB.ID
-    data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.tag.TSB.ID
-    data modify storage asset:context New.id.head set from storage asset:context New.Items.head.tag.TSB.ID
-    data modify storage asset:context New.id.hotbar append from storage asset:context New.Items.hotbar[].tag.TSB.ID
+    data modify storage asset:context New.id.mainhand set from storage asset:context New.Items.mainhand.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.offhand set from storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.feet set from storage asset:context New.Items.feet.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.legs set from storage asset:context New.Items.legs.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.chest set from storage asset:context New.Items.chest.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.head set from storage asset:context New.Items.head.components."minecraft:custom_data".TSB.ID
+    data modify storage asset:context New.id.hotbar append from storage asset:context New.Items.hotbar[].components."minecraft:custom_data".TSB.ID

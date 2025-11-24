@@ -4,7 +4,7 @@
 #   asset_manager:artifact/tick/migrate/migration_artifact
 
 # 神器生成
-    data modify storage api: Argument.ID set from storage asset:artifact NeedMigrateArtifacts[-1].tag.TSB.ID
+    data modify storage api: Argument.ID set from storage asset:artifact NeedMigrateArtifacts[-1].components."minecraft:custom_data".TSB.ID
     function api:artifact/box/from_id
 # Slot を元に replace する
     data modify storage asset:artifact Slot set from storage asset:artifact NeedMigrateArtifacts[-1].Slot

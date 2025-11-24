@@ -8,7 +8,7 @@
 
 data modify block 10000 0 10000 Items set value []
 
-data modify storage api: Argument.Rarity set from storage asset:container ArtifactSeeds[-1].tag.TSB.ArtifactSeed.Rarity
+data modify storage api: Argument.Rarity set from storage asset:container ArtifactSeeds[-1].components."minecraft:custom_data".TSB.ArtifactSeed.Rarity
 function api:artifact/storage/from_rarity
 
 execute if data storage api: Return.Artifacts[0] unless data storage api: Return.Artifacts[1] run data modify storage asset:container Item set from storage api: Return.Artifacts[0]

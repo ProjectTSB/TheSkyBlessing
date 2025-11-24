@@ -11,8 +11,8 @@
 
 # チェスト名準備
     execute store result storage debug:catalog_container Artifact.Give.Page int 1 run scoreboard players get $Page Temporary
-    data modify storage debug:catalog_container Artifact.Give.From set from storage lib: Package[0].tag.TSB.ID
-    data modify storage debug:catalog_container Artifact.Give.To set from storage lib: Package[-1].tag.TSB.ID
+    data modify storage debug:catalog_container Artifact.Give.From set from storage lib: Package[0].components."minecraft:custom_data".TSB.ID
+    data modify storage debug:catalog_container Artifact.Give.To set from storage lib: Package[-1].components."minecraft:custom_data".TSB.ID
 
 # チェストを作成
     loot replace block 10000 0 10000 container.0 loot debug:catalog_container/artifact_give

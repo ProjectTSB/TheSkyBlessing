@@ -14,7 +14,7 @@
 
 # その神器に該当する種別クールダウンの現在値を取得する
     scoreboard players set $Duration Temporary -15
-    execute if data storage asset:artifact CopiedItem[-1].tag.TSB.TypeCooldown store result score $Duration Temporary run function asset_manager:artifact/check/check_type_cooldown/get_duration.m with storage asset:artifact CopiedItem[-1].tag.TSB.TypeCooldown
+    execute if data storage asset:artifact CopiedItem[-1].components."minecraft:custom_data".TSB.TypeCooldown store result score $Duration Temporary run function asset_manager:artifact/check/check_type_cooldown/get_duration.m with storage asset:artifact CopiedItem[-1].components."minecraft:custom_data".TSB.TypeCooldown
 # クールダウンが終わっていなければタグを付与する
     execute if score $Duration Temporary matches 1.. run tag @s add CheckFailed
 

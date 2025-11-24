@@ -19,16 +19,16 @@
     # buy
         data modify storage asset:trader Item set from storage asset:trader Trades[-1].BuyA
         function asset_manager:trader/common/trades_map/item_normalize/
-        data remove storage asset:trader Item.tag.TSB.UUID
-        data remove storage asset:trader Item.tag.TSB.ItemMetaData
+        data remove storage asset:trader Item.components."minecraft:custom_data".TSB.UUID
+        data remove storage asset:trader Item.components."minecraft:custom_data".TSB.ItemMetaData
         data modify storage asset:trader Recipes[-1].buy set from storage asset:trader Item
         execute unless score $Current Temporary >= $Required Temporary run data modify storage asset:trader Recipes[-1].buy set from storage asset:trader DeprecatedItem
     # buyB
         data remove storage asset:trader Item
         data modify storage asset:trader Item set from storage asset:trader Trades[-1].BuyB
         execute if data storage asset:trader Item run function asset_manager:trader/common/trades_map/item_normalize/
-        data remove storage asset:trader Item.tag.TSB.UUID
-        data remove storage asset:trader Item.tag.TSB.ItemMetaData
+        data remove storage asset:trader Item.components."minecraft:custom_data".TSB.UUID
+        data remove storage asset:trader Item.components."minecraft:custom_data".TSB.ItemMetaData
         data modify storage asset:trader Recipes[-1].buyB set from storage asset:trader Item
         execute if data storage asset:trader Item unless score $Current Temporary >= $Required Temporary run data modify storage asset:trader Recipes[-1].buyB set from storage asset:trader DeprecatedItem
     # sell

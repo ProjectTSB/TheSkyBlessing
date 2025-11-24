@@ -10,7 +10,7 @@
 
 # 対象スロットのデータの取得
     function asset_manager:artifact/data/current/get
-    execute unless data storage asset:artifact DisabledCheckFlag run data modify storage asset:artifact DisabledCheckFlag set from storage asset:artifact TargetItems[0].tag.TSB.DisabledFlag.Check
+    execute unless data storage asset:artifact DisabledCheckFlag run data modify storage asset:artifact DisabledCheckFlag set from storage asset:artifact TargetItems[0].components."minecraft:custom_data".TSB.DisabledFlag.Check
 # 事前にtag付与
     tag @s add CanUsed
 # 条件を満たしてなかったらtag削除
@@ -47,7 +47,7 @@
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed
 # 条件を満たしてない && 使用回数が存在する && トリガーがitemUse ならば使用回数を減らす
-    execute if entity @s[tag=!CanUsed] if data storage asset:artifact TargetItems[0].tag.TSB.RemainingCount if data storage asset:artifact TargetItems[0].tag.TSB{Trigger:"itemUse"} run function asset_manager:artifact/use/item/has_remain
+    execute if entity @s[tag=!CanUsed] if data storage asset:artifact TargetItems[0].components."minecraft:custom_data".TSB.RemainingCount if data storage asset:artifact TargetItems[0].components."minecraft:custom_data".TSB{Trigger:"itemUse"} run function asset_manager:artifact/use/item/has_remain
 
 # mainhand の場合はタグを削除する
     execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} if data storage asset:context Attack{Type:"vanilla_melee"} run tag @s remove ShouldVanillaAttack

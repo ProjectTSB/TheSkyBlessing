@@ -11,9 +11,9 @@
     function api:artifact/box/from_id
 # 設定
     data modify storage asset:trader Item set from block 10000 0 10000 Items[{Slot:0b}]
-    data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "ArtifactBoughtFromTrader"
-    data modify storage asset:trader Item.tag.TSB.ItemMetaData append value "BanPossession"
-    data modify storage asset:trader Item.tag.TSB.UUID set value -3
+    data modify storage asset:trader Item.components."minecraft:custom_data".TSB.ItemMetaData append value "ArtifactBoughtFromTrader"
+    data modify storage asset:trader Item.components."minecraft:custom_data".TSB.ItemMetaData append value "BanPossession"
+    data modify storage asset:trader Item.components."minecraft:custom_data".TSB.UUID set value -3
     data remove storage asset:trader Item.Slot
 # ところで存在しない場合もありますよね
     execute unless data storage asset:trader Item.id run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"次のIDの神器は存在しません: "},{"storage":"asset:trader","nbt":"Item.PresetItem","color":"red"}]

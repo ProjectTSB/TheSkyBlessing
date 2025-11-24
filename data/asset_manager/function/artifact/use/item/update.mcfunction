@@ -9,13 +9,13 @@
 # CT設定
     function asset_manager:artifact/use/item/update_local_cooldown/
 # データ更新処理
-    data modify storage asset:artifact Name set from storage asset:artifact TargetItems[-1].tag.TSB.rawName
+    data modify storage asset:artifact Name set from storage asset:artifact TargetItems[-1].components."minecraft:custom_data".TSB.rawName
     # 残り回数が存在する場合
-        execute if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run data modify storage asset:artifact Item set from storage asset:artifact TargetItems[-1]
-        execute if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/has_remain
-        execute if data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run data remove storage asset:artifact Item
+        execute if data storage asset:artifact TargetItems[-1].components."minecraft:custom_data".TSB.RemainingCount run data modify storage asset:artifact Item set from storage asset:artifact TargetItems[-1]
+        execute if data storage asset:artifact TargetItems[-1].components."minecraft:custom_data".TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/has_remain
+        execute if data storage asset:artifact TargetItems[-1].components."minecraft:custom_data".TSB.RemainingCount run data remove storage asset:artifact Item
     # 残り回数が存在しない場合
-        execute unless data storage asset:artifact TargetItems[-1].tag.TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/
+        execute unless data storage asset:artifact TargetItems[-1].components."minecraft:custom_data".TSB.RemainingCount run loot replace block 10000 0 10000 container.0 loot asset_manager:artifact/get_name/
     # スロットをコピーしておく
         data modify storage asset:artifact CopiedSlot set from storage asset:artifact TargetItems[-1].Slot
     # shulker boxでデータを完成させる

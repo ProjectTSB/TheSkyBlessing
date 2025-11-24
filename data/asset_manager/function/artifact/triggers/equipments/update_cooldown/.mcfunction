@@ -9,20 +9,20 @@
 # セッション開く
     function lib:array/session/open
 # 配列として取得
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.offhand.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.feet.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.legs.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.chest.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.head.tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[0].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[1].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[2].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[3].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[4].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[5].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[6].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[7].tag.TSB
-    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[8].tag.TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.feet.components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.legs.components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.chest.components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.head.components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[0].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[1].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[2].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[3].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[4].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[5].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[6].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[7].components."minecraft:custom_data".TSB
+    data modify storage asset:artifact ItemData append from storage asset:context New.Items.hotbar[8].components."minecraft:custom_data".TSB
 # それぞれについて更新
     function asset_manager:artifact/triggers/equipments/update_cooldown/foreach
 # 反転

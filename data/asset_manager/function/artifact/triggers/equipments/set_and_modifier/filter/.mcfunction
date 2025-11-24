@@ -9,13 +9,13 @@
 # 現tickの装備データの取得
     # 現tickの神器を抽出
     # asset:context New.Items -> asset:artifact Temp.Items
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.mainhand.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.offhand.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.feet.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.legs.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.chest.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.head.tag.TSB
-        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.hotbar[].tag.TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.mainhand.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.feet.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.legs.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.chest.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.head.components."minecraft:custom_data".TSB
+        data modify storage asset:artifact Temp.Items append from storage asset:context New.Items.hotbar[].components."minecraft:custom_data".TSB
     # 信仰条件を満たさない神器を弾く
     # asset:artifact Temp.Items -> asset:artifact Temp.BelieveFilteredItems (inverted)
         function asset_manager:artifact/triggers/equipments/set_and_modifier/filter/check_religion

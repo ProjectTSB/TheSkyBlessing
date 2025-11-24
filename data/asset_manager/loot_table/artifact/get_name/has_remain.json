@@ -25,7 +25,7 @@
                                     "text": " "
                                 },
                                 {
-                                    "nbt": "Item.tag.TSB.RemainingCount",
+                                    "nbt": "Item.components.\"minecraft:custom_data\".TSB.RemainingCount",
                                     "storage": "asset:artifact",
                                     "color": "green"
                                 },
@@ -34,7 +34,7 @@
                                     "color": "green"
                                 },
                                 {
-                                    "nbt": "Item.tag.TSB.RemainingCountMax",
+                                    "nbt": "Item.components.\"minecraft:custom_data\".TSB.RemainingCountMax",
                                     "storage": "asset:artifact",
                                     "color": "green"
                                 }

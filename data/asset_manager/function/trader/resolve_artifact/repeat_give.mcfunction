@@ -7,7 +7,7 @@
 #   asset_manager:trader/resolve_artifact/repeat_give
 
 # 一つgiveする
-    data modify storage api: Argument.ID set from storage asset:trader BoughtArtifacts[-1].tag.TSB.ID
+    data modify storage api: Argument.ID set from storage asset:trader BoughtArtifacts[-1].components."minecraft:custom_data".TSB.ID
     function api:artifact/give/from_id
 
 # 減らす

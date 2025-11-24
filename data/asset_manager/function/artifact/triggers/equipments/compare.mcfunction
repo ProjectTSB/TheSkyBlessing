@@ -13,21 +13,21 @@
 # セッション開く
     function lib:array/session/open
 # データ設定
-    data modify storage lib: ArrayA append from storage asset:context New.Items.mainhand.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.offhand.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.feet.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.legs.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.chest.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.head.tag.TSB.UUID
-    data modify storage lib: ArrayA append from storage asset:context New.Items.hotbar[].tag.TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.mainhand.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.offhand.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.feet.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.legs.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.chest.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.head.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayA append from storage asset:context New.Items.hotbar[].components."minecraft:custom_data".TSB.UUID
 
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.mainhand.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.offhand.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.feet.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.legs.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.chest.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.head.tag.TSB.UUID
-    data modify storage lib: ArrayB append from storage asset:context Old.Items.hotbar[].tag.TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.mainhand.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.offhand.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.feet.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.legs.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.chest.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.head.components."minecraft:custom_data".TSB.UUID
+    data modify storage lib: ArrayB append from storage asset:context Old.Items.hotbar[].components."minecraft:custom_data".TSB.UUID
 # 比較
     function lib:array/compare
 # 比較結果を保存する

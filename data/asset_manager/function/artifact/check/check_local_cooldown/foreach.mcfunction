@@ -12,8 +12,8 @@
 # 時間を取得
     execute store result score $Tick Temporary run time query gametime
 # 最後に使用したtickとLocalCooldownを取得
-    execute store result score $LatestUsedTick Temporary run data get storage asset:artifact CopiedItem[-1].tag.TSB.LatestUseTick
-    execute store result score $Cooldown Temporary run data get storage asset:artifact CopiedItem[-1].tag.TSB.LocalCooldown
+    execute store result score $LatestUsedTick Temporary run data get storage asset:artifact CopiedItem[-1].components."minecraft:custom_data".TSB.LatestUseTick
+    execute store result score $Cooldown Temporary run data get storage asset:artifact CopiedItem[-1].components."minecraft:custom_data".TSB.LocalCooldown
 # 減算
     scoreboard players operation $Tick Temporary -= $LatestUsedTick Temporary
 # 比較
