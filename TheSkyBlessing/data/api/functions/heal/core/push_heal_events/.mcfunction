@@ -24,6 +24,7 @@
     scoreboard players reset $OverHeal Temporary
     scoreboard players reset $MaxHealth Temporary
     scoreboard players reset $CurrentHealth Temporary
+    scoreboard players reset $HealthPer Temporary
 
 # ApplyTriggerがtrueでないなら与回復トリガーは実行しない
     execute unless data storage api: Argument{ApplyTrigger:true} run return fail
