@@ -18,6 +18,6 @@
     execute if block ~ ~-0.2 ~ honey_block run scoreboard players remove $DamageMultiplier Temporary 8
     execute if block ~ ~-0.2 ~ pointed_dripstone[thickness=tip,vertical_direction=up] run scoreboard players add $FallDistance Temporary 20
     execute if block ~ ~-0.2 ~ pointed_dripstone[thickness=tip,vertical_direction=up] run scoreboard players add $DamageMultiplier Temporary 10
-    execute if block ~ ~-0.2 ~ pointed_dripstone[thickness=tip,vertical_direction=up] run data modify storage player_manager:fall_damage CustomDeathMessage set value '[{"translate": "death.attack.stalagmite","with":[{"selector":"@s"}]}]'
+    execute if block ~ ~-0.2 ~ pointed_dripstone[thickness=tip,vertical_direction=up] run data modify storage player_manager:fall_damage CustomDeathMessage set value [{"translate": "death.attack.stalagmite","with":[{"selector":"@s"}]}]
     execute if block ~ ~-0.2 ~ powder_snow run scoreboard players set $FallDistance Temporary 0
     execute if block ~ ~-0.2 ~ slime_block unless predicate lib:is_sneaking run scoreboard players set $FallDistance Temporary 0

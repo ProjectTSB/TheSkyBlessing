@@ -19,9 +19,9 @@
     execute store success score $notOffToMain Temporary run data modify storage asset:artifact Temp set from storage api: Item
 
 # 比較結果から設定
-    execute if score $notMainToOff Temporary matches 0 if score $notOffToMain Temporary matches 0 run data modify storage asset:artifact Argument.AutoSlot set value 'none'
-    execute if score $notMainToOff Temporary matches 0 if score $notOffToMain Temporary matches 1 run data modify storage asset:artifact Argument.AutoSlot set value 'offhand'
-    execute if score $notMainToOff Temporary matches 1 if score $notOffToMain Temporary matches 0 run data modify storage asset:artifact Argument.AutoSlot set value 'mainhand'
+    execute if score $notMainToOff Temporary matches 0 if score $notOffToMain Temporary matches 0 run data modify storage asset:artifact Argument.AutoSlot set value none
+    execute if score $notMainToOff Temporary matches 0 if score $notOffToMain Temporary matches 1 run data modify storage asset:artifact Argument.AutoSlot set value offhand
+    execute if score $notMainToOff Temporary matches 1 if score $notOffToMain Temporary matches 0 run data modify storage asset:artifact Argument.AutoSlot set value mainhand
 
 # リセット
     scoreboard players reset $notMainToOff Temporary

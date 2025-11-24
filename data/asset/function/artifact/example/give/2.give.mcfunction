@@ -12,9 +12,9 @@ data modify storage asset:artifact ID set value 65535
 
 data modify storage asset:artifact Item set value "iron_helmet"
 
-data modify storage asset:artifact Name set value '{"text":"ヘルメット","color":"#f9fffe","font":"misaki/gothic"}'
+data modify storage asset:artifact Name set value {"text":"ヘルメット","color":"#f9fffe","font":"misaki/gothic"}
 
-data modify storage asset:artifact Lore set value ['{"text":"まもる"}']
+data modify storage asset:artifact Lore set value [{"text":"まもる"}]
 
 # data modify storage asset:artifact ConsumeItem.Item set value
 # data modify storage asset:artifact ConsumeItem.Count set value
@@ -25,7 +25,7 @@ data modify storage asset:artifact Slot set value "head"
 
 data modify storage asset:artifact Trigger set value "equipping"
 
-data modify storage asset:artifact Condition set value '{"text":"いつでも"}'
+data modify storage asset:artifact Condition set value {"text":"いつでも"}
 
 data modify storage asset:artifact MPCost set value 0
 # data modify storage asset:artifact MPRequire set value 10

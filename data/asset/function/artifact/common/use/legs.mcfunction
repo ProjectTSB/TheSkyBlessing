@@ -4,6 +4,6 @@
 #
 # @within function asset:artifact/*/*/3.main
 
-data modify storage asset:artifact TargetSlot set value 'legs'
+data modify storage asset:artifact TargetSlot set value legs
 function asset_manager:artifact/use/
 tag @s remove CanUsed

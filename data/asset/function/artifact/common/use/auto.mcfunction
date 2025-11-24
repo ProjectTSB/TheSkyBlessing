@@ -4,6 +4,6 @@
 #
 # @within function asset:artifact/*/*/3.main
 
-data modify storage asset:artifact TargetSlot set value 'auto'
+data modify storage asset:artifact TargetSlot set value auto
 function asset_manager:artifact/use/
 tag @s remove CanUsed

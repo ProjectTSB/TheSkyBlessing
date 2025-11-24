@@ -3,4 +3,4 @@
 #   Type : string
 # @within function asset_manager:artifact/create/set_lore/modifier/
 
-$data modify storage asset:artifact Line[1] set value '{"translate":"attribute.name.$(Type)"}'
+$data modify storage asset:artifact Line[1] set value {"translate":"attribute.name.$(Type)"}

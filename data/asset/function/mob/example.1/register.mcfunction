@@ -15,9 +15,9 @@
 # 干渉可能か否か (boolean)
     data modify storage asset:mob Interferable set value true
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"サンプルの敵"}'
+    data modify storage asset:mob Name set value {"text":"サンプルの敵"}
 # Mobの説明文 (TextComponentString[]) (オプション)
-    data modify storage asset:mob Lore set value ['{"text":"アセットモブの動作チェック用エネミー。","color":"white"}','{"text":"Lore文は多くても3行くらいに収めておくべきだろう。","color":"white"}','{"text":"あんまり長いとチャット表示欄からはみ出しかねないからだ。","color":"white"}']
+    data modify storage asset:mob Lore set value [{"text":"アセットモブの動作チェック用エネミー。","color":"white"},{"text":"Lore文は多くても3行くらいに収めておくべきだろう。","color":"white"},{"text":"あんまり長いとチャット表示欄からはみ出しかねないからだ。","color":"white"}]
 # 武器
     # メインハンド (Compound(Item)) (オプション)
         data modify storage asset:mob Weapon.Mainhand set value {id:"minecraft:iron_sword",Count:1b}

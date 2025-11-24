@@ -45,7 +45,7 @@
     scoreboard players add $ArtifactIndex Global 1
     execute store result storage asset:artifact Item.components."minecraft:custom_data".TSB.UUID int 1 run scoreboard players get $ArtifactIndex Global
 # 扱える神のエイリアスを修正する
-    execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value ['Flora','Urban','Nyaptov','Wi-ki','Rumor']
+    execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # そのまま入れれるやつ
     data modify storage asset:artifact Item.id set from storage asset:artifact BaseItem
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID

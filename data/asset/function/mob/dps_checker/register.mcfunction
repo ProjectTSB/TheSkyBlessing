@@ -7,7 +7,7 @@ data modify storage asset:mob Type set value "Enemy"
 
 data modify storage asset:mob Interferable set value true
 
-data modify storage asset:mob Name set value '[{"text":"DPS: "},{"text":"waiting..."}]'
+data modify storage asset:mob Name set value [{"text":"DPS: "},{"text":"waiting..."}]
 data modify storage asset:mob Health set value 1000000
 
 data modify storage asset:mob Armor.Head set value {id:"minecraft:target",Count:1b}

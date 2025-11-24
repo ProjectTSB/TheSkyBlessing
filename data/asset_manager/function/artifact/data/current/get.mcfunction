@@ -17,7 +17,7 @@
 # autoの場合の処理
     execute if data storage asset:artifact {TargetSlot:"auto"} run data modify storage asset:artifact TargetDefaultSlot set from storage asset:context Items.AutoSlot
     execute if data storage asset:artifact {TargetSlot:"auto"} unless data storage asset:context Items.AutoSlot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"autoはこのトリガーでは実行できません","color":"white"}]
-    execute if data storage asset:artifact {TargetSlot:"auto"} unless data storage asset:context Items.AutoSlot run data modify storage asset:artifact TargetDefaultSlot set value 'mainhand'
+    execute if data storage asset:artifact {TargetSlot:"auto"} unless data storage asset:context Items.AutoSlot run data modify storage asset:artifact TargetDefaultSlot set value mainhand
 
 # 取得
     execute if data storage asset:artifact {TargetDefaultSlot:"mainhand"} run data modify storage asset:artifact TargetItems append from storage asset:context Items.mainhand

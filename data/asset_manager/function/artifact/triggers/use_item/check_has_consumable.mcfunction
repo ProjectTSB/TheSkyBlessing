@@ -11,9 +11,9 @@
     data modify entity @s HandItems set from storage asset:artifact Temp
 
 # チェック
-    execute unless predicate asset_manager:has_consumable_item/mainhand unless predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value 'none'
-    execute if predicate asset_manager:has_consumable_item/mainhand unless predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value 'mainhand'
-    execute unless predicate asset_manager:has_consumable_item/mainhand if predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value 'offhand'
+    execute unless predicate asset_manager:has_consumable_item/mainhand unless predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value none
+    execute if predicate asset_manager:has_consumable_item/mainhand unless predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value mainhand
+    execute unless predicate asset_manager:has_consumable_item/mainhand if predicate asset_manager:has_consumable_item/offhand run data modify storage asset:artifact Argument.AutoSlot set value offhand
 
 # リセット
     kill @s

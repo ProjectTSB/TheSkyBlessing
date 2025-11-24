@@ -9,9 +9,9 @@
 # ID
     data modify storage asset:effect ID set value 65535
 # 名前
-    data modify storage asset:effect Name set value '{"text":"微再生"}'
+    data modify storage asset:effect Name set value {"text":"微再生"}
 # 説明文
-    data modify storage asset:effect Description set value '{"text":"再生能力"}'
+    data modify storage asset:effect Description set value {"text":"再生能力"}
 # 残り時間 (default = API || error)
     data modify storage asset:effect Duration set value 100
 # スタック (default = API || 1)

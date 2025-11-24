@@ -11,8 +11,8 @@
 # ID
     data modify storage asset:effect ID set value 65533
 # 名前
-    data modify storage asset:effect Name set value '{"text":"超再生"}'
+    data modify storage asset:effect Name set value {"text":"超再生"}
 # 説明文
-    data modify storage asset:effect Description set value '{"text":"ものすごく強力な再生能力"}'
+    data modify storage asset:effect Description set value {"text":"ものすごく強力な再生能力"}
 # フィールド
     data modify storage asset:effect Field.HealAmount set value 4

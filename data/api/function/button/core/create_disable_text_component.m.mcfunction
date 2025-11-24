@@ -3,4 +3,4 @@
 #   Label: string
 # @within function api:button/create_text_component
 
-$data modify storage api: Return.ButtonTextComponent set value '{"text":"","extra":["[",$(Label),"]"],"color":"gray"}'
+$data modify storage api: Return.ButtonTextComponent set value {"text":"","extra":["[",$(Label),"]"],"color":"gray"}

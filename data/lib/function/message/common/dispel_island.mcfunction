@@ -37,7 +37,7 @@
     data modify storage lib: Temp.Time append value ":"
     execute if score $PlayTimeSeconds Temporary matches 0..9 run data modify storage lib: Temp.Time append value "0"
     data modify storage lib: Temp.Time append string storage lib: Temp.Seconds
-    data modify storage lib: Temp.Time append value "'"
+    data modify storage lib: Temp.Time append value ""
     execute if score $PlayTimeDecimal Temporary matches 0..1 run data modify storage lib: Temp.Time append value "0"
     data modify storage lib: Temp.Time append string storage lib: Temp.Decimal
 

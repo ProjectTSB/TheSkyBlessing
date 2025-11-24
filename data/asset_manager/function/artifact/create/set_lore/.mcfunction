@@ -11,11 +11,11 @@
 # 装備時効果
     # ステータス補正
         data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
-        execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value '""'
+        execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value ""
         execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/
         data remove storage asset:artifact CopiedModifiers
     # セット効果
-        execute if data storage asset:artifact Equipment.Effects[{Visible:true}] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value '""'
+        execute if data storage asset:artifact Equipment.Effects[{Visible:true}] if data storage asset:artifact Item.components."minecraft:lore"[0] run data modify storage asset:artifact Item.components."minecraft:lore" append value ""
         execute if data storage asset:artifact Equipment.Effects[0] run function asset_manager:artifact/create/set_lore/equipment/
     # リセット
         data modify block 10000 0 10000 Items set value []
