@@ -16,7 +16,7 @@
     tellraw @s [{"text":"難易度: "},{"storage":"settings:","nbt":"DifficultyText","interpret":true}]
 
 # 難易度 - ボタン
-    data modify storage settings: DifficultyButtons set value ['{"text":""}']
+    data modify storage settings: DifficultyButtons set value [{"text":""}]
 
     data modify storage api: Argument.Label set from storage settings: TextRegistry.WithHoverEvent[1]
     data modify storage api: Argument.Key set value "change_difficulty_request_normal"
@@ -44,15 +44,15 @@
     execute if data storage global Config{IsKeepInventory:false} run tellraw @s [{"text":"死亡時インベントリ保護: "},{"text":"無効","color":"red"}]
 
 # 死亡時インベントリ保護 - ボタン
-    data modify storage settings: KeepInventoryButtons set value ['{"text":""}']
+    data modify storage settings: KeepInventoryButtons set value [{"text":""}]
 
-    data modify storage api: Argument.Label set value '"無効"'
+    data modify storage api: Argument.Label set value "無効"
     data modify storage api: Argument.Key set value "change_keep_inventory_disable"
     execute unless data storage global Config{IsKeepInventory:false} run data modify storage api: Argument.Listener set value "settings:change_keep_inventory/disable"
     function api:button/create_text_component
     data modify storage settings: KeepInventoryButtons append from storage api: Return.ButtonTextComponent
 
-    data modify storage api: Argument.Label set value '"有効"'
+    data modify storage api: Argument.Label set value "有効"
     data modify storage api: Argument.Key set value "change_keep_inventory_enable"
     execute unless data storage global Config{IsKeepInventory: true} run data modify storage api: Argument.Listener set value "settings:change_keep_inventory/enable"
     function api:button/create_text_component
@@ -66,15 +66,15 @@
     execute if data storage global Config{EnableDamageTypeIcon:false} run tellraw @s [{"text":"ダメージログ属性表示: "},{"text":"無効","color":"red"}]
 
 # ダメージログ属性表示 - ボタン
-    data modify storage settings: DamageTypeIconButtons set value ['{"text":""}']
+    data modify storage settings: DamageTypeIconButtons set value [{"text":""}]
 
-    data modify storage api: Argument.Label set value '"無効"'
+    data modify storage api: Argument.Label set value "無効"
     data modify storage api: Argument.Key set value "change_damage_type_icon_disable"
     execute unless data storage global Config{EnableDamageTypeIcon:false} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/disable"
     function api:button/create_text_component
     data modify storage settings: DamageTypeIconButtons append from storage api: Return.ButtonTextComponent
 
-    data modify storage api: Argument.Label set value '"有効"'
+    data modify storage api: Argument.Label set value "有効"
     data modify storage api: Argument.Key set value "change_damage_type_icon_enable"
     execute unless data storage global Config{EnableDamageTypeIcon: true} run data modify storage api: Argument.Listener set value "settings:damage_type_icon/enable"
     function api:button/create_text_component
@@ -88,15 +88,15 @@
     execute if data storage global Config{ShowPlayTimeOnDispel:false} run tellraw @s [{"text":"解呪時プレイ時間表示: "},{"text":"無効","color":"red"}]
 
 # 解呪時プレイ時間表示 - ボタン
-    data modify storage settings: ShowPlayTimeOnDispelButtons set value ['{"text":""}']
+    data modify storage settings: ShowPlayTimeOnDispelButtons set value [{"text":""}]
 
-    data modify storage api: Argument.Label set value '"無効"'
+    data modify storage api: Argument.Label set value "無効"
     data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_disable"
     execute unless data storage global Config{ShowPlayTimeOnDispel:false} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_dispel/disable"
     function api:button/create_text_component
     data modify storage settings: ShowPlayTimeOnDispelButtons append from storage api: Return.ButtonTextComponent
 
-    data modify storage api: Argument.Label set value '"有効"'
+    data modify storage api: Argument.Label set value "有効"
     data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_enable"
     execute unless data storage global Config{ShowPlayTimeOnDispel: true} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_dispel/enable"
     function api:button/create_text_component

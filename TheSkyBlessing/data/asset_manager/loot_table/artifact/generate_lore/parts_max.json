@@ -1,0 +1,41 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "debug_stick",
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "最大発動回数"
+                                    },
+                                    {
+                                        "text": "\u0006",
+                                        "font": "space"
+                                    },
+                                    {
+                                        "storage": "asset:artifact",
+                                        "nbt": "PartsMax"
+                                    }
+                                ]
+                            ],
+                            "mode": "insert"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

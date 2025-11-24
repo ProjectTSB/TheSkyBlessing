@@ -19,7 +19,7 @@
     execute if score $Rotation Temporary matches 5 run playsound minecraft:block.stone_button.click_on block @a ~ ~ ~ 1.5 2
 
     execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.CustomModelData set value 20122
-    execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.display.Name set value '{"text":"#","font":"invisible_bg"}'
+    execute if score $Rotation Temporary matches 1 run data modify entity @s Item.tag.display.Name set value {"text":"#","font":"invisible_bg"}
     execute positioned ~-0.5 ~-0.5 ~ as @e[type=armor_stand,tag=ShardProcessorModel,distance=..0.04,limit=1] run function world_manager:gimmick/shard_processor/process/model_modifier
 
 # 8で回転されないようにFixedをつける

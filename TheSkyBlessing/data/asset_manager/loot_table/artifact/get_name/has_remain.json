@@ -1,0 +1,49 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "debug_stick",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "",
+                                    "italic": false
+                                },
+                                {
+                                    "nbt": "Name",
+                                    "storage": "asset:artifact",
+                                    "interpret": true
+                                },
+                                {
+                                    "text": " "
+                                },
+                                {
+                                    "nbt": "Item.components.\"minecraft:custom_data\".TSB.RemainingCount",
+                                    "storage": "asset:artifact",
+                                    "color": "green"
+                                },
+                                {
+                                    "text": "/",
+                                    "color": "green"
+                                },
+                                {
+                                    "nbt": "Item.components.\"minecraft:custom_data\".TSB.RemainingCountMax",
+                                    "storage": "asset:artifact",
+                                    "color": "green"
+                                }
+                            ],
+                            "mode": "insert"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

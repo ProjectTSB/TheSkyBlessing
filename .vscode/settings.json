@@ -407,6 +407,1928 @@
             "}"
         ]
     },
+    "mcdutil.createDatapackTemplate.customTemplate": [
+        {
+            "label": "Mob/登録処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/register",
+                        "#",
+                        "# Mobのデータを指定",
+                        "#",
+                        "# @within function asset_manager:mob/summon/register.m",
+                        "",
+                        "# 継承(オプション)",
+                        "    # data modify storage asset:mob Extends append value ",
+                        "    # function asset:mob/extends",
+                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
+                        "    # data modify storage asset:mob ExtendsSafe set value ",
+                        "# 継承されることを前提とした、抽象的なモブであるかどうか(boolean)",
+                        "    data modify storage asset:mob IsAbstract set value false",
+                        "# ID (int)",
+                        "    data modify storage asset:mob ID set value \"%namespace%\"",
+                        "# フィールド(オプション)",
+                        "    # data modify storage asset:mob Field.myValue set value "
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/ 召喚処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/summon/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/summon/",
+                        "#",
+                        "# Mob召喚処理の呼び出し時の処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:mob/summon/summon.m",
+                        "",
+                        "# 元となるEntityを召喚する",
+                        "    summon %entity% ~ ~ ~ {Tags:[\"MobInit\"]}",
+                        ""
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "entity",
+                    "question": "元となるentity",
+                    "pattern": "area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|bogged|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "patternErrorMessage": "Entityの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Mob/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/tick/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/tick/",
+                        "#",
+                        "# Mobのtick時の処理",
+                        "#",
+                        "# @within asset_manager:mob/triggers/tick/tick.m",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/トリガー: init",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/init/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/init/",
+                        "#",
+                        "# Mobのinit時の処理",
+                        "#",
+                        "# @within asset_manager:mob/triggers/init/init.m",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/トリガー: 攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/attack/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/attack/",
+                        "#",
+                        "# Mobの攻撃時の処理",
+                        "#",
+                        "# @within function asset_manager:mob/triggers/attack/attack.m",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/トリガー: 被ダメージ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/hurt/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/hurt/",
+                        "#",
+                        "# Mobのダメージ時の処理",
+                        "#",
+                        "# @within function asset_manager:mob/triggers/hurt/hurt.m",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/load.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/load",
+                        "#",
+                        "# Mobに利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:mob/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:mob/%namespace%/**",
+                        "    scoreboard objectives add %namespace%."
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/mob/load.json",
+                    "content": {
+                        "values": [
+                            "asset:mob/%namespace%/load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:mob/%namespace%/load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Mob/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/index.d.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:mob/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Mob/メソッド",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/mob/%namespace%/%method_name%/.mcfunction",
+                    "content": [
+                        "#> asset:mob/%namespace%/%method_name%/",
+                        "#",
+                        "# 継承先などから実行される処理",
+                        "#",
+                        "# @within asset_manager:mob/triggers/call_method/run_method.m",
+                        ""
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "method_name",
+                    "question": "メソッドの名前",
+                    "pattern": "[a-z0-9./_-]*",
+                    "patternErrorMessage": "使用できない文字が入っているようです"
+                }
+            ]
+        },
+        {
+            "label": "Object/登録処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/register",
+                        "#",
+                        "# Objectのデータを指定",
+                        "#",
+                        "# @within function asset_manager:object/summon/register.m",
+                        "",
+                        "# 継承(オプション)",
+                        "    # data modify storage asset:object Extends append value ",
+                        "    # function asset:object/extends",
+                        "# 他のモブに継承されることを許可するか (boolean) (オプション)",
+                        "    # data modify storage asset:object ExtendsSafe set value ",
+                        "# 継承されることを前提とした、抽象的なオブジェクトであるかどうか(boolean)",
+                        "    data modify storage asset:object IsAbstract set value false",
+                        "",
+                        "# ID (int)",
+                        "    data modify storage asset:object ID set value \"%namespace%\"",
+                        "# フィールド(オプション)",
+                        "    # data modify storage asset:object Field.myValue set value "
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object/ 召喚処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/summon/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/summon/",
+                        "#",
+                        "# Object召喚処理の呼び出し時の処理のエイリアス",
+                        "#",
+                        "# @within asset_manager:object/summon/summon.m",
+                        "",
+                        "# 元となるEntityを召喚する",
+                        "    summon %entity% ~ ~ ~ {Tags:[\"ObjectInit\"]}",
+                        ""
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "entity",
+                    "question": "元となるentity",
+                    "pattern": "interaction|area_effect_cloud|armor_stand|arrow|axolotl|bat|bee|blaze|boat|cat|cave_spider|chest_minecart|chicken|cod|command_block_minecart|cow|creeper|dolphin|donkey|dragon_fireball|drowned|egg|elder_guardian|end_crystal|ender_dragon|ender_pearl|enderman|endermite|evoker|evoker_fangs|experience_bottle|experience_orb|eye_of_ender|falling_block|fireball|firework_rocket|fox|furnace_minecart|ghast|giant|glow_item_frame|glow_squid|goat|guardian|hoglin|hopper_minecart|horse|husk|illusioner|iron_golem|item|item_frame|leash_knot|lightning_bolt|llama|llama_spit|magma_cube|marker|minecart|mooshroom|mule|ocelot|painting|panda|parrot|phantom|pig|piglin|piglin_brute|pillager|polar_bear|potion|pufferfish|rabbit|ravager|salmon|sheep|shulker|shulker_bullet|silverfish|skeleton|skeleton_horse|slime|small_fireball|snow_golem|snowball|spawner_minecart|spectral_arrow|spider|squid|stray|strider|tnt|tnt_minecart|trader_llama|trident|tropical_fish|turtle|vex|villager|vindicator|wandering_trader|witch|wither|wither_skeleton|wither_skull|wolf|zoglin|zombie|zombie_horse|zombie_villager|zombified_piglin",
+                    "patternErrorMessage": "Entityの名前のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Object/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/tick/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/tick/",
+                        "#",
+                        "# Objectのtick時の処理",
+                        "#",
+                        "# @within asset_manager:object/tick/tick.m",
+                        "",
+                        "# Tick加算",
+                        "    scoreboard players add @s General.Object.Tick 1",
+                        "",
+                        "# 消滅処理",
+                        "    kill @s[scores={General.Object.Tick=1000..}]",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object/トリガー: init",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/init/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/init/",
+                        "#",
+                        "# Objectのinit時の処理",
+                        "#",
+                        "# @within asset_manager:object/init/init.m",
+                        ""
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/load.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/load",
+                        "#",
+                        "# Objectに利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:object/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:object/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/object/load.json",
+                    "content": {
+                        "values": [
+                            "asset:object/%namespace%/load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:object/%namespace%/load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Object/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/index.d.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:object/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Object/メソッド",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/object/%namespace%/%method_name%/.mcfunction",
+                    "content": [
+                        "#> asset:object/%namespace%/%method_name%/",
+                        "#",
+                        "# 継承先などから実行される処理",
+                        "#",
+                        "# @within asset_manager:object/call_method/run_method.m",
+                        ""
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "method_name",
+                    "question": "メソッドの名前",
+                    "pattern": "[a-z0-9./_-]*",
+                    "patternErrorMessage": "使用できない文字が入っているようです"
+                }
+            ]
+        },
+        {
+            "label": "Effect/テンプレート",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/register",
+                        "#",
+                        "# Effectのデータを指定",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/register",
+                        "",
+                        "# ExtendsSafe (boolean) (default = false)",
+                        "    # data modify storage asset:effect ExtendsSafe set value true",
+                        "# ID (int)",
+                        "    data modify storage asset:effect ID set value %id%",
+                        "# 名前 (TextComponentString)",
+                        "    data modify storage asset:effect Name set value ",
+                        "# 説明文 (TextComponentString[])",
+                        "    data modify storage asset:effect Description set value ",
+                        "# 効果時間 (int) (default = API || error)",
+                        "    data modify storage asset:effect Duration set value ",
+                        "# スタック (int) (default = API || 1)",
+                        "    # data modify storage asset:effect Stack set value ",
+                        "# 効果時間の操作方法 (default = API || \"replace\")",
+                        "    # data modify storage asset:effect DurationOperation set value ",
+                        "# スタックの操作方法 (default = API || \"replace\")",
+                        "    # data modify storage asset:effect StackOperation set value ",
+                        "# 最大効果時間 (int) (default = 2147483647)",
+                        "    # data modify storage asset:effect MaxDuration set value ",
+                        "# 最大スタック (int) (default = 2147483647)",
+                        "    # data modify storage asset:effect MaxStack set value ",
+                        "# 悪い効果か否か (boolean)",
+                        "    data modify storage asset:effect IsBadEffect set value ",
+                        "# 死亡時のエフェクトの処理 (default = \"remove\")",
+                        "    # data modify storage asset:effect ProcessOnDied set value ",
+                        "# 消すのに必要なレベル (int) (default = 1)",
+                        "    # data modify storage asset:effect RequireClearLv set value ",
+                        "# エフェクトをUIに表示するか (boolean) (default = true)",
+                        "    # data modify storage asset:effect Visible set value ",
+                        "# エフェクトのスタックををUIに表示するか (boolean) (default = true)",
+                        "    # data modify storage asset:effect StackVisible set value",
+                        "",
+                        "# フィールド",
+                        "    # data modify storage asset:effect Field set value {}"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/register.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/register",
+                        "#",
+                        "#",
+                        "#",
+                        "# @within asset_manager:effect/",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:effect/%namespace%/register"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/give.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/give/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/give/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/give/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/give/1.trigger",
+                        "#",
+                        "# 神器の取得処理の呼び出し時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:artifact/give",
+                        "",
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:artifact/%namespace%/give/2.give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/give/2.give.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/give/2.give",
+                        "#",
+                        "# 神器の作成部 ここでID等を定義する",
+                        "#",
+                        "# @user",
+                        "# @within function asset:artifact/%namespace%/give/1.trigger",
+                        "",
+                        "# 神器の説明や消費MPなどをここで設定する。",
+                        "# 最後にasset:artifact/common/giveを実行することで入手可能。",
+                        "",
+                        "# 神器のID (int) スプレッドシートの値を入れる",
+                        "    data modify storage asset:artifact ID set value %ItemID%",
+                        "# 神器のベースアイテム",
+                        "    data modify storage asset:artifact Item set value ",
+                        "# 神器の名前 (TextComponentString)",
+                        "    data modify storage asset:artifact Name set value ",
+                        "# 神器の説明文 (TextComponentString[])",
+                        "    data modify storage asset:artifact Lore set value []",
+                        "# 消費アイテム ({Item: TextComponent, Count: int, Extra?: TextComponent}) (オプション)",
+                        "    # data modify storage asset:artifact ConsumeItem.Item set value '{\"translate\":\"item.minecraft.stick\"}'",
+                        "    # data modify storage asset:artifact ConsumeItem.Count set value 1",
+                        "    # data modify storage asset:artifact ConsumeItem.Extra set value ",
+                        "# 使用回数 (int) (オプション)",
+                        "    # data modify storage asset:artifact RemainingCount set value ",
+                        "# 神器を発動できるスロット (string) Wikiを参照",
+                        "    data modify storage asset:artifact Slot set value \"%slot%\"",
+                        "# 神器のトリガー (string) Wikiを参照",
+                        "    data modify storage asset:artifact Trigger set value ",
+                        "# 神器の発動条件 (TextComponentString) (オプション)",
+                        "    # data modify storage asset:artifact Condition set value ",
+                        "# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.Damage set value [0,0]",
+                        "# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.AttackType set value [Physical,Magic]",
+                        "# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
+                        "# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.BypassResist set value ",
+                        "# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.IsRangeAttack set value ",
+                        "# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.AttackRange set value ",
+                        "# MP消費量 (int) ",
+                        "    # data modify storage asset:artifact MPCost set value ",
+                        "# MP必要量 (int) (オプション)",
+                        "    # data modify storage asset:artifact MPRequire set value ",
+                        "# MP回復量 (int) ",
+                        "    # data modify storage asset:artifact MPHealWhenHit set value ",
+                        "# 神器のクールダウン (int) (オプション)",
+                        "    # data modify storage asset:artifact LocalCooldown set value ",
+                        "# 種別クールダウン ({Type: string, Duration: int}) (オプション)",
+                        "    # data modify storage asset:artifact TypeCooldown.Type set value ",
+                        "    # data modify storage asset:artifact TypeCooldown.Duration set value",
+                        "# グローバルクールダウン (int) (オプション)",
+                        "    # data modify storage asset:artifact SpecialCooldown set value ",
+                        "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableMPMessage set value ",
+                        "# 破壊時の音を鳴らさないかどうか (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableBreakSound set value",
+                        "# 扱える神 (string[]) Wikiを参照",
+                        "    data modify storage asset:artifact CanUsedGod set value []",
+                        "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
+                        "    # data modify storage asset:artifact CustomNBT set value {}",
+                        "",
+                        "# 神器の入手用function",
+                        "    function asset:artifact/common/give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/1.trigger",
+                        "#",
+                        "# 指定したイベントタイミングで実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:artifact/**",
+                        "",
+                        "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:context id{%slot%:%ItemID%} run function asset:artifact/%namespace%/trigger/2.check_condition"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/2.check_condition.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/2.check_condition",
+                        "#",
+                        "# 神器の発動条件をチェックします",
+                        "#",
+                        "# @within function asset:artifact/%namespace%/trigger/1.trigger",
+                        "",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:artifact/common/check_condition/%slot%",
+                        "# 他にアイテム等確認する場合はここに書く",
+                        "    ",
+                        "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
+                        "    execute if entity @s[tag=CanUsed] run function asset:artifact/%namespace%/trigger/3.main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/3.main.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/3.main",
+                        "#",
+                        "# 神器のメイン処理部",
+                        "#",
+                        "# @within function asset:artifact/%namespace%/trigger/2.check_condition",
+                        "",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:artifact/common/use/%slot%",
+                        "",
+                        "# ここから先は神器側の効果の処理を書く",
+                        "    say test: %namespace%"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "神器のID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "使用できるスロット",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート(hotbar)",
+            "picked": true,
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/give.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/give/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/give/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/give/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/give/1.trigger",
+                        "#",
+                        "# 神器の取得処理の呼び出し時に実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:artifact/give",
+                        "",
+                        "execute if data storage asset:context {id:%ItemID%} run function asset:artifact/%namespace%/give/2.give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/give/2.give.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/give/2.give",
+                        "#",
+                        "# 神器の作成部 ここでID等を定義する",
+                        "#",
+                        "# @user",
+                        "# @within function asset:artifact/%namespace%/give/1.trigger",
+                        "",
+                        "# 神器の説明や消費MPなどをここで設定する。",
+                        "# 最後にasset:artifact/common/giveを実行することで入手可能。",
+                        "",
+                        "# 神器のID (int) スプレッドシートの値を入れる",
+                        "    data modify storage asset:artifact ID set value %ItemID%",
+                        "# 神器のベースアイテム",
+                        "    data modify storage asset:artifact Item set value ",
+                        "# 神器の名前 (TextComponentString)",
+                        "    data modify storage asset:artifact Name set value ",
+                        "# 神器の説明文 (TextComponentString[])",
+                        "    data modify storage asset:artifact Lore set value []",
+                        "# 消費アイテム ({Item: TextComponent, Count: int, Extra?: TextComponent}) (オプション)",
+                        "    # data modify storage asset:artifact ConsumeItem.Item set value '{\"translate\":\"item.minecraft.stick\"}'",
+                        "    # data modify storage asset:artifact ConsumeItem.Count set value 1",
+                        "    # data modify storage asset:artifact ConsumeItem.Extra set value ",
+                        "# 使用回数 (int) (オプション)",
+                        "    # data modify storage asset:artifact RemainingCount set value ",
+                        "# 神器を発動できるスロット (string) Wikiを参照",
+                        "    data modify storage asset:artifact Slot set value \"hotbar\"",
+                        "# 神器のトリガー (string) Wikiを参照",
+                        "    data modify storage asset:artifact Trigger set value ",
+                        "# 効果が重複可能か否か (boolean) (オプション)",
+                        "    # data modify storage asset:artifact EnableDuplication set value ",
+                        "# 神器の発動条件 (TextComponentString) (オプション)",
+                        "    # data modify storage asset:artifact Condition set value ",
+                        "# 攻撃に関する情報 -Damage量 (literal[]/literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.Damage set value [0,0]",
+                        "# 攻撃に関する情報 -攻撃タイプ (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.AttackType set value [Physical,Magic]",
+                        "# 攻撃に関する情報 -攻撃属性 (string[]) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.ElementType set value [Fire,Water,Thunder,None]",
+                        "# 攻撃に関する情報 -防御無視 (boolean) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.BypassResist set value ",
+                        "# 攻撃に関する情報 -範囲攻撃 (string) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.IsRangeAttack set value ",
+                        "# 攻撃に関する情報 -攻撃範囲 (literal) Wikiを参照 (オプション)",
+                        "    # data modify storage asset:artifact AttackInfo.AttackRange set value ",
+                        "# MP消費量 (int) ",
+                        "    data modify storage asset:artifact MPCost set value ",
+                        "# MP必要量 (int) (オプション)",
+                        "    # data modify storage asset:artifact MPRequire set value ",
+                        "# MP回復量 (int) ",
+                        "    # data modify storage asset:artifact MPHealWhenHit set value ",
+                        "# 神器のクールダウン (int) (オプション)",
+                        "    # data modify storage asset:artifact LocalCooldown set value ",
+                        "# 種別クールダウン ({Type: string, Duration: int}) (オプション)",
+                        "    # data modify storage asset:artifact TypeCooldown.Type set value ",
+                        "    # data modify storage asset:artifact TypeCooldown.Duration set value",
+                        "# 第二種別クールダウン ({Type: string, Duration: int}) (オプション)",
+                        "    # data modify storage asset:artifact SecondaryTypeCooldown.Type set value ",
+                        "    # data modify storage asset:artifact SecondaryTypeCooldown.Duration set value",
+                        "# グローバルクールダウン (int) (オプション)",
+                        "    # data modify storage asset:artifact SpecialCooldown set value ",
+                        "# クールダウンによる使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableCooldownMessage set value ",
+                        "# MP不足による使用不可のメッセージを非表示にするか否か (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableMPMessage set value ",
+                        "# 破壊時の音を鳴らさないかどうか (boolean) (オプション)",
+                        "    # data modify storage asset:artifact DisableBreakSound set value",
+                        "# 扱える神 (string[]) Wikiを参照",
+                        "    data modify storage asset:artifact CanUsedGod set value []",
+                        "# カスタムNBT (NBTCompound) 追加で指定したいNBT (オプション)",
+                        "    # data modify storage asset:artifact CustomNBT set value {}",
+                        "",
+                        "# 神器の入手用function",
+                        "    function asset:artifact/common/give"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/1.trigger.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/1.trigger",
+                        "#",
+                        "# 指定したイベントタイミングで実行されるfunction",
+                        "#",
+                        "# @within tag/function asset:artifact/**",
+                        "",
+                        "# storage asset:idの%slot%に装備している神器のIDが入っているので比較し、~/2.check_condition.mcfunctionを実行する",
+                        "    execute if data storage asset:context id{hotbar:[%ItemID%]} run function asset:artifact/%namespace%/trigger/2.check_condition"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/2.check_condition.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/2.check_condition",
+                        "#",
+                        "# 神器の発動条件をチェックします",
+                        "#",
+                        "# @within function asset:artifact/%namespace%/trigger/1.trigger",
+                        "",
+                        "# ID指定する",
+                        "    data modify storage asset:artifact TargetID set value %ItemID%",
+                        "# 神器の基本的な条件の確認を行うfunction、成功している場合CanUsedタグが付く",
+                        "    function asset:artifact/common/check_condition/hotbar",
+                        "# 他にアイテム等確認する場合はここに書く",
+                        "",
+                        "# CanUsedタグをチェックして3.main.mcfunctionを実行する",
+                        "    execute if entity @s[tag=CanUsed] run function asset:artifact/%namespace%/trigger/3.main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/3.main.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/3.main",
+                        "#",
+                        "# 神器のメイン処理部",
+                        "#",
+                        "# @within function asset:artifact/%namespace%/trigger/2.check_condition",
+                        "",
+                        "# 基本的な使用時の処理(MP消費や使用回数の処理など)を行う",
+                        "    function asset:artifact/common/use/hotbar",
+                        "",
+                        "# ここから先は神器側の効果の処理を書く",
+                        "    say test: %namespace%"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "神器のID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート: 加工結果への登録",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/register",
+                        "#",
+                        "# 神器プールへの登録処理",
+                        "#",
+                        "# @within tag/function asset:artifact/register",
+                        "",
+                        "data modify storage asset:artifact RarityRegistry[%Rarity%] append value [%ItemID%]"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/register.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/register"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/register"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "神器のID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "Rarity",
+                    "question": "レアリティ",
+                    "pattern": "1|2|3|4",
+                    "patternErrorMessage": "1-4のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/0.load.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/0.load",
+                        "#",
+                        "# 神器に利用するスコアボード等の初期化処理",
+                        "#",
+                        "# @within tag/function asset:artifact/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:artifact/%namespace%/trigger/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/load.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/0.load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/0.load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/_index.d.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/_index.d",
+                        "# @private",
+                        "",
+                        "#> tag",
+                        "# @within function asset:artifact/%namespace%/trigger/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 人参棒クリック",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/click.carrot_on_a_stick.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/attack.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃 - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/attack/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 攻撃 - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/attack/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 爆発",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/explode.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 炎上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/fire.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 敵による攻撃",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/from_entity/.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 防御",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/from_entity/blocked.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/from_entity/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 被ダメージ - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/damage/from_entity/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/killed.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル - 近接",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/killed/melee.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: キル - 遠距離",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/killed/projectile.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 飲食",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/use_item.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 1秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 2秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 3秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 4秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 5秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 10秒",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/10s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 0秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 1秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/1s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 2秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/2s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 3秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/3s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 4秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/4s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 5秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/5s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: スニーク - 10秒以上",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/sneak/keep/10s.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: アイテム使用中",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/using_item.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 弓発射",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/shot.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/tick.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 回復",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/heal.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "神器/トリガー: 装備着脱",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/dis_equip/.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/dis_equip/",
+                        "#",
+                        "# 装備を外した時に外した部位にのみのidが入った状態でトリガーされる",
+                        "#",
+                        "# @within tag/function asset:artifact/dis_equip",
+                        "",
+                        "execute if data storage asset:context id{%slot%:%ItemID%} run function asset:artifact/%namespace%/trigger/dis_equip/main"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/dis_equip/main.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/dis_equip/main",
+                        "#",
+                        "# 装備を外した時のメイン処理",
+                        "#",
+                        "# @within function asset:artifact/%namespace%/trigger/dis_equip/",
+                        "",
+                        ""
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/equip.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/1.trigger"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/1.trigger"
+                    }
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/artifact/dis_equip.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/dis_equip/"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/dis_equip/"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "ItemID",
+                    "question": "神器のID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                },
+                {
+                    "name": "slot",
+                    "question": "使用できるスロット",
+                    "pattern": "(auto|mainhand|offhand|head|chest|legs|feet)",
+                    "patternErrorMessage": "スロットのみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "神器/特殊トリガー: 再Join",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/artifact/%namespace%/trigger/rejoin_process.mcfunction",
+                    "content": [
+                        "#> asset:artifact/%namespace%/trigger/rejoin_process",
+                        "#",
+                        "# 使い方は必ずwikiを見ること",
+                        "#",
+                        "# @within tag/function asset:rejoin"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/functions/rejoin.json",
+                    "content": {
+                        "values": [
+                            "asset:artifact/%namespace%/trigger/rejoin_process"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:artifact/%namespace%/trigger/rejoin_process"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Effect/テンプレート (継承)",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/register.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/register",
+                        "#",
+                        "# Effectのデータを指定",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/register",
+                        "",
+                        "# 継承 (int)",
+                        "    data modify storage asset:effect Extends append value ",
+                        "    function asset:effect/extends",
+                        "# ID (int)",
+                        "    data modify storage asset:effect ID set value %id%"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/register.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/register",
+                        "#",
+                        "#",
+                        "#",
+                        "# @within tag/function asset:effect/register",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:effect/%namespace%/register"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/effect/register.json",
+                    "content": {
+                        "values": [
+                            "asset:effect/alias/%id%/register"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:effect/alias/%id%/register"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: 初期化処理",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/load.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/load",
+                        "#",
+                        "# Effectに利用するスコアボード等の初期化処理",
+                        "# ※ExtendsSafeを有効化した状態での使用は非推奨です",
+                        "#",
+                        "# @within tag/function asset:effect/load",
+                        "",
+                        "#> 定義類はここに",
+                        "# @within function asset:effect/%namespace%/**",
+                        "    scoreboard objectives add "
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/effect/load.json",
+                    "content": {
+                        "values": [
+                            "asset:effect/%namespace%/load"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:effect/%namespace%/load"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Effect/テンプレート: _index.d ",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%index.d.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%index.d",
+                        "# @private",
+                        "",
+                        "#> %namespace%",
+                        "# @within function asset:effect/%namespace%/**",
+                        "    #declare"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: 付与",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/given.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/given",
+                        "#",
+                        "# Effectが付与された時に実行されるエイリアス",
+                        "#",
+                        "# @within tag/function asset:effect/given",
+                        "",
+                        "function asset:effect/%namespace%/given/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/given/.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/given/",
+                        "#",
+                        "# Effectが付与された時の処理",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/given"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: 上書き",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/re-given.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/re-given",
+                        "#",
+                        "# Effectが上書きされた時の処理のエイリアス",
+                        "#",
+                        "# @within tag/function asset:effect/re-given",
+                        "",
+                        "execute if data storage asset:context {id:%id%} run function asset:effect/%namespace%/re-given/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/re-given/.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/re-given/",
+                        "#",
+                        "# Effectが上書きされた時の処理",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/re-given"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/tags/function/effect/re-given.json",
+                    "content": {
+                        "values": [
+                            "asset:effect/alias/%id%/re-given"
+                        ]
+                    },
+                    "append": {
+                        "addFirst": true,
+                        "key": "values",
+                        "elem": "asset:effect/alias/%id%/re-given"
+                    }
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: 終了",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/end.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/end",
+                        "#",
+                        "# Effectの効果の終了時の処理のエイリアス",
+                        "#",
+                        "# @within tag/function asset:effect/end",
+                        "",
+                        "function asset:effect/%namespace%/end/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/end/.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/end/",
+                        "#",
+                        "# Effectの効果が切れた時の処理",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/end"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: 削除",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/remove.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/remove",
+                        "#",
+                        "# Effectが神器や牛乳によって削除された時の処理のエイリアス",
+                        "#",
+                        "# @within tag/function asset:effect/remove",
+                        "",
+                        "asset:effect/%namespace%/remove/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/remove/.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/remove/",
+                        "#",
+                        "# Effectが削除された時の処理",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/remove"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        },
+        {
+            "label": "Effect/トリガー: tick",
+            "generates": [
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/alias/%id%/tick.mcfunction",
+                    "content": [
+                        "#> asset:effect/alias/%id%/tick",
+                        "#",
+                        "# Effectが発動している間毎tick実行される処理のエイリアス",
+                        "#",
+                        "# @within tag/function asset:effect/tick",
+                        "",
+                        "function asset:effect/%namespace%/tick/"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "rel": "data/asset/function/effect/%namespace%/tick/.mcfunction",
+                    "content": [
+                        "#> asset:effect/%namespace%/tick/",
+                        "#",
+                        "# Effectのtick処理",
+                        "#",
+                        "# @within function asset:effect/alias/%id%/tick"
+                    ]
+                }
+            ],
+            "customQuestion": [
+                {
+                    "name": "id",
+                    "question": "EffectのID",
+                    "pattern": "[1-9][0-9]*",
+                    "patternErrorMessage": "数値のみが許されるよ"
+                }
+            ]
+        }
+    ],
     "mcdutil.createDatapackTemplate.defaultFolder": false,
     "mcdutil.createDatapackTemplate.defaultLoadAndTick": false,
     "mcdutil.createDatapackTemplate.defaultVanillaData": false,
@@ -420,9 +2342,6 @@
     "files.eol": "\n",
     "githubIssues.ignoreUserCompletionTrigger": [
         "mcfunction"
-    ],
-    "git.branchProtection": [
-        "master"
     ],
     "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
     "gitmoji.addCustomEmoji": [
@@ -445,5 +2364,4 @@
     ],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "github.copilot.editor.enableAutoCompletions": false,
 }

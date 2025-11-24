@@ -24,7 +24,7 @@
 # ScoreToHPFlucに衝撃吸収分だけ加算する
     execute store result storage api: Argument.Fluctuation double -0.1 run scoreboard players get @p[tag=DamagedPlayer] AbsorbedDamage
     execute store result storage api: Argument.Attacker int 1 run scoreboard players get @s MobUUID
-    data modify storage api: Argument.DeathMessage set value ['{"translate":"%1$sは%2$sに倒された","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}']
+    data modify storage api: Argument.DeathMessage set value [{"translate":"%1$sは%2$sに倒された","with":[{"selector":"@s"},{"nbt":"Return.AttackerName","storage":"lib:","interpret":true}]}]
     data modify storage api: Argument.DisableLog set value true
     execute as @p[tag=DamagedPlayer] at @s run function lib:score_to_health_wrapper/fluctuation
     data remove storage api: Argument.DeathMessage

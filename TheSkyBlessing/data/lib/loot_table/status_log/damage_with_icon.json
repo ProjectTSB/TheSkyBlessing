@@ -1,0 +1,74 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:debug_stick",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": [
+                                {
+                                    "text": "#",
+                                    "font": "invisible_bg"
+                                },
+                                {
+                                    "storage": "lib:",
+                                    "nbt": "AttackType",
+                                    "interpret": true
+                                },
+                                {
+                                    "text": "\u0002",
+                                    "font": "space"
+                                },
+                                {
+                                    "storage": "lib:",
+                                    "nbt": "ElementType",
+                                    "interpret": true
+                                },
+                                {
+                                    "text": "\u0002",
+                                    "font": "space"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "Temporary",
+                                        "name": "$Int"
+                                    },
+                                    "color": "white",
+                                    "font": "damage"
+                                },
+                                {
+                                    "text": ".",
+                                    "color": "white",
+                                    "font": "damage"
+                                },
+                                {
+                                    "score": {
+                                        "objective": "Temporary",
+                                        "name": "$Frac"
+                                    },
+                                    "color": "white",
+                                    "font": "damage"
+                                },
+                                {
+                                    "text": "\u0010",
+                                    "font": "space"
+                                },
+                                {
+                                    "text": "#",
+                                    "font": "invisible_bg"
+                                }
+                            ],
+                            "mode": "insert"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
