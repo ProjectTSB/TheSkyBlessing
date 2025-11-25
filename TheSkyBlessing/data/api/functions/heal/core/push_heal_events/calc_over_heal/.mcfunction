@@ -1,4 +1,4 @@
-#> api:heal/core/push_heal_events/calc_over_heal
+#> api:heal/core/push_heal_events/calc_over_heal/
 #
 # 超過回復量を計算
 #

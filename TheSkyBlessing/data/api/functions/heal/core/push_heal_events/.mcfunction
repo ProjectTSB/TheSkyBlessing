@@ -9,7 +9,7 @@
 #declare score_holder $ReceiverUUID
 
 # 超過回復量の計算
-    function api:heal/core/push_heal_events/calc_over_heal
+    function api:heal/core/push_heal_events/calc_over_heal/
 
 # ヒールされた側にイベントを追加する
     function oh_my_dat:please
@@ -20,11 +20,8 @@
     execute if data storage api: Argument{ApplyTrigger:false} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].IsHoT set value true
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.ReceiveHeal[-1].Metadata set from storage api: Argument.Metadata
 
-# returnされる場合もあるのでここでリセット
-    scoreboard players reset $OverHeal Temporary
-    scoreboard players reset $MaxHealth Temporary
-    scoreboard players reset $CurrentHealth Temporary
-    scoreboard players reset $HealthPer Temporary
+# ApplyTrigger:trueでない場合は、ここでリセット
+    execute unless data storage api: Argument{ApplyTrigger:true} run function api:heal/core/push_heal_events/calc_over_heal/reset
 
 # ApplyTriggerがtrueでないなら与回復トリガーは実行しない
     execute unless data storage api: Argument{ApplyTrigger:true} run return fail
@@ -33,3 +30,6 @@
     scoreboard players operation $ReceiverUUID Temporary = @s UserID
     execute as @a if score @s UserID = $LatestModifiedUser UserID run function api:heal/core/push_heal_events/healer
     scoreboard players reset $ReceiverUUID Temporary
+
+# リセット
+    function api:heal/core/push_heal_events/calc_over_heal/reset
