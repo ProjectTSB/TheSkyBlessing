@@ -48,7 +48,6 @@
     execute if data storage asset:artifact {CanUsedGod:"ALL"} run data modify storage asset:artifact CanUsedGod set value [Flora,Urban,Nyaptov,Wi-ki,Rumor]
 # そのまま入れれるやつ
     data modify storage asset:artifact Item.id set from storage asset:artifact BaseItem
-    data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.ID set from storage asset:artifact ID
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.Trigger set from storage asset:artifact Trigger
@@ -65,7 +64,13 @@
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.Equipment set from storage asset:artifact Equipment
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.DisabledFlag set from storage asset:artifact DisabledFlag
     data modify storage asset:artifact Item.components."minecraft:custom_data".TSB.DisabledFlag set from storage asset:artifact DisabledFlag
-    data modify storage asset:artifact Item.components."minecraft:item_model" set from storage asset:artifact Model
+# アイテムモデル
+    # 新バージョン
+        execute if data storage asset:artifact Model run data modify storage asset:artifact Item.components."minecraft:item_model" set from storage asset:artifact Model
+    # 旧バージョン互換
+        execute unless data storage asset:artifact Model run function asset_manager:artifact/create/legacy_custom_model_data.m with storage asset:artifact
+    # リセット
+        data remove storage asset:artifact Model
 
 # トリガー次第でデフォルトで入るコンポーネント
     # 左クリック
