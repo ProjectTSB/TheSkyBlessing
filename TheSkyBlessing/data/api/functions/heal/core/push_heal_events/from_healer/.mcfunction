@@ -5,7 +5,7 @@
 # @within function api:heal/core/push_heal_events/
 
 #> Private
-# @private
+# @within function api:heal/core/push_heal_events/from_healer/*
     #declare score_holder $ReceiverUUID
 
     scoreboard players operation $ReceiverUUID Temporary = @s UserID
