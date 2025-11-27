@@ -1,4 +1,4 @@
-#> api:heal/core/push_heal_events/calc_over_heal/
+#> api:heal/core/push_heal_events/calc_over_heal
 #
 # 超過回復量を計算
 #
@@ -24,3 +24,8 @@
 
 # 0未満なら0にする
     scoreboard players operation $OverHeal Temporary > $0 Const
+
+# リセット
+    scoreboard players reset $MaxHealth Temporary
+    scoreboard players reset $CurrentHealth Temporary
+    scoreboard players reset $HealthPer Temporary

@@ -1,8 +1,8 @@
-#> api:heal/core/push_heal_events/healer
+#> api:heal/core/push_heal_events/from_healer/push
 #
 #
 #
-# @within function api:heal/core/push_heal_events/
+# @within function api:heal/core/push_heal_events/from_healer/
 
 #> Private
 # @private
