@@ -25,9 +25,5 @@ function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To append value -1
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To[-1] int 1 run scoreboard players get $DamagerUUID Temporary
 
-    tellraw @a {"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack"}
-    #tellraw @a [{"text":"LastIndex: "},{"score":{"name": "$LastIndex","objective": "Temporary"}}]
-    #tellraw @a [{"text":"ModifierIndex: "},{"score":{"name": "$ModifierIndex","objective": "Global"}}]
-
 # リセット
     scoreboard players reset $LastIndex Temporary
