@@ -18,11 +18,16 @@ function oh_my_dat:please
     execute unless score $LastIndex Temporary = $ModifierIndex Global if data storage api: Argument{ApplyTrigger:true} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].IsDoT set value false
     execute unless score $LastIndex Temporary = $ModifierIndex Global if data storage api: Argument{ApplyTrigger:false} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].IsDoT set value true
     execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Metadata set from storage api: Argument.Metadata
+    execute unless score $LastIndex Temporary = $ModifierIndex Global store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Index int 1 run scoreboard players get $ModifierIndex Global
 # 攻撃対象に追加する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Amounts append value -1d
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Amounts[-1] double 0.01 run scoreboard players get $Damage Temporary
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To append value -1
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].To[-1] int 1 run scoreboard players get $DamagerUUID Temporary
+
+    tellraw @a {"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack"}
+    #tellraw @a [{"text":"LastIndex: "},{"score":{"name": "$LastIndex","objective": "Temporary"}}]
+    #tellraw @a [{"text":"ModifierIndex: "},{"score":{"name": "$ModifierIndex","objective": "Global"}}]
 
 # リセット
     scoreboard players reset $LastIndex Temporary
