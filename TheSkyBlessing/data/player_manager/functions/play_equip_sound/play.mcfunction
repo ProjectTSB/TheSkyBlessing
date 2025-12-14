@@ -47,4 +47,4 @@
     execute if data storage lib: {CompareResult:[{_:{_:true}}]} run return run playsound disabled_sounds:item.armor.equip_turtle player @a ~ ~ ~
 
 
-# 新規防具でも追加されない限り、ここまで処理が到達することは無い。はず。
+# 未定義の防具でもない限りここに処理は到達しないはず。

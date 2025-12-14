@@ -26,3 +26,4 @@
 
 # リセット
     data remove storage player_manager:equip_sound Item
+    data remove storage player_manager:equip_sound Result

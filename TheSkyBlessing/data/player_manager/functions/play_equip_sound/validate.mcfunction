@@ -18,6 +18,3 @@
 
 # 鳴らす
     function player_manager:play_equip_sound/play
-
-# リセット
-    data remove storage player_manager:equip_sound Result
