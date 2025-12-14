@@ -349,6 +349,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MP dummy {"text":"MP (e1)"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値 (e1)"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
+        scoreboard objectives add VoidDamageCooldown dummy {"text":"奈落ダメージのクールダウン"}
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
         scoreboard objectives add FloraFoodRegenCooldown dummy {"text":"フローラの満腹度回復のクールダウン"}
     scoreboard objectives setdisplay below_name Health

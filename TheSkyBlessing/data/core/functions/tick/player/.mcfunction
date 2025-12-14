@@ -51,6 +51,8 @@
     function player_manager:trigger/
 # 落下ダメージの処理
     function player_manager:fall_damage/
+# 奈落ダメージの処理
+    function player_manager:void_damage/
 # 神の処理
     function player_manager:god/tick
 # 神器処理
