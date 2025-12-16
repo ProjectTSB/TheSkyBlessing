@@ -11,6 +11,7 @@
 
 # 直前tickの装備アイテム取得
     function oh_my_dat:please
+    data modify storage player_manager:equip_sound Old set value [{},{},{},{}]
     data modify storage player_manager:equip_sound Old set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LastEquipmentsForSound
 # 現在の装備アイテム取得
     function api:data_get/inventory

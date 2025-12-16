@@ -47,4 +47,4 @@
     execute if data storage lib: {CompareResult:[{_:{_:true}}]} run return run playsound disabled_sounds:item.armor.equip_turtle player @a ~ ~ ~
 
 
-# 未定義の防具でもない限りここに処理は到達しないはず。
+# Generic鳴らすカボチャとかは全部すり抜けます。Generic音は無効化してないので無問題。
