@@ -67,6 +67,8 @@
     function player_manager:set_team_and_per_health
 # 緩衝体力処理
     function player_manager:absorption/
+# 装備装着音再生
+    function player_manager:play_equip_sound/tick
 # リセット
     tag @s remove this
     tag @s remove NotInGateway

@@ -450,6 +450,9 @@ team modify NoCollision collisionRule never
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
 
+#> 装着音とアイテムIDの対応表を定義
+    function player_manager:play_equip_sound/define
+
 #> ROMを初期化する
     scoreboard players set $LatestProvidedAddress Global 0
     execute unless data storage rom: _ run function rom:init
