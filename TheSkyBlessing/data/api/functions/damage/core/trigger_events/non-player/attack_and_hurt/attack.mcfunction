@@ -6,7 +6,7 @@
 
 #> Private
 # @private
-#declare score_holder $LastIndex
+    #declare score_holder $LastIndex
 
 function oh_my_dat:please
 

@@ -2,17 +2,15 @@
 #
 # attackトリガー用の進捗を手動でトリガーします
 #
-# @within function api:damage/core/health_subtract/non-player/add_event
+# @within function api:damage/core/health_subtract/non-player/
 
 #> Declare
 # @within function api:damage/core/trigger_events/non-player/attack_and_hurt/*
     #declare score_holder $DamagerUUID
 
-# Mob の UUID を記録しておく
-    scoreboard players operation $DamagerUUID Temporary = @s MobUUID
 # Hurt イベントの push
-    function api:damage/core/trigger_events/non-player/attack_and_hurt/hurt
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/trigger_events/non-player/attack_and_hurt/hurt",IsForwardedOnly:false}
 # Attack イベントの push
-    execute unless predicate api:mob/has_forward_target as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/attack_and_hurt/attack
-# リセット
+    scoreboard players operation $DamagerUUID Temporary = @s MobUUID
+    execute as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/attack_and_hurt/attack
     scoreboard players reset $DamagerUUID Temporary
