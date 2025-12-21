@@ -2,7 +2,7 @@
 #
 # 実行MobのHP最大値補正倍率を取得します
 #
-# @input as @e[type=#lib:living,type=!player]
+# @input as @e[type=#lib:living_without_player]
 # @output storage api: Return.MaxHealthMultiplier
 # @api
 
