@@ -15,7 +15,10 @@ function oh_my_dat:please
     execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack append value {Type: "api",IsVanilla:false}
     execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].AttackType set from storage api: Argument.AttackType
     execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].ElementType set from storage api: Argument.ElementType
+    execute unless score $LastIndex Temporary = $ModifierIndex Global if data storage api: Argument{ApplyTrigger:true} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].IsDoT set value false
+    execute unless score $LastIndex Temporary = $ModifierIndex Global if data storage api: Argument{ApplyTrigger:false} run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].IsDoT set value true
     execute unless score $LastIndex Temporary = $ModifierIndex Global run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Metadata set from storage api: Argument.Metadata
+    execute unless score $LastIndex Temporary = $ModifierIndex Global store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Index int 1 run scoreboard players get $ModifierIndex Global
 # 攻撃対象に追加する
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Amounts append value -1d
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactEvents.Attack[-1].Amounts[-1] double 0.01 run scoreboard players get $Damage Temporary

@@ -1,4 +1,4 @@
-#> lib:distance/core/abs/y
+#> lib:distance/core/abs/y.m
 # @within function lib:distance/**
 
 $data modify storage lib: Distance.tmp.Abs set value "$(Y)"
