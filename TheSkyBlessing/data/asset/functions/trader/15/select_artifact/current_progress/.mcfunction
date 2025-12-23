@@ -8,10 +8,10 @@
 # シャード村人に対応した攻略度で設定しておく
 
 # プールを設定
-    execute if score $Current Temporary matches 00..28 run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:1}
-    execute if score $Current Temporary matches 29..53 run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:2}
-    execute if score $Current Temporary matches 54..74 run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:3}
-    execute if score $Current Temporary matches 75.. run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:4}
+    execute if score $Current Temporary >= $UnlockLv1 Temporary unless score $Current Temporary >= $UnlockLv2 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:1}
+    execute if score $Current Temporary >= $UnlockLv2 Temporary unless score $Current Temporary >= $UnlockLv3 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:2}
+    execute if score $Current Temporary >= $UnlockLv3 Temporary unless score $Current Temporary >= $UnlockLv4 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:3}
+    execute if score $Current Temporary >= $UnlockLv4 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:4}
 
 # プールから神器を1つ抽出する
     function lib:array/session/open
