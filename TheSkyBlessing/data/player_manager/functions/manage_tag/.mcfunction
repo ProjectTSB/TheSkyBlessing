@@ -10,5 +10,5 @@
 
 # PlayerNearbyEnemy
     tag @s[tag=PlayerNearbyEnemy] remove PlayerNearbyEnemy
-    execute if entity @e[type=#lib:living,type=!player,tag=Enemy,distance=..15] run tag @s add PlayerNearbyEnemy
-    execute if entity @s[tag=!PlayerNearbyEnemy] if entity @e[type=#lib:living,type=!player,tag=Enemy.Boss,distance=..100] run tag @s add PlayerNearbyEnemy
+    execute if entity @e[type=#lib:living_without_player,tag=Enemy,distance=..15] run tag @s add PlayerNearbyEnemy
+    execute if entity @s[tag=!PlayerNearbyEnemy] if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..100] run tag @s add PlayerNearbyEnemy
