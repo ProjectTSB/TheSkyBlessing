@@ -4,16 +4,11 @@
 #
 # @within function asset_manager:artifact/create/set_lore/
 
-# 各補正にPriorityを設定
-    data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
-    function asset_manager:artifact/create/set_lore/modifier/priority/set
+# 補正が2個以上ならソートする
+    execute if data storage asset:artifact Equipment.Modifiers[1] run function asset_manager:artifact/create/set_lore/modifier/sort
 
-# ソート
-    function lib:array/session/open
-    data modify storage lib: Array set from storage asset:artifact PrioritizedModifiers
-    function lib:array/sort/compound/descend
-    data modify storage asset:artifact SortedModifiers set from storage lib: Array
-    function lib:array/session/close
+# 補正が2個以上でないならソートされたものとする
+    execute unless data storage asset:artifact Equipment.Modifiers[1] run data modify storage asset:artifact SortedModifiers set from storage asset:artifact Equipment.Modfiers
 
 # 書き出し
     function asset_manager:artifact/create/set_lore/modifier/write

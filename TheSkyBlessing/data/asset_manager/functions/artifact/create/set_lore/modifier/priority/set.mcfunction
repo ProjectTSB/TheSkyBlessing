@@ -3,7 +3,7 @@
 #
 #
 # @within function
-#   asset_manager:artifact/create/set_lore/modifier/
+#   asset_manager:artifact/create/set_lore/modifier/sort
 #   asset_manager:artifact/create/set_lore/modifier/priority/set
 
 # 必要な変数を用意
