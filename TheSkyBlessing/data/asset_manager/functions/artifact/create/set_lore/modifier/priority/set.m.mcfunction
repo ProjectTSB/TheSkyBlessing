@@ -13,10 +13,10 @@
     $execute store result score $Priority Temporary run data get storage asset:artifact ModifierPriority.$(Type)
 
 # 補正の量を取得
-    execute store result score $Amount Temporary run data get storage asset:artifact Modifier.Amount 100
+    execute store result score $Amount Temporary run data get storage asset:artifact Modifier.Amount 1000
 
 # 補正がマイナスならPriorityをメチャクチャ落とす
-    execute unless score $Amount Temporary matches 1.. run scoreboard players remove $Priority Temporary 1000
+    execute if score $Amount Temporary matches ..1 run scoreboard players remove $Priority Temporary 1024
 
 # storageにPriorityを代入
 # lib:array/sort/compound用にweightとして代入する
