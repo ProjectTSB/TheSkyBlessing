@@ -4,31 +4,20 @@
 #
 # @within function core:load_once
 
-# base -> physical -> magic -> fire -> water -> thunder
-# attack -> defense
-
-# base
+# 攻撃
     data modify storage asset:artifact ModifierPriority.attack/base set value 255
-    data modify storage asset:artifact ModifierPriority.defense/base set value 254
+    data modify storage asset:artifact ModifierPriority.attack/physical set value 254
+    data modify storage asset:artifact ModifierPriority.attack/magic set value 253
+    data modify storage asset:artifact ModifierPriority.attack/fire set value 252
+    data modify storage asset:artifact ModifierPriority.attack/water set value 251
+    data modify storage asset:artifact ModifierPriority.attack/thunder set value 250
 
-# 物理
-    data modify storage asset:artifact ModifierPriority.attack/physical set value 253
-    data modify storage asset:artifact ModifierPriority.defense/physical set value 252
-
-# 魔法
-    data modify storage asset:artifact ModifierPriority.attack/magic set value 251
-    data modify storage asset:artifact ModifierPriority.defense/magic set value 250
-
-# 火
-    data modify storage asset:artifact ModifierPriority.attack/fire set value 249
-    data modify storage asset:artifact ModifierPriority.defense/fire set value 248
-
-# 水
-    data modify storage asset:artifact ModifierPriority.attack/fire set value 247
-    data modify storage asset:artifact ModifierPriority.defense/water set value 246
-
-# 雷
-    data modify storage asset:artifact ModifierPriority.attack/thunder set value 245
+# 耐性
+    data modify storage asset:artifact ModifierPriority.defense/base set value 249
+    data modify storage asset:artifact ModifierPriority.defense/physical set value 248
+    data modify storage asset:artifact ModifierPriority.defense/magic set value 247
+    data modify storage asset:artifact ModifierPriority.defense/fire set value 246
+    data modify storage asset:artifact ModifierPriority.defense/water set value 245
     data modify storage asset:artifact ModifierPriority.defense/thunder set value 244
 
 # その他のTSB固有の補正
