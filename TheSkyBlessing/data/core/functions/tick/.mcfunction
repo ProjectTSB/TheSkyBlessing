@@ -63,11 +63,11 @@
 
 # Mob処理部
     # データ初期化部
-        execute as @e[type=#lib:living,type=!player,tag=!AlreadyInitMob] run function mob_manager:init/
+        execute as @e[type=#lib:living_without_player,tag=!AlreadyInitMob] run function mob_manager:init/
     # MobAsset処理
         execute as @e[type=!player,tag=AssetMob] at @s run function asset_manager:mob/tick/
     # 環境ダメージ処理
-        execute as @e[type=#lib:living,type=!player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
+        execute as @e[type=#lib:living_without_player,tag=AlreadyInitMob,nbt=!{Health:512f}] run function mob_manager:fix_health
 # Objects処理
     execute as @e[type=!player,tag=AssetObject,tag=!Object.DisableTicking] at @s run function asset_manager:object/triggers/tick
 # 汎用タグ処理

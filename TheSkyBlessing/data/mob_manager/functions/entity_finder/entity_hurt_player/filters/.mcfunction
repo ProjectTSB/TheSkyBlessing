@@ -9,6 +9,6 @@
 # tag付け
     tag @s add DamagedPlayer
 # フィルタ
-    execute as @e[type=#lib:living,type=!player,distance=..150] run function mob_manager:entity_finder/entity_hurt_player/filters/15
+    execute as @e[type=#lib:living_without_player,distance=..150] run function mob_manager:entity_finder/entity_hurt_player/filters/15
 # リセット
     tag @s remove DamagedPlayer
