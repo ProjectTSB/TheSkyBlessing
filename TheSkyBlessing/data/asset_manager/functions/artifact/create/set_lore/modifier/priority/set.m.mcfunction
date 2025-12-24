@@ -19,7 +19,8 @@
     execute unless score $Amount Temporary matches 1.. run scoreboard players remove $Priority Temporary 1000
 
 # storageにPriorityを代入
-    execute store result storage asset:artifact Modifier.Priority int 1 run scoreboard players get $Priority Temporary
+# lib:array/sort/compound用にweightとして代入する
+    execute store result storage asset:artifact Modifier.weight int 1 run scoreboard players get $Priority Temporary
 
 # 別のstorageへまとめて追加しておく
     data modify storage asset:artifact PrioritizedModifiers append from storage asset:artifact Modifier
