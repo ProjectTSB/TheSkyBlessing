@@ -16,4 +16,4 @@
     execute if data storage lib: {ArrayLibSessionOpened:false} run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"lib:array/のセッションが開かれずに利用されています。","color":"white"}]
 
 # NaturalMergeSort呼び出し
-    function natural_merge_sort_for_compound:ascend
+    function natural_merge_sort_for_compound:descend
