@@ -9,4 +9,4 @@
 # @output args IsPlayerNearby: boolean
 # @within function world_manager:gimmick/darkness/is_player_nearby/
 
-$return run execute positioned ~$(X) ~$(Y) ~$(Z) if entity @a[distance=..8,limit=1]
+$return run execute positioned ~$(X) ~$(Y) ~$(Z) if entity @a[gamemode=!spectator,tag=!Death,distance=..8,limit=1]

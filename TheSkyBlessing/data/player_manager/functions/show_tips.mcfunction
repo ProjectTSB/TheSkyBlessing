@@ -19,7 +19,7 @@ execute if score $TipRandom Temporary matches 05 run tellraw @s "取引中、Spa
 execute if score $TipRandom Temporary matches 06 run tellraw @s "羊を刈るよりも農業をしたほうが効率よく通貨を集められる。"
 execute if score $TipRandom Temporary matches 07 run tellraw @s "防具すら装備せずに戦闘することは無謀だ。\n防具神器が無い時は安価で買える簡易防具を必ず装備しよう。"
 execute if score $TipRandom Temporary matches 08 run tellraw @s "雑貨屋で売られている ｢見通しの書｣ は自身や相手の情報を確認できる。\n手持ちの攻撃神器よりも相手が強力であったなら、挑むべきではない。"
-execute if score $TipRandom Temporary matches 09 run tellraw @s "満腹時の体力回復量は最大体力に比例する。"
+execute if score $TipRandom Temporary matches 09 run tellraw @s "満腹でなくとも体力は自然と回復する。\nまた、最大体力が多いと自然回復量もその分多くなる。"
 execute if score $TipRandom Temporary matches 10 run tellraw @s "戦闘中、体力の自然回復量は著しく減少する。\n体力が尽きかけた時にいち早く戦闘から離脱するのも良い戦い方だろう。"
 execute if score $TipRandom Temporary matches 11 run tellraw @s "全ての島にはいつでも訪れることが出来る。\nしかし、あなたより遥かに強い敵と相対することになるかもしれない。"
 execute if score $TipRandom Temporary matches 12 run tellraw @s "多くの攻撃神器には種類別のクールダウンが存在する。\n同じ種別クールダウンを持つ神器はすぐには使うことができない。"

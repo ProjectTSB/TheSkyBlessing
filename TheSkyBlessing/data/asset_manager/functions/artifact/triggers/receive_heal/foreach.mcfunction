@@ -17,6 +17,7 @@
     scoreboard players reset $HealedFrom Temporary
 # 神器側に受け渡し
     function #asset:artifact/receive_heal
+
 # リセット
     data remove storage asset:context ReceiveHeal
     tag @a[tag=Healer] remove Healer
