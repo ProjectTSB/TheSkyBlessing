@@ -30,3 +30,7 @@
 
 # リセット
     scoreboard players reset $Current Temporary
+    scoreboard players reset $UnlockLv1 Temporary
+    scoreboard players reset $UnlockLv2 Temporary
+    scoreboard players reset $UnlockLv3 Temporary
+    scoreboard players reset $UnlockLv4 Temporary
