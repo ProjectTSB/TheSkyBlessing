@@ -6,3 +6,4 @@ data remove storage asset:trader Pos
 data remove storage asset:trader Name
 data remove storage asset:trader Rotation
 data remove storage asset:trader Trades
+data remove storage asset:trader DailyUpdate
