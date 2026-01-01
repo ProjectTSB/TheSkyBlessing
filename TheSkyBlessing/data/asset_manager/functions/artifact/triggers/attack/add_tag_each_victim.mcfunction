@@ -13,7 +13,7 @@
 execute store result score $AttackTarget Temporary run data get storage asset:artifact AttackTargets[-1]
 data remove storage asset:artifact AttackTargets[-1]
 
-execute as @e[type=#lib:living,type=!player,distance=..150] if score @s MobUUID = $AttackTarget Temporary run tag @s add Victim
+execute as @e[type=#lib:living_without_player,distance=..150] if score @s MobUUID = $AttackTarget Temporary run tag @s add Victim
 
 scoreboard players reset $AttackTarget Temporary
 

@@ -66,7 +66,7 @@
 
 #> セレクターテンプレート
 # @within * asset:artifact/**
-    #alias entity selectorTemplate @e[type=#lib:living,type=!player,tag=!Uninterferable,distance=..n]
+    #alias entity selectorTemplate @e[type=#lib:living_without_player,tag=!Uninterferable,distance=..n]
 
 #> クールダウン表示用
 # @within function asset_manager:artifact/cooldown/**
