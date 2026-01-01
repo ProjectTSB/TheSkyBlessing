@@ -19,3 +19,6 @@
     function asset:trader/15/select_artifact/picks
     data modify storage asset:temp Sell.CurrentProgress set from storage lib: Elements[]
     function lib:array/session/close
+
+# リセット
+    data remove storage asset:temp Pool

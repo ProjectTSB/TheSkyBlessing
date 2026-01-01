@@ -26,3 +26,4 @@
 
 # リセット
     data remove storage asset:temp IsHidePool
+    data remove storage asset:temp Pool
