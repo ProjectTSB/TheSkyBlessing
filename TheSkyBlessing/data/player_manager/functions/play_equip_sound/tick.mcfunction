@@ -13,13 +13,14 @@
     function oh_my_dat:please
     data modify storage player_manager:equip_sound Old set value [{},{},{},{}]
     data modify storage player_manager:equip_sound Old set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LastEquipmentsForSound
-# 現在の装備アイテム取得
+# 現在の装備アイテム取得 耐久値変化は無視するので消しておく
     function api:data_get/inventory
     data modify storage player_manager:equip_sound New set value [{},{},{},{}]
     data modify storage player_manager:equip_sound New[0] set from storage api: Inventory[{Slot:100b}]
     data modify storage player_manager:equip_sound New[1] set from storage api: Inventory[{Slot:101b}]
     data modify storage player_manager:equip_sound New[2] set from storage api: Inventory[{Slot:102b}]
     data modify storage player_manager:equip_sound New[3] set from storage api: Inventory[{Slot:103b}]
+    data remove storage player_manager:equip_sound New[].tag.Damage
 
 # 装備アイテムを比較
     function lib:array/session/open
