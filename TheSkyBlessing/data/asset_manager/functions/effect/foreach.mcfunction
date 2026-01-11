@@ -22,6 +22,7 @@
     execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 # context作成
     data modify storage asset:context id set from storage asset:effect TargetEffect.ID
+    data modify storage asset:context originID set from storage asset:effect TargetEffect.ID
     data modify storage asset:context Duration set from storage asset:effect TargetEffect.Duration
     data modify storage asset:context Stack set from storage asset:effect TargetEffect.Stack
     data modify storage asset:context this set from storage asset:effect TargetEffect.Field
@@ -54,6 +55,7 @@
 # リセット
     scoreboard players reset $RequireClearLv Temporary
     data remove storage asset:context id
+    data remove storage asset:context originID
     data remove storage asset:context this
     data remove storage asset:context PreviousField
     data remove storage asset:effect TargetEffect
