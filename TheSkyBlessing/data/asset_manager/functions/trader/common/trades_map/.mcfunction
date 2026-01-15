@@ -5,7 +5,7 @@
 # @input storage asset:trader Trades
 # @output storage asset:trader Recipes
 # @within function
-#   asset_manager:trader/common/update_recipe
+#   asset_manager:trader/common/update_recipe/update
 #   asset_manager:trader/common/trades_map/
 
 # 攻略進捗 (条件) のチェック用データ取得
