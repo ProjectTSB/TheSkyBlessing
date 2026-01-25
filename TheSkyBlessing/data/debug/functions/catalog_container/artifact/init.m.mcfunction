@@ -24,10 +24,10 @@
 # 引数取得
     $data modify storage debug:catalog_container Arg set value $(_)
 
-# カタログ初期化
+# カタログを初期化。ここに神器アイテムのNBTが突っ込まれる。
     data remove storage debug:catalog_container Artifact.CatalogItems
 
-# all指定時は5000から降順総当りでカタログ生成して終了
+# all指定時は5000から降順総当りでカタログ生成して終了。IDが5000以上の神器が作られるようになったら直してね
     execute if data storage debug:catalog_container {Arg:"all"} run data modify storage debug:catalog_container Artifact.Mode set value "BruteForce"
     execute if data storage debug:catalog_container {Arg:"all"} run scoreboard players set $Counter Temporary 5000
     execute if data storage debug:catalog_container {Arg:"all"} run function debug:catalog_container/artifact/core/generate_catalog
@@ -36,18 +36,17 @@
 
 # IDリスト準備
     data remove storage debug:catalog_container Artifact.IDList
-    function lib:array/session/open
-# 色毎
+# IDリストをセット (色指定の場合)
     execute if data storage debug:catalog_container {Arg:"normal-all"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistry
     execute if data storage debug:catalog_container {Arg:"red-all"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistryWithColor.Red
     execute if data storage debug:catalog_container {Arg:"blue-all"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistryWithColor.Blue
     execute if data storage debug:catalog_container {Arg:"green-all"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistryWithColor.Green
-# 色毎の場合はarray/flatが追加で必要
+# 色指定だった場合はint配列の配列の配列になってるのでint配列の配列に
     execute if data storage debug:catalog_container Artifact.IDList run data remove storage debug:catalog_container Artifact.IDList[0]
-    execute if data storage debug:catalog_container Artifact.IDList run data modify storage lib: Array set from storage debug:catalog_container Artifact.IDList
-    execute if data storage debug:catalog_container Artifact.IDList run function lib:array/flat
-    execute if data storage debug:catalog_container Artifact.IDList run data modify storage debug:catalog_container Artifact.IDList set from storage lib: Array
-# ランク毎
+    execute if data storage debug:catalog_container Artifact.IDList run data modify storage debug:catalog_container Temp append from storage debug:catalog_container Artifact.IDList[][]
+    execute if data storage debug:catalog_container Artifact.IDList run data modify storage debug:catalog_container Artifact.IDList set from storage debug:catalog_container Temp
+    data remove storage debug:catalog_container Temp
+# IDリストをセット (ランク指定の場合)
     execute if data storage debug:catalog_container {Arg:"normal-1"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistry[1]
     execute if data storage debug:catalog_container {Arg:"normal-2"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistry[2]
     execute if data storage debug:catalog_container {Arg:"normal-3"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistry[3]
@@ -66,16 +65,15 @@
     execute if data storage debug:catalog_container {Arg:"green-4"} run data modify storage debug:catalog_container Artifact.IDList set from storage asset:artifact RarityRegistryWithColor.Green[4]
 
 # int配列の配列になってるので普通のint配列に
-    data modify storage lib: Array set from storage debug:catalog_container Artifact.IDList
-    function lib:array/flat
-    data modify storage debug:catalog_container Artifact.IDList set from storage lib: Array
+    data modify storage debug:catalog_container Temp append from storage debug:catalog_container Artifact.IDList[][]
+    data modify storage debug:catalog_container Artifact.IDList set from storage debug:catalog_container Temp
+    data remove storage debug:catalog_container Temp
 
 # IDリストからカタログ生成
     data modify storage debug:catalog_container Artifact.Mode set value "IDList"
     function debug:catalog_container/artifact/core/generate_catalog
 
 # 後片付け
-    function lib:array/session/close
     data remove storage debug:catalog_container Artifact.Mode
     data remove storage debug:catalog_container Artifact.IDList
     data remove storage debug:catalog_container Arg
