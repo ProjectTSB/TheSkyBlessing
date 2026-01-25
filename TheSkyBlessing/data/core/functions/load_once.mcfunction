@@ -182,6 +182,9 @@ team modify NoCollision collisionRule never
     bossbar set asset:special_cooldown color green
     bossbar set asset:special_cooldown style notched_10
 
+    # 神器の補正の優先度を定義
+        function asset_manager:artifact/create/set_lore/modifier/priority/define
+
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
