@@ -51,6 +51,8 @@
     function player_manager:trigger/
 # 落下ダメージの処理
     function player_manager:fall_damage/
+# 奈落ダメージの処理
+    function player_manager:void_damage/
 # 神の処理
     function player_manager:god/tick
 # 神器処理
@@ -65,6 +67,8 @@
     function player_manager:set_team_and_per_health
 # 緩衝体力処理
     function player_manager:absorption/
+# 装備装着音再生
+    function player_manager:play_equip_sound/tick
 # リセット
     tag @s remove this
     tag @s remove NotInGateway

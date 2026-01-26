@@ -5,10 +5,10 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v1.0.4"
+data modify storage global GameVersion set value "v1.0.5"
 data modify storage global FirstGameVersion set from storage global GameVersion
 data modify storage global ExpectedDatapackCount set value 22
-data modify storage global ResourcePackVersion set value "v1.0.c"
+data modify storage global ResourcePackVersion set value "v1.0.d"
 
 #> forceload chunksの設定
 # Origin
@@ -349,6 +349,7 @@ team modify NoCollision collisionRule never
         scoreboard objectives add MP dummy {"text":"MP (e1)"}
         scoreboard objectives add MPMax dummy {"text":"MP上限値 (e1)"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
+        scoreboard objectives add VoidDamageCooldown dummy {"text":"奈落ダメージのクールダウン"}
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
         scoreboard objectives add FloraFoodRegenCooldown dummy {"text":"フローラの満腹度回復のクールダウン"}
     scoreboard objectives setdisplay below_name Health
@@ -448,6 +449,9 @@ team modify NoCollision collisionRule never
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
+
+#> 装着音とアイテムIDの対応表を定義
+    function player_manager:play_equip_sound/define
 
 #> ROMを初期化する
     scoreboard players set $LatestProvidedAddress Global 0
