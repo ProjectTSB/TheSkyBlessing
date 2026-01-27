@@ -8,7 +8,8 @@
 # ダメだったらレビューで弾いてくれ～
     function api:entity/player/get_health_per
     execute store result score $HealthPer Temporary run data get storage api: Return.HealthPer 1000
-    execute if score $HealthPer Temporary matches 999.. store result score $OverHeal Temporary run return run data get storage api: Argument.Fluctuation 100
+    execute if score $HealthPer Temporary matches 999.. store result score $OverHeal Temporary run data get storage api: Argument.Fluctuation 100
+    execute if score $HealthPer Temporary matches 999.. run return run scoreboard players reset $HealthPer Temporary
 
 # 必要な値を取得
     execute store result score $OverHeal Temporary run data get storage api: Argument.Fluctuation 100
