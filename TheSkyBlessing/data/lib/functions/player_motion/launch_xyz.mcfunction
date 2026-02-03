@@ -8,6 +8,9 @@
 # @api
 # @input
 #   as player
-#   score $strength PlayerMotion.Api.Launch
+#   score
+#       $x PlayerMotion.Api.Launch
+#       $y PlayerMotion.Api.Launch
+#       $z PlayerMotion.Api.Launch
 
 function player_motion:api/launch_xyz
