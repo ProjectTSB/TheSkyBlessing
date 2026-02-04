@@ -17,7 +17,7 @@
 # 接続詞
     data modify storage asset:artifact Temp.Trigger.AB set value "し"
 # トリガー
-    execute if data storage asset:artifact {Trigger:"onClick"} run data modify storage asset:artifact Temp.Trigger.B set value "右クリック"
+    execute if data storage asset:artifact {Trigger:"onClick"} run data modify storage asset:artifact Temp.Trigger.B set value '{"keybind":"key.use"}'
     execute if data storage asset:artifact {Trigger:"shot"} run data modify storage asset:artifact Temp.Trigger.B set value "発射"
     execute if data storage asset:artifact {Trigger:"itemUse"} run data modify storage asset:artifact Temp.Trigger.B set value "使用"
     execute if data storage asset:artifact {Trigger:"passive"} run data modify storage asset:artifact Temp.Trigger.B set value "ている限り"
