@@ -1,2 +1,2 @@
-scoreboard players set $strength PlayerMotion.Api.Launch 10000
-function lib:player_motion/launch_looking
+data modify storage lib: Argument set value {VectorMagnitude:1d,KnockbackResist:1b}
+function lib:motion/looking

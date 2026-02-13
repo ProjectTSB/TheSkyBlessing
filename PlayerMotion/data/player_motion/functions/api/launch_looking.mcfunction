@@ -2,7 +2,7 @@
 #
 # Launches the player in the input direction
 #
-# @within function lib:player_motion/launch_looking
+# @api
 
 execute if entity @s[type=!player] run return fail
 execute on vehicle run return fail
