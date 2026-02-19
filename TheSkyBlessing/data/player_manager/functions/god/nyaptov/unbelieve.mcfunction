@@ -3,7 +3,7 @@
 #
 #
 # @within
-#   function player_manager:god/change_believe/unbelieve2
+#   function player_manager:god/change_believe/change_process/unbelieve2
 #   function debug:change_believe/none
 
 # 信仰タグ削除
@@ -19,4 +19,4 @@
     function api:modifier/defense/water/remove
 # 落下ダメージ-100%
     data modify storage api: Argument.UUID set value [2, 1, 1, 11]
-    function api:modifier/fall_damage/remove
+    function api:modifier/fall_resistance/remove

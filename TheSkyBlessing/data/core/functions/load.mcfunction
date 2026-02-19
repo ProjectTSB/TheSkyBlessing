@@ -16,11 +16,9 @@
 # マイグレーション
     function core:migration/
 
-# 神器のレジストリ読み込み
-    function asset_manager:artifact/load
+# データパック欠損チェック
+    function core:check_datapack_deficient
 
-# 初期化処理
-    execute if data storage global {IsProduction:0b} run function #asset:mob/load
-    execute if data storage global {IsProduction:0b} run function #asset:object/load
-    execute if data storage global {IsProduction:0b} run function #asset:artifact/load
-    execute if data storage global {IsProduction:0b} run function #asset:effect/load
+# レジストリ読み込み
+    function asset_manager:artifact/load
+    function asset_manager:mob/load

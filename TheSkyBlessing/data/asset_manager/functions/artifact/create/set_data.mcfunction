@@ -13,13 +13,17 @@
 #       Slot : Slot
 #       Trigger : Trigger
 #       Condition? : TextComponent
-#       AttackInfo? : Component
 #       MPCost : int
 #       MPRequire : int
 #       MPHealWhenHit : int
-#       CostText? : TextComponent
-#       LocalCooldown : int
-#       SpecialCooldown : int
+#       ConsumeItem? : {Item: TextComponent, Count: int, Extra?: TextComponent}
+#       LocalCooldown? : int
+#       TypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#       SecondaryTypeCooldown? : {Type: enum(CooldownType), Duration: int}
+#       SpecialCooldown? : int
+#       AttackInfo? : Component
+#       Equipment? : Component
+#       DisabledFlag? : Component
 #       CanUsedGod : God[]
 #       CustomNBT : Item.tag
 # @within function asset:artifact/common/give
@@ -53,13 +57,13 @@
     data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit
     data modify storage asset:artifact Item.tag.TSB.CanUsedGod set from storage asset:artifact CanUsedGod
     data modify storage asset:artifact Item.tag.TSB.RemainingCount set from storage asset:artifact RemainingCount
-    data modify storage asset:artifact Item.tag.TSB.RemainingCountMAX set from storage asset:artifact RemainingCount
+    data modify storage asset:artifact Item.tag.TSB.RemainingCountMax set from storage asset:artifact RemainingCount
     data modify storage asset:artifact Item.tag.TSB.LocalCooldown set from storage asset:artifact LocalCooldown
     data modify storage asset:artifact Item.tag.TSB.TypeCooldown set from storage asset:artifact TypeCooldown
+    data modify storage asset:artifact Item.tag.TSB.SecondaryTypeCooldown set from storage asset:artifact SecondaryTypeCooldown
     data modify storage asset:artifact Item.tag.TSB.SpecialCooldown set from storage asset:artifact SpecialCooldown
-    data modify storage asset:artifact Item.tag.TSB.DisableCooldownMessage set from storage asset:artifact DisableCooldownMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableMPMessage set from storage asset:artifact DisableMPMessage
-    data modify storage asset:artifact Item.tag.TSB.DisableBreakSound set from storage asset:artifact DisableBreakSound
+    data modify storage asset:artifact Item.tag.TSB.Equipment set from storage asset:artifact Equipment
+    data modify storage asset:artifact Item.tag.TSB.DisabledFlag set from storage asset:artifact DisabledFlag
 
 # 名前
     # 残り回数が存在する場合
@@ -71,6 +75,9 @@
 # Lore
     function asset_manager:artifact/create/set_lore/
 # カスタムNBT
+    execute unless data storage asset:artifact CustomNBT.AttributeModifiers run data modify storage asset:artifact CustomNBT.AttributeModifiers set value []
+    data modify storage asset:artifact CustomNBT.Unbreakable set value 1b
+    function asset_manager:artifact/create/set_hide_flags
     data modify storage asset:artifact Item.tag merge from storage asset:artifact CustomNBT
 
 # データの適用
@@ -79,3 +86,4 @@
 
 # リセット
     data remove storage asset:artifact BaseItem
+    data remove storage asset:artifact RemainingCountMax

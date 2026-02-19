@@ -207,7 +207,6 @@ scoreboard players set $98 Const 98
 scoreboard players set $99 Const 99
 scoreboard players set $100 Const 100
 scoreboard players set $150 Const 150
-scoreboard players set $183 Const 183
 scoreboard players set $200 Const 200
 scoreboard players set $250 Const 250
 scoreboard players set $300 Const 300
@@ -466,8 +465,6 @@ scoreboard players set $536870912 Const 536870912
 scoreboard players set $1073741824 Const 1073741824
 
 #その他定数
-scoreboard players set $31743 Const 31743
-
 scoreboard players set $byte.min Const -256
 scoreboard players set $byte.max Const 255
 scoreboard players set $short.min Const -32768
@@ -485,3 +482,7 @@ scoreboard players set $-2147483648 Const -2147483648
 scoreboard players set $2147483647 Const 2147483647
 scoreboard players set $-2147483648 Const -2147483648
 scoreboard players set $2147483647 Const 2147483647
+
+scoreboard players set $120 Const 120
+scoreboard players set $130 Const 130
+scoreboard players set $135 Const 135

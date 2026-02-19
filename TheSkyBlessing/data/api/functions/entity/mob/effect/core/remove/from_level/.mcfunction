@@ -4,6 +4,9 @@
 #
 # @within function api:entity/mob/effect/remove/from_level
 
+# エフェクトを持ってなかったら return
+    execute if entity @s[tag=!HasAssetEffect] run return 0
+
 # storage呼び出し
     function oh_my_dat:please
 # effect id抽出
@@ -16,4 +19,5 @@
 # リセット
     data remove storage asset:effect IDList
     data remove storage asset:effect Type
+    data remove storage asset:effect ClearType
     scoreboard players reset $ClearCount Temporary

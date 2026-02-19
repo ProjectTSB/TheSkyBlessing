@@ -14,3 +14,4 @@
 # マクロからデータを取得し召喚
     $data modify storage api: Argument set value $(Argument)
     function api:entity/mob/effect/give
+    function api:entity/mob/effect/reset

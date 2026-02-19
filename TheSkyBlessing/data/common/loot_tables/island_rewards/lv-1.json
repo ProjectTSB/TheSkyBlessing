@@ -2,27 +2,43 @@
     "type": "generic",
     "pools": [
         {
-            "rolls": {
-                "min": 0,
-                "max": 2
-            },
+            "rolls": 1,
             "entries": [
                 {
-                    "weight": 75,
+                    "weight": 50,
                     "type": "loot_table",
-                    "name": "common:sacred_shard/lv-1"
+                    "name": "common:sacred_shard/lv-1",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ]
                 },
                 {
                     "weight": 25,
                     "type": "loot_table",
                     "name": "common:sacred_shard/lv-2"
+                },
+                {
+                    "weight": 25,
+                    "type": "loot_table",
+                    "name": "common:island_rewards/artifact_seed/lv-1"
+                },
+                {
+                    "weight": 100,
+                    "type": "empty"
                 }
             ]
         },
         {
             "rolls": {
-                "min": 0,
-                "max": 1
+                "type": "binomial",
+                "p": 0.4,
+                "n": 1
             },
             "entries": [
                 {
@@ -34,7 +50,7 @@
         {
             "rolls": {
                 "min": 0,
-                "max": 16
+                "max": 12
             },
             "entries": [
                 {

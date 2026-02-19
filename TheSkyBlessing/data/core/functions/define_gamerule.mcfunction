@@ -20,8 +20,7 @@ execute if data storage global {IsProduction:1b} run gamerule doInsomnia true
 execute if data storage global {IsProduction:0b} run gamerule doInsomnia false
 gamerule doLimitedCrafting false
 gamerule doMobLoot true
-execute if data storage global {IsProduction:1b} run gamerule doMobSpawning true
-execute if data storage global {IsProduction:0b} run gamerule doMobSpawning false
+gamerule doMobSpawning false
 gamerule doPatrolSpawning false
 gamerule doTileDrops true
 gamerule doTraderSpawning false
@@ -47,8 +46,9 @@ execute if data storage global {IsProduction:1b} run gamerule mobGriefing true
 execute if data storage global {IsProduction:0b} run gamerule mobGriefing false
 gamerule naturalRegeneration false
 gamerule playersSleepingPercentage 100
-gamerule playersNetherPortalCreativeDelay 1
-execute if data storage global {IsProduction:1b} run gamerule playersNetherPortalDefaultDelay 80
+execute if data storage global {IsProduction:1b} run gamerule playersNetherPortalCreativeDelay 2147483647
+execute if data storage global {IsProduction:0b} run gamerule playersNetherPortalCreativeDelay 1
+execute if data storage global {IsProduction:1b} run gamerule playersNetherPortalDefaultDelay 2147483647
 execute if data storage global {IsProduction:0b} run gamerule playersNetherPortalDefaultDelay 1
 execute if data storage global {IsProduction:1b} run gamerule projectilesCanBreakBlocks true
 execute if data storage global {IsProduction:0b} run gamerule projectilesCanBreakBlocks false

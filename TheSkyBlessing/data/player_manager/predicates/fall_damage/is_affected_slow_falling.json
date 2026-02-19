@@ -1,0 +1,9 @@
+{
+    "condition": "entity_properties",
+    "entity": "this",
+    "predicate": {
+        "effects": {
+            "slow_falling": {}
+        }
+    }
+}

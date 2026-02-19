@@ -11,4 +11,3 @@
 
 # super.tick呼び出し
     execute unless data storage asset:object {Implement:true} run function asset_manager:object/tick/call_super_methods/
-    data remove storage asset:object Implement

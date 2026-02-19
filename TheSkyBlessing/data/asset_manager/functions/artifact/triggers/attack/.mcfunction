@@ -8,5 +8,3 @@
     function asset_manager:artifact/data/new/set_to_current
 # イベントを順に発火する
     function asset_manager:artifact/triggers/attack/foreach
-# イベント発火後に実行するやつ
-    function asset_manager:artifact/data/new/revert_from_current

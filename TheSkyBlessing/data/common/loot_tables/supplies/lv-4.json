@@ -1,0 +1,88 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 2,
+                "max": 6
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wheat_seeds",
+                    "functions": [
+                        {
+                            "function": "set_nbt",
+                            "tag": "{TSB:{ArtifactSeed:{ID:145}}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "torch",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "arrow",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 16
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "scaffolding",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 6,
+                                "max": 24
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "water_bucket"
+                },
+                {
+                    "type": "item",
+                    "name": "apple",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "shulker_box",
+                    "conditions": [
+                        {
+                            "condition": "random_chance",
+                            "chance": 0.15
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

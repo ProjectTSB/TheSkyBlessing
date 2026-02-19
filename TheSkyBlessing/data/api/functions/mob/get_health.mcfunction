@@ -5,4 +5,4 @@
 # @output storage api: Return.Health : float
 # @api
 
-execute store result storage api: Return.Health float 0.01 run scoreboard players get @s MobHealth
+function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:mob/core/get_health",IsForwardedOnly:true}

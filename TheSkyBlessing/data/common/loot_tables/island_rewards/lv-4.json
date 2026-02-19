@@ -3,26 +3,45 @@
     "pools": [
         {
             "rolls": {
-                "min": 0,
-                "max": 3
+                "min": 1,
+                "max": 2
             },
             "entries": [
                 {
-                    "weight": 50,
+                    "weight": 40,
                     "type": "loot_table",
-                    "name": "common:sacred_shard/lv-3"
+                    "name": "common:sacred_shard/lv-3",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ]
                 },
                 {
-                    "weight": 50,
+                    "weight": 35,
                     "type": "loot_table",
                     "name": "common:sacred_shard/lv-4"
+                },
+                {
+                    "weight": 25,
+                    "type": "loot_table",
+                    "name": "common:island_rewards/artifact_seed/lv-4"
+                },
+                {
+                    "weight": 75,
+                    "type": "empty"
                 }
             ]
         },
         {
             "rolls": {
-                "min": 2,
-                "max": 5
+                "type": "binomial",
+                "p": 0.4,
+                "n": 4
             },
             "entries": [
                 {
@@ -143,20 +162,6 @@
                             "count": {
                                 "min": 1,
                                 "max": 3
-                            }
-                        }
-                    ]
-                },
-                {
-                    "weight": 10,
-                    "type": "item",
-                    "name": "trident",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 1
                             }
                         }
                     ]

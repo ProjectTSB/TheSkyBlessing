@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$Difficulty"
+      },
+      "score": "Global"
+    },
+    "range": {
+      "min": 2
+    }
+  }

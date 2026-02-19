@@ -11,7 +11,8 @@
 # @api
 
 # データ検証
-    function api:modifier/core/common/validate
+    function api:modifier/core/common/validate_add
+    execute if entity @s[type=!player] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:modifier/attack/*/add が非プレイヤーに対して使用されています","color":"white"}]
 # データが正しいなら入れる
     execute if data storage api: Argument.UUID if data storage api: Argument.Amount if data storage api: Argument.Operation run function api:modifier/core/attack/water/add
 # リセット

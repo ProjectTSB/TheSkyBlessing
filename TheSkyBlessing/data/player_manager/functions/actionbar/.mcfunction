@@ -2,14 +2,16 @@
 #
 #
 #
-# @within function core:tick/player/
+# @within function core:tick/player/post
+
+# EntityStorage 呼び出し
+    function oh_my_dat:please
 
 # 出力
-    # ( MainBar )
-        title @s[gamemode=spectator] actionbar [{"text":""},{"storage":"asset:artifact","nbt":"MainBarMessage[]","interpret":true,"separator":""}]
-    # ( MiniBar, MainBar )
-        title @s[gamemode=!spectator] actionbar [{"text":""},{"storage":"asset:artifact","nbt":"MiniBarsMessage[]","interpret":true,"separator":""},{"storage":"asset:artifact","nbt":"MainBarMessage[]","interpret":true,"separator":""}]
+    # ( MainBar, Effect )
+        title @s[gamemode= spectator] actionbar [{"text":""},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Message.MainBar[]","interpret":true,"separator":""},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Message.Effect[]","interpret":true,"separator":""}]
+    # ( MiniBar, MainBar, Effect )
+        title @s[gamemode=!spectator] actionbar [{"text":""},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Message.MiniBars[]","interpret":true,"separator":""},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Message.MainBar[]","interpret":true,"separator":""},{"storage":"oh_my_dat:","nbt":"_[-4][-4][-4][-4][-4][-4][-4][-4].Message.Effect[]","interpret":true,"separator":""}]
 
 # リセット
-    data remove storage asset:artifact MiniBarsMessage
-    data remove storage asset:artifact MainBarMessage
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Message

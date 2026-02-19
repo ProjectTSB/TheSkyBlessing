@@ -7,7 +7,8 @@ env_file="${PWD}/server-env.sh"
 if [ -e "$env_file" ]; then
     source "$env_file"
     cd "$SERVER_JAR_DIR"
-    RESOURCEPACK_HASH=$(curl -L https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip | sha1sum | tr ' ' '\t' | cut -f1)
+    RESOURCEPACK_HASH=$(curl -L "$RESOURCEPACK_URI" | sha1sum | tr ' ' '\t' | cut -f1)
+    sed -e "s|^resource-pack=.*$|resource-pack=$RESOURCEPACK_URI|" -i ./server.properties
     sed -e "s/^resource-pack-sha1=.*$/resource-pack-sha1=$RESOURCEPACK_HASH/" -i ./server.properties
     echo "Resourcepack hash updated: $RESOURCEPACK_HASH"
     java $SERVER_ARGS -jar "$SERVER_JAR_NAME" nogui
@@ -20,5 +21,6 @@ if [ ! -e "$env_file" ]; then
     echo "SERVER_JAR_DIR=" >> "$env_file"
     echo "SERVER_JAR_NAME=server.jar" >> "$env_file"
     echo "SERVER_ARGS=\"-Xms2G -Xmx4G\"" >> "$env_file"
+    echo "RESOURCEPACK_URI=\"https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip\"" >> "$env_file"
     echo ".env ファイルが存在しません。自動生成された値を編集の上再度実行してください。"
 fi

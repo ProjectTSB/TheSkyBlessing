@@ -5,7 +5,10 @@
 # @within function core:load
 
 #> バージョン情報の設定
-data modify storage global GameVersion set value "v0.1.6"
+data modify storage global GameVersion set value "v1.0.5"
+data modify storage global FirstGameVersion set from storage global GameVersion
+data modify storage global ExpectedDatapackCount set value 22
+data modify storage global ResourcePackVersion set value "v1.0.d"
 
 #> forceload chunksの設定
 # Origin
@@ -35,7 +38,6 @@ data modify storage global GameVersion set value "v0.1.6"
 #> gameruleの設定
 function core:define_gamerule
 
-
 #> エイリアスの登録とシャルカーボックスのsetblock
 # @public
     #alias vector shulkerA 10000 0 10000
@@ -61,18 +63,42 @@ data modify storage global Prefix.FAILED set value "§cFAILED >> §r"
 data modify storage global Prefix.ERROR set value "§cERROR >> §r"
 data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
-data modify storage global Icon.God.Flora set value '{"text":"\\uE010","color":"white","font":"tsb"}'
-data modify storage global Icon.God.Urban set value '{"text":"\\uE011","color":"white","font":"tsb"}'
-data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE012","color":"white","font":"tsb"}'
-data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE013","color":"white","font":"tsb"}'
-data modify storage global Icon.God.Rumor set value '{"text":"\\uE014","color":"white","font":"tsb"}'
+data modify storage global Icon.Frame set value '{"text":"\\uB000<","color":"white","font":"icon"}'
+data modify storage global Icon.FrameWhite set value '{"text":"\\uB001<","color":"white","font":"icon"}'
 
-data modify storage global Icon.Cooldown.Local set value '{"text":"ﾛｰ","color":"white"}'
-data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"近","color":"white"}'
-data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"遠","color":"white"}'
-data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"召","color":"white"}'
-data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"癒","color":"white"}'
-data modify storage global Icon.Cooldown.Global set value '{"text":"ｸﾞ","color":"white"}'
+data modify storage global Icon.God.Flora set value '{"text":"\\uE000","color":"white","font":"icon"}'
+data modify storage global Icon.God.Urban set value '{"text":"\\uE001","color":"white","font":"icon"}'
+data modify storage global Icon.God.Nyaptov set value '{"text":"\\uE002","color":"white","font":"icon"}'
+data modify storage global Icon.God.Wi-ki set value '{"text":"\\uE003","color":"white","font":"icon"}'
+data modify storage global Icon.God.Rumor set value '{"text":"\\uE004","color":"white","font":"icon"}'
+data modify storage global Icon.God.Wiki set from storage global Icon.God.Wi-ki
+
+data modify storage global Icon.Cooldown.Local set value '{"text":"\\uE200","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.ShortRange set value '{"text":"\\uE202","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.LongRange set value '{"text":"\\uE203","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Summon set value '{"text":"\\uE205","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Type.Heal set value '{"text":"\\uE204","color":"white","font":"icon"}'
+data modify storage global Icon.Cooldown.Global set value '{"text":"\\uE201","color":"white","font":"icon"}'
+
+data modify storage global Icon.Attack.Physical set value '{"text":"\\uE100","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Magic set value '{"text":"\\uE101","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Fire set value '{"text":"\\uE102","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Water set value '{"text":"\\uE103","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.Thunder set value '{"text":"\\uE104","color":"white","font":"icon"}'
+data modify storage global Icon.Attack.None set value '{"text":"\\uE105","color":"white","font":"icon"}'
+
+# こうすることでマクロから一行で execute condition にできる
+data modify storage global Boolean.1 set value true
+data modify storage global Boolean.1b set value true
+data modify storage global Boolean.true set value true
+# data modify storage global Boolean.0b set value null
+
+execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
+execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
+execute unless data storage global Config.ShowPlayTimeOnDispel run data modify storage global Config.ShowPlayTimeOnDispel set value false
+
+#> シャードの自由入手解禁に必要な攻略度(割合)
+    data modify storage global UnlockShardProgress set value [5,29,54,75]
 
 #> リセット必須オブジェクト等の削除
 scoreboard objectives remove Debug
@@ -109,17 +135,11 @@ team modify NoCollision collisionRule never
     #> 常に値が設定される変数用スコアボード
     # @public
         scoreboard objectives add Global dummy
-    # 乱数値の設定
-        #> Private
-        # @private
-            #declare tag Random
-        summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-        execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
-        kill @e[tag=Random,limit=1]
-    scoreboard players set $Difficulty Global 2
+    execute unless score $Difficulty Global matches -2147483648..2147483647 run scoreboard players set $Difficulty Global 1
     scoreboard players set $PurifiedIslands Global 0
-    scoreboard players set $TotalIslands Global 50
+    scoreboard players set $TotalIslands Global 60
+    scoreboard players set $TraderRecipeVersion Global 0
+    scoreboard players set $UnlockedShardLv Global 0
 
     #> 定数類用スコアボード **変更厳禁**
     # @public
@@ -165,17 +185,13 @@ team modify NoCollision collisionRule never
     #> AssetManager: Mob -Public
     # @public
         scoreboard objectives add MobID dummy {"text":"MobAssetのID"}
-        scoreboard objectives add MobHealth dummy {"text":"Mobの体力"}
+        scoreboard objectives add MobHealth dummy {"text":"Mobの体力(e2)"}
 
-    #> AssetManager: Mob -Private
+    #> MobManager: Mob -Private
     # @within function
-    #   core:load_once
-    #   asset_manager:mob/**
-        bossbar add asset:bossbar {"text":""}
+    #   mob_manager:processing_tag/common_tag/**
         scoreboard objectives add VoidActionTime dummy {"text":"汎用奈落耐性アクションの状態"}
         scoreboard objectives add VoidMobID dummy {"text":"耐性MobとAECの紐付け用"}
-    bossbar set asset:bossbar color pink
-    bossbar set asset:bossbar style notched_10
 
     #> AssetManager: Object -Public
     # @public
@@ -196,10 +212,13 @@ team modify NoCollision collisionRule never
     #   asset_manager:spawner/**
         scoreboard objectives add SpawnerHP dummy {"text":"スポナーの残体力"}
         scoreboard objectives add SpawnerCooldown dummy {"text":"スポナーの召喚クールダウン"}
+        scoreboard objectives add SummonedSpawnerID dummy {"text":"自身を召喚したスポナーの ID"}
 
     #> AssetManager: Teleporter
     # @within function
     #   asset_manager:teleporter/**
+        scoreboard objectives add TeleporterActivationStateVersion dummy {"text":"テレポーターの更新がどこまで反映されているか"}
+        scoreboard objectives add TeleporterStarBlinkTick dummy {"text":"テレポーターのの星の点滅状況"}
         scoreboard objectives add TeleporterLogCD dummy {"text":"他のテレポーターが発見できなかった際のログのクールダウン"}
 
     #> AssetManager: Island
@@ -213,6 +232,12 @@ team modify NoCollision collisionRule never
     #   asset_manager:effect/**
         scoreboard objectives add UsedMilk used:milk_bucket {"text":"牛乳使用チェック"}
         scoreboard objectives add UsedTotem used:totem_of_undying {"text":"トーテム使用チェック"}
+
+    #> AssetManager: Trader
+    # @within function
+    #   asset_manager:trader/tick/4_interval
+    #   asset_manager:trader/common/**
+        scoreboard objectives add RecipeVersion dummy {"text":"商人の取引内容の更新チェック用スコア"}
 
     #> イベントハンドラ用スコアボード
     # @within function
@@ -232,6 +257,7 @@ team modify NoCollision collisionRule never
     #> Library用スコアボード
     # @public
         scoreboard objectives add Lib dummy {"text":"ライブラリの引数/返り値用"}
+        scoreboard objectives add ForwardTargetMobUUID dummy {"text":"ダメージを転送する対象"}
 
     #> Library用スコアボード - PrivateUse
     # @within * lib:**
@@ -263,14 +289,15 @@ team modify NoCollision collisionRule never
 
     #> PlayerManager - 信仰
     # @within function player_manager:god/**
-        scoreboard objectives add Believe trigger {"text":"信仰のユーザー入力"}
-        scoreboard objectives add Believe2 trigger {"text":"信仰のユーザー入力"}
-        scoreboard objectives add Believe3 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe4 trigger {"text":"信仰のユーザー入力"}
+        scoreboard objectives add Believe5 trigger {"text":"信仰のユーザー入力"}
         scoreboard objectives add GodMessagePhase dummy {"text":"信仰変更のチャット遅延用"}
+        function settings:init
 
     #> PlayerManager - Teams
     # @within function
     #   core:load_once
+    #   core:update_team_prefix.m
     #   player_manager:set_team_and_per_health
         team add None.LowHP
         team add None.MedHP
@@ -308,24 +335,7 @@ team modify NoCollision collisionRule never
     team modify Rumor.LowHP color red
     team modify Rumor.MedHP color yellow
     team modify Rumor.HighHP color green
-    team modify None.LowHP prefix {"text":"  ","color":"white"}
-    team modify None.MedHP prefix {"text":"  ","color":"white"}
-    team modify None.HighHP prefix {"text":"  ","color":"white"}
-    team modify Flora.LowHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Flora.MedHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Flora.HighHP prefix [{"text":"\uE010","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.LowHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.MedHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Urban.HighHP prefix [{"text":"\uE011","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.LowHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.MedHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Nyaptov.HighHP prefix [{"text":"\uE012","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.LowHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.MedHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Wi-ki.HighHP prefix [{"text":"\uE013","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.LowHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.MedHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
-    team modify Rumor.HighHP prefix [{"text":"\uE014","color":"white","font":"tsb"},{"text":" ","font":"default"}]
+    function core:update_team_prefix.m with storage global Icon.God
 
     #> PlayerManager用スコアボード
     # @within
@@ -336,15 +346,35 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Health health {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add PerHealth dummy {"text":"♥","color":"#FF4c99"}
         scoreboard objectives add HPRegenCooldown dummy {"text":"HP自然回復のクールダウン"}
-        scoreboard objectives add MP dummy {"text":"MP"}
-        scoreboard objectives add MPFloat dummy {"text":"MP - 小数部"}
-        scoreboard objectives add MPMax dummy {"text":"MP上限値"}
+        scoreboard objectives add MP dummy {"text":"MP (e1)"}
+        scoreboard objectives add MPMax dummy {"text":"MP上限値 (e1)"}
         scoreboard objectives add MPRegenCooldown dummy {"text":"MP再生のクールダウン"}
+        scoreboard objectives add VoidDamageCooldown dummy {"text":"奈落ダメージのクールダウン"}
         scoreboard objectives add OldFallDistance dummy {"text":"1tick前の落下距離 (e1)"}
         scoreboard objectives add FloraFoodRegenCooldown dummy {"text":"フローラの満腹度回復のクールダウン"}
     scoreboard objectives setdisplay below_name Health
     scoreboard objectives modify PerHealth rendertype hearts
     scoreboard objectives setdisplay list PerHealth
+
+    #> PlayerManager - Arrow
+    # @within function
+    #   asset_manager:artifact/triggers/
+    #   core:load_once
+    #   player_manager:arrow/**
+    scoreboard objectives add ArrowOwnerUserID dummy
+    scoreboard objectives add ArrowShotTick dummy
+
+    #> PlayerManager - 墓
+    # @within function
+    #   core:handler/death
+    #   player_manager:grave/**
+    scoreboard objectives add GraveVersion dummy
+    scoreboard objectives add GraveUserID dummy
+
+    #> PlayerManager - Trigger
+    # @within function
+    #   player_manager:trigger/**
+    scoreboard objectives add Trigger trigger
 
     #> 最大値用スコアホルダー
     # @within function
@@ -361,14 +391,6 @@ team modify NoCollision collisionRule never
     scoreboard players set $BonusAttack Global 0
     scoreboard players set $BonusDefense Global 0
 
-    #> WorldManager用スコアボード - ChunkLoadProtect
-    # @within
-    #   function
-    #       core:tick/player/pre
-    #       world_manager:chunk_io_protect/*
-    #   predicate api:is_completed_player_chunk_load_waiting_time
-        scoreboard objectives add ChunkLoadWaitingTime dummy {"text":"プレイヤーの周囲のチャンクロードが終了するまでの待ち時間"}
-
     #> WorldManager用スコアボード - Area
     # @within function
     #   world_manager:area/**
@@ -382,9 +404,14 @@ team modify NoCollision collisionRule never
     #   asset_manager:teleporter/tick/**
         scoreboard objectives add TPStarFromUserID dummy {"text":"テレポーターの星のユーザーID"}
 
+    #> WorldManager用スコアボード - エンドの溶岩ダメージ
+    # @within function
+    #   world_manager:area/20-03.end_forgotten_star_higher
+        scoreboard objectives add LavaDamageCooldown dummy {"text":"溶岩ダメージのクールダウン"}
+
     #> MobManager用スコアボード - 最大体力
     # @within function
-    #   api:mob/get_max_health*
+    #   api:mob/core/**
     #   asset_manager:mob/summon/set_data
     #   mob_manager:init/modify_health
     #   mob_manager:init/multiplay_multiplier/*
@@ -398,6 +425,7 @@ team modify NoCollision collisionRule never
     #   asset_manager:artifact/handler/on_damage_without_source
     #   mob_manager:entity_finder/entity_hurt_player/fetch_entity
         scoreboard objectives add TakenDamage custom:damage_taken
+        scoreboard objectives add AbsorbedDamage custom:damage_absorbed
 
     #> MobManager - Teams
     # @within function
@@ -405,15 +433,26 @@ team modify NoCollision collisionRule never
     #   asset_manager:mob/summon/set_data
         team add Enemy
 
+    #> Settings - Private
+    # @within function settings:**
+        scoreboard objectives add SettingMenuResendTime dummy
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
     function #asset:effect/load
     function #asset:object/load
+    function asset_manager:teleporter/early_register
+
+#> R 木のロード処理
+    function world_manager:nexus_loader/register
 
 #> 神の慈悲アイテムを定義する
     function player_manager:god/mercy/offering/init
 
+#> 装着音とアイテムIDの対応表を定義
+    function player_manager:play_equip_sound/define
+
 #> ROMを初期化する
-#> ROMが初期化されてなければ初期化する
+    scoreboard players set $LatestProvidedAddress Global 0
     execute unless data storage rom: _ run function rom:init

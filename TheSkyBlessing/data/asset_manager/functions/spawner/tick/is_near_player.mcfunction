@@ -20,7 +20,7 @@
     execute store result score $PlayerY Temporary run data get storage api: Pos[1] 10
     execute store result score $PlayerZ Temporary run data get storage api: Pos[2] 10
 # スポナーの座標データ取得
-    execute as @e[type=snowball,tag=this,distance=..0.01] run function oh_my_dat:please
+    execute as @e[type=item_display,tag=this,distance=..0.01] run function oh_my_dat:please
     execute store result score $SpawnerX Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[0] 10
     execute store result score $SpawnerY Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[1] 10
     execute store result score $SpawnerZ Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].SpawnerData.Pos[2] 10
@@ -35,7 +35,7 @@
     scoreboard players operation $SquaredDistance Temporary += $PlayerY Temporary
     scoreboard players operation $SquaredDistance Temporary += $PlayerZ Temporary
 # プレイヤーにセット
-    execute if score $SquaredDistance Temporary <= $RequiredPlayerRange Temporary run tag @e[type=snowball,tag=this,distance=..0.01] add Success
+    execute if score $SquaredDistance Temporary <= $RequiredPlayerRange Temporary run tag @e[type=item_display,tag=this,distance=..0.01] add Success
 # リセット
     scoreboard players reset $SpawnerX Temporary
     scoreboard players reset $SpawnerY Temporary

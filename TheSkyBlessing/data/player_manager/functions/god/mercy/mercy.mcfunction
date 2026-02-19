@@ -2,7 +2,7 @@
 #
 #
 #
-# @within function player_manager:god/mercy/on_mercy/check
+# @within function player_manager:god/mercy/on_mercy
 
 # 供物アイテムの削除
     data modify storage api: Argument.Target set from storage player_manager:god TargetOfferingData.Next.Item
@@ -14,8 +14,8 @@
     data modify storage api: Argument.Count set value 20
     execute at @s positioned ~ ~7 ~ run function api:lost_items/give
 # 神のメッセージ
-    execute if score @s InSubArea matches 10 run function lib:message/god/flora/mercy
-    execute if score @s InSubArea matches 11 run function lib:message/god/nyaptov/mercy
-    execute if score @s InSubArea matches 12 run function lib:message/god/rumor/mercy
-    execute if score @s InSubArea matches 13 run function lib:message/god/urban/mercy
-    execute if score @s InSubArea matches 14 run function lib:message/god/wi-ki/mercy
+    execute if score @s InSubArea matches 1 run function lib:message/god/flora/mercy
+    execute if score @s InSubArea matches 2 run function lib:message/god/nyaptov/mercy
+    execute if score @s InSubArea matches 3 run function lib:message/god/rumor/mercy
+    execute if score @s InSubArea matches 4 run function lib:message/god/urban/mercy
+    execute if score @s InSubArea matches 5 run function lib:message/god/wi-ki/mercy

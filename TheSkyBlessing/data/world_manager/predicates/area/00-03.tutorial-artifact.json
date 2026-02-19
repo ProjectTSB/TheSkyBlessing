@@ -4,16 +4,16 @@
         "dimension": "overworld",
         "position": {
             "x": {
-                "min": 4192,
-                "max": 4193
+                "min": 4162,
+                "max": 4185
             },
             "y": {
-                "min": 163,
-                "max": 172
+                "min": 175,
+                "max": 194
             },
             "z": {
-                "min": -467,
-                "max": -454
+                "min": -398,
+                "max": -375
             }
         }
     }

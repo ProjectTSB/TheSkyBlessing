@@ -28,6 +28,5 @@
     execute if score $Amount Temporary matches 1.. run function api:inventory/core/clear/remove/
 # リセット
     function lib:array/session/close
-    data remove storage api: NewInv
     data remove storage api: Argument
     scoreboard players reset $Amount Temporary

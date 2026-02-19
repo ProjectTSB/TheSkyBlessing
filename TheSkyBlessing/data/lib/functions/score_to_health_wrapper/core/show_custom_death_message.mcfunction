@@ -10,7 +10,7 @@
     #declare score_holder $Argument.Index
 
 # 乱数取得&範囲設定
-    execute store result score $Argument.Index Lib run function lib:random/
+    execute store result score $Argument.Index Lib run random value 0..65535
     execute store result score $Length Temporary if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].LatestAttackInfo.DeathMessage[]
     scoreboard players operation $Argument.Index Lib %= $Length Temporary
 # 配列操作

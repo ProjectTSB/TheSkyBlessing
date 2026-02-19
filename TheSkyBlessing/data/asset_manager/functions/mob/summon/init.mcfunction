@@ -20,6 +20,9 @@
 # データセット
     function asset_manager:mob/summon/set_data
 
+# PreInitInterceptFn があるなら呼び出す
+    execute if data storage api: Argument.PreInitInterceptFn run function asset_manager:mob/summon/call_pre_init_intercept_fn.m with storage api: Argument
+
 # Mob側に実装されてるInitを実行
     function asset_manager:mob/triggers/init/ with storage asset:context
 

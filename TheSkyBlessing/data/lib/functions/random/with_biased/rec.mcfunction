@@ -6,7 +6,7 @@
     #declare score_holder $value
 
 # 乱数生成して Random.value に入れる
-    execute store result score $value Temporary run function lib:random/
+    execute store result score $value Temporary run random value 0..65535
     execute store result storage lib: Random.value int 1 run scoreboard players operation $value Temporary %= $max Temporary
     scoreboard players reset $value Temporary
 

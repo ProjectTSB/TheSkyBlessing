@@ -1,0 +1,10 @@
+{
+    "condition": "entity_scores",
+    "entity": "this",
+    "scores": {
+        "ForwardTargetMobUUID": {
+            "min": -2147483648,
+            "max": 2147483647
+        }
+    }
+}

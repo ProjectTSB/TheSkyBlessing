@@ -6,11 +6,13 @@
     #declare tag Friend
     #declare tag Enemy
     #declare tag Enemy.Boss
+    #declare tag Enemy.EndGameBoss
     #declare tag Projectile
     #declare tag Npc
     #declare tag Object
     #declare tag Uninterferable
     #declare tag Immovable
+    #declare tag ExtendedCollision
 
 #> Storage
 # @within function mob_manager:entity_finder/**
@@ -21,6 +23,12 @@
 #   core:tick/
 #   mob_manager:init/
     #declare tag AlreadyInitMob
+
+#> ForwardTarget
+# @within function
+#   api:mob/apply_to_forward_target/*
+#   asset_manager:mob/summon/set_tag
+    #declare tag ForwardTarget
 
 #> FlagIndex
 # @within function

@@ -6,6 +6,3 @@
 
 # パーティクル
     particle minecraft:sonic_boom
-
-# 実装フラグを立てる
-    data modify storage asset:object Implement set value true

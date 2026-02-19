@@ -1,0 +1,221 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 2,
+                "max": 6
+            },
+            "entries": [
+                {
+                    "type": "group",
+                    "children": [
+                        {
+                            "type": "item",
+                            "name": "wheat_seeds",
+                            "weight": 50,
+                            "functions": [
+                                {
+                                    "function": "set_nbt",
+                                    "tag": "{TSB:{ArtifactSeed:{ID:144}}}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "wheat_seeds",
+                            "weight": 50,
+                            "functions": [
+                                {
+                                    "function": "set_nbt",
+                                    "tag": "{TSB:{ArtifactSeed:{ID:145}}}"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "children": [
+                        {
+                            "type": "item",
+                            "name": "torch",
+                            "weight": 70,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 4,
+                                        "max": 8
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "charcoal",
+                            "weight": 15,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "stick",
+                            "weight": 15,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 2
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "children": [
+                        {
+                            "type": "item",
+                            "name": "arrow",
+                            "weight": 70,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 4,
+                                        "max": 16
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "flint",
+                            "weight": 10,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "stick",
+                            "weight": 10,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "feather",
+                            "weight": 10,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "children": [
+                        {
+                            "type": "item",
+                            "name": "scaffolding",
+                            "weight": 65,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 6,
+                                        "max": 24
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "bamboo",
+                            "weight": 30,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 6,
+                                        "max": 24
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "name": "string",
+                            "weight": 5,
+                            "functions": [
+                                {
+                                    "function": "set_count",
+                                    "count": {
+                                        "min": 1,
+                                        "max": 4
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "water_bucket"
+                },
+                {
+                    "type": "item",
+                    "name": "apple",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "shulker_box",
+                    "conditions": [
+                        {
+                            "condition": "random_chance",
+                            "chance": 0.10
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

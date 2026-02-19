@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "enter_block",
+            "conditions": {
+                "block": "nether_portal"
+            }
+        }
+    }
+}

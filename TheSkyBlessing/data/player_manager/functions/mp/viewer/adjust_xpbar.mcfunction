@@ -12,6 +12,7 @@
     xp set @s 40 levels
     xp set @s 0 points
     scoreboard players operation $NowMP Temporary = @s MP
+    scoreboard players operation $NowMP Temporary /= $10 Const
 
 # pointを設定
     scoreboard players operation $NowLvP Temporary *= $2^24 Const

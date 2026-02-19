@@ -4,5 +4,3 @@
 data modify storage asset:context this.IsAttacked set value true
 
 execute if data storage asset:context this{Cooldown:0} run function asset:mob/dps_checker/hurt/add_to_sum
-
-data modify storage asset:mob Implement set value true

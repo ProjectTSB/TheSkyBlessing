@@ -42,7 +42,9 @@
     data modify storage asset:effect EffectData.Name set from storage asset:effect Name
     data modify storage asset:effect EffectData.Description set from storage asset:effect Description
     execute store result storage asset:effect EffectData.Duration int 1 run scoreboard players get $Duration Temporary
+    data modify storage asset:effect EffectData.Visible set from storage asset:effect Visible
     execute store result storage asset:effect EffectData.Stack int 1 run scoreboard players get $Stack Temporary
+    data modify storage asset:effect EffectData.StackVisible set from storage asset:effect StackVisible
     data modify storage asset:effect EffectData.IsBadEffect set from storage asset:effect IsBadEffect
     data modify storage asset:effect EffectData.ProcessOnDied set from storage asset:effect ProcessOnDied
     data modify storage asset:effect EffectData.RequireClearLv set from storage asset:effect RequireClearLv

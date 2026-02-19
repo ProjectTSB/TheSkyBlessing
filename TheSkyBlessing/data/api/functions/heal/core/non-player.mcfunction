@@ -17,7 +17,8 @@
 # 最大体力/最大体力倍率取得
     execute store result score $MaxHealth Temporary run function api:mob/get_max_health
     scoreboard players operation $MaxHealth Temporary *= $100 Const
-    execute store result score $MaxHealthMultiplier Temporary run function api:mob/get_max_health_multiplier
+    function api:mob/get_max_health_multiplier
+    execute store result score $MaxHealthMultiplier Temporary run data get storage api: Return.MaxHealthMultiplier 10
 # 代入
     execute store result score $Heal Temporary run data get storage api: Argument.Heal 100
 # マルチ補正
@@ -31,7 +32,7 @@
     scoreboard players operation @s MobHealth = $Health Temporary
 # 回復量表示
     scoreboard players operation $Fluctuation Lib = $Heal Temporary
-    execute at @s run function lib:status_log/show_health
+    execute at @s anchored eyes positioned ^ ^ ^ run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Health Temporary
     scoreboard players reset $MaxHealth Temporary

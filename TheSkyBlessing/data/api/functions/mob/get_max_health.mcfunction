@@ -4,5 +4,5 @@
 #
 # @api
 
-execute store result storage api: Return.MaxHealth float 0.01 run scoreboard players get @s MobHealthMax
+function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:mob/core/get_max_health",IsForwardedOnly:true}
 return run data get storage api: Return.MaxHealth

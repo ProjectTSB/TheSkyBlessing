@@ -20,8 +20,6 @@
     execute if score $Resistance Temporary matches 1.. run function api:damage/core/calc/resistance
 # エンチャントによる軽減計算部
     execute if score $EPF Temporary matches 1.. run function api:damage/core/calc/enchantment
-# システム的なダメージ上限(99999.9(e2))チェック
-    execute if score $Damage Temporary matches 9999990.. run scoreboard players set $Damage Temporary 9999990
 # Reset
     scoreboard players reset $isDefenseCalcSkip Temporary
     scoreboard players reset $defensePoints Temporary

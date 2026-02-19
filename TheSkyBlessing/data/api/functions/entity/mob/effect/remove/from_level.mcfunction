@@ -5,20 +5,12 @@
 # @input storage api:
 #   Argument.ClearLv : int
 #   Argument.ClearType? : "all" | "bad" | "good" (default: "all")
-#   Argument.IsSingle? : bool (default: false)
-#   └ Argument.ClearCount? : int (default: null)
+#   Argument.ClearCount? : int (default: 2147483647)
 # @api
 
 # validate
     execute unless data storage api: Argument.ClearLv run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ClearLv","color":"red"}]
     execute unless data storage api: Argument.ClearType run data modify storage api: Argument.ClearType set value "all"
-    # execute unless data storage api: Argument.IsSingle run
-    # execute unless data storage api: Argument.ClearCount run
-    execute if data storage api: Argument{IsSingle:true} run data modify storage api: Argument.ClearCount set value 1
+    execute unless data storage api: Argument.ClearCount run data modify storage api: Argument.ClearCount set value 2147483647
 # 呼び出し
-    execute if data storage api: Argument.ClearLv if entity @s[tag=HasAssetEffect] run function api:entity/mob/effect/core/remove/from_level/
-# リセット
-    data remove storage api: Argument.ClearLv
-    data remove storage api: Argument.ClearType
-    data remove storage api: Argument.IsSingle
-    data remove storage api: Argument.ClearCount
+    function api:entity/mob/effect/core/remove/from_level/

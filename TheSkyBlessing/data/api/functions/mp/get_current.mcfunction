@@ -7,4 +7,4 @@
 # @api
 
 # 取得
-    execute store result storage api: Return.CurrentMP int 1 run scoreboard players get @s MP
+    execute store result storage api: Return.CurrentMP int 0.1 run scoreboard players get @s MP

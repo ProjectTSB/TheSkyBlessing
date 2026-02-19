@@ -1,0 +1,104 @@
+compound NexusLoader {
+    /// レジストリ
+    Registry: [RegistryForDimension] @ 3,
+
+    /// Offset 用 compound
+    DummyCompoundsForOffset2: [EmptyCompound] @ 2
+    DummyCompoundsForOffset3: [EmptyCompound] @ 3
+}
+
+compound RegistryForDimension {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry0] @ ..4
+
+    /// Outliers: そのディメンションには属すがその領域には属さないような、すなわち子ノード群とは特に離れた位置を主張するような領域
+    Outliers: [Registry6]
+}
+
+compound Registry0 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry1] @ ..4
+}
+
+compound Registry1 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry2] @ ..4
+}
+
+compound Registry2 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry3] @ ..4
+}
+
+compound Registry3 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry4] @ ..4
+}
+
+compound Registry4 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry5] @ ..4
+}
+
+compound Registry5 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Nodes: 子ノード
+    N: [Registry6] @ ..4
+}
+
+compound Registry6 {
+    /// Bound: 領域
+    B: Bound,
+
+    /// Resource: 領域を主張するリソース
+    R: Resource
+}
+
+compound Bound {
+    X: [int] @ 2,
+    Y: [int] @ 2,
+    Z: [int] @ 2
+}
+
+compound Resource {
+    /// Type: リソース種別
+    T: ResourceType,
+
+    /// ID: リソース ID
+    I: int
+}
+
+enum (byte) ResourceType {
+    Test = 0,
+    Spawner = 1,
+    Container = 2,
+    Trader = 3,
+    Island = 4,
+    Teleporter = 5
+}
+
+compound EmptyCompound {
+
+}
+
+NexusLoader describes minecraft:storage[world_manager:nexus_loader]

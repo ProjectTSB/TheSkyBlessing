@@ -20,7 +20,7 @@
 # レベルチェック
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect CanRemove set value false
     execute if data storage asset:effect TargetEffectData store result score $ClearLv Temporary run data get storage api: Argument.ClearLv 1
-    execute if data storage asset:effect TargetEffectData store result score $RequiredLv Temporary run data get storage api: Argument.RequireClearLv 1
+    execute if data storage asset:effect TargetEffectData store result score $RequiredLv Temporary run data get storage asset:effect TargetEffectData.RequireClearLv
     execute unless score $ClearLv Temporary >= $RequiredLv Temporary run data modify storage asset:effect CanRemove set value false
 # 削除条件の確認
     execute if data storage asset:effect {TargetEffectData:{IsBadEffect:false},ClearType:"bad"} run data modify storage asset:effect CanRemove set value false

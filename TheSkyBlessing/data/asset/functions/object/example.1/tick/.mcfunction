@@ -25,6 +25,3 @@
 # ただし、こいつにはtestメソッドが実装されてないため、めっちゃエラーが出る
 # この場合、example.1は単独で召喚されるものではなく、他のもので継承して使うことを前提とされているといえる
     execute if entity @a[distance=..5] run function asset:object/call.m {method:test}
-
-# 実装フラグを立てる
-    data modify storage asset:object Implement set value true

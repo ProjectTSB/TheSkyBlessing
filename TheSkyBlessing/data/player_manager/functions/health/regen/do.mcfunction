@@ -4,7 +4,7 @@
 #
 # @within function player_manager:health/regen/check
 
-# 1秒に1度回復する
+# 2秒に1度回復する
 # 満腹度 | 戦闘時 | 非戦闘時
 #   20      2.5%      4.0%
 # 18..19    1.5%      3.0%

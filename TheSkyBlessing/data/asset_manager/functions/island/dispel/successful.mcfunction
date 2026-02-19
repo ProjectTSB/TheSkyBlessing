@@ -8,6 +8,8 @@
     scoreboard players reset @s DispelTime
 # 解呪数を1増やす
     scoreboard players add $PurifiedIslands Global 1
+# シャード解禁状況のスコアを更新
+    function asset_manager:island/dispel/update_unlocked_shard_lv/
 # VFX
     function asset_manager:island/dispel/vfx/dispel
 # メッセージ
@@ -24,10 +26,14 @@
 # テレポーターを起動する
     data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
     data modify storage api: Argument.ActivationState set value "Activate"
+    function metric:island
     function api:teleporter/set_activation_state/from_id
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
 # Dispelledトリガーを発火する
-    data modify storage asset:context id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
-    function #asset:island/dispelled
+    data modify storage asset:island Args.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    function asset_manager:island/dispel/dispelled.m with storage asset:island Args
+    data remove storage asset:island Args
+# 商人の取引内容を更新する
+    function api:trader/schedule_recipe_update_check

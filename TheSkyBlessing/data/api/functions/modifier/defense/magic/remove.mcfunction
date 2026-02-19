@@ -10,7 +10,8 @@
 # @api
 
 # データ検証
-    execute unless data storage api: Argument.UUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" UUID","color":"red"}]
+    function api:modifier/core/common/validate_remove
+    execute if entity @s[tag=ExtendedCollision] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:modifier/**/remove が ExtendedCollision に対して実行されています","color":"white"}]
 # データが正しいなら消す
     execute if data storage api: Argument.UUID run function api:modifier/core/defense/magic/remove
 # リセット

@@ -4,6 +4,9 @@
 #
 # @within function api:entity/mob/effect/remove/from_id
 
+# エフェクトを持ってなかったら return
+    execute if entity @s[tag=!HasAssetEffect] run return 0
+
 # 該当IDのデータを引っこ抜く
     data modify storage asset:effect ID set from storage api: Argument.ID
     function asset_manager:effect/common/try_pop_effect_data

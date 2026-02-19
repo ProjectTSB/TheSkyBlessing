@@ -7,7 +7,7 @@
 #   player_manager:lost_item/give_part/generate_index
 
 # 乱数生成
-    execute store result score $Index Temporary run function lib:random/
+    execute store result score $Index Temporary run random value 0..65535
 # 配列範囲に剰余算
     scoreboard players operation $Index Temporary %= $ListLength Temporary
 # 添字配列に追加

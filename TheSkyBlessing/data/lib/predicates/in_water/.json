@@ -1,0 +1,8 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "fluid": {
+            "fluid": "water"
+        }
+    }
+}

@@ -21,7 +21,7 @@
 # 候補リストの長さを取得
     execute store result score $CandidatesLength Temporary if data storage lib: Array[]
 # ターゲットの名前をランダムに決める
-    execute store result score $Argument.Index Lib run function lib:random/
+    execute store result score $Argument.Index Lib run random value 0..65535
     scoreboard players operation $Argument.Index Lib %= $CandidatesLength Temporary
 # 移動
     function lib:array/move
@@ -34,16 +34,16 @@
     scoreboard players operation $Diff Temporary -= $Min Temporary
     scoreboard players add $Diff Temporary 1
 # 個数をランダムに設定する
-    execute store result score $Count Temporary run function lib:random/
+    execute store result score $Count Temporary run random value 0..65535
     scoreboard players operation $Count Temporary %= $Diff Temporary
     scoreboard players operation $Count Temporary += $Min Temporary
     execute store result storage player_manager:god TargetOfferingData.Next.Amount int 1 run scoreboard players get $Count Temporary
 # セット
-    execute if score @s InSubArea matches 10 run data modify storage player_manager:god OfferingData.Flora set from storage player_manager:god TargetOfferingData
-    execute if score @s InSubArea matches 11 run data modify storage player_manager:god OfferingData.Nyaptov set from storage player_manager:god TargetOfferingData
-    execute if score @s InSubArea matches 12 run data modify storage player_manager:god OfferingData.Rumor set from storage player_manager:god TargetOfferingData
-    execute if score @s InSubArea matches 13 run data modify storage player_manager:god OfferingData.Urban set from storage player_manager:god TargetOfferingData
-    execute if score @s InSubArea matches 14 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 1 run data modify storage player_manager:god OfferingData.Flora set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 2 run data modify storage player_manager:god OfferingData.Nyaptov set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 3 run data modify storage player_manager:god OfferingData.Rumor set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 4 run data modify storage player_manager:god OfferingData.Urban set from storage player_manager:god TargetOfferingData
+    execute if score @s InSubArea matches 5 run data modify storage player_manager:god OfferingData.Wi-ki set from storage player_manager:god TargetOfferingData
 # リセット
     function lib:array/session/close
     scoreboard players reset $CandidatesLength Temporary

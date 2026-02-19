@@ -31,3 +31,4 @@
     data remove storage asset:artifact NormalizedCDs
     data remove storage asset:artifact MiniBars
     data remove storage asset:artifact CDs
+    scoreboard players reset $NormalizedValue Temporary
