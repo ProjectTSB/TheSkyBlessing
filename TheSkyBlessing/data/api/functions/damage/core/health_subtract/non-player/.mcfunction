@@ -11,7 +11,10 @@
 
 #> Val
 # @private
-#declare score_holder $Fluctuation
+    #declare score_holder $Fluctuation
+
+# ダメージ上限
+    function api:damage/core/health_subtract/force_cap
 
 # ダメージ表示
     scoreboard players set $Fluctuation Lib 0
