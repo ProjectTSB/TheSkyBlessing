@@ -7,7 +7,7 @@
 #   at position
 #   at rotation
 #   storage lib: Argument.SlideMove.Speed: double 進む距離
-#   storage lib: Argument.SlideMove.Conditions: String 引っかかるブロックの条件if/unless（省略した場合は"unless block ~ ~ ~ #lib:no_collision/"）
+#   storage lib: Argument.SlideMove.Conditions: string 引っかかるブロックの条件if/unless（省略した場合は"unless block ~ ~ ~ #lib:no_collision/"）
 # @api
 #
 #> temp
@@ -21,7 +21,7 @@
     execute store result storage lib: SlideMove.Macro.Speed double 0.00005 run data get storage lib: Argument.SlideMove.Speed 10000
     data modify storage lib: SlideMove.Macro.Conditions set from storage lib: Argument.SlideMove.Conditions
 
-# ループ開始
+# 幾何学処理
     function lib:slide_move/core/geometry.m with storage lib: SlideMove.Macro
 
 # 後片付け
