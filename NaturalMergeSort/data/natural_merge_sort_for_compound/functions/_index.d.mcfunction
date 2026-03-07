@@ -1,11 +1,11 @@
-#> natural_merge_sort:_index.d
+#> natural_merge_sort_for_compound:_index.d
 # @private
 
 #> 数値配列操作用ストレージ
 # Storage for sorting operation.
-# @within function lib:array/sort/int/*
+# @within function lib:array/sort/compound/*
 # @internal
-    #declare storage natural_merge_sort:
+    #declare storage natural_merge_sort_for_compound:
 
 #> 計算用ScoreHolder
 # @internal
