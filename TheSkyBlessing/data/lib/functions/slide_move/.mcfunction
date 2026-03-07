@@ -27,4 +27,4 @@
 # 後片付け
     data remove storage lib: Argument.SlideMove.Speed
     data remove storage lib: Argument.SlideMove.Conditions
-    data remove storage lib: SlideMove.Macro
+    data remove storage lib: SlideMove
