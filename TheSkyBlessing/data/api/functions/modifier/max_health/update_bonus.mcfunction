@@ -10,13 +10,14 @@
     #declare score_holder $RemovedAmount
     #declare score_holder $isNegative
 
+# 削除前に更新前の補正量を取得しておく
+    execute store result score $RemovedAmount Temporary run attribute @s generic.max_health modifier value get 00000001-0000-0001-0000-000200000000
+
 # 古いのをremove
-    data modify storage api: Argument.UUID set value [I;1,1,2,0]
-    function api:modifier/max_health/remove
+    attribute @s generic.max_health modifier remove 00000001-0000-0001-0000-000200000000
 
 # 差分にする
     scoreboard players operation $Diff Temporary = $BonusHealth Global
-    execute store result score $RemovedAmount Temporary run data get storage api: Removed.Amount 1
     execute unless score $RemovedAmount Temporary matches -2147483648..2147483647 run scoreboard players set $RemovedAmount Temporary 0
     scoreboard players operation $Diff Temporary -= $RemovedAmount Temporary
 # 出力
@@ -30,6 +31,6 @@
     scoreboard players reset $isNegative Temporary
 
 # 適用
-    data modify storage api: Argument set value {Amount:-1,UUID:[I;1,1,2,0],Operation:"add"}
-    execute store result storage api: Argument.Amount double 1 run scoreboard players get $BonusHealth Global
-    function api:modifier/max_health/add
+    execute store result storage api: Temp.Amount int 1 run scoreboard players get $BonusHealth Global
+    function api:modifier/core/max_health/add.m with storage api: Temp
+    data remove storage api: Temp
