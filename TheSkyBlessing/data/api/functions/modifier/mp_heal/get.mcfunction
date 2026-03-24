@@ -4,7 +4,7 @@
 #
 # @input as player
 # @output storage api:
-#   Return.Heal : double
+#   Return.MPHeal : double
 # @api
 
 execute if entity @s[type=!player] run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"api:modifier/mp_heal/get が非プレイヤーに対して使用されています","color":"white"}]
