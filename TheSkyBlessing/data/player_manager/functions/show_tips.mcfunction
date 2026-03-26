@@ -9,7 +9,7 @@
 
 tellraw @s {"text":"[TIPS] ","color":"aqua"}
 
-execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:21}
+execute store result score $TipRandom Temporary run function lib:random/with_biased/m {key:"player_manager:show_tips",max:22}
 execute if score $TipRandom Temporary matches 00 run tellraw @s "石を掘ると確率で鉱石を入手できる。\n掘るピッケルに応じて確率は変化し、丸石よりも焼き石のほうが鉱石が出やすい。"
 execute if score $TipRandom Temporary matches 01 run tellraw @s "スポナーをすべて破壊しなくても呪われた神器を解呪できる。"
 execute if score $TipRandom Temporary matches 02 run tellraw @s "この世界では落下ダメージを通常よりも多く受ける。\n体力が増えても慢心しないようにしよう。"
@@ -31,6 +31,7 @@ execute if score $TipRandom Temporary matches 17 run tellraw @s "特殊クール
 execute if score $TipRandom Temporary matches 18 run tellraw @s [{"text": "予備の羊毛や食料、帰還用神器入れとして","color":"white"},{"translate":"block.minecraft.shulker_box","color":"white"},{"text": "を利用すると快適に冒険できるだろう。","color":"white"}]
 execute if score $TipRandom Temporary matches 19 run tellraw @s "遠くでふよふよ浮いている敵を狙いづらい時は、召喚神器の出番だ。\nあなたに代わって敵を片付けてくれる。"
 execute if score $TipRandom Temporary matches 20 run tellraw @s "敵の撃破に手こずる場合は、神器の相性が悪いのかもしれない。\n信仰による恩恵や相手の属性耐性、神器同士の組み合わせを見直してみよう。"
+execute if score $TipRandom Temporary matches 21 run tellraw @s "釣りをしていると意外なものが釣れるかもしれない。"
 
 # リセット
     scoreboard players reset $TipRandom Temporary
