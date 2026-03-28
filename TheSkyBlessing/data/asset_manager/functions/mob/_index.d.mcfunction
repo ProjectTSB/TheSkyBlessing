@@ -50,6 +50,9 @@
 #   asset_manager:mob/triggers/attack/add_tag_each_victim
 #   asset_manager:mob/triggers/attack/foreach
 #   asset:mob/*/attack/**
+#   asset_manager:mob/triggers/kill/add_tag_each_victim
+#   asset_manager:mob/triggers/kill/foreach
+#   asset:mob/*/kill/**
     #declare tag Victim
 
 #> Attacker
