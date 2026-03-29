@@ -4,12 +4,16 @@
 #
 # @within function asset_manager:island/dispel/
 
+#> Private
+# @private
+    #declare tag NotFirstDispell
+
 # 邪魔なスコアをリセットする
     scoreboard players reset @s DispelTime
 # 解呪数を1増やす
-    scoreboard players add $PurifiedIslands Global 1
+    execute unless entity @s[tag=NotFirstDispell] run scoreboard players add $PurifiedIslands Global 1
 # シャード解禁状況のスコアを更新
-    function asset_manager:island/dispel/update_unlocked_shard_lv/
+    execute unless entity @s[tag=NotFirstDispell] run function asset_manager:island/dispel/update_unlocked_shard_lv/
 # VFX
     function asset_manager:island/dispel/vfx/dispel
 # メッセージ
@@ -22,12 +26,12 @@
 # データ取得
     function oh_my_dat:please
 # 二度と祈れないようにする
-    tag @s add DispelledCursedArtifact
+    # tag @s add DispelledCursedArtifact
 # テレポーターを起動する
-    data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
-    data modify storage api: Argument.ActivationState set value "Activate"
-    function metric:island
-    function api:teleporter/set_activation_state/from_id
+    execute unless entity @s[tag=NotFirstDispell] run data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    execute unless entity @s[tag=NotFirstDispell] run data modify storage api: Argument.ActivationState set value "Activate"
+    execute unless entity @s[tag=NotFirstDispell] run function metric:island
+    execute unless entity @s[tag=NotFirstDispell] run function api:teleporter/set_activation_state/from_id
 # DispelPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
@@ -37,3 +41,10 @@
     data remove storage asset:island Args
 # 商人の取引内容を更新する
     function api:trader/schedule_recipe_update_check
+
+# 2回目以降の浄化時に諸々を実行しないためのtag
+    tag @s add NotFirstDispell
+
+# 浄化後Ntick間は再度浄化できないようにする
+    tag @s add CantDispel
+    scoreboard players set @s CantDispelTime 100

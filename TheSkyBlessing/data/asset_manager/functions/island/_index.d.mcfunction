@@ -28,7 +28,9 @@
 #> Tag
 # @within function
 #   asset_manager:island/dispel/boss/*
+#   asset_manager:island/dispel/successful
 #   asset_manager:island/tick/
+#   asset_manager:island/tick/after_boss_killed
     #declare tag CantDispel
     #declare tag BossSummonMarker
 
