@@ -14,7 +14,7 @@
 
 # DispelPhaseを戻す
     function oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 1b
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 0b
 
 # スコアをリセット
     scoreboard players reset @s CantDispelTime
