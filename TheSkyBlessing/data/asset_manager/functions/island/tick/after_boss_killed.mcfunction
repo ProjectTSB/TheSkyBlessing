@@ -19,3 +19,6 @@
 # スコアをリセット
     scoreboard players reset @s CantDispelTime
     tag @s remove CantDispel
+
+# メッセージ
+    tellraw @a "呪われた神器はまだ呪われている。あの石像は何度でも戦えるようだ"
