@@ -93,7 +93,7 @@ data modify storage global Boolean.1b set value true
 data modify storage global Boolean.true set value true
 # data modify storage global Boolean.0b set value null
 
-execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
+execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value true
 execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
 execute unless data storage global Config.ShowPlayTimeOnDispel run data modify storage global Config.ShowPlayTimeOnDispel set value false
 
