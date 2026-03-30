@@ -11,7 +11,7 @@
 # 邪魔なスコアをリセットする
     scoreboard players reset @s DispelTime
 # 解呪数を1増やす
-    execute unless entity @s[tag=NotFirstDispell] run scoreboard players add $PurifiedIslands Global 1
+    # execute unless entity @s[tag=NotFirstDispell] run scoreboard players add $PurifiedIslands Global 1
 # シャード解禁状況のスコアを更新
     execute unless entity @s[tag=NotFirstDispell] run function asset_manager:island/dispel/update_unlocked_shard_lv/
 # VFX
