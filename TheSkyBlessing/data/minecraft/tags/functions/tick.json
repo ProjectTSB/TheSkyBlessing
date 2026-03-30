@@ -1,5 +1,5 @@
 {
     "values": [
-        "core:tick/"
+        "core:tick/","debug:april/world/bonus_ui","debug:april/world/tp_to_field","debug:april/world/tp_to_island"
     ]
 }
