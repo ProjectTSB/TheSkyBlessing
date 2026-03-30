@@ -34,3 +34,6 @@ function metric:user_id
 
 # リスポーンイベントが初回に発火しないように
     scoreboard players set @s RespawnEvent 81
+
+# なんと、最初からチュートリアル終了
+    tag @s add TutorialEnded

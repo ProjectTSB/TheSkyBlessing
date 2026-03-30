@@ -11,6 +11,7 @@
 #   world_manager:area/00**
 #   core:handler/rejoin
 #   core:handler/join
+#   core:handler/first_join
 #   debug:tutorial/*
     #declare tag TutorialEnded
 
