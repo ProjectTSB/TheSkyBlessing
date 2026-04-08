@@ -14,9 +14,14 @@
     function lib:array/session/open
     data modify storage lib: Array set from storage asset:context Heal.Amounts.Base
     function lib:array/math/max
-    data modify storage asset:context Heal.Amount set from storage lib: MaxResult
+    data modify storage asset:context Heal.Amount.Base set from storage lib: MaxResult
     function lib:array/session/close
-
+# 最大オーバーヒール量の計算
+    function lib:array/session/open
+    data modify storage lib: Array set from storage asset:context Heal.Amounts.Over
+    function lib:array/math/max
+    data modify storage asset:context Heal.Amount.Over set from storage lib: MaxResult
+    function lib:array/session/close
 # 神器側に受け渡し
     function #asset:artifact/heal
 # リセット
