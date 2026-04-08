@@ -2,17 +2,15 @@
 #
 #
 #
-# @within function api:damage/core/health_subtract/non-player/add_event
+# @within function api:damage/core/health_subtract/non-player/
 
 #> Declare
 # @within function api:damage/core/trigger_events/non-player/kill_and_death/*
     #declare score_holder $DamagerUUID
 
-# Mob の UUID を記録しておく
-    scoreboard players operation $DamagerUUID Temporary = @s MobUUID
 # Death イベントの push
-    function api:damage/core/trigger_events/non-player/kill_and_death/death
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"api:damage/core/trigger_events/non-player/kill_and_death/death",IsForwardedOnly:true}
 # Kill イベントの push
-    execute unless predicate api:mob/has_forward_target as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/kill_and_death/kill
-# リセット
+    scoreboard players operation $DamagerUUID Temporary = @s MobUUID
+    execute as @a if score @s UserID = $LatestModifiedUser UserID run function api:damage/core/trigger_events/non-player/kill_and_death/kill
     scoreboard players reset $DamagerUUID Temporary
