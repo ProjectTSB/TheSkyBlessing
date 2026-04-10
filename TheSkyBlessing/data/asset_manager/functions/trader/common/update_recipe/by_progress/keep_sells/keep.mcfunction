@@ -17,6 +17,9 @@
     data modify storage asset:trader TempB[-1].sell set from storage asset:trader TempA[-1].sell
     data modify storage asset:trader TempB[-1].maxUses set from storage asset:trader TempA[-1].maxUses
 
+# 売ってるのが神器の場合はIDを入れておく
+    execute if data storage asset:trader TempA[-1].sell.tag.TSB.ID run data modify storage asset:trader TempB[-1].sell set from storage asset:trader TempA[-1].sell.tag.TSB.ID
+
 # TempCに移す
     data modify storage asset:trader TempC[-1] set from storage asset:trader TempB[-1]
 
