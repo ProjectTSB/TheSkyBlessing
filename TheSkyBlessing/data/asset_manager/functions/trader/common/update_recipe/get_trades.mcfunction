@@ -4,6 +4,7 @@
 #
 # @within function
 #   asset_manager:trader/common/update_recipe/by_daily
+#   asset_manager:trader/common/update_recipe/by_progress/keep_sells/
 #   asset_manager:trader/common/update_recipe/by_progress/check_version.m
 
 # 取引一覧を抽出
