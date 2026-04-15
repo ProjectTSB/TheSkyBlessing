@@ -26,7 +26,7 @@
     execute store result score $OriginStack Temporary run data get storage asset:effect TargetEffectData.Stack
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
-# Operationに合わせてDurationとStackを計算する // replaceの場合、OriginStackが元々付与されてたStack未満なら更新しない // forceReplaceはそのまま新しい値が使われるので何もしなくて良い
+# Operationに合わせてDurationとStackを計算する // replaceの場合、StackがOriginStack未満なら更新しない // forceReplaceはそのまま新しい値が使われるので何もしなくて良い
     execute if data storage asset:effect {DurationOperation:"replace"} if score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"replace"} unless score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary = $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
