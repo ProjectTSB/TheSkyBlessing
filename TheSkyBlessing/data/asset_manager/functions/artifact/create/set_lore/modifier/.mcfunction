@@ -51,8 +51,6 @@
     execute if data storage asset:artifact Modifier{Type:"receive_heal"} run data modify storage asset:artifact Line[1] set value '"被回復量"'
     execute if data storage asset:artifact Modifier{Type:"mp_regen"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"mp_regen"} run data modify storage asset:artifact Line[1] set value '"MP回復量"'
-    execute if data storage asset:artifact Modifier{Type:"max_health"} run scoreboard players set $CustomModifier Temporary 1
-    execute if data storage asset:artifact Modifier{Type:"max_health"} run data modify storage asset:artifact Line[1] set value '"最大体力"'
     execute if data storage asset:artifact Modifier{Type:"max_mp"} run scoreboard players set $CustomModifier Temporary 1
     execute if data storage asset:artifact Modifier{Type:"max_mp"} run data modify storage asset:artifact Line[1] set value '"最大MP"'
     execute if score $CustomModifier Temporary matches 0 run function asset_manager:artifact/create/set_lore/modifier/generic.m with storage asset:artifact Modifier
