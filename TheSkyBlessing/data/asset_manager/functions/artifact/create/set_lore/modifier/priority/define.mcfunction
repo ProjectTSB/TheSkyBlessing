@@ -25,7 +25,7 @@
     data modify storage asset:artifact ModifierPriority.heal set value 242
     data modify storage asset:artifact ModifierPriority.receive_heal set value 241
     data modify storage asset:artifact ModifierPriority.max_mp set value 240
-    data modify storage asset:artifact ModifierPriority.mp_regen set value 239
+    data modify storage asset:artifact ModifierPriority.mp_heal set value 239
     data modify storage asset:artifact ModifierPriority.fall_resistance set value 238
 
 # バニラattribute

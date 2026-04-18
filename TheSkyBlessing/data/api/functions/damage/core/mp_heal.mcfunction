@@ -10,10 +10,10 @@
     #declare score_holder $Modifier
 
 # 補正を取得
-    function api:modifier/mp_regen/get
+    function api:modifier/mp_heal/get
 # 回復量計算
     execute store result score $MPHeal Temporary run data get storage api: Argument.AdditionalMPHeal 100
-    execute store result score $Modifier Temporary run data get storage api: Return.MPRegen 100
+    execute store result score $Modifier Temporary run data get storage api: Return.MPHeal 100
     scoreboard players operation $MPHeal Temporary *= $Modifier Temporary
     execute store result storage api: Argument.Fluctuation double 0.01 run scoreboard players operation $MPHeal Temporary /= $100 Const
 # 表示を無効化する
