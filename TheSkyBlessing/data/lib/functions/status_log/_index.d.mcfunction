@@ -5,7 +5,7 @@
 # @within
 #   lib:status_log/**
 #   core:tick/
-    #declare tag LogAEC
+    #declare tag LogDisplay
 
 #> 計算用
 # @within lib:status_log/**
