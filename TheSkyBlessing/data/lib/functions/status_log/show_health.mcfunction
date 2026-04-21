@@ -42,7 +42,7 @@
     data modify storage lib: Argument.Bounds set value [[1d,1d],[0.2d,0.8d],[1d,1d]]
     execute as @e[type=marker,tag=SummonPosMarker,distance=..0.001,limit=1] run function lib:spread_entity/
 # 描画用AEC
-    execute at @e[type=marker,tag=SummonPosMarker,distance=..1.5,limit=1] run summon text_display ~ ~ ~ {Tags:["LogDisplay", "LogDisplayInit","Object"],billboard:"center",background:16711680,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,0.4f,0f]}}
+    execute at @e[type=marker,tag=SummonPosMarker,distance=..1.5,limit=1] run summon text_display ~ ~ ~ {Tags:["LogDisplay", "LogDisplayInit","Object"],brightness:{sky:15,block:15},billboard:"center",background:16711680,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],translation:[0f,0.4f,0f]}}
 # 表示文字列生成
     execute if score $isNegative Temporary matches 0 run loot replace block 10000 0 10000 container.0 loot lib:status_log/heal
     execute if score $isNegative Temporary matches 1 if data storage global Config{EnableDamageTypeIcon:true} run loot replace block 10000 0 10000 container.0 loot lib:status_log/damage_with_icon
