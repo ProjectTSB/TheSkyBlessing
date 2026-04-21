@@ -25,7 +25,7 @@
         data modify storage lib: ArrayTemp set from storage lib: Array
         data modify storage lib: Array set from storage lib: Picks
     # ソート
-        function lib:array/sort_ascend
+        function lib:array/sort/int/ascend
     # 配列を元に戻す
         data modify storage lib: Picks set from storage lib: Array
         data modify storage lib: Array set from storage lib: ArrayTemp
