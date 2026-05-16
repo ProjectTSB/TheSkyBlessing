@@ -17,7 +17,6 @@
 #   score_to_health:**
 #   lib:score_to_health_wrapper/**
 #   lib:has_health_modify_score
-#   api:modifier/max_health/**
     scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
 
 #> PrivateUse
