@@ -17,9 +17,7 @@
 #   score_to_health:**
 #   lib:score_to_health_wrapper/**
 #   lib:has_health_modify_score
-#   api:modifier/max_health/**
     scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
-    scoreboard objectives add ScoreToMaxHealth dummy {"text":"プレイヤーをこの最大体力にする(*0.0001HP)"}
 
 #> PrivateUse
 # @internal
@@ -27,8 +25,3 @@
     #declare tag ScoreToHealth.AntiGlitch.Protected
     #declare tag ScoreToHealth.Modified
     #declare tag ScoreToHealth.Return
-    scoreboard objectives add STMHBackup dummy {"text":"ScoreToMaxHealthのBackup"}
-
-#> RespawnCheck
-# @within function core:handler/respawn
-#declare objective STMHBackup

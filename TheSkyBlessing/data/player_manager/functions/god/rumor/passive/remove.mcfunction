@@ -13,4 +13,4 @@
     function api:modifier/attack/base/remove
 # MP回復量+30%
     data modify storage api: Argument.UUID set value [1, 2, 1, 12]
-    function api:modifier/mp_regen/remove
+    function api:modifier/mp_heal/remove

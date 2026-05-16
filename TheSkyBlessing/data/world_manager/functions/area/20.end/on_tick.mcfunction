@@ -12,3 +12,5 @@
     execute if predicate world_manager:area/20-03.end_forgotten_star_higher run function world_manager:area/20-03.end_forgotten_star_higher
 # エンドラが沸いてる可能性があるのでさよならしようね
     kill @e[type=ender_dragon]
+# エリトラ破壊
+    execute if predicate lib:is_flying_elytra run function world_manager:area/20.end/break_elytra

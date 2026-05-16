@@ -23,6 +23,6 @@
 # リセット
     data remove storage asset:context Attack
     data remove storage asset:mob AttackTargets
-    tag @p[tag=Victim] remove Victim
+    tag @a[tag=Victim] remove Victim
 # イベントがまだあれば再帰する
     execute if data storage asset:mob MobEvents.Attack[0] run function asset_manager:mob/triggers/attack/foreach
