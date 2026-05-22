@@ -1,5 +1,5 @@
 #> player_motion:internal/technical/trig
-# @within function player_motion:internal/technical/load
+# @within function player_motion:internal/technical/load_once
 
 #> STORAGE
 # @within function
