@@ -2,7 +2,7 @@
 #
 # Launches the player in the input direction
 #
-# @api
+# @within function lib:motion/core/xyz/player
 
 execute if entity @s[type=!player] run return fail
 execute on vehicle run return fail
