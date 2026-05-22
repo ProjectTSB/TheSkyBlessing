@@ -21,15 +21,15 @@
     data modify storage asset:artifact ModifierPriority.defense/thunder set value 244
 
 # その他のTSB固有の補正
-    data modify storage asset:artifact ModifierPriority.max_health set value 243
-    data modify storage asset:artifact ModifierPriority.heal set value 242
-    data modify storage asset:artifact ModifierPriority.receive_heal set value 241
-    data modify storage asset:artifact ModifierPriority.max_mp set value 240
-    data modify storage asset:artifact ModifierPriority.mp_heal set value 239
-    data modify storage asset:artifact ModifierPriority.fall_resistance set value 238
+    data modify storage asset:artifact ModifierPriority.heal set value 243
+    data modify storage asset:artifact ModifierPriority.receive_heal set value 242
+    data modify storage asset:artifact ModifierPriority.max_mp set value 241
+    data modify storage asset:artifact ModifierPriority.mp_heal set value 240
+    data modify storage asset:artifact ModifierPriority.fall_resistance set value 239
 
 # バニラattribute
     data modify storage asset:artifact ModifierPriority.generic.armor set value 127
     data modify storage asset:artifact ModifierPriority.generic.armor_toughness set value 126
     data modify storage asset:artifact ModifierPriority.generic.movement_speed set value 125
-    data modify storage asset:artifact ModifierPriority.generic.knockback_resistance set value 124
+    data modify storage asset:artifact ModifierPriority.generic.max_health set value 124
+    data modify storage asset:artifact ModifierPriority.generic.knockback_resistance set value 123
