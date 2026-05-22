@@ -8,25 +8,25 @@
 # @internal
     #declare storage player_motion:
     #declare storage player_motion:math
-data modify storage player_motion:math unitvector set value [0.0d,0.0d,0.0d]
-data modify storage player_motion:math motion set value [0.0d,0.0d,0.0d]
-data modify storage player_motion:math pos set value [0.0d,0.0d,0.0d]
+    data modify storage player_motion:math unitvector set value [0.0d,0.0d,0.0d]
+    data modify storage player_motion:math motion set value [0.0d,0.0d,0.0d]
+    data modify storage player_motion:math pos set value [0.0d,0.0d,0.0d]
 
 #> OBJECTIVE
 
     #> Launch Api
     # @internal
-    scoreboard objectives add PlayerMotion.Api.Launch dummy
+        scoreboard objectives add PlayerMotion.Api.Launch dummy
 
     #> Internal
     # @internal
-    scoreboard objectives add PlayerMotion.Internal.Dummy dummy
-    scoreboard objectives add PlayerMotion.Internal.Math dummy
-        scoreboard objectives add PlayerMotion.Internal.Math.Sqrt dummy
-    scoreboard objectives add PlayerMotion.Internal.Motion.X dummy
-    scoreboard objectives add PlayerMotion.Internal.Motion.Y dummy
-    scoreboard objectives add PlayerMotion.Internal.Motion.Z dummy
-    scoreboard objectives add PlayerMotion.Internal.Gamemode dummy
+        scoreboard objectives add PlayerMotion.Internal.Dummy dummy
+        scoreboard objectives add PlayerMotion.Internal.Math dummy
+            scoreboard objectives add PlayerMotion.Internal.Math.Sqrt dummy
+        scoreboard objectives add PlayerMotion.Internal.Motion.X dummy
+        scoreboard objectives add PlayerMotion.Internal.Motion.Y dummy
+        scoreboard objectives add PlayerMotion.Internal.Motion.Z dummy
+        scoreboard objectives add PlayerMotion.Internal.Gamemode dummy
 
 #> TAG
 # @within function
