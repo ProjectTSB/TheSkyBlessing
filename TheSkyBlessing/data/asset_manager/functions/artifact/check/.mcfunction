@@ -16,7 +16,7 @@
 # 条件を満たしてなかったらtag削除
     # 信仰による制限
         execute unless data storage asset:artifact DisabledCheckFlag{Believe:true} if entity @s[tag=CanUsed] run function asset_manager:artifact/check/check_believe
-        execute if entity @s[tag=CheckFailed] unless score @s BelieveLogCD matches 0.. run tellraw @s {"text":"現在の信仰では使えないようだ...","color":"red"}
+        execute if entity @s[tag=CheckFailed] unless data storage asset:artifact DisabledCheckFlag{BelieveMessage:true} unless score @s BelieveLogCD matches 0.. run tellraw @s {"text":"現在の信仰では使えないようだ...","color":"red"}
         execute if entity @s[tag=CheckFailed] unless score @s BelieveLogCD matches 0.. run scoreboard players set @s BelieveLogCD 100
         execute if entity @s[tag=CheckFailed] run tag @s remove CanUsed
         tag @s[tag=CheckFailed] remove CheckFailed

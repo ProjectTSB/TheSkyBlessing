@@ -22,7 +22,7 @@
     data modify storage api: Argument.UUID set value [2, 1, 1, 14]
     data modify storage api: Argument.Amount set value 0.25
     data modify storage api: Argument.Operation set value "multiply_base"
-    function api:modifier/mp_regen/add
+    function api:modifier/mp_heal/add
 # 物理攻撃-30%
     data modify storage api: Argument.UUID set value [2, 1, 1, 14]
     data modify storage api: Argument.Amount set value -0.3

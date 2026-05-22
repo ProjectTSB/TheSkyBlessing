@@ -16,25 +16,6 @@
         {
             "condition": "reference",
             "name": "world_manager:area/20.end"
-        },
-        {
-            "condition": "location_check",
-            "predicate": {
-                "position": {
-                    "x": {
-                        "min": 169,
-                        "max": 221
-                    },
-                    "y": {
-                        "min": 154,
-                        "max": 206
-                    },
-                    "z": {
-                        "min": -211,
-                        "max": -159
-                    }
-                }
-            }
         }
     ]
 }
