@@ -1,18 +1,18 @@
-#> lib:motion/core/knockback_resistance
+#> lib:motion/core/looking/knockback_resistance
 #
 #
 #
-# @within function lib:motion/core/
+# @within function lib:motion/core/looking/
 
 #> private
 # @private
-#declare score_holder $Calc
+    #declare score_holder $Calc
 
 # 100からノックバック耐性を引いた値を出す
     scoreboard players set $Calc Temporary 100
     scoreboard players operation $Calc Temporary -= $KnockbackResist Temporary
     scoreboard players operation $Calc Temporary >< $KnockbackResist Temporary
-# $VectorMagnitudeの数値ととノックバック耐性をかける
+# $VectorMagnitudeの数値とノックバック耐性をかける
     scoreboard players operation $VectorMagnitude Temporary *= $KnockbackResist Temporary
 # 100で割る
     scoreboard players operation $VectorMagnitude Temporary /= $100 Const

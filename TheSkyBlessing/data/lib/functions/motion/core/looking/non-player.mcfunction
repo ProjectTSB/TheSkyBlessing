@@ -1,8 +1,8 @@
-#> lib:motion/core/apply
+#> lib:motion/core/looking/non-player
 #
 #
 #
-# @within function lib:motion/core/
+# @within function lib:motion/core/looking/
 
 #> Val
 # @private
@@ -15,9 +15,9 @@
 
 # 演算処理
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos
-    execute store result score $VectorX Temporary run data get storage lib: Pos[0] 1000
-    execute store result score $VectorY Temporary run data get storage lib: Pos[1] 1000
-    execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 1000
+    execute store result score $VectorX Temporary run data get storage lib: Pos[0] 10
+    execute store result score $VectorY Temporary run data get storage lib: Pos[1] 10
+    execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 10
 
     scoreboard players operation $VectorX Temporary *= $VectorMagnitude Temporary
     scoreboard players operation $VectorY Temporary *= $VectorMagnitude Temporary

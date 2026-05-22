@@ -19,6 +19,7 @@
 このリポジトリでは、以下のディレクトリを除いて[CC0-1.0 License](LICENSE)が適用されます。
 * [NaturalMergeSort](NaturalMergeSort)ディレクトリ ([MIT License](NaturalMergeSort/LICENSE) / Copyright by 赤石愛)
 * [OhMyDat](OhMyDat)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
+* [PlayerMotion](PlayerMotion)ディレクトリ ([MIT License](PlayerMotion/LICENSE) / Copyright by BigPapi13 & MulverineX)
 * [ScoreToHealth](ScoreToHealth)ディレクトリ ([Apache-2.0 License](ScoreToHealth/LICENSE) / Copyright by 赤石愛)
 * [TheSkyBlessing/data/rom](TheSkyBlessing/data/rom/functions/)ディレクトリ ([MIT License](OhMyDat/LICENSE) / Copyright by 赤石愛)
 
@@ -30,6 +31,9 @@
 * [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)
 * [ScoreToHealth](https://github.com/Ai-Akaishi/ScoreToHealth)
 * [ScoreToMove](https://github.com/Ai-Akaishi/ScoreToMove)
+
+#### [BigPapi13](https://github.com/BigPapi13)氏 & [MulverineX](https://github.com/MulverineX)氏
+* [player_motion](https://github.com/MulverineX/player_motion)
 
 ## コラボレーター以外によるプルリクエストについて
 コラボレーター以外によるプルリクエストは、最適化, バグ修正に限り歓迎しています。
