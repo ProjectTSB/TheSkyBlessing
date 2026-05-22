@@ -9,7 +9,7 @@
 #   rotation: 実行向き
 #       円錐の軸
 #   storage lib: Argument.BoundingCone.Angle: float
-#       円錐の頂角(0°~360°)
+#       円錐の半頂角(0°~180°)
 #   storage lib: Argument.BoundingCone.Selector: string
 #       検索対象のセレクタ(distanceの最大距離を設定することを推奨)
 #
