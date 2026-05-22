@@ -1,6 +1,6 @@
 #> lib:array/sort/compound/ascend
 #
-# Compund型の配列の要素を昇順ソートします。
+# Compound型の配列の要素を昇順ソートします。
 #
 # @input
 #   storage lib: Array: [Compound] @ N

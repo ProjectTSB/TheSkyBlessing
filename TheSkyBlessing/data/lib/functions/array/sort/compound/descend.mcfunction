@@ -1,6 +1,6 @@
 #> lib:array/sort/compound/descend
 #
-# Compund型の配列の要素を降順ソートします。
+# Compound型の配列の要素を降順ソートします。
 #
 # @input
 #   storage lib: Array: [Compound] @ N
