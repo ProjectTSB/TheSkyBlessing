@@ -4,7 +4,7 @@
 #
 # @input
 #   storage lib: Array: [Compound] @ N
-   #    - 各要素は weightキーを持つ必要があります
+#    - 各要素は weightキーを持つ必要があります
 #   配列データ
 # @output
 #   storage lib: Array: [Compound] @ N
