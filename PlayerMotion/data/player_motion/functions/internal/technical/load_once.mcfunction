@@ -15,7 +15,10 @@
 #> OBJECTIVE
 
     #> Launch Api
-    # @internal
+    # @within function
+    #   player_motion:**
+    #   lib:motion/core/looking/player
+    #   lib:motion/core/xyz/player
         scoreboard objectives add PlayerMotion.Api.Launch dummy
 
     #> Internal
