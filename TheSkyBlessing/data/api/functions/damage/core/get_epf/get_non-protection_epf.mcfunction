@@ -28,9 +28,9 @@ execute unless data storage api: Argument.ReduceEnchantment.id run data modify s
     function lib:array/mask_inverted
 # エンチャントレベルの総和を計算する
 # SumResult = Array.map(v => v.lvl).reduce((a, b) => a + b)
-    data modify storage lib: Temp append from storage lib: Array[].lvl
-    data modify storage lib: Array set from storage lib: Temp
-    data remove storage lib: Temp
+    data modify storage api: Temp append from storage lib: Array[].lvl
+    data modify storage lib: Array set from storage api: Temp
+    data remove storage api: Temp
     function lib:array/math/sum
 # 計算結果を取得する
     execute store result score $Temp Temporary run data get storage lib: SumResult
@@ -38,10 +38,10 @@ execute unless data storage api: Argument.ReduceEnchantment.id run data modify s
     function lib:array/session/close
 # エンチャント係数を取得する
     execute if data storage api: Argument.ReduceEnchantment.modifier store result score $TypeModifier Temporary run data get storage api: Argument.ReduceEnchantment.modifier
-    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:fire_protection"} run scoreboard players set $TypeModifier Temporary 2
-    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:     "minecraft:blast_protection"} run scoreboard players set $TypeModifier Temporary 2
-    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:"minecraft:projectile_protection"} run scoreboard players set $TypeModifier Temporary 2
-    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage lib: {ReduceEnchantmentID:      "minecraft:feather_falling"} run scoreboard players set $TypeModifier Temporary 3
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage api: {ReduceEnchantmentID:      "minecraft:fire_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage api: {ReduceEnchantmentID:     "minecraft:blast_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage api: {ReduceEnchantmentID:"minecraft:projectile_protection"} run scoreboard players set $TypeModifier Temporary 2
+    execute unless score $TypeModifier Temporary matches -2147483648.. if data storage api: {ReduceEnchantmentID:      "minecraft:feather_falling"} run scoreboard players set $TypeModifier Temporary 3
     execute unless score $TypeModifier Temporary matches -2147483648.. run scoreboard players set $TypeModifier Temporary 1
 # エンチャント係数を掛ける
     scoreboard players operation $Temp Temporary *= $TypeModifier Temporary
