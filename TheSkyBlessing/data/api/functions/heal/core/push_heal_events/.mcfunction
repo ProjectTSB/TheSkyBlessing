@@ -4,11 +4,11 @@
 #
 # @within function api:heal/core/player
 
+# 現在体力の取得
+    function api:data_get/health
+
 # 超過回復量の計算
     function api:heal/core/push_heal_events/calc_over_heal
-
-# 現在体力を回復前の体力用に取得
-    function api:data_get/health
 
 # ヒールされた側にイベントを追加する
     function oh_my_dat:please
