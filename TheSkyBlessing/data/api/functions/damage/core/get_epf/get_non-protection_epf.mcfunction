@@ -28,8 +28,9 @@ execute unless data storage api: Argument.ReduceEnchantment.id run data modify s
     function lib:array/mask_inverted
 # エンチャントレベルの総和を計算する
 # SumResult = Array.map(v => v.lvl).reduce((a, b) => a + b)
-    data modify storage api: Temp append from storage lib: Array[].lvl
-    data modify storage lib: Array set from storage api: Temp
+  # data modify storage api: Temp.EnchantmentLevels set value []
+    data modify storage api: Temp.EnchantmentLevels append from storage lib: Array[].lvl
+    data modify storage lib: Array set from storage api: Temp.EnchantmentLevels
     data remove storage api: Temp
     function lib:array/math/sum
 # 計算結果を取得する
