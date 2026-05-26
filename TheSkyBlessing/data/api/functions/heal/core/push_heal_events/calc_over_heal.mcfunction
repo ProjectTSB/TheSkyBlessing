@@ -4,12 +4,6 @@
 #
 # @within function api:heal/core/push_heal_events/
 
-# 体力が100%なら計算が不要なのでreturn
-    function api:entity/player/get_health_per
-    execute store result score $HealthPer Temporary run data get storage api: Return.HealthPer 1000
-    execute if score $HealthPer Temporary matches 100.. store result score $OverHeal Temporary run data get storage api: Argument.Fluctuation 100
-    execute if score $HealthPer Temporary matches 100.. run return run scoreboard players reset $HealthPer Temporary
-
 # 必要な値を取得
     execute store result score $OverHeal Temporary run data get storage api: Argument.Fluctuation 100
     function api:modifier/max_health/get
