@@ -6,8 +6,7 @@
 
 # 必要な値を取得
     execute store result score $OverHeal Temporary run data get storage api: Argument.Fluctuation 100
-    function api:modifier/max_health/get
-    execute store result score $MaxHealth Temporary run data get storage api: Return.MaxHealth 100
+    execute store result score $MaxHealth Temporary run attribute @s generic.max_health get 100
     execute store result score $CurrentHealth Temporary run data get storage api: Health 100
 
 # 計算
