@@ -21,10 +21,13 @@
     execute store result storage lib: SlideMove.Macro.Speed double 0.00005 run data get storage lib: Argument.SlideMove.Speed 10000
     data modify storage lib: SlideMove.Macro.Conditions set from storage lib: Argument.SlideMove.Conditions
 
+# ファンクションの実行位置＆向きに実行者を移動
+    tp @s ~ ~ ~ ~ ~
+
 # 幾何学処理
-    function lib:slide_move/core/geometry.m with storage lib: SlideMove.Macro
+    execute unless data storage lib: {SlideMove:{Macro:{Speed:0.0}}} run function lib:slide_move/core/geometry.m with storage lib: SlideMove.Macro
 
 # 後片付け
     data remove storage lib: Argument.SlideMove.Speed
     data remove storage lib: Argument.SlideMove.Conditions
-    data remove storage lib: SlideMove.Macro
+    data remove storage lib: SlideMove
