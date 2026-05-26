@@ -50,3 +50,4 @@ execute unless data storage api: Argument.ReduceEnchantment.id run data modify s
 # リセット
     scoreboard players reset $Temp Temporary
     scoreboard players reset $TypeModifier Temporary
+    data remove storage api: ReduceEnchantmentID
