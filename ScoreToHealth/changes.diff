@@ -1,3 +1,12 @@
+--- original/ScoreToHealth/data/minecraft/tags/functions/load.json
++++ modified/ScoreToHealth/data/minecraft/tags/functions/load.json
+@@ -2,3 +2,3 @@
+-	"values": [
+-		"score_to_health:load"
+-	]
++    "values": [
++        "score_to_health:load"
++    ]
 --- original/ScoreToHealth/data/score_to_health/functions/check.mcfunction
 +++ modified/ScoreToHealth/data/score_to_health/functions/check.mcfunction
 @@ -15,3 +15,4 @@
@@ -16,13 +25,14 @@
 +execute if score $__ ScoreToHealth matches 1.. run function score_to_health:anti_glitch/protect
 --- original/ScoreToHealth/data/score_to_health/functions/load.mcfunction
 +++ modified/ScoreToHealth/data/score_to_health/functions/load.mcfunction
-@@ -14,0 +15,5 @@
+@@ -15 +15,13 @@
+-scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
 +#> ObjectDeclare
 +# @within *
 +#   score_to_health:**
 +#   lib:score_to_health_wrapper/**
 +#   lib:has_health_modify_score
-@@ -15,0 +21,7 @@
++    scoreboard objectives add ScoreToHealth dummy {"text":"プレイヤーをこの体力にする(*0.01HP)"}
 +
 +#> PrivateUse
 +# @internal
@@ -198,8 +208,22 @@
 +execute store result score $_ ScoreToHealth run attribute @s minecraft:generic.max_health get 100
 +execute if score @s ScoreToHealth <= $_ ScoreToHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0001-00 "ScoreToHealth" -0.0001 add
 +execute if score @s ScoreToHealth > $_ ScoreToHealth run attribute @s minecraft:generic.max_health modifier add bab7cdc2-fb6a-47f6-0001-00 "ScoreToHealth" 0.0001 add
+--- original/ScoreToHealth/data/score_to_health/functions/player_tick.mcfunction
++++ modified/ScoreToHealth/data/score_to_health/functions/player_tick.mcfunction
+@@ -15 +15 @@
+-execute if entity @s[tag=ScoreToHealth.Modified] run function score_to_health:restore
++# execute if entity @s[tag=ScoreToHealth.Modified] run function score_to_health:restore
 --- original/ScoreToHealth/pack.mcmeta
 +++ modified/ScoreToHealth/pack.mcmeta
-@@ -3 +3 @@
+@@ -2,5 +2,5 @@
+-	"pack":{
 -		"pack_format": 10,
+-		"description": "Sync Health with Score"
+-	}
+-}
+\ No newline at end of file
++    "pack":{
 +        "pack_format": 26,
++        "description": "Sync Health with Score"
++    }
++}
