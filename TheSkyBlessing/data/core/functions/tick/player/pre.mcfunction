@@ -4,6 +4,8 @@
 #
 # @within function core:tick/
 
+function player_manager:health/score_to_health_restore
+
 function player_manager:manage_tag/
 
 function player_manager:pos_fix_and_calc_diff
