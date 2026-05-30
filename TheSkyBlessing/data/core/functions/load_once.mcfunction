@@ -268,7 +268,7 @@ team modify NoCollision collisionRule never
     # @within function lib:message/artifact/**
         scoreboard objectives add CannotUseHereMessageCD dummy
         scoreboard objectives add ConditionNotMetMessageCD dummy
-        scoreboard objectives add DontHaveRequirItemsMessageCD dummy
+        scoreboard objectives add DontHaveRequiredItemsMessageCD dummy
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within
