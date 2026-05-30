@@ -9,7 +9,7 @@
     #declare score_holder $CurrentTick
 
 # クールダウン
-    execute store result score $CurrentTick Temporary run time query gametime
+    execute store result score $CurrentTick Temporary run data get storage global Time
     scoreboard players operation $CurrentTick Temporary -= @s DontHaveRequiredItemsMessageCD
     execute if score $CurrentTick Temporary matches 20.. run tellraw @s [{"text":"発動に必要なアイテムを所持していません。","color":"red"}]
     execute if score $CurrentTick Temporary matches 20.. store result score @s DontHaveRequiredItemsMessageCD run time query gametime
