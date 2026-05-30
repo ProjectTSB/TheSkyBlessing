@@ -266,9 +266,9 @@ team modify NoCollision collisionRule never
 
     #> 神器の使用失敗メッセージのクールダウン
     # @within function lib:message/artifact/**
-        scoreboard objectives add CannotUseHereMessageCD dummy
-        scoreboard objectives add ConditionNotMetMessageCD dummy
-        scoreboard objectives add DontHaveRequiredItemsMessageCD dummy
+        scoreboard objectives add CannotUseHereLatestLogTick dummy
+        scoreboard objectives add ConditionNotMetLatestLogTick dummy
+        scoreboard objectives add DontHaveRequiredItemsLatestLogTick dummy
 
     #> PlayerManager - Motionチェック用スコアボード
     # @within

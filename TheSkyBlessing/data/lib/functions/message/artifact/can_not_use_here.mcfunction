@@ -10,7 +10,7 @@
 
 # クールダウン
     execute store result score $CurrentTick Temporary run data get storage global Time
-    scoreboard players operation $CurrentTick Temporary -= @s CannotUseHereMessageCD
+    scoreboard players operation $CurrentTick Temporary -= @s CannotUseHereLatestLogTick
     execute if score $CurrentTick Temporary matches 20.. run tellraw @s [{"text":"ここでは使用できません。","color":"red"}]
-    execute if score $CurrentTick Temporary matches 20.. store result score @s CannotUseHereMessageCD run time query gametime
+    execute if score $CurrentTick Temporary matches 20.. store result score @s CannotUseHereLatestLogTick run time query gametime
     scoreboard players reset $CurrentTick Temporary
