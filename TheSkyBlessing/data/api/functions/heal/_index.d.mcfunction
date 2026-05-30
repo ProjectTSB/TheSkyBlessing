@@ -11,4 +11,3 @@
     #declare score_holder $OverHeal
     #declare score_holder $MaxHealth
     #declare score_holder $CurrentHealth
-    #declare score_holder $HealthPer

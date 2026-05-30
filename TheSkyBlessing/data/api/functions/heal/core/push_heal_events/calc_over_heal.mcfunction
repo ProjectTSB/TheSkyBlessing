@@ -20,4 +20,3 @@
 # リセット
     scoreboard players reset $MaxHealth Temporary
     scoreboard players reset $CurrentHealth Temporary
-    scoreboard players reset $HealthPer Temporary
