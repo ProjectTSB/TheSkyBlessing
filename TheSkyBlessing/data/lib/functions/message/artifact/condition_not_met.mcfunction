@@ -4,6 +4,10 @@
 #
 # @api
 
+#> Private
+# @private
+    #declare score_holder $CurrentTick
+
 # クールダウン
     execute store result score $CurrentTick Temporary run data get storage global Time
     scoreboard players operation $CurrentTick Temporary -= @s ConditionNotMetMessageCD
