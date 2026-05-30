@@ -4,4 +4,9 @@
 #
 # @api
 
-tellraw @s [{"text":"発動条件を満たしていません。","color":"red"}]
+# クールダウン
+    execute store result score $CurrentTick Temporary run time query gametime
+    scoreboard players operation $CurrentTick Temporary -= @s ConditionNotMetMessageCD
+    execute if score $CurrentTick Temporary matches 20.. run tellraw @s [{"text":"発動条件を満たしていません。","color":"red"}]
+    execute if score $CurrentTick Temporary matches 20.. store result score @s ConditionNotMetMessageCD run time query gametime
+    scoreboard players reset $CurrentTick Temporary

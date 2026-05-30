@@ -264,6 +264,12 @@ team modify NoCollision collisionRule never
         scoreboard objectives add LogRemoveTime dummy
         scoreboard objectives add ScoreToHPFluc dummy
 
+    #> 神器の使用失敗メッセージのクールダウン
+    # @within function lib:message/artifact/**
+        scoreboard objectives add CannotUseHereMessageCD dummy
+        scoreboard objectives add ConditionNotMetMessageCD dummy
+        scoreboard objectives add DontHaveRequirItemsMessageCD dummy
+
     #> PlayerManager - Motionチェック用スコアボード
     # @within
     #   function
