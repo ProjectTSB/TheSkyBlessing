@@ -4,6 +4,7 @@
 #> storage
 # @within *
 #   api:artifact/core/**
+#   api:artifact/get_registry/**
 #   asset:artifact/*/register
 #   asset:artifact/*/give/2.give
 #   asset:artifact/*/*/2.check_condition
