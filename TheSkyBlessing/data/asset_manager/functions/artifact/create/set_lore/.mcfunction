@@ -10,10 +10,8 @@
     execute if data storage asset:artifact Lore[0] run function asset_manager:artifact/create/set_lore/vanilla_lore
 # 装備時効果
     # ステータス補正
-        data modify storage asset:artifact CopiedModifiers set from storage asset:artifact Equipment.Modifiers
-        execute if data storage asset:artifact CopiedModifiers[0] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
-        execute if data storage asset:artifact CopiedModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/
-        data remove storage asset:artifact CopiedModifiers
+        execute if data storage asset:artifact Equipment.Modifiers[0] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
+        execute if data storage asset:artifact Equipment.Modifiers[0] run function asset_manager:artifact/create/set_lore/modifier/
     # セット効果
         execute if data storage asset:artifact Equipment.Effects[{Visible:true}] if data storage asset:artifact Item.tag.display.Lore[0] run data modify storage asset:artifact Item.tag.display.Lore append value '""'
         execute if data storage asset:artifact Equipment.Effects[0] run function asset_manager:artifact/create/set_lore/equipment/
