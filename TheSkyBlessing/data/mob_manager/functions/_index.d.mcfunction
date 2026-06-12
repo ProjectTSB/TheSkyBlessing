@@ -12,6 +12,7 @@
     #declare tag Object
     #declare tag Uninterferable
     #declare tag Immovable
+    #declare tag HasHealAbility
     #declare tag ExtendedCollision
 
 #> Storage
