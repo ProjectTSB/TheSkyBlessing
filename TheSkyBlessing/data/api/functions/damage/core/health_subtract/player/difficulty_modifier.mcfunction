@@ -5,7 +5,7 @@
 # @private
     #declare score_holder $Difficulty
 
-# $damage(e4) = $damage(e4) * (1 + ($Difficulty - 2) / 5)
+# $damage(e2) = $damage(e2) * (1 + ($Difficulty - 2) / 5)
     function api:global_vars/get_difficulty
     execute store result score $Difficulty Temporary run data get storage api: Return.Difficulty 2
     scoreboard players add $Difficulty Temporary 6

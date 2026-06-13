@@ -13,7 +13,7 @@
 # $Mul(e1) = 1 * e1 - $Resistance(e1)
     scoreboard players operation $Mul Temporary = $10 Const
     scoreboard players operation $Mul Temporary -= $Resistance Temporary
-# $damage(e4) = $damage(e4) * $Mul(e1) / e1
+# $damage(e2) = $damage(e2) * $Mul(e1) / e1
     scoreboard players operation $Damage Temporary *= $Mul Temporary
     scoreboard players operation $Damage Temporary /= $10 Const
 # リセット

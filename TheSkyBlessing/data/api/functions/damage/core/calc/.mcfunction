@@ -9,7 +9,7 @@
     #declare score_holder $isDefenseCalcSkip
 
 # 計算式:
-# damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - min(10, resistanceLv) / 10) * (1 - (min(20, cappedEPF) / 25))
+# damage * (1 - min(20, max(defensePoints / 5, defensePoints - damage / (2 + toughness / 4))) / 25) * (1 - min(10, resistanceLv) / 10) * (1 - (min(20, cappedEPF) / 50))
 
 # 計算的なダメージ上限(214748.36)チェック
     execute if score $Damage Temporary matches 21474836.. run scoreboard players set $Damage Temporary 21474836

@@ -16,7 +16,7 @@
 # $CalcF(e2) = 1 * e2 - $EPF(e2)
     scoreboard players operation $CalcF Temporary = $100 Const
     scoreboard players operation $CalcF Temporary -= $EPF Temporary
-# $damage(e4) = $damage(e4) * $CalcF(e2) / e2
+# $damage(e2) = $damage(e2) * $CalcF(e2) / e2
     scoreboard players operation $CalcG1 Temporary = $Damage Temporary
     scoreboard players operation $CalcG1 Temporary /= $100 Const
     scoreboard players operation $CalcG2 Temporary = $Damage Temporary
