@@ -12,7 +12,8 @@
     #declare score_holder $CalcB2
     #declare score_holder $CalcC
     #declare score_holder $CalcD
-    #declare score_holder $CalcE
+    #declare score_holder $CalcE1
+    #declare score_holder $CalcE2
 
 # $CalcA(e2) = $defensePoints(e2) / 5
     scoreboard players operation $CalcA Temporary = $defensePoints Temporary
@@ -38,13 +39,15 @@
     scoreboard players set $CalcD Temporary 1000
     scoreboard players operation $CalcD Temporary -= $CalcC Temporary
 # $Damage(e2) = $Damage(e2) * $CalcD(e3) / e3
-    scoreboard players operation $CalcE Temporary = $Damage Temporary
-    execute if score $Damage Temporary matches 1000000.. run scoreboard players operation $CalcE Temporary /= $10 Const
-    scoreboard players operation $CalcE Temporary *= $CalcD Temporary
-    execute if score $Damage Temporary matches 1000000.. run scoreboard players operation $CalcE Temporary /= $100 Const
-    execute if score $Damage Temporary matches ..999999 run scoreboard players operation $CalcE Temporary /= $1000 Const
-    scoreboard players operation $Damage Temporary = $CalcE Temporary
-
+    scoreboard players operation $CalcE1 Temporary = $Damage Temporary
+    scoreboard players operation $CalcE1 Temporary /= $1000 Const
+    scoreboard players operation $CalcE2 Temporary = $Damage Temporary
+    scoreboard players operation $CalcE2 Temporary %= $1000 Const
+    scoreboard players operation $CalcE1 Temporary *= $CalcD Temporary
+    scoreboard players operation $CalcE2 Temporary *= $CalcD Temporary
+    scoreboard players operation $CalcE2 Temporary /= $1000 Const
+    scoreboard players operation $Damage Temporary = $CalcE1 Temporary
+    scoreboard players operation $Damage Temporary += $CalcE2 Temporary
 # リセット
     scoreboard players reset $CalcA Temporary
     scoreboard players reset $CalcB Temporary
@@ -52,4 +55,5 @@
     scoreboard players reset $CalcB2 Temporary
     scoreboard players reset $CalcC Temporary
     scoreboard players reset $CalcD Temporary
-    scoreboard players reset $CalcE Temporary
+    scoreboard players reset $CalcE1 Temporary
+    scoreboard players reset $CalcE2 Temporary
