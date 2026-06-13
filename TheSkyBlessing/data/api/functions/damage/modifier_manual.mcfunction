@@ -10,5 +10,7 @@
 
 # 引数チェック
     execute unless data storage api: Argument.MobUUID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" MobUUID","color":"red"}]
-
-function api:damage/core/modify/non-player_manual
+# 補正フラグ
+    function api:damage/core/modify/non-player_manual
+# リセット
+    data remove storage api: Argument.MobUUID
