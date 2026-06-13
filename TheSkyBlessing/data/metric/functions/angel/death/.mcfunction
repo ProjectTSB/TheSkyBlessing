@@ -1,6 +1,6 @@
-#> metric:angel/death
+#> metric:angel/death/
 #
-# 対天使での被ダメージ量を記録する
+# 対天使での死亡回数を記録する
 #
 # @within function lib:score_to_health_wrapper/core/die
 
