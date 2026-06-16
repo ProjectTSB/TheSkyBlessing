@@ -5,7 +5,7 @@
             "condition": "time_check",
             "value": {
                 "min": 0,
-                "max": 12999
+                "max": 11999
             },
             "period": 24000
         },
