@@ -4,9 +4,9 @@
 #
 # @input
 #   as entity
-#   storage api: Argument.Heal : float
+#   storage api: Argument.Heal : double
 #   storage api: Argument.FIxedHeal : boolean
-# @output storage api: Argument.Heal : float
+# @output storage api: Argument.Heal : double
 # @api
 
 # 補正
