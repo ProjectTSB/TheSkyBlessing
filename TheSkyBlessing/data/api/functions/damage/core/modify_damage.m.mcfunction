@@ -47,14 +47,6 @@
         scoreboard players operation $Modifier Temporary *= $Sum Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
         scoreboard players operation $Metric Temporary = $Modifier Temporary
-# 最低値設定
-# $Modifier(e2) = max($Modifier(e2), (0.45 - $Difficulty * 0.10) * e2, 0)
-    function api:global_vars/get_difficulty
-    execute store result score $Difficulty Temporary run data get storage api: Return.Difficulty 10
-    scoreboard players operation $Difficulty Temporary *= $-1 Const
-    scoreboard players add $Difficulty Temporary 45
-    scoreboard players operation $Difficulty Temporary > $0 Const
-    scoreboard players operation $Modifier Temporary > $Difficulty Temporary
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
