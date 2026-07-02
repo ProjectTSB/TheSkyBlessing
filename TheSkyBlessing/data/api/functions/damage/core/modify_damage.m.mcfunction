@@ -47,6 +47,8 @@
         scoreboard players operation $Modifier Temporary *= $Sum Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
         scoreboard players operation $Metric Temporary = $Modifier Temporary
+    # 最低保証を0とする
+        scoreboard players operation $Modifier Temporary > $0 Const
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
