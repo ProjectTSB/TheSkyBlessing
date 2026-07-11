@@ -12,6 +12,8 @@
     function api:damage/core/calc/
 # ダメージの補正
     execute if data storage api: Argument{BypassModifier:false} store result storage api: Damage double 0.0001 run scoreboard players get $Damage Temporary
+#1574sword_for_knight
+        execute if entity @s[type=player,tag= 1574used] store result storage api: Damage double 0.00002 run scoreboard players get $Damage Temporary
     execute if data storage api: Argument{BypassModifier:false} run function api:damage/core/modify_damage.m {Side:"Defense"}
     execute if data storage api: Argument{BypassModifier:false} if entity @s[type=!player,tag=!Enemy.Boss] if score $Metric Temporary matches ..99 run function metric:damage/normal.m {Condition:"Resist"}
     execute if data storage api: Argument{BypassModifier:false} if entity @s[type=!player,tag=!Enemy.Boss] if score $Metric Temporary matches 100 run function metric:damage/normal.m {Condition:"Normal"}
