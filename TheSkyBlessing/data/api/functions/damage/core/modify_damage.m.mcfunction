@@ -14,7 +14,6 @@
     #declare score_holder $Modifier
     #declare score_holder $Temp
     #declare score_holder $Sum
-    #declare score_holder $Difficulty
 
 # 必要なデータの取得と加算
     # 元ダメージ
@@ -60,4 +59,3 @@
     scoreboard players reset $Modifier Temporary
     scoreboard players reset $Temp Temporary
     scoreboard players reset $Sum Temporary
-    scoreboard players reset $Difficulty Temporary
