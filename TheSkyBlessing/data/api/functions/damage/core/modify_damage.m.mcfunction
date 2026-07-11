@@ -14,7 +14,6 @@
     #declare score_holder $Modifier
     #declare score_holder $Temp
     #declare score_holder $Sum
-    #declare score_holder $Difficulty
 
 # 必要なデータの取得と加算
     # 元ダメージ
@@ -47,14 +46,8 @@
         scoreboard players operation $Modifier Temporary *= $Sum Temporary
         scoreboard players operation $Modifier Temporary /= $100 Const
         scoreboard players operation $Metric Temporary = $Modifier Temporary
-# 最低値設定
-# $Modifier(e2) = max($Modifier(e2), (0.45 - $Difficulty * 0.10) * e2, 0)
-    function api:global_vars/get_difficulty
-    execute store result score $Difficulty Temporary run data get storage api: Return.Difficulty 10
-    scoreboard players operation $Difficulty Temporary *= $-1 Const
-    scoreboard players add $Difficulty Temporary 45
-    scoreboard players operation $Difficulty Temporary > $0 Const
-    scoreboard players operation $Modifier Temporary > $Difficulty Temporary
+    # 最低保証を0とする
+        scoreboard players operation $Modifier Temporary > $0 Const
 # 補正
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
@@ -66,4 +59,3 @@
     scoreboard players reset $Modifier Temporary
     scoreboard players reset $Temp Temporary
     scoreboard players reset $Sum Temporary
-    scoreboard players reset $Difficulty Temporary
