@@ -5,6 +5,7 @@
 # @within function
 #   api:damage/
 #   api:damage/core/attack_to_forward_target/
+    #declare tag 1574used
 
 # 計算に必要な値を取得
     function api:damage/core/get_status/
