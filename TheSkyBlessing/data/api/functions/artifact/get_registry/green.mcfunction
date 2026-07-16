@@ -1,4 +1,4 @@
-#> api:artifact/get_registry/green
+#> api:artifact/get_registry/color/green
 #
 #
 #
