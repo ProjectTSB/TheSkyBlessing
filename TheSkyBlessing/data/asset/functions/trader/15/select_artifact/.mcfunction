@@ -21,8 +21,8 @@
     execute store result score $UnlockLv4 Temporary run data get storage global UnlockShardProgress[3]
 
 # APIで通常シャードのプールと隠し神器のプールを取得
-    function api:artifact/get_registry/normal
-    function api:artifact/get_registry/hide
+    function api:artifact/get_registry/normal/all
+    function api:artifact/get_registry/extra/daily/all
 
 # 1, 2それぞれで神器を選択
     function asset:trader/15/select_artifact/current_progress/
