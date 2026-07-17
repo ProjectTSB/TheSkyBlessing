@@ -15,6 +15,8 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.DefaultRotation set from storage asset:trader Rotation
 # 日替わり更新するか
     execute if data storage asset:trader {DailyUpdate:true} run tag @s add Trader.DailyUpdate
+    execute if data storage asset:trader {DailyUpdate:true} store result score @s LatestDayTime run time query daytime
+    execute if data storage asset:trader {DailyUpdate:true} store result score @s LatestDailyUpdateTick run data get storage global Time
 # 取引一覧
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].TraderData.Trades set from storage asset:trader Trades
 # そのまま適用するやつ
