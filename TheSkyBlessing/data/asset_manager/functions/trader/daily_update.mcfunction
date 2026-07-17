@@ -27,7 +27,7 @@
 
 # LatestDayTime/LatestUpdateTick更新
     execute store result score @s LatestDayTime run time query daytime
-    execute if entity @s[tag=Update] store result score @s LatestDailyUpdateTick run time query gametime
+    execute if entity @s[tag=Update] store result score @s LatestDailyUpdateTick run data get storage global Time
 
 # リセット
     scoreboard players reset $DayTime Temporary
