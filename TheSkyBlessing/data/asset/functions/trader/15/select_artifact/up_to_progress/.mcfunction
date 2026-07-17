@@ -5,14 +5,14 @@
 # @within function asset:trader/15/select_artifact/
 
 # 隠しプールにするかの判定
-    execute if predicate lib:random_pass_per/3 run data modify storage asset:temp IsHidePool set value true
+    execute if predicate lib:random_pass_per/3 run data modify storage asset:temp IsSpecialPool set value true
 
 # プール初期化
     data modify storage asset:temp Pool set value []
 
 # プールを設定
-    execute unless data storage asset:temp {IsHidePool:true} run function asset:trader/15/select_artifact/up_to_progress/set_pool.m {Type:"Normal"}
-    execute if data storage asset:temp {IsHidePool:true} run function asset:trader/15/select_artifact/up_to_progress/set_pool.m {Type:"Hide"}
+    execute unless data storage asset:temp {IsSpecialPool:true} run function asset:trader/15/select_artifact/up_to_progress/set_pool.m {Type:"Normal"}
+    execute if data storage asset:temp {IsSpecialPool:true} run function asset:trader/15/select_artifact/up_to_progress/set_pool.m {Type:"Daily"}
 
 # 要素数が0の場合、強制的に通常シャードのプールで上書きする (隠しプールの神器が0個である可能性があるため)
     execute unless data storage asset:temp Pool[0] run function asset:trader/15/select_artifact/up_to_progress/set_pool.m {Type:"Normal"}
@@ -25,5 +25,5 @@
     function lib:array/session/close
 
 # リセット
-    data remove storage asset:temp IsHidePool
+    data remove storage asset:temp IsSpecialPool
     data remove storage asset:temp Pool
