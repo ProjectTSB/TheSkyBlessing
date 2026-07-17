@@ -13,7 +13,7 @@
 #   debug:trader/update
     #declare tag Trader
     #declare tag Trader.DailyUpdate
-    #declare tag Trader.FirstSetup
+    #declare tag Trader.Initialized
 
 #> storage
 # @within
