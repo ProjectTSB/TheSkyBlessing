@@ -26,3 +26,6 @@
 
 # バージョンを更新
     scoreboard players operation @s RecipeVersion = $TraderRecipeVersion Global
+
+# リセット
+    function asset_manager:trader/register/reset

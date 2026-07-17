@@ -10,3 +10,6 @@
 
 # 取引を更新
     function asset_manager:trader/common/update_recipe/update
+
+# リセット
+    function asset_manager:trader/register/reset
