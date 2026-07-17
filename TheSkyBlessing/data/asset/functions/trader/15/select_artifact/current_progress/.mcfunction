@@ -9,10 +9,11 @@
 
 # プールを設定
 # Lv1は最初から買えるようにする
-    execute unless score $Current Temporary >= $UnlockLv2 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:1}
-    execute if score $Current Temporary >= $UnlockLv2 Temporary unless score $Current Temporary >= $UnlockLv3 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:2}
-    execute if score $Current Temporary >= $UnlockLv3 Temporary unless score $Current Temporary >= $UnlockLv4 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:3}
-    execute if score $Current Temporary >= $UnlockLv4 Temporary run function asset:trader/15/select_artifact/current_progress/set_pool.m {Rarity:4}
+    data modify storage asset:temp Temp.Rarity set value 1
+    execute if score $Current Temporary >= $UnlockLv2 Temporary run data modify storage asset:temp Temp.Rarity set value 2
+    execute if score $Current Temporary >= $UnlockLv3 Temporary run data modify storage asset:temp Temp.Rarity set value 3
+    execute if score $Current Temporary >= $UnlockLv4 Temporary run data modify storage asset:temp Temp.Rarity set value 4
+    function asset:trader/15/select_artifact/current_progress/set_pool.m with storage asset:temp Temp
 
 # プールから神器を1つ抽出する
     function lib:array/session/open

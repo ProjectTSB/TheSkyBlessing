@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:trader/15/select_artifact/current_progress/
-#   asset:trader/15/select_artifact/up_to_progress/
+#   asset:trader/15/select_artifact/up_to_progress/m
 #   asset:trader/15/select_artifact/picks
 
 #> private
@@ -23,7 +23,7 @@
     scoreboard players reset $Random Temporary
     scoreboard players reset $CandidatesLength Temporary
 
-# 選択した配列が2次元でかつ、要素数が2以上でなければ、次元を1減らしてreturnする
+# 選択した配列が2次元 &&、要素数が1 なら、次元を1減らしてreturnする
     execute if data storage lib: Elements[][] unless data storage lib: Elements[][1] run return run data modify storage lib: Elements set from storage lib: Elements[]
 
 # 1次元配列ならreturn

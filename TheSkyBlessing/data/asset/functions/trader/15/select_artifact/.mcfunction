@@ -20,13 +20,12 @@
     execute store result score $UnlockLv3 Temporary run data get storage global UnlockShardProgress[2]
     execute store result score $UnlockLv4 Temporary run data get storage global UnlockShardProgress[3]
 
-# APIで通常シャードのプールと隠し神器のプールを取得
-    function api:artifact/get_registry/normal/all
-    function api:artifact/get_registry/extra/daily/all
+# 日替わり枠プールになる確率
+    data modify storage asset:temp Temp.Per set value "5"
 
 # 1, 2それぞれで神器を選択
     function asset:trader/15/select_artifact/current_progress/
-    function asset:trader/15/select_artifact/up_to_progress/
+    function asset:trader/15/select_artifact/up_to_progress/m with storage asset:temp Temp
 
 # リセット
     scoreboard players reset $Current Temporary
@@ -34,3 +33,4 @@
     scoreboard players reset $UnlockLv2 Temporary
     scoreboard players reset $UnlockLv3 Temporary
     scoreboard players reset $UnlockLv4 Temporary
+    data remove storage asset:temp Temp
