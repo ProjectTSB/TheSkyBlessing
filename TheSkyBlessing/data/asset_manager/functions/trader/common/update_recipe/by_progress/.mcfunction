@@ -11,7 +11,9 @@
     function oh_my_dat:please
 
 # 日替わり商人の場合は現在の商品は維持し、攻略度だけ反映する
-    execute if entity @s[tag=Trader.DailyUpdate] run function asset_manager:trader/common/update_recipe/by_progress/keep_sells/
+# 初回は実行する必要がないため弾く
+    execute if entity @s[tag=Trader.DailyUpdate,tag=Trader.FirstSetup] run function asset_manager:trader/common/update_recipe/by_progress/keep_sells/
+    execute if entity @s[tag=Trader.DailyUpdate,tag=!Trader.FirstSetup] run tag @s add Trader.FirstSetup
 
 # バージョンをチェックし、違うなら取引内容を更新する
     function asset_manager:trader/common/update_recipe/by_progress/check_version.m with storage global
