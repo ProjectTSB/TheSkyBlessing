@@ -1,26 +1,25 @@
-#!/bin/bash
-
-# .env ファイルのパス
-env_file="${PWD}/server-env.sh"
-
-# .env ファイルが存在する場合のみ実行する
-if [ -e "$env_file" ]; then
-    source "$env_file"
-    cd "$SERVER_JAR_DIR"
-    RESOURCEPACK_HASH=$(curl -L "$RESOURCEPACK_URI" | sha1sum | tr ' ' '\t' | cut -f1)
-    sed -e "s|^resource-pack=.*$|resource-pack=$RESOURCEPACK_URI|" -i ./server.properties
-    sed -e "s/^resource-pack-sha1=.*$/resource-pack-sha1=$RESOURCEPACK_HASH/" -i ./server.properties
-    echo "Resourcepack hash updated: $RESOURCEPACK_HASH"
-    java $SERVER_ARGS -jar "$SERVER_JAR_NAME" nogui
+#!/bin/sh
+set -eu
+root=$PWD
+while [ "$root" != / ] && [ ! -f "$root/scripts/server.sh" ]; do root=$(dirname "$root"); done
+if [ -f "$root/scripts/server.sh" ]; then exec sh "$root/scripts/server.sh"; fi
+env_file="$PWD/server-env.sh"
+if [ -f "$env_file" ]; then
+  . "$env_file"
+  cd "$SERVER_JAR_DIR"
+  RESOURCEPACK_HASH=$(curl -L "$RESOURCEPACK_URI" | sha1sum | tr ' ' '\t' | cut -f1)
+  sed -e "s|^resource-pack=.*$|resource-pack=$RESOURCEPACK_URI|" -i ./server.properties
+  sed -e "s/^resource-pack-sha1=.*$/resource-pack-sha1=$RESOURCEPACK_HASH/" -i ./server.properties
+  echo "Resourcepack hash updated: $RESOURCEPACK_HASH"
+  java $SERVER_ARGS -jar "$SERVER_JAR_NAME" nogui
+  exit $?
 fi
-
-
-# .env ファイルが存在しない場合、生成する
-if [ ! -e "$env_file" ]; then
-    echo "# VSCode の task からサーバーを起動する際に利用する環境変数" > "$env_file"
-    echo "SERVER_JAR_DIR=" >> "$env_file"
-    echo "SERVER_JAR_NAME=server.jar" >> "$env_file"
-    echo "SERVER_ARGS=\"-Xms2G -Xmx4G\"" >> "$env_file"
-    echo "RESOURCEPACK_URI=\"https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip\"" >> "$env_file"
-    echo ".env ファイルが存在しません。自動生成された値を編集の上再度実行してください。"
-fi
+cat > "$env_file" <<'EOF'
+# Edit these values, then run the task again.
+SERVER_JAR_DIR=
+SERVER_JAR_NAME=server.jar
+SERVER_ARGS="-Xms2G -Xmx4G"
+RESOURCEPACK_URI="https://github.com/ProjectTSB/TSB-ResourcePack/releases/download/dev/resources.zip"
+EOF
+echo "Created $env_file; edit it and run the task again." >&2
+exit 1
