@@ -2,7 +2,7 @@
 
 API を使う前に、その API が行為、寄与の登録、個体生成、状態の取得のどれを提供するかを確認する。[本体の抽象構造](architecture.md) に、呼出フレーム、modifier の出典 ID、イベント配送、緩衝体力の防壁モデルをまとめた。
 
-API関数は `TheSkyBlessing/data/api/functions/` にあり、呼出側のエンティティを暗黙に利用する関数が多い。呼出前に `as`/`at`、対象タグ、実行者を確認する。関数名のコメント（`#>`、`# @public`、`# @within`）が契約の入口で、`_index.d.mcfunction` は宣言と可視性の台帳である。
+公開APIは `TheSkyBlessing/data/api/functions/` に置き、内部処理は既存のcore・manager・lib等の責務に合わせる。追加・変更時は引数・storage・scoreboard・戻り値をIMP Docへ明記する。API関数は呼出側のエンティティを暗黙に利用する関数が多い。呼出前に `as`/`at`、対象タグ、実行者を確認する。関数名のコメント（`#>`、`# @public`、`# @within`）が契約の入口で、`_index.d.mcfunction` は宣言と可視性の台帳である。
 
 引数・結果は一時storageを介するパターンが中心で、まず対象APIと同じディレクトリの `get/set/add/remove` を読む。例としてDamageAPIのPR #2268では `Argument.ReduceEnchantment` と `Enchantments` のstorage namespace不一致が修正され、`api:ReduceEnchantmentID` の削除も追加された。storageのnamespace、パス、型、後片付けを一組で確認する。
 

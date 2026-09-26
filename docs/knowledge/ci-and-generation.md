@@ -6,6 +6,14 @@ masterではProjectTSB/Assetを `Asset2` にcheckoutし、Node.js/ts-nodeで `.g
 
 ローカルでの確認は、pack.mcmetaの所在、JSON構文、関数参照の存在。
 
+## IMP Docとコードのインデント
+
+共通のmcfunction規約はDevSpaceの `AGENTS.md` にある。本体でのdeclareの実例は [coreの宣言](../../TheSkyBlessing/data/core/functions/_index.d.mcfunction) のGlobal Vars・DeathTag・RespawnTag。これらの公開範囲は、上記の `VISIBILITY_FILTER` とdeclare生成にも関係する。
+
+通常処理のコメント・インデントの実例は [heal補正の追加](../../TheSkyBlessing/data/api/functions/modifier/core/heal/add.mcfunction) と [緩衝体力の取得](../../TheSkyBlessing/data/api/functions/entity/player/absorption/get.mcfunction) を参照する。
+
+## 生成物の変更
+
 `.cache/dls.json`なしでdeclare生成物を手編集して完了扱いにしない。master条件では外部Asset checkoutとpushまで行うため、公開declare・関数名変更時は生成差分と参照切れを確認する。除外対象（animated_java、define_gamerule）は個別確認する。
 
 ## CI の作用先

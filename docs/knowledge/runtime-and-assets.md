@@ -6,9 +6,17 @@
 
 tickの全順序は `TheSkyBlessing/data/core/functions/tick/.mcfunction` を入口に追う。pre、arrow/nexus/4tick、artifact/player本体、context reset、island/spawner/teleporter/gimmick/mob/object/effect、再reset/item/log、postの順で呼ばれる。新規処理は実行頻度と実行主体を決め、適切な既存入口へ登録する。
 
-asset_managerはartifact、mob、trader等の登録・呼出を担い、debugは分離されている。Mob/Object/Effectのregister、継承、動的dispatch、永続Fieldと`asset:context this`の関係は [Assetの実行モデル](asset-runtime.md) を先に読む。`*.m.mcfunction` はmacro構文を使う手書き関数も含むため、拡張子だけで生成物と判断せず参照元を確認する。イベント入口はadvancement handlerから `core:handler/*` へ接続される。
+asset_managerはartifact、mob、trader等の登録・呼出を担い、debugは分離されている。デバッグ関数を本番の呼出経路へ接続しない。Mob/Object/Effectのregister、継承、動的dispatch、永続Fieldと`asset:context this`の関係は [Assetの実行モデル](asset-runtime.md) を先に読む。`*.m.mcfunction` はmacro構文を使う手書き関数も含むため、拡張子だけで生成物と判断せず参照元を確認する。イベント入口はadvancement handlerから `core:handler/*` へ接続される。
 
 イベントはadvancement条件→handler→asset/APIの順に追う。毎tickはpre→本体→post、低頻度処理は4tick入口へ登録し、`execute as/at`境界ごとにscore所有者を確認する。scheduleは登録・再登録・停止条件を揃える。production登録は`IsProduction`分岐とmigrationを併せて検証する。
+
+## 神器tickと死亡・スペクテイター
+
+[core:tick](../../TheSkyBlessing/data/core/functions/tick/.mcfunction) は `@a` 全員をplayer処理へ渡し、[player本体](../../TheSkyBlessing/data/core/functions/tick/player/.mcfunction) → `asset_manager:artifact/tick/player` → [triggers](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/.mcfunction) → [tick](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/tick.mcfunction) から神器tagを呼ぶ。この経路と [共通check](../../TheSkyBlessing/data/asset_manager/functions/artifact/check/.mcfunction) には、Death・InRespawnEvent・spectatorの一律除外がない。DataCache経由のinventory取得にもその除外はない。これだけを根拠に個別神器へ発動制限を追加しない。仕様上必要な条件を、Assetに公開されたAPI・リソースで判定する。
+
+[宣言元](../../TheSkyBlessing/data/core/functions/_index.d.mcfunction) ではDeathは公開タグだが、InRespawnEventは本体内部の利用先に限定され、Artifactは含まれない。神器から参照する公開状態ではない。
+
+死亡時に装備がなくなる場合と、神器tick自体の停止は別である。[死亡handler](../../TheSkyBlessing/data/core/functions/handler/death.mcfunction) の回収はplayer/postから呼ばれ、IsKeepInventoryやSoulBoundにも依存する。また、[エリア入場](../../TheSkyBlessing/data/world_manager/functions/area/02.islands/on_entered.mcfunction) は非creativeをsurvivalへ変更し、[respawn.delay](../../TheSkyBlessing/data/core/functions/handler/respawn.delay.mcfunction) はInRespawnEventを外す。状態別の試験は、設定コマンドの成功だけでなく検査時の状態を確かめる。確認範囲は [sources.md](sources.md) を参照。
 
 ## 変更手順
 
