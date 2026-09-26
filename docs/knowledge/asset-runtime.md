@@ -10,6 +10,8 @@ Mob と Object の `register` は型定義に相当する。API は `Argument.ID
 
 init 後、`this` は対象 entity の OhMyDat `MobField` / `ObjectField` へ保存される。[Mob init](../../TheSkyBlessing/data/asset_manager/functions/mob/summon/init.mcfunction) と [Object init](../../TheSkyBlessing/data/asset_manager/functions/object/summon/init.mcfunction) が最初の保存を行う。
 
+召喚した個体の受け渡しには一時的な `MobInit` / `ObjectInit` tagを使う。例えばObject core summonは召喚直後に実行位置から0.01以内の `ObjectInit` をすべて初期化する。tagは任意の目印ではなく、召喚と共通initの間の受け渡し口である。同じ位置に別用途の未処理Init個体を残したり、独自の召喚処理で後始末を変えたりすると、別個体まで初期化する可能性がある。
+
 したがって `asset:context this` は永続領域ではない。現在処理中の個体の永続 Field を method 実行中だけ展開する作業窓である。
 
 ## tick と実行 context
@@ -28,6 +30,8 @@ Mob の [trigger entry](../../TheSkyBlessing/data/asset_manager/functions/mob/tr
 Object の [tick entry](../../TheSkyBlessing/data/asset_manager/functions/object/triggers/tick.mcfunction) も同じ load、dispatch、pointer 再取得、save の形を取る。Object の cleanup は `id`、`originID`、`this` を削除する。Object は `Object.DisableTicking` の個体を core selector で除外する。
 
 Field の更新は正常終了後の save で永続化される。method 中に対象が破棄され ID / UUID score が失われた場合、save は行われない。この分岐を跨いで `this` の更新が残るとは仮定しない。
+
+Objectの入口は、dispatch後に `if score @s ObjectID matches -2147483648..2147483647` でscoreを参照できるか確認し、できなければOhMyDatのpointer取得とFieldの書き戻しを省く。破棄後に個体のscoreを参照できなくなることを利用したguardである（ユーザー確認済みの用途）。全int範囲のif/unlessの真偽はDevSpaceの `docs/mcfunction-idioms.md` にある。Assetのabstract_projectileも衝突メソッド間と再帰前に同じguardを使う。型IDがあるという前提を破棄の境界で確認し直す処理なので、常にtrueとして削除したり、一般的な生死判定や `unless` へ置き換えたりしない。
 
 ## 継承 graph の構築
 

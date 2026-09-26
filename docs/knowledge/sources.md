@@ -43,6 +43,10 @@ Island等の `2147483647` は形式例として確認した範囲。個別島cal
 
 [runtime-and-assets.md](runtime-and-assets.md#神器tickと死亡スペクテイター) の状態条件は2026-09-21に本体 `5d6799ed1` のcore/tick→player→artifact tick、DataCache、共通check、死亡handler→grave/build、エリア入場、respawn.delay、coreのタグ宣言を静的に照合した。実際の死亡・リスポーン操作の検証を意味しない。
 
+## MP表示の整数演算の根拠
+
+[MP・actionbar表示](runtime-and-assets.md#表示用の値へ変換してから共通の表示処理へ渡す) はcheck_xpbar・adjust_xpbar・player/post・actionbarを照合した。ポイント側は整数百分率0〜100を2倍のポイントへ、レベル側は0〜2047を元の整数へ復元することを符号付き32bit演算で確認した。レベル40の必要経験値202はMinecraft Java 1.20.4の公式server jarの `Player.getXpNeededForNextLevel` と [公式mappings](https://piston-data.mojang.com/v1/objects/c1cafe916dd8b58ed1fe0564fc8f786885224e62/server.txt) で確認。これは演算と版の照合であり、画面表示の実機検証ではない。
+
 ## Wiki・AJとの照合
 
 2026-09-15にWiki snapshot `3a5ede8625a713382dca0e96f46b2a8ed75218c5` の公開16ページと `_Sidebar.md` を全文確認し、上記本体の版と照合した。ページ別の採否・直接URLは [wiki-crosscheck.md](wiki-crosscheck.md)。外部リンク先・添付画像自体は対象外。

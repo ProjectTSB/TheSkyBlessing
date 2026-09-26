@@ -17,6 +17,14 @@
 
 共通なのは配置までの入口である。構築後の変更や終了処理は、各領域の所有モデルから判断する。
 
+### R木の固定パス走査とmacroの境界
+
+可変の添字を渡さずに有界個数の子を処理する場合、配列をずらしながら固定の負添字を参照する構成が使える。参照先の移動をデータの変更で表すため、配列を不変の入力として再利用できるかは別に確認する。
+
+[Nexusの木走査](../../TheSkyBlessing/data/world_manager/functions/nexus_loader/load/tree/0.mcfunction) は子配列Nへダミーcompoundを3個追加し、固定パス `N[-4]` を調べ、末尾を一つ消して次を調べる。こうして添字をmacroへ渡さずに最大4個の子を走査する。[判定側](../../TheSkyBlessing/data/world_manager/functions/nexus_loader/load/tree/0_check.mcfunction) は対象ノードの有無と境界を確認し、存在しない子はfailする。末尾の削除は走査位置の移動とダミーの除去を兼ねるため、空の値を足して消すだけの処理として省略しない。
+
+[fetch](../../TheSkyBlessing/data/world_manager/functions/nexus_loader/load/fetch.m.mcfunction) はTargetPathからIDをstorageの `Args.ID` へ取り出し、構築側には `{Type:"spawner"}` 等の種別だけをmacro引数として渡す。コードコメントは、TargetPathを直接渡すと構築側でキャッシュミスになることを理由としている。動的なパス解決と共通の構築処理を分けたこの境界を、引数をまとめる整理で崩さない。これはこの呼出経路の設計理由であり、全macroの引数を定数に限定する規約ではない。
+
 ## Island：解呪の進行とボス個体の関係
 
 [定義の形式例](../../TheSkyBlessing/data/asset/functions/island/2147483647/register.mcfunction) は、呪物の配置と任意の BossID 等を渡す。[construct](../../TheSkyBlessing/data/asset_manager/functions/island/register/construct/.mcfunction) と [set_data](../../TheSkyBlessing/data/asset_manager/functions/island/register/construct/set_data.mcfunction) が、呪物の armor stand に IslandData と進行状態を作る。ここで管理している個体は、島の全 block をまとめたものではなく、解呪を進める呪物である。
@@ -69,6 +77,8 @@ GroupIDs は接続候補を集めるための所属リストである。[候補�
 [LootTable の処理](../../TheSkyBlessing/data/asset_manager/functions/container/register/construct/set_loot_table/.mcfunction) は、構築時に loot を展開し、[Artifact の抽選](../../TheSkyBlessing/data/asset_manager/functions/container/register/construct/set_loot_table/roll_artifact.mcfunction) と [seed の置換](../../TheSkyBlessing/data/asset_manager/functions/container/register/construct/set_loot_table/replace_artifact.mcfunction) を行う。[人数による Count 補正](../../TheSkyBlessing/data/asset_manager/functions/container/register/construct/common/calculate_count_for_multiplayer.mcfunction) もこの時点で行う。[島の報酬 loot table](../../TheSkyBlessing/data/common/loot_tables/island_rewards/lv-1.json) は解釈対象の例である。
 
 これは開封時まで抽選を保留するモデルではない。構築時点の乱数や人数から実 Items を確定し、manager が内容物の別コピーを保持して継続管理するわけでもない。[明示 Items](../../TheSkyBlessing/data/asset_manager/functions/container/register/construct/set_items/.mcfunction) も構築時に解決して配置する。
+
+LootTableの結果を開封前に加工したい場合は、抽選の定義と実Itemsへの展開を分けて扱う。この構築経路のLootTable設定直後の `item modify block ~ ~ ~ container.0 identity` は、slotへアクセスしてLootTableをItemsへ展開させるために挟まれている。使う [identity modifier](../../TheSkyBlessing/data/minecraft/item_modifiers/identity.json) 自体は空の配列だが、呼出しまで無作用ではない。続くItemsの取得・神器seedの置換より前に抽選結果が必要なので、空のmodifierだからという理由で削除しない。
 
 LootTable と Items は定義上は排他的に使う契約である。construct が両方を拒否する検査とは限らず、両方を書けば後続の Items 設定が結果を上書きし得る。新しい報酬確率は loot table、固定 slot 配置は Items、人数補正は manager が対象になる。開封時抽選へ仕様を変える場合は、構築時の確定と DPR の扱いも含めて変更を設計する。
 

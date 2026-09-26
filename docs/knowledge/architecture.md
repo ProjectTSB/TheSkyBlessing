@@ -81,6 +81,8 @@ flowchart LR
 
 [装備比較](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/equipments/compare.mcfunction) は array lib で slot ごとの変化を得る。[有効装備の filter](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/equipments/set_and_modifier/filter/.mcfunction) と旧状態の比較から remove/add を行う。[trigger の編成](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/.mcfunction) は、信仰が変わった場合もこの更新を起動する。
 
+[dis_equip](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/dis_equip.mcfunction) はOldを現在処理用の `Items`・`id` 等へ展開し、通常の装備変更では変化しなかったslotのIDをマスクしてから呼ぶ。ここでの `Items` は変更前の装備であり、変更後に何が残るかは `New.Items` を読む。dis_equipが呼ばれたことは、同じ神器をすべて手放したことを意味しない。複数所持で共有する効果を解除する場合は、変更後の残数まで確認する。
+
 この構造を理解すると、装備条件の追加では filter と再評価の契機、新しい補正の追加では寄与の登録・解除、新しいアイテム情報では正規化と snapshot の保存を確認すべきだと分かる。レビューでは「装備したとき効く」だけでなく、外す・交換する・信仰だけを変える場合にも同じ状態へ収束するかを見る。
 
 ## 行為とイベントへの反応を分ける
