@@ -7,14 +7,22 @@
 #> Temp
 # @private
     #declare score_holder $Mul
+    #declare score_holder $Rem
 
 # $Resistance(e1) *= min(10, $Resistance(e0)) * e1 / 10
     scoreboard players operation $Resistance Temporary < $10 Const
 # $Mul(e1) = 1 * e1 - $Resistance(e1)
     scoreboard players operation $Mul Temporary = $10 Const
     scoreboard players operation $Mul Temporary -= $Resistance Temporary
-# $damage(e2) = $damage(e2) * $Mul(e1) / e1
-    scoreboard players operation $Damage Temporary *= $Mul Temporary
+# $damage(e4) = $damage(e4) * $Mul(e1) / e1
+#             = ($damage / e1) * $Mul + ($damage % e1) * $Mul / e1  : オーバーフロー回避
+    scoreboard players operation $Rem Temporary = $Damage Temporary
+    scoreboard players operation $Rem Temporary %= $10 Const
+    scoreboard players operation $Rem Temporary *= $Mul Temporary
+    scoreboard players operation $Rem Temporary /= $10 Const
     scoreboard players operation $Damage Temporary /= $10 Const
+    scoreboard players operation $Damage Temporary *= $Mul Temporary
+    scoreboard players operation $Damage Temporary += $Rem Temporary
 # リセット
     scoreboard players reset $Mul Temporary
+    scoreboard players reset $Rem Temporary

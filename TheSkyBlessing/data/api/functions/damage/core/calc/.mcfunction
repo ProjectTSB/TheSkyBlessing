@@ -16,6 +16,7 @@
 # 防御による軽減計算部
     execute if score $defensePoints Temporary matches 0 if score $toughness Temporary matches 0 run scoreboard players set $isDefenseCalcSkip Temporary 1
     execute unless score $isDefenseCalcSkip Temporary matches 1 run function api:damage/core/calc/defense
+    execute if score $isDefenseCalcSkip Temporary matches 1 run scoreboard players operation $Damage Temporary *= $100 Const
 # 耐性エフェクトによる軽減計算部
     execute if score $Resistance Temporary matches 1.. run function api:damage/core/calc/resistance
 # エンチャントによる軽減計算部
