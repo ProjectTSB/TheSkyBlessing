@@ -5,9 +5,11 @@
     "tasks": [
         {
             "label": "Open SkyBlock Server",
-            "type": "shell",
-            "command": "bash",
-            "args": ["./.vscode/server-start.sh"],
+            "type": "process",
+            "command": "sh",
+            "args": ["${workspaceFolder}/.vscode/server-start.sh"],
+            "options": {"cwd": "${workspaceFolder}"},
+            "windows": {"command": "${env:ProgramFiles}/Git/bin/bash.exe"},
             "presentation": {
                 "echo": false,
                 "reveal": "always",
