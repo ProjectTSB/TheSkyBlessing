@@ -1,28 +1,21 @@
 #> asset_manager:effect/tick
 #
-# @s に付与された Effect を、開始時の予定順に処理する。
-# Effect を持つ付与先の OhMyDat に Effects を残し、イベント中の API からも参照できるようにする。
-# snapshot → foreach/process → 表示の順に処理する。途中の新規付与・再付与のイベントは次回に呼ぶ。
+# @s の Effect を処理し、表示を更新する。
+# 途中の新規付与・再付与のイベントは次回に呼ぶ。
 #
-# 走査用の一時データは storage asset:effect に置く。
-# SnapshotSource は反転用のコピーで、イベント前に破棄する。TickQueue は {ID, Revision} を逆順に保持する。
-# Current と TargetEffect は foreach が Effect ごとに作成・破棄する。
-#
-# core:tick/ が付与先を as / at に設定して呼ぶ。走査用 storage は共有する。
-# イベント内からこの関数を再帰的に呼び出すことは想定しない。
+# イベントからの再帰呼出しと、array session 中の呼出しは想定しない。
 #
 # @input as entity
 # @within function core:tick/
 
-# 付与先の Effects から今回の処理予定を作る
-# コピーの末尾から ID/Revision を取り出し、元の付与順とは逆の予定を作る。
-# Effects 自体は取り出さず、API から検索できる状態に保つ。
+# 元の付与順で末尾から取り出せるよう、処理予定を反転する
+# array session はイベントを呼ぶ前に閉じる。
     function oh_my_dat:please
-    data modify storage asset:effect TickQueue set value []
-    data modify storage asset:effect SnapshotSource set value []
-    data modify storage asset:effect SnapshotSource set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
-    execute if data storage asset:effect SnapshotSource[0] run function asset_manager:effect/snapshot
-    data remove storage asset:effect SnapshotSource
+    function lib:array/session/open
+    data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
+    function lib:array/reverse
+    data modify storage asset:effect TickQueue set from storage lib: Array
+    function lib:array/session/close
 
 # 今回の死亡処理を確定する
 # トーテム使用も死亡時の Effect 処理に含める。全 Effect の処理後に DeathProcess タグを外す。

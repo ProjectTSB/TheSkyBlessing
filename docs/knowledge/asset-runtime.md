@@ -92,7 +92,7 @@ Wiki の [Object 作成手順](https://github.com/ProjectTSB/TheSkyBlessing/wiki
 
 ## Effect の保存データとイベント処理
 
-この節の書き戻し・自己削除・処理順は、`tick` が `snapshot` → `foreach/process.m` → `finish.m` を使う実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
+この節の書き戻し・自己削除・処理順は、`tick` が処理予定を固定し、`foreach/process.m` → `finish.m` と進む実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
 
 Effect はエンティティに付与する効果であり、Mob / Object のエンティティそのものとは区別する。ID、register、Field、継承を持つが、任意名の method を呼ぶ仕組みはなく、`given` / `re-given` / `tick` / `remove` / `end` の決まったイベントを呼び出す。
 
@@ -107,7 +107,7 @@ Effect はエンティティに付与する効果であり、Mob / Object のエ
 | 付与中の Effect | 特定の付与先に付与されている効果。同じ付与先では同じ ID の Effect を一件として扱い、再付与はそのデータを更新する。 |
 | 保存データ | 付与先の OhMyDat `Effects[]` に保持する Effect データ。ID、Revision、Duration、Stack、Field 等を持つ。 |
 | 作業データ（context） | イベント実行中に読み書きする `asset:context` の値。`this` は Field、Duration / Stack は同名の保存値に対応する。保存データへの反映時点は下記の API 前後とイベント終了後。 |
-| 処理予定 | tick 開始時に `TickQueue` へ記録した `{ID, Revision}` の一覧。今回処理する対象と順序を固定する。Effect の全データを複製したものではない。 |
+| 処理予定 | tick 開始時の `Effects[]` を反転した `TickQueue`。ID/Revision で今回の対象と順序を固定し、他の属性は実行直前に保存先から読み直す。 |
 | 更新番号 | `Revision`。新規付与・再付与ごとに割り当て、処理予定を作った後の再付与を識別する。Duration の減算や Field の編集では変えない。 |
 | 削除予約 | remove API 等が `Duration=-1` を設定した状態。まだ `Effects[]` に残っており、終了処理でデータの削除と `remove` の呼び出しを行う。 |
 | 終了処理 | 保存データを削除し、削除予約なら `remove`、残り時間または Stack が 0 なら `end` を呼ぶ処理。後者を自然終了と呼ぶ。 |
@@ -128,7 +128,7 @@ register と各イベントは function tag の全走査と ID 条件の wrapper
 
 ### 保存データと処理予定
 
-[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、全体を `SnapshotSource` へコピーする。[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.mcfunction) はコピーの末尾から `{ID, Revision}` を取り出し、逆順の `TickQueue` を作る。Field 等は処理予定に残さず、コピーはイベント前に破棄する。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) は予定を末尾から取り出すため、元の付与順で実行する。[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が保存先から一致するデータを読み直す。API が保存配列を並べ替えても処理予定の対象と順序は変わらず、新規付与を途中の予定へ追加しない。`NextTickEffects` への退避・復元は行わない。
+[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は保存先の `Effects[]` をコピーし、array lib の reverse で反転して `TickQueue` に保持する。array session はイベント前に閉じる。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) は予定を末尾から取り出すため、元の付与順で実行する。コピーから使うのは ID/Revision だけで、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が実行直前の保存データを読み直す。API が保存配列を並べ替えても処理予定の対象と順序は変わらず、新規付与を途中の予定へ追加しない。イベント中も API が参照できるよう、保存先の `Effects[]` は残す。
 
 [make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同じ ID の既存データの `Revision + 1` を割り当て、新規付与は 1 とする。削除予約では更新番号を変えない。
 

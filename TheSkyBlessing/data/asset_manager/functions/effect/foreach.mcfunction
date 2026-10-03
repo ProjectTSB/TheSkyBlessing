@@ -12,7 +12,9 @@
 # 次に処理する Effect の ID/Revision を選び、OhMyDat の参照先を付与先へ戻す
 # Current は ID/Revision で初期化する。前の Effect の Phase や削除予約は引き継がない。
 # process.m は保存データとの照合、イベント実行、保存、終了判定を担当する。
-    data modify storage asset:effect Current set from storage asset:effect TickQueue[-1]
+    data modify storage asset:effect Current set value {}
+    data modify storage asset:effect Current.ID set from storage asset:effect TickQueue[-1].ID
+    data modify storage asset:effect Current.Revision set from storage asset:effect TickQueue[-1].Revision
     data remove storage asset:effect TickQueue[-1]
     function oh_my_dat:please
     function asset_manager:effect/process.m with storage asset:effect Current

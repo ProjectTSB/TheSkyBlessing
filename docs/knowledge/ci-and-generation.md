@@ -26,7 +26,7 @@ workflowは `pull_request_target` と標準の `GITHUB_TOKEN` を使い、PRの�
 
 通常処理のコメント・インデントの実例は [heal補正の追加](../../TheSkyBlessing/data/api/functions/modifier/core/heal/add.mcfunction) と [緩衝体力の取得](../../TheSkyBlessing/data/api/functions/entity/player/absorption/get.mcfunction) を参照する。
 
-Effect の内部補助関数は、呼出元を具体的な function ID で指定している。[finish.m](../../TheSkyBlessing/data/asset_manager/functions/effect/finish.m.mcfunction) は process.m だけ、snapshot や foreach は入口と自己再帰の呼出元を許可する。呼出経路が固定された補助関数へ `asset_manager:effect/**` を指定すると、許可範囲から責務の境界を読み取れなくなる。
+Effect の内部補助関数は、呼出元を具体的な function ID で指定している。[finish.m](../../TheSkyBlessing/data/asset_manager/functions/effect/finish.m.mcfunction) は process.m だけ、foreach は tick と自己再帰の呼出元を許可する。呼出経路が固定された補助関数へ `asset_manager:effect/**` を指定すると、許可範囲から責務の境界を読み取れなくなる。
 
 [before_api](../../TheSkyBlessing/data/asset_manager/functions/effect/context/before_api.mcfunction) は直接呼び出しに加え、get 系 API が `CB` に指定し、[with_idempotent.m](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/with_idempotent.m.mcfunction) が `function $(CB)` で呼び出す。関数 ID の直接参照だけでなく、callback の指定元と実行元も公開範囲に含めて照合する。Effect の内部タグ・一時スコアも使用する関数を列挙し、使用範囲が異なる宣言はブロックを分けている。
 

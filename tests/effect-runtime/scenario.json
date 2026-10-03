@@ -17,7 +17,7 @@
         {"condition": "unless data storage effect_test: Effects[0]"},
         {"condition": "unless data storage asset:effect Current"},
         {"condition": "unless data storage asset:effect TickQueue"},
-        {"condition": "unless data storage asset:effect SnapshotSource"}
+        {"condition": "if data storage lib: {ArrayLibSessionOpened:false}"}
       ]
     },
     {
@@ -33,7 +33,7 @@
         {"condition": "unless data storage effect_test: Effects[0]"},
         {"condition": "unless data storage asset:effect Current"},
         {"condition": "unless data storage asset:effect TickQueue"},
-        {"condition": "unless data storage asset:effect SnapshotSource"}
+        {"condition": "if data storage lib: {ArrayLibSessionOpened:false}"}
       ]
     },
     {
