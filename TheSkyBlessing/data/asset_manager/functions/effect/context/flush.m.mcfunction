@@ -2,8 +2,6 @@
 #
 # context の変更を同じ ID / Revision の Effect へ保存する。
 #
-# OhMyDat は付与先を指し、Current と context は同じ Effect を指すこと。
-#
 # @input args
 #   ID : int
 #   Revision : int
@@ -20,7 +18,6 @@
     execute if data storage asset:effect Current{RemoveRequested:true} run data modify storage asset:context Duration set value -1
 
 # context の変更を一括保存する
-# Field は set で置き換え、削除したキーを残さない。
     data modify storage asset:effect Current.Data.Duration set from storage asset:context Duration
     data modify storage asset:effect Current.Data.Stack set from storage asset:context Stack
     data modify storage asset:effect Current.Data.Field set from storage asset:context this

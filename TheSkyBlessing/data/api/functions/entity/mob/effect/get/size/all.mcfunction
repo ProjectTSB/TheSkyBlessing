@@ -2,9 +2,6 @@
 #
 # entityに付与されている全てのエフェクトの数を取得します。
 #
-# 転送先がある場合は、その付与先の保存データを参照する。
-# 同じ付与先のイベントで変更した context も取得値へ反映する。
-#
 # @output storage api: Return.EffectSize.All
 # @api
 

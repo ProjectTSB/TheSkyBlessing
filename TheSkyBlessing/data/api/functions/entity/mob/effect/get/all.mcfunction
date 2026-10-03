@@ -2,9 +2,6 @@
 #
 # Effect 一覧を取得する
 #
-# 転送先がある場合は、その付与先の保存データを参照する。
-# 同じ付与先のイベントで変更した context も取得値へ反映する。
-#
 # @input as player
 # @output storage api: Return.EffectList
 # @api

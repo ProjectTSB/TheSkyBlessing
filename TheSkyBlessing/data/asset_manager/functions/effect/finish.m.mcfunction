@@ -2,8 +2,6 @@
 #
 # Effect を削除し、remove / end の一方を実行する。
 #
-# @s と OhMyDat は付与先を指す。書き戻し後の Current を渡すこと。
-#
 # @input args
 #   ID : int
 #   Revision : int

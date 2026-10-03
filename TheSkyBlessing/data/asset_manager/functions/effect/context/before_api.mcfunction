@@ -2,8 +2,6 @@
 #
 # API の参照先を @s に合わせ、同じ付与先の実行中の context を保存する。
 #
-# api: Argument / Return は変更しない。
-#
 # @input as entity
 # @within function
 #   api:entity/mob/effect/give
@@ -18,7 +16,6 @@
 #   api:mob/apply_to_forward_target/with_idempotent.m
 
 # API の付与先を参照する
-# get の転送時は、ForwardTarget 解決後の @s で呼ばれる。
     function oh_my_dat:please
 
 # 同じ付与先の given / re-given / tick 中だけ書き戻す

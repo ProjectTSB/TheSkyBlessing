@@ -2,8 +2,6 @@
 #
 # TickQueue の予定を順に処理する。
 #
-# @s は付与先。TickQueue が空でない場合に呼ぶ。
-#
 # @within function
 #   asset_manager:effect/tick
 #   asset_manager:effect/foreach

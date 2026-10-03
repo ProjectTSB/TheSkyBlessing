@@ -2,8 +2,6 @@
 #
 # 処理対象の Effect を更新し、イベントを実行する。
 #
-# @s と OhMyDat は付与先を指し、Current は初期化済みであること。
-#
 # @input args
 #   ID : int
 #   Revision : int

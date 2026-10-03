@@ -2,8 +2,6 @@
 #
 # 付与中の Effect から表示メッセージを組み立てる。
 #
-# @s と OhMyDat は表示対象のプレイヤーを指すこと。array session 中の呼出しは想定しない。
-#
 # @input as entity
 # @within function asset_manager:effect/tick
 

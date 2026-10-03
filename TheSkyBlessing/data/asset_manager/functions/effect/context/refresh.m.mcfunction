@@ -2,8 +2,6 @@
 #
 # API の更新結果を Current と context へ反映する。
 #
-# OhMyDat は付与先を指し、Phase は callback であること。
-#
 # @input args
 #   ID : int
 # @within function asset_manager:effect/context/after_api

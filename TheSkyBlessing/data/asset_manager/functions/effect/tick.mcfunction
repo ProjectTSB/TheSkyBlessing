@@ -1,15 +1,11 @@
 #> asset_manager:effect/tick
 #
 # @s の Effect を処理し、表示を更新する。
-# 途中の新規付与・再付与のイベントは次回に呼ぶ。
-#
-# イベントからの再帰呼出しと、array session 中の呼出しは想定しない。
 #
 # @input as entity
 # @within function core:tick/
 
 # 元の付与順で末尾から取り出せるよう、処理予定を反転する
-# array session はイベントを呼ぶ前に閉じる。
     function oh_my_dat:please
     function lib:array/session/open
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects

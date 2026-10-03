@@ -6,7 +6,6 @@
 #
 # context への更新結果の反映は、同じ付与先の given / re-given / tick 中に限る。
 # Argument は呼出後も保持するため、使用後は effect/reset を呼ぶ。
-# 独立した Return 値・戻り値用スコアはない。
 #
 # @input
 #   as entity

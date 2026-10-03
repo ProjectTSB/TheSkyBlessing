@@ -2,8 +2,6 @@
 #
 # give / remove の結果を、同じ付与先の実行中の context へ反映する。
 #
-# @s は API の対象。api: Argument / Return は変更しない。
-#
 # @input as entity
 # @within function
 #   api:entity/mob/effect/give

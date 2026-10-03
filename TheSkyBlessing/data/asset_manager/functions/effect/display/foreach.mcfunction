@@ -2,8 +2,6 @@
 #
 # 表示対象の Effect のアイコンを追加する。
 #
-# @s は表示対象のプレイヤー。DisplayEffects が空でない場合に呼ぶ。
-#
 # @input as entity
 # @within function
 #   asset_manager:effect/display/

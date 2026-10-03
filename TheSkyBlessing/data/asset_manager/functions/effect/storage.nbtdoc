@@ -65,7 +65,7 @@ inject compound ::ohmydat::Mob {
 }
 
 compound EffectData {
-    /// 同じ ID の再付与で進める更新番号。新規付与は 1。途中の再付与の re-given は次回に呼ぶ
+    /// 同じ ID の再付与を識別する更新番号
     Revision: int,
     /// ID
     ID: int @ 1..65535,
