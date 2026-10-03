@@ -14,6 +14,8 @@ masterではProjectTSB/Assetを `Asset2` にcheckoutし、Node.js/ts-nodeで `.g
 
 PRの更新・Draft化・マージ先変更で対象外になった場合は、GitHub Actions botが有効にしたauto-mergeを解除する。人が有効にしたauto-mergeは保持する。差分確認中にhead・base等が変化した場合は処理を見送り、次のイベントで再判定する。既存PRや手動再試行にはworkflow_dispatchの `pull_request` 番号入力を使う。
 
+auto-mergeを手動解除しただけでは継続的な停止にならず、次のPR更新で条件を満たせば再び有効になる。作業中のPRを自動マージさせたくない場合はDraftにしておき、Ready for reviewへ戻すと再判定される。導入前から開いているPRは、更新イベントまたはworkflow_dispatchで判定を開始する。
+
 workflowは `pull_request_target` と標準の `GITHUB_TOKEN` を使い、PRのコードをcheckout・実行しない。Actionsのイベントポリシーでは `pull_request_target` を許可する必要がある。GITHUB_TOKENによるマージでは後続のpush workflowが通常起動しないため、自動対象を本体・生成スクリプトへ広げる場合は、マージ後の処理も再設計する。
 
 差分判定とCLI呼出しの回帰確認は `node --test .github/tests/auto-merge-docs-tests.test.cjs`。APIとCLIを置き換えたローカル検証であり、Rulesetや実際のGitHubマージ動作の検証とは区別する。
