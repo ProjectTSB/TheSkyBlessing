@@ -1,7 +1,6 @@
 #> effect_test:observe
 #
 # シナリオの assertion で確認する保存データとイベント件数を取得する。
-# 取得した値は effect_test: Effects / OtherEffects / LogCount に保存する。
 # @private
 
 # 主対象の保存データを取得する
@@ -11,7 +10,6 @@
     data modify storage effect_test: Effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
 
 # 別の付与先の保存データを取得する
-# API が主対象以外を変更した場合も、それぞれの保存データを分けて検証できるようにする。
     execute as @e[tag=EffectTest.Other,limit=1] run function oh_my_dat:please
     data modify storage effect_test: OtherEffects set value []
     data modify storage effect_test: OtherEffects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects

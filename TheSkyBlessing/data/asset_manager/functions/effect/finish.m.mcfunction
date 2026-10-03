@@ -10,7 +10,7 @@
 # 保存対象がなければ終了する
     execute unless data storage asset:effect Current.Data run return 0
 
-# 再付与イベント待ちなら、終了を次回へ回す
+# 再付与イベントを実行するまで終了を保留する
     execute if data storage asset:effect Current.Data.NextEvent run return 0
 
 # 削除予約を自然終了より優先する
@@ -20,7 +20,6 @@
     execute unless data storage asset:effect Current.EndEvent run return 0
 
 # 終了イベント内の同 ID への give を新規付与として扱うため、先に削除する
-# 終了する Effect の context は書き戻さない。
     data modify storage asset:effect Current.Phase set value "ending"
     $data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}]
 

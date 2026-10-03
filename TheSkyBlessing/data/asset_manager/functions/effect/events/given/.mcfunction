@@ -1,6 +1,6 @@
 #> asset_manager:effect/events/given/
 #
-# given イベントを現在の context.id に対して呼び出す。
+# given イベントを呼び出す。
 # 実装がなければ継承元のイベントを呼ぶ。
 #
 # @within function

@@ -1,6 +1,6 @@
 #> asset_manager:effect/events/tick/
 #
-# tick イベントを現在の context.id に対して呼び出す。
+# tick イベントを呼び出す。
 # 実装がなければ継承元のイベントを呼ぶ。
 #
 # @within function

@@ -1,11 +1,6 @@
 #> asset_manager:effect/give/make_effect_data
 #
-# asset:effect の情報からエンティティに追加するエフェクトのストレージデータを作成する。
-# 該当エフェクトが付与済みの場合 stack と duration について operation が
-# add の場合、既存の値に加算
-# replace の場合、Stack は既存値と新規値のうち大きい方に置換する。
-# Duration は新規 Stack が既存 Stack 以上なら大きい方、下回るなら既存値を維持する。
-# forceReplace の場合、新規値に上書きを行う
+# 付与・再付与する Effect の保存データを作成する。
 #
 # @output storage asset:effect EffectData
 # @within function asset_manager:effect/give/give
@@ -29,6 +24,7 @@
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
 # Operation に合わせて Duration と Stack を計算する
+# Duration の replace は、新規 Stack が既存 Stack を下回る場合に既存 Duration を維持する。
     execute if data storage asset:effect {DurationOperation:"replace"} if score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"replace"} unless score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary = $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
@@ -54,11 +50,11 @@
     data modify storage asset:effect EffectData.Field set from storage asset:effect Field
     data modify storage asset:effect EffectData.Field merge from storage asset:effect FieldOverride
     execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.PreviousField set from storage asset:effect TargetEffectData.Field
-# 新規付与は Revision=1、再付与は既存値+1
+# 再付与を識別する更新番号を設定する
     execute store result score $EffectRevision Temporary run data get storage asset:effect TargetEffectData.Revision
     scoreboard players add $EffectRevision Temporary 1
     execute store result storage asset:effect EffectData.Revision int 1 run scoreboard players get $EffectRevision Temporary
-# 次に呼び出す付与イベントを NextEvent に設定する
+# 付与イベントを予約する
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
     execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット

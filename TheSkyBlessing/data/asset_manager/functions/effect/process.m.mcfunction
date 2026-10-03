@@ -8,7 +8,7 @@
 # @within function asset_manager:effect/foreach
 
 # 処理対象を取得する
-# 途中で再付与された Effect は Revision が異なるため、次回に回す。
+# 再付与前の処理予定はスキップする。
     data remove storage asset:effect TargetEffect
     $data modify storage asset:effect TargetEffect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}]
     execute unless data storage asset:effect TargetEffect run return 0
