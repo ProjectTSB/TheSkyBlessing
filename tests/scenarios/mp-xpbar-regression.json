@@ -1,0 +1,167 @@
+{
+  "name": "mp-xpbar-regression",
+  "scope": {
+    "purpose": "Skip adjustment when both displayed MP level and bar match; repair either mismatch.",
+    "fixture": "Explicit first_join, frozen ticks, MP/MPMax and XP drift are fixtures. Direct private function calls are diagnostic boundaries. $NowMP sentinel observes adjust_xpbar cleanup; production functions are unchanged by the test.",
+    "notVerified": [
+      "Graphical rendering",
+      "Performance"
+    ]
+  },
+  "players": [
+    "VerifyMP"
+  ],
+  "steps": [
+    {
+      "name": "Explicit player initialization in frozen test world",
+      "commands": [
+        "gamerule doMobSpawning false",
+        "gamemode creative VerifyMP",
+        "execute as VerifyMP at @s run function core:handler/first_join",
+        "fill -3 79 -3 3 79 3 stone",
+        "tp VerifyMP 0.5 80 0.5",
+        "clear VerifyMP",
+        "scoreboard objectives add MPVerify dummy",
+        "scoreboard players set READY MPVerify 1"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for READY to 1"
+      ]
+    },
+    {
+      "name": "zero",
+      "commands": [
+        "scoreboard players set VerifyMP MP 0",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute if score $NowMP Temporary matches 314159 if score LEVEL MPVerify matches 0 if score BAR MPVerify matches 0..2 run scoreboard players set ZERO MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for ZERO to 1"
+      ]
+    },
+    {
+      "name": "positive",
+      "commands": [
+        "scoreboard players set VerifyMP MP 500",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute if score $NowMP Temporary matches 314159 if score LEVEL MPVerify matches 50 if score BAR MPVerify matches 495047..495051 run scoreboard players set POSITIVE MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for POSITIVE to 1"
+      ]
+    },
+    {
+      "name": "fractional",
+      "commands": [
+        "scoreboard players set VerifyMP MP 509",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute if score $NowMP Temporary matches 314159 if score LEVEL MPVerify matches 50 if score BAR MPVerify matches 495047..495051 run scoreboard players set FRACTIONAL MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for FRACTIONAL to 1"
+      ]
+    },
+    {
+      "name": "below_ten",
+      "commands": [
+        "scoreboard players set VerifyMP MP 9",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute if score $NowMP Temporary matches 314159 if score LEVEL MPVerify matches 0 if score BAR MPVerify matches 0..2 run scoreboard players set BELOW_TEN MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for BELOW_TEN to 1"
+      ]
+    },
+    {
+      "name": "full",
+      "commands": [
+        "scoreboard players set VerifyMP MP 1000",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute if score $NowMP Temporary matches 314159 if score LEVEL MPVerify matches 100 if score BAR MPVerify matches 990097..990101 run scoreboard players set FULL MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for FULL to 1"
+      ]
+    },
+    {
+      "name": "level_drift",
+      "commands": [
+        "scoreboard players set VerifyMP MP 509",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "xp set VerifyMP 123 levels",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute unless score $NowMP Temporary matches -2147483648..2147483647 if score LEVEL MPVerify matches 50 if score BAR MPVerify matches 495047..495051 run scoreboard players set LEVEL_DRIFT MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for LEVEL_DRIFT to 1"
+      ]
+    },
+    {
+      "name": "bar_drift",
+      "commands": [
+        "scoreboard players set VerifyMP MP 509",
+        "scoreboard players set VerifyMP MPMax 1000",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "xp set VerifyMP 0 points",
+        "scoreboard players set $NowMP Temporary 314159",
+        "execute as VerifyMP run function api:data_get/invalidate_cache",
+        "execute as VerifyMP at @s run function player_manager:mp/viewer/check_xpbar",
+        "execute store result score LEVEL MPVerify run xp query VerifyMP levels",
+        "execute store result score BAR MPVerify run data get entity VerifyMP XpP 1000000",
+        "execute unless score $NowMP Temporary matches -2147483648..2147483647 if score LEVEL MPVerify matches 50 if score BAR MPVerify matches 495047..495051 run scoreboard players set BAR_DRIFT MPVerify 1",
+        "scoreboard players reset $NowMP Temporary"
+      ],
+      "expect": [
+        "Set \\[MPVerify\\] for BAR_DRIFT to 1"
+      ]
+    }
+  ]
+}
