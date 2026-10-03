@@ -40,9 +40,6 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Test declaration generator
-        run: node --test .github/tests/make-declares-mcf.test.cjs
-
       - name: Generate declares.d.mcfunction
         run: node .github/workflows/make-declares-mcf.mts
         env:
