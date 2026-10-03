@@ -105,6 +105,26 @@ Effect の `this` も永続 `Effects[].Field` の作業窓という点は共通�
 
 再付与では旧 `Field` が `EffectData.PreviousField` に複製され、event 中だけ `asset:context PreviousField` として読める。event 後には一時キーが除去されるため、次回比較したい値（例: 前回 stack）は event 実装が `this` に記録する。`DurationOperation:"replace"` は単純な duration の最大値ではなく、現行コードでは新 stack が旧 stack 以上なら duration の大きい方、下回るなら旧 duration を維持する。
 
+### 付与要求とイベント配送
+
+giveは保存データを作り、`NextEvent` を予約する。givenをそのコマンド内で実行するわけではない。[make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同IDの既存データがあればre-givenを予約するため、最初のgivenの配送前に再付与すると、givenを通らずre-givenが最初に呼ばれる。利用側はgiven済みの初期化状態をre-givenの必須前提にしない。
+
+getで取得できることは補正等の発効済みを意味しない。保存先には付与待ちや削除予約も含まれる。foreachはgiven/re-givenの回に通常tickを重ねず、削除予約中にも通常tickを呼ばない。付与先をまたぐ操作の反映時点は各付与先の処理順にも依存する。呼出し時点、イベント実行、書き戻し、終了を一つの即時操作として扱わない。
+
+### 削除予約と自己終了の制約
+
+[remove/from_idの内部処理](../../TheSkyBlessing/data/api/functions/entity/mob/effect/core/remove/from_id.mcfunction) は、保存先から取得できたEffectの `Duration=-1` を設定し、保存先へ戻す削除予約である。API呼出しの直後にremoveイベントを実行するわけではない。
+
+この版のtickは処理対象の `Effects[]` をOhMyDatから取り出す。[try_pop_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/common/try_pop_effect_data.mcfunction) は保存先を検索するため、処理中のEffectを自己remove APIから取得できない。[#1673](https://github.com/ProjectTSB/TheSkyBlessing/issues/1673) に関係する制約であり、「Effectが付与されているなら、どのイベントからでも同じAPIで操作できる」と仮定しない。
+
+foreachは `TargetEffect` のDuration/Stackでremove/endを判定してから、contextの変更を書き戻し、終了した要素を破棄する。この順序のため、イベント中に `context.Duration=0` としても、変更後の値でendが呼ばれる保証はない。自己終了では、終了要求と補正等の後始末を区別する。本体の処理順を変更する際は、手動の後始末と終了イベントの両方が走るようにならないか、二重実行できない副作用がないかを利用側まで確認する。
+
+### 死亡時の削除・tick・残り時間
+
+死亡時の処理はEffectの付与先に対して行う。[giveの既定値](../../TheSkyBlessing/data/api/functions/entity/mob/effect/core/give.mcfunction) は `ProcessOnDied:"remove"`。tickはDeathタグまたはトーテム使用をDeathProcessへ集約し、foreachがremove指定のEffectへ削除予約を設定する。付与元の死亡から他の付与先へ削除を伝播する機能ではない。
+
+死亡処理中・リスポーン待ちの通常tickイベントはkeep指定だけが実行対象になる。一方、残り時間の減算は通常tickイベントの呼出しとは別であり、付与・再付与待ちと削除予約を除いて行う。keep以外だから時間も停止する、keepなら未接続中も時間が進む、と解釈しない。死亡時に消すか、イベントを動かすか、残り時間が減るかを分けて確認し、個別Assetから内部タグの条件を複製せず公開されたEffect定義を使う。
+
 Artifact には、この調査範囲で Mob / Object 型の extends、super、任意 `call.m` runtime は確認されていない。alias という名前だけで同じクラス実行系と判断しない。
 
 ## 実装時の確認
