@@ -9,7 +9,7 @@
     #declare tag NotInLava
 
 # エリアセット
-    scoreboard players set $NextInSubArea Temporary 02
+    scoreboard players set $NextInSubArea Temporary 03
 
 # 溶岩に触れていないか判定
 # スペクテイターだろうがダメージを食らうようにする
