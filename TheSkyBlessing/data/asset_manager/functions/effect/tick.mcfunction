@@ -4,6 +4,8 @@
 #
 # @within function core:tick/
 
+# thisタグ付与
+    tag @s add this
 # EntityStorage呼び出し
     function oh_my_dat:please
 # お約束
@@ -31,6 +33,7 @@
     execute if entity @s[type=player] if data storage asset:effect NextTickEffects[0] run function asset_manager:effect/display/construct_message/
 
 # リセット
+    tag @s remove this
     scoreboard players reset @s UsedMilk
     scoreboard players reset @s UsedTotem
     tag @s remove DeathProcess
