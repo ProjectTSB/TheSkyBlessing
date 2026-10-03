@@ -130,6 +130,8 @@ register と各イベントは function tag の全走査と ID 条件の wrapper
 
 [Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は保存先の `Effects[]` をコピーし、array lib の reverse で反転して `TickQueue` に保持する。array session はイベント前に閉じる。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) は予定を末尾から取り出すため、元の付与順で実行する。コピーから使うのは ID/Revision だけで、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が実行直前の保存データを読み直す。API が保存配列を並べ替えても処理予定の対象と順序は変わらず、新規付与を途中の予定へ追加しない。イベント中も API が参照できるよう、保存先の `Effects[]` は残す。
 
+末尾から取り出す方式は、処理予定の添字・件数・Iteratorの管理を省けるため採用している。順序を保つための反転には既存のarray libを使い、ID/Revisionだけの配列を作る専用ループを持たない。その代わりにFieldを含む全データをコピーするため、Fieldが大きい用途ではコピー量も評価する。[性能比較](../../tests/effect-runtime/results.md)は空のFieldで行っており、pop方式が常に速いことや、要素数が増えるほど有利になることを示す結果ではない。既存reverseへの置換後の性能も未測定である。
+
 [make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同じ ID の既存データの `Revision + 1` を割り当て、新規付与は 1 とする。削除予約では更新番号を変えない。
 
 Revision は ID と組み合わせて照合し、別 ID との一意性は要求しない。削除 API は予約だけを行い、実際の削除はその Effect の終了処理で行う。終了イベントで同 ID を新規付与して Revision が 1 に戻っても、古い処理予定は再実行しない。この前提は、同 ID のデータが一つで、イベントから Effect tick を再帰呼出ししない現行の契約に基づく。
@@ -148,9 +150,15 @@ Revision は ID と組み合わせて照合し、別 ID との一意性は要求
 
 取得した Effect 全体は `Current.Data` に保持する。[flush](../../TheSkyBlessing/data/asset_manager/functions/effect/context/flush.m.mcfunction) は context の Duration・Stack・Field をここへ反映し、Effect 全体を一度に書き戻す。属性ごとの配列検索を減らすための保持領域であり、公開 API からの更新を読み直すことが前提になる。保存データを変更する API を追加するときも、同じ付与先なら処理前の flush と処理後の refresh を通す。保存先に ID/Revision が一致する要素がなければ Current.Data を破棄し、書き戻しも終了イベントも行わない。
 
+TargetEffectは今回のイベントを決めるデータで、イベント開始後は更新しない。一方、Current.DataはAPI後に読み直す保存用データである。自己再付与ではCurrent.Revisionも変わるため、開始時に値が同じでもTargetEffectの値で常に代用できるわけではない。これらを統合する場合は、今回呼ぶイベントと次回の予約を区別する仕組みが別途必要になる。保存場所の統合だけで判断せず、そのために増える状態や処理も含めて簡潔になるかを比較する。
+
 given / re-given / tick から戻った後は、OhMyDat の参照先を現在の付与先へ戻し、context を書き戻す。削除予約は後続の Duration 変更で取り消さない。Field は全体を set するので、イベント内で削除した Field のキーが merge によって復活することも避ける。
 
-FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。今回呼ぶ given / re-given / tick は、削除予約と死亡時の条件を確認して `TargetEffect.NextEvent` に確定する。今回分の `NextEvent` と `PreviousField` はイベントを呼ぶ前に Current.Data から除く。保存先への反映は API 前またはイベント終了時の一括保存で行う。再付与後は refresh が新しい予約も読み直す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
+FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。
+
+今回呼ぶ given / re-given / tick は、削除予約と死亡時の条件を確認して `TargetEffect.NextEvent` に確定する。今回分の `NextEvent` と `PreviousField` はイベントを呼ぶ前に Current.Data から除く。通常tickもTargetEffect.NextEventへ一時的に設定して同じ呼出し分岐を使うが、Current.Dataから除くため保存先の予約には残らない。TargetEffectをイベント中に更新しない限り、今回のイベント名を別の領域へ重複して保持する必要はない。
+
+保存先への反映は API 前またはイベント終了時の一括保存で行う。再付与後は refresh が新しい予約も読み直す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
 
 `DurationOperation:"replace"` は、新 Stack が旧 Stack 以上なら Duration の大きい方、下回るなら旧 Duration を維持する既存の計算を使う。
 
