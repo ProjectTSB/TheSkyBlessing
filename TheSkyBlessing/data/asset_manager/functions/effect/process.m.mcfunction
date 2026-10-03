@@ -5,12 +5,12 @@
 # TargetEffect は処理開始時に読み取った Effect データで、今回呼び出すイベントの判定に使う。
 # イベントが編集する Duration・Stack・Field は asset:context に展開する。
 #
-# @s は現在の付与先で、OhMyDat もその保存先を参照する。Current は foreach が初期化・破棄する。
+# @s は現在の付与先で、OhMyDat もその保存先を参照する。Current は foreach.m が初期化・破棄する。
 #
 # @input args
 #   ID : int
 #   Revision : int
-# @within function asset_manager:effect/foreach
+# @within function asset_manager:effect/foreach.m
 
 # 処理予定の ID/Revision と一致する Effect データを取得する
 # 処理の途中で再付与された Effect を処理順によらず次回に回すため、ID と Revision を照合する。

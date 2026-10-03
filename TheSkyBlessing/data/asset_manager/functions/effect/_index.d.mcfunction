@@ -52,13 +52,13 @@
 # @within function
 #   asset_manager:effect/tick
 #   asset_manager:effect/snapshot.m
-#   asset_manager:effect/foreach
+#   asset_manager:effect/foreach.m
     #declare score_holder $EffectTickIndex
     #declare score_holder $EffectTickCount
 
 #> 牛乳による削除条件の判定
-# process.m が取得・判定し、foreach が Effect ごとに破棄する。
+# process.m が取得・判定し、foreach.m が Effect ごとに破棄する。
 # @within function
 #   asset_manager:effect/process.m
-#   asset_manager:effect/foreach
+#   asset_manager:effect/foreach.m
     #declare score_holder $RequireClearLv

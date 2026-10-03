@@ -22,7 +22,7 @@
     $data modify storage asset:effect TickQueue[-1].Revision set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[$(Index)].Revision
 
 # 開始時に数えた要素数まで進める
-# Iterator と走査スコアは呼出元の tick が初期化し、foreach の前に先頭へ戻す。
+# Iterator と走査スコアは呼出元の tick が初期化し、foreach.m の前に先頭へ戻す。
     scoreboard players add $EffectTickIndex Temporary 1
     execute store result storage asset:effect Iterator.Index int 1 run scoreboard players get $EffectTickIndex Temporary
     execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/snapshot.m with storage asset:effect Iterator

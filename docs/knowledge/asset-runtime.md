@@ -92,7 +92,7 @@ Wiki の [Object 作成手順](https://github.com/ProjectTSB/TheSkyBlessing/wiki
 
 ## Effect の保存データとイベント処理
 
-この節の書き戻し・自己削除・処理順は、`tick` が `snapshot.m` → `foreach/process.m` → `finish.m` を使う実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
+この節の書き戻し・自己削除・処理順は、`tick` が `snapshot.m` → `foreach.m/process.m` → `finish.m` を使う実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
 
 Effect はエンティティに付与する効果であり、Mob / Object のエンティティそのものとは区別する。ID、register、Field、継承を持つが、任意名の method を呼ぶ仕組みはなく、`given` / `re-given` / `tick` / `remove` / `end` の決まったイベントを呼び出す。
 
@@ -128,7 +128,7 @@ register と各イベントは function tag の全走査と ID 条件の wrapper
 
 ### 保存データと処理予定
 
-[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.m.mcfunction) で `{ID, Revision}` の処理予定を保存順に作る。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) は処理予定を順に進め、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が一致する Effect データを取得する。配列の添字は API の抜き取り・append で変わるため、Effect の識別には使わない。`NextTickEffects` への退避・復元は行わない。
+[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.m.mcfunction) で `{ID, Revision}` の処理予定を保存順に作る。[foreach.m](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.m.mcfunction) は処理予定を順に進め、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が一致する Effect データを取得する。配列の添字は API の抜き取り・append で変わるため、Effect の識別には使わない。`NextTickEffects` への退避・復元は行わない。
 
 [make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は付与先の `EffectRevision` を進め、新規付与・再付与する Effect の `Revision` へ割り当てる。削除予約では更新番号を変えない。旧データの未設定 Revision は snapshot 時に 0 として補完する。
 

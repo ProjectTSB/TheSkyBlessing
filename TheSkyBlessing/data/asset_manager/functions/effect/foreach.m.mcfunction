@@ -1,4 +1,4 @@
-#> asset_manager:effect/foreach
+#> asset_manager:effect/foreach.m
 #
 # TickQueue の一件を処理し、context を破棄して次の予定へ進む。
 # API が Effects 配列を並べ替えても、処理予定の内容と順序は変えない。
@@ -9,7 +9,7 @@
 #   Index : int
 # @within function
 #   asset_manager:effect/tick
-#   asset_manager:effect/foreach
+#   asset_manager:effect/foreach.m
 
 # 次に処理する Effect の ID/Revision を選び、OhMyDat の参照先を付与先へ戻す
 # Current は ID/Revision で初期化する。前の Effect の Phase や削除予約は引き継がない。
@@ -34,4 +34,4 @@
 # この添字は TickQueue の位置を表す。API が変更する Effects 配列の位置ではない。
     scoreboard players add $EffectTickIndex Temporary 1
     execute store result storage asset:effect Iterator.Index int 1 run scoreboard players get $EffectTickIndex Temporary
-    execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/foreach with storage asset:effect Iterator
+    execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/foreach.m with storage asset:effect Iterator

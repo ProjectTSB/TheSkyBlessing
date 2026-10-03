@@ -2,11 +2,11 @@
 #
 # @s に付与された Effect を、開始時の予定順に処理する。
 # Effect を持つ付与先の OhMyDat に Effects を残し、イベント中の API からも参照できるようにする。
-# snapshot → foreach/process → 表示の順に処理する。途中の新規付与・再付与のイベントは次回に呼ぶ。
+# snapshot → foreach.m/process → 表示の順に処理する。途中の新規付与・再付与のイベントは次回に呼ぶ。
 #
 # 走査用の一時データは storage asset:effect に置く。
 # TickQueue は今回の処理予定として {ID, Revision} を保持し、Iterator.Index はその走査位置を表す。
-# Current と TargetEffect は foreach が Effect ごとに作成・破棄する。
+# Current と TargetEffect は foreach.m が Effect ごとに作成・破棄する。
 #
 # core:tick/ が付与先を as / at に設定して呼ぶ。走査用 storage・score は共有する。
 # イベント内からこの関数を再帰的に呼び出すことは想定しない。
@@ -37,7 +37,7 @@
     tag @s add this
     scoreboard players set $EffectTickIndex Temporary 0
     data modify storage asset:effect Iterator.Index set value 0
-    execute if score $EffectTickCount Temporary matches 1.. run function asset_manager:effect/foreach with storage asset:effect Iterator
+    execute if score $EffectTickCount Temporary matches 1.. run function asset_manager:effect/foreach.m with storage asset:effect Iterator
     tag @s remove Effect.CurrentOwner
     tag @s remove this
 
@@ -48,7 +48,7 @@
     execute if entity @s[type=player] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0] run function asset_manager:effect/display/
 
 # 付与先単位の入力と走査用の一時値を片付ける
-# Effect ごとの context は foreach 側で破棄済み。次の付与先へ状態を持ち越さない。
+# Effect ごとの context は foreach.m 側で破棄済み。次の付与先へ状態を持ち越さない。
     scoreboard players reset @s UsedMilk
     scoreboard players reset @s UsedTotem
     tag @s remove DeathProcess
