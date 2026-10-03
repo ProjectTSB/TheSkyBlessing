@@ -1,11 +1,7 @@
 #> api:entity/mob/effect/give
 #
 # 付与先に Effect を付与・再付与する。
-# 処理中に付与・再付与した Effect の given / re-given は、次の Effect tick で実行する。
-# 終了イベント中に同じ ID を付与した場合は、新規付与として given を予約する。
-#
-# context への更新結果の反映は、同じ付与先の given / re-given / tick 中に限る。
-# Argument は呼出後も保持するため、使用後は effect/reset を呼ぶ。
+# 使用後は effect/reset を呼ぶ。
 #
 # @input
 #   as entity

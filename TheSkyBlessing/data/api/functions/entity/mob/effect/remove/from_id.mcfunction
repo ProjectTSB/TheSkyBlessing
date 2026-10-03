@@ -1,12 +1,7 @@
 #> api:entity/mob/effect/remove/from_id
 #
-# 付与先の指定 ID の Effect に削除予約を設定する。
-# 実行中のイベントは中断しない。
-# 自分自身の remove はイベントから戻った後に呼ぶ。未処理の Effect はその処理時、処理済みの Effect は次の Effect tick に呼ぶ。
-# 付与・再付与イベント待ちの場合は、そのイベントを実行してから remove を呼ぶ。
-#
-# context への更新結果の反映は、同じ付与先の given / re-given / tick 中に限る。
-# Argument は呼出後も保持するため、使用後は effect/reset を呼ぶ。
+# 付与先の指定 ID の Effect を削除する。
+# 使用後は effect/reset を呼ぶ。
 #
 # @input
 #   as entity
