@@ -4,6 +4,7 @@ The fixture replaces Effect dispatch tags only in a detached, disposable copy.
 Neither the normal pack selection nor the source checkout is modified.
 """
 import argparse
+import json
 import os
 from pathlib import Path
 import runpy
@@ -54,7 +55,12 @@ def main():
         f'ACCEPT_EULA={accepted}', f'JAVA_BIN={java}',
     ]) + '\n')
     print(f'Effect fixture copy: {stage}', flush=True)
-    command = ['sh', str(devspace / 'scripts/verify.sh'), str(stage / 'tests/effect-runtime' / args.scenario)]
+    # JSON の期待条件と条件表を共通 runner の形式へ展開し、入力として保存する。
+    expand = runpy.run_path(str(stage / 'tests/effect-runtime/scenarios.py'))['expand']
+    scenario = stage / 'tests/effect-runtime' / args.scenario
+    expanded = stage / 'tests/effect-runtime/expanded.json'
+    expanded.write_text(json.dumps(expand(json.loads(scenario.read_text())), indent=2) + '\n')
+    command = ['sh', str(devspace / 'scripts/verify.sh'), str(expanded)]
     # 再試行は以前の失敗記録へ関連付ける。コピーと実行記録は削除せず保持する。
     if args.retry_of:
         command += ['--retry-of', str(args.retry_of.resolve())]

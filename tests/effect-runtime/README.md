@@ -22,7 +22,11 @@ python3 tests/effect-runtime/run.py --retry-of /path/to/previous/result.json
 
 “Owner” in the fixtures means the entity bearing the Effect (付与先), not the source that applied it. The implementation terminology and storage mapping are documented in [asset-runtime.md](../../docs/knowledge/asset-runtime.md#用語と保存場所).
 
-`scenario.json` prepares armor stands and calls the real give/get/remove APIs and Effect manager. A prepared cow checks the normal core tick selector; armor stands are intentionally outside `#lib:living`. A protocol player checks stored display messages. These are explicit fixtures, not tests of normal login, physical milk consumption, actual death/combat, or rendered client UI.
+`scenario.json` defines commands and explicit `checks`. Each check contains an `execute` condition without `run`; optional `probe` copies a path from `effect_test:` into `Probe` before evaluation. `scenarios.py` expands these into FAIL/PASS reporting and runner expectations. Expected values stay in the JSON; they are not inferred from the production code.
+
+`benchmark.json` stores the owner/Effect counts, iterations and expected remaining durations. The same module expands the repeated profiling steps. `run.py` writes the expanded scenario to `tests/effect-runtime/expanded.json` **only in the disposable copy**, then passes it to the common runner. The runner archives that complete input alongside its results. Run these compact sources through `run.py`, rather than passing them directly to `verify.sh`.
+
+The functional scenario prepares armor stands and calls the real give/get/remove APIs and Effect manager. A prepared cow checks the normal core tick selector; armor stands are intentionally outside `#lib:living`. A protocol player checks stored display messages. These are explicit fixtures, not tests of normal login, physical milk consumption, actual death/combat, or rendered client UI.
 
 The assertions cover:
 

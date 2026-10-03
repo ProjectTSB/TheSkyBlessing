@@ -76,3 +76,9 @@ Issue #1673 の本文・コメント、HEAD `bf9467016` からの未コミット
 | `run-9hxebsna` | 36 / 36 step 成功 | 先行試行を retry-of に指定し、シナリオ・実装・設定を変えず再実行。stopで正常終了（exit 0）、全dimension保存、参照repoのコード不変を確認。 |
 
 変更されたJSON 9ファイルの構文、本体の変更関数からの固定function参照40箇所、`git diff --check HEAD` も成功。コメント訂正後の全本体mcfunctionについて、成功した隔離コピーとの実行コマンド列・順序の一致を確認した。server logに関数読込エラーはなかった。GitHub CI / datapack-linter、通常ログイン、実ダメージ、画面描画は今回も検証対象外。branch・indexは維持し、commit / pushは行っていない。
+
+## シナリオの重複整理（2026-10-03）
+
+機能シナリオは入力と期待条件を明記し、PASS/FAILの報告コマンドを共通化した。性能シナリオは8条件と各3回の期待Durationを表にし、同じ実行手順を展開する。展開結果を整理前のcommit `c133f218d` と比較し、機能36 step・110判定、性能129 stepのコマンド・順序・期待値・待機tick数を含むJSON全体の一致を確認した。
+
+整理後の `python3 tests/effect-runtime/run.py` は `run-lfcgqm2m` で36 / 36 step成功。stopで正常終了（exit 0）、全dimension保存、参照repoのコード不変を確認した。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用し、展開済みJSONと実行記録を保存した。性能測定は再実行していない。
