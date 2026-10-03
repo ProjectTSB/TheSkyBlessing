@@ -93,7 +93,7 @@ Minecraft 1.20.4 の `effect give` は効果時間を秒単位で指定するた
 
 [add_flag](../../TheSkyBlessing/data/mob_manager/functions/init/add_flag.mcfunction) の MobUUID は 1〜32767 を循環する値で、Minecraft の UUID や永久に一意な ID ではない。検索用 tag は FindFlag0〜15 を使う。独自に長期間の関連付けを増やす場合、値が再利用されることを前提に寿命と解除を決める。
 
-攻撃元の特定では、[被弾advancement](../../TheSkyBlessing/data/mob_manager/advancements/entity_finder/check_entity_hurt_player.json) の `damage.source_entity.nbt` が、攻撃元のFindFlagをbitごとのcriterionとして記録する。requirementsは各bitの0/1をORでまとめ、全bitと攻撃種別・防御判定の各グループをANDで結ぶ。[filters](../../TheSkyBlessing/data/mob_manager/functions/entity_finder/entity_hurt_player/filters/15.mcfunction) は被弾者に記録されたcriterionと候補Mobのtagを1bitずつ照合し、合う候補だけ次へ進める。reward関数の実行者は被弾したプレイヤーであり、攻撃元を `@s` として受け取るわけではない。MobUUIDの値域、bitからtagへの変換、criteria・requirements、照合関数を一組として変更する。現行のtype-otherには [被弾triggerの誤記 #2290](https://github.com/ProjectTSB/TheSkyBlessing/issues/2290) がある。bit照合の構造とイベント種別の正しさは別に確認し、JSON全体を動作保証済みのテンプレートと扱わない。
+攻撃元の特定では、[被弾advancement](../../TheSkyBlessing/data/mob_manager/advancements/entity_finder/check_entity_hurt_player.json) の `damage.source_entity.nbt` が、攻撃元のFindFlagをbitごとのcriterionとして記録する。requirementsは各bitの0/1をORでまとめ、全bitと攻撃種別・防御判定の各グループをANDで結ぶ。[filters](../../TheSkyBlessing/data/mob_manager/functions/entity_finder/entity_hurt_player/filters/15.mcfunction) は被弾者に記録されたcriterionと候補Mobのtagを1bitずつ照合し、合う候補だけ次へ進める。reward関数の実行者は被弾したプレイヤーであり、攻撃元を `@s` として受け取るわけではない。MobUUIDの値域、bitからtagへの変換、criteria・requirements、照合関数を一組として変更する。攻撃種別の4分類はすべて被弾側の `entity_hurt_player` で記録する。`type-other` も攻撃側イベントと混ぜず、被弾1回で他のrequirementsと併せて成立できるようにする。
 
 ExtendedCollision は物理的な追加当たり判定で、ForwardTargetMobUUID が論理本体を指す。API は [forward target の判定](../../TheSkyBlessing/data/api/predicates/mob/has_forward_target.json) と callback 転送を使うが、適用対象と重複抑制は入口によって異なる。
 
