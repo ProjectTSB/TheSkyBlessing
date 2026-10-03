@@ -24,3 +24,9 @@
 #   asset_manager:effect/foreach
     #declare tag DeathProcess
     #declare tag HasAssetEffect
+
+#> thisタグ
+# @within function
+#   asset_manager:effect/tick
+#   asset:effect/**
+    #declare tag this

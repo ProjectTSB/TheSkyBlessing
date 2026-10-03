@@ -111,6 +111,8 @@ giveは保存データを作り、`NextEvent` を予約する。givenをその�
 
 getで取得できることは補正等の発効済みを意味しない。保存先には付与待ちや削除予約も含まれる。foreachはgiven/re-givenの回に通常tickを重ねず、削除予約中にも通常tickを呼ばない。付与先をまたぐ操作の反映時点は各付与先の処理順にも依存する。呼出し時点、イベント実行、書き戻し、終了を一つの即時操作として扱わない。
 
+全イベントは [Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) から付与先を `as` / `at` として配送され、その間だけ付与先に `this` タグが付く。`execute as` で他のentityへ移った後に付与先を `@e[tag=this]` 等で参照できる。付与元ではなく付与先を指す。Effect tickはプレイヤー・Mob・Objectの各tickが `this` を外した後に1体ずつ走るため、別の入口の `this` と同時には付かない。Effectのイベントから同期的に `this` を付け外しする処理を本体に追加すると、この前提が崩れる。
+
 ### 削除予約と自己終了の制約
 
 [remove/from_idの内部処理](../../TheSkyBlessing/data/api/functions/entity/mob/effect/core/remove/from_id.mcfunction) は、保存先から取得できたEffectの `Duration=-1` を設定し、保存先へ戻す削除予約である。API呼出しの直後にremoveイベントを実行するわけではない。
