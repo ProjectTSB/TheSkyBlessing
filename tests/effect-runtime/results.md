@@ -113,3 +113,11 @@ Effect manager、API、検証fixture、runnerのコメントを読み直し、�
 10 Effect では約15〜16%、20 Effect では約22〜28%短縮した。1 Effect の条件では一律の改善は見られない。検索回数の削減率を実行時間の削減率とは扱わない。空のイベント本体、NBT コピー、pointer 取得、macro、プロファイラ、runner の待機を含む測定であり、ゲームのMSPTや本番負荷の許容性を示す値ではない。探索量は引き続き O(N²)。全サンプルは [measurements.json](measurements.json) の `cacheComparison` に保存した。
 
 3回の実行とも、TheSkyBlessing は隔離コピー、依存先は DevSpace 直下の Asset / Asset-AnimatedJava を参照した。stop で正常終了（exit 0）、全dimension保存、参照コードの不変、関数読込エラーなしを確認した。入力・patch・hash・ログは各runの実行記録に残した。コメントと説明文には yomiyasu の lint を実施した。
+
+## Effectごとの更新番号への変更（2026-10-03）
+
+付与先の採番用データを削除し、同じIDの既存EffectのRevisionに1を足す方式へ変更した。新規付与は1、旧データの未設定値は0として扱う。既存シナリオの期待値に、自己再付与・未処理の別Effectへの再付与でRevisionが2になることと、終了イベントからの新規付与で1に戻ることを追加した。
+
+`python3 tests/effect-runtime/run.py --baseline` を実行し、`run-9kire_29` で38 / 38 step・118判定に成功した。本体はcommit `044e5c453` の隔離コピーを使用し、未コミットのループ変更案は含めていない。入力には既存36 stepに加え、ローカルの検討用シナリオからEffects未設定・空配列の2 stepを含む。採番変更によるシナリオの追加はなく、既存3条件を更新した。
+
+依存先はDevSpace直下のAsset / Asset-AnimatedJava。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。性能測定は行っていない。Revisionの照合範囲と、終了後の新規付与で番号を戻せる条件は `docs/knowledge/asset-runtime.md` に記録した。
