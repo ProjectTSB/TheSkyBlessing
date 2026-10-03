@@ -5,7 +5,8 @@
 # @input as entity
 # @within function core:tick/
 
-# 元の付与順で末尾から取り出せるよう、処理予定を反転する
+# Effects を逆順にコピーして TickQueue に格納する
+# 末尾から取り出したときに、元の付与順で処理するため。
     function oh_my_dat:please
     function lib:array/session/open
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects

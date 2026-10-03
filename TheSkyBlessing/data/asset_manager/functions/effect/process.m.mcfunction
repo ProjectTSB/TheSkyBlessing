@@ -35,10 +35,11 @@
     data modify storage asset:context PreviousField set from storage asset:effect TargetEffect.PreviousField
     data modify storage asset:effect Current.Phase set value "callback"
 
-# イベント中の Duration 変更で取り消されないよう、削除予約を保持する
+# 削除予約を Current.RemoveRequested に記録する
+# イベント中の Duration 変更では予約を取り消さない。
     execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
 
-# 書き戻すデータから今回の付与イベントを除く
+# 保存用のデータを Current.Data にコピーし、今回の NextEvent と PreviousField を除く
     data modify storage asset:effect Current.Data set from storage asset:effect TargetEffect
     data remove storage asset:effect Current.Data.NextEvent
     data remove storage asset:effect Current.Data.PreviousField

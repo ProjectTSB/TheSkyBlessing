@@ -6,7 +6,8 @@
 #   ID : int
 # @within function asset_manager:effect/context/after_api
 
-# 再付与後のデータも取得するため、Revision は照合しない
+# 同じ ID の Effect を Current.Data に取得する
+# 再付与後のデータも取得するため、Revision は照合しない。
     data remove storage asset:effect Current.Data
     $data modify storage asset:effect Current.Data set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID)}]
     execute unless data storage asset:effect Current.Data run return 0
