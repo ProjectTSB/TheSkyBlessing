@@ -369,7 +369,7 @@
             }
         },
         "type-other": {
-            "trigger": "player_hurt_entity",
+            "trigger": "entity_hurt_player",
             "conditions": {
                 "damage": {
                     "type": {

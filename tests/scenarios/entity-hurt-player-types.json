@@ -1,0 +1,131 @@
+{
+  "name": "entity-hurt-player-types",
+  "scope": {
+    "purpose": "Incoming other/melee/projectile/explosion damage completes all requirements, invokes reward and revokes criteria; outgoing other damage does not grant type-other.",
+    "fixture": "Explicit first_join; marker damage source has all 16 FindFlag zero bits. The marker intentionally does not enter living-Mob damage routing. Damage command creates real advancement events. Outgoing attacker carries AttackedByApi to exclude unrelated attack routing. Advance 100 ticks after login before the first hit; 20 ticks between later hits.",
+    "notVerified": [
+      "Mob damage calculation",
+      "Natural Mob attacks",
+      "Graphical effects"
+    ]
+  },
+  "players": [
+    "VerifyHurt"
+  ],
+  "steps": [
+    {
+      "name": "Explicit player initialization in frozen test world",
+      "commands": [
+        "gamerule doMobSpawning false",
+        "gamemode creative VerifyHurt",
+        "execute as VerifyHurt at @s run function core:handler/first_join",
+        "fill -3 79 -3 3 79 3 stone",
+        "tp VerifyHurt 0.5 80 0.5",
+        "clear VerifyHurt",
+        "scoreboard objectives add HurtVerify dummy",
+        "scoreboard players set READY HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for READY to 1"
+      ]
+    },
+    {
+      "name": "Source fixture supplies all FindFlag bits without a living Mob",
+      "commands": [
+        "summon marker 1 80 1 {Tags:[\"HurtSource\",\"FindFlag0.0\",\"FindFlag1.0\",\"FindFlag2.0\",\"FindFlag3.0\",\"FindFlag4.0\",\"FindFlag5.0\",\"FindFlag6.0\",\"FindFlag7.0\",\"FindFlag8.0\",\"FindFlag9.0\",\"FindFlag10.0\",\"FindFlag11.0\",\"FindFlag12.0\",\"FindFlag13.0\",\"FindFlag14.0\",\"FindFlag15.0\"]}",
+        "gamemode survival VerifyHurt",
+        "scoreboard players set SOURCE_READY HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for SOURCE_READY to 1"
+      ]
+    },
+    {
+      "name": "Advance 100 ticks after login before first damage",
+      "ticks": 100
+    },
+    {
+      "name": "other completes reward from fresh criteria",
+      "commands": [
+        "data get entity VerifyHurt abilities.invulnerable",
+        "data get entity VerifyHurt Health",
+        "advancement revoke VerifyHurt only mob_manager:entity_finder/check_entity_hurt_player",
+        "scoreboard players set VerifyHurt InBattleTick 0",
+        "damage VerifyHurt 1 magic by @e[type=marker,tag=HurtSource,limit=1]",
+        "execute if score VerifyHurt InBattleTick matches 160 unless entity @a[name=VerifyHurt,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-other=true}}] run scoreboard players set OTHER HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for OTHER to 1"
+      ]
+    },
+    {
+      "name": "Advance hurt immunity before melee",
+      "ticks": 20
+    },
+    {
+      "name": "melee completes reward from fresh criteria",
+      "commands": [
+        "data get entity VerifyHurt abilities.invulnerable",
+        "data get entity VerifyHurt Health",
+        "advancement revoke VerifyHurt only mob_manager:entity_finder/check_entity_hurt_player",
+        "scoreboard players set VerifyHurt InBattleTick 0",
+        "damage VerifyHurt 1 mob_attack by @e[type=marker,tag=HurtSource,limit=1]",
+        "execute if score VerifyHurt InBattleTick matches 160 unless entity @a[name=VerifyHurt,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-melee=true}}] run scoreboard players set MELEE HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for MELEE to 1"
+      ]
+    },
+    {
+      "name": "Advance hurt immunity before projectile",
+      "ticks": 20
+    },
+    {
+      "name": "projectile completes reward from fresh criteria",
+      "commands": [
+        "data get entity VerifyHurt abilities.invulnerable",
+        "data get entity VerifyHurt Health",
+        "advancement revoke VerifyHurt only mob_manager:entity_finder/check_entity_hurt_player",
+        "scoreboard players set VerifyHurt InBattleTick 0",
+        "damage VerifyHurt 1 arrow by @e[type=marker,tag=HurtSource,limit=1]",
+        "execute if score VerifyHurt InBattleTick matches 160 unless entity @a[name=VerifyHurt,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-projectile=true}}] run scoreboard players set PROJECTILE HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for PROJECTILE to 1"
+      ]
+    },
+    {
+      "name": "Advance hurt immunity before explosion",
+      "ticks": 20
+    },
+    {
+      "name": "explosion completes reward from fresh criteria",
+      "commands": [
+        "data get entity VerifyHurt abilities.invulnerable",
+        "data get entity VerifyHurt Health",
+        "advancement revoke VerifyHurt only mob_manager:entity_finder/check_entity_hurt_player",
+        "scoreboard players set VerifyHurt InBattleTick 0",
+        "damage VerifyHurt 1 explosion by @e[type=marker,tag=HurtSource,limit=1]",
+        "execute if score VerifyHurt InBattleTick matches 160 unless entity @a[name=VerifyHurt,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-explosion=true}}] run scoreboard players set EXPLOSION HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for EXPLOSION to 1"
+      ]
+    },
+    {
+      "name": "Outgoing other damage does not grant the incoming criterion",
+      "commands": [
+        "advancement revoke VerifyHurt only mob_manager:entity_finder/check_entity_hurt_player",
+        "scoreboard players set VerifyHurt InBattleTick 0",
+        "summon cow 2 80 2 {NoAI:1b,Tags:[\"HurtTarget\"]}",
+        "tag VerifyHurt add AttackedByApi",
+        "damage @e[type=cow,tag=HurtTarget,limit=1] 1 magic by VerifyHurt",
+        "tag VerifyHurt remove AttackedByApi",
+        "execute if score VerifyHurt InBattleTick matches 0 unless entity @a[name=VerifyHurt,advancements={mob_manager:entity_finder/check_entity_hurt_player={type-other=true}}] run scoreboard players set OUTGOING HurtVerify 1"
+      ],
+      "expect": [
+        "Set \\[HurtVerify\\] for OUTGOING to 1"
+      ]
+    }
+  ]
+}
