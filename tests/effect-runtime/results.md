@@ -160,3 +160,11 @@ Revision未設定の保存データを補完する契約を廃止した。snapsh
 この検証の完了時点では、開始時のstage済み差分を維持し、編集分はstage・commit・pushしていない。
 
 コミット前に、実行した関数とシナリオが検証コピーに一致することを確認した。検証コピーにはstage済みの削除をrunnerが反映できず、旧名の `foreach.m.mcfunction` が残っていた。新しい呼出経路からは参照されておらず、本体全体にも旧名への参照がないことを確認した。
+
+## 既存のreverseへの置換とコメント整理（2026-10-03・検証時は未コミット）
+
+snapshot関数を削除し、Effectsのコピーをarray libで反転してTickQueueへ保存する形にした。foreachは末尾のID/Revisionを取り出し、実行直前の保存データをprocess.mで読む。array sessionはイベント前に閉じる。空入力の2ケースは、不要になったSnapshotSourceの破棄確認をsessionの終了確認へ置き換えた。
+
+`python3 tests/effect-runtime/run.py` は `run-65jf9okm` で37 / 37 step・118判定に成功した。基準commitは `3d33f0463`。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用した。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。コピー内からsnapshot関数が削除され、本体の関数とシナリオが作業中の差分に一致することも確認した。
+
+IMP Docは振る舞いと呼出時の前提を中心にし、本文では通常の代入や後片付けの説明を短くした。tick・foreachと削除したsnapshot以外の関数は、実行コマンドと公開範囲に変更がない。固定function参照、関連文書の参照、文章のlint、`git diff --check` を確認した。Fieldを含む配列の反転・保持でコピー量が増えるため、速度改善とは扱わない。今回は性能を測定していない。

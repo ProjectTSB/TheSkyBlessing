@@ -9,7 +9,7 @@
 # @output storage api: Return.EffectList
 # @api
 
-# ForwardTarget から実際の付与先を特定し、その付与先の Effect を処理中なら context の変更を保存データへ反映する
+# 転送先の context を同期する
     function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:effect/context/before_api",IsForwardedOnly:true}
 
 # エフェクトを取得

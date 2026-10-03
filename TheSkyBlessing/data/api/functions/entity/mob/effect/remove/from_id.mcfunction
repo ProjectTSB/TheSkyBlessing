@@ -23,11 +23,11 @@
 # 引数を確認する
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
 
-# API が最新の Duration / Stack / Field を扱えるよう、現在の context を保存する
+# context を保存する
     function asset_manager:effect/context/before_api
 
 # 保存データへ削除予約を設定する
     function api:entity/mob/effect/core/remove/from_id
 
-# API で更新した値をイベントの続きで使うため、実行中の Effect の context を読み直す
+# 更新後の context を読み直す
     function asset_manager:effect/context/after_api

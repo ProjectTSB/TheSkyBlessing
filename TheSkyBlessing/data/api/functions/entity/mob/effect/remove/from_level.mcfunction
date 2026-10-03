@@ -28,11 +28,11 @@
     execute unless data storage api: Argument.ClearType run data modify storage api: Argument.ClearType set value "all"
     execute unless data storage api: Argument.ClearCount run data modify storage api: Argument.ClearCount set value 2147483647
 
-# API が最新の Duration / Stack / Field を扱えるよう、現在の context を保存する
+# context を保存する
     function asset_manager:effect/context/before_api
 
 # 保存データへ削除予約を設定する
     function api:entity/mob/effect/core/remove/from_level/
 
-# API で更新した値をイベントの続きで使うため、実行中の Effect の context を読み直す
+# 更新後の context を読み直す
     function asset_manager:effect/context/after_api

@@ -29,8 +29,6 @@
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
 # Operation に合わせて Duration と Stack を計算する
-# Duration の replace は新規 Stack が既存 Stack 未満なら既存の時間を維持する。
-# forceReplace は取得した新規値をそのまま使うため、この段階で追加操作しない。
     execute if data storage asset:effect {DurationOperation:"replace"} if score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"replace"} unless score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary = $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
@@ -56,15 +54,11 @@
     data modify storage asset:effect EffectData.Field set from storage asset:effect Field
     data modify storage asset:effect EffectData.Field merge from storage asset:effect FieldOverride
     execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.PreviousField set from storage asset:effect TargetEffectData.Field
-# 新規付与・再付与の更新番号を割り当てる
-# 同じ ID の既存データの Revision に 1 を足す。新規付与では既存データがないため 1 になる。
-# tick 開始時の予定と照合し、処理中に再付与された Effect の re-given を次回に回す。
-# 削除予約の設定や配列の並べ替えでは、この更新番号を進めない。
+# 新規付与は Revision=1、再付与は既存値+1
     execute store result score $EffectRevision Temporary run data get storage asset:effect TargetEffectData.Revision
     scoreboard players add $EffectRevision Temporary 1
     execute store result storage asset:effect EffectData.Revision int 1 run scoreboard players get $EffectRevision Temporary
 # 次に呼び出す付与イベントを NextEvent に設定する
-# process.m は今回消費する NextEvent を除いてから API 前に保存するため、再付与で新しく設定した値は残る。
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
     execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット

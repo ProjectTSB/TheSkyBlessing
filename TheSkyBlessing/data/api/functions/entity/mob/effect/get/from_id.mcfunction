@@ -15,8 +15,8 @@
 # 引数を確認する
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ID","color":"red"}]
 
-# context を書き戻した保存データから指定 ID の Effect を取得する
+# 指定 ID の Effect を取得する
     execute if data storage api: Argument.ID run function api:entity/mob/effect/core/get/from_id.m with storage api: Argument
 
-# 取得結果は Return に残し、この API の入力だけを片付ける
+# 引数をリセット
     data remove storage api: Argument.ID

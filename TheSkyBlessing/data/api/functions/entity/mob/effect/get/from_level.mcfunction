@@ -19,10 +19,10 @@
     execute unless data storage api: Argument.FilterMode run data modify storage api: Argument.FilterMode set value "Equal"
     # execute unless data storage api: Argument.IsBadEffect
 
-# context を書き戻した保存データから条件に合う Effect を取得する
+# 条件に合う Effect を取得する
     function api:entity/mob/effect/core/get/from_level/
 
-# 取得結果は Return に残し、この API の入力だけを片付ける
+# 引数をリセット
     data remove storage api: Argument.ClearLv
     data remove storage api: Argument.FilterMode
     data remove storage api: Argument.IsBadEffect
