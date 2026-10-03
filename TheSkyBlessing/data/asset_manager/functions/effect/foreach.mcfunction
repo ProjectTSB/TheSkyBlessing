@@ -1,9 +1,9 @@
 #> asset_manager:effect/foreach
 #
 # TickQueue の一件を処理し、context を破棄して次の予定へ進む。
-# 処理予定の内容・順序は固定し、Effects 配列が API で並べ替わっても影響を受けない。
+# API が Effects 配列を並べ替えても、処理予定の内容と順序は変えない。
 #
-# @s は現在の付与先。TickQueue と走査スコアの寿命は tick の一回分。
+# @s は現在の付与先。TickQueue と走査スコアは一回の tick の間だけ保持する。
 #
 # @input args
 #   Index : int
@@ -19,7 +19,7 @@
     function asset_manager:effect/process.m with storage asset:effect Current
 
 # Effect ごとの作業状態を破棄する
-# process.m が対象なしで戻った場合もここを通り、次の Effect へ context を持ち越さない。
+# process.m が対象なしで戻った場合も作業状態を破棄し、次の Effect へ context を持ち越さない。
     data remove storage asset:effect Current
     data remove storage asset:effect TargetEffect
     data remove storage asset:context id
@@ -31,7 +31,7 @@
     scoreboard players reset $RequireClearLv Temporary
 
 # 固定した予定の次の添字へ進む
-# この添字は TickQueue の位置であり、変更され得る Effects 配列の位置ではない。
+# この添字は TickQueue の位置を表す。API が変更する Effects 配列の位置ではない。
     scoreboard players add $EffectTickIndex Temporary 1
     execute store result storage asset:effect Iterator.Index int 1 run scoreboard players get $EffectTickIndex Temporary
     execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/foreach with storage asset:effect Iterator

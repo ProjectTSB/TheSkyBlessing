@@ -62,7 +62,7 @@ compound GlobalEffectData {
 inject compound ::ohmydat::Mob {
     /// 現在付与されているエフェクトのデータ
     Effects: [EffectData],
-    /// 付与先ごとに新規付与・再付与で進める連番。各 Effect の Revision に割り当てる
+    /// 付与先ごとに新規付与・再付与のたびに進める連番。各 Effect の Revision に割り当てる
     EffectRevision?: int
 }
 

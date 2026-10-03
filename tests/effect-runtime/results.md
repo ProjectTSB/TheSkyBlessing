@@ -82,3 +82,7 @@ Issue #1673 の本文・コメント、HEAD `bf9467016` からの未コミット
 機能シナリオは入力と期待条件を明記し、PASS/FAILの報告コマンドを共通化した。性能シナリオは8条件と各3回の期待Durationを表にし、同じ実行手順を展開する。展開結果を整理前のcommit `c133f218d` と比較し、機能36 step・110判定、性能129 stepのコマンド・順序・期待値・待機tick数を含むJSON全体の一致を確認した。
 
 整理後の `python3 tests/effect-runtime/run.py` は `run-lfcgqm2m` で36 / 36 step成功。stopで正常終了（exit 0）、全dimension保存、参照repoのコード不変を確認した。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用し、展開済みJSONと実行記録を保存した。性能測定は再実行していない。
+
+## コメントの文章校正
+
+Effect manager、API、検証fixture、runnerのコメントを読み直し、操作対象や保存先が曖昧な説明を具体化した。yomiyasuのlintと文章の差分確認を実施した。commit `616321800` と比較し、実行コマンドの内容と順序、Pythonの構文木、NBT定義、IMP Docの公開範囲・宣言・インデントが変わっていないことを確認した。`git diff --check`も成功。コメントだけの変更のため、実サーバー検証は再実行していない。

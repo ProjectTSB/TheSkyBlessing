@@ -23,9 +23,9 @@
 
 # OhMyDat の参照先を API が実際に扱う付与先へ合わせる
 # getter は ForwardTarget を解決した先の @s でこの入口を呼ぶ。
-# 実行中の Effect がない場合も、API 本体が保存先を扱えるように取得する。
+# 実行中の Effect がない場合も、API 本体が保存先を扱えるように OhMyDat の参照先を取得する。
     function oh_my_dat:please
 
 # 同じ付与先の given / re-given / tick 中だけ context を書き戻す
-# 別の付与先への操作に現在の Field を混ぜない。remove / end 中の context も書き戻さない。
+# 別の付与先へ現在の Field を書き戻さない。remove / end 中の context も書き戻さない。
     execute if entity @s[tag=Effect.CurrentOwner] if data storage asset:effect Current{Phase:"callback"} run function asset_manager:effect/context/flush.m with storage asset:effect Current

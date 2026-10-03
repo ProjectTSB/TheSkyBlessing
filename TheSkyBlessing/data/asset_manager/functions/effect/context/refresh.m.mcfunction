@@ -10,14 +10,14 @@
 # @within function asset_manager:effect/context/after_api
 
 # 同じ ID の最新の Effect データを取得する
-# 再付与による更新番号の変更を取り込むため、ここでは古い Revision で絞らない。
-# TargetEffect は実行中のイベント選択に使うので、読み取り用に SyncedEffect を使う。
+# 再付与で更新されたデータを読み込むため、ここでは古い Revision を検索条件に含めない。
+# TargetEffect は実行中のイベントの判定に使うため、読み直したデータは SyncedEffect に保存する。
     data remove storage asset:effect SyncedEffect
     $data modify storage asset:effect SyncedEffect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID)}]
     execute unless data storage asset:effect SyncedEffect run return 0
 
 # API 操作後の更新番号と残り時間を読み込む
-# API による削除予約は記憶し、後続の書き戻しで取り消されないようにする。
+# API による削除予約を記録し、後の書き戻しで取り消されないようにする。
     data modify storage asset:effect Current.Revision set from storage asset:effect SyncedEffect.Revision
     execute if data storage asset:effect SyncedEffect{Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
     data modify storage asset:context Duration set from storage asset:effect SyncedEffect.Duration

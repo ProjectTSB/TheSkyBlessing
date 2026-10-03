@@ -9,8 +9,8 @@
 # @within function asset_manager:effect/tick
 
 # 表示用に Effects 配列を複製し、末尾から取り出せる順序にする
-# 表示側の走査で保存データを変更しない。配列を反転してから末尾を取ることで保存順を保つ。
-# 呼出時に他の array session が開いていないことを前提に、表示用の配列作業をここで開始・終了する。
+# 保存データは変更せず、コピーした配列を反転して末尾から取り出すことで保存順を保つ。
+# 呼出時には他の array session が開いていないこと。この関数内で表示用の array session を開き、閉じる。
     data remove storage asset:effect Display
     function lib:array/session/open
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects

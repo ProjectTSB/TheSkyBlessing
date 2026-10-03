@@ -1,7 +1,7 @@
 #> effect_test:benchmark/init_owner
 #
 # 測定用付与先の保存データをテンプレートで初期化する。
-# give の費用を測定に混ぜず、tick に入る時点の状態を揃える。
+# give の処理時間を測定に含めず、tick に入る時点の状態を揃える。
 # @private
 
 # @s の保存先へ Effects を複製し、初期化待ちの印を外す

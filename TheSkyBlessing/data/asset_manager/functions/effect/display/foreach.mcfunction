@@ -15,6 +15,6 @@
     execute if data storage asset:effect TargetEffect{Visible:1b} run function asset_manager:effect/display/icon/
 
 # 表示済みの要素をコピーから削除して次へ進む
-# DisplayEffects は反転済みなので、末尾から取るとEffects 配列の順序になる。
+# DisplayEffects は反転済みなので、末尾から取り出すと元の Effects 配列と同じ順序になる。
     data remove storage asset:effect DisplayEffects[-1]
     execute if data storage asset:effect DisplayEffects[0] run function asset_manager:effect/display/foreach

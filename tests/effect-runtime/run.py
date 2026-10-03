@@ -55,7 +55,7 @@ def main():
         f'ACCEPT_EULA={accepted}', f'JAVA_BIN={java}',
     ]) + '\n')
     print(f'Effect fixture copy: {stage}', flush=True)
-    # JSON の期待条件と条件表を共通 runner の形式へ展開し、入力として保存する。
+    # JSON の期待条件とベンチマークの条件一覧を共通 runner の形式へ展開し、入力として保存する。
     expand = runpy.run_path(str(stage / 'tests/effect-runtime/scenarios.py'))['expand']
     scenario = stage / 'tests/effect-runtime' / args.scenario
     expanded = stage / 'tests/effect-runtime/expanded.json'

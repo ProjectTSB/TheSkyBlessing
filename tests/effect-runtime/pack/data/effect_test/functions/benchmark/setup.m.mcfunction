@@ -1,6 +1,6 @@
 #> effect_test:benchmark/setup.m
 #
-# 性能測定用の付与先数と、一つの付与先あたりの Effect 数を準備する。
+# 性能測定用に指定数の付与先を作り、それぞれに指定数の Effect を設定する。
 # Owners / Effects は benchmark.json の条件から渡す。
 # @private
 

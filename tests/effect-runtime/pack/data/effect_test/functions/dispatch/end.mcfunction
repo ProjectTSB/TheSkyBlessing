@@ -3,7 +3,7 @@
 # end の入力を操作前に記録し、Field で指定された試験操作を実行する。
 # @private
 
-# 性能測定ではイベント本体の仕事を省き、管理処理を比較する
+# 性能測定ではイベント本体の処理を省き、管理処理を比較する
     execute if data storage effect_test: {Benchmark:true} run return run data modify storage asset:effect Implement set value true
 
 # 子 64995 では未実装として戻り、親 64994 への継承 dispatch を検証する

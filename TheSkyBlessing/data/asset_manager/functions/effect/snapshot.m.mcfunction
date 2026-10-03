@@ -1,7 +1,7 @@
 #> asset_manager:effect/snapshot.m
 #
 # 保存順に {ID, Revision} を TickQueue へ追加する。
-# 予定には Field 等の状態を複製せず、実行直前に process.m が保存データから読み直す。
+# 処理予定には Field 等の状態をコピーしない。process.m が実行直前に保存データから読み直す。
 #
 # 呼出元で OhMyDat の参照先を付与先へ合わせ、空の TickQueue と走査スコアを用意する。
 #
@@ -12,11 +12,11 @@
 #   asset_manager:effect/snapshot.m
 
 # 旧データの Revision を補完する
-# 未設定を 0 とし、give が割り当てる更新番号と同じ形式で照合できるようにする。
+# 未設定の場合は 0 を補い、give が割り当てる更新番号と同じ形式で照合できるようにする。
     $execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[$(Index)].Revision run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[$(Index)].Revision set value 0
 
 # 現在の添字から対象の ID と更新番号を記録する
-# 添字を使うのは配列を変更するイベントが始まる前だけ。対象の識別には保存しない。
+# 添字を使うのは、配列を変更するイベントが始まる前だけ。対象の識別には使わないため、処理予定には保存しない。
     data modify storage asset:effect TickQueue append value {}
     $data modify storage asset:effect TickQueue[-1].ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[$(Index)].ID
     $data modify storage asset:effect TickQueue[-1].Revision set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[$(Index)].Revision

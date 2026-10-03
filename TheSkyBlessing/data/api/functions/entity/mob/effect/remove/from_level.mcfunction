@@ -1,8 +1,8 @@
 #> api:entity/mob/effect/remove/from_level
 #
-# 付与先の Effect のうち、解除条件と件数に合うものへ削除予約を設定する。
+# 付与先の Effect に、解除条件と件数の指定に従って削除予約を設定する。
 # 実行中のイベントは中断せず、Duration=-1 として削除を予約する。
-# 自分自身はイベント復帰後、未処理の Effect はその処理時、処理済みの Effect は次の Effect tick に remove を呼ぶ。
+# 自分自身の remove はイベントから戻った後に呼ぶ。未処理の Effect はその処理時、処理済みの Effect は次の Effect tick に呼ぶ。
 # 付与・再付与イベント待ちの場合は、そのイベントを実行してから remove を呼ぶ。
 # ClearCount は一覧全体に適用し、0 以下なら削除しない。
 #
@@ -34,5 +34,5 @@
 # 保存データへ削除予約を設定する
     function api:entity/mob/effect/core/remove/from_level/
 
-# イベントの続きが API 更新後の値を使えるよう、実行中の Effect の context を読み直す
+# API で更新した値をイベントの続きで使うため、実行中の Effect の context を読み直す
     function asset_manager:effect/context/after_api

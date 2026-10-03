@@ -1,6 +1,6 @@
 #> asset_manager:effect/finish.m
 #
-# 保存済みの Duration / Stack で終了イベントを決め、Effects 配列から対象を削除して呼び出す。
+# 保存済みの Duration / Stack で終了イベントを決め、Effects 配列から対象を削除してから呼び出す。
 # 終了イベント内で同 ID を新規付与した場合、その保存データは削除・上書きしない。
 #
 # @s は現在の付与先で、OhMyDat もその保存先を参照する。process.m の書き戻し後に Current を渡す。
@@ -17,10 +17,10 @@
     execute unless data storage asset:effect TargetEffect run return 0
 
 # 再付与イベントが予約されていれば終了を次回へ回す
-# イベント中の give → remove では、次回 re-given の差分処理を済ませてから remove する。
+# イベント中に give → remove の順で呼んだ場合は、次回の re-given で差分処理を済ませてから remove を呼ぶ。
     execute if data storage asset:effect TargetEffect.NextEvent run return 0
 
-# 削除を自然終了より優先し、終了イベントを一つに決める
+# 削除予約を自然終了より優先し、終了イベントを一つに決める
 # Duration=-1 と Stack=0 が重なっても remove / end を二重に呼ばない。
     execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.EndEvent set value "remove"
     execute unless data storage asset:effect Current.EndEvent if data storage asset:effect TargetEffect{Duration:0} run data modify storage asset:effect Current.EndEvent set value "end"

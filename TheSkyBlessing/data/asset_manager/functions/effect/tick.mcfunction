@@ -1,11 +1,11 @@
 #> asset_manager:effect/tick
 #
 # @s に付与された Effect を、開始時の予定順に処理する。
-# 付与先（Effect を持つエンティティ）の OhMyDat に Effects を残し、イベント中の API も参照できるようにする。
-# 処理は snapshot → foreach/process → 表示の順。途中の新規付与・再付与は次回に回す。
+# Effect を持つ付与先の OhMyDat に Effects を残し、イベント中の API からも参照できるようにする。
+# snapshot → foreach/process → 表示の順に処理する。途中の新規付与・再付与のイベントは次回に呼ぶ。
 #
 # 走査用の一時データは storage asset:effect に置く。
-# TickQueue は {ID, Revision} を保存した今回の処理予定、Iterator.Index はその走査位置。
+# TickQueue は今回の処理予定として {ID, Revision} を保持し、Iterator.Index はその走査位置を表す。
 # Current と TargetEffect は foreach が Effect ごとに作成・破棄する。
 #
 # core:tick/ が付与先を as / at に設定して呼ぶ。走査用 storage・score は共有する。
@@ -25,13 +25,13 @@
     execute if score $EffectTickCount Temporary matches 1.. run function asset_manager:effect/snapshot.m with storage asset:effect Iterator
 
 # 今回の死亡処理を確定する
-# トーテム使用も死亡時の Effect 処理に含める。付与中の全 Effect を処理した後に解除する。
+# トーテム使用も死亡時の Effect 処理に含める。全 Effect の処理後に DeathProcess タグを外す。
     execute if entity @s[tag=Death] run tag @s add DeathProcess
     execute if score @s UsedTotem matches 1.. run tag @s add DeathProcess
 
 # 処理予定の先頭から実行する
 # Effect.CurrentOwner は API の実行対象が現在の付与先かを判断するためのタグ。
-# 同じ付与先への API 操作だけが、イベント実行中の作業データ（asset:context）を書き戻し・読み直す。
+# 同じ付与先への API 操作だけが、イベントの作業データである asset:context を書き戻し・読み直す。
 # this はイベント内で他の entity へ移った後に付与先を参照するためのタグ。
     tag @s add Effect.CurrentOwner
     tag @s add this

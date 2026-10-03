@@ -1,6 +1,6 @@
 #> effect_test:benchmark/batch.m
 #
-# 全付与先の Effect manager を Iterations 回実行し、完了した反復数を返す。
+# 全付与先の Effect manager を Iterations 回実行し、完了した反復数を保存する。
 # 総 owner-tick 数は付与先数 × Iterations。結果は effect_test: Completed に保持する。
 # @private
 

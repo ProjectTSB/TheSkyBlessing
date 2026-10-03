@@ -17,13 +17,13 @@
     $execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}] run return 0
 
 # 一度設定された削除予約を保持する
-# 保存データ・context のいずれかが Duration=-1 なら Current に記憶する。
+# 保存データ・context のいずれかが Duration=-1 なら、削除予約を Current に記録する。
 # 後続の context.Duration の書き換えより削除予約を優先する。
     $execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision),Duration:-1}] run data modify storage asset:effect Current.RemoveRequested set value true
     execute if data storage asset:context {Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
     execute if data storage asset:effect Current{RemoveRequested:true} run data modify storage asset:context Duration set value -1
 
-# イベントが編集する三つの値だけを保存する
+# イベントが編集する Duration・Stack・Field だけを保存する
 # Field は丸ごと set する。merge では context で削除したキーが保存データに残ってしまう。
 # NextEvent / PreviousField / Revision は give と process.m で管理する。
     $data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}].Duration set from storage asset:context Duration
