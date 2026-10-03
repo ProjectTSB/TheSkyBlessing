@@ -47,18 +47,9 @@
 #   asset_manager:effect/context/after_api
     #declare tag Effect.CurrentOwner
 
-#> Effect 走査用スコア
-# 一つの付与先の snapshot と処理予定の走査に使い、tick の末尾で破棄する。
-# @within function
-#   asset_manager:effect/tick
-#   asset_manager:effect/snapshot.m
-#   asset_manager:effect/foreach.m
-    #declare score_holder $EffectTickIndex
-    #declare score_holder $EffectTickCount
-
 #> 牛乳による削除条件の判定
-# process.m が取得・判定し、foreach.m が Effect ごとに破棄する。
+# process.m が取得・判定し、foreach が Effect ごとに破棄する。
 # @within function
 #   asset_manager:effect/process.m
-#   asset_manager:effect/foreach.m
+#   asset_manager:effect/foreach
     #declare score_holder $RequireClearLv

@@ -66,8 +66,7 @@ inject compound ::ohmydat::Mob {
 
 compound EffectData {
     /// 同じ ID の再付与で進める更新番号。新規付与は 1。途中の再付与の re-given は次回に呼ぶ
-    /// 旧データの未設定値は snapshot 時に 0 として補完する
-    Revision?: int,
+    Revision: int,
     /// ID
     ID: int @ 1..65535,
     /// 残り時間 (0: end, -1: remove)

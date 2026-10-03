@@ -1,20 +1,19 @@
-#> asset_manager:effect/foreach.m
+#> asset_manager:effect/foreach
 #
 # TickQueue の一件を処理し、context を破棄して次の予定へ進む。
 # API が Effects 配列を並べ替えても、処理予定の内容と順序は変えない。
 #
-# @s は現在の付与先。TickQueue と走査スコアは一回の tick の間だけ保持する。
+# @s は現在の付与先。TickQueue は逆順に作成済みで、空でない場合だけ呼ぶ。
 #
-# @input args
-#   Index : int
 # @within function
 #   asset_manager:effect/tick
-#   asset_manager:effect/foreach.m
+#   asset_manager:effect/foreach
 
 # 次に処理する Effect の ID/Revision を選び、OhMyDat の参照先を付与先へ戻す
 # Current は ID/Revision で初期化する。前の Effect の Phase や削除予約は引き継がない。
 # process.m は保存データとの照合、イベント実行、保存、終了判定を担当する。
-    $data modify storage asset:effect Current set from storage asset:effect TickQueue[$(Index)]
+    data modify storage asset:effect Current set from storage asset:effect TickQueue[-1]
+    data remove storage asset:effect TickQueue[-1]
     function oh_my_dat:please
     function asset_manager:effect/process.m with storage asset:effect Current
 
@@ -30,8 +29,5 @@
     data remove storage asset:context PreviousField
     scoreboard players reset $RequireClearLv Temporary
 
-# 固定した予定の次の添字へ進む
-# この添字は TickQueue の位置を表す。API が変更する Effects 配列の位置ではない。
-    scoreboard players add $EffectTickIndex Temporary 1
-    execute store result storage asset:effect Iterator.Index int 1 run scoreboard players get $EffectTickIndex Temporary
-    execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/foreach.m with storage asset:effect Iterator
+# 処理予定が残っていれば、次の末尾を取り出す
+    execute if data storage asset:effect TickQueue[0] run function asset_manager:effect/foreach

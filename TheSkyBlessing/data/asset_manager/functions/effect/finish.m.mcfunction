@@ -32,6 +32,6 @@
     $data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}]
 
 # 確定した終了イベントを一度だけ実行する
-# 終了する Effect の context はイベントに渡すが、復帰後は保存せず foreach.m が片付ける。
+# 終了する Effect の context はイベントに渡すが、復帰後は保存せず foreach が片付ける。
     execute if data storage asset:effect Current{EndEvent:"remove"} run function asset_manager:effect/events/remove/
     execute if data storage asset:effect Current{EndEvent:"end"} run function asset_manager:effect/events/end/

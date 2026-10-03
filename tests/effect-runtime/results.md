@@ -121,3 +121,42 @@ Effect manager、API、検証fixture、runnerのコメントを読み直し、�
 `python3 tests/effect-runtime/run.py --baseline` を実行し、`run-9kire_29` で38 / 38 step・118判定に成功した。本体はcommit `044e5c453` の隔離コピーを使用し、未コミットのループ変更案は含めていない。入力には既存36 stepに加え、ローカルの検討用シナリオからEffects未設定・空配列の2 stepを含む。採番変更によるシナリオの追加はなく、既存3条件を更新した。
 
 依存先はDevSpace直下のAsset / Asset-AnimatedJava。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。性能測定は行っていない。Revisionの照合範囲と、終了後の新規付与で番号を戻せる条件は `docs/knowledge/asset-runtime.md` に記録した。
+
+## 反転した処理予定を末尾から取り出す案（2026-10-03・検証時は未コミット）
+
+Effects全体をSnapshotSourceへコピーし、末尾からID/RevisionだけをTickQueueへ移して逆順にする。foreachは予定の末尾を取り出してから処理するため、元の付与順を保つ。SnapshotSourceはイベント前に破棄し、保存先のEffectsは残す。添字・件数スコアとIteratorを削除し、macro引数が不要になったforeachは通常の関数名へ戻した。
+
+`python3 tests/effect-runtime/run.py` は `run-4snp83zr` で38 / 38 step・120判定に成功した。未設定・空のEffects、削除・再付与、終了時の新規付与、旧Revisionの補完を含む。先行する空入力の2ケースには、反転用コピーの破棄も期待条件として追加した。比較元はcommit `8b6664420`。変更前の未コミット案はローカルに退避し、HEADとindexは変更していない。
+
+TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用した。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。固定function参照48箇所と `git diff --check` も確認した。性能測定は行っておらず、全Effectのコピーによる時間・メモリへの影響は未評価。文書とコメントにはyomiyasuのlintを実施した。検証時点では、実装・関連ナレッジ・検証結果を比較用の未コミット差分として保持した。
+
+## 添字方式とpop方式の性能比較（2026-10-03・検証時は未コミット）
+
+添字方式はHEAD `8b6664420` を `python3 tests/effect-runtime/run.py --scenario benchmark.json --baseline` で実行した `run-lvc_x6ye`、pop方式は作業中の差分を同じコマンドの `--baseline` なしで実行した `run-mpseiglc`。両方とも129 / 129 step成功し、入力シナリオのSHA-256も一致した。各条件1000 owner-tick、ウォームアップ後3回の中央値を比較した。単位は秒。
+
+| 付与先数 | Effect数 / 付与先 | 添字方式 | pop方式 | pop / 添字 |
+| --- | --- | --- | --- | --- |
+| 1 | 1 | 0.74 | 0.89 | 1.20× |
+| 1 | 5 | 1.11 | 1.13 | 1.02× |
+| 1 | 10 | 1.97 | 2.01 | 1.02× |
+| 1 | 20 | 3.57 | 3.32 | 0.93× |
+| 20 | 1 | 0.68 | 0.70 | 1.03× |
+| 20 | 5 | 1.00 | 1.04 | 1.04× |
+| 20 | 10 | 1.95 | 2.07 | 1.06× |
+| 20 | 20 | 3.45 | 3.39 | 0.98× |
+
+この測定では、pop方式は20 Effectで約2〜7%短く、1〜10 Effectでは約2〜20%長かった。各回のばらつきがあり、今回の測定だけで一律の速度優位や同等性を断定しない。全サンプルを [measurements.json](measurements.json) の `loopComparison` に保存した。
+
+Fieldは空で、イベント本体も省いた条件である。大きなFieldをコピーする負担は評価していない。プロファイラ・runner待機・背景のcore tickも含み、ゲームのMSPTを示す値ではない。コードの読みやすさでは、pop方式は添字・件数・Iteratorの管理を省ける一方、イベント前に全Effectをコピーする。速度改善を前提にせず、この違いを採用判断に使う。
+
+TheSkyBlessingは各回の隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用した。両方ともstopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。計測した未コミット差分は、各runの実行記録に保存した。
+
+## Revision未設定への後方互換の削除（2026-10-03・検証時は未コミット）
+
+Revision未設定の保存データを補完する契約を廃止した。snapshotでのID検索・Revision書込みと処理予定の既定値0を削除し、引数が不要になった関数を `snapshot.mcfunction` へ変更した。型定義のRevisionを必須とし、旧データ補完用のシナリオを削除した。新規付与はRevision=1、再付与は既存Revision+1とする処理を維持している。契約と呼出経路のナレッジも現行コードへ合わせた。
+
+`python3 tests/effect-runtime/run.py` は `run-a1j8dbwu` で37 / 37 step・118判定に成功した。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用し、stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。固定function参照48箇所、文章のlint、`git diff --check HEAD` も確認した。性能測定は再実行しておらず、前節の測定は互換処理を含む変更前の実装に対する結果である。
+
+この検証の完了時点では、開始時のstage済み差分を維持し、編集分はstage・commit・pushしていない。
+
+コミット前に、実行した関数とシナリオが検証コピーに一致することを確認した。検証コピーにはstage済みの削除をrunnerが反映できず、旧名の `foreach.m.mcfunction` が残っていた。新しい呼出経路からは参照されておらず、本体全体にも旧名への参照がないことを確認した。

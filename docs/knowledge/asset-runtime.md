@@ -92,7 +92,7 @@ Wiki の [Object 作成手順](https://github.com/ProjectTSB/TheSkyBlessing/wiki
 
 ## Effect の保存データとイベント処理
 
-この節の書き戻し・自己削除・処理順は、`tick` が `snapshot.m` → `foreach.m/process.m` → `finish.m` を使う実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
+この節の書き戻し・自己削除・処理順は、`tick` が `snapshot` → `foreach/process.m` → `finish.m` を使う実装に対応する。旧 `foreach` が `Effects[]` を取り出して `NextTickEffects` へ戻す実装とは契約が異なる。別ブランチや依存repoから参照するときは、利用する本体の入口を確認する。基準commitと作業コピーの変更の区別は [出典](sources.md#effect-の処理中の削除再付与) を参照する。
 
 Effect はエンティティに付与する効果であり、Mob / Object のエンティティそのものとは区別する。ID、register、Field、継承を持つが、任意名の method を呼ぶ仕組みはなく、`given` / `re-given` / `tick` / `remove` / `end` の決まったイベントを呼び出す。
 
@@ -124,13 +124,13 @@ getで取得できることは補正等の発効済みを意味しない。保�
 
 register と各イベントは function tag の全走査と ID 条件の wrapper で呼び出す。継承は単一の親を辿る。give 時に `Extends` 列を ROM の `child -> parent` へ分解保存する。[親 ID の登録](../../TheSkyBlessing/data/api/functions/entity/mob/effect/core/put_id_to_map.mcfunction) を参照する。
 
-同じ付与先に同じ ID の Effect データが複数ある状態は想定しない。旧データの Revision 未設定には対応するが、不正な重複データを修復する処理は含まない。
+同じ付与先に同じ ID の Effect データが複数ある状態は想定しない。各データは Revision を持つことを前提とし、未設定値の補完や不正な重複データの修復は行わない。
 
 ### 保存データと処理予定
 
-[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.m.mcfunction) で `{ID, Revision}` の処理予定を保存順に作る。[foreach.m](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.m.mcfunction) は処理予定を順に進め、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が一致する Effect データを取得する。配列の添字は API の抜き取り・append で変わるため、Effect の識別には使わない。`NextTickEffects` への退避・復元は行わない。
+[Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、全体を `SnapshotSource` へコピーする。[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.mcfunction) はコピーの末尾から `{ID, Revision}` を取り出し、逆順の `TickQueue` を作る。Field 等は処理予定に残さず、コピーはイベント前に破棄する。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) は予定を末尾から取り出すため、元の付与順で実行する。[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が保存先から一致するデータを読み直す。API が保存配列を並べ替えても処理予定の対象と順序は変わらず、新規付与を途中の予定へ追加しない。`NextTickEffects` への退避・復元は行わない。
 
-[make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同じ ID の既存データの `Revision + 1` を割り当て、新規付与は 1 とする。未設定の Revision は 0 として扱い、snapshot 時にも 0 を補完する。削除予約では更新番号を変えない。
+[make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同じ ID の既存データの `Revision + 1` を割り当て、新規付与は 1 とする。削除予約では更新番号を変えない。
 
 Revision は ID と組み合わせて照合し、別 ID との一意性は要求しない。削除 API は予約だけを行い、実際の削除はその Effect の終了処理で行う。終了イベントで同 ID を新規付与して Revision が 1 に戻っても、古い処理予定は再実行しない。この前提は、同 ID のデータが一つで、イベントから Effect tick を再帰呼出ししない現行の契約に基づく。
 

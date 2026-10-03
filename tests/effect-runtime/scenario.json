@@ -1,10 +1,41 @@
 {
   "name": "effect-runtime-1673",
-  "scope": "Isolated fixture pack on a copied checkout; manually prepared armor stands, a cow for core tick, and a protocol player. Actual give/remove/get, Effect callbacks, one normal core tick, stored actionbar message. Not normal login, real combat or rendered UI. Tests include re-give/remove order, clear filters/count, owner isolation, inheritance, legacy revision and milk/death.",
+  "scope": "Isolated fixture pack on a copied checkout; manually prepared armor stands, a cow for core tick, and a protocol player. Actual give/remove/get, Effect callbacks, one normal core tick, stored actionbar message. Not normal login, real combat or rendered UI. Tests include re-give/remove order, clear filters/count, owner isolation, inheritance and milk/death.",
   "players": [
     "EffectTester"
   ],
   "steps": [
+    {
+      "name": "missing_effects",
+      "commands": [
+        "function effect_test:setup",
+        "function effect_test:tick",
+        "function effect_test:observe"
+      ],
+      "checks": [
+        {"condition": "if data storage effect_test: {LogCount:0}"},
+        {"condition": "unless data storage effect_test: Effects[0]"},
+        {"condition": "unless data storage asset:effect Current"},
+        {"condition": "unless data storage asset:effect TickQueue"},
+        {"condition": "unless data storage asset:effect SnapshotSource"}
+      ]
+    },
+    {
+      "name": "empty_effects",
+      "commands": [
+        "execute as @e[tag=EffectTest.Main,limit=1] run function oh_my_dat:please",
+        "data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects set value []",
+        "function effect_test:tick",
+        "function effect_test:observe"
+      ],
+      "checks": [
+        {"condition": "if data storage effect_test: {LogCount:0}"},
+        {"condition": "unless data storage effect_test: Effects[0]"},
+        {"condition": "unless data storage asset:effect Current"},
+        {"condition": "unless data storage asset:effect TickQueue"},
+        {"condition": "unless data storage asset:effect SnapshotSource"}
+      ]
+    },
     {
       "name": "self_given",
       "commands": [
@@ -447,23 +478,6 @@
         {"condition": "if data storage effect_test: {LogCount:1}"},
         {"probe": "Log[0]", "condition": "if data storage effect_test: Probe{Event:\"remove\"}"},
         {"condition": "unless data storage effect_test: Effects[0]"}
-      ]
-    },
-    {
-      "name": "legacy_revision",
-      "commands": [
-        "function effect_test:setup",
-        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
-        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
-        "function api:entity/mob/effect/reset",
-        "execute as @e[tag=EffectTest.Main,limit=1] run function oh_my_dat:please",
-        "data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].Revision",
-        "function effect_test:tick",
-        "function effect_test:observe"
-      ],
-      "checks": [
-        {"probe": "Effects[0]", "condition": "if data storage effect_test: Probe{ID:64991,Revision:0}"},
-        {"probe": "Log[0]", "condition": "if data storage effect_test: Probe{Event:\"given\"}"}
       ]
     },
     {

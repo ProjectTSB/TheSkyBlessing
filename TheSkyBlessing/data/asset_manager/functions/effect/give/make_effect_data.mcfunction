@@ -57,7 +57,7 @@
     data modify storage asset:effect EffectData.Field merge from storage asset:effect FieldOverride
     execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.PreviousField set from storage asset:effect TargetEffectData.Field
 # 新規付与・再付与の更新番号を割り当てる
-# 同じ ID の既存データの Revision に 1 を足す。新規付与・旧データの未設定値は 0 から進める。
+# 同じ ID の既存データの Revision に 1 を足す。新規付与では既存データがないため 1 になる。
 # tick 開始時の予定と照合し、処理中に再付与された Effect の re-given を次回に回す。
 # 削除予約の設定や配列の並べ替えでは、この更新番号を進めない。
     execute store result score $EffectRevision Temporary run data get storage asset:effect TargetEffectData.Revision

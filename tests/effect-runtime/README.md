@@ -35,7 +35,7 @@ The assertions cover:
 - ClearLv/ClearType/ClearCount, including zero count and the existing reverse selection order.
 - New give, pending/self re-give, PreviousField, context refresh, and preservation of the next event.
 - `remove → give` preserves removal; `give → remove` delivers the pending re-given before removing on the next Effect tick.
-- Duration/stack expiry, natural expiry, give from end, milk/death flags, and legacy data without Revision.
+- Duration/stack expiry, natural expiry, give from end, and milk/death flags.
 - Cleanup of active context/owner tags and generation of the player's display data.
 
 The existing remove API moves the selected element to the end of the saved array. The next tick uses that saved order; the fixture does not assume that removal preserves an element's former position.
