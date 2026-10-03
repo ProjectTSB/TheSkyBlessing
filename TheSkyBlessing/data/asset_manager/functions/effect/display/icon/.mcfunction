@@ -2,7 +2,7 @@
 #
 # エフェクトアイコンを作成
 #
-# @within function asset_manager:effect/foreach
+# @within function asset_manager:effect/display/foreach
 
 #> Private
 # @private

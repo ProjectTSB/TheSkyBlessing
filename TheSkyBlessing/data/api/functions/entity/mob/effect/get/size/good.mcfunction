@@ -2,9 +2,14 @@
 #
 # entityに付与されている良い効果のエフェクトの数を取得します。
 #
+# 転送先がある場合は、その付与先の保存データを参照する。
+# 実行中の同じ付与先の context の変更も取得値へ反映する。
+#
+# @output storage api: Return.EffectSize.Good
 # @api
 
-# storage呼び出し
-    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"oh_my_dat:please",IsForwardedOnly:true}
+# ForwardTarget から実際の付与先を解決し、処理中なら context の変更を保存データへ反映する
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:effect/context/before_api",IsForwardedOnly:true}
+
 # エフェクト数を取得
     execute store result storage api: Return.EffectSize.Good int 1 if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{IsBadEffect: 0b}]

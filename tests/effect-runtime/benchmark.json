@@ -1,0 +1,1137 @@
+{
+  "name": "effect-manager-benchmark",
+  "scope": "Synthetic manager-only benchmark, frozen server, inert Effect callbacks in isolated fixture pack, armor stands, 1/5/10/20 Effects and 1/20 owners. One warmup and three profiled batches of 1000 owner-ticks per case. Batch is scheduled after a profiler activation tick. Exact completed batches and remaining durations are asserted. debug elapsed time includes profiling, background core ticks and RCON scheduling overhead; not gameplay MSPT. Compare same scenario on HEAD and working tree.",
+  "players": [],
+  "steps": [
+    {
+      "name": "benchmark_limits",
+      "commands": [
+        "gamerule maxCommandChainLength 10000000",
+        "gamerule maxCommandChainLength"
+      ],
+      "expect": [
+        "10000000"
+      ]
+    },
+    {
+      "name": "setup_M1_N1",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:1,Effects:1}",
+        "function effect_test:benchmark/batch.m {Iterations:1000}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 1000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N1_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N1_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N1_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N1_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N1_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999998000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N1_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N1_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N1_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N1_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N1_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999997000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N1_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N1_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N1_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N1_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N1_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999996000"
+      ]
+    },
+    {
+      "name": "setup_M1_N5",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:1,Effects:5}",
+        "function effect_test:benchmark/batch.m {Iterations:1000}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 1000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N5_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N5_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N5_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N5_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N5_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999998000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N5_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N5_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N5_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N5_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N5_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999997000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N5_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N5_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N5_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N5_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N5_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999996000"
+      ]
+    },
+    {
+      "name": "setup_M1_N10",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:1,Effects:10}",
+        "function effect_test:benchmark/batch.m {Iterations:1000}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 1000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N10_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N10_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N10_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N10_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N10_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999998000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N10_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N10_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N10_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N10_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N10_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999997000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N10_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N10_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N10_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N10_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N10_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999996000"
+      ]
+    },
+    {
+      "name": "setup_M1_N20",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:1,Effects:20}",
+        "function effect_test:benchmark/batch.m {Iterations:1000}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 1000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N20_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N20_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N20_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N20_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N20_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999998000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N20_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N20_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N20_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N20_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N20_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999997000"
+      ]
+    },
+    {
+      "name": "profile_start_M1_N20_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M1_N20_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M1_N20_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:1000}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M1_N20_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M1_N20_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 1000",
+        "following contents: 999996000"
+      ]
+    },
+    {
+      "name": "setup_M20_N1",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:20,Effects:1}",
+        "function effect_test:benchmark/batch.m {Iterations:50}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 50"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N1_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N1_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N1_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N1_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N1_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999900"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N1_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N1_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N1_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N1_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N1_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999850"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N1_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N1_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N1_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N1_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N1_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999800"
+      ]
+    },
+    {
+      "name": "setup_M20_N5",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:20,Effects:5}",
+        "function effect_test:benchmark/batch.m {Iterations:50}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 50"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N5_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N5_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N5_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N5_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N5_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999900"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N5_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N5_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N5_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N5_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N5_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999850"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N5_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N5_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N5_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N5_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N5_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999800"
+      ]
+    },
+    {
+      "name": "setup_M20_N10",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:20,Effects:10}",
+        "function effect_test:benchmark/batch.m {Iterations:50}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 50"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N10_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N10_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N10_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N10_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N10_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999900"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N10_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N10_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N10_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N10_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N10_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999850"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N10_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N10_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N10_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N10_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N10_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999800"
+      ]
+    },
+    {
+      "name": "setup_M20_N20",
+      "commands": [
+        "function effect_test:benchmark/setup.m {Owners:20,Effects:20}",
+        "function effect_test:benchmark/batch.m {Iterations:50}",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 50"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N20_1",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N20_1",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N20_1",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N20_1",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N20_1",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999900"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N20_2",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N20_2",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N20_2",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N20_2",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N20_2",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999850"
+      ]
+    },
+    {
+      "name": "profile_start_M20_N20_3",
+      "commands": [
+        "debug start"
+      ],
+      "expect": [
+        "Started tick profiling"
+      ]
+    },
+    {
+      "name": "profile_activate_M20_N20_3",
+      "ticks": 1
+    },
+    {
+      "name": "schedule_M20_N20_3",
+      "commands": [
+        "data modify storage effect_test: BenchArgs set value {Iterations:50}",
+        "data modify storage effect_test: Completed set value 0",
+        "schedule function effect_test:benchmark/scheduled 1t",
+        "data get storage effect_test: Completed"
+      ],
+      "expect": [
+        "following contents: 0"
+      ]
+    },
+    {
+      "name": "profile_batch_M20_N20_3",
+      "ticks": 1
+    },
+    {
+      "name": "measure_M20_N20_3",
+      "commands": [
+        "debug stop",
+        "data get storage effect_test: Completed",
+        "execute as @e[tag=EffectTest.Bench,limit=1] run function oh_my_dat:please",
+        "data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0].Duration"
+      ],
+      "expect": [
+        "Stopped.*profiling",
+        "following contents: 50",
+        "following contents: 999999800"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+# Effect 検証結果（2026-09-21）
+
+現実装は機能シナリオ **36 / 36 step 成功**。最終実行は `run-d92qw3lo`。自己削除、未処理・処理済み・別付与先の削除、再付与との順序、継承、getter の転送、終了 callback、通常 core tick、表示用 storage を確認した。前提・入力・期待値は [scenario.json](scenario.json)、実行方法と対象範囲は [README.md](README.md) にある。
+
+Minecraft 1.20.4、Java 17、最大 heap 4G。DevSpace 共通 runner が隔離 world と明示 fixture を作成した。実ゲームの通常ログイン、実ダメージ、牛乳を飲む操作、画面の描画は未検証。牛乳・死亡は対応するフラグを入力した。GitHub CI / datapack-linter は未実行。Minecraft による関数読み込みと実行、参照先の静的確認、`git diff --check` を実施した。
+
+## 性能比較
+
+基準は HEAD `5d6799ed16578e8c6a7c61593bcf3d0ef22c1ff1`。比較シナリオは [benchmark.json](benchmark.json)（129 step）。1 / 20 付与先、各 1 / 5 / 10 / 20 Effect、処理本体が空の callback を用いた。各条件で 1000 owner-tick（付与先一体の Effect 管理処理一回を1 owner-tickとする）のウォームアップ後、1000 owner-tick のバッチを3回計測した。20付与先では各50回、1付与先では1000回の manager 実行に相当する。全件の反復完了数と先頭の Effectの残り Duration を照合した。
+
+値は `debug stop` が返したプロファイル区間の秒数の中央値。runner の待機、背景 tick、プロファイラの費用を含む。**通常ゲームの MSPT、Effect 一個の純粋な費用、サーバー収容数ではない。** 1 / 20 付与先とも総 owner-tick 数を揃えたバッチ比較であり、負荷の20倍化を測っていない。
+
+| 付与先数 | 付与先あたり Effect 数 | 基準（秒） | 初期実装（秒） | 最終実装（秒） | 最終 / 基準 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 1 | 0.65 | 0.73 | 0.72 | 1.11× |
+| 1 | 5 | 0.79 | 0.93 | 0.88 | 1.11× |
+| 1 | 10 | 1.02 | 2.74 | 2.04 | 2.00× |
+| 1 | 20 | 1.53 | 4.82 | 3.96 | 2.59× |
+| 20 | 1 | 0.65 | 0.65 | 0.64 | 0.98× |
+| 20 | 5 | 0.84 | 1.08 | 0.94 | 1.12× |
+| 20 | 10 | 1.03 | 2.56 | 2.32 | 2.25× |
+| 20 | 20 | 1.49 | 5.03 | 4.01 | 2.69× |
+
+初期実装から、callback 前の不要な書き戻しと、継続する Effect の終了判定のためだけの再検索を省いた。10要素でも基準の約2倍の時間が残る。ID 条件探索は O(N²) だが、上記は NBT コピー、pointer 取得、macro 等を含む合計であり、探索だけに増加原因を帰属していない。「高々10要素だから費用は無視できる」とは判定できない。機能を試す実装として成立しているが、本番の許容性は実際の付与先数・Effect 本体を含めて評価する必要がある。
+
+各サンプルと scenario hash は [measurements.json](measurements.json)。基準 `run-yw_xzsy5`、初期実装 `run-al7d_vjd`、最終実装 `run-2ubpd3uh` はすべて129 step 成功。
+
+## 失敗・再試行・終了確認
+
+全実行の入力、出力、保存された patch / hash、server log、終了記録は DevSpace の `.runtime/verification-runs/<run ID>/` に残した。失敗結果は上書きしていない。`run.py` の隔離コピーも `.worktrees/` に保持した。
+
+| run ID | 結果 | 原因・対応／確認内容 |
+| --- | --- | --- |
+| `run-gczdfg0t` | 1 step 目で失敗 | fixture の NBT 判定が `Log[0]{...}` で不正、かつ `say` による PASS が RCON 応答に出なかった。Probe へ要素をコピーし、Check storage の読み出しで判定する方式へ修正。実行中 repo 不変の判定も false のため合格の根拠にしない。 |
+| `run-3b1kh837` | 5 step 目で失敗 | remove が対象を末尾へ append する既存仕様を期待順に反映していなかった。次 tick の保存順 B→A に合わせて期待値を訂正。 |
+| `run-05_s4ex4` | 25 step 成功 | 上記修正後の機能シナリオ。後続で範囲を拡充。 |
+| `run-y_5izfjx` | 34 step 目で失敗 | 通常 core tick の fixture が armor stand だったため `#lib:living` の対象外。core tick 用だけ初期化済みの cow へ変更。 |
+| `run-eiir2415` | 35 step 成功 | core tick と protocol player の表示用 storage を含む拡充後。 |
+| `run-x7rrkrwc` | 33 step 成功、計時は不採用 | `debug start` 直後の RCON バッチが profiling 区間外となり 0.00 秒等を返した。profiling を先の tick で開始し、バッチを次 tick に schedule する方式へ変更。費用がゼロという根拠にはしない。 |
+| `run-al7d_vjd` | 129 step 成功 | 修正した計時方法で初期実装を測定。 |
+| `run-yw_xzsy5` | 129 step 成功 | 同じシナリオで基準 HEAD を測定。 |
+| `run-2ubpd3uh` | 129 step 成功 | 不要な書き戻し・検索を省いた最終実装を測定。 |
+| `run-d92qw3lo` | 36 step 成功 | 最終実装で機能を再確認。転送先 getter の context の書き戻し・読み直しも追加。 |
+
+全試行で `stop` による終了、server exit code 0、全 dimension 保存を確認した。初回以外は runner が実行中 repo 不変を確認した。最終機能・性能実行の実装ファイルは対応する保存 hash と照合可能。失敗時も正常終了しており、中断した server は残していない。
+
+検証 pack は隔離コピー内だけで Effect dispatch tag を置換する。検証用の `maxCommandChainLength` 引き上げと各初期化コマンドは disposable world に適用し、通常 world / production 設定は変更していない。元 checkout の branch / index を切り替えず、コミット・push はしていない。
+
+## コメント・可読性の確認（2026-09-23）
+
+関数の前提、状態の受け渡し、Revision によるイベントを呼び出す時点、終了順序をコメントへ補い、処理単位の空行と4スペースのインデントを揃えた。fixture と runner にも準備・記録・計測の役割を追記した。
+
+この編集の直前と直後を比較し、mcfunction のコメントと行頭の空白を除くコマンド列・順序、Python の構文木、NBT schema、IMP Doc の可視性指定と declare 行が不変であることを確認した。`git diff --check` も成功。今回の変更では実サーバー検証を再実行していない。上記36 step と性能値は9月21日の実行結果であり、コメント編集後のファイル hash は当時の hash と異なる。
+
+用語の見直しでは、付与先・付与中の Effect・保存データ・作業データ・更新番号・処理予定・削除予約を区別した。関数名が `.mcfunction` のファイルも含めて94関数を比較し、コメント整理前および用語修正前からコマンド列・実行順・可視性・declare が不変であることを確認した。シナリオの入力・期待値、NBT schema、runner の Python 構文木も変更していない。
+
+## 内部の公開範囲の確認（2026-09-23）
+
+Effect の補助関数10件の `@within` を、具体的な呼出元の一覧へ変更した。before_api は callback の指定元と `with_idempotent.m` の実行箇所も対象にした。タグ・一時スコア6件は使用箇所に合わせて宣言ブロックを分けた。
+
+本体の mcfunction を検索し、直接参照・CB 指定・自己再帰が宣言の範囲と一致すること、対象タグ・スコアの参照が許可範囲内であることを静的に確認した。共有 storage の宣言は変更せず、補助関数は変更前後とも workflow の Asset 向け `VISIBILITY_FILTER` の対象外。生成処理・push は実行していない。
+
+実行コマンド列と順序は編集前と一致し、`git diff --check` も成功。今回は IMP Doc の範囲変更のため実サーバー検証は再実行していない。CI / datapack-linter は未実行であり、静的な参照照合の結果と区別する。
+
+## 差分の再評価（2026-10-03）
+
+Issue #1673 の本文・コメント、HEAD `bf9467016` からの未コミット差分、API と Effect manager の呼出経路を照合した。保存先に Effects を残すこと、ID/Revision による処理予定、API 前後の context 同期、終了前のデータ削除は整合しており、今回の確認範囲で動作の追加修正を要する不具合は見つからなかった。Revision は再付与の配送時点を揃えるための仕組みで、削除だけの最小修正より変更範囲は広い。上記の性能増加は残る評価事項であり、本番負荷の許容性を確認済みとはしない。今回は性能測定を再実行していない。
+
+`display/` のコメントだけ訂正した。array session は外側の作業状態を退避しないため、別の session が開いていないことを呼出前提として明記した。実行コマンド・順序は変更していない。この制約は `docs/knowledge/architecture.md`「共通部品には利用区間がある」に説明済みのため、ナレッジ本文への重複追記は行わなかった。
+
+既存の36 stepを共通 runner で再実行した。通常のworld・設定は変更せず、TheSkyBlessing は各回の隔離コピー、依存先は DevSpace 直下の Asset / Asset-AnimatedJava を使用した。
+
+| run ID | 結果 | 観測・終了状態 |
+| --- | --- | --- |
+| `run-6dyuxxr6` | テスト開始前に失敗 | 初期化後の RCON 応答待ちで `TimeoutError`。step は未実行。stop後に保存完了を確認できず、runner が TERM / KILL で終了（exit -9）。原因は特定していない。機能の合否判定には使わない。 |
+| `run-9hxebsna` | 36 / 36 step 成功 | 先行試行を retry-of に指定し、シナリオ・実装・設定を変えず再実行。stopで正常終了（exit 0）、全dimension保存、参照repoのコード不変を確認。 |
+
+変更されたJSON 9ファイルの構文、本体の変更関数からの固定function参照40箇所、`git diff --check HEAD` も成功。コメント訂正後の全本体mcfunctionについて、成功した隔離コピーとの実行コマンド列・順序の一致を確認した。server logに関数読込エラーはなかった。GitHub CI / datapack-linter、通常ログイン、実ダメージ、画面描画は今回も検証対象外。branch・indexは維持し、commit / pushは行っていない。

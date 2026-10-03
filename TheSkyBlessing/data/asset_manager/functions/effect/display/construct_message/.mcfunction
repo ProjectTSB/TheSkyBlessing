@@ -2,7 +2,7 @@
 #
 # actionbarに表示するtext componentを構築
 #
-# @within function asset_manager:effect/tick
+# @within function asset_manager:effect/display/
 
 # 開始位置移動
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Message.Effect append value '{"text":"\\u0098","font":"space"}'

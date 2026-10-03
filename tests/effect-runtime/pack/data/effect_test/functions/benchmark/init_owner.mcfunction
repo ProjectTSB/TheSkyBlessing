@@ -1,0 +1,10 @@
+#> effect_test:benchmark/init_owner
+#
+# 測定用付与先の保存データをテンプレートで初期化する。
+# give の費用を測定に混ぜず、tick に入る時点の状態を揃える。
+# @private
+
+# @s の保存先へ Effects を複製し、初期化待ちの印を外す
+    function oh_my_dat:please
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects set from storage effect_test: BenchTemplate
+    tag @s remove EffectTest.Fresh

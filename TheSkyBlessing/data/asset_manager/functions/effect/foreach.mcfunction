@@ -1,63 +1,37 @@
 #> asset_manager:effect/foreach
 #
+# TickQueue の一件を処理し、context を破棄して次の予定へ進む。
+# 処理予定の内容・順序は固定し、Effects 配列が API で並べ替わっても影響を受けない。
 #
+# @s は現在の付与先。TickQueue と走査スコアの寿命は tick の一回分。
 #
+# @input args
+#   Index : int
 # @within function
 #   asset_manager:effect/tick
 #   asset_manager:effect/foreach
 
-#> Private
-# @private
-    #declare score_holder $RequireClearLv
+# 次に処理する Effect の ID/Revision を選び、OhMyDat の参照先を付与先へ戻す
+# Current は ID/Revision で初期化する。前の Effect の Phase や削除予約は引き継がない。
+# process.m は保存データとの照合、イベント実行、保存、終了判定を担当する。
+    $data modify storage asset:effect Current set from storage asset:effect TickQueue[$(Index)]
+    function oh_my_dat:please
+    function asset_manager:effect/process.m with storage asset:effect Current
 
-# 移動
-    data modify storage asset:effect TargetEffect set from storage asset:effect Effects[-1]
-    data remove storage asset:effect Effects[-1]
-# 牛乳チェック
-    execute if score @s UsedMilk matches 1.. store result score $RequireClearLv Temporary run data get storage asset:effect TargetEffect.RequireClearLv
-    execute if score @s UsedMilk matches 1.. if score $RequireClearLv Temporary matches ..1 run data modify storage asset:effect TargetEffect.Duration set value -1
-# 死亡判定
-    execute if data storage asset:effect TargetEffect{ProcessOnDied:"remove"} if entity @s[tag=DeathProcess] run data modify storage asset:effect TargetEffect.Duration set value -1
-# 効果時間を減少させる
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
-# context作成
-    data modify storage asset:context id set from storage asset:effect TargetEffect.ID
-    data modify storage asset:context originID set from storage asset:effect TargetEffect.ID
-    data modify storage asset:context Duration set from storage asset:effect TargetEffect.Duration
-    data modify storage asset:context Stack set from storage asset:effect TargetEffect.Stack
-    data modify storage asset:context this set from storage asset:effect TargetEffect.Field
-    data modify storage asset:context PreviousField set from storage asset:effect TargetEffect.PreviousField
-# 各種イベントを呼び出す
-    execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
-    execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
-    # execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] if data storage asset:effect TargetEffect{ProcessOnDied:"stopTickUntilRespawn"}
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] run function asset_manager:effect/events/tick/
-    execute if data storage asset:effect TargetEffect{Duration:-1} run function asset_manager:effect/events/remove/
-    execute if data storage asset:effect TargetEffect{Duration:0} run function asset_manager:effect/events/end/
-    execute unless data storage asset:effect TargetEffect{Duration:0} if data storage asset:effect TargetEffect{Stack:0} run function asset_manager:effect/events/end/
-# フィールドとスタックを元に戻す
-    data modify storage asset:effect TargetEffect.Duration set from storage asset:context Duration
-    data modify storage asset:effect TargetEffect.Stack set from storage asset:context Stack
-    data modify storage asset:effect TargetEffect.Field set from storage asset:context this
-# ゴミを消す
-    data remove storage asset:effect TargetEffect.NextEvent
-    data remove storage asset:effect TargetEffect.PreviousField
-# 条件を満たしていればエフェクトを消す
-    execute if data storage asset:effect TargetEffect{Duration:0} run data remove storage asset:effect TargetEffect
-    execute if data storage asset:effect TargetEffect{Duration:-1} run data remove storage asset:effect TargetEffect
-    execute if data storage asset:effect TargetEffect{Stack:0} run data remove storage asset:effect TargetEffect
-# 残っていれば引継ぎ
-    execute if data storage asset:effect TargetEffect run data modify storage asset:effect NextTickEffects append from storage asset:effect TargetEffect
-# アイコン作成
-    execute if entity @s[type=player] if data storage asset:effect TargetEffect{Visible:1b} run function asset_manager:effect/display/icon/
-
-# リセット
-    scoreboard players reset $RequireClearLv Temporary
+# Effect ごとの作業状態を破棄する
+# process.m が対象なしで戻った場合もここを通り、次の Effect へ context を持ち越さない。
+    data remove storage asset:effect Current
+    data remove storage asset:effect TargetEffect
     data remove storage asset:context id
     data remove storage asset:context originID
     data remove storage asset:context this
+    data remove storage asset:context Duration
+    data remove storage asset:context Stack
     data remove storage asset:context PreviousField
-    data remove storage asset:effect TargetEffect
-# まだ処理してないエフェクトがあれば再帰
-    execute if data storage asset:effect Effects[0] run function asset_manager:effect/foreach
+    scoreboard players reset $RequireClearLv Temporary
+
+# 固定した予定の次の添字へ進む
+# この添字は TickQueue の位置であり、変更され得る Effects 配列の位置ではない。
+    scoreboard players add $EffectTickIndex Temporary 1
+    execute store result storage asset:effect Iterator.Index int 1 run scoreboard players get $EffectTickIndex Temporary
+    execute if score $EffectTickIndex Temporary < $EffectTickCount Temporary run function asset_manager:effect/foreach with storage asset:effect Iterator

@@ -3,7 +3,8 @@
 # asset:effect の情報からエンティティに追加するエフェクトのストレージデータを作成する。
 # 該当エフェクトが付与済みの場合 stack と duration について operation が
 # add の場合、既存の値に加算
-# replace の場合、既存値と新規値のうち大きい方に置換
+# replace の場合、Stack は既存値と新規値のうち大きい方に置換する。
+# Duration は新規 Stack が既存 Stack 以上なら大きい方、下回るなら既存値を維持する。
 # forceReplace の場合、新規値に上書きを行う
 #
 # @output storage asset:effect EffectData
@@ -17,6 +18,7 @@
     #declare score_holder $Stack
     #declare score_holder $MaxDuration
     #declare score_holder $MaxStack
+    #declare score_holder $EffectRevision
 
 # 計算用にスコアとして取得する
     execute store result score $OriginDuration Temporary run data get storage asset:effect TargetEffectData.Duration
@@ -26,7 +28,9 @@
     execute store result score $OriginStack Temporary run data get storage asset:effect TargetEffectData.Stack
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
-# Operationに合わせてDurationとStackを計算する // replaceの場合、StackがOriginStack未満なら更新しない // forceReplaceはそのまま新しい値が使われるので何もしなくて良い
+# Operation に合わせて Duration と Stack を計算する
+# Duration の replace は新規 Stack が既存 Stack 未満なら既存の時間を維持する。
+# forceReplace は取得した新規値をそのまま使うため、この段階で追加操作しない。
     execute if data storage asset:effect {DurationOperation:"replace"} if score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"replace"} unless score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary = $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary
@@ -52,7 +56,16 @@
     data modify storage asset:effect EffectData.Field set from storage asset:effect Field
     data modify storage asset:effect EffectData.Field merge from storage asset:effect FieldOverride
     execute if data storage asset:effect TargetEffectData.Field run data modify storage asset:effect EffectData.PreviousField set from storage asset:effect TargetEffectData.Field
-# イベント設定
+# 新規付与・再付与の更新番号を割り当てる
+# 付与先の EffectRevision を進め、付与・再付与後の保存データの Revision へ複製する。
+# tick 開始時の予定と照合し、処理中に再付与された Effect の re-given を次回に回す。
+# 削除予約の設定や配列の並べ替えでは、この更新番号を進めない。
+    execute store result score $EffectRevision Temporary run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EffectRevision
+    scoreboard players add $EffectRevision Temporary 1
+    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EffectRevision int 1 run scoreboard players get $EffectRevision Temporary
+    data modify storage asset:effect EffectData.Revision set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EffectRevision
+# 次に呼び出す付与イベントを NextEvent に設定する
+# process.m はイベントを呼ぶ前に保存データの NextEvent を消すため、イベント内の再付与で設定した値は残る。
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
     execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット
@@ -62,3 +75,4 @@
     scoreboard players reset $Stack Temporary
     scoreboard players reset $MaxDuration Temporary
     scoreboard players reset $MaxStack Temporary
+    scoreboard players reset $EffectRevision Temporary

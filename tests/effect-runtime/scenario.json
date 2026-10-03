@@ -1,0 +1,1063 @@
+{
+  "name": "effect-runtime-1673",
+  "scope": "Isolated fixture pack on a copied checkout; manually prepared armor stands, a cow for core tick, and a protocol player. Actual give/remove/get, Effect callbacks, one normal core tick, stored actionbar message. Not normal login, real combat or rendered UI. Tests include re-give/remove order, clear filters/count, owner isolation, inheritance, legacy revision and milk/death.",
+  "players": [
+    "EffectTester"
+  ],
+  "steps": [
+    {
+      "name": "self_given",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{GivenAction:\"remove_self\",RemoveAction:\"remove_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_self_given_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_1\"",
+        "execute if data storage effect_test: Probe{Event:\"given\",ID:64991} run data modify storage effect_test: Check set value \"PASS_self_given_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64991} run data modify storage effect_test: Check set value \"PASS_self_given_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_self_given_3\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_4\"",
+        "execute unless entity @e[tag=EffectTest.Main,tag=HasAssetEffect] run data modify storage effect_test: Check set value \"PASS_self_given_4\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_5\"",
+        "execute unless data storage asset:effect Current run data modify storage effect_test: Check set value \"PASS_self_given_5\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_given_6\"",
+        "execute unless entity @e[tag=Effect.CurrentOwner] run data modify storage effect_test: Check set value \"PASS_self_given_6\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_self_given_0",
+        "PASS_self_given_1",
+        "PASS_self_given_2",
+        "PASS_self_given_3",
+        "PASS_self_given_4",
+        "PASS_self_given_5",
+        "PASS_self_given_6"
+      ]
+    },
+    {
+      "name": "self_tick",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"remove_self\",RemoveAction:\"remove_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_self_tick_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_1\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",ID:64991} run data modify storage effect_test: Check set value \"PASS_self_tick_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64991} run data modify storage effect_test: Check set value \"PASS_self_tick_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_self_tick_3\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_4\"",
+        "execute unless entity @e[tag=EffectTest.Main,tag=HasAssetEffect] run data modify storage effect_test: Check set value \"PASS_self_tick_4\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_5\"",
+        "execute unless data storage asset:effect Current run data modify storage effect_test: Check set value \"PASS_self_tick_5\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_tick_6\"",
+        "execute unless entity @e[tag=Effect.CurrentOwner] run data modify storage effect_test: Check set value \"PASS_self_tick_6\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_self_tick_0",
+        "PASS_self_tick_1",
+        "PASS_self_tick_2",
+        "PASS_self_tick_3",
+        "PASS_self_tick_4",
+        "PASS_self_tick_5",
+        "PASS_self_tick_6"
+      ]
+    },
+    {
+      "name": "remove_next",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"remove_next\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_remove_next_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_remove_next_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_remove_next_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64992} run data modify storage effect_test: Check set value \"PASS_remove_next_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Effects[0]",
+        "data modify storage effect_test: Check set value \"FAIL_remove_next_2\"",
+        "execute if data storage effect_test: Probe{ID:64991} run data modify storage effect_test: Check set value \"PASS_remove_next_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_remove_next_3\"",
+        "execute unless data storage effect_test: Effects[1] run data modify storage effect_test: Check set value \"PASS_remove_next_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_remove_next_0",
+        "PASS_remove_next_1",
+        "PASS_remove_next_2",
+        "PASS_remove_next_3"
+      ]
+    },
+    {
+      "name": "remove_previous",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{TickAction:\"remove_previous\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_remove_previous_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_remove_previous_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_remove_previous_1\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:-1}] run data modify storage effect_test: Check set value \"PASS_remove_previous_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_remove_previous_0",
+        "PASS_remove_previous_1"
+      ]
+    },
+    {
+      "name": "previous_next_tick",
+      "commands": [
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_previous_next_tick_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_previous_next_tick_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_previous_next_tick_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64991} run data modify storage effect_test: Check set value \"PASS_previous_next_tick_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_previous_next_tick_2\"",
+        "execute unless data storage effect_test: Effects[{ID:64991}] run data modify storage effect_test: Check set value \"PASS_previous_next_tick_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_previous_next_tick_0",
+        "PASS_previous_next_tick_1",
+        "PASS_previous_next_tick_2"
+      ]
+    },
+    {
+      "name": "remove_other",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"remove_other_owner\",Value:5}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Other,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_remove_other_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_remove_other_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_remove_other_1\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:99,Field:{Value:5}}] run data modify storage effect_test: Check set value \"PASS_remove_other_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_remove_other_2\"",
+        "execute if data storage effect_test: OtherEffects[{ID:64991,Duration:-1}] run data modify storage effect_test: Check set value \"PASS_remove_other_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_remove_other_0",
+        "PASS_remove_other_1",
+        "PASS_remove_other_2"
+      ]
+    },
+    {
+      "name": "level_filter",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"remove_level\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64993,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_level_filter_0\"",
+        "execute if data storage effect_test: {LogCount:3} run data modify storage effect_test: Check set value \"PASS_level_filter_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_level_filter_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64992} run data modify storage effect_test: Check set value \"PASS_level_filter_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_level_filter_2\"",
+        "execute unless data storage effect_test: Effects[{ID:64992}] run data modify storage effect_test: Check set value \"PASS_level_filter_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_level_filter_3\"",
+        "execute if data storage effect_test: Effects[{ID:64993}] run data modify storage effect_test: Check set value \"PASS_level_filter_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_level_filter_0",
+        "PASS_level_filter_1",
+        "PASS_level_filter_2",
+        "PASS_level_filter_3"
+      ]
+    },
+    {
+      "name": "zero_count",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"zero_count\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_zero_count_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_zero_count_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_zero_count_1\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",ID:64992} run data modify storage effect_test: Check set value \"PASS_zero_count_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_zero_count_2\"",
+        "execute unless data storage effect_test: Effects[{Duration:-1}] run data modify storage effect_test: Check set value \"PASS_zero_count_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_zero_count_0",
+        "PASS_zero_count_1",
+        "PASS_zero_count_2"
+      ]
+    },
+    {
+      "name": "get_during_tick",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"get_all\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_get_during_tick_0\"",
+        "execute if data storage effect_test: {ObservedCount:2,ObservedGood:1,ObservedBad:1} run data modify storage effect_test: Check set value \"PASS_get_during_tick_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_get_during_tick_1\"",
+        "execute if data storage effect_test: Observed[{ID:64991,Duration:99,Field:{Value:42}}] run data modify storage effect_test: Check set value \"PASS_get_during_tick_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_get_during_tick_2\"",
+        "execute if data storage effect_test: Observed[{ID:64992}] run data modify storage effect_test: Check set value \"PASS_get_during_tick_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_get_during_tick_3\"",
+        "execute if data storage effect_test: ObservedSelf{ID:64991,Field:{Value:42}} run data modify storage effect_test: Check set value \"PASS_get_during_tick_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_get_during_tick_0",
+        "PASS_get_during_tick_1",
+        "PASS_get_during_tick_2",
+        "PASS_get_during_tick_3"
+      ]
+    },
+    {
+      "name": "new_given_next_tick",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"give_new\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_new_given_next_tick_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_new_given_next_tick_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_new_given_next_tick_1\"",
+        "execute if data storage effect_test: Effects[{ID:64993,Duration:200,NextEvent:\"given\"}] run data modify storage effect_test: Check set value \"PASS_new_given_next_tick_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_new_given_next_tick_0",
+        "PASS_new_given_next_tick_1"
+      ]
+    },
+    {
+      "name": "new_delivery",
+      "commands": [
+        "execute as @e[tag=EffectTest.Main,limit=1] run function oh_my_dat:please",
+        "data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:64991}].Field.TickAction",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_new_delivery_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_new_delivery_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_new_delivery_1\"",
+        "execute if data storage effect_test: Probe{Event:\"given\",ID:64993} run data modify storage effect_test: Check set value \"PASS_new_delivery_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_new_delivery_0",
+        "PASS_new_delivery_1"
+      ]
+    },
+    {
+      "name": "regive_pending",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"regive_next\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{Value:7}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_regive_pending_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_regive_pending_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_regive_pending_1\"",
+        "execute if data storage effect_test: Effects[{ID:64992,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:7}}] run data modify storage effect_test: Check set value \"PASS_regive_pending_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_regive_pending_0",
+        "PASS_regive_pending_1"
+      ]
+    },
+    {
+      "name": "regive_pending_delivery",
+      "commands": [
+        "execute as @e[tag=EffectTest.Main,limit=1] run function oh_my_dat:please",
+        "data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:64991}].Field.TickAction",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_regive_pending_delivery_0\"",
+        "execute if data storage effect_test: Probe{Event:\"re-given\",ID:64992,PreviousField:{Value:7}} run data modify storage effect_test: Check set value \"PASS_regive_pending_delivery_0\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_regive_pending_delivery_0"
+      ]
+    },
+    {
+      "name": "regive_self",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"regive_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_regive_self_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_regive_self_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_regive_self_1\"",
+        "execute if data storage effect_test: AfterGive{Value:9} run data modify storage effect_test: Check set value \"PASS_regive_self_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_regive_self_2\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:42}}] run data modify storage effect_test: Check set value \"PASS_regive_self_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_regive_self_0",
+        "PASS_regive_self_1",
+        "PASS_regive_self_2"
+      ]
+    },
+    {
+      "name": "self_regive_delivery",
+      "commands": [
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_self_regive_delivery_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_self_regive_delivery_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_self_regive_delivery_1\"",
+        "execute if data storage effect_test: Probe{Event:\"re-given\",ID:64991,Duration:200,PreviousField:{Value:42}} run data modify storage effect_test: Check set value \"PASS_self_regive_delivery_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_regive_delivery_2\"",
+        "execute unless data storage effect_test: Effects[0].NextEvent run data modify storage effect_test: Check set value \"PASS_self_regive_delivery_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_self_regive_delivery_0",
+        "PASS_self_regive_delivery_1",
+        "PASS_self_regive_delivery_2"
+      ]
+    },
+    {
+      "name": "self_remove_regiven",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{ReGivenAction:\"remove_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_self_remove_regiven_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_self_remove_regiven_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_self_remove_regiven_1\"",
+        "execute if data storage effect_test: Probe{Event:\"re-given\"} run data modify storage effect_test: Check set value \"PASS_self_remove_regiven_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_self_remove_regiven_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_self_remove_regiven_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_self_remove_regiven_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_self_remove_regiven_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_self_remove_regiven_0",
+        "PASS_self_remove_regiven_1",
+        "PASS_self_remove_regiven_2",
+        "PASS_self_remove_regiven_3"
+      ]
+    },
+    {
+      "name": "duration_zero",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"duration_zero\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_duration_zero_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_duration_zero_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_duration_zero_1\"",
+        "execute if data storage effect_test: Probe{Event:\"end\"} run data modify storage effect_test: Check set value \"PASS_duration_zero_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_duration_zero_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_duration_zero_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_duration_zero_0",
+        "PASS_duration_zero_1",
+        "PASS_duration_zero_2"
+      ]
+    },
+    {
+      "name": "stack_zero",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"stack_zero\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_stack_zero_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_stack_zero_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_stack_zero_1\"",
+        "execute if data storage effect_test: Probe{Event:\"end\"} run data modify storage effect_test: Check set value \"PASS_stack_zero_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_stack_zero_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_stack_zero_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_stack_zero_0",
+        "PASS_stack_zero_1",
+        "PASS_stack_zero_2"
+      ]
+    },
+    {
+      "name": "natural_end",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:1,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_natural_end_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_natural_end_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_natural_end_1\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",Duration:0} run data modify storage effect_test: Check set value \"PASS_natural_end_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_natural_end_2\"",
+        "execute if data storage effect_test: Probe{Event:\"end\"} run data modify storage effect_test: Check set value \"PASS_natural_end_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_natural_end_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_natural_end_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_natural_end_0",
+        "PASS_natural_end_1",
+        "PASS_natural_end_2",
+        "PASS_natural_end_3"
+      ]
+    },
+    {
+      "name": "give_on_end",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:1,FieldOverride:{EndAction:\"give_self_on_end\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_give_on_end_0\"",
+        "execute if data storage effect_test: Probe{Event:\"end\"} run data modify storage effect_test: Check set value \"PASS_give_on_end_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_give_on_end_1\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:200,NextEvent:\"given\"}] run data modify storage effect_test: Check set value \"PASS_give_on_end_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_give_on_end_0",
+        "PASS_give_on_end_1"
+      ]
+    },
+    {
+      "name": "give_on_end_delivery",
+      "commands": [
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_give_on_end_delivery_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_give_on_end_delivery_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_give_on_end_delivery_1\"",
+        "execute if data storage effect_test: Probe{Event:\"given\",ID:64991} run data modify storage effect_test: Check set value \"PASS_give_on_end_delivery_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_give_on_end_delivery_0",
+        "PASS_give_on_end_delivery_1"
+      ]
+    },
+    {
+      "name": "inherited_self_remove",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64995,Duration:100,FieldOverride:{TickAction:\"remove_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_inherited_self_remove_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_inherited_self_remove_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_inherited_self_remove_1\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",ID:64995,DispatchID:64994} run data modify storage effect_test: Check set value \"PASS_inherited_self_remove_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_inherited_self_remove_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64995,DispatchID:64994} run data modify storage effect_test: Check set value \"PASS_inherited_self_remove_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_inherited_self_remove_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_inherited_self_remove_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_inherited_self_remove_0",
+        "PASS_inherited_self_remove_1",
+        "PASS_inherited_self_remove_2",
+        "PASS_inherited_self_remove_3"
+      ]
+    },
+    {
+      "name": "milk",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "scoreboard players set @e[tag=EffectTest.Main,limit=1] UsedMilk 1",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_milk_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_milk_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_milk_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_milk_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_milk_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_milk_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_milk_0",
+        "PASS_milk_1",
+        "PASS_milk_2"
+      ]
+    },
+    {
+      "name": "death",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "tag @e[tag=EffectTest.Main,limit=1] add Death",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_death_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_death_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_death_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_death_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_death_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_death_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_death_0",
+        "PASS_death_1",
+        "PASS_death_2"
+      ]
+    },
+    {
+      "name": "legacy_revision",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "execute as @e[tag=EffectTest.Main,limit=1] run function oh_my_dat:please",
+        "data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[].Revision",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Effects[0]",
+        "data modify storage effect_test: Check set value \"FAIL_legacy_revision_0\"",
+        "execute if data storage effect_test: Probe{ID:64991,Revision:0} run data modify storage effect_test: Check set value \"PASS_legacy_revision_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_legacy_revision_1\"",
+        "execute if data storage effect_test: Probe{Event:\"given\"} run data modify storage effect_test: Check set value \"PASS_legacy_revision_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_legacy_revision_0",
+        "PASS_legacy_revision_1"
+      ]
+    },
+    {
+      "name": "remove_then_give",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"remove_then_give\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_remove_then_give_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_remove_then_give_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_remove_then_give_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_remove_then_give_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_remove_then_give_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_remove_then_give_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_remove_then_give_0",
+        "PASS_remove_then_give_1",
+        "PASS_remove_then_give_2"
+      ]
+    },
+    {
+      "name": "give_then_remove",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"give_then_remove\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_give_then_remove_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_1\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:-1,NextEvent:\"re-given\"}] run data modify storage effect_test: Check set value \"PASS_give_then_remove_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_give_then_remove_0",
+        "PASS_give_then_remove_1"
+      ]
+    },
+    {
+      "name": "give_then_remove_delivery",
+      "commands": [
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_delivery_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_give_then_remove_delivery_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_delivery_1\"",
+        "execute if data storage effect_test: Probe{Event:\"re-given\",PreviousField:{Value:42}} run data modify storage effect_test: Check set value \"PASS_give_then_remove_delivery_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_delivery_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_give_then_remove_delivery_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_give_then_remove_delivery_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_give_then_remove_delivery_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_give_then_remove_delivery_0",
+        "PASS_give_then_remove_delivery_1",
+        "PASS_give_then_remove_delivery_2",
+        "PASS_give_then_remove_delivery_3"
+      ]
+    },
+    {
+      "name": "clear_count_order",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"clear_one\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64993,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_clear_count_order_0\"",
+        "execute if data storage effect_test: {LogCount:3} run data modify storage effect_test: Check set value \"PASS_clear_count_order_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_clear_count_order_1\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",ID:64991} run data modify storage effect_test: Check set value \"PASS_clear_count_order_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_clear_count_order_2\"",
+        "execute if data storage effect_test: Probe{Event:\"tick\",ID:64992} run data modify storage effect_test: Check set value \"PASS_clear_count_order_2\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[2]",
+        "data modify storage effect_test: Check set value \"FAIL_clear_count_order_3\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\",ID:64993} run data modify storage effect_test: Check set value \"PASS_clear_count_order_3\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_clear_count_order_4\"",
+        "execute unless data storage effect_test: Effects[2] run data modify storage effect_test: Check set value \"PASS_clear_count_order_4\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_clear_count_order_0",
+        "PASS_clear_count_order_1",
+        "PASS_clear_count_order_2",
+        "PASS_clear_count_order_3",
+        "PASS_clear_count_order_4"
+      ]
+    },
+    {
+      "name": "get_level",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"get_level\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64992,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "data modify storage api: Argument set value {ID:64993,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_get_level_0\"",
+        "execute if data storage effect_test: Observed[{ID:64991}] run data modify storage effect_test: Check set value \"PASS_get_level_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_get_level_1\"",
+        "execute if data storage effect_test: Observed[{ID:64992}] run data modify storage effect_test: Check set value \"PASS_get_level_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_get_level_2\"",
+        "execute unless data storage effect_test: Observed[{ID:64993}] run data modify storage effect_test: Check set value \"PASS_get_level_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_get_level_0",
+        "PASS_get_level_1",
+        "PASS_get_level_2"
+      ]
+    },
+    {
+      "name": "external_remove",
+      "commands": [
+        "function effect_test:setup",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "data modify storage api: Argument.ID set value 64991",
+        "execute as @e[tag=EffectTest.Main,limit=1] run function api:entity/mob/effect/remove/from_id",
+        "function api:entity/mob/effect/reset",
+        "data modify storage effect_test: Log set value []",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_external_remove_0\"",
+        "execute if data storage effect_test: {LogCount:1} run data modify storage effect_test: Check set value \"PASS_external_remove_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_external_remove_1\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_external_remove_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_external_remove_2\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_external_remove_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_external_remove_0",
+        "PASS_external_remove_1",
+        "PASS_external_remove_2"
+      ]
+    },
+    {
+      "name": "forwarded_get",
+      "commands": [
+        "function effect_test:setup",
+        "kill @e[tag=EffectTest.Main]",
+        "summon minecraft:cow 0 0 0 {Tags:[\"EffectTest.Main\",\"AlreadyInitMob\",\"ForwardTarget\"],NoAI:1b,Invulnerable:1b,NoGravity:1b,Health:512f,Attributes:[{Name:\"minecraft:generic.max_health\",Base:1024d}]}",
+        "scoreboard players set @e[tag=EffectTest.Main,limit=1] MobUUID 123",
+        "scoreboard players set @e[tag=EffectTest.Other,limit=1] ForwardTargetMobUUID 123",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{TickAction:\"get_through_proxy\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "function effect_test:tick",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_forwarded_get_0\"",
+        "execute if data storage effect_test: Observed[{ID:64991,Duration:99,Field:{Value:42}}] run data modify storage effect_test: Check set value \"PASS_forwarded_get_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_forwarded_get_1\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:99,Field:{Value:42}}] run data modify storage effect_test: Check set value \"PASS_forwarded_get_1\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_forwarded_get_0",
+        "PASS_forwarded_get_1"
+      ]
+    },
+    {
+      "name": "core_tick_setup",
+      "commands": [
+        "function effect_test:setup",
+        "kill @e[tag=EffectTest.Main]",
+        "summon minecraft:cow 0 0 0 {Tags:[\"EffectTest.Main\",\"AlreadyInitMob\"],NoAI:1b,Invulnerable:1b,NoGravity:1b,Health:512f,Attributes:[{Name:\"minecraft:generic.max_health\",Base:1024d}]}",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{GivenAction:\"remove_self\"}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_core_tick_setup_0\"",
+        "execute if data storage effect_test: Effects[{ID:64991,NextEvent:\"given\"}] run data modify storage effect_test: Check set value \"PASS_core_tick_setup_0\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_core_tick_setup_0"
+      ]
+    },
+    {
+      "name": "core_tick",
+      "ticks": 1
+    },
+    {
+      "name": "core_tick_result",
+      "commands": [
+        "function effect_test:observe",
+        "data modify storage effect_test: Check set value \"FAIL_core_tick_result_0\"",
+        "execute if data storage effect_test: {LogCount:2} run data modify storage effect_test: Check set value \"PASS_core_tick_result_0\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_core_tick_result_1\"",
+        "execute if data storage effect_test: Probe{Event:\"given\"} run data modify storage effect_test: Check set value \"PASS_core_tick_result_1\"",
+        "data get storage effect_test: Check",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[1]",
+        "data modify storage effect_test: Check set value \"FAIL_core_tick_result_2\"",
+        "execute if data storage effect_test: Probe{Event:\"remove\"} run data modify storage effect_test: Check set value \"PASS_core_tick_result_2\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_core_tick_result_3\"",
+        "execute unless data storage effect_test: Effects[0] run data modify storage effect_test: Check set value \"PASS_core_tick_result_3\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_core_tick_result_0",
+        "PASS_core_tick_result_1",
+        "PASS_core_tick_result_2",
+        "PASS_core_tick_result_3"
+      ]
+    },
+    {
+      "name": "player_display",
+      "commands": [
+        "kill @e[tag=EffectTest.Main]",
+        "tag EffectTester add EffectTest.Main",
+        "data modify storage effect_test: Log set value []",
+        "data modify storage api: Argument set value {ID:64991,Duration:100,FieldOverride:{}}",
+        "execute as @e[tag=EffectTest.Main,limit=1] at @s run function api:entity/mob/effect/give",
+        "function api:entity/mob/effect/reset",
+        "function effect_test:tick",
+        "execute as @a[name=EffectTester] run function oh_my_dat:please",
+        "data modify storage effect_test: PlayerMessage set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Message.Effect",
+        "function effect_test:observe",
+        "data remove storage effect_test: Probe",
+        "data modify storage effect_test: Probe set from storage effect_test: Log[0]",
+        "data modify storage effect_test: Check set value \"FAIL_player_display_0\"",
+        "execute if data storage effect_test: Probe{Event:\"given\"} run data modify storage effect_test: Check set value \"PASS_player_display_0\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_player_display_1\"",
+        "execute if data storage effect_test: PlayerMessage[0] run data modify storage effect_test: Check set value \"PASS_player_display_1\"",
+        "data get storage effect_test: Check",
+        "data modify storage effect_test: Check set value \"FAIL_player_display_2\"",
+        "execute if data storage effect_test: Effects[{ID:64991,Duration:100}] run data modify storage effect_test: Check set value \"PASS_player_display_2\"",
+        "data get storage effect_test: Check"
+      ],
+      "expect": [
+        "PASS_player_display_0",
+        "PASS_player_display_1",
+        "PASS_player_display_2"
+      ]
+    }
+  ]
+}
