@@ -12,6 +12,10 @@ masterではProjectTSB/Assetを `Asset2` にcheckoutし、Node.js/ts-nodeで `.g
 
 通常処理のコメント・インデントの実例は [heal補正の追加](../../TheSkyBlessing/data/api/functions/modifier/core/heal/add.mcfunction) と [緩衝体力の取得](../../TheSkyBlessing/data/api/functions/entity/player/absorption/get.mcfunction) を参照する。
 
+Effectの内部補助関数の公開範囲は、実際の呼出元と照合する。[foreach](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.mcfunction) はtickと自己再帰、[try_pop_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/common/try_pop_effect_data.mcfunction) はgiveと削除APIの内部処理を列挙する。固定された呼出経路を広いワイルドカードへ置き換えると、責務の境界を読み取れなくなる。
+
+callbackには指定元と実行元がある。[Effectの件数取得](../../TheSkyBlessing/data/api/functions/entity/mob/effect/get/size/all.mcfunction) は `CB:"oh_my_dat:please"` を指定し、[with_idempotent.m](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/with_idempotent.m.mcfunction) が `function $(CB)` を実行する。callbackの可視性を調べるときは、関数IDの直接参照だけでなく、この指定と呼出しも辿る。共通の公開範囲の規約はDevSpaceの `AGENTS.md` に従う。
+
 ## 生成物の変更
 
 `.cache/dls.json`なしでdeclare生成物を手編集して完了扱いにしない。master条件では外部Asset checkoutとpushまで行うため、公開declare・関数名変更時は生成差分と参照切れを確認する。除外対象（animated_java、define_gamerule）は個別確認する。

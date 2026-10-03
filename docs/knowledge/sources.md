@@ -66,3 +66,7 @@ AJ optional登録は `e48a116501b931a6688d5bd77e8f60c82de27ffa` の [global/root
 PRの状態・保存diff・確認時点のコードを分けて判定した。RESTのreview commentにはthreadのresolved状態がない。merge済みPRでも個々の提案の採用を意味しない。
 
 補助根拠は [#2266](https://github.com/ProjectTSB/TheSkyBlessing/pull/2266) のScoreToHealth干渉中の最大体力、[#2261](https://github.com/ProjectTSB/TheSkyBlessing/pull/2261) のPlayerMotion.Api.Launchの定義範囲。CI・生成のコード根拠は `.github/workflows/datapack-linter.yml` と `.github/workflows/make-declares-mcf.ts`。open issues一覧は取得したが、この調査で確定した規約の根拠として採用したissueはない。
+
+## Effectの付与・寿命・自己終了の根拠
+
+[Effectの契約](asset-runtime.md#effect-は別の個体モデル) の付与予約・死亡時処理・自己削除の制約は、本体 `6e2b1d0850a3f0adeb7e785e11260c0b15a963c2` のtick/foreach、give/make_effect_data、core/give、core/remove/from_id、common/try_pop_effect_dataを静的に照合した。対象の版は処理中にEffectsを保存先から取り出し、contextのDuration/Stackを書き戻す前に終了イベントを判定する。別の処理順を採用した本体へ適用するときは、保存先・APIから取得できる範囲・終了判定の順序を再確認する。

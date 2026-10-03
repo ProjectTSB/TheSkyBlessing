@@ -25,7 +25,7 @@ storage は完成アイテムを呼出側に返す方式であり、永続の保
 
 [data_get/inventory](../../TheSkyBlessing/data/api/functions/data_get/inventory.mcfunction) は DataCache を介して Inventory を取得する。呼ぶたびにその瞬間の entity NBT を無条件で再取得する API として扱わず、現在の処理が使う snapshot と実 inventory の違いを確認する。
 
-[inventory/set](../../TheSkyBlessing/data/api/functions/inventory/set.mcfunction) はslot付き配列でinventoryを置換し、入力にないslotも空にする。カーソル保持アイテムはIMP Docにある例外であり、部分更新APIとして使わない。27〜35・防具・offhandは、DevSpaceの `docs/mcfunction-idioms.md`「一致しない要素も書込みで作られる」を利用し、空の入力からもSlotだけの要素を作る。これを作業shulkerで空アイテムへ変換して `loot replace` するため、`Items[0]` の条件を「入力アイテムがある場合だけ置換」と読まない。
+[inventory/set](../../TheSkyBlessing/data/api/functions/inventory/set.mcfunction) はslot付き配列でinventoryを置換し、入力にないslotも空にする。カーソル保持アイテムはIMP Docにある例外であり、部分更新APIとして使わない。27〜35・防具・offhandは、DevSpaceの `docs/mcfunction-idioms.md`「一致しない要素も書込みで作られる」を利用し、空の入力からもSlotだけの要素を作る。これを作業shulkerで空アイテムへ変換して `loot replace` するため、`Items[0]` の条件を「入力アイテムがある場合だけ置換」と読まない。[実機検証](../verification/mp-xpbar-and-grave.md)では欠落した防具・offhand・slot27の消去を確認した。
 
 選択中のアイテムを扱う [get_item](../../TheSkyBlessing/data/api/functions/inventory/refer_selected_item_slot/get_item.mcfunction)、[replace_air](../../TheSkyBlessing/data/api/functions/inventory/refer_selected_item_slot/replace_air.mcfunction)、[replace_from_shulker_box](../../TheSkyBlessing/data/api/functions/inventory/refer_selected_item_slot/replace_from_shulker_box.mcfunction) は、選択 hotbar slot を操作するための短い呼出区間の部品である。長期間有効なアイテム参照や、同じ UUID の個体を追い続ける handle ではない。
 

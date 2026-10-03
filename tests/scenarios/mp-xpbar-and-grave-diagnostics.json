@@ -1,0 +1,272 @@
+{
+  "name": "mp-xpbar-and-grave-diagnostics",
+  "scope": {
+    "purpose": "Diagnose redundant XP adjustment and verify grave replacement without duplication, including missing inventory slots.",
+    "fixture": "Explicit first_join; frozen dedicated world; direct private function boundary calls for observation, not example API usage. MP/XP configured then production check is traced. Synthetic marker and GraveStoreItems stand in for a saved grave; actual grave recovery and inventory API run unchanged.",
+    "notVerified": [
+      "Natural death/grave creation or contact detection",
+      "Graphical XP bar",
+      "Performance impact",
+      "Fix correctness"
+    ]
+  },
+  "players": [
+    "VerifyIdioms"
+  ],
+  "steps": [
+    {
+      "name": "Fixture: explicit player initialization, no natural-login assertion",
+      "commands": [
+        "gamerule doMobSpawning false",
+        "gamerule doDaylightCycle false",
+        "gamemode creative VerifyIdioms",
+        "execute as VerifyIdioms at @s run function core:handler/first_join",
+        "fill -3 79 -3 3 79 3 stone",
+        "tp VerifyIdioms 0.5 80 0.5",
+        "clear VerifyIdioms",
+        "scoreboard objectives add IdiomVerify dummy",
+        "execute if entity @a[name=VerifyIdioms] run scoreboard players set FIXTURE_READY IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for FIXTURE_READY to 1"
+      ]
+    },
+    {
+      "name": "Prepare stable MP/XP state: positive_first",
+      "commands": [
+        "scoreboard players set VerifyIdioms MP 500",
+        "scoreboard players set VerifyIdioms MPMax 1000",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute as VerifyIdioms run function player_manager:mp/viewer/check_xpbar",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute store result score #level IdiomVerify run xp query VerifyIdioms levels",
+        "execute if score VerifyIdioms MP matches 500 if score #level IdiomVerify matches 50 run scoreboard players set POSITIVE_FIRST_BASELINE_OK IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for POSITIVE_FIRST_BASELINE_OK to 1"
+      ]
+    },
+    {
+      "name": "Trace actual check_xpbar call: positive_first",
+      "commands": [
+        "execute as VerifyIdioms at @s run debug function player_manager:mp/viewer/check_xpbar",
+        "xp query VerifyIdioms levels",
+        "data get entity VerifyIdioms XpP"
+      ],
+      "expect": [
+        "[Tt]rac",
+        "VerifyIdioms has 50 experience levels"
+      ]
+    },
+    {
+      "name": "Advance 40 ticks to separate trace filenames; reset fixture afterwards",
+      "ticks": 40,
+      "expect": []
+    },
+    {
+      "name": "Prepare stable MP/XP state: positive_repeat",
+      "commands": [
+        "scoreboard players set VerifyIdioms MP 500",
+        "scoreboard players set VerifyIdioms MPMax 1000",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute as VerifyIdioms run function player_manager:mp/viewer/check_xpbar",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute store result score #level IdiomVerify run xp query VerifyIdioms levels",
+        "execute if score VerifyIdioms MP matches 500 if score #level IdiomVerify matches 50 run scoreboard players set POSITIVE_REPEAT_BASELINE_OK IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for POSITIVE_REPEAT_BASELINE_OK to 1"
+      ]
+    },
+    {
+      "name": "Trace actual check_xpbar call: positive_repeat",
+      "commands": [
+        "execute as VerifyIdioms at @s run debug function player_manager:mp/viewer/check_xpbar",
+        "xp query VerifyIdioms levels",
+        "data get entity VerifyIdioms XpP"
+      ],
+      "expect": [
+        "[Tt]rac",
+        "VerifyIdioms has 50 experience levels"
+      ]
+    },
+    {
+      "name": "Advance 40 ticks to separate trace filenames; reset fixture afterwards",
+      "ticks": 40,
+      "expect": []
+    },
+    {
+      "name": "Prepare stable MP/XP state: zero_control",
+      "commands": [
+        "scoreboard players set VerifyIdioms MP 0",
+        "scoreboard players set VerifyIdioms MPMax 1000",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute as VerifyIdioms run function player_manager:mp/viewer/check_xpbar",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute store result score #level IdiomVerify run xp query VerifyIdioms levels",
+        "execute if score VerifyIdioms MP matches 0 if score #level IdiomVerify matches 0 run scoreboard players set ZERO_CONTROL_BASELINE_OK IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for ZERO_CONTROL_BASELINE_OK to 1"
+      ]
+    },
+    {
+      "name": "Trace actual check_xpbar call: zero_control",
+      "commands": [
+        "execute as VerifyIdioms at @s run debug function player_manager:mp/viewer/check_xpbar",
+        "xp query VerifyIdioms levels",
+        "data get entity VerifyIdioms XpP"
+      ],
+      "expect": [
+        "[Tt]rac",
+        "VerifyIdioms has 0 experience levels"
+      ]
+    },
+    {
+      "name": "Separate zero-MP trace from grave trace",
+      "ticks": 40
+    },
+    {
+      "name": "Fixture grave contents: missing_slots",
+      "commands": [
+        "kill @e[type=item]",
+        "clear VerifyIdioms",
+        "item replace entity VerifyIdioms armor.head with diamond_helmet{IdiomVerify:\"grave_helmet\"} 1",
+        "item replace entity VerifyIdioms weapon.offhand with emerald{IdiomVerify:\"grave_offhand\"} 1",
+        "item replace entity VerifyIdioms inventory.18 with gold_ingot{IdiomVerify:\"grave_slot27\"} 7",
+        "item replace entity VerifyIdioms hotbar.0 with dirt{IdiomVerify:\"grave_hotbar\"} 9",
+        "tag VerifyIdioms add GraveOwner",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute as VerifyIdioms run function oh_my_dat:please",
+        "data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems set value [{Slot:0b,id:\"minecraft:stone\",Count:1b}]",
+        "summon marker 10.5 80 0.5 {Tags:[\"IdiomVerify.Grave\"]}",
+        "data get entity VerifyIdioms Inventory",
+        "execute if entity @e[type=marker,tag=IdiomVerify.Grave,limit=1] run scoreboard players set GRAVE_FIXTURE_READY IdiomVerify 1",
+        "execute if data entity VerifyIdioms Inventory[{Slot:103b,id:\"minecraft:diamond_helmet\"}] if data entity VerifyIdioms Inventory[{Slot:-106b,id:\"minecraft:emerald\"}] if data entity VerifyIdioms Inventory[{Slot:27b,id:\"minecraft:gold_ingot\"}] run scoreboard players set SLOTS_PREPARED IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for GRAVE_FIXTURE_READY to 1",
+        "Set \\[IdiomVerify\\] for SLOTS_PREPARED to 1"
+      ]
+    },
+    {
+      "name": "Execute production grave recovery boundary: missing_slots",
+      "commands": [
+        "execute as @e[type=marker,tag=IdiomVerify.Grave,limit=1] at @s run debug function player_manager:grave/tick/break",
+        "data get entity VerifyIdioms Inventory",
+        "execute positioned 10.5 80 0.5 as @e[type=item,distance=..3] run data get entity @s Item",
+        "execute unless entity @e[type=marker,tag=IdiomVerify.Grave] run scoreboard players set GRAVE_RECOVERED IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for GRAVE_RECOVERED to 1"
+      ]
+    },
+    {
+      "name": "Measure inventory and ground independently: missing_slots",
+      "commands": [
+        "execute store result score #helmet_inventory IdiomVerify run clear VerifyIdioms minecraft:diamond_helmet{IdiomVerify:\"grave_helmet\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #helmet_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:diamond_helmet\",Count:1b,tag:{IdiomVerify:\"grave_helmet\"}}}]",
+        "scoreboard players get #helmet_inventory IdiomVerify",
+        "scoreboard players get #helmet_ground IdiomVerify",
+        "execute store result score #offhand_inventory IdiomVerify run clear VerifyIdioms minecraft:emerald{IdiomVerify:\"grave_offhand\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #offhand_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:emerald\",Count:1b,tag:{IdiomVerify:\"grave_offhand\"}}}]",
+        "scoreboard players get #offhand_inventory IdiomVerify",
+        "scoreboard players get #offhand_ground IdiomVerify",
+        "execute store result score #slot27_inventory IdiomVerify run clear VerifyIdioms minecraft:gold_ingot{IdiomVerify:\"grave_slot27\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #slot27_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:gold_ingot\",Count:7b,tag:{IdiomVerify:\"grave_slot27\"}}}]",
+        "scoreboard players get #slot27_inventory IdiomVerify",
+        "scoreboard players get #slot27_ground IdiomVerify",
+        "execute if data entity VerifyIdioms Inventory[{Slot:0b,id:\"minecraft:stone\",Count:1b}] run scoreboard players set SAVED_HOTBAR_RESTORED IdiomVerify 1"
+      ],
+      "expect": [
+        "#helmet_inventory has 0 \\[IdiomVerify\\]",
+        "#helmet_ground has 1 \\[IdiomVerify\\]",
+        "#offhand_inventory has 0 \\[IdiomVerify\\]",
+        "#offhand_ground has 1 \\[IdiomVerify\\]",
+        "#slot27_inventory has 0 \\[IdiomVerify\\]",
+        "#slot27_ground has 1 \\[IdiomVerify\\]",
+        "Set \\[IdiomVerify\\] for SAVED_HOTBAR_RESTORED to 1"
+      ]
+    },
+    {
+      "name": "Separate grave trace files before preparing next fixture",
+      "ticks": 40
+    },
+    {
+      "name": "Fixture grave contents: supplied_slots",
+      "commands": [
+        "kill @e[type=item]",
+        "clear VerifyIdioms",
+        "item replace entity VerifyIdioms armor.head with diamond_helmet{IdiomVerify:\"grave_helmet\"} 1",
+        "item replace entity VerifyIdioms weapon.offhand with emerald{IdiomVerify:\"grave_offhand\"} 1",
+        "item replace entity VerifyIdioms inventory.18 with gold_ingot{IdiomVerify:\"grave_slot27\"} 7",
+        "item replace entity VerifyIdioms hotbar.0 with dirt{IdiomVerify:\"grave_hotbar\"} 9",
+        "tag VerifyIdioms add GraveOwner",
+        "execute as VerifyIdioms run function api:data_get/invalidate_cache",
+        "execute as VerifyIdioms run function oh_my_dat:please",
+        "data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].GraveStoreItems set value [{Slot:0b,id:\"minecraft:stone\",Count:1b},{Slot:103b,id:\"minecraft:iron_helmet\",Count:1b},{Slot:-106b,id:\"minecraft:shield\",Count:1b},{Slot:27b,id:\"minecraft:diamond\",Count:1b}]",
+        "summon marker 10.5 80 0.5 {Tags:[\"IdiomVerify.Grave\"]}",
+        "data get entity VerifyIdioms Inventory",
+        "execute if entity @e[type=marker,tag=IdiomVerify.Grave,limit=1] run scoreboard players set GRAVE_FIXTURE_READY IdiomVerify 1",
+        "execute if data entity VerifyIdioms Inventory[{Slot:103b,id:\"minecraft:diamond_helmet\"}] if data entity VerifyIdioms Inventory[{Slot:-106b,id:\"minecraft:emerald\"}] if data entity VerifyIdioms Inventory[{Slot:27b,id:\"minecraft:gold_ingot\"}] run scoreboard players set SLOTS_PREPARED IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for GRAVE_FIXTURE_READY to 1",
+        "Set \\[IdiomVerify\\] for SLOTS_PREPARED to 1"
+      ]
+    },
+    {
+      "name": "Execute production grave recovery boundary: supplied_slots",
+      "commands": [
+        "execute as @e[type=marker,tag=IdiomVerify.Grave,limit=1] at @s run debug function player_manager:grave/tick/break",
+        "data get entity VerifyIdioms Inventory",
+        "execute positioned 10.5 80 0.5 as @e[type=item,distance=..3] run data get entity @s Item",
+        "execute unless entity @e[type=marker,tag=IdiomVerify.Grave] run scoreboard players set GRAVE_RECOVERED IdiomVerify 1"
+      ],
+      "expect": [
+        "Set \\[IdiomVerify\\] for GRAVE_RECOVERED to 1"
+      ]
+    },
+    {
+      "name": "Measure inventory and ground independently: supplied_slots",
+      "commands": [
+        "execute store result score #helmet_inventory IdiomVerify run clear VerifyIdioms minecraft:diamond_helmet{IdiomVerify:\"grave_helmet\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #helmet_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:diamond_helmet\",Count:1b,tag:{IdiomVerify:\"grave_helmet\"}}}]",
+        "scoreboard players get #helmet_inventory IdiomVerify",
+        "scoreboard players get #helmet_ground IdiomVerify",
+        "execute store result score #offhand_inventory IdiomVerify run clear VerifyIdioms minecraft:emerald{IdiomVerify:\"grave_offhand\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #offhand_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:emerald\",Count:1b,tag:{IdiomVerify:\"grave_offhand\"}}}]",
+        "scoreboard players get #offhand_inventory IdiomVerify",
+        "scoreboard players get #offhand_ground IdiomVerify",
+        "execute store result score #slot27_inventory IdiomVerify run clear VerifyIdioms minecraft:gold_ingot{IdiomVerify:\"grave_slot27\"} 0",
+        "execute positioned 10.5 80 0.5 store result score #slot27_ground IdiomVerify if entity @e[type=item,distance=..3,nbt={Item:{id:\"minecraft:gold_ingot\",Count:7b,tag:{IdiomVerify:\"grave_slot27\"}}}]",
+        "scoreboard players get #slot27_inventory IdiomVerify",
+        "scoreboard players get #slot27_ground IdiomVerify",
+        "execute if data entity VerifyIdioms Inventory[{Slot:0b,id:\"minecraft:stone\",Count:1b}] run scoreboard players set SAVED_HOTBAR_RESTORED IdiomVerify 1"
+      ],
+      "expect": [
+        "#helmet_inventory has 0 \\[IdiomVerify\\]",
+        "#helmet_ground has 1 \\[IdiomVerify\\]",
+        "#offhand_inventory has 0 \\[IdiomVerify\\]",
+        "#offhand_ground has 1 \\[IdiomVerify\\]",
+        "#slot27_inventory has 0 \\[IdiomVerify\\]",
+        "#slot27_ground has 1 \\[IdiomVerify\\]",
+        "Set \\[IdiomVerify\\] for SAVED_HOTBAR_RESTORED to 1"
+      ]
+    },
+    {
+      "name": "Isolate creation by filtered NBT write on an empty list",
+      "commands": [
+        "data modify storage idiom_verify:probe Items set value []",
+        "data modify storage idiom_verify:probe Items[{Slot:103b}].Slot set value 0b",
+        "data get storage idiom_verify:probe Items",
+        "execute if data storage idiom_verify:probe Items[{Slot:0b}] unless data storage idiom_verify:probe Items[0].id run scoreboard players set EMPTY_SLOT_CREATED IdiomVerify 1",
+        "data remove storage idiom_verify:probe Items"
+      ],
+      "expect": [
+        "Storage idiom_verify:probe has the following contents: \\[\\{Slot: 0b\\}\\]",
+        "Set \\[IdiomVerify\\] for EMPTY_SLOT_CREATED to 1"
+      ]
+    }
+  ]
+}
