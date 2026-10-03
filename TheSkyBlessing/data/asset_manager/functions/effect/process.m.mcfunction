@@ -23,6 +23,10 @@
 # 継続中の Effect の残り時間を減らす
     execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} store result storage asset:effect TargetEffect.Duration int 1 run data get storage asset:effect TargetEffect.Duration 0.9999999999
 
+# 今回呼ぶイベントを確定する
+    execute unless data storage asset:effect TargetEffect.NextEvent unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] run data modify storage asset:effect TargetEffect.NextEvent set value "tick"
+    execute unless data storage asset:effect TargetEffect.NextEvent unless data storage asset:effect TargetEffect{Duration:-1} if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run data modify storage asset:effect TargetEffect.NextEvent set value "tick"
+
 # イベントの context を設定する
     data modify storage asset:context id set from storage asset:effect Current.ID
     data modify storage asset:context originID set from storage asset:effect Current.ID
@@ -37,21 +41,15 @@
     execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
 
 # 書き戻すデータから今回の付与イベントを除く
-# TargetEffect は今回のイベント判定に使うため残す。
     data modify storage asset:effect Current.Data set from storage asset:effect TargetEffect
     data remove storage asset:effect Current.Data.NextEvent
     data remove storage asset:effect Current.Data.PreviousField
 
-# 付与イベントを実行する
-# 削除予約がある場合も、初期化・差分処理を先に済ませる。
+# 確定したイベントを実行する
+# 削除予約がある場合も、付与時の初期化・差分処理を先に済ませる。
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
-
-# 死亡処理中・リスポーン待ちは keep の Effect だけ tick を実行する
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} unless entity @s[tag=!DeathProcess,tag=!InRespawnEvent] if data storage asset:effect TargetEffect{ProcessOnDied:"keep"} run function asset_manager:effect/events/tick/
-
-# 通常時の tick を実行する
-    execute unless data storage asset:effect TargetEffect{NextEvent:"given"} unless data storage asset:effect TargetEffect{NextEvent:"re-given"} unless data storage asset:effect TargetEffect{Duration:-1} if entity @s[tag=!DeathProcess,tag=!InRespawnEvent] run function asset_manager:effect/events/tick/
+    execute if data storage asset:effect TargetEffect{NextEvent:"tick"} run function asset_manager:effect/events/tick/
 
 # イベントの変更を保存する
     function oh_my_dat:please

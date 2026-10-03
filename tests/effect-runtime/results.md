@@ -168,3 +168,11 @@ snapshot関数を削除し、Effectsのコピーをarray libで反転してTickQ
 `python3 tests/effect-runtime/run.py` は `run-65jf9okm` で37 / 37 step・118判定に成功した。基準commitは `3d33f0463`。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用した。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。コピー内からsnapshot関数が削除され、本体の関数とシナリオが作業中の差分に一致することも確認した。
 
 IMP Docは振る舞いと呼出時の前提を中心にし、本文では通常の代入や後片付けの説明を短くした。tick・foreachと削除したsnapshot以外の関数は、実行コマンドと公開範囲に変更がない。固定function参照、関連文書の参照、文章のlint、`git diff --check` を確認した。Fieldを含む配列の反転・保持でコピー量が増えるため、速度改善とは扱わない。今回は性能を測定していない。
+
+## イベントの選択と呼出しを分離（2026-10-03・検証時は未コミット）
+
+process.mで通常tickの条件を満たす場合にTargetEffect.NextEventへtickを設定し、given・re-givenと同じ形で呼び出す。保存用のCurrent.DataからはNextEventを削除するため、tickは保存先に残らない。付与イベントを優先し、削除予約中は通常tickを呼ばない。死亡処理中・リスポーン待ちの通常tickはkeep指定だけを対象にする。Current.Data・TargetEffectの使い分け、API前後の同期、foreachはcommit `44afc729d` の構成を維持する。
+
+Current.Eventを使っていた変更前の検証では、`python3 tests/effect-runtime/run.py` が `run-3rihf2t4` で既存37 / 37 step・118判定に成功した。シナリオの変更はない。TheSkyBlessingは隔離コピー、依存先はDevSpace直下のAsset / Asset-AnimatedJavaを使用した。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。実行したprocess.mとシナリオは、その時点の作業コピーに一致した。固定function参照・公開範囲・文章のlint・`git diff --check` も確認した。
+
+TargetEffect.NextEventへ変更した最終版は、同じコマンドの `run-09jqhv68` で37 / 37 step・118判定に成功した。stopで正常終了（exit 0）、全dimension保存、参照コードの不変を確認した。実行したprocess.mとシナリオは現在の作業コピーに一致する。文章のlintと `git diff --check` も確認した。検証時点では未コミットで保持した。

@@ -150,7 +150,7 @@ Revision は ID と組み合わせて照合し、別 ID との一意性は要求
 
 given / re-given / tick から戻った後は、OhMyDat の参照先を現在の付与先へ戻し、context を書き戻す。削除予約は後続の Duration 変更で取り消さない。Field は全体を set するので、イベント内で削除した Field のキーが merge によって復活することも避ける。
 
-FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。今回分の `NextEvent` と `PreviousField` はイベントを呼ぶ前に Current.Data から除く。保存先への反映は API 前またはイベント終了時の一括保存で行う。再付与後は refresh が新しい予約も読み直す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
+FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。今回呼ぶ given / re-given / tick は、削除予約と死亡時の条件を確認して `TargetEffect.NextEvent` に確定する。今回分の `NextEvent` と `PreviousField` はイベントを呼ぶ前に Current.Data から除く。保存先への反映は API 前またはイベント終了時の一括保存で行う。再付与後は refresh が新しい予約も読み直す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
 
 `DurationOperation:"replace"` は、新 Stack が旧 Stack 以上なら Duration の大きい方、下回るなら旧 Duration を維持する既存の計算を使う。
 
