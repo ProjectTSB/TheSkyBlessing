@@ -15,18 +15,18 @@
 
 # 演算処理
     data modify storage lib: Pos set from entity 0-0-0-0-0 Pos
-    execute store result score $VectorX Temporary run data get storage lib: Pos[0] 10
-    execute store result score $VectorY Temporary run data get storage lib: Pos[1] 10
-    execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 10
+    execute store result score $VectorX Temporary run data get storage lib: Pos[0] 1000
+    execute store result score $VectorY Temporary run data get storage lib: Pos[1] 1000
+    execute store result score $VectorZ Temporary run data get storage lib: Pos[2] 1000
 
     scoreboard players operation $VectorX Temporary *= $VectorMagnitude Temporary
     scoreboard players operation $VectorY Temporary *= $VectorMagnitude Temporary
     scoreboard players operation $VectorZ Temporary *= $VectorMagnitude Temporary
 
 # 適用
-    execute store result storage lib: Pos[0] double 0.00001 run scoreboard players get $VectorX Temporary
-    execute store result storage lib: Pos[1] double 0.00001 run scoreboard players get $VectorY Temporary
-    execute store result storage lib: Pos[2] double 0.00001 run scoreboard players get $VectorZ Temporary
+    execute store result storage lib: Pos[0] double 0.0000001 run scoreboard players get $VectorX Temporary
+    execute store result storage lib: Pos[1] double 0.0000001 run scoreboard players get $VectorY Temporary
+    execute store result storage lib: Pos[2] double 0.0000001 run scoreboard players get $VectorZ Temporary
     data modify entity @s Motion set from storage lib: Pos
 
 # リセット
