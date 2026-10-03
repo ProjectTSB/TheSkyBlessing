@@ -1,12 +1,13 @@
 #> api:entity/mob/effect/get/all
 #
-# Effect一覧を取得する
+# Effect 一覧を取得する
 #
 # @input as player
+# @output storage api: Return.EffectList
 # @api
 
-# storage呼び出し
-    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"oh_my_dat:please",IsForwardedOnly:true}
+# 転送先の context を同期する
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:effect/context/before_api",IsForwardedOnly:true}
 
 # エフェクトを取得
     data remove storage api: Return.EffectList

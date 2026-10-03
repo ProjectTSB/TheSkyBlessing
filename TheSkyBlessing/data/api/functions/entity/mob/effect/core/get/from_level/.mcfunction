@@ -3,8 +3,8 @@
 
 # 返り値用のストレージを空にする
     data remove storage api: Return.EffectList
-# エフェクト一覧を取得
-    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"oh_my_dat:please",IsForwardedOnly:true}
+# 転送先の context を同期してから、条件判定用の Effect 一覧を取得する
+    function api:mob/apply_to_forward_target/with_idempotent.m {CB:"asset_manager:effect/context/before_api",IsForwardedOnly:true}
     data modify storage api: Temp.Effects set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
 # 条件に合うようにフィルターする
     function api:entity/mob/effect/core/get/from_level/filter/level/

@@ -1,0 +1,15 @@
+{
+  "name": "effect-manager-benchmark",
+  "scope": "Synthetic manager-only benchmark, frozen server, inert Effect callbacks in isolated fixture pack, armor stands, 1/5/10/20 Effects and 1/20 owners. One warmup and three profiled batches of 1000 owner-ticks per case. Batch is scheduled after a profiler activation tick. Exact completed batches and remaining durations are asserted. debug elapsed time includes profiling, background core ticks and RCON scheduling overhead; not gameplay MSPT. Compare same scenario on HEAD and working tree.",
+  "players": [],
+  "cases": [
+    {"owners": 1, "effects": 1, "iterations": 1000, "expectedDurations": [999998000, 999997000, 999996000]},
+    {"owners": 1, "effects": 5, "iterations": 1000, "expectedDurations": [999998000, 999997000, 999996000]},
+    {"owners": 1, "effects": 10, "iterations": 1000, "expectedDurations": [999998000, 999997000, 999996000]},
+    {"owners": 1, "effects": 20, "iterations": 1000, "expectedDurations": [999998000, 999997000, 999996000]},
+    {"owners": 20, "effects": 1, "iterations": 50, "expectedDurations": [999999900, 999999850, 999999800]},
+    {"owners": 20, "effects": 5, "iterations": 50, "expectedDurations": [999999900, 999999850, 999999800]},
+    {"owners": 20, "effects": 10, "iterations": 50, "expectedDurations": [999999900, 999999850, 999999800]},
+    {"owners": 20, "effects": 20, "iterations": 50, "expectedDurations": [999999900, 999999850, 999999800]}
+  ]
+}

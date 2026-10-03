@@ -1,17 +1,32 @@
 #> api:entity/mob/effect/give
 #
-# entityにエフェクトを与えます。
+# 付与先に Effect を付与・再付与する
+# 使用後は effect/reset を呼ぶ
 #
-# @input storage api:
-#   Argument.ID : int
-#   Argument.Duration? : int (default: Asset | error)
-#   Argument.Stack? : int (default: 1)
-#   Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
-#   Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
-#   Argument.FieldOverride? : compound
+# @input
+#   as entity
+#   storage api:
+#       Argument.ID : int
+#       Argument.Duration? : int (default: Asset | error)
+#       Argument.Stack? : int (default: 1)
+#       Argument.DurationOperation? : "forceReplace" | "replace" | "add" (default: "replace")
+#       Argument.StackOperation? : "forceReplace" | "replace" | "add" (default: "replace")
+#       Argument.FieldOverride? : compound
+# @output
+#   storage asset:context
+#       Duration : int
+#       Stack : int
+#       this : compound
 # @api
 
-# validate
+# 引数を確認する
     execute unless data storage api: Argument.ID run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" ID","color":"red"}]
-# 呼び出し
+
+# context を保存する
+    function asset_manager:effect/context/before_api
+
+# 保存データへ付与・再付与を反映する
     function api:entity/mob/effect/core/give
+
+# 更新後の context を読み直す
+    function asset_manager:effect/context/after_api

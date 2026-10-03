@@ -67,6 +67,12 @@ PRの状態・保存diff・確認時点のコードを分けて判定した。RE
 
 補助根拠は [#2266](https://github.com/ProjectTSB/TheSkyBlessing/pull/2266) のScoreToHealth干渉中の最大体力、[#2261](https://github.com/ProjectTSB/TheSkyBlessing/pull/2261) のPlayerMotion.Api.Launchの定義範囲。CI・生成のコード根拠は `.github/workflows/datapack-linter.yml` と `.github/workflows/make-declares-mcf.mts`。open issues一覧は取得したが、この調査で確定した規約の根拠として採用したissueはない。
 
-## Effectの付与・寿命・自己終了の根拠
+## 旧実装のEffectの付与・寿命・自己終了の根拠
 
-[Effectの契約](asset-runtime.md#effect-は別の個体モデル) の付与予約・死亡時処理・自己削除の制約は、本体 `6e2b1d0850a3f0adeb7e785e11260c0b15a963c2` のtick/foreach、give/make_effect_data、core/give、core/remove/from_id、common/try_pop_effect_dataを静的に照合した。対象の版は処理中にEffectsを保存先から取り出し、contextのDuration/Stackを書き戻す前に終了イベントを判定する。別の処理順を採用した本体へ適用するときは、保存先・APIから取得できる範囲・終了判定の順序を再確認する。
+旧実装の付与予約・死亡時処理・自己削除の制約は、本体 `6e2b1d0850a3f0adeb7e785e11260c0b15a963c2` のtick/foreach、give/make_effect_data、core/give、core/remove/from_id、common/try_pop_effect_dataを静的に照合した。対象の版は処理中にEffectsを保存先から取り出し、contextのDuration/Stackを書き戻す前に終了イベントを判定する。別の処理順を採用した本体へ適用するときは、保存先・APIから取得できる範囲・終了判定の順序を再確認する。
+
+## Effect の処理中の削除・再付与
+
+[#1673](https://github.com/ProjectTSB/TheSkyBlessing/issues/1673)、[#2265](https://github.com/ProjectTSB/TheSkyBlessing/issues/2265) と、基準 HEAD `5d6799ed16578e8c6a7c61593bcf3d0ef22c1ff1` の tick/foreach、remove、give、register/継承/ROM、get、表示処理を照合した。Effects を保存先から取り出すことで API が対象を検索できなくなるのが原因。現作業ツリーでは Effects を保存先に残し、ID/Revision による処理予定の走査と、API 前後の context の書き戻し・読み直しを実装した。自己削除は既存 remove API で扱う。
+
+採用した用語・契約・設計理由・コード根拠は [asset-runtime.md](asset-runtime.md#effect-の保存データとイベント処理)、再実行する前提と期待値は [シナリオ](../../tests/effect-runtime/README.md)、実測値・失敗・性能比較・未検証範囲は [実行記録](../../tests/effect-runtime/results.md) を参照する。約10要素という規模はユーザーの想定であり強制上限ではない。機能の実サーバー検証と、性能・実ゲーム全体の許容性を区別する。

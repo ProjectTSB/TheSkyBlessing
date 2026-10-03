@@ -1,9 +1,10 @@
 #> asset_manager:effect/events/end/
 #
-#
+# end イベントを呼び出す
+# 実装がなければ継承元のイベントを呼ぶ
 #
 # @within function
-#   asset_manager:effect/foreach
+#   asset_manager:effect/finish.m
 #   asset_manager:effect/events/end/call_super_method
 
 function #asset:effect/end

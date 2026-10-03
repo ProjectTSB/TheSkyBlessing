@@ -11,13 +11,15 @@
 # @output storage api: Return.EffectList
 # @api
 
-# validate
+# 引数を確認する
     execute unless data storage api: Argument.ClearLv run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません","color":"white"},{"text":" ClearLv","color":"red"}]
     execute unless data storage api: Argument.FilterMode run data modify storage api: Argument.FilterMode set value "Equal"
     # execute unless data storage api: Argument.IsBadEffect
-# call
+
+# 条件に合う Effect を取得する
     function api:entity/mob/effect/core/get/from_level/
-# reset
+
+# 引数をリセット
     data remove storage api: Argument.ClearLv
     data remove storage api: Argument.FilterMode
     data remove storage api: Argument.IsBadEffect
