@@ -15,7 +15,7 @@
     data modify storage asset:effect ClearType set from storage api: Argument.ClearType
     execute store result score $ClearCount Temporary run data get storage api: Argument.ClearCount
 # 対象と残り件数がある場合だけ削除処理を始める
-# recursion は一件を処理してから残数を判定するため、ClearCount=0 は入口で止める。
+# recursion は一件を処理してから残数を判定するため、ClearCount=0 は入口で止める
     execute if score $ClearCount Temporary matches 1.. if data storage asset:effect IDList[0] run function api:entity/mob/effect/core/remove/from_level/recursion
 # リセット
     data remove storage asset:effect IDList

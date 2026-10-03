@@ -1,6 +1,6 @@
 #> effect_test:benchmark/loop
 #
-# 指定された反復数だけ全付与先の Effect を処理する。
+# 指定された反復数だけ全付与先の Effect を処理する
 # @private
 
 # 全付与先の Effect を処理する

@@ -1,7 +1,7 @@
 #> asset_manager:effect/events/end/
 #
-# end イベントを呼び出す。
-# 実装がなければ継承元のイベントを呼ぶ。
+# end イベントを呼び出す
+# 実装がなければ継承元のイベントを呼ぶ
 #
 # @within function
 #   asset_manager:effect/finish.m

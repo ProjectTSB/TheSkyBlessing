@@ -1,6 +1,6 @@
 #> asset_manager:effect/give/make_effect_data
 #
-# 付与・再付与する Effect の保存データを作成する。
+# 付与・再付与する Effect の保存データを作成する
 #
 # @output storage asset:effect EffectData
 # @within function asset_manager:effect/give/give
@@ -24,7 +24,7 @@
     execute store result score $Stack Temporary run data get storage asset:effect Stack
     execute store result score $MaxStack Temporary run data get storage asset:effect MaxStack
 # Operation に合わせて Duration と Stack を計算する
-# Duration の replace は、新規 Stack が既存 Stack を下回る場合に既存 Duration を維持する。
+# Duration の replace は、新規 Stack が既存 Stack を下回る場合に既存 Duration を維持する
     execute if data storage asset:effect {DurationOperation:"replace"} if score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary > $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"replace"} unless score $Stack Temporary >= $OriginStack Temporary run scoreboard players operation $Duration Temporary = $OriginDuration Temporary
     execute if data storage asset:effect {DurationOperation:"add"} run scoreboard players operation $Duration Temporary += $OriginDuration Temporary

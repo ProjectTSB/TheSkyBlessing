@@ -1,7 +1,7 @@
 #> api:entity/mob/effect/remove/from_id
 #
-# 付与先の指定 ID の Effect を削除する。
-# 使用後は effect/reset を呼ぶ。
+# 付与先の指定 ID の Effect を削除する
+# 使用後は effect/reset を呼ぶ
 #
 # @input
 #   as entity

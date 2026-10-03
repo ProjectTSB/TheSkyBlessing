@@ -1,7 +1,8 @@
 #> effect_test:setup
 #
-# 各機能シナリオの独立した付与先と観測用 storage を用意する。
-# 隔離 fixture 専用。armor stand は通常 core tick の対象外で、手動の tick 入口で処理する。
+# 各機能シナリオの独立した付与先と観測用 storage を用意する
+# 隔離 fixture 専用
+# armor stand は通常 core tick の対象外で、手動の tick 入口で処理する
 # @private
 
 # 前のシナリオの付与先を破棄し、主対象と別の付与先を新しく作る

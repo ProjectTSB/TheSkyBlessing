@@ -1,6 +1,6 @@
 #> api:entity/mob/effect/get/size/all
 #
-# entityに付与されている全てのエフェクトの数を取得します。
+# entityに付与されている全てのエフェクトの数を取得します
 #
 # @output storage api: Return.EffectSize.All
 # @api

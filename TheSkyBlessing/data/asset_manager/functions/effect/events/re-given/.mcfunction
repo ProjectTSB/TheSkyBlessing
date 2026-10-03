@@ -1,7 +1,7 @@
 #> asset_manager:effect/events/re-given/
 #
-# re-given イベントを呼び出す。
-# 実装がなければ継承元のイベントを呼ぶ。
+# re-given イベントを呼び出す
+# 実装がなければ継承元のイベントを呼ぶ
 #
 # @within function
 #   asset_manager:effect/process.m

@@ -1,6 +1,6 @@
 #> effect_test:tick
 #
-# 主対象の Effect を一回処理する。
+# 主対象の Effect を一回処理する
 # @private
 
 # イベントの実行者と位置を主対象に揃える

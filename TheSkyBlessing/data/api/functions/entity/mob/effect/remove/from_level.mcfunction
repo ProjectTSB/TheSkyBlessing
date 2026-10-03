@@ -1,7 +1,7 @@
 #> api:entity/mob/effect/remove/from_level
 #
-# 付与先の Effect を、解除条件と件数の指定に従って削除する。
-# 使用後は effect/reset を呼ぶ。
+# 付与先の Effect を、解除条件と件数の指定に従って削除する
+# 使用後は effect/reset を呼ぶ
 #
 # @input
 #   as entity

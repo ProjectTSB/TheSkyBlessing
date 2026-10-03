@@ -1,12 +1,12 @@
 #> asset_manager:effect/tick
 #
-# @s の Effect を処理し、表示を更新する。
+# @s の Effect を処理し、表示を更新する
 #
 # @input as entity
 # @within function core:tick/
 
 # Effects を逆順にコピーして TickQueue に格納する
-# 末尾から取り出したときに、元の付与順で処理するため。
+# 末尾から取り出したときに、元の付与順で処理するため
     function oh_my_dat:please
     function lib:array/session/open
     data modify storage lib: Array set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects
@@ -26,7 +26,7 @@
     tag @s remove this
 
 # 付与状態と表示を更新する
-# イベントで OhMyDat の参照先が変わるため、取得し直す。
+# イベントで OhMyDat の参照先が変わるため、取得し直す
     function oh_my_dat:please
     execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0] run tag @s remove HasAssetEffect
     execute if entity @s[type=player] if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[0] run function asset_manager:effect/display/

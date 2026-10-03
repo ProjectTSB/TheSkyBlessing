@@ -1,6 +1,6 @@
 #> asset_manager:effect/process.m
 #
-# 処理対象の Effect を更新し、イベントを実行する。
+# 処理対象の Effect を更新し、イベントを実行する
 #
 # @input args
 #   ID : int
@@ -8,7 +8,7 @@
 # @within function asset_manager:effect/foreach
 
 # 処理対象を取得する
-# 再付与前の処理予定はスキップする。
+# 再付与前の処理予定はスキップする
     data remove storage asset:effect TargetEffect
     $data modify storage asset:effect TargetEffect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}]
     execute unless data storage asset:effect TargetEffect run return 0
@@ -36,7 +36,7 @@
     data modify storage asset:effect Current.Phase set value "callback"
 
 # 削除予約を Current.RemoveRequested に記録する
-# イベント中の Duration 変更では予約を取り消さない。
+# イベント中の Duration 変更では予約を取り消さない
     execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
 
 # 保存用のデータを Current.Data にコピーし、今回の NextEvent と PreviousField を除く
@@ -45,7 +45,7 @@
     data remove storage asset:effect Current.Data.PreviousField
 
 # 確定したイベントを実行する
-# 削除予約がある場合も、付与時の初期化・差分処理を先に済ませる。
+# 削除予約がある場合も、付与時の初期化・差分処理を先に済ませる
     execute if data storage asset:effect TargetEffect{NextEvent:"given"} run function asset_manager:effect/events/given/
     execute if data storage asset:effect TargetEffect{NextEvent:"re-given"} run function asset_manager:effect/events/re-given/
     execute if data storage asset:effect TargetEffect{NextEvent:"tick"} run function asset_manager:effect/events/tick/

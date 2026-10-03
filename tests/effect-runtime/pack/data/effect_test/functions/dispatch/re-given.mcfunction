@@ -1,6 +1,6 @@
 #> effect_test:dispatch/re-given
 #
-# re-given の入力を操作前に記録し、Field で指定された試験操作を実行する。
+# re-given の入力を操作前に記録し、Field で指定された試験操作を実行する
 # @private
 
 # 性能測定ではイベント本体の処理を省き、管理処理を比較する

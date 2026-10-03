@@ -1,6 +1,6 @@
 #> api:entity/mob/effect/get/size/good
 #
-# entityに付与されている良い効果のエフェクトの数を取得します。
+# entityに付与されている良い効果のエフェクトの数を取得します
 #
 # @output storage api: Return.EffectSize.Good
 # @api

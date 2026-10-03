@@ -1,6 +1,6 @@
 #> asset_manager:effect/foreach
 #
-# TickQueue の予定を順に処理する。
+# TickQueue の予定を順に処理する
 #
 # @within function
 #   asset_manager:effect/tick

@@ -1,6 +1,6 @@
 #> asset_manager:effect/display/
 #
-# 付与中の Effect から表示メッセージを組み立てる。
+# 付与中の Effect から表示メッセージを組み立てる
 #
 # @input as entity
 # @within function asset_manager:effect/tick

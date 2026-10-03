@@ -1,6 +1,6 @@
 #> effect_test:benchmark/batch.m
 #
-# 全付与先の Effect manager を Iterations 回実行し、完了した反復数を保存する。
+# 全付与先の Effect manager を Iterations 回実行し、完了した反復数を保存する
 # @private
 
 # 反復数を初期化する

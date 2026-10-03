@@ -1,6 +1,6 @@
 #> asset_manager:effect/display/foreach
 #
-# 表示対象の Effect のアイコンを追加する。
+# 表示対象の Effect のアイコンを追加する
 #
 # @input as entity
 # @within function

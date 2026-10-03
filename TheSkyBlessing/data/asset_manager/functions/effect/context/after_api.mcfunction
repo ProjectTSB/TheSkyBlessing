@@ -1,6 +1,6 @@
 #> asset_manager:effect/context/after_api
 #
-# give / remove の結果を、同じ付与先の実行中の context へ反映する。
+# give / remove の結果を、同じ付与先の実行中の context へ反映する
 #
 # @input as entity
 # @within function

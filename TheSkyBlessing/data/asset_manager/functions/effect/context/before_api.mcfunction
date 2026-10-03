@@ -1,6 +1,6 @@
 #> asset_manager:effect/context/before_api
 #
-# API の参照先を @s に合わせ、同じ付与先の実行中の context を保存する。
+# API の参照先を @s に合わせ、同じ付与先の実行中の context を保存する
 #
 # @input as entity
 # @within function

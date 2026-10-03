@@ -1,7 +1,7 @@
 #> api:entity/mob/effect/give
 #
-# 付与先に Effect を付与・再付与する。
-# 使用後は effect/reset を呼ぶ。
+# 付与先に Effect を付与・再付与する
+# 使用後は effect/reset を呼ぶ
 #
 # @input
 #   as entity
