@@ -130,7 +130,9 @@ register と各イベントは function tag の全走査と ID 条件の wrapper
 
 [Effect tick](../../TheSkyBlessing/data/asset_manager/functions/effect/tick.mcfunction) は `Effects[]` を保存先に残し、[snapshot](../../TheSkyBlessing/data/asset_manager/functions/effect/snapshot.m.mcfunction) で `{ID, Revision}` の処理予定を保存順に作る。[foreach.m](../../TheSkyBlessing/data/asset_manager/functions/effect/foreach.m.mcfunction) は処理予定を順に進め、[process](../../TheSkyBlessing/data/asset_manager/functions/effect/process.m.mcfunction) が一致する Effect データを取得する。配列の添字は API の抜き取り・append で変わるため、Effect の識別には使わない。`NextTickEffects` への退避・復元は行わない。
 
-[make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は付与先の `EffectRevision` を進め、新規付与・再付与する Effect の `Revision` へ割り当てる。削除予約では更新番号を変えない。旧データの未設定 Revision は snapshot 時に 0 として補完する。
+[make_effect_data](../../TheSkyBlessing/data/asset_manager/functions/effect/give/make_effect_data.mcfunction) は同じ ID の既存データの `Revision + 1` を割り当て、新規付与は 1 とする。未設定の Revision は 0 として扱い、snapshot 時にも 0 を補完する。削除予約では更新番号を変えない。
+
+Revision は ID と組み合わせて照合し、別 ID との一意性は要求しない。削除 API は予約だけを行い、実際の削除はその Effect の終了処理で行う。終了イベントで同 ID を新規付与して Revision が 1 に戻っても、古い処理予定は再実行しない。この前提は、同 ID のデータが一つで、イベントから Effect tick を再帰呼出ししない現行の契約に基づく。
 
 実行直前に保存データと処理予定の Revision が違えば、その処理予定をスキップする。途中の新規付与・再付与のイベントは、次の Effect tick で呼び出す。再付与先の Effect が処理前か処理後かによって、re-given の実行時点が変わらないようにするためである。たとえば A のイベントで未処理の B を再付与した場合も、再付与前の B の処理予定をスキップして次回に回す。Revision はこの実行時点を揃えるための識別情報であり、削除 API の成立自体に必須の値でも、検索を高速化する index でもない。
 

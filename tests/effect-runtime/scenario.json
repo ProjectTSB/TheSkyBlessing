@@ -239,7 +239,7 @@
       ],
       "checks": [
         {"condition": "if data storage effect_test: {LogCount:1}"},
-        {"condition": "if data storage effect_test: Effects[{ID:64992,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:7}}]"}
+        {"condition": "if data storage effect_test: Effects[{ID:64992,Revision:2,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:7}}]"}
       ]
     },
     {
@@ -270,7 +270,7 @@
       "checks": [
         {"condition": "if data storage effect_test: {LogCount:1}"},
         {"condition": "if data storage effect_test: AfterGive{Value:9}"},
-        {"condition": "if data storage effect_test: Effects[{ID:64991,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:42}}]"}
+        {"condition": "if data storage effect_test: Effects[{ID:64991,Revision:2,Duration:200,Stack:3,NextEvent:\"re-given\",PreviousField:{Value:42}}]"}
       ]
     },
     {
@@ -377,7 +377,7 @@
       ],
       "checks": [
         {"probe": "Log[1]", "condition": "if data storage effect_test: Probe{Event:\"end\"}"},
-        {"condition": "if data storage effect_test: Effects[{ID:64991,Duration:200,NextEvent:\"given\"}]"}
+        {"condition": "if data storage effect_test: Effects[{ID:64991,Revision:1,Duration:200,NextEvent:\"given\"}]"}
       ]
     },
     {
