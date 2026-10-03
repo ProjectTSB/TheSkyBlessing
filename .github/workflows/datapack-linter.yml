@@ -35,19 +35,18 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Setup minimum typescript code runner
-        if: ${{ github.ref == 'refs/heads/master'}}
-        run: |
-            npm i -g ts-node
-            npm i -D @types/node
-            echo '{"compilerOptions": {"target": "ESNext", "types": ["node"]}}' > ./tsconfig.json
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Test declaration generator
+        run: node --test .github/tests/make-declares-mcf.test.cjs
 
       - name: Generate declares.d.mcfunction
-        if: ${{ github.ref == 'refs/heads/master' }}
-        run: |
-            ts-node ./.github/workflows/make-declares-mcf.ts
+        run: node .github/workflows/make-declares-mcf.mts
         env:
-          CHECKOUT_PATH: /home/runner/work/TheSkyBlessing/TheSkyBlessing/
+          CHECKOUT_PATH: ${{ github.workspace }}/
           REPOSITORY: ProjectTSB/TheSkyBlessing
           BRANCH: master
           VISIBILITY_FILTER: |
