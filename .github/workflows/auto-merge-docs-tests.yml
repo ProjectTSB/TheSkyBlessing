@@ -1,0 +1,78 @@
+name: auto-merge-docs-tests
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft, edited]
+  workflow_dispatch:
+    inputs:
+      pull_request:
+        description: Pull request number
+        required: true
+        type: number
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: auto-merge-docs-tests-${{ github.event.pull_request.number || inputs.pull_request }}
+  cancel-in-progress: false
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Inspect API metadata only: never check out or execute the PR's code.
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          GH_TOKEN: ${{ github.token }}
+        with:
+          script: |
+            const number = context.payload.pull_request?.number
+              ?? Number(context.payload.inputs.pull_request);
+            const params = { ...context.repo, pull_number: number };
+            const { data: pr } = await github.rest.pulls.get(params);
+            if (pr.state !== 'open') return;
+
+            const allowed = path => /^(docs|tests)\//.test(path);
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              ...params, per_page: 100,
+            });
+            const eligible = pr.base.ref === 'master' && !pr.draft
+              && files.length > 0 && files.length === pr.changed_files
+              && files.every(file => allowed(file.filename)
+                && (!file.previous_filename || allowed(file.previous_filename)));
+
+            // A push or retarget during pagination invalidates this decision.
+            const { data: current } = await github.rest.pulls.get(params);
+            if (current.state !== 'open'
+                || current.head.sha !== pr.head.sha
+                || current.base.sha !== pr.base.sha
+                || current.base.ref !== pr.base.ref
+                || current.draft !== pr.draft
+                || current.changed_files !== pr.changed_files) {
+              core.info('PR changed during inspection; leave it to the next run.');
+              return;
+            }
+
+            const repo = `${context.repo.owner}/${context.repo.repo}`;
+            if (!eligible) {
+              // Preserve auto-merge requests explicitly enabled by a maintainer.
+              if (current.auto_merge?.enabled_by?.login === 'github-actions[bot]') {
+                await exec.exec('gh', [
+                  'pr', 'merge', String(number), '--repo', repo, '--disable-auto',
+                ]);
+              }
+              core.info('Only non-draft PRs confined to docs/ and tests/ qualify.');
+              return;
+            }
+            if (current.auto_merge) return;
+
+            const emoji = files.some(file => file.filename.startsWith('tests/'))
+              ? '✅' : '📝';
+            await exec.exec('gh', [
+              'pr', 'merge', String(number), '--repo', repo,
+              '--auto', '--squash', '--match-head-commit', current.head.sha,
+              '--subject', `${emoji} ${current.title} (#${number})`,
+            ]);

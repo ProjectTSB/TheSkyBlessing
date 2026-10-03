@@ -6,6 +6,18 @@ masterではProjectTSB/Assetを `Asset2` にcheckoutし、Node.js/ts-nodeで `.g
 
 ローカルでの確認は、pack.mcmetaの所在、JSON構文、関数参照の存在。
 
+## docs/tests の承認と自動マージ
+
+[CODEOWNERS](../../.github/CODEOWNERS) は通常の変更を `@ChenCMD`・`@haiiro2gou` の担当とし、repo直下の `docs/`・`tests/` は所有者を指定しない。承認不要の例外を成立させるには、masterのRulesetで全PR共通の必須承認数を0、Code ownerの承認を必須、`lint` を必須チェックに設定する。CODEOWNERSを先にmasterへ反映してからRulesetを変更する。RulesetはGit管理外の設定なので、ファイルのマージだけでは承認要件は変わらない。
+
+[自動マージworkflow](../../.github/workflows/auto-merge-docs-tests.yml) はmaster向けの非Draft PRをAPIで調べ、変更ファイルがすべて `docs/`・`tests/` 配下ならsquash方式のauto-mergeを有効にする。必須チェックが完了済みならその場でマージし、未完了ならGitHubが条件成立を待つ。全ページのファイル一覧と変更件数を照合し、rename前のパスも判定するため、本体ファイルをdocsへ移動したPRは自動化の対象外になる。rootのREADMEや `.github/` も対象外。
+
+PRの更新・Draft化・マージ先変更で対象外になった場合は、GitHub Actions botが有効にしたauto-mergeを解除する。人が有効にしたauto-mergeは保持する。差分確認中にhead・base等が変化した場合は処理を見送り、次のイベントで再判定する。既存PRや手動再試行にはworkflow_dispatchの `pull_request` 番号入力を使う。
+
+workflowは `pull_request_target` と標準の `GITHUB_TOKEN` を使い、PRのコードをcheckout・実行しない。Actionsのイベントポリシーでは `pull_request_target` を許可する必要がある。GITHUB_TOKENによるマージでは後続のpush workflowが通常起動しないため、自動対象を本体・生成スクリプトへ広げる場合は、マージ後の処理も再設計する。
+
+差分判定とCLI呼出しの回帰確認は `node --test .github/tests/auto-merge-docs-tests.test.cjs`。APIとCLIを置き換えたローカル検証であり、Rulesetや実際のGitHubマージ動作の検証とは区別する。
+
 ## IMP Docとコードのインデント
 
 共通のmcfunction規約はDevSpaceの `AGENTS.md` にある。本体でのdeclareの実例は [coreの宣言](../../TheSkyBlessing/data/core/functions/_index.d.mcfunction) のGlobal Vars・DeathTag・RespawnTag。これらの公開範囲は、上記の `VISIBILITY_FILTER` とdeclare生成にも関係する。
