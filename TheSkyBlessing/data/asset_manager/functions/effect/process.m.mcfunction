@@ -78,4 +78,4 @@
     execute if data storage asset:context {Duration:-1} run data modify storage asset:effect Current.ShouldFinish set value true
     execute if data storage asset:context {Duration:0} run data modify storage asset:effect Current.ShouldFinish set value true
     execute if data storage asset:context {Stack:0} run data modify storage asset:effect Current.ShouldFinish set value true
-    execute if data storage asset:effect Current.ShouldFinish run function asset_manager:effect/finish.m with storage asset:effect Current
+    execute if data storage asset:effect Current{ShouldFinish:true} run function asset_manager:effect/finish.m with storage asset:effect Current
