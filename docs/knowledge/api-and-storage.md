@@ -56,7 +56,7 @@ Damageの `Argument.AdditionalMPHeal` は、未指定時だけ `PersistentArgume
 
 [button/create_text_component](../../TheSkyBlessing/data/api/functions/button/create_text_component.mcfunction) はKeyとListenerを登録して表示を作る。Listenerは省略可能で、省略時はクリックできない表示になる。[Keyの登録](../../TheSkyBlessing/data/player_manager/functions/trigger/register/get_or_allocate_id.m.mcfunction) は既存KeyのIDを再利用し、Listenerを置き換えないため、同じKeyへ異なる処理を登録して切り替わるとは扱わない。
 
-押せる権利はプレイヤーごとの `Trigger.<ID>` に保持され、[呼出処理](../../TheSkyBlessing/data/player_manager/functions/trigger/call_listener/check_and_call.m.mcfunction) がその値を削除してからListenerを実行する。[button/disable](../../TheSkyBlessing/data/api/functions/button/disable.mcfunction) は権利を取り消す操作で、既存チャットを消す操作ではない。同じKeyで再登録すると再び押せるため、過去のチャットに残った同じボタンからも実行できる。表示一個ずつの一回限りの権利が発行されるモデルと混同しない。 新しいメニューでは登録するKeyと無効化するKeyの集合を揃える。設定メニューには [無効化漏れ #2289](https://github.com/ProjectTSB/TheSkyBlessing/issues/2289) があるため、その一覧を完全な手本としてコピーしない。
+押せる権利はプレイヤーごとの `Trigger.<ID>` に保持され、[呼出処理](../../TheSkyBlessing/data/player_manager/functions/trigger/call_listener/check_and_call.m.mcfunction) がその値を削除してからListenerを実行する。[button/disable](../../TheSkyBlessing/data/api/functions/button/disable.mcfunction) は権利を取り消す操作で、既存チャットを消す操作ではない。同じKeyで再登録すると再び押せるため、過去のチャットに残った同じボタンからも実行できる。表示一個ずつの一回限りの権利が発行されるモデルと混同しない。 新しいメニューでは登録するKeyと無効化するKeyの集合を揃える。設定項目を追加するときは [メニュー作成](../../TheSkyBlessing/data/settings/functions/send_setting_menu.mcfunction) と [無効化](../../TheSkyBlessing/data/settings/functions/disable_settings_menu.mcfunction) の両方に有効化用・無効化用のKeyを揃える。
 
 ## 実装手順
 

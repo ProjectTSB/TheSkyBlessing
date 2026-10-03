@@ -1,0 +1,136 @@
+{
+  "name": "settings-play-time-buttons",
+  "scope": {
+    "purpose": "Both play-time setting keys stop working after menu/all-buttons disable, and work again after menu redisplay.",
+    "fixture": "Explicit first_join and initial setting; frozen ticks suppress scheduled redisplay. Actual menu registration, disable, trigger dispatch and setting listeners run. Trigger score is supplied directly as the chat click input. Private function calls are diagnostic boundaries.",
+    "notVerified": [
+      "Graphical chat clicks",
+      "Scheduled menu redisplay"
+    ]
+  },
+  "players": [
+    "VerifySettings"
+  ],
+  "steps": [
+    {
+      "name": "Explicit player initialization in frozen test world",
+      "commands": [
+        "gamerule doMobSpawning false",
+        "gamemode creative VerifySettings",
+        "execute as VerifySettings at @s run function core:handler/first_join",
+        "fill -3 79 -3 3 79 3 stone",
+        "tp VerifySettings 0.5 80 0.5",
+        "clear VerifySettings",
+        "scoreboard objectives add SettingsVerify dummy",
+        "scoreboard players set READY SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for READY to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_SETTINGS_MENU_ENABLE rejects stale click",
+      "commands": [
+        "data modify storage global Config.ShowPlayTimeOnDispel set value false",
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute as VerifySettings at @s run function settings:disable_settings_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_enable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:false} run scoreboard players set DISABLE_SETTINGS_MENU_ENABLE_STALE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_SETTINGS_MENU_ENABLE_STALE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_SETTINGS_MENU_ENABLE reopens and applies click",
+      "commands": [
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_enable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:true} run scoreboard players set DISABLE_SETTINGS_MENU_ENABLE_ACTIVE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_SETTINGS_MENU_ENABLE_ACTIVE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_SETTINGS_MENU_DISABLE rejects stale click",
+      "commands": [
+        "data modify storage global Config.ShowPlayTimeOnDispel set value true",
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute as VerifySettings at @s run function settings:disable_settings_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_disable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:true} run scoreboard players set DISABLE_SETTINGS_MENU_DISABLE_STALE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_SETTINGS_MENU_DISABLE_STALE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_SETTINGS_MENU_DISABLE reopens and applies click",
+      "commands": [
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_disable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:false} run scoreboard players set DISABLE_SETTINGS_MENU_DISABLE_ACTIVE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_SETTINGS_MENU_DISABLE_ACTIVE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_ALL_BUTTONS_ENABLE rejects stale click",
+      "commands": [
+        "data modify storage global Config.ShowPlayTimeOnDispel set value false",
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute as VerifySettings at @s run function settings:disable_all_buttons",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_enable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:false} run scoreboard players set DISABLE_ALL_BUTTONS_ENABLE_STALE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_ALL_BUTTONS_ENABLE_STALE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_ALL_BUTTONS_ENABLE reopens and applies click",
+      "commands": [
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_enable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:true} run scoreboard players set DISABLE_ALL_BUTTONS_ENABLE_ACTIVE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_ALL_BUTTONS_ENABLE_ACTIVE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_ALL_BUTTONS_DISABLE rejects stale click",
+      "commands": [
+        "data modify storage global Config.ShowPlayTimeOnDispel set value true",
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute as VerifySettings at @s run function settings:disable_all_buttons",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_disable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:true} run scoreboard players set DISABLE_ALL_BUTTONS_DISABLE_STALE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_ALL_BUTTONS_DISABLE_STALE to 1"
+      ]
+    },
+    {
+      "name": "DISABLE_ALL_BUTTONS_DISABLE reopens and applies click",
+      "commands": [
+        "execute as VerifySettings at @s run function settings:send_setting_menu",
+        "execute store result score VerifySettings Trigger run data get storage player_manager:trigger TriggerListeners[{Key:\"change_show_play_time_on_dispel_disable\"}].ID",
+        "execute as VerifySettings at @s run function player_manager:trigger/",
+        "execute if data storage global Config{ShowPlayTimeOnDispel:false} run scoreboard players set DISABLE_ALL_BUTTONS_DISABLE_ACTIVE SettingsVerify 1"
+      ],
+      "expect": [
+        "Set \\[SettingsVerify\\] for DISABLE_ALL_BUTTONS_DISABLE_ACTIVE to 1"
+      ]
+    }
+  ]
+}
