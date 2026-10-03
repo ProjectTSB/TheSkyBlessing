@@ -1,6 +1,10 @@
-# Effect 検証結果（2026-09-21）
+# Effect 検証結果
 
-現実装は機能シナリオ **36 / 36 step 成功**。最終実行は `run-d92qw3lo`。自己削除、未処理・処理済み・別付与先の削除、再付与との順序、継承、getter の転送、終了 callback、通常 core tick、表示用 storage を確認した。前提・入力・期待値は [scenario.json](scenario.json)、実行方法と対象範囲は [README.md](README.md) にある。
+最新の機能・性能検証は[一括保存による検索回数の削減](#一括保存による検索回数の削減2026-10-03)を参照。
+
+## 初期検証（2026-09-21）
+
+初期検証では機能シナリオ **36 / 36 step 成功**。最終実行は `run-d92qw3lo`。自己削除、未処理・処理済み・別付与先の削除、再付与との順序、継承、getter の転送、終了 callback、通常 core tick、表示用 storage を確認した。前提・入力・期待値は [scenario.json](scenario.json)、実行方法と対象範囲は [README.md](README.md) にある。
 
 Minecraft 1.20.4、Java 17、最大 heap 4G。DevSpace 共通 runner が隔離 world と明示 fixture を作成した。実ゲームの通常ログイン、実ダメージ、牛乳を飲む操作、画面の描画は未検証。牛乳・死亡は対応するフラグを入力した。GitHub CI / datapack-linter は未実行。Minecraft による関数読み込みと実行、参照先の静的確認、`git diff --check` を実施した。
 
@@ -86,3 +90,26 @@ Issue #1673 の本文・コメント、HEAD `bf9467016` からの未コミット
 ## コメントの文章校正
 
 Effect manager、API、検証fixture、runnerのコメントを読み直し、操作対象や保存先が曖昧な説明を具体化した。yomiyasuのlintと文章の差分確認を実施した。commit `616321800` と比較し、実行コマンドの内容と順序、Pythonの構文木、NBT定義、IMP Docの公開範囲・宣言・インデントが変わっていないことを確認した。`git diff --check`も成功。コメントだけの変更のため、実サーバー検証は再実行していない。
+
+## 一括保存による検索回数の削減（2026-10-03）
+
+取得した Effect 全体を Current.Data に保持し、Duration・Stack・Field を反映して一括保存する方式へ変更した。API を呼ばず終了もしない通常処理では、保存先の配列検索を1 Effect あたり8回から3回へ減らした。API 前には保存し、give/remove 後には全体を読み直す。ID/Revision の存在確認と削除予約の保持は継続する。
+
+機能シナリオは `run-r3me567_` で36 / 36 step・110判定に成功した。自己削除、再付与の予約と PreviousField、API 後の context、別付与先、終了イベント等の既存条件を再確認した。検証シナリオと fixture の追加・変更はない。
+
+性能は変更前の commit `285dcdd1d` を `--baseline` で実行した `run-m4frb797` と、未コミットの一括保存版を実行した `run-7_l425vf` を比較した。両方とも129 step成功。各条件1000 owner-tick、ウォームアップ後3回の中央値で、単位は秒。シナリオのSHA-256も一致する。比較対象はPR内の変更前後であり、PR導入前の旧foreachとの比較ではない。
+
+| 付与先数 | Effect数 / 付与先 | 変更前（秒） | 一括保存（秒） | 一括保存 / 変更前 |
+| --- | --- | --- | --- | --- |
+| 1 | 1 | 0.76 | 0.86 | 1.13× |
+| 1 | 5 | 1.10 | 1.07 | 0.97× |
+| 1 | 10 | 2.67 | 2.25 | 0.84× |
+| 1 | 20 | 5.28 | 3.81 | 0.72× |
+| 20 | 1 | 0.80 | 0.78 | 0.97× |
+| 20 | 5 | 1.18 | 1.11 | 0.94× |
+| 20 | 10 | 2.76 | 2.34 | 0.85× |
+| 20 | 20 | 5.26 | 4.09 | 0.78× |
+
+10 Effect では約15〜16%、20 Effect では約22〜28%短縮した。1 Effect の条件では一律の改善は見られない。検索回数の削減率を実行時間の削減率とは扱わない。空のイベント本体、NBT コピー、pointer 取得、macro、プロファイラ、runner の待機を含む測定であり、ゲームのMSPTや本番負荷の許容性を示す値ではない。探索量は引き続き O(N²)。全サンプルは [measurements.json](measurements.json) の `cacheComparison` に保存した。
+
+3回の実行とも、TheSkyBlessing は隔離コピー、依存先は DevSpace 直下の Asset / Asset-AnimatedJava を参照した。stop で正常終了（exit 0）、全dimension保存、参照コードの不変、関数読込エラーなしを確認した。入力・patch・hash・ログは各runの実行記録に残した。コメントと説明文には yomiyasu の lint を実施した。

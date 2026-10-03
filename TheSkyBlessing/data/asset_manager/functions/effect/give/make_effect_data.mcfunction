@@ -65,7 +65,7 @@
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EffectRevision int 1 run scoreboard players get $EffectRevision Temporary
     data modify storage asset:effect EffectData.Revision set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].EffectRevision
 # 次に呼び出す付与イベントを NextEvent に設定する
-# process.m はイベントを呼ぶ前に保存データの NextEvent を消すため、イベント内の再付与で設定した値は残る。
+# process.m は今回消費する NextEvent を除いてから API 前に保存するため、再付与で新しく設定した値は残る。
     execute unless data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "given"
     execute if data storage asset:effect TargetEffectData run data modify storage asset:effect EffectData.NextEvent set value "re-given"
 # リセット

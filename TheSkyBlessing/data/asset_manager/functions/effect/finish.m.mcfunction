@@ -10,21 +10,19 @@
 #   Revision : int
 # @within function asset_manager:effect/process.m
 
-# context を書き戻した後の Effect データを取得する
-# ID と Revision が一致するものだけを扱い、対象が既にない場合は何もしない。
-    data remove storage asset:effect TargetEffect
-    $data modify storage asset:effect TargetEffect set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}]
-    execute unless data storage asset:effect TargetEffect run return 0
+# flush.m が保存した Effect データで終了を判定する
+# 保存先の ID / Revision が一致しなければ flush.m が Data を消すため、終了イベントも呼ばない。
+    execute unless data storage asset:effect Current.Data run return 0
 
 # 再付与イベントが予約されていれば終了を次回へ回す
 # イベント中に give → remove の順で呼んだ場合は、次回の re-given で差分処理を済ませてから remove を呼ぶ。
-    execute if data storage asset:effect TargetEffect.NextEvent run return 0
+    execute if data storage asset:effect Current.Data.NextEvent run return 0
 
 # 削除予約を自然終了より優先し、終了イベントを一つに決める
 # Duration=-1 と Stack=0 が重なっても remove / end を二重に呼ばない。
-    execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.EndEvent set value "remove"
-    execute unless data storage asset:effect Current.EndEvent if data storage asset:effect TargetEffect{Duration:0} run data modify storage asset:effect Current.EndEvent set value "end"
-    execute unless data storage asset:effect Current.EndEvent if data storage asset:effect TargetEffect{Stack:0} run data modify storage asset:effect Current.EndEvent set value "end"
+    execute if data storage asset:effect Current.Data{Duration:-1} run data modify storage asset:effect Current.EndEvent set value "remove"
+    execute unless data storage asset:effect Current.EndEvent if data storage asset:effect Current.Data{Duration:0} run data modify storage asset:effect Current.EndEvent set value "end"
+    execute unless data storage asset:effect Current.EndEvent if data storage asset:effect Current.Data{Stack:0} run data modify storage asset:effect Current.EndEvent set value "end"
     execute unless data storage asset:effect Current.EndEvent run return 0
 
 # 終了イベントを呼ぶ前に、context の書き戻し・読み直しを無効にして対象のデータを削除する

@@ -1,7 +1,7 @@
 #> asset_manager:effect/process.m
 #
 # 処理予定の一件について、イベントを実行して作業データを書き戻す。
-# Current は処理対象の ID/Revision と、実行段階を表す Phase を保持する。
+# Current は処理対象の ID/Revision、実行段階の Phase、書き戻す Effect 全体の Data を保持する。
 # TargetEffect は処理開始時に読み取った Effect データで、今回呼び出すイベントの判定に使う。
 # イベントが編集する Duration・Stack・Field は asset:context に展開する。
 #
@@ -46,11 +46,12 @@
 # イベントが context.Duration を更新しても、牛乳・死亡・API の削除予約は取り消さない。
     execute if data storage asset:effect TargetEffect{Duration:-1} run data modify storage asset:effect Current.RemoveRequested set value true
 
-# 今回のイベントを呼び出す前に、保存データの NextEvent / PreviousField を消す
-# 今回の NextEvent は TargetEffect に、PreviousField は context に保持済み。
-# イベント終了後に消すと、途中の再付与が新しく予約した値まで消してしまう。
-    $data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}].NextEvent
-    $data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Effects[{ID:$(ID),Revision:$(Revision)}].PreviousField
+# 取得した Effect 全体を保持し、今回消費するイベントの情報を除く
+# TargetEffect は今回のイベント判定用に残す。Current.Data は API 前とイベント終了時に一括で保存する。
+# API による再付与後は refresh.m が Data を読み直すため、新しく予約したイベントの情報も残る。
+    data modify storage asset:effect Current.Data set from storage asset:effect TargetEffect
+    data remove storage asset:effect Current.Data.NextEvent
+    data remove storage asset:effect Current.Data.PreviousField
 
 # given / re-given を通常の tick より先に呼び出す
 # 削除予約がある場合も、付与時の初期化・差分処理を先に実行してから終了を判定する。
@@ -72,7 +73,7 @@
     function asset_manager:effect/context/flush.m with storage asset:effect Current
 
 # 保存後の Duration / Stack を確認し、終了条件に当てはまるか判定する
-# 終了条件がなければ finish.m による保存データの再検索を省く。
+# 終了条件がなければ finish.m の呼び出しを省く。
 # finish.m は付与イベントの実行待ちなら終了を延期し、終了時に remove / end の一方だけを実行する。
     execute if data storage asset:context {Duration:-1} run data modify storage asset:effect Current.ShouldFinish set value true
     execute if data storage asset:context {Duration:0} run data modify storage asset:effect Current.ShouldFinish set value true

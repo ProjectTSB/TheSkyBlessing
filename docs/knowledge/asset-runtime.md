@@ -140,13 +140,15 @@ register と各イベントは function tag の全走査と ID 条件の wrapper
 
 ここでの `this` はstorageのField名であり、付与先に付く同名のentityタグとは別物である。[内部タグの宣言](../../TheSkyBlessing/data/asset_manager/functions/effect/_index.d.mcfunction) にある `Effect.CurrentOwner` もmanagerとAPI前後処理だけの公開範囲で、個別Effectの自己除外用に参照しない。
 
-[before_api](../../TheSkyBlessing/data/asset_manager/functions/effect/context/before_api.mcfunction) は API の対象である付与先の OhMyDat を参照し、同じ付与先の given / re-given / tick 中なら context の Duration・Stack・Field を保存データへ書き戻す。get の ForwardTarget 経路も、転送先でこの処理を呼ぶ。give/remove の後は [after_api](../../TheSkyBlessing/data/asset_manager/functions/effect/context/after_api.mcfunction) が、処理中の Effect の更新後の保存データを context へ読み直す。自己再付与の場合は Current.Revision も更新する。
+[before_api](../../TheSkyBlessing/data/asset_manager/functions/effect/context/before_api.mcfunction) は API の対象である付与先の OhMyDat を参照し、同じ付与先の given / re-given / tick 中なら context の Duration・Stack・Field を保存データへ書き戻す。get の ForwardTarget 経路も、転送先でこの処理を呼ぶ。give/remove の後は [after_api](../../TheSkyBlessing/data/asset_manager/functions/effect/context/after_api.mcfunction) が、処理中の Effect の更新後の保存データを Current.Data と context へ読み直す。自己再付与の場合は Current.Revision も更新する。
 
 別の付与先への API 操作では、現在の context をその付与先へ書き戻したり、その保存データで context を上書きしたりしない。remove / end 中の context に対しても、API 前後の書き戻し・読み直しを行わない。`Argument` / `Return` はこの処理の一時領域に使わず、既存の reset 契約を維持する。
 
+取得した Effect 全体は `Current.Data` に保持する。[flush](../../TheSkyBlessing/data/asset_manager/functions/effect/context/flush.m.mcfunction) は context の Duration・Stack・Field をここへ反映し、Effect 全体を一度に書き戻す。属性ごとの配列検索を減らすための保持領域であり、公開 API からの更新を読み直すことが前提になる。保存データを変更する API を追加するときも、同じ付与先なら処理前の flush と処理後の refresh を通す。保存先に ID/Revision が一致する要素がなければ Current.Data を破棄し、書き戻しも終了イベントも行わない。
+
 given / re-given / tick から戻った後は、OhMyDat の参照先を現在の付与先へ戻し、context を書き戻す。削除予約は後続の Duration 変更で取り消さない。Field は全体を set するので、イベント内で削除した Field のキーが merge によって復活することも避ける。
 
-FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。今回分の `NextEvent` と保存側の `PreviousField` はイベントを呼ぶ前に消す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
+FieldOverride は付与時に作る Field へ merge される。再付与時には API 前に書き戻した旧 Field が `PreviousField` に入る。現在実行中のイベントに渡した PreviousField と、次の re-given に渡す PreviousField は区別する。今回分の `NextEvent` と `PreviousField` はイベントを呼ぶ前に Current.Data から除く。保存先への反映は API 前またはイベント終了時の一括保存で行う。再付与後は refresh が新しい予約も読み直す。イベントから戻った後に一律削除すると、途中の再付与で新しく設定された値も消してしまう。
 
 `DurationOperation:"replace"` は、新 Stack が旧 Stack 以上なら Duration の大きい方、下回るなら旧 Duration を維持する既存の計算を使う。
 
@@ -158,7 +160,7 @@ FieldOverride は付与時に作る Field へ merge される。再付与時に�
 
 削除 API は既存と同じ `Duration=-1` で削除予約を設定する。実行中のイベントの残りのコマンドは続行する。通常の自己削除ではイベントから戻った後、未処理の Effect はその処理時、処理済みの Effect は次の Effect tick に remove を呼ぶ。再付与直後に削除予約を設定した場合は、次回 re-given の初期化・差分処理を済ませてから remove を呼ぶ。`remove → give` では、削除予約済みの Effect への再付与を拒否する従来の扱いを維持する。
 
-[finish](../../TheSkyBlessing/data/asset_manager/functions/effect/finish.m.mcfunction) は書き戻し後の状態で終了を判定し、Duration=-1 による remove を、Duration=0 / Stack=0 による end より優先する。終了判定より先に context を書き戻すことで、イベント内の Duration / Stack の変更にも終了イベントが対応する。
+[finish](../../TheSkyBlessing/data/asset_manager/functions/effect/finish.m.mcfunction) は書き戻した Current.Data で終了を判定し、Duration=-1 による remove を、Duration=0 / Stack=0 による end より優先する。終了判定より先に context を書き戻すことで、イベント内の Duration / Stack の変更にも終了イベントが対応する。
 
 終了時は Current.Phase を ending にし、ID/Revision が一致するデータを `Effects[]` から削除してから、remove / end の一方だけを呼ぶ。終了する Effect の context はイベントに渡すが、保存データへ書き戻さない。そのため、終了イベント中の get は削除済みのデータを返さず、同 ID の give は新規付与になる。新しく設定した given は次回に呼び出す。
 
@@ -172,7 +174,7 @@ remove API が要素を末尾へ戻す既存の動作は残る。今回の実行
 
 ### 規模と検証範囲
 
-ID 条件検索を各要素に行うため、foreach の探索量は O(N²)。ユーザー提示の想定規模は付与先一体あたり約10要素であり、コード上の10件制限ではない。添字を固定するための無効印・圧縮や保存形式の移行を避けるため、この方式を試作に採用した。ただし実サーバーの管理処理ベンチマークでは、10要素で基準版より実行時間が増えている。Big-O だけで不採用にすることも、少数だから性能問題がないと断定することも避ける。実ゲームの許容負荷を確認済みとは扱わない。
+ID 条件検索を各要素に行うため、foreach の探索量は O(N²)。イベント内で API を呼ばず、終了もしない場合、1 Effect あたりの検索は初回の取得・保存先の存在確認・一括保存の3回。API 呼出し時の同期や終了時の削除では検索が増える。ユーザー提示の想定規模は付与先一体あたり約10要素であり、コード上の10件制限ではない。添字を固定するための無効印・圧縮や保存形式の移行を避けるため、この方式を試作に採用した。検索回数を減らしても、NBT コピー・pointer 取得・macro の費用は残る。管理処理ベンチマークで変更前後を比較し、実ゲームの付与先数やイベント本体を含む負荷とは区別して判断する。
 
 [検証手順・シナリオ](../../tests/effect-runtime/README.md) と [実行記録](../../tests/effect-runtime/results.md) に、前提・期待値・失敗と再試行・性能比較・確認範囲を置く。検証用 Effect は隔離コピーへだけ追加し、本番 tag へ接続しない。API とイベント、core tick、表示用データは確認対象だが、通常ログイン・実ダメージ・描画の検証とは区別する。
 
