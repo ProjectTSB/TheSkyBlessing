@@ -2,7 +2,7 @@
 
 API を使う前に、その API が行為、寄与の登録、個体生成、状態の取得のどれを提供するかを確認する。[本体の抽象構造](architecture.md) に、呼出フレーム、modifier の出典 ID、イベント配送、緩衝体力の防壁モデルをまとめた。
 
-公開APIは `TheSkyBlessing/data/api/functions/` に置き、内部処理は既存のcore・manager・lib等の責務に合わせる。追加・変更時は引数・storage・scoreboard・戻り値をIMP Docへ明記する。API関数は呼出側のエンティティを暗黙に利用する関数が多い。呼出前に `as`/`at`、対象タグ、実行者を確認する。関数名のコメント（`#>`、`# @public`、`# @within`）が契約の入口で、`_index.d.mcfunction` は宣言と可視性の台帳である。
+TSBの状態・ゲームルールを扱う公開操作は `TheSkyBlessing/data/api/functions/`、汎用の処理部品は `TheSkyBlessing/data/lib/functions/` を配置先の候補にする。libにも公開APIがある。内部処理は既存のcore・manager・各機能のcore等の責務に合わせる。追加・変更時は引数・storage・scoreboard・戻り値をIMP Docへ明記する。API関数は呼出側のエンティティを暗黙に利用する関数が多い。呼出前に `as`/`at`、対象タグ、実行者を確認する。関数名のコメント（`#>`、`# @public`、`# @within`）が契約の入口で、`_index.d.mcfunction` は宣言と可視性の台帳である。
 
 引数・結果は一時storageを介するパターンが中心で、まず対象APIと同じディレクトリの `get/set/add/remove` を読む。例としてDamageAPIのPR #2268では `Argument.ReduceEnchantment` と `Enchantments` のstorage namespace不一致が修正され、`api:ReduceEnchantmentID` の削除も追加された。storageのnamespace、パス、型、後片付けを一組で確認する。
 
@@ -13,6 +13,35 @@ API仕様として確定していないレビューコメント（特に一時�
 Wiki の [API](https://github.com/ProjectTSB/TheSkyBlessing/wiki/api) は利用目的を探す索引として有用で、引数は原則自動 remove、damage/heal/effect 等は例外として呼出側 reset と説明する。現行実装では成功と validation failure でも cleanup が異なるため、一般則だけで判断しない。Wiki の Absorption 取得例は引数なしで `Return.Amount` 等を読む形だが、現行 `get` は `Argument.UUID` を必須とし、core が `Return.Absorption` を作る。IMP Doc、公開 wrapper、core、現行呼出側を一組で確認する。
 
 [load_onceのBoolean表](../../TheSkyBlessing/data/core/functions/load_once.mcfunction) の `Boolean.1`・`Boolean.1b`・`Boolean.true` は、macroに渡る異なる真値の表記を `Boolean.$(IsHogeFuga)` のように同じ条件判定へ取り込むために用意されている（ユーザー確認済み）。同じtrueへの重複代入として表を一つへ縮めず、呼出側の引数表現も契約に含める。
+
+## libとapiは責務と公開範囲を分けて判断する
+
+新しい共通処理は、TSB固有の状態やルールをどこまで扱うかで配置を決める。`api`／`lib` というnamespaceと、呼出可能範囲を定めるIMP Docは別の判断である。
+
+| 処理の責務 | 配置先の候補 | 現行の例 |
+| --- | --- | --- |
+| 幾何・配列・向きなど、複数の機能で使う処理部品 | `lib` | [array/session/open](../../TheSkyBlessing/data/lib/functions/array/session/open.mcfunction)、[rotate_display](../../TheSkyBlessing/data/lib/functions/rotate_display/.mcfunction) は `@api` を持つ |
+| TSBのダメージ計算、補正、Assetの生成などの公開操作 | `api` | [damage](../../TheSkyBlessing/data/api/functions/damage/.mcfunction)、[mob/summon](../../TheSkyBlessing/data/api/functions/mob/summon.mcfunction) |
+| 特定機能の状態管理、tick編成、公開操作の下請け | その機能のmanager・core等 | [damage/core/modify_damage.m](../../TheSkyBlessing/data/api/functions/damage/core/modify_damage.m.mcfunction) は呼出元を制限する |
+
+例えば範囲内の対象を選ぶ幾何計算はlib、選んだ対象へTSBのダメージを与える操作はapi、神器固有の発動条件と演出はAssetが担当する。複数箇所から呼ぶことだけを理由に、TSB固有の処理を汎用libへ移さない。
+
+現行の配置には例外もある。[lib:score_to_health_wrapper/proc](../../TheSkyBlessing/data/lib/functions/score_to_health_wrapper/proc.mcfunction) はTSBの体力反映を扱い、呼出元をplayer/postに制限している。lib全体を「状態を持たない」「誰でも使える」「単体で他のパックへ移せる」と扱わず、既存関数の移動も名前だけでは決めない。Assetから使うときは、namespaceにかかわらず関数と参照するtag・score・storageの公開範囲、入力、結果、後始末を確認する。
+
+## 攻撃の属性と能力値のAttributesを区別する
+
+Damage APIの属性は、一回の攻撃を分類して補正先を選ぶ入力である。神器のTCDが使う種別とは独立している。
+
+| 入力 | 値 | 意味 |
+| --- | --- | --- |
+| `Argument.AttackType` | `"Physical"`／`"Magic"` | 第一属性。物理／魔法のいずれかを指定する必須入力 |
+| `Argument.ElementType` | `"None"`／`"Fire"`／`"Water"`／`"Thunder"` | 第二属性。無／火／水／雷。未指定時は `"None"` |
+
+[damage/modifier](../../TheSkyBlessing/data/api/functions/damage/modifier.mcfunction) と [damage](../../TheSkyBlessing/data/api/functions/damage/.mcfunction) は、それぞれの呼出時点の属性を使う。どちらも単一の文字列で指定する。`Physical` と `Fire` は併用できるが、`ElementType` へ配列を渡して複数属性の攻撃にする契約はない。見た目に炎や雷を使っても、API引数が自動でその属性になるわけではない。
+
+能力補正の `Attributes.Default`／`Modifier`／`Value` は、これらの分類ごとの倍率などを保持する別のデータである。構造と更新方法は [能力補正の寄与](architecture.md#能力補正は識別できる寄与から組み立てる) を参照する。[共通のダメージ補正](../../TheSkyBlessing/data/api/functions/damage/core/modify_damage.m.mcfunction) は、AttackまたはDefenseのBaseと、選んだ第一・第二属性の値を読む。丸めと最低倍率の適用前は `Base × (第一属性の値 + 第二属性の値 - 1)` で、未設定の倍率とNoneは1として扱う。第一属性と第二属性の倍率をそのまま掛け合わせる式ではない。
+
+この共通計算は [プレイヤーの攻撃補正](../../TheSkyBlessing/data/api/functions/damage/core/modify/player.mcfunction) と [対象の防御補正](../../TheSkyBlessing/data/api/functions/damage/core/attack.mcfunction) で使う。現在の [non-playerのmodifier](../../TheSkyBlessing/data/api/functions/damage/core/modify/non-player.mcfunction) は攻撃者情報の記録のみで、同じ攻撃倍率計算は行わない。BypassModifier・FixedDamageによる省略と、攻撃情報の記録は下記の契約に従う。
 
 ## NBTの代入結果を変更検知に使う
 

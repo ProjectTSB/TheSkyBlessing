@@ -18,6 +18,43 @@ asset_managerはartifact、mob、trader等の登録・呼出を担い、debugは
 
 死亡時に装備がなくなる場合と、神器tick自体の停止は別である。[死亡handler](../../TheSkyBlessing/data/core/functions/handler/death.mcfunction) の回収はplayer/postから呼ばれ、IsKeepInventoryやSoulBoundにも依存する。また、[エリア入場](../../TheSkyBlessing/data/world_manager/functions/area/02.islands/on_entered.mcfunction) は非creativeをsurvivalへ変更し、[respawn.delay](../../TheSkyBlessing/data/core/functions/handler/respawn.delay.mcfunction) はInRespawnEventを外す。状態別の試験は、設定コマンドの成功だけでなく検査時の状態を確かめる。確認範囲は [sources.md](sources.md) を参照。
 
+## LCD・TCD・GCDは共有範囲と時間の進め方で選ぶ
+
+神器の待ち時間は、何を共有するかと、どの時計で進めるかを組み合わせて設計する。各定義の時間はtick単位である。GCDはグローバルクールダウンの呼称で、現行の定義名は `SpecialCooldown`、実装・メッセージでは「特殊クールダウン」とも呼ぶ。
+
+| 呼称と定義 | 共有する範囲 | 判定する値・時間の進め方 |
+| --- | --- | --- |
+| LCD／`LocalCooldown` | アイテム個体ごと。同じ神器IDでも別個体なら独立 | 現在のgametimeとアイテムのLatestUseTickの差 |
+| TCD／`TypeCooldown` | 同じプレイヤーの、同じTypeを指定した神器同士 | プレイヤーのOhMyDat `TypeCooldown[]` のValueを神器tickで減算 |
+| 第二TCD／`SecondaryTypeCooldown` | TypeCooldownと同じ保存先・種別。二系統を指定するための追加項目 | 指定したTypeのValueを主TCDと同じ仕組みで減算 |
+| GCD／`SpecialCooldown` | 全プレイヤーの、SpecialCooldownを持つ神器同士 | 共通score `$ArtifactSpecialCooldown Global` を本体の神器グローバルtickで減算 |
+
+[共通check](../../TheSkyBlessing/data/asset_manager/functions/artifact/check/.mcfunction) は、対応するDisabledCheckFlagで省略されない限り各条件を確認する。複数のクールダウンを定義した神器は、いずれかが使用を阻害すれば発動できない。checkの省略と、[共通use](../../TheSkyBlessing/data/asset_manager/functions/artifact/use/.mcfunction) による待ち時間の開始は別であり、checkを省略してもuse側の更新が自動で省略されるわけではない。
+
+### LCDはアイテムに最終使用時刻を残す
+
+[使用時のitem更新](../../TheSkyBlessing/data/asset_manager/functions/artifact/use/item/.mcfunction) は `tag.TSB.LatestUseTick` にgametimeを保存する。[LCDの判定](../../TheSkyBlessing/data/asset_manager/functions/artifact/check/check_local_cooldown/foreach.mcfunction) は `現在gametime - LatestUseTick >= LocalCooldown` で使用可能とする。装備を外したり別プレイヤーへ渡したりしても、同じNBTを保持するアイテムなら最終使用時刻は残る。同じサーバーのgametimeが進む間は、所持者が未接続でも経過分を次の判定で取り込む。サーバー停止・tick停止中の実時間は数えない。
+
+プレイヤーの `LocalCoolDown[]` は、offhand・防具・hotbarのslotに対応する表示用の残り値も保持する。[装備変更時の更新](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/equipments/update_cooldown/foreach.mcfunction) でアイテムの最終使用時刻から組み直すため、この表示用配列だけで使用可否を判断しない。共通useのIgnoreItemUpdateが有効ならitem更新経路へ進まないので、LCDを使う設計では最終使用時刻の保存も確認する。
+
+### TCDはプレイヤーごとに種別を共有する
+
+標準種別は `shortRange`・`longRange`・`summon`・`heal`。それぞれ近接・遠距離・召喚・回復系を表す。攻撃の物理／魔法や火／水／雷から自動で決まる値ではない。[Lore生成](../../TheSkyBlessing/data/asset_manager/functions/artifact/create/set_lore/cooldown/.mcfunction) もこの四種を分岐するため、任意の文字列を保存できることを、新種別への対応が完了している根拠にしない。
+
+共通checkは神器に指定されたTypeをプレイヤーのOhMyDat `TypeCooldown[]` から引き、Valueが正なら使用を拒む。共通useは主・第二の順に [更新関数](../../TheSkyBlessing/data/asset_manager/functions/artifact/use/update_type_cooldown.m.mcfunction) を呼び、同じTypeのValueとMaxを使用した神器のDurationへ設定する。加算や既存値との最大値比較ではない。主・第二へ同じTypeを書けば後の設定で上書きされるため、独立した二つの待ち時間にはならない。
+
+例えばAとBが同じTypeなら、Aの使用で始まった待ち時間はBの使用も制限する。別プレイヤーのBには共有されない。攻撃属性が同じでもTypeが違えばTCDは独立する。特定のアイテム個体だけを待たせるならLCD、同じプレイヤーの複数の神器をまとめて待たせるならTCDを候補にする。
+
+[TCDの減算](../../TheSkyBlessing/data/asset_manager/functions/artifact/cooldown/decrement/type/.mcfunction) は、[プレイヤーの神器tick](../../TheSkyBlessing/data/asset_manager/functions/artifact/tick/player.mcfunction) からトリガー処理後に行う。装備中のTypeだけを減らす処理ではないが、未接続中はそのプレイヤーの減算処理が走らない。装備解除中も進むことと、未接続中も進むことを区別する。
+
+LCDの表示値とTCDの残り値は、完了後も負数の期間を経て-15まで進む。使用を阻害しなくなる境界と、表示を消す境界は別である。TCDは-15になった要素を削除する。表示の詳細は下記の「表示用の値へ変換してから、共通の表示処理へ渡す」を参照する。
+
+### GCDはSpecialCooldownを持つ神器を全プレイヤーで共有する
+
+共通useは神器の `SpecialCooldown` を `$ArtifactSpecialCooldown Global` へ設定する。[判定](../../TheSkyBlessing/data/asset_manager/functions/artifact/check/check_special_cooldown.mcfunction) は、対象神器にSpecialCooldownがあり、共通scoreが1以上なら使用を拒む。SpecialCooldownのない神器まで一律に止める処理ではない。複数プレイヤー間でも特殊な神器の連続使用を制限したい場合に使う。
+
+[グローバルtick](../../TheSkyBlessing/data/asset_manager/functions/artifact/tick/.mcfunction) は正の残り値を1ずつ減らす。使用者個人の接続や所持には依存せず、本体tickが進む間は共通の残り時間が進む。useは使用した神器の定義値で上書きするので、checkを省略して再使用する場合は既存値より短くなることもある。加算や最長時間への延長という契約にはしない。
+
 ## 遅延・再入・破棄をイベント境界から読む
 
 [sneakの配送](../../TheSkyBlessing/data/asset_manager/functions/artifact/triggers/sneak/.mcfunction) は、slotごとの継続時間を見てcontextのIDを絞り込む。`sneak/<N>s` は閾値と等しいslotだけ、`sneak/keep/<N>s` は閾値以上のslotを残してfunction tagを呼ぶ。同じ「N秒スニーク」でも単発と継続を区別し、function tagを呼ぶ外側の条件だけから発動回数を判断しない。
