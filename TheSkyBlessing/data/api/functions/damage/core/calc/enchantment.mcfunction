@@ -16,12 +16,14 @@
     scoreboard players operation $CalcF Temporary = $100 Const
     scoreboard players operation $CalcF Temporary -= $EPF Temporary
 # $damage(e4) = $damage(e4) * $CalcF(e2) / e2
+#             = ($damage / e2) * $CalcF + ($damage % e2) * $CalcF / e2  : オーバーフロー回避
     scoreboard players operation $CalcG Temporary = $Damage Temporary
-    execute if score $Damage Temporary matches 10000000.. run scoreboard players operation $CalcG Temporary /= $10 Const
+    scoreboard players operation $CalcG Temporary %= $100 Const
     scoreboard players operation $CalcG Temporary *= $CalcF Temporary
-    execute if score $Damage Temporary matches ..9999999 run scoreboard players operation $CalcG Temporary /= $100 Const
-    execute if score $Damage Temporary matches 10000000.. run scoreboard players operation $CalcG Temporary /= $10 Const
-    scoreboard players operation $Damage Temporary = $CalcG Temporary
+    scoreboard players operation $CalcG Temporary /= $100 Const
+    scoreboard players operation $Damage Temporary /= $100 Const
+    scoreboard players operation $Damage Temporary *= $CalcF Temporary
+    scoreboard players operation $Damage Temporary += $CalcG Temporary
 # リセット
     scoreboard players reset $CalcF Temporary
     scoreboard players reset $CalcG Temporary
