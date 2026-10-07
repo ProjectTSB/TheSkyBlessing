@@ -6,7 +6,9 @@ TSBの状態・ゲームルールを扱う公開操作は `TheSkyBlessing/data/a
 
 引数・結果は一時storageを介するパターンが中心で、まず対象APIと同じディレクトリの `get/set/add/remove` を読む。例としてDamageAPIのPR #2268では `Argument.ReduceEnchantment` と `Enchantments` のstorage namespace不一致が修正され、`api:ReduceEnchantmentID` の削除も追加された。storageのnamespace、パス、型、後片付けを一組で確認する。
 
-グローバル状態には `storage global` と scoreboard が使われ、`core:load_once` が初期化の入口となる。個体ごとの永続状態には OhMyDat の `MobField`／`ObjectField`／`Effects` 等もあり、生成・付与時に作られるため、永続状態の保存先と初期化時点を一律に扱わない。[個体状態の保存](asset-runtime.md) を参照する。グローバルscore holderには `$PlayerCount`、`$Difficulty` 等があり、一般用途の一時計算用objectiveも存在する。新しいscore holder/objectiveは `_index.d.mcfunction` の宣言と初期化箇所を揃える。
+グローバル状態には `storage global` と scoreboard が使われ、`core:load_once` が初期化の入口となる。個体ごとの永続状態には OhMyDat の `MobField`／`ObjectField`／`Effects` 等もあり、生成・付与時に作られるため、永続状態の保存先と初期化時点を一律に扱わない。[個体状態の保存](asset-runtime.md) を参照する。グローバルscore holderには `$PlayerCount`、`$Difficulty` 等がある。score holderの宣言は必要な公開範囲に置き、objectiveは `core:load_once` の定義箇所で公開範囲を指定する。
+
+`Temporary`・`Const` の利用と明示宣言の規約はDevSpaceの `AGENTS.md` を参照する。本体は共通objectiveを `core:load_once` で定義し、定数値は `core:define_const` で管理する。不足する定数はこの定義へ追加する。初期化の実行時点と更新方法は [loadの変更手順](runtime-and-assets.md#変更手順) に従う。
 
 API仕様として確定していないレビューコメント（特に一時値の取り回し）は、そのPRの結論と現行コードを優先し、推測で外部利用契約にしない。
 
@@ -25,6 +27,8 @@ Wiki の [API](https://github.com/ProjectTSB/TheSkyBlessing/wiki/api) は利用�
 | 特定機能の状態管理、tick編成、公開操作の下請け | その機能のmanager・core等 | [damage/core/modify_damage.m](../../TheSkyBlessing/data/api/functions/damage/core/modify_damage.m.mcfunction) は呼出元を制限する |
 
 例えば範囲内の対象を選ぶ幾何計算はlib、選んだ対象へTSBのダメージを与える操作はapi、神器固有の発動条件と演出はAssetが担当する。複数箇所から呼ぶことだけを理由に、TSB固有の処理を汎用libへ移さない。
+
+lib の機能内では、公開入口と宣言を直下に置き、内部補助関数をその機能の `core/` 配下へ置く。内部処理を役割別に分ける場合も `core/` 内で構造化する。初期化や生成表も内部関数であり、公開入口と同じ階層へ並べない。
 
 現行の配置には例外もある。[lib:score_to_health_wrapper/proc](../../TheSkyBlessing/data/lib/functions/score_to_health_wrapper/proc.mcfunction) はTSBの体力反映を扱い、呼出元をplayer/postに制限している。lib全体を「状態を持たない」「誰でも使える」「単体で他のパックへ移せる」と扱わず、既存関数の移動も名前だけでは決めない。Assetから使うときは、namespaceにかかわらず関数と参照するtag・score・storageの公開範囲、入力、結果、後始末を確認する。
 

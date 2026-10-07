@@ -89,6 +89,8 @@ Mobのtick入口は `Death` tagを一律には除外しない。論理的な死�
 
 loadを変える場合は、まず `data/minecraft/tags/functions/load.json` から `core:load` への入口を確認する。`load.mcfunction` は毎回 `IsProduction` を設定した後、開発時は毎reloadで `load_once` を呼ぶ。`load_once` にはobjective作成、forceload、固定UUID entityのsummonなどがあるため、名前だけを根拠に「ワールド生涯で一度」と解釈しない。FirstJoinEventを削除・再作成し、開発reload時に初回参加処理を再実行することも意図した動作である（ユーザー確認済み）。UserID等の再初期化を許容する開発用の動作なので、reload前後で同じ個体識別や初期化状態が維持される前提の検証にしない。registry追加は `core:load` 内のartifact/mob load順と、各asset manager側のtag呼出しを両方確認する。
 
+本体が管理するobjectiveの作成と静的な表の初期化は `core:load_once` に置く。`core:load` への直接追加は、初期化済みの本番ワールドでもreloadごとに実行する必要がある処理に限る。開発中の表の更新は既存のload_once呼出しで反映される。初期化を移すときは利用する側のloadより前に実行し、生成元のIMP Doc・呼出元・更新手順も揃える。本番の導入済みワールドへ新しい状態や表を追加・更新する場合は、既存のmigration経路で扱う。
+
 tickを変える場合は `data/minecraft/tags/functions/tick.json` → `data/core/functions/tick/.mcfunction` → 対象関数の順で追う。プレイヤーイベントは `execute as @a at @s` で `player/pre`、`player/`、`player/post` が呼ばれる。MobやObjectは別のselectorと `as/at` で呼ばれるため、プレイヤー用関数を移すと実行者が変わる。tick途中で `asset_manager:common/reset_all_context` が2回呼ばれるが、削除対象は`New`、`Old`、`id`、`Items`、`Inventory`だけである。`this`、`originID`、各stash stackを含むstorage全体のresetではないため、対象 lifecycle の個別cleanupと [contextの詳細](asset-runtime.md#context-の-stack-と限界) を確認する。
 
 advancement eventでは、例えば `data/core/advancements/handler/attack.json`、`data/core/functions/tick/player/.mcfunction` の判定、`data/core/functions/handler/attack.mcfunction` のrevokeと転送を一組で確認する。handlerを追加するだけでは発火しない。Mob/Object の dispatch にある schedule／clear は、[実装の存在検出](asset-runtime.md#virtual-dispatch-と-super) に使われる。これを再入防止や遅延実行の仕組みと解釈しない。処理を実際に遅延実行する schedule は、その呼出元と停止条件を別途確認する。
