@@ -11,8 +11,8 @@ NBT・数値・selector・移動の共通イディオムはDevSpaceの `docs/mcf
 | 機能をどの仕組みに載せるか・領域間の責務を判断する | [architecture.md](architecture.md) |
 | Island・Teleporter・Trader・Container・Nexus構築判定を追う | [world-components.md](world-components.md) |
 | Item生成・inventory・墓・LostItems・Mob初期化/追加当たり判定・幾何や移動・ROMを扱う | [runtime-components.md](runtime-components.md) |
-| APIを呼ぶ・追加する | [api-and-storage.md](api-and-storage.md) |
-| load/tick、asset、MP・actionbar表示を追う | [runtime-and-assets.md](runtime-and-assets.md) |
+| APIを呼ぶ・追加する、libとapiの配置、攻撃属性を確認する | [api-and-storage.md](api-and-storage.md) |
+| load/tick、asset、LCD・TCD・GCD、MP・actionbar表示を追う | [runtime-and-assets.md](runtime-and-assets.md) |
 | Mob/Object/Effectの型・継承・Field・dispatchを追う | [asset-runtime.md](asset-runtime.md) |
 | ProjectTSB Wiki の設計意図と現行実装の差を確認する | [wiki-crosscheck.md](wiki-crosscheck.md) |
 | CI の役割、宣言、生成物を確認する | [ci-and-generation.md](ci-and-generation.md) |
