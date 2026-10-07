@@ -15,7 +15,7 @@
 
 # 変数を用意
     scoreboard players set $CustomModifier Temporary 0
-    data modify storage asset:artifact Modifier set from storage asset:artifact SortedModifiers[0]
+    data modify storage asset:artifact Modifier set from storage asset:artifact PendingModifiers[0]
     data modify storage asset:artifact Line set value ['{"text":"","color":"green","italic":false}','""','" +"','{"translate":"%s","with":[{"storage":"asset:artifact","nbt":"Amount.Int"}]}','""']
 
 # カスタムModifier
@@ -99,5 +99,5 @@
     data remove storage asset:artifact Amount
 # 残っていればループ
     data remove storage asset:artifact Modifier
-    data remove storage asset:artifact SortedModifiers[0]
-    execute if data storage asset:artifact SortedModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/write
+    data remove storage asset:artifact PendingModifiers[0]
+    execute if data storage asset:artifact PendingModifiers[0] run function asset_manager:artifact/create/set_lore/modifier/write
