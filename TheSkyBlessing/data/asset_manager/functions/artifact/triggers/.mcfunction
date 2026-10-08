@@ -28,6 +28,7 @@
     execute if entity @s[tag=TriggerFlag.ClickCarrot] run function asset_manager:artifact/triggers/click.carrot
     execute if entity @s[tag=TriggerFlag.Sneak] run function asset_manager:artifact/triggers/sneak/
     execute if entity @s[tag=TriggerFlag.UsingItem] run function asset_manager:artifact/triggers/using_item/
+    execute if entity @s[tag=!TriggerFlag.UsingItem,scores={UsingItem=1..}] run function asset_manager:artifact/triggers/using_item/release/
     execute if data storage asset:artifact ArtifactEvents.Attack[0] run function asset_manager:artifact/triggers/attack/
     execute if data storage asset:artifact ArtifactEvents.Damage[0] run function asset_manager:artifact/triggers/damage/
     execute if data storage asset:artifact ArtifactEvents.Killed[0] run function asset_manager:artifact/triggers/killed/
@@ -46,7 +47,6 @@
     data remove storage asset:artifact EquipmentChanges
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset
-    execute if entity @s[tag=!TriggerFlag.UsingItem,scores={UsingItem=1..}] run function asset_manager:artifact/triggers/using_item/reset
     tag @s remove Believe.Changed
     tag @s remove TriggerFlag.ClickCarrot
     tag @s remove TriggerFlag.UseItem

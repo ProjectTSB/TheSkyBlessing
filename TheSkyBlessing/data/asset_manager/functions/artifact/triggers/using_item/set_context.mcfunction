@@ -2,7 +2,9 @@
 #
 # asset:contextにアイテム使用時間のデータを設定します
 #
-# @within function asset_manager:artifact/triggers/using_item/
+# @within function
+#   asset_manager:artifact/triggers/using_item/
+#   asset_manager:artifact/triggers/using_item/release/
 
 execute store result storage asset:context UsingItemTime.mainhand int 1 run scoreboard players get @s UsingItem.Mainhand
 execute store result storage asset:context UsingItemTime.offhand int 1 run scoreboard players get @s UsingItem.Offhand
