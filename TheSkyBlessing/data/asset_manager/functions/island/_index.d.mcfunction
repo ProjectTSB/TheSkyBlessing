@@ -18,7 +18,7 @@
 # @within *
 #   asset_manager:island/**
 #   core:tick/
-#declare tag DispelledCursedArtifact
+#declare tag PurifiedCursedArtifact
 
 #> Tag
 # @within function
