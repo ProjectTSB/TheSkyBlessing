@@ -1,17 +1,17 @@
-#> asset_manager:island/dispel/successful
+#> asset_manager:island/purify/successful
 #
 #
 #
-# @within function asset_manager:island/dispel/
+# @within function asset_manager:island/purify/
 
 # 邪魔なスコアをリセットする
     scoreboard players reset @s PurifyTime
 # 解呪数を1増やす
     scoreboard players add $PurifiedIslands Global 1
 # シャード解禁状況のスコアを更新
-    function asset_manager:island/dispel/update_unlocked_shard_lv/
+    function asset_manager:island/purify/update_unlocked_shard_lv/
 # VFX
-    function asset_manager:island/dispel/vfx/dispel
+    function asset_manager:island/purify/vfx/dispel
 # メッセージ
     function lib:message/common/dispel_island
 # 祝福を与える
@@ -33,7 +33,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
 # Dispelledトリガーを発火する
     data modify storage asset:island Args.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
-    function asset_manager:island/dispel/dispelled.m with storage asset:island Args
+    function asset_manager:island/purify/dispelled.m with storage asset:island Args
     data remove storage asset:island Args
 # 商人の取引内容を更新する
     function api:trader/schedule_recipe_update_check

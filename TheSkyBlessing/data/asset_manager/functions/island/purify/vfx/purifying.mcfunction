@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/vfx/purifying
+#> asset_manager:island/purify/vfx/purifying
 #
 #
 #
-# @within function asset_manager:island/dispel/
+# @within function asset_manager:island/purify/
 
 execute if score @s PurifyTime matches 000.. run particle enchant ^-0.06371 ^0.05 ^0.64687 0 0 0 0 1
 execute if score @s PurifyTime matches 005.. run particle enchant ^-0.18869 ^0.05 ^0.62201 0 0 0 0 1

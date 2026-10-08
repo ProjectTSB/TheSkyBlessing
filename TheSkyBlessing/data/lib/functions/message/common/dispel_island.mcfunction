@@ -2,7 +2,7 @@
 #
 # 「島を浄化した！」
 #
-# @within function asset_manager:island/dispel/successful
+# @within function asset_manager:island/purify/successful
 
 #> Private
 # @private

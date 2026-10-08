@@ -13,7 +13,7 @@
 #   api:global_vars/islands_purified
 #   api:global_vars/game_progress
 #   api:global_vars/total_islands
-#   asset_manager:island/dispel/successful
+#   asset_manager:island/purify/successful
 #   lib:message/common/*
     #declare score_holder $PurifiedIslands
     #declare score_holder $TotalIslands
@@ -36,7 +36,7 @@
 # @within
 #   function
 #     core:load_once
-#     asset_manager:island/dispel/update_unlocked_shard_lv/*
+#     asset_manager:island/purify/update_unlocked_shard_lv/*
 #   loot_table
 #     world_manager:fishing/*
     #declare score_holder $UnlockedShardLv

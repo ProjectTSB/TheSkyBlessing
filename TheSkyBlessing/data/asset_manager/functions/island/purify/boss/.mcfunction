@@ -1,11 +1,11 @@
-#> asset_manager:island/dispel/boss/
+#> asset_manager:island/purify/boss/
 #
 #
 #
-# @within function asset_manager:island/dispel/
+# @within function asset_manager:island/purify/
 
 # リセット
-    function asset_manager:island/dispel/cancelled
+    function asset_manager:island/purify/cancelled
 # 一定時間祈れないようにする
     tag @s add CantDispel
 # 天使召喚済フラグを立てる

@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/boss/vfx/summon_line
+#> asset_manager:island/purify/boss/vfx/summon_line
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/summoning_task
+# @within function asset_manager:island/purify/boss/summoning_task
 
 execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.8 ~ 0 0 0 0 1 force @a
 execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.6 ~ 0 0 0 0 1 force @a
