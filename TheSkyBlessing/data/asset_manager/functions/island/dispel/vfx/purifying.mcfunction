@@ -1,4 +1,4 @@
-#> asset_manager:island/dispel/vfx/dispelling
+#> asset_manager:island/dispel/vfx/purifying
 #
 #
 #
