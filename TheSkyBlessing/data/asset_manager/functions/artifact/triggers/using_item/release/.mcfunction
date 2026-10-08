@@ -6,8 +6,8 @@
 
 # イベント発火前に実行するやつ
     function asset_manager:artifact/data/new/set_to_current
-# 持ち替えチェック（持ち替えと同時に離して持ち替えた方が発動...を防ぐため）
-    function asset_manager:artifact/triggers/using_item/release/reset_when_change_item
+# 持ち替えチェック（0になるのはreleaseトリガーでも都合が良い）
+    function asset_manager:artifact/triggers/using_item/reset_when_change_item
 # asset:contextにアイテム使用時間を設定する
     function asset_manager:artifact/triggers/using_item/set_context
 # 神器側に受け渡し
