@@ -4,7 +4,9 @@
 #
 # Q. なんでスニークトリガーと違って1じゃなくて0にしてるの？ A. 持ち替えた瞬間のtickではトリガーが発動しない方が好都合だから。
 #
-# @within function asset_manager:artifact/triggers/using_item/
+# @within function
+#   asset_manager:artifact/triggers/using_item/
+#   asset_manager:artifact/triggers/using_item/release/
 
 # 変更のあったスロットのデータをリセットする
     execute if data storage asset:artifact EquipmentChanges[00]._{_:false} run scoreboard players set @s UsingItem.Mainhand 0
