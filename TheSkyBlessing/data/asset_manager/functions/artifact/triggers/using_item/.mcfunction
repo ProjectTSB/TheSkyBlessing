@@ -14,6 +14,8 @@
     function asset_manager:artifact/triggers/using_item/set_context
 # 神器側に受け渡し
     # keepトリガー類
+        scoreboard players set $UsingItemThreshold Temporary 1
+        function asset_manager:artifact/triggers/using_item/reset_threshold_less
         function #asset:artifact/using_item/keep/
 
         execute if score @s UsingItem matches 10.. run scoreboard players set $UsingItemThreshold Temporary 10
