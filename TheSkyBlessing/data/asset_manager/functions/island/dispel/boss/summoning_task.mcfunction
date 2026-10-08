@@ -5,15 +5,15 @@
 # @within function asset_manager:island/tick/
 
 # スコア加算
-    scoreboard players add @s DispelTime 1
+    scoreboard players add @s PurifyTime 1
 # VFX
-    execute if score @s DispelTime matches 1..95 run tp @s ~ ~ ~ ~1.5 ~
-    execute if score @s DispelTime matches 1..95 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/circle
-    execute if score @s DispelTime matches 96..100 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/summon_line
-    execute if score @s DispelTime matches 100 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/summon
+    execute if score @s PurifyTime matches 1..95 run tp @s ~ ~ ~ ~1.5 ~
+    execute if score @s PurifyTime matches 1..95 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/circle
+    execute if score @s PurifyTime matches 96..100 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/summon_line
+    execute if score @s PurifyTime matches 100 positioned ~ ~0.5 ~ run function asset_manager:island/dispel/boss/vfx/summon
 # データパックローディング表示
-    execute if score @s DispelTime matches 99 run function asset_manager:island/dispel/boss/load_datapack
+    execute if score @s PurifyTime matches 99 run function asset_manager:island/dispel/boss/load_datapack
 # 召喚
-    execute if score @s DispelTime matches 100 run function asset_manager:island/dispel/boss/summon
+    execute if score @s PurifyTime matches 100 run function asset_manager:island/dispel/boss/summon
 # 削除
-    execute if score @s DispelTime matches 100 run kill @s
+    execute if score @s PurifyTime matches 100 run kill @s

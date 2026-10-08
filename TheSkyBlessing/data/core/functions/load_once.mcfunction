@@ -224,7 +224,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
-        scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
+        scoreboard objectives add PurifyTime dummy {"text":"解呪の時間"}
         scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
     #> AssetManager: Effect
