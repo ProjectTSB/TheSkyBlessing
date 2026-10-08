@@ -47,6 +47,7 @@
     execute if data storage asset:artifact {Trigger:"keepSneak4s"} run data modify storage asset:artifact Temp.Trigger.B set value "4秒間以上スニーク"
     execute if data storage asset:artifact {Trigger:"keepSneak5s"} run data modify storage asset:artifact Temp.Trigger.B set value "5秒間以上スニーク"
     execute if data storage asset:artifact {Trigger:"keepSneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒間以上スニーク"
+
     execute if data storage asset:artifact {Trigger:"usingItem"} run data modify storage asset:artifact Temp.Trigger.B set value '{"keybind":"key.use"}'
     execute if data storage asset:artifact {Trigger:"usingItem0.5s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"0.5秒間"},{"keybind":"key.use"}]'
     execute if data storage asset:artifact {Trigger:"usingItem1s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"1秒間"},{"keybind":"key.use"}]'
@@ -63,6 +64,15 @@
     execute if data storage asset:artifact {Trigger:"keepUsingItem4s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"4秒以上"},{"keybind":"key.use"}]'
     execute if data storage asset:artifact {Trigger:"keepUsingItem5s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"5秒以上"},{"keybind":"key.use"}]'
     execute if data storage asset:artifact {Trigger:"keepUsingItem10s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"10秒以上"},{"keybind":"key.use"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem0.5s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"0.5秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem1s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"1秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem2s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"2秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem3s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"3秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem4s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"4秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem5s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"5秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+    execute if data storage asset:artifact {Trigger:"releaseUsingItem10s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"10秒以上"},{"keybind":"key.use"},{"text":"後離す"}]'
+
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.AB set value ""
     execute if data storage asset:artifact {Trigger:"equipping"} run data modify storage asset:artifact Temp.Trigger.B set value ""
     execute if data storage asset:artifact {Trigger:"onHeal"} run data modify storage asset:artifact Temp.Trigger.B set value "回復を与える"
