@@ -443,6 +443,9 @@ team modify NoCollision collisionRule never
     # @within function settings:**
         scoreboard objectives add SettingMenuResendTime dummy
 
+#> 文字幅表を読み込む
+    function lib:text/core/load
+
 #> 各Asset側のロード処理
     function #asset:artifact/load
     function #asset:mob/load
