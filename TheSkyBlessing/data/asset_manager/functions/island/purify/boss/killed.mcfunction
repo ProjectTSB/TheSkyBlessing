@@ -5,7 +5,7 @@
 # @within function asset_manager:island/purify/boss/watcher
 
 # タグ外す
-    tag @s remove CantDispel
+    tag @s remove CantPurify
     scoreboard players reset @s TargetBossID
 # DispelPhaseを進める
     function oh_my_dat:please

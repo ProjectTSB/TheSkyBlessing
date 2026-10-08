@@ -29,7 +29,7 @@
 # @within function
 #   asset_manager:island/purify/boss/*
 #   asset_manager:island/tick/
-    #declare tag CantDispel
+    #declare tag CantPurify
     #declare tag BossSummonMarker
 
 # MEMO

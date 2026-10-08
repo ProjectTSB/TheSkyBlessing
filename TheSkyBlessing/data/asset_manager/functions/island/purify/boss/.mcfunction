@@ -7,7 +7,7 @@
 # リセット
     function asset_manager:island/purify/cancelled
 # 一定時間祈れないようにする
-    tag @s add CantDispel
+    tag @s add CantPurify
 # 天使召喚済フラグを立てる
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 1b
 # 召喚用のマーカーを召喚する
