@@ -1,0 +1,552 @@
+{
+  "name": "text-measure",
+  "scope": {
+    "purpose": "Static component, literal translate, formatting and filtered font tables",
+    "fixture": "Native NBT components and strings through public library functions",
+    "notVerified": [
+      "Client pixels",
+      "Translation key lookup",
+      "Dynamic component references"
+    ]
+  },
+  "players": [],
+  "steps": [
+    {
+      "name": "Initialize measurement checks",
+      "commands": [
+        "scoreboard objectives add TextVerify dummy"
+      ],
+      "expect": [
+        "TextVerify"
+      ]
+    },
+    {
+      "name": "Removed Hangul fails",
+      "commands": [
+        "data modify storage lib: Text set value \"한\"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Removed line separator fails",
+      "commands": [
+        "data modify storage lib: Text set value \" \"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Removed unassigned glyph fails",
+      "commands": [
+        "data modify storage lib: Text set value \"͸\"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Symbols remain supported",
+      "commands": [
+        "data modify storage lib: Text set value \"∞\"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:8.0d,TextWidth:8}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:4.0d,TextWidth:4}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Roman numeral used in Mob names remains supported",
+      "commands": [
+        "data modify storage lib: Text set value \"Ⅱ\"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify",
+        "data get storage lib: Return.Default",
+        "data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 1",
+        "TextWidth: 4, TextAdvance: 4.0d"
+      ]
+    },
+    {
+      "name": "Structured text",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"ABC\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:18.0d,TextWidth:18}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "String extra and compound array siblings",
+      "commands": [
+        "data modify storage lib: Component set value [{text:\"A\",extra:[\"B\"]},{text:\"C\"}]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:18.0d,TextWidth:18}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Translate pieces and string extra",
+      "commands": [
+        "data modify storage lib: Component set value {translate:\"A%s\",with:[\"B\"],extra:[\"C\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:18.0d,TextWidth:18}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Nested component arrays",
+      "commands": [
+        "data modify storage lib: Component set value [[{text:\"A\"}],[{text:\"B\"}]]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:8.0d,TextWidth:8}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Nested array head style reaches outer siblings",
+      "commands": [
+        "data modify storage lib: Component set value [[{text:\"A\",bold:true}],[{text:\"B\"},{text:\"C\",bold:false}]]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:20.0d,TextWidth:20}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:13.0d,TextWidth:13}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Nested array head font reaches outer siblings",
+      "commands": [
+        "data modify storage lib: Component set value [[{text:\"A\",font:\"uniform\"}],[{text:\"B\"}]]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:8.0d,TextWidth:8}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:8.0d,TextWidth:8}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Inherited and cleared bold",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"A\",\"bold\":true,\"extra\":[{\"text\":\"B\",\"bold\":false},{\"text\":\"C\"}]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:20.0d,TextWidth:20}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:13.0d,TextWidth:13}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Array head style is inherited",
+      "commands": [
+        "data modify storage lib: Component set value [{\"text\":\"A\",\"bold\":true},{\"text\":\"B\"}]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:14.0d,TextWidth:14}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:9.0d,TextWidth:9}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Plain component string",
+      "commands": [
+        "data modify storage lib: Component set value \"ABC\"",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:18.0d,TextWidth:18}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Direct translate placeholders",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%2$s%s%1$s%%\",\"with\":[{\"text\":\"A\"},{\"text\":\"B\",\"bold\":true}]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:25.0d,TextWidth:25}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:16.5d,TextWidth:17}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "String with arguments",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%s%s\",\"with\":[\"A\",\"B\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:8.0d,TextWidth:8}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Multi digit argument",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%10$s\",\"with\":[\"A\",\"A\",\"A\",\"A\",\"A\",\"A\",\"A\",\"A\",\"A\",\"B\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:6.0d,TextWidth:6}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:4.0d,TextWidth:4}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Nested translate",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%sC\",\"bold\":true,\"with\":[{\"translate\":\"A%s\",\"with\":[{\"text\":\"B\",\"bold\":false}]}]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:20.0d,TextWidth:20}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:13.0d,TextWidth:13}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Space font positive and negative",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"A\",\"extra\":[{\"text\":\"\u0002쀁\",\"font\":\"space\"},{\"text\":\"B\"}]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:13.0d,TextWidth:13}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:9.0d,TextWidth:9}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Explicit uniform does not follow settings",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"ABC\",\"font\":\"uniform\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:12.0d,TextWidth:12}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Private padding tracks settings",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:6.0d,TextWidth:6}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:3.0d,TextWidth:3}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Unsupported font fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"A\",\"font\":\"effect/inline/icon\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Dynamic nbt fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"nbt\":\"Text\",\"storage\":\"lib:\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Invalid placeholder fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%d\",\"with\":[\"A\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Missing argument fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%2$s\",\"with\":[\"A\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Zero index fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%0$s\",\"with\":[\"A\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Missing dollar fails",
+      "commands": [
+        "data modify storage lib: Component set value {\"translate\":\"%1s\",\"with\":[\"A\"]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Invalid empty component fails",
+      "commands": [
+        "data modify storage lib: Component set value {}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Empty nested arrays fail and clear results",
+      "commands": [
+        "data modify storage lib: Component set value [[],[]]",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Default",
+        "scoreboard players get retained TextVerify",
+        "execute store success score retained TextVerify run data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 0",
+        "retained has 0"
+      ]
+    },
+    {
+      "name": "Empty literal succeeds",
+      "commands": [
+        "data modify storage lib: Component set value {\"text\":\"\"}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "execute store success score defaultValid TextVerify run data get storage lib: Return.Default{TextAdvance:0.0d,TextWidth:0}",
+        "scoreboard players get defaultValid TextVerify",
+        "execute store success score uniformValid TextVerify run data get storage lib: Return.Unifont{TextAdvance:0.0d,TextWidth:0}",
+        "scoreboard players get uniformValid TextVerify"
+      ],
+      "expect": [
+        "ok has 1",
+        "defaultValid has 1",
+        "uniformValid has 1"
+      ]
+    },
+    {
+      "name": "Section formatting remains unsupported",
+      "commands": [
+        "data modify storage lib: Text set value \"A§lB\"",
+        "data modify storage lib: Bold set value false",
+        "execute store result score ok TextVerify run function lib:text/measure",
+        "scoreboard players get ok TextVerify"
+      ],
+      "expect": [
+        "ok has 0"
+      ]
+    },
+    {
+      "name": "Round only after adding fractional advances",
+      "commands": [
+        "data modify storage lib: Component set value {text:\"\",extra:[{text:\"日\",bold:true},{text:\"日\",bold:true}]}",
+        "execute store result score ok TextVerify run function lib:text/measure_component",
+        "scoreboard players get ok TextVerify",
+        "data get storage lib: Return.Default",
+        "data get storage lib: Return.Unifont"
+      ],
+      "expect": [
+        "ok has 1",
+        "TextWidth: 19, TextAdvance: 19.0d"
+      ]
+    },
+    {
+      "name": "Work state is cleared",
+      "commands": [
+        "execute store success score remains TextVerify run data get storage lib:text Component",
+        "scoreboard players get remains TextVerify",
+        "execute store success score remains TextVerify run data get storage lib:text Work",
+        "scoreboard players get remains TextVerify"
+      ],
+      "expect": [
+        "remains has 0"
+      ]
+    }
+  ]
+}

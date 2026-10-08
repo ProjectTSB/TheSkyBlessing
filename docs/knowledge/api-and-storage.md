@@ -115,3 +115,11 @@ execute if data storage api: Return.Absorption run data get storage api: Return.
 吸収体力追加は [absorption/add.mcfunction](../../TheSkyBlessing/data/api/functions/entity/player/absorption/add.mcfunction) の通り、`Argument.Amount`と`Argument.UUID`が必須で、`Priority`の既定値は0。成功経路は `Amount`、`UUID`、`Priority`、`WipedCallback` を削除する。必須値不足の失敗経路は早期returnするので、呼出側で残値を次の呼出しへ持ち越さない。
 
 heal補正の [heal/modifier.mcfunction](../../TheSkyBlessing/data/api/functions/heal/modifier.mcfunction) は `as entity` で `Argument.Heal` をその場で更新するAPIである。これは独立したReturnを返す例ではない。呼出側が補正前の値も必要なら、呼出前に別pathへ複製する。このように「入力を消す」「入力を書き換える」「Returnを作る」はAPIごとに異なるため、共通の後始末規則へまとめない。
+
+## フォント設定が異なる文字列を計測する
+
+文字列の送り幅はフォントと太字指定に依存する。配置計算では通常表示とUnicodeフォント強制時を分け、配布するリソースパックと一致する幅表を使う。明示的なuniform・space指定は両設定で同じ幅になる。文字列は [measure](../../TheSkyBlessing/data/lib/functions/text/measure.mcfunction)、装飾を含む静的なTextComponentは [measure_component](../../TheSkyBlessing/data/lib/functions/text/measure_component.mcfunction) を使い、入出力と対応範囲は各関数のIMP Docを参照する。
+
+複数部分を配置するときは、小数の送り幅を合計してから一度だけ整数へ切り上げる。部分ごとに丸めると、その数だけ誤差が積み上がる。幅表にない文字や未対応の内容は推定せず失敗するため、呼出側は明示幅を用意するか表示を中止する。
+
+幅表はクライアント独自のフォント置換を追跡しない。配布フォントの文字・送り幅を変えたら [生成手順](../../scripts/text/README.md) に従って表も更新する。現在の表現精度は0.5pxであり、異なる精度やproviderを導入する場合は生成処理と実行時の計算を併せて見直す。
