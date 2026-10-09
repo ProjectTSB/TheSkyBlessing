@@ -1,3 +1,8 @@
+---
+title: Item・回収・Mob・計算部品の抽象構造
+description: Item生成・inventory・墓・LostItems・Mob初期化・幾何や移動の部品を扱うときに読む
+---
+
 # Item・回収・Mob・計算部品の抽象構造
 
 確認日: 2026-09-15。本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` の生成、保存、回収、転送、計算の入口と利用側を静的に確認した。[全体の抽象構造](architecture.md) と併せて、状態の所有者と操作の単位を判断するために使う。
@@ -67,10 +72,6 @@ data_get系の内部呼出しはOhMyDatのpointerを取得し直すため、別�
 
 [死亡時の保存](../../TheSkyBlessing/data/player_manager/functions/adjust_hunger/death.mcfunction) はHungerTargetへ値を残す。[復活時](../../TheSkyBlessing/data/player_manager/functions/adjust_hunger/respawn.mcfunction) は目標が20以外なら `hunger 4 255` を与える。RespawnEventが80tickに達した[遅延処理](../../TheSkyBlessing/data/player_manager/functions/adjust_hunger/respawn.delay.mcfunction) は目標値に関係なくsaturationを与えて監視を開始し、[observe](../../TheSkyBlessing/data/player_manager/functions/adjust_hunger/observe.mcfunction) が目標到達でsaturationを解除する。playerのfoodLevelを直接代入する処理の代わりに、Vanillaの効果と観測したscoreで目標へ戻す仕組みである。hungerの4秒と遅延の80tickは時間の上で対応するため、片方を変えるときはもう片方も確認する。hungerとsaturationを打ち消し合う不要な付与と扱わず、保存値・復活時の時間順・監視終了を一続きで保つ。
 
-## 天候predicateはゲーム内の発動条件を表す
-
-`lib:weather` の [is_sunny](../../TheSkyBlessing/data/lib/predicates/weather/is_sunny.json)・[is_raining](../../TheSkyBlessing/data/lib/predicates/weather/is_raining.json)・[is_thundering](../../TheSkyBlessing/data/lib/predicates/weather/is_thundering.json) は、エンドではすべてtrueになる。雨が降らないエンドでも雨・雷雨の効果を発動可能にし、晴れだけが有利になることを避けるゲーム仕様である（ユーザー確認済み）。純粋なVanilla天候判定として排他的な分岐へ整理しない。[Flora の passive](../../TheSkyBlessing/data/player_manager/functions/god/flora/passive.mcfunction) が雷雨側に `unless predicate lib:dimension/is_end` を付けるのは、雨と雷雨の分岐で同じスコアを二重加算しないため。この例のように、複数の天候条件が同時成立してよいかを呼出側で判断する。
-
 ## Vanilla の効果を秒未満の単位で制御する
 
 Minecraft 1.20.4 の `effect give` は効果時間を秒単位で指定するため、より細かい時間制御には area_effect_cloud（AEC）の効果NBTを使う（ユーザー確認済みの意図）。[テレポーターの待機処理](../../TheSkyBlessing/data/asset_manager/functions/teleporter/tick/active.mcfunction) の `Duration:6,Age:4,effects:[{id:"blindness",amplifier:0b,duration:25,show_particles:0b}]` はその実例である。短時間の効果付与を実装するときの選択肢とし、単に回りくどいという理由で `effect give` へ置き換えない。AEC本体の `Duration`・`Age` と、付与する効果の `effects[].duration` は別の値である。今回確認したのは時間制御の意図で、NBTの値から実際の付与時刻・持続時間へ換算する規則や、付与対象の範囲まで新たに検証したものではない。
@@ -78,10 +79,6 @@ Minecraft 1.20.4 の `effect give` は効果時間を秒単位で指定するた
 ## 金ハートの量を attribute と効果の付与・解除で設定する
 
 [absorption/set.m](../../TheSkyBlessing/data/player_manager/functions/absorption/set.m.mcfunction) の `max_absorption base set` → `effect give @s absorption 1 255 true` → `effect clear @s absorption` は、吸収量を指定した上限に合わせる手法である（ユーザー確認済み）。付与した直後に解除する2行を打ち消し合う処理として削除したり、効果を付けっぱなしにしたりしない。防壁の合計値を金ハートへ反映する実装であり、防壁そのものの追加・消費・解除は [緩衝体力の状態モデル](architecture.md#緩衝体力は複数の防壁とその表示を分ける) に従う。新しい防壁の実装から、この内部関数を直接呼ぶために公開範囲を広げない。
-
-## ゲートウェイ接触時の低速落下は、自作の落下ダメージの回避策
-
-[player tick](../../TheSkyBlessing/data/core/functions/tick/player/.mcfunction) はゲートウェイとの重なりを調べ、接触しているプレイヤーに `slow_falling 1` を付与する。ユーザーが確認している目的は、自作の落下ダメージがテレポート時に誤って発生することへの対策である。[落下ダメージの適用条件](../../TheSkyBlessing/data/player_manager/functions/fall_damage/deal_for_vulnerable.mcfunction) は低速落下の付いたプレイヤーを除外するため、この2つの処理を一続きで読む。移動演出だけの効果として削除しない。誤発生の原因を特定・解消した場合、またはバージョンアップに伴い落下ダメージ倍率をattributeで制御する方式へ移行した場合には、この回避策が不要か再評価できる。今回の調査では誤発生の原因そのものは特定していない。
 
 ## Mob：共通の個体表現と追加当たり判定
 

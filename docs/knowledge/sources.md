@@ -1,3 +1,8 @@
+---
+title: 調査根拠
+description: 結論の出典・採用状況・確認範囲を辿るときに読む
+---
+
 # 調査根拠
 
 コード固有の結論を辿る索引。共通規約・記録方針はDevSpaceの `AGENTS.md` と `docs/knowledge-maintenance.md` にある。以下の版・PR状態は確認時点の記録であり、現在のブランチへ適用するときはコードと照合する。

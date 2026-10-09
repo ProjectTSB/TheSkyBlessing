@@ -1,3 +1,8 @@
+---
+title: World コンポーネントの状態と更新境界
+description: Island・Teleporter・Trader・Container・Nexusの構築判定と状態の所有者を追うときに読む
+---
+
 # World コンポーネントの状態と更新境界
 
 確認日: 2026-09-15。本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` の Island、Teleporter、Trader、Container を、定義・管理処理・利用側から確認した。[全体の抽象構造](architecture.md) を前提に、それぞれ何が状態を所有するかを整理する。

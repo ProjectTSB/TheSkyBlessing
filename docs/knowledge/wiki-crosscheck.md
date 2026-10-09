@@ -1,3 +1,8 @@
+---
+title: ProjectTSB Wiki と現行本体の照合
+description: Wikiの設計意図と現行実装の差を確認するときに読む
+---
+
 # ProjectTSB Wiki と現行本体の照合
 
 確認日: 2026-09-15。Wiki snapshot `3a5ede8625a713382dca0e96f46b2a8ed75218c5` の公開16ページと `_Sidebar.md` を全文確認し、本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` と照合した。Wiki は作成者向けの設計意図、現行コードは実行時の事実として分ける。API 一覧をここへ複製せず、誤用時の影響が大きい差だけを扱う。
