@@ -107,6 +107,21 @@ test('an existing auto-merge request is left intact', async () => {
   }), []);
 });
 
+test('paths a person has to merge are excluded, individual notes are not', async () => {
+  for (const files of [
+    [file('docs/knowledge/README.md')],
+    [file('docs/guide.md'), file('docs/knowledge/README.md')],
+    [file('docs/knowledge/entry.md', 'docs/knowledge/README.md')],
+    [file('docs/knowledge/README.md', 'docs/knowledge/entry.md')],
+    [file('.github/workflows/auto-merge-docs-tests.yml')],
+  ]) assert.deepEqual(await inspect(files), []);
+  for (const files of [
+    [file('docs/knowledge/notes/motion/no-inertia-tp-roundtrip.md')],
+    [file('docs/knowledge/notes/motion/new.md', 'docs/knowledge/notes/motion/old.md')],
+    [file('docs/knowledge/README-of-notes.md')],
+  ]) assert.equal((await inspect(files)).length, 1);
+});
+
 test('PR title is one literal process argument', async () => {
   const title = 'Literal `command` $(command) ${{ secrets.TOKEN }}';
   const calls = await inspect([file('docs/guide.md')], { title });
