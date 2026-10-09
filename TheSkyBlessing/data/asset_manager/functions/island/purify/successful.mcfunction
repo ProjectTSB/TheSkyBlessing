@@ -28,9 +28,9 @@
     data modify storage api: Argument.ActivationState set value "Activate"
     function metric:island
     function api:teleporter/set_activation_state/from_id
-# DispelPhaseを進める
+# PurifyPhaseを進める
     function oh_my_dat:please
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 3b
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.PurifyPhase set value 3b
 # Dispelledトリガーを発火する
     data modify storage asset:island Args.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
     function asset_manager:island/purify/dispelled.m with storage asset:island Args

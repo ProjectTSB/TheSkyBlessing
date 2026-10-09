@@ -33,7 +33,7 @@
     #declare tag BossSummonMarker
 
 # MEMO
-# DispelPhase:
+# PurifyPhase:
 #   0b: unknown(first boss waited/dispellable)
 #   1b: boss waited
 #   2b: dispellable
