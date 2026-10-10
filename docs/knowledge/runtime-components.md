@@ -7,6 +7,8 @@ description: Item生成・inventory・墓・LostItems・Mob初期化・幾何や
 
 確認日: 2026-09-15。本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` の生成、保存、回収、転送、計算の入口と利用側を静的に確認した。[全体の抽象構造](architecture.md) と併せて、状態の所有者と操作の単位を判断するために使う。
 
+この領域の個別判断の一部は `docs/knowledge/notes/` にある。天候による発動条件は `notes/predicate/`、ゲートウェイ周辺の落下ダメージは `notes/fall-damage/` で、DevSpaceの `scripts/knowledge/index.py --area predicate` のように領域で絞って読む。
+
 ## Artifact：テンプレートから個体を作り、配送する
 
 Artifact の型定義と、生成した ItemStack は別の対象である。[Elemental Sword の give](https://github.com/ProjectTSB/Asset/blob/8f661ea1003a0e519d9825c55e1dde0ce6edaf80/Asset/data/asset/functions/artifact/0057.elemental_sword/give/2.give.mcfunction) は ID やアイテム種、使用回数等のテンプレートを渡し、共通の生成処理へ進む。[create/set_data](../../TheSkyBlessing/data/asset_manager/functions/artifact/create/set_data.mcfunction) が Item compound を構築し、`tag.TSB.ID` に型、`tag.TSB.UUID` に `$ArtifactIndex` 由来の単一整数を設定する。通常生成時の stack Count は 1 であり、使用可能回数 RemainingCount と別である。
