@@ -1,13 +1,13 @@
 ---
 title: Item・回収・Mob・計算部品の抽象構造
-description: Item生成・inventory・墓・LostItems・Mob初期化・幾何や移動の部品を扱うときに読む
+description: Item生成・inventory・墓・LostItems・Mob初期化と追加当たり判定・幾何や移動・ROMの部品を扱うときに読む
 ---
 
 # Item・回収・Mob・計算部品の抽象構造
 
 確認日: 2026-09-15。本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` の生成、保存、回収、転送、計算の入口と利用側を静的に確認した。[全体の抽象構造](architecture.md) と併せて、状態の所有者と操作の単位を判断するために使う。
 
-この領域の個別判断の一部は `docs/knowledge/notes/` にある。天候による発動条件は `notes/predicate/`、ゲートウェイ周辺の落下ダメージは `notes/fall-damage/` で、DevSpaceの `scripts/knowledge/index.py --area predicate` のように領域で絞って読む。
+この領域の個別判断の一部はノートにある。天候による発動条件は [notes/predicate/](notes/predicate/)、ゲートウェイ周辺の落下ダメージは [notes/fall-damage/](notes/fall-damage/) にあり、DevSpaceの `scripts/knowledge/index.py --area predicate` のように領域で絞って読める。
 
 ## Artifact：テンプレートから個体を作り、配送する
 
@@ -98,7 +98,7 @@ ExtendedCollision は物理的な追加当たり判定で、ForwardTargetMobUUID
 
 - [with_idempotent](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/with_idempotent.m.mcfunction) は重複抑制をしない。IsForwardedOnly によって元 entity と本体の両方、または転送先を優先して callback を呼ぶ。名前を「一度だけ実行される」という保証に読み替えない。
 - [with_non-idempotent](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/with_non-idempotent.m.mcfunction) の抑制は ExtendedCollision 経由に限られる。[適用集合](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/check_initial_apply.m.mcfunction) は Key と ForwardTargetMobUUID ごとに管理され、[reset](../../TheSkyBlessing/data/api/functions/mob/apply_to_forward_target/reset_initial_apply.m.mcfunction) も指定 Key 単位である。通常 Mob の直通経路を含む全呼出しの一度だけ実行や再入防止は保証しない。
-- 集合の有効区間は利用側が決める。entity finder 用は [tick](../../TheSkyBlessing/data/core/functions/tick/.mcfunction)、Damage 用は [damage reset](../../TheSkyBlessing/data/api/functions/damage/core/reset.mcfunction) と single-damage session の終了を辿る。
+- 集合の有効区間は利用側が決める。entity finder 用は [tick](../../TheSkyBlessing/data/core/functions/tick/.mcfunction) で消える。Damage 用は [damage reset](../../TheSkyBlessing/data/api/functions/damage/core/reset.mcfunction) で消えるが、[single-damage session](../../TheSkyBlessing/data/api/functions/damage/single_damage_session/open.mcfunction) が開いている間は reset でも残り、[close](../../TheSkyBlessing/data/api/functions/damage/single_damage_session/close.mcfunction) で消える。本体へ直接当たった Damage は集合に入らないため、session を開いていても抑制されない。
 
 [get_health](../../TheSkyBlessing/data/api/functions/mob/get_health.mcfunction) は本体への転送を使い、[Damage](../../TheSkyBlessing/data/api/functions/damage/.mcfunction) は重複抑制を利用する。一方、[modify_health](../../TheSkyBlessing/data/api/functions/mob/modify_health.mcfunction) は追加当たり判定を除外する。どの Mob API も自動的に同じ転送をするという前提で実装しない。新しい効果では、論理本体だけか両方か、複数の当たり判定から適用された場合の単位、適用集合をいつ解除するかを決める。
 

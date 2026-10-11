@@ -6,13 +6,27 @@
 
 ## 読む文書を選ぶ
 
-領域文書とノートの一覧・用途は、DevSpaceで次を実行して得るINDEXから選ぶ。INDEXのファイルや手書きの一覧は保存せず、この作業コピーのブランチのヘッダーから毎回生成する。
+領域文書は次の表から、作業の目的に合うものを選ぶ。個別の判断を扱うノートは、下記のINDEXから選ぶ。
+
+| 目的 | 読む文書 |
+|---|---|
+| 機能をどの仕組みに載せるか・領域間の責務と状態の持ち主を判断する。能力補正・装備・緩衝体力の状態モデルを含む | [architecture.md](architecture.md) |
+| Island・Teleporter・Trader・Container・Nexus構築判定を追う | [world-components.md](world-components.md) |
+| Item生成・inventory・墓・LostItems・Mob初期化/追加当たり判定・幾何や移動・ROM、Vanillaの効果や金ハートの制御を扱う | [runtime-components.md](runtime-components.md) |
+| APIを呼ぶ・追加する、libとapiの配置、攻撃属性、Damageの補正、NBTの代入結果による変更検知、ボタンのListenerを確認する | [api-and-storage.md](api-and-storage.md) |
+| load/tick、asset、LCD・TCD・GCD、遅延・再入・破棄、MP・actionbar表示を追う | [runtime-and-assets.md](runtime-and-assets.md) |
+| Mob/Object/Effectの型・継承・Field・dispatchと保存データを追う | [asset-runtime.md](asset-runtime.md) |
+| ProjectTSB Wiki の設計意図と現行実装の差を確認する | [wiki-crosscheck.md](wiki-crosscheck.md) |
+| CI の役割、宣言、生成物、IMP Docのインデント、docs/testsの自動マージを確認する | [ci-and-generation.md](ci-and-generation.md) |
+| 根拠・調査範囲 | [sources.md](sources.md) |
+
+ノートを含むINDEXは、DevSpaceで次を実行して得る。INDEXのファイルや手書きのノート一覧は保存せず、この作業コピーのブランチのヘッダーから毎回生成する。
 
 ```sh
 python3 scripts/knowledge/index.py <この作業コピー>
 ```
 
-領域を絞るときは `--area <領域>`、ノートだけを見るときは `--notes-only` を付ける。スクリプトを使えない場合は、`docs/knowledge/*.md` と `docs/knowledge/notes/**/*.md` の先頭にある `title`・`description` を直接読む。ノートの形式、参照経路、機械的な検査、人がマージする範囲はDevSpaceの `docs/knowledge-notes.md` に従う。
+スクリプトを使えない場合は、`docs/knowledge/notes/**/*.md` の先頭にある `title`・`description` を直接読む。INDEXのオプション、ノートの形式、参照経路、機械的な検査、人がマージする範囲はDevSpaceの `docs/knowledge-notes.md` に従う。
 
 領域文書は領域の全体像と入口、`notes/` 配下のノートは個別の判断（根拠・適用条件・適用外）を扱う。該当が見つからないときは領域を広げてINDEXを読み直し、コードと呼出元の実装を確認してから知識の有無を判断する。
 
