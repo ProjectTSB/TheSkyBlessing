@@ -32,7 +32,6 @@
     data modify storage lib:text Component.Check append from storage lib:text Component.Current.text
     execute if data storage lib:text Component.Current.translate run data modify storage lib:text Component.Check append from storage lib:text Component.Current.translate
     execute unless data storage lib:text Component.Check[1] run return fail
-    execute unless data storage lib:text Component.Style{Bold:true} unless data storage lib:text Component.Style{Bold:false} run return fail
     data modify storage lib:text Component.Part set from storage lib:text Component.Style
     data modify storage lib:text Component.Part.Text set from storage lib:text Component.Check[1]
     execute unless data storage lib:text Component.Current.translate run data modify storage lib:text Component.Parts append from storage lib:text Component.Part

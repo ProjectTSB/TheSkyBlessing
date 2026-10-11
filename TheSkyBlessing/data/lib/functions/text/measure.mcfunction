@@ -2,8 +2,9 @@
 #
 # 通常表示とUnicodeフォント強制時の、単一行の送り幅を測る
 # 入力は消費する
+# 引数の型は呼出側で保証する
 # 空文字列は幅0で成功する
-# 未収録文字・C0制御文字・§・不正入力・計算範囲超過は失敗し、両設定の結果を削除する
+# 未収録文字・C0制御文字・§・計算範囲超過は失敗し、両設定の結果を削除する
 # 複数部分を合算する場合はTextAdvanceを使い、合計後に一度だけ丸める
 #
 # @input storage lib:
@@ -32,6 +33,4 @@
 # 両フォントの幅を計測し、成否を返す
     scoreboard players set $TextResult Temporary 0
     execute store result score $TextResult Temporary run function lib:text/core/measure
-    data remove storage lib:text Work
-    execute if score $TextResult Temporary matches 1 run return 1
-    return fail
+    return run function lib:text/core/finish

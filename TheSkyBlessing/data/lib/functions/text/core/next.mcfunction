@@ -20,12 +20,15 @@
     execute store result score $TextEncoded Temporary run data get storage lib:text Work.Glyph
     scoreboard players operation $TextGlyph Temporary = $TextEncoded Temporary
     scoreboard players operation $TextGlyph Temporary /= $8 Const
-    scoreboard players operation $TextBold Temporary = $TextEncoded Temporary
-    scoreboard players operation $TextBold Temporary /= $2 Const
-    scoreboard players operation $TextBold Temporary %= $4 Const
+    execute if data storage lib:text Work{Bold:true} run scoreboard players operation $TextBold Temporary = $TextEncoded Temporary
+    execute if data storage lib:text Work{Bold:true} run scoreboard players operation $TextBold Temporary /= $2 Const
+    execute if data storage lib:text Work{Bold:true} run scoreboard players operation $TextBold Temporary %= $4 Const
     execute if data storage lib:text Work{Bold:true} run scoreboard players operation $TextGlyph Temporary += $TextBold Temporary
     scoreboard players operation $TextOld Temporary = $TextAdvance Temporary
     scoreboard players operation $TextAdvance Temporary += $TextGlyph Temporary
+    # 合計は半px単位のintで保持し、加算前後の大小関係からオーバーフローを検出する
+    # 例: default・Bold:falseでは、U+F300（+65,536px）を16,384文字で上限を超える
+    # U+F301（-65,536px）は16,385文字で下限を超える
     execute if score $TextGlyph Temporary matches 0.. if score $TextAdvance Temporary < $TextOld Temporary run return fail
     execute if score $TextGlyph Temporary matches ..-1 if score $TextAdvance Temporary > $TextOld Temporary run return fail
 

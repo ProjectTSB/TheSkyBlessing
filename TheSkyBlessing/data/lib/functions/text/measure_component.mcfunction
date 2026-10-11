@@ -6,6 +6,7 @@
 # translateは文章の %s・%N$s・%% とwithの文字列・compound、入れ子に対応する
 # 翻訳辞書は検索せず、selector・NBT・score・keybindの動的参照は失敗する
 # 未収録文字・§・不正入力・未対応フォントや書式・計算範囲超過も失敗する
+# 引数の型は呼出側で保証する
 # 入力は消費し、失敗時は両設定の結果を削除する
 # 色・斜体・下線・取り消し線は送り幅を増やさない
 #
@@ -33,9 +34,4 @@
 # 本文を分解して両設定の幅を測り、失敗時も作業領域を片付ける
     scoreboard players set $TextResult Temporary 0
     execute if function lib:text/core/component/collect store result score $TextResult Temporary run function lib:text/core/component/measure
-    data remove storage lib:text Component
-    data remove storage lib:text Work
-    execute if score $TextResult Temporary matches 1 run return 1
-    data remove storage lib: Return.Default
-    data remove storage lib: Return.Unifont
-    return fail
+    return run function lib:text/core/finish
