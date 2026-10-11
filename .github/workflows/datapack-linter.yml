@@ -21,9 +21,11 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ github.token }}
           muteSuccessResult: true
+          # 文字幅表は必須の引用符にも警告が出るため除外する
           ignoreLintPathPattern: |
             animated_java:**
             core:define_gamerule
+            lib:text/core/tables
 
       - name: Checkout Asset2
         if: ${{ github.ref == 'refs/heads/master' }}
