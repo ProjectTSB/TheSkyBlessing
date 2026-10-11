@@ -175,6 +175,9 @@ team modify NoCollision collisionRule never
         scoreboard objectives add Sneak.Hotbar6 custom:sneak_time {"text":"スニークタイム: ホットバー6"}
         scoreboard objectives add Sneak.Hotbar7 custom:sneak_time {"text":"スニークタイム: ホットバー7"}
         scoreboard objectives add Sneak.Hotbar8 custom:sneak_time {"text":"スニークタイム: ホットバー8"}
+        scoreboard objectives add UsingItem dummy {"text":"アイテム使用時間: 通算"}
+        scoreboard objectives add UsingItem.Mainhand dummy {"text":"アイテム使用時間: メインハンド"}
+        scoreboard objectives add UsingItem.Offhand dummy {"text":"アイテム使用時間: オフハンド"}
         scoreboard objectives add MPLogCD dummy {"text":"神器をMP枯渇で失敗した際のログのクールダウン"}
         scoreboard objectives add BelieveLogCD dummy {"text":"神器を信仰で失敗した際のログのクールダウン"}
         scoreboard objectives add LocalCDLogCD dummy {"text":"神器をローカルクールダウンで失敗した際のログのクールダウン"}
