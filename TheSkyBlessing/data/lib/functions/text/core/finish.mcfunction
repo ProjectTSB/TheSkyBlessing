@@ -14,6 +14,9 @@
     scoreboard players reset $TextResult Temporary
     scoreboard players reset $TextValid Temporary
     scoreboard players reset $TextAdvance Temporary
+    scoreboard players reset $TextUniformAdvance Temporary
+    scoreboard players reset $TextUniformGlyph Temporary
+    scoreboard players reset $TextUniformEncoded Temporary
     scoreboard players reset $TextWidth Temporary
     scoreboard players reset $TextGlyph Temporary
     scoreboard players reset $TextBold Temporary

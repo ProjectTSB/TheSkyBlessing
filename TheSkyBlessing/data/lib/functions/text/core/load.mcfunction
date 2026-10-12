@@ -3,6 +3,8 @@
 # @within function core:load_once
 
 # 版が変わった場合だけ文字幅表を更新する
-    execute if data storage lib:text_fonts {Version:"3564394154134fd495c2ecf79b0cd9c9177d86b20fa8663e67d3cc437db2c87f"} run return 1
-    function lib:text/core/tables
-    data modify storage lib:text_fonts Version set value "3564394154134fd495c2ecf79b0cd9c9177d86b20fa8663e67d3cc437db2c87f"
+    execute if data storage lib_text_fonts: {Version:"45ce851d4a644def5c8df7be1b9cf495e7dab15301250bdc6fad15eec4078029"} run return 1
+    function lib:text/core/tables.m {_:""}
+    data remove storage lib:text_fonts Fonts
+    data remove storage lib:text_fonts Version
+    data modify storage lib_text_fonts: Version set value "45ce851d4a644def5c8df7be1b9cf495e7dab15301250bdc6fad15eec4078029"

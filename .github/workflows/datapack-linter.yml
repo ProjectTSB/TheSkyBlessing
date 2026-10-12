@@ -25,7 +25,7 @@ jobs:
           ignoreLintPathPattern: |
             animated_java:**
             core:define_gamerule
-            lib:text/core/tables
+            lib:text/core/tables.m
 
       - name: Checkout Asset2
         if: ${{ github.ref == 'refs/heads/master' }}

@@ -1,6 +1,6 @@
 # CI・生成物・検証
 
-GitHub Actions の `.github/workflows/datapack-linter.yml` はpush/PRで `ChenCMD/datapack-linter@v2` を実行し、`animated_java:**`、`core:define_gamerule`、生成済みの文字幅表 `lib:text/core/tables` を除外する。文字幅表は、引用符が必須のキーにも引用符の警告が出るため除外している。
+GitHub Actions の `.github/workflows/datapack-linter.yml` はpush/PRで `ChenCMD/datapack-linter@v2` を実行し、`animated_java:**`、`core:define_gamerule`、生成済みの文字幅表 `lib:text/core/tables.m` を除外する。文字幅表は、引用符が必須のキーにも引用符の警告が出るため除外している。
 
 Node.js 24 の標準TypeScript実行で `.github/workflows/make-declares-mcf.mts` を動かす。linterの `.cache/dls.json` を読み、可視性フィルタに合う定義を `Asset2/Asset/data/minecraft/functions/declares.d.mcfunction` に生成する。生成はpush/PRでも実行し、ProjectTSB/Assetのcheckoutとpushだけをmasterに限定する。したがって公開範囲やdeclareを変えたら生成結果への影響を確認する。
 

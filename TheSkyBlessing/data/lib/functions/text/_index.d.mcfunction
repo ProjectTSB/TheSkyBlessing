@@ -4,10 +4,13 @@
 #> Text measurement
 # @within function lib:text/**
     #declare storage lib:text
-    #declare storage lib:text_fonts
+    #declare storage lib_text_fonts:
     #declare score_holder $TextResult
     #declare score_holder $TextValid
     #declare score_holder $TextAdvance
+    #declare score_holder $TextUniformAdvance
+    #declare score_holder $TextUniformGlyph
+    #declare score_holder $TextUniformEncoded
     #declare score_holder $TextWidth
     #declare score_holder $TextGlyph
     #declare score_holder $TextBold
@@ -21,3 +24,7 @@
     #declare score_holder $TextDigit
     #declare score_holder $TextDefaultTotal
     #declare score_holder $TextUniformTotal
+
+#> Previous font table storage
+# @within function lib:text/core/load
+    #declare storage lib:text_fonts

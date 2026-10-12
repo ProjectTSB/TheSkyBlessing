@@ -120,6 +120,6 @@ heal補正の [heal/modifier.mcfunction](../../TheSkyBlessing/data/api/functions
 
 文字列の送り幅はフォントと太字指定に依存する。配置計算では通常表示とUnicodeフォント強制時を分け、配布するリソースパックと一致する幅表を使う。明示的なuniform・space指定は両設定で同じ幅になる。文字列は [measure](../../TheSkyBlessing/data/lib/functions/text/measure.mcfunction)、装飾を含む静的なTextComponentは [measure_component](../../TheSkyBlessing/data/lib/functions/text/measure_component.mcfunction) を使い、入出力と対応範囲は各関数のIMP Docを参照する。
 
-複数部分を配置するときは、小数の送り幅を合計してから一度だけ整数へ切り上げる。部分ごとに丸めると、その数だけ誤差が積み上がる。幅表にない文字や未対応の内容は推定せず失敗するため、呼出側は明示幅を用意するか表示を中止する。
+複数部分を配置するときは、小数の送り幅を合計してから一度だけ整数へ切り上げる。部分ごとに丸めると、その数だけ誤差が積み上がる。default・uniformの表にない文字は、1 UTF-16コード単位あたり送り幅9px・太字加算0.5pxとして計算する。対応範囲外でこの値と異なる文字を使う場合は表の拡張が必要になる。spaceの未収録文字や未対応の書式は失敗するため、呼出側は明示幅を用意するか表示を中止する。
 
 幅表はクライアント独自のフォント置換を追跡しない。配布フォントの文字・送り幅を変えたら [生成手順](../../scripts/text/README.md) に従って表も更新する。現在の表現精度は0.5pxであり、異なる精度やproviderを導入する場合は生成処理と実行時の計算を併せて見直す。
