@@ -120,7 +120,7 @@ Spawner manager は [候補形式の正規化](../../TheSkyBlessing/data/asset_m
 
 この境界では register は構築レシピ、manager はその解釈と実行を担う。候補の新しい記法は正規化、spawn 条件は manager、Mob 自身の能力は Mob 定義、配置条件は定義と loader の境界から変更先を探す。
 
-Island も loader/construct の境界を持つが、[個体の設定](../../TheSkyBlessing/data/asset_manager/functions/island/register/construct/set_data.mcfunction) には IslandData と DispelPhase があり、進行状態を管理する。Spawner の候補選択や Mob/Object のメソッド継承を、すべての world asset に適用しない。
+Island も loader/construct の境界を持つが、[個体の設定](../../TheSkyBlessing/data/asset_manager/functions/island/register/construct/set_data.mcfunction) には IslandData と PurifyPhase があり、進行状態を管理する。Spawner の候補選択や Mob/Object のメソッド継承を、すべての world asset に適用しない。
 
 ## 共通部品には利用区間がある
 

@@ -36,13 +36,13 @@ description: Island・Teleporter・Trader・Container・Nexusの構築判定と�
 
 識別子には役割の違いがある。Island の ID は定義・解呪 callback・対応する転移装置を結び、BossID は Mob の型を指定し、TargetBossID は召喚した特定の MobUUID を追う。型と個体の識別を混同すると、同型の別ボスまで監視対象になってしまう。
 
-[解呪処理](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/.mcfunction) は祈願の継続や中断を扱い、ボスが必要な場合は [召喚開始](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/.mcfunction)、[召喚タスク](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/summoning_task.mcfunction)、[個体の関連付け](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/summon.mcfunction) へ進む。DispelPhase、tag、score が協調して状態遷移を表す。
+[解呪処理](../../TheSkyBlessing/data/asset_manager/functions/island/purify/.mcfunction) は祈願の継続や中断を扱い、ボスが必要な場合は [召喚開始](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/.mcfunction)、[召喚タスク](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/summoning_task.mcfunction)、[個体の関連付け](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/summon.mcfunction) へ進む。PurifyPhase、tag、score が協調して状態遷移を表す。
 
 [phase の宣言](../../TheSkyBlessing/data/asset_manager/functions/island/_index.d.mcfunction) と実処理では、0 は初回の解呪可能状態、1 はボス召喚を開始済み、2 は追跡ボスが見つからなくなった後の解呪可能状態、3 は解呪成功済みを表す。初回の召喚開始には祈願120 tick、phase 1 からの再召喚開始には30 tickを使う。
 
-[watcher](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/watcher.mcfunction) は関連するボスの存在・位置・周囲のプレイヤーを監視する。[ボス不在](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/killed.mcfunction) なら phase 2 に進む一方、[周囲に対象 player がいない場合の除去](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/boss/remove.mcfunction) は関連付けを外して phase 1 を保ち、再祈願による早期再召喚につながる。これは対応ボスの lifecycle であり、島全体の unload 処理と同一視しない。
+[watcher](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/watcher.mcfunction) は関連するボスの存在・位置・周囲のプレイヤーを監視する。[ボス不在](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/killed.mcfunction) なら phase 2 に進む一方、[周囲に対象 player がいない場合の除去](../../TheSkyBlessing/data/asset_manager/functions/island/purify/boss/remove.mcfunction) は関連付けを外して phase 1 を保ち、再祈願による早期再召喚につながる。これは対応ボスの lifecycle であり、島全体の unload 処理と同一視しない。
 
-[成功処理](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/successful.mcfunction) は全体進捗、報酬、lost item の返却、対応 Teleporter の起動、完了状態、[島別 callback](../../TheSkyBlessing/data/asset_manager/functions/island/dispel/dispelled.m.mcfunction)、Trader の更新通知をつなぐ。個別の島で成功後に演出や配置を追加するなら、まず callback の境界を使う。全島共通の進捗や再評価通知を変えるなら成功処理が対象になる。callback は動的な関数呼出しであり、存在・成功を保証する検査はない。形式例と共通処理を読んだもので、個別の島 callback の本番実例を示したものではない。
+[成功処理](../../TheSkyBlessing/data/asset_manager/functions/island/purify/successful.mcfunction) は全体進捗、報酬、lost item の返却、対応 Teleporter の起動、完了状態、[島別 callback](../../TheSkyBlessing/data/asset_manager/functions/island/purify/purified.m.mcfunction)、Trader の更新通知をつなぐ。個別の島で成功後に演出や配置を追加するなら、まず callback の境界を使う。全島共通の進捗や再評価通知を変えるなら成功処理が対象になる。callback は動的な関数呼出しであり、存在・成功を保証する検査はない。形式例と共通処理を読んだもので、個別の島 callback の本番実例を示したものではない。
 
 ## Teleporter：接続状態と選択中の状態
 
