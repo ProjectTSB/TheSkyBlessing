@@ -6,7 +6,7 @@
 #
 # @input
 #   as living entity
-#   storage api: Argument.Heal : float
+#   storage api: Argument.Heal : double
 #   storage api: Argument.FixedHeal? : boolean(default: false)
 #   storage api: Argument.DisableLog? : boolean(default: false)
 #   storage api: Argument.ApplyTrigger? : boolean(default: true)
