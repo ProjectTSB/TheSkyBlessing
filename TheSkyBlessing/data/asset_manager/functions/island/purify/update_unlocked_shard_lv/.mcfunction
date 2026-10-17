@@ -1,11 +1,11 @@
-#> asset_manager:island/dispel/update_unlocked_shard_lv/
+#> asset_manager:island/purify/update_unlocked_shard_lv/
 #
 # 解呪時に、現在解禁されているシャードのレベルを示す値を更新
 #
-# @within function asset_manager:island/dispel/successful
+# @within function asset_manager:island/purify/successful
 
 #> priv
-# @within function asset_manager:island/dispel/update_unlocked_shard_lv/*
+# @within function asset_manager:island/purify/update_unlocked_shard_lv/*
     #declare score_holder $Current
     #declare score_holder $Required
 
@@ -15,7 +15,7 @@
 # 攻略度に応じてスコアを更新
     scoreboard players set $UnlockedShardLv Global 0
     data modify storage asset:island Temp set from storage global UnlockShardProgress
-    function asset_manager:island/dispel/update_unlocked_shard_lv/compare_current_lv
+    function asset_manager:island/purify/update_unlocked_shard_lv/compare_current_lv
 # リセット
     data remove storage asset:island Temp
     scoreboard players reset $Current Temporary

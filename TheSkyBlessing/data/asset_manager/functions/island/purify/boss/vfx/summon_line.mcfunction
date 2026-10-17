@@ -1,0 +1,26 @@
+#> asset_manager:island/purify/boss/vfx/summon_line
+#
+#
+#
+# @within function asset_manager:island/purify/boss/summoning_task
+
+execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.8 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.6 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.4 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 96 run particle electric_spark ~ ~3.2 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 97 run particle electric_spark ~ ~3.0 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 97 run particle electric_spark ~ ~2.8 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 97 run particle electric_spark ~ ~2.6 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 97 run particle electric_spark ~ ~2.4 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 98 run particle electric_spark ~ ~2.2 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 98 run particle electric_spark ~ ~2.0 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 98 run particle electric_spark ~ ~1.8 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 98 run particle electric_spark ~ ~1.6 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 99 run particle electric_spark ~ ~1.4 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 99 run particle electric_spark ~ ~1.2 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 99 run particle electric_spark ~ ~1.0 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 99 run particle electric_spark ~ ~0.8 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 100 run particle electric_spark ~ ~0.6 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 100 run particle electric_spark ~ ~0.4 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 100 run particle electric_spark ~ ~0.2 ~ 0 0 0 0 1 force @a
+execute if score @s PurifyTime matches 100 run particle electric_spark ~ ~0.0 ~ 0 0 0 0 1 force @a

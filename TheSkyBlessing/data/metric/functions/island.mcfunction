@@ -2,7 +2,7 @@
 #
 # 島の攻略順を記録する
 #
-# @within function asset_manager:island/dispel/successful
+# @within function asset_manager:island/purify/successful
 
 function api:global_vars/get_difficulty
 data modify storage metric: Island.Order append value {}

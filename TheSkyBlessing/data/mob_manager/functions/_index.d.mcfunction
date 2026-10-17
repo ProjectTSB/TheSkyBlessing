@@ -34,7 +34,7 @@
 #> FlagIndex
 # @within function
 #   mob_manager:init/
-#   asset_manager:island/dispel/boss/summon
+#   asset_manager:island/purify/boss/summon
     #declare score_holder $FlagIndex
 
 #> FindFlag

@@ -95,7 +95,7 @@ data modify storage global Boolean.true set value true
 
 execute unless data storage global Config.IsKeepInventory run data modify storage global Config.IsKeepInventory set value false
 execute unless data storage global Config.EnableDamageTypeIcon run data modify storage global Config.EnableDamageTypeIcon set value false
-execute unless data storage global Config.ShowPlayTimeOnDispel run data modify storage global Config.ShowPlayTimeOnDispel set value false
+execute unless data storage global Config.ShowPlayTimeOnPurify run data modify storage global Config.ShowPlayTimeOnPurify set value false
 
 #> シャードの自由入手解禁に必要な攻略度(割合)
     data modify storage global UnlockShardProgress set value [5,29,54,75]
@@ -227,7 +227,7 @@ team modify NoCollision collisionRule never
     #> AssetManager: Island
     # @within function
     #   asset_manager:island/**
-        scoreboard objectives add DispelTime dummy {"text":"解呪の時間"}
+        scoreboard objectives add PurifyTime dummy {"text":"解呪の時間"}
         scoreboard objectives add TargetBossID dummy {"text":"召喚するボスのID"}
 
     #> AssetManager: Effect

@@ -30,5 +30,5 @@
     #declare tag TPStarInit
 
 #> OpenDeclares
-# @within asset_manager:island/dispel/register_tp
+# @within asset_manager:island/purify/register_tp
     #declare tag Teleporter

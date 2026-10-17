@@ -25,9 +25,9 @@ function player_manager:god/mercy/offering/init
 
 #> from: https://github.com/ProjectTSB/TheSkyBlessing/commit/8d20c4967981a3f4d789ba824b7aa8ce96d4b6de
 # @private
-#declare function asset_manager:island/dispel/update_unlocked_shard_lv/
+#declare function asset_manager:island/purify/update_unlocked_shard_lv/
 data modify storage global UnlockShardProgress set value [5,29,54,75]
-function asset_manager:island/dispel/update_unlocked_shard_lv/
+function asset_manager:island/purify/update_unlocked_shard_lv/
 
 #> from: https://github.com/ProjectTSB/Asset/commit/0a5d64c0aa456409719a1e9fb93e2f614fac102e
 # @private

@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/boss/summon
+#> asset_manager:island/purify/boss/summon
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/summoning_task
+# @within function asset_manager:island/purify/boss/summoning_task
 
 # UUIDを+1して先に保存する
     scoreboard players operation $FlagIndex Temporary = $FlagIndex Global

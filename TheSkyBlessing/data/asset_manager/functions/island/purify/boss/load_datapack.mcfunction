@@ -1,8 +1,8 @@
-#> asset_manager:island/dispel/boss/load_datapack
+#> asset_manager:island/purify/boss/load_datapack
 #
 #
 #
-# @within function asset_manager:island/dispel/boss/summoning_task
+# @within function asset_manager:island/purify/boss/summoning_task
 
 execute as @e[type=armor_stand,tag=CursedArtifact,distance=..0.01] run function oh_my_dat:please
 
