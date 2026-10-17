@@ -24,7 +24,3 @@
     #declare score_holder $TextDigit
     #declare score_holder $TextDefaultTotal
     #declare score_holder $TextUniformTotal
-
-#> Previous font table storage
-# @within function lib:text/core/load
-    #declare storage lib:text_fonts
