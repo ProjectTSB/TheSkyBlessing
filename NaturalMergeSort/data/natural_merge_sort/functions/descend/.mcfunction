@@ -1,8 +1,8 @@
 ### Copyright © 2020 赤石愛
 ### This software is released under the MIT License, see LICENSE.
 
-#> natural_merge_sort:descend/  
-# 渡された数値配列を、降順にソートします。  
+#> natural_merge_sort:descend/
+# 渡された数値配列を、降順にソートします。
 # Sort the specified int list in descending order.
 # @api
 # @input storage natural_merge_sort: List
