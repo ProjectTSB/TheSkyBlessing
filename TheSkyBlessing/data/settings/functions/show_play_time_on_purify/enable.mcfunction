@@ -1,4 +1,4 @@
-#> settings:show_play_time_on_dispel/enable
+#> settings:show_play_time_on_purify/enable
 # @within function settings:send_setting_menu
 
 tellraw @a [{"text":"解呪時プレイ時間表示を "},{"text":"有効","color":"green"},{"text":" にしました。"}]

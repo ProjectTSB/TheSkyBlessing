@@ -91,14 +91,14 @@
     data modify storage settings: ShowPlayTimeOnDispelButtons set value ['{"text":""}']
 
     data modify storage api: Argument.Label set value '"無効"'
-    data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_disable"
-    execute unless data storage global Config{ShowPlayTimeOnPurify:false} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_dispel/disable"
+    data modify storage api: Argument.Key set value "change_show_play_time_on_purify_disable"
+    execute unless data storage global Config{ShowPlayTimeOnPurify:false} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_purify/disable"
     function api:button/create_text_component
     data modify storage settings: ShowPlayTimeOnDispelButtons append from storage api: Return.ButtonTextComponent
 
     data modify storage api: Argument.Label set value '"有効"'
-    data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_enable"
-    execute unless data storage global Config{ShowPlayTimeOnPurify: true} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_dispel/enable"
+    data modify storage api: Argument.Key set value "change_show_play_time_on_purify_enable"
+    execute unless data storage global Config{ShowPlayTimeOnPurify: true} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_purify/enable"
     function api:button/create_text_component
     data modify storage settings: ShowPlayTimeOnDispelButtons append from storage api: Return.ButtonTextComponent
 

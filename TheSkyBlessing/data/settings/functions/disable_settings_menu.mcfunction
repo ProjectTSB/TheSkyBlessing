@@ -21,7 +21,7 @@ function api:button/disable
 data modify storage api: Argument.Key set value "change_damage_type_icon_enable"
 function api:button/disable
 
-data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_disable"
+data modify storage api: Argument.Key set value "change_show_play_time_on_purify_disable"
 function api:button/disable
-data modify storage api: Argument.Key set value "change_show_play_time_on_dispel_enable"
+data modify storage api: Argument.Key set value "change_show_play_time_on_purify_enable"
 function api:button/disable
