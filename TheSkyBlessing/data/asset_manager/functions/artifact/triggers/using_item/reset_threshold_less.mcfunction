@@ -2,7 +2,9 @@
 #
 # 各slotについて$UsingItemThreshold未満の値の場合、asset:contextの当該slotのidを-1に設定します
 #
-# @within function asset_manager:artifact/triggers/using_item/
+# @within function
+#   asset_manager:artifact/triggers/using_item/
+#   asset_manager:artifact/triggers/using_item/release/
 
 # 処理
     execute unless score @s UsingItem.Mainhand >= $UsingItemThreshold Temporary run data modify storage asset:context id.mainhand set value -1

@@ -1,0 +1,39 @@
+#> asset_manager:island/purify/successful
+#
+#
+#
+# @within function asset_manager:island/purify/
+
+# 邪魔なスコアをリセットする
+    scoreboard players reset @s PurifyTime
+# 解呪数を1増やす
+    scoreboard players add $PurifiedIslands Global 1
+# シャード解禁状況のスコアを更新
+    function asset_manager:island/purify/update_unlocked_shard_lv/
+# VFX
+    function asset_manager:island/purify/vfx/purify
+# メッセージ
+    function lib:message/common/purify_island
+# 祝福を与える
+    data modify storage api: Argument.ID set value 2
+    execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:artifact/give/from_id
+# アイテム返す
+    function player_manager:lost_item/give_all/
+# データ取得
+    function oh_my_dat:please
+# 二度と祈れないようにする
+    tag @s add PurifiedCursedArtifact
+# テレポーターを起動する
+    data modify storage api: Argument.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    data modify storage api: Argument.ActivationState set value "Activate"
+    function metric:island
+    function api:teleporter/set_activation_state/from_id
+# PurifyPhaseを進める
+    function oh_my_dat:please
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.PurifyPhase set value 3b
+# Purifiedトリガーを発火する
+    data modify storage asset:island Args.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
+    function asset_manager:island/purify/purified.m with storage asset:island Args
+    data remove storage asset:island Args
+# 商人の取引内容を更新する
+    function api:trader/schedule_recipe_update_check

@@ -15,6 +15,6 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.BossDatapack set from storage asset:island BossDatapack
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.BossID set from storage asset:island BossID
     execute if data storage asset:island BossID run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.HasBoss set value true
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.DispelPhase set value 0b
+    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.PurifyPhase set value 0b
 # リセット
     tag @s remove CursedArtifactInit

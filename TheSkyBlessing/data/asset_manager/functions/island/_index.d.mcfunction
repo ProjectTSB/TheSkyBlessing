@@ -18,7 +18,7 @@
 # @within *
 #   asset_manager:island/**
 #   core:tick/
-#declare tag DispelledCursedArtifact
+#declare tag PurifiedCursedArtifact
 
 #> Tag
 # @within function
@@ -27,13 +27,13 @@
 
 #> Tag
 # @within function
-#   asset_manager:island/dispel/boss/*
+#   asset_manager:island/purify/boss/*
 #   asset_manager:island/tick/
-    #declare tag CantDispel
+    #declare tag CantPurify
     #declare tag BossSummonMarker
 
 # MEMO
-# DispelPhase:
+# PurifyPhase:
 #   0b: unknown(first boss waited/dispellable)
 #   1b: boss waited
 #   2b: dispellable
