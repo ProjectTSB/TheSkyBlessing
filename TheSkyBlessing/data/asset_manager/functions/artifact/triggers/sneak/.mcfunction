@@ -14,6 +14,10 @@
     # keepトリガー類
         function #asset:artifact/sneak/keep/
 
+        execute if score @s Sneak matches 10.. run scoreboard players set $SneakThreshold Temporary 10
+        execute if score @s Sneak matches 10.. run function asset_manager:artifact/triggers/sneak/reset_threshold_less
+        execute if score @s Sneak matches 10.. run function #asset:artifact/sneak/keep/0.5s
+
         execute if score @s Sneak matches 20.. run scoreboard players set $SneakThreshold Temporary 20
         execute if score @s Sneak matches 20.. run function asset_manager:artifact/triggers/sneak/reset_threshold_less
         execute if score @s Sneak matches 20.. run function #asset:artifact/sneak/keep/1s
@@ -42,6 +46,10 @@
         scoreboard players set $SneakThreshold Temporary 1
         function asset_manager:artifact/triggers/sneak/reset_value_not-equal
         function #asset:artifact/sneak/
+
+        execute if score @s Sneak matches 10.. run scoreboard players set $SneakThreshold Temporary 10
+        execute if score @s Sneak matches 10.. run function asset_manager:artifact/triggers/sneak/reset_value_not-equal
+        execute if score @s Sneak matches 10.. run function #asset:artifact/sneak/0.5s
 
         execute if score @s Sneak matches 20.. run scoreboard players set $SneakThreshold Temporary 20
         execute if score @s Sneak matches 20.. run function asset_manager:artifact/triggers/sneak/reset_value_not-equal

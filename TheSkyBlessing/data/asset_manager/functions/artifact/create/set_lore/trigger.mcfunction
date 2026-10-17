@@ -34,6 +34,7 @@
     execute if data storage asset:artifact {Trigger:"onKilledByMelee"} run data modify storage asset:artifact Temp.Trigger.B set value "近接攻撃で撃破"
     execute if data storage asset:artifact {Trigger:"onKilledByProjectile"} run data modify storage asset:artifact Temp.Trigger.B set value "遠距離攻撃で撃破"
     execute if data storage asset:artifact {Trigger:"sneak"} run data modify storage asset:artifact Temp.Trigger.B set value "スニーク"
+    execute if data storage asset:artifact {Trigger:"sneak0.5s"} run data modify storage asset:artifact Temp.Trigger.B set value "0.5秒間スニーク"
     execute if data storage asset:artifact {Trigger:"sneak1s"} run data modify storage asset:artifact Temp.Trigger.B set value "1秒間スニーク"
     execute if data storage asset:artifact {Trigger:"sneak2s"} run data modify storage asset:artifact Temp.Trigger.B set value "2秒間スニーク"
     execute if data storage asset:artifact {Trigger:"sneak3s"} run data modify storage asset:artifact Temp.Trigger.B set value "3秒間スニーク"
@@ -41,12 +42,13 @@
     execute if data storage asset:artifact {Trigger:"sneak5s"} run data modify storage asset:artifact Temp.Trigger.B set value "5秒間スニーク"
     execute if data storage asset:artifact {Trigger:"sneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒間スニーク"
     execute if data storage asset:artifact {Trigger:"keepSneak"} run data modify storage asset:artifact Temp.Trigger.B set value "0秒以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak1s"} run data modify storage asset:artifact Temp.Trigger.B set value "1秒間以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak2s"} run data modify storage asset:artifact Temp.Trigger.B set value "2秒間以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak3s"} run data modify storage asset:artifact Temp.Trigger.B set value "3秒間以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak4s"} run data modify storage asset:artifact Temp.Trigger.B set value "4秒間以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak5s"} run data modify storage asset:artifact Temp.Trigger.B set value "5秒間以上スニーク"
-    execute if data storage asset:artifact {Trigger:"keepSneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒間以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak0.5s"} run data modify storage asset:artifact Temp.Trigger.B set value "0.5秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak1s"} run data modify storage asset:artifact Temp.Trigger.B set value "1秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak2s"} run data modify storage asset:artifact Temp.Trigger.B set value "2秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak3s"} run data modify storage asset:artifact Temp.Trigger.B set value "3秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak4s"} run data modify storage asset:artifact Temp.Trigger.B set value "4秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak5s"} run data modify storage asset:artifact Temp.Trigger.B set value "5秒以上スニーク"
+    execute if data storage asset:artifact {Trigger:"keepSneak10s"} run data modify storage asset:artifact Temp.Trigger.B set value "10秒以上スニーク"
 
     execute if data storage asset:artifact {Trigger:"usingItem"} run data modify storage asset:artifact Temp.Trigger.B set value '{"keybind":"key.use"}'
     execute if data storage asset:artifact {Trigger:"usingItem0.5s"} run data modify storage asset:artifact Temp.Trigger.B set value '[{"text":"0.5秒間"},{"keybind":"key.use"}]'
