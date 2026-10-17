@@ -10,7 +10,7 @@
     execute unless data storage lib:text Component.Template{Char:"%"} unless data storage lib:text Component.Template{Char:"s"} run scoreboard players set $TextArg Temporary 0
     execute unless data storage lib:text Component.Template{Char:"%"} unless data storage lib:text Component.Template{Char:"s"} unless function lib:text/core/component/index run return fail
     execute unless data storage lib:text Component.Template{Char:"%"} store result storage lib:text Component.Template.Index int 1 run scoreboard players get $TextArg Temporary
-    execute unless data storage lib:text Component.Template{Char:"%"} store result score $TextValid Temporary run function lib:text/core/component/argument.m with storage lib:text Component.Template
+    execute unless data storage lib:text Component.Template{Char:"%"} store success score $TextValid Temporary run function lib:text/core/component/argument.m with storage lib:text Component.Template
     execute unless data storage lib:text Component.Template{Char:"%"} unless score $TextValid Temporary matches 1 run return fail
     data modify storage lib:text Component.Template.Remaining set string storage lib:text Component.Template.Remaining 1
     scoreboard players add $TextCursor Temporary 1

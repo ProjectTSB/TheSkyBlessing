@@ -33,5 +33,5 @@
 
 # 両フォントの幅を計測し、成否を返す
     scoreboard players set $TextResult Temporary 0
-    execute store result score $TextResult Temporary run function lib:text/core/measure
+    execute store success score $TextResult Temporary run function lib:text/core/measure
     return run function lib:text/core/finish

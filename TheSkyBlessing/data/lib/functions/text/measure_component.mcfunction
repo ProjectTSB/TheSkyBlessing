@@ -34,5 +34,5 @@
 
 # 本文を分解して両設定の幅を測り、失敗時も作業領域を片付ける
     scoreboard players set $TextResult Temporary 0
-    execute if function lib:text/core/component/collect store result score $TextResult Temporary run function lib:text/core/component/measure
+    execute if function lib:text/core/component/collect store success score $TextResult Temporary run function lib:text/core/component/measure
     return run function lib:text/core/finish

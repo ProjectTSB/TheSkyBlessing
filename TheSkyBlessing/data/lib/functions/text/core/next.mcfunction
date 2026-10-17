@@ -13,7 +13,7 @@
     data modify storage lib:text Work.Key set from storage lib:text Work.Escaped
     data remove storage lib:text Work.Glyph
     data remove storage lib:text Work.UniformGlyph
-    execute store result score $TextValid Temporary run function lib:text/core/glyph.m with storage lib:text Work
+    execute store success score $TextValid Temporary run function lib:text/core/glyph.m with storage lib:text Work
     execute unless score $TextValid Temporary matches 1 run return fail
     execute unless data storage lib:text Work.Glyph unless data storage lib:text Work.UniformGlyph run function lib:text/core/pair
     execute if data storage lib:text Work{Font:"minecraft:space"} unless data storage lib:text Work.UniformGlyph run return fail
