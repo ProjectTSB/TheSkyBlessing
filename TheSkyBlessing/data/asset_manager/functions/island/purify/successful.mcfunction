@@ -31,9 +31,9 @@
 # PurifyPhaseを進める
     function oh_my_dat:please
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.PurifyPhase set value 3b
-# Dispelledトリガーを発火する
+# Purifiedトリガーを発火する
     data modify storage asset:island Args.ID set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].IslandData.ID
-    function asset_manager:island/purify/dispelled.m with storage asset:island Args
+    function asset_manager:island/purify/purified.m with storage asset:island Args
     data remove storage asset:island Args
 # 商人の取引内容を更新する
     function api:trader/schedule_recipe_update_check
