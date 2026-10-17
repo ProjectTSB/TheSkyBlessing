@@ -1,4 +1,4 @@
-#> lib:message/common/dispel_island
+#> lib:message/common/purify_island
 #
 # 「島を浄化した！」
 #

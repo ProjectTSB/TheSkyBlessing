@@ -13,7 +13,7 @@
 # VFX
     function asset_manager:island/purify/vfx/purify
 # メッセージ
-    function lib:message/common/dispel_island
+    function lib:message/common/purify_island
 # 祝福を与える
     data modify storage api: Argument.ID set value 2
     execute as @p[predicate=lib:is_sneaking,distance=..2] at @s run function api:artifact/give/from_id
