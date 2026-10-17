@@ -45,6 +45,10 @@
 # @within function asset_manager:artifact/triggers/sneak/*
     #declare score_holder $SneakThreshold
 
+#> アイテム使用時間閾値用スコアホルダー
+# @within function asset_manager:artifact/triggers/using_item/*
+    #declare score_holder $UsingItemThreshold
+
 #> use_itemの誤検知対策タグ
 # @within function
 #   core:handler/drop
