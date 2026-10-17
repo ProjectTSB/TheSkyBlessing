@@ -1,3 +1,8 @@
+---
+title: CI・生成物・検証
+description: CIの役割、declare生成物、docs/testsの承認と自動マージを確認するときに読む
+---
+
 # CI・生成物・検証
 
 GitHub Actions の `.github/workflows/datapack-linter.yml` はpush/PRで `ChenCMD/datapack-linter@v2` を実行し、`animated_java:**` と `core:define_gamerule` を除外する。
@@ -11,6 +16,8 @@ Node.js 24 の標準TypeScript実行で `.github/workflows/make-declares-mcf.mts
 [CODEOWNERS](../../.github/CODEOWNERS) は通常の変更を `@ChenCMD`・`@haiiro2gou` の担当とし、repo直下の `docs/`・`tests/` は所有者を指定しない。承認不要の例外を成立させるには、masterのRulesetで全PR共通の必須承認数を0、Code ownerの承認を必須、`lint` を必須チェックに設定する。CODEOWNERSを先にmasterへ反映してからRulesetを変更する。RulesetはGit管理外の設定なので、ファイルのマージだけでは承認要件は変わらない。
 
 [自動マージworkflow](../../.github/workflows/auto-merge-docs-tests.yml) はmaster向けの非Draft PRをAPIで調べ、変更ファイルがすべて `docs/`・`tests/` 配下ならsquash方式のauto-mergeを有効にする。必須チェックが完了済みならその場でマージし、未完了ならGitHubが条件成立を待つ。全ページのファイル一覧と変更件数を照合し、rename前のパスも判定するため、本体ファイルをdocsへ移動したPRは自動化の対象外になる。rootのREADMEや `.github/` も対象外。
+
+`docs/`・`tests/` 配下でも、以後のAI全体の行動を変える保護対象を含むPRは対象外になる。現在の保護対象は `AGENTS.md`、`docs/knowledge/README.md`、`.github/workflows/auto-merge-docs-tests.yml`、`.github/tests/auto-merge-docs-tests.test.cjs` で、rename前のパスも同じ判定を受ける。`docs/knowledge/notes/` 配下の個別ノートは自動マージの対象のままで、追加・訂正・削除に人の承認を待たない。保護対象の一覧と理由はDevSpaceの `docs/knowledge-notes.md`「人がマージする範囲」にあり、workflow内の一覧と一緒に更新する。
 
 PRの更新・Draft化・マージ先変更で対象外になった場合は、GitHub Actions botが有効にしたauto-mergeを解除する。人が有効にしたauto-mergeは保持する。差分確認中にhead・base等が変化した場合は処理を見送り、次のイベントで再判定する。既存PRや手動再試行にはworkflow_dispatchの `pull_request` 番号入力を使う。
 

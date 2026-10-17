@@ -36,13 +36,22 @@ jobs:
             if (pr.state !== 'open') return;
 
             const allowed = path => /^(docs|tests)\//.test(path);
+            // Files that change how later sessions read and update knowledge are merged
+            // by a person, so a PR touching them never qualifies for the automation.
+            const protectedPaths = [
+              'AGENTS.md',
+              'docs/knowledge/README.md',
+              '.github/workflows/auto-merge-docs-tests.yml',
+              '.github/tests/auto-merge-docs-tests.test.cjs',
+            ];
+            const mergeable = path => allowed(path) && !protectedPaths.includes(path);
             const files = await github.paginate(github.rest.pulls.listFiles, {
               ...params, per_page: 100,
             });
             const eligible = pr.base.ref === 'master' && !pr.draft
               && files.length > 0 && files.length === pr.changed_files
-              && files.every(file => allowed(file.filename)
-                && (!file.previous_filename || allowed(file.previous_filename)));
+              && files.every(file => mergeable(file.filename)
+                && (!file.previous_filename || mergeable(file.previous_filename)));
 
             // A push or retarget during pagination invalidates this decision.
             const { data: current } = await github.rest.pulls.get(params);
@@ -64,7 +73,8 @@ jobs:
                   'pr', 'merge', String(number), '--repo', repo, '--disable-auto',
                 ]);
               }
-              core.info('Only non-draft PRs confined to docs/ and tests/ qualify.');
+              core.info('Only non-draft PRs confined to docs/ and tests/, '
+              + 'without the paths a person has to merge, qualify.');
               return;
             }
             if (current.auto_merge) return;
