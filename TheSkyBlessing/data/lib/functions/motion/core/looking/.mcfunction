@@ -12,8 +12,8 @@
     execute if data storage lib: Argument{KnockbackResist:1b} run function lib:motion/core/looking/knockback_resistance
 
 # 適用
-    execute if entity @s[type=player] run function lib:motion/core/looking/player
-    execute if entity @s[type=!player,tag=!Uninterferable] run function lib:motion/core/looking/non-player
+    execute if entity @s[type=player] unless score $VectorMagnitude Temporary matches 0 run function lib:motion/core/looking/player
+    execute if entity @s[type=!player,tag=!Uninterferable] unless score $VectorMagnitude Temporary matches 0 run function lib:motion/core/looking/non-player
 
 # リセット
     scoreboard players reset $VectorMagnitude Temporary
