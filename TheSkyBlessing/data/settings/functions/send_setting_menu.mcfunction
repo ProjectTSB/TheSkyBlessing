@@ -88,21 +88,21 @@
     execute if data storage global Config{ShowPlayTimeOnPurify:false} run tellraw @s [{"text":"解呪時プレイ時間表示: "},{"text":"無効","color":"red"}]
 
 # 解呪時プレイ時間表示 - ボタン
-    data modify storage settings: ShowPlayTimeOnDispelButtons set value ['{"text":""}']
+    data modify storage settings: ShowPlayTimeOnPurifyButtons set value ['{"text":""}']
 
     data modify storage api: Argument.Label set value '"無効"'
     data modify storage api: Argument.Key set value "change_show_play_time_on_purify_disable"
     execute unless data storage global Config{ShowPlayTimeOnPurify:false} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_purify/disable"
     function api:button/create_text_component
-    data modify storage settings: ShowPlayTimeOnDispelButtons append from storage api: Return.ButtonTextComponent
+    data modify storage settings: ShowPlayTimeOnPurifyButtons append from storage api: Return.ButtonTextComponent
 
     data modify storage api: Argument.Label set value '"有効"'
     data modify storage api: Argument.Key set value "change_show_play_time_on_purify_enable"
     execute unless data storage global Config{ShowPlayTimeOnPurify: true} run data modify storage api: Argument.Listener set value "settings:show_play_time_on_purify/enable"
     function api:button/create_text_component
-    data modify storage settings: ShowPlayTimeOnDispelButtons append from storage api: Return.ButtonTextComponent
+    data modify storage settings: ShowPlayTimeOnPurifyButtons append from storage api: Return.ButtonTextComponent
 
-    tellraw @s [{"storage":"settings:","nbt":"ShowPlayTimeOnDispelButtons[]","interpret":true,"separator":" "}]
+    tellraw @s [{"storage":"settings:","nbt":"ShowPlayTimeOnPurifyButtons[]","interpret":true,"separator":" "}]
 
 # フッター
     tellraw @s [{"text":"----------------------------"}]
@@ -111,4 +111,4 @@
     data remove storage settings: DifficultyButtons
     data remove storage settings: KeepInventoryButtons
     data remove storage settings: DamageTypeIconButtons
-    data remove storage settings: ShowPlayTimeOnDispelButtons
+    data remove storage settings: ShowPlayTimeOnPurifyButtons
