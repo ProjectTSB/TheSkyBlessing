@@ -11,7 +11,7 @@
 # シャード解禁状況のスコアを更新
     function asset_manager:island/purify/update_unlocked_shard_lv/
 # VFX
-    function asset_manager:island/purify/vfx/dispel
+    function asset_manager:island/purify/vfx/purify
 # メッセージ
     function lib:message/common/dispel_island
 # 祝福を与える
