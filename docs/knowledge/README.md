@@ -23,7 +23,7 @@
 ノートを含むINDEXは、DevSpaceで次を実行して得る。INDEXのファイルや手書きのノート一覧は保存せず、この作業コピーのブランチのヘッダーから毎回生成する。
 
 ```sh
-python3 scripts/knowledge/index.py <この作業コピー>
+sh scripts/knowledge/index.sh <この作業コピー>
 ```
 
 スクリプトを使えない場合は、`docs/knowledge/notes/**/*.md` の先頭にある `title`・`description` を直接読む。INDEXのオプション、ノートの形式、参照経路、機械的な検査、人がマージする範囲はDevSpaceの `docs/knowledge-notes.md` に従う。

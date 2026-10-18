@@ -7,7 +7,7 @@ description: Item生成・inventory・墓・LostItems・Mob初期化と追加当
 
 確認日: 2026-09-15。本体 HEAD `f88cdd5bcb2216d24b26e48684f4a7951a686c94` の生成、保存、回収、転送、計算の入口と利用側を静的に確認した。[全体の抽象構造](architecture.md) と併せて、状態の所有者と操作の単位を判断するために使う。
 
-この領域の個別判断の一部はノートにある。天候による発動条件は [notes/predicate/](notes/predicate/)、ゲートウェイ周辺の落下ダメージは [notes/fall-damage/](notes/fall-damage/) にあり、DevSpaceの `scripts/knowledge/index.py --area predicate` のように領域で絞って読める。
+この領域の個別判断の一部はノートにある。天候による発動条件は [notes/predicate/](notes/predicate/)、ゲートウェイ周辺の落下ダメージは [notes/fall-damage/](notes/fall-damage/) にあり、DevSpaceの `sh scripts/knowledge/index.sh <この作業コピー> --for runtime-components.md` で、この文書を `related` に挙げるノートを出せる。
 
 ## Artifact：テンプレートから個体を作り、配送する
 

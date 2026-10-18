@@ -44,11 +44,29 @@ jobs:
               '.github/workflows/auto-merge-docs-tests.yml',
               '.github/tests/auto-merge-docs-tests.test.cjs',
             ];
-            const mergeable = path => allowed(path) && !protectedPaths.includes(path);
+            // Instruction files an agent loads at any depth, such as a nested CLAUDE.md,
+            // are protected too. Names are compared in lower case, as on Windows and macOS.
+            const instruction = path => {
+              const parts = path.toLowerCase().split('/');
+              return ['agents.md', 'agents.override.md', 'claude.md', 'claude.local.md'].includes(parts.at(-1))
+                || parts.includes('.claude');
+            };
+            const listed = path => protectedPaths.some(rule => rule.toLowerCase() === path.toLowerCase());
+            const mergeable = path => allowed(path) && !listed(path) && !instruction(path);
             const files = await github.paginate(github.rest.pulls.listFiles, {
               ...params, per_page: 100,
             });
-            const eligible = pr.base.ref === 'master' && !pr.draft
+            // Only PRs by people who can already push here qualify: anyone can open a PR
+            // against this public repository, and the approval here is automatic. The
+            // repository permission is read rather than author_association, which shows an
+            // organization member with a private membership as CONTRIBUTOR.
+            const trusted = await github.rest.repos.getCollaboratorPermissionLevel({
+              ...context.repo, username: pr.user.login,
+            }).then(({ data }) => ['admin', 'write'].includes(data.permission), error => {
+              core.warning(`Could not read the permission of ${pr.user.login}: ${error.message}`);
+              return false;
+            });
+            const eligible = trusted && pr.base.ref === 'master' && !pr.draft
               && files.length > 0 && files.length === pr.changed_files
               && files.every(file => mergeable(file.filename)
                 && (!file.previous_filename || mergeable(file.previous_filename)));
@@ -73,8 +91,8 @@ jobs:
                   'pr', 'merge', String(number), '--repo', repo, '--disable-auto',
                 ]);
               }
-              core.info('Only non-draft PRs confined to docs/ and tests/, '
-              + 'without the paths a person has to merge, qualify.');
+              core.info('Only non-draft PRs by people with write access, confined to docs/ '
+              + 'and tests/ and without the paths a person has to merge, qualify.');
               return;
             }
             if (current.auto_merge) return;
