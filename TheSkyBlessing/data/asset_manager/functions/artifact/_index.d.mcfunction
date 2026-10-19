@@ -19,6 +19,7 @@
 #   asset_manager:artifact/use/
 #   asset_manager:artifact/tick/
 #   core:tick/
+#   debug:artifact/cooldown/reset_all
     #declare score_holder $ArtifactSpecialCooldown
 
 #> Trigger検知用
