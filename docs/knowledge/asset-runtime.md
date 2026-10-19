@@ -1,3 +1,8 @@
+---
+title: Asset の実行モデル
+description: Mob／Object／Effectの型・継承・Field・dispatchと、保存データの契約を追うときに読む
+---
+
 # Asset の実行モデル
 
 この文書は本体が提供する Mob、Object、Effect の実行基盤を扱う。Asset 側の個別実装を読む前に、ID 別の定義がどのように構築され、entity ごとの状態と結び付くかを確認する。

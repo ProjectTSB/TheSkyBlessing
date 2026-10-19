@@ -1,3 +1,8 @@
+---
+title: API・storage・scoreboard
+description: APIを呼ぶ・追加する、libとapiの配置、攻撃属性やstorageの扱いを確認するときに読む
+---
+
 # API・storage・scoreboard
 
 API を使う前に、その API が行為、寄与の登録、個体生成、状態の取得のどれを提供するかを確認する。[本体の抽象構造](architecture.md) に、呼出フレーム、modifier の出典 ID、イベント配送、緩衝体力の防壁モデルをまとめた。
