@@ -17,7 +17,7 @@
 # 補正
     scoreboard players operation $Heal Temporary *= $Modifier Temporary
 # 代入
-    execute store result storage api: Argument.Heal float 0.0001 run scoreboard players get $Heal Temporary
+    execute store result storage api: Argument.Heal double 0.0001 run scoreboard players get $Heal Temporary
 # リセット
     scoreboard players reset $Heal Temporary
     scoreboard players reset $Modifier Temporary
