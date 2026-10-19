@@ -12,13 +12,14 @@
     execute if data storage lib:text Work{Char:'\\'} run data modify storage lib:text Work.Escaped set value '\\\\'
     data modify storage lib:text Work.Key set from storage lib:text Work.Escaped
 
-# 文字幅を検索し、両設定で未取得なら先頭2コード単位でも検索する
+# 文字幅を検索し、補助文字の先頭なら2コード単位で検索する
+# 表から取得した146は先頭の目印で、通常の未収録文字にはこの後で146を補う
 # spaceの未収録文字には既定の幅を使わず失敗する
     data remove storage lib:text Work.Glyph
     data remove storage lib:text Work.UniformGlyph
     execute store success score $TextValid Temporary run function lib:text/core/glyph.m with storage lib:text Work
     execute unless score $TextValid Temporary matches 1 run return fail
-    execute unless data storage lib:text Work.Glyph unless data storage lib:text Work.UniformGlyph run function lib:text/core/pair
+    execute if data storage lib:text Work{UniformGlyph:146} run function lib:text/core/pair
     execute if data storage lib:text Work{Font:"minecraft:space"} unless data storage lib:text Work.UniformGlyph run return fail
 
 # 未収録文字を9px・太字加算0.5px・1コード単位として補う

@@ -3,6 +3,7 @@
 # @within function core:load_once
 
 # 版が変わった場合だけ文字幅表を更新する
-    execute if data storage lib_text_fonts: {Version:"45ce851d4a644def5c8df7be1b9cf495e7dab15301250bdc6fad15eec4078029"} run return 1
-    function lib:text/core/tables.m {_:""}
-    data modify storage lib_text_fonts: Version set value "45ce851d4a644def5c8df7be1b9cf495e7dab15301250bdc6fad15eec4078029"
+    execute if data storage lib_text_fonts: {Version:"72dda72f697f3946f595d1a3b6c1066a629f21f513330406fcf8442755c8cdb7"} run return 1
+    execute store success score $TextResult Temporary run function lib:text/core/tables.m {_:""}
+    execute if score $TextResult Temporary matches 1 run data modify storage lib_text_fonts: Version set value "72dda72f697f3946f595d1a3b6c1066a629f21f513330406fcf8442755c8cdb7"
+    scoreboard players reset $TextResult Temporary
