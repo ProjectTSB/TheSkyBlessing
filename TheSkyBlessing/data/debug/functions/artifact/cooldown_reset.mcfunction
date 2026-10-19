@@ -1,10 +1,12 @@
-#> debug:artifact/cooldown/reset_all
+#> debug:artifact/cooldown_reset
 #
 # 実行者のすべての神器クールダウンを解消します
 #
 # @private
 # @user
 
+# 実行者が居ない場合エラー
+    execute unless entity @s[type=player] run return run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text": "実行者を指定してください。"}]
 
 # LCD
 # アイテムに付いた最終発動時刻を削除
