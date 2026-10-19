@@ -3,7 +3,7 @@
 # プレイヤーが失ったアイテムの数を取得します。
 #
 # @input as player
-# @output result score MP
+# @output result length
 # @api
 
 # EntityStorage呼び出し
