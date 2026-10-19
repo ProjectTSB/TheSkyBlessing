@@ -15,6 +15,7 @@
     #declare score_holder $Temp
     #declare score_holder $Sum
     #declare score_holder $Difficulty
+    #declare score_holder $Limit
 
 # 必要なデータの取得と加算
     # 元ダメージ
@@ -56,6 +57,9 @@
     scoreboard players operation $Difficulty Temporary > $0 Const
     scoreboard players operation $Modifier Temporary > $Difficulty Temporary
 # 補正
+    scoreboard players operation $Limit Temporary = $int.max Const
+    scoreboard players operation $Limit Temporary /= $Modifier Temporary
+    scoreboard players operation $Damage Temporary < $Limit Temporary
     scoreboard players operation $Damage Temporary *= $Modifier Temporary
 # 代入
     execute store result storage api: ModifiedDamage double 0.0001 run scoreboard players get $Damage Temporary
@@ -67,3 +71,4 @@
     scoreboard players reset $Temp Temporary
     scoreboard players reset $Sum Temporary
     scoreboard players reset $Difficulty Temporary
+    scoreboard players reset $Limit Temporary
