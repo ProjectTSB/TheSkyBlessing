@@ -1,0 +1,10 @@
+{
+    "name": "tsb-text-width-generator",
+    "private": true,
+    "engines": {
+        "node": "24.x"
+    },
+    "dependencies": {
+        "pngjs": "7.0.0"
+    }
+}
