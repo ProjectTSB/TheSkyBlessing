@@ -1,21 +1,21 @@
 #> lib:text/measure_component
 #
-# 静的な本文・装飾・文章直接指定の translate を含む単一行の送り幅を測る
-# text・extra・入れ子配列・配列先頭からの装飾継承・boldを扱う
-# fontはdefault・uniform・spaceに対応し、defaultだけがフォント強制設定に追従する
-# translateは文章の %s・%N$s・%% とwithの文字列・compound、入れ子に対応する
-# 翻訳辞書は検索せず、selector・NBT・score・keybindの動的参照は失敗する
-# default・uniformの未収録文字は1コード単位あたり9px・太字加算0.5pxで補う
-# spaceの未収録文字・未対応の制御文字・§・不正入力・未対応フォントや書式・計算範囲超過は失敗する
-# 引数の型と、LF・CRを含めないことは呼出側で保証する
-# 入力は消費し、失敗時は両設定の結果を削除する
-# 色・斜体・下線・取り消し線は送り幅を増やさない
+# 静的なTextComponentの単一行の送り幅を、通常表示とUnicodeフォント強制時について測る
+# 入力は消費する
 #
 # @input storage lib:
 #   Component : compound | list | string
-#       NBT で渡す TextComponent
+#       NBTで渡すTextComponent
 #       文字列はJSONとして解析せず、本文として扱う
+#       引数の型と、LF・CRを含めないことは呼出側で保証する
 #       NBTリスト内の要素は同じ型で渡す
+#       text・extra・入れ子配列・配列先頭からの装飾継承・boldを扱う
+#       fontはdefault・uniform・spaceに対応し、defaultだけがフォント強制設定に追従する
+#       translateは文章の %s・%N$s・%% とwithの文字列・compound、入れ子に対応する
+#       翻訳辞書は検索せず、selector・NBT・score・keybindの動的参照は失敗する
+#       default・uniformの未収録文字は1コード単位あたり9px・太字加算0.5pxで補う
+#       spaceの未収録文字・未対応の制御文字・§・不正入力・未対応フォントや書式は失敗する
+#       色・斜体・下線・取り消し線は送り幅を増やさない
 # @output storage lib:
 #   Return.Default.TextAdvance : double
 #   Return.Unifont.TextAdvance : double
@@ -23,6 +23,7 @@
 #   Return.Default.TextWidth : int
 #   Return.Unifont.TextWidth : int
 #       部分ごとの送り幅を合計してから切り上げた整数
+#   計算範囲超過は失敗し、失敗時は両設定の結果を削除する
 # @api
 
 # 入力を消費し、前回の結果を消す

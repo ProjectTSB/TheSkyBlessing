@@ -2,24 +2,25 @@
 #
 # 通常表示とUnicodeフォント強制時の、単一行の送り幅を測る
 # 入力は消費する
-# 引数の型と、LF・CRを含めないことは呼出側で保証する
-# 空文字列は幅0で成功する
-# 未収録文字は1コード単位あたり9px・太字加算0.5pxで補う
-# 未対応の制御文字・行や段落の区切り文字・§・計算範囲超過は失敗し、両設定の結果を削除する
-# 複数部分を合算する場合はTextAdvanceを使い、合計後に一度だけ丸める
 #
 # @input storage lib:
 #   Text : string
-#       単一行の文字列
+#       単一行の文字列で、空文字列は幅0で成功する
+#       LF・CRを含めないことは呼出側で保証する
+#       未収録文字は1コード単位あたり9px・太字加算0.5pxで補う
+#       未対応の制御文字・行や段落の区切り文字・§は失敗する
 #   Bold : bool
 #       太字なら true
+#   引数の型は呼出側で保証する
 # @output storage lib:
 #   Return.Default.TextAdvance : double
 #   Return.Unifont.TextAdvance : double
 #       通常表示・Unicodeフォント強制時の送り幅
+#       複数部分を合算する場合はこの値を使い、合計後に一度だけ丸める
 #   Return.Default.TextWidth : int
 #   Return.Unifont.TextWidth : int
 #       送り幅を切り上げた整数
+#   計算範囲超過は失敗し、失敗時は両設定の結果を削除する
 # @api
 
 # 文字列と太字指定を取り込み、前回の結果を消す

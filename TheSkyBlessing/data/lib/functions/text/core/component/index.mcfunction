@@ -3,7 +3,7 @@
 #   lib:text/core/component/placeholder
 #   lib:text/core/component/index
 
-# 数字列を読み、1始まりの番号を配列添字へ変換する
+# 番号末尾の $s を確認し、1始まりの番号を配列添字へ変換する
     data modify storage lib:text Component.Template.Char set string storage lib:text Component.Template.Remaining 0 1
     data modify storage lib:text Component.Template.IndexEnd set value false
     execute if data storage lib:text Component.Template{Char:"$"} run data modify storage lib:text Component.Template.IndexEnd set value true
@@ -14,6 +14,8 @@
     execute if data storage lib:text Component.Template{Char:"$"} run data modify storage lib:text Component.Template.Char set string storage lib:text Component.Template.Remaining 0 1
     execute if data storage lib:text Component.Template{IndexEnd:true,Char:"s"} run return 1
     execute if data storage lib:text Component.Template{IndexEnd:true} run return fail
+
+# 数字を1桁読み取り、数値へ変換する
     scoreboard players set $TextDigit Temporary -1
     execute if data storage lib:text Component.Template{Char:"0"} run scoreboard players set $TextDigit Temporary 0
     execute if data storage lib:text Component.Template{Char:"1"} run scoreboard players set $TextDigit Temporary 1
@@ -26,10 +28,15 @@
     execute if data storage lib:text Component.Template{Char:"8"} run scoreboard players set $TextDigit Temporary 8
     execute if data storage lib:text Component.Template{Char:"9"} run scoreboard players set $TextDigit Temporary 9
     execute if score $TextDigit Temporary matches -1 run return fail
+
+# 番号を10倍して次の桁を足す前に、int上限を超えないか確認する
+# $TextArg（更新後）= $TextArg（更新前）× 10 + $TextDigit <= 2147483647
     execute if score $TextArg Temporary matches 214748365.. run return fail
     execute if score $TextArg Temporary matches 214748364 if score $TextDigit Temporary matches 8.. run return fail
     scoreboard players operation $TextArg Temporary *= $10 Const
     scoreboard players operation $TextArg Temporary += $TextDigit Temporary
+
+# 読み取った桁を消費し、次の桁または $s を調べる
     data modify storage lib:text Component.Template.Remaining set string storage lib:text Component.Template.Remaining 1
     scoreboard players add $TextCursor Temporary 1
     execute if data storage lib:text Component.Template{Remaining:""} run return fail

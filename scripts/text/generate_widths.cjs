@@ -22,7 +22,7 @@ function asset(id, prefix = "") {
     }
     throw Error(`Missing asset ${id}`);
 }
-// Keep common name/description characters; 146 entries need no per-character storage.
+// Keep common name/description characters; entries encoded as 146 need no per-character storage.
 const textRanges = [
     [0x20, 0x7e], // ASCII
     [0xa0, 0x24f], [0x1e00, 0x1eff], // Latin
@@ -32,7 +32,7 @@ const textRanges = [
     [0x2000, 0x23ff], // Punctuation, numbers, units, arrows, mathematics, technical symbols
     [0x2460, 0x27ff], [0x2900, 0x2bff], // Enclosed numbers, shapes, ornaments and arrows
     [0x3000, 0x30ff], [0x31f0, 0x33ff], // Kana, CJK punctuation, enclosed forms and units
-    [0x3400, 0x4dbf], [0x4e00, 0x9fff], // Kanji (146 entries are omitted)
+    [0x3400, 0x4dbf], [0x4e00, 0x9fff], // Kanji (entries encoded as 146 are omitted)
     [0xfe10, 0xfe1f], [0xfe30, 0xfe6f], [0xff00, 0xffef], // Compatibility and width forms
 ];
 const spacingGlyphs = new Set();
@@ -68,6 +68,7 @@ const cache = new Map(),
     active = new Set(),
     images = new Map(),
     hexes = new Map();
+// Resolve providers in pack priority order; glyphs store half-pixel advance, bold offset, and UTF-16 length.
 function font(id) {
     id = canonical(id);
     if (cache.has(id)) return cache.get(id);
@@ -92,6 +93,7 @@ function font(id) {
                 const f = asset(provider.file, "textures");
                 if (!images.has(f))
                     images.set(f, PNG.sync.read(fs.readFileSync(f)));
+                // Find the rightmost opaque pixel in each cell and scale its advance to the provider height.
                 const image = images.get(f),
                     rows = provider.chars.map((r) => [...r]);
                 const w = image.width / rows[0].length,
@@ -121,6 +123,7 @@ function font(id) {
                                 break;
                             }
                         }
+                        // Round the scaled ink width as a float, then add the one-pixel gap.
                         const advance =
                             Math.trunc(
                                 Math.fround(Math.fround(ink * scale) + 0.5),
@@ -129,6 +132,7 @@ function font(id) {
                     }),
                 );
             } else if (type === "unihex") {
+                // Read and cache the HEX entries from the provider archive.
                 const f = asset(provider.hex_file);
                 if (!hexes.has(f)) {
                     const names = execFileSync("unzip", ["-Z1", f], {
@@ -149,6 +153,7 @@ function font(id) {
                             .join("\n"),
                     );
                 }
+                // Use explicit bounds where provided; otherwise derive bounds from the union of all 16 rows.
                 for (const line of hexes.get(f).trim().split("\n")) {
                     if (!line) continue;
                     const [code, bitmap] = line.split(":"),
@@ -182,6 +187,7 @@ function font(id) {
                                 right--;
                         }
                     }
+                    // Convert inclusive bounds to the advance; unihex adds half a pixel for bold.
                     glyphs.set(c, [
                         (Math.trunc((right - left + 1) / 2) + 1) * 2,
                         1,
@@ -190,6 +196,7 @@ function font(id) {
                 }
             } else
                 throw Error(`Unsupported provider ${provider.type} in ${id}`);
+            // Earlier providers win when more than one provider defines the same character.
             for (const [c, g] of glyphs) if (!result.has(c)) result.set(c, g);
         }
     }
@@ -216,6 +223,7 @@ const lines = [
 ];
 let count = 0,
     skipped = 0;
+// Emit per-font overrides in chunks; shared default/uniform widths and encoded-146 uniform widths are omitted.
 for (const id of [...ids].sort()) {
     let chunk = {};
     let n = 0;
