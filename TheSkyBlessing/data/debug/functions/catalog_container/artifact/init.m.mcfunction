@@ -69,6 +69,13 @@
     data modify storage debug:catalog_container Artifact.IDList set from storage debug:catalog_container Temp
     data remove storage debug:catalog_container Temp
 
+# 昇順でソート（IDListは末尾から読まれるので降順として生成処理される）
+    function lib:array/session/open
+    data modify storage lib: Array set from storage debug:catalog_container Artifact.IDList
+    function lib:array/sort/int/ascend
+    data modify storage debug:catalog_container Artifact.IDList set from storage lib: Array
+    function lib:array/session/close
+
 # IDリストからカタログ生成
     data modify storage debug:catalog_container Artifact.Mode set value "IDList"
     function debug:catalog_container/artifact/core/generate_catalog
