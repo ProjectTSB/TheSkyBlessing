@@ -11,6 +11,9 @@
 # 事前リセット
     data remove storage api: Return.Absorption.Amount
 
+# 実行者のOhMyDatを参照する
+    function oh_my_dat:please
+
 # セッション開ける
     function lib:array/session/open
 
