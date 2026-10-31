@@ -25,11 +25,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cargo/bin/mcf-linter-spark
-          key: mcf-linter-spark-${{ runner.os }}-35ae24c
+          key: mcf-linter-spark-${{ runner.os }}-v0.1.1
 
       - name: Install mcf-linter-spark
         if: steps.cache-linter.outputs.cache-hit != 'true'
-        run: cargo install --git https://github.com/EllaCoat/mcf-linter-spark --rev 35ae24c1459433674a5c8720e0767027b76ec253 --locked mcf-linter-spark
+        run: cargo install --git https://github.com/EllaCoat/mcf-linter-spark --tag v0.1.1 --locked mcf-linter-spark
 
       - name: Test
         run: mcf-linter-spark check . --ignore 'animated_java:**' --format github --symbols .cache/dls.json
