@@ -2,7 +2,7 @@
 
 GitHub Actions の `.github/workflows/datapack-linter.yml` はpush/PRで [mcf-linter-spark](https://github.com/EllaCoat/mcf-linter-spark) を `cargo install` で入れて実行し、`animated_java:**` を除外する。変更したファイルだけでなくpack全体を毎回検査し、errorかwarningが1件でもあれば失敗する。
 
-Node.js 24 の標準TypeScript実行で `.github/workflows/make-declares-mcf.mts` を動かす。linterが `--symbols` で書き出す `.cache/dls.json`（Datapack Helper PlusのDLS cacheと同じ形）を読み、可視性フィルタに合う定義を `Asset2/Asset/data/minecraft/functions/declares.d.mcfunction` に生成する。生成はpush/PRでも実行し、ProjectTSB/Assetのcheckoutとpushだけをmasterに限定する。したがって公開範囲やdeclareを変えたら生成結果への影響を確認する。
+Node.js 24 の標準TypeScript実行で `.github/workflows/make-declares-mcf.mts` を動かす。linterが `--symbols` で書き出す `.cache/dls.json`（Datapack Helper PlusのDLS cacheと同じ形。宣言・定義の位置、公開範囲、aliasの値を持ち、`ref` と `doc` は含まない）を読み、可視性フィルタに合う定義を `Asset2/Asset/data/minecraft/functions/declares.d.mcfunction` に生成する。生成はpush/PRでも実行し、ProjectTSB/Assetのcheckoutとpushだけをmasterに限定する。したがって公開範囲やdeclareを変えたら生成結果への影響を確認する。
 
 ローカルでの確認は、pack.mcmetaの所在、JSON構文、関数参照の存在。
 
