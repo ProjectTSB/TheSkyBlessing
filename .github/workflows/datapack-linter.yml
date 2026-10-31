@@ -12,18 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
+
+      - name: Cache Minecraft data
+        uses: actions/cache@v4
         with:
-          fetch-depth: 0
+          path: ~/.cache/mcf-linter-spark
+          key: mcf-linter-spark-data-1.20.4-c85548aae6f2-5aab1da2ff00
+
+      - name: Cache mcf-linter-spark
+        id: cache-linter
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/mcf-linter-spark
+          key: mcf-linter-spark-${{ runner.os }}-v0.1.1
+
+      - name: Install mcf-linter-spark
+        if: steps.cache-linter.outputs.cache-hit != 'true'
+        run: cargo install --git https://github.com/EllaCoat/mcf-linter-spark --tag v0.1.1 --locked mcf-linter-spark
 
       - name: Test
-        uses: ChenCMD/datapack-linter@v2
-        with:
-          GITHUB_TOKEN: ${{ github.token }}
-          muteSuccessResult: true
-          ignoreLintPathPattern: |
-            animated_java:**
-            core:define_gamerule
+        run: mcf-linter-spark check . --ignore 'animated_java:**' --format github --symbols .cache/dls.json
 
       - name: Checkout Asset2
         if: ${{ github.ref == 'refs/heads/master' }}
