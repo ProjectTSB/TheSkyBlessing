@@ -9,6 +9,10 @@
 
 data modify storage asset:artifact ID set value 65535
 
+data modify storage asset:artifact Namespace set value "example"
+
+data modify storage asset:artifact Triggers set value [{Event:"equip",Entry:"equip/1.trigger"}]
+
 
 data modify storage asset:artifact Item set value "iron_helmet"
 
@@ -22,8 +26,6 @@ data modify storage asset:artifact Lore set value ['{"text":"まもる"}']
 # data modify storage asset:artifact RemainingCount set value
 
 data modify storage asset:artifact Slot set value "head"
-
-data modify storage asset:artifact Trigger set value "equipping"
 
 data modify storage asset:artifact Condition set value '{"text":"いつでも"}'
 

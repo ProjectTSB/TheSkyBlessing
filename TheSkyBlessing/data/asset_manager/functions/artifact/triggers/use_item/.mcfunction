@@ -26,4 +26,7 @@
 # イベント発火前に実行するやつ
     function asset_manager:artifact/data/old/set_to_current
 # 神器側に受け渡し
-    function #asset:artifact/use_item
+# 使ったアイテムは今の持ち物から消えていることがあるので、作り直す前の一覧があればそれを使う
+    execute if data storage asset:artifact PreviousSubscriptions run data modify storage asset:artifact DispatchQueue append from storage asset:artifact PreviousSubscriptions[{Event:"use_item"}]
+    execute unless data storage asset:artifact PreviousSubscriptions run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"use_item"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/

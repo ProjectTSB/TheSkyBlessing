@@ -16,7 +16,8 @@
     execute if data storage asset:context ReceiveHeal.From as @a if score @s UserID = $HealedFrom Temporary run tag @s add Healer
     scoreboard players reset $HealedFrom Temporary
 # 神器側に受け渡し
-    function #asset:artifact/receive_heal
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"receive_heal"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
 # リセット
     data remove storage asset:context ReceiveHeal

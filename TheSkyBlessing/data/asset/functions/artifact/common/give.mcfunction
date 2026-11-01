@@ -9,7 +9,9 @@
 #   Lore : TextComponent[]
 #   RemainingCount? : int
 #   Slot : Slot
-#   Trigger : Trigger
+#   Namespace? : string (Triggers を指定する場合は必須)
+#   Triggers? : {Event: string, Entry: string}[]
+#   LoreTrigger? : Trigger (default: Triggers[0].Event に対応する値)
 #   Condition? : TextComponent
 #   MPCost : int
 #   MPRequire? : int
@@ -61,7 +63,12 @@
     execute unless data storage asset:artifact Name run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Name","color":"red"}]
     execute unless data storage asset:artifact Lore run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Lore","color":"red"}]
     execute unless data storage asset:artifact Slot run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Slot","color":"red"}]
-    execute unless data storage asset:artifact Trigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Trigger","color":"red"}]
+    execute if data storage asset:artifact Triggers[0] unless data storage asset:artifact Namespace run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" Namespace","color":"red"}]
+    execute if data storage asset:artifact Triggers[0] run data modify storage asset:artifact CopiedTriggers set from storage asset:artifact Triggers
+    execute if data storage asset:artifact Triggers[0] run function asset:artifact/common/validate/triggers
+    execute if data storage asset:artifact Triggers[0] run data remove storage asset:artifact CopiedTriggers
+    execute unless data storage asset:artifact LoreTrigger if data storage asset:artifact Triggers[0] run function asset:artifact/common/default_lore_trigger.m with storage asset:artifact Triggers[0]
+    execute unless data storage asset:artifact LoreTrigger run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" LoreTrigger","color":"red"},{"text":" or","color":"white"},{"text":" Triggers","color":"red"}]
     execute unless data storage asset:artifact MPCost unless data storage asset:artifact MPHealWhenHit run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"引数が足りません"},{"text":" MPCost","color":"red"},{"text":" or","color":"white"},{"text":" MPHealWhenHit","color":"red"}]
     execute unless data storage asset:artifact PartsMax run data modify storage asset:artifact PartsMax set value 1
     execute if data storage asset:artifact Equipment unless data storage asset:artifact Equipment.Slot run data modify storage asset:artifact Equipment.Slot set from storage asset:artifact Slot
@@ -73,6 +80,8 @@
     execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
+# 入口の宣言を ROM に書き込む
+    function asset_manager:artifact/create/set_definition
 # 神器排出
     execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
     # execute if data storage asset:context {Type:"box"} // 何もする必要がない
@@ -93,7 +102,9 @@
     data remove storage asset:artifact Lore
     data remove storage asset:artifact RemainingCount
     data remove storage asset:artifact Slot
-    data remove storage asset:artifact Trigger
+    data remove storage asset:artifact Namespace
+    data remove storage asset:artifact Triggers
+    data remove storage asset:artifact LoreTrigger
     data remove storage asset:artifact Condition
     data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact MPCost

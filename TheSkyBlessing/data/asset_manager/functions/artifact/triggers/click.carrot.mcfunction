@@ -18,7 +18,8 @@
     execute if data storage asset:context UseMainhand run data modify storage asset:context id.offhand set value -2
 
 # 神器側に受け渡し
-    function #asset:artifact/click.carrot_on_a_stick
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"click.carrot_on_a_stick"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
 # リセット
     data remove storage asset:context UseMainhand

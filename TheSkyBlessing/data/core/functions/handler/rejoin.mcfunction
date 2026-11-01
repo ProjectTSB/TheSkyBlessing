@@ -8,6 +8,8 @@
     function core:handler/join
 # Assetのrejoin処理
     function #asset:rejoin
+# 神器の購読の一覧を作り直させる
+    tag @s add ArtifactSubscription.Outdated
 # Reset
     scoreboard players reset @s RejoinEvent
 
