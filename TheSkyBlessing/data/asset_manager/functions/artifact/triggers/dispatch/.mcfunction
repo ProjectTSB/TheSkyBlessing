@@ -7,7 +7,6 @@
 # @within function asset_manager:artifact/triggers/**
 
 # 先頭の入口を、その神器の this を入れて呼ぶ
-    data modify storage asset:context this set from storage asset:artifact DispatchQueue[0].This
     function asset_manager:artifact/triggers/dispatch/call.m with storage asset:artifact DispatchQueue[0]
     data remove storage asset:context this
 

@@ -81,7 +81,7 @@
     execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
-# 入口の宣言を ROM に書き込む
+# 入口の宣言を ROM に、this に入れる値を Namespace をキーにした置き場に書き込む
     function asset_manager:artifact/create/set_definition
 # 神器排出
     execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
