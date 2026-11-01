@@ -8,8 +8,7 @@
 #   rom:provide
 #   rom:provide/from/*
 
-# 上の桁の比較に使った値を消し、ずらされたアドレスを保存したアドレスから戻す
-    scoreboard players reset $PreviousAddress
+# 呼び出し元でずらされたアドレスを、保存したアドレスから戻す
     scoreboard players operation $Address Temporary = $LatestProvidedAddress Global
 
 # リセット

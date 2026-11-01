@@ -5,9 +5,6 @@
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
 # @within function rom:provide
 
-# 上の桁の比較に使った値を消す
-    scoreboard players reset $PreviousAddress
-
 # 前回のアドレスのオフセット要素を、深い層から 6 層目まで外す
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][5]

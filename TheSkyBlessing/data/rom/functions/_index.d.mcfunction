@@ -26,3 +26,4 @@
     #declare score_holder $PreviousAddress
 
 # $PreviousAddress : 前回提供したアドレス。上の桁を今回のアドレスと比べるため、比べる層の桁を最上位 2bit にずらして使う
+# 使い終わっても reset しない。最後のスコアを reset すると、表示していない objective でも全プレイヤーへスコアの削除が送られる
