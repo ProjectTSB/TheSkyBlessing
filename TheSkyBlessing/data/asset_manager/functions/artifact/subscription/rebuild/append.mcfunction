@@ -7,9 +7,11 @@
 # まだ宣言が無い神器は、box に give して宣言を書き込ませる
     execute unless data storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact run function asset_manager:artifact/subscription/rebuild/fill
 
-# 宣言の Triggers に Namespace を付けて、一覧に足す
+# 宣言の Triggers に Namespace と、入口を呼ぶ間の this (Field と TSB の値) を付けて、一覧に足す
     data modify storage asset:artifact SubscriptionTemp set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact.Triggers
     data modify storage asset:artifact SubscriptionTemp[].Namespace set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact.Namespace
+    data modify storage asset:artifact SubscriptionTemp[].This set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact.Field
+    data modify storage asset:artifact SubscriptionTemp[].This.TSB set from storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact.TSB
     data modify storage asset:artifact Subscriptions append from storage asset:artifact SubscriptionTemp[]
 
 # リセット

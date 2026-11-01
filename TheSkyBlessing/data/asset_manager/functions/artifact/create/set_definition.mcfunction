@@ -1,6 +1,6 @@
 #> asset_manager:artifact/create/set_definition
 #
-# 神器の入口の宣言を、ID を番号にした ROM に書き込む
+# 神器の入口の宣言と、入口を呼ぶ間に this に入れる Field と TSB の値を、ID を番号にした ROM に書き込む
 # give するたびに書き込むので、宣言を変えたら give し直せば反映される
 #
 # @within function asset:artifact/common/give
@@ -12,9 +12,17 @@
     scoreboard players reset $DefinitionID
 
 # 宣言を組む
-    data modify storage asset:artifact Definition set value {Triggers:[]}
+    data modify storage asset:artifact Definition set value {Triggers:[],Field:{}}
     data modify storage asset:artifact Definition.Namespace set from storage asset:artifact Namespace
     data modify storage asset:artifact Definition.Triggers set from storage asset:artifact Triggers
+    data modify storage asset:artifact Definition.Field set from storage asset:artifact Field
+# アイテムの TSB の値から、個体ごとに変わる値と本体だけが使う値を除いて入れる
+    data modify storage asset:artifact Definition.TSB set from storage asset:artifact Item.tag.TSB
+    data remove storage asset:artifact Definition.TSB.UUID
+    data remove storage asset:artifact Definition.TSB.Version
+    data remove storage asset:artifact Definition.TSB.RemainingCount
+    data remove storage asset:artifact Definition.TSB.TypeCooldown
+    data remove storage asset:artifact Definition.TSB.SecondaryTypeCooldown
 
 # ID の番号の ROM に書き込む
     data modify storage api: Argument.Address set from storage asset:artifact ID
