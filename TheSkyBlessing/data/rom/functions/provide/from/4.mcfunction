@@ -3,7 +3,7 @@
 # 4 層目から深い層のオフセット要素を、前回のアドレスの分から今回のアドレスの分へ付け替える
 #
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
-# @within function rom:provide/
+# @within function rom:provide
 
 # 上の桁の比較に使った値を消す
     scoreboard players reset $PreviousAddress

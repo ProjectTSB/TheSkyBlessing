@@ -5,7 +5,7 @@
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
 # @within function
 #   core:load_once
-#   rom:provide/
+#   rom:provide
 #   rom:provide/from/*
 
 # 上の桁の比較に使った値を消し、ずらされたアドレスを保存したアドレスから戻す

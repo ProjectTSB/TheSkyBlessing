@@ -20,7 +20,9 @@
     #declare score_holder $Address
 
 #> 提供の途中で使う値
-# @within function rom:provide/**
+# @within function
+#   rom:provide
+#   rom:provide/**
     #declare score_holder $PreviousAddress
 
 # $PreviousAddress : 前回提供したアドレス。上の桁を今回のアドレスと比べるため、比べる層の桁を最上位 2bit にずらして使う
