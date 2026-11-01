@@ -12,6 +12,6 @@
 # validate 2
     execute unless score $Address Temporary matches 0..65535 run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"アドレスは0から65535の範囲でのみ提供されますが、","color":"white"},{"score":{"name":"$Address","objective":"Temporary"}},{"text":"が要求されました。"}]
 # 必要な場合は提供する
-    execute unless score $Address Temporary = $LatestProvidedAddress Global run function rom:provide
+    execute unless score $Address Temporary = $LatestProvidedAddress Global run function rom:provide/
 # リセット
     data remove storage api: Argument.Address

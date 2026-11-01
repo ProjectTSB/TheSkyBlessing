@@ -1,16 +1,16 @@
-#> rom:provide
+#> rom:provide/full
 #
-#
+# 今の [-4] の経路から全部の層のオフセット要素を外し、初めて使う枝を初期化しながら、$LatestProvidedAddress の経路の全部の層にオフセット要素を付ける
 #
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
-# @within function api:rom/please
+# @within function
+#   core:load_once
+#   rom:provide/
+#   rom:provide/from/*
 
-#> Val
-# @private
-    #declare score_holder $Address
-
-# 提供したアドレスを保存しておく
-    scoreboard players operation $LatestProvidedAddress Global = $Address Temporary
+# 上の桁の比較に使った値を消し、ずらされたアドレスを保存したアドレスから戻す
+    scoreboard players reset $PreviousAddress
+    scoreboard players operation $Address Temporary = $LatestProvidedAddress Global
 
 # リセット
     data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
