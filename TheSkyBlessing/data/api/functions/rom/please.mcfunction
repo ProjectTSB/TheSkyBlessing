@@ -15,3 +15,4 @@
     execute unless score $Address Temporary = $LatestProvidedAddress Global run function rom:provide
 # リセット
     data remove storage api: Argument.Address
+    scoreboard players reset $Address
