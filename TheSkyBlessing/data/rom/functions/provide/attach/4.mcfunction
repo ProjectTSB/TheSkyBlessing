@@ -1,26 +1,22 @@
-#> rom:provide/from/5
+#> rom:provide/attach/4
 #
-# 5 層目から深い層のオフセット要素を、前回のアドレスの分から今回のアドレスの分へ付け替える
+# 4 層目から深い層へ、今回のアドレスのオフセット要素を付ける
 #
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
 # @within function rom:provide
 
-# 前回のアドレスのオフセット要素を、深い層から 5 層目まで外す
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][5]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][4]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][6]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][5]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][4]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][6]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][5]
-    execute if data storage rom: _[-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][4]
-    execute if data storage rom: _[-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][6]
-    execute if data storage rom: _[-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][5]
-    execute if data storage rom: _[-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][4]
+# 呼び出し元で割った 2 つのアドレスを、please の引数から今回のアドレスに戻す
+    execute store result score $LatestProvidedAddress Global run data get storage api: Argument.Address
+    scoreboard players operation $Address Temporary = $LatestProvidedAddress Global
+# 4 層目の桁を最上位 2bit に寄せる
+    scoreboard players operation $Address Temporary *= $4194304 Const
 
-# 今回のアドレスのオフセット要素を、5 層目から深い層へ付ける
+# 上位2bitを元にオフセット要素を 4 層目から深い層へ付ける
 # 初めて使う枝の空のリストには insert 4 が失敗し、オフセット要素は付かない
+    execute if score $Address Temporary matches 1073741824.. run data modify storage rom: _[-4][-4][-4] insert 4 from storage rom: OneEmptyLists[]
+    execute if score $Address Temporary matches ..-1073741825 run data modify storage rom: _[-4][-4][-4] insert 4 from storage rom: TwoEmptyLists[]
+    execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4] insert 4 from storage rom: ThreeEmptyLists[]
+    scoreboard players operation $Address Temporary *= $4 Const
     execute if score $Address Temporary matches 1073741824.. run data modify storage rom: _[-4][-4][-4][-4] insert 4 from storage rom: OneEmptyLists[]
     execute if score $Address Temporary matches ..-1073741825 run data modify storage rom: _[-4][-4][-4][-4] insert 4 from storage rom: TwoEmptyLists[]
     execute if score $Address Temporary matches -1073741824..-1 run data modify storage rom: _[-4][-4][-4][-4] insert 4 from storage rom: ThreeEmptyLists[]

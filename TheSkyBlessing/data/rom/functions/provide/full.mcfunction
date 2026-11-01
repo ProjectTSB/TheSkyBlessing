@@ -5,8 +5,7 @@
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
 # @within function
 #   core:load_once
-#   rom:provide
-#   rom:provide/from/*
+#   rom:provide/attach/*
 
 # 呼び出し元でずらされたアドレスを、保存したアドレスから戻す
     scoreboard players operation $Address Temporary = $LatestProvidedAddress Global

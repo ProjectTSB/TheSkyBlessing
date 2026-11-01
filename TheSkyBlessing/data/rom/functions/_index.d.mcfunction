@@ -19,11 +19,6 @@
     #declare score_holder $LatestProvidedAddress
     #declare score_holder $Address
 
-#> 提供の途中で使う値
-# @within function
-#   rom:provide
-#   rom:provide/**
-    #declare score_holder $PreviousAddress
-
-# $PreviousAddress : 前回提供したアドレス。上の桁を今回のアドレスと比べるため、比べる層の桁を最上位 2bit にずらして使う
-# 使い終わっても reset しない。最後のスコアを reset すると、表示していない objective でも全プレイヤーへスコアの削除が送られる
+# $LatestProvidedAddress : 最後に提供したアドレス
+# rom:provide はオフセット要素が $LatestProvidedAddress の経路にだけ付いているものとして上の桁を比べるので、provide の外で書き換えたら rom:provide/full を呼ぶ
+# $Address : please から provide へ渡す、今回のアドレス
