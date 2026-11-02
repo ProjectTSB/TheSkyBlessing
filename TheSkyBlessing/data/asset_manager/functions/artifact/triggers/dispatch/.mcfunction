@@ -1,6 +1,6 @@
 #> asset_manager:artifact/triggers/dispatch/
 #
-# DispatchQueue に入れた購読の一覧の要素の入口を、先頭から順に呼ぶ
+# DispatchQueue に入れた神器のキャッシュの要素の入口を、先頭から順に呼ぶ
 # 呼び終えると DispatchQueue は空になる
 #
 # @within function asset_manager:artifact/triggers/**

@@ -23,7 +23,7 @@
     data modify storage asset:context Heal.Amount.Over set from storage lib: MaxResult
     function lib:array/session/close
 # 神器側に受け渡し
-    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"heal"}]
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"heal"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 # リセット
     data remove storage asset:context Heal

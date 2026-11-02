@@ -16,83 +16,83 @@
     # keepトリガー類
         scoreboard players set $UsingItemThreshold Temporary 1
         function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/"}]
+        data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 10.. run scoreboard players set $UsingItemThreshold Temporary 10
         execute if score @s UsingItem matches 10.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 10.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/0.5s"}]
+        execute if score @s UsingItem matches 10.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/0.5s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 20.. run scoreboard players set $UsingItemThreshold Temporary 20
         execute if score @s UsingItem matches 20.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 20.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/1s"}]
+        execute if score @s UsingItem matches 20.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/1s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 40.. run scoreboard players set $UsingItemThreshold Temporary 40
         execute if score @s UsingItem matches 40.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 40.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/2s"}]
+        execute if score @s UsingItem matches 40.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/2s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 60.. run scoreboard players set $UsingItemThreshold Temporary 60
         execute if score @s UsingItem matches 60.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 60.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/3s"}]
+        execute if score @s UsingItem matches 60.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/3s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 80.. run scoreboard players set $UsingItemThreshold Temporary 80
         execute if score @s UsingItem matches 80.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 80.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/4s"}]
+        execute if score @s UsingItem matches 80.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/4s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 100.. run scoreboard players set $UsingItemThreshold Temporary 100
         execute if score @s UsingItem matches 100.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 100.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/5s"}]
+        execute if score @s UsingItem matches 100.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/5s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 200.. run scoreboard players set $UsingItemThreshold Temporary 200
         execute if score @s UsingItem matches 200.. run function asset_manager:artifact/triggers/using_item/reset_threshold_less
-        execute if score @s UsingItem matches 200.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/keep/10s"}]
+        execute if score @s UsingItem matches 200.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/keep/10s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
     # 単発トリガー類
         scoreboard players set $UsingItemThreshold Temporary 1
         function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/"}]
+        data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 10.. run scoreboard players set $UsingItemThreshold Temporary 10
         execute if score @s UsingItem matches 10.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 10.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/0.5s"}]
+        execute if score @s UsingItem matches 10.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/0.5s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 20.. run scoreboard players set $UsingItemThreshold Temporary 20
         execute if score @s UsingItem matches 20.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 20.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/1s"}]
+        execute if score @s UsingItem matches 20.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/1s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 40.. run scoreboard players set $UsingItemThreshold Temporary 40
         execute if score @s UsingItem matches 40.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 40.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/2s"}]
+        execute if score @s UsingItem matches 40.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/2s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 60.. run scoreboard players set $UsingItemThreshold Temporary 60
         execute if score @s UsingItem matches 60.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 60.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/3s"}]
+        execute if score @s UsingItem matches 60.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/3s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 80.. run scoreboard players set $UsingItemThreshold Temporary 80
         execute if score @s UsingItem matches 80.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 80.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/4s"}]
+        execute if score @s UsingItem matches 80.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/4s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 100.. run scoreboard players set $UsingItemThreshold Temporary 100
         execute if score @s UsingItem matches 100.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 100.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/5s"}]
+        execute if score @s UsingItem matches 100.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/5s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
         execute if score @s UsingItem matches 200.. run scoreboard players set $UsingItemThreshold Temporary 200
         execute if score @s UsingItem matches 200.. run function asset_manager:artifact/triggers/using_item/reset_value_not-equal
-        execute if score @s UsingItem matches 200.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"using_item/10s"}]
+        execute if score @s UsingItem matches 200.. run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"using_item/10s"}]
         execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 # リセット
     data remove storage asset:context UsingItemTime
