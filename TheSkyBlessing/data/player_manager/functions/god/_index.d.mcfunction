@@ -6,7 +6,12 @@
 #   function player_manager:god/**
 #   function player_manager:set_team_and_per_health
 #   function debug:change_believe/*
-#   predicate player_manager:is_believe/*
+#   function asset_manager:artifact/check/check_believe
+#   function asset_manager:artifact/triggers/equipments/set_and_modifier/filter/match_religion
+#   function core:handler/death
+#   function core:handler/first_join
+#   function asset:artifact/*/*/2.check_condition
+#   function asset:artifact/*/*/3.main
     #declare tag Believe.None
     #declare tag Believe.Flora
     #declare tag Believe.Urban
