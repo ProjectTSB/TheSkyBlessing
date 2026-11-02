@@ -12,7 +12,7 @@
 # 8 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][5]
-    data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][4]
+    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][-4][4]
 # 7 層目までの桁が今回と同じなら、8 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -21,7 +21,7 @@
 # 7 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][5]
-    data remove storage rom: _[-4][-4][-4][-4][-4][-4][4]
+    execute if data storage rom: _[-4][-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][-4][4]
 # 6 層目までの桁が今回と同じなら、7 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -30,7 +30,7 @@
 # 6 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][-4][5]
-    data remove storage rom: _[-4][-4][-4][-4][-4][4]
+    execute if data storage rom: _[-4][-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][-4][4]
 # 5 層目までの桁が今回と同じなら、6 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -39,7 +39,7 @@
 # 5 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][-4][5]
-    data remove storage rom: _[-4][-4][-4][-4][4]
+    execute if data storage rom: _[-4][-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][-4][4]
 # 4 層目までの桁が今回と同じなら、5 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -48,7 +48,7 @@
 # 4 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][-4][6] run data remove storage rom: _[-4][-4][-4][6]
     execute if data storage rom: _[-4][-4][-4][5] run data remove storage rom: _[-4][-4][-4][5]
-    data remove storage rom: _[-4][-4][-4][4]
+    execute if data storage rom: _[-4][-4][-4][4] run data remove storage rom: _[-4][-4][-4][4]
 # 3 層目までの桁が今回と同じなら、4 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -57,7 +57,7 @@
 # 3 層目のオフセット要素を外す
     execute if data storage rom: _[-4][-4][6] run data remove storage rom: _[-4][-4][6]
     execute if data storage rom: _[-4][-4][5] run data remove storage rom: _[-4][-4][5]
-    data remove storage rom: _[-4][-4][4]
+    execute if data storage rom: _[-4][-4][4] run data remove storage rom: _[-4][-4][4]
 # 2 層目までの桁が今回と同じなら、3 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -66,7 +66,7 @@
 # 2 層目のオフセット要素を外す
     execute if data storage rom: _[-4][6] run data remove storage rom: _[-4][6]
     execute if data storage rom: _[-4][5] run data remove storage rom: _[-4][5]
-    data remove storage rom: _[-4][4]
+    execute if data storage rom: _[-4][4] run data remove storage rom: _[-4][4]
 # 1 層目までの桁が今回と同じなら、2 層目から付ける
     scoreboard players operation $LatestProvidedAddress Global /= $4 Const
     scoreboard players operation $Address Temporary /= $4 Const
@@ -75,5 +75,5 @@
 # 1 層目のオフセット要素を外し、1 層目から付ける
     execute if data storage rom: _[6] run data remove storage rom: _[6]
     execute if data storage rom: _[5] run data remove storage rom: _[5]
-    data remove storage rom: _[4]
+    execute if data storage rom: _[4] run data remove storage rom: _[4]
     function rom:provide/attach/1
