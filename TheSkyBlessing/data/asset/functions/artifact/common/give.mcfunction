@@ -12,7 +12,7 @@
 #   Namespace? : string (Triggers を指定する場合は必須)
 #   Triggers? : {Event: string, Entry: string}[]
 #   LoreTrigger? : Trigger (default: Triggers[0].Event に対応する値)
-#   Field? : compound (入口を呼ぶ間は storage asset:context this で読める、読むだけで書き換えても保存されない、this.TSB には UUID などを除いたアイテムの TSB の値が入るので TSB というキーは使わない)
+#   Field? : compound (入口を呼ぶ間は storage asset:context this で読める、読むだけで書き換えても保存されない)
 #   Condition? : TextComponent
 #   MPCost : int
 #   MPRequire? : int
@@ -81,7 +81,7 @@
     execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
-# 入口の宣言を ROM に、this に入れる値を Namespace をキーにした置き場に書き込む
+# 入口の宣言と Field を ROM に書き込む
     function asset_manager:artifact/create/set_definition
 # 神器排出
     execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
