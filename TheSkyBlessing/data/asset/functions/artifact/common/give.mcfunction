@@ -12,6 +12,7 @@
 #   Namespace? : string (Triggers を指定する場合は必須)
 #   Triggers? : {Event: string, Entry: string}[]
 #   LoreTrigger? : Trigger (default: Triggers[0].Event に対応する値)
+#   Field? : compound (入口を呼ぶ間は storage asset:context this で読める、読むだけで書き換えても保存されない)
 #   Condition? : TextComponent
 #   MPCost : int
 #   MPRequire? : int
@@ -80,7 +81,7 @@
     execute if data storage asset:artifact SecondaryTypeCooldown unless data storage asset:artifact TypeCooldown run tellraw @a [{"storage":"global","nbt":"Prefix.ERROR"},{"text":"TypeCooldown が指定されていないにも関わらず SecondaryTypeCooldown が指定されています"}]
 # 各データ設定
     function asset_manager:artifact/create/set_data
-# 入口の宣言を ROM に書き込む
+# 入口の宣言と Field を ROM に書き込む
     function asset_manager:artifact/create/set_definition
 # 神器排出
     execute unless data storage asset:context Type run data modify storage asset:context Type set value "give"
@@ -105,6 +106,8 @@
     data remove storage asset:artifact Namespace
     data remove storage asset:artifact Triggers
     data remove storage asset:artifact LoreTrigger
+    data remove storage asset:artifact Field
+    data remove storage asset:artifact FieldText
     data remove storage asset:artifact Condition
     data remove storage asset:artifact EnableDuplication
     data remove storage asset:artifact MPCost
