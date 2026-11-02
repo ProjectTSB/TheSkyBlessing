@@ -463,7 +463,4 @@ team modify NoCollision collisionRule never
     function player_manager:play_equip_sound/define
 
 #> ROMを初期化する
-    scoreboard players set $LatestProvidedAddress Global 0
     execute unless data storage rom: _ run function rom:init
-    # 開発環境では reload のたびにここを通るので、前に提供したアドレスのオフセット要素を外し、0 番地を提供した状態に揃える
-        function rom:provide/full

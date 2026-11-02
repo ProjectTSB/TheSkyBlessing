@@ -3,9 +3,7 @@
 # 今の [-4] の経路から全部の層のオフセット要素を外し、初めて使う枝を初期化しながら、$LatestProvidedAddress の経路の全部の層にオフセット要素を付ける
 #
 # @license Copyright © 2020 赤石愛, This software is released under the MIT License, see OhMyDat/LICENSE.
-# @within function
-#   core:load_once
-#   rom:provide/attach/*
+# @within function rom:provide/attach/*
 
 # 呼び出し元でずらされたアドレスを、保存したアドレスから戻す
     scoreboard players operation $Address Temporary = $LatestProvidedAddress Global
