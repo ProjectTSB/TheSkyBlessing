@@ -18,7 +18,7 @@
     execute if data storage asset:context UseMainhand run data modify storage asset:context id.offhand set value -2
 
 # 神器側に受け渡し
-    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"shot"}]
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"shot"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 
 # リセット

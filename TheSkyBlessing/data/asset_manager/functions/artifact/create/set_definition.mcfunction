@@ -34,8 +34,8 @@
     function api:rom/please
     execute store success storage asset:artifact DefinitionChanged byte 1 run data modify storage rom: _[-4][-4][-4][-4][-4][-4][-4][-4].Artifact set from storage asset:artifact Definition
 
-# 宣言が変わったら、その神器を持っているかもしれないプレイヤー全員の購読の一覧を作り直させる
-    execute if data storage asset:artifact {DefinitionChanged:true} run tag @a add ArtifactSubscription.Outdated
+# 宣言が変わったら、その神器を持っているかもしれないプレイヤー全員の神器のキャッシュを作り直させる
+    execute if data storage asset:artifact {DefinitionChanged:true} run tag @a add ArtifactCache.Outdated
 
 # リセット
     data remove storage asset:artifact Definition

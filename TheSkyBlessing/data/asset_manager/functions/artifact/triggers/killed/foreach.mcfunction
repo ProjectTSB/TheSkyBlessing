@@ -16,13 +16,13 @@
     execute if data storage asset:context Killed.To as @e[type=#lib:living_without_player,distance=..150] if score @s MobUUID = $KillTarget Temporary run tag @s add Victim
     scoreboard players reset $KillTarget Temporary
 # 神器側に受け渡し
-    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"killed"}]
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"killed"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
-    execute if data storage asset:context Killed{Type:"vanilla_melee"     } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"killed/melee"}]
+    execute if data storage asset:context Killed{Type:"vanilla_melee"     } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"killed/melee"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
-    execute if data storage asset:context Killed{Type:"vanilla_projectile"} run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"killed/projectile"}]
+    execute if data storage asset:context Killed{Type:"vanilla_projectile"} run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"killed/projectile"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
-    execute if data storage asset:context Killed{Type:"vanilla_explosion" } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Subscriptions[{Event:"killed/explosion"}]
+    execute if data storage asset:context Killed{Type:"vanilla_explosion" } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"killed/explosion"}]
     execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 # リセット
     data remove storage asset:context Killed
