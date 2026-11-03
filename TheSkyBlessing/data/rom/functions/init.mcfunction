@@ -16,3 +16,5 @@
     data modify storage rom: Initial set value [[[[[[[[{},{},{},{}],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]],[],[],[]]
 # メインになるストレージ
     data modify storage rom: _ set from storage rom: Initial
+# Initial はオフセット要素が無く窓が 0 番地を指すので、提供したアドレスも 0 にする
+    scoreboard players set $LatestProvidedAddress Global 0
