@@ -11,4 +11,5 @@
 # 変更のなかったスロットをマスクする
     execute if entity @s[tag=!Believe.Changed] run function asset_manager:artifact/triggers/equipments/mask_slot/
 # 神器側に受け渡し
-    function #asset:artifact/equip
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"equip"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/

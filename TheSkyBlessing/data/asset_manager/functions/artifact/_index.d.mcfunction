@@ -30,6 +30,19 @@
     #declare tag TriggerFlag.Sneak
     #declare tag TriggerFlag.UsingItem
 
+#> 神器のキャッシュを作り直させるタグ
+# @within function
+#   asset_manager:artifact/create/set_definition
+#   asset_manager:artifact/triggers/
+#   asset_manager:artifact/cache/compare_ids
+#   asset_manager:artifact/cache/rebuild/
+#   core:handler/rejoin
+    #declare tag ArtifactCache.Outdated
+
+#> ROM に書き込む ID の範囲の確認用
+# @within function asset_manager:artifact/create/set_definition
+    #declare score_holder $DefinitionID
+
 #> バニラの攻撃を扱う用
 # @within function
 #   asset_manager:artifact/check/

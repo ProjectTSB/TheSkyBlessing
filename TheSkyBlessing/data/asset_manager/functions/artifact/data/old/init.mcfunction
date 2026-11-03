@@ -14,5 +14,7 @@
     data modify storage asset:context Old.Items set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.Items
     data modify storage asset:context Old.id set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.id
     data modify storage asset:context Old.EquipData set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash.EquipData
+# 前の tick までに作った神器のキャッシュを取り出す
+    data modify storage asset:artifact Cache set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ArtifactCache
 # EntityStorageから削除
     data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].ContextStash

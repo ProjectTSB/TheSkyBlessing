@@ -21,6 +21,12 @@
 # 各トリガーに処理受け渡し & AutoSlotのリセット
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/dis_equip
     execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/dis_equip
+# 持っている神器の ID が変わったときと、キャッシュが無いとき・作り直しを求められたときは、神器のキャッシュを作り直す
+# dis_equip は作り直す前のキャッシュ、equip からは作り直した後のキャッシュで呼ぶ
+    execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/cache/compare_ids
+    execute unless data storage asset:artifact Cache run tag @s add ArtifactCache.Outdated
+    execute if entity @s[tag=ArtifactCache.Outdated] run function asset_manager:artifact/cache/rebuild/
+# 各トリガーに処理受け渡し
     execute if data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
     execute if entity @s[tag=Believe.Changed] unless data storage asset:artifact {EquipmentChanges:[{_:{_:false}}]} run function asset_manager:artifact/triggers/equip
     execute if entity @s[tag=TriggerFlag.UseItem] run function asset_manager:artifact/triggers/use_item/
@@ -44,6 +50,9 @@
     function asset_manager:artifact/data/new/stash_to_entity_storage
 # リセット
     data remove storage api: PersistentArgument.AdditionalMPHeal
+    data remove storage asset:artifact Cache
+    data remove storage asset:artifact PreviousCache
+    data remove storage asset:artifact CacheIDs
     data remove storage asset:artifact EquipmentChanges
     data remove storage asset:artifact ArtifactEvents
     function asset_manager:artifact/data/current/reset

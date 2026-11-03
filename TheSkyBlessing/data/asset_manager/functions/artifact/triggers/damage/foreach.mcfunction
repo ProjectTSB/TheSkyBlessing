@@ -16,19 +16,32 @@
     execute if data storage asset:context Damage.From as @e[type=#lib:living_without_player,distance=..150] if score @s MobUUID = $AttackedFrom Temporary run tag @s add Attacker
     scoreboard players reset $AttackedFrom Temporary
 # 神器側に受け渡し
-    function #asset:artifact/damage
-    execute if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/melee
-    execute if data storage asset:context Damage{Type:"vanilla_drowning"  } run function #asset:artifact/damage/drowning
-    execute if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/projectile
-    execute if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/explosion
-    execute if data storage asset:context Damage{Type:"vanilla_fire"      } run function #asset:artifact/damage/fire
-    execute if data storage asset:context Damage{Type:"vanilla_freezing"  } run function #asset:artifact/damage/freezing
-    execute if data storage asset:context Damage{Type:"vanilla_lightning" } run function #asset:artifact/damage/lightning
-    execute if data storage asset:context Damage{Type:"vanilla_other"     } run function #asset:artifact/damage/other
-    execute if data storage asset:context Damage.From run function #asset:artifact/damage/from_entity/
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_melee"     } run function #asset:artifact/damage/from_entity/melee
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_projectile"} run function #asset:artifact/damage/from_entity/projectile
-    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_explosion" } run function #asset:artifact/damage/from_entity/explosion
+    data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_melee"     } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/melee"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_drowning"  } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/drowning"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_projectile"} run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/projectile"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_explosion" } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/explosion"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_fire"      } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/fire"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_freezing"  } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/freezing"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_lightning" } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/lightning"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage{Type:"vanilla_other"     } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/other"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage.From run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/from_entity/"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_melee"     } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/from_entity/melee"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_projectile"} run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/from_entity/projectile"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
+    execute if data storage asset:context Damage.From if data storage asset:context Damage{Type:"vanilla_explosion" } run data modify storage asset:artifact DispatchQueue append from storage asset:artifact Cache[{Event:"damage/from_entity/explosion"}]
+    execute if data storage asset:artifact DispatchQueue[0] run function asset_manager:artifact/triggers/dispatch/
 # リセット
     data remove storage asset:context Damage
     tag @e[type=#lib:living_without_player,tag=Attacker] remove Attacker

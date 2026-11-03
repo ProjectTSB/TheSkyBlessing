@@ -11,7 +11,7 @@
 #       Lore : TextComponent[]
 #       RemainingCount? : int
 #       Slot : Slot
-#       Trigger : Trigger
+#       LoreTrigger : Trigger
 #       Condition? : TextComponent
 #       MPCost : int
 #       MPRequire : int
@@ -51,7 +51,7 @@
     data modify storage asset:artifact Item.tag.CustomModelData set from storage asset:artifact ID
     data modify storage asset:artifact Item.tag.TSB.rawName set from storage asset:artifact Name
     data modify storage asset:artifact Item.tag.TSB.ID set from storage asset:artifact ID
-    data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact Trigger
+    data modify storage asset:artifact Item.tag.TSB.Trigger set from storage asset:artifact LoreTrigger
     data modify storage asset:artifact Item.tag.TSB.MPCost set from storage asset:artifact MPCost
     data modify storage asset:artifact Item.tag.TSB.MPRequire set from storage asset:artifact MPRequire
     data modify storage asset:artifact Item.tag.TSB.MPHealWhenHit set from storage asset:artifact MPHealWhenHit

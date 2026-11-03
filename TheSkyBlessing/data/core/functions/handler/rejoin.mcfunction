@@ -8,6 +8,8 @@
     function core:handler/join
 # Assetのrejoin処理
     function #asset:rejoin
+# 神器のキャッシュを作り直させる
+    tag @s add ArtifactCache.Outdated
 # Reset
     scoreboard players reset @s RejoinEvent
 
