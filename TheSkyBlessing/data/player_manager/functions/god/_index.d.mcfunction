@@ -2,11 +2,11 @@
 # @private
 
 #> Tags
-# @within
-#   function player_manager:god/**
-#   function player_manager:set_team_and_per_health
-#   function debug:change_believe/*
-#   function api:entity/player/is_believe/*
+# @within function
+#   player_manager:god/**
+#   player_manager:set_team_and_per_health
+#   debug:change_believe/*
+#   api:entity/player/is_believe/*
     #declare tag Believe.None
     #declare tag Believe.Flora
     #declare tag Believe.Urban
