@@ -9,8 +9,8 @@
 # タグの事前付与
     tag @s add CheckFailed
 # チェックに成功してたらタグを外す
-    execute if entity @s[tag=Believe.Flora] if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Flora"]} run tag @s remove CheckFailed
-    execute if entity @s[tag=Believe.Nyaptov] if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Nyaptov"]} run tag @s remove CheckFailed
-    execute if entity @s[tag=Believe.Rumor] if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Rumor"]} run tag @s remove CheckFailed
-    execute if entity @s[tag=Believe.Urban] if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Urban"]} run tag @s remove CheckFailed
-    execute if entity @s[tag=Believe.Wi-ki] if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Wi-ki"]} run tag @s remove CheckFailed
+    execute if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Flora"]} if function api:entity/player/is_believe/flora run tag @s remove CheckFailed
+    execute if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Nyaptov"]} if function api:entity/player/is_believe/nyaptov run tag @s remove CheckFailed
+    execute if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Rumor"]} if function api:entity/player/is_believe/rumor run tag @s remove CheckFailed
+    execute if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Urban"]} if function api:entity/player/is_believe/urban run tag @s remove CheckFailed
+    execute if data storage asset:artifact TargetItems[0].tag.TSB{CanUsedGod:["Wi-ki"]} if function api:entity/player/is_believe/wi-ki run tag @s remove CheckFailed

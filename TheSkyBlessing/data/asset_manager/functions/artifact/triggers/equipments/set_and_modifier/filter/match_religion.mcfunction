@@ -8,10 +8,10 @@
     execute if entity @s[tag=DevPrivilege] if data storage asset:artifact Temp.Item.CanUsedGod[0] run return 1
 
 # 信仰している神が CanUsedGod に入っていれば 1 を返す
-    execute if entity @s[tag=Believe.Flora] if data storage asset:artifact Temp.Item{CanUsedGod:["Flora"]} run return 1
-    execute if entity @s[tag=Believe.Nyaptov] if data storage asset:artifact Temp.Item{CanUsedGod:["Nyaptov"]} run return 1
-    execute if entity @s[tag=Believe.Rumor] if data storage asset:artifact Temp.Item{CanUsedGod:["Rumor"]} run return 1
-    execute if entity @s[tag=Believe.Urban] if data storage asset:artifact Temp.Item{CanUsedGod:["Urban"]} run return 1
-    execute if entity @s[tag=Believe.Wi-ki] if data storage asset:artifact Temp.Item{CanUsedGod:["Wi-ki"]} run return 1
+    execute if data storage asset:artifact Temp.Item{CanUsedGod:["Flora"]} if function api:entity/player/is_believe/flora run return 1
+    execute if data storage asset:artifact Temp.Item{CanUsedGod:["Nyaptov"]} if function api:entity/player/is_believe/nyaptov run return 1
+    execute if data storage asset:artifact Temp.Item{CanUsedGod:["Rumor"]} if function api:entity/player/is_believe/rumor run return 1
+    execute if data storage asset:artifact Temp.Item{CanUsedGod:["Urban"]} if function api:entity/player/is_believe/urban run return 1
+    execute if data storage asset:artifact Temp.Item{CanUsedGod:["Wi-ki"]} if function api:entity/player/is_believe/wi-ki run return 1
 # どの神にも当てはまらなければ失敗を返す
     return fail
