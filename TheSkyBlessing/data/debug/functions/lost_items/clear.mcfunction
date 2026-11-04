@@ -1,4 +1,4 @@
-#> debug:clear_lostitems
+#> debug:lost_items/clear
 #
 # 失ったアイテムを削除します
 #
