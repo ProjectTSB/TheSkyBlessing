@@ -24,8 +24,6 @@
     execute if data storage api: Argument{BypassModifier: true} run scoreboard players operation $Damage Temporary /= $100 Const
     execute if data storage api: Argument{BypassModifier: true} if entity @s[type=!player,tag=!Enemy.Boss] run function metric:damage/normal.m {Condition:"Bypass"}
     execute if data storage api: Argument{BypassModifier: true} if entity @s[type=!player,tag= Enemy.Boss] run function metric:damage/angel.m {Condition:"Bypass"}
-# システム的なダメージ上限(9999.9(e2))チェック
-    execute if score $Damage Temporary matches 999990.. run scoreboard players set $Damage Temporary 999990
 # Mobに適用
     function api:damage/core/health_subtract/
 # リセット

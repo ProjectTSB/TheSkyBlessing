@@ -6,6 +6,8 @@
 
 # 難易度補正を掛ける
     execute if data storage api: Argument{BypassDifficulty:false} run function api:damage/core/health_subtract/player/difficulty_modifier
+# ダメージ上限
+    function api:damage/core/health_subtract/force_cap
 # 引数として代入
     execute store result storage api: Argument.Fluctuation double -0.01 run scoreboard players get $Damage Temporary
 # 統計送りにする
