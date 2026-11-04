@@ -11,11 +11,11 @@ const run = new (Object.getPrototypeOf(async function () {}).constructor)(
   'github', 'context', 'core', 'exec', script);
 
 const file = (filename, previous_filename) => ({ filename, previous_filename });
-async function inspect(files, overrides = {}, changes = {}) {
+async function inspect(files, overrides = {}, changes = {}, permission = 'write') {
   const pr = {
     number: 42, state: 'open', draft: false, changed_files: files.length,
     head: { sha: 'head' }, base: { ref: 'master', sha: 'base' },
-    title: 'Update documentation', auto_merge: null, ...overrides,
+    title: 'Update documentation', auto_merge: null, user: { login: 'author' }, ...overrides,
   };
   let reads = 0;
   const calls = [];
@@ -23,6 +23,12 @@ async function inspect(files, overrides = {}, changes = {}) {
     rest: { pulls: {
       get: async () => ({ data: reads++ ? { ...pr, ...changes } : pr }),
       listFiles: Symbol('listFiles'),
+    }, repos: {
+      getCollaboratorPermissionLevel: async ({ username }) => {
+        assert.equal(username, pr.user.login);
+        if (permission === 'unknown') throw new Error('Not Found');
+        return { data: { permission } };
+      },
     } },
     paginate: async (method, params) => {
       assert.equal(method, github.rest.pulls.listFiles);
@@ -33,7 +39,7 @@ async function inspect(files, overrides = {}, changes = {}) {
   await run(github, {
     repo: { owner: 'ProjectTSB', repo: 'Example' },
     payload: { pull_request: { number: 42 } },
-  }, { info() {} }, {
+  }, { info() {}, warning() {} }, {
     exec: async (command, args) => calls.push([command, ...args]),
   });
   return calls;
@@ -105,6 +111,39 @@ test('an existing auto-merge request is left intact', async () => {
   assert.deepEqual(await inspect([file('docs/guide.md')], {
     auto_merge: { enabled_by: { login: 'github-actions[bot]' } },
   }), []);
+});
+
+test('paths a person has to merge are excluded, individual notes are not', async () => {
+  for (const files of [
+    [file('docs/knowledge/README.md')],
+    [file('docs/guide.md'), file('docs/knowledge/README.md')],
+    [file('docs/knowledge/entry.md', 'docs/knowledge/README.md')],
+    [file('docs/knowledge/README.md', 'docs/knowledge/entry.md')],
+    [file('.github/workflows/auto-merge-docs-tests.yml')],
+    [file('docs/knowledge/readme.md')],
+    [file('docs/knowledge/notes/CLAUDE.md')],
+    [file('docs/CLAUDE.local.md')],
+    [file('tests/AGENTS.md')],
+    [file('docs/.claude/rules/reading.md')],
+    [file('docs/.claude')],
+    [file('docs/knowledge/AGENTS.override.md')],
+    [file('docs/knowledge/notes/motion/new.md', 'docs/.Claude/rules/old.md')],
+  ]) assert.deepEqual(await inspect(files), []);
+  for (const files of [
+    [file('docs/knowledge/notes/motion/no-inertia-tp-roundtrip.md')],
+    [file('docs/knowledge/notes/motion/new.md', 'docs/knowledge/notes/motion/old.md')],
+    [file('docs/knowledge/README-of-notes.md')],
+    [file('docs/claude-notes.md')],
+  ]) assert.equal((await inspect(files)).length, 1);
+});
+
+test('only PRs by people with write access qualify', async () => {
+  for (const permission of ['read', 'none', 'unknown']) {
+    assert.deepEqual(await inspect([file('docs/guide.md')], {}, {}, permission), []);
+  }
+  for (const permission of ['admin', 'write']) {
+    assert.equal((await inspect([file('docs/guide.md')], {}, {}, permission)).length, 1);
+  }
 });
 
 test('PR title is one literal process argument', async () => {

@@ -1,3 +1,8 @@
+---
+title: 実行経路とasset
+description: load/tick、asset、LCD・TCD・GCD、MPやactionbar表示の経路を追うときに読む
+---
+
 # 実行経路とasset
 
 順序を辿る際は、その段階が観測値の正規化、差分の照合、寄与の更新、イベント配送、個体の実行のどれを担うかも確認する。装備・Damage・world 定義の横断的な経路と変更先の判断は [本体の抽象構造](architecture.md) にまとめた。
