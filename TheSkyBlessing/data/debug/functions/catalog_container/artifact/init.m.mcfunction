@@ -69,7 +69,9 @@
     data modify storage debug:catalog_container Artifact.IDList set from storage debug:catalog_container Temp
     data remove storage debug:catalog_container Temp
 
-# 昇順でソート（IDListは末尾から読まれるので降順として生成処理される）
+# 昇順でソート
+# IDListは末尾から読まれるので、総当たりと同様に降順として生成処理される。
+# チェスト梱包は末尾から行われる為最終結果は昇順。
     function lib:array/session/open
     data modify storage lib: Array set from storage debug:catalog_container Artifact.IDList
     function lib:array/sort/int/ascend
