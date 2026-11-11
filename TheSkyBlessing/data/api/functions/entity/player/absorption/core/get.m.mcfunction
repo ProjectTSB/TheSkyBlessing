@@ -1,5 +1,6 @@
 #> api:entity/player/absorption/core/get.m
 # @input args UUID: [int] @ 4
+# @output storage api: Return.Absorption
 # @within function api:entity/player/absorption/get
 
 # EntityStorage

@@ -4,7 +4,7 @@
 #
 # @input
 #   as player
-#
+# @output storage api: Return.Absorption.Amount
 #
 # @api
 
